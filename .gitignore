@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.vscode
+output/**
+home/output/**
+home_EN/output/**
+web/output/**
+web_EN/output/**
+mobile/output/**
+mobile_EN/output/**

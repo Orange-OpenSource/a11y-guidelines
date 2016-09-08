@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dropdown menu - Orange web accessibility guidelines</title>
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Examples code styling -->
+      <link rel="stylesheet" href="../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Dropdown menu</h1>
+
+      <h2>Introduction</h2>
+      <p>In this example we will use the <a href="http://boosted.orange.com/components/#dropdowns">drop-down menu</a> available in the <a href="http://boosted.orange.com/">boosted</a> library. This library based on bootstrap allows you to quickly create UI components branded with the Orange colors.</p>
+
+      <h2>Final example</h2>
+      <p>This is how the dropdown looks with our library.</p>
+
+      <!-- Final menu -->
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+          My account
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">My cart</a></li>
+          <li><a href="#">My orders</a></li>
+          <li><a href="#">My details</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </div>
+
+      <h2>Code example</h2>
+
+      <!-- Example 1 code -->
+      <pre><code>
+        &lt;div class="dropdown"&gt;
+          &lt;button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+            My account
+            &lt;span class="caret"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;My cart&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;My orders&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;My details&lt;/a&gt;&lt;/li&gt;
+            &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Log out&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      </code></pre>
+
+      <h2>Testing</h2>
+      For this menu to be accessible it must be usable with a mouse, keyboard and screen reader.
+
+      <h3>Keyboard navigation</h3>
+       <dl>
+         <dt>Move the focus on the "My Account" using the <code>TAB</code> key and press the "enter" key.</dt>
+         <dd>The menu opens.</dd>
+         <dt>Use the up / down arrows.</dt>
+         <dd>These allow you to navigate on the different menu items.</dd>
+         <dt>Press <code>Escape</code>.</dt>
+         <dd>The menu closes. On closing, the focus is automatically repositioned on the button that opened the menu</dd>
+         <dt></dt>
+      </dl>
+
+      <h3>Screen reader navigation</h3>
+       <dl>
+         <dt>Position on the "My Account"</dt>
+         <dd>The screen reader says there is a dropdown menu, and vocalize the dropdown state (open or closed).</dd>
+         <dt>Press the enter key</dt>
+         <dd>The menu opens, the first item is selected. This element is automatically vocalized by the screen reader.</dd>
+         <dt>Use the up / down arrows.</dt>
+         <dd>These allow you to navigate on the different menu items.</dd>
+         <dt>Select a menu item using the enter key</dt>
+         <dd>The menu closes. As the focus is placed automatically, the screen reader again vocalize the menu button, and its state.</dd>
+       </dl>
+
+       <h2>ARIA attributes</h2>
+       <p>If you do not already use an accessible dropdown component, you will need to use some ARIA attributes in order to be correctly vocalized by the screen reader.</p>
+       On the opening button:
+       <ul>
+         <li>The <code>aria-haspopup="true"</code> attribute allows the screen reader to vocalize that it is a dropdown menu.</li>
+         <li>The <code>aria-expanded</code> attribute with value <code>true/false</code>, allows to vocalize menu states (open or closed).
+      </ul>
+
+      Example:
+      <pre><code>
+        &lt;button aria-haspopup="true" aria-expanded="false"&gt;My account&lt;/button&gt;
+      </code></pre>
+
+      On the menu list items:
+      <ul>
+        <li>A <code>role="menu"</code> attribute on the <code>ul</code> list tag.</li>
+        <li>A <code>role="menuitem"</code> attribute on <code>a</code> tags.</li>
+      </ul>
+
+      Example:
+      <pre><code>
+        &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+        &lt;ul role="menu"&gt;
+          &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My cart&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My orders&lt;/li&gt;
+        &lt;/ul&gt;
+      </code></pre>
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

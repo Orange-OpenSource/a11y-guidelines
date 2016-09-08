@@ -1,0 +1,10 @@
+*** Avec npm version 2 ***
+
+npm install
+
+
+*** Avec npm version 3 ***
+
+npm install
+cd node_modules/grunt-beautiful-docs
+npm install
