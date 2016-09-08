@@ -1,0 +1,24 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+.row {
+  font-size: 1.4rem;
+}
+
+ul.o-wizard-step-bar li.visited *, ul.o-wizard-step-bar li.on {
+  cursor: unset;
+}
+
+ul.o-wizard-step-bar li.on > .arrow,
+ul.o-wizard-step-bar li.on + li.next > .arrow,
+ul.o-wizard-step-bar li.on > .arrow::after,
+ul.o-wizard-step-bar li.on + li.next > .arrow::after {
+  border-width: 1.8rem .9rem;
+}
+
+ul.o-wizard-step-bar li.on > .arrow::after,
+ul.o-wizard-step-bar li.on + li.next > .arrow::after {
+  bottom: -1.8rem;
+  margin-left: -.9rem;
+}

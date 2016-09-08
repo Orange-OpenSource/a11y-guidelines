@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité Orange pour mobiles</title>
+        
+      
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->      
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="../bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="../bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->                   
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../boosted/css/boosted2015.css">              
+    <!--<![endif]-->
+                  
+      <!-- Style pour la mise en forme des exemples de code -->      
+      <link rel="stylesheet" href="css/dark.css">
+      
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="css/reco.css">  
+      <link rel="stylesheet" href="css/reco-custom.css">        
+      
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/jquery.min.js"></script>    
+      <script src="./js/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top" id="top-navbar">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Navigation bar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.html" class="navbar-brand">
+                <img src="../boosted/images/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home" width="48"/>                
+              </a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
+              <ul class="nav navbar-nav top-nav">
+                    <li><a href="../home_EN/index.html">Home</a></li>
+                    <li><a href="../web_EN/index.html">Web</a></li>                   
+                    <li class="active"><a href="../mobile_EN/index.html">Mobile</a></li>
+                    <li><a class="language" href="../mobile/index.html" lang="fr" title="French version">Version française</a></li>                    
+              </ul>
+                                                                                                      
+              <form action="./search.html" class="navbar-form navbar-right" role="search">              
+              
+              <!-- formulaire de recherche -->
+                <div class="form-group">
+                  <input title="Search" type="text" class="form-control" placeholder="Search..." name="q">
+                </div>
+                <button title="Search" type="submit" class="btn btn-default">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  <span class="sr-only">Search</span>
+                </button>
+                
+              <!-- bouton CDU -->
+              <span id="cdu">
+                <a href="#" title="Confort plus" id="uci_link">
+                    Confort
+                    <span>+</span>
+                </a>                  
+              </span>
+                              
+              </form>    
+                                                         
+              <ul id="navigation-mobile" class="nav navbar-nav"></ul>
+                                                  
+            </div>
+          </div>
+        </nav>
+    </header>
+    
+    <main role="main" class="container-fluid">
+       
+      <div class="row ">
+        <div role="navigation" id="sidebar" class="hidden-xs col-sm-3 sidebar-offcanvas">
+            <ul id="navigation" class="nav navbar-nav">                
+                <li><a id="index" href="index.html">Presentation</a></li>
+                <li><a id="criteria-mobile" href="criteria-mobile.html">Mobile criteria</a></li>  
+                <li><a id="dev-mobile" href="dev-mobile.html">Guide for developers</a></li>                
+                <li><a id="mdan" href="mdan.html">mDAN</a></li>                                                                        
+                <li><a id="screen-reader" href="screen-reader.html">Screen reader</a></li>
+                <li><a id="links" href="links.html">Useful links</a></li>
+                <li><a id="contact" href="contact.html">Contact</a></li>
+                <li><a id="about" href="about.html">About</a></li>
+            </ul>
+        </div>
+    
+        <div class="col-xs-12 col-sm-9" id="content">
+          <span class="sr-only">You are here: </span>
+          <ol class="breadcrumb">
+            <li><a href="/mobile_EN/index.html">Mobile</a></li>        
+          </ol>
+        
+          <h1 id="talkback-and-voiceover-guide">TalkBack and VoiceOver guide</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Screen reader"}]);
+});</script>
+
+<p><span data-menuitem="screen-reader"></span></p>
+<p>Through this section, we list the common gestures for Android and iOS screen readers. These assistive tools have a lot of functionalities but requires a minimum knowledge to be used effectively.</p>
+<p>Two versions are available:</p>
+<ul>
+<li><strong>TalkBack</strong> built-in screen reader for Android.</li>
+<li><strong>VoiceOver</strong> built-in screen reader for iOS.</li>
+</ul>
+<p class="row">
+    <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">TalkBack</h2><br>        <a href="./talkback.html" class="btn btn-info">
+            <img src="./images/android.png" alt="">
+            <div>TalkBack user guide</div>
+        </a>
+    </div>
+    <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">Voiceover</h2><br>        <a href="./voiceover.html" class="btn btn-info">
+            <img src="./images/iphone.png" alt="">
+            <div>VoiceOver user guide</div>
+        </a>
+    </div><br></p>
+
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+
+        </div>
+      </div>
+    </main>
+    
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="./js/reco.js"></script> 
+    <script type="text/javascript" src="./js/highlight.pack.js"></script>
+    
+    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>
+        
+</body>
+</html>

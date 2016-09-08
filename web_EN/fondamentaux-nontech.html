@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité web Orange</title>
+    
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="../boosted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="css/reco.css">
+      <link rel="stylesheet" href="css/reco-custom.css">
+
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+        <nav id="top-navbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Navigation bar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.html" class="navbar-brand">
+                <img src="../boosted/images/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home" width="48"/>
+              </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav top-nav">
+                    <li><a href="../home_EN/index.html">Home</a></li>
+                    <li class="active"><a href="./index.html">Web</a></li>
+                    <li><a href="../mobile_EN/index.html">Mobile</a></li>
+                    <li><a class="language" href="../web/index.html" lang="fr" title="French version">Version française</a></li>
+              </ul>
+
+              <form action="./search.html" class="navbar-form navbar-right" role="search">
+
+              <!-- formulaire de recherche -->
+                <div class="form-group">
+                  <input title="Search" type="text" class="form-control" placeholder="Search..." name="q">
+                </div>
+                <button title="Search" type="submit" class="btn btn-default">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  <span class="sr-only">Search</span>
+                </button>
+
+              <!-- bouton CDU -->
+              <span id="cdu">
+                <a href="#" title="Confort plus" id="uci_link">
+                    Confort
+                    <span>+</span>
+                </a>
+              </span>
+
+              </form>
+
+              <ul id="navigation-mobile" class="nav navbar-nav"></ul>
+
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container-fluid">
+
+      <div class="row ">
+        <div role="navigation" id="sidebar" class="hidden-xs col-sm-3 sidebar-offcanvas">
+            <ul id="navigation" class="nav navbar-nav">
+                <li><a id="index" href="index.html">Presentation</a></li>
+                <li><a id="fondamentaux" href="fondamentaux.html">Essential criteria</a></li>
+                <li><a id="exigences" href="exigences.html">All requirements</a></li>
+                <li><a id="methodes-outils" href="methodes-outils.html">Test tools</a></li>
+                <li><a id="nos-outils" href="nos-outils.html">Open source Orange test tools</a></li>
+                <li><a id="exemples" href="exemples.html">Examples</a></li>
+                <li><a id="htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
+                <li><a id="contact" href="contact.html">Contact</a></li>
+                <li><a id="about" href="about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-9" id="content">
+          <span class="sr-only">You are here: </span>
+          <ol class="breadcrumb">
+            <li><a href="/web_EN/index.html">Web</a></li>
+          </ol>
+
+            <h1 id="essential-criteria-for-the-design">Essential criteria for the design</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Essential criteria", "url": "./fondamentaux.html"},
+        {"label":"Essential criteria for the design"}
+    ]);
+
+    addSubMenu();
+
+});</script>
+
+<p><span data-menuitem="fondamentaux"></span></p>
+<h2 id="1-set-a-title-for-each-page">1. Set a title for each page</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description:</strong><br>Set each page a title that is specific to it and which reflects its content or function  (<code>&lt;title&gt;</code> tag).<br>The page title is the first element read by the speech synthesis, it must help to formally identify the page where you are.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Even if there is no rule, in general (opening many tabs in multiple applications), we go from the most specific information to the least specific (eg title of the current page - name of the site). For windowing a multitude of application, the approach is different, in this case we will prefer going from the least specific information to the most specific (eg name of the site - title of the current page).</li>
+<li>When the content of the page is dynamic (displaying the result of a search, errors in a form, user adding content...), the title of the page should reflect this change.</li>
+</ul>
+<p><strong>Do:</strong><br><code>Home - Corporate web site of Orange</code></p>
+<p><strong>Don&#39;t:</strong><br><code>Home</code></p>
+<h2 id="2-set-a-title-to-headings">2. Set a title to headings</h2>
+<p><strong>Target : </strong> everyone and especially people with cognitive limitations, reading difficulties and visual impairments.<br><strong>When: </strong> from the design, content writing and during development.</p>
+<p><strong>Description:</strong><br>Identifying title tags to use (<code>h1</code> to <code>h6</code> HTML tags) to structure the content of the pages.
+The visually impaired people browsing with a screen reader can access the list of titles of the page to navigate quickly. 
+Just like in a Word document, it is possible to use the table of contents only if the titles tags have been properly set within the document.  </p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>The titles must be relevant, reflect the structure of the information contained in the page.</li>
+<li>There should be no break in the heading hierarchy (we cannot jump from a <code>h2</code> title to a <code>h4</code> title).</li>
+<li>You can use several <code>h1</code> titles per page (don&#39;t exceed two in most cases).</li>
+</ul>
+<p><strong>Goal: </strong></p>
+<ul>
+<li>For all users: improve the structure of the page and its contents.</li>
+<li>For search engines: improve SEO.</li>
+<li>For users that are visually impaired, cognitively impaired or having reading difficulties: easy navigation and access to content.</li>
+</ul>
+<p><strong>Do:</strong>  </p>
+<p>Page with consistent and relevant titles:</p>
+<p><code>(Title 1) Home - Orange</code></p>
+<p><code>(Title 2) News</code></p>
+<p><code>(Title 2) Fiber broadband is coming!</code></p>
+<p><code>(Title 3) Check eligibility</code></p>
+<h2 id="3-make-sure-there-is-enough-contrast-between-text-and-background">3. Make sure there is enough contrast between text and background</h2>
+<p><strong>Target : </strong> everyone, especially the mobile and tablet users, people with visual impairments, reading or attention difficulties and elderly people.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description:</strong><br>The contrast between the text and the background should be high enough.
+Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablets users in a very bright environment.</p>
+<p><strong>Don&#39;t: </strong><br>The label &quot;film | 20h40 ...&quot; does not have enough contrast. It will not be readable by all users.  </p>
+<p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>The contrast between the color of the background and the text must be 4.5:1 minimum and also for text on an image carrying information.</li>
+<li>For applications used primarily in mobile web or in mobility, the contrast level of the main elements must be 7:1 in order to ensure a good readability for all.</li>
+<li>Links should be easily identifiable from to the rest of the text.</li>
+</ul>
+<p><strong>Tool: </strong><br>The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">color contrast analyzer</a> application can quickly measure color contrast levels (free for Windows and Mac).  </p>
+<h2 id="4-do-not-use-color-or-sensory-characteristics-as-the-unique-source-of-information">4. Do not use color or sensory characteristics as the unique source of information</h2>
+<p><strong>Target : </strong> everyone, especially the colorblind and more generally people with visual impairments, cognitive limitations, hearing impairments and elderly people.<br><strong>When: </strong> from the design and during development.</p>
+<p><strong>Description: </strong><br>Do not use color or sensory characteristics (shape, size, sound, direction, visual localization ...) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a color change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.</p>
+<p><strong>Do: </strong>  </p>
+<p><img src="images/couleur-ok.png" alt="illustration using colored icons to convey information"></p>
+<p><strong>Don&#39;t: </strong></p>
+<p><img src="images/couleur-ko.png" alt="illustration using colored icons to convey information">  </p>
+<p>This example is not valid because the information is conveyed only by color.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Take a screenshot and convert it in black and white. The loss of color should not cause difficulty while navigating, nor cause loss of information.</li>
+<li>Turn off the speakers, the level of information should remain the same.</li>
+</ul>
+<h2 id="5-define-text-alternatives">5. Define text alternatives</h2>
+<p><strong>Target : </strong> people with visual impairments, hearing difficulties or cognitive limitations and search engines.<br><strong>When: </strong> from the design and during development.</p>
+<p><strong>Description:</strong><br>Set text alternatives for all non-text informative elements (alternatives to images, icons). Also provide scripts or subtitles for the audio or video content.</p>
+<p><strong>Example  </strong><br>In the screenshot below, we should provide since the design, text alternatives for each button:</p>
+<ul>
+<li>menu</li>
+<li>settings</li>
+<li>previous channel</li>
+<li>mute ...</li>
+</ul>
+<p><img src="images/player.png" alt="screenshot of a video player with multiple buttons">   </p>
+<h2 id="6-focus-visibility">6. Focus visibility</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments or cognitive limitations, motor disabilities and using a device outdoors.<br><strong>When: </strong> from the graphic design and during development.</p>
+<p><strong>Description:</strong><br>The position of the keyboard focus must be visible at all times. When a clickable element receives the focus (link, button...), this must be visible to the user. By default, the browser sets a dotted or a colored box around the element. This behavior can be replaced by a custom effect (improving the contrast, for example) but must not be deleted. Users who navigate using the keyboard (TAB) need to know the position of the focus.    </p>
+<p>The focus indicator as well as the hover indicator (when the mouse is over an element) should be carefully considered since the graphic design.</p>
+<p><strong>Do: </strong><br>In the following screenshots, the focus is located on the &quot;209 SMS / month&quot;. 
+The first figure shows the default behavior (focus represented by a dotted box).
+In the second capture, the dotted lines have been removed, replaced by a colored box to indicate explicitly the location of the focus.<br><img src="images/focus.png" alt="screenshot showing the default focus">
+<img src="images/focus2.png" alt="screenshot with a custom focus"></p>
+<h2 id="7-changing-text-size">7. Changing text size</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments, using a device outdoors and elderly people.<br><strong>Who: </strong> from graphic design and mainly during development.</p>
+<p><strong>Description:</strong><br>The text size should be able to be doubled (set the zoom to 200% from the browser settings). At this zoom level, the page layout can be altered, but the information must be readable (text or bunk not truncated).
+Although this must be taken into account during the development phase, we can identify, from the graphic design phase, areas of the screen that should or should not grow along with the text size. Moreover, some design choices may or may not facilitate the implementation of this criterion during development, so it is important to think about it from the start.</p>
+<p><strong>Example: </strong><br>The screenshot below shows a page with the zoom to 100%.<br><img src="images/zoom.png" alt="screenshot showing a page zoomed to 100%">    </p>
+<p>&nbsp;<br><strong>Do: </strong><br>Zoom set to 200%.<br><img src="images/zoom-ok.png" alt="screenshot with 200% zoom and readable text">    </p>
+<p>&nbsp;<br><strong>Don&#39;t: </strong><br>Zoom set to 200%. In this case the height of the text container did not resized accordingly to text size.<br><img src="images/zoom-ko.png" alt="screenshot with 200% zoom and truncated text">  </p>
+<h2 id="8-animation">8. Animation</h2>
+<p><strong>Target : </strong> people with visual impairments, reading/attention/understanding difficulties and seizure disorders.<br><strong>When: </strong> when designing the service and graphic design.</p>
+<p><strong>Description:</strong><br>All moving, refreshed or flashing content must be stoppable, paused or hidden by the user.
+Also, avoid as much as possible flashing content and sudden brightness changes (see <a href="http://news.bbc.co.uk/2/hi/uk_news/england/london/6724245.stm">The logo of the Olympics causes seizures</a>).</p>
+<p><strong>Example: </strong><br><img src="./images/carrousel.png" alt="screenshot of a carousel with a button to pause the animation">  </p>
+<p>A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.
+It is also possible to add a &quot;pause&quot; button directly in the interface.</p>
+<h2 id="9-links-label">9. Links label</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments, cognitive limitations or attention difficulties.<br><strong>When: </strong> when designing the service and the graphic design.</p>
+<p><strong>Description:</strong><br>The wording of the links should be explicit enough.
+In exceptional cases when it is technically impossible, provide a proper label so the speech synthesis can use it.</p>
+<p><strong>Do:</strong><br><code>Learn about our offers</code></p>
+<p><strong>Don&#39;t:</strong><br><code>click here</code><br><code>more details</code></p>
+<h2 id="10-navigating-with-the-keyboard">10. Navigating with the keyboard</h2>
+<p><strong>Target : </strong> everyone, especially people with motor or visual impairments or using a device outdoors.<br><strong>When: </strong> when designing the service and during development.</p>
+<p><strong>Description:</strong><br>All features must be accessible from the keyboard. Pressing the keyboard Tab key, the browser passes the focus between clickable elements.<br>Moreover, if the features are specific to mouse (drag and drop, right click menu...), ensure that these are also available through other means elsewhere in the interface (button, icon, menu...).</p>
+<p><strong>Example: </strong><br>In the webmail, right-clicking on the &quot;trash&quot; opens a menu to empty the trash, this option should be also available from a button &quot;empty the trash&quot; elsewhere in the interface or from a drop-down menu accessible with the keyboard.</p>
+<h2 id="11-forms">11. Forms</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments.<br><strong>When: </strong> during design and development.</p>
+<p><strong>Description:</strong><br>Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. This label should be visually close to the field so we can easily link them (especially for people using zoom or software magnifier or even mobile users). Error messages should identify clearly the invalid field, and if necessary suggest a correction. This applies to input fields, but also to other types of fields (drop-down list, radio button, checkbox...). From the development perspective, this label must be associated with the form field to facilitate the navigation with a screen reader.</p>
+<p><strong>Do: </strong><br><img src="images/formulaire.png" alt="screenshot of a valid form"></p>
+<p>&nbsp;</p>
+<p><strong>Don&#39;t: </strong><br><img src="images/formulaire2.png" alt="screenshot of a form with a missing label"></p>
+<p>&nbsp;</p>
+<p>In some cases, it seems unnecessary to associate a label to a form field (search field accompanied by a magnifying glass button for example). In such case you can provide a hidden label, it will not be displayed on the screen but it will be associated with the form field programmatically for easy navigation with a screen reader.</p>
+<p>Lastly, the wording of the error messages should be explicit.</p>
+<p><strong>Do: </strong><br><img src="images/formulaire-ok.png" alt="screenshot of a form that displays relevant error messages">  </p>
+<p><strong>Don&#39;t: </strong><br><img src="images/formulaire-ko.png" alt="screenshot of a form displaying irrelevant error messages"></p>
+<h2 id="12-dialogs-and-opening-new-windows">12. Dialogs and opening new windows</h2>
+<p><strong>Target : </strong> elderly people, people with cognitive or visual impairments or using a device outdoors.<br><strong>When: </strong> from the design and in the development.</p>
+<p><strong>Description:</strong><br>Avoid as much as possible the actions that open a new window (or tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text &quot;new window&quot; is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
+Also avoid the systematic use of dialogs to display information in the pages (presentation of service...). They often cause accessibility problems for people who navigate with a keyboard or a screen reader, they will require special attention during the development phase.</p>
+<p><strong>Don&#39;t: </strong><br>In the example below the use of a dialog is not justified. Using a standard web page would:</p>
+<ul>
+<li>Allow more space to the content (by removing the margins around the dialog).</li>
+<li>Allow the &quot;back&quot; button to go back when navigating between pages of the dialog.</li>
+<li>To make easier the display on small screens.</li>
+<li>To avoid problems of accessibility for people who navigate using the keyboard or using a screen reader.</li>
+<li>To reduce the weight of the page and improve loading time, as in this example the page behind the dialog box must be charged.  </li>
+</ul>
+<p><img src="images/dialog.png" alt="screenshot of a dialog way too big"></p>
+<h2 id="13-provide-skip-links">13. Provide skip links</h2>
+<p><strong>Target : </strong> useful for mobile and tablet users, people with visual impairments, motor disabilities or using a device outdoors.<br><strong>When: </strong> from the design phase and in the development.</p>
+<p><strong>Description:</strong><br>Provide skip links such as &quot;Skip to content&quot; on each page. It facilitates navigation for people using the keyboard, using a device outdoors or with a screen reader. In <strong>very specific</strong> cases, the links can be hidden on the screen and appear only when keyboard navigation.</p>
+<p><strong>Example: </strong><br>Skip links (&quot;Skip to navigation, &quot;Skip to content&quot;) are available on this site.
+To make them appear, move the focus on the top of the page by clicking on your browser&#39;s address bar, for example, then repeatedly press the button <code>TAB</code>.</p>
+<p><img src="images/skiplink.png" alt="screenshot of the site orange.com">
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+
+        </div>
+      </div>
+    </main>
+
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="./js/reco.js"></script>
+    <script type="text/javascript" src="./js/highlight.min.js"></script>
+    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>
+
+</body>
+</html>

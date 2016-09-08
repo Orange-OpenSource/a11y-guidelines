@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explorateur de fichier - recommandations accessiblité web Orange</title>
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Explorateur de fichier</h1>
+
+      <h2>Introduction</h2>
+      <p>L'explorateur de fichier est un composant disponible sur tous les systèmes d'exploitation. Lorsque celui-ci est présent dans une page web, il doit se comporter comme attendu par l'utilisateur.</p>
+      
+      <h2>Mode de navigation</h2>
+
+      <p>A la souris, chaque fichier peut être ouvert via un double clic. Les touches controle et shift permettent d'effectuer une sélection multiple.</p>
+      <p>En navigant au clavier, les flèches permettent de déplacer la sélection. La touche entrée permet d'ouvrir un fichier. Les touches controle+barre espace ou shift+flèches du clavier permettent de sélectionner plusieurs fichiers.</p>
+      <p>Au lecteur d'écran, la navigation est identique à celle du clavier, chaque fichier est correctement vocalisé (nom, taille, type ...), de plus l'état sélectionné/non sélectionné est également indiqué.</p>
+
+      <a href="./step1/index.html" class="btn btn-default">Ouvrir l'exemple</a>
+      
+      <h2> Mise en place de la structure </h2>
+      <p>Au niveau de la structure, nous utiilsons des balises <code>div</code>. Pour que celles-ci soient vocalisées correctement nous avons ajouté quelques attributs et rôles ARIA.</p>
+      <p>Le rôle <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">listbox</a> pour indiquer au lecteur d'écran qu'il s'agit d'une liste d'éléments. L'attribut <code>aria-multiselectable</code> pour indiquer qu'il s'agit d'une liste à sélection multiple. Chaque élément de liste doit posséder un rôle <a href="https://www.w3.org/TR/wai-aria-1.1/#option">option</a>.
+      <p>Pour que chaque fichier soit correctement vocalisé, on ajoute un attribut <code>aria-label</code> sur chaque élément de la liste. Enfin, pour que chaque fichier soit focusable, on ajoute un attribut <code>tabindex="0"</code>.</p>
+      
+      <h3>Exemple de code</h3>
+      
+      <pre><code>
+      &lt;div role="listbox" aria-multiselectable="true" aria-label="liste des fichiers, vue mosaïque"&gt;
+        &lt;div tabindex="0" role="option" aria-label="test 001.avi, video, 18.9MB"&gt; ... &lt;/div&gt;
+        ...
+      &lt;/div&gt;
+      </code></pre>
+        
+      <h2>Visibilité du focus</h2>
+      <p>La position du focus doit être visible à tout moment. Un effet est appliqué à la vignette qui a le focus. Cet effet reste visible même sur les fichiers sélectionnés.</p>
+      
+      <h2>Gestion du clavier</h2>
+      <p>Pour que les utilisateurs puissent correctement naviguer dans la liste, le clavier doit être géré via Javascript:
+        <ul>
+          <li>Les flèches pour se déplacer dans la liste.</li>
+          <li>Les touches <code>Ctrl</code>, <code>Shift</code> et la barre espace pour sélectionner plusieurs fichiers.</li>
+          <li>Les touches <code>Ctrl+a</code> pour sélectionner tous les éléments.</li>
+          <li>La touche entrée pour lancer l'ouverture d'un fichier.</li>
+        </ul>
+      </p>
+      
+    </main>
+        
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

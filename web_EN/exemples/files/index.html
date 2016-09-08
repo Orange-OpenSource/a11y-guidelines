@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>File Explorer - Orange web accessibility guidelines</title>
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Examples code styling -->
+      <link rel="stylesheet" href="../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>File Explorer</h1>
+
+      <h2>Introduction</h2>
+      <p>The file explorer is a component available on all operating systems. When it is present in a web page, it should behave as expected by the user.</p>
+      
+      <h2>Navigation mode</h2>
+
+      <p>Using the mouse, each file can be opened via a double click. The ctrl and shift keys allow multiple selection.</p>
+      <p>Using the keyboard, the arrow keys the move the selection. Pressing enter allows to open a file. The control+spacebar or shift+arrow shortcuts to select multiple files.</p>
+      <p>Using a screen reader is the same as the keyboard, each file is correctly vocalized (name, size, type ...), in addition it vocalizes the state of the file (selected/unselected).</p>
+
+      <a href="./step1/index.html" class="btn btn-default">Open example</a>
+      
+      <h2> Layout setup </h2>
+      <p>For the layout, we use <code>div</code> tags. To be properly vocalized we have to add some ARIA attributes and roles.</p>
+      <p>The <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">listbox</a> role indicates the component is list of items to the screen reader. The <code>aria-multiselectable</code> attribute indicates that it is a multiple-selection list. Each list item must have the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">option</a> role.
+      <p>In order to correctly vocalize each file, we add the <code>aria-label</code> attribute to each element of the list. Finally, for each file to be focusable, the <code>tabindex="0"</code> attribute is added.</p>
+      
+      <h3>Sample Code</h3>
+      
+      <pre><code>
+      &lt;div role="listbox" aria-multiselectable="true" aria-label="file list, grid view"&gt;
+        &lt;div tabindex="0" role="option" aria-label="test 001.avi, video, 18.9MB"&gt; ... &lt;/div&gt;
+        ...
+      &lt;/div&gt;
+      </code></pre>
+        
+      <h2>Focus visibility</h2>
+      <p>The focus position must be visible at all times. A specific style is applied to the thumbnail that has the focus. This style remains visible on selected files.</p>
+      
+      <h2>Handling keyboard</h2>
+      <p>In order to browse properly the list, the keyboard must be managed via Javascript:
+        <ul>
+          <li>Arrow keys to move through the list.</li>
+          <li><code>Ctrl</code>, <code>Shift</code> and spacebar to select several items.</li>
+          <li><code>Ctrl+a</code> to select all items</li>
+          <li>The enter key to open the file.</li>
+        </ul>
+      </p>
+      
+    </main>
+        
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

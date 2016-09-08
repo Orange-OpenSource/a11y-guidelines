@@ -1,0 +1,25 @@
+/* ---- custom home section */
+.axs-picto::before {
+    float: left;
+    margin-right: 20px;  
+    margin-bottom: 2rem;  
+}
+
+.axs-picto ul {
+    padding-left: 150px;
+}
+.axs-picto.visuel::before {
+    content: url(../images/accessibility_vision.png);
+}
+.axs-picto.materiel::before {
+    content: url(../images/device_fixed-line_phone.png);
+}
+.axs-picto.cognitif::before {
+    content: url(../images/accessibility_cognition.png);
+}
+.axs-picto.auditif::before {
+    content: url(../images/accessibility_hearing.png);
+}
+.axs-picto.physique::before {
+    content: url(../images/accessibility_mobility.png);
+}

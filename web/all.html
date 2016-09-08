@@ -1,0 +1,1175 @@
+
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité web Orange</title>
+    
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="../boosted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="css/reco.css">
+      <link rel="stylesheet" href="css/reco-custom.css">
+
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+        <nav id="top-navbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Menu de navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.html" class="navbar-brand">
+                <img src="../boosted/images/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil" width="48"/>
+              </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav top-nav">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="active"><a href="../web/index.html">Web</a></li>
+                    <li><a href="../mobile/index.html">Mobile</a></li>
+                    <li><a class="language" href="../web_EN/index.html" title="Version anglaise" lang="en">English version</a></li>
+              </ul>
+
+              <form action="./search.html" class="navbar-form navbar-right" role="search">
+
+              <!-- formulaire de recherche -->
+                <div class="form-group">
+                  <input title="rechercher" type="text" class="form-control" placeholder="Rechercher..." name="q">
+                </div>
+                <button title="Rechercher" type="submit" class="btn btn-default">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  <span class="sr-only">Rechercher</span>
+                </button>
+
+              <!-- bouton CDU -->
+              <span id="cdu">
+                <a href="#" title="Confort plus" id="uci_link">
+                    Confort
+                    <span>+</span>
+                </a>
+              </span>
+
+              </form>
+
+              <ul id="navigation-mobile" class="nav navbar-nav"></ul>
+
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container-fluid">
+
+      <div class="row ">
+        <div role="navigation" id="sidebar" class="hidden-xs col-sm-3 sidebar-offcanvas">
+            <ul id="navigation" class="nav navbar-nav">
+                <li><a id="index" href="index.html">Présentation</a></li>
+                <li><a id="fondamentaux" href="fondamentaux.html">Critères incontournables</a></li>
+                <li><a id="exigences" href="exigences.html">Ensemble des exigences</a></li>
+                <li><a id="methodes-outils" href="methodes-outils.html">Outils de test</a></li>
+                <li><a id="nos-outils" href="nos-outils.html">Outils Orange open source</a></li>
+                <li><a id="exemples" href="exemples.html">Exemples</a></li>
+                <li><a id="htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
+                <li><a id="contact" href="contact.html">Contact</a></li>
+                <li><a id="about" href="about.html">A propos</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-9" id="content">
+          <span class="sr-only">Vous êtes ici : </span>
+          <ol class="breadcrumb">
+            <li><a href="/web/index.html">Web</a></li>
+          </ol>
+
+            <h1 id="recommandations-accessibilit-web-orange">Recommandations accessibilité web Orange</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Présentation"}]);
+});</script>
+
+
+<p><strong><em> L&#39;accessibilité, un avantage pour tous, une nécessité pour certains ! </em></strong></p>
+<h2 id="d-finition-de-l-accessibilit-web">Définition de l’accessibilité web</h2>
+<p><strong> C’est un service web utilisable par tous </strong></p>
+<ul>
+<li>Personnes valides</li>
+<li>Seniors</li>
+<li>Personnes en situation de handicap (temporaire ou permanent)</li>
+</ul>
+<p><strong> et dans tous les contextes </strong></p>
+<ul>
+<li>Avec tous types de matériel : navigateurs, PC, MAC, tél. mobiles, tablettes</li>
+<li>Dans un contexte dégradé : mauvaise luminosité, touchpad en mobilité, etc.</li>
+<li>Avec des logiciels spécifiques de compensation du handicap</li>
+</ul>
+<h2 id="organisation-de-ce-site">Organisation de ce site</h2>
+<h3 id="crit-res-incontournables">Critères incontournables</h3>
+<p>Liste des critères principaux selon votre profil, basés sur un sous-ensemble des recommandations WCAG 2.0 niveau AA. Un bon moyen de prendre connaissance des principaux critères à respecter pour s&#39;engager vers une démarche de mise en accessibilité progressive.  </p>
+<h3 id="ensemble-des-exigences">Ensemble des exigences</h3>
+<p>Section à destination des développeurs. Tout ce qu&#39;il faut savoir pour coder accessible et pour effectuer les tests permettant de valider ses développements.</p>
+<h3 id="outils-de-test">Outils de test</h3>
+<p>Pour ceux qui veulent vérifier l&#39;accessibilité de leurs pages avec des outils plus ou moins automatiques. Enfin, tout l&#39;outillage méthodologique et technique pour évaluer ses pages.</p>
+<h3 id="nos-outils-pour-le-web">Nos outils pour le Web</h3>
+<p>Présentation de la bibliothèque Boosted et du service Confort+.</p>
+<h3 id="les-exemples">Les exemples</h3>
+<p>Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n&#39;a plus qu&#39;à se laisser guider !</p>
+<p>Ces exemples utilisent la librairie <a href="http://boosted.orange.com/">boosted</a>. Cette librairie basée sur <a href="http://getbootstrap.com/">bootstrap</a> permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="liste-des-crit-res-incontournables">Liste des critères incontournables</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Liste des critères incontournables"}]);
+});</script>
+
+<p><span data-menuitem="fondamentaux"></span>
+Ce socle de critères destiné aux sites et applications web Orange permet d&#39;éviter les principales erreurs d&#39;accessibilité. Il s&#39;agit d&#39;un sous-ensemble des exigences d&#39;accessibilité.<br>La mise en œuvre de ce socle ne permet pas, d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s&#39;engager dans une démarche de mise en accessibilité progressive.</p>
+<p>Le respect de la charte Orange (<span lang="en">Design for digital platforms Guideline</span>), disponible sur <a href="http://brand.orange.com/">le site de la marque Orange</a> est un prérequis à l&#39;utilisation de ce socle.
+Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte...) n&#39;ont pas été repris dans cette liste de critères.</p>
+<p>Deux versions sont disponibles :</p>
+<ul>
+<li><strong>La première version</strong> n&#39;aborde pas le code, elle s&#39;adresse aux concepteurs de produits, designers, responsables de projet, etc.</li>
+<li><strong>La seconde version</strong> aborde le code et s&#39;adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
+</ul>
+<p><p class="row">
+    <div class="perso col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">Pour les concepteurs et designers</h2><br>        <a href="./fondamentaux-nontech.html" class="btn btn-info">
+            <img src="./images/perso1.png" alt="">
+            <div>Critères incontournables pour la conception</div>
+        </a>
+    </div>
+    <div class="perso col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">Pour les développeurs</h2><br>        <a href="./fondamentaux-tech.html" class="btn btn-info">
+            <img src="./images/perso3.png" alt="">
+            <div>Critères incontournables pour le développement</div>
+        </a>
+    </div><br></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="crit-res-incontournables-pour-le-d-veloppement">Critères incontournables pour le développement</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères incontournables", "url": "./fondamentaux.html"},
+        {"label":"Critères incontournables pour le développement"}
+    ]);
+    addSubMenu();
+});</script>
+
+<p><span data-menuitem="fondamentaux"></span></p>
+<h2 id="1-donner-un-titre-aux-pages">1. Donner un titre aux pages</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles.<br><strong>Quand : </strong> dès la conception et pendant le développement.</p>
+<p><strong>Description : </strong><br>Donner à chaque page un titre qui lui est spécifique et qui reflète son contenu ou sa fonction (balise <code>&lt;title&gt;</code>).<br>Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d&#39;identifier formellement la page sur laquelle on se trouve.</p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Bien qu&#39;il n&#39;y ait pas de règle, en général, on va de l&#39;information la plus spécifique vers la moins spécifique (ex.: nom de la page courante - nom du site). Dans d&#39;autres contextes d&#39;utilisation pour lesquels l&#39;utilisateur à de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l&#39;information la plus générale vers la plus spécifique (ex.: nom du site - nom de la page).</li>
+<li>Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d&#39;une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu...), le titre de la page doit refléter cette modification du contenu.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong><br>Permettre aux utilisateurs d&#39;identifier le sujet d&#39;une page, de se repérer et se faire une idée précise du contenu de la page sans avoir à le lire. C&#39;est, notamment, le premier élément vocalisé par un lecteur d&#39;écran.</p>
+<p><strong>Exemple valide : </strong><br><code>&lt;title&gt;Accueil - Espace client Orange&lt;/title&gt;</code>        </p>
+<p><strong>Exemple non-valide :</strong><br><code>&lt;title&gt;Accueil&lt;/title&gt;</code></p>
+<p><strong>Référence : </strong> WCAG 2.4.2</p>
+<h2 id="2-donner-des-titres-aux-rubriques">2. Donner des titres aux rubriques</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes cognitives, avec des difficultés pour lire et déficientes visuelles.<br><strong>Quand : </strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Description : </strong><br>Identifier les balises de titres à utiliser (balises HTML <code>h1</code> jusqu&#39;à <code>h6</code>) pour structurer le contenu des pages.
+Les personnes malvoyantes naviguant à l&#39;aide d&#39;un lecteur d&#39;écran peuvent accéder à la liste des titres de la page pour naviguer rapidement. 
+Tout comme dans un fichier Word, il est possible d&#39;utiliser la table des matières si des titres ont correctement été positionnés à l&#39;intérieur du document. </p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Les titres doivent être pertinents et non vides.</li>
+<li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d&#39;un titre <code>h2</code> à un titre <code>h4</code>).</li>
+<li>On peut mettre plusieurs <code>h1</code> par page (se limiter tout de même à deux dans la majorité des cas).</li>
+<li>Les lecteurs d&#39;écran ne prennent pas en compte les titres masqués (<code>visibility: hidden;</code>, <code>display: none;</code> ou <code>aria-hidden</code>).</li>
+<li>Le contenu généré dynamiquement doit aussi respecter cette exigence.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong></p>
+<ul>
+<li>Pour tous les utilisateurs : améliorer la structure de la page et de son contenu. </li>
+<li>Pour les utilisateurs déficients visuels, déficients cognitifs et difficultés de lecture : faciliter la navigation et l&#39;accés au contenu.</li>
+</ul>
+<p><strong>Objectif technique : </strong></p>
+<ul>
+<li>Pour les moteurs de recherche : améliorer le référencement.</li>
+</ul>
+<p><strong>Exemple valide : </strong>   </p>
+<p>Un titrage de page cohérent et pertinent :</p>
+<p><code>&lt;h1&gt;Accueil - Orange&lt;/h1&gt;</code></p>
+<p><code>&lt;h2&gt;Les actualités&lt;/h2&gt;</code></p>
+<p><code>&lt;h2&gt;La fibre arrive !&lt;/h2&gt;</code></p>
+<p><code>&lt;h3&gt;Êtes-vous éligible ?&lt;/h3&gt;</code></p>
+<p><strong>Exemple non-valide : </strong><br>Un titrage de page avec un saut de niveau h2-&gt;h4 :</p>
+<p><code>&lt;h1&gt;Accueil - Orange&lt;/h1&gt;</code></p>
+<p><code>&lt;h2&gt;Les actualités&lt;/h2&gt;</code></p>
+<p><code>&lt;h2&gt;La fibre arrive !&lt;/h2&gt;</code></p>
+<p><code>&lt;h4&gt;Êtes-vous éligible ?&lt;/h4&gt;</code></p>
+<p><strong>Référence :</strong> WCAG 1.3.1</p>
+<h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
+<p><strong>Cible : </strong> tout le monde, en particulier, les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d&#39;attention et les seniors.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong><br>Le niveau de contraste entre le texte et l&#39;arrière-plan, doit être suffisamment élevé.
+Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
+<p><strong>Exemple non valide : </strong><br>Le texte &quot;film | 20h40 ...&quot; ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
+<p><img src="images/contraste.png" alt="capture d&#39;écran présentant du texte dont le contraste n&#39;est pas suffisant"></p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d&#39;image porteur d&#39;information.</li>
+<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d&#39;assurer une bonne lisibilité pour tous.</li>
+<li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personne dans un environnement lumineux défavorable (en mobilité).</p>
+<p><strong>Outil : </strong><br>L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalyser/">colour contrast analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).  </p>
+<p><strong>Référence :</strong> WCAG 1.4.3</p>
+<h2 id="4-ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">4. Ne pas utiliser la couleur ou l&#39;information sensorielle comme seule source d&#39;information</h2>
+<p><strong>Cible : </strong> tout le monde, en particulier, les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong><br>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle...) comme la seule façon de véhiculer de l&#39;information, d&#39;indiquer une action, de solliciter une réponse ou de distinguer un élément. L&#39;information fournie par un changement de couleur ou une information sensorielle doit être complétée par une information textuelle (alternative) ou/et structuration sémantique.</p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Faire une capture d&#39;écran et passer la en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d&#39;information.</li>
+<li>Couper le son, le niveau d&#39;information doit rester identique. </li>
+</ul>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Permettre aux utilisateurs ne distinguant pas les couleurs ou l&#39;information sensorielle (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant... ), d&#39;accéder tout de même à l&#39;information par d&#39;autres moyens.</p>
+<p><strong>Exemple :</strong><br>Pour un graphique type camembert, où chaque partie est colorée différemment, ajouter par exemple une texture différente pour les identifier sans la couleur.</p>
+<p><strong>Exemple valide :</strong><br><img src="./images/couleur-ok.png" alt="Exemple d&#39;image valide n&#39;utilisant pas que la couleur pour transmettre l&#39;information"></p>
+<p><strong>Exemple non-valide :</strong><br><img src="./images/couleur-ko.png" alt="Exemple non-valide utilisant uniquement des voyants de couleur pour transmettre l&#39;information"></p>
+<p>Cet exemple n&#39;est pas valide, car l&#39;information est transmise uniquement par la couleur.</p>
+<p><strong>Référence :</strong> WCAG 1.4.1</p>
+<h2 id="5-mettre-en-place-des-listes">5. Mettre en place des listes</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, avec des déficiences cognitives.<br><strong>Quand : </strong> dès la conception et à la rédaction du contenu.</p>
+<p><strong>Description : </strong> </p>
+<p>La page, si besoin, doit posséder des listes sémantiquement pertinentes. 
+Sémantiser le contenu HTML en utilisant les balises :</p>
+<ul>
+<li><code>ol</code> pour les listes ordonnées</li>
+<li><code>ul</code> pour les listes non ordonnées</li>
+<li><code>li</code> pour les éléments de liste</li>
+</ul>
+<p><strong>À vérifier : </strong> </p>
+<ul>
+<li>Il ne doit pas y avoir de liste vide.</li>
+<li>Il ne doit pas y avoir de liste avec un seul élément (car ce n&#39;est pas une liste, à moins que cette liste ne soit générée dynamiquement !).</li>
+</ul>
+<p><strong> Objectif utilisateur : </strong></p>
+<p>Utiliser des listes permet d&#39;identifier, regrouper et présenter séquentiellement des éléments de même nature.</p>
+<p><strong>Objectif technique : </strong> </p>
+<p>Oblige à la structuration cohérente du contenu par le créateur du site.</p>
+<p><strong>Référence : </strong> WCAG 1.3.1</p>
+<h2 id="6-s-parer-le-contenu-de-l-interactivit-et-de-la-pr-sentation">6. Séparer le contenu, de l&#39;interactivité et de la présentation</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, avec des difficultés pour lire ou avec un déficit d&#39;attention.<br><strong>Quand : </strong> lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Séparer strictement le contenu (HTML), l&#39;interactivité (Javascript) et la présentation (CSS). </p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. </li>
+<li>Éviter d&#39;utiliser des images pour afficher du texte, préférer les habillages CSS.</li>
+<li>Utiliser des classes CSS plutôt que manipuler des styles CSS en ligne dans le code HTML.</li>
+<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information</li>
+<li>Ne pas câbler des évènements Javascript directement dans le code HTML mais gérer l&#39;interactivité dans un script ou un fichier JS à part.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Permettre aux utilisateurs, via leur agent utilisateur ou aide technique (par exemple, leur navigateur) de modifier le rendu visuel de la page (grossissement, couleur, position...). Par exemple, de grossir le texte sans problème de mise en pages.</p>
+<p><strong>Objectif technique : </strong></p>
+<p>Améliore globalement la maintenabilité.</p>
+<p><strong>Référence :</strong> WCAG 1.3.1, 1.4.5</p>
+<h2 id="7-valider-le-code">7. Valider le code</h2>
+<p><strong>Cible : </strong> tout le monde.<br><strong>Quand : </strong> pendant et à la fin du développement.</p>
+<p><strong>Description : </strong>  </p>
+<p>Le code source de la page doit être valide au niveau HTML.</p>
+<p><strong>À vérifier : </strong></p>
+<p>Dans le code HTML s&#39;assurer que :</p>
+<ul>
+<li>les éléments ont des balises de début et de fin</li>
+<li>les éléments sont imbriqués conformément à leurs spécifications </li>
+<li>les éléments ne contiennent pas d&#39;attributs dupliqués</li>
+<li>chaque ID est unique</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong> </p>
+<p>Des erreurs de validation peuvent empêcher l&#39;accès à certains contenus. </p>
+<p><strong>Objectif technique : </strong> </p>
+<ul>
+<li>Assurer l&#39;interopérabilité, la maintenabilité du code HTML.</li>
+<li>Accroître la compatibilité avec les aides techniques.</li>
+</ul>
+<p><strong>Référence :</strong> WCAG 4.1.1  </p>
+<p><strong>Outil : </strong> <a href="https://validator.w3.org/">validateur HTML et CSS du W3c</a></p>
+<h2 id="8-indiquer-la-langue-principale-et-les-changements-de-langue">8. Indiquer la langue principale et les changements de langue</h2>
+<p><strong>Cible : </strong> pour tous et en particulier, les personnes déficientes visuelles.<br><strong>Quand : </strong> lors du le développement.</p>
+<p><strong>Description : </strong>  </p>
+<p>Spécifier la langue principale du document grâce à l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans la balise <code>html</code>. 
+Préciser également la langue d&#39;un contenu exprimé dans une langue autre que la langue principale, en utilisant l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans l&#39;élément html contenant l&#39;expression en langue étrangère.  </p>
+<p><strong>À vérifier : </strong></p>
+<p>Pour les mots ou les expressions en langue étrangère passés dans l&#39;usage courant (Google, newsletter...) ou les noms propres, ne pas indiquer de changement de langue.</p>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Cet attribut permet d&#39;indiquer à la synthèse vocale la langue à utiliser.</p>
+<p><strong>Objectif technique : </strong> </p>
+<p>Permettre aux moteurs de recherche d&#39;identifier la langue d&#39;une page pour améliorer le référencement naturel.  </p>
+<p><strong>Exemple pour une page en français :</strong>  </p>
+<ul>
+<li>pour du HTML : <code>&lt;html lang=&quot;fr&quot;&gt;</code></li>
+<li>pour du XHTML : <code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;</code></li>
+</ul>
+<p><strong>Exemple de changement de langue : </strong><br><code>découvrir Orange &lt;span lang=&quot;fr&quot;&gt;live&lt;/span&gt; TV</code></p>
+<p><strong>Référence : </strong>WCAG 3.1.1, 3.1.2</p>
+<h2 id="9-associer-une-tiquette-pertinente-chaque-champ-de-formulaire">9. Associer une étiquette pertinente à chaque champ de formulaire</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles et cognitives, avec un déficit d&#39;attention et les utilisateurs de tactiles (mobile et tablette).<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description : </strong>  </p>
+<p>Chaque champ de formulaire doit être accompagné d&#39;un libellé permettant d&#39;identifier le rôle du champ, le type de donnée et le format attendu. </p>
+<p>Le libéllé doit être proche visuellement du champ afin qu&#39;on fasse facilement le lien entre eux (notamment pour les utilisateur de zoom ou de loupe logicielle, voire sur mobile).</p>
+<p>Chaque libellé doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un  attribut <code>for</code> renseigné, reprenant la valeur de l&#39;<code>id</code> du champ.</p>
+<p>Dans certains cas, il semble inutile d&#39;accompagner le champ de formulaire d&#39;un libellé (champ de recherche accompagné d&#39;un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l&#39;associé au champ de formulaire et le rendre invisible à l&#39;écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d&#39;écran.
+L&#39;attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de label tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> dans cette ordre de préférence.</p>
+<p><strong>À vérifier : </strong></p>
+<p>Pour tout élement de formulaire, le libellé est proche visuellement du champ qu&#39;il identifie.</p>
+<p>Pour les boutons radio et les cases à cocher, l&#39;utilisation de la balise <code>label</code> est, parfois, à compléter par un autre dispositif (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> ou <code>fieldset</code> et <code>legend</code>).
+Pour les champs obligatoires, ceci doit être précisé dans le label via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Ne pas respecter cette exigence est un point bloquant pour tout utilisateur de synthèse vocale mais aussi loupe logicielle car ceci ne savent pas entrer comme valeur dans les champs. Pour les utilisateurs de mobile et les déficients moteurs cela permet d&#39;activer ou cliquer plus facilement sur les éléments de formulaire.</p>
+<p><strong>Exemple valide : </strong><br><img src="images/formulaire.png" alt="capture d&#39;écran d&#39;un formulaire valide"></p>
+<p>&nbsp;</p>
+<p><strong>Exemple non-valide : </strong><br><img src="images/formulaire2.png" alt="capture d&#39;écran d&#39;un formulaire auquel il manque un label"></p>
+<p>&nbsp;<br><strong>Exemple de formulaire accessible : </strong></p>
+<p>Consulter <a href="./exemples/formulaire/index.html">l&#39;exemple de formulaire accessible</a> pour plus d&#39;informations.</p>
+<p><strong>Référence : </strong>WCAG 3.3.2</p>
+<h2 id="10-d-tecter-identifier-les-erreurs-et-sugg-rer-des-corrections">10. Détecter, identifier les erreurs et suggérer des corrections</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou ayant un déficit d&#39;attention et les seniors.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description : </strong> </p>
+<p>Les erreurs sont automatiquement détectées, l&#39;utilisateur est averti par la modification du titre de la page, l&#39;élément de formulaire en erreur est identifié et l&#39;erreur est décrite à l&#39;utilisateur sous forme de texte. Si besoin, une correction est suggérée.</p>
+<p>Enfin les libellés des messages d&#39;erreur doivent être explicites.</p>
+<p><strong>À vérifier : </strong></p>
+<p>L&#39;identification du champ en erreur ainsi qu&#39;une éventuelle suggestion de correction peuvent être ajoutées dynamiquement à la balise <code>label</code>, en priorité, mais aussi à l&#39;attribut <code>title</code> ou les attributs <code>aria-label</code> et <code>aria-labelledby</code> selon le contexte et les besoins.</p>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Guider l&#39;utilisateur en cas d&#39;erreurs permet d&#39;améliorer la compréhension et la correction des erreurs, pour tous les utilisateurs, en particulier, pour les novices sur internet, les seniors et les personnes déficientes cognitives.</p>
+<p><strong>Exemple valide : </strong><br><img src="images/formulaire-ok.png" alt="capture d&#39;écran d&#39;un formulaire affichant des messages d&#39;erreur à la saisie valides">  </p>
+<p><strong>Exemple non-valide : </strong><br><img src="images/formulaire-ko.png" alt="capture d&#39;écran d&#39;un formulaire affichant des messages d&#39;erreur à la saisie non-valides"></p>
+<p>&nbsp;<br><strong>Exemple de formulaire accessible : </strong></p>
+<p>Consulter <a href="./exemples/formulaire/index.html">l&#39;exemple de formulaire accessible</a> pour plus d&#39;informations.</p>
+<p><strong>Référence : </strong>WCAG 3.3.1, 3.3.3</p>
+<h2 id="11-fournir-un-quivalent-textuel-pour-les-images">11. Fournir un équivalent textuel pour les images</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles ou cognitives.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description : </strong> </p>
+<p>Mettre, dans toute balise <code>img</code>, un attribut <code>alt</code> pertinent : </p>
+<ul>
+<li>Pour les images cliquables : préciser la fonction / la cible du lien dans l’attribut <code>alt</code>,</li>
+<li>Pour les images porteuses d&#39;information : mettre un <code>alt</code> décrivant l&#39;information contenue dans l&#39;image</li>
+<li>Pour les images contenant du texte : mettre un attribut <code>alt</code> reprenant au moins le texte de l’image,</li>
+<li>Pour les images décoratives : mettre un attribut <code>alt</code> vide,</li>
+<li>Pour les images dont le contenu du <code>alt</code> serait trop long (schémas, graphes...), mettre à proximité de l&#39;image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page html contenant cette description.</li>
+</ul>
+<p><strong>À vérifier : </strong></p>
+<p>Toute balise <code>img</code> doit posséder un attribut <code>alt</code>.
+Pour les images non-porteuses d&#39;information, il est préférable de les passer en image de fond CSS.
+Pour les graphes, la solution, peut être, de mettre un lien sous l&#39;image permettant d&#39;accéder à un tableau de chiffre (le faire apparaître dans la même page ou sur une autre page).</p>
+<p><strong>Objectif utilisateur : </strong>
+Permettre l&#39;accès à l&#39;information incluse dans une image pour des utilisateurs qui n&#39;y ont pas accès.
+Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n&#39;affichant pas les images (mobile, faible bande passante...).</p>
+<p><strong>Objectif technique : </strong></p>
+<p>Améliorer le référencement naturel.</p>
+<p><strong>Exemple valide :</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;Retour à l&#39;accueil&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.&quot;&gt;</code></p>
+<p><strong>Exemple d&#39;alternative vide :</strong><br>Dans l&#39;exemple ci-dessous, le picto à droite n&#39;a pas besoin d&#39;être vocalisé puisque le texte situé à gauche apporte déjà l&#39;information.<br>Renseigner l&#39;attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
+<p><img src="./images/service-24.png" alt="exemple d&#39;image décorative">  </p>
+<p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
+<p><strong>Référence : </strong>WCAG 1.1.1</p>
+<h2 id="12-fournir-un-transcrit-pour-toute-piste-audio-ou-vid-o">12. Fournir un transcrit pour toute piste audio ou vidéo</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives et auditives et celle dont le Français est mal maîtrisé.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description : </strong> </p>
+<p>Fournir, pour toute piste audio ou vidéo porteuse d&#39;information, un transcrit complet dans la page elle-même ou grâce à un lien à proximité de celle-ci.</p>
+<p><strong>À vérifier : </strong></p>
+<p>Un transcrit complet est le texte contenant l&#39;ensemble des informations visuelles et auditives porteuses de sens. </p>
+<p><strong>Objectif utilisateur : </strong></p>
+<p>Fournir un moyen d&#39;accès à l&#39;information visuelle et auditive pour des personnes ne pouvant pas en bénéficier : malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, environnement lumineux ou bruyant.</p>
+<p><strong>Objectif technique : </strong></p>
+<p>Permet le référencement de tout contenu audio et vidéo.</p>
+<p><strong>Référence : </strong>WCAG 1.2.3</p>
+<h2 id="13-structurer-les-tableaux-de-donn-es">13. Structurer les tableaux de données</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Pour des données tabulaires :</p>
+<ul>
+<li>utiliser l&#39;élément <code>table</code> avec les éléments enfants <code>th</code> (pour les cellules d&#39;entêtes), <code>td</code>, <code>tr</code>.</li>
+<li>utiliser l&#39;attribut <code>scope</code> avec la valeur row/col pour associer les cellules d&#39;en-têtes et les cellules de données ou pour des tableaux complexes, utiliser les attributs <code>id</code> et <code>headers</code>.</li>
+<li>utiliser la balise <code>caption</code>, une balise <code>h1</code> à <code>h6</code> juste avant le tableau ou lier un texte proche du tableau via un <code>aria-labelledby</code> dans l&#39;élément <code>table</code> pour associer un titre au tableau.</li>
+<li>mettre un attribut <code>summary</code> dans l&#39;élément <code>table</code> pour expliciter la structure dans le cas d&#39;un tableau complexe. Attention cet attribut est déprécié en HTML5, il faudra donc rajouter, si besoin, le contenu du <code>summary</code> dans le titre du tableau.</li>
+</ul>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Rappel : ne pas utiliser de tableaux à des fins de mise en pages. </li>
+<li>La légende (<code>caption</code>) peut être remplacé par un titre de section (<code>hx</code>) placé avant le tableau. <code>summary</code>, quant à lui, n&#39;est nécessaire que pour des tableaux complexes.</li>
+<li>Préférer scinder un tableau complexe en plusieurs tableaux plus simples.</li>
+<li>Mettre un résumé (attribut <code>summary</code>) dans le tableau pour expliciter la structure dans le cas d&#39;un tableau complexe.</li>
+<li>Les balises <code>tbody</code>, <code>tfoot</code> et <code>thead</code> n&#39;ont aucune influence sur l&#39;accessibilité, il n&#39;est donc pas d&#39;obligation à les utiliser.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong>
+Donner un résumé et un titre aux tableaux de données permet à tous d&#39;en connaître l&#39;objet rapidement sans avoir à le parcourir. Pour des utilisateurs déficients visuels, lier les cellules aux en-têtes permet de se situer dans le tableau et de comprendre les données de celui-ci.</p>
+<p><strong>Objectif technique : </strong>
+Optimiser le référencement naturel.</p>
+<p><strong>Référence :</strong> WCAG 1.3.1</p>
+<h2 id="14-utiliser-des-tailles-relatives-pour-permettre-le-grossissement-des-textes">14. Utiliser des tailles relatives pour permettre le grossissement des textes</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand : </strong> lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>N&#39;utiliser pour les tailles de police que des tailles relatives (em, rem, %) et pour les éléments conteneurs permettant l&#39;agrandissement du texte seul de 200%.</p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Ne pas utiliser le pixel (px) pour des tailles qui doivent pouvoir s&#39;agrandir si l&#39;on ne zoome que les textes.</li>
+<li>Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s&#39;agrandir.</li>
+<li>Penser à rendre fluides les conteneurs des textes afin qu&#39;ils puissent s&#39;agrandir lorsque les textes sont zoomés.</li>
+<li>Dans Firefox, faire Affichage&gt;Zoom&gt;Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu&#39;il n&#39;y a pas de perte d&#39;information (disparition ou chevauchement de texte).<br><img src="./images/zoom-200.png" alt="capture d&#39;écran réglage du zoom dans Firefox"></li>
+</ul>
+<p><strong>Objectif utilisateur : </strong>
+Permettre aux utilisateurs (malvoyants, en mobilité, seniors...) d&#39;augmenter la taille du texte pour plus aisément accéder à l&#39;information.</p>
+<p><strong>Exemple :</strong><br>Voir l&#39;exemple <a href="./exemples/zoom/index.html">gestion du zoom, agrandissement de la taille du texte</a> pour plus d&#39;informations.</p>
+<p><strong>Référence :</strong> WCAG 1.4.4</p>
+<h2 id="15-rendre-l-intitul-d-un-lien-compr-hensible-hors-contexte">15. Rendre l&#39;intitulé d&#39;un lien compréhensible hors contexte</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives ou ayant un déficit d&#39;attention.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Rendre compréhensible les intitulés des liens hors contexte pour tous les utilisateurs et, en particulier, les déficients visuels. Lors de la navigation avec un lecteur d&#39;écran, il est possible d&#39;accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens &quot;en savoir plus&quot;, il sera impossible de les différencier les uns des autres.  </p>
+<p>S&#39;il n&#39;est pas possible de rendre un lien plus explicite, faute de place, mais que l&#39;intitulé du lien actuel est suffisant pour les personnes qui ont accès à l&#39;écran, le texte du lien peut être complété par un contenu supplétif caché ou en utilisant un <code>aria-label</code> ou <code>aria-labelledby</code>, spécifiquement pour les utilisateurs qui naviguent à l&#39;aide d&#39;un lecteur d&#39;écran.
+Par exemple dans l&#39;image ci-dessous, les deux liens &quot;valider&quot; ne sont pas suffisamment explicites pour une personne déficiente visuelle. Par contre quand on voit l&#39;écran, la disposition fait qu&#39;il n&#39;y a pas d&#39;ambiguïté sur le rôle de chaque bouton.</p>
+<p><img src="./images/liens-valider.png" alt="capture d&#39;écran présentant deux liens valider dont le libellé doit être explicité"></p>
+<p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l&#39;intitulé du lien. Celui-ci ne sera pas affiché à l&#39;écran, mais sera vocalisé par les outils d&#39;assistance.</p>
+<p><strong>Exemple :</strong><br><code>&lt;a href=&quot;...&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;</code><br><code>&lt;a href=&quot;...&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;</code></p>
+<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l&#39;intitulé du lien.<br>En complément de ces solutions, on pourrait ici également utiliser <strong> un attribut <code>title</code> </strong> pour faire apparaître une info-bulle &quot;valider le paiement en plusieurs fois&quot; au survol du lien avec la souris.</p>
+<p><strong>À vérifier : </strong>
+S&#39;assurer que les liens isolés du contenu donnent une bonne information sur l&#39;action déclenchée ou sa destination.
+Une page ne doit pas avoir plusieurs liens dont l&#39;intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
+<p><strong>Objectif utilisateur : </strong>
+Permettre à un utilisateur n&#39;ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d&#39;écran) ou les utilisateurs de loupe logicielle qui ne voient qu&#39;une fraction de la page. </p>
+<p><strong>Objectif technique : </strong>
+Expliciter les liens permet d&#39;améliorer le référencement naturel.</p>
+<p><strong>Exemple valide :</strong><br>Associer à un lien &quot;cliquer ici&quot;, un texte caché hors écran : &quot;commander votre téléphone&quot;.</p>
+<p><strong>Exemple non-valide :</strong><br>Liens &quot;Cliquez ici&quot; ou &quot;Lire la suite...&quot; sans plus de précision.</p>
+<p><strong>Référence :</strong> WCAG 2.4.9</p>
+<h2 id="16-pr-venir-l-utilisateur-de-l-ouverture-d-une-nouvelle-fen-tre">16. Prévenir l&#39;utilisateur de l&#39;ouverture d&#39;une nouvelle fenêtre</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives ou ayant un déficit d&#39;attention.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Prévenir l&#39;utilisateur de l&#39;ouverture de toute nouvelle fenêtre en l&#39;indiquant dans l&#39;intitulé du lien. 
+En cas d&#39;impossibilité avérée, utiliser  un icône (image avec un <code>alt</code>) en ajoutant l&#39;indication d&#39;ouverture d&#39;une nouvelle fenêtre ou juste &#39;nouvelle fenêtre&#39;.<br>En dernier recours, un texte  en <a href="./exemples/masquage/index.html">masquage accessible</a> (hors écran).</p>
+<p><strong>Exemple : </strong>  </p>
+<p>Exemple d&#39;icône pouvant indiquer l&#39;ouverture d&#39;une nouvelle fenêtre.<br><img src="./images/nouvelle-fenetre.png" alt="capture d&#39;écran d&#39;un lien accompagné d&#39;une icône indiquant l&#39;ouverture d&#39;une nouvelle fenêtre">  </p>
+<p><strong>À vérifier : </strong>
+Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type &quot;(nouvelle fenêtre)&quot; est présente dans l&#39;intitulé du lien, ou la mention (nouvelle fenêtre) est positionnée hors écran via CSS (<a href="./exemples/masquage/index.html">masquage accessible</a>).</p>
+<p><strong>Objectif utilisateur : </strong>
+Éviter l&#39;ouverture inattendue de fenêtre, car cela peut gêner, perturber ou désorienter l&#39;utilisateur. En particulier, pour des personnes en mobilité, utilisant des synthèses vocales ou présentant des déficiences cognitives.</p>
+<p><strong>Exemple valide :</strong><br>Pour un lien pointant à l&#39;extérieur du site et ouvrant une nouvelle fenêtre, l&#39;intitulé du lien texte &quot;Accéder au site orange.com (nouvelle fenêtre)&quot;, pour une image-lien avec un alt=&quot;consulter les CGU (nouvelle fenêtre)&quot;.    </p>
+<p><strong>Référence :</strong> WCAG 3.2.2</p>
+<h2 id="17-permettre-d-utiliser-les-principales-fonctionnalit-s-de-l-application-au-clavier">17. Permettre d&#39;utiliser les principales fonctionnalités de l&#39;application au clavier</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, motrices et en mobilité.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong>
+Mettre en place des gestionnaires d&#39;événements qui ne s&#39;appuient pas uniquement sur des événements souris. </p>
+<p><strong>À vérifier : </strong>
+Toutes les actions importantes effectuées à la souris peuvent aussi l&#39;être qu&#39;avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (drag&#39;ndrop, gestes à plusieurs doigts sur mobile ...).</p>
+<p><strong>Objectif utilisateur : </strong>
+ Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité...) d&#39;accéder aux fonctionnalités principales de l&#39;application au clavier.</p>
+<p><strong>Exemple valide :</strong>      </p>
+<ul>
+<li>Un sous-menu qui se déroule au survol doit aussi se dérouler quand l&#39;item de menu parent reçoit le focus clavier.</li>
+<li>Dans un webmail, un clic droit permet d&#39;accéder à un menu pour vider la corbeille, un bouton &quot;vider la corbeille&quot; est également présent dans l&#39;interface quand la corbeille est en cours de consultation. </li>
+</ul>
+<p><strong>Exemple non-valide :</strong><br>Une fonctionnalité réalisable qu&#39;à l&#39;aide du drag&#39;n drop et sans équivalent au clavier.</p>
+<p><strong>Référence :</strong> WCAG 2.1.1</p>
+<h2 id="18-rendre-le-parcours-du-focus-s-quentiel-et-logique-sans-pi-ge-clavier">18. Rendre le parcours du focus séquentiel et logique sans piège clavier</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand : </strong> lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre logique pour l&#39;utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,...). </p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Pour valider cette exigence, la position du focus doit être visible à tous moments (propriété <code>outline</code> et <code>:focus</code> en CSS), voir exigence 19, ci-dessous.</li>
+<li>Attention à l&#39;ordre d&#39;insertion des éléments dans le code HTML, cela a une influence sur l&#39;ordre de déplacement du focus. Un élément présent à la fin du code source, mais positionné tout en haut de la page via CSS sera le dernier à recevoir le focus. </li>
+<li>Pour la maintenabilité, éviter l&#39;utilisation de l&#39;attribut <code>tabindex</code> avec des valeurs supérieur à 0.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong>
+Permettre la navigation logique sans piège au clavier dans les pages de l&#39;application. Nécessaire pour les utilisateurs naviguant qu&#39;au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
+<p><strong>Exemple non-valide :</strong><br>Une page contenant un lecteur vidéo dont le focus peut entrer à l&#39;intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        </p>
+<p><strong>Référence :</strong> WCAG 2.4.3, 2.1.2</p>
+<h2 id="19-rendre-visible-le-focus-en-toute-circonstance">19. Rendre visible le focus en toute circonstance</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d&#39;attention et en mobilité.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Ne pas masquer le focus et si nécessaire le rendre suffisamment visible (par exemple, en modifiant la propriété CSS <code>outline</code>) sur tous les éléments susceptibles de recevoir celui-ci (liens, boutons, éléments de formulaire). Vous pouvez meêm amplifier la visibilité du focus afin qu&#39;il soit plus facilement identifiable.</p>
+<p>Lorsqu&#39;un effet est visible sur un élément lors du survol de la souris (<code>:hover</code> en CSS par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
+<p><strong>À vérifier : </strong>
+Dans beaucoup de frameworks front ou dans les reset CSS, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
+<p><strong>Objectif utilisateur : </strong>
+Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d&#39;attention et de mémorisation ou en mobilité).</p>
+<p><strong>Exemple valide :</strong><br>Focus positionné sur le lien &quot;HTC Desire 620&quot;.</p>
+<p><img src="./images/focus-ok.png" alt="capture d&#39;écran montrant un lien dont le focus est clairement visible">  </p>
+<p><strong>Exemple non-valide :</strong><br>Focus positionné sur le lien &quot;HTC Desire 620&quot;.</p>
+<p><img src="./images/focus-ko.png" alt="capture d&#39;écran montrant un lien dont le focus n&#39;est pas suffisamment visible">   </p>
+<p><strong>Référence :</strong> WCAG 2.4.7</p>
+<h2 id="20-fournir-des-liens-d-vitement">20. Fournir des liens d&#39;évitement</h2>
+<p><strong>Cible : </strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Mettre en place des liens d&#39;accès direct (liens d&#39;évitement) permettant d&#39;accéder aux principales zones de la page (navigation, contenu, pied de page, recherche...) grâce à des liens internes vers des ancres (balises <code>&lt;a&gt;</code> ou tout élément HTML possédant un attribut <code>id</code>). En cas de <strong>fortes contraintes,</strong> ces liens peuvent être cachés et affichés uniquement lors de la navigation clavier.</p>
+<p><strong>À vérifier : </strong>
+Lorsqu&#39;un lien d&#39;évitement est activé, vérifier que le focus est bien déplacé (il ne s&#39;agit pas uniquement de faire défiler la page au bon endroit).</p>
+<p><strong>Objectif utilisateur : </strong>
+Faciliter la navigation pour des utilisateurs naviguant au clavier, des utilisateurs malvoyants, utilisateurs de loupe logicielle ou de téléphone mobile.</p>
+<p><strong>Exemple : </strong><br>Des liens d&#39;évitement (&quot;Aller à la navigation&quot;, &quot;Aller au contenu&quot;) sont disponibles sur ce site.
+Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d&#39;adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
+<p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com">   </p>
+<p><strong>Référence :</strong> WCAG 2.4.1</p>
+<h2 id="21-animation">21. Animation</h2>
+<p><strong>Cible : </strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d&#39;attention ou de compréhension, les personnes épileptiques.<br><strong>Quand : </strong> lors de la conception du service et lors de la conception graphique.</p>
+<p><strong>Description :</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l&#39;utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d&#39;épilepsie</a>).
+Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l&#39;animation, la mise à jour ou le clignotement via un bouton par exemple.</p>
+<p><strong>Exemple : </strong><br><img src="./images/carrousel.png" alt="capture d&#39;écran d&#39;un carrousel disposant d&#39;un bouton pour mettre en pause l&#39;animation">  </p>
+<p>Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsque celui-ci a le focus.<br>Il est également possible d&#39;ajouter un bouton &quot;pause&quot; directement dans l&#39;interface.</p>
+<p><strong>Référence :</strong> WCAG 2.2.2</p>
+<h2 id="22-s-assurer-que-les-principales-fonctionnalit-s-sont-utilisables-avec-les-lecteurs-d-cran">22. S&#39;assurer que les principales fonctionnalités sont utilisables avec les lecteurs d&#39;écran</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles.<br><strong>Quand : </strong>lors du développement.</p>
+<p><strong>Description : </strong></p>
+<p>Respecter les recommandations générales d&#39;accessibilité, utiliser en priorité les composants standards HTML, sinon, utiliser l&#39;ARIA (Accessible Rich Internet Application) pour les composants d&#39;interface complexes.</p>
+<p><strong>À vérifier : </strong>
+S&#39;assurer de l&#39;absence de point bloquant avec les couples navigateur/lecteur d&#39;écran (FireFox/NVDA, IE/Jaws, Safari/VoiceOver) dans les parcours utilisateurs (scénarios d&#39;utilisation des principales fonctionnalités de l&#39;application).
+En effet, les utilisateurs de lecteur d&#39;écran sont les plus impactés par un manque d&#39;accessibilité, on repère un grand nombre de problèmes en vérifiant cette exigence.</p>
+<p><strong>Objectif utilisateur : </strong>
+Permettre à l&#39;utilisateur de lecteur d&#39;écran d&#39;accéder aux principales fonctionnalités de l&#39;application, mais aussi de s&#39;assurer pour tous les utilisateurs de l&#39;utilisabilité de l&#39;application.</p>
+<h2 id="23-conserver-un-ordre-de-tabulation-logique-lors-d-une-insertion-ou-d-une-modification-dynamique">23. Conserver un ordre de tabulation logique lors d&#39;une insertion ou d&#39;une modification dynamique</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives ou avec un déficit d&#39;attention.<br><strong>Quand : </strong>lors du développement.</p>
+<p><strong>Description : </strong>
+Lorsqu&#39;un élément est affiché suite à une interaction de l&#39;utilisateur : </p>
+<ul>
+<li>celui-ci doit apparaître dans le code source juste après l&#39;élément déclenchant (exemple : menu dépliant), </li>
+<li>ou le focus doit être déplacé sur un des premiers éléments du contenu généré (lien, bouton, titre, paragraphe...).  </li>
+</ul>
+<p>Lors de la disparition de contenu, le focus doit être redonné à l&#39;élément déclenchant.<br>Par exemple à la fermeture d&#39;une boite de dialogue, le focus doit être repositionné sur l&#39;élément qui a déclenché l&#39;ouverture (bouton, lien ...).</p>
+<p>Pour rappel : le contenu dynamiquement généré doit être accessible et donc respecter tous les critères d&#39;accessibilité.<br>Il existe plusieurs solutions pour prévenir l&#39;utilisateur en cas d&#39;apparition/disparition de contenu :</p>
+<ul>
+<li>via du texte</li>
+<li>en déplaçant le focus</li>
+<li>en utilisant de l&#39;ARIA</li>
+</ul>
+<p>Voir <a href="./exemples/simple-menu/simple-menu.html">l&#39;exemple de menu déroulant</a> pour la mise en pratique de l&#39;attribut <code>aria-haspopup</code>.</p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Le déplacement du focus s&#39;effectue de manière logique (ordre de lecture naturel).</li>
+<li>L&#39;ordre de lecture n&#39;a pas été redéfini en utilisant des attributs <code>tabindex</code> (avec des valeurs positives).</li>
+</ul>
+<p>En pratique, l&#39;attribut <code>tabindex</code> devrait être utilisé qu&#39;avec deux valeurs :</p>
+<ul>
+<li><code>tabindex=&quot;-1&quot;</code> : pour interdire un élément à recevoir le focus via la touche <code>TAB</code> et autoriser celui-ci à recevoir le focus via Javascript.</li>
+<li><code>tabindex=&quot;0&quot;</code> : pour rendre un élément focusable via la touche <code>TAB</code> et via Javascript.</li>
+</ul>
+<p><strong>Objectif utilisateur : </strong>
+Permettre à l&#39;utilisateur, par exemple, un non ou malvoyant, de repérer l&#39;apparition de nouveaux contenus et interagir avec ceux-ci.  </p>
+<p><strong>Référence :</strong> WCAG 2.4.3</p>
+<h2 id="24-s-assurer-que-l-utilisateur-garde-le-contr-le-lors-des-interactions">24. S&#39;assurer que l&#39;utilisateur garde le contrôle lors des interactions</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives ou avec un déficit d&#39;attention.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong>
+Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l&#39;activation d&#39;un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l&#39;utilisateur ait été averti. </p>
+<p><strong>Objectif utilisateur : </strong>
+Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.</p>
+<p><strong>Exemple :</strong><br>Un formulaire doit obligatoirement avoir un bouton d&#39;envoi. Celui-ci ne doit pas être envoyé automatiquement après la saisie de l&#39;utilisateur.</p>
+<p><strong>Référence :</strong> WCAG 3.2.1, 3.2.2
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="crit-res-incontournables-pour-la-conception">Critères incontournables pour la conception</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères incontournables", "url": "./fondamentaux.html"},
+        {"label":"Critères incontournables pour la conception"}]
+    );
+    addSubMenu();
+});</script>
+
+<p><span data-menuitem="fondamentaux"></span></p>
+<h2 id="1-donner-un-titre-aux-pages">1. Donner un titre aux pages</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand : </strong> dès la conception et pendant le développement.</p>
+<p><strong>Description :</strong><br>Donner à chaque page un titre qui lui est spécifique et qui reflète son contenu ou sa fonction (balise <code>&lt;title&gt;</code>).<br>Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d&#39;identifier formellement la page sur laquelle on se trouve.</p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Bien qu&#39;il n&#39;y ait pas de règle, en général (ouverture de nombreux onglets de multiples applications), on va de l&#39;information la plus spécifique vers la moins spécifique (ex: nom de la page courante - nom du site). Pour le fenêtrage d&#39;une multitude d&#39;application, le contexte d&#39;utilisation est différent, dans ce cas, on préférera aller de l&#39;information la moins spécifique vers la plus spécifique.</li>
+<li>Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d&#39;une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu...), le titre de la page doit refléter cette modification du contenu.</li>
+</ul>
+<p><strong>Exemple valide :</strong><br><code>Accueil - Espace client Orange</code></p>
+<p><strong>Exemple non-valide :</strong><br><code>Accueil</code></p>
+<h2 id="2-donner-des-titres-aux-rubriques">2. Donner des titres aux rubriques</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes cognitives, avec des difficultés pour lire et déficientes visuelles.<br><strong>Quand : </strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Description :</strong><br>Identifier les balises de titres à utiliser (balises HTML <code>h1</code> jusqu&#39;à <code>h6</code>) pour structurer le contenu des pages.
+Les personnes malvoyantes naviguant à l&#39;aide d&#39;un lecteur d&#39;écran peuvent accéder à la liste des titres de la page pour naviguer rapidement. 
+Tout comme dans un fichier Word, il est possible d&#39;utiliser la table des matières si des titres ont correctement été positionnés à l&#39;intérieur du document.  </p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Les titres doivent être pertinents, refléter la structure de l&#39;information contenue dans la page.</li>
+<li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d&#39;un titre <code>h2</code> à un titre <code>h4</code>).</li>
+<li>On peut mettre plusieurs <code>h1</code> par page (se limiter tout de même à deux dans la majorité des cas).</li>
+</ul>
+<p><strong>Exemple valide : </strong>  </p>
+<p>Un titrage de page cohérent et pertinent :</p>
+<p><code>(Titre 1) Accueil - Orange</code></p>
+<p><code>(Titre 2) Les actualités</code></p>
+<p><code>(Titre 2) La fibre arrive !</code></p>
+<p><code>(Titre 3) Êtes-vous éligible ?</code></p>
+<h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
+<p><strong>Cible : </strong> tout le monde, en particulier, les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d&#39;attention et les seniors.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong><br>Le niveau de contraste entre le texte et l&#39;arrière-plan, doit être suffisamment élevé.
+Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
+<p><strong>Exemple non-valide : </strong><br>Le texte &quot;film | 20h40 ...&quot; ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
+<p><img src="images/contraste.png" alt="capture d&#39;écran présentant du texte dont le contraste n&#39;est pas suffisant"></p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d&#39;image porteur d&#39;information.</li>
+<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d&#39;assurer une bonne lisibilité pour tous.</li>
+<li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
+</ul>
+<p><strong>Outil : </strong><br>L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalyser/">colour contrast analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).  </p>
+<h2 id="4-ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">4. Ne pas utiliser la couleur ou l&#39;information sensorielle comme seule source d&#39;information</h2>
+<p><strong>Cible : </strong> tout le monde, en particulier, les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description : </strong><br>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle...) comme la seule façon de véhiculer de l&#39;information, d&#39;indiquer une action, de solliciter une réponse ou de distinguer un élément. L&#39;information fournie par un changement de couleur ou une information sensorielle doit être complétée par une information textuelle (alternative) ou/et structuration sémantique.</p>
+<p><strong>Exemple valide : </strong>  </p>
+<p><img src="images/couleur-ok.png" alt="illustration utilisant des icônes de couleurs pour transmettre l&#39;information"></p>
+<p><strong>Exemple non-valide : </strong></p>
+<p><img src="images/couleur-ko.png" alt="illustration utilisant des icônes de couleurs pour transmettre l&#39;information">  </p>
+<p>Cet exemple n&#39;est pas valide, car l&#39;information est transmise uniquement par la couleur.</p>
+<p><strong>À vérifier : </strong></p>
+<ul>
+<li>Faire une capture d&#39;écran et passer la en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d&#39;information.</li>
+<li>Couper le son, le niveau d&#39;information doit rester identique.</li>
+</ul>
+<h2 id="5-d-finir-des-quivalents-textuels">5. Définir des équivalents textuels</h2>
+<p><strong>Cible : </strong> les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.<br><strong>Quand : </strong> dès la conception et pendant le développement.</p>
+<p><strong>Description :</strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.</p>
+<p><strong>Exemple : </strong><br>Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton :</p>
+<ul>
+<li>menu</li>
+<li>réglages</li>
+<li>chaine précédente</li>
+<li>couper le son ...  </li>
+</ul>
+<p><img src="images/player.png" alt="capture d&#39;écran d&#39;un lecteur vidéo contenant plusieurs boutons">   </p>
+<h2 id="6-visibilit-du-focus">6. Visibilité du focus</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand : </strong> lors de la conception graphique et lors du développement.</p>
+<p><strong>Description :</strong><br>La position du focus clavier doit être visible à tous moment. Lorsqu&#39;un élément cliquable reçoit le focus (lien, bouton ...), ceci doit être visible pour l&#39;utilisateur. Par défaut, le navigateur entoure l&#39;élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour le rendre plus visible (assurer un contraste suffisant, par exemple) par un effet personnalisé, mais ne doit pas être supprimé. Les utilisateurs qui naviguent à l&#39;aide du clavier (touche TAB) ont besoin de connaître la position du focus.    </p>
+<p>L&#39;effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l&#39;effet visible au survol du pointeur de la souris.</p>
+<p><strong>Exemples valides : </strong><br>Dans les captures d&#39;écran suivantes, le focus est positionné sur le lien &quot;209 SMS/mois&quot;.<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
+Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d&#39;indiquer de manière explicite l&#39;emplacement du focus.<br><img src="images/focus.png" alt="capture d&#39;écran présentant l&#39;affichage du focus par défaut">
+<img src="images/focus2.png" alt="capture d&#39;écran présentant un comportement personnalisé pour l&#39;affichage du focus"></p>
+<h2 id="7-agrandissement-de-la-taille-du-texte">7. Agrandissement de la taille du texte</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand : </strong> lors de la conception graphique et principalement lors du développement.</p>
+<p><strong>Description :</strong><br>La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). A ce niveau de zoom, la présentation de la page peut être altérée, mais l&#39;information doit rester lisible (pas de texte tronqué, ni superposé).
+Bien que ceci doive être pris en compte pendant la phase de développement, on peut identifier les zones de l&#39;écran qui doivent ou non s&#39;agrandir en même temps que la taille du texte dès la phase de conception graphique. Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d&#39;y réfléchir dès le départ.</p>
+<p><strong>Exemple : </strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d&#39;écran avec zoom à 100%">    </p>
+<p>&nbsp;<br><strong>Exemple valide : </strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d&#39;écran avec zoom à 200% et texte lisible">    </p>
+<p>&nbsp;<br><strong>Exemple non-valide : </strong><br>Avec zoom du texte à 200%. Ici la hauteur de l&#39;élément contenant le texte n&#39;a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d&#39;écran avec zoom à 200% et texte tronqué">  </p>
+<h2 id="8-animation">8. Animation</h2>
+<p><strong>Cible : </strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d&#39;attention ou de compréhension, les personnes épileptiques.<br><strong>Quand : </strong> lors de la conception du service et lors de la conception graphique.</p>
+<p><strong>Description :</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l&#39;utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d&#39;épilepsie</a>).</p>
+<p><strong>Exemple : </strong><br><img src="./images/carrousel.png" alt="capture d&#39;écran d&#39;un carrousel disposant d&#39;un bouton pour mettre en pause l&#39;animation">  </p>
+<p>Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsque celui-ci reçoit le focus.<br>Il est également possible d&#39;ajouter un bouton &quot;pause&quot; directement dans l&#39;interface.</p>
+<h2 id="9-libell-des-liens">9. Libellé des liens</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d&#39;attention.<br><strong>Quand : </strong> lors de la conception du service et lors de la conception graphique.</p>
+<p><strong>Description :</strong><br>Les libellés des liens doivent être suffisamment explicites.
+Dans les cas exceptionnels où ce n&#39;est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale.</p>
+<p><strong>Exemple valide :</strong><br><code>découvrez nos offres</code></p>
+<p><strong>Exemple non-valide :</strong><br><code>cliquez ici</code><br><code>en savoir plus</code></p>
+<h2 id="10-navigation-au-clavier">10. Navigation au clavier</h2>
+<p><strong>Cible : </strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand : </strong> lors de la conception du service et lors du développement.</p>
+<p><strong>Description :</strong><br>Toutes les fonctionnalités doivent être utilisables à l&#39;aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l&#39;aide de la touche TAB).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glissé déposé, menu apparaissant au clic droit...), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l&#39;interface (bouton, icône, menu...). </p>
+<p><strong>Exemple : </strong><br>Dans webmail, si un clic droit sur le dossier &quot;corbeille&quot; permet d&#39;accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton &quot;vider la corbeille&quot; ailleurs dans l&#39;interface ou depuis un menu déroulant accessible au clavier.</p>
+<h2 id="11-formulaires">11. Formulaires</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong><br>Chaque champ de formulaire doit être accompagné d&#39;un libellé permettant d&#39;identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin qu&#39;on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle), voire sur mobile). Les champs en erreur doivent pouvoir être identifiés, si besoin, suggérer une correction. Ceci s&#39;applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher ...). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l&#39;aide d&#39;un lecteur d&#39;écran.</p>
+<p><strong>Exemple valide : </strong><br><img src="images/formulaire.png" alt="capture d&#39;écran d&#39;un formulaire valide"></p>
+<p>&nbsp;</p>
+<p><strong>Exemple non-valide : </strong><br><img src="images/formulaire2.png" alt="capture d&#39;écran d&#39;un formulaire auquel il manque un label"></p>
+<p>&nbsp;</p>
+<p>Dans certains cas, il semble inutile d&#39;accompagner le champ de formulaire d&#39;un libellé (champ de recherche accompagné d&#39;un bouton en forme de loupe par exemple). Dans ce cas prévoir tout de même un libellé, celui-ci ne sera pas affiché à l&#39;écran mais sera tout de même associé au champ de formulaire lors du développement pour faciliter la navigation à l&#39;aide d&#39;un lecteur d&#39;écran.</p>
+<p>Enfin les libellés des messages d&#39;erreur doivent être explicites.</p>
+<p><strong>Exemple valide : </strong><br><img src="images/formulaire-ok.png" alt="capture d&#39;écran d&#39;un formulaire affichant des messages d&#39;erreur à la saisie valides">  </p>
+<p><strong>Exemple non-valide : </strong><br><img src="images/formulaire-ko.png" alt="capture d&#39;écran d&#39;un formulaire affichant des messages d&#39;erreur à la saisie non-valides"></p>
+<h2 id="12-boites-de-dialogues-et-ouverture-de-nouvelles-fen-tres">12. Boites de dialogues et ouverture de nouvelles fenêtres</h2>
+<p><strong>Cible : </strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong><br>Eviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l&#39;ouverture d&#39;une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte &quot;nouvelle fenêtre&quot; soit vocalisé par les lecteurs d&#39;écran. Ceci afin que les personnes malvoyantes sachent qu&#39;une nouvelle fenêtre s&#39;ouvre.
+De même éviter le recours systématique aux boites de dialogues pour présenter des informations dans les pages (présentation du service ...). Celles-ci posent souvent des problèmes d&#39;accessibilité pour les personnes qui naviguent au clavier ou au lecteur d&#39;écran qui nécessiteront une attention particulière lors de la phase de développement.</p>
+<p><strong>Exemple non-valide : </strong><br>Dans l&#39;exemple ci-dessous le recours à une boite de dialogue n&#39;est pas justifié. L&#39;utilisation d&#39;un page web standard permettrait :</p>
+<ul>
+<li>De laisser plus d&#39;espace au contenu (en supprimant les marges autour de la boite de dialogue.</li>
+<li>De pouvoir utiliser le bouton &quot;précédent&quot; du navigateur pour revenir en arrière lors de la navigation entre les différentes pages de la boite de dialogue.</li>
+<li>De faciliter l&#39;affichage sur les petits écrans.</li>
+<li>D&#39;éviter des problèmes d&#39;accessibilité pour les personnes qui naviguent à l&#39;aide du clavier ou à l&#39;aide d&#39;un lecteur d&#39;écran.</li>
+<li>D&#39;alléger le poids de la page et le temps de chargement, car dans cet exemple la page derrière la boite de dialogue doit être chargée.  </li>
+</ul>
+<p><img src="images/dialog.png" alt="capture d&#39;écran d&#39;une boite de dialogue beaucoup trop volumineuse"></p>
+<h2 id="13-fournir-des-liens-d-vitement">13. Fournir des liens d&#39;évitement</h2>
+<p><strong>Cible : </strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.<br><strong>Quand : </strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong><br>Fournir des liens d&#39;évitement du type &quot;Aller au contenu&quot; sur chaque page. Ceux-ci facilitent la navigation pour les personnes utilisant le clavier, en mobilité ou navigant à l&#39;aide d&#39;un lecteur d&#39;écran. En cas de <strong>fortes contraintes,</strong> les liens peuvent être masqués à l&#39;écran et apparaître uniquement lors de la navigation au clavier.</p>
+<p><strong>Exemple : </strong><br>Des liens d&#39;évitement (&quot;Aller à la navigation&quot;, &quot;Aller au contenu&quot;) sont disponibles sur ce site.
+Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d&#39;adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
+<p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com">
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="exigences-accessibilit-web-orange">Exigences accessibilité web Orange</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Ensemble des exigences"}]);
+});</script>
+<h2 id="introduction-et-contexte">Introduction et contexte</h2>
+<p>Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les <a href="http://www.w3.org/Translations/WCAG20-fr/">Web Content Accessibility Guidelines v2</a> (WCAG 2). Il s&#39;agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.</p>
+<p>Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est <strong>le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant</strong> du point de vue utilisateur suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
+<p>Pour la partie, solutions techniques, nous avons pointé vers un contenu externe que sont les <a href="http://www.accede-web.com/notices/">notices Accede-Web</a>. En effet, ces notices sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.</p>
+<p>Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).</p>
+<p>De plus, pour ce qui est des tests associés, nous avons utilisé le <a href="http://references.modernisation.gouv.fr/referentiel">Référentiel Général d’Accessibilité de l’Administration version 3</a> (RGAA3). C’est le référentiel officiel permettant de s’assurer qu’un site d&#39;état et de collectivités territoriales est en conformité avec l’<a href="http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&amp;cidTexte=JORFTEXT000000809647">article 47 de la loi de février 2005 pour l&#39;égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées</a>.</p>
+<p>Le RGAA3 est méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA3 est également conforme aux WCAG2.<br>Le RGAA3 est basé sur des tests spécifiques rangés par grandes thématiques (présentation, formulaire, contenu non-textuel…) permettant de valider la conformité du site ou de l’application.</p>
+<h2 id="liste-des-chapitres-du-rgaa">Liste des chapitres du RGAA</h2>
+<ol>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#images">Images</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#cadres">Cadres</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#couleurs">Couleurs</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#multimedia">Multimédia</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#tableaux">Tableaux</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#liens">Liens</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#scripts">Scripts</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#elements">Eléments obligatoires</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#structure">Structuration de l&#39;information</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#presentation">Présentation de l&#39;information</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#formulaire">Formulaires</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#navigation">Navigation</a></li>
+<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#consultation">Consultation</a></li>
+</ol>
+<p><strong>Tests associés</strong> : les tests RGAA v3 (niveau A et AA) associés à cette thématique permettant de valider l’accessibilité.</p>
+<h2 id="les-exemples">Les exemples</h2>
+<p>Des exemples didactiques pour certains types de composants ou d’éléments d’interface particulièrement délicats à rendre accessible et fréquemment utilisés sont disponibles dans la section <a href="./exemples.html">exemples</a>.
+Ces exemples utilisent la librairie <a href="http://boosted.orange.com/">boosted</a>. Cette librairie basée sur <a href="http://getbootstrap.com/">bootstrap</a> permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange, la Brand.</p>
+<h2 id="rappel-les-notices-accede-web">Rappel : les notices accede-web</h2>
+<p>Les recommandations d&#39;accessibilité web Orange font référence aux notices accessibilité du site <a href="http://accede-web.com/">accede-web</a>. 
+Ce site propose d&#39;excellentes notices sur l&#39;accessibilité au format Web et PDF.</p>
+<p class="row"><br>    <div class="perso col-sm-12 col-md-6 col-lg-3">
+        <img src="./images/perso1.png" alt=""> 
+        <a href="http://www.accede-web.com/notices/graphique/" class="btn btn-info">Notice d’accessibilité pour la conception fonctionnelle et graphique</a>
+    </div>
+    <div class="perso col-sm-12 col-md-6 col-lg-3">
+        <img src="./images/perso2.png" alt=""><br>        <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
+    </div>
+    <div class="perso col-sm-12 col-md-6 col-lg-3">
+        <img src="./images/perso3.png" alt=""><br>        <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité HTML, CSS et JavaScript</a>
+    </div>
+    <div class="perso col-sm-12 col-md-6 col-lg-3">
+        <img src="./images/perso4.png" alt=""><br>        <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interface riche</a>
+    </div><br></p>
+
+<p><br>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="html5-aria">HTML5 &amp; ARIA</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"HTML5 & ARIA"}]);
+});</script>
+
+<h2 id="introduction">Introduction</h2>
+<p>Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d’interface complexes : slider, datepicker…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le HTML classique. </p>
+<p>Même avec l’évolution due au HTML5, on manque encore d’informations sémantiques à fournir aux aides techniques (lecteurs d’écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées.</p>
+<h2 id="qu-est-ce-">Qu’est-ce ?</h2>
+<p>Pour remédier à ces limitations, le W3c/WAI a officiellement publié une recommandation appelée ARIA, pour Accessible Rich Internet Applications, ainsi qu’une suite de documents traitant de l’utilisation d’ARIA.</p>
+<p>ARIA est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que HTML, SVG, XML, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (AT). Grâce à ARIA, on peut décrire des éléments et leurs comportements en HTML lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. ARIA définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. <strong> ARIA prend tout son sens et exprime tout son potentiel lorsqu&#39;il est utilisé dans du HTML5 </strong>.</p>
+<p>Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d’interface. Il faut donc toujours assurer la mise en forme grâce aux CSS, le contrôle du contenu et la gestion de l’interactivité via Javascript.</p>
+<h2 id="le-support">Le support</h2>
+<p>Le support d’ARIA s’améliore constamment et est déjà présent depuis longtemps :</p>
+<ul>
+<li>Dans les navigateurs modernes (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera &gt;=9.5, Internet Explorer 8 pour un support basique, Internet Explorer &gt;=9 et Edge pour un support avancé).</li>
+<li>Dans les aides techniques (NVDA &gt;=2010, Orca &gt;= 2 + Firefox uniquement, VoiceOver OSX &gt;=10.5, iOS &gt;=4, JAWS &gt;=8, Window-Eyes &gt;=7, ZoomText 10 pour un support basique, ZoomText &gt;=11 pour un support avancé).  </li>
+</ul>
+<p>De plus, l’efficacité optimale de la prise en charge d’ARIA dépend du couple navigateur, aide technique, Firefox avec NVDA, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
+<h2 id="faut-il-l-utiliser-">Faut-il l’utiliser ?</h2>
+<p>Globalement, ARIA améliore l’accessibilité pour des composants pas nativement présents en html (ou pas accessibles notamment certains 
+HTML5). La robustesse et l’interopérabilité d’ARIA sont maintenant suffisantes pour qu’<a href="https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html">une vingtaine de techniques WCAG 2.0 soient spécifiques à ARIA</a> (contre 10 techniques HTML5). En conséquence, pour des applications Internet riches, l’ARIA est incontournable pour leur mise en accessibilité.</p>
+<p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/NVDA.</p>
+<p>Dans un environnement maitrisé (intranet), les environnements cibles sont connus et en nombre fini, donc, on peut statuer plus facilement !</p>
+<h2 id="webographie">Webographie</h2>
+<ul>
+<li>Page de synthèse sur &quot;ARIA in HTML&quot; : <a href="https://specs.webplatform.org/html-aria/webspecs/master/">https://specs.webplatform.org/html-aria/webspecs/master/</a></li>
+<li>W3c :<ul>
+<li>Introduction à ARIA : <a href="http://www.w3.org/TR/wai-aria/introduction">http://www.w3.org/TR/wai-aria/introduction</a> </li>
+<li>Spécification ARIA : <a href="http://www.w3.org/TR/wai-aria/">http://www.w3.org/TR/wai-aria/</a></li>
+<li>Mettre en place ARIA : <a href="http://www.w3.org/TR/wai-aria-practices/">http://www.w3.org/TR/wai-aria-practices/</a>, attention « working draft »</li>
+<li>Utiliser ARIA en HTML (5) : <a href="http://www.w3.org/TR/aria-in-html/">http://www.w3.org/TR/aria-in-html/</a> , attention « working draft »</li>
+<li>Techniques ARIA dans les WCAG 2 : <a href="https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html">https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html</a> </li>
+</ul>
+</li>
+<li>Introduction à ARIA chez Site Point : <a href="http://www.sitepoint.com/introduction-wai-aria/">http://www.sitepoint.com/introduction-wai-aria/</a> </li>
+<li>Introduction et liste de liens vers des sources sur ARIA : <a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA</a> <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+Copyright (C) 2016  Orange SA
+See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+</ul>
+
+<h1 id="m-thodes-et-outils">Méthodes et outils</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Outils de test"}]);
+});</script>
+
+<p>Vous trouverez ci-dessous des articles décrivant les méthodes et outils utiles pour tester l&#39;accessibilité de vos pages web.</p>
+<h2 id="tests-utilisateurs">Tests utilisateurs</h2>
+<h3 id="-navigation-au-clavier-methodes-outils-clavier-html-"><a href="./methodes-outils-clavier.html">Navigation au clavier</a></h3>
+<p>Liste des principaux raccourcis pour naviguer au clavier dans une page web.</p>
+<h3 id="-agrandissement-de-la-taille-du-texte-methodes-outils-zoom-html-"><a href="./methodes-outils-zoom.html">Agrandissement de la taille du texte</a></h3>
+<p>Un guide sur la gestion du zoom.</p>
+<h3 id="-navigation-l-aide-d-un-lecteur-d-cran-methodes-outils-lecteur-ecran-html-"><a href="./methodes-outils-lecteur-ecran.html">Navigation à l&#39;aide d&#39;un lecteur d&#39;écran</a></h3>
+<p>Les principaux lecteurs d&#39;écrans utilisés.</p>
+<h2 id="tests-automatis-s">Tests automatisés</h2>
+<h3 id="-extensions-pour-navigateur-methodes-outils-extensions-html-"><a href="./methodes-outils-extensions.html">Extensions pour navigateur</a></h3>
+<p>Certaines extensions permettent d&#39;effectuer des tests automatiques sur la page en cours de consultation.</p>
+<h2 id="tests-des-crit-res">Tests des critères</h2>
+<h3 id="-mesurer-le-niveau-de-contraste-des-couleurs-methodes-outils-contrastes-html-"><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a></h3>
+<p>Présentation de l&#39;outil colour contrast analyser.</p>
+<h3 id="-acc-der-la-liste-des-titres-de-la-page-balises-h1-h6-methodes-outils-liste-titres-html-"><a href="./methodes-outils-liste-titres.html">Accéder à la liste des titres de la page (balises <code>H1</code> à <code>H6</code>)</a></h3>
+<p>Les différentes façons d&#39;accéder à la liste des titres d&#39;une page.</p>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="outils-orange-open-source">Outils Orange open source</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Outils Orange open source"}]);
+});</script>
+
+<p>  Voici la liste de nos outils open source pour le web : </p>
+<ul>
+<li><strong>Orange Boosted :</strong> pour créer des sites web ou mobile accessibles aux couleurs de la charte Orange.</li>
+<li><strong>Orange Confort+ :</strong> pour améliorer le confort de l&#39;utilisateur pendant la consultation de votre site web.</li>
+</ul>
+<h2 id="boosted" lang="en">Orange Boosted</h2>
+<h3 id="pr-sentation">Présentation</h3>
+<p>Orange <span lang="en">Boosted</span> est un framework HTML, CSS et Javascript basé sur le très populaire <span lang="en"><a href="http://getbootstrap.com/">Twitter Boostrap</a></span>.
+Il permet la mise en place rapide d&#39;un site web responsive et accessible aux couleurs de la charte Orange.</p>
+<h3 id="pourquoi-vous-devez-l-utiliser-">Pourquoi vous devez l&#39;utiliser ?</h3>
+<ul>
+<li>Basé sur <span lang="en"><a href="http://getbootstrap.com/">Twitter Boostrap</a></span></li>
+<li>A la charte Orange, la Brand</li>
+<li>Amélioré avec des composants <strong>plus accessibles</strong></li>
+<li>Enrichi de composants spécifiques à Orange</li>
+<li>Illustré de pages d&#39;exemples</li>
+<li><span lang="en">Open source</span> sous Licence <span lang="en">MIT</span></li>
+</ul>
+<h3 id="site-officiel">Site officiel</h3>
+<p><span lang="en"><a href="http://boosted.orange.com/">Orange Boosted with Bootstrap</a></span></p>
+<h2 id="orange-confort-">Orange Confort+</h2>
+<h3 id="pr-sentation">Présentation</h3>
+<p>Le service Orange Confort+ permet d&#39;adapter l&#39;affichage d&#39;un site web pour améliorer le confort lors de la consultation. Il dispose d&#39;un vaste choix de réglages qui peuvent améliorer le confort de tous les utilisateurs. Il apporte également une aide précieuse aux utilisateurs ayant un handicap moteur, visuel ou cognitif.</p>
+<p>Vous pouvez tester le service en cliquant sur le lien &quot;confort+&quot; situé en haut à droite de cette page.</p>
+<h3 id="ses-principaux-atouts-">Ses principaux atouts :</h3>
+<ul>
+<li>Utile pour tous les utilisateurs</li>
+<li>Prise en charge de différents handicaps</li>
+<li>S&#39;intègre sur tous les sites web</li>
+<li>Egalement disponible sous forme d&#39;extensions pour navigateur</li>
+<li><span lang="en">Open source</span> sous Licence <span lang="en">MIT</span> </li>
+</ul>
+<p><img src="./images/confort-plus.png" alt="capture d&#39;écran du service confort plus"></p>
+<h3 id="extensions-pour-navigateur">Extensions pour navigateur</h3>
+<ul>
+<li>Firefox : <a href="https://addons.mozilla.org/fr/firefox/addon/orange-confort">https://addons.mozilla.org/fr/firefox/addon/orange-confort</a></li>
+<li>Chrome : <a href="https://chrome.google.com/webstore/detail/orange-confort%2B/ddnpdohiipephjpdpohikkamhdikbldp">https://chrome.google.com/webstore/detail/orange-confort%2B/ddnpdohiipephjpdpohikkamhdikbldp</a></li>
+<li>IE11, 64 ou 32 bits : <a href="http://confort-plus.orange.com/">http://confort-plus.orange.com/</a></li>
+</ul>
+<h3 id="site-officiel">Site officiel</h3>
+<p><a href="http://confort-plus.orange.com/">Orange Confort+</a></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="mesurer-le-niveau-de-contraste-des-couleurs">Mesurer le niveau de contraste des couleurs</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Outils de test", "url": "./methodes-outils.html"},
+        {"label":"Mesurer le niveau de contraste des couleurs"}]);
+});</script>
+
+<p><span data-menuitem="methodes-outils"></span></p>
+<p>Le niveau de contraste peut être mesuré simplement à l&#39;aide de l&#39;outil <a href="http://www.paciellogroup.com/resources/contrastanalyser/">colour contrast analyser</a>.</p>
+<p>Cet outil est disponible gratuitement pour Mac et Windows. Il permet de mesurer la différence de contraste entre deux couleurs (la couleur du texte et la couleur du fond). Celles-ci peuvent être sélectionnées à l&#39;aide d&#39;une pipette directement dans une page web, une image ou une application.  </p>
+<p><img src="./images/contraste2.png" alt="capture d&#39;écran de l&#39;outil colour contrast analyser"><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="navigation-l-aide-du-clavier">Navigation à l&#39;aide du clavier</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Outils de test", "url": "./methodes-outils.html"},
+        {"label":"Navigation à l'aide du clavier"}]);
+});</script>
+
+<p><span data-menuitem="methodes-outils"></span></p>
+<p>La navigation dans une page web doit être possible à l&#39;aide du clavier seul, notamment pour les personnes qui ne peuvent pas utiliser de souris. Cette fonctionnalité est prise en charge directement par le navigateur. Il est tout de même important de vérifier son fonctionnement, car certains développements peuvent entraîner des difficultés pour naviguer correctement dans la page.</p>
+<p>Pour tester si votre service est accessible à l&#39;aide du clavier, vous pouvez tenter de naviguer sans votre souris. Toutes les fonctionnalités disponibles habituellement doivent rester accessible.<br><strong> Rappel : </strong>le focus doit rester suffisamment visible sur tous éléments recevant le focus.</p>
+<h2 id="liste-des-raccourcis-clavier-principaux-">Liste des raccourcis clavier principaux :</h2>
+<ul>
+<li>La touche <code>TAB</code> : pour faire avancer le focus.</li>
+<li>Les touches <code>maj+TAB</code> : pour faire reculer le focus.</li>
+<li>La touche entrée pour activer l&#39;élément qui a le focus (lien, bouton, menu...).</li>
+<li>La barre espace pour cocher/décocher une case à cocher.</li>
+<li>Les flèches directionnelles pour modifier la sélection des boutons radio, pour se déplacer dans une liste déroulante, ou faire défiler les ascenseurs (scrollbar) lorsque ceux-ci sont présents.</li>
+</ul>
+<p><strong> Remarque sur mac la navigation au clavier doit être activée au préalable : </strong><br>Dans Safari : Edition &gt; Préférences ... &gt; Avancées<br>Puis cocher la case <em>&quot;La touche TAB permet de naviguer parmi les objets des pages web&quot;</em>.
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="acc-der-la-liste-des-titres-de-la-page-balises-h1-h6-">Accéder à la liste des titres de la page (balises <code>H1</code> à <code>H6</code>)</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Outils de test", "url": "./methodes-outils.html"},
+        {"label":"Accéder à la liste des titres de la page"}]);
+});</script>
+
+<p><span data-menuitem="methodes-outils"></span></p>
+<p>Pour vérifier si des titres ont été correctement positionnés dans la page, il existe plusieurs solutions :</p>
+<ul>
+<li>Parcourir le code de la page à la main.</li>
+<li>Utiliser une extension telle que <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">HeadingsMap</a> pour Firefox, <a href="http://wave.webaim.org/extension/">Wave pour Chrome</a> ou <a href="http://chrispederick.com/work/web-developer/">Web Developper Toolbar</a>.</li>
+<li>Accéder à la liste des titres depuis un lecteur d&#39;écran (cf. chapitre <a href="./methodes-outils-lecteur-ecran.html">lecteur d&#39;écran</a>).</li>
+</ul>
+<p>La dernière solution reste la plus fiable, car les extensions ne prennent pas toujours en compte les CSS et les éventuels attributs ARIA positionnés sur les balises HTML.<br>Vous pouvez trouver des informations complémentaires dans l&#39;article : <a href="./methodes-outils-lecteur-ecran.html">navigation à l&#39;aide d&#39;un lecteur d&#39;écran</a>.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="navigation-l-aide-d-un-lecteur-d-cran">Navigation à l&#39;aide d&#39;un lecteur d&#39;écran</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Outils de test", "url": "./methodes-outils.html"},
+        {"label":"Navigation à l'aide d'un lecteur d'écran"}]);
+});</script>
+
+<p><span data-menuitem="methodes-outils"></span></p>
+<p>Un lecteur d&#39;écran (appelé aussi revue d&#39;écran) est un logiciel de synthèse vocale utilisé par les personnes malvoyantes et non-voyantes. Il permet à l&#39;utilisateur d&#39;interagir avec l&#39;ordinateur et d&#39;écouter ce qui est affiché sous forme textuelle (le plus souvent) à l&#39;écran.
+Il existe plusieurs lecteurs d&#39;écran, les plus connus sont :</p>
+<ul>
+<li><a href="http://nvda-fr.org/">NVDA</a> : gratuit disponible pour Windows.</li>
+<li><a href="http://www.freedomscientific.com/Downloads/JAWS">Jaws</a> : payant disponible pour Windows. En mode démonstration, vous pouvez l&#39;utiliser 40 min, après quoi il faudra redémarrer votre ordinateur pour l&#39;utiliser à nouveau.</li>
+<li><a href="http://www.apple.com/fr/accessibility/osx/voiceover/">Voiceover</a> : disponible pour mac. Il est est gratuit et intégré directement au système MacOS.</li>
+</ul>
+<h2 id="prise-en-main-de-nvda">Prise en main de NVDA</h2>
+<p>NVDA est un lecteur d&#39;écran gratuit disponible pour Windows.</p>
+<h3 id="installation">Installation</h3>
+<p>Télécharger le fichier d&#39;installation de NVDA sur le <a href="http://nvda-fr.org/">site officiel</a>.</p>
+<p>La voix par défaut n&#39;est pas de très bonne qualité mais elle est très réactive. Ce n&#39;est pas indispensable, mais le téléchargement d&#39;une voix de meilleure qualité est conseillé comme celle d&#39;<a href="http://www.nvda-fr.org/voix.php">Hortense</a>. Il suffit ensuite de se rendre dans les préférences de NVDA pour modifier les paramètres vocaux.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Au premier démarrage, NVDA est configuré pour vocaliser tout ce que survol le pointeur de la souris. Ce mode est utilisé par certaines personnes malvoyantes qui ont des difficultés à lire les textes affichés à l&#39;écran par exemple. Il est conseillé de désactiver cette option si vous utilisez NVDA pour faire des tests d&#39;accessibilité sur vos pages. 
+Pour désactiver ce mode de navigation, faites un clic droit sur l&#39;icone de NVDA dans la barre windows à côté de l&#39;heure. Puis aller dans <em>préférences &gt;&gt; paramètres</em> de la souris et désactiver la case &quot;activer le suivi de la souris&quot;.</p>
+<p>Enfin, il est conseillé de modifier le mode de lecture par défaut. Pour cela, se positionner sur une page web et utiliser le raccourci clavier suivant <code>INS+v</code> pour désactiver la &quot;disposition telle qu&#39;à l&#39;écran&quot; puis enregistrer cette configuration par défaut à l&#39;aide du raccourci <code>INS+Ctrl+c</code>. </p>
+<h3 id="navigation-dans-les-pages-web">Navigation dans les pages Web</h3>
+<p>Voici les principaux raccourcis utiles pour tester la navigation au sein d&#39;une page web à l&#39;aide de NVDA :</p>
+<ul>
+<li><code>flèche haut</code> et <code>flèche bas</code> pour avancer ou reculer dans la lecture de la page.</li>
+<li><code>flèche droite</code> et <code>flèche gauche</code> pour avancer ou reculer d&#39;un caractère</li>
+<li><code>Ctrl+Home</code> pour se déplacer en haut de la page.</li>
+<li><code>Ctrl+End</code> pour se déplacer en bas de la page.</li>
+<li><code>INS+F7</code> pour afficher la liste des titres et la liste des liens.</li>
+<li><code>Ctrl</code> pour faire taire NVDA.</li>
+<li><code>INS+T</code> pour faire lire le titre de la page.</li>
+<li><code>H</code> et <code>maj+H</code> pour passer au titre suivant ou au titre précédent (balises de titres <code>H1</code> à <code>H6</code>).</li>
+<li><code>B</code> et <code>maj+B</code> pour passer d&#39;un bouton à l&#39;autre.</li>
+<li><code>C</code> et <code>maj+C</code> pour passer d&#39;une liste déroulante à une autre (Combobox).</li>
+<li><code>D</code> et <code>maj+D</code> pour naviguer parmis les landmark ARIA.</li>
+<li><code>E</code> et <code>maj+E</code> pour naviguer parmis les champs de texte.</li>
+<li><code>F</code> et <code>maj+F</code> pour naviguer parmis les formulaires.</li>
+<li><code>G</code> et <code>maj+G</code> pour naviguer parmis les images (Graphics).</li>
+<li><code>I</code> et <code>maj+I</code> pour naviguer parmis les éléments d&#39;une liste HTML.</li>
+<li><code>K</code> et <code>maj+K</code> pour naviguer parmis les liens.</li>
+<li><code>L</code> et <code>maj+L</code> pour naviguer parmis les listes HTML.</li>
+<li><code>M</code> et <code>maj+M</code> pour naviguer parmis les frames et iframes.</li>
+<li><code>O</code> et <code>maj+M</code> pour naviguer parmis les objets intégrés (flash). Appuyer sur INS+espace pour commencer l&#39;interraction. Echap pour terminer l&#39;interraction.</li>
+<li><code>Q</code> et <code>maj+Q</code> pour naviguer parmis les citations (blockquote).</li>
+<li><code>R</code> et <code>maj+R</code> pour naviguer parmis les boutons radio.</li>
+<li><code>T</code> et <code>maj+T</code> pour naviguer parmis les tableaux (table).</li>
+<li><code>X</code> et <code>maj+X</code> pour naviguer parmis les cases à cocher.</li>
+<li><code>Barre espace</code> pour cocher ou décocher une case à cocher.</li>
+<li><code>INS+maj+S</code> permet de mettre en veille NVDA uniquement dans l&#39;application en cours.</li>
+<li><code>INS+Q</code> pour quitter NVDA.</li>
+</ul>
+<p>A noter également que NVDA dispose d&#39;une visionneuse de parole (<em>outils &gt;&gt; visionneuse de parole</em>), celle-ci permet d&#39;afficher tout ce qui est vocalisé.</p>
+<h2 id="prise-en-main-de-jaws">Prise en main de Jaws</h2>
+<p>Jaws est un lecteur d&#39;écran payant très utilisé, disponible pour Windows. Il est à utiliser en priorité avec Internet Explorer. En mode démonstration, vous pouvez l&#39;utiliser 40 min, après quoi il faudra redémarrer votre ordinateur pour l&#39;utiliser à nouveau.</p>
+<h3 id="installation">Installation</h3>
+<p>Vous pouvez télécharger Jaws directement depuis <a href="http://www.freedomscientific.com/Downloads/JAWS">le site de l&#39;éditeur Freedom Scientific</a>.</p>
+<h3 id="navigation-dans-les-pages-web">Navigation dans les pages Web</h3>
+<p>Voici les principaux raccourcis utiles pour tester la navigation au sein d&#39;une page web à l&#39;aide de Jaws :</p>
+<ul>
+<li><code>flèche haut</code> et <code>flèche bas</code> pour avancer ou reculer dans la lecture de la page.</li>
+<li><code>INS + T</code> pour faire lire le titre de la page.</li>
+<li><code>INS + F5</code> pour afficher la liste des champs de formulaire.</li>
+<li><code>INS + F6</code> pour afficher la liste des titres de la page.</li>
+<li><code>INS + F7</code> pour afficher la liste des liens.</li>
+<li><code>Barre espace</code> pour cocher ou décocher une case à cocher.</li>
+<li><code>Ctrl</code> pour faire taire Jaws.</li>
+</ul>
+<h2 id="prise-en-main-de-voiceover">Prise en main de Voiceover</h2>
+<p>Voiceover est le lecteur d&#39;écran disponible sur Mac. Celui-ci nécessite aucune installation puisqu&#39;il est intégré directement au système.<br>Pour pouvez activer voiceover depuis les préférences systèmes &gt;&gt; accessibilité. Ou directement en utilisant le raccourci <code>Commande + F5</code>.</p>
+<h3 id="navigation-dans-les-pages-web">Navigation dans les pages web</h3>
+<p>Au démarrage de voiceover, celui-ci propose un guide interactif permettant d&#39;apprendre les principaux raccourcis clavier. Il est recommandé de le parcourir.<br>Voici néanmoins les raccourcis principaux :</p>
+<ul>
+<li><code>Ctrl + Option + flèche droite</code> et <code>Ctrl + Option + flèche gauche</code> pour avancer ou reculer dans la lecture de la page.</li>
+<li><code>Ctrl + Option + U</code> pour accéder à la liste des titres, liens, champs de formulaires ... (utiliser les flèches gauche et droite pour naviguer entre les différentes listes). </li>
+<li><code>Ctrl</code> pour faire taire Voiceover.</li>
+<li><code>Ctrl + Option</code><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+Copyright (C) 2016  Orange SA
+See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+</ul>
+
+<h1 id="extensions-pour-navigateur">Extensions pour navigateur</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Outils de test", "url": "./methodes-outils.html"},
+        {"label":"Extensions pour navigateur"}]);
+});</script>
+
+<p><span data-menuitem="methodes-outils"></span></p>
+<p>Certaines extensions permettent d&#39;effectuer des tests automatiques sur la page en cours de consultation.</p>
+<h2 id="axe-accessibility-audit">aXe accessibility audit</h2>
+<p><a href="http://www.deque.com/products/axe/">aXe</a> est une extension disponible pour Chrome et Firefox permettant d&#39;effectuer une série de tests basés sur les <a href="https://www.w3.org/WAI/intro/wcag">WCAG</a>.</p>
+<p><img src="images/aXe.png" alt="capture d&#39;écran de l&#39;extension axe">
+&nbsp;</p>
+<h2 id="wave-toolbar">Wave toolbar</h2>
+<p><a href="http://wave.webaim.org/extension/">Wave toolbar</a> est une barre d&#39;extension pour Chrome. Tout comme aXe, elle permet d&#39;effectuer une série de tests d&#39;accessibilité sur la page en cours. A la différence de ce dernier qui affiche les erreurs dans un onglet de l&#39;inspecteur web, ici les erreurs sont affichées directement dans la page. Il existe un <a href="http://wave.webaim.org/help">bookmarklet (ou favlet) pour Wave</a>.</p>
+<p><img src="images/wave.png" alt="capture d&#39;écran de l&#39;extension wave toolbar"></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="agrandissement-de-la-taille-du-texte">Agrandissement de la taille du texte</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Outils de test", "url": "./methodes-outils.html"},
+        {"label":"Agrandissement de la taille du texte"}]);
+});</script>
+
+<p><span data-menuitem="methodes-outils"></span></p>
+<h2 id="comment-on-teste-">Comment on teste ?</h2>
+<p>Une des recommandations d&#39;accessibilité est la possibilité pour l&#39;utilisateur d&#39;agrandir la taille du texte à 200%. Il s&#39;agit bien d&#39;agrandir uniquement le texte et non l&#39;ensemble de la page. En effet, si vous utilisez le zoom par défaut du navigateur, toute la page est agrandie ce qui entraîne l&#39;apparition systématique d&#39;ascenseurs horizontaux et verticaux. La lecture d&#39;un article de blog par exemple devient fastidieuse puisqu&#39;il faut jouer constamment avec l&#39;ascenseur horizontal.</p>
+<p>L&#39;agrandissement du texte seul, n&#39;entraîne pas systématiquement l&#39;apparition de barres de défilement horizontale. Vous devez vérifier qu&#39;a ce niveau de zoom (200%), le texte reste lisible. Aucun texte ne doit être tronqué, ni superposé. L&#39;information doit rester accessible même si la présentation peut être quelque peu altérée, </p>
+<p>Pour agrandir le texte uniquement, il faut cocher l&#39;option &quot;zoom texte seulement&quot; dans Firefox. Pour agrandir le texte de 200%, faire <code>Ctrl+</code> quatre fois. </p>
+<p><img src="images/zoom-firefox.png" alt="capture d&#39;écran de l&#39;option zoom texte seulement, dans Firefox"> </p>
+<h2 id="quelles-cons-quences-sur-le-d-veloppement-">Quelles conséquences sur le développement ?</h2>
+<p>Si votre page ne s&#39;affiche pas correctement lorsque vous agrandissez le texte, il se peut que ceci soit lié à l&#39;utilisation du pixel comme unité pour dimensionner la taille des textes et la taille des éléments (hauteur ou largeur des <code>div</code>...).
+Pour corriger les problèmes d&#39;affichage lorsque le zoom est à 200%, il ne s&#39;agit pas nécessairement de tout revoir et de supprimer les pixels définitivement. L&#39;idée est de revoir uniquement les éléments qui posent un problème (remplacer les px par des em, rem ou %).</p>
+<p><strong> Exemple zoom à 100% </strong><br><img src="images/zoom.png" alt="capture d&#39;une page avec zoom à 100%"></p>
+<p>&nbsp;</p>
+<p><strong> Exemple zoom à 200% et taille en pixel</strong><br>La hauteur des éléments n&#39;étant pas fonction de la taille du texte, ceux-ci ne s&#39;agrandissent pas.</p>
+<p><img src="images/zoom-ko.png" alt="capture d&#39;une page avec zoom à 100%"></p>
+<p>&nbsp;</p>
+<p><strong> Exemple zoom à 200% et hauteur des éléments en unités relatives (rem)</strong><br>La hauteur des éléments contenant le texte a été renseignée avec une unité relative qui varie en fonction de la taille du texte (rem). Les éléments s&#39;agrandissent, le texte reste lisible.</p>
+<p><img src="images/zoom-ok.png" alt="capture d&#39;une page avec zoom à 100%"></p>
+<p>&nbsp;
+Plus d&#39;information dans la rubrique <strong>exemples</strong> : <a href="exemples/zoom/index.html">gestion de l&#39;agrandissement de la taille du texte à 200%</a>.  </p>
+<p>&nbsp; </p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="liste-des-exemples">Liste des exemples</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Exemples"}]);
+});</script>
+
+<h2 id="les-bases">Les bases</h2>
+<ul>
+<li><p><a href="exemples/masquage/index.html">Masquage accessible</a></p>
+</li>
+<li><p><a href="exemples/formulaire/index.html">Gestion des formulaires</a></p>
+</li>
+<li><p><a href="exemples/zoom/index.html">Gestion du zoom, agrandissement de la taille du texte</a></p>
+</li>
+</ul>
+<h2 id="niveau-interm-diaire">Niveau intermédiaire</h2>
+<ul>
+<li><p><a href="exemples/role-dialog/role-dialog.html">Les boites de dialogue 1/2</a>  </p>
+</li>
+<li><p><a href="exemples/role-dialog2/role-dialog.html">Les boites de dialogue 2/2</a></p>
+</li>
+<li><p><a href="exemples/simple-menu/simple-menu.html">Menu déroulant</a>  </p>
+</li>
+<li><p><a href="exemples/stepbar/stepbar.html">Barre d&#39;avancement étape par étape (stepbar)</a></p>
+</li>
+</ul>
+<h2 id="niveau-avanc-">Niveau avancé</h2>
+<ul>
+<li><p><a href="exemples/listbox/index.html">Les listes ARIA (listbox) 1/3</a> </p>
+</li>
+<li><p><a href="exemples/check-listbox/index.html">Les listes ARIA (listbox) 2/3 (avec cases à cocher)</a></p>
+</li>
+<li><p><a href="exemples/listbox-pattern-aria/index.html">Les listbox et patterns ARIA 3/3 (navigation au clavier)</a></p>
+</li>
+<li><p><a href="exemples/files/index.html">Explorateur de fichiers (cloud)</a></p>
+</li>
+<li><p><a href="exemples/dynFocus/index.html">Les régions vivantes (live regions), contenu dynamique, gestion du focus et ARIA </a></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+Copyright (C) 2016  Orange SA
+See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+</ul>
+
+<h1 id="votre-avis-compte">Votre avis compte</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Contact"}]);
+});</script>
+
+<p>Vous avez une remarque, une suggestion à apporter ?  </p>
+<p>Vérifiez que ceci n&#39;a pas déjà été remonté par quelqu&#39;un d&#39;autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des &quot;issues&quot;</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="a-propos">A propos</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"A propos"}]);
+});</script>
+
+<p>Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY 3.0</a>. Le code source de ce site ainsi que celui des exemples est disponible <a href="https://github.com/Orange-OpenSource/a11y-guidelines">sur notre compte github</a>.  </p>
+<p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange:  </p>
+<p>Copyright (C) 2016 Orange SA All rights reserved<br><a href="/notice.txt">Liste des fichiers concernés</a></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+
+        </div>
+      </div>
+    </main>
+
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="./js/reco.js"></script>
+    <script type="text/javascript" src="./js/highlight.min.js"></script>
+    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>
+
+</body>
+</html>

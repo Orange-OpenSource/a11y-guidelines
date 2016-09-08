@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité web Orange</title>
+    
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="../boosted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="css/reco.css">
+      <link rel="stylesheet" href="css/reco-custom.css">
+
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+        <nav id="top-navbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Navigation bar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.html" class="navbar-brand">
+                <img src="../boosted/images/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home" width="48"/>
+              </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav top-nav">
+                    <li><a href="../home_EN/index.html">Home</a></li>
+                    <li class="active"><a href="./index.html">Web</a></li>
+                    <li><a href="../mobile_EN/index.html">Mobile</a></li>
+                    <li><a class="language" href="../web/index.html" lang="fr" title="French version">Version française</a></li>
+              </ul>
+
+              <form action="./search.html" class="navbar-form navbar-right" role="search">
+
+              <!-- formulaire de recherche -->
+                <div class="form-group">
+                  <input title="Search" type="text" class="form-control" placeholder="Search..." name="q">
+                </div>
+                <button title="Search" type="submit" class="btn btn-default">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  <span class="sr-only">Search</span>
+                </button>
+
+              <!-- bouton CDU -->
+              <span id="cdu">
+                <a href="#" title="Confort plus" id="uci_link">
+                    Confort
+                    <span>+</span>
+                </a>
+              </span>
+
+              </form>
+
+              <ul id="navigation-mobile" class="nav navbar-nav"></ul>
+
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container-fluid">
+
+      <div class="row ">
+        <div role="navigation" id="sidebar" class="hidden-xs col-sm-3 sidebar-offcanvas">
+            <ul id="navigation" class="nav navbar-nav">
+                <li><a id="index" href="index.html">Presentation</a></li>
+                <li><a id="fondamentaux" href="fondamentaux.html">Essential criteria</a></li>
+                <li><a id="exigences" href="exigences.html">All requirements</a></li>
+                <li><a id="methodes-outils" href="methodes-outils.html">Test tools</a></li>
+                <li><a id="nos-outils" href="nos-outils.html">Open source Orange test tools</a></li>
+                <li><a id="exemples" href="exemples.html">Examples</a></li>
+                <li><a id="htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
+                <li><a id="contact" href="contact.html">Contact</a></li>
+                <li><a id="about" href="about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-9" id="content">
+          <span class="sr-only">You are here: </span>
+          <ol class="breadcrumb">
+            <li><a href="/web_EN/index.html">Web</a></li>
+          </ol>
+
+            <h1 id="essential-criteria-for-the-development">Essential criteria for the development</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Essential criteria", "url": "./fondamentaux.html"},
+        {"label":"Essential criteria for the development"}
+    ]);
+    addSubMenu();
+});</script>
+
+<p><span data-menuitem="fondamentaux"></span></p>
+<h2 id="1-set-a-title-for-each-page">1. Set a title for each page</h2>
+<p><strong>Target : </strong> everyone and especially people with visual disabilities.<br><strong>When: </strong> starting at conception and during development.</p>
+<p><strong>Description:</strong><br>Set each page a title that is specific to it and which reflects its content or function  (<code>&lt;title&gt;</code> tag).<br>The page title is the first element read by the speech synthesis, it must help to formally identify the page where you are.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Even if there is no rule, in general (opening many tabs in multiple applications), we go from the most specific information to the least specific (e.g. title of the current page - name of the site). For windowing a multitude of application, the approach is different, in this case we will prefer going from the least specific information to the most specific (e.g. name of the site - title of the current page).</li>
+<li>When the content of the page is dynamic (displaying the result of a search, errors in a form, user adding content...), the title of the page should reflect this change.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong><br>Allow users to identify the topic of a page, find and get a clear idea of the content of the page without having to read it. It is especially the first element vocalized by a screen reader.</p>
+<p><strong>Do:</strong><br><code>&lt;title&gt;Home - Corporate web site of Orange&lt;/title&gt;</code></p>
+<p><strong>Don&#39;t:</strong><br><code>&lt;title&gt;Home&lt;/title&gt;</code></p>
+<p><strong>Reference: </strong> WCAG 2.4.2</p>
+<h2 id="2-set-a-title-to-headings">2. Set a title to headings</h2>
+<p><strong>Target : </strong> everyone and especially people with cognitive limitations, reading difficulties and visual disabilities.<br><strong>When: </strong> from design, during content writing and development.</p>
+<p><strong>Description:</strong><br>One must identify the title tags to use (<code>h1</code> to <code>h6</code> HTML tags) to structure the content of the pages.
+The visually impaired people browsing with a screen reader can access the list of titles of the page to navigate quickly. 
+Just like in a Word document, it is possible to use the table of contents only if the titles tags have been set properly within the document.  </p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>The titles must be relevant, reflect the structure of the information contained in the page.</li>
+<li>There must be no break in the heading hierarchy (we cannot jump from a <code>h2</code> title to a <code>h4</code> title).</li>
+<li>You can use several <code>h1</code> titles per page (don&#39;t exceed two in most cases).</li>
+<li>Hidden tags are dismissed by screen readers (<code>visibility: hidden;</code>, <code>display: none;</code>or <code>aria-hidden</code>).</li>
+<li>The dynamically generated content must also meet this requirement.</li>
+</ul>
+<p><strong>Goal: </strong></p>
+<ul>
+<li>For all users: improve the structure of the page and its contents.</li>
+<li>For search engines: improve SEO.</li>
+<li>For users with visual disabilities, cognitive limitations or reading difficulties: easy navigation and access to content.</li>
+</ul>
+<p><strong>Do:</strong>  </p>
+<p>Page with consistent and relevant titles:</p>
+<p><code>&lt;h1&gt;Home - Orange&lt;/h1&gt;</code></p>
+<p><code>&lt;h2&gt;News&lt;/h2&gt;</code></p>
+<p><code>&lt;h2&gt;Fiber broadband is coming!&lt;/h2&gt;</code></p>
+<p><code>&lt;h3&gt;Check eligibility&lt;/h3&gt;</code></p>
+<p><strong>Don&#39;t: </strong>
+Page with a break in the heading hierarchy h2-&gt;h4:</p>
+<p><code>&lt;h1&gt;Home - Orange&lt;/h1&gt;</code></p>
+<p><code>&lt;h2&gt;News&lt;/h2&gt;</code></p>
+<p><code>&lt;h2&gt;Fiber broadband is coming!&lt;/h2&gt;</code></p>
+<p><code>&lt;h4&gt;Check eligibility&lt;/h4&gt;</code></p>
+<p><strong>Reference:</strong> WCAG 1.3.1</p>
+<h2 id="3-provide-enough-contrast-between-text-and-background">3. Provide enough contrast between text and background</h2>
+<p><strong>Target : </strong> everyone, especially the mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong><br>The contrast between the text and its background should be high enough.
+Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablets users in a very bright environment.</p>
+<p><strong>Don&#39;t: </strong><br>The label &quot;film | 8:40 PM ...&quot; does not have enough contrast. It will not be readable by all users.  </p>
+<p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>The contrast between the color of the background and the text must be at least 4.5:1 and this must also be applied for text on an image carrying information.</li>
+<li>For applications used primarily in mobile web or in mobility, the contrast level of the main elements must be 7:1 in order to ensure a good readability for all.</li>
+<li>Links should be easily identifiable from to the rest of the text.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Ease of reading for all users especially the visually impaired, or people in a very bright environment (outdoors).</p>
+<p><strong>Tool: </strong><br>The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">color contrast analyzer</a> application can quickly measure color contrast levels (free for Windows and Mac).  </p>
+<p><strong>Reference:</strong> WCAG 1.4.3</p>
+<h2 id="4-do-not-use-color-or-sensory-characteristics-as-the-unique-source-of-information">4. Do not use color or sensory characteristics as the unique source of information</h2>
+<p><strong>Target : </strong> everyone, especially the colorblind and more generally people with visual impairments, cognitive limitations, hearing impairments and elderly people.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong><br>Do not use color or sensory characteristics (shape, size, sound, direction, visual localization ...) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a color change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.</p>
+<p><strong>Example:</strong><br>For a pie chart, where each part is colored differently, you could add different pattern fills to identify them without color.</p>
+<p><strong>Do: </strong><br><img src="images/couleur-ok.png" alt="illustration using colored icons to convey information"></p>
+<p><strong>Don&#39;t: </strong><br><img src="images/couleur-ko.png" alt="illustration using colored icons to convey information">  </p>
+<p>This example is not valid because the information is conveyed only by color.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Take a screenshot and convert it in black and white. The loss of color should not cause difficulty while navigating, nor cause loss of information.</li>
+<li>Turn off the speakers, the level of information should remain the same.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow users not distinguishing colors or sensory information (colorblind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments ...), access the same information by other means.</p>
+<p><strong>Reference:</strong> WCAG 1.4.1</p>
+<h2 id="5-use-lists">5. Use lists</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments and cognitive limitations.<br><strong>When: </strong> from design and during content writing.</p>
+<p><strong>Description: </strong> </p>
+<p>Pages, if required, must contain semantically relevant lists. 
+Add semantics to the HTML content using the following tags:</p>
+<ul>
+<li><code>ol</code> for ordered lists</li>
+<li><code>ul</code> for unordered lists</li>
+<li><code>li</code> for list items</li>
+</ul>
+<p><strong>Checklist: </strong> </p>
+<ul>
+<li>There must be no empty list.</li>
+<li>There must be no list with a single element (because this is not a list, unless this list is generated dynamically!).</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Using lists allows users to identify, consolidate and display sequentially elements of the same kind.</p>
+<p><strong>Technical goal: </strong> </p>
+<p>Requires coherent structuring of the content by the creator of the site.</p>
+<p><strong>Reference: </strong> WCAG 1.3.1</p>
+<h2 id="6-decoupling-content-from-interaction-and-presentation">6. Decoupling content from interaction and presentation</h2>
+<p><strong>Target : </strong> everyone, especially people with visual disabilities, reading or attention difficulties.<br><strong>When: </strong> during development.</p>
+<p><strong>Description: </strong></p>
+<p>Strictly decouple the content (HTML), the interaction (Javascript) and presentation (CSS). </p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Do not use Tables to design the page layout, the latter should be used only for tabular data. </li>
+<li>Avoid using images to display text, prefer CSS skins.</li>
+<li>Use CSS classes rather than manipulate inline CSS styles in HTML.</li>
+<li>Do not use CSS pseudo-elements (::before, ::after...) to display information.</li>
+<li>Do not write Javascript events directly inside the HTML, use a separate script or JS file instead.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow users, via their User Agent or tool assistance (e.g. their browser) to change the visual appearance of the page (zoom, color, position...). For example, being able to increase the text size without display problems.</p>
+<p><strong>Technical goal: </strong></p>
+<p>Improves maintainability.</p>
+<p><strong>Reference:</strong> WCAG 1.3.1, 1.4.5</p>
+<h2 id="7-code-validation">7. Code validation</h2>
+<p><strong>Target : </strong> everyone.<br><strong>When: </strong> during and at the end of development.</p>
+<p><strong>Description: </strong>  </p>
+<p>The source code of the page must have a valid HTML.</p>
+<p><strong>Checklist </strong></p>
+<p>In the HTML code, ensure that:</p>
+<ul>
+<li>Elements must have opening and closing tags</li>
+<li>Elements can be nested  according to their specifications</li>
+<li>Elements cannot contain duplicate attributes</li>
+<li>Each ID must be unique</li>
+</ul>
+<p><strong>Users&#39; goal: </strong> </p>
+<p>The validation errors can be used to prevent the user to access some content. </p>
+<p><strong>Technical goal: </strong> </p>
+<ul>
+<li>Ensuring HTML interoperability and maintainability.</li>
+<li>Increase the compatibility with assistive technologies.</li>
+</ul>
+<p><strong>Reference:</strong> WCAG 4.1.1  </p>
+<p><strong>Tool: </strong> <a href="https://validator.w3.org/">HTML CSS Validation Service</a></p>
+<h2 id="8-declaring-the-main-language-and-language-changes">8. Declaring the main language and language changes</h2>
+<p><strong>Target : </strong> everyone particularly people with visual impairments.<br><strong>When: </strong> during development.</p>
+<p><strong>Description: </strong>  </p>
+<p>Specify the primary language of the document with the attribute <code>lang</code> and / or<code>xml:lang</code> in the <code>html</code> tag.
+Also specify the language of a content in a language other than the primary one, using the <code>lang</code> and / or <code>xml:lang</code> in the html element containing the foreign language text.  </p>
+<p><strong>Checklist: </strong></p>
+<p>For words or phrases in foreign language used as generic terms (Google, newsletter ...) or proper names, do not indicate a change of language.</p>
+<p><strong>Users&#39;s goal: </strong></p>
+<p>This attribute allows you to specify the language to the speech synthesis.</p>
+<p><strong>Technical goal: </strong> </p>
+<p>Enable search engines to identify the language of a page to improve the natural referencing.  </p>
+<p><strong>Example for a page in French:</strong>  </p>
+<ul>
+<li>using HTML: <code>&lt;html lang=&quot;fr&quot;&gt;</code></li>
+<li>using XHTML: <code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;</code></li>
+</ul>
+<p><strong>Example of language change: </strong><br><code>découvrir Orange &lt;span lang=&quot;en&quot;&gt;live&lt;/span&gt; TV</code></p>
+<p><strong>Reference: </strong> WCAG 3.1.1, 3.1.2</p>
+<h2 id="9-associate-a-relevant-label-to-form-fields">9. Associate a relevant label to form fields</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments, cognitive limitations, experiencing attention difficulties and mobile and tablet users.<br><strong>When: </strong> during design and development.</p>
+<p><strong>Description: </strong>  </p>
+<p>Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. </p>
+<p>This label should be visually close to the field so we can easily link them (especially for people using zoom or software magnifier or even mobile users).</p>
+<p>Each label must be set in a <code>label</code> tag, which is associated to the form field with a<code>for</code> attribute, using the <code>id</code> field.</p>
+<p>In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
+The <code>title</code> attribute set on a form field tags can also be used like a label, such as the <code>aria-aria-label</code> and <code>aria-labelledby</code> attributes preferably in this order.</p>
+<p><strong>Checklist: </strong></p>
+<p>For any form element, the label should be visually close to the field it identifies.</p>
+<p>For radio and check box buttons, in addition to the label tag you can use other tags (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> or <code>fieldset</code> and <code>legend</code>). For required fields, this should be specified in the label using an image, a text symbol (<code>*</code> for example) or text and / or the <code>aria-required</code> property.</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Not meeting this requirement is a blocking point for all users using speech synthesis. For mobile users and motor deficient it allows to click on the form elements more easily.</p>
+<p><strong>Do: </strong><br><img src="images/formulaire.png" alt="screenshot of a valid form"></p>
+<p>&nbsp;</p>
+<p><strong>Don&#39;t: </strong><br><img src="images/formulaire2.png" alt="screenshot of a form with a missing label"></p>
+<p>&nbsp;  </p>
+<p><strong>Example of an accessible form: </strong></p>
+<p>See <a href="./exemples/formulaire/index.html">the example of an accessible form</a> for more details.</p>
+<p><strong>Reference: </strong>WCAG 3.3.2</p>
+<h2 id="10-detect-identify-errors-and-suggest-corrections">10. Detect, identify errors and suggest corrections</h2>
+<p><strong>Target : </strong> everyone and particularly people with visual impairments, cognitive limitations, reading or attention difficulties and elderly people.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong> </p>
+<p>The errors are automatically detected, the user is warned by a page title change, the error of the form field is clearly identified and the error is described with words to the user. If necessary, a correction is suggested.</p>
+<p>Finally, the wording of the error messages should be explicit.</p>
+<p><strong>Checklist: </strong></p>
+<p>Identifying the invalid field, as well as displaying a suggestion of correction can be dynamically added to the <code>label</code> tag, but also to the <code>title</code> tag or <code>aria-label</code> and <code>aria-labelledby</code> tags depending on the needs.</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Guide users when errors happen to improve the understanding and help them correct the errors, especially for internet beginners, elderly people and cognitively deficient.</p>
+<p><strong>Do: </strong><br><img src="images/formulaire-ok.png" alt="screenshot of a form that displays relevant error messages">  </p>
+<p><strong>Don&#39;t: </strong><br><img src="images/formulaire-ko.png" alt="screenshot of a form displaying irrelevant error messages"></p>
+<p>&nbsp;<br><strong>Example of an accessible form: </strong></p>
+<p>See <a href="./exemples/formulaire/index.html">the accessible form example</a> for more details.</p>
+<p><strong>Reference: </strong>WCAG 3.3.1, 3.3.3</p>
+<h2 id="11-set-a-text-alternatives-for-images">11. Set a text alternatives for images</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments, and cognitive limitations.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong> </p>
+<p>All <code>img</code> tags should have an <code>alt</code> attribute with a relevant description: </p>
+<ul>
+<li>For clickable images: specify the function / link target in the <code>alt</code> attribute,</li>
+<li>For images carrying information: add an <code>alt</code> attribute describing the information contained in the image</li>
+<li>For images containing text: add an <code>alt</code> attribute containing at least the text from the image,</li>
+<li>For decorative images: add an empty <code>alt</code> attribute,</li>
+<li>For images having <code>alt</code> attributes text too long (diagrams, graphs...), add a describing text close to the image, or add a link pointing to a html page with the description.</li>
+</ul>
+<p><strong>Checklist: </strong></p>
+<p>Each <code>img</code> tag must have an <code>alt</code> attribute.
+For images not carrying information, set them as background images preferably (CSS). 
+For graphs, you can add a link under it to access the data table (revealing it in the same page or in a different page).</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Access the information included in images for users who cannot access it.
+Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth...).</p>
+<p><strong>Technical goal: </strong></p>
+<p>Improve the natural referencing.</p>
+<p><strong>Valid example:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;back to home&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Good deal, family max plan 2 euros per month for 12 months instead of 16 euros.&quot;&gt;</code></p>
+<p><strong>Example with an empty alternative:</strong><br>In the example below, the right picto doesn&#39;t have to be vocalized as the text on the left already provides the information.<br>In this case setting the <code>alt</code> attribute would provide a redundant information.  </p>
+<p><img src="./images/service-24.png" alt="example with empty alternative">  </p>
+<p><code>&lt;h3&gt;guaranteed 24h service&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
+<p><strong>Reference: </strong>WCAG 1.1.1</p>
+<h2 id="12-provide-a-transcript-for-any-audio-or-video">12. Provide a transcript for any audio or video</h2>
+<p><strong>Target : </strong> everyone and particularly people with visual disabilities, hearing impairments, cognitive limitations, or difficulties with French.<br><strong>When: </strong> during design and development.</p>
+<p><strong>Description: </strong> </p>
+<p>Provide for any audio or video carrying information, a complete transcript in the page itself or through a link next to it.</p>
+<p><strong>Checklist: </strong></p>
+<p>A full transcript is a transcript containing all the visual and hearing information that is relevant. </p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Provide access to visual and hearing information for people who cannot access it: visually impaired, blind, deaf, cognitively deficient, computer without speakers, noisy or bright environment.</p>
+<p><strong>Technical goal: </strong></p>
+<p>Allow audio and video referencing.</p>
+<p><strong>Reference: </strong>WCAG 1.2.3</p>
+<h2 id="13-structuring-data-tables">13. Structuring data tables</h2>
+<p><strong>Target : </strong> everyone, particularly people with visual disabilities.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>For tabular data:</p>
+<ul>
+<li>Use the <code>table</code> element with <code>th</code>(for table headers), <code>td</code>,<code>tr</code> children elements.</li>
+<li>Use the <code>scope</code> attribute with row / col to associate header cells and data cells. For complex tables, use the<code>id</code> and <code>headers</code> attributes.</li>
+<li>Use the <code>caption</code> tag, a <code>h1</code> to <code>h6</code> tag just before the table or use a text near the table via an <code>aria-labelledby</code> in the <code>table</code> element to associate a title to the table.</li>
+<li>Add the <code>summary</code> attribute to the <code>table</code> tag to explain the structure in the case of a complex table. Keep in mind that this attribute is deprecated in HTML5, therefore it can be necessary to add the <code>summary</code> in the table title.</li>
+</ul>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Reminder: Do not use tables for page layout purposes. </li>
+<li>The caption (<code>caption</code>) can be replaced by a section title (<code>hx</code>) located before the table. <code>summary</code>, meanwhile, is only needed for complex tables.</li>
+<li>Prefer splitting a complex table into several simpler tables.</li>
+<li>Add a summary (<code>summary</code> attribute) in the table to explain the structure in the case of a complex table.</li>
+<li>The <code>tbody</code>, <code>tfoot</code> and <code>thead</code> tags have no influence on accessibility, hence, there is no obligation to use them.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Giving a summary and title for data tables allows everyone to know quickly its purpose without having to read it. For visually impaired users, binding cells to headers allows them to know where they are situated and understand the data in it.</p>
+<p><strong>Technical goal: </strong></p>
+<p>Improve natural referencing.</p>
+<p><strong>Reference:</strong> WCAG 1.3.1</p>
+<h2 id="14-use-relative-size-to-allow-changing-text-size">14. Use relative size to allow changing text size</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments, using a device outdoors and elderly people.<br><strong>When: </strong> during development.</p>
+<p><strong>Description: </strong></p>
+<p>Use relative length units for font size (em, rem, %) and for containers handling text size enlargement up to 200%.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Do not use pixel (px) for size that must adapt if we increase the text size.</li>
+<li>Form fields must also have relative sizes to enlarge properly.</li>
+<li>Try to make the container adaptive so they can increase in size when the text is zoomed in.</li>
+<li>In Firefox, go to View&gt;Zoom and check Zoom text only, set the zoom to 200%. Verify that there is no loss of information (disappearance or overlapping text).
+<img src="./images/zoom-200.png" alt="screenshot Zoom settings In Firefox"></li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow users (visually impaired, using a device outdoors, elderly people...) to increase the font size so they can access easily the information.</p>
+<p><strong>Example:</strong><br>See the example <a href="./exemples/zoom/index.html">handling zoom, increasing the text size</a> for more details.</p>
+<p><strong>Reference:</strong> WCAG 1.4.4</p>
+<h2 id="15-link-label-must-be-understandable-ouf-of-context">15. Link label must be understandable ouf of context</h2>
+<p><strong>Target : </strong> everyone, especially people with visual impairments, cognitive limitations or attention difficulties.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>Make the link labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several &quot;learn more&quot; links, it will be impossible to differentiate from each other.  </p>
+<p>If it is not possible to make a link more explicit (e.g. not enough space) but that the label of the current link is sufficiently clear for people having access to the screen, the link label can have an extra hidden text or an <code>aria-label</code> or <code>aria-labelledby</code> attribute, specifically for the screen reader users.
+For example, in the image below, the two &quot;next&quot; links are not explicit enough for a person with visual impairments. However, when one sees the screen, the positioning makes obvious the function of each button.</p>
+<p><img src="./images/liens-valider.png" alt="screenshot showing two valid links that should be clarified"></p>
+<p>In this case, add an <a href="./exemples/masquage/index.html">accessible hidden content</a> using <code>span</code> to complete the link label. This will not be displayed on the screen, but will be vocalized by assistive technologies.</p>
+<p><strong>Example:</strong><br><code>&lt;a href=&quot;...&quot;&gt;next&lt;span class=&quot;accessible-hidden-content&quot;&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;</code><br><code>&lt;a href=&quot;...&quot;&gt;next&lt;span class=&quot;accessible-hidden-content&quot;&gt; to pay at one time&lt;/span&gt;&lt;/a&gt;</code></p>
+<p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label.
+In addition to these solutions, we could also use <strong> a <code>title</code> attribute </strong> to display a &quot;confirm to pay in installments&quot; tooltip when the mouse is over the link.</p>
+<p><strong>Checklist: </strong></p>
+<p>Ensure that links, out of context, give good information about the triggered action or destination.
+A page must not contain multiple links with the same label but pointing to different destinations / actions.</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow users who don&#39;t not have access to the visual context to know the destination of the link. Particularly important for the users navigating through a list of links extracted from the page (screen readers) or software magnifying glass users who see only a fraction of the page.</p>
+<p><strong>Technical goal: </strong></p>
+<p>Making explicit link labels improves the natural referencing.</p>
+<p><strong>Do:</strong><br>Associate a link labeled &quot;click here&quot; with a hidden label: &quot;order you mobile phone&quot;. </p>
+<p><strong>Don&#39;t:</strong><br>&quot;Click here&quot; or &quot;Read more...&quot; links without clarification.</p>
+<p><strong>Reference:</strong> WCAG 2.4.9</p>
+<h2 id="16-preventing-the-user-from-opening-a-new-window">16. Preventing the user from opening a new window</h2>
+<p><strong>Target : </strong> everyone, especially people with visual impairments, cognitive limitations or having attention difficulties.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description:</strong></p>
+<p>Notify the user of any new window opening by mentioning it in the title of the link.
+If it is not possible, use an icon (image with <code>alt</code> attribute) indicating the new window opening or just add a &#39;new window&#39; in the label.<br>As a last resort, use an <a href="./exemples/masquage/index.html">accessibly hidden text</a> (off-screen).</p>
+<p><strong>Example: </strong>  </p>
+<p>Example of an icon that indicates the opening of a new window.<br><img src="./images/nouvelle-fenetre.png" alt="screenshot of a link with an icon indicating the opening of a new window">  </p>
+<p><strong>Checklist: </strong></p>
+<p>For any link opening a new window or a new tab, a mention like &quot;(new window)&quot; is shown in the link label, or the mention (new window) is positioned off the screen via CSS (<a href="./examples/hiding/index.html">accessible hidden content</a>).</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Avoid the unexpected opening of window, because this can disturb, disrupt, or confuse the user. In particular for persons using mobile outdoors, using speech synthesis or cognitively impaired.</p>
+<p><strong>Do:</strong><br>For any external link and opening a new window, the label could be: &quot;Access the site orange.com (new window)&quot;, for a picture-link the alt attribute could be: &quot;consult the CGU (new window)&quot;.    </p>
+<p><strong>Reference:</strong> WCAG 3.2.2</p>
+<h2 id="17-allow-to-use-the-main-features-of-the-application-with-the-keyboard">17. Allow to use the main features of the application with the keyboard</h2>
+<p><strong>Target : </strong> everyone, especially people with motor or visual impairment and using a device outdoors.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>Implement event handlers that don&#39;t rely only on mouse events.</p>
+<p><strong>Checklist: </strong></p>
+<p>All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag &amp; drop, mobile touch gestures...).</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor...) to access the main features of the application with the keyboard.</p>
+<p><strong>Do:</strong>      </p>
+<ul>
+<li>A sub-menu displayed when the mouse is over an element must also be displayed when the parent menu item receives the keyboard focus.</li>
+<li>In the webmail, right-clicking on the &quot;trash&quot; opens a menu to empty the trash, this option should be also available from a button &quot;empty the trash&quot; elsewhere in the interface or from a drop-down menu accessible with the keyboard.</li>
+</ul>
+<p><strong>Don&#39;t:</strong><br>A functionality only available through drag &amp; drop and without any keyboard equivalent.</p>
+<p><strong>Reference:</strong> WCAG 2.1.1</p>
+<h2 id="18-the-focus-order-must-be-sequential-and-logical-without-keyboard-trap">18. The focus order must be sequential and logical without keyboard trap</h2>
+<p><strong>Target : </strong> everyone, especially people with motor or visual impairments and using a device outdoors.<br><strong>When: </strong> during development.</p>
+<p><strong>Description: </strong></p>
+<p>The elements (links, buttons, form fields) must receive the focus in a logical order for the user, without being trapped or blocked, even for dynamically generated content appearing or disappearing (changing the DOM, Ajax,...). </p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>To validate this requirement, the focus position must be visible at all times (<code>outline</code> and <code>:focus</code> CSS  properties), see requirement 19 below.</li>
+<li>Be careful of the elements ordering in the HTML code, it affects the focus order. An element at the end of the source code, but positioned at the top of the page via CSS will be the last to receive focus.</li>
+<li>For maintainability, avoid using the <code>tabindex</code> attribute with values higher than 0.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allowing logical navigation without &quot;trapping&quot; the keyboard in the pages of the application. Necessary for users navigating with the keyboard (visually impaired, motor impaired, cognitive impaired, using a device outdoors).</p>
+<p><strong>Don&#39;t:</strong><br>A page containing a video player whose focus can enter inside the player, but cannot get out (keyboard trap).        </p>
+<p><strong>Reference:</strong> WCAG 2.4.3, 2.1.2</p>
+<h2 id="19-make-visible-the-focus-at-all-times">19. Make visible the focus at all times</h2>
+<p><strong>Target : </strong> everyone and especially people with visual impairments, cognitive limitations, motor disabled, having attention difficulties or using a device outdoors.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>Do not hide the focus and if necessary make it visible enough (e.g. by modifying the <code>outline</code> CSS property) on all elements likely to receive it (links, buttons, form elements). You can also accentuate the visibility of the focus so that it is easily identifiable.</p>
+<p>When an effect is visible on an element during mouse-over (e.g. <code>:hover</code> CSS property), this effect must also be displayed when capturing the focus (<code>:focus</code>).</p>
+<p><strong>Checklist: </strong></p>
+<p>In many front-end frameworks or CSS resets, the <code>outline</code> property (to visualize the focus) is disabled (<code>outline: none;</code>), don&#39;t forget to redefine it and check the focus is visible on all focusable elements.</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow focus visibility on all elements, especially for keyboard users (visually impaired, motor disabled or those with attention or memory difficulties and using devices outdoors).</p>
+<p><strong>Do:</strong><br>Focus set on the &quot;HTC Desire 620&quot; link.</p>
+<p><img src="./images/focus-ok.png" alt="screenshot showing a link whose focus is clearly visible">  </p>
+<p><strong>Don&#39;t:</strong><br>Focus set on the &quot;HTC Desire 620&quot; link.</p>
+<p><img src="./images/focus-ko.png" alt="screenshot showing a link whose focus is not visible enough">   </p>
+<p><strong>Reference:</strong> WCAG 2.4.7</p>
+<h2 id="20-provide-skip-links">20. Provide skip links</h2>
+<p><strong>Target : </strong> useful for mobile and tablet users, people with visual impairments, motor disabilities or using a device outdoors.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>Provide skip links allowing to access directly the main page areas (navigation, content, bottom of the page, search...) with internal links pointing to anchors. (<code>&lt;a&gt;</code> tags or any HTML element with an <code>id</code> attribute). In <strong>very specific</strong> cases, the links can be hidden on the screen and appear only when keyboard navigation.</p>
+<p><strong>Checklist: </strong>
+When a skip link is activated, make sure the focus is correctly set (not only scrolled to the right position).</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Facilitate the navigation for users using a keyboard, visually impaired, users of magnifying glass software or mobile phone.</p>
+<p><strong>Example: </strong><br>Skip links (&quot;Skip to navigation&quot;, &quot;Skip to content&quot;) are available on this site.
+To make them appear, move the focus on the top of the page by clicking on your browser&#39;s address bar, for example, then repeatedly press the button <code>TAB</code>.</p>
+<p><img src="images/skiplink.png" alt="screenshot of the site orange.com">   </p>
+<p><strong>Reference:</strong> WCAG 2.4.1</p>
+<h2 id="21-animation">21. Animation</h2>
+<p><strong>Target : </strong> people with visual impairments, reading, attention or understanding difficulties, people with seizure disorders.<br><strong>When: </strong> when designing the service and graphic design.</p>
+<p><strong>Description:</strong><br>All moving, refreshing or flashing content must be able to be stopped, paused or hidden by the user.
+Also, avoid as much as possible flashing content and sudden brightness changes (see <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">The logo of the Olympics causes seizures</a>).
+Therefore, it is necessary to add a pause when loading the page or a way to stop or pause the animation, the update or the flashing via a button for example.</p>
+<p><strong>Example: </strong><br><img src="./images/carrousel.png" alt="screenshot of a carousel with a button to pause the animation">  </p>
+<p>A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.<br>It is also possible to add a &quot;pause&quot; button directly in the interface.</p>
+<p><strong>Reference:</strong> WCAG 2.2.2</p>
+<h2 id="22-make-sure-the-main-features-can-be-used-with-screen-readers">22. Make sure the main features can be used with screen readers</h2>
+<p><strong>Target : </strong> everyone, especially people with visual impairments.<br><strong>When: </strong> during development.</p>
+<p><strong>Description: </strong></p>
+<p>Follow general recommendations for accessibility, use primarily the HTML standard components, otherwise, use the ARIA (Accessible Rich Internet Application) interface for complex components.</p>
+<p><strong>Checklist: </strong></p>
+<p>Ensure there is no blocking point with the combination browser/screen reader (Firefox/NVDA, IE/Jaws, Safari/VoiceOver) when a user navigates (accessing the main features of the application).
+Indeed, the screen reader users are the most affected by the lack of accessibility, we can identify a huge amount of problems in satisfying this requirement.</p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.</p>
+<h2 id="23-keep-a-logical-tab-order-on-dynamic-insertion-or-modification">23. Keep a logical tab order on dynamic insertion or modification</h2>
+<p><strong>Target : </strong> everyone, especially people with visual disabilities, cognitive limitations, or attention difficulties.<br><strong>When: </strong> during development.</p>
+<p><strong>Description: </strong></p>
+<p>When an element is displayed on a user interaction:</p>
+<ul>
+<li>it must appear in the source code right after the triggering element (e.g. drop down menu),</li>
+<li>or the focus must be set on one of the first elements of the generated content (link, button, title, paragraph...).  </li>
+</ul>
+<p>When the content disappears, the focus must be restored on the triggering element.
+For example, when closing a dialog, the focus must be moved to the element that triggered the popup opening (button, link...).</p>
+<p>Reminder: dynamically generated content must be accessible and therefore respect all accessibility criteria. 
+There are several solutions to warn the user in case of appearing/disappearing of content:</p>
+<ul>
+<li>via text</li>
+<li>moving the focus</li>
+<li>using ARIA</li>
+</ul>
+<p>See <a href="./exemples/simple-menu/simple-menu.html">the drop down menu example</a> for the <code>aria-haspopup</code> attribute implementation.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>The focus moves in a logical way (natural reading order).</li>
+<li>The focus order must not be defined using the <code>tabindex</code> attribute (with positive values).</li>
+</ul>
+<p>In practice, <code>tabindex</code> should be used with only two attribute values:</p>
+<ul>
+<li><code>tabindex=&quot;-1&quot;</code>: prevents an element to be focusable via the <code>TAB</code> key and allows it to be focusable via Javascript.</li>
+<li><code>tabindex=&quot;0&quot;</code>: makes an element focusable via the <code>TAB</code> key and via Javascript.</li>
+</ul>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow a user, for example, a blind or visually impaired, to detect and interact with new appearing content.  </p>
+<p><strong>Reference:</strong> WCAG 2.4.3</p>
+<h2 id="24-ensure-the-user-keeps-control-during-interactions">24. Ensure the user keeps control during interactions</h2>
+<p><strong>Target : </strong> everyone, especially people with visual impairments, cognitive limitations or attention difficulties.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>Do not introduce confusion when setting the focus on an element, entering data, on an unpredictable form field activation or without notifying the user. </p>
+<p><strong>Users&#39; goal: </strong></p>
+<p>Allow all users to maintain control over any change of context after an action.</p>
+<p><strong>Example:</strong><br>A form must have a submit button. It should not be sent automatically after the user input.</p>
+<p><strong>Reference:</strong> WCAG 3.2.1, 3.2.2
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+
+        </div>
+      </div>
+    </main>
+
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="./js/reco.js"></script>
+    <script type="text/javascript" src="./js/highlight.min.js"></script>
+    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>
+
+</body>
+</html>

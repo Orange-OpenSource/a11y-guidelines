@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handling keyboard navigation for ARIA - Orange web accessibility guidelines</title>
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Examples code styling -->
+      <link rel="stylesheet" href="../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+
+      <script src="../main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Handling keyboard navigation for ARIA and Design Patterns</h1>
+
+      <h2>Introduction</h2>
+      <p>Handling the keyboard navigation is one of the mainstays of the W3c/WAI ARIA recommendations (Accessible Rich Internet Application). The goal is to standardize the keyboard navigation in each interface components on a web page.<br />
+	  Generally, the keyboard navigation between UI components (widget) is "classically" done by tabbing. However, inside a widget, keyboard navigation has to be fine-tuned following the design patterns that are part of the ARIA recommendation.</p>
+
+	  <h2>Design patterns</h2>
+
+	  <h3>TabIndex</h3>
+	  <p>In HTML5, ARIA makes tabindex available to all visible elements and allows the use of:</p>
+	<ul>
+	<li>a negative value (-1) for components that must not be accessible with keyboard navigation, but can receive focus programmatically.</li>
+	<li>a value set to 0, it allows the element to receive the focus like all natively focusable element.</li>
+	</ul>
+	<h3>Design Patterns</h3>
+	<p>In ARIA, the main goal is to standardize the keyboard interactions by making the keyboard navigation identical as a desktop application (thick client). It is therefore necessary to implement the keyboard behavior on each widget according to its type (accordion, navigation bar, tool bar, potentiometer...) by following the design patterns (https://www.w3.org/TR/wai-aria-practices/#aria_ex). In addition to that, design patterns also give a way to implement the ARIA properties and states in order to make the widget accessible depending on its type.</p>
+	 <h3>User tests</h3>
+	 <p>To validate the usability for people with disabilities and the robustness according to user agents (assistive aids and browsers), the web site must be tested at least by screen reader users (this is the most affected population by wrong implementation of design patterns).</p>
+   <p>In any cases, you have to test developments in the target environments (browsers/assistive technologies combination). This is a tough task absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/NVDA.</p> 
+     
+ <p>    These user tests will allow you to validate that your widget is ergonomic which means that it is usable for this type of users and by extension for all users benefiting from accessibility (recall, 15% of the total population).</p>
+
+     
+    </main>
+
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

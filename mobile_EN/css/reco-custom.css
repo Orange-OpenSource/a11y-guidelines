@@ -1,0 +1,52 @@
+/* ---- custom mobile section */
+.mobileImg .btn-info {
+  min-height: 6.5rem;
+  white-space: normal;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.mobileImg a div {
+  margin-top : 5px;
+  font-size: 1.6rem;
+}
+
+#content {
+  text-align : justify;
+}
+
+#content img{
+  margin: 5px;
+}
+
+.sideToSide strong {
+  display: block;
+}
+
+#sidebar>ul {
+  -webkit-transition: margin-top .5s ease;
+       -o-transition: margin-top .5s ease;
+          transition: margin-top .5s ease;
+}
+
+.screenreaderContent h3{
+	margin-top: 10px;
+	
+}
+
+.screenreaderContent {
+	border-top : 1px solid #ddd;
+	margin-left: 5px;
+}
+
+.vcenter {
+	display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
+
+.licence {
+	color: #666;
+   font-size: 1.4rem;
+}
