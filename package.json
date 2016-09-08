@@ -1,7 +1,8 @@
 {
-  "name": "recoaxs",
+  "name": "a11y-guidelines",
   "version": "1.0.0",
   "description": "Recommandations accessiblité Orange",
+  "repository": "https://github.com/Orange-OpenSource/a11y-guidelines",
   "main": "index.js",
   "dependencies": {
     "boosted": "3.2.1",
@@ -20,6 +21,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sylvain Pigeard",
-  "license": "ISC"
+  "author": "Orange SA",
+  "license": "CC-BY-SA-3.0"
 }
