@@ -1,7 +1,14 @@
 # Recommandations accessibilité Orange
+
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
+
+## Avertissement
+Ce site est en cours de construction. Certaines rubriques ne sont pas totalement finalisées, d'autres seront peu être amenées à évoluer dans les prochaines semaines.  
+N'hésitez pas à nous remonter vos éventuelles remarques et suggestions.  
+
+Merci de votre compréhension.
 
 ## Qu'est ce que l'accessibilité numérique ?
 
