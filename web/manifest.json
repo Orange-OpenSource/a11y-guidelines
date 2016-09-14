@@ -17,7 +17,8 @@
         "output/markdown/methodes-outils-zoom.md",
         "output/markdown/exemples.md",                                
         "output/markdown/contact.md",
-        "output/markdown/about.md"
+        "output/markdown/about.md",
+        "output/markdown/pushmail.md"
     ],
     "maxTocLevel":"1"
 }
