@@ -6,12 +6,12 @@
 
 
 ## Introduction : l'accessibilité des mails
-Les mails au format texte et sans images, comme le sont les mails entre salariés, sont souvent accessibles. Le problème d'inaccessiiblité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d'informations et sont un outil essentiel de la communication d'entreprise.
+Les mails au format texte et sans image, comme le sont les mails entre salariés, sont généralement accessibles. Le problème d'inaccessiiblité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d'informations et sont un outil essentiel de la communication d'entreprise.
 
 ### Des solutions alternatives
-Et si c’est complexe, 
-pensez à proposer un lien redirigeant vers une page web
-un lien de début de mail vers un word accessible
+Et si la mise en pagedu pushamail est complexe, que l'on a pas la possiiblité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes mais qui fonctionnent toujours :
+- proposer un lien redirigeant vers une page web 
+- Mettre en place un lien en début de mail pointant vers un word accessible
 
 ### Qui est impacté ?
 - les personnes qui ne voient pas 
@@ -156,10 +156,10 @@ Word !!!!!!!!!!!!!!!!
 Simplifier la mise en page bien que les clients de messagerie (Outlook inclus) obligent à utiliser une mise en page en tableau.
 
 **À vérifier : **
-- Globalement, ne pas utilliser de mise en page complexe (fusion de cellules d'un tableau, multicolonnage...), 
+Globalement, ne pas utilliser de mise en page complexe (fusion de cellules d'un tableau, multicolonnage...), 
 - Éviter d'imbriquer les tableaux de mise en page (grand maximum, 2 niveaux d'imbrication), mais aussi :
     - Ne pas fusionner les cellules d’un tableau mais utiliser plusieurs tableaux plus simples
-    - Pas de cellules vides utiliser 
+    - Pas de cellules vides
     - Pas d’images de fond 
 - Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas)
 - Éviter les tableaux de données, les graphiques ou les schémas complexes
