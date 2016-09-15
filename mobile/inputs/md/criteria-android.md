@@ -43,7 +43,6 @@ Permettre l'accès à l'information incluse dans une image pour des utilisateurs
 En décomposant l'image :  
 - <img src="./images/montagnard.png" alt="exemple d'image décorative" width="256"> pas de `contentDescription`  
 - <img src="./images/edit.png" alt="exemple d'icone informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`  
-.
 - <img src="./images/settings.png" alt="exemple d'icone informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l'image")`
   
 ## Couleurs  
