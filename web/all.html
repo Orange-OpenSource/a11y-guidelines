@@ -1156,6 +1156,175 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="recommandations-accessibilit-pushmail-orange">Recommandations accessibilité pushmail Orange</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Pushmails"}]);
+});</script>
+
+
+<h2 id="introduction-l-accessibilit-des-mails">Introduction : l&#39;accessibilité des mails</h2>
+<p>Les mails au format texte et sans image, comme le sont les mails entre salariés, sont généralement accessibles. Le problème d&#39;inaccessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d&#39;informations et sont un outil essentiel de la communication d&#39;entreprise.</p>
+<h3 id="des-solutions-alternatives">Des solutions alternatives</h3>
+<p>Et si la mise en page du push mail est complexe, que l&#39;on a pas la possibilité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours :</p>
+<ul>
+<li>Proposer un lien redirigeant vers une page web </li>
+<li>Mettre en place un lien en début de mail pointant vers un fichier texte ou un fichier word accessible</li>
+</ul>
+<h3 id="qui-est-impact-">Qui est impacté ?</h3>
+<ul>
+<li>Les personnes qui ne voient pas <ul>
+<li>synthèse vocale</li>
+<li>plage braille</li>
+</ul>
+</li>
+<li>Les personnes qui voient mal<ul>
+<li>malvoyant, âgé</li>
+<li>contexte visuel contraint</li>
+</ul>
+</li>
+<li>Les personnes qui lisent avec difficulté <ul>
+<li>autre langue maternelle</li>
+<li>contraintes cognitives et illettrisme</li>
+</ul>
+</li>
+<li>Les personnes qui ont des difficultés à manipuler</li>
+<li>Les personnes cumulant des difficultés légères (seniors)</li>
+</ul>
+<h2 id="les-crit-res-respecter">Les critères à respecter</h2>
+<h3 id="consid-ration-g-n-rale">Considération générale</h3>
+<p>Ces critères sont génériques et ne présument pas de la manière de fabriquer les mails, mais suppose que le contenu soit du html, seul format permettant une mise en page complexe. Pour les exemples utilisés dans ces recommandations, nous les avons mis en oeuvre dans Word qui semble être l&#39;outil privilégié pour fabriquer les pushmails et les gabarits des newsletters, chez nous, Orange. Bien sûr, ces recommandations peuvent être appliquées dans n&#39;importe quel outil permettant de fabriquer des mails.</p>
+<h3 id="simplifier-la-r-daction-du-contenu">Simplifier la rédaction du contenu</h3>
+<p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
+<p><strong>Description : </strong><br>Simplifier le rédactionnel pour tous les utilisateurs.</p>
+<p><strong>À vérifier : </strong><br>S&#39;assurer que le rédactionnel :</p>
+<ul>
+<li>Utilise des tournures de phrases limpides<ul>
+<li>des phrases courtes et à la construction simple : sujet, verbe, complément</li>
+<li>une idée par phrase</li>
+<li>utiliser des mots simples et expliquer les mots compliqués</li>
+<li>utiliser le présent</li>
+<li>privilégier le style direct et la forme active (pas de subjonctif, pas de conjonctions)</li>
+</ul>
+</li>
+<li>Ne contient pas de mots en anglais, de sigles ou abréviations sauf ceux passés dans le langage courant </li>
+<li>Utilise les caractères typographiques du Français  <ul>
+<li>Tiret - , cadratin —, « guillemets français »</li>
+<li>Accents même aux majuscules (éèêçàïùÉÈÊÇÀÏÙ)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Objectif : </strong><br>Permettre aux utilisateurs de comprendre facilement et d&#39;interpréter le sens du contenu.</p>
+<h3 id="structurer-s-mantiquement-le-contenu">Structurer sémantiquement le contenu</h3>
+<p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
+<p><strong>Description : </strong><br>Donner une structure cohérente au contenu rédactionnel grâce à la mise en place :</p>
+<ul>
+<li>de titres (balises HTML <code>h1</code> jusqu&#39;à <code>h6</code>) </li>
+<li>de listes (balises HTML <code>ol</code>, <code>ul</code> et <code>li</code>) </li>
+</ul>
+<p><strong>À vérifier : </strong>  </p>
+<ul>
+<li>Les titres doivent être pertinents et non vides.</li>
+<li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d&#39;un titre <code>h2</code> à un titre <code>h4</code>).</li>
+<li>On peut mettre plusieurs <code>h1</code> par mail (se limiter tout de même à deux dans la majorité des cas).</li>
+<li>les listes doivent être de réelles listes de plusieurs éléments et bien différencier les listes ordonnées de celles qui ne le sont pas.</li>
+</ul>
+<p><strong>Objectif : </strong><br>Permettre aux utilisateurs de facilement comprendre et hiérarchiser le contenu.</p>
+<p><strong>Exemple : </strong><br>Word styles</p>
+<h3 id="simplifier-la-pr-sentation">Simplifier la présentation</h3>
+<p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
+<p><strong>Description : </strong><br>Simplifier la présentation du contenu et respecter les bonnes pratiques en terme de présentation. </p>
+<p><strong>À vérifier : </strong><br>Pour assurer une lecture facile :</p>
+<ul>
+<li>Aligner le texte à gauche, mais ne pas le justifier</li>
+<li>Utiliser une police de caractères facilement lisible en corps 12pt minimum</li>
+<li>Mettre  en place une ponctuation simple</li>
+<li>Ne pas mettre d’italiques, ni de phrases en majuscules, mais une majuscule en début de phrase</li>
+<li>Éviter les fonds texturés (images)</li>
+<li>Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction Paragraphe Espacement ou Retrait dans Word)</li>
+<li>Éviter les tableaux de mise en page ou de données</li>
+<li>Mettre en place un indicateur de fin de mail (par exemple, une image indiquant « fin de mail », un texte blanc sur fond blanc &quot;fin de mail&quot;)</li>
+</ul>
+<p><strong>Objectif : </strong>
+S&#39;assurer que la présentation n&#39;empêche pas l&#39;accès au contenu et à sa compréhension.</p>
+<h3 id="donner-une-alternative-aux-images">Donner une alternative aux images</h3>
+<p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles ou cognitives.  </p>
+<p><strong>Description : </strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones...). 
+Mettre pour toute image (balise <code>img</code> en HTML) une alternative pertinente (un attribut <code>alt</code> en HTML) : </p>
+<ul>
+<li>Pour les images cliquables : préciser la fonction / la cible du lien dans l’alternative,</li>
+<li>Pour les images porteuses d&#39;information : mettre une alternative décrivant l&#39;information contenue dans l&#39;image</li>
+<li>Pour les images contenant du texte : mettre une alternative reprenant au moins le texte de l’image,</li>
+<li>Pour les images décoratives : mettre une alternative vide,</li>
+<li>Pour les images dont le contenu de l&#39;alternative serait trop long (schémas, graphes...), mettre à proximité de l&#39;image à décrire, sa description sous forme de texte dans le mail ou, un lien pointant vers une page html contenant cette description.</li>
+</ul>
+<p><strong>À vérifier : </strong><br>Toute image doit posséder une  alternative qui ne reflète que le contenu informatif qu&#39;elle porte.
+Pour les graphes, la solution, peut être, de mettre un lien sous l&#39;image permettant d&#39;accéder à un tableau de chiffre en bas du mail, par exemple.
+Une alternative doit être :</p>
+<ul>
+<li>Précise et équivalente au contenu de l&#39;image ou sa fonction</li>
+<li>Succincte, quelques mots à deux phrases courtes semble la bonne taille</li>
+<li>Pas redondante, ne pas fournir la même information que dans le texte environnant</li>
+<li>Pas de texte générique, pas besoin d&#39;alternative du type &quot;image de...&quot;, &quot;graphique sur...&quot;, &quot;lien vers...&quot;, ...</li>
+</ul>
+<p><strong>Objectif : </strong><br>Permettre l&#39;accès à l&#39;information incluse dans une image pour des utilisateurs qui n&#39;y ont pas accès.
+Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n&#39;affichant pas les images (mobile, faible bande passante...).</p>
+<p><strong>Exemple : </strong><br>word</p>
+<h3 id="sp-cifier-la-langue-du-mail-et-les-changements-ventuels">Spécifier la langue du mail et les changements éventuels</h3>
+<p><strong>Pour qui : </strong> les personnes déficientes visuelles.  </p>
+<p><strong>Description : </strong><br>Spécifier la langue principale du document (l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans la balise <code>html</code>). 
+Préciser également la langue d&#39;un contenu exprimé dans une langue autre que la langue principale (l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans l&#39;élément html contenant l&#39;expression en langue étrangère).  </p>
+<p><strong>À vérifier : </strong><br>Pour les mots ou les expressions en langue étrangère passés dans l&#39;usage courant (Google, newsletter...) ou les noms propres, ne pas indiquer de changement de langue.</p>
+<p><strong>Objectif : </strong><br>Cette indication permet d&#39;adapter la synthèse vocale pour une bonne prononciation de la langue à utiliser.</p>
+<p><strong>Exemple pour une page en français : </strong><br>Word !!!!!!!!!!!!!!!!</p>
+<ul>
+<li>pour du HTML : <code>&lt;html lang=&quot;fr&quot;&gt;</code></li>
+<li>pour du XHTML : <code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;</code></li>
+</ul>
+<p><strong>Exemple de changement de langue : </strong><br><code>découvrir Orange &lt;span lang=&quot;fr&quot;&gt;live&lt;/span&gt; TV</code></p>
+<h3 id="fournir-une-mise-en-page-accessible">Fournir une mise en page accessible</h3>
+<p><strong>Pour qui : </strong> les personnes déficientes visuelles.  </p>
+<p><strong>Description : </strong><br>Simplifier la mise en page bien que les clients de messagerie (Outlook inclus) obligent à utiliser une mise en page en tableau.</p>
+<p><strong>À vérifier : </strong><br>Globalement, ne pas utiliser de mise en page complexe (fusion de cellules d&#39;un tableau, multicolonnage...), </p>
+<ul>
+<li>Éviter d&#39;imbriquer les tableaux de mise en page (grand maximum, 2 niveaux d&#39;imbrication), mais aussi :<ul>
+<li>Ne pas fusionner les cellules d’un tableau, mais utiliser plusieurs tableaux plus simples</li>
+<li>Pas de cellules vides</li>
+<li>Pas d’images de fond </li>
+</ul>
+</li>
+<li>Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas)</li>
+<li>Éviter les tableaux de données, les graphiques ou les schémas complexes</li>
+</ul>
+<p><strong>Objectif : </strong><br>Permettre, notamment aux utilisateurs de lecteurs d&#39;écran, de comprendre facilement le contenu quelle que soit la mise en page utilisée.</p>
+<h3 id="rendre-accessibles-les-couleurs-et-le-contraste">Rendre accessibles les couleurs et le contraste</h3>
+<p><strong>Pour qui : </strong> tout le monde, en particulier, les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d&#39;attention et les seniors.   </p>
+<p><strong>Description : </strong>  </p>
+<ul>
+<li>Le niveau de contraste entre le texte et l&#39;arrière-plan, doit être suffisamment élevé.</li>
+<li>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle...) comme la seule façon de véhiculer de l&#39;information, d&#39;indiquer une action, de solliciter une réponse ou de distinguer un élément.</li>
+</ul>
+<p><strong>Objectif : </strong><br>Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
+De même, utiliser des informations sensorielles (forme, taille, son, orientation, localisation visuelle...) seules sans alternative empêche, ceux qui ne peuvent les interpréter, d&#39;agir efficacement voire d&#39;agir tout simplement. </p>
+<p><strong>Outil : </strong><br>L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalyser/">colour contrast analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
+<h3 id="identifier-les-liens-et-leurs-cibles">Identifier les liens et leurs cibles</h3>
+<p><strong>Pour qui : </strong> tout le monde, en particulier, pour les malvoyants, les non-voyants et les personnes ayant des difficultés de lecture.</p>
+<p><strong>Description : </strong><br>Rendre les liens identifiables et compréhensibles hors contexte</p>
+<p><strong>À vérifier : </strong>  </p>
+<ul>
+<li>Souligner les liens, car sinon les personnes doivent faire un effort cognitif pour les trouver. Les personnes en situation de contrainte motrice ne peuvent les trouver qu’en naviguant davantage.</li>
+<li>Ne pas utiliser des intitulés comme &quot;Cliquez ici&quot;, &quot;Pour en savoir plus&quot;, &quot;Suivez ce lien&quot;, &quot;Plus de détails&quot;, &quot;Lire la suite&quot;, mais des intitulés qui identifient  bien leur cible</li>
+<li>Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en ajoutant à l&#39;intitulé du texte, par exemple &quot;nouvelle fenêtre&quot;, car le multifenêtrage qui peut être déjà troublant pour un voyant est tout simplement bloquant pour un non-voyant.</li>
+</ul>
+<p><strong>Objectif : </strong><br>Permettre à un utilisateur n&#39;ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d&#39;écran) ou les utilisateurs de loupe logicielle qui ne voient qu&#39;une fraction de la page. </p>
+<h3 id="word-et-accessibilit-quelques-liens">Word et accessibilité, quelques liens</h3>
+<ul>
+<li><a href="http://www.webaim.org/techniques/word/">http://www.webaim.org/techniques/word/</a> </li>
+<li><a href="https://support.office.com/en-us/article/Creating-accessible-Word-documents-D9BF3683-87AC-47EA-B91A-78DCACB3C66D">https://support.office.com/en-us/article/Creating-accessible-Word-documents-D9BF3683-87AC-47EA-B91A-78DCACB3C66D</a></li>
+<li><a href="http://www.anysurfer.be/fr/en-pratique/documents/word">http://www.anysurfer.be/fr/en-pratique/documents/word</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 
 
         </div>

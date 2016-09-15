@@ -61,6 +61,13 @@ index.add({
     body: "# Orange accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  "
 });
 
+documentTitles["index.html#warning"] = "Warning";
+index.add({
+    url: "index.html#warning",
+    title: "Warning",    
+    body: "## Warning  This site is under construction. Some items are not fully finalized, others may evolve over the coming weeks.   Any comments or suggestions are welcome.  Thanks for your understanding.  "
+});
+
 documentTitles["index.html#what-is-digital-accessibility"] = "What is digital accessibility ?";
 index.add({
     url: "index.html#what-is-digital-accessibility",

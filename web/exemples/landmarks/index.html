@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemple landmarks ARIA - recommandations accessiblité web Orange</title>
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>les régions ou landmarks ARIA</h1>
+
+      <h2>Préambule</h2>
+      <p>Dans cet exemple, nous allons voir comment améliorer la navigation dans la page en ajoutant de la sémantique au contenu permettant de repérer plus facilement les grandes régions de la page.</p>
+      <h2>Théorie</h2>
+      <p> HTML5 introduit de nouvelles balises, notamment des balises sémantiques (<code>main</code>, <code>aside</code>, <code>footer</code> et <code>header</code>).</p>
+      <p>Ces balises doivent être utilisées avec les rôles ARIA correspondants pour être sûr de mieux servir les utilisateurs, notamment ceux qui utilisent des aides techniques :</p>
+      <pre><code>
+    &lt;header role="banner"&gt;[…]&lt;/header&gt;
+
+    &lt;nav role="navigation" aria-label="Menu principal"&gt;[…]&lt;/nav&gt;
+    &lt;nav role="navigation" aria-label="Menu secondaire"&gt;[…]alt;/nav&gt;
+
+    &lt;div class="search" role="search"&gt;
+      &lt;form&gt;[…]&lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;main role="main"&gt;
+      &lt;nav aria-label="Fil d'Ariane"&gt;[…]&lt;/nav&gt;
+      […]
+    &lt;/main&gt;
+
+    &lt;aside role="complementary"&gt;[…]&lt;/aside&gt;
+    &lt;footer role="contentinfo"&gt;[…]&lt;/footer&gt;
+      </code></pre>
+      
+      <h3>Usages</h3>
+      <ul>
+        <li>Il ne peut y avoir qu'une seule balise <code>main</code> et donc un seul <code>role=main</code> par page afin d'identifier le contenu principal d'une page.</li>
+        <li>Le <code>role=navigation</code> couplé à la balise <code>nav</code> permet d'identifier les principales navigations internes au site. Les bonnes pratiques demandent que l'on utilise 3 balises/roles nav/navigation maximum par page.</li>
+        <li>La balise <code>footer</code> et le <code>role=contentinfo</code> permettent d'identifier le pied de page. Il doit être unique dans la page.</li>
+        <li>Le couple balise <code>header</code>, <code>role=header</code> identifie l'en-tête de la page. Lui aussi doit être unique.</li>
+        <li>Pour identifier le formulaire de recherche dans le site, on utilisera seul le <code>role=search</code> ARIA.</li>
+        <li>Si besoin, le contenu annexe au contenu principal de la page (information complémentaire, pub...) doit être identifier en utilisant la balise <code>aside</code> et le <code>role=complementary</code>.</li>
+      </ul>
+
+      <h3>Landmark, utilisateurs et aides techniques</h3>
+      <p>En effet, les balises HTML5 définissant les grandes régions de la page n'ont, pour l'instant, qu'un support insuffisant avec les aides techniques (lecteur d'écran, loupe logicielle...). Il faut donc les doubler avec leur équivalent ARIA dont le support est meilleur.</p>
+      <p>Mettre en place ces landmarks ARIA est une bonne pratique, car elle peut améliorer la navigations de certains utilisiateurs sans impacter celle des autres, c'est un plus indéniable !</p>
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
