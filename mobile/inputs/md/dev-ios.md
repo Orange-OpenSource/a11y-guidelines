@@ -11,7 +11,7 @@
 
 <span data-menuitem="dev-mobile"></span>
 
-Ce guide a pour objectif de présenter les différentes options d'accessibilité du SDK iOS. A travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d'accessibilité et propose des liens vers la documentation officielle d'Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).
+Ce guide a pour objectif de présenter les différentes options d'accessibilité du SDK iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d'accessibilité et propose des liens vers la documentation officielle d'Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).
 
 ## Alternatives textuelles
 **Description : **  
@@ -21,7 +21,7 @@ L’ordre de vocalisation est toujours le suivant : `label`, `value`, `trait` e
 
 Une section de ce guide est dédiée au trait, nous décrivons ici les 3 autres :  
 - `accessibilityLabel` : le `label` permet de préciser le titre spécifique à l’accessibilité qui est lu par VoiceOver en lieu et place du texte du composant si celui-ci en possède un. Cela permet d’avoir un texte de composant plus explicite que celui affiché à l’écran. Par exemple, dans le cas d’un bouton dont le titre est « OK », on peut indiquer que le bouton sert à valider un choix.
-- `accessibilityValue` : la valeur d’un élément est par défaut le pourcentage de progression (exemple : une barre de progression). A noter que pour la plupart des éléments ajustables disponibles dans le SDK, cette value n’a pas besoin d’être reprécisée (le système restitue automatiquement la valeur à l’utilisateur via VoiceOver).
+- `accessibilityValue` : la valeur d’un élément est par défaut le pourcentage de progression (exemple : une barre de progression). À noter que pour la plupart des éléments ajustables disponibles dans le SDK, cette value n’a pas besoin d’être reprécisée (le système restitue automatiquement la valeur à l’utilisateur via VoiceOver).
 - `accessibilityHint` : le `hint` permet de décrire le comportement du composant. Exemple : « cliquez pour obtenir le résultat ».  
 
 Ces attributs d’accessibilité sont disponibles via l’interface builder, mais également via le code. Tout élément dérivant de `UIView` les possède par défaut. Ces attributs acceptent une chaine de caractère en option, et sont, par conséquent, facilement internationalisables.
@@ -75,7 +75,7 @@ func accessibleSegmentedControl() {
 
 **Description : ** 
 
-L’attribut `accessibilityTraits` permet de donner une information à l'api d'accessibilité sur la nature d’un composant. On peut décider ainsi qu’un item de liste soit pris en compte comme un bouton par VoiceOver car celui-ci est cliquable. De ce fait, l’`accessibilityTrait` joue également sur la vocalisation de l’élément car cette nature est restituée par VoiceOver.  
+L’attribut `accessibilityTraits` permet de donner une information à l'API d'accessibilité sur la nature d’un composant. On peut décider ainsi qu’un item de liste soit pris en compte comme un bouton par VoiceOver car celui-ci est cliquable. De ce fait, l’`accessibilityTrait` joue également sur la vocalisation de l’élément car cette nature est restituée par VoiceOver.  
  
 Cet attribut d’accessibilité est disponible via l’interface builder, mais également utilisable directement via le code.  
 
@@ -83,7 +83,7 @@ Il existe beaucoup de traits. Ci-après, les principaux (les plus utiles) :
 - `accessibilityTraitNone` : supprime toute valeur sémantique à l’élément.
 - `accessibilityTraitButton` : ajoute le trait « bouton », l’élément est vu comme un bouton par VoiceOver.
 - `accessibilityTraitLink` : utile pour définir un label en tant que « lien ».
-- `accessibilityTraitHeader` : permet de définir un élément comme un en-tête (pour plus d’information, voir la section « titres et en-têtes » dans la partie critères de l’application).
+- `accessibilityTraitHeader` : permet de définir un élément comme une en-tête (pour plus d’information, voir la section « titres et en-têtes » dans la partie critères de l’application).
 - `accessibilityTraitAdjustable` : permet de définir un élément comme un élément « ajustable », c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un geste spécifique de VoiceOver.
 
 **Exemples : **   
@@ -196,7 +196,7 @@ Il existe plusieurs notifications de modification, mais les deux plus utiles son
 - `UIAccessibilityLayoutChangedNotification` : permet de spécifier à l’API d’accessibilité qu’une partie de la page a été modifiée.
 - `UIAccessibilityScreenChangedNotification` : permet d’annoncer un changement global de la page.  
 
-A l’usage, il existe une petite différence entre les deux. `UIAccessibilityLayoutChangedNotification` accepte une `NSString` ou un `UIObject`. Avec le premier paramètre, la notification se comporte comme une `UIAccessibilityAnnouncementNotification` et lance une vocalisation VoiceOver. Avec le second, le focus est repositionné sur l’élément de notre choix.  
+À l’usage, il existe une petite différence entre les deux. `UIAccessibilityLayoutChangedNotification` accepte une `NSString` ou un `UIObject`. Avec le premier paramètre, la notification se comporte comme une `UIAccessibilityAnnouncementNotification` et lance une vocalisation VoiceOver. Avec le second, le focus est repositionné sur l’élément de notre choix.  
 
 `UIAccessibilityScreenChangedNotification` accepte soit `nil`, soit l’élément qui doit recevoir le focus.
 
@@ -349,4 +349,5 @@ Cellule de tableau qui comporte des éléments de formulaire :
 - [UIAccessibilityContainer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/)
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Crea
+ tive Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

@@ -11,7 +11,7 @@
 
 <span data-menuitem="dev-mobile"></span>
 
-Ce guide a pour objectif de présenter les différentes options d'accessibilité du SDK Android. A travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d'accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.
+Ce guide a pour objectif de présenter les différentes options d'accessibilité du SDK Android.  travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d'accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.
 
 ## Alternatives textuelles
 **Description : **  
@@ -20,7 +20,7 @@ Sous Android, la vocalisation d'un élément s'effectue à travers un attribut, 
 
 Le `contentDescription` doit aussi être utilisé sur les éléments custom pour indiquer leur nature. Par exemple, un `LinearLayout` que l'on rendrait cliquable doit avoir un `contentDescription` type « nom_du_bouton, bouton » (il faut également permettre le focus du bouton à l'accessibilité, voir la section correspondante).  
 
-A noter que le `contentDescription` est disponible sous tout élément qui hérite de `View`. Il est donc possible de positionner un `contentDescription` sur une `TextView` par exemple, comme montré dans la section « guide d'accessibilité – alternative textuelle – abréviations, dates et heures ».  
+À noter que le `contentDescription` est disponible sous tout élément qui hérite de `View`. Il est donc possible de positionner un `contentDescription` sur une `TextView` par exemple, comme montré dans la section « guide d'accessibilité – alternative textuelle – abréviations, dates et heures ».  
  
 **Exemples : **   
 
@@ -57,14 +57,14 @@ private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
 
 **Description : **  
 
-Il est possible via un attribut d'accessibilité de masquer des éléments aux outils d'accessibilité (TalkBack par exemple). Par extension, il est possible de forcer certains éléments à être visible aux outils d'accessibilité.  
+Il est possible via un attribut d'accessibilité de masquer des éléments aux outils d'accessibilité (TalkBack par exemple). Par extension, il est possible de forcer certains éléments à être visibles aux outils d'accessibilité.  
 `ImportantForAccessibility` : suivant la valeur de l'attribut, cela permet d'indiquer qu'un élément est visible ou non de l'API d'accessibilité.  
 -	`auto` (0) : valeur par défaut, c'est le système qui décide. Par exemple, un `Button` aura sa valeur par défaut à 1 (<i>yes</i>) et un `LinearLayout` à 2 (<i>no</i>).
 -	`yes` (1) : la vue est importante pour l'accessibilité. Elle peut par exemple recevoir le focus de TalkBack.
 -	`no`(2) : la vue n'est pas importante pour l'accessibilité. Elle ne déclenche plus d'évènement d'accessibilité et est par conséquent ignorée par des services tel que TalkBack.
 -	`noHideDescendants`  (4) : la vue n'est pas importante pour l'accessibilité, mais également toutes ses vues filles. Cela permet de cacher tous les éléments d'une vue à l'accessibilité en une seule fois. Très utile sur les éléments custom.  
   
-A noter : l'attribut « `importantForAccessibility` » est disponible pour tout élément qui hérite de `View`.
+À noter : l'attribut « `importantForAccessibility` » est disponible pour tout élément qui hérite de `View`.
 
 **Exemples : **
 
@@ -85,7 +85,7 @@ Depuis le code :
 
 Il est très facile de déclencher des vocalisations avec TalkBack. Déclencher une vocalisation est très utile dans le cas de contenu dynamique, au même titre que les `LiveRegion` (voir la section correspondante). Pour déclencher une vocalisation, il suffit de faire appel à la méthode `announceForAccessibility` en lui passant en paramètre l'id de la chaine de caractère à vocaliser.  
 
-A noter : la méthode `announceForAccessibility` est disponible sur tout élément qui hérite de `View` et se fait dans la langue du système.
+À noter : la méthode `announceForAccessibility` est disponible sur tout élément qui hérite de `View` et se fait dans la langue du système.
 
 Attention: nous parlons ici de vocalisation TalkBack et non pas de TTS (Text To Speech) qui peut fonctionner indépendamment du statut de TalkBack.
 
@@ -107,7 +107,7 @@ Il est fréquent de tester la version d'Android avant de déclencher une vocalis
 
 Sous Android, il est possible de savoir si l'API d'accessibilité est activée, et par extension de savoir si TalkBack est activé.
 
-**A l'usage : ** 
+**À l'usage : ** 
 
 <pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
 boolean isAccessibilityEnabled = am.isEnabled();</code></pre>
@@ -124,7 +124,7 @@ Il faut passer par la méthode `setAccessibilityLiveRegion` qui prend en paramè
 -	`ACCESSIBILITY_LIVE_REGION_POLITE` : en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont « polies » : elles sont moins prioritaires que les vocalisations système par exemple.
 -	`ACCESSIBILITY_LIVE_REGION_ASSERTIVE` : en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « rudes » : elles sont prioritaires et immédiatement vocalisées.  
 
-A noter : la méthode `setAccessibilityLiveRegion` est disponible sur tout élément qui hérite de `View`.
+À noter : la méthode `setAccessibilityLiveRegion` est disponible sur tout élément qui hérite de `View`.
 
 **Exemples : **
 
@@ -145,7 +145,7 @@ L'ordre du focus de la synthèse vocale par défaut prend en compte plusieurs pa
 -	`accessibilityTraversalAfter` : prend un id en paramètre et permet de spécifier à la vue qu'elle doit être décrite par l'accessibilité après la vue passée en paramètre.
 - `accessibilityTraversalBefore` : prend un id en paramètre et permet de spécifier à la vue qu'elle doit être décrite par l'accessibilité avant la vue passée en paramètre.
 
-A noter : ces attributs peuvent être utilisés directement dans le xml mais également dans le code via les méthodes `setAccessibilityTraversalAfter` et `setAccessibilityTraversalBefore`. Ces méthodes sont disponibles pour tout élément qui hérite de `View`.
+À noter : ces attributs peuvent être utilisés directement dans le xml mais également dans le code via les méthodes `setAccessibilityTraversalAfter` et `setAccessibilityTraversalBefore`. Ces méthodes sont disponibles pour tout élément qui hérite de `View`.
 
 **Exemple : ** 
 
@@ -270,9 +270,9 @@ Pour gérer la navigation au focus, il faut s'assurer de 3 choses :
 - Gérer l'affichage du focus : tout élément interactif peut recevoir le focus, il faut donc que le `state_focused` soit défini et permette de distinguer d'un seul coup d'œil quel élément a le focus.
 - Gérer l'ordre du focus : à travers les options `nextFocusDown, nextFocusUp, nextFocusRight` et `nextFocusLeft`, vous pouvez spécifier quelle vue doit prendre le focus selon l'utilisation des flèches bas, haut, droit et gauche.  
 
-La plupart du temps, seuls les point 1 et 2 sont à prendre la compte. En effet, le système Android est capable de déterminer assez précisément les positions des éléments par rapport aux autres et donc de fournir un ordre de lecture au clavier logique et cohérent.
+La plupart du temps, seuls les point 1 et 2 sont à prendre la compte. En effet, le système Android est capable de déterminer assez précisément les positions des éléments les uns par rapport aux autres et donc de fournir un ordre de lecture au clavier logique et cohérent.
 
-A noter : `nextFocusDown, nextFocusUp, nextFocusRight, nextFocusLeft, focusable` ainsi que d'autres options de gestion du focus sont accessibles directement dans le xml ou dans le code à travers les méthodes correspondantes.
+À noter : `nextFocusDown, nextFocusUp, nextFocusRight, nextFocusLeft, focusable` ainsi que d'autres options de gestion du focus sont accessibles directement dans le xml ou dans le code à travers les méthodes correspondantes.
 
 **Exemple : **
 

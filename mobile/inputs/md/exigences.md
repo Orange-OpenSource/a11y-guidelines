@@ -7,7 +7,7 @@
 - Lecture des éléments avec voiceover (label + role)
 - Taille du texte dynamique
 - Changement de langue dans l'application
-- Usage de composants natifs (ou custom avec gestion de l'axs)
+- Usage de composants natifs (ou custom avec gestion de l'accessibilité)
 - Ordre de lecture des éléments
 - Zones cliquables suffisament grandes
 - Eléments fantomes ?

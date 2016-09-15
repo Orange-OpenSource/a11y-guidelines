@@ -43,6 +43,7 @@ Permettre l'accès à l'information incluse dans une image pour des utilisateurs
 En décomposant l'image :  
 - <img src="./images/montagnard.png" alt="exemple d'image décorative" width="256"> pas de `contentDescription`  
 - <img src="./images/edit.png" alt="exemple d'icone informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`  
+.
 - <img src="./images/settings.png" alt="exemple d'icone informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l'image")`
   
 ## Couleurs  
@@ -62,7 +63,7 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 **Objectif utilisateur : ** 
 
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personne dans un environnement lumineux défavorable (en mobilité).  
-Permettre aux utilisateurs ne distinguant pas les couleurs ou l'information sensorielle (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant... ), d'accéder tout de même à l'information par d'autres moyens.
+Permettre aux utilisateurs ne distinguant pas les couleurs (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure... ), d'accéder tout de même à l'information par d'autres moyens.
 
 **Outil : **
 L'application [colour contrast analyser](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
@@ -90,7 +91,7 @@ Les alternatives textuelles sont au coeur de l'accessibilité sur mobile. Grâce
   
 Tout comme pour les images, il est important de renseigner une alternative textuelle lorsque l'information n'est pas disponible pour les personnes malvoyantes/non-voyantes. C'est le cas des composants fournissant de l'information par la couleur, la forme, la position, le son... Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d'enrichir la vocalisation native d'un élément, y compris celle d'un simple texte.  
   
-La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais Cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restitue les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. A noter que TalkBack sait reconnaitre quelques abréviations courantes. Par exemple, "etc." et "Dr." sont bien vocalisées "etcetera" et "docteur".  
+La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais Cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restitue les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. À noter que TalkBack sait reconnaitre quelques abréviations courantes. Par exemple, "etc." et "Dr." sont bien vocalisées "etcetera" et "docteur".  
   
 Certaines images sont régulièrement associées à du texte pour donner une information. C'est le cas notamment des "messages non lus" où une infobulle donne le nombre de messages à lire et où une image donne l'information "message". Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple : "3 messages non lus". On peut également placer cette alternative sur l'image, mais dans ce cas, il faut penser à rendre le texte "invisible" pour le lecteur d'écran.
 
@@ -103,7 +104,7 @@ L'alternative textuelle d'un élément est renseignée via l'attribut `contentDe
 
 **Objectif utilisateur : **
 
-Permettre aux utilisateurs de lecteur d'écran d'accéder aux informations véhiculées par l'application.
+Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant... ) d'accéder aux informations véhiculées par l'application par d'autres biais.
 
 **Exemple : **      
 
@@ -128,6 +129,7 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d'une app
 **À vérifier : ** 
 
 - Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour)
+- Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l'API d'accessibilité comme tel
 
 ** Objectif utilisateur : **
 
@@ -182,7 +184,7 @@ Un exemple fréquent est l'utilisation d'un composant personnalisé pour le menu
 
 **Objectif utilisateur : ** 
 
-Améliorer la navigation de l'utilisateur.
+Permet à tous les utilisateurs de plus intuitivement interagir avec l'interface.
 
 **Objectif technique : **
 
@@ -204,7 +206,7 @@ Une taille insuffisante pour la zone d'action d'un composant peut empêcher cert
 
 **Objectif utilisateur : **
 
-Améliorer son confort de navigation.
+Améliorer le confort de navigation au toucher (touch).
 
 **Outil : **
 L'application [AccessibilityScanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d'accessibilité et notamment la taille des zones de clic. Disponible pour Android 6+. 
@@ -238,7 +240,7 @@ Consulter l'article sur l'[utilisation des fragments](https://developer.android.
 
 **Objectif utilisateur : **
 
-Permettre la navigation dans l'application sans avoir d'élément perturbant non utilisable sur la vue courante.
+Permettre la navigation dans l'application sans avoir d'élément perturbant, non utilisable, sur la vue courante.
 
 **Exemple non-valide : **  
 
@@ -268,7 +270,7 @@ Afin de permettre à l'option « grand caractère » d'interagir correctement av
 
 **Objectif utilisateur : **
 
-Permettre aux utilisateurs (malvoyants, en mobilité, seniors...) d'augmenter la taille du texte pour plus aisément accéder à l'information.
+Permettre aux utilisateurs (malvoyants, en mobilité, seniors...) d'augmenter la taille du texte sans perte d'information pour plus aisément accéder au contenu.
 
 **Outil : **
 L'application [AccessibilityScanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d'accessibilité et notamment la taille des textes. Disponible pour Android 6+.
@@ -311,12 +313,12 @@ Améliorer le référencement naturel.
 Lorsque du contenu est modifié dynamiquement à la suite d'une action de l'utilisateur, il faut le notifier à la synthèse vocale. Sans retour vocal, l'utilisateur ne sait pas qu'une action a été déclenchée.  
 Sur une page, si du contenu est modifié dynamiquement suite à une action utilisateur, il est important que le lecteur d'écran soit notifié afin qu'il déclenche une vocalisation. Par exemple, les listes qui se rafraîchissent, ou un compteur de temps.
 
-Une simple vocalisation peut suffire à avertir l'utilisateur. Il est très facile de déclencher des vocalisations avec TalkBack. Attention: nous parlons de la vocalisation si TalkBack est activé et non pas de TTS (Text To Speech) qui peut fonctionner indépendamment du statut de TalkBack. Il suffit de faire appel à la méthode `announceForAccessibility` en lui passant en paramètre l'id de la chaine de caractère à vocaliser. A noter : la méthode `announceForAccessibility` est disponible sur tout élément qui hérite de `View` et se fait dans la langue du système.
+Une simple vocalisation peut suffire à avertir l'utilisateur. Il est très facile de déclencher des vocalisations avec TalkBack. Attention: nous parlons de la vocalisation si TalkBack est activé et non pas de TTS (Text To Speech) qui peut fonctionner indépendamment du statut de TalkBack. Il suffit de faire appel à la méthode `announceForAccessibility` en lui passant en paramètre l'id de la chaine de caractère à vocaliser. À noter : la méthode `announceForAccessibility` est disponible sur tout élément qui hérite de `View` et se fait dans la langue du système.
 
 Il est également possible de spécifier à une vue qu'elle est une région live, c'est-à-dire que son contenu est susceptible d'être modifié dynamiquement et qu'elle doit dans ce cas prévenir l'API d'accessibilité. Cela aura pour conséquence de générer des vocalisations avec TalkBack par exemple. Un exemple type d'utilisation : sur un formulaire, si l'utilisateur fait une erreur et qu'un message d'erreur apparaît, la vue contenant le message doit être définie comme une région live.  Il faut passer par la méthode `setAccessibilityLiveRegion` qui prend en paramètre un mode pour la région live. Il existe 3 modes :
 -	`ACCESSIBILITY_LIVE_REGION_NONE` : cette vue n'est pas une région live. C'est la valeur par défaut de la plupart des vues.
 -	`ACCESSIBILITY_LIVE_REGION_POLITE` : en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont « polies » ; elles sont moins prioritaires que les vocalisations système par exemple.
--	`ACCESSIBILITY_LIVE_REGION_ASSERTIVE` : en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « rudes » ; elles sont prioritaires et immédiatement vocalisées. A noter, la méthode `setAccessibilityLiveRegion` est disponible sur tout élément qui hérite de `View`.
+-	`ACCESSIBILITY_LIVE_REGION_ASSERTIVE` : en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « rudes » ; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode `setAccessibilityLiveRegion` est disponible sur tout élément qui hérite de `View`.
 
 **À vérifier : **
 
@@ -378,7 +380,7 @@ Il existe 2 grandes techniques pour réaliser cette liaison :
 
 **Objectif utilisateur : **
 
-Améliorer la navigation en améliorant la compréhension globale de la page, les champs de formulaires décrivant le contenu attendu.
+Améliorer la navigation et la compréhension globale de la page, car les champs de formulaires décrivant le contenu attendu  facilitent leur saisie par les utilisateurs déficients visuels.
 
 
 ## Ordre de lecture
@@ -396,7 +398,7 @@ Il est tout à fait possible de redéfinir cet ordre de lecture avec deux attrib
 -	`accessibilityTraversalAfter` : prend un id en paramètre et permet de spécifier à la vue qu'elle doit être « vue » par l'accessibilité après la vue passée en paramètre.
 - `accessibilityTraversalBefore` : prend un id en paramètre et permet de spécifier à la vue qu'elle doit être « vue » par l'accessibilité avant la vue passée en paramètre.  
 
-A noter : ces attributs peuvent être utilisés directement dans le xml mais également dans le code via les méthodes `setAccessibilityTraversalAfter` et `setAccessibilityTraversalBefore`. Ces méthodes sont disponibles pour tout élément qui hérite de `View`.
+À noter : ces attributs peuvent être utilisés directement dans le xml mais également dans le code via les méthodes `setAccessibilityTraversalAfter` et `setAccessibilityTraversalBefore`. Ces méthodes sont disponibles pour tout élément qui hérite de `View`.
 
 **À vérifier : **
 
@@ -404,7 +406,7 @@ A noter : ces attributs peuvent être utilisés directement dans le xml mais ég
 
 **Objectif utilisateur : **
 
-Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d'écran.
+Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d'écran pour leur assurer une complète compréhension du contenu.
 
 **Exemple :**      
 Dans cet exemple, l'ordre de lecture par défaut dépend complétement de l'implémentation et de l'ordre de déclaration des éléments. Dans ce cas-ci : `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, +-, 0`. Un ordre de lecture plus consistent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
@@ -431,7 +433,7 @@ Pour gérer la navigation au focus, il faut s'assurer de 3 choses :
 - Gérer l'ordre du focus : à travers les options `nextFocusDown, nextFocusUp, nextFocusRight` et `nextFocusLeft`, vous pouvez spécifier quelle vue doit prendre le focus selon l'utilisation des flèches bas, haut, droit et gauche.
 - Gérer l'affichage du focus : tout élément interactif peut recevoir le focus, il faut donc que le `state_focused` soit défini et permette de distinguer d'un seul coup d'œil quel élément a le focus.
 
-A noter : `nextFocusDown, nextFocusUp, nextFocusRight, nextFocusLeft, focusable` ainsi que d'autres options de gestion du focus sont accessibles directement dans le xml ou dans le code à travers les méthodes correspondantes.
+À noter : `nextFocusDown, nextFocusUp, nextFocusRight, nextFocusLeft, focusable` ainsi que d'autres options de gestion du focus sont accessibles directement dans le xml ou dans le code à travers les méthodes correspondantes.
   
 Pour plus d'information sur la [gestion du focus sous Android](http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav).
 
@@ -439,7 +441,7 @@ Pour plus d'information sur la [gestion du focus sous Android](http://developer.
 **À vérifier : **
 
 - L'ordre de navigation au focus (clavier) est logique et cohérent.
-- A la navigation au focus (clavier), il est possible de déterminer visuellement l'élément qui a le focus
+- À la navigation au focus (clavier), il est possible de déterminer visuellement l'élément qui a le focus
 
 **Objectif utilisateur : **
 
