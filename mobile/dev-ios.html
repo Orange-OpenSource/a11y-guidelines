@@ -128,14 +128,14 @@
 });</script>
 
 <p><span data-menuitem="dev-mobile"></span></p>
-<p>Ce guide a pour objectif de présenter les différentes options d&#39;accessibilité du SDK iOS. A travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d&#39;accessibilité et propose des liens vers la documentation officielle d&#39;Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).</p>
+<p>Ce guide a pour objectif de présenter les différentes options d&#39;accessibilité du SDK iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d&#39;accessibilité et propose des liens vers la documentation officielle d&#39;Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).</p>
 <h2 id="alternatives-textuelles">Alternatives textuelles</h2>
 <p><strong>Description : </strong>  </p>
 <p>Sous iOS, la vocalisation d’un élément s’effectue à travers 4 attributs, à savoir le <code>label</code>, le <code>hint</code>, la <code>value</code> et le <code>trait</code>.<br>L’ordre de vocalisation est toujours le suivant : <code>label</code>, <code>value</code>, <code>trait</code> et <code>hint</code>. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  </p>
 <p>Une section de ce guide est dédiée au trait, nous décrivons ici les 3 autres :  </p>
 <ul>
 <li><code>accessibilityLabel</code> : le <code>label</code> permet de préciser le titre spécifique à l’accessibilité qui est lu par VoiceOver en lieu et place du texte du composant si celui-ci en possède un. Cela permet d’avoir un texte de composant plus explicite que celui affiché à l’écran. Par exemple, dans le cas d’un bouton dont le titre est « OK », on peut indiquer que le bouton sert à valider un choix.</li>
-<li><code>accessibilityValue</code> : la valeur d’un élément est par défaut le pourcentage de progression (exemple : une barre de progression). A noter que pour la plupart des éléments ajustables disponibles dans le SDK, cette value n’a pas besoin d’être reprécisée (le système restitue automatiquement la valeur à l’utilisateur via VoiceOver).</li>
+<li><code>accessibilityValue</code> : la valeur d’un élément est par défaut le pourcentage de progression (exemple : une barre de progression). À noter que pour la plupart des éléments ajustables disponibles dans le SDK, cette value n’a pas besoin d’être reprécisée (le système restitue automatiquement la valeur à l’utilisateur via VoiceOver).</li>
 <li><code>accessibilityHint</code> : le <code>hint</code> permet de décrire le comportement du composant. Exemple : « cliquez pour obtenir le résultat ».  </li>
 </ul>
 <p>Ces attributs d’accessibilité sont disponibles via l’interface builder, mais également via le code. Tout élément dérivant de <code>UIView</code> les possède par défaut. Ces attributs acceptent une chaine de caractère en option, et sont, par conséquent, facilement internationalisables.</p>
@@ -182,14 +182,14 @@ func accessibleSegmentedControl() {
 </ul>
 <h2 id="nature-des-l-ments">Nature des éléments</h2>
 <p><strong>Description : </strong> </p>
-<p>L’attribut <code>accessibilityTraits</code> permet de donner une information à l&#39;api d&#39;accessibilité sur la nature d’un composant. On peut décider ainsi qu’un item de liste soit pris en compte comme un bouton par VoiceOver car celui-ci est cliquable. De ce fait, l’<code>accessibilityTrait</code> joue également sur la vocalisation de l’élément car cette nature est restituée par VoiceOver.  </p>
+<p>L’attribut <code>accessibilityTraits</code> permet de donner une information à l&#39;API d&#39;accessibilité sur la nature d’un composant. On peut décider ainsi qu’un item de liste soit pris en compte comme un bouton par VoiceOver car celui-ci est cliquable. De ce fait, l’<code>accessibilityTrait</code> joue également sur la vocalisation de l’élément car cette nature est restituée par VoiceOver.  </p>
 <p>Cet attribut d’accessibilité est disponible via l’interface builder, mais également utilisable directement via le code.  </p>
 <p>Il existe beaucoup de traits. Ci-après, les principaux (les plus utiles) :  </p>
 <ul>
 <li><code>accessibilityTraitNone</code> : supprime toute valeur sémantique à l’élément.</li>
 <li><code>accessibilityTraitButton</code> : ajoute le trait « bouton », l’élément est vu comme un bouton par VoiceOver.</li>
 <li><code>accessibilityTraitLink</code> : utile pour définir un label en tant que « lien ».</li>
-<li><code>accessibilityTraitHeader</code> : permet de définir un élément comme un en-tête (pour plus d’information, voir la section « titres et en-têtes » dans la partie critères de l’application).</li>
+<li><code>accessibilityTraitHeader</code> : permet de définir un élément comme une en-tête (pour plus d’information, voir la section « titres et en-têtes » dans la partie critères de l’application).</li>
 <li><code>accessibilityTraitAdjustable</code> : permet de définir un élément comme un élément « ajustable », c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un geste spécifique de VoiceOver.</li>
 </ul>
 <p><strong>Exemples : </strong>   </p>
@@ -271,7 +271,7 @@ func accessibleSegmentedControl() {
 <li><code>UIAccessibilityLayoutChangedNotification</code> : permet de spécifier à l’API d’accessibilité qu’une partie de la page a été modifiée.</li>
 <li><code>UIAccessibilityScreenChangedNotification</code> : permet d’annoncer un changement global de la page.  </li>
 </ul>
-<p>A l’usage, il existe une petite différence entre les deux. <code>UIAccessibilityLayoutChangedNotification</code> accepte une <code>NSString</code> ou un <code>UIObject</code>. Avec le premier paramètre, la notification se comporte comme une <code>UIAccessibilityAnnouncementNotification</code> et lance une vocalisation VoiceOver. Avec le second, le focus est repositionné sur l’élément de notre choix.  </p>
+<p>À l’usage, il existe une petite différence entre les deux. <code>UIAccessibilityLayoutChangedNotification</code> accepte une <code>NSString</code> ou un <code>UIObject</code>. Avec le premier paramètre, la notification se comporte comme une <code>UIAccessibilityAnnouncementNotification</code> et lance une vocalisation VoiceOver. Avec le second, le focus est repositionné sur l’élément de notre choix.  </p>
 <p><code>UIAccessibilityScreenChangedNotification</code> accepte soit <code>nil</code>, soit l’élément qui doit recevoir le focus.</p>
 <p><strong>Exemples : </strong></p>
 <pre><code class="objectivec">UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, @"speakString");

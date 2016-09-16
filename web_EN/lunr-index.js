@@ -366,6 +366,13 @@ index.add({
     body: "## Introduction and background  For Orange internal accessibility requirements, we have chosen to rely on the [Web Content Accessibility Guidelines v2](https://www.w3.org/TR/WCAG20/) (WCAG 2). Those guidelines are international guidelines published by the World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI) task force, which comply with the ISO standard 40500:2012.  All HTML pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (WCAG) 2.0, without blocking point** for the user after testing the main features of the site or application.  For the technical solutions, we refer to an external content available at [Accede-Web references](http://wiki.accede-web.com/en/home). Indeed, these references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities.  These references are translated into English and are very famous in e-Accessibility as source of good practice, complete and high-quality. These references are updated regularly to stick to the evolution of technologies (browsers, assistive technology...).  "
 });
 
+documentTitles["exigences.html#rgaa"] = "RGAA";
+index.add({
+    url: "exigences.html#rgaa",
+    title: "RGAA",    
+    body: "## RGAA  The RGAA is the French government's [General Accessibility Reference for Administrations (in french)](http://references.modernisation.gouv.fr/referentiel/). It is meant to provide a way to check compliance against WCAG 2.0. If your are familiar with this reference, you can use it for testing your site.  An [english translation](http://disic.github.io/rgaa_referentiel_en/RGAA3.0_Criteria_English_version_v1.html) is available for informational purposes only.   "
+});
+
 documentTitles["exigences.html#examples"] = "Examples";
 index.add({
     url: "exigences.html#examples",
@@ -426,18 +433,18 @@ index.add({
 
 
 
-documentTitles["methodes-outils.html#methods-and-tools"] = "Methods and tools";
+documentTitles["methodes-outils.html#methods-and-testing-tools"] = "Methods and testing tools";
 index.add({
-    url: "methodes-outils.html#methods-and-tools",
-    title: "Methods and tools",    
-    body: "# Methods and tools  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Test tools\&quot;}]); });&lt;/script&gt;  You will find articles describing useful methods and tools to test the accessibility of your web pages.  "
+    url: "methodes-outils.html#methods-and-testing-tools",
+    title: "Methods and testing tools",    
+    body: "# Methods and testing tools  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Test tools\&quot;}]); });&lt;/script&gt;  You will find articles describing useful methods and tools to test the accessibility of your web pages.  "
 });
 
-documentTitles["methodes-outils.html#user-tests"] = "User tests";
+documentTitles["methodes-outils.html#manual-test-and-assistive-technology"] = "Manual test and assistive technology";
 index.add({
-    url: "methodes-outils.html#user-tests",
-    title: "User tests",    
-    body: "## User tests  "
+    url: "methodes-outils.html#manual-test-and-assistive-technology",
+    title: "Manual test and assistive technology",    
+    body: "## Manual test and assistive technology  "
 });
 
 documentTitles["methodes-outils.html#keyboard-navigationmethodes-outils-clavierhtml"] = "[Keyboard navigation](./methodes-outils-clavier.html)";
@@ -461,11 +468,11 @@ index.add({
     body: "### [Navigating with a screen reader](./methodes-outils-lecteur-ecran.html) The screen readers commonly used.  "
 });
 
-documentTitles["methodes-outils.html#automated-tests"] = "Automated tests";
+documentTitles["methodes-outils.html#automated-testing-tools"] = "Automated testing tools";
 index.add({
-    url: "methodes-outils.html#automated-tests",
-    title: "Automated tests",    
-    body: "## Automated tests "
+    url: "methodes-outils.html#automated-testing-tools",
+    title: "Automated testing tools",    
+    body: "## Automated testing tools "
 });
 
 documentTitles["methodes-outils.html#browser-extensionsmethodes-outils-extensionshtml"] = "[Browser extensions](./methodes-outils-extensions.html)";

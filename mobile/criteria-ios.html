@@ -129,7 +129,7 @@
 
 <p><span data-menuitem="criteria-mobile"></span></p>
 <p>Ce guide a pour objectif de présenter les différents critères d&#39;accessibilité à respecter pour obtenir une application iOS accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d&#39;accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d&#39;exemples réels. Nous vous invitons à installer l&#39;application <a href="./mdan.html">mDAN</a> pour obtenir des exemples fonctionnels avec VoiceOver, le lecteur d&#39;écran d&#39;iOS, et d&#39;autres outils d&#39;assistance. Pour plus d&#39;information sur l&#39;outil (comment l&#39;activer, comment s&#39;en servir…) nous vous invitons à vous référer à la <a href="./voiceover.html">section correspondante à VoiceOver</a>.  </p>
-<p>Note : les quelques exemples de code dans cette section seront présentés en Swift.</p>
+<p>À noter : les quelques exemples de code dans cette section seront présentés en Swift.</p>
 <h2 id="images">Images</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand : </strong> lors de la conception et pendant le développement.</p>
 <p><strong>Description : </strong>  </p>
@@ -161,7 +161,7 @@
 <li>Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (7:1 sur mobile, 4,5:1 pour les textes larges, à calculer avec Color Constrast Analyzer par exemple).</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong> </p>
-<p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personne dans un environnement lumineux défavorable (en mobilité).<br>Permettre aux utilisateurs ne distinguant pas les couleurs ou l&#39;information sensorielle (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant... ), d&#39;accéder tout de même à l&#39;information par d&#39;autres moyens.</p>
+<p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personne dans un environnement lumineux défavorable (en mobilité).<br>Permettre aux utilisateurs ne distinguant pas les couleurs (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure... ), d&#39;accéder tout de même à l&#39;information par d&#39;autres moyens.</p>
 <p><strong>Outil : </strong>
 L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalyser/">colour contrast analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).  </p>
 <p><strong>Exemple de contraste non valide : </strong><br>Le texte &quot;film | 20h40 ...&quot; ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
@@ -173,7 +173,7 @@ L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalys
 <p><strong>Description : </strong>  </p>
 <p>Les alternatives textuelles sont au coeur de l&#39;accessibilité sur mobile. Grâce à elles, un utilisateur non voyant peut utiliser une application sans perte d&#39;information.  </p>
 <p>Tout comme pour les images, il est important de renseigner une alternative textuelle lorsque l&#39;information n&#39;est pas disponible pour les personnes malvoyantes/non-voyantes. C&#39;est le cas des composants fournissant de l&#39;information par la couleur, la forme, la position, le son... Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d&#39;enrichir la vocalisation native d&#39;un élément, y compris celle d&#39;un simple texte.  </p>
-<p>La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais Cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restitue les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. A noter que VoiceOver sait reconnaitre quelques abréviations courantes. Par exemple, &quot;etc.&quot; est bien vocalisé &quot;et cetera&quot;.  </p>
+<p>La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais Cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restitue les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. À noter que VoiceOver sait reconnaitre quelques abréviations courantes. Par exemple, &quot;etc.&quot; est bien vocalisé &quot;et cetera&quot;.  </p>
 <p>Certaines images sont régulièrement associées à du texte pour donner une information. C&#39;est le cas notamment des &quot;messages non lus&quot; où une infobulle donne le nombre de messages à lire et où une image donne l&#39;information &quot;message&quot;. Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple : &quot;3 messages non lus&quot;. On peut également placer cette alternative sur l&#39;image, mais dans ce cas, il faut penser à rendre le texte &quot;invisible&quot; pour le lecteur d&#39;écran.</p>
 <p>L&#39;alternative textuelle d&#39;un élément est renseignée via les attribut <code>accessibilityLabel, accessibilityHint, accessibilityValue</code> et <code>accessibilityTrait</code> (via le protocole <code>UIAccessibility</code> implémenté par tout élément standard dérivant de <code>UIView</code>).<br>L’ordre de vocalisation est toujours le suivant : label, value, trait et hint. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.<br>Pour plus d&#39;informations techniques sur ces attributs, nous vous conseillons de lire la section des <a href="./dev-ios.html#alternatives-textuelles">alternatives textuelles dans le guide développeur</a>.</p>
 <p><strong>À vérifier : </strong></p>
@@ -182,7 +182,7 @@ L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalys
 <li>Les alternatives textuelles de l&#39;application sont explicites et compréhensibles</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
-<p>Donner accès aux informations de l&#39;application aux utilisateurs de lecteur d&#39;écran.</p>
+<p>Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant... ) d&#39;accéder aux informations véhiculées par l&#39;application par d&#39;autres biais.</p>
 <p><strong>Exemple : </strong>      </p>
 <p>Ci-dessous, un exemple fréquent d&#39;une icône qu&#39;on couple avec du texte (infobulle) pour ajouter de l&#39;information. Dans notre cas, l&#39;icone &quot;mail&quot; couplé à l&#39;infobulle de valeur &quot;3&quot; nous fait comprendre que nous avons &quot;3 mails non lus&quot;. Si aucune alternative textuelle n&#39;est ajoutée, 2 vocalisations seront lues &quot;bouton sans libellé&quot; et &quot;3&quot;. On comprend bien ici l&#39;importance d&#39;ajouter des alternatives textuelles.<br><img src="./images/alt.png" alt="exemple d'icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left"></p>
 <pre><code class="swift">cell.mailImageView.accessibilityLabel = cell.badgeLabel.text! + " " + "exemple_textualAlternative_textImage_accessibilityLabel".localized //On ajoute l'alternative complète
@@ -197,7 +197,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <p><strong>À vérifier : </strong> </p>
 <ul>
 <li>Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour)</li>
-<li>Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l&#39;accessibilité comme tel</li>
+<li>Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l&#39;API d&#39;accessibilité comme tel</li>
 </ul>
 <p><strong> Objectif utilisateur : </strong></p>
 <p>Permettre aux utilisateurs d&#39;identifier le sujet d&#39;une page, de se repérer et se faire une idée précise du contenu de la page sans avoir à le lire. Permettre une navigation plus aisée.</p>
@@ -231,7 +231,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <p>L&#39;accessibilité  est prise en compte dans les composants natifs (la plupart du temps). De plus, l&#39;utilisation de composants standards permet à l&#39;utilisateur de se retrouver dans une situation et un comportement habituels. La navigation dans une interface standard est donc plus confortable.  </p>
 <p>Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun composant standard ne permet de répondre au besoin, créer un composant dédié basé sur un composant standard en veillant à conserver la cohérence de navigation et l&#39;accessibilité.  </p>
 <p><strong>Objectif utilisateur : </strong> </p>
-<p>Améliorer la navigation de l&#39;utilisateur.</p>
+<p>Permet à tous les utilisateurs de plus intuitivement interagir avec l&#39;interface.</p>
 <p><strong>Objectif technique : </strong></p>
 <p>Améliore globalement la maintenabilité. Réduit les temps de développement. </p>
 <h2 id="zone-de-clic">Zone de clic</h2>
@@ -243,7 +243,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <li>Apple définit pour son système une taille de zone de clic minimum de 44pt (en hauteur ET largeur) ; <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/layout/">lien vers les recommandations Apple</a></li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
-<p>Améliorer son confort de navigation.</p>
+<p>Améliorer le confort de navigation au toucher (touch).</p>
 <p><strong>Exemple valide : </strong> </p>
 <p>Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.<br><img src="./images/clic_ok.png" alt="exemple de composant interractif avec une zone d'interraction assez large" width="300"></p>
 <p><strong>Exemple non-valide : </strong>  </p>
@@ -258,7 +258,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <li>Voiceover ne doit pas vocaliser d&#39;éléments indésirables appartenant à un autre écran que celui en cours de consultation.</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
-<p>Permettre la navigation dans l&#39;application sans avoir d&#39;élément perturbant non utilisable sur la vue courante.</p>
+<p>Permettre la navigation dans l&#39;application sans avoir d&#39;élément perturbant, non utilisable, sur la vue courante.</p>
 <p><strong>Exemple non-valide : </strong>  </p>
 <p>Dans l’exemple ci-dessous, l’alerte personnalisée présente ce problème de vue fantôme. En effet, avec VoiceOver activé, il est possible de &quot;lire&quot; les éléments situés en dessous, comme nous le montre le focus de VoiceOver (en noir sur l&#39;image)<br><img src="./images/ghost_ios.png" alt="exemple d'élément fantôme" width="300"></p>
 <h2 id="contr-le-de-contenu">Contrôle de contenu</h2>
@@ -267,7 +267,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <p>Sur mobile, les lecteurs d&#39;écran essayent de transmettre au maximum à l&#39;utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l&#39;utilisateur.<br>L&#39;utilisateur doit rester maître du contenu à tout instant. C&#39;est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu&#39;une vidéo ne se lance directement en plein écran, qu&#39;une vidéo ne se lance directement sans une action au préalable de l&#39;utilisateur, qu&#39;un carrousel défile de manière automatique, etc.</p>
 <p><strong>À vérifier : </strong></p>
 <ul>
-<li>Les contenus interactifs peuvent être maitriser par l&#39;utilisateur (pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)</li>
+<li>Les contenus interactifs peuvent être maitrisés par l&#39;utilisateur (pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
 <p>Permettre aux utilisateurs de rester maître de l&#39;application. Permettre à l&#39;utilisateur de lecteur d&#39;écran d&#39;éviter une pollution sonore qui peut nuire à sa navigation. </p>
@@ -336,7 +336,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <li>L&#39;ordre de lecture (celui de VoiceOver) est logique et cohérent.</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
-<p>Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d&#39;écran.</p>
+<p>Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d&#39;écran  pour leur assurer une complète compréhension du contenu.</p>
 <p><strong>Exemple :</strong><br>Dans cet exemple, l&#39;ordre de lecture par défaut est dépend complétement de l&#39;implémentation et de l&#39;ordre de déclaration des éléments. Dans ce cas-ci : <code>1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-</code>. Un ordre de lecture plus consistent serait <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-</code>.  </p>
 <p><img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  </p>
 <pre><code>remoteView.isAccessibilityElement = false
@@ -352,7 +352,7 @@ remoteView.accessibilityElements?.append(fourButton)
 <h2 id="langue">Langue</h2>
 <p><strong>Cible : </strong> les personnes déficientes visuelles.<br><strong>Quand : </strong> lors du développement.</p>
 <p><strong>Description : </strong></p>
-<p>La vocalisation donnée par VoiceOver s&#39;effectue par défaut dans la langue du système du mobile. Il arrive parfois que certain mots/textes d&#39;une application soient dans une langue différente. Afin que la vocalisation soit audible, il faut déclarer ces textes dans la langue correspondante.  </p>
+<p>La vocalisation donnée par VoiceOver s&#39;effectue, par défaut, dans la langue du système du mobile. Il arrive parfois que certain mots/textes d&#39;une application soient dans une langue différente. Afin que la vocalisation soit audible, il faut déclarer ces textes dans la langue correspondante.  </p>
 <p>Afin de modifier la langue de prononciation de VoiceOver pour un mot ou un texte, il existe l’attribut <code>accessibilityLanguage</code>. Disponible via le protocole <code>UIAccessibility</code>. </p>
 <p><strong>À vérifier : </strong></p>
 <ul>
