@@ -6,39 +6,23 @@
 
 Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les [Web Content Accessibility Guidelines v2](http://www.w3.org/Translations/WCAG20-fr/) (WCAG 2). Il s'agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.
 
-Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est **le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant** du point de vue utilisateur suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.
+Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est **le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.
 
-Pour la partie, solutions techniques, nous avons pointé vers un contenu externe que sont les [notices Accede-Web](http://www.accede-web.com/notices/). En effet, ces notices sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.
+Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la lecture des [notices Accede-Web](http://www.accede-web.com/notices/). En effet, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.
 
 Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).
 
-De plus, pour ce qui est des tests associés, nous avons utilisé le [Référentiel Général d’Accessibilité de l’Administration version 3](http://references.modernisation.gouv.fr/referentiel) (RGAA3). C’est le référentiel officiel permettant de s’assurer qu’un site d'état et de collectivités territoriales est en conformité avec l’[article 47 de la loi de février 2005 pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées](http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&cidTexte=JORFTEXT000000809647).
+## Le référentiel général d'accessibilité des administrations (RGAA)
 
-Le RGAA3 est méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA3 est également conforme aux WCAG2.  
-Le RGAA3 est basé sur des tests spécifiques rangés par grandes thématiques (présentation, formulaire, contenu non-textuel…) permettant de valider la conformité du site ou de l’application.
+Si vous êtes familiarisé avec le [Référentiel Général d’Accessibilité des Administrations](http://references.modernisation.gouv.fr/referentiel) (RGAA), celui-ci peut être utilisé pour effectuer les tests d'accessibilité. 
+Il s'agit du référentiel officiel permettant de s’assurer qu’un site d'état et de collectivités territoriales est en conformité avec l’[article 47 de la loi de février 2005 pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées](http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&cidTexte=JORFTEXT000000809647).
 
-## Liste des chapitres du RGAA
-
-1. [Images](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#images)
-2. [Cadres](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#cadres)
-3. [Couleurs](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#couleurs)
-4. [Multimédia](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#multimedia)
-5. [Tableaux](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#tableaux)
-6. [Liens](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#liens)
-7. [Scripts](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#scripts)
-8. [Eléments obligatoires](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#elements)
-9. [Structuration de l'information](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#structure)
-10. [Présentation de l'information](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#presentation)
-11. [Formulaires](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#formulaire)
-12. [Navigation](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#navigation)
-13. [Consultation](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#consultation)
-
-**Tests associés** : les tests RGAA v3 (niveau A et AA) associés à cette thématique permettant de valider l’accessibilité.
+Le RGAA est une méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA est également conforme aux WCAG2.  
 
 ## Les exemples
 
 Des exemples didactiques pour certains types de composants ou d’éléments d’interface particulièrement délicats à rendre accessible et fréquemment utilisés sont disponibles dans la section [exemples](./exemples.html).
-Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange, la Brand.
+Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.
 
 ## Rappel : les notices accede-web
 

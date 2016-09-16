@@ -12,6 +12,13 @@ For the technical solutions, we refer to an external content available at [Acced
 
 These references are translated into English and are very famous in e-Accessibility as source of good practice, complete and high-quality. These references are updated regularly to stick to the evolution of technologies (browsers, assistive technology...).
 
+## RGAA
+
+The RGAA is the French government's [General Accessibility Reference for Administrations (in french)](http://references.modernisation.gouv.fr/referentiel/). It is meant to provide a way to check compliance against WCAG 2.0.
+If your are familiar with this reference, you can use it for testing your site.
+
+An [english translation](http://disic.github.io/rgaa_referentiel_en/RGAA3.0_Criteria_English_version_v1.html) is available for informational purposes only. 
+
 ## Examples
 
 Didactic examples for user interface components or elements particularly difficult to make accessible and frequently used are available in the [examples](./exemples.html).
