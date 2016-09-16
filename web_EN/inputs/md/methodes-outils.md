@@ -1,4 +1,4 @@
-# Methods and tools
+# Methods and testing tools
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Test tools"}]);
@@ -6,7 +6,7 @@
 
 You will find articles describing useful methods and tools to test the accessibility of your web pages.
 
-## User tests
+## Manual test and assistive technology
 
 ### [Keyboard navigation](./methodes-outils-clavier.html)
 List of the main shortcuts to navigate with the keyboard in a web page.
@@ -17,7 +17,7 @@ Zoom guide.
 ### [Navigating with a screen reader](./methodes-outils-lecteur-ecran.html)
 The screen readers commonly used.
 
-## Automated tests
+## Automated testing tools
 ### [Browser extensions](./methodes-outils-extensions.html)
 Some extensions allow you to perform automated tests on the current page.
 

@@ -1,4 +1,4 @@
-# Méthodes et outils
+# Méthodes et outils de test
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Outils de test"}]);
@@ -6,7 +6,7 @@
 
 Vous trouverez ci-dessous des articles décrivant les méthodes et outils utiles pour tester l'accessibilité de vos pages web.
 
-## Tests utilisateurs
+## Tests manuel et outils d'assistance
 
 ### [Navigation au clavier](./methodes-outils-clavier.html)
 Liste des principaux raccourcis pour naviguer au clavier dans une page web.
@@ -17,11 +17,11 @@ Un guide sur la gestion du zoom.
 ### [Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html)
 Les principaux lecteurs d'écrans utilisés.
 
-## Tests automatisés
+## Outils de test automatisés
 ### [Extensions pour navigateur](./methodes-outils-extensions.html)
 Certaines extensions permettent d'effectuer des tests automatiques sur la page en cours de consultation.
 
-## Tests des critères
+## Test des critères
 ### [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html)
 Présentation de l'outil colour contrast analyser.
 
