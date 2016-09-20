@@ -8,7 +8,7 @@ Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a
 Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange:  
 
 Copyright (C) 2016 Orange SA All rights reserved  
-[Liste des fichiers concernés](/notice.txt)
+[Liste des fichiers concernés](/NOTICE.txt)
 
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
