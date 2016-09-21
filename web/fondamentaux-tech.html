@@ -234,7 +234,7 @@ Sémantiser le contenu HTML en utilisant les balises :</p>
 <li>Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. </li>
 <li>Éviter d&#39;utiliser des images pour afficher du texte, préférer les habillages CSS.</li>
 <li>Utiliser des classes CSS plutôt que manipuler des styles CSS en ligne dans le code HTML.</li>
-<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information</li>
+<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information (ou prévoir une alternative pour les lecteurs d&#39;écran notamment).</li>
 <li>Ne pas câbler des évènements Javascript directement dans le code HTML mais gérer l&#39;interactivité dans un script ou un fichier JS à part.</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
@@ -339,6 +339,13 @@ Point bloquant : une image sans description textuelle est inexploitable par des 
 <p><strong>Exemple d&#39;alternative vide :</strong><br>Dans l&#39;exemple ci-dessous, le picto à droite n&#39;a pas besoin d&#39;être vocalisé puisque le texte situé à gauche apporte déjà l&#39;information.<br>Renseigner l&#39;attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
 <p><img src="./images/service-24.png" alt="exemple d&#39;image décorative">  </p>
 <p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
+<p><strong>Note à propos des CAPTCHA :</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d&#39;un système anti-spam ne peut être évitée, il est souhaitable de s&#39;orienter vers une solution plus souple pour l&#39;utilisateur :</p>
+<ul>
+<li>Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l&#39;utilisateur.</li>
+<li>Test logique (question dont la réponse est évidente, test mathématique simple ...).</li>
+<li>Double authentification.</li>
+</ul>
+<p>Si la présence d&#39;un captcha ne peut être évitée, il est indispensable de prévoir <strong>une alternative audio aux captcha image</strong>. De plus l&#39;attribut <code>alt</code> de l&#39;image captcha doit être renseignée (exemple : <code>alt=&quot;CAPTCHA&quot;</code>).</p>
 <p><strong>Référence : </strong>WCAG 1.1.1</p>
 <h2 id="12-fournir-un-transcrit-pour-toute-piste-audio-ou-vid-o">12. Fournir un transcrit pour toute piste audio ou vidéo</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives et auditives et celle dont le Français est mal maîtrisé.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>

@@ -230,7 +230,7 @@ Add semantics to the HTML content using the following tags:</p>
 <li>Do not use Tables to design the page layout, the latter should be used only for tabular data. </li>
 <li>Avoid using images to display text, prefer CSS skins.</li>
 <li>Use CSS classes rather than manipulate inline CSS styles in HTML.</li>
-<li>Do not use CSS pseudo-elements (::before, ::after...) to display information.</li>
+<li>Do not use CSS pseudo-elements (::before, ::after...) to display information (or provide an alternative for screen readers especially).</li>
 <li>Do not write Javascript events directly inside the HTML, use a separate script or JS file instead.</li>
 </ul>
 <p><strong>Users&#39; goal: </strong></p>
@@ -334,7 +334,14 @@ Blocking point: an image without textual description is unusable by people with 
 <p><strong>Valid example:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;back to home&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Good deal, family max plan 2 euros per month for 12 months instead of 16 euros.&quot;&gt;</code></p>
 <p><strong>Example with an empty alternative:</strong><br>In the example below, the right picto doesn&#39;t have to be vocalized as the text on the left already provides the information.<br>In this case setting the <code>alt</code> attribute would provide a redundant information.  </p>
 <p><img src="./images/service-24.png" alt="example with empty alternative">  </p>
-<p><code>&lt;h3&gt;guaranteed 24h service&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
+<p><code>&lt;h3&gt;guaranteed 24h service&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code>  </p>
+<p><strong>Note about CAPTCHA :</strong><br>Captcha are often source of problems for users. If the implementation of an anti-spam system can not be avoided, it is desirable to move towards a more flexible solution for the user :</p>
+<ul>
+<li>Hidden input form left empty (honeypot technique), not visible to the user.</li>
+<li>Logical test (question whose answer is obvious, simple math test ...).</li>
+<li>Double authentication.</li>
+</ul>
+<p>If the presence of a captcha can not be avoided, it is essential to provide an audio alternative. Furthermore the <code>alt</code> attribute of the captcha image must be setted (eg <code>alt = &quot;CAPTCHA&quot;</code>).</p>
 <p><strong>Reference: </strong>WCAG 1.1.1</p>
 <h2 id="12-provide-a-transcript-for-any-audio-or-video">12. Provide a transcript for any audio or video</h2>
 <p><strong>Target : </strong> everyone and particularly people with visual disabilities, hearing impairments, cognitive limitations, or difficulties with French.<br><strong>When: </strong> during design and development.</p>
