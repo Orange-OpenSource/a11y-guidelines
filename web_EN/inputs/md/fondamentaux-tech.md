@@ -183,7 +183,7 @@ Strictly decouple the content (HTML), the interaction (Javascript) and presentat
 - Do not use Tables to design the page layout, the latter should be used only for tabular data. 
 - Avoid using images to display text, prefer CSS skins.
 - Use CSS classes rather than manipulate inline CSS styles in HTML.
-- Do not use CSS pseudo-elements (::before, ::after...) to display information.
+- Do not use CSS pseudo-elements (::before, ::after...) to display information (or provide an alternative for screen readers especially).
 - Do not write Javascript events directly inside the HTML, use a separate script or JS file instead.
 
 **Users' goal: **
@@ -372,7 +372,15 @@ In this case setting the `alt` attribute would provide a redundant information.
 ![example with empty alternative](./images/service-24.png)  
   
 `<h3>guaranteed 24h service</h3>`  
-`<img src="service-24.png" alt="">`
+`<img src="service-24.png" alt="">`  
+
+**Note about CAPTCHA :**  
+Captcha are often source of problems for users. If the implementation of an anti-spam system can not be avoided, it is desirable to move towards a more flexible solution for the user :
+ - Hidden input form left empty (honeypot technique), not visible to the user.
+ - Logical test (question whose answer is obvious, simple math test ...).
+ - Double authentication.
+
+If the presence of a captcha can not be avoided, it is essential to provide an audio alternative. Furthermore the `alt` attribute of the captcha image must be setted (eg `alt = "CAPTCHA"`).
 
 **Reference: **WCAG 1.1.1
 

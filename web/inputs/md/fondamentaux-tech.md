@@ -184,7 +184,7 @@ Séparer strictement le contenu (HTML), l'interactivité (Javascript) et la pré
 - Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. 
 - Éviter d'utiliser des images pour afficher du texte, préférer les habillages CSS.
 - Utiliser des classes CSS plutôt que manipuler des styles CSS en ligne dans le code HTML.
-- Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d'information
+- Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d'information (ou prévoir une alternative pour les lecteurs d'écran notamment).
 - Ne pas câbler des évènements Javascript directement dans le code HTML mais gérer l'interactivité dans un script ou un fichier JS à part.
 
 **Objectif utilisateur : **
@@ -373,6 +373,14 @@ Renseigner l'attribut `alt` dans ce cas apporterait une information redondante.
   
 `<h3>Le service 24h garanti</h3>`  
 `<img src="service-24.png" alt="">`
+
+**Note à propos des CAPTCHA :**  
+Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d'un système anti-spam ne peut être évitée, il est souhaitable de s'orienter vers une solution plus souple pour l'utilisateur :
+ - Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l'utilisateur.
+ - Test logique (question dont la réponse est évidente, test mathématique simple ...).
+ - Double authentification.
+
+Si la présence d'un captcha ne peut être évitée, il est indispensable de prévoir **une alternative audio aux captcha image**. De plus l'attribut `alt` de l'image captcha doit être renseignée (exemple : `alt="CAPTCHA"`).
 
 **Référence : **WCAG 1.1.1
 

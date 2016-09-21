@@ -121,6 +121,14 @@ In the screenshot below, we should provide since the design, text alternatives f
 
 ![screenshot of a video player with multiple buttons](images/player.png)   
 
+**Note about CAPTCHA :**  
+Captcha are often source of problems for users. If the implementation of an anti-spam system can not be avoided, it is desirable to move towards a more flexible solution for the user :
+ - Hidden input form left empty (honeypot technique), not visible to the user.
+ - Logical test (question whose answer is obvious, simple math test ...).
+ - Double authentication.
+
+If the presence of a captcha can not be avoided, **it is essential to provide an audio alternative**.
+
 ## 6. Focus visibility
 **Target : ** everyone and especially people with visual impairments or cognitive limitations, motor disabilities and using a device outdoors.  
 **When: ** from the graphic design and during development.

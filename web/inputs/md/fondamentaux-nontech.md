@@ -103,7 +103,7 @@ Cet exemple n'est pas valide, car l'information est transmise uniquement par la 
 **Quand : ** dès la conception et pendant le développement.
 
 **Description :**  
-Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.
+Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo. Prévoir des alternatives audio pour les captcha.
 
 **Exemple : **  
 Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton :
@@ -113,6 +113,14 @@ Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception 
 - couper le son ...  
 
 ![capture d'écran d'un lecteur vidéo contenant plusieurs boutons](images/player.png)   
+  
+**Note à propos des CAPTCHA :**  
+Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d'un système anti-spam ne peut être évitée, il est souhaitable de s'orienter vers une solution plus souple pour l'utilisateur :
+ - Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l'utilisateur.
+ - Test logique (question dont la réponse est évidente, test mathématique simple ...).
+ - Double authentification.
+
+Si la présence d'un captcha ne peut être évitée, il est indispensable de **prévoir une alternative pour les captcha uniquement visuels ou sonores**.
 
 ## 6. Visibilité du focus
 **Cible : ** tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.  
@@ -252,7 +260,9 @@ Fournir des liens d'évitement du type "Aller au contenu" sur chaque page. Ceux-
 Des liens d'évitement ("Aller à la navigation", "Aller au contenu") sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d'adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche `TAB`.
 
-![capture d'écran du site orange.com](images/skiplink.png)
+![capture d'écran du site orange.com](images/skiplink.png)  
+
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
