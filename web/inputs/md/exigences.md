@@ -2,7 +2,7 @@
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Ensemble des exigences"}]);
 });</script>
-## Introduction et contexte
+## Le référentiel WCAG
 
 Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les [Web Content Accessibility Guidelines v2](http://www.w3.org/Translations/WCAG20-fr/) (WCAG 2). Il s'agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.
 
@@ -19,15 +19,9 @@ Il s'agit du référentiel officiel permettant de s’assurer qu’un site d'ét
 
 Le RGAA est une méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA est également conforme aux WCAG2.  
 
-## Les exemples
+## Pour information : les notices accede-web
 
-Des exemples didactiques pour certains types de composants ou d’éléments d’interface particulièrement délicats à rendre accessible et fréquemment utilisés sont disponibles dans la section [exemples](./exemples.html).
-Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.
-
-## Rappel : les notices accede-web
-
-Les recommandations d'accessibilité web Orange font référence aux notices accessibilité du site [accede-web](http://accede-web.com/). 
-Ce site propose d'excellentes notices sur l'accessibilité au format Web et PDF.
+Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l'accessibilité au format Web et PDF:
 
 <p class="row">  
     <div class="perso col-sm-12 col-md-6 col-lg-3">

@@ -27,10 +27,10 @@ List of the most important criteria according to your profile, based on a subset
 ### List of the requirements
 Section for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.
 
-### Test tools
+### Methods and testing tools
 For those who want to check the accessibility of their websites more or less automatically with tools. Finally, all the technical and methodological tools to review its pages.
 
-### Our tools for the web
+### Open source Orange tools
 Presentation of the Boosted library and the Comfort+ service.
 
 ### Examples

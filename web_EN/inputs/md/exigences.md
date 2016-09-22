@@ -2,7 +2,7 @@
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"All requirements"}]);
 });</script>
-## Introduction and background
+## WCAG
 
 For Orange internal accessibility requirements, we have chosen to rely on the [Web Content Accessibility Guidelines v2](https://www.w3.org/TR/WCAG20/) (WCAG 2). Those guidelines are international guidelines published by the World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI) task force, which comply with the ISO standard 40500:2012.
 
@@ -19,15 +19,10 @@ If your are familiar with this reference, you can use it for testing your site.
 
 An [english translation](http://disic.github.io/rgaa_referentiel_en/RGAA3.0_Criteria_English_version_v1.html) is available for informational purposes only. 
 
-## Examples
+## Accede-web references
 
-Didactic examples for user interface components or elements particularly difficult to make accessible and frequently used are available in the [examples](./exemples.html).
-These examples use the [Boosted](http://boosted.orange.com/) library. This library is based on [bootstrap](http://getbootstrap.com/) to quickly make a responsive/accessible website  branded with the Orange colors.
-
-## Reminder : accede-web references
-
-Orange web accessibility guidelines refer to accessibility references available on the [accede-web](http://wiki.accede-web.com/en/) site.
-
+[Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility:
+ 
 <p class="row">  
     <div class="perso col-sm-12 col-md-6 col-lg-3">
         ![](./images/perso1.png) 

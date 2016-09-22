@@ -3,13 +3,6 @@
     setBreadcrumb([{"label":"Presentation"}]);
 });</script>
 
-## Warning
-
-This site is under construction. Some items are not fully finalized, others may evolve over the coming weeks.  
-Any comments or suggestions are welcome.
-
-Thanks for your understanding.
-
 ## What is digital accessibility ?
 
 <div class="axs-picto axs">

@@ -28,13 +28,13 @@ Liste des critères principaux selon votre profil, basés sur un sous-ensemble d
 ### Ensemble des exigences
 Section à destination des développeurs. Tout ce qu'il faut savoir pour coder accessible et pour effectuer les tests permettant de valider ses développements.
 
-### Outils de test
+### Méthodes et outils de test
 Pour ceux qui veulent vérifier l'accessibilité de leurs pages avec des outils plus ou moins automatiques. Enfin, tout l'outillage méthodologique et technique pour évaluer ses pages.
 
-### Nos outils pour le Web
+### Outils Orange open source
 Présentation de la bibliothèque Boosted et du service Confort+.
 
-### Les exemples
+### Exemples
 Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n'a plus qu'à se laisser guider !
 
 Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.
