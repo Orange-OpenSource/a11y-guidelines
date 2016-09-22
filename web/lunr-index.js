@@ -43,25 +43,25 @@ index.add({
     body: "### Ensemble des exigences Section à destination des développeurs. Tout ce qu'il faut savoir pour coder accessible et pour effectuer les tests permettant de valider ses développements.  "
 });
 
-documentTitles["index.html#outils-de-test"] = "Outils de test";
+documentTitles["index.html#methodes-et-outils-de-test"] = "Méthodes et outils de test";
 index.add({
-    url: "index.html#outils-de-test",
-    title: "Outils de test",    
-    body: "### Outils de test Pour ceux qui veulent vérifier l'accessibilité de leurs pages avec des outils plus ou moins automatiques. Enfin, tout l'outillage méthodologique et technique pour évaluer ses pages.  "
+    url: "index.html#methodes-et-outils-de-test",
+    title: "Méthodes et outils de test",    
+    body: "### Méthodes et outils de test Pour ceux qui veulent vérifier l'accessibilité de leurs pages avec des outils plus ou moins automatiques. Enfin, tout l'outillage méthodologique et technique pour évaluer ses pages.  "
 });
 
-documentTitles["index.html#nos-outils-pour-le-web"] = "Nos outils pour le Web";
+documentTitles["index.html#outils-orange-open-source"] = "Outils Orange open source";
 index.add({
-    url: "index.html#nos-outils-pour-le-web",
-    title: "Nos outils pour le Web",    
-    body: "### Nos outils pour le Web Présentation de la bibliothèque Boosted et du service Confort+.  "
+    url: "index.html#outils-orange-open-source",
+    title: "Outils Orange open source",    
+    body: "### Outils Orange open source Présentation de la bibliothèque Boosted et du service Confort+.  "
 });
 
-documentTitles["index.html#les-exemples"] = "Les exemples";
+documentTitles["index.html#exemples"] = "Exemples";
 index.add({
-    url: "index.html#les-exemples",
-    title: "Les exemples",    
-    body: "### Les exemples Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n'a plus qu'à se laisser guider !  Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange. &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "index.html#exemples",
+    title: "Exemples",    
+    body: "### Exemples Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n'a plus qu'à se laisser guider !  Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange. &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -359,11 +359,11 @@ index.add({
     body: "# Exigences accessibilité web Orange &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Ensemble des exigences\&quot;}]); });&lt;/script&gt; "
 });
 
-documentTitles["exigences.html#introduction-et-contexte"] = "Introduction et contexte";
+documentTitles["exigences.html#le-referentiel-wcag"] = "Le référentiel WCAG";
 index.add({
-    url: "exigences.html#introduction-et-contexte",
-    title: "Introduction et contexte",    
-    body: "## Introduction et contexte  Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les [Web Content Accessibility Guidelines v2](http://www.w3.org/Translations/WCAG20-fr/) (WCAG 2). Il s'agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.  Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est **le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.  Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la lecture des [notices Accede-Web](http://www.accede-web.com/notices/). En effet, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.  Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).  "
+    url: "exigences.html#le-referentiel-wcag",
+    title: "Le référentiel WCAG",    
+    body: "## Le référentiel WCAG  Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les [Web Content Accessibility Guidelines v2](http://www.w3.org/Translations/WCAG20-fr/) (WCAG 2). Il s'agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.  Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est **le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.  Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la lecture des [notices Accede-Web](http://www.accede-web.com/notices/). En effet, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.  Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).  "
 });
 
 documentTitles["exigences.html#le-referentiel-general-daccessibilite-des-administrations-rgaa"] = "Le référentiel général d'accessibilité des administrations (RGAA)";
@@ -373,18 +373,11 @@ index.add({
     body: "## Le référentiel général d'accessibilité des administrations (RGAA)  Si vous êtes familiarisé avec le [Référentiel Général d’Accessibilité des Administrations](http://references.modernisation.gouv.fr/referentiel) (RGAA), celui-ci peut être utilisé pour effectuer les tests d'accessibilité.  Il s'agit du référentiel officiel permettant de s’assurer qu’un site d'état et de collectivités territoriales est en conformité avec l’[article 47 de la loi de février 2005 pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées](http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&amp;cidTexte=JORFTEXT000000809647).  Le RGAA est une méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA est également conforme aux WCAG2.    "
 });
 
-documentTitles["exigences.html#les-exemples"] = "Les exemples";
+documentTitles["exigences.html#pour-information-les-notices-accede-web"] = "Pour information : les notices accede-web";
 index.add({
-    url: "exigences.html#les-exemples",
-    title: "Les exemples",    
-    body: "## Les exemples  Des exemples didactiques pour certains types de composants ou d’éléments d’interface particulièrement délicats à rendre accessible et fréquemment utilisés sont disponibles dans la section [exemples](./exemples.html). Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.  "
-});
-
-documentTitles["exigences.html#rappel-les-notices-accede-web"] = "Rappel : les notices accede-web";
-index.add({
-    url: "exigences.html#rappel-les-notices-accede-web",
-    title: "Rappel : les notices accede-web",    
-    body: "## Rappel : les notices accede-web  Les recommandations d'accessibilité web Orange font référence aux notices accessibilité du site [accede-web](http://accede-web.com/).  Ce site propose d'excellentes notices sur l'accessibilité au format Web et PDF.  &lt;p class=\&quot;row\&quot;&gt;       &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso1.png)          &lt;a href=\&quot;http://www.accede-web.com/notices/graphique/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour la conception fonctionnelle et graphique&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso2.png)             &lt;a href=\&quot;http://www.accede-web.com/notices/editoriale/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité éditoriale (modèle)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso3.png)           &lt;a href=\&quot;http://www.accede-web.com/notices/html-css-javascript/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité HTML, CSS et JavaScript&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso4.png)           &lt;a href=\&quot;http://www.accede-web.com/notices/interface-riche/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour les composants d’interface riche&lt;/a&gt;     &lt;/div&gt;       &lt;/p&gt;  &lt;br&gt;&amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt; "
+    url: "exigences.html#pour-information-les-notices-accede-web",
+    title: "Pour information : les notices accede-web",    
+    body: "## Pour information : les notices accede-web  Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l'accessibilité au format Web et PDF:  &lt;p class=\&quot;row\&quot;&gt;       &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso1.png)          &lt;a href=\&quot;http://www.accede-web.com/notices/graphique/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour la conception fonctionnelle et graphique&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso2.png)             &lt;a href=\&quot;http://www.accede-web.com/notices/editoriale/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité éditoriale (modèle)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso3.png)           &lt;a href=\&quot;http://www.accede-web.com/notices/html-css-javascript/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité HTML, CSS et JavaScript&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso4.png)           &lt;a href=\&quot;http://www.accede-web.com/notices/interface-riche/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour les composants d’interface riche&lt;/a&gt;     &lt;/div&gt;       &lt;/p&gt;  &lt;br&gt;&amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt; "
 });
 
 

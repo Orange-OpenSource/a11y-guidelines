@@ -61,13 +61,6 @@ index.add({
     body: "# Recommandations accessibilité Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
 });
 
-documentTitles["index.html#avertissement"] = "Avertissement";
-index.add({
-    url: "index.html#avertissement",
-    title: "Avertissement",    
-    body: "## Avertissement Ce site est en cours de construction. Certaines rubriques ne sont pas totalement finalisées, d'autres seront peu être amenées à évoluer dans les prochaines semaines.   N'hésitez pas à nous remonter vos éventuelles remarques et suggestions.    Merci de votre compréhension.  "
-});
-
 documentTitles["index.html#quest-ce-que-laccessibilite-numerique"] = "Qu'est ce que l'accessibilité numérique ?";
 index.add({
     url: "index.html#quest-ce-que-laccessibilite-numerique",

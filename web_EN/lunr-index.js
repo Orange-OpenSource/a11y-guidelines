@@ -43,18 +43,18 @@ index.add({
     body: "### List of the requirements Section for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.  "
 });
 
-documentTitles["index.html#test-tools"] = "Test tools";
+documentTitles["index.html#methods-and-testing-tools"] = "Methods and testing tools";
 index.add({
-    url: "index.html#test-tools",
-    title: "Test tools",    
-    body: "### Test tools For those who want to check the accessibility of their websites more or less automatically with tools. Finally, all the technical and methodological tools to review its pages.  "
+    url: "index.html#methods-and-testing-tools",
+    title: "Methods and testing tools",    
+    body: "### Methods and testing tools For those who want to check the accessibility of their websites more or less automatically with tools. Finally, all the technical and methodological tools to review its pages.  "
 });
 
-documentTitles["index.html#our-tools-for-the-web"] = "Our tools for the web";
+documentTitles["index.html#open-source-orange-tools"] = "Open source Orange tools";
 index.add({
-    url: "index.html#our-tools-for-the-web",
-    title: "Our tools for the web",    
-    body: "### Our tools for the web Presentation of the Boosted library and the Comfort+ service.  "
+    url: "index.html#open-source-orange-tools",
+    title: "Open source Orange tools",    
+    body: "### Open source Orange tools Presentation of the Boosted library and the Comfort+ service.  "
 });
 
 documentTitles["index.html#examples"] = "Examples";
@@ -359,11 +359,11 @@ index.add({
     body: "# Orange web accessibility requirements &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;All requirements\&quot;}]); });&lt;/script&gt; "
 });
 
-documentTitles["exigences.html#introduction-and-background"] = "Introduction and background";
+documentTitles["exigences.html#wcag"] = "WCAG";
 index.add({
-    url: "exigences.html#introduction-and-background",
-    title: "Introduction and background",    
-    body: "## Introduction and background  For Orange internal accessibility requirements, we have chosen to rely on the [Web Content Accessibility Guidelines v2](https://www.w3.org/TR/WCAG20/) (WCAG 2). Those guidelines are international guidelines published by the World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI) task force, which comply with the ISO standard 40500:2012.  All HTML pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (WCAG) 2.0, without blocking point** for the user after testing the main features of the site or application.  For the technical solutions, we refer to an external content available at [Accede-Web references](http://wiki.accede-web.com/en/home). Indeed, these references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities.  These references are translated into English and are very famous in e-Accessibility as source of good practice, complete and high-quality. These references are updated regularly to stick to the evolution of technologies (browsers, assistive technology...).  "
+    url: "exigences.html#wcag",
+    title: "WCAG",    
+    body: "## WCAG  For Orange internal accessibility requirements, we have chosen to rely on the [Web Content Accessibility Guidelines v2](https://www.w3.org/TR/WCAG20/) (WCAG 2). Those guidelines are international guidelines published by the World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI) task force, which comply with the ISO standard 40500:2012.  All HTML pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (WCAG) 2.0, without blocking point** for the user after testing the main features of the site or application.  For the technical solutions, we refer to an external content available at [Accede-Web references](http://wiki.accede-web.com/en/home). Indeed, these references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities.  These references are translated into English and are very famous in e-Accessibility as source of good practice, complete and high-quality. These references are updated regularly to stick to the evolution of technologies (browsers, assistive technology...).  "
 });
 
 documentTitles["exigences.html#rgaa"] = "RGAA";
@@ -373,18 +373,11 @@ index.add({
     body: "## RGAA  The RGAA is the French government's [General Accessibility Reference for Administrations (in french)](http://references.modernisation.gouv.fr/referentiel/). It is meant to provide a way to check compliance against WCAG 2.0. If your are familiar with this reference, you can use it for testing your site.  An [english translation](http://disic.github.io/rgaa_referentiel_en/RGAA3.0_Criteria_English_version_v1.html) is available for informational purposes only.   "
 });
 
-documentTitles["exigences.html#examples"] = "Examples";
+documentTitles["exigences.html#accede-web-references"] = "Accede-web references";
 index.add({
-    url: "exigences.html#examples",
-    title: "Examples",    
-    body: "## Examples  Didactic examples for user interface components or elements particularly difficult to make accessible and frequently used are available in the [examples](./exemples.html). These examples use the [Boosted](http://boosted.orange.com/) library. This library is based on [bootstrap](http://getbootstrap.com/) to quickly make a responsive/accessible website  branded with the Orange colors.  "
-});
-
-documentTitles["exigences.html#reminder-accede-web-references"] = "Reminder : accede-web references";
-index.add({
-    url: "exigences.html#reminder-accede-web-references",
-    title: "Reminder : accede-web references",    
-    body: "## Reminder : accede-web references  Orange web accessibility guidelines refer to accessibility references available on the [accede-web](http://wiki.accede-web.com/en/) site.  &lt;p class=\&quot;row\&quot;&gt;       &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso1.png)          &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/graphique-ergonomique\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for graphic design (to ensure WCAG 2.0 compliance)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso2.png)             &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/contributeurs\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for editors (template)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso3.png)           &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/html-css\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for HTML and CSS (to ensure WCAG 2.0 compliance)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso4.png)           &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/interfaces-riches-javascript\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)&lt;/a&gt;     &lt;/div&gt;       &lt;/p&gt;  &lt;br&gt;&amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt; "
+    url: "exigences.html#accede-web-references",
+    title: "Accede-web references",    
+    body: "## Accede-web references  [Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility:   &lt;p class=\&quot;row\&quot;&gt;       &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso1.png)          &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/graphique-ergonomique\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for graphic design (to ensure WCAG 2.0 compliance)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso2.png)             &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/contributeurs\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for editors (template)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso3.png)           &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/html-css\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for HTML and CSS (to ensure WCAG 2.0 compliance)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso4.png)           &lt;a href=\&quot;http://wiki.accede-web.com/en/notices/interfaces-riches-javascript\&quot; class=\&quot;btn btn-info\&quot;&gt;Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)&lt;/a&gt;     &lt;/div&gt;       &lt;/p&gt;  &lt;br&gt;&amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt; "
 });
 
 
