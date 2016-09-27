@@ -1222,7 +1222,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
 <p>Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d&#39;écran  pour leur assurer une complète compréhension du contenu.</p>
-<p><strong>Exemple :</strong><br>Dans cet exemple, l&#39;ordre de lecture par défaut est dépend complétement de l&#39;implémentation et de l&#39;ordre de déclaration des éléments. Dans ce cas-ci : <code>1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-</code>. Un ordre de lecture plus consistent serait <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-</code>.  </p>
+<p><strong>Exemple :</strong><br>Dans cet exemple, l&#39;ordre de lecture par défaut dépend complétement de l&#39;implémentation et de l&#39;ordre de déclaration des éléments. Dans ce cas-ci : <code>1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-</code>. Un ordre de lecture plus cohérent serait <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-</code>.  </p>
 <p><img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  </p>
 <pre><code>remoteView.isAccessibilityElement = false
 remoteView.shouldGroupAccessibilityChildren = true
