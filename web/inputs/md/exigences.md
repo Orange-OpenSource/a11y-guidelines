@@ -8,9 +8,8 @@ Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de n
 
 Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est **le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.
 
-Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la lecture des [notices Accede-Web](http://www.accede-web.com/notices/). En effet, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.
+Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères incontournables](./fondamentaux.html) et des [exemples](./exemples.html) de ce site. Vous pouvez aussi utiliser les notices  [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
 
-Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).
 
 ## Le référentiel général d'accessibilité des administrations (RGAA)
 
@@ -19,9 +18,11 @@ Il s'agit du référentiel officiel permettant de s’assurer qu’un site d'ét
 
 Le RGAA est une méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA est également conforme aux WCAG2.  
 
-## Pour information : les notices accede-web
+## Les notices accede-web
 
-Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l'accessibilité au format Web et PDF:
+Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l'accessibilité au format Web et PDF, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.
+
+Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).
 
 <p class="row">  
     <div class="perso col-sm-12 col-md-6 col-lg-3">

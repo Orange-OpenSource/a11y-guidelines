@@ -8,9 +8,7 @@ For Orange internal accessibility requirements, we have chosen to rely on the [W
 
 All HTML pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (WCAG) 2.0, without blocking point** for the user after testing the main features of the site or application.
 
-For the technical solutions, we refer to an external content available at [Accede-Web references](http://wiki.accede-web.com/en/home). Indeed, these references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities.
-
-These references are translated into English and are very famous in e-Accessibility as source of good practice, complete and high-quality. These references are updated regularly to stick to the evolution of technologies (browsers, assistive technology...).
+For the technical solutions, you should consult [essential criteria](./fondamentaux.html) and [examples](./exemples.html) sections. You should also refer to an external content available at [Accede-Web references](http://wiki.accede-web.com/en/home).
 
 ## RGAA
 
@@ -21,7 +19,7 @@ An [english translation](http://disic.github.io/rgaa_referentiel_en/RGAA3.0_Crit
 
 ## Accede-web references
 
-[Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility:
+[Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities:
  
 <p class="row">  
     <div class="perso col-sm-12 col-md-6 col-lg-3">

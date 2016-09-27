@@ -375,7 +375,7 @@ Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d'�
 
 
 **Exemple :**      
-Dans cet exemple, l'ordre de lecture par défaut est dépend complétement de l'implémentation et de l'ordre de déclaration des éléments. Dans ce cas-ci : `1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-`. Un ordre de lecture plus consistent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
+Dans cet exemple, l'ordre de lecture par défaut dépend complétement de l'implémentation et de l'ordre de déclaration des éléments. Dans ce cas-ci : `1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
 
 <img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
 <pre><code>remoteView.isAccessibilityElement = false
