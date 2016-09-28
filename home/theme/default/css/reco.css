@@ -40,9 +40,10 @@ body {
     min-height: 7.5rem;
 }
 
-.top-nav .active a:focus,
+.top-nav a:focus,
 .navbar-brand:focus {
     outline-color: #fff;
+    text-decoration: none;
 }
 
 #cdu_zone {
@@ -57,10 +58,12 @@ body {
     font-size: 1.6rem;
     margin: 0 2rem;
     text-decoration: none;
+    border-bottom: .1rem dotted #fff;    
 } 
 
 #cdu a:focus, #cdu a:hover {
-    text-decoration: underline;    
+    border-bottom: 0;    
+    outline: .1rem dotted #fff;
 } 
 
 #cdu span {
@@ -233,10 +236,6 @@ h1:before, h2:before {
   position: relative;
   z-index: 1000;
   background-color: transparent;
-}
-
-.breadcrumb a {
-    text-decoration: none;
 }
 
 .subtitle{
