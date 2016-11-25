@@ -6,7 +6,7 @@ $(document).ready( function () {
   document.title = title;
 
   var resize = function () {
-    $("#sidebar ul").innerWidth($("#sidebar").innerWidth()-10);
+    $("#navigation").innerWidth($("#sidebar").innerWidth()-10);
   }
   resize();
   $(window).resize(function(){resize();});
@@ -114,9 +114,9 @@ $(document).ready( function () {
 function setBreadcrumb(param) {
     param.forEach(function (element, index, array) {
     if (element.url) {
-            $(".breadcrumb").append($("<li><a href='" + element.url + "'>" + element.label + "</a></li>"));
+            $(".breadcrumb").append($("<li class=\"breadcrumb-item\"><a href='" + element.url + "'>" + element.label + "</a></li>"));
         } else {
-            $(".breadcrumb").append($("<li>" + element.label + "</li>"));
+            $(".breadcrumb").append($("<li class=\"breadcrumb-item\">" + element.label + "</li>"));
         }
     });
     $(".breadcrumb li:last").addClass("active");
