@@ -35,7 +35,7 @@
 
     <header role="banner">
       <nav class="navbar navbar-dark navbar-fixed-top">
-          <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
               <span class="sr-only">Menu de navigation</span>
               <span class="icon-menu"></span>
           </button>
@@ -52,10 +52,13 @@
                       </ul>
                   </li>                                    
                   <li class="nav-item"><a class="nav-link" href="./web/index.html">Web</a></li>
-                  <li class="nav-item"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active">fr</a><a href="#" class="nav-link">en</a>
+                  </li>
               </ul> 
-              <ul class="nav navbar-nav pull-xs-right">        
-                <li class="nav-item">
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
                   <span id="cdu">
                     <a href="#" title="Confort plus" id="uci_link">
                       Confort
@@ -63,23 +66,32 @@
                     </a>
                   </span>
                 </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active">fr</a><a href="#" class="nav-link">en</a> 
+                </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link icon" id="searchIcon">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
                         <span class="sr-only">Afficher la barre de recherche</span>
                         <span class="icon-search" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="dropdown-toggle" id="language" href="#" data-toggle="dropdown">FR</a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a class="dropdown-item" href="#">FR</a></li>
-                    <li><a class="dropdown-item" href="#">EN</a></li>
-                </ul>
-            </li>
+                    </a>                    
+                </li>                
             </ul>             
           
-      </nav>
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rerchercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
     </header>
+
+    <span class="sr-only">Vous êtes ici : </span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
+    </ol>
 <!--
     <header role="banner">
         <nav id="top-navbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
@@ -153,13 +165,9 @@
             </ul>
 -->            
         </div>
-        <div class="col-xs-12 col-sm-9" id="content">
-          <span class="sr-only">Vous êtes ici&nbsp;: </span>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
-          </ol>
-        
-          <%- @content %>
+
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <%- @content %>          
         </div>
       </div>
     </main>

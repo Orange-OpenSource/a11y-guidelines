@@ -1,4 +1,22 @@
-/* ---- custom home section */
+#content {
+  background-image: url(../../../images/blue.png);  
+  background-size: 100% 140px;
+  background-repeat: no-repeat;  
+}
+
+h1 {  
+  background-image: url(../../../images/banniere-conception.jpg);
+  background-repeat: no-repeat;
+  background-position: right;  
+  min-height: 140px;
+}
+
+h1 a {
+  max-width: 24rem;
+  display: inline-block;
+  margin: 1.9rem 1.9rem 1.9rem 0;
+}
+
 .axs-picto::before {
     float: left;
     margin-right: 20px;  
