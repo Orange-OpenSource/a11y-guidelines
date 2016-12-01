@@ -26,7 +26,11 @@ mDAN targets everybody interested or involved in accessibility:
 
 ## I want mDAN!
 
+[Source code is available on github](https://github.com/Orange-OpenSource/m-dan)
+
 mDAN will be available soon on the play store and the app store.
+
+You can already [download Android version](/mDAN_v2.2.0.apk)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
