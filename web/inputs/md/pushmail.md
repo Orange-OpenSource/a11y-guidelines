@@ -6,12 +6,12 @@
 
 
 ## Introduction : l'accessibilité des mails
-Les mails au format texte et sans image, comme le sont les mails entre salariés, sont généralement accessibles. Le problème d'inaccessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d'informations et sont un outil essentiel de la communication d'entreprise.
+Les mails au format texte et sans image, comme le sont les mails entre salariés, sont souvent accessibles. Le problème d'inaccessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d'informations et sont un outil essentiel de la communication d'entreprise.
 
 ### Des solutions alternatives
-Et si la mise en page du push mail est complexe, que l'on a pas la possibilité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours :
+Et si la mise en page du push mail est complexe, que l'on n'a pas la possibilité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours :
 - Proposer un lien redirigeant vers une page web 
-- Mettre en place un lien en début de mail pointant vers un fichier texte ou un fichier word accessible
+- Mettre en place un lien en début de mail pointant vers un fichier texte ou un fichier Word accessible
 
 ### Qui est impacté ?
 - Les personnes qui ne voient pas 
@@ -73,20 +73,27 @@ Donner une structure cohérente au contenu rédactionnel grâce à la mise en pl
 **Objectif : **  
 Permettre aux utilisateurs de facilement comprendre et hiérarchiser le contenu.
 
-**Exemple : **  
-Word styles
+**Exemple dans Word : **  
+Pour sémantiser le contenu, il faut utiliser la palette des Styles. En donnant un style (titre, emphase, liste...) à une partie de vote contenu, vous modifiez son apparence mais surtout vous lui donnez de la sémantique.
+Cliquer sur le bouton d'ouverture (en bas à droite de l'outil Style dans l'onglet Accueil) ou grâce au racourci clavier Ctrl + Alt + Maj + s permet l'ouverture du panneau Style.
+
+![ ](images/style_word.jpg)
+
+  Vous avez accès à des listes (comme avec les boutons dans le bandeau "Accueil" dans le menu "Paragraphe), aux titres et à toute une série de styles. De préférence utiliser les styles par défaut proposés, il en existe suffisamment. 
+
+![ ](images/palette_style.jpg)
 
 ### Simplifier la présentation
 
 **Pour qui : ** tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d'attention.  
 
 **Description : **  
-Simplifier la présentation du contenu et respecter les bonnes pratiques en terme de présentation. 
+Simplifier la présentation du contenu et respecter les bonnes pratiques en termes de présentation. 
 
 **À vérifier : **  
 Pour assurer une lecture facile :
 - Aligner le texte à gauche, mais ne pas le justifier
-- Utiliser une police de caractères facilement lisible en corps 12pt minimum
+- Utiliser une police de caractères facilement lisible en corps 12pixels minimum
 - Mettre  en place une ponctuation simple
 - Ne pas mettre d’italiques, ni de phrases en majuscules, mais une majuscule en début de phrase
 - Éviter les fonds texturés (images)
@@ -115,7 +122,7 @@ Toute image doit posséder une  alternative qui ne reflète que le contenu infor
 Pour les graphes, la solution, peut être, de mettre un lien sous l'image permettant d'accéder à un tableau de chiffre en bas du mail, par exemple.
 Une alternative doit être :
 - Précise et équivalente au contenu de l'image ou sa fonction
-- Succincte, quelques mots à deux phrases courtes semble la bonne taille
+- Succinte, quelques mots à deux phrases courtes semble la bonne taille
 - Pas redondante, ne pas fournir la même information que dans le texte environnant
 - Pas de texte générique, pas besoin d'alternative du type "image de...", "graphique sur...", "lien vers...", ...
 
@@ -123,8 +130,15 @@ Une alternative doit être :
 Permettre l'accès à l'information incluse dans une image pour des utilisateurs qui n'y ont pas accès.
 Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n'affichant pas les images (mobile, faible bande passante...).
 
-**Exemple : **  
-word
+**Exemple dans Word : **  
+
+Il faut donner une alternative textuelle (texte de replacement) à toute image dans Word. Pour cela, il faut accéder aux propriété de cette image. Sélectionnez l'image, faire un clic droit, puis "Fomat de l'image" et "Texte de remplacement".
+
+![ ](images/menu_context_im.jpg) 
+
+Ne pas remplir le champ "Titre", le laisser vide. En revanche, mettre dans le champs "Description" (seul champ lu par une synthèse vocale)  le texte alternatif donnant l'information équivalente à celle contenue dans l'image. Si l'image ne porte pas d'information, laisser les deux champs "Titre" et "Description" vides.
+
+![ ](images/format_img.jpg)
 
 ### Spécifier la langue du mail et les changements éventuels
 
@@ -141,12 +155,20 @@ Pour les mots ou les expressions en langue étrangère passés dans l'usage cour
 Cette indication permet d'adapter la synthèse vocale pour une bonne prononciation de la langue à utiliser.
 
 **Exemple pour une page en français : **  
-Word !!!!!!!!!!!!!!!!
 - pour du HTML : `<html lang="fr">`
 - pour du XHTML : `<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">`
 
 **Exemple de changement de langue : **  
 `découvrir Orange <span lang="fr">live</span> TV`
+
+**Exemple pour Word :**
+Pour modifier la langue du document ou d'une partie du contenu (après sélection de ce contenu), on utilise  on utilise, dans l'onglet "Révision", l'élément "Langue". 
+
+![ ](images/revision.jpg) 
+
+Dans le sous-menu de "Langue", on clique sur "Défnir la langue de vérification" et dans la fenêtre "Langue", on choisit la langue voulue.
+
+![ ](images/langue.jpg) 
 
 ### Fournir une mise en page accessible
 
@@ -190,9 +212,9 @@ L'application [colour contrast analyser](http://www.paciellogroup.com/resources/
 Rendre les liens identifiables et compréhensibles hors contexte
 
 **À vérifier : **  
-- Souligner les liens, car sinon les personnes doivent faire un effort cognitif pour les trouver. Les personnes en situation de contrainte motrice ne peuvent les trouver qu’en naviguant davantage.
+- Souligner les liens, parce que, sinon, les personnes doivent faire un effort cognitif pour pouvoir les identifier. Les personnes déficientes motrices (utilisant le clavier) ou malvoyantes ne peuvent les trouver que difficilement.
 - Ne pas utiliser des intitulés comme "Cliquez ici", "Pour en savoir plus", "Suivez ce lien", "Plus de détails", "Lire la suite", mais des intitulés qui identifient  bien leur cible
-- Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en ajoutant à l'intitulé du texte, par exemple "nouvelle fenêtre", car le multifenêtrage qui peut être déjà troublant pour un voyant est tout simplement bloquant pour un non-voyant.
+- Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en rajoutant à l'intitulé du texte, par exemple "nouvelle fenêtre", car le multifenêtrage qui peut être déjà troublant pour un voyant est tout simplement bloquant pour un non-voyant.
 
 **Objectif : **  
 Permettre à un utilisateur n'ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d'écran) ou les utilisateurs de loupe logicielle qui ne voient qu'une fraction de la page. 

@@ -103,7 +103,7 @@ Cet exemple n'est pas valide, car l'information est transmise uniquement par la 
 **Quand : ** dès la conception et pendant le développement.
 
 **Description :**  
-Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo. Prévoir des alternatives audio pour les captcha.
+Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.
 
 **Exemple : **  
 Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton :
@@ -113,14 +113,6 @@ Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception 
 - couper le son ...  
 
 ![capture d'écran d'un lecteur vidéo contenant plusieurs boutons](images/player.png)   
-  
-**Note à propos des CAPTCHA :**  
-Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d'un système anti-spam ne peut être évitée, il est souhaitable de s'orienter vers une solution plus souple pour l'utilisateur :
- - Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l'utilisateur.
- - Test logique (question dont la réponse est évidente, test mathématique simple ...).
- - Double authentification.
-
-Si la présence d'un captcha ne peut être évitée, il est indispensable de **prévoir une alternative pour les captcha uniquement visuels ou sonores**.
 
 ## 6. Visibilité du focus
 **Cible : ** tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.  
@@ -260,8 +252,29 @@ Fournir des liens d'évitement du type "Aller au contenu" sur chaque page. Ceux-
 Des liens d'évitement ("Aller à la navigation", "Aller au contenu") sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d'adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche `TAB`.
 
-![capture d'écran du site orange.com](images/skiplink.png)  
+![capture d'écran du site orange.com](images/skiplink.png)
 
+## 14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
+**Cible : ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
+
+**Description :**
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.
+
+**À vérifier :** 
+- S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
+- S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.
+- S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous menu, liste déroulante…) ainsi que les différentes régions de la page.
+
+**Objectif utilisateur :**
+Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.
+
+**Exemple valide :** 
+![capture d'écran du site 100% pratique](images/groupement.jpg)
+Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.
+
+**Exemple non-valide :**
+![capture d'écran du site fnac.com](images/groupement2.jpg)
+Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

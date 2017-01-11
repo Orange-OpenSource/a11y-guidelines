@@ -184,7 +184,7 @@ Séparer strictement le contenu (HTML), l'interactivité (Javascript) et la pré
 - Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. 
 - Éviter d'utiliser des images pour afficher du texte, préférer les habillages CSS.
 - Utiliser des classes CSS plutôt que manipuler des styles CSS en ligne dans le code HTML.
-- Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d'information (ou prévoir une alternative pour les lecteurs d'écran notamment).
+- Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d'information
 - Ne pas câbler des évènements Javascript directement dans le code HTML mais gérer l'interactivité dans un script ou un fichier JS à part.
 
 **Objectif utilisateur : **
@@ -373,14 +373,6 @@ Renseigner l'attribut `alt` dans ce cas apporterait une information redondante.
   
 `<h3>Le service 24h garanti</h3>`  
 `<img src="service-24.png" alt="">`
-
-**Note à propos des CAPTCHA :**  
-Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d'un système anti-spam ne peut être évitée, il est souhaitable de s'orienter vers une solution plus souple pour l'utilisateur :
- - Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l'utilisateur.
- - Test logique (question dont la réponse est évidente, test mathématique simple ...).
- - Double authentification.
-
-Si la présence d'un captcha ne peut être évitée, il est indispensable de prévoir **une alternative audio aux captcha image**. De plus l'attribut `alt` de l'image captcha doit être renseignée (exemple : `alt="CAPTCHA"`).
 
 **Référence : **WCAG 1.1.1
 
@@ -711,6 +703,30 @@ Donner à tous les utilisateurs la maîtrise des changements de contexte lié à
 Un formulaire doit obligatoirement avoir un bouton d'envoi. Celui-ci ne doit pas être envoyé automatiquement après la saisie de l'utilisateur.
 
 **Référence :** WCAG 3.2.1, 3.2.2
+
+## 25. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
+**Cible : ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
+
+**Description :**
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.
+
+**À vérifier :** 
+- S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
+- S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.
+- S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous menu, liste déroulante…) ainsi que les différentes régions de la page.
+
+**Objectif utilisateur :**
+Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.
+
+**Exemple valide :** 
+![capture d'écran du site 100% pratique](images/groupement.jpg)
+Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.
+
+**Exemple non-valide :**
+![capture d'écran du site fnac.com](images/groupement2.jpg)
+Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
+Référence WCAG : 3.2.3., 3.2.4
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
