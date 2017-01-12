@@ -3,8 +3,24 @@ body {
   background-color: #f6f6f6;
 }
 
+/*
 #content {
   background: #fff;  
+}
+*/
+#content p {
+  background: #fff;
+  padding: 1rem;  
+}
+
+#content p+ul, #content p+p {
+  margin-top: -2rem;
+}
+
+#content ul {
+  background: #fff;
+  padding: 1rem;
+  padding-left: 3rem;  
 }
 
 .highlight-zone {
@@ -42,6 +58,7 @@ body {
 
 .navbar {
     padding: 0 1.4rem;
+    font-size: 1.05rem;
 }
 
 #searchIcon {  
@@ -228,11 +245,12 @@ h1:before, h2:before {
   background-color: #f6f6f6;
   z-index: 100;
   padding: .75rem;
+  font-size: .94rem;
 }
 
 #secondNavBar .nav-item.language a {
   display: inline-block;
-  font-size: 1rem;  
+  font-size: 1.05rem;  
   margin-left: .4rem;
   margin-top: 3.8rem;
 }

@@ -6,11 +6,9 @@
 
 ## Qu'est ce que l'accessibilité numérique ?
 
-<div class="axs-picto axs">
 L’accessibilité numérique permet de rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
 
 Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.
-</div>
 
 ## Qui est concerné par l’accessibilité numérique&nbsp;?
 
@@ -18,7 +16,7 @@ Les situations de handicap identifiées ne sont pas seulement celles que l’on 
 Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.
 
 &nbsp;  
-![](./images/chat.png)
+<img src="./images/chat.png" class="img-fluid">
 
 <div class="sr-only">
     Les citations suivantes en sont l'illustration&nbsp;:
@@ -90,8 +88,6 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
         <li>Matériel non approprié (imprimante noir et blanc…)</li>
     </ul>
 </div>
-
-&nbsp;
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
