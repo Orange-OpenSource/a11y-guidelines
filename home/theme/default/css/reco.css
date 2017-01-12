@@ -3,24 +3,46 @@ body {
   background-color: #f6f6f6;
 }
 
-/*
+
 #content {
-  background: #fff;  
+  margin-bottom: 3rem;  
 }
-*/
-#content p {
+
+#content p,
+#content h2, 
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
   background: #fff;
   padding: 1rem;  
 }
 
-#content p+ul, #content p+p {
-  margin-top: -2rem;
+ #content ul, #content h2, #content h3, #content h4, #content p {
+   margin-bottom: 0;  
+ }
+
+ #content p, #content ul {
+   padding-bottom: 0;
+ }
+
+#content h3+p, #content h4+p, #content h5+p, #content h6+p {
+  padding-top: 0;
+}
+
+#content p+h2, #content ul+h2 {
+  border-top: 1rem solid #fff;
+  padding-top: 1rem;
 }
 
 #content ul {
   background: #fff;
   padding: 1rem;
   padding-left: 3rem;  
+}
+
+#content p a, #content ul a {
+  text-decoration: underline;
 }
 
 .highlight-zone {
@@ -248,6 +270,10 @@ h1:before, h2:before {
   font-size: .94rem;
 }
 
+.breadcrumb a {
+  text-decoration: underline;
+}
+
 #secondNavBar .nav-item.language a {
   display: inline-block;
   font-size: 1.05rem;  
@@ -457,6 +483,15 @@ h1:before, h2:before {
     bottom: 20px;
     right: 20px;
     display:none;
+    transform: rotate(-90deg);
+}
+
+.back-to-top::before {  
+  font-family: icon-orange;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #fff;
+  content: "\e93e";  
 }
 
 .subtitle{

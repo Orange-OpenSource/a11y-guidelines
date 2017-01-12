@@ -24,24 +24,22 @@ Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l
 
 Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).
 
-<p class="row">  
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso1.png) 
-        <a href="http://www.accede-web.com/notices/graphique/" class="btn btn-info">Notice d’accessibilité pour la conception fonctionnelle et graphique</a>
-    </div>
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso2.png)    
-        <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
-    </div>
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso3.png)  
-        <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité HTML, CSS et JavaScript</a>
-    </div>
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso4.png)  
-        <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interface riche</a>
-    </div>      
-</p>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso1.png) 
+    <a href="http://www.accede-web.com/notices/graphique/" class="btn btn-info">Notice d’accessibilité pour la conception fonctionnelle et graphique</a>
+</div>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso2.png)    
+    <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
+</div>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso3.png)  
+    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité HTML, CSS et JavaScript</a>
+</div>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso4.png)  
+    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interface riche</a>
+</div>      
 
 <br>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

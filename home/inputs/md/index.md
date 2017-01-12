@@ -15,9 +15,7 @@ Il ne s’agit pas de démultiplier les supports de l’information, mais de res
 Les situations de handicap identifiées ne sont pas seulement celles que l’on voit.   
 Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.
 
-&nbsp;  
-<img src="./images/chat.png" class="img-fluid">
-
+&nbsp;
 <div class="sr-only">
     Les citations suivantes en sont l'illustration&nbsp;:
     <ul>
@@ -25,7 +23,9 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
         <li>C'est utile de ne pas être obligé d'imprimer en couleur pour comprendre cette carte.</li>
         <li>Après avoir travaillé toute la journée derrière un écran, j'ai plus de difficultés à lire certains textes trop petits.</li>
     </ul>
-</div>
+</div>  
+
+<img src="./images/chat.png" alt="" class="img-fluid">
 
 ## Les situations de handicap
 

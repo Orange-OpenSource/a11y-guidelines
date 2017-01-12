@@ -4,7 +4,7 @@
   background-repeat: no-repeat;  
 }
 
-h1 {  
+#content h1 {  
   background-image: url(../../../images/banniere-conception.jpg);
   background-repeat: no-repeat;
   background-position: right;  
@@ -18,8 +18,14 @@ h1 a {
   line-height: 2.4rem;
 }
 
-h3 {
-    margin-top: 1.5rem;
+#content h2 {
+    margin-bottom: 1rem;
+    background: transparent;
+    padding: 0;
+}
+
+h3+.axs-picto {
+    margin-top: -2rem;
 }
 
 .axs-picto {
@@ -41,6 +47,7 @@ h3 {
 }
 .axs-picto.materiel::before {
     content: url(../images/device_fixed-line_phone.png);
+    margin-bottom: 3rem;
 }
 .axs-picto.cognitif::before {
     content: url(../images/accessibility_cognition.png);

@@ -31,8 +31,6 @@
         <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
         <a id="skip-content" href="#content">Aller au contenu</a>
     </div>
-
-
     <header role="banner">
       <nav class="navbar navbar-dark navbar-fixed-top">
           <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
@@ -54,7 +52,7 @@
                   <li class="nav-item"><a class="nav-link" href="./web/index.html">Web</a></li>
                   <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
                   <li class="nav-item language hidden-sm-up">
-                    <a href="#" class="nav-link active">fr</a><a href="#" class="nav-link">en</a>
+                    <a href="#" class="nav-link active">fr</a><a href="./home_EN/index.html" class="nav-link">en</a>
                   </li>
               </ul> 
               <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
@@ -67,7 +65,7 @@
                   </span>
                 </li>
                 <li class="nav-item language hidden-xs-down">
-                  <a href="#" class="nav-link active">fr</a><a href="#" class="nav-link">en</a> 
+                  <a href="#" class="nav-link active">fr</a><a href="./home_EN/index.html" class="nav-link">en</a> 
                 </li>
                 <li class="nav-item">
                     <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
@@ -92,78 +90,10 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
     </ol>
-<!--
-    <header role="banner">
-        <nav id="top-navbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-            
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Menu de navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a href="index.html" class="navbar-brand">
-                <img src="./boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil" width="48"/>
-              </a>
-            </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-              <ul class="nav navbar-nav top-nav">
-                    <li class="active"><a href="./index.html">Accueil</a></li>
-                    <li><a href="./web/index.html">Web</a></li>
-
-                    <li><a href="./mobile/index.html">Mobile</a></li>
-              </ul>
-
-              <form action="./search.html" class="navbar-form navbar-right" role="search">
-
-               
-              <span id="cdu">
-                <a href="#" title="Confort plus" id="uci_link">
-                    Confort
-                    <span>+</span>
-                </a>
-              </span>
-
-             
-              <ul class="language">
-                <li>fr<span class="sr-only"> (version française)</span></li>
-                <li><a href="./home_EN/index.html" title="English version" lang="en">en<span class="sr-only"> (english version)</span></a></li>
-              </ul>
-
-              
-                <div class="form-group">
-                  <input title="rechercher" type="text" class="form-control" placeholder="Rechercher..." name="q">
-                </div>
-                <button title="Rechercher" type="submit" class="btn btn-default">
-                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                  <span class="sr-only">Rechercher</span>
-                </button>
-              
-              </form>
-
-              <ul id="navigation-mobile" class="nav navbar-nav"></ul>
-
-            </div>
-          </div>
-        </nav>
-    </header>
--->
     <main role="main" class="container-fluid">
-      <div class="row row-offcanvas row-offcanvas-left">
-       
+      <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
-<!--          
-            <ul id="navigation" class="nav navbar-nav">
-                <li><a id="index" href="index.html">Présentation</a></li>
-                <li><a id="organisation" href="organisation.html">Organisation du site</a></li>
-                <li><a id="contact" href="contact.html">Contact</a></li>
-                <li><a id="about" href="about.html">À propos</a></li>
-            </ul>
--->            
         </div>
 
         <div class="col-xs-12 col-sm-9" id="content">          
@@ -172,9 +102,7 @@
       </div>
     </main>
 
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="./boosted/js/boosted.min.js"></script>
