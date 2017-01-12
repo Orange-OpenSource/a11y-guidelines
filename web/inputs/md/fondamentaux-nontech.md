@@ -268,12 +268,12 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 **Objectif utilisateur :**
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.
 
-**Exemple valide :** 
-![capture d'écran du site 100% pratique](images/groupement.jpg)
+**Exemple valide :**  
+![capture d'écran du site 100% pratique](images/groupement.jpg)  
 Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.
 
-**Exemple non-valide :**
-![capture d'écran du site fnac.com](images/groupement2.jpg)
+**Exemple non-valide :**  
+![capture d'écran du site fnac.com](images/groupement2.jpg)  
 Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
