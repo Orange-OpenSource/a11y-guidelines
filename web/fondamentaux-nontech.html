@@ -183,7 +183,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 </ul>
 <h2 id="5-d-finir-des-quivalents-textuels">5. Définir des équivalents textuels</h2>
 <p><strong>Cible : </strong> les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.<br><strong>Quand : </strong> dès la conception et pendant le développement.</p>
-<p><strong>Description :</strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo. Prévoir des alternatives audio pour les captcha.</p>
+<p><strong>Description :</strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.</p>
 <p><strong>Exemple : </strong><br>Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton :</p>
 <ul>
 <li>menu</li>
@@ -192,13 +192,6 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>couper le son ...  </li>
 </ul>
 <p><img src="images/player.png" alt="capture d&#39;écran d&#39;un lecteur vidéo contenant plusieurs boutons">   </p>
-<p><strong>Note à propos des CAPTCHA :</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d&#39;un système anti-spam ne peut être évitée, il est souhaitable de s&#39;orienter vers une solution plus souple pour l&#39;utilisateur :</p>
-<ul>
-<li>Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l&#39;utilisateur.</li>
-<li>Test logique (question dont la réponse est évidente, test mathématique simple ...).</li>
-<li>Double authentification.</li>
-</ul>
-<p>Si la présence d&#39;un captcha ne peut être évitée, il est indispensable de <strong>prévoir une alternative pour les captcha uniquement visuels ou sonores</strong>.</p>
 <h2 id="6-visibilit-du-focus">6. Visibilité du focus</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand : </strong> lors de la conception graphique et lors du développement.</p>
 <p><strong>Description :</strong><br>La position du focus clavier doit être visible à tous moment. Lorsqu&#39;un élément cliquable reçoit le focus (lien, bouton ...), ceci doit être visible pour l&#39;utilisateur. Par défaut, le navigateur entoure l&#39;élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour le rendre plus visible (assurer un contraste suffisant, par exemple) par un effet personnalisé, mais ne doit pas être supprimé. Les utilisateurs qui naviguent à l&#39;aide du clavier (touche TAB) ont besoin de connaître la position du focus.    </p>
@@ -257,7 +250,21 @@ De même éviter le recours systématique aux boites de dialogues pour présente
 <p><strong>Description :</strong><br>Fournir des liens d&#39;évitement du type &quot;Aller au contenu&quot; sur chaque page. Ceux-ci facilitent la navigation pour les personnes utilisant le clavier, en mobilité ou navigant à l&#39;aide d&#39;un lecteur d&#39;écran. En cas de <strong>fortes contraintes,</strong> les liens peuvent être masqués à l&#39;écran et apparaître uniquement lors de la navigation au clavier.</p>
 <p><strong>Exemple : </strong><br>Des liens d&#39;évitement (&quot;Aller à la navigation&quot;, &quot;Aller au contenu&quot;) sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d&#39;adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
-<p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com">  </p>
+<p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com"></p>
+<h2 id="14-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
+<p><strong>Description :</strong>
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.</p>
+<p><strong>À vérifier :</strong> </p>
+<ul>
+<li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
+<li>S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.</li>
+<li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong>
+Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
+<p><strong>Exemple valide :</strong><br><img src="images/groupement.jpg" alt="capture d&#39;écran du site 100% pratique"><br>Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
+<p><strong>Exemple non-valide :</strong><br><img src="images/groupement2.jpg" alt="capture d&#39;écran du site fnac.com"><br>Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

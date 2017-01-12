@@ -301,7 +301,7 @@ Sémantiser le contenu HTML en utilisant les balises :</p>
 <li>Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. </li>
 <li>Éviter d&#39;utiliser des images pour afficher du texte, préférer les habillages CSS.</li>
 <li>Utiliser des classes CSS plutôt que manipuler des styles CSS en ligne dans le code HTML.</li>
-<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information (ou prévoir une alternative pour les lecteurs d&#39;écran notamment).</li>
+<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information</li>
 <li>Ne pas câbler des évènements Javascript directement dans le code HTML mais gérer l&#39;interactivité dans un script ou un fichier JS à part.</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
@@ -406,13 +406,6 @@ Point bloquant : une image sans description textuelle est inexploitable par des 
 <p><strong>Exemple d&#39;alternative vide :</strong><br>Dans l&#39;exemple ci-dessous, le picto à droite n&#39;a pas besoin d&#39;être vocalisé puisque le texte situé à gauche apporte déjà l&#39;information.<br>Renseigner l&#39;attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
 <p><img src="./images/service-24.png" alt="exemple d&#39;image décorative">  </p>
 <p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
-<p><strong>Note à propos des CAPTCHA :</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d&#39;un système anti-spam ne peut être évitée, il est souhaitable de s&#39;orienter vers une solution plus souple pour l&#39;utilisateur :</p>
-<ul>
-<li>Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l&#39;utilisateur.</li>
-<li>Test logique (question dont la réponse est évidente, test mathématique simple ...).</li>
-<li>Double authentification.</li>
-</ul>
-<p>Si la présence d&#39;un captcha ne peut être évitée, il est indispensable de prévoir <strong>une alternative audio aux captcha image</strong>. De plus l&#39;attribut <code>alt</code> de l&#39;image captcha doit être renseignée (exemple : <code>alt=&quot;CAPTCHA&quot;</code>).</p>
 <p><strong>Référence : </strong>WCAG 1.1.1</p>
 <h2 id="12-fournir-un-transcrit-pour-toute-piste-audio-ou-vid-o">12. Fournir un transcrit pour toute piste audio ou vidéo</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives et auditives et celle dont le Français est mal maîtrisé.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
@@ -603,11 +596,25 @@ Ne pas induire de changement de contexte lors de la prise de focus, la saisie de
 <p><strong>Objectif utilisateur : </strong>
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.</p>
 <p><strong>Exemple :</strong><br>Un formulaire doit obligatoirement avoir un bouton d&#39;envoi. Celui-ci ne doit pas être envoyé automatiquement après la saisie de l&#39;utilisateur.</p>
-<p><strong>Référence :</strong> WCAG 3.2.1, 3.2.2
+<p><strong>Référence :</strong> WCAG 3.2.1, 3.2.2</p>
+<h2 id="25-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">25. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
+<p><strong>Description :</strong>
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.</p>
+<p><strong>À vérifier :</strong> </p>
+<ul>
+<li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
+<li>S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.</li>
+<li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong>
+Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
+<p><strong>Exemple valide :</strong><br><img src="images/groupement.jpg" alt="capture d&#39;écran du site 100% pratique"><br>Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
+<p><strong>Exemple non-valide :</strong><br><img src="images/groupement2.jpg" alt="capture d&#39;écran du site fnac.com"><br>Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
+Référence WCAG : 3.2.3., 3.2.4</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="crit-res-incontournables-pour-la-conception">Critères incontournables pour la conception</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -673,7 +680,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 </ul>
 <h2 id="5-d-finir-des-quivalents-textuels">5. Définir des équivalents textuels</h2>
 <p><strong>Cible : </strong> les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.<br><strong>Quand : </strong> dès la conception et pendant le développement.</p>
-<p><strong>Description :</strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo. Prévoir des alternatives audio pour les captcha.</p>
+<p><strong>Description :</strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.</p>
 <p><strong>Exemple : </strong><br>Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton :</p>
 <ul>
 <li>menu</li>
@@ -682,13 +689,6 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>couper le son ...  </li>
 </ul>
 <p><img src="images/player.png" alt="capture d&#39;écran d&#39;un lecteur vidéo contenant plusieurs boutons">   </p>
-<p><strong>Note à propos des CAPTCHA :</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d&#39;un système anti-spam ne peut être évitée, il est souhaitable de s&#39;orienter vers une solution plus souple pour l&#39;utilisateur :</p>
-<ul>
-<li>Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l&#39;utilisateur.</li>
-<li>Test logique (question dont la réponse est évidente, test mathématique simple ...).</li>
-<li>Double authentification.</li>
-</ul>
-<p>Si la présence d&#39;un captcha ne peut être évitée, il est indispensable de <strong>prévoir une alternative pour les captcha uniquement visuels ou sonores</strong>.</p>
 <h2 id="6-visibilit-du-focus">6. Visibilité du focus</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand : </strong> lors de la conception graphique et lors du développement.</p>
 <p><strong>Description :</strong><br>La position du focus clavier doit être visible à tous moment. Lorsqu&#39;un élément cliquable reçoit le focus (lien, bouton ...), ceci doit être visible pour l&#39;utilisateur. Par défaut, le navigateur entoure l&#39;élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour le rendre plus visible (assurer un contraste suffisant, par exemple) par un effet personnalisé, mais ne doit pas être supprimé. Les utilisateurs qui naviguent à l&#39;aide du clavier (touche TAB) ont besoin de connaître la position du focus.    </p>
@@ -747,7 +747,21 @@ De même éviter le recours systématique aux boites de dialogues pour présente
 <p><strong>Description :</strong><br>Fournir des liens d&#39;évitement du type &quot;Aller au contenu&quot; sur chaque page. Ceux-ci facilitent la navigation pour les personnes utilisant le clavier, en mobilité ou navigant à l&#39;aide d&#39;un lecteur d&#39;écran. En cas de <strong>fortes contraintes,</strong> les liens peuvent être masqués à l&#39;écran et apparaître uniquement lors de la navigation au clavier.</p>
 <p><strong>Exemple : </strong><br>Des liens d&#39;évitement (&quot;Aller à la navigation&quot;, &quot;Aller au contenu&quot;) sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d&#39;adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
-<p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com">  </p>
+<p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com"></p>
+<h2 id="14-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
+<p><strong>Description :</strong>
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.</p>
+<p><strong>À vérifier :</strong> </p>
+<ul>
+<li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
+<li>S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.</li>
+<li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong>
+Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
+<p><strong>Exemple valide :</strong><br><img src="images/groupement.jpg" alt="capture d&#39;écran du site 100% pratique"><br>Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
+<p><strong>Exemple non-valide :</strong><br><img src="images/groupement2.jpg" alt="capture d&#39;écran du site fnac.com"><br>Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -1157,12 +1171,12 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 
 
 <h2 id="introduction-l-accessibilit-des-mails">Introduction : l&#39;accessibilité des mails</h2>
-<p>Les mails au format texte et sans image, comme le sont les mails entre salariés, sont généralement accessibles. Le problème d&#39;inaccessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d&#39;informations et sont un outil essentiel de la communication d&#39;entreprise.</p>
+<p>Les mails au format texte et sans image, comme le sont les mails entre salariés, sont souvent accessibles. Le problème d&#39;inaccessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d&#39;informations et sont un outil essentiel de la communication d&#39;entreprise.</p>
 <h3 id="des-solutions-alternatives">Des solutions alternatives</h3>
-<p>Et si la mise en page du push mail est complexe, que l&#39;on a pas la possibilité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours :</p>
+<p>Et si la mise en page du push mail est complexe, que l&#39;on n&#39;a pas la possibilité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours :</p>
 <ul>
 <li>Proposer un lien redirigeant vers une page web </li>
-<li>Mettre en place un lien en début de mail pointant vers un fichier texte ou un fichier word accessible</li>
+<li>Mettre en place un lien en début de mail pointant vers un fichier texte ou un fichier Word accessible</li>
 </ul>
 <h3 id="qui-est-impact-">Qui est impacté ?</h3>
 <ul>
@@ -1223,14 +1237,18 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 <li>les listes doivent être de réelles listes de plusieurs éléments et bien différencier les listes ordonnées de celles qui ne le sont pas.</li>
 </ul>
 <p><strong>Objectif : </strong><br>Permettre aux utilisateurs de facilement comprendre et hiérarchiser le contenu.</p>
-<p><strong>Exemple : </strong><br>Word styles</p>
+<p><strong>Exemple dans Word : </strong><br>Pour sémantiser le contenu, il faut utiliser la palette des Styles. En donnant un style (titre, emphase, liste...) à une partie de vote contenu, vous modifiez son apparence mais surtout vous lui donnez de la sémantique.
+Cliquer sur le bouton d&#39;ouverture (en bas à droite de l&#39;outil Style dans l&#39;onglet Accueil) ou grâce au racourci clavier Ctrl + Alt + Maj + s permet l&#39;ouverture du panneau Style.</p>
+<p><img src="images/style_word.jpg" alt=" "></p>
+<p>  Vous avez accès à des listes (comme avec les boutons dans le bandeau &quot;Accueil&quot; dans le menu &quot;Paragraphe), aux titres et à toute une série de styles. De préférence utiliser les styles par défaut proposés, il en existe suffisamment. </p>
+<p><img src="images/palette_style.jpg" alt=" "></p>
 <h3 id="simplifier-la-pr-sentation">Simplifier la présentation</h3>
 <p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
-<p><strong>Description : </strong><br>Simplifier la présentation du contenu et respecter les bonnes pratiques en terme de présentation. </p>
+<p><strong>Description : </strong><br>Simplifier la présentation du contenu et respecter les bonnes pratiques en termes de présentation. </p>
 <p><strong>À vérifier : </strong><br>Pour assurer une lecture facile :</p>
 <ul>
 <li>Aligner le texte à gauche, mais ne pas le justifier</li>
-<li>Utiliser une police de caractères facilement lisible en corps 12pt minimum</li>
+<li>Utiliser une police de caractères facilement lisible en corps 12pixels minimum</li>
 <li>Mettre  en place une ponctuation simple</li>
 <li>Ne pas mettre d’italiques, ni de phrases en majuscules, mais une majuscule en début de phrase</li>
 <li>Éviter les fonds texturés (images)</li>
@@ -1256,25 +1274,34 @@ Pour les graphes, la solution, peut être, de mettre un lien sous l&#39;image pe
 Une alternative doit être :</p>
 <ul>
 <li>Précise et équivalente au contenu de l&#39;image ou sa fonction</li>
-<li>Succincte, quelques mots à deux phrases courtes semble la bonne taille</li>
+<li>Succinte, quelques mots à deux phrases courtes semble la bonne taille</li>
 <li>Pas redondante, ne pas fournir la même information que dans le texte environnant</li>
 <li>Pas de texte générique, pas besoin d&#39;alternative du type &quot;image de...&quot;, &quot;graphique sur...&quot;, &quot;lien vers...&quot;, ...</li>
 </ul>
 <p><strong>Objectif : </strong><br>Permettre l&#39;accès à l&#39;information incluse dans une image pour des utilisateurs qui n&#39;y ont pas accès.
 Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n&#39;affichant pas les images (mobile, faible bande passante...).</p>
-<p><strong>Exemple : </strong><br>word</p>
+<p><strong>Exemple dans Word : </strong>  </p>
+<p>Il faut donner une alternative textuelle (texte de replacement) à toute image dans Word. Pour cela, il faut accéder aux propriété de cette image. Sélectionnez l&#39;image, faire un clic droit, puis &quot;Fomat de l&#39;image&quot; et &quot;Texte de remplacement&quot;.</p>
+<p><img src="images/menu_context_im.jpg" alt=" "> </p>
+<p>Ne pas remplir le champ &quot;Titre&quot;, le laisser vide. En revanche, mettre dans le champs &quot;Description&quot; (seul champ lu par une synthèse vocale)  le texte alternatif donnant l&#39;information équivalente à celle contenue dans l&#39;image. Si l&#39;image ne porte pas d&#39;information, laisser les deux champs &quot;Titre&quot; et &quot;Description&quot; vides.</p>
+<p><img src="images/format_img.jpg" alt=" "></p>
 <h3 id="sp-cifier-la-langue-du-mail-et-les-changements-ventuels">Spécifier la langue du mail et les changements éventuels</h3>
 <p><strong>Pour qui : </strong> les personnes déficientes visuelles.  </p>
 <p><strong>Description : </strong><br>Spécifier la langue principale du document (l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans la balise <code>html</code>). 
 Préciser également la langue d&#39;un contenu exprimé dans une langue autre que la langue principale (l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans l&#39;élément html contenant l&#39;expression en langue étrangère).  </p>
 <p><strong>À vérifier : </strong><br>Pour les mots ou les expressions en langue étrangère passés dans l&#39;usage courant (Google, newsletter...) ou les noms propres, ne pas indiquer de changement de langue.</p>
 <p><strong>Objectif : </strong><br>Cette indication permet d&#39;adapter la synthèse vocale pour une bonne prononciation de la langue à utiliser.</p>
-<p><strong>Exemple pour une page en français : </strong><br>Word !!!!!!!!!!!!!!!!</p>
+<p><strong>Exemple pour une page en français : </strong>  </p>
 <ul>
 <li>pour du HTML : <code>&lt;html lang=&quot;fr&quot;&gt;</code></li>
 <li>pour du XHTML : <code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;</code></li>
 </ul>
 <p><strong>Exemple de changement de langue : </strong><br><code>découvrir Orange &lt;span lang=&quot;fr&quot;&gt;live&lt;/span&gt; TV</code></p>
+<p><strong>Exemple pour Word :</strong>
+Pour modifier la langue du document ou d&#39;une partie du contenu (après sélection de ce contenu), on utilise  on utilise, dans l&#39;onglet &quot;Révision&quot;, l&#39;élément &quot;Langue&quot;. </p>
+<p><img src="images/revision.jpg" alt=" "> </p>
+<p>Dans le sous-menu de &quot;Langue&quot;, on clique sur &quot;Défnir la langue de vérification&quot; et dans la fenêtre &quot;Langue&quot;, on choisit la langue voulue.</p>
+<p><img src="images/langue.jpg" alt=" "> </p>
 <h3 id="fournir-une-mise-en-page-accessible">Fournir une mise en page accessible</h3>
 <p><strong>Pour qui : </strong> les personnes déficientes visuelles.  </p>
 <p><strong>Description : </strong><br>Simplifier la mise en page bien que les clients de messagerie (Outlook inclus) obligent à utiliser une mise en page en tableau.</p>
@@ -1305,9 +1332,9 @@ De même, utiliser des informations sensorielles (forme, taille, son, orientatio
 <p><strong>Description : </strong><br>Rendre les liens identifiables et compréhensibles hors contexte</p>
 <p><strong>À vérifier : </strong>  </p>
 <ul>
-<li>Souligner les liens, car sinon les personnes doivent faire un effort cognitif pour les trouver. Les personnes en situation de contrainte motrice ne peuvent les trouver qu’en naviguant davantage.</li>
+<li>Souligner les liens, parce que, sinon, les personnes doivent faire un effort cognitif pour pouvoir les identifier. Les personnes déficientes motrices (utilisant le clavier) ou malvoyantes ne peuvent les trouver que difficilement.</li>
 <li>Ne pas utiliser des intitulés comme &quot;Cliquez ici&quot;, &quot;Pour en savoir plus&quot;, &quot;Suivez ce lien&quot;, &quot;Plus de détails&quot;, &quot;Lire la suite&quot;, mais des intitulés qui identifient  bien leur cible</li>
-<li>Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en ajoutant à l&#39;intitulé du texte, par exemple &quot;nouvelle fenêtre&quot;, car le multifenêtrage qui peut être déjà troublant pour un voyant est tout simplement bloquant pour un non-voyant.</li>
+<li>Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en rajoutant à l&#39;intitulé du texte, par exemple &quot;nouvelle fenêtre&quot;, car le multifenêtrage qui peut être déjà troublant pour un voyant est tout simplement bloquant pour un non-voyant.</li>
 </ul>
 <p><strong>Objectif : </strong><br>Permettre à un utilisateur n&#39;ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d&#39;écran) ou les utilisateurs de loupe logicielle qui ne voient qu&#39;une fraction de la page. </p>
 <h3 id="word-et-accessibilit-quelques-liens">Word et accessibilité, quelques liens</h3>

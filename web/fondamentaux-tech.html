@@ -234,7 +234,7 @@ Sémantiser le contenu HTML en utilisant les balises :</p>
 <li>Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. </li>
 <li>Éviter d&#39;utiliser des images pour afficher du texte, préférer les habillages CSS.</li>
 <li>Utiliser des classes CSS plutôt que manipuler des styles CSS en ligne dans le code HTML.</li>
-<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information (ou prévoir une alternative pour les lecteurs d&#39;écran notamment).</li>
+<li>Ne pas utiliser les pseudo éléments CSS (::before, ::after...) pour afficher du contenu porteur d&#39;information</li>
 <li>Ne pas câbler des évènements Javascript directement dans le code HTML mais gérer l&#39;interactivité dans un script ou un fichier JS à part.</li>
 </ul>
 <p><strong>Objectif utilisateur : </strong></p>
@@ -339,13 +339,6 @@ Point bloquant : une image sans description textuelle est inexploitable par des 
 <p><strong>Exemple d&#39;alternative vide :</strong><br>Dans l&#39;exemple ci-dessous, le picto à droite n&#39;a pas besoin d&#39;être vocalisé puisque le texte situé à gauche apporte déjà l&#39;information.<br>Renseigner l&#39;attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
 <p><img src="./images/service-24.png" alt="exemple d&#39;image décorative">  </p>
 <p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
-<p><strong>Note à propos des CAPTCHA :</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d&#39;un système anti-spam ne peut être évitée, il est souhaitable de s&#39;orienter vers une solution plus souple pour l&#39;utilisateur :</p>
-<ul>
-<li>Champ de formulaire caché à laisser vide (technique du Honeypot), non-visibles pour l&#39;utilisateur.</li>
-<li>Test logique (question dont la réponse est évidente, test mathématique simple ...).</li>
-<li>Double authentification.</li>
-</ul>
-<p>Si la présence d&#39;un captcha ne peut être évitée, il est indispensable de prévoir <strong>une alternative audio aux captcha image</strong>. De plus l&#39;attribut <code>alt</code> de l&#39;image captcha doit être renseignée (exemple : <code>alt=&quot;CAPTCHA&quot;</code>).</p>
 <p><strong>Référence : </strong>WCAG 1.1.1</p>
 <h2 id="12-fournir-un-transcrit-pour-toute-piste-audio-ou-vid-o">12. Fournir un transcrit pour toute piste audio ou vidéo</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives et auditives et celle dont le Français est mal maîtrisé.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
@@ -536,11 +529,25 @@ Ne pas induire de changement de contexte lors de la prise de focus, la saisie de
 <p><strong>Objectif utilisateur : </strong>
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.</p>
 <p><strong>Exemple :</strong><br>Un formulaire doit obligatoirement avoir un bouton d&#39;envoi. Celui-ci ne doit pas être envoyé automatiquement après la saisie de l&#39;utilisateur.</p>
-<p><strong>Référence :</strong> WCAG 3.2.1, 3.2.2
+<p><strong>Référence :</strong> WCAG 3.2.1, 3.2.2</p>
+<h2 id="25-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">25. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
+<p><strong>Description :</strong>
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.</p>
+<p><strong>À vérifier :</strong> </p>
+<ul>
+<li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
+<li>S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.</li>
+<li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong>
+Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
+<p><strong>Exemple valide :</strong><br><img src="images/groupement.jpg" alt="capture d&#39;écran du site 100% pratique"><br>Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
+<p><strong>Exemple non-valide :</strong><br><img src="images/groupement2.jpg" alt="capture d&#39;écran du site fnac.com"><br>Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
+Référence WCAG : 3.2.3., 3.2.4</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 
         </div>
       </div>

@@ -534,7 +534,7 @@ documentTitles["mdan.html#je-veux-mdan"] = "Je veux mDAN !";
 index.add({
     url: "mdan.html#je-veux-mdan",
     title: "Je veux mDAN !",    
-    body: "## Je veux mDAN !  L'application mDAN sera prochainement disponible pour Android et iOS sur le play store et l'app store. &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Je veux mDAN ! [Le code source est disponible sur github](https://github.com/Orange-OpenSource/m-dan)  L'application mDAN sera prochainement disponible pour Android et iOS sur le play store et l'app store.  Vous pouvez déjà [télécharger la version Android](/mDAN_v2.2.0.apk) &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
