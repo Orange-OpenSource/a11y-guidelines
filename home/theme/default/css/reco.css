@@ -160,7 +160,7 @@ h1:before, h2:before {
   position: absolute;
   left: 1rem;
   top: 9rem;
-  background-color: #fff;
+  background-color: #fff;  
 } 
 
 #navigation a {
@@ -205,8 +205,6 @@ h1:before, h2:before {
 }
 
 #navigation li {
-  border:0 #fff solid;
-  border-bottom-width: 1px;
   display: block;
   float: none;
 }
@@ -497,10 +495,11 @@ h1:before, h2:before {
 .subtitle{
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
-  padding: 5px;
-  font-size: 1.5rem;
+  /*white-space: nowrap;*/
+  padding-left: .5rem;
+  font-size: .95rem;
   font-weight: normal;
+  border-bottom: .1rem solid #ddd;  
 }
 
 #navigation li.subtitle.active {
@@ -509,5 +508,9 @@ h1:before, h2:before {
 }
 
 #subtitles {
-  padding-left: 1.5rem;
+  padding-left: 0;
+}
+
+#subtitles .subtitle a {
+  padding: .5rem 1rem;
 }
