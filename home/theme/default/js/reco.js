@@ -6,11 +6,16 @@ $(document).ready( function () {
   document.title = title;
 
   var resize = function () {
-    $("#navigation").innerWidth($("#sidebar").innerWidth()-10);
+    window.setTimeout( function () {
+      $("#left-navigation").innerWidth($("#sidebar").innerWidth()-10);
+    }, 100);
   }
   resize();
   $(window).resize(function(){resize();});
-    
+
+  // Fill left navigation menu
+  $("#navigation").clone().attr("id", "left-navigation").appendTo("#sidebar");
+
   // Skip links
   $(".skip-links a").on("focus", function () {
       $(".skip-links").removeClass("sr-only");
@@ -29,12 +34,12 @@ $(document).ready( function () {
   });
 
   $("#skip-nav").on("focus mouseenter", function () {
-    $("#navigation").addClass("highlight-zone");
+    $("#left-navigation").addClass("highlight-zone");
   });
 
   $("#skip-nav").on("blur mouseleave", function () {
-    $("#navigation").removeClass("highlight-zone");
-  });
+    $("#left-navigation").removeClass("highlight-zone");
+  });  
 
   // Chargement du menu de navigation pour les mobiles
   $("#navigation-mobile").html($("#sidebar ul").html());
@@ -96,7 +101,7 @@ $(document).ready( function () {
 
   if ($("li .subtitle").length == 0) { // if no submenu displayed
     $(window).on("scroll", function(){    
-      var marginTop = 0, windowHeight = $(window).height(), navHeight = $("#navigation").innerHeight(), topHeight = $("#top-navbar").innerHeight();
+      var marginTop = 0, windowHeight = $(window).height(), navHeight = $("#left-navigation").innerHeight(), topHeight = $("#top-navbar").innerHeight();
 
       if (navHeight + topHeight > windowHeight) {
         marginTop = (navHeight + topHeight) * $(window).scrollTop() / $(document).height();
@@ -122,28 +127,33 @@ function setBreadcrumb(param) {
     $(".breadcrumb li:last").addClass("active");
 }
 
-function addSubMenu() {  
-    getCurrentItem().after('<ul id="subtitles" class="hidden-xs">');
+function addSubMenu(subMenus) {
+    var currentItem, htmlStringToAppend, insertPoint = $('.subtitles');
+
+    currentItem = getCurrentItem().last();
+    currentItem.after('<ul class="subtitles" class="hidden-xs">');    
+
+    if (subMenus) {
+      subMenus.forEach(function(subMenu) {          
+        var htmlStringToAppend = '<li class="subtitle submenu"><a aria-haspopup="true" aria-expanded="' + (subMenu.expanded === true?"true":"false") + '" href="' + (subMenu.url?subMenu.url:"#") + '">' + subMenu.label + '</a></li>';
+        if (subMenu.expanded === true) {
+          htmlStringToAppend+="<ul></ul>";
+        }
+
+        $('.subtitles').append(htmlStringToAppend);      
+        if (subMenu.expanded === true) {
+          insertPoint = $(".subtitles ul");
+        }
+      });
+    }
+
     $('h2').each(function() {          
-      var htmlStringToAppend = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
-      $('#subtitles').append(htmlStringToAppend);      
+      htmlStringToAppend = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
+      insertPoint.append(htmlStringToAppend);      
     });
     $('.subtitle:last').after('</ul>');
-		
-		//Scrollspy
-  	$('body').scrollspy();
-  	$('body').data('bs.scrollspy').selector = "#sidebar ul ul li > a";
-  	$('body').scrollspy('refresh');
 
-		var scrollMenu = function () {
-			var marginTop = 0, activeElement = $('#sidebar li .active a')[0], navHeight = $("#navigation").innerHeight(), topHeight = $("#top-navbar").innerHeight();
-			if (activeElement && activeElement != $('#sidebar ul ul li > a:first')[0] && (navHeight + topHeight) > $(window).height()) {
-				marginTop = activeElement.getBoundingClientRect().y - $('#navigation')[0].getBoundingClientRect().y - 100;
-			}
-			$("#sidebar>ul").css('margin-top', "-" + marginTop +'px'); 
-		};
-		$('#sidebar').on('activate.bs.scrollspy', scrollMenu);
-		scrollMenu();    
+    currentItem.attr("aria-haspopup", "true").attr("aria-expanded", "true");    
 }
     
 function getCurrentItem() {
@@ -154,7 +164,7 @@ function getCurrentItem() {
     pageName = (window.location.pathname).split("/").pop().split(".")[0];
   }
   if (pageName) {
-        return $(".navbar-nav").find("#" + pageName);
+        return $(".navbar-nav").find(".page-" + pageName);
   } else {
     return false;
   }

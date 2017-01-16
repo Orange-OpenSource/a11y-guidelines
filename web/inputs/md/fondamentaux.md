@@ -2,6 +2,10 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Liste des critères incontournables"}]);
+    addSubMenu([
+        {"label":"La conception","url":"fondamentaux-nontech.html"}, 
+        {"label":"Le développement","url":"fondamentaux-tech.html"}
+    ]);
 });</script>
 
 <span data-menuitem="fondamentaux"></span>

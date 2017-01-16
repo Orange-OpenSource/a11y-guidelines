@@ -3,6 +3,9 @@ body {
   background-color: #f6f6f6;
 }
 
+.container-fluid {
+  margin: 0;
+}
 
 #content {
   margin-bottom: 3rem;  
@@ -43,6 +46,10 @@ body {
 
 #content p a, #content ul a {
   text-decoration: underline;
+}
+
+header .subtitles {
+  display: none;
 }
 
 .highlight-zone {
@@ -156,17 +163,19 @@ h1:before, h2:before {
   border-color: #000;
 }
 
-#navigation {
-  position: absolute;
-  left: 1rem;
-  top: 9rem;
+
+#left-navigation {  
   background-color: #fff;  
 } 
 
-#navigation a {
+#left-navigation a {
   padding: .65rem .8rem;
   width: 100%;
   display: inline-block;
+}
+
+#navigation {
+  display: none;
 }
 
 #navigation-mobile {
@@ -197,30 +206,33 @@ h1:before, h2:before {
   padding-right: 0;
   max-width: 20em;
   font-weight: bold;
-  margin-top: 1rem;
 }
 
-#navigation {
+#left-navigation {
   width: 95%;
 }
 
-#navigation li {
+#left-navigation li {
   display: block;
   float: none;
 }
 
-#navigation a {
+#left-navigation a {
   margin: 0;
 }
 
-#navigation a:focus,
-#navigation a:hover {
+#left-navigation a:focus,
+#left-navigation a:hover {
   background: transparent;
 }
 
-#navigation a.current {
+#left-navigation a.current {
   background: #000;
   color: #fff;
+}
+
+#left-navigation a.current:focus {
+  color: #f16e00;
 }
 
 .language {
@@ -260,7 +272,6 @@ h1:before, h2:before {
 .breadcrumb {
   position: fixed;
   top: 6.2rem;
-  left: .4rem;  
   width: 100%;
   background-color: #f6f6f6;
   z-index: 100;
@@ -286,7 +297,7 @@ h1:before, h2:before {
   z-index: 1000;
   position: absolute;
   left: 0;
-  top: 6rem;
+  top: 6.1rem;
   padding-top: .5rem;
 }
 
@@ -317,6 +328,10 @@ h1:before, h2:before {
 /* collapsed sidebar styles */
 @media screen and (max-width: 479px) {
   
+  #left-navigation {
+    display: none;
+  }
+
   body {
     padding-top: 5.5rem;
   }
@@ -342,13 +357,16 @@ h1:before, h2:before {
   }
   
   #navigation {
+    display: block;
     position: static;
     width: 100% !important;  
     background-color: transparent;
+    margin-top: .5rem;  
   }
 
   #navigation li {
     border: none;
+    padding: .75rem;
   }
 
   #navigation a {
@@ -385,7 +403,7 @@ h1:before, h2:before {
   }
 
   #navigation li, #collapsingNavbar .language {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   #collapsingNavbar .language {
@@ -417,7 +435,7 @@ h1:before, h2:before {
     background-image: none;
     border: 0
   }
-
+/*
   .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
@@ -448,7 +466,7 @@ h1:before, h2:before {
     top: 0;
     width: 41.6%;
   }
-
+*/
   #sidebar {
     padding-top:0;
   }
@@ -502,15 +520,49 @@ h1:before, h2:before {
   border-bottom: .1rem solid #ddd;  
 }
 
-#navigation li.subtitle.active {
+#left-navigation li.subtitle.active {
   font-weight: bold;
   border-right: 2px solid black;
 }
 
-#subtitles {
+.subtitles {
   padding-left: 0;
 }
 
-#subtitles .subtitle a {
+.subtitles .subtitle a {
   padding: .5rem 1rem;
+}
+
+.submenu {
+  background: #ddd;
+  color: #000;
+  padding: .70rem;
+  font-weight: bold
+}
+
+.submenu a {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#left-navigation [aria-haspopup=true]::before {
+  float: right;
+  margin-right: .625rem;
+  font-family: icon-orange;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #000;
+  content: "\e93e";
+}
+
+#left-navigation [aria-haspopup=true].current::before {
+  color: #fff;
+}
+
+#left-navigation [aria-expanded=true]::before {
+  transform: rotate(90deg);
+}
+
+.subtitles ul {
+  padding: 0; 
 }
