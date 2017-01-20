@@ -1,6 +1,5 @@
 TODO
 
-./mobile/inputs/md/about.md
 ./mobile/inputs/md/contact.md
 ./mobile/inputs/md/criteria-android.md
 ./mobile/inputs/md/criteria-ios.md
@@ -148,3 +147,4 @@ DONE
 ./home_EN/inputs/md/contact.md
 ./home_EN/inputs/md/index.md
 ./home_EN/inputs/md/organisation.md
+./mobile/inputs/md/about.md
