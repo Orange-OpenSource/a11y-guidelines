@@ -80,7 +80,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
 
 ### Le handicap matériel
 <div class="axs-picto materiel">
-    L’utilisation des règles de l’accessibilité servent au delà des situations de handicaps identifiées.  
+    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées.  
     L’accessibilité numérique apporte du confort pour tous&nbsp;:    
     <ul>
         <li>Les utilisateurs de mobiles et smartphones</li>
