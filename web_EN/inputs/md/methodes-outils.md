@@ -8,24 +8,24 @@ You will find articles describing useful methods and tools to test the accessibi
 
 ## Manual test and assistive technology
 
-### [Keyboard navigation](./methodes-outils-clavier.html)
+[Keyboard navigation](./methodes-outils-clavier.html)
 List of the main shortcuts to navigate with the keyboard in a web page.
 
-### [Text size enlargement](./methodes-outils-zoom.html)
+[Text size enlargement](./methodes-outils-zoom.html)
 Zoom guide.
 
-### [Navigating with a screen reader](./methodes-outils-lecteur-ecran.html)
+[Navigating with a screen reader](./methodes-outils-lecteur-ecran.html)
 The screen readers commonly used.
 
 ## Automated testing tools
-### [Browser extensions](./methodes-outils-extensions.html)
+[Browser extensions](./methodes-outils-extensions.html)
 Some extensions allow you to perform automated tests on the current page.
 
 ## Test criteria
-### [Measure the color contrast level](./methodes-outils-contrastes.html)
+[Measure the color contrast level](./methodes-outils-contrastes.html)
 Introducing the color contrast analyzer tool.
 
-### [Accessing page headers (`H1` to `H6` tags)](./methodes-outils-liste-titres.html)
+[Accessing page headers (`H1` to `H6` tags)](./methodes-outils-liste-titres.html)
 The different ways to access the list of page headers.
 
 &nbsp;

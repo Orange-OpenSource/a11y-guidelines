@@ -18,8 +18,6 @@
 - [Les boites de dialogue 2/2](exemples/role-dialog2/role-dialog.html)
 	
 - [Menu déroulant](exemples/simple-menu/simple-menu.html)  
-	
-- [Barre d'avancement étape par étape (stepbar)](exemples/stepbar/stepbar.html)
 
 ## Niveau avancé
 

@@ -18,6 +18,12 @@ h1 a {
   line-height: 2.4rem;
 }
 
+#content h2 {
+    margin-bottom: 1rem;
+    background: transparent;
+    padding: 0;
+}
+
 h3+.axs-picto {
     margin-top: -2rem;
 }

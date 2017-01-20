@@ -165,8 +165,13 @@ h1:before, h2:before {
 
 
 #left-navigation {  
-  background-color: #fff;  
+  background-color: #fff;
+  position: fixed;  
 } 
+
+#left-navigation.autoscroll {
+  position: static;
+}
 
 #left-navigation a {
   padding: .65rem .8rem;
@@ -535,13 +540,12 @@ h1:before, h2:before {
 
 .submenu {
   background: #ddd;
-  color: #000;
-  padding: .70rem;
+  color: #000;  
   font-weight: bold
 }
 
 .submenu a {
-  padding: 0 !important;
+  padding: .70rem;  
   margin: 0 !important;
 }
 

@@ -8,24 +8,24 @@ Vous trouverez ci-dessous des articles décrivant les méthodes et outils utiles
 
 ## Tests manuel et outils d'assistance
 
-### [Navigation au clavier](./methodes-outils-clavier.html)
+[Navigation au clavier](./methodes-outils-clavier.html) :
 Liste des principaux raccourcis pour naviguer au clavier dans une page web.
 
-### [Agrandissement de la taille du texte](./methodes-outils-zoom.html)
+[Agrandissement de la taille du texte](./methodes-outils-zoom.html) : 
 Un guide sur la gestion du zoom.
 
-### [Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html)
+[Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html) : 
 Les principaux lecteurs d'écrans utilisés.
 
 ## Outils de test automatisés
-### [Extensions pour navigateur](./methodes-outils-extensions.html)
+[Extensions pour navigateur](./methodes-outils-extensions.html) : 
 Certaines extensions permettent d'effectuer des tests automatiques sur la page en cours de consultation.
 
 ## Test des critères
-### [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html)
+[Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) : 
 Présentation de l'outil colour contrast analyser.
 
-### [Accéder à la liste des titres de la page (balises `H1` à `H6`)](./methodes-outils-liste-titres.html)
+[Accéder à la liste des titres de la page (balises `H1` à `H6`)](./methodes-outils-liste-titres.html) : 
 Les différentes façons d'accéder à la liste des titres d'une page.
 
 &nbsp;

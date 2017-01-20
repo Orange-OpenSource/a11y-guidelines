@@ -4,7 +4,7 @@
 * See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
 $(document).ready(function() {
       jQuery.extend(jQuery.validator.messages, {
-            required: "Veuillez renseigner le champ : {0}."
+            required: "Please fill in the field : {0}."
       });
       
 	jQuery("#formulaire").validate({
@@ -22,7 +22,7 @@ $(document).ready(function() {
                         "required": true
                   }
             },
-            submitHandler: function () { alert("Merci !");}
+            submitHandler: function () { alert("Thanks !");}
       });
 
       jQuery.validator.addMethod(
@@ -36,12 +36,12 @@ $(document).ready(function() {
                   return this.optional(element) || regexp.test(value);
             },
             function (regex, input) {                  
-                  return jQuery.validator.format("Le format du champ {0}, n'est pas valide.", $(input).attr("data-displayname"));
+                  return jQuery.validator.format("The format of the {0} field is not valid.", $(input).attr("data-displayname"));
             }
       );
       	 
      $.validator.messages.required = function (param, input) {           
-            return 'Le champ ' + $(input).attr("data-displayname") + ' est obligatoire.';
+            return 'The ' + $(input).attr("data-displayname") + ' field is mandatory.';
      }
      
 });

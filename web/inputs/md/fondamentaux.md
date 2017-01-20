@@ -3,8 +3,8 @@
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Liste des critères incontournables"}]);
     addSubMenu([
-        {"label":"La conception","url":"fondamentaux-nontech.html"}, 
-        {"label":"Le développement","url":"fondamentaux-tech.html"}
+        {"label":"Pour la conception","url":"fondamentaux-nontech.html"}, 
+        {"label":"Pour le développement","url":"fondamentaux-tech.html"}
     ]);
 });</script>
 
@@ -23,14 +23,14 @@ Deux versions sont disponibles :
     <h2 class="sr-only">Pour les concepteurs et designers</h2>          
     <a href="./fondamentaux-nontech.html" class="btn btn-info">
         ![](./images/perso1.png)
-        <div>Critères incontournables pour la conception</div>
+        <div>Les critères incontournables pour la conception</div>
     </a>
 </div>
 <div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
     <h2 class="sr-only">Pour les développeurs</h2>          
     <a href="./fondamentaux-tech.html" class="btn btn-info">
         ![](./images/perso3.png)
-        <div>Critères incontournables pour le développement</div>
+        <div>Les critères incontournables pour le développement</div>
     </a>
 </div>
 

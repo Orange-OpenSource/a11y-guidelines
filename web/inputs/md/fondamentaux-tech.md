@@ -6,8 +6,8 @@
         {"label":"Critères incontournables pour le développement"}
     ]);
     addSubMenu([
-        {"label":"La conception", "url":"fondamentaux-nontech.html", "url":"fondamentaux-nontech.html"}, 
-        {"label":"Le développement", "url":"fondamentaux-tech.html", "expanded":true}
+        {"label":"La conception", "url":"fondamentaux-nontech.html"}, 
+        {"label":"Le développement", "url":"fondamentaux.html", "expanded":true}
     ]);
 });</script>
 

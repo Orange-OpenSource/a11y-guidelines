@@ -147,6 +147,8 @@ function addSubMenu(subMenus) {
       });
     }
 
+    currentItem.parent().parent().addClass("autoscroll");
+
     $('h2').each(function() {          
       htmlStringToAppend = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
       insertPoint.append(htmlStringToAppend);      
