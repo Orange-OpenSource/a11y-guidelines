@@ -128,6 +128,7 @@ function setBreadcrumb(param) {
 }
 
 function addSubMenu(subMenus) {
+console.log("Add submenu : ", subMenus);  
     var currentItem, htmlStringToAppend, insertPoint = $('.subtitles');
 
     currentItem = getCurrentItem().last();

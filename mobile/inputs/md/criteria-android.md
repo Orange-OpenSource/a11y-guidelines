@@ -5,7 +5,10 @@
     setBreadcrumb([{"label":"Critères mobiles", "url": "./criteria-mobile.html"},
         {"label":"Guide d’accessibilité Android"}
 	]);
-	addSubMenu();    
+    addSubMenu([
+        {"label":"Guide pour Android","url":"criteria-mobile.html", "expanded": true}, 
+        {"label":"Guide pour iOS","url":"criteria-ios.html"}
+    ]);        
 });</script>
 
 <span data-menuitem="criteria-mobile"></span>

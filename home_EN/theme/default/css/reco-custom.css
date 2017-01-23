@@ -1,14 +1,15 @@
-#content {
-  background-image: url(../../../images/blue.png);  
+#content {  
   background-size: 100% 140px;
   background-repeat: no-repeat;  
 }
 
-#content h1 {  
+#content h1 {
+  background-color: #41B3E7;  
   background-image: url(../../../images/banniere-conception.jpg);
   background-repeat: no-repeat;
   background-position: right;  
   min-height: 140px;
+  padding-left: 2rem;
 }
 
 h1 a {

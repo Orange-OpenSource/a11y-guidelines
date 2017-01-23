@@ -5,7 +5,10 @@
     setBreadcrumb([{"label":"Guide développeur", "url": "./dev-mobile.html"},
         {"label":"Guide développeur iOS"}
 	]);
-    addSubMenu();
+    addSubMenu([
+        {"label":"Guide pour Android","url":"dev-android.html"}, 
+        {"label":"Guide pour iOS","url":"dev-mobile.html", "expanded": true}
+    ]);    
     
 });</script>
 

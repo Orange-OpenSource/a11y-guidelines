@@ -2,6 +2,10 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Mobile criteria"}]);
+    addSubMenu([
+        {"label":"Android guide","url":"criteria-android.html"}, 
+        {"label":"iOS guide","url":"criteria-ios.html"}
+    ]);    
 });</script>
 
 <span data-menuitem="criteria-mobile"></span>
@@ -16,24 +20,21 @@ Two versions are available:
 - ** Android version ** focused on the development of applications for the Google platform, Android.
 - ** iOS version ** focused on the development of applications for the Apple platform, iOS.
 
-<p class="row">
-    <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">Android criteria</h2>          
-        <a href="./criteria-android.html" class="btn btn-info">
-            ![](./images/android.png)
-            <div>Android accessibility guide</div>
-        </a>
-    </div>
-    <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">iOS criteria</h2>          
-        <a href="./criteria-ios.html" class="btn btn-info">
-            ![](./images/iphone.png)
-            <div>iOS accessibility guide</div>
-        </a>
-    </div>            
-</p>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">Android criteria</h2>          
+    <a href="./criteria-android.html" class="btn btn-info">
+        ![](./images/android.png)
+        <div>Android accessibility guide</div>
+    </a>
+</div>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">iOS criteria</h2>          
+    <a href="./criteria-ios.html" class="btn btn-info">
+        ![](./images/iphone.png)
+        <div>iOS accessibility guide</div>
+    </a>
+</div>            
 
-&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
