@@ -60,7 +60,7 @@ private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
 **Description&nbsp;: **  
 
 Il est possible via un attribut d’accessibilité de masquer des éléments aux outils d’accessibilité (<span lang="en">TalkBack</span> par exemple). Par extension, il est possible de forcer certains éléments à être visibles aux outils d’accessibilité.  
-`ImportantForAccessibility`&nbsp;: suivant la valeur de l’attribut, cela permet d’indiquer qu’un élément est visible ou non de l’API d’accessibilité.  
+`ImportantForAccessibility`&nbsp;: suivant la valeur de l’attribut, cela permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité.  
 -	`auto` (0)&nbsp;: valeur par défaut, c’est le système qui décide. Par exemple, un `Button` aura sa valeur par défaut à 1 (<i lang="en">yes</i>) et un `LinearLayout` à 2 (<i lang="en">no</i>).
 -	`yes` (1)&nbsp;: la vue est importante pour l’accessibilité. Elle peut par exemple recevoir le focus de <span lang="en">TalkBack</span>.
 -	`no`(2)&nbsp;: la vue n’est pas importante pour l’accessibilité. Elle ne déclenche plus d’événement d’accessibilité et est par conséquent ignorée par des services tel que <span lang="en">TalkBack</span>.
