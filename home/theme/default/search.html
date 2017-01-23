@@ -4,7 +4,8 @@ layout: _layout.html
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Recherche"}]);
 });</script>
-<h2>Search results for "<span id="search-q"></span>"</h2>
+<h1>Recommandations accessibilité Orange</h1>
+<h2>Résultats de recherche pour "<span id="search-q"></span>"</h2>
 <ul id="search-results"></ul>
 <script type="text/javascript" src="<%= @baseUrl %>lunr-index.js"></script>
 <script type="text/javascript">
@@ -26,7 +27,7 @@ layout: _layout.html
                 ul.append($('<li><a href="' + results[i].ref + '">' + documentTitles[results[i].ref] + '</a></li>'));
             }
         } else {
-            ul.append($('<li class="no-results">No results found</li>'));
+            ul.append($('<li class="no-results">Aucun résultat</li>'));
         }
     })
 </script>

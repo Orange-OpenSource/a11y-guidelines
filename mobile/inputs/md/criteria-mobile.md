@@ -2,6 +2,10 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Critères mobiles"}]);
+    addSubMenu([
+        {"label":"Guide pour Android","url":"criteria-android.html"}, 
+        {"label":"Guide pour iOS","url":"criteria-ios.html"}
+    ]);    
 });</script>
 
 <span data-menuitem="criteria-mobile"></span>
@@ -16,24 +20,21 @@ Deux versions sont disponibles :
 - **Version Android** concerne le développement d'applications destinées à la plateforme de Google, Android.
 - **Version iOS** concerne le développement d'applications destinées à la plateforme d'Apple, iOS.
 
-<p class="row">
-    <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">critères Android</h2>          
-        <a href="./criteria-android.html" class="btn btn-info">
-            ![](./images/android.png)
-            <div>Guide d'accessibilité Android</div>
-        </a>
-    </div>
-    <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">critères iOS</h2>          
-        <a href="./criteria-ios.html" class="btn btn-info">
-            ![](./images/iphone.png)
-            <div>Guide d'accessibilité iOS</div>
-        </a>
-    </div>            
-</p>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">critères Android</h2>          
+    <a href="./criteria-android.html" class="btn btn-info">
+        ![](./images/android.png)
+        <div>Guide d'accessibilité Android</div>
+    </a>
+</div>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">critères iOS</h2>          
+    <a href="./criteria-ios.html" class="btn btn-info">
+        ![](./images/iphone.png)
+        <div>Guide d'accessibilité iOS</div>
+    </a>
+</div>            
 
-&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

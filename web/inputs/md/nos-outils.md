@@ -49,6 +49,7 @@ Vous pouvez tester le service en cliquant sur le lien "confort+" situé en haut 
 ### Site officiel
 [Orange Confort+](http://confort-plus.orange.com/)
  
+&nbsp;
    
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

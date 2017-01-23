@@ -37,6 +37,8 @@ Presentation of the Boosted library and the Comfort+ service.
 Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible and frequently used. Everything is explained, just go ahead!
 
 These examples use the [boosted](http://boosted.orange.com/) library. The latter is based on [bootstrap](http://getbootstrap.com/) and let you create and test quickly the accessibility and responsiveness of a website. This library is branded with the Orange colors.
+
+&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

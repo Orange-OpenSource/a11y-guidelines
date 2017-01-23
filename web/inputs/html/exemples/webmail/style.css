@@ -3,8 +3,7 @@
 * Copyright (C) 2016  Orange SA
 * See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
 body {
-  border-top: 15px solid #000;
-  font-size: 1.6rem;
+  border-top: 15px solid #000;  
 }
 
 header {
@@ -12,6 +11,7 @@ header {
 }
 
 main {
+    margin: 0 !important;
     border-left: 1rem solid #fff;
     border-top: .5rem solid #fff;
 }
@@ -87,4 +87,16 @@ main {
 
 .emails [role=option].active.unread {
     font-weight: bold;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::before, .o-checkbox[type="checkbox"]:checked + label::before {
+    top: .5rem;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::after, .o-checkbox[type="checkbox"]:checked + label::after {
+    top: .5rem;
 }

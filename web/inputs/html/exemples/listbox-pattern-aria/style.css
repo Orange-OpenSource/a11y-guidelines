@@ -40,9 +40,18 @@
 }
 
 [role=option].active .o-checkbox[type="checkbox"]:checked + label::before {
-    border-color: #e15e00 !important;
+    border-color: #e15e00 !important;    
 }
 
 [role=option].active .o-checkbox[type="checkbox"]:checked + label::after {
     background: transparent !important;
 }
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::before, .o-checkbox[type="checkbox"]:checked + label::before {
+    top: .5rem;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::after, .o-checkbox[type="checkbox"]:checked + label::after {
+    top: .5rem;
+}
+

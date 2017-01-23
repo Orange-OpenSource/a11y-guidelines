@@ -18,8 +18,6 @@
 - [Les boites de dialogue 2/2](exemples/role-dialog2/role-dialog.html)
 	
 - [Menu déroulant](exemples/simple-menu/simple-menu.html)  
-	
-- [Barre d'avancement étape par étape (stepbar)](exemples/stepbar/stepbar.html)
 
 ## Niveau avancé
 
@@ -35,3 +33,5 @@
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+ &nbsp;

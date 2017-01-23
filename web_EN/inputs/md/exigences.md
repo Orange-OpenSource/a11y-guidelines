@@ -19,26 +19,25 @@ An [english translation](http://disic.github.io/rgaa_referentiel_en/RGAA3.0_Crit
 
 ## Accede-web references
 
-[Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities:
- 
-<p class="row">  
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso1.png) 
-        <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info">Accessibility guidelines for graphic design (to ensure WCAG 2.0 compliance)</a>
-    </div>
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso2.png)    
-        <a href="http://wiki.accede-web.com/en/notices/contributeurs" class="btn btn-info">Accessibility guidelines for editors (template)</a>
-    </div>
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso3.png)  
-        <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info">Accessibility guidelines for HTML and CSS (to ensure WCAG 2.0 compliance)</a>
-    </div>
-    <div class="perso col-sm-12 col-md-6 col-lg-3">
-        ![](./images/perso4.png)  
-        <a href="http://wiki.accede-web.com/en/notices/interfaces-riches-javascript" class="btn btn-info">Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)</a>
-    </div>      
-</p>
+[Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities: 
+  
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso1.png) 
+    <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info">Accessibility guidelines for graphic design (to ensure WCAG 2.0 compliance)</a>
+</div>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso2.png)    
+    <a href="http://wiki.accede-web.com/en/notices/contributeurs" class="btn btn-info">Accessibility guidelines for editors (template)</a>
+</div>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso3.png)  
+    <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info">Accessibility guidelines for HTML and CSS (to ensure WCAG 2.0 compliance)</a>
+</div>
+<div class="perso col-sm-12 col-md-6 col-lg-3">
+    ![](./images/perso4.png)  
+    <a href="http://wiki.accede-web.com/en/notices/interfaces-riches-javascript" class="btn btn-info">Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)</a>
+</div>      
+
 
 <br>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

@@ -5,7 +5,10 @@
         {"label":"Critères incontournables", "url": "./fondamentaux.html"},
         {"label":"Critères incontournables pour le développement"}
     ]);
-    addSubMenu();
+    addSubMenu([
+        {"label":"La conception", "url":"fondamentaux-nontech.html"}, 
+        {"label":"Le développement", "url":"fondamentaux.html", "expanded":true}
+    ]);
 });</script>
 
 <span data-menuitem="fondamentaux"></span>

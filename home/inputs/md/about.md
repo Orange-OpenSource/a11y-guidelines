@@ -1,4 +1,6 @@
-# À propos    
+# Recommandations accessibilité Orange
+## À propos    
+
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"À propos"}]);
 });</script>
@@ -10,7 +12,7 @@ Le logo Orange ainsi que certaines images et captures sont la propriété d'Oran
 <span lang="en">Copyright (C) 2016 Orange SA All rights reserved</span>  
 [Liste des fichiers concernés](/NOTICE.txt)
 
-
+&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

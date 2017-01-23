@@ -1,4 +1,6 @@
-# Organisation du site
+# Recommandations accessibilité Orange
+
+## Organisation du site
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Organisation du site"}]);
 });</script>
@@ -11,20 +13,20 @@ Chaque rubrique contient&nbsp;:
 - Des ressources pour apprendre et tester soi-même,
 - Des exemples techniques.
 
-## Liste des rubriques
-### Accueil
-Il s'agit de la rubrique actuelle&nbsp;:
-- Présentation succincte de l'accessibilité,
+### Liste des rubriques
+#### Accueil
+Il s'agit de la rubrique actuelle :
+- Présentation succincte de l'accessibilité.
 - Organisation de ce site.
 
-### Web
+#### Web
 Les recommandations accessibilité pour le Web.
 - Les critères indispensables à respecter,
 - Les recommandations techniques pour le Web,
 - Des méthodes et des outils pour rendre un site accessible,
 - Des exemples fonctionnels.
 
-### Mobile
+#### Mobile
 
 Les recommandations accessibilité pour les mobiles.
 - Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible, 

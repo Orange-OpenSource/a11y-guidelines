@@ -40,7 +40,7 @@ $(document).ready(function() {
   // Boutons de fermeture des dialog
   $('[role=dialog] button').on('click', function () {
     $('#'+$(this).parent().parent().attr('data-focusBack')).focus();
-    $(this).parent().parent().hide();
+    $(this).parent().parent().parent().hide();
   })
 
   $('.dialog-start').on('focus', function () {
