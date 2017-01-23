@@ -3,26 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Recommandations accessibilité Orange</title>
     
 
-    <!-- Boosted -->
-      <!-- To use the old orange brand, just remove the 2015 postfix-->
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
-        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
-        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-      <!--[if (gte IE 9) | (!IE)]><!-->
-        <link rel="stylesheet" href="./boosted/css/bootstrap-orange2015.css" />
-        <link rel="stylesheet" href="./boosted/css/bootstrap-orange-theme2015.css" />
-        <link rel="stylesheet" href="./boosted/css/boosted2015.css">
-    <!--<![endif]-->
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
       <link rel="stylesheet" href="css/dark.min.css">
@@ -31,9 +20,9 @@
       <link rel="stylesheet" href="css/reco.css">
       <link rel="stylesheet" href="css/reco-custom.css">
 
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -41,122 +30,119 @@
         <a id="skip-content" href="#content">Aller au contenu</a>
     </div>
     <header role="banner">
-        <nav id="top-navbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Menu de navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a href="index.html" class="navbar-brand">
-                <img src="./boosted/images/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil" width="48"/>
-              </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-              <ul class="nav navbar-nav top-nav">
-                    <li class="active"><a href="./index.html">Accueil</a></li>
-                    <li><a href="./web/index.html">Web</a></li>
-
-                    <li><a href="./mobile/index.html">Mobile</a></li>
-
-                    <li><a class="language" href="./home_EN/index.html" title="Version anglaise" lang="en">English version</a></li>
-              </ul>
-
-              <form action="./search.html" class="navbar-form navbar-right" role="search">
-
-              <!-- formulaire de recherche -->
-                <div class="form-group">
-                  <input title="rechercher" type="text" class="form-control" placeholder="Rechercher..." name="q">
-                </div>
-                <button title="Rechercher" type="submit" class="btn btn-default">
-                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                  <span class="sr-only">Rechercher</span>
-                </button>
-
-              <!-- bouton CDU -->
-              <span id="cdu">
-                <a href="#" title="Confort plus" id="uci_link">
-                    Confort
-                    <span>+</span>
-                </a>
-              </span>
-
-              </form>
-
-              <ul id="navigation-mobile" class="nav navbar-nav"></ul>
-
-            </div>
-          </div>
-        </nav>
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="./boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Accueil</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-organisation" href="organisation.html">Organisation du site</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                      </ul>
+                  </li>                                    
+                  <li class="nav-item"><a class="nav-link" href="./web/index.html">Web</a></li>
+                  <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="#" title="Confort plus" id="uci_link">
+                      Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
     </header>
 
+    <span class="sr-only">Vous êtes ici : </span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
+    </ol>
+
     <main role="main" class="container-fluid">
-      <div class="row row-offcanvas row-offcanvas-left">
+      <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
-            <ul id="navigation" class="nav navbar-nav">
-                <li><a id="index" href="index.html">Présentation</a></li>
-                <li><a id="organisation" href="organisation.html">Organisation du site</a></li>
-                <li><a id="contact" href="contact.html">Contact</a></li>
-                <li><a id="about" href="about.html">A propos</a></li>
-            </ul>
         </div>
 
-        <div class="col-xs-12 col-sm-9" id="content">
-          <span class="sr-only">Vous êtes ici : </span>
-          <ol class="breadcrumb">
-            <li><a href="/index.html">Accueil</a></li>        
-          </ol>
-        
-          <h1 id="votre-avis-compte">Votre avis compte</h1>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="recommandations-accessibilit-orange">Recommandations accessibilité Orange</h1>
+<h2 id="votre-avis-compte">Votre avis compte</h2>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Contact"}]);
 });</script>
 
-<p>Vous avez une remarque, une suggestion à apporter ?  </p>
-<p>Vérifiez que ceci n&#39;a pas déjà été remonté par quelqu&#39;un d&#39;autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des &quot;issues&quot;</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.
+<p>Vous avez une remarque, une suggestion à apporter&nbsp;?  </p>
+<p>Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des «&nbsp;<i lang="en">issues</i>&nbsp;»</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.</p>
+<p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="organisation-du-site">Organisation du site</h1>
+<h1 id="recommandations-accessibilit-orange">Recommandations accessibilité Orange</h1>
+<h2 id="organisation-du-site">Organisation du site</h2>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Organisation du site"}]);
 });</script>
 
-<p>Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.<br>Ces différentes rubriques sont disponibles via le menu de navigation situé dans l&#39;en-tête.</p>
-<p>Chaque rubrique contient :</p>
+<p>Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.<br>Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.</p>
+<p>Chaque rubrique contient&nbsp;:</p>
 <ul>
-<li>Des recommandations en fonction de la plateforme visée</li>
-<li>Des ressources pour apprendre et tester soi-même</li>
-<li>Des exemples techniques</li>
+<li>Des recommandations en fonction de la plateforme visée,</li>
+<li>Des ressources pour apprendre et tester soi-même,</li>
+<li>Des exemples techniques.</li>
 </ul>
-<h2 id="liste-des-rubriques">Liste des rubriques</h2>
-<h3 id="accueil">Accueil</h3>
-<p>Il s&#39;agit de la rubrique actuelle :</p>
+<h3 id="liste-des-rubriques">Liste des rubriques</h3>
+<h4 id="accueil">Accueil</h4>
+<p>Il s’agit de la rubrique actuelle&nbsp;:</p>
 <ul>
-<li>Présentation succincte de l&#39;accessibilité.</li>
+<li>Présentation succincte de l&#39;accessibilité,</li>
 <li>Organisation de ce site.</li>
 </ul>
-<h3 id="web">Web</h3>
+<h4 id="web">Web</h4>
 <p>Les recommandations accessibilité pour le Web.</p>
 <ul>
-<li>Les critères indispensables à respecter.</li>
-<li>Les recommandations techniques pour le web.</li>
-<li>Des méthodes et des outils pour rendre un site accessible.</li>
+<li>Les critères indispensables à respecter,</li>
+<li>Les recommandations techniques pour le Web,</li>
+<li>Des méthodes et des outils pour rendre un site accessible,</li>
 <li>Des exemples fonctionnels.</li>
 </ul>
-<h3 id="mobile">Mobile</h3>
+<h4 id="mobile">Mobile</h4>
 <p>Les recommandations accessibilité pour les mobiles.</p>
 <ul>
-<li>Liste des différents critères d&#39;accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible. </li>
-<li>Tout ce qu&#39;il faut savoir pour coder accessible sur mobile, sous Android ou iOS.</li>
-<li>Présentation de l&#39;application mDAN, le démonstrateur d&#39;accessibilité numérique pour mobile.</li>
-<li>Un guide simple pour utiliser les lecteurs d&#39;écran d&#39;iOS et d&#39;Android, respectivement VoiceOver et TalkBack.</li>
+<li>Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible, </li>
+<li>Tout ce qu’il faut savoir pour coder accessible sur mobile, sous Android ou iOS,</li>
+<li>Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile,</li>
+<li>Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement <span lang="en">VoiceOver</span> et <span lang="en">TalkBack</span>.</li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -167,46 +153,43 @@
 });</script>
 
 <h2 id="qu-est-ce-que-l-accessibilit-num-rique-">Qu&#39;est ce que l&#39;accessibilité numérique ?</h2>
-<div class="axs-picto axs">
-L’accessibilité numérique, c’est rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
-
-Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.
-</div>
-
-<h2 id="qui-est-concern-par-l-accessibilit-num-rique-">Qui est concerné par l’accessibilité numérique ?</h2>
+<p>L’accessibilité numérique permet de rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.</p>
+<p>Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.</p>
+<h2 id="qui-est-concern-par-l-accessibilit-num-rique-nbsp-">Qui est concerné par l’accessibilité numérique&nbsp;?</h2>
 <p>Les situations de handicap identifiées ne sont pas seulement celles que l’on voit.<br>Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.</p>
-<p>&nbsp;<br><img src="./images/chat.png" alt=""></p>
+<p>&nbsp;</p>
 <div class="sr-only">
-    Les citations suivantes en sont l&#39;illustration :
+    Les citations suivantes en sont l&#39;illustration&nbsp;:
     <ul>
         <li>Les sous-titres me sont utiles car ma langue maternelle n&#39;est pas le français.</li>
         <li>C&#39;est utile de ne pas être obligé d&#39;imprimer en couleur pour comprendre cette carte.</li>
         <li>Après avoir travaillé toute la journée derrière un écran, j&#39;ai plus de difficultés à lire certains textes trop petits.</li>
     </ul>
-</div>
+</div>  
 
+<p><img src="./images/chat.png" alt="" class="img-fluid"></p>
 <h2 id="les-situations-de-handicap">Les situations de handicap</h2>
 <h3 id="le-handicap-auditif">Le handicap auditif</h3>
 <div class="axs-picto auditif">
     <ul>
         <li>Personnes sourdes</li>
-        <li>Personnes mal entendantes</li>
+        <li>Personnes malentendantes</li>
         <li>Personnes sourdes-aveugles</li>
         <li>Difficulté de perception de la parole dans un environnement bruyant</li>
     </ul>
-<strong>Solutions adaptées :</strong> ajout de script ou de sous-titres
+<strong>Solutions adaptées&nbsp;:</strong> ajout de script ou de sous-titres
 </div>
 
 <h3 id="le-handicap-visuel">Le handicap visuel</h3>
 <div class="axs-picto visuel">
     <ul>
-        <li>Personnes avec un petit reste visuel ou celles qui ont une vue incorrigible.</li>
-        <li>Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie).</li>
+        <li>Personnes avec un petit reste visuel ou celles qui ont une vue incorrigible</li>
+        <li>Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)</li>
         <li>Personnes sensibles à une luminosité accrue des couleurs</li>
         <li>Personnes complètement aveugles</li>
         <li>Personnes sourdes-aveugles</li>
     </ul>
-    <strong>Solutions adaptées :</strong> tablette braille, synthèses vocales, personnalisation de l’affichage.
+    <strong>Solutions adaptées&nbsp;:</strong> tablette Braille, synthèses vocales, personnalisation de l’affichage.
 </div>
 
 <h3 id="le-handicap-cognitif">Le handicap cognitif</h3>
@@ -218,7 +201,7 @@ Il ne s’agit pas de démultiplier les supports de l’information, mais de res
         <li>Langage</li>
         <li>Raisonnement</li>
     </ul>
-<strong>Solutions adaptées :</strong> hiérarchisation et simplification de l’information, attention apportées à la mise en page.
+<strong>Solutions adaptées&nbsp;:</strong> hiérarchisation et simplification de l’information, attention apportées à la mise en page.
 </div>
 
 <h3 id="le-handicap-moteur-et-de-pr-hension">Le handicap moteur et de préhension</h3>
@@ -229,50 +212,50 @@ Il ne s’agit pas de démultiplier les supports de l’information, mais de res
         <li>Lésions rhumatismales</li>
         <li>Un bras cassé</li>
     </ul>
-<strong> Solutions adaptées :</strong> périphériques adaptés (souris, claviers...)
+<strong> Solutions adaptées&nbsp;:</strong> périphériques adaptés (souris, claviers…)
 </div>
 
 <h3 id="le-handicap-mat-riel">Le handicap matériel</h3>
 <div class="axs-picto materiel">
-    L’utilisation des règles de l’accessibilité servent au delà des situations de handicaps identifiées.<br>    L’accessibilité numérique apporte du confort pour tous :<br>    <ul>
+    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées.<br>    L’accessibilité numérique apporte du confort pour tous&nbsp;:<br>    <ul>
         <li>Les utilisateurs de mobiles et smartphones</li>
         <li>Les utilisateurs ayant un bas débit</li>
         <li>Les séniors</li>
-        <li>Les environnements bruyants tels que open space, boutiques, accueil...</li>
-        <li>Matériel non approprié (imprimante noir et blanc...)</li>
+        <li>Les environnements bruyants tels que open space, boutiques, accueil…</li>
+        <li>Matériel non approprié (imprimante noir et blanc…)</li>
     </ul>
 </div>
 
-<p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="a-propos">A propos</h1>
+<h1 id="recommandations-accessibilit-orange">Recommandations accessibilité Orange</h1>
+<h2 id="-propos">À propos</h2>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"A propos"}]);
+    setBreadcrumb([{"label":"À propos"}]);
 });</script>
 
 <p>Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>. Le code source de ce site ainsi que celui des exemples est disponible <a href="https://github.com/Orange-OpenSource/a11y-guidelines">sur notre compte github</a>.  </p>
-<p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange:  </p>
-<p>Copyright (C) 2016 Orange SA All rights reserved<br><a href="/NOTICE.txt">Liste des fichiers concernés</a></p>
+<p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange&nbsp;:  </p>
+<p><span lang="en">Copyright (C) 2016 Orange SA All rights reserved</span><br><a href="/NOTICE.txt">Liste des fichiers concernés</a></p>
+<p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
 
+          
         </div>
       </div>
     </main>
 
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
-    
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="./boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="./js/reco.js"></script>
     <script type="text/javascript" src="./js/highlight.min.js"></script>
 
-    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>
-
+    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>    
 </body>
 </html>

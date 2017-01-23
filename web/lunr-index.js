@@ -61,7 +61,7 @@ documentTitles["index.html#exemples"] = "Exemples";
 index.add({
     url: "index.html#exemples",
     title: "Exemples",    
-    body: "### Exemples Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n'a plus qu'à se laisser guider !  Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange. &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "### Exemples Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n'a plus qu'à se laisser guider !  Ces exemples utilisent la librairie [boosted](http://boosted.orange.com/). Cette librairie basée sur [bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -70,7 +70,7 @@ documentTitles["fondamentaux.html#liste-des-criteres-incontournables"] = "Liste 
 index.add({
     url: "fondamentaux.html#liste-des-criteres-incontournables",
     title: "Liste des critères incontournables",    
-    body: "# Liste des critères incontournables  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Liste des critères incontournables\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt; Ce socle de critères destiné aux sites et applications web Orange permet d'éviter les principales erreurs d'accessibilité. Il s'agit d'un sous-ensemble des exigences d'accessibilité.    La mise en œuvre de ce socle ne permet pas, d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s'engager dans une démarche de mise en accessibilité progressive.  Le respect de la charte Orange (&lt;span lang=\&quot;en\&quot;&gt;Design for digital platforms Guideline&lt;/span&gt;), disponible sur [le site de la marque Orange](http://brand.orange.com/) est un prérequis à l'utilisation de ce socle. Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte...) n'ont pas été repris dans cette liste de critères.  Deux versions sont disponibles : - **La première version** n'aborde pas le code, elle s'adresse aux concepteurs de produits, designers, responsables de projet, etc. - **La seconde version** aborde le code et s'adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.  &lt;p class=\&quot;row\&quot;&gt;     &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-4\&quot;&gt;         &lt;h2 class=\&quot;sr-only\&quot;&gt;Pour les concepteurs et designers&lt;/h2&gt;                   &lt;a href=\&quot;./fondamentaux-nontech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;             ![](./images/perso1.png)             &lt;div&gt;Critères incontournables pour la conception&lt;/div&gt;         &lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-4\&quot;&gt;         &lt;h2 class=\&quot;sr-only\&quot;&gt;Pour les développeurs&lt;/h2&gt;                   &lt;a href=\&quot;./fondamentaux-tech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;             ![](./images/perso3.png)             &lt;div&gt;Critères incontournables pour le développement&lt;/div&gt;         &lt;/a&gt;     &lt;/div&gt;             &lt;/p&gt; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Liste des critères incontournables  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Liste des critères incontournables\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Pour la conception\&quot;,\&quot;url\&quot;:\&quot;fondamentaux-nontech.html\&quot;},          {\&quot;label\&quot;:\&quot;Pour le développement\&quot;,\&quot;url\&quot;:\&quot;fondamentaux-tech.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt; Ce socle de critères destiné aux sites et applications web Orange permet d'éviter les principales erreurs d'accessibilité. Il s'agit d'un sous-ensemble des exigences d'accessibilité.    La mise en œuvre de ce socle ne permet pas, d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s'engager dans une démarche de mise en accessibilité progressive.  Le respect de la charte Orange (&lt;span lang=\&quot;en\&quot;&gt;Design for digital platforms Guideline&lt;/span&gt;), disponible sur [le site de la marque Orange](http://brand.orange.com/) est un prérequis à l'utilisation de ce socle. Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte...) n'ont pas été repris dans cette liste de critères.  Deux versions sont disponibles : - **La première version** n'aborde pas le code, elle s'adresse aux concepteurs de produits, designers, responsables de projet, etc. - **La seconde version** aborde le code et s'adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.  &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-6 col-xl-5\&quot;&gt;     &lt;h2 class=\&quot;sr-only\&quot;&gt;Pour les concepteurs et designers&lt;/h2&gt;               &lt;a href=\&quot;./fondamentaux-nontech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;         ![](./images/perso1.png)         &lt;div&gt;Les critères incontournables pour la conception&lt;/div&gt;     &lt;/a&gt; &lt;/div&gt; &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-6 col-xl-5\&quot;&gt;     &lt;h2 class=\&quot;sr-only\&quot;&gt;Pour les développeurs&lt;/h2&gt;               &lt;a href=\&quot;./fondamentaux-tech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;         ![](./images/perso3.png)         &lt;div&gt;Les critères incontournables pour le développement&lt;/div&gt;     &lt;/a&gt; &lt;/div&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -79,7 +79,7 @@ documentTitles["fondamentaux-tech.html#criteres-incontournables-pour-le-developp
 index.add({
     url: "fondamentaux-tech.html#criteres-incontournables-pour-le-developpement",
     title: "Critères incontournables pour le développement",    
-    body: "# Critères incontournables pour le développement  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Critères incontournables\&quot;, \&quot;url\&quot;: \&quot;./fondamentaux.html\&quot;},         {\&quot;label\&quot;:\&quot;Critères incontournables pour le développement\&quot;}     ]);     addSubMenu(); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt;  "
+    body: "# Critères incontournables pour le développement  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Critères incontournables\&quot;, \&quot;url\&quot;: \&quot;./fondamentaux.html\&quot;},         {\&quot;label\&quot;:\&quot;Critères incontournables pour le développement\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;La conception\&quot;, \&quot;url\&quot;:\&quot;fondamentaux-nontech.html\&quot;},          {\&quot;label\&quot;:\&quot;Le développement\&quot;, \&quot;url\&quot;:\&quot;fondamentaux.html\&quot;, \&quot;expanded\&quot;:true}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt;  "
 });
 
 documentTitles["fondamentaux-tech.html#1-donner-un-titre-aux-pages"] = "1. Donner un titre aux pages";
@@ -263,7 +263,7 @@ documentTitles["fondamentaux-nontech.html#criteres-incontournables-pour-la-conce
 index.add({
     url: "fondamentaux-nontech.html#criteres-incontournables-pour-la-conception",
     title: "Critères incontournables pour la conception",    
-    body: "# Critères incontournables pour la conception  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Critères incontournables\&quot;, \&quot;url\&quot;: \&quot;./fondamentaux.html\&quot;},         {\&quot;label\&quot;:\&quot;Critères incontournables pour la conception\&quot;}]     );     addSubMenu(); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt;   "
+    body: "# Critères incontournables pour la conception  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Critères incontournables\&quot;, \&quot;url\&quot;: \&quot;./fondamentaux.html\&quot;},         {\&quot;label\&quot;:\&quot;Critères incontournables pour la conception\&quot;}]     );     addSubMenu([         {\&quot;label\&quot;:\&quot;La conception\&quot;, \&quot;url\&quot;:\&quot;fondamentaux.html\&quot;, \&quot;expanded\&quot;:true},          {\&quot;label\&quot;:\&quot;Le développement\&quot;, \&quot;url\&quot;:\&quot;fondamentaux-tech.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt;   "
 });
 
 documentTitles["fondamentaux-nontech.html#1-donner-un-titre-aux-pages"] = "1. Donner un titre aux pages";
@@ -391,7 +391,7 @@ documentTitles["exigences.html#les-notices-accede-web"] = "Les notices accede-we
 index.add({
     url: "exigences.html#les-notices-accede-web",
     title: "Les notices accede-web",    
-    body: "## Les notices accede-web  Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l'accessibilité au format Web et PDF, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.  Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).  &lt;p class=\&quot;row\&quot;&gt;       &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso1.png)          &lt;a href=\&quot;http://www.accede-web.com/notices/graphique/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour la conception fonctionnelle et graphique&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso2.png)             &lt;a href=\&quot;http://www.accede-web.com/notices/editoriale/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité éditoriale (modèle)&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso3.png)           &lt;a href=\&quot;http://www.accede-web.com/notices/html-css-javascript/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité HTML, CSS et JavaScript&lt;/a&gt;     &lt;/div&gt;     &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;         ![](./images/perso4.png)           &lt;a href=\&quot;http://www.accede-web.com/notices/interface-riche/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour les composants d’interface riche&lt;/a&gt;     &lt;/div&gt;       &lt;/p&gt;  &lt;br&gt;&amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt; "
+    body: "## Les notices accede-web  Le site [accede-web](http://accede-web.com/) propose d'excellentes notices sur l'accessibilité au format Web et PDF, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.  Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).  &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;     ![](./images/perso1.png)      &lt;a href=\&quot;http://www.accede-web.com/notices/graphique/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour la conception fonctionnelle et graphique&lt;/a&gt; &lt;/div&gt; &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;     ![](./images/perso2.png)         &lt;a href=\&quot;http://www.accede-web.com/notices/editoriale/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité éditoriale (modèle)&lt;/a&gt; &lt;/div&gt; &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;     ![](./images/perso3.png)       &lt;a href=\&quot;http://www.accede-web.com/notices/html-css-javascript/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité HTML, CSS et JavaScript&lt;/a&gt; &lt;/div&gt; &lt;div class=\&quot;perso col-sm-12 col-md-6 col-lg-3\&quot;&gt;     ![](./images/perso4.png)       &lt;a href=\&quot;http://www.accede-web.com/notices/interface-riche/\&quot; class=\&quot;btn btn-info\&quot;&gt;Notice d’accessibilité pour les composants d’interface riche&lt;/a&gt; &lt;/div&gt;        &lt;br&gt;&amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt; "
 });
 
 
@@ -451,63 +451,21 @@ documentTitles["methodes-outils.html#tests-manuel-et-outils-dassistance"] = "Tes
 index.add({
     url: "methodes-outils.html#tests-manuel-et-outils-dassistance",
     title: "Tests manuel et outils d'assistance",    
-    body: "## Tests manuel et outils d'assistance  "
-});
-
-documentTitles["methodes-outils.html#navigation-au-claviermethodes-outils-clavierhtml"] = "[Navigation au clavier](./methodes-outils-clavier.html)";
-index.add({
-    url: "methodes-outils.html#navigation-au-claviermethodes-outils-clavierhtml",
-    title: "[Navigation au clavier](./methodes-outils-clavier.html)",    
-    body: "### [Navigation au clavier](./methodes-outils-clavier.html) Liste des principaux raccourcis pour naviguer au clavier dans une page web.  "
-});
-
-documentTitles["methodes-outils.html#agrandissement-de-la-taille-du-textemethodes-outils-zoomhtml"] = "[Agrandissement de la taille du texte](./methodes-outils-zoom.html)";
-index.add({
-    url: "methodes-outils.html#agrandissement-de-la-taille-du-textemethodes-outils-zoomhtml",
-    title: "[Agrandissement de la taille du texte](./methodes-outils-zoom.html)",    
-    body: "### [Agrandissement de la taille du texte](./methodes-outils-zoom.html) Un guide sur la gestion du zoom.  "
-});
-
-documentTitles["methodes-outils.html#navigation-a-laide-dun-lecteur-decranmethodes-outils-lecteur-ecranhtml"] = "[Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html)";
-index.add({
-    url: "methodes-outils.html#navigation-a-laide-dun-lecteur-decranmethodes-outils-lecteur-ecranhtml",
-    title: "[Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html)",    
-    body: "### [Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html) Les principaux lecteurs d'écrans utilisés.  "
+    body: "## Tests manuel et outils d'assistance  [Navigation au clavier](./methodes-outils-clavier.html) : Liste des principaux raccourcis pour naviguer au clavier dans une page web.  [Agrandissement de la taille du texte](./methodes-outils-zoom.html) :  Un guide sur la gestion du zoom.  [Navigation à l'aide d'un lecteur d'écran](./methodes-outils-lecteur-ecran.html) :  Les principaux lecteurs d'écrans utilisés.  "
 });
 
 documentTitles["methodes-outils.html#outils-de-test-automatises"] = "Outils de test automatisés";
 index.add({
     url: "methodes-outils.html#outils-de-test-automatises",
     title: "Outils de test automatisés",    
-    body: "## Outils de test automatisés "
-});
-
-documentTitles["methodes-outils.html#extensions-pour-navigateurmethodes-outils-extensionshtml"] = "[Extensions pour navigateur](./methodes-outils-extensions.html)";
-index.add({
-    url: "methodes-outils.html#extensions-pour-navigateurmethodes-outils-extensionshtml",
-    title: "[Extensions pour navigateur](./methodes-outils-extensions.html)",    
-    body: "### [Extensions pour navigateur](./methodes-outils-extensions.html) Certaines extensions permettent d'effectuer des tests automatiques sur la page en cours de consultation.  "
+    body: "## Outils de test automatisés [Extensions pour navigateur](./methodes-outils-extensions.html) :  Certaines extensions permettent d'effectuer des tests automatiques sur la page en cours de consultation.  "
 });
 
 documentTitles["methodes-outils.html#test-des-criteres"] = "Test des critères";
 index.add({
     url: "methodes-outils.html#test-des-criteres",
     title: "Test des critères",    
-    body: "## Test des critères "
-});
-
-documentTitles["methodes-outils.html#mesurer-le-niveau-de-contraste-des-couleursmethodes-outils-contrasteshtml"] = "[Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html)";
-index.add({
-    url: "methodes-outils.html#mesurer-le-niveau-de-contraste-des-couleursmethodes-outils-contrasteshtml",
-    title: "[Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html)",    
-    body: "### [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) Présentation de l'outil colour contrast analyser.  "
-});
-
-documentTitles["methodes-outils.html#acceder-a-la-liste-des-titres-de-la-page-balises-h1-a-h6methodes-outils-liste-titreshtml"] = "[Accéder à la liste des titres de la page (balises `H1` à `H6`)](./methodes-outils-liste-titres.html)";
-index.add({
-    url: "methodes-outils.html#acceder-a-la-liste-des-titres-de-la-page-balises-h1-a-h6methodes-outils-liste-titreshtml",
-    title: "[Accéder à la liste des titres de la page (balises `H1` à `H6`)](./methodes-outils-liste-titres.html)",    
-    body: "### [Accéder à la liste des titres de la page (balises `H1` à `H6`)](./methodes-outils-liste-titres.html) Les différentes façons d'accéder à la liste des titres d'une page.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Test des critères [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) :  Présentation de l'outil colour contrast analyser.  [Accéder à la liste des titres de la page (balises `H1` à `H6`)](./methodes-outils-liste-titres.html) :  Les différentes façons d'accéder à la liste des titres d'une page.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -572,7 +530,7 @@ documentTitles["nos-outils.html#site-officiel"] = "Site officiel";
 index.add({
     url: "nos-outils.html#site-officiel",
     title: "Site officiel",    
-    body: "### Site officiel [Orange Confort+](http://confort-plus.orange.com/)       &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "### Site officiel [Orange Confort+](http://confort-plus.orange.com/)   &amp;nbsp;     &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -747,14 +705,14 @@ documentTitles["exemples.html#niveau-intermediaire"] = "Niveau intermédiaire";
 index.add({
     url: "exemples.html#niveau-intermediaire",
     title: "Niveau intermédiaire",    
-    body: "## Niveau intermédiaire  - [Les boites de dialogue 1/2](exemples/role-dialog/role-dialog.html)    - [Les boites de dialogue 2/2](exemples/role-dialog2/role-dialog.html) 	 - [Menu déroulant](exemples/simple-menu/simple-menu.html)   	 - [Barre d'avancement étape par étape (stepbar)](exemples/stepbar/stepbar.html)  "
+    body: "## Niveau intermédiaire  - [Les boites de dialogue 1/2](exemples/role-dialog/role-dialog.html)    - [Les boites de dialogue 2/2](exemples/role-dialog2/role-dialog.html) 	 - [Menu déroulant](exemples/simple-menu/simple-menu.html)    "
 });
 
 documentTitles["exemples.html#niveau-avance"] = "Niveau avancé";
 index.add({
     url: "exemples.html#niveau-avance",
     title: "Niveau avancé",    
-    body: "## Niveau avancé  - [Les listes ARIA (listbox) 1/3](exemples/listbox/index.html)   - [Les listes ARIA (listbox) 2/3 (avec cases à cocher)](exemples/check-listbox/index.html)  - [Les listbox et patterns ARIA 3/3 (navigation au clavier)](exemples/listbox-pattern-aria/index.html)  - [Explorateur de fichiers (cloud)](exemples/files/index.html)  - [Les régions vivantes (live regions), contenu dynamique, gestion du focus et ARIA ](exemples/dynFocus/index.html) &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Niveau avancé  - [Les listes ARIA (listbox) 1/3](exemples/listbox/index.html)   - [Les listes ARIA (listbox) 2/3 (avec cases à cocher)](exemples/check-listbox/index.html)  - [Les listbox et patterns ARIA 3/3 (navigation au clavier)](exemples/listbox-pattern-aria/index.html)  - [Explorateur de fichiers (cloud)](exemples/files/index.html)  - [Les régions vivantes (live regions), contenu dynamique, gestion du focus et ARIA ](exemples/dynFocus/index.html) &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;   &amp;nbsp;"
 });
 
 
@@ -763,7 +721,7 @@ documentTitles["contact.html#votre-avis-compte"] = "Votre avis compte";
 index.add({
     url: "contact.html#votre-avis-compte",
     title: "Votre avis compte",    
-    body: "# Votre avis compte    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter ?    Vérifiez que ceci n'a pas déjà été remonté par quelqu'un d'autre en consultant [la liste des \&quot;issues\&quot;](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github. &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Votre avis compte    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?  Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -772,7 +730,7 @@ documentTitles["about.html#a-propos"] = "A propos";
 index.add({
     url: "about.html#a-propos",
     title: "A propos",    
-    body: "# A propos     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;A propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange:    Copyright (C) 2016 Orange SA All rights reserved   [Liste des fichiers concernés](/NOTICE.txt)   &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# A propos     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;A propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange:    Copyright (C) 2016 Orange SA All rights reserved   [Liste des fichiers concernés](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

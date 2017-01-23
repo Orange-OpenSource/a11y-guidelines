@@ -5,10 +5,11 @@
 $(document).ready(function() {
 	$(function () {
         $('<a>',{
+            'id': 'back-button',
             'text': 'Retour',
             'aria-label': 'Retour à la liste des exemples',            
             'href': '../../exemples.html',
-            'class': "return-button"
+            'class': "btn btn-info"
         }).prependTo('body');
     });
 });

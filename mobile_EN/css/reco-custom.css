@@ -32,21 +32,42 @@
 
 .screenreaderContent h3{
 	margin-top: 10px;
-	
 }
 
 .screenreaderContent {
-	border-top : 1px solid #ddd;
-	margin-left: 5px;
+	border-top : .1rem solid #ddd;
+  background: #fff;
 }
 
-.vcenter {
-	display: inline-block;
-  float: none;
-  vertical-align: middle;
+.list-gesture {
+  list-style: none;  
+}
+
+.list-gesture img { 
+  float: left;
+  margin-right: 1rem !important;
+}
+
+.list-gesture h3, .list-gesture p {
+    margin-left: 12rem;
+}
+
+.image-gesture>p {
+  float: right;
 }
 
 .licence {
 	color: #666;
-   font-size: 1.4rem;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 479px) {
+
+  .list-gesture h3 {
+    clear: left;
+  }
+
+  .list-gesture h3, .list-gesture p {
+    margin-left: 0;
+  }
 }

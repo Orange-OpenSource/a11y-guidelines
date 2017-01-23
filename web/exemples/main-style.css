@@ -4,27 +4,23 @@
 * See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
 body {
   border-top: 15px solid #000;
-  font-size: 1.6rem;
 }
 
 pre code .important {
   border: 1px solid #f00;
 }
 
-.return-button {
+#back-button {
     padding-left: 1rem;
     margin: 1rem 0 0 1rem;
-    font-weight: bold;
-    font-size: 1.6rem;
-    border-bottom: 1px solid #ddd;
-    width: 20rem;
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    line-height: 4rem;
+    width: 10rem;
+    text-align: left;
 }
 
 h1:first-child {
     margin-top: 0;
+}
+
+h2, h3 {
+  margin-top: 1rem;
 }
