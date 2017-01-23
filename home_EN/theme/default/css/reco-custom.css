@@ -59,3 +59,11 @@ h3+.axs-picto {
 .axs-picto.physique::before {
     content: url(../images/accessibility_mobility.png);
 }
+
+
+@media screen and (max-width: 479px) {
+    h1 a {
+        padding-left: 1rem;
+        background-color: rgba(255,255,255,.5);
+    }
+}
