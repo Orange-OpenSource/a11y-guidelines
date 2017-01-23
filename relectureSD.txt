@@ -134,17 +134,17 @@ TODO
 ./web_EN/theme/default/_manifests.html
 ./web_EN/theme/default/_page.html
 
-DONE
-./home/inputs/md/about.md
-./home/inputs/md/contact.md
-./home/inputs/md/index.md
-./home/inputs/md/organisation.md
-./home/theme/default/_layout.html
-./home_EN/inputs/md/about.md
-./home_EN/inputs/md/contact.md
-./home_EN/inputs/md/index.md
-./home_EN/inputs/md/organisation.md
-./mobile/inputs/md/about.md
-./mobile/inputs/md/contact.md
-./web/inputs/md/contact.md
+DONE before v2
+./home/inputs/md/about.md OK v2
+./home/inputs/md/contact.md OK v2
+./home/inputs/md/index.md OK v2
+./home/inputs/md/organisation.md OK v2
+./home/theme/default/_layout.html OK v2
+./home_EN/inputs/md/about.md OK v2
+./home_EN/inputs/md/contact.md OK v2
+./home_EN/inputs/md/index.md OK v2
+./home_EN/inputs/md/organisation.md OK v2
+./mobile/inputs/md/about.md OK v2
+./mobile/inputs/md/contact.md OK v2
+./web/inputs/md/contact.md OK v2
 ./mobile/inputs/md/criteria-android.md

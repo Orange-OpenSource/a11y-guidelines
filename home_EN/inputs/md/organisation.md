@@ -26,7 +26,7 @@ Accessibility guidelines for the Web.
 - Methods and tools to make a site accessible,
 - Functional examples.
 
-#### Mobile
+#### Mobile (<abbr title="to be done">TBD</abbr>)
 Here you will find the Orange accessibility recommendations for mobile.
 
 &nbsp;
