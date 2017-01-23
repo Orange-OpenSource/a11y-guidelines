@@ -329,7 +329,7 @@ Il est également possible de spécifier à une vue qu’elle est une région <i
 Donner accès aux modifications des informations de l’application aux utilisateurs de lecteurs d’écran.
 
 
-## Scroll horizontal
+## <i lang="en">Scroll</i> horizontal
 
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;: ** dès la phase de conception et lors du développement.
