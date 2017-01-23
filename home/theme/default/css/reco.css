@@ -370,12 +370,17 @@ h1:before, h2:before {
   }
 
   #navigation li {
-    border: none;
-    padding: .75rem;
+    border: none;    
   }
 
   #navigation a {
     color: #fff;
+    padding: .75rem;
+    display: block;    
+  }
+
+  #navigation a:focus {
+    outline: dotted 1px #fff;
   }
 
   #navigation li:first-child a {
