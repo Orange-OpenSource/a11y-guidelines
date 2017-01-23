@@ -1,6 +1,5 @@
 TODO
 
-./mobile/inputs/md/contact.md
 ./mobile/inputs/md/criteria-android.md
 ./mobile/inputs/md/criteria-ios.md
 ./mobile/inputs/md/criteria-mobile.md
@@ -37,7 +36,6 @@ TODO
 ./mobile_EN/inputs/md/voiceover.md
 ./README.md
 ./web/inputs/md/about.md
-./web/inputs/md/contact.md
 ./web/inputs/md/exemples.md
 ./web/inputs/md/exigences.md
 ./web/inputs/md/fondamentaux-nontech.md
@@ -148,3 +146,5 @@ DONE
 ./home_EN/inputs/md/index.md
 ./home_EN/inputs/md/organisation.md
 ./mobile/inputs/md/about.md
+./mobile/inputs/md/contact.md
+./web/inputs/md/contact.md
