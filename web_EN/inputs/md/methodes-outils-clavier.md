@@ -23,6 +23,8 @@ To test if your service is accessible using the keyboard, you can try to navigat
 ** Note on mac, the keyboard navigation must be enabled first: **  
 In Safari: Edit> Preferences...> Advanced  
 Then check the box *"Press tab to highlight each item on a webpage"*.
+
+&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
