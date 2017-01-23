@@ -1,6 +1,5 @@
 TODO
 
-./mobile/inputs/md/criteria-android.md
 ./mobile/inputs/md/criteria-ios.md
 ./mobile/inputs/md/criteria-mobile.md
 ./mobile/inputs/md/dev-android.md
@@ -148,3 +147,4 @@ DONE
 ./mobile/inputs/md/about.md
 ./mobile/inputs/md/contact.md
 ./web/inputs/md/contact.md
+./mobile/inputs/md/criteria-android.md
