@@ -1,6 +1,5 @@
 TODO
 
-./mobile/inputs/md/criteria-ios.md
 ./mobile/inputs/md/criteria-mobile.md
 ./mobile/inputs/md/dev-android.md
 ./mobile/inputs/md/dev-ios.md
@@ -147,4 +146,7 @@ DONE before v2
 ./mobile/inputs/md/about.md OK v2
 ./mobile/inputs/md/contact.md OK v2
 ./web/inputs/md/contact.md OK v2
-./mobile/inputs/md/criteria-android.md
+./mobile/inputs/md/criteria-android.md OK v2
+./mobile/inputs/md/criteria-ios.md OK v2
+
+DONE
