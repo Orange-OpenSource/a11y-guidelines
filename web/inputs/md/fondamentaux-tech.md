@@ -708,7 +708,7 @@ Un formulaire doit obligatoirement avoir un bouton d'envoi. Celui-ci ne doit pas
 **Cible : ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
 **Description :**
-Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.
 
 **À vérifier :** 
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
@@ -725,7 +725,77 @@ Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et su
 **Exemple non-valide :**
 ![capture d'écran du site fnac.com](images/groupement2.jpg)
 Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
-Référence WCAG : 3.2.3., 3.2.4
+**Exemple : Les balises HTML5 et landmarks ARIA**
+Pour donner une structure sémantique aux grandes régions d'une page, on peut utiliser les balises de structure HTML5 (`main` pour le contenu principal de la page, `header` pour l'entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d'autres) même si leur support par les technologies d"assistance/navigateurs n'est pas total mais s'améliorant rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, les landmarks ARIA (Accessible Rich Internet Application, https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meiileur !
+
+Mettre en place ce type de sémantique permet aux déficients visuels d'indentifier et comprendre l'organisation, la structure gloale de la page et donc de naviguer plus facilement.
+
+Pour aller plus loin (en anglais) : https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html 
+
+Pour une page en HTML5
+`<head>
+    ...
+
+    <title>Titre de la page</title>
+
+    ...
+
+  </head>
+  <body>
+  <header>
+  <h1>...</h1>
+    <p>en tête de page : logo, baseline...</p>
+    ...
+  </header>
+
+  <main>
+    <p>contenu principal</p>
+     ...
+  </main>
+
+  <aside>
+    <p>contenu annexe en relation avec le contenu principal</p>
+    ...
+  </aside>    
+
+  <footer>
+    <p>contenu du pied de page : copyright...</p>
+    ...
+  </footer>
+  </body>`
+  
+Pour une page pas en HTML5 mais avec les landmarks ARIA
+`<head>
+    ...
+
+    <title>Titre de la page</title>
+
+    ...
+
+  </head>
+  <body>
+  <div role="banner">
+    <p>en tête de page : logo, baseline...</p>
+    ...
+  </div>
+
+  <div role="main">
+    <p>contenu principal</p>
+     ...
+  </div>
+
+  <div role="complementary">
+    <p>contenu annexe en relation avec le contenu principal</p>
+    ...
+  </div>    
+
+  <div role="contentinfo">
+    <p>contenu du pied de page : copyright...</p>
+    ...
+  </div>
+  </body>`
+
+**Référence WCAG :** 3.2.3., 3.2.4
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

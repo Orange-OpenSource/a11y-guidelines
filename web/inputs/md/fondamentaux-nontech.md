@@ -258,7 +258,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 **Cible : ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
 **Description :**
-Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.
 
 **À vérifier :** 
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
