@@ -726,7 +726,7 @@ Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et su
 ![capture d'écran du site fnac.com](images/groupement2.jpg)
 Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 **Exemple : Les balises HTML5 et landmarks ARIA**
-Pour donner une structure sémantique aux grandes régions d'une page, on peut utiliser les balises de structure HTML5 (`main` pour le contenu principal de la page, `header` pour l'entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d'autres) même si leur support par les technologies d"assistance/navigateurs n'est pas total mais s'améliorant rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, les landmarks ARIA (Accessible Rich Internet Application, https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meiileur !
+Pour donner une structure sémantique aux grandes régions d'une page, on peut utiliser les balises de structure HTML5 (`main` pour le contenu principal de la page, `nav` pour la navigation principale, `header` pour l'entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d'autres) même si leur support par les technologies d"assistance/navigateurs n'est pas total mais s'améliorant rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, les landmarks ARIA (Accessible Rich Internet Application, https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meiileur !
 
 Mettre en place ce type de sémantique permet aux déficients visuels d'indentifier et comprendre l'organisation, la structure gloale de la page et donc de naviguer plus facilement.
 
@@ -743,7 +743,8 @@ Pour une page en HTML5
   </head>
   <body>
   <header>
-  <h1>...</h1>
+    <h1>...</h1>
+    <nav>...navigation...</nav>
     <p>en tête de page : logo, baseline...</p>
     ...
   </header>
@@ -775,6 +776,8 @@ Pour une page pas en HTML5 mais avec les landmarks ARIA
   </head>
   <body>
   <div role="banner">
+    <h1>...</h1>
+    <div role="navigation">...navigation...</div>
     <p>en tête de page : logo, baseline...</p>
     ...
   </div>
