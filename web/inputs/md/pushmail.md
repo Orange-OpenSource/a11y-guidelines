@@ -137,7 +137,7 @@ Il faut donner une alternative textuelle (texte de replacement) à toute image d
 
 ![ ](images/menu_context_im.jpg) 
 
-Ne pas remplir le champ "Titre", le laisser vide. En revanche, saisir dans le champs "Description" (seul champ lu par une synthèse vocale) e texte alternatif donnant l'information équivalente à celle contenue dans l'image. Si l'image ne porte pas d'information, laisser les deux champs "Titre" et "Description" vides.
+Ne pas remplir le champ "Titre", le laisser vide. En revanche, saisir dans le champs "Description" (seul champ lu par une synthèse vocale) le texte alternatif donnant l'information équivalente à celle contenue dans l'image. Si l'image ne porte pas d'information, laisser les deux champs "Titre" et "Description" vides.
 
 ![ ](images/format_img.jpg)
 
