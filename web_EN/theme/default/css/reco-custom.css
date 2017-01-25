@@ -27,14 +27,20 @@
 }
 
 .perso {
-    text-align: center;
+    text-align: center;    
 }
+
 .perso .btn-info {
     width: 100%;
     white-space: normal;
     min-height: 6.5rem;
 }
 
+.perso .btn-info:hover, .perso .btn-info:focus {
+  background: #666;
+  color: #fff;
+} 
+
 .perso div {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }

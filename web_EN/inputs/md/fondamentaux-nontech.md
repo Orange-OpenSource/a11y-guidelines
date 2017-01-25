@@ -5,9 +5,10 @@
         {"label":"Essential criteria", "url": "./fondamentaux.html"},
         {"label":"Essential criteria for the design"}
     ]);
-
-    addSubMenu();
-    
+    addSubMenu([
+        {"label":"For designers", "url":"fondamentaux.html", "expanded":true}, 
+        {"label":"For developers", "url":"fondamentaux-tech.html"}
+    ]);
 });</script>
 
 <span data-menuitem="fondamentaux"></span>

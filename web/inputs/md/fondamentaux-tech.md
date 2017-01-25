@@ -5,7 +5,10 @@
         {"label":"Critères incontournables", "url": "./fondamentaux.html"},
         {"label":"Critères incontournables pour le développement"}
     ]);
-    addSubMenu();
+    addSubMenu([
+        {"label":"La conception", "url":"fondamentaux-nontech.html"}, 
+        {"label":"Le développement", "url":"fondamentaux.html", "expanded":true}
+    ]);
 });</script>
 
 <span data-menuitem="fondamentaux"></span>
@@ -718,12 +721,12 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 **Objectif utilisateur :**
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.
 
-**Exemple valide :** 
-![capture d'écran du site 100% pratique](images/groupement.jpg)
+**Exemple valide :**  
+![capture d'écran du site 100% pratique](images/groupement.jpg)  
 Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.
 
-**Exemple non-valide :**
-![capture d'écran du site fnac.com](images/groupement2.jpg)
+**Exemple non-valide :**  
+![capture d'écran du site fnac.com](images/groupement2.jpg)  
 Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 **Exemple : Les balises HTML5 et landmarks ARIA**
 Pour donner une structure sémantique aux grandes régions d'une page, on peut utiliser les balises de structure HTML5 (`main` pour le contenu principal de la page, `nav` pour la navigation principale, `header` pour l'entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d'autres) même si leur support par les technologies d"assistance/navigateurs n'est pas total mais s'améliorant rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, les landmarks ARIA (Accessible Rich Internet Application, https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meiileur !

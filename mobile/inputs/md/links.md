@@ -14,18 +14,18 @@ Vous trouverez de l'information sur le développement accessible pour iOS et And
 
 ## Pour Android
 Présentation de l'accessibilité sous Android et de l'API Google  
-- [documentation officielle de Google](https://developer.android.com/guide/topics/ui/accessibility/index.html)  
-- [guide complet de TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=fr&ref_topic=3529932)
+- [Documentation officielle de Google](https://developer.android.com/guide/topics/ui/accessibility/index.html)  
+- [Guide complet de TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=fr&ref_topic=3529932)
 
 Application AccessibilityScanner pour vous aider à tester une partie de l'accessibilité de vos applications rapidement et simplement
-- [application AccessibilityScanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr)
+- [Application AccessibilityScanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr)
 
 ## Pour iOS
 Présentation de l'accessibilité sous iOS et de l'API Apple
-- [documentation officielle de l'API d'accessiblité Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html)
-- [présentation des options d'accessibilité d'iOS](http://www.apple.com/fr/accessibility/)
-- [page officielle de l'accessibilité sous Apple](https://developer.apple.com/accessibility/ios/)
-- [utilisation de VoiceOver](https://help.apple.com/iphone/9/#/iph3e2e415f)
+- [Documentation officielle de l'API d'accessiblité Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html)
+- [Présentation des options d'accessibilité d'iOS](http://www.apple.com/fr/accessibility/)
+- [Page officielle de l'accessibilité sous Apple](https://developer.apple.com/accessibility/ios/)
+- [Utilisation de VoiceOver](https://help.apple.com/iphone/9/#/iph3e2e415f)
 
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

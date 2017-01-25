@@ -5,8 +5,10 @@
     setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
         {"label":"iOS developer guide"}
 	]);
-    addSubMenu();
-    
+    addSubMenu([
+        {"label":"Android guide","url":"dev-android.html"}, 
+        {"label":"iOS guide","url":"dev-mobile.html", "expanded": true}
+    ]);        
 });</script>
 
 <span data-menuitem="dev-mobile"></span>

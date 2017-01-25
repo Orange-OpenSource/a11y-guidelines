@@ -20,7 +20,7 @@ $(document).ready(function() {
            $(activeElement).addClass("active").attr("tabindex", "0").focus();
            $(".list").attr("tabindex", "-1");            
         });
-        
+                
         $(".list").on("keydown", function (e) {            
             var newIndex = currentIndex = $("ease-file").index($(".list .active"))+1;                          
             var lastIndex = $("ease-file").length;
@@ -43,13 +43,14 @@ $(document).ready(function() {
                     newIndex = currentIndex - maxElementsByRow;
                     break;                    
                 case 32: //space
-                    if (e.ctrlKey) {
-                        if ($(this).find("ease-file.active").attr("aria-selected") === "false") {
-                            $(this).find("ease-file.active").attr("aria-selected", "true");
-                        } else {
-                            $(this).find("ease-file.active").attr("aria-selected", "false");
-                        }                        
+                    if (!e.ctrlKey) {
+                        $(this).find("ease-file").attr("aria-selected", "false");
                     }
+                    if ($(this).find("ease-file.active").attr("aria-selected") === "false") {
+                        $(this).find("ease-file.active").attr("aria-selected", "true");
+                    } else {
+                        $(this).find("ease-file.active").attr("aria-selected", "false");
+                    }                                            
                     break;
                 case 13: //enter
                     alert("Ouverture du fichier...");
@@ -72,16 +73,15 @@ $(document).ready(function() {
                    for (var i=currentIndex; i!=newIndex; i=i+((currentIndex < newIndex)?1:-1)) {                       
                     $(this).find("ease-file:nth-child(" + i + ")").attr("aria-selected", "true");                                           
                    }                   
-                   $(this).find("ease-file.active").removeClass("active");
-                   $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active");
+                   $(this).find("ease-file.active").removeClass("active").attr("tabindex","-1");
+                   $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active").attr("tabindex","0");
                    $(this).find("ease-file:nth-child(" + newIndex + ")").attr("aria-selected", "true");
                 } else if (e.ctrlKey) {
-                    $(this).find("ease-file.active").removeClass("active");
-                    $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active");                                 
-                } else {
-                    $(this).find("ease-file").attr("aria-selected", "false");
-                    $(this).find("ease-file.active").removeClass("active");
-                    $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active");                    
+                    $(this).find("ease-file.active").removeClass("active").attr("tabindex","-1");
+                    $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active").attr("tabindex","0");                                 
+                } else {                    
+                    $(this).find("ease-file.active").removeClass("active").attr("tabindex","-1");
+                    $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active").attr("tabindex","0");                    
                 } 
                                 
             }  
@@ -94,8 +94,8 @@ $(document).ready(function() {
         
         $("ease-file").on("click", function (e) {
             var newIndex = currentIndex = $("ease-file").index($(".list .active"))+1;
-            $("ease-file").removeClass("active");
-            $(this).addClass("active");
+            $("ease-file").removeClass("active").attr("tabindex","-1");
+            $(this).addClass("active").attr("tabindex","0");
             newIndex = $("ease-file").index($(".list .active"))+1;
             
             if (e.ctrlKey) {

@@ -2,6 +2,10 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Liste des critères incontournables"}]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"fondamentaux-nontech.html"}, 
+        {"label":"Pour le développement","url":"fondamentaux-tech.html"}
+    ]);
 });</script>
 
 <span data-menuitem="fondamentaux"></span>
@@ -15,22 +19,21 @@ Deux versions sont disponibles :
 - **La première version** n'aborde pas le code, elle s'adresse aux concepteurs de produits, designers, responsables de projet, etc.
 - **La seconde version** aborde le code et s'adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
 
-<p class="row">
-    <div class="perso col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">Pour les concepteurs et designers</h2>          
-        <a href="./fondamentaux-nontech.html" class="btn btn-info">
-            ![](./images/perso1.png)
-            <div>Critères incontournables pour la conception</div>
-        </a>
-    </div>
-    <div class="perso col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">Pour les développeurs</h2>          
-        <a href="./fondamentaux-tech.html" class="btn btn-info">
-            ![](./images/perso3.png)
-            <div>Critères incontournables pour le développement</div>
-        </a>
-    </div>            
-</p>
+<div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
+    <h2 class="sr-only">Pour les concepteurs et designers</h2>          
+    <a href="./fondamentaux-nontech.html" class="btn btn-info">
+        ![](./images/perso1.png)
+        <div>Les critères incontournables pour la conception</div>
+    </a>
+</div>
+<div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
+    <h2 class="sr-only">Pour les développeurs</h2>          
+    <a href="./fondamentaux-tech.html" class="btn btn-info">
+        ![](./images/perso3.png)
+        <div>Les critères incontournables pour le développement</div>
+    </a>
+</div>
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

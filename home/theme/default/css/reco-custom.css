@@ -1,4 +1,39 @@
-/* ---- custom home section */
+#content {  
+  background-size: 100% 140px;
+  background-repeat: no-repeat;  
+}
+
+#content h1 {
+  background-color: #41B3E7;  
+  background-image: url(../../../images/banniere-conception.jpg);
+  background-repeat: no-repeat;
+  background-position: right;  
+  min-height: 140px;
+  padding-left: 2rem;
+}
+
+h1 a {
+  max-width: 24rem;
+  display: inline-block;
+  margin: 1.9rem 1.9rem 1.9rem 0;
+  line-height: 2.4rem;
+}
+
+#content h2 {
+    margin-bottom: 1rem;
+    background: transparent;
+    padding: 0;
+}
+
+h3+.axs-picto {
+    margin-top: -2rem;
+}
+
+.axs-picto {
+    background: #fff;
+    padding: 1rem;
+}
+
 .axs-picto::before {
     float: left;
     margin-right: 20px;  
@@ -13,6 +48,7 @@
 }
 .axs-picto.materiel::before {
     content: url(../images/device_fixed-line_phone.png);
+    margin-bottom: 3rem;
 }
 .axs-picto.cognitif::before {
     content: url(../images/accessibility_cognition.png);
@@ -22,4 +58,12 @@
 }
 .axs-picto.physique::before {
     content: url(../images/accessibility_mobility.png);
+}
+
+
+@media screen and (max-width: 479px) {
+    h1 a {
+        padding-left: 1rem;
+        background-color: rgba(255,255,255,.5);
+    }
 }

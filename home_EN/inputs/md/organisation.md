@@ -1,9 +1,11 @@
-# Site organization
+# Orange accessibility guidelines
+
+## Site organization
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Organization"}]);
 });</script>
 
-This site is divided into several headings. Each one presents the Orange accessibility recommendations for a type of platform.  
+This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.  
 These different topics are available through the navigation menu located in the header.
 
 Each section contains:
@@ -11,22 +13,23 @@ Each section contains:
 - Resources to learn and test yourself
 - Technical examples
 
-## Headings list
-### Home
-It is the current heading :
-- Succinct presentation of the accessibility.
+### Headings list
+#### Home
+This is the current section:
+- Succinct presentation of accessibility,
 - Site organization.
 
-### Web
+#### Web
 Accessibility guidelines for the Web.
-- The essential criteria to meet.
-- The technical recommendations for the web.
-- Methods and tools to make a site accessible.
+- Essential criteria to meet,
+- Technical recommendations for the web,
+- Methods and tools to make a site accessible,
 - Functional examples.
 
-### Mobile (TBD)
+#### Mobile (<abbr title="to be done">TBD</abbr>)
 Here you will find the Orange accessibility recommendations for mobile.
 
+&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
