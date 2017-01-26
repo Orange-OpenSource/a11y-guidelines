@@ -623,7 +623,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 **Référence :** WCAG 2.4.1
 
 
-## 21. Animation
+## 21. Permettre le contrôle des animations
 **Cible : ** les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d'attention ou de compréhension, les personnes épileptiques.  
 **Quand : ** lors de la conception du service et lors de la conception graphique.
 
@@ -735,71 +735,109 @@ Mettre en place ce type de sémantique permet aux déficients visuels d'indentif
 
 Pour aller plus loin (en anglais) : https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html 
 
-Pour une page en HTML5
-`<head>
-    ...
+Pour une page en HTML5 :
 
-    <title>Titre de la page</title>
+` <head>`
 
-    ...
+`     ...`
 
-  </head>
-  <body>
-  <header>
-    <h1>...</h1>
-    <nav>...navigation...</nav>
-    <p>en tête de page : logo, baseline...</p>
-    ...
-  </header>
+`  <title>Titre de la page</title>`
 
-  <main>
-    <p>contenu principal</p>
-     ...
-  </main>
+`     ...`
 
-  <aside>
-    <p>contenu annexe en relation avec le contenu principal</p>
-    ...
-  </aside>    
+` </head>`
 
-  <footer>
-    <p>contenu du pied de page : copyright...</p>
-    ...
-  </footer>
-  </body>`
-  
-Pour une page pas en HTML5 mais avec les landmarks ARIA
-`<head>
-    ...
+` <body>`
 
-    <title>Titre de la page</title>
+`   <header>`
 
-    ...
+`     <h1>...</h1>`
 
-  </head>
-  <body>
-  <div role="banner">
-    <h1>...</h1>
-    <div role="navigation">...navigation...</div>
-    <p>en tête de page : logo, baseline...</p>
-    ...
-  </div>
+`     <nav>...navigation...</nav>`
 
-  <div role="main">
-    <p>contenu principal</p>
-     ...
-  </div>
+`     <p>en tête de page : logo, baseline...</p>`
+     
+`      ...`
+     
+`  </header>`
 
-  <div role="complementary">
-    <p>contenu annexe en relation avec le contenu principal</p>
-    ...
-  </div>    
+`  <main>`
 
-  <div role="contentinfo">
-    <p>contenu du pied de page : copyright...</p>
-    ...
-  </div>
-  </body>`
+`    <p>contenu principal</p>`
+
+`      ...`
+
+`  </main>`
+
+`  <aside>`
+
+`    <p>contenu annexe en relation avec le contenu principal</p>`
+
+`      ...`
+
+`  </aside>`
+
+`  <footer>`
+
+`    <p>contenu du pied de page : copyright...</p>`
+
+`      ...`
+
+`  </footer>`
+
+` </body>`
+   
+Pour une page pas en HTML5 mais avec les landmarks ARIA :
+
+` <head>`
+
+`    ...`
+
+`    <title>Titre de la page</title>`
+
+`    ...`
+
+` </head>`
+
+` <body>`
+
+`  <div role="banner">`
+
+`    <h1>...</h1>`
+
+`    <div role="navigation">...navigation...</div>`
+
+`     <p>en tête de page : logo, baseline...</p>`
+
+`    ...`
+
+`  </div>`
+
+`  <div role="main">`
+
+`    <p>contenu principal</p>`
+
+`    ...`
+
+`  </div>`
+
+`  <div role="complementary">`
+
+`   <p>contenu annexe en relation avec le contenu principal</p>`
+
+`    ...`
+
+`  </div>`
+
+`  <div role="contentinfo">`
+
+`    <p>contenu du pied de page : copyright...</p>`
+
+`    ...`
+
+`  </div>`
+
+` </body>`
 
 **Référence WCAG :** 3.2.3., 3.2.4
 

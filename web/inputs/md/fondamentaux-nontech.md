@@ -32,7 +32,8 @@ Le titre de la page est le premier élément lu par la synthèse vocale, il doit
 `Accueil`
 
 ## 2. Donner des titres aux rubriques
-**Cible : ** tout le monde et en particulier les personnes déficientes cognitives, avec des difficultés pour lire et déficientes visuelles.  
+**Cible : ** tout le monde et en particulier les personnes déficientes cognitives, avec des difficultés pour lire 
+et déficientes visuelles.  
 **Quand : ** dès la conception, à la rédaction du contenu et pendant le développement.
 
 **Description :**  
@@ -117,7 +118,7 @@ Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception 
 
 ![capture d'écran d'un lecteur vidéo contenant plusieurs boutons](images/player.png)   
 
-## 6. Visibilité du focus
+## 6. Assurer la visibilité du focus
 **Cible : ** tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.  
 **Quand : ** lors de la conception graphique et lors du développement.
 
@@ -158,7 +159,7 @@ Avec zoom du texte à 200%.
 Avec zoom du texte à 200%. Ici la hauteur de l'élément contenant le texte n'a pas été rendue variable en fonction de la taille des caractères.  
 ![capture d'écran avec zoom à 200% et texte tronqué](images/zoom-ko.png)  
 
-## 8. Animation
+## 8. Permettre le contrôle des animations
 **Cible : ** les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d'attention ou de compréhension, les personnes épileptiques.  
 **Quand : ** lors de la conception du service et lors de la conception graphique.
 
@@ -187,7 +188,7 @@ Dans les cas exceptionnels où ce n'est techniquement pas possible, prévoir qua
 `cliquez ici`  
 `en savoir plus`
 
-## 10. Navigation au clavier
+## 10. Permettre la navigation au clavier
 **Cible : ** tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand : ** lors de la conception du service et lors du développement.
 
@@ -199,7 +200,7 @@ Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glissé d
 **Exemple : **  
 Dans webmail, si un clic droit sur le dossier "corbeille" permet d'accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton "vider la corbeille" ailleurs dans l'interface ou depuis un menu déroulant accessible au clavier.
 
-## 11. Formulaires
+## 11. Rendre utilisable les formulairess
 **Cible : ** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand : ** lors de la conception et lors du développement.
 
@@ -226,12 +227,12 @@ Enfin les libellés des messages d'erreur doivent être explicites.
 **Exemple non-valide : **  
 ![capture d'écran d'un formulaire affichant des messages d'erreur à la saisie non-valides](images/formulaire-ko.png)
 
-## 12. Boites de dialogues et ouverture de nouvelles fenêtres
+## 12. Éviter les boites de dialogues et l'ouverture de nouvelles fenêtres
 **Cible : ** les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.  
 **Quand : ** lors de la conception et lors du développement.
 
 **Description :**  
-Eviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l'ouverture d'une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte "nouvelle fenêtre" soit vocalisé par les lecteurs d'écran. Ceci afin que les personnes malvoyantes sachent qu'une nouvelle fenêtre s'ouvre.
+Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l'ouverture d'une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte "nouvelle fenêtre" soit vocalisé par les lecteurs d'écran. Ceci afin que les personnes malvoyantes sachent qu'une nouvelle fenêtre s'ouvre.
 De même éviter le recours systématique aux boites de dialogues pour présenter des informations dans les pages (présentation du service ...). Celles-ci posent souvent des problèmes d'accessibilité pour les personnes qui naviguent au clavier ou au lecteur d'écran qui nécessiteront une attention particulière lors de la phase de développement.
 
 **Exemple non-valide : **  
