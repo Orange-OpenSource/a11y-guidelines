@@ -2,6 +2,7 @@ Pour chaque fichier :
 - " :" → "&nbsp;:" ; " !" → "&nbsp;!" ; " ?" → "&nbsp;?" ; " ;" → "&nbsp;;" ; 
 - "« " → "«&nbsp;" ; " »" → "&nbsp;»"
 - "..." → "…"
+- "'" → "’"
 
 TODO
 
