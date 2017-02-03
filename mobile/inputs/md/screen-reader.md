@@ -1,7 +1,7 @@
-# Guide d'utilisation des lecteurs d'écran TalkBack et VoiceOver
+# Guide d’utilisation des lecteurs d’écran <span lang="en">TalkBack</span> et <span lang="en">VoiceOver</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Lecteur d'écran"}]);
+    setBreadcrumb([{"label":"Lecteur d’écran"}]);
     addSubMenu([
         {"label":"Guide pour Android","url":"talkback.html"}, 
         {"label":"Guide pour iOS","url":"voiceover.html"}
@@ -10,24 +10,24 @@
 
 <span data-menuitem="screen-reader"></span>
 
-A travers cette section, nous allons présenter les gestes de base pour une utilisation des lecteurs d'écran d'Android et iOS. Ces outils sont riches en fonctionalités mais nécessitent une connaissance minimale pour être utilisé efficacement. C'est cette utilisation standard qui sera présentée ici.
+À travers cette section, nous allons présenter les gestes de base pour une utilisation des lecteurs d’écran d’Android et iOS. Ces outils sont riches en fonctionnalités mais nécessitent une connaissance minimale pour être utilisés efficacement. C’est cette utilisation standard qui sera présentée ici.
 
-Deux versions sont disponibles :
-- **TalkBack** le lecteur d'écran intégré à Android.
-- **VoiceOver**  le lecteur d'écran intégré à iOS.
+Deux versions sont disponibles&nbsp;:
+- **<span lang="en">TalkBack</span>** le lecteur d’écran intégré à Android.
+- **<span lang="en">VoiceOver</span>**  le lecteur d’écran intégré à iOS.
 
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">TalkBack</h2>          
+    <h2 class="sr-only"><span lang="en">TalkBack</span></h2>          
     <a href="./talkback.html" class="btn btn-info">
         ![](./images/android.png)
-        <div>Guide d'utilisation de Talkback</div>
+        <div>Guide d’utilisation de <span lang="en">TalkBack</span></div>
     </a>
 </div>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">Voiceover</h2>          
     <a href="./voiceover.html" class="btn btn-info">
         ![](./images/iphone.png)
-        <div>Guide d'utilisation de VoiceOver</div>
+        <div>Guide d’utilisation de <span lang="en">VoiceOver</span></div>
     </a>
 </div>      
       
