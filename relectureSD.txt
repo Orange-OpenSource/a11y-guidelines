@@ -5,7 +5,6 @@ Pour chaque fichier :
 
 TODO
 
-./mobile/inputs/md/exigences.md
 ./mobile/inputs/md/fondamentaux.md
 ./mobile/inputs/md/index.md
 ./mobile/inputs/md/links.md
@@ -155,3 +154,4 @@ DONE post v2
 ./mobile/inputs/md/dev-ios.md
 ./mobile/inputs/md/dev-mobile.md
 ./mobile/inputs/md/exemples.md
+./mobile/inputs/md/exigences.md
