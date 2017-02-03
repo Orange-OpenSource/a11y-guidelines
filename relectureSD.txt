@@ -1,6 +1,5 @@
 TODO
 
-./mobile/inputs/md/exemples.md
 ./mobile/inputs/md/exigences.md
 ./mobile/inputs/md/fondamentaux.md
 ./mobile/inputs/md/index.md
@@ -150,3 +149,4 @@ DONE post v2
 ./mobile/inputs/md/dev-android.md
 ./mobile/inputs/md/dev-ios.md
 ./mobile/inputs/md/dev-mobile.md
+./mobile/inputs/md/exemples.md
