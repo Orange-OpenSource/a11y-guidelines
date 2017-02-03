@@ -5,7 +5,7 @@
 
 Documentation under the [CC BY SA 3.0 license](/LICENSE.txt), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).  
 
-The Orange logo and some images or screenshots are property of Orange:
+The Orange logo and some images or screenshots are the property of Orange:
 
 Copyright (C) 2016 Orange SA All rights reserved  
 [List of the concerned files](/NOTICE.txt)
