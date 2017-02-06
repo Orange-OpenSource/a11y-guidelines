@@ -10,7 +10,7 @@
 
 <span data-menuitem="screen-reader"></span>
 
-Through this section, we list the common gestures for Android and iOS screen readers. These assistive tools have a lot of functionalities but requires a minimum knowledge to be used effectively.
+Through this section, we list the common gestures for Android and iOS screen readers. These assistive tools have a lot of functionalities but require a minimum knowledge to be used effectively.
 
 Two versions are available:
 - **TalkBack** built-in screen reader for Android.
