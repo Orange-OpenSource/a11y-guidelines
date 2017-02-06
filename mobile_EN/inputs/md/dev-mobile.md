@@ -10,11 +10,11 @@
 
 <span data-menuitem="dev-mobile"></span>
 
-The developer guide is intended to help developers with the major Android / iOS accessibility options. Through different categories, this guide explains how to use the accessibility attributes / methods and provides links to the official documentation of Google / Apple.
+The developer guide is intended to help developers with the major Android&nbsp;/ iOS accessibility options. Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the official documentation of Google&nbsp;/ Apple.
 
 Two versions are available:
-- **Android version** is about the application development for the Google platform: Android.
-- **iOS version** is about the application development for the Apple platform: iOS.
+- **Android version** is about application development for the Google platform: Android.
+- **iOS version** is about application development for the Apple platform: iOS.
 
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">critères Android</h2>          
