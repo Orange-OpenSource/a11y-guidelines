@@ -21,17 +21,15 @@
 
 ## Niveau avancé
 
-- [Les listes ARIA (listbox) 1/3](exemples/listbox/index.html) 
+- [Les listes <abbr>ARIA</abbr> (listbox) 1/3](exemples/listbox/index.html) 
 
-- [Les listes ARIA (listbox) 2/3 (avec cases à cocher)](exemples/check-listbox/index.html)
+- [Les listes <abbr>ARIA</abbr> (listbox) 2/3 (avec cases à cocher)](exemples/check-listbox/index.html)
 
-- [Les listbox et patterns ARIA 3/3 (navigation au clavier)](exemples/listbox-pattern-aria/index.html)
+- [Les <i lang="en">listbox</i> et <i lang="en">patterns</i> <abbr>ARIA</abbr> 3/3 (navigation au clavier)](exemples/listbox-pattern-aria/index.html)
 
-- [Explorateur de fichiers (cloud)](exemples/files/index.html)
+- [Explorateur de fichiers (<i lang="en">cloud</i>)](exemples/files/index.html)
 
-- [Les régions vivantes (live regions), contenu dynamique, gestion du focus et ARIA ](exemples/dynFocus/index.html)
+- [Les régions vivantes (<i lang="en">live regions</i>), contenu dynamique, gestion du focus et <abbr>ARIA</abbr> ](exemples/dynFocus/index.html)
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-
- &nbsp;
