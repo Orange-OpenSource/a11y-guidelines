@@ -13,7 +13,7 @@ You will find more detailed information on accessibility for iOS and Android on 
 - [Guide for accessible hybrid mobile applications with Ionic and OnsenUI](https://github.com/DISIC/guide-mobile_app_dev_hybride)
 
 ## For Android
-Google and Android accessibility API:
+Google and Android accessibility <abbr>API</abbr>:
 - [Google official documentation](https://developer.android.com/guide/topics/ui/accessibility/index.html)  
 - [Complete Talkback guide](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932)
 
@@ -22,8 +22,8 @@ The AccessibilityScanner application allows you to test quickly and simply the a
 
 
 ## For iOS
-Apple accessibility API:
-- [Official accessibility API documentation](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html)
+Apple accessibility <abbr>API</abbr>:
+- [Official accessibility <abbr>API</abbr> documentation](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html)
 - [iOS accessibility features](http://www.apple.com/accessibility/)
 - [Apple official accessibility documentation](https://developer.apple.com/accessibility/ios/)
 - [VoiceOver user guide](https://help.apple.com/iphone/9/#/iph3e2e415f)
