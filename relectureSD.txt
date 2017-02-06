@@ -9,7 +9,6 @@ UNDETERMINED
 
 TODO
 
-./web/inputs/md/about.md
 ./web/inputs/md/exemples.md
 ./web/inputs/md/exigences.md
 ./web/inputs/md/fondamentaux-nontech.md
@@ -158,3 +157,4 @@ DONE post v2
 ./mobile_EN/inputs/md/talkback.md
 ./mobile_EN/inputs/md/voiceover.md
 ./README.md
+./web/inputs/md/about.md
