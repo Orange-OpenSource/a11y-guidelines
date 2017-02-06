@@ -9,7 +9,6 @@ UNDETERMINED
 
 TODO
 
-./mobile_EN/inputs/md/mdan.md
 ./mobile_EN/inputs/md/methodes-outils.md
 ./mobile_EN/inputs/md/screen-reader.md
 ./mobile_EN/inputs/md/talkback.md
@@ -158,3 +157,4 @@ DONE post v2
 ./mobile_EN/inputs/md/fondamentaux.md
 ./mobile_EN/inputs/md/index.md
 ./mobile_EN/inputs/md/links.md
+./mobile_EN/inputs/md/mdan.md
