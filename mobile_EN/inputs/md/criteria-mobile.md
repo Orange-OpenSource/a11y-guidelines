@@ -10,11 +10,11 @@
 
 <span data-menuitem="criteria-mobile"></span>
 
-This base criteria for the Android and iOS Orange mobile applications  avoids the major accessibility errors.
-Its implementation does not give you the guarantee to be 100% accessible, but is a clean bedrock so you can engage in a progressive accessibility implementation process.
+This base criteria for the Android and iOS Orange mobile applications avoids major accessibility errors.
+Its implementation does not give you the guarantee to be 100% accessible, but it is a clean bedrock so you can engage in a progressive accessibility implementation process.
 
 Following the Orange guidelines (Design for digital platforms Guideline), available on the [Orange brand site](http://brand.orange.com/) is a prerequisite to the use of this base criteria.
-Some elements already present in the Orange Brand (such as the use of colors) have not been included in this list of criteria.
+Some elements already present in the Orange Brand (such as the use of colours) have not been included in this list of criteria.
 
 Two versions are available:
 - ** Android version ** focused on the development of applications for the Google platform, Android.
