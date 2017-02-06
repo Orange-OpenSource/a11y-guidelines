@@ -4,10 +4,11 @@ Pour chaque fichier :
 - "..." → "…"
 - "'" → "’"
 
+UNDETERMINED
+./mobile_EN/inputs/md/exigences.md
+
 TODO
 
-./mobile_EN/inputs/md/exigences.md
-./mobile_EN/inputs/md/index.md
 ./mobile_EN/inputs/md/links.md
 ./mobile_EN/inputs/md/mdan.md
 ./mobile_EN/inputs/md/methodes-outils.md
@@ -156,3 +157,4 @@ DONE post v2
 ./mobile_EN/inputs/md/dev-mobile.md
 ./mobile_EN/inputs/md/exemples.md
 ./mobile_EN/inputs/md/fondamentaux.md
+./mobile_EN/inputs/md/index.md
