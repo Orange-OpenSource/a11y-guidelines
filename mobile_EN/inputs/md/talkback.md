@@ -3,14 +3,14 @@
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Screen reader", "url":"./screen-reader.html"}, {"label":"Talkback user guide"}]);
     addSubMenu([
-        {"label":"Android guide","url":"screen-reader.html", "expanded": true}, 
+        {"label":"Android guide","url":"talkback.html", "expanded": true}, 
         {"label":"iOS guide","url":"voiceover.html"}
     ]);                
 });</script>
 
 <span data-menuitem="screen-reader"></span>
 
-TalkBack is a built-in screen reader for Android that reads aloud the items that appear on the device screen. It is free and vocalize all visible elements in the page specially for blind or partially sighted, dyslexic or illiterate user. A tool like TalkBack is called either screen reader or speech synthesizers, even if a screen reader is actually a software associated with voice synthesis.
+TalkBack is a built-in screen reader for Android that reads aloud the items that appear on the device screen. It is free and it vocalizes all visible elements in the page specially for blind or partially sighted, dyslexic or illiterate users. A tool like TalkBack is called either screen reader or speech synthesizer, even if a screen reader is actually a software associated with voice synthesis.
 
 When TalkBack is on, the standard gestures behave differently. Furthermore, additional gestures let you move the focus on the screen and control the selected items. TalkBack has gestures with one, two and three fingers to select and to go through elements. We describe here the basic gestures commonly used. Note: TalkBack is considered as accessible since the JellyBean release (4.1) because you can navigate sequentially.
 
@@ -54,13 +54,13 @@ First of all, update TalkBack here: [PlayStore Link](https://play.google.com/sto
       <img src="./images/gesture7.png" alt="" width="80">
       <img src="./images/gesture8.png" alt="" width="80">
       <h3>Swipe up or down using one finger</h3>
-      <p>Cycle through navigation mode: "pages", "by default (elements)", "characters", "words", "lines" et "paragraphs".</p>
+      <p>Cycle through navigation mode: “pages”, “by default (elements)”, “characters”, “words”, “lines” et “paragraphs”.</p>
   </li>
 </ul>
 
 <span class="licence">These images are licensed under the Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/">openexhibits</a></span>
 
-For more information about TalkBack and a detailed description of its features, please read the [Google's official documentation on TalkBack](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932).
+For more information about TalkBack and a detailed description of its features, please read the [Google’s official documentation on TalkBack](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932).
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
