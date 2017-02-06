@@ -177,7 +177,8 @@ Il est important que les champs de formulaire soient liés à un label. Il exist
 	[...]
   android:labelFor="@+id/imageView11"
   android:importantForAccessibility="no" /&gt;</code></pre>
-	Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).
+
+Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).
 
 `Hint` dans le <abbr>xml</abbr>&nbsp;:
 <pre><code>&lt;EditText
