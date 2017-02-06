@@ -93,9 +93,9 @@ Text alternatives are at the core of mobile accessibility. Thanks to them, a vis
   
 As for the images, it is important to add a text alternative when information is not available for the visually impaired/blind. This is the case of components that provide information by colour, shape, position, sound… On mobile, all components can have a text alternative, it is possible to enrich the native vocalization of an element, including a simple text.
   
-Space on mobile is reduced, we often use abbreviations for text. However, this raises an issue for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that Talkback can recognize some common abbreviations. For example, "etc." and "Dr." are vocalized "etcetera" and "doctor".
+Space on mobile is reduced, we often use abbreviations for text. However, this raises an issue for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that Talkback can recognize some common abbreviations. For example, “etc.” and “Dr.” are vocalized “etcetera” and “doctor”.
   
-Some images are regularly associated with text to give information. This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”. In this case, the solution is to set a text alternative on the text that gives all the necessary information. For example: “3 unread messages”. One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.
+Some images are frequently associated with text to give information. This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”. In this case, the solution is to set a text alternative on the text that gives all the necessary information. For example: “3 unread messages”. One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.
 
 The text alternative of an element is set via the `contentDescription` attribute (available to any child of `View`). For the buttons in the `ActionBar` (or `ToolBar`) the `title` attribute must be set.
 
@@ -126,7 +126,7 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 **Description: ** 
 
 The page title is the first element vocalized or seen on a mobile screen. It makes navigation easier for everyone: at any time, we know where we are in the application.  
-A common mistake is to set a unique title for every page of an application (or even no title at all).
+A common mistake is to set the same title for every page of an application (or even no title at all).
 
 **Checklist: ** 
 
@@ -288,7 +288,7 @@ Allow users (visually impaired, mobility, elderly people…) to increase the tex
 
 **Description: **
 
-On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, therefore inaudible, or prevent any user action.
+On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
 The user must control the content at all times. This is especially true with interactive content. So avoid video players launching directly in full screen mode, or videos starting automatically without user action, or a carousel scrolling automatically etc.
 
 **Checklist: **
@@ -371,7 +371,7 @@ Provide a visual indication to users when there is horizontal scroll. Allow scre
 
 Binding the form fields with their labels provides an additional vocalization allowing the user to understand what happens when filling out a form field.
   
-There are 2 major techniques to achieve this link:
+There are 2 major techniques to achieve this:
  - `LabelFor`: helps indicated that a view is the label of another view. This method takes the `id` of the view that is being labelled a a parameter. This method can be used with almost any type of form field. We can also use the `android:labelFor` <abbr>xml</abbr> attribute or programmatically `setLabelFor`.
  - `Hint`: add an example text when the text field is empty. This method only works for `TextView`. Supports setting the id to a string. Can be used with the `android:hint` <abbr>xml</abbr> attribute or programmatically `setHint`.
 
@@ -392,7 +392,7 @@ Improve navigation and overall understanding of the page, because form fields de
 
 The reading order allows the screen reader user to get their bearings and to ensure functional coherence. It is therefore important to pay attention to it.
   
-By default, the reading order of voice synthesis depends on several parameters: the “logical” reading order(in France), from left to right and top to bottom, and the parsing of <abbr>xml</abbr> (order of elements declaration). However, there are some cases where the screen reader cannot determine the correct order; it then uses the order in which elements are defined, leading to inconsistent vocalizations.
+By default, the reading order of voice synthesis depends on several parameters: the “logical” reading order (in France), from left to right and top to bottom, and the parsing of <abbr>xml</abbr> (order of elements declaration). However, there are some cases where the screen reader cannot determine the correct order; it then uses the order in which elements are defined, leading to inconsistent vocalizations.
   
 It is quite possible to redefine the reading order with two attributes:
 - `accessibilityTraversalAfter`: sets the `id` of a view after which this one is visited in accessibility traversal. A screen-reader must visit the content of the other view before the content of this one.
