@@ -1,5 +1,10 @@
 $(document).ready( function () {
-  var title = $("h1:first").text() + " - " + $("head title").text();
+  var title = " - " + $("head title").text();
+  if ($(".page-title:first").length > 0) {
+    title = $(".page-title:first").text() + title;
+  } else {
+     title = $("h1:first").text() + title;
+  }
 
   // Mise à jour du titre de la page
   $("head title").text(title);

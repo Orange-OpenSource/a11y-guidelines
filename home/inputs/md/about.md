@@ -1,5 +1,5 @@
 # Recommandations accessibilité Orange
-## À propos    
+<h2 class="page-title">À propos</h2>
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"À propos"}]);

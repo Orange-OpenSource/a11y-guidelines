@@ -1,4 +1,4 @@
-# Recommandations accessibilité web Orange  
+# Recommandations accessibilité Orange pour le web
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);

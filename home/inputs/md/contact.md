@@ -1,5 +1,5 @@
 # Recommandations accessibilité Orange
-## Votre avis compte   
+<h2 class="page-title">Votre avis compte</h2>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Contact"}]);
 });</script>

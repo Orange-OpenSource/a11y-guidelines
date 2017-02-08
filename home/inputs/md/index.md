@@ -4,7 +4,7 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-## Qu'est ce que l'accessibilité numérique ?
+<h2 class="page-title">Qu'est ce que l'accessibilité numérique ?</h2>
 
 L’accessibilité numérique permet de rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
 

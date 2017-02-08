@@ -1,6 +1,6 @@
 # Recommandations accessibilité Orange
 
-## Organisation du site
+<h2 class="page-title">Organisation du site</h2>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Organisation du site"}]);
 });</script>
