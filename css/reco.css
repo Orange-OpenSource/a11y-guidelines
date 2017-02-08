@@ -53,8 +53,9 @@ header .subtitles {
 }
 
 .highlight-zone {
-    outline: .4rem dotted #888;
-    background-color:rgba(128,128,128,0.1) !important;    
+    outline: .2rem dotted #888;
+    background-color:rgba(128,128,128,0.1) !important;  
+    z-index: 1000;  
 }
 
 .skip-links {

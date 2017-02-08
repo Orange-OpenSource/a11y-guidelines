@@ -12,14 +12,7 @@ documentTitles["contact.html#orange-accessibility-guidelines"] = "Orange accessi
 index.add({
     url: "contact.html#orange-accessibility-guidelines",
     title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines  "
-});
-
-documentTitles["contact.html#your-opinion-matters"] = "Your opinion matters…";
-index.add({
-    url: "contact.html#your-opinion-matters",
-    title: "Your opinion matters…",    
-    body: "## Your opinion matters…  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Have a bug or a feature request?    Please first check [the issues](https://github.com/Orange-OpenSource/a11y-guidelines/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).  &amp;nbsp;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Orange accessibility guidelines  &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Have a bug or a feature request?    Please first check [the issues](https://github.com/Orange-OpenSource/a11y-guidelines/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).  &amp;nbsp;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -28,14 +21,7 @@ documentTitles["organisation.html#orange-accessibility-guidelines"] = "Orange ac
 index.add({
     url: "organisation.html#orange-accessibility-guidelines",
     title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines  "
-});
-
-documentTitles["organisation.html#site-organization"] = "Site organization";
-index.add({
-    url: "organisation.html#site-organization",
-    title: "Site organization",    
-    body: "## Site organization &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organization\&quot;}]); });&lt;/script&gt;  This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.   These different topics are available through the navigation menu located in the header.  Each section contains: - Recommendations for the targeted platform - Resources to learn and test yourself - Technical examples  "
+    body: "# Orange accessibility guidelines  &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organization\&quot;}]); });&lt;/script&gt;  This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.   These different topics are available through the navigation menu located in the header.  Each section contains: - Recommendations for the targeted platform - Resources to learn and test yourself - Technical examples  "
 });
 
 documentTitles["organisation.html#headings-list"] = "Headings list";
@@ -72,14 +58,7 @@ documentTitles["index.html#orange-accessibility-guidelines"] = "Orange accessibi
 index.add({
     url: "index.html#orange-accessibility-guidelines",
     title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  "
-});
-
-documentTitles["index.html#what-is-digital-accessibility"] = "What is digital accessibility?";
-index.add({
-    url: "index.html#what-is-digital-accessibility",
-    title: "What is digital accessibility?",    
-    body: "## What is digital accessibility?  Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones.   It is not a question of increasing the number of information outlets, but of respecting functional, graphical, technical and editorial rules that will enable everyone to access information no matter what tools they use.  "
+    body: "# Orange accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  &lt;h2 class=\&quot;page-title\&quot;&gt;What is digital accessibility?&lt;/h2&gt;  Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones.   It is not a question of increasing the number of information outlets, but of respecting functional, graphical, technical and editorial rules that will enable everyone to access information no matter what tools they use.  "
 });
 
 documentTitles["index.html#who-is-concerned-by-digital-accessibility"] = "Who is concerned by digital accessibility?";
@@ -137,14 +116,7 @@ documentTitles["about.html#orange-accessibility-guidelines"] = "Orange accessibi
 index.add({
     url: "about.html#orange-accessibility-guidelines",
     title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines  "
-});
-
-documentTitles["about.html#about"] = "About";
-index.add({
-    url: "about.html#about",
-    title: "About",    
-    body: "## About     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Orange accessibility guidelines  &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

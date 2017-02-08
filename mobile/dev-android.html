@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recommandations accessibilité Orange pour mobiles</title>
+    <title>Recommandations accessibilité Orange</title>
         
       
        <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -22,7 +22,13 @@
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -239,9 +245,9 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
     [...]
   android:labelFor="@+id/imageView11"
   android:importantForAccessibility="no" /&gt;</code></pre>
-    Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).
 
-`Hint` dans le <abbr>xml</abbr>&nbsp;:
+<p>Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).</p>
+<p><code>Hint</code> dans le <abbr>xml</abbr>&nbsp;:</p>
 <pre><code>&lt;EditText
   [...]
    android:hint="@string/criteria_form_ex1_placeholder" /&gt;</code></pre>

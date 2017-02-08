@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recommandations accessibilité Orange pour mobiles</title>
+    <title>Recommandations accessibilité Orange</title>
         
       
        <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -22,7 +22,13 @@
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -135,11 +141,11 @@
 });</script>
 
 <p><span data-menuitem="dev-mobile"></span></p>
-<p>Le guide pour développeur a pour vocation d&#39;aider les développeurs avec les principales options d&#39;accessibilité du SDK Android/iOS. A travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d&#39;accessibilité et propose des liens vers la documentation officielle de Google/Apple.</p>
+<p>Le guide pour développeur a pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> Android/iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google/Apple.</p>
 <p>Deux versions sont donc disponibles :</p>
 <ul>
-<li><strong>Version Android</strong> concerne le développement d&#39;application destiné à la plateforme de Google, Android.</li>
-<li><strong>Version iOS</strong> concerne le développement d&#39;application destiné à la plateforme d&#39;Apple, iOS.</li>
+<li><strong>Version Android</strong> concerne le développement d’application destiné à la plate-forme de Google, Android.</li>
+<li><strong>Version iOS</strong> concerne le développement d’application destiné à la plate-forme d’Apple, iOS.</li>
 </ul>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">critères Android</h2><br>    <a href="./dev-android.html" class="btn btn-info">
@@ -296,9 +302,9 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
     [...]
   android:labelFor="@+id/imageView11"
   android:importantForAccessibility="no" /&gt;</code></pre>
-    Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).
 
-`Hint` dans le <abbr>xml</abbr>&nbsp;:
+<p>Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).</p>
+<p><code>Hint</code> dans le <abbr>xml</abbr>&nbsp;:</p>
 <pre><code>&lt;EditText
   [...]
    android:hint="@string/criteria_form_ex1_placeholder" /&gt;</code></pre>
@@ -400,7 +406,7 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="guide-d-accessibilit-ios">Guide d&#39;accessibilité iOS</h1>
+<h1 id="guide-d-accessibilit-ios">Guide d’accessibilité iOS</h1>
 <script>$(document).ready(function () {
 
     setBreadcrumb([{"label":"Guide développeur", "url": "./dev-mobile.html"},
@@ -414,20 +420,20 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 });</script>
 
 <p><span data-menuitem="dev-mobile"></span></p>
-<p>Ce guide a pour objectif de présenter les différentes options d&#39;accessibilité du SDK iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d&#39;accessibilité et propose des liens vers la documentation officielle d&#39;Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).</p>
+<p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du <abbr>SDK</abbr> iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d’Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).</p>
 <h2 id="alternatives-textuelles">Alternatives textuelles</h2>
-<p><strong>Description : </strong>  </p>
-<p>Sous iOS, la vocalisation d’un élément s’effectue à travers 4 attributs, à savoir le <code>label</code>, le <code>hint</code>, la <code>value</code> et le <code>trait</code>.<br>L’ordre de vocalisation est toujours le suivant : <code>label</code>, <code>value</code>, <code>trait</code> et <code>hint</code>. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  </p>
-<p>Une section de ce guide est dédiée au trait, nous décrivons ici les 3 autres :  </p>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>Sous iOS, la vocalisation d’un élément s’effectue à travers 4 attributs, à savoir le <code>label</code>, le <code>hint</code>, la <code>value</code> et le <code>trait</code>.<br>L’ordre de vocalisation est toujours le suivant&nbsp;: <code>label</code>, <code>value</code>, <code>trait</code> et <code>hint</code>. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  </p>
+<p>Une section de ce guide est dédiée au <code>trait</code>, nous décrivons ici les 3 autres&nbsp;:  </p>
 <ul>
-<li><code>accessibilityLabel</code> : le <code>label</code> permet de préciser le titre spécifique à l’accessibilité qui est lu par VoiceOver en lieu et place du texte du composant si celui-ci en possède un. Cela permet d’avoir un texte de composant plus explicite que celui affiché à l’écran. Par exemple, dans le cas d’un bouton dont le titre est « OK », on peut indiquer que le bouton sert à valider un choix.</li>
-<li><code>accessibilityValue</code> : la valeur d’un élément est par défaut le pourcentage de progression (exemple : une barre de progression). À noter que pour la plupart des éléments ajustables disponibles dans le SDK, cette value n’a pas besoin d’être reprécisée (le système restitue automatiquement la valeur à l’utilisateur via VoiceOver).</li>
-<li><code>accessibilityHint</code> : le <code>hint</code> permet de décrire le comportement du composant. Exemple : « cliquez pour obtenir le résultat ».  </li>
+<li><code>accessibilityLabel</code>&nbsp;: le <code>label</code> permet de préciser le titre spécifique à l’accessibilité qui est lu par <span lang="en">VoiceOver</span> en lieu et place du texte du composant si celui-ci en possède un. Cela permet d’avoir un texte de composant plus explicite que celui affiché à l’écran. Par exemple, dans le cas d’un bouton dont le titre est « OK », on peut indiquer que le bouton sert à valider un choix.</li>
+<li><code>accessibilityValue</code>&nbsp;: la valeur d’un élément est par défaut le pourcentage de progression (exemple&nbsp;: une barre de progression). À noter que pour la plupart des éléments ajustables disponibles dans le <abbr>SDK</abbr>, cette <code>value</code> n’a pas besoin d’être reprécisée (le système restitue automatiquement la valeur à l’utilisateur via <span lang="en">VoiceOver</span>).</li>
+<li><code>accessibilityHint</code>&nbsp;: le <code>hint</code> permet de décrire le comportement du composant. Exemple&nbsp;: «&nbsp;cliquez pour obtenir le résultat&nbsp;».  </li>
 </ul>
-<p>Ces attributs d’accessibilité sont disponibles via l’interface builder, mais également via le code. Tout élément dérivant de <code>UIView</code> les possède par défaut. Ces attributs acceptent une chaine de caractère en option, et sont, par conséquent, facilement internationalisables.</p>
-<p><strong>Exemples : </strong>   </p>
-<p>Exemple simple (internationalisé) :<br><code>accordionHeaderView.accessibilityHint = &quot;example_elementState_foldArea_open_accessibilityHint&quot;.localized</code></p>
-<p>Indiquer l&#39;état et la nature d&#39;onglets personnalisés :  </p>
+<p>Ces attributs d’accessibilité sont disponibles via l’<i lang="en">interface builder</i>, mais également via le code. Tout élément dérivant de <code>UIView</code> les possède par défaut. Ces attributs acceptent une chaîne de caractère en option, et sont, par conséquent, facilement internationalisables.</p>
+<p><strong>Exemples&nbsp;: </strong>   </p>
+<p>Exemple simple (internationalisé)&nbsp;:<br><code>accordionHeaderView.accessibilityHint = &quot;example_elementState_foldArea_open_accessibilityHint&quot;.localized</code></p>
+<p>Indiquer l’état et la nature d’onglets personnalisés&nbsp;:  </p>
 <pre><code class="swift">@IBAction func buttonClicked(sender: AnyObject) {
     for button:UIButton in buttonList {
 
@@ -460,147 +466,147 @@ func accessibleSegmentedControl() {
     threePageButton.accessibilityHint = "3 " + "common_of".localized + " " + String(buttonList.count)
 }</code></pre>
 
-<p><strong>Liens : </strong></p>
+<p><strong>Liens&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLabel">accessibilityLabel</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityValue">accessibilityValue</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityHint">accessibilityHint</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLabel"><code>accessibilityLabel</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityValue"><code>accessibilityValue</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityHint"><code>accessibilityHint</code></a></li>
 </ul>
 <h2 id="nature-des-l-ments">Nature des éléments</h2>
-<p><strong>Description : </strong> </p>
-<p>L’attribut <code>accessibilityTraits</code> permet de donner une information à l&#39;API d&#39;accessibilité sur la nature d’un composant. On peut décider ainsi qu’un item de liste soit pris en compte comme un bouton par VoiceOver car celui-ci est cliquable. De ce fait, l’<code>accessibilityTrait</code> joue également sur la vocalisation de l’élément car cette nature est restituée par VoiceOver.  </p>
-<p>Cet attribut d’accessibilité est disponible via l’interface builder, mais également utilisable directement via le code.  </p>
-<p>Il existe beaucoup de traits. Ci-après, les principaux (les plus utiles) :  </p>
+<p><strong>Description&nbsp;: </strong> </p>
+<p>L’attribut <code>accessibilityTraits</code> permet de donner une information à l’<abbr>API</abbr> d’accessibilité sur la nature d’un composant. On peut décider ainsi qu’un item de liste soit pris en compte comme un bouton par <span lang="en">VoiceOver</span> car celui-ci est cliquable. De ce fait, l’<code>accessibilityTrait</code> joue également sur la vocalisation de l’élément car cette nature est restituée par <span lang="en">VoiceOver</span>.  </p>
+<p>Cet attribut d’accessibilité est disponible via l’<i lang="en">interface builder</i>, mais également utilisable directement via le code.  </p>
+<p>Il existe beaucoup de traits. Ci-après, les principaux (les plus utiles)&nbsp;:  </p>
 <ul>
-<li><code>accessibilityTraitNone</code> : supprime toute valeur sémantique à l’élément.</li>
-<li><code>accessibilityTraitButton</code> : ajoute le trait « bouton », l’élément est vu comme un bouton par VoiceOver.</li>
-<li><code>accessibilityTraitLink</code> : utile pour définir un label en tant que « lien ».</li>
-<li><code>accessibilityTraitHeader</code> : permet de définir un élément comme une en-tête (pour plus d’information, voir la section « titres et en-têtes » dans la partie critères de l’application).</li>
-<li><code>accessibilityTraitAdjustable</code> : permet de définir un élément comme un élément « ajustable », c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un geste spécifique de VoiceOver.</li>
+<li><code>accessibilityTraitNone</code>&nbsp;: supprime toute valeur sémantique à l’élément.</li>
+<li><code>accessibilityTraitButton</code>&nbsp;: ajoute le trait «&nbsp;bouton&nbsp;», l’élément est vu comme un bouton par <span lang="en">VoiceOver</span>.</li>
+<li><code>accessibilityTraitLink</code>&nbsp;: utile pour définir un label en tant que «&nbsp;lien&nbsp;».</li>
+<li><code>accessibilityTraitHeader</code>&nbsp;: permet de définir un élément comme une en-tête (pour plus d’information, voir la section «&nbsp;titres et en-têtes&nbsp;» dans la partie critères de l’application).</li>
+<li><code>accessibilityTraitAdjustable</code>&nbsp;: permet de définir un élément comme un élément «&nbsp;ajustable&nbsp;», c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un geste spécifique de <span lang="en">VoiceOver</span>.</li>
 </ul>
-<p><strong>Exemples : </strong>   </p>
-<p>Exemple avec un <code>UIPageControl</code> et le trait &#39;ajustable&#39; :<br><code>pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable</code></p>
-<p>Exemple pour ajouter un en-tête :<br><code>defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader</code></p>
-<p>On peut également combiner plusieurs trait :<br><code>onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected</code></p>
-<p><strong>Lien : </strong>     </p>
+<p><strong>Exemples&nbsp;: </strong>   </p>
+<p>Exemple avec un <code>UIPageControl</code> et le trait ’ajustable’&nbsp;:<br><code>pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable</code></p>
+<p>Exemple pour ajouter un en-tête&nbsp;:<br><code>defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader</code></p>
+<p>On peut également combiner plusieurs trait&nbsp;:<br><code>onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected</code></p>
+<p><strong>Lien&nbsp;: </strong>     </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/doc/constant_group/Accessibility_Traits">accessibilityTraits</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/doc/constant_group/Accessibility_Traits"><code>accessibilityTraits</code></a></li>
 </ul>
-<h2 id="masquer-des-l-ments-l-accessibilit-">Masquer des éléments à l&#39;accessibilité</h2>
-<p><strong>Description : </strong>  </p>
-<p>Il est possible via des attributs d’accessibilité de masquer des éléments aux outils d’accessibilité (VoiceOver par exemple). Il est aussi possible de forcer certains éléments à être visibles aux outils d’accessibilité.  </p>
+<h2 id="masquer-des-l-ments-l-accessibilit-">Masquer des éléments à l’accessibilité</h2>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>Il est possible via des attributs d’accessibilité de masquer des éléments aux outils d’accessibilité (<span lang="en">VoiceOver</span> par exemple). Il est aussi possible de forcer certains éléments à être visibles pour les outils d’accessibilité.  </p>
 <ul>
-<li><code>AccessibilityElement</code> : booléen qui permet d’indiquer qu’un élément est visible ou non de l’API d’accessibilité (de VoiceOver ou autre).</li>
-<li><code>AccessibilityElementIsHidden</code> : booléen qui permet d’indiquer que les éléments fils de l’élément cible sont visibles ou non de l’API d’accessibilité.</li>
-<li><code>AccessibilityViewIsModal</code> : booléen qui permet de rendre visible ou non les éléments frères de l’élément cible à l’API d’accessibilité. Très utile pour rendre accessible des popin custom par exemple.  </li>
+<li><code>AccessibilityElement</code>&nbsp;: booléen qui permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité (de <span lang="en">VoiceOver</span> ou autre).</li>
+<li><code>AccessibilityElementIsHidden</code>&nbsp;: booléen qui permet d’indiquer que les éléments fils de l’élément cible sont visibles ou non de l’<abbr>API</abbr> d’accessibilité.</li>
+<li><code>AccessibilityViewIsModal</code>&nbsp;: booléen qui permet de rendre visible ou non les éléments frères de l’élément cible à l’<abbr>API</abbr> d’accessibilité. Très utile pour rendre accessible des <i lang="en">popin custom</i> par exemple.  </li>
 </ul>
-<p>L’attribut <code>accessibilityElement</code> est disponible via l’interface builder, mais est également utilisable directement via le code. Les deux autres attributs sont utilisables uniquement via le code.</p>
-<p><strong>Exemples : </strong></p>
-<p>Exemple simple :<br><code>pageControl.isAccessibilityElement = true</code></p>
-<p>Exemple d&#39;alerte custom accessible :  </p>
+<p>L’attribut <code>accessibilityElement</code> est disponible via l’<i lang="en">interface builder</i>, mais est également utilisable directement via le code. Les deux autres attributs sont utilisables uniquement via le code.</p>
+<p><strong>Exemples&nbsp;: </strong></p>
+<p>Exemple simple&nbsp;:<br><code>pageControl.isAccessibilityElement = true</code></p>
+<p>Exemple d’alerte <i lang="en">custom</i> accessible&nbsp;:  </p>
 <pre><code class="swift">@IBAction func displayCustomAlert() {
-    popUpVIew.hidden = false //La vue a été créée au préalable, on ne fait que l'afficher et la rendre accessible
-    popUpVIew.accessibilityViewIsModal = true //Empêche l'accessibilité de voir ce qui est "derrière" l'alerte
-    popUpVIew.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height) //Le filtre modal de l'alerte prend tout l'écran
+    popUpVIew.hidden = false //La vue a été créée au préalable, on ne fait que l’afficher et la rendre accessible
+    popUpVIew.accessibilityViewIsModal = true //Empêche l’accessibilité de voir ce qui est "derrière" l’alerte
+    popUpVIew.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height) //Le filtre modal de l’alerte prend tout l’écran
 
     let window = UIApplication.sharedApplication().keyWindow
     window?.addSubview(popUpVIew)
 
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, popUpVIew) //On informe l'accessibilité de l'affichage de l'alerte afin que celle-ci soit focus si VoiceOver est actif
+    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, popUpVIew) //On informe l’accessibilité de l’affichage de l’alerte afin que celle-ci soit focus si <span lang="en">VoiceOver</span> est actif
 }</code></pre>
 
-<p><strong>Liens : </strong>     </p>
+<p><strong>Liens&nbsp;: </strong>     </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/isAccessibilityElement">accessibilityElement</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityElementsHidden">accessibilityElementIsHidden</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityViewIsModal">accessibilityViewIsModal</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/isAccessibilityElement"><code>accessibilityElement</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityElementsHidden"><code>accessibilityElementIsHidden</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityViewIsModal"><code>accessibilityViewIsModal</code></a></li>
 </ul>
 <h2 id="d-clencher-une-vocalisation">Déclencher une vocalisation</h2>
-<p><strong>Description : </strong>  </p>
-<p>Il est très facile de déclencher des vocalisations avec VoiceOver. Attention, nous parlons de vocalisation avec VoiceOver (ce qui implique que VoiceOver soit activé) et pas de TTS (<span lang="en">Text To Speech</span>) (qui fonctionne indépendamment de l&#39;activation ou non de VoiceOver).  </p>
-<p>Pour déclencher une vocalisation, il faut envoyer une notification à l’API d’accessibilité via la méthode <code>UIAccessibilityPostNotification</code>  avec en paramètre la notification permettant de déclencher une vocalisation <code>UIAccessibilityAnnouncementNotification</code> et la chaine de caractère à vocaliser.    </p>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>Il est très facile de déclencher des vocalisations avec <span lang="en">VoiceOver</span>. Attention, nous parlons de vocalisation avec <span lang="en">VoiceOver</span> (ce qui implique que <span lang="en">VoiceOver</span> soit activé) et pas de <abbr>TTS</abbr> (<span lang="en">Text To Speech</span>) (qui fonctionne indépendamment de l’activation ou non de <span lang="en">VoiceOver</span>).  </p>
+<p>Pour déclencher une vocalisation, il faut envoyer une notification à l’<abbr>API</abbr> d’accessibilité via la méthode <code>UIAccessibilityPostNotification</code>  avec en paramètre la notification permettant de déclencher une vocalisation <code>UIAccessibilityAnnouncementNotification</code> et la chaîne de caractères à vocaliser.    </p>
 <p>La vocalisation se fait dans la langue du système.</p>
-<p><strong>Exemple : </strong></p>
+<p><strong>Exemple&nbsp;: </strong></p>
 <p><code>UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, speakString);</code></p>
-<p><strong>Liens : </strong></p>
+<p><strong>Liens&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification">UIAccessibilityPostNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementNotification">UIAccessibilityAnnouncementNotification</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification"><code>UIAccessibilityPostNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementNotification"><code>UIAccessibilityAnnouncementNotification</code></a></li>
 </ul>
-<h2 id="connaitre-l-tat-des-options-d-accessibilit-">Connaitre l&#39;état des options d&#39;accessibilité</h2>
-<p><strong>Description : </strong> </p>
-<p>Sous iOS, il est possible de connaitre les statuts des options d’accessibilité. Est-ce que VoiceOver est activé ? Est-ce que le mode audio-mono est activé ? Plusieurs fonctions permettent de connaitre ces valeurs. Ces fonctions font partie du <code>UIKit</code> framework.  </p>
-<p>La plus utile de ces fonctions est certainement <code>UIAccessibilityIsVoiceOverRunning</code> qui permet de savoir si VoiceOver est activé au moment de l’appel.</p>
-<p><strong>Exemple : </strong> </p>
-<p><code>UIAccessibilityIsVoiceOverRunning() ? 1 : 0</code></p>
-<p><strong>Liens : </strong></p>
+<h2 id="conna-tre-l-tat-des-options-d-accessibilit-">Connaître l’état des options d’accessibilité</h2>
+<p><strong>Description&nbsp;: </strong> </p>
+<p>Sous iOS, il est possible de connaître les statuts des options d’accessibilité. Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;? Plusieurs fonctions permettent de connaître ces valeurs. Ces fonctions font partie du <code>UIKit</code> <span lang="en">framework</span>.  </p>
+<p>La plus utile de ces fonctions est certainement <code>UIAccessibilityIsVoiceOverRunning</code> qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel.</p>
+<p><strong>Exemple&nbsp;: </strong> </p>
+<p><code>UIAccessibilityIsVoiceOverRunning() ? 1&amp;nbsp;: 0</code></p>
+<p><strong>Liens&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsVoiceOverRunning">UIAccessibilityIsVoiceOverRunning</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsClosedCaptioningEnabled">UIAccessibilityIsClosedCaptioningEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsMonoAudioEnabled">UIAccessibilityIsMonoAudioEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsBoldTextEnabled">UIAccessibilityIsBoldTextEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityDarkerSystemColorsEnabled">UIAccessibilityDarkerSystemColorsEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGrayscaleEnabled">UIAccessibilityIsGrayscaleEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGuidedAccessEnabled">UIAccessibilityIsGuidedAccessEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsInvertColorsEnabled">UIAccessibilityIsInvertColorsEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceMotionEnabled">UIAccessibilityIsReduceMotionEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceTransparencyEnabled">UIAccessibilityIsReduceTransparencyEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakScreenEnabled">UIAccessibilityIsSpeakScreenEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakSelectionEnabled">UIAccessibilityIsSpeakSelectionEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSwitchControlRunning">UIAccessibilityIsSwitchControlRunning</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsVoiceOverRunning"><code>UIAccessibilityIsVoiceOverRunning</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsClosedCaptioningEnabled"><code>UIAccessibilityIsClosedCaptioningEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsMonoAudioEnabled"><code>UIAccessibilityIsMonoAudioEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsBoldTextEnabled"><code>UIAccessibilityIsBoldTextEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityDarkerSystemColorsEnabled"><code>UIAccessibilityDarkerSystemColorsEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGrayscaleEnabled"><code>UIAccessibilityIsGrayscaleEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGuidedAccessEnabled"><code>UIAccessibilityIsGuidedAccessEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsInvertColorsEnabled"><code>UIAccessibilityIsInvertColorsEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceMotionEnabled"><code>UIAccessibilityIsReduceMotionEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceTransparencyEnabled"><code>UIAccessibilityIsReduceTransparencyEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakScreenEnabled"><code>UIAccessibilityIsSpeakScreenEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakSelectionEnabled"><code>UIAccessibilityIsSpeakSelectionEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSwitchControlRunning"><code>UIAccessibilityIsSwitchControlRunning</code></a></li>
 </ul>
-<h2 id="informer-d-une-modification-sur-la-page">Informer d&#39;une modification sur la page</h2>
-<p><strong>Description : </strong></p>
-<p>Lors d’un changement de contenu sur une page, il est possible de notifier l’API d’accessibilité de ce changement à travers différentes notifications. Pour ce faire, il faut envoyer une notification de modification à l’API d’accessibilité via la méthode <code>UIAccessibilityPostNotification</code>.  </p>
-<p>Il existe plusieurs notifications de modification, mais les deux plus utiles sont :</p>
+<h2 id="informer-d-une-modification-sur-la-page">Informer d’une modification sur la page</h2>
+<p><strong>Description&nbsp;: </strong></p>
+<p>Lors d’un changement de contenu sur une page, il est possible de notifier l’<abbr>API</abbr> d’accessibilité de ce changement à travers différentes notifications. Pour ce faire, il faut envoyer une notification de modification à l’<abbr>API</abbr> d’accessibilité via la méthode <code>UIAccessibilityPostNotification</code>.  </p>
+<p>Il existe plusieurs notifications de modification, mais les deux plus utiles sont&nbsp;:</p>
 <ul>
-<li><code>UIAccessibilityLayoutChangedNotification</code> : permet de spécifier à l’API d’accessibilité qu’une partie de la page a été modifiée.</li>
-<li><code>UIAccessibilityScreenChangedNotification</code> : permet d’annoncer un changement global de la page.  </li>
+<li><code>UIAccessibilityLayoutChangedNotification</code>&nbsp;: permet de spécifier à l’<abbr>API</abbr> d’accessibilité qu’une partie de la page a été modifiée.</li>
+<li><code>UIAccessibilityScreenChangedNotification</code>&nbsp;: permet d’annoncer un changement global de la page.  </li>
 </ul>
-<p>À l’usage, il existe une petite différence entre les deux. <code>UIAccessibilityLayoutChangedNotification</code> accepte une <code>NSString</code> ou un <code>UIObject</code>. Avec le premier paramètre, la notification se comporte comme une <code>UIAccessibilityAnnouncementNotification</code> et lance une vocalisation VoiceOver. Avec le second, le focus est repositionné sur l’élément de notre choix.  </p>
+<p>À l’usage, il existe une petite différence entre les deux. <code>UIAccessibilityLayoutChangedNotification</code> accepte une <code>NSString</code> ou un <code>UIObject</code>. Avec le premier paramètre, la notification se comporte comme une <code>UIAccessibilityAnnouncementNotification</code> et lance une vocalisation <span lang="en">VoiceOver</span>. Avec le second, le focus est repositionné sur l’élément de notre choix.  </p>
 <p><code>UIAccessibilityScreenChangedNotification</code> accepte soit <code>nil</code>, soit l’élément qui doit recevoir le focus.</p>
-<p><strong>Exemples : </strong></p>
+<p><strong>Exemples&nbsp;: </strong></p>
 <pre><code class="objectivec">UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, @"speakString");
 UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, aViewObject);
 
 UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
 UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewObject);</code></pre>
 
-<p><strong>Liens : </strong></p>
+<p><strong>Liens&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification">UIAccessibilityPostNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityLayoutChangedNotification">UIAccessibilityLayoutChangedNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityScreenChangedNotification">UIAccessibilityScreenChangedNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityPageScrolledNotification">UIAccessibilityPageScrolledNotification</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification"><code>UIAccessibilityPostNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityLayoutChangedNotification"><code>UIAccessibilityLayoutChangedNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityScreenChangedNotification"><code>UIAccessibilityScreenChangedNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityPageScrolledNotification"><code>UIAccessibilityPageScrolledNotification</code></a></li>
 </ul>
 <h2 id="modifier-la-langue-de-vocalisation">Modifier la langue de vocalisation</h2>
-<p><strong>Description : </strong>  </p>
-<p>Afin de modifier la langue de prononciation de VoiceOver pour un mot ou un texte, il existe l’attribut <code>accessibilityLanguage</code>. Disponible via le protocole <code>UIAccessibility</code>, cet attribut permet de redéfinir la langue de prononciation d’un texte. Par exemple, si on utilise cet attribut sur un <code>UILabel</code>, alors celui-ci sera vocalisé par VoiceOver dans la nouvelle langue donnée en valeur de l’attribut.</p>
-<p><strong>Exemple : </strong> </p>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> pour un mot ou un texte, il existe l’attribut <code>accessibilityLanguage</code>. Disponible via le protocole <code>UIAccessibility</code>, cet attribut permet de redéfinir la langue de prononciation d’un texte. Par exemple, si on utilise cet attribut sur un <code>UILabel</code>, alors celui-ci sera vocalisé par <span lang="en">VoiceOver</span> dans la nouvelle langue donnée en valeur de l’attribut.</p>
+<p><strong>Exemple&nbsp;: </strong> </p>
 <p><code>cell.textLabel?.accessibilityLanguage = &quot;en_EN&quot;</code></p>
-<p><strong>Lien : </strong>      </p>
+<p><strong>Lien&nbsp;: </strong>      </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLanguage">accessibilityLanguage</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLanguage"><code>accessibilityLanguage</code></a></li>
 </ul>
-<h2 id="modifier-la-zone-de-focus-de-voiceover">Modifier la zone de focus de VoiceOver</h2>
-<p><strong>Description : </strong>  </p>
-<p>Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas de <code>UIView</code>, il est possible de déterminer la zone géographique d’accessibilité de cet élément, c&#39;est-à-dire la zone que VoiceOver met en surbrillance lors du focus.  </p>
+<h2 id="modifier-la-zone-de-focus-de-span-lang-en-voiceover-span-">Modifier la zone de focus de <span lang="en">VoiceOver</span></h2>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas de <code>UIView</code>, il est possible de déterminer la zone géographique d’accessibilité de cet élément, c’est-à-dire la zone que <span lang="en">VoiceOver</span> met en surbrillance lors du focus.  </p>
 <ul>
-<li><code>AccessibilityFrame</code> : permet de définir cette zone via un rectangle (<code>CGRect</code>). Par défaut pour un élément dérivant de <code>UIView</code>, cette zone est la partie « visible » de la vue.</li>
-<li><code>AccessibilityPath</code> : équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.</li>
-<li><code>AccessibilityActivationPoint</code> : le « point » d’activation d’un élément pour les outils d’accessibilité. Par défaut, ce point est au centre de l’élément.</li>
+<li><code>AccessibilityFrame</code>&nbsp;: permet de définir cette zone via un rectangle (<code>CGRect</code>). Par défaut pour un élément dérivant de <code>UIView</code>, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.</li>
+<li><code>AccessibilityPath</code>&nbsp;: équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.</li>
+<li><code>AccessibilityActivationPoint</code>&nbsp;: le «&nbsp;point&nbsp;» d’activation d’un élément pour les outils d’accessibilité. Par défaut, ce point est au centre de l’élément.</li>
 </ul>
-<p><strong>Liens : </strong></p>
+<p><strong>Liens&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityFrame">AccessibilityFrame</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityPath">AccessibilityPath</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityActivationPoint">AccessibilityActivationPoint</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityFrame"><code>AccessibilityFrame</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityPath"><code>AccessibilityPath</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityActivationPoint"><code>AccessibilityActivationPoint</code></a></li>
 </ul>
 <h2 id="grouper-des-l-ments">Grouper des éléments</h2>
-<p><strong>Description : </strong>  </p>
-<p>L&#39;attribut <code>shouldGroupAccessibilityChildren</code> est un booléen qui permet d’indiquer à VoiceOver qu’il doit grouper les enfants de la vue qui porte l’attribut. Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture VoiceOver particulier pour une partie de la page seulement (voir la section « ordre de lecture »).</p>
-<p><strong>Exemple : </strong> </p>
-<p>Très pratique quand on veut redéfinir l&#39;ordre de lecture VoiceOver, ici sur une cellule de tableau qui comporte des éléments de formulaire :  </p>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>L’attribut <code>shouldGroupAccessibilityChildren</code> est un booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut. Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section «&nbsp;ordre de lecture&nbsp;»).</p>
+<p><strong>Exemple&nbsp;: </strong> </p>
+<p>Très pratique quand on veut redéfinir l’ordre de lecture pour <span lang="en">VoiceOver</span>, ici sur une cellule de tableau qui comporte des éléments de formulaire&nbsp;:  </p>
 <pre><code class="swift">class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deliveringAddressLabel:  UILabel!
@@ -617,48 +623,48 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewO
     }
 }</code></pre>
 
-<p><strong>Lien : </strong>      </p>
+<p><strong>Lien&nbsp;: </strong>      </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/shouldGroupAccessibilityChildren">shouldGroupAccessibilityChildren</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/shouldGroupAccessibilityChildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
-<h2 id="ev-nements-d-accessibilit-">Evènements d&#39;accessibilité</h2>
-<p><strong>Description : </strong>  </p>
-<p>Le système iOS envoie un certain nombre d’évènements d’accessibilité à destination des applications. Ces événements sont envoyés lors de la modification des options d’accessibilité. Par exemple, si VoiceOver est désactivé durant l’utilisation de l’application, celle-ci recevra l’évènement <code>UIAccessibilityVoiceOverStatusChanged</code>. Cela est très utile couplé à la fonction <code>UIAccessibilityIsVoiceOverRunning</code>.  </p>
-<p>Imaginons que nous ayons un traitement particulier quand VoiceOver est activé. Ceci est détecté grâce à la fonction <code>UIAccessibilityIsVoiceOverRunning</code>. Mais que se passe-t-il si VoiceOver est désactivé alors que ce traitement a déjà eu lieu ? C’est là que les évènements système peuvent être utilisés. En restant à l’écoute de ces évènements, il est possible d’appliquer des traitements particuliers de manière dynamique.</p>
-<p><strong>Exemple : </strong> </p>
-<p>Ici, on appelle le sélecteur &quot;voiceOverStatusDidChange&quot; au moment ou le status change :<br><code>NSNotificationCenter.defaultCenter().addObserver(self, selector: &quot;voiceOverStatusDidChange:&quot;, name: UIAccessibilityVoiceOverStatusChanged, object: nil)</code></p>
-<p><strong>Lien : </strong>      </p>
+<h2 id="-v-nements-d-accessibilit-">Événements d’accessibilité</h2>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>Le système iOS envoie un certain nombre d’événements d’accessibilité à destination des applications. Ces événements sont envoyés lors de la modification des options d’accessibilité. Par exemple, si <span lang="en">VoiceOver</span> est désactivé durant l’utilisation de l’application, celle-ci recevra l’événement <code>UIAccessibilityVoiceOverStatusChanged</code>. Cela est très utile couplé à la fonction <code>UIAccessibilityIsVoiceOverRunning</code>.  </p>
+<p>Imaginons que nous ayons un traitement particulier quand <span lang="en">VoiceOver</span> est activé. Ceci est détecté grâce à la fonction <code>UIAccessibilityIsVoiceOverRunning</code>. Mais que se passe-t-il si <span lang="en">VoiceOver</span> est désactivé alors que ce traitement a déjà eu lieu&nbsp;? C’est là que les événements système peuvent être utilisés. En restant à l’écoute de ces événements, il est possible d’appliquer des traitements particuliers de manière dynamique.</p>
+<p><strong>Exemple&nbsp;: </strong> </p>
+<p>Ici, on appelle le sélecteur <code>VoiceOverStatusDidChange</code> au moment où le statut change&nbsp;:<br><code>NSNotificationCenter.defaultCenter().addObserver(self, selector: &quot;VoiceOverStatusDidChange:&quot;, name: UIAccessibilityVoiceOverStatusChanged, object: nil)</code></p>
+<p><strong>Lien&nbsp;: </strong>      </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityVoiceOverStatusChanged">UIAccessibilityVoiceOverStatusChanged</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityClosedCaptioningStatusDidChangeNotification">UIAccessibilityClosedCaptioningStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityMonoAudioStatusDidChangeNotification">UIAccessibilityMonoAudioStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification">UIAccessibilityAnnouncementDidFinishNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification">UIAccessibilityGuideAccessStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityInvertColorsStatusDidChangeNotification">UIAccessibilityInvertColorsStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityDarkerSystemColorsStatusDidChangeNotification">UIAccessibilityDarkerSystemColorsStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityGrayscaleStatusDidChangeNotification">UIAccessibilityGrayscaleStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityBoldTextStatusDidChangeNotification">UIAccessibilityBoldTextStatusDidChangeNotification</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibility&lt;span lang=&quot;en&quot;&gt;VoiceOver&lt;/span&gt;StatusChanged"><code>UIAccessibilityVoiceOverStatusChanged</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityClosedCaptioningStatusDidChangeNotification"><code>UIAccessibilityClosedCaptioningStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityMonoAudioStatusDidChangeNotification"><code>UIAccessibilityMonoAudioStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification"><code>UIAccessibilityAnnouncementDidFinishNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification"><code>UIAccessibilityGuideAccessStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityInvertColorsStatusDidChangeNotification"><code>UIAccessibilityInvertColorsStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityDarkerSystemColorsStatusDidChangeNotification"><code>UIAccessibilityDarkerSystemColorsStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityGrayscaleStatusDidChangeNotification"><code>UIAccessibilityGrayscaleStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityBoldTextStatusDidChangeNotification"><code>UIAccessibilityBoldTextStatusDidChangeNotification</code></a></li>
 </ul>
 <h2 id="taille-des-textes">Taille des textes</h2>
-<p><strong>Description : </strong>  </p>
-<p>La gestion des polices dynamiques sous iOS est complexe. Il est possible depuis iOS7 d’utiliser une API permettant de rendre la taille des textes de son application dynamiquement modifiable à l’aide du paramétrage du téléphone. Si on résume cette API, il faut :  </p>
+<p><strong>Description&nbsp;: </strong>  </p>
+<p>La gestion des polices dynamiques sous iOS est complexe. Il est possible depuis iOS7 d’utiliser une <abbr>API</abbr> permettant de rendre la taille des textes de son application dynamiquement modifiable à l’aide du paramétrage du téléphone. Si on résume cette <abbr>API</abbr>, il faut&nbsp;:  </p>
 <ul>
-<li>Utiliser les polices système pour les textes de l’application, <code>[UIFont preferredFontForTextStyle:UIFontTextStyle…]</code>. Il est aussi possible de définir ses propres polices dérivées de la classe <code>UIFont</code>.<ul>
-<li>Traiter l’évènement signalant le changement de la taille du texte dans les paramètres du téléphone <code>UIContentSizeCategoryDidChangeNotification</code>, <code>[[NSNotificationCenter defaultCenter] addObserver:… selector:@selector(…) name: UIContentSizeCategoryDidChangeNotification object:…];</code></li>
-<li>Lors du traitement de l’évènement signalant le changement de taille, il faut réafficher les éléments concernés.</li>  </li>
+<li>Utiliser les polices système pour les textes de l’application, <code>[UIFont preferredFontForTextStyle:UIFontTextStyle…]</code>. Il est aussi possible de définir ses propres polices dérivées de la classe <code>UIFont</code>&nbsp;;<ul>
+<li>Traiter l’événement signalant le changement de la taille du texte dans les paramètres du téléphone <code>UIContentSizeCategoryDidChangeNotification</code>, <code>[[NSNotificationCenter defaultCenter] addObserver:… selector:@selector(…) name: UIContentSizeCategoryDidChangeNotification object:…];</code>&nbsp;;</li>
+<li>Lors du traitement de l’événement signalant le changement de taille, il faut réafficher les éléments concernés.  </li>
 </ul>
 </li>
 </ul>
-<p>Il faut aussi faire attention à ce que les conteneurs s’adaptent à leur contenu : utiliser les contraintes est le meilleur moyen de réaliser cette tâche.</p>
-<p><strong>Lien : </strong></p>
+<p>Il faut aussi faire attention à ce que les conteneurs s’adaptent à leur contenu&nbsp;: utiliser les contraintes est le meilleur moyen de réaliser cette tâche.</p>
+<p><strong>Lien&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65">Dynamic Type API</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65"><span lang="en">Dynamic Type <abbr>API</abbr></span></a></li>
 </ul>
 <h2 id="ordre-de-lecture">Ordre de lecture</h2>
-<p><strong>Description : </strong> </p>
-<p>Redéfinir l’ordre de lecture VoiceOver s’effectue en respectant le protocole <code>UIAccessibilityContainer</code>. L’idée est d’avoir un tableau des éléments de la vue qui définit l’ordre de lecture des éléments. Il est bien souvent nécessaire d’utiliser l’attribut <code>shouldGroupAccessibilityElement</code> afin d’avoir un ordre précis, mais pour une partie seulement de la vue (le reste étant l’ordre naturel de lecture).</p>
-<p><strong>Exemple : </strong> </p>
-<p>Cellule de tableau qui comporte des éléments de formulaire :  </p>
+<p><strong>Description&nbsp;: </strong> </p>
+<p>Redéfinir l’ordre de lecture pour <span lang="en">VoiceOver</span> s’effectue en respectant le protocole <code>UIAccessibilityContainer</code>. L’idée est d’avoir un tableau des éléments de la vue qui définit l’ordre de lecture des éléments. Il est bien souvent nécessaire d’utiliser l’attribut <code>shouldGroupAccessibilityElement</code> afin d’avoir un ordre précis, mais pour une partie seulement de la vue (le reste étant l’ordre naturel de lecture).</p>
+<p><strong>Exemple&nbsp;: </strong> </p>
+<p>Cellule de tableau qui comporte des éléments de formulaire&nbsp;:  </p>
 <pre><code class="swift">class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deliveringAddressLabel:  UILabel!
@@ -675,13 +681,13 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewO
     }
 }</code></pre>
 
-<p><strong>Lien : </strong></p>
+<p><strong>Lien&nbsp;: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/">UIAccessibilityContainer</a><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/"><code>UIAccessibilityContainer</code></a></li>
 </ul>
-
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="les-crit-res-mobiles">Les critères mobiles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Critères mobiles"}]);
@@ -865,10 +871,10 @@ infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_
 <p><strong>Description&nbsp;: </strong> </p>
 <p>L’utilisateur a la possibilité d’augmenter la taille du texte via une option d’accessibilité. Afin que l’application réagisse correctement à cette option, il est nécessaire d’utiliser des tailles de texte dynamiques qui s’ajusteront en fonction des paramètres utilisateurs. Un texte trop petit sera facilement ignoré par certains utilisateurs malvoyants.  </p>
 <p>L’application devra mettre en œuvre des tailles de textes dynamiques, s’assurer de la bonne réactivité des zones d’affichage au grossissement de texte (conteneurs qui s’adaptent à la taille de leur contenu). Il faut aussi assurer une taille minimum pour les textes (14sp).  </p>
-<p>Afin de permettre à l’option « grand caractère » d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements&nbsp;:</p>
+<p>Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements&nbsp;:</p>
 <ul>
-<li>Utiliser une taille de police dynamique&nbsp;: le « sp ». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android. </li>
-<li>Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique (« sp » donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (le <code>height</code> à <code>wrap_content</code> et le <code>min-height</code> à la hauteur voulue par défaut).</li>
+<li>Utiliser une taille de police dynamique&nbsp;: le «&nbsp;sp&nbsp;». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android. </li>
+<li>Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique («&nbsp;sp&nbsp;» donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (le <code>height</code> à <code>wrap_content</code> et le <code>min-height</code> à la hauteur voulue par défaut).</li>
 </ul>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
@@ -901,8 +907,8 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <p>Il est également possible de spécifier à une vue qu’elle est une région <i lang="en">live</i>, c’est-à-dire que son contenu est susceptible d’être modifié dynamiquement et qu’elle doit dans ce cas prévenir l’<abbr>API</abbr> d’accessibilité. Cela aura pour conséquence de générer des vocalisations avec <span lang="en">TalkBack</span> par exemple. Un exemple type d’utilisation&nbsp;: sur un formulaire, si l’utilisateur fait une erreur et qu’un message d’erreur apparaît, la vue contenant le message doit être définie comme une région <i lang="en">live</i>.  Il faut passer par la méthode <code>setAccessibilityLiveRegion</code> qui prend en paramètre un mode pour la région <i lang="en">live</i>. Il existe 3 modes&nbsp;:</p>
 <ul>
 <li><code>ACCESSIBILITY_LIVE_REGION_NONE</code>&nbsp;: cette vue n’est pas une région <i lang="en">live</i>. C’est la valeur par défaut de la plupart des vues.</li>
-<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code>&nbsp;: en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont « polies » ; elles sont moins prioritaires que les vocalisations système par exemple.</li>
-<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code>&nbsp;: en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « <i lang="en">rude</i> » ; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code>&nbsp;: en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont «&nbsp;polies&nbsp;»&nbsp;; elles sont moins prioritaires que les vocalisations système par exemple.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code>&nbsp;: en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont «&nbsp;<i lang="en">rude</i>&nbsp;»&nbsp;; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</li>
 </ul>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
@@ -953,11 +959,11 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <p><strong>Cible&nbsp;: </strong> les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors du développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
 <p>L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle. Il est donc important d’y faire attention.  </p>
-<p>Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres&nbsp;: la lecture « logique » (en France), soit de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il existe cependant certain cas où le lecteur d’écran n’arrive pas à déterminer un ordre et dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.  </p>
+<p>Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres&nbsp;: la lecture «&nbsp;logique&nbsp;» (en France), soit de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il existe cependant certain cas où le lecteur d’écran n’arrive pas à déterminer un ordre et dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.  </p>
 <p>Il est tout à fait possible de redéfinir cet ordre de lecture avec deux attributs&nbsp;:</p>
 <ul>
-<li><code>accessibilityTraversalAfter</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être « vue » par l’accessibilité après la vue passée en paramètre.</li>
-<li><code>accessibilityTraversalBefore</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être « vue » par l’accessibilité avant la vue passée en paramètre.  </li>
+<li><code>accessibilityTraversalAfter</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être «&nbsp;vue&nbsp;» par l’accessibilité après la vue passée en paramètre.</li>
+<li><code>accessibilityTraversalBefore</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être «&nbsp;vue&nbsp;» par l’accessibilité avant la vue passée en paramètre.  </li>
 </ul>
 <p>À noter&nbsp;: ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes <code>setAccessibilityTraversalAfter</code> et <code>setAccessibilityTraversalBefore</code>. Ces méthodes sont disponibles pour tout élément qui hérite de <code>View</code>.</p>
 <p><strong>À vérifier&nbsp;: </strong></p>
@@ -1250,71 +1256,70 @@ remoteView.accessibilityElements?.append(fourButton)
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-<p><strong><em> L&#39;accessibilité, une nécessité pour certains, un avantage pour tous ! </em></strong></p>
+<p><strong><em> L’accessibilité, une nécessité pour certains, un avantage pour tous&nbsp;! </em></strong></p>
 <h2 id="d-finition-de-l-accessibilit-mobile">Définition de l’accessibilité mobile</h2>
 <p><strong> C’est une application utilisable par tous </strong></p>
 <ul>
-<li>Personnes valides</li>
-<li>Seniors</li>
-<li>Personnes en situation de handicap (temporaire ou permanent)</li>
+<li>personnes valides&nbsp;;</li>
+<li>seniors&nbsp;;</li>
+<li>personnes en situation de handicap (temporaire ou permanent)&nbsp;;</li>
 </ul>
 <p><strong> et dans tous les contextes </strong></p>
 <ul>
-<li>Avec tous types de matériel : navigateurs mobiles, Android, iOS, tablette</li>
-<li>Dans un contexte dégradé : mauvaise luminosité, etc.</li>
-<li>Avec des logiciels spécifiques de compensation du handicap</li>
+<li>avec tous types de matériel&nbsp;: navigateurs mobiles, Android, iOS, tablette&nbsp;;</li>
+<li>dans un contexte dégradé&nbsp;: mauvaise luminosité, etc.&nbsp;;</li>
+<li>avec des logiciels spécifiques de compensation du handicap.</li>
 </ul>
 <h2 id="organisation-de-ce-site">Organisation de ce site</h2>
 <h3 id="crit-res-mobiles">Critères mobiles</h3>
-<p>Liste des différents critères d&#39;accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible. Un bon moyen de prendre connaissance des critères à respecter pour s&#39;engager vers une démarche de mise en accessibilité. </p>
+<p>Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible. Un bon moyen de prendre connaissance des critères à respecter pour s’engager vers une démarche de mise en accessibilité. </p>
 <h3 id="guide-pour-les-d-veloppeurs">Guide pour les développeurs</h3>
-<p>Section à destination des développeurs. Tout ce qu&#39;il faut savoir pour coder accessible sur mobile, sous Android ou iOS.</p>
+<p>Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible sur mobile, sous Android ou iOS.</p>
 <h3 id="mdan">mDAN</h3>
-<p>Présentation de l&#39;application mDAN, le démonstrateur d&#39;accessibilité numérique pour mobile. Vous y trouverez également des liens pour télécharger l&#39;application (Android et iOS)</p>
-<h3 id="lecteur-d-cran">Lecteur d&#39;écran</h3>
-<p>Un guide simple pour utiliser les lecteurs d&#39;écran d&#39;iOS et d&#39;Android, respectivement VoiceOver et TalkBack.</p>
+<p>Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile. Vous y trouverez également des liens pour télécharger l’application (Android et iOS).</p>
+<h3 id="lecteur-d-cran">Lecteur d’écran</h3>
+<p>Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement <span lang="en">VoiceOver</span> et <span lang="en">TalkBack</span>.</p>
 <h3 id="liens-utiles">Liens utiles</h3>
-<p>Quelques liens utiles qui pourront compléter les explications de ce site.
+<p>Quelques liens utiles qui pourront compléter les explications de ce site.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="mdan">mDAN</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"mDAN"}]);
 });</script>
 
 <p><span data-menuitem="mdan"></span></p>
-<h2 id="mdan-kesako-">mDAN, kesako?</h2>
-<p>mDAN est une application mobile (Android et iOS) visant à présenter l’accessibilité d’un système mobile sous toutes ses formes. Ses objectifs sont : </p>
+<h2 id="mdan-kesako-nbsp-">mDAN, kesako&nbsp;?</h2>
+<p>mDAN est une application mobile (Android et iOS) visant à présenter l’accessibilité d’un système mobile sous toutes ses formes. Ses objectifs sont&nbsp;: </p>
 <ul>
-<li>présentation de l’accessibilité</li>
-<li>critères d’accessibilité mobile</li>
-<li>guide pour les développeurs</li>
-<li>guide d’utilisation du lecteur d’écran (Talkback ou VoiceOver)</li>
-<li>présentation des options d’accessibilité par plateforme</li>
+<li>présentation de l’accessibilité,</li>
+<li>critères d’accessibilité mobile,</li>
+<li>guide pour les développeurs,</li>
+<li>guide d’utilisation du lecteur d’écran (<span lang="en">Talkback</span> ou <span lang="en">VoiceOver</span>),</li>
+<li>présentation des options d’accessibilité par plate-forme,</li>
 <li>contact, etc.</li>
 </ul>
-<h2 id="mdan-oui-mais-pour-qui-">mDAN, oui, mais pour qui?</h2>
-<p>mDAN, de part son contenu riche, cible la plupart des corps de métier susceptibles d’être impactés par l’accessibilité : </p>
+<h2 id="mdan-oui-mais-pour-qui-nbsp-">mDAN, oui, mais pour qui&nbsp;?</h2>
+<p>mDAN, de par son contenu riche, cible la plupart des corps de métier susceptibles d’être impactés par l’accessibilité&nbsp;: </p>
 <ul>
-<li>testeurs : avec les critères d’accessibilité et le guide d’utilisation du lecteur d’écran</li>
-<li>développeurs : avec le guide de développement</li>
-<li>managers, designers, etc : pour la sensibilisation à l’accessibilité</li>
+<li>testeurs&nbsp;: avec les critères d’accessibilité et le guide d’utilisation du lecteur d’écran&nbsp;;</li>
+<li>développeurs&nbsp;: avec le guide de développement&nbsp;;</li>
+<li>managers, designers, etc&nbsp;: pour la sensibilisation à l’accessibilité.</li>
 </ul>
-<p>Pour tout monde en somme !</p>
-<h2 id="je-veux-mdan-">Je veux mDAN !</h2>
+<p>Pour tout le monde en somme&nbsp;!</p>
+<h2 id="je-veux-mdan-nbsp-">Je veux mDAN&nbsp;!</h2>
 <p><a href="https://github.com/Orange-OpenSource/m-dan">Le code source est disponible sur github</a></p>
-<p>L&#39;application mDAN sera prochainement disponible pour Android et iOS sur le play store et l&#39;app store.</p>
+<p>L&#39;application mDAN sera prochainement disponible pour Android et iOS sur le <span lang="en">Play Store</span> et l&#39;<span lang="en">App Store</span>.</p>
 <p>Vous pouvez déjà <a href="/mDAN_v2.2.0.apk">télécharger la version Android</a></p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="guide-d-utilisation-des-lecteurs-d-cran-talkback-et-voiceover">Guide d&#39;utilisation des lecteurs d&#39;écran TalkBack et VoiceOver</h1>
+<h1 id="guide-d-utilisation-des-lecteurs-d-cran-span-lang-en-talkback-span-et-span-lang-en-voiceover-span-">Guide d’utilisation des lecteurs d’écran <span lang="en">TalkBack</span> et <span lang="en">VoiceOver</span></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Lecteur d'écran"}]);
+    setBreadcrumb([{"label":"Lecteur d’écran"}]);
     addSubMenu([
         {"label":"Guide pour Android","url":"talkback.html"}, 
         {"label":"Guide pour iOS","url":"voiceover.html"}
@@ -1322,31 +1327,31 @@ remoteView.accessibilityElements?.append(fourButton)
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
-<p>A travers cette section, nous allons présenter les gestes de base pour une utilisation des lecteurs d&#39;écran d&#39;Android et iOS. Ces outils sont riches en fonctionalités mais nécessitent une connaissance minimale pour être utilisé efficacement. C&#39;est cette utilisation standard qui sera présentée ici.</p>
-<p>Deux versions sont disponibles :</p>
+<p>À travers cette section, nous allons présenter les gestes de base pour une utilisation des lecteurs d’écran d’Android et iOS. Ces outils sont riches en fonctionnalités mais nécessitent une connaissance minimale pour être utilisés efficacement. C’est cette utilisation standard qui sera présentée ici.</p>
+<p>Deux versions sont disponibles&nbsp;:</p>
 <ul>
-<li><strong>TalkBack</strong> le lecteur d&#39;écran intégré à Android.</li>
-<li><strong>VoiceOver</strong>  le lecteur d&#39;écran intégré à iOS.</li>
+<li><strong><span lang="en">TalkBack</span></strong> le lecteur d’écran intégré à Android.</li>
+<li><strong><span lang="en">VoiceOver</span></strong>  le lecteur d’écran intégré à iOS.</li>
 </ul>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">TalkBack</h2><br>    <a href="./talkback.html" class="btn btn-info">
+    <h2 class="sr-only"><span lang="en">TalkBack</span></h2><br>    <a href="./talkback.html" class="btn btn-info">
         <img src="./images/android.png" alt="">
-        <div>Guide d&#39;utilisation de Talkback</div>
+        <div>Guide d’utilisation de <span lang="en">TalkBack</span></div>
     </a>
 </div>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">Voiceover</h2><br>    <a href="./voiceover.html" class="btn btn-info">
         <img src="./images/iphone.png" alt="">
-        <div>Guide d&#39;utilisation de VoiceOver</div>
+        <div>Guide d’utilisation de <span lang="en">VoiceOver</span></div>
     </a>
 </div>      
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="guide-d-utilisation-de-talkback">Guide d&#39;utilisation de TalkBack</h1>
+<h1 id="guide-d-utilisation-de-span-lang-en-talkback-span-">Guide d’utilisation de <span lang="en">TalkBack</span></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"lecteur d'écran", "url":"./screen-reader.html"},{"label":"Guide d'utilisation de TalkBack"}]);
+    setBreadcrumb([{"label":"lecteur d’écran", "url":"./screen-reader.html"},{"label":"Guide d’utilisation de <span lang="en">TalkBack</span>"}]);
     addSubMenu([
         {"label":"Guide pour Android","url":"screen-reader.html", "expanded": true}, 
         {"label":"Guide pour iOS","url":"voiceover.html"}
@@ -1354,56 +1359,56 @@ remoteView.accessibilityElements?.append(fourButton)
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
-<p>TalkBack est un lecteur d&#39;écran intégré à Android qui décrit à haute voix les éléments qui apparaissent sur l&#39;écran du téléphone. Il est gratuit et permet à un utilisateur non ou mal voyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. Un outil comme TalkBack est appelé indifféremment lecteur d&#39;écran ou synthèse vocale, même si un lecteur d&#39;écran est en fait un logiciel associé à une synthèse vocale.</p>
-<p>Lorsque TalkBack est activé, les gestes standards effectués sur l&#39;écran tactile donnent des résultats différents. En outre, des gestes supplémentaires permettent de déplacer le focus à l&#39;écran et de contrôler les éléments sélectionnés. TalkBack comprend des gestes de toucher et de balayage à un, deux et trois doigts. Nous décrivons ici les gestes de base pour une utilisation courante de TalkBack. A noter : TalkBack n&#39;est considéré comme accessible qu&#39;à partir de la version JellyBean (4.1) car on peut naviguer séquentiellement.</p>
-<p>Avant toute chose, commencez par mettre à jour TalkBack : <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">page de l&#39;application sur le PlayStore</a></p>
+<p><span lang="en">TalkBack</span> est un lecteur d’écran intégré à Android qui décrit à haute voix les éléments qui apparaissent sur l’écran du téléphone. Il est gratuit et permet à un utilisateur non- ou malvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. Un outil comme <span lang="en">TalkBack</span> est appelé indifféremment lecteur d’écran ou synthèse vocale, même si un lecteur d’écran est en fait un logiciel associé à une synthèse vocale.</p>
+<p>Lorsque <span lang="en">TalkBack</span> est activé, les gestes standards effectués sur l’écran tactile donnent des résultats différents. En outre, des gestes supplémentaires permettent de déplacer le focus à l’écran et de contrôler les éléments sélectionnés. <span lang="en">TalkBack</span> comprend des gestes de toucher et de balayage à un, deux et trois doigts. Nous décrivons ici les gestes de base pour une utilisation courante de <span lang="en">TalkBack</span>. À noter&nbsp;: <span lang="en">TalkBack</span> n’est considéré comme accessible qu’à partir de la version <span lang="en">JellyBean</span> (4.1) car on peut naviguer séquentiellement.</p>
+<p>Avant toute chose, commencez par mettre à jour <span lang="en">TalkBack</span>&nbsp;: <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">page de l’application sur le <span lang="en">PlayStore</span></a></p>
 <h2 id="gestes-de-bases">Gestes de bases</h2>
 <ul class="list-gesture">
   <li class="clearfix">
     <img src="./images/gesture1.png" alt="" width="80">
-    <a name="se-deplacer-avec-un-doigt-sur-lecran"></a><h3>Se déplacer avec un doigt sur l&#39;écran</h3>
-    <p>Explorer l&#39;écran et entendre la vocalisation de l&#39;élément qui est touché.</p>
+    <a name="se-deplacer-avec-un-doigt-sur-lecran"></a><h3>Se déplacer avec un doigt sur l’écran</h3>
+    <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
   </li>
   <li class="clearfix">
     <img src="./images/gesture2.png" alt="" width="80">
-    <a name="double-cliquer-nimporte-ou-sur-lecran"></a><h3>Double-cliquer n&#39;importe où sur l&#39;écran</h3>
-    <p>Ouvrir ou activer l&#39;élément qui a été touché (vocalisé) en dernier.</p>
+    <a name="double-cliquer-nimporte-ou-sur-lecran"></a><h3>Double-cliquer n’importe où sur l’écran</h3>
+    <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
   </li>
   <li class="clearfix">
     <img src="./images/gesture3_1.png" alt="" width="80">
     <img src="./images/gesture3_2.png" alt="" width="80">
-    <a name="slider-vers-le-haut-ou-le-bas-en-utilisant-deux-doigts"></a><h3>Slider vers le haut ou le bas en utilisant deux doigts</h3>
-    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu&#39;elle soit sélectionnée. Correspond à un slide vertical.</p><br>  </li>
+    <a name="slide-vers-le-haut-ou-le-bas-en-utilisant-deux-doigts"></a><h3><span lang="en">Slide</span> vers le haut ou le bas en utilisant deux doigts</h3>
+    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un <span lang="en">slide</span> vertical.</p><br>  </li>
   <li class="clearfix">
     <img src="./images/gesture4_1.png" alt="" width="80">
-    <img src="./images/gesture4_2.png" alt="" width="80"><br>    <a name="slider-vers-la-gauche-ou-la-droite-en-utilisant-deux-doigts"></a><h3>Slider vers la gauche ou la droite en utilisant deux doigts</h3>
-    <p>Changer de page ou d&#39;écran quand c&#39;est possible. Correspond à un slide horizontal.</p><br>  </li>
+    <img src="./images/gesture4_2.png" alt="" width="80"><br>    <a name="slide-vers-la-gauche-ou-la-droite-en-utilisant-deux-doigts"></a><h3><span lang="en">Slide</span> vers la gauche ou la droite en utilisant deux doigts</h3>
+    <p>Changer de page ou d’écran quand c’est possible. Correspond à un <span lang="en">slide</span> horizontal.</p><br>  </li>
   <li class="clearfix">
-    <img src="./images/gesture5.png" alt="" width="80"><br>    <a name="slider-vers-la-droite-en-utilisant-un-doigt"></a><h3>Slider vers la droite en utilisant un doigt</h3>
-    <p>Déplacer le focus TalkBack sur l&#39;élément suivant.</p>
+    <img src="./images/gesture5.png" alt="" width="80"><br>    <a name="slide-vers-la-droite-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers la droite en utilisant un doigt</h3>
+    <p>Déplacer le focus <span lang="en">TalkBack</span> sur l’élément suivant.</p>
   </li>
   <li class="clearfix">
-    <img src="./images/gesture6.png" alt="" width="80"><br>    <a name="slider-vers-la-gauche-en-utilisant-un-doigt"></a><h3>Slider vers la gauche en utilisant un doigt</h3>
-    <p>Déplacer le focus TalkBack sur l&#39;élément précédent.</p>
+    <img src="./images/gesture6.png" alt="" width="80"><br>    <a name="slide-vers-la-gauche-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers la gauche en utilisant un doigt</h3>
+    <p>Déplacer le focus <span lang="en">TalkBack</span> sur l’élément précédent.</p>
   </li>
-  <li class="clearfix"><br>    <img src="./images/gesture7.png" alt="" width="80"><br>    <a name="slider-vers-le-haut-en-utilisant-un-doigt"></a><h3>Slider vers le haut en utilisant un doigt</h3>
-    <p>Changer de mode de lecture : &quot;pages&quot;, &quot;par défaut (éléments)&quot;, &quot;caractères&quot;, &quot;mots&quot;, &quot;lignes&quot; et &quot;paragraphes&quot;.</p><br>  </li>
+  <li class="clearfix"><br>    <img src="./images/gesture7.png" alt="" width="80"><br>    <a name="slide-vers-le-haut-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers le haut en utilisant un doigt</h3>
+    <p>Changer de mode de lecture&nbsp;: « pages », « par défaut (éléments) », « caractères », « mots », « lignes » et « paragraphes ».</p><br>  </li>
   <li class="clearfix"><br>    <img src="./images/gesture8.png" alt="" width="80">
-    <a name="slider-vers-le-bas-en-utilisant-un-doigt"></a><h3>Slider vers le bas en utilisant un doigt</h3>
-    <p>Explorer l&#39;écran et entendre la vocalisation de l&#39;élément qui est touché.</p>
+    <a name="slide-vers-le-bas-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers le bas en utilisant un doigt</h3>
+    <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
   </li>
 </ul>  
 
-<p><span class="licence">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/">openexhibits</a></span></p>
-<p>Pour plus d&#39;information sur TalkBack et une description détaillée de ses fonctionnalités, nous vous invitons à lire la <a href="https://support.google.com/accessibility/android/answer/6283677?hl=fr&amp;ref_topic=3529932">documentation officielle de Google sur TalkBack</a>.  </p>
+<p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
+<p>Pour plus d’information sur <span lang="en">TalkBack</span> et une description détaillée de ses fonctionnalités, nous vous invitons à lire la <a href="https://support.google.com/accessibility/android/answer/6283677?hl=fr&amp;ref_topic=3529932">documentation officielle de Google sur <span lang="en">TalkBack</span></a>.  </p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="guide-d-utilisation-de-voiceover">Guide d&#39;utilisation de VoiceOver</h1>
+<h1 id="guide-d-utilisation-de-span-lang-en-voiceover-span-">Guide d’utilisation de <span lang="en">VoiceOver</span></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"lecteur d'écran", "url":"./screen-reader.html"},{"label":"Guide d'utilisation de VoiceOver"}]);
+    setBreadcrumb([{"label":"lecteur d’écran", "url":"./screen-reader.html"},{"label":"Guide d’utilisation de <span lang="en">VoiceOver</span>"}]);
     addSubMenu([
         {"label":"Guide pour Android","url":"talkback.html"}, 
         {"label":"Guide pour iOS","url":"screen-reader.html", "expanded": true}
@@ -1411,55 +1416,47 @@ remoteView.accessibilityElements?.append(fourButton)
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
-<p>VoiceOver est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone. Il est gratuit et permet à un utilisateur non ou mal voyant, dyslexique et illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. Un outil comme VoiceOver est appelé indifféremment lecteur d&#39;écran ou synthèse vocale, même si un lecteur d&#39;écran est en fait un logiciel associé à une synthèse vocale.  </p>
-<p>Lorsque VoiceOver est activé, les gestes standards effectués sur l’écran tactile donnent des résultats différents ; en outre, des gestes supplémentaires permettent de se déplacer à l’écran et de contrôler des éléments sélectionnés. VoiceOver comprend des gestes de toucher et de balayage à deux, trois et quatre doigts. Nous décrirons ici les gestes de base pour une utilisation courante de VoiceOver.</p>
+<p><span lang="en">VoiceOver</span> est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone. Il est gratuit et permet à un utilisateur non- ou malvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. Un outil comme <span lang="en">VoiceOver</span> est appelé indifféremment lecteur d’écran ou synthèse vocale, même si un lecteur d’écran est en fait un logiciel associé à une synthèse vocale.  </p>
+<p>Lorsque <span lang="en">VoiceOver</span> est activé, les gestes standards effectués sur l’écran tactile donnent des résultats différents ; en outre, des gestes supplémentaires permettent de se déplacer à l’écran et de contrôler des éléments sélectionnés. <span lang="en">VoiceOver</span> comprend des gestes de toucher et de balayage à deux, trois et quatre doigts. Nous décrirons ici les gestes de base pour une utilisation courante de <span lang="en">VoiceOver</span>.</p>
 <h2 id="gestes-de-bases">Gestes de bases</h2>
 <ul class="list-gesture">
   <li class="clearfix">
-    <img src="./images/gesture1.png" alt="" width="80"><br>    <a name="se-deplacer-avec-un-doigt-sur-lecran"></a><h3>Se déplacer avec un doigt sur l&#39;écran</h3>
-    <p>Explorer l&#39;écran et entendre la vocalisation de l&#39;élément qui est touché.</p>
+    <img src="./images/gesture1.png" alt="" width="80"><br>    <a name="se-deplacer-avec-un-doigt-sur-lecran"></a><h3>Se déplacer avec un doigt sur l’écran</h3>
+    <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
   </li>
   <li class="clearfix"><br>    <img src="./images/gesture2.png" alt="" width="80">
-    <a name="double-cliquer-nimporte-ou-sur-lecran"></a><h3>Double-cliquer n&#39;importe où sur l&#39;écran</h3>
-    <p>Ouvrir ou activer l&#39;élément qui a été touché (vocalisé) en dernier.</p>
+    <a name="double-cliquer-nimporte-ou-sur-lecran"></a><h3>Double-cliquer n’importe où sur l’écran</h3>
+    <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
   </li>
   <li class="clearfix">
     <img src="./images/gesture9_1.png" alt="" width="80">
     <img src="./images/gesture9_2.png" alt="" width="80">
-    <a name="slider-vers-le-haut-ou-le-bas-en-utilisant-trois-doigts"></a><h3>Slider vers le haut ou le bas en utilisant trois doigts</h3>
-    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu&#39;elle soit sélectionnée. Correspond à un slide vertical.</p>
+    <a name="slide-vers-le-haut-ou-le-bas-en-utilisant-trois-doigts"></a><h3><span lang="en">Slide</span> vers le haut ou le bas en utilisant trois doigts</h3>
+    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un <span lang="en">slide</span> vertical.</p>
   </li>
   <li class="clearfix">
       <img src="./images/gesture10_1.png" alt="" width="80">
-      <img src="./images/gesture10_2.png" alt="" width="80"><br>      <a name="slider-vers-la-gauche-ou-la-droite-en-utilisant-trois-doigts"></a><h3>Slider vers la gauche ou la droite  en utilisant trois doigts</h3>
-      <p>Changer de page ou d&#39;écran quand c&#39;est possible. Correspond à un slide horizontal.</p>
+      <img src="./images/gesture10_2.png" alt="" width="80"><br>      <a name="slide-vers-la-gauche-ou-la-droite-en-utilisant-trois-doigts"></a><h3><span lang="en">Slide</span> vers la gauche ou la droite  en utilisant trois doigts</h3>
+      <p>Changer de page ou d’écran quand c’est possible. Correspond à un <span lang="en">slide</span> horizontal.</p>
   </li>
-  <li class="clearfix"><br>      <img src="./images/gesture5.png" alt="" width="80"><br>      <a name="slider-vers-la-droite-en-utilisant-un-doigt"></a><h3>Slider vers la droite en utilisant un doigt</h3>
-      <p>
-          Déplacer le focus VoiceOver sur le prochain élément.
-      </p>
+  <li class="clearfix"><br>      <img src="./images/gesture5.png" alt="" width="80"><br>      <a name="slide-vers-la-droite-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers la droite en utilisant un doigt</h3>
+      <p>Déplacer le focus <span lang="en">VoiceOver</span> sur le prochain élément.</p>
   </li>
   <li class="clearfix">
-      <img src="./images/gesture6.png" alt="" width="80"><br>      <a name="slider-vers-la-gauche-en-utilisant-un-doigt"></a><h3>Slider vers la gauche en utilisant un doigt</h3>
-      <p>
-          Déplacer le focus VoiceOver sur l’élément précédent.
-      </p>
+      <img src="./images/gesture6.png" alt="" width="80"><br>      <a name="slide-vers-la-gauche-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers la gauche en utilisant un doigt</h3>
+      <p>Déplacer le focus <span lang="en">VoiceOver</span> sur l’élément précédent.</p>
   </li>
-  <li class="clearfix"><br>      <img src="./images/gesture7.png" alt="" width="80"><br>      <a name="slider-vers-le-haut-en-utilisant-un-doigt"></a><h3>Slider vers le haut en utilisant un doigt</h3>
-      <p>
-        Permet d’augmenter la valeur d’un élément ajustable.
-      </p>
+  <li class="clearfix"><br>      <img src="./images/gesture7.png" alt="" width="80"><br>      <a name="slide-vers-le-haut-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers le haut en utilisant un doigt</h3>
+      <p>Permet d’augmenter la valeur d’un élément ajustable.</p>
   </li>
   <li class="clearfix">
-      <img src="./images/gesture8.png" alt="" width="80"><br>      <a name="slider-vers-le-bas-en-utilisant-un-doigt"></a><h3>Slider vers le bas en utilisant un doigt</h3>
-      <p>
-        Permet de diminuer la valeur d’un élément ajustable.
-      </p>
+      <img src="./images/gesture8.png" alt="" width="80"><br>      <a name="slide-vers-le-bas-en-utilisant-un-doigt"></a><h3><span lang="en">Slide</span> vers le bas en utilisant un doigt</h3>
+      <p>Permet de diminuer la valeur d’un élément ajustable.</p>
   </li>
 </ul>  
 
-<p><span class="licence">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/">openexhibits</a></span></p>
-<p>Pour plus d’informations sur VoiceOver et une description détaillée des fonctionnalités qu’il propose, nous vous invitons à lire la <a href="https://help.apple.com/iphone/9/#/iph3e2e415f">documentation officielle d&#39;Apple sur VoiceOver</a>.  </p>
+<p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
+<p>Pour plus d’informations sur <span lang="en">VoiceOver</span> et une description détaillée des fonctionnalités qu’il propose, nous vous invitons à lire la <a href="https://help.apple.com/iphone/9/#/iph3e2e415f">documentation officielle d’Apple sur <span lang="en">VoiceOver</span></a>.  </p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -1472,29 +1469,29 @@ remoteView.accessibilityElements?.append(fourButton)
 
 <p><span data-menuitem="links"></span></p>
 <h2 id="en-compl-ment">En complément</h2>
-<p>Vous trouverez de l&#39;information sur le développement accessible pour iOS et Android sur <a href="https://github.com/DISIC/guide-mobile_app_dev_natif">le dépôt github de la DISIC</a> (Direction Interministérielle des Systèmes d&#39;Information et de Communication):</p>
+<p>Vous trouverez de l’information sur le développement accessible pour iOS et Android sur <a href="https://github.com/DISIC/guide-mobile_app_dev_natif">le dépôt github de la DISIC</a> (Direction Interministérielle des Systèmes d’Information et de Communication)&nbsp;:</p>
 <ul>
-<li><a href="https://github.com/DISIC/guide-mobile_app_audit">Guide d&#39;audit d&#39;applications mobiles</a></li>
-<li><a href="https://github.com/DISIC/guide-mobile_app_conception">Guide de conception d&#39;applications mobiles accessibles</a></li>
-<li><a href="https://github.com/DISIC/guide-mobile_app_dev_hybride">Guide de développement d&#39;applications mobiles hybrides accessibles avec Ionic et OnsenUI</a></li>
+<li><a href="https://github.com/DISIC/guide-mobile_app_audit">Guide d’audit d’applications mobiles</a></li>
+<li><a href="https://github.com/DISIC/guide-mobile_app_conception">Guide de conception d’applications mobiles accessibles</a></li>
+<li><a href="https://github.com/DISIC/guide-mobile_app_dev_hybride">Guide de développement d’applications mobiles hybrides accessibles avec Ionic et OnsenUI</a></li>
 </ul>
 <h2 id="pour-android">Pour Android</h2>
-<p>Présentation de l&#39;accessibilité sous Android et de l&#39;API Google  </p>
+<p>Présentation de l’accessibilité sous Android et de l’<abbr>API</abbr> Google  </p>
 <ul>
 <li><a href="https://developer.android.com/guide/topics/ui/accessibility/index.html">Documentation officielle de Google</a>  </li>
-<li><a href="https://support.google.com/accessibility/android/answer/6283677?hl=fr&amp;ref_topic=3529932">Guide complet de TalkBack</a></li>
+<li><a href="https://support.google.com/accessibility/android/answer/6283677?hl=fr&amp;ref_topic=3529932">Guide complet de <span lang="en">TalkBack</span></a></li>
 </ul>
-<p>Application AccessibilityScanner pour vous aider à tester une partie de l&#39;accessibilité de vos applications rapidement et simplement</p>
+<p>Application <span lang="en">AccessibilityScanner</span> pour vous aider à tester une partie de l’accessibilité de vos applications rapidement et simplement</p>
 <ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr">Application AccessibilityScanner</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr">Application <span lang="en">AccessibilityScanner</span></a></li>
 </ul>
 <h2 id="pour-ios">Pour iOS</h2>
-<p>Présentation de l&#39;accessibilité sous iOS et de l&#39;API Apple</p>
+<p>Présentation de l’accessibilité sous iOS et de l’<abbr>API</abbr> Apple</p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html">Documentation officielle de l&#39;API d&#39;accessiblité Apple</a></li>
-<li><a href="http://www.apple.com/fr/accessibility/">Présentation des options d&#39;accessibilité d&#39;iOS</a></li>
-<li><a href="https://developer.apple.com/accessibility/ios/">Page officielle de l&#39;accessibilité sous Apple</a></li>
-<li><a href="https://help.apple.com/iphone/9/#/iph3e2e415f">Utilisation de VoiceOver</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html">Documentation officielle de l’<abbr>API</abbr> d’accessiblité Apple</a></li>
+<li><a href="http://www.apple.com/fr/accessibility/">Présentation des options d’accessibilité d’iOS</a></li>
+<li><a href="https://developer.apple.com/accessibility/ios/">Page officielle de l’accessibilité sous Apple</a></li>
+<li><a href="https://help.apple.com/iphone/9/#/iph3e2e415f">Utilisation de <span lang="en">VoiceOver</span></a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

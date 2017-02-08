@@ -44,3 +44,20 @@
 .perso div {
     font-size: 1.2rem;
 }
+
+.examples-list {
+  list-style: none;
+}
+
+.examples-list img {
+  border: .1rem solid #888;
+  opacity: .75;
+  margin: 1rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.examples-list a:focus img,
+.examples-list a:hover img {
+  opacity: 1;
+}

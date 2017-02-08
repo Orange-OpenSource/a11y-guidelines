@@ -1,5 +1,6 @@
 
 var index = lunr(function () {
+    this.use(lunr.fr);
     this.field('body');
     this.ref('url');
 });
@@ -12,14 +13,7 @@ documentTitles["contact.html#recommandations-accessibilite-orange"] = "Recommand
 index.add({
     url: "contact.html#recommandations-accessibilite-orange",
     title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange "
-});
-
-documentTitles["contact.html#votre-avis-compte"] = "Votre avis compte";
-index.add({
-    url: "contact.html#votre-avis-compte",
-    title: "Votre avis compte",    
-    body: "## Votre avis compte    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?    Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?    Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -28,14 +22,7 @@ documentTitles["organisation.html#recommandations-accessibilite-orange"] = "Reco
 index.add({
     url: "organisation.html#recommandations-accessibilite-orange",
     title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange  "
-});
-
-documentTitles["organisation.html#organisation-du-site"] = "Organisation du site";
-index.add({
-    url: "organisation.html#organisation-du-site",
-    title: "Organisation du site",    
-    body: "## Organisation du site &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.   Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.  Chaque rubrique contient&amp;nbsp;: - Des recommandations en fonction de la plateforme visée, - Des ressources pour apprendre et tester soi-même, - Des exemples techniques.  "
+    body: "# Recommandations accessibilité Orange  &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.   Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.  Chaque rubrique contient&amp;nbsp;: - Des recommandations en fonction de la plateforme visée, - Des ressources pour apprendre et tester soi-même, - Des exemples techniques.  "
 });
 
 documentTitles["organisation.html#liste-des-rubriques"] = "Liste des rubriques";
@@ -72,14 +59,7 @@ documentTitles["index.html#recommandations-accessibilite-orange"] = "Recommandat
 index.add({
     url: "index.html#recommandations-accessibilite-orange",
     title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
-});
-
-documentTitles["index.html#quest-ce-que-laccessibilite-numerique"] = "Qu'est ce que l'accessibilité numérique ?";
-index.add({
-    url: "index.html#quest-ce-que-laccessibilite-numerique",
-    title: "Qu'est ce que l'accessibilité numérique ?",    
-    body: "## Qu'est ce que l'accessibilité numérique ?  L’accessibilité numérique permet de rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.  Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.  "
+    body: "# Recommandations accessibilité Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  &lt;h2 class=\&quot;page-title\&quot;&gt;Qu'est ce que l'accessibilité numérique ?&lt;/h2&gt;  L’accessibilité numérique permet de rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.  Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.  "
 });
 
 documentTitles["index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp"] = "Qui est concerné par l’accessibilité numérique&amp;nbsp;?";
@@ -137,14 +117,7 @@ documentTitles["about.html#recommandations-accessibilite-orange"] = "Recommandat
 index.add({
     url: "about.html#recommandations-accessibilite-orange",
     title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange "
-});
-
-documentTitles["about.html#a-propos"] = "À propos";
-index.add({
-    url: "about.html#a-propos",
-    title: "À propos",    
-    body: "## À propos      &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

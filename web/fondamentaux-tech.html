@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Recommandations accessibilité web Orange</title>
+    <title>Recommandations accessibilité Orange</title>
     
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -22,7 +22,13 @@
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -461,7 +467,7 @@ Faciliter la navigation pour des utilisateurs naviguant au clavier, des utilisat
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d&#39;adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
 <p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com">   </p>
 <p><strong>Référence :</strong> WCAG 2.4.1</p>
-<h2 id="21-animation">21. Animation</h2>
+<h2 id="21-permettre-le-contr-le-des-animations">21. Permettre le contrôle des animations</h2>
 <p><strong>Cible : </strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d&#39;attention ou de compréhension, les personnes épileptiques.<br><strong>Quand : </strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description :</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l&#39;utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d&#39;épilepsie</a>).
 Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l&#39;animation, la mise à jour ou le clignotement via un bouton par exemple.</p>

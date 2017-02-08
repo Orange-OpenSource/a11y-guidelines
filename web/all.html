@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Recommandations accessibilité web Orange</title>
+    <title>Recommandations accessibilité Orange</title>
     
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -22,7 +22,13 @@
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -99,7 +105,7 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="recommandations-accessibilit-web-orange">Recommandations accessibilité web Orange</h1>
+          <h1 id="recommandations-accessibilit-orange-pour-le-web">Recommandations accessibilité Orange pour le web</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
@@ -532,7 +538,7 @@ Faciliter la navigation pour des utilisateurs naviguant au clavier, des utilisat
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d&#39;adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
 <p><img src="images/skiplink.png" alt="capture d&#39;écran du site orange.com">   </p>
 <p><strong>Référence :</strong> WCAG 2.4.1</p>
-<h2 id="21-animation">21. Animation</h2>
+<h2 id="21-permettre-le-contr-le-des-animations">21. Permettre le contrôle des animations</h2>
 <p><strong>Cible : </strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d&#39;attention ou de compréhension, les personnes épileptiques.<br><strong>Quand : </strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description :</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l&#39;utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d&#39;épilepsie</a>).
 Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l&#39;animation, la mise à jour ou le clignotement via un bouton par exemple.</p>
@@ -588,7 +594,7 @@ Donner à tous les utilisateurs la maîtrise des changements de contexte lié à
 <h2 id="25-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">25. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
 <p><strong>Description :</strong>
-Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.</p>
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier :</strong> </p>
 <ul>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
@@ -599,7 +605,63 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
 <p><strong>Exemple valide :</strong><br><img src="images/groupement.jpg" alt="capture d&#39;écran du site 100% pratique"><br>Ici, l’info bulle (tooltip) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
 <p><strong>Exemple non-valide :</strong><br><img src="images/groupement2.jpg" alt="capture d&#39;écran du site fnac.com"><br>Il est très difficile d’associer les thèmes (« par région », « par genre »… et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
-Référence WCAG : 3.2.3., 3.2.4</p>
+<strong>Exemple : Les balises HTML5 et landmarks ARIA</strong>
+Pour donner une structure sémantique aux grandes régions d&#39;une page, on peut utiliser les balises de structure HTML5 (<code>main</code> pour le contenu principal de la page, <code>nav</code> pour la navigation principale, <code>header</code> pour l&#39;entête de page, <code>footer</code> pour le pied de page, <code>aside</code> pour du contenu complémentaire au contenu principal, et d&#39;autres) même si leur support par les technologies d&quot;assistance/navigateurs n&#39;est pas total mais s&#39;améliorant rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, les landmarks ARIA (Accessible Rich Internet Application, <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html">https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html</a>) et là, le support est bien meiileur !</p>
+<p>Mettre en place ce type de sémantique permet aux déficients visuels d&#39;indentifier et comprendre l&#39;organisation, la structure gloale de la page et donc de naviguer plus facilement.</p>
+<p>Pour aller plus loin (en anglais) : <a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html">https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html</a> </p>
+<p>Pour une page en HTML5 :</p>
+<p><code>&lt;head&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;title&gt;Titre de la page&lt;/title&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/head&gt;</code></p>
+<p><code>&lt;body&gt;</code></p>
+<p><code>&lt;header&gt;</code></p>
+<p><code>&lt;h1&gt;...&lt;/h1&gt;</code></p>
+<p><code>&lt;nav&gt;...navigation...&lt;/nav&gt;</code></p>
+<p><code>&lt;p&gt;en tête de page : logo, baseline...&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/header&gt;</code></p>
+<p><code>&lt;main&gt;</code></p>
+<p><code>&lt;p&gt;contenu principal&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/main&gt;</code></p>
+<p><code>&lt;aside&gt;</code></p>
+<p><code>&lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/aside&gt;</code></p>
+<p><code>&lt;footer&gt;</code></p>
+<p><code>&lt;p&gt;contenu du pied de page : copyright...&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/footer&gt;</code></p>
+<p><code>&lt;/body&gt;</code></p>
+<p>Pour une page pas en HTML5 mais avec les landmarks ARIA :</p>
+<p><code>&lt;head&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;title&gt;Titre de la page&lt;/title&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/head&gt;</code></p>
+<p><code>&lt;body&gt;</code></p>
+<p><code>&lt;div role=&quot;banner&quot;&gt;</code></p>
+<p><code>&lt;h1&gt;...&lt;/h1&gt;</code></p>
+<p><code>&lt;div role=&quot;navigation&quot;&gt;...navigation...&lt;/div&gt;</code></p>
+<p><code>&lt;p&gt;en tête de page : logo, baseline...&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/div&gt;</code></p>
+<p><code>&lt;div role=&quot;main&quot;&gt;</code></p>
+<p><code>&lt;p&gt;contenu principal&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/div&gt;</code></p>
+<p><code>&lt;div role=&quot;complementary&quot;&gt;</code></p>
+<p><code>&lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/div&gt;</code></p>
+<p><code>&lt;div role=&quot;contentinfo&quot;&gt;</code></p>
+<p><code>&lt;p&gt;contenu du pied de page : copyright...&lt;/p&gt;</code></p>
+<p><code>...</code></p>
+<p><code>&lt;/div&gt;</code></p>
+<p><code>&lt;/body&gt;</code></p>
+<p><strong>Référence WCAG :</strong> 3.2.3., 3.2.4</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -627,7 +689,8 @@ Référence WCAG : 3.2.3., 3.2.4</p>
 <p><strong>Exemple valide :</strong><br><code>Accueil - Espace client Orange</code></p>
 <p><strong>Exemple non-valide :</strong><br><code>Accueil</code></p>
 <h2 id="2-donner-des-titres-aux-rubriques">2. Donner des titres aux rubriques</h2>
-<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes cognitives, avec des difficultés pour lire et déficientes visuelles.<br><strong>Quand : </strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes cognitives, avec des difficultés pour lire 
+et déficientes visuelles.<br><strong>Quand : </strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
 <p><strong>Description :</strong><br>Identifier les balises de titres à utiliser (balises HTML <code>h1</code> jusqu&#39;à <code>h6</code>) pour structurer le contenu des pages.
 Les personnes malvoyantes naviguant à l&#39;aide d&#39;un lecteur d&#39;écran peuvent accéder à la liste des titres de la page pour naviguer rapidement. 
 Tout comme dans un fichier Word, il est possible d&#39;utiliser la table des matières si des titres ont correctement été positionnés à l&#39;intérieur du document.  </p>
@@ -680,7 +743,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>couper le son ...  </li>
 </ul>
 <p><img src="images/player.png" alt="capture d&#39;écran d&#39;un lecteur vidéo contenant plusieurs boutons">   </p>
-<h2 id="6-visibilit-du-focus">6. Visibilité du focus</h2>
+<h2 id="6-assurer-la-visibilit-du-focus">6. Assurer la visibilité du focus</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand : </strong> lors de la conception graphique et lors du développement.</p>
 <p><strong>Description :</strong><br>La position du focus clavier doit être visible à tous moment. Lorsqu&#39;un élément cliquable reçoit le focus (lien, bouton ...), ceci doit être visible pour l&#39;utilisateur. Par défaut, le navigateur entoure l&#39;élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour le rendre plus visible (assurer un contraste suffisant, par exemple) par un effet personnalisé, mais ne doit pas être supprimé. Les utilisateurs qui naviguent à l&#39;aide du clavier (touche TAB) ont besoin de connaître la position du focus.    </p>
 <p>L&#39;effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l&#39;effet visible au survol du pointeur de la souris.</p>
@@ -694,7 +757,7 @@ Bien que ceci doive être pris en compte pendant la phase de développement, on 
 <p><strong>Exemple : </strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d&#39;écran avec zoom à 100%">    </p>
 <p>&nbsp;<br><strong>Exemple valide : </strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d&#39;écran avec zoom à 200% et texte lisible">    </p>
 <p>&nbsp;<br><strong>Exemple non-valide : </strong><br>Avec zoom du texte à 200%. Ici la hauteur de l&#39;élément contenant le texte n&#39;a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d&#39;écran avec zoom à 200% et texte tronqué">  </p>
-<h2 id="8-animation">8. Animation</h2>
+<h2 id="8-permettre-le-contr-le-des-animations">8. Permettre le contrôle des animations</h2>
 <p><strong>Cible : </strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d&#39;attention ou de compréhension, les personnes épileptiques.<br><strong>Quand : </strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description :</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l&#39;utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d&#39;épilepsie</a>).</p>
 <p><strong>Exemple : </strong><br><img src="./images/carrousel.png" alt="capture d&#39;écran d&#39;un carrousel disposant d&#39;un bouton pour mettre en pause l&#39;animation">  </p>
@@ -705,11 +768,11 @@ Bien que ceci doive être pris en compte pendant la phase de développement, on 
 Dans les cas exceptionnels où ce n&#39;est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale.</p>
 <p><strong>Exemple valide :</strong><br><code>découvrez nos offres</code></p>
 <p><strong>Exemple non-valide :</strong><br><code>cliquez ici</code><br><code>en savoir plus</code></p>
-<h2 id="10-navigation-au-clavier">10. Navigation au clavier</h2>
+<h2 id="10-permettre-la-navigation-au-clavier">10. Permettre la navigation au clavier</h2>
 <p><strong>Cible : </strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand : </strong> lors de la conception du service et lors du développement.</p>
 <p><strong>Description :</strong><br>Toutes les fonctionnalités doivent être utilisables à l&#39;aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l&#39;aide de la touche TAB).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glissé déposé, menu apparaissant au clic droit...), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l&#39;interface (bouton, icône, menu...). </p>
 <p><strong>Exemple : </strong><br>Dans webmail, si un clic droit sur le dossier &quot;corbeille&quot; permet d&#39;accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton &quot;vider la corbeille&quot; ailleurs dans l&#39;interface ou depuis un menu déroulant accessible au clavier.</p>
-<h2 id="11-formulaires">11. Formulaires</h2>
+<h2 id="11-rendre-utilisable-les-formulairess">11. Rendre utilisable les formulairess</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong><br>Chaque champ de formulaire doit être accompagné d&#39;un libellé permettant d&#39;identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin qu&#39;on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle), voire sur mobile). Les champs en erreur doivent pouvoir être identifiés, si besoin, suggérer une correction. Ceci s&#39;applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher ...). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l&#39;aide d&#39;un lecteur d&#39;écran.</p>
 <p><strong>Exemple valide : </strong><br><img src="images/formulaire.png" alt="capture d&#39;écran d&#39;un formulaire valide"></p>
@@ -720,9 +783,9 @@ Dans les cas exceptionnels où ce n&#39;est techniquement pas possible, prévoir
 <p>Enfin les libellés des messages d&#39;erreur doivent être explicites.</p>
 <p><strong>Exemple valide : </strong><br><img src="images/formulaire-ok.png" alt="capture d&#39;écran d&#39;un formulaire affichant des messages d&#39;erreur à la saisie valides">  </p>
 <p><strong>Exemple non-valide : </strong><br><img src="images/formulaire-ko.png" alt="capture d&#39;écran d&#39;un formulaire affichant des messages d&#39;erreur à la saisie non-valides"></p>
-<h2 id="12-boites-de-dialogues-et-ouverture-de-nouvelles-fen-tres">12. Boites de dialogues et ouverture de nouvelles fenêtres</h2>
+<h2 id="12-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">12. Éviter les boites de dialogues et l&#39;ouverture de nouvelles fenêtres</h2>
 <p><strong>Cible : </strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand : </strong> lors de la conception et lors du développement.</p>
-<p><strong>Description :</strong><br>Eviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l&#39;ouverture d&#39;une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte &quot;nouvelle fenêtre&quot; soit vocalisé par les lecteurs d&#39;écran. Ceci afin que les personnes malvoyantes sachent qu&#39;une nouvelle fenêtre s&#39;ouvre.
+<p><strong>Description :</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l&#39;ouverture d&#39;une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte &quot;nouvelle fenêtre&quot; soit vocalisé par les lecteurs d&#39;écran. Ceci afin que les personnes malvoyantes sachent qu&#39;une nouvelle fenêtre s&#39;ouvre.
 De même éviter le recours systématique aux boites de dialogues pour présenter des informations dans les pages (présentation du service ...). Celles-ci posent souvent des problèmes d&#39;accessibilité pour les personnes qui naviguent au clavier ou au lecteur d&#39;écran qui nécessiteront une attention particulière lors de la phase de développement.</p>
 <p><strong>Exemple non-valide : </strong><br>Dans l&#39;exemple ci-dessous le recours à une boite de dialogue n&#39;est pas justifié. L&#39;utilisation d&#39;un page web standard permettrait :</p>
 <ul>
@@ -742,7 +805,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h2 id="14-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
 <p><strong>Cible : </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
 <p><strong>Description :</strong>
-Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence dans toutes les pages à ces régions ou regroupements.</p>
+Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier :</strong> </p>
 <ul>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
@@ -760,16 +823,16 @@ Permettre aux utilisateurs d’identifier et localiser les éléments d’interf
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Ensemble des exigences"}]);
 });</script>
-<h2 id="le-r-f-rentiel-wcag">Le référentiel WCAG</h2>
-<p>Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les <a href="http://www.w3.org/Translations/WCAG20-fr/">Web Content Accessibility Guidelines v2</a> (WCAG 2). Il s&#39;agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.</p>
-<p>Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est <strong>le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
-<p>Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des <a href="./fondamentaux.html">critères incontournables</a> et des <a href="./exemples.html">exemples</a> de ce site. Vous pouvez aussi utiliser les notices  <a href="http://www.accede-web.com/notices/">notices Accede-Web</a> cf. ci-dessous. </p>
-<h2 id="le-r-f-rentiel-g-n-ral-d-accessibilit-des-administrations-rgaa-">Le référentiel général d&#39;accessibilité des administrations (RGAA)</h2>
-<p>Si vous êtes familiarisé avec le <a href="http://references.modernisation.gouv.fr/referentiel">Référentiel Général d’Accessibilité des Administrations</a> (RGAA), celui-ci peut être utilisé pour effectuer les tests d&#39;accessibilité. 
-Il s&#39;agit du référentiel officiel permettant de s’assurer qu’un site d&#39;état et de collectivités territoriales est en conformité avec l’<a href="http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&amp;cidTexte=JORFTEXT000000809647">article 47 de la loi de février 2005 pour l&#39;égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées</a>.</p>
-<p>Le RGAA est une méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA est également conforme aux WCAG2.  </p>
-<h2 id="les-notices-accede-web">Les notices accede-web</h2>
-<p>Le site <a href="http://accede-web.com/">accede-web</a> propose d&#39;excellentes notices sur l&#39;accessibilité au format Web et PDF, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.</p>
+<h2 id="le-r-f-rentiel-abbr-wcag-abbr-">Le référentiel <abbr>WCAG</abbr></h2>
+<p>Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les <a href="http://www.w3.org/Translations/WCAG20-fr/"><span lang="en">Web Content Accessibility Guidelines</span> v2</a> (<abbr>WCAG</abbr> 2). Il s’agit des recommandations internationales éditées par le groupe de travail <span lang="en">Web Accessibility Initiative</span> (<abbr>WAI</abbr>) du <span lang="en">World Wide Web Consortium</span> (<abbr>W3C</abbr>) qui sont aussi les normes ISO 40500:2012.</p>
+<p>Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.0, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
+<p>Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des <a href="./fondamentaux.html">critères incontournables</a> et des <a href="./exemples.html">exemples</a> de ce site. Vous pouvez aussi utiliser les <a href="http://www.accede-web.com/notices/">notices Accede-Web</a> cf. ci-dessous. </p>
+<h2 id="le-r-f-rentiel-g-n-ral-d-accessibilit-des-administrations-abbr-rgaa-abbr-">Le référentiel général d’accessibilité des administrations (<abbr>RGAA</abbr>)</h2>
+<p>Si vous êtes familiarisé avec le <a href="http://references.modernisation.gouv.fr/referentiel">Référentiel Général d’Accessibilité des Administrations</a> (<abbr>RGAA</abbr>), celui-ci peut être utilisé pour effectuer les tests d’accessibilité. 
+Il s’agit du référentiel officiel permettant de s’assurer qu’un site d’état et de collectivités territoriales est en conformité avec l’<a href="http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&amp;cidTexte=JORFTEXT000000809647">article 47 de la loi de février 2005 pour l’égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées</a>.</p>
+<p>Le <abbr>RGAA</abbr> est une méthode d’implémentation des <span lang="en">Web Content Accessibility Guidelines</span> v2 (<abbr>WCAG</abbr> 2). Un site conforme au <abbr>RGAA</abbr> est également conforme aux <abbr>WCAG</abbr>2.  </p>
+<h2 id="les-notices-accede-web">Les notices Accede-Web</h2>
+<p>Le site <a href="http://accede-web.com/">Accede-Web</a> propose d’excellentes notices sur l’accessibilité au format Web et <abbr>PDF</abbr>. Celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.</p>
 <p>Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).</p>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
     <img src="./images/perso1.png" alt=""> 
@@ -779,10 +842,10 @@ Il s&#39;agit du référentiel officiel permettant de s’assurer qu’un site d
     <img src="./images/perso2.png" alt=""><br>    <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    <img src="./images/perso3.png" alt=""><br>    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité HTML, CSS et JavaScript</a>
+    <img src="./images/perso3.png" alt=""><br>    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité <abbr>HTML</abbr>, <abbr>CSS</abbr> et JavaScript</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    <img src="./images/perso4.png" alt=""><br>    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interface riche</a>
+    <img src="./images/perso4.png" alt=""><br>    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interfaces riches</a>
 </div>      
 
 <p><br>&nbsp;
@@ -1099,40 +1162,74 @@ Plus d&#39;information dans la rubrique <strong>exemples</strong> : <a href="exe
 });</script>
 
 <h2 id="les-bases">Les bases</h2>
-<ul>
-<li><p><a href="exemples/masquage/index.html">Masquage accessible</a></p>
-</li>
-<li><p><a href="exemples/formulaire/index.html">Gestion des formulaires</a></p>
-</li>
-<li><p><a href="exemples/zoom/index.html">Gestion du zoom, agrandissement de la taille du texte</a></p>
-</li>
+<ul class="examples-list">
+    <li>
+        <a href="exemples/masquage/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/masquage.png"><span>Masquage accessible</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/formulaire/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/formulaire.png"><span>Gestion des formulaires</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/zoom/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/zoom.png"><span>Gestion du zoom, agrandissement de la taille du texte</span>
+        </a>
+    </li>
 </ul>
+
 <h2 id="niveau-interm-diaire">Niveau intermédiaire</h2>
-<ul>
-<li><p><a href="exemples/role-dialog/role-dialog.html">Les boites de dialogue 1/2</a>  </p>
-</li>
-<li><p><a href="exemples/role-dialog2/role-dialog.html">Les boites de dialogue 2/2</a></p>
-</li>
-<li><p><a href="exemples/simple-menu/simple-menu.html">Menu déroulant</a>  </p>
-</li>
+<ul class="examples-list">
+    <li>
+        <a href="exemples/role-dialog/role-dialog.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog1.png"><span>Les boites de dialogue 1/2</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/role-dialog2/role-dialog.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog2.png"><span>Les boites de dialogue 2/2</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/simple-menu/simple-menu.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/menu.png"><span>Menu déroulant</span>
+        </a>
+    </li>
 </ul>
+
 <h2 id="niveau-avanc-">Niveau avancé</h2>
-<ul>
-<li><p><a href="exemples/listbox/index.html">Les listes ARIA (listbox) 1/3</a> </p>
-</li>
-<li><p><a href="exemples/check-listbox/index.html">Les listes ARIA (listbox) 2/3 (avec cases à cocher)</a></p>
-</li>
-<li><p><a href="exemples/listbox-pattern-aria/index.html">Les listbox et patterns ARIA 3/3 (navigation au clavier)</a></p>
-</li>
-<li><p><a href="exemples/files/index.html">Explorateur de fichiers (cloud)</a></p>
-</li>
-<li><p><a href="exemples/dynFocus/index.html">Les régions vivantes (live regions), contenu dynamique, gestion du focus et ARIA </a></p>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<p>&nbsp;</p>
-</li>
+<p><ul class="examples-list">
+    <li>
+        <a href="exemples/listbox/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox.png"><span>Les listes <abbr>ARIA</abbr> (listbox) 1/3</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/check-listbox/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox2.png"><span>Les listes <abbr>ARIA</abbr> (listbox) 2/3 (avec cases à cocher)</span>
+        </a>
+    </li> 
+    <li>
+        <a href="exemples/listbox-pattern-aria/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox3.png"><span>Les <i lang="en">listbox</i> et <i lang="en">patterns</i> <abbr>ARIA</abbr> 3/3 (navigation au clavier)</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/files/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/cloud.png"><span>Explorateur de fichiers (<i lang="en">cloud</i>)</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/dynFocus/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/live-region.png"><span>Les régions vivantes (<i lang="en">live regions</i>), contenu dynamique, gestion du focus et <abbr>ARIA</abbr></span>
+        </a>
+    </li>
 </ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
 <h1 id="votre-avis-compte">Votre avis compte</h1>
 <script>$(document).ready(function () {
@@ -1166,7 +1263,7 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 
 
 <h2 id="introduction-l-accessibilit-des-mails">Introduction : l&#39;accessibilité des mails</h2>
-<p>Les mails au format texte et sans image, comme le sont les mails entre salariés, sont souvent accessibles. Le problème d&#39;inaccessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d&#39;informations et sont un outil essentiel de la communication d&#39;entreprise.</p>
+<p>Les mails au format texte et sans image, comme souvent les mails entre salariés, sont accessibles. Le problème de non accessibilité est plutôt le fait des pushmails. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d&#39;informations et sont un outil essentiel de la communication d&#39;entreprise.</p>
 <h3 id="des-solutions-alternatives">Des solutions alternatives</h3>
 <p>Et si la mise en page du push mail est complexe, que l&#39;on n&#39;a pas la possibilité de rendre le pushmail accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours :</p>
 <ul>
@@ -1195,28 +1292,29 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 </ul>
 <h2 id="les-crit-res-respecter">Les critères à respecter</h2>
 <h3 id="consid-ration-g-n-rale">Considération générale</h3>
-<p>Ces critères sont génériques et ne présument pas de la manière de fabriquer les mails, mais suppose que le contenu soit du html, seul format permettant une mise en page complexe. Pour les exemples utilisés dans ces recommandations, nous les avons mis en oeuvre dans Word qui semble être l&#39;outil privilégié pour fabriquer les pushmails et les gabarits des newsletters, chez nous, Orange. Bien sûr, ces recommandations peuvent être appliquées dans n&#39;importe quel outil permettant de fabriquer des mails.</p>
+<p>Ces critères sont génériques et ne présument pas de la manière de fabriquer les mails, mais supposent que le contenu soit du html, seul format permettant une mise en page complexe. Pour les exemples utilisés dans ces recommandations, nous les avons mis en oeuvre dans Word qui semble être l&#39;outil privilégié pour fabriquer les pushmails et les gabarits des newsletters, en interne Orange. Bien sûr, ces recommandations peuvent être appliquées dans n&#39;importe quel outil permettant de fabriquer des mails.</p>
 <h3 id="simplifier-la-r-daction-du-contenu">Simplifier la rédaction du contenu</h3>
 <p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
 <p><strong>Description : </strong><br>Simplifier le rédactionnel pour tous les utilisateurs.</p>
-<p><strong>À vérifier : </strong><br>S&#39;assurer que le rédactionnel :</p>
+<p><strong>À vérifier : </strong><br>S&#39;assurer que le rédacteur utilise :</p>
 <ul>
-<li>Utilise des tournures de phrases limpides<ul>
+<li>Des tournures de phrases limpides<ul>
 <li>des phrases courtes et à la construction simple : sujet, verbe, complément</li>
 <li>une idée par phrase</li>
-<li>utiliser des mots simples et expliquer les mots compliqués</li>
-<li>utiliser le présent</li>
-<li>privilégier le style direct et la forme active (pas de subjonctif, pas de conjonctions)</li>
+<li>des mots simples et les mots compliqués doivent être expliqués</li>
+<li>le présent</li>
+<li>de préférence, le style direct et la forme active (pas de subjonctif, pas de conjonctions)</li>
 </ul>
 </li>
-<li>Ne contient pas de mots en anglais, de sigles ou abréviations sauf ceux passés dans le langage courant </li>
-<li>Utilise les caractères typographiques du Français  <ul>
+<li>Les caractères typographiques du Français  <ul>
 <li>Tiret - , cadratin —, « guillemets français »</li>
-<li>Accents même aux majuscules (éèêçàïùÉÈÊÇÀÏÙ)</li>
+<li>Accents même aux majuscules (éèêçàïùÉÈÊÇÀÏÙ)
+et n&#39;utilisent pas :</li>
 </ul>
 </li>
+<li>de mots en anglais, de sigles ou abréviations sauf ceux passés dans le langage courant </li>
 </ul>
-<p><strong>Objectif : </strong><br>Permettre aux utilisateurs de comprendre facilement et d&#39;interpréter le sens du contenu.</p>
+<p><strong>Objectif : </strong><br>Permettre aux utilisateurs de comprendre facilement le sens du contenu.</p>
 <h3 id="structurer-s-mantiquement-le-contenu">Structurer sémantiquement le contenu</h3>
 <p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
 <p><strong>Description : </strong><br>Donner une structure cohérente au contenu rédactionnel grâce à la mise en place :</p>
@@ -1229,21 +1327,21 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 <li>Les titres doivent être pertinents et non vides.</li>
 <li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d&#39;un titre <code>h2</code> à un titre <code>h4</code>).</li>
 <li>On peut mettre plusieurs <code>h1</code> par mail (se limiter tout de même à deux dans la majorité des cas).</li>
-<li>les listes doivent être de réelles listes de plusieurs éléments et bien différencier les listes ordonnées de celles qui ne le sont pas.</li>
+<li>les listes doivent être de réelles listes de plusieurs éléments et les listes ordonnées doivent être différenciées de celles qui ne le sont pas.</li>
 </ul>
 <p><strong>Objectif : </strong><br>Permettre aux utilisateurs de facilement comprendre et hiérarchiser le contenu.</p>
-<p><strong>Exemple dans Word : </strong><br>Pour sémantiser le contenu, il faut utiliser la palette des Styles. En donnant un style (titre, emphase, liste...) à une partie de vote contenu, vous modifiez son apparence mais surtout vous lui donnez de la sémantique.
-Cliquer sur le bouton d&#39;ouverture (en bas à droite de l&#39;outil Style dans l&#39;onglet Accueil) ou grâce au racourci clavier Ctrl + Alt + Maj + s permet l&#39;ouverture du panneau Style.</p>
+<p><strong>Exemple dans Word : </strong><br>Pour donner une structure sémantique au le contenu, il faut utiliser la palette des Styles. En donnant un style (titre, emphase, liste...) à une partie de vote contenu, vous modifiez son apparence mais surtout vous lui donnez de la sémantique.
+Cliquer sur le bouton d&#39;ouverture (en bas à droite de l&#39;outil Style dans l&#39;onglet Accueil) ou grâce au raccourci clavier Ctrl + Alt + Maj + s permet l&#39;ouverture du panneau Style.</p>
 <p><img src="images/style_word.jpg" alt=" "></p>
 <p>  Vous avez accès à des listes (comme avec les boutons dans le bandeau &quot;Accueil&quot; dans le menu &quot;Paragraphe), aux titres et à toute une série de styles. De préférence utiliser les styles par défaut proposés, il en existe suffisamment. </p>
 <p><img src="images/palette_style.jpg" alt=" "></p>
 <h3 id="simplifier-la-pr-sentation">Simplifier la présentation</h3>
 <p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d&#39;attention.  </p>
-<p><strong>Description : </strong><br>Simplifier la présentation du contenu et respecter les bonnes pratiques en termes de présentation. </p>
+<p><strong>Description : </strong><br>Simplifier la présentation du contenu et respecter les bonnes pratiques pour ce qui est de la présentation. </p>
 <p><strong>À vérifier : </strong><br>Pour assurer une lecture facile :</p>
 <ul>
 <li>Aligner le texte à gauche, mais ne pas le justifier</li>
-<li>Utiliser une police de caractères facilement lisible en corps 12pixels minimum</li>
+<li>Utiliser une police de caractères facilement lisible en corps 12 pixels minimum</li>
 <li>Mettre  en place une ponctuation simple</li>
 <li>Ne pas mettre d’italiques, ni de phrases en majuscules, mais une majuscule en début de phrase</li>
 <li>Éviter les fonds texturés (images)</li>
@@ -1255,37 +1353,37 @@ Cliquer sur le bouton d&#39;ouverture (en bas à droite de l&#39;outil Style dan
 S&#39;assurer que la présentation n&#39;empêche pas l&#39;accès au contenu et à sa compréhension.</p>
 <h3 id="donner-une-alternative-aux-images">Donner une alternative aux images</h3>
 <p><strong>Pour qui : </strong> tout le monde et en particulier, les personnes déficientes visuelles ou cognitives.  </p>
-<p><strong>Description : </strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icones...). 
+<p><strong>Description : </strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (images, icones...). 
 Mettre pour toute image (balise <code>img</code> en HTML) une alternative pertinente (un attribut <code>alt</code> en HTML) : </p>
 <ul>
 <li>Pour les images cliquables : préciser la fonction / la cible du lien dans l’alternative,</li>
 <li>Pour les images porteuses d&#39;information : mettre une alternative décrivant l&#39;information contenue dans l&#39;image</li>
 <li>Pour les images contenant du texte : mettre une alternative reprenant au moins le texte de l’image,</li>
 <li>Pour les images décoratives : mettre une alternative vide,</li>
-<li>Pour les images dont le contenu de l&#39;alternative serait trop long (schémas, graphes...), mettre à proximité de l&#39;image à décrire, sa description sous forme de texte dans le mail ou, un lien pointant vers une page html contenant cette description.</li>
+<li>Pour les images dont le contenu de l&#39;alternative serait trop long (schémas, graphes...), mettre à proximité de l&#39;image décrite soit, sa description sous forme d&#39;une texte dans le mail soit, un lien pointant vers une page html contenant cette description.</li>
 </ul>
 <p><strong>À vérifier : </strong><br>Toute image doit posséder une  alternative qui ne reflète que le contenu informatif qu&#39;elle porte.
-Pour les graphes, la solution, peut être, de mettre un lien sous l&#39;image permettant d&#39;accéder à un tableau de chiffre en bas du mail, par exemple.
+Pour les graphes, la solution, peut-être, de mettre un lien sous l&#39;image permettant d&#39;accéder à un tableau de chiffre en bas du mail, par exemple.
 Une alternative doit être :</p>
 <ul>
 <li>Précise et équivalente au contenu de l&#39;image ou sa fonction</li>
-<li>Succinte, quelques mots à deux phrases courtes semble la bonne taille</li>
-<li>Pas redondante, ne pas fournir la même information que dans le texte environnant</li>
-<li>Pas de texte générique, pas besoin d&#39;alternative du type &quot;image de...&quot;, &quot;graphique sur...&quot;, &quot;lien vers...&quot;, ...</li>
+<li>Succincte, quelques mots à deux phrases courtes</li>
+<li>Non redondante : ne pas fournir la même information que dans le texte environnant</li>
+<li>Sans texte générique, pas besoin d&#39;alternative du type &quot;image de...&quot;, &quot;graphique sur...&quot;, &quot;lien vers...&quot;, etc.</li>
 </ul>
-<p><strong>Objectif : </strong><br>Permettre l&#39;accès à l&#39;information incluse dans une image pour des utilisateurs qui n&#39;y ont pas accès.
+<p><strong>Objectif : </strong><br>Permettre l&#39;accès à l&#39;information véhiculée dans une image pour des utilisateurs qui n&#39;y ont pas accès.
 Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n&#39;affichant pas les images (mobile, faible bande passante...).</p>
 <p><strong>Exemple dans Word : </strong>  </p>
-<p>Il faut donner une alternative textuelle (texte de replacement) à toute image dans Word. Pour cela, il faut accéder aux propriété de cette image. Sélectionnez l&#39;image, faire un clic droit, puis &quot;Fomat de l&#39;image&quot; et &quot;Texte de remplacement&quot;.</p>
+<p>Il faut donner une alternative textuelle (texte de replacement) à toute image dans Word. Pour cela, il faut accéder aux propriétés de cette image. Sélectionnez l&#39;image, faire un clic droit, puis &quot;Format de l&#39;image&quot; et &quot;Texte de remplacement&quot;.</p>
 <p><img src="images/menu_context_im.jpg" alt=" "> </p>
-<p>Ne pas remplir le champ &quot;Titre&quot;, le laisser vide. En revanche, mettre dans le champs &quot;Description&quot; (seul champ lu par une synthèse vocale)  le texte alternatif donnant l&#39;information équivalente à celle contenue dans l&#39;image. Si l&#39;image ne porte pas d&#39;information, laisser les deux champs &quot;Titre&quot; et &quot;Description&quot; vides.</p>
+<p>Ne pas remplir le champ &quot;Titre&quot;, le laisser vide. En revanche, saisir dans le champs &quot;Description&quot; (seul champ lu par une synthèse vocale) le texte alternatif donnant l&#39;information équivalente à celle contenue dans l&#39;image. Si l&#39;image ne porte pas d&#39;information, laisser les deux champs &quot;Titre&quot; et &quot;Description&quot; vides.</p>
 <p><img src="images/format_img.jpg" alt=" "></p>
 <h3 id="sp-cifier-la-langue-du-mail-et-les-changements-ventuels">Spécifier la langue du mail et les changements éventuels</h3>
 <p><strong>Pour qui : </strong> les personnes déficientes visuelles.  </p>
 <p><strong>Description : </strong><br>Spécifier la langue principale du document (l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans la balise <code>html</code>). 
 Préciser également la langue d&#39;un contenu exprimé dans une langue autre que la langue principale (l&#39;attribut <code>lang</code> et/ou <code>xml:lang</code> dans l&#39;élément html contenant l&#39;expression en langue étrangère).  </p>
 <p><strong>À vérifier : </strong><br>Pour les mots ou les expressions en langue étrangère passés dans l&#39;usage courant (Google, newsletter...) ou les noms propres, ne pas indiquer de changement de langue.</p>
-<p><strong>Objectif : </strong><br>Cette indication permet d&#39;adapter la synthèse vocale pour une bonne prononciation de la langue à utiliser.</p>
+<p><strong>Objectif : </strong><br>Cette indication permet à la synthèse vocale d&#39;adapter la prononciation en fonction de la langue utilisée.</p>
 <p><strong>Exemple pour une page en français : </strong>  </p>
 <ul>
 <li>pour du HTML : <code>&lt;html lang=&quot;fr&quot;&gt;</code></li>
@@ -1293,11 +1391,11 @@ Préciser également la langue d&#39;un contenu exprimé dans une langue autre q
 </ul>
 <p><strong>Exemple de changement de langue : </strong><br><code>découvrir Orange &lt;span lang=&quot;fr&quot;&gt;live&lt;/span&gt; TV</code></p>
 <p><strong>Exemple pour Word :</strong>
-Pour modifier la langue du document ou d&#39;une partie du contenu (après sélection de ce contenu), on utilise  on utilise, dans l&#39;onglet &quot;Révision&quot;, l&#39;élément &quot;Langue&quot;. </p>
+Pour modifier la langue du document ou d&#39;une partie du contenu (après sélection de ce contenu), on utilise on utilise, dans l&#39;onglet &quot;Révision&quot;, l&#39;élément &quot;Langue&quot;. </p>
 <p><img src="images/revision.jpg" alt=" "> </p>
-<p>Dans le sous-menu de &quot;Langue&quot;, on clique sur &quot;Défnir la langue de vérification&quot; et dans la fenêtre &quot;Langue&quot;, on choisit la langue voulue.</p>
+<p>Dans le sous-menu de &quot;Langue&quot;, on clique sur &quot;Définir la langue de vérification&quot; et dans la fenêtre &quot;Langue&quot;, on choisit la langue voulue.</p>
 <p><img src="images/langue.jpg" alt=" "> </p>
-<h3 id="fournir-une-mise-en-page-accessible">Fournir une mise en page accessible</h3>
+<h3 id="fournir-une-mise-en-page-des-tableaux-accessible">Fournir une mise en page (des tableaux) accessible</h3>
 <p><strong>Pour qui : </strong> les personnes déficientes visuelles.  </p>
 <p><strong>Description : </strong><br>Simplifier la mise en page bien que les clients de messagerie (Outlook inclus) obligent à utiliser une mise en page en tableau.</p>
 <p><strong>À vérifier : </strong><br>Globalement, ne pas utiliser de mise en page complexe (fusion de cellules d&#39;un tableau, multicolonnage...), </p>
@@ -1317,9 +1415,9 @@ Pour modifier la langue du document ou d&#39;une partie du contenu (après séle
 <p><strong>Description : </strong>  </p>
 <ul>
 <li>Le niveau de contraste entre le texte et l&#39;arrière-plan, doit être suffisamment élevé.</li>
-<li>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle...) comme la seule façon de véhiculer de l&#39;information, d&#39;indiquer une action, de solliciter une réponse ou de distinguer un élément.</li>
+<li>La couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle...) ne doit pas être la seule façon de véhiculer de l&#39;information, d&#39;indiquer une action, de solliciter une réponse ou de distinguer un élément.</li>
 </ul>
-<p><strong>Objectif : </strong><br>Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
+<p><strong>Objectif : </strong><br>Un niveau de contraste insuffisant est préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
 De même, utiliser des informations sensorielles (forme, taille, son, orientation, localisation visuelle...) seules sans alternative empêche, ceux qui ne peuvent les interpréter, d&#39;agir efficacement voire d&#39;agir tout simplement. </p>
 <p><strong>Outil : </strong><br>L&#39;application <a href="http://www.paciellogroup.com/resources/contrastanalyser/">colour contrast analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
 <h3 id="identifier-les-liens-et-leurs-cibles">Identifier les liens et leurs cibles</h3>
@@ -1327,9 +1425,9 @@ De même, utiliser des informations sensorielles (forme, taille, son, orientatio
 <p><strong>Description : </strong><br>Rendre les liens identifiables et compréhensibles hors contexte</p>
 <p><strong>À vérifier : </strong>  </p>
 <ul>
-<li>Souligner les liens, parce que, sinon, les personnes doivent faire un effort cognitif pour pouvoir les identifier. Les personnes déficientes motrices (utilisant le clavier) ou malvoyantes ne peuvent les trouver que difficilement.</li>
+<li>Souligner les liens pour éviter aux personnes de faire un effort cognitif pour les identifier et ne pas obliger les personnes déficientes motrices (utilisant le clavier) ou malvoyantes à ne les trouver qu&#39;en naviguant dans tout le contenu.</li>
 <li>Ne pas utiliser des intitulés comme &quot;Cliquez ici&quot;, &quot;Pour en savoir plus&quot;, &quot;Suivez ce lien&quot;, &quot;Plus de détails&quot;, &quot;Lire la suite&quot;, mais des intitulés qui identifient  bien leur cible</li>
-<li>Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en rajoutant à l&#39;intitulé du texte, par exemple &quot;nouvelle fenêtre&quot;, car le multifenêtrage qui peut être déjà troublant pour un voyant est tout simplement bloquant pour un non-voyant.</li>
+<li>Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en rajoutant à l&#39;intitulé du texte, par exemple &quot;nouvelle fenêtre&quot;, car le multifenêtrage qui peut être déjà troublant pour un voyant et tout simplement bloquant pour un non-voyant.</li>
 </ul>
 <p><strong>Objectif : </strong><br>Permettre à un utilisateur n&#39;ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d&#39;écran) ou les utilisateurs de loupe logicielle qui ne voient qu&#39;une fraction de la page. </p>
 <h3 id="word-et-accessibilit-quelques-liens">Word et accessibilité, quelques liens</h3>

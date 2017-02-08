@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recommandations accessibilité Orange pour mobiles</title>
+    <title>Recommandations accessibilité Orange</title>
         
       
        <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -22,7 +22,13 @@
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -249,10 +255,10 @@ infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_
 <p><strong>Description&nbsp;: </strong> </p>
 <p>L’utilisateur a la possibilité d’augmenter la taille du texte via une option d’accessibilité. Afin que l’application réagisse correctement à cette option, il est nécessaire d’utiliser des tailles de texte dynamiques qui s’ajusteront en fonction des paramètres utilisateurs. Un texte trop petit sera facilement ignoré par certains utilisateurs malvoyants.  </p>
 <p>L’application devra mettre en œuvre des tailles de textes dynamiques, s’assurer de la bonne réactivité des zones d’affichage au grossissement de texte (conteneurs qui s’adaptent à la taille de leur contenu). Il faut aussi assurer une taille minimum pour les textes (14sp).  </p>
-<p>Afin de permettre à l’option « grand caractère » d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements&nbsp;:</p>
+<p>Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements&nbsp;:</p>
 <ul>
-<li>Utiliser une taille de police dynamique&nbsp;: le « sp ». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android. </li>
-<li>Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique (« sp » donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (le <code>height</code> à <code>wrap_content</code> et le <code>min-height</code> à la hauteur voulue par défaut).</li>
+<li>Utiliser une taille de police dynamique&nbsp;: le «&nbsp;sp&nbsp;». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android. </li>
+<li>Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique («&nbsp;sp&nbsp;» donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (le <code>height</code> à <code>wrap_content</code> et le <code>min-height</code> à la hauteur voulue par défaut).</li>
 </ul>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
@@ -285,8 +291,8 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <p>Il est également possible de spécifier à une vue qu’elle est une région <i lang="en">live</i>, c’est-à-dire que son contenu est susceptible d’être modifié dynamiquement et qu’elle doit dans ce cas prévenir l’<abbr>API</abbr> d’accessibilité. Cela aura pour conséquence de générer des vocalisations avec <span lang="en">TalkBack</span> par exemple. Un exemple type d’utilisation&nbsp;: sur un formulaire, si l’utilisateur fait une erreur et qu’un message d’erreur apparaît, la vue contenant le message doit être définie comme une région <i lang="en">live</i>.  Il faut passer par la méthode <code>setAccessibilityLiveRegion</code> qui prend en paramètre un mode pour la région <i lang="en">live</i>. Il existe 3 modes&nbsp;:</p>
 <ul>
 <li><code>ACCESSIBILITY_LIVE_REGION_NONE</code>&nbsp;: cette vue n’est pas une région <i lang="en">live</i>. C’est la valeur par défaut de la plupart des vues.</li>
-<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code>&nbsp;: en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont « polies » ; elles sont moins prioritaires que les vocalisations système par exemple.</li>
-<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code>&nbsp;: en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « <i lang="en">rude</i> » ; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code>&nbsp;: en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont «&nbsp;polies&nbsp;»&nbsp;; elles sont moins prioritaires que les vocalisations système par exemple.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code>&nbsp;: en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont «&nbsp;<i lang="en">rude</i>&nbsp;»&nbsp;; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</li>
 </ul>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
@@ -337,11 +343,11 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <p><strong>Cible&nbsp;: </strong> les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors du développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
 <p>L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle. Il est donc important d’y faire attention.  </p>
-<p>Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres&nbsp;: la lecture « logique » (en France), soit de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il existe cependant certain cas où le lecteur d’écran n’arrive pas à déterminer un ordre et dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.  </p>
+<p>Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres&nbsp;: la lecture «&nbsp;logique&nbsp;» (en France), soit de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il existe cependant certain cas où le lecteur d’écran n’arrive pas à déterminer un ordre et dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.  </p>
 <p>Il est tout à fait possible de redéfinir cet ordre de lecture avec deux attributs&nbsp;:</p>
 <ul>
-<li><code>accessibilityTraversalAfter</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être « vue » par l’accessibilité après la vue passée en paramètre.</li>
-<li><code>accessibilityTraversalBefore</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être « vue » par l’accessibilité avant la vue passée en paramètre.  </li>
+<li><code>accessibilityTraversalAfter</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être «&nbsp;vue&nbsp;» par l’accessibilité après la vue passée en paramètre.</li>
+<li><code>accessibilityTraversalBefore</code>&nbsp;: prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être «&nbsp;vue&nbsp;» par l’accessibilité avant la vue passée en paramètre.  </li>
 </ul>
 <p>À noter&nbsp;: ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes <code>setAccessibilityTraversalAfter</code> et <code>setAccessibilityTraversalBefore</code>. Ces méthodes sont disponibles pour tout élément qui hérite de <code>View</code>.</p>
 <p><strong>À vérifier&nbsp;: </strong></p>

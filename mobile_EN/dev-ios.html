@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recommandations accessibilité Orange pour mobiles</title>
+    <title>Orange accessibility guidelines</title>
         
       
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -23,6 +23,10 @@
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
       <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">                  
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -113,18 +117,18 @@
 });</script>
 
 <p><span data-menuitem="dev-mobile"></span></p>
-<p>This guide aims to present the various iOS SDK accessibility options. Through different categories, this guide explains how to use the accessibility attributes / methods and provides links to the official documentation from Apple. Code snippets are also available to show you how to implement it (mostly in Swift).</p>
+<p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options. Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the official documentation from Apple. Code snippets are also available to show you how to implement it (mostly in Swift).</p>
 <h2 id="text-alternatives">Text alternatives</h2>
 <p><strong>Description: </strong>  </p>
 <p>On iOS, the vocalization of an element is done through four attributes: <code>label</code>, <code>hint</code>, <code>value</code> and <code>trait</code>.
 The order of vocalization is always as follows: <code>label</code>, <code>value</code>, <code>trait</code> and <code>hint</code>. This order cannot be changed and the vocalization is performed only once.</p>
 <p>A section of this guide is dedicated to the trait, we describe here the other three:</p>
 <ul>
-<li><code>AccessibilityLabel</code>: the <code>label</code> redefines the text read by VoiceOver. This allows a component to be more explicit than the text displayed on the screen. For example, for a button whose title is &quot;OK&quot;, this attribute can indicate that the button is used to confirm an action.</li>
-<li><code>AccessibilityValue</code>: the <code>value</code> of an element is by default the completion percentage (e.g. a progress bar percentage). Note that for most elements available in the SDK, this value does not need to be set (the system automatically sets the value).</li>
-<li><code>AccessibilityHint</code>: the<code>hint</code> describes the component behavior. Example: &quot;click here to get the result&quot;.</li>
+<li><code>AccessibilityLabel</code>: the <code>label</code> redefines the text read by VoiceOver. This allows a component to be more explicit than the text displayed on the screen. For example, for a button whose title is “OK”, this attribute can indicate that the button is used to confirm an action.</li>
+<li><code>AccessibilityValue</code>: the <code>value</code> of an element is by default the completion percentage (e.g. a progress bar percentage). Note that for most elements available in the <abbr>SDK</abbr>, this value does not need to be set (the system automatically sets the value).</li>
+<li><code>AccessibilityHint</code>: the<code>hint</code> describes the component’s behaviour. Example: “click here to get the result”.</li>
 </ul>
-<p>These accessibility attributes are available via the builder interface but also programatically. Anything inheriting from <code>UIView</code> has these attributes by default. These attributes accept an optional string, and are therefore easily localizable.</p>
+<p>These accessibility attributes are available via the builder interface but also programmatically. Anything inheriting from <code>UIView</code> has these attributes by default. These attributes accept an optional string, and are therefore easily localizable.</p>
 <p><strong>Examples: </strong>   </p>
 <p>Simple example (localized):<br><code>accordionHeaderView.accessibilityHint = &quot;example_elementState_foldArea_open_accessibilityHint&quot;.localized</code></p>
 <p>Example of custom tabs indicating their trait and state:  </p>
@@ -162,37 +166,37 @@ func accessibleSegmentedControl() {
 
 <p><strong>Links: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLabel">accessibilityLabel</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityValue">accessibilityValue</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityHint">accessibilityHint</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLabel"><code>accessibilityLabel</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityValue"><code>accessibilityValue</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityHint"><code>accessibilityHint</code></a></li>
 </ul>
 <h2 id="element-trait">Element trait</h2>
 <p><strong>Description:</strong>  </p>
-<p>The <code>accessibilityTraits</code> attribute allows to specify the trait of an element to the accessibility API. Thus, it is possible to make a list item be considered as a button because it is clickable. Therefore, the <code>accessibilityTrait</code> attribute plays an important role on the element vocalization because the trait is vocalized by VoiceOver.  </p>
+<p>The <code>accessibilityTraits</code> attribute allows to specify the trait of an element to the accessibility <abbr>API</abbr>. Thus, it is possible to make a list item be considered as a button because it is clickable. Therefore, the <code>accessibilityTrait</code> attribute plays an important role on the element vocalization because the trait is vocalized by VoiceOver.  </p>
 <p>This accessibility attribute is available via the builder interface but also programmatically.</p>
 <p>There are many available traits. The more commonly used are:  </p>
 <ul>
 <li><code>AccessibilityTraitNone</code>: removes any semantic value to the element.</li>
-<li><code>AccessibilityTraitButton</code>: adds the &quot;button&quot; trait, the element is seen as a button by VoiceOver.</li>
-<li><code>AccessibilityTraitLink</code>: useful to define a label as a &quot;link&quot;.</li>
-<li><code>AccessibilityTraitHeader</code>: defines an element as a header (for more information, see the &quot;titles and headers&quot; section).</li>
-<li><code>AccessibilityTraitAdjustable</code>: defines an element as an &quot;adjustable&quot; element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view.</li>
+<li><code>AccessibilityTraitButton</code>: adds the “button” trait, the element is seen as a button by VoiceOver.</li>
+<li><code>AccessibilityTraitLink</code>: useful to define a label as a “link”.</li>
+<li><code>AccessibilityTraitHeader</code>: defines an element as a header (for more information, see the “Titles and headers” section).</li>
+<li><code>AccessibilityTraitAdjustable</code>: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view.</li>
 </ul>
 <p><strong>Examples: </strong>   </p>
-<p>Example with a <code>UIPageControl</code> and the &#39;adjustable&#39; trait:<br><code>pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable</code></p>
+<p>Example with a <code>UIPageControl</code> and the “adjustable” trait:<br><code>pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable</code></p>
 <p>Example with a <code>header</code> trait :<br><code>defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader</code></p>
 <p>We can also combine traits:<br><code>onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected</code></p>
 <p><strong>Link: </strong>     </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/doc/constant_group/Accessibility_Traits">accessibilityTraits</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/doc/constant_group/Accessibility_Traits"><code>accessibilityTraits</code></a></li>
 </ul>
 <h2 id="hide-elements-from-accessibility">Hide elements from accessibility</h2>
 <p><strong>Description: </strong>  </p>
 <p>It is possible via an accessibility attribute to hide elements from accessibility tools (e.g. VoiceOver). By extension, it is possible to force some elements to be visible to accessibility tools.</p>
 <ul>
-<li><code>AccessibilityElement</code>: boolean to specify that an element is visible or not to the Accessibility API (VoiceOver or other).</li>
-<li><code>AccessibilityElementIsHidden</code>: boolean to indicate that the children elements of the target element are visible or not to the Accessibility API.</li>
-<li><code>AccessibilityViewIsModal</code>: boolean that can make visible or not the sibling elements of the target element to the Accessibility API. Very useful for making accessible custom popin for example.</li>
+<li><code>AccessibilityElement</code>: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
+<li><code>AccessibilityElementIsHidden</code>: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
+<li><code>AccessibilityViewIsModal</code>: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popins for example.</li>
 </ul>
 <p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.</p>
 <p><strong>Examples: </strong></p>
@@ -211,54 +215,54 @@ func accessibleSegmentedControl() {
 
 <p><strong>Links: </strong>     </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/isAccessibilityElement">accessibilityElement</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityElementsHidden">accessibilityElementIsHidden</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityViewIsModal">accessibilityViewIsModal</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/isAccessibilityElement"><code>accessibilityElement</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityElementsHidden"><code>accessibilityElementIsHidden</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityViewIsModal"><code>accessibilityViewIsModal</code></a></li>
 </ul>
 <h2 id="trigger-a-vocalization">Trigger a vocalization</h2>
 <p><strong>Description: </strong>  </p>
-<p>It is very easy to trigger vocalizations with VoiceOver. Note that we are talking about VoiceOver vocalization and not TTS (Text To Speech) that can operate whether VoiceOver is on or off. </p>
+<p>It is very easy to trigger vocalizations with VoiceOver. Note that we are talking about VoiceOver vocalization and not <abbr>TTS</abbr> (Text To Speech) that can operate whether VoiceOver is on or off. </p>
 <p>To trigger a vocalization, just call the <code>UIAccessibilityPostNotification</code> method passing the notification allowing to trigger a vocalization (<code>UIAccessibilityAnnouncementNotification</code>) and the string to vocalize as parameters.</p>
-<p>Note: the vocalization is done in the system language.</p>
+<p>Note: the vocalization is done in the system’s language.</p>
 <p><strong>Example: </strong></p>
 <p><code>UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, speakString);</code></p>
-<p><strong>Links : </strong></p>
+<p><strong>Links: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification">UIAccessibilityPostNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementNotification">UIAccessibilityAnnouncementNotification</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification"><code>UIAccessibilityPostNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementNotification"><code>UIAccessibilityAnnouncementNotification</code></a></li>
 </ul>
 <h2 id="check-accessibility-options-state">Check accessibility options state</h2>
 <p><strong>Description: </strong> </p>
 <p>On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the <code>UIKit</code> framework.  </p>
-<p>The most useful method is <code>UIAccessibilityIsVoiceOverRunning</code> which allows to know wether VoiceOver is activated.</p>
+<p>The most useful method is <code>UIAccessibilityIsVoiceOverRunning</code> which allows to know whether VoiceOver is activated.</p>
 <p><strong>Exemple: </strong> </p>
 <p><code>UIAccessibilityIsVoiceOverRunning() ? 1 : 0</code></p>
 <p><strong>Links: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsVoiceOverRunning">UIAccessibilityIsVoiceOverRunning</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsClosedCaptioningEnabled">UIAccessibilityIsClosedCaptioningEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsMonoAudioEnabled">UIAccessibilityIsMonoAudioEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsBoldTextEnabled">UIAccessibilityIsBoldTextEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityDarkerSystemColorsEnabled">UIAccessibilityDarkerSystemColorsEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGrayscaleEnabled">UIAccessibilityIsGrayscaleEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGuidedAccessEnabled">UIAccessibilityIsGuidedAccessEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsInvertColorsEnabled">UIAccessibilityIsInvertColorsEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceMotionEnabled">UIAccessibilityIsReduceMotionEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceTransparencyEnabled">UIAccessibilityIsReduceTransparencyEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakScreenEnabled">UIAccessibilityIsSpeakScreenEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakSelectionEnabled">UIAccessibilityIsSpeakSelectionEnabled</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSwitchControlRunning">UIAccessibilityIsSwitchControlRunning</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsVoiceOverRunning"><code>UIAccessibilityIsVoiceOverRunning</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsClosedCaptioningEnabled"><code>UIAccessibilityIsClosedCaptioningEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsMonoAudioEnabled"><code>UIAccessibilityIsMonoAudioEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsBoldTextEnabled"><code>UIAccessibilityIsBoldTextEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityDarkerSystemColorsEnabled"><code>UIAccessibilityDarkerSystemColorsEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGrayscaleEnabled"><code>UIAccessibilityIsGrayscaleEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsGuidedAccessEnabled"><code>UIAccessibilityIsGuidedAccessEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsInvertColorsEnabled"><code>UIAccessibilityIsInvertColorsEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceMotionEnabled"><code>UIAccessibilityIsReduceMotionEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsReduceTransparencyEnabled"><code>UIAccessibilityIsReduceTransparencyEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakScreenEnabled"><code>UIAccessibilityIsSpeakScreenEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSpeakSelectionEnabled"><code>UIAccessibilityIsSpeakSelectionEnabled</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/#//apple_ref/c/func/UIAccessibilityIsSwitchControlRunning"><code>UIAccessibilityIsSwitchControlRunning</code></a></li>
 </ul>
 <h2 id="notify-a-content-change">Notify a content change</h2>
 <p><strong>Description: </strong></p>
-<p>When there is a content change in the current page, it is possible to notify the accessibility API using several types of notifications. To do that, we must send the change notification to the accessibility API using the following method: <code>UIAccessibilityPostNotification</code>.  </p>
-<p>There are several types of change notification but the two most commonly used are:</p>
+<p>When there is a content change in the current page, it is possible to notify the accessibility <abbr>API</abbr> using several types of notifications. To do that, we must send the change notification to the accessibility <abbr>API</abbr> using the following method: <code>UIAccessibilityPostNotification</code>.  </p>
+<p>There are several types of change notifications but the two most commonly used are:</p>
 <ul>
 <li><code>UIAccessibilityLayoutChangedNotification</code>: notifies that a part of the page has changed.</li>
 <li><code>UIAccessibilityScreenChangedNotification</code> : notifies that the whole page has changed.  </li>
 </ul>
 <p>There is a small difference between them. We can pass a <code>NSString</code> or a <code>UIObject</code> to the <code>UIAccessibilityLayoutChangedNotification</code> method. With a <code>NSString</code> it behaves like a <code>UIAccessibilityAnnouncementNotification</code> and triggers a VoiceOver vocalization. With a <code>UIObject</code> the focus is set on the <code>UIObject</code>.  </p>
-<p><code>UIAccessibilityScreenChangedNotification</code>&#39;s parameter can be either <code>nil</code> or the elements to set the focus on.</p>
+<p>The parameter for <code>UIAccessibilityScreenChangedNotification</code> can be either <code>nil</code> or the elements to set the focus on.</p>
 <p><strong>Examples: </strong></p>
 <pre><code class="objectivec">UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, @"speakString");
 UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, aViewObject);
@@ -268,39 +272,39 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewO
 
 <p><strong>Links: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification">UIAccessibilityPostNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityLayoutChangedNotification">UIAccessibilityLayoutChangedNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityScreenChangedNotification">UIAccessibilityScreenChangedNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityPageScrolledNotification">UIAccessibilityPageScrolledNotification</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKitFunctionReference/index.html#//apple_ref/c/func/UIAccessibilityPostNotification"><code>UIAccessibilityPostNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityLayoutChangedNotification"><code>UIAccessibilityLayoutChangedNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityScreenChangedNotification"><code>UIAccessibilityScreenChangedNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/index.html#//apple_ref/c/data/UIAccessibilityPageScrolledNotification"><code>UIAccessibilityPageScrolledNotification</code></a></li>
 </ul>
 <h2 id="change-the-vocalization-language">Change the vocalization language</h2>
 <p><strong>Description: </strong>  </p>
-<p>To change the vocalization language of VoiceOver for a word or a sentence, one can use the <code>accessibilityLanguage</code> attribute. Available using the <code>UIAccessibility</code>, this attributes allows to specify a language for a specific text. E.g. if we use this attribute on a <code>UILabel</code>, it will be vocalized by VoiceOver in the language set on this attribute.</p>
-<p><strong>Exemple: </strong> </p>
+<p>To change the vocalization language of VoiceOver for a word or a sentence, one can use the <code>accessibilityLanguage</code> attribute. Available through <code>UIAccessibility</code>, this attributes allows to specify a language for a specific text. E.g. if we use this attribute on a <code>UILabel</code>, it will be vocalized by VoiceOver in the language set on this attribute.</p>
+<p><strong>Example: </strong> </p>
 <p><code>cell.textLabel?.accessibilityLanguage = &quot;fr_FR&quot;</code></p>
 <p><strong>Link: </strong>      </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLanguage">accessibilityLanguage</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityLanguage"><code>accessibilityLanguage</code></a></li>
 </ul>
 <h2 id="modify-the-focus-area-of-voiceover">Modify the focus area of VoiceOver</h2>
 <p><strong>Description: </strong>  </p>
 <p>In the case of dynamically modified element or component not inheriting from <code>UIView</code>, it is possible to modify the focus area of accessibility of this element, i.e. the area VoiceOver highlights when focusing an element.</p>
 <ul>
-<li><code>AccessibilityFrame</code>: sets the area via a rectangle (<code>CGRect</code>). Generally, for an element inheriting from <code>UIView</code>, this area is the &quot;visible&quot; part of the view.</li>
+<li><code>AccessibilityFrame</code>: sets the area via a rectangle (<code>CGRect</code>). Generally, for an element inheriting from <code>UIView</code>, this area is the “visible” part of the view.</li>
 <li><code>AccessibilityPath</code>: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.</li>
-<li><code>AccessibilityActivationPoint</code>: the activation &quot;point&quot; of an element for accessibility tools. By default, this point is at the center of the element.</li>
+<li><code>AccessibilityActivationPoint</code>: the activation “point” of an element for accessibility tools. By default, this point is at the centre of the element.</li>
 </ul>
 <p><strong>Links: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityFrame">AccessibilityFrame</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityPath">AccessibilityPath</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityActivationPoint">AccessibilityActivationPoint</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityFrame"><code>AccessibilityFrame</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityPath"><code>AccessibilityPath</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/accessibilityActivationPoint"><code>AccessibilityActivationPoint</code></a></li>
 </ul>
 <h2 id="grouping-elements">Grouping elements</h2>
 <p><strong>Description: </strong>  </p>
-<p>The <code>shouldGroupAccessibilityChildren</code> attribute is a Boolean that indicates if VoiceOver must group its view children. This allows making unique vocalizations or define a particular VoiceOver reading order for a part of the page (see &quot;Reading order&quot; section).</p>
+<p>The <code>shouldGroupAccessibilityChildren</code> attribute is a Boolean that indicates whether VoiceOver must group its children views. This allows making unique vocalizations or define a particular VoiceOver reading order for a part of the page (see “Reading order” section).</p>
 <p><strong>Example: </strong> </p>
-<p>Very useful when we want the customize the VoiceOver reading order, like here on a table cell containing form data:  </p>
+<p>Very useful when we want to customize the VoiceOver reading order, like here on a table cell containing form data:  </p>
 <pre><code class="swift">class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deliveringAddressLabel:  UILabel!
@@ -319,42 +323,42 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewO
 
 <p><strong>Link: </strong>      </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/shouldGroupAccessibilityChildren">shouldGroupAccessibilityChildren</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/occ/instp/NSObject/shouldGroupAccessibilityChildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
 <h2 id="accessibility-events">Accessibility events</h2>
 <p><strong>Description: </strong>  </p>
 <p>iOS sends several accessibility events to the applications. They are sent when accessibility options are changed. For example, if VoiceOver is deactivated, the running applications will receive the <code>UIAccessibilityVoiceOverStatusChanged</code> event. This is very useful when used simultaneously with <code>UIAccessibilityIsVoiceOverRunning</code>.</p>
 <p>Let&#39;s say the application behaves differently when VoiceOver is turned on. This is detected by the <code>UIAccessibilityIsVoiceOverRunning</code> method. What happens if VoiceOver is disabled? This is when the system events can be used. By listening to these events, it is possible to dynamically change how the application behaves.</p>
 <p><strong>Example: </strong> </p>
-<p>We call the &quot;voiceOverStatusDidChange&quot; method when the VoiceOver state changes:<br><code>NSNotificationCenter.defaultCenter().addObserver(self, selector: &quot;voiceOverStatusDidChange:&quot;, name: UIAccessibilityVoiceOverStatusChanged, object: nil)</code></p>
+<p>We call the “<code>voiceOverStatusDidChange</code>” method when the VoiceOver state changes:<br><code>NSNotificationCenter.defaultCenter().addObserver(self, selector: &quot;voiceOverStatusDidChange:&quot;, name: UIAccessibilityVoiceOverStatusChanged, object: nil)</code></p>
 <p><strong>Link: </strong>      </p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityVoiceOverStatusChanged">UIAccessibilityVoiceOverStatusChanged</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityClosedCaptioningStatusDidChangeNotification">UIAccessibilityClosedCaptioningStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityMonoAudioStatusDidChangeNotification">UIAccessibilityMonoAudioStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification">UIAccessibilityAnnouncementDidFinishNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification">UIAccessibilityGuideAccessStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityInvertColorsStatusDidChangeNotification">UIAccessibilityInvertColorsStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityDarkerSystemColorsStatusDidChangeNotification">UIAccessibilityDarkerSystemColorsStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityGrayscaleStatusDidChangeNotification">UIAccessibilityGrayscaleStatusDidChangeNotification</a></li>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityBoldTextStatusDidChangeNotification">UIAccessibilityBoldTextStatusDidChangeNotification</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityVoiceOverStatusChanged"><code>UIAccessibilityVoiceOverStatusChanged</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityClosedCaptioningStatusDidChangeNotification"><code>UIAccessibilityClosedCaptioningStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityMonoAudioStatusDidChangeNotification"><code>UIAccessibilityMonoAudioStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification"><code>UIAccessibilityAnnouncementDidFinishNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityAnnouncementDidFinishNotification"><code>UIAccessibilityGuideAccessStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityInvertColorsStatusDidChangeNotification"><code>UIAccessibilityInvertColorsStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityDarkerSystemColorsStatusDidChangeNotification"><code>UIAccessibilityDarkerSystemColorsStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityGrayscaleStatusDidChangeNotification"><code>UIAccessibilityGrayscaleStatusDidChangeNotification</code></a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibility_Protocol/#//apple_ref/c/data/UIAccessibilityBoldTextStatusDidChangeNotification"><code>UIAccessibilityBoldTextStatusDidChangeNotification</code></a></li>
 </ul>
 <h2 id="text-size">Text size</h2>
 <p><strong>Description: </strong>  </p>
-<p>Dynamic font size on iOS is very tricky. Since iOS7, it is possible to use an API to make the text size dynamic according to the phone settings. If we summarize this API, you must:</p>
+<p>Dynamic font size on iOS is very tricky. Since iOS7, it is possible to use an <abbr>API</abbr> to make the text size dynamic according to the phone settings. If we summarize this <abbr>API</abbr>, you must:</p>
 <ul>
 <li>Use the system fonts for the application, <code>[UIFont preferredFontForTextStyle:UIFontTextStyle…]</code>. You can also use custom fonts only if they inherit from <code>UIFont</code>.</li>
-<li>Listen the font size settings change events <code>UIContentSizeCategoryDidChangeNotification</code>, <code>[[NSNotificationCenter defaultCenter] addObserver:… selector:@selector(…) name: UIContentSizeCategoryDidChangeNotification object:…];</code></li>
-<li>When handling the font size change event, you must redisplay the affected elements.</li>  </li>
+<li>Listen to the font size settings change events <code>UIContentSizeCategoryDidChangeNotification</code>, <code>[[NSNotificationCenter defaultCenter] addObserver:… selector:@selector(…) name: UIContentSizeCategoryDidChangeNotification object:…];</code></li>
+<li>When handling the font size change event, you must redisplay the affected elements.  </li>
 </ul>
-<p>We must also be careful that the containers fit their content: using constraints is the best way to perform this task.</p>
+<p>We must also be careful that the containers fit their contents: using constraints is the best way to perform this task.</p>
 <p><strong>Link: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65">Dynamic Type API</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65">Dynamic Type <abbr>API</abbr></a></li>
 </ul>
 <h2 id="reading-order">Reading order</h2>
 <p><strong>Description: </strong> </p>
-<p>Redefining the VoiceOver reading order is done using the <code>UIAccessibilityContainer</code> protocol. The idea is to have a table of elements that defines the reading order of the elements. It is often very useful to use the <code>shouldGroupAccessibilityElement</code> attribute so we have a precise order but for a part if the view only (the rest of the view will be read using the &#39;logical&#39; order)</p>
+<p>Redefining the VoiceOver reading order is done using the <code>UIAccessibilityContainer</code> protocol. The idea is to have a table of elements that defines the reading order of the elements. It is often very useful to use the <code>shouldGroupAccessibilityElement</code> attribute so we have a precise order but for a part if the view only (the rest of the view will be read using the “logical” order)</p>
 <p><strong>Example: </strong> </p>
 <p>Table cell containing form elements:  </p>
 <pre><code class="swift">class AddressTableViewCell: UITableViewCell {
@@ -375,11 +379,11 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewO
 
 <p><strong>Link: </strong></p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/">UIAccessibilityContainer</a><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/"><code>UIAccessibilityContainer</code></a></li>
 </ul>
-
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>

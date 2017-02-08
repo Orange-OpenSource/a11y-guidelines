@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Recommandations accessibilité web Orange</title>
+    <title>Recommandations accessibilité Orange</title>
     
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
@@ -22,7 +22,13 @@
 
       <script src="./js/jquery.min.js"></script>
       <script src="./js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -103,16 +109,16 @@
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Ensemble des exigences"}]);
 });</script>
-<h2 id="le-r-f-rentiel-wcag">Le référentiel WCAG</h2>
-<p>Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les <a href="http://www.w3.org/Translations/WCAG20-fr/">Web Content Accessibility Guidelines v2</a> (WCAG 2). Il s&#39;agit des recommandations internationales éditées par le groupe de travail Web Accessibility Initiative (WAI) du World Wide Web Consortium (W3c) qui sont aussi les normes ISO 40500:2012.</p>
-<p>Le niveau d’accessibilité demandé à toute interface HTML par le groupe Orange est <strong>le respect des critères du niveau AA des Web Content Accessibility Guidelines (WCAG) 2.0, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
-<p>Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des <a href="./fondamentaux.html">critères incontournables</a> et des <a href="./exemples.html">exemples</a> de ce site. Vous pouvez aussi utiliser les notices  <a href="http://www.accede-web.com/notices/">notices Accede-Web</a> cf. ci-dessous. </p>
-<h2 id="le-r-f-rentiel-g-n-ral-d-accessibilit-des-administrations-rgaa-">Le référentiel général d&#39;accessibilité des administrations (RGAA)</h2>
-<p>Si vous êtes familiarisé avec le <a href="http://references.modernisation.gouv.fr/referentiel">Référentiel Général d’Accessibilité des Administrations</a> (RGAA), celui-ci peut être utilisé pour effectuer les tests d&#39;accessibilité. 
-Il s&#39;agit du référentiel officiel permettant de s’assurer qu’un site d&#39;état et de collectivités territoriales est en conformité avec l’<a href="http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&amp;cidTexte=JORFTEXT000000809647">article 47 de la loi de février 2005 pour l&#39;égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées</a>.</p>
-<p>Le RGAA est une méthode d’implémentation des Web Content Accessibility Guidelines v2 (WCAG 2). Un site conforme au RGAA est également conforme aux WCAG2.  </p>
-<h2 id="les-notices-accede-web">Les notices accede-web</h2>
-<p>Le site <a href="http://accede-web.com/">accede-web</a> propose d&#39;excellentes notices sur l&#39;accessibilité au format Web et PDF, celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.</p>
+<h2 id="le-r-f-rentiel-abbr-wcag-abbr-">Le référentiel <abbr>WCAG</abbr></h2>
+<p>Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les <a href="http://www.w3.org/Translations/WCAG20-fr/"><span lang="en">Web Content Accessibility Guidelines</span> v2</a> (<abbr>WCAG</abbr> 2). Il s’agit des recommandations internationales éditées par le groupe de travail <span lang="en">Web Accessibility Initiative</span> (<abbr>WAI</abbr>) du <span lang="en">World Wide Web Consortium</span> (<abbr>W3C</abbr>) qui sont aussi les normes ISO 40500:2012.</p>
+<p>Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.0, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
+<p>Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des <a href="./fondamentaux.html">critères incontournables</a> et des <a href="./exemples.html">exemples</a> de ce site. Vous pouvez aussi utiliser les <a href="http://www.accede-web.com/notices/">notices Accede-Web</a> cf. ci-dessous. </p>
+<h2 id="le-r-f-rentiel-g-n-ral-d-accessibilit-des-administrations-abbr-rgaa-abbr-">Le référentiel général d’accessibilité des administrations (<abbr>RGAA</abbr>)</h2>
+<p>Si vous êtes familiarisé avec le <a href="http://references.modernisation.gouv.fr/referentiel">Référentiel Général d’Accessibilité des Administrations</a> (<abbr>RGAA</abbr>), celui-ci peut être utilisé pour effectuer les tests d’accessibilité. 
+Il s’agit du référentiel officiel permettant de s’assurer qu’un site d’état et de collectivités territoriales est en conformité avec l’<a href="http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&amp;cidTexte=JORFTEXT000000809647">article 47 de la loi de février 2005 pour l’égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées</a>.</p>
+<p>Le <abbr>RGAA</abbr> est une méthode d’implémentation des <span lang="en">Web Content Accessibility Guidelines</span> v2 (<abbr>WCAG</abbr> 2). Un site conforme au <abbr>RGAA</abbr> est également conforme aux <abbr>WCAG</abbr>2.  </p>
+<h2 id="les-notices-accede-web">Les notices Accede-Web</h2>
+<p>Le site <a href="http://accede-web.com/">Accede-Web</a> propose d’excellentes notices sur l’accessibilité au format Web et <abbr>PDF</abbr>. Celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.</p>
 <p>Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).</p>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
     <img src="./images/perso1.png" alt=""> 
@@ -122,10 +128,10 @@ Il s&#39;agit du référentiel officiel permettant de s’assurer qu’un site d
     <img src="./images/perso2.png" alt=""><br>    <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    <img src="./images/perso3.png" alt=""><br>    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité HTML, CSS et JavaScript</a>
+    <img src="./images/perso3.png" alt=""><br>    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité <abbr>HTML</abbr>, <abbr>CSS</abbr> et JavaScript</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    <img src="./images/perso4.png" alt=""><br>    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interface riche</a>
+    <img src="./images/perso4.png" alt=""><br>    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interfaces riches</a>
 </div>      
 
 <p><br>&nbsp;
