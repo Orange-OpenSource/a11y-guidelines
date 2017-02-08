@@ -2,6 +2,7 @@
 ---
 
 var index = lunr(function () {
+    this.use(lunr.fr);
     this.field('body');
     this.ref('url');
 });
