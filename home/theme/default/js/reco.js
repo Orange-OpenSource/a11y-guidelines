@@ -89,6 +89,11 @@ $(document).ready( function () {
     }
   });
 
+  // Déplacement du focus à l'affichage du formulaire de recherche
+  $('#searchbar').on('shown.bs.collapse', function() {
+    $("#search").focus();
+  });
+
   $('#back-to-top').click(function () {
     $('#back-to-top').tooltip('hide');
     $('body,html').animate({
