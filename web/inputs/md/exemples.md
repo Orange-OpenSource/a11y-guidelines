@@ -46,6 +46,16 @@
             <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Faire parler le lecteur d'écran via Javascript</span>
         </a>
     </li>
+    <li>
+        <a href="exemples/tag/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 1/2</span>
+        </a>
+    </li>    
+        <li>
+        <a href="exemples/tag-exemples/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 2/2 (exemples)</span>
+        </a>
+    </li>    
 </ul>
 
 ## Niveau avancé

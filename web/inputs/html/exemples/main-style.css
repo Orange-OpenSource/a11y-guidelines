@@ -29,3 +29,7 @@ h2, h3 {
     background-color:rgba(128,0,0,0.5) !important;  
     z-index: 1000;  
 }
+
+a { 
+  text-decoration: underline;
+}

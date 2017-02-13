@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exemple tag - recommandations accessiblité web Orange</title>
+    <title>Créer des tags accessibles 1/2 - recommandations accessiblité web Orange</title>
 
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -30,17 +30,17 @@
 <body>
 
     <main role="main" class="container">
-      <h1>Créer des "tag" accessibles</h1>
+      <h1>Créer des "tag" accessibles 1/2</h1>
 
       <h2>Préambule</h2>
-      <p>Dans cet exemple nous voir comment réaliser des "tag" accessibles. Vous savez ces boutons un peu particulier qui peuvent servir dans différents cas à taguer du contenu, afficher une liste de destinataire ...</p>
+      <p>Dans cet exemple, nous allons voir comment réaliser des "tag" accessibles. Vous savez ces boutons que nous utilisons pour taguer du contenu, pour afficher une liste de destinataires ...</p>
       
       <h2>Rendu final</h2>
       <p>Voici un exemple de rendu graphique :</p>
       <img src="tag.png" alt="capture d'écran de plusieurs tag dans une page web">
 
       <h2>Structure HTML</h2>
-      <p>Comme les tags ne se promènent jamais seuls, nous allons créer liste HTML. Ainsi un utilisateur qui navigue à l'aide d'un lecteur d'écran entendra directement le nombre de tags affichés: "Liste de x éléments ...".
+      <p>Comme les tags ne se promènent jamais seuls, nous allons créer liste HTML. Ainsi, un utilisateur qui navigue à l'aide d'un lecteur d'écran entendra directement le nombre de tags affichés: "Liste de x éléments ...".
       </p>
 
       <pre><code>
@@ -59,8 +59,8 @@
       </div>
 
       <h2>Suppression d'un TAG</h2>
-      <p>Un tag doit pouvoir être supprimé. Nous allons ajouter un bouton "supprimer" sur chaque élément de notre liste. Pour les utilisateurs qui ne voient pas l'écran et qui naviguent à l'aide d'un lecteur d'écran, un simple bouton "Supprimer" n'est pas suffisant. Nous allons ajouter le nom du tag dans l'intitulé du bouton pour oter toute ambiguité. Exemple : "Retirer Sony de la liste".</p>
-      <p>L'utilisation d'un vrai bouton, rend cette fonctionnalité accessible au lecteur d'écran, mais également aux personnes qui ne peuvent pas utiliser une souris et qui naviguent à l'aide du clavier en déplaçant le focus (touche TAB). En effet un bouton est focusable nativement.</p>
+      <p>Un tag doit pouvoir être supprimé. Nous allons ajouter un bouton "supprimer" sur chaque élément de notre liste. Pour les utilisateurs qui ne voient pas l'écran et qui naviguent à l'aide d'un lecteur d'écran, un simple bouton "Supprimer" n'est pas suffisant. Nous allons ajouter le nom du tag dans l'intitulé du bouton pour ôter toute ambiguïté. Exemple : "Retirer Sony de la liste".</p>
+      <p>L'utilisation d'un vrai bouton, rend cette fonctionnalité accessible au lecteur d'écran, mais également aux personnes qui ne peuvent pas utiliser une souris et qui naviguent à l'aide du clavier en déplaçant le focus (touche TAB). En effet, un bouton est focusable nativement.</p>
 
       <pre><code>
         &lt;ul&gt;
@@ -77,7 +77,7 @@
         <p><a target="_blank" title="ouvrir l'exemple 2" href="exemple2.html"><img src="exemple2.png" alt="ouvrir l'exemple 2 (nouvelle fenêtre)"></a></p>
       </div>
       
-      <p>Et voila ! des tags simples et accessibles. Comment ça c'est pas beau ?</p>
+      <p>Et voilà ! des tags simples et accessibles. Bon Ok, ce n'est pas très beau.</p>
 
       <h2>Un peu de déco</h2>
       <p>Maintenant que nous avons des tag accessibles, on peut passer à la déco. L'idéal serait de faire ressembler nos tags à la première illustration proposée au début de cet article. Plusieurs solutions sont possibles.</p>
@@ -95,7 +95,7 @@
         <p><a target="_blank" title="ouvrir l'exemple 3" href="exemple3.html"><img src="exemple3.png" alt="ouvrir l'exemple 3 (nouvelle fenêtre)"></a></p>
       </div>
 
-      <p>Dans l'état on vient de perdre les utilisateurs qui naviguent au lecteur d'écran car les boutons seront désormais vocalisés "X". On peut corriger cela par exemple à l'aide d'un attribut <code>aria-label</code>.</p>
+      <p>Par contre, là, on vient de perdre les utilisateurs qui naviguent au lecteur d'écran, car les boutons seront désormais vocalisés "X". On peut corriger cela par exemple à l'aide d'un attribut <code>aria-label</code>.</p>
 
       <pre><code>
         &lt;ul&gt;
@@ -121,9 +121,9 @@
 
       <h2>Optimisation</h2>
 
-      <p>Cela fonctionne mais ce n'est pas parfait. Il faut bien viser pour supprimer un tag car le bouton en forme de croix n'est pas très grand. Ce n'est pas agréable à utiliser et cela risque d'être réelement problématique pour les personnes qui tremblent ou qui ont des difficultés avec la souris.</p>
+      <p>Cela fonctionne, mais ce n'est pas parfait. Il faut bien viser pour supprimer un tag, car le bouton en forme de croix n'est pas très grand. Ce n'est pas agréable à utiliser et cela risque d'être réellement problématique pour les personnes qui tremblent ou qui ont des difficultés avec la souris.</p>
 
-      <p>Sachant que le bouton supprimer est la seule action disponible on pourrait étendre la zone de clic à la totalité du tag. Ainsi même si on clique un peu à coté de la croix, l'action de suppression sera prise en compte.</p>
+      <p>Sachant que le bouton supprimer est la seule action disponible, on pourrait étendre la zone de clic à la totalité du tag. Ainsi même si on clique un peu à côté de la croix, l'action de suppression sera prise en compte.</p>
           
       <pre><code>
         &lt;ul&gt;
@@ -147,14 +147,14 @@
         <p><a target="_blank" title="ouvrir l'exemple 5" href="exemple5.html"><img src="exemple5.png" alt="ouvrir l'exemple 5 (nouvelle fenêtre)"></a></p>
       </div>
 
-      <p>Visuelement on voit deux choses dans chaque tag, son libellé et un bouton de suppression. Au lecteur d'écran pour le moment on entend qu'un seul bouton "Retirer xxx de la liste". Pour corriger cela, on ajoute un <code>span</code> contenant l'intitulé du tag. Pour éviter que celui-ci apparaisse à l'écran (cela ferai doublon), on lui ajoute une classe de masquage accessible (<code>sr-only</code>). Ainsi ce texte sera accessible que par les lecteurs d'écran.</p>
+      <p>C'est mieux. Visuellement on voit bien deux choses dans chaque tag, son libellé et un bouton de suppression. Au lecteur d'écran par contre, pour le moment, on entend qu'un seul bouton "Retirer xxx de la liste". Pour corriger cela, on ajoute un <code>span</code> contenant l'intitulé du tag. Pour éviter que celui-ci apparaisse à l'écran (cela ferait doublon), on lui ajoute une classe de masquage accessible (<code>sr-only</code>). Ainsi, ce texte sera visible que par les lecteurs d'écran.</p>
 
       <pre><code>
         &lt;ul&gt;
           &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
         &lt;/ul&gt;
       </pre></code>
-      <p>Ainsi au lecteur d'écran, pour chaque tag on entend son libellé, puis un bouton pour le supprimer.</p>
+      <p>Ainsi au lecteur d'écran, pour chaque tag, on entend son libellé, puis un bouton pour le supprimer.</p>
 
       <div class="exemple">
         <h3>Exemple 6</h3>
@@ -178,7 +178,7 @@
       </div>
 
       <h2>Optimisation (bis)</h2>
-      <p>Nous avons des tags accessibles, par contre lorsqu'on supprime un tag à l'aide du clavier, le focus positionné sur le tag qui disparait n'est pas repositionné. Cela se corrige facilement avec un peu de Javascript:</p>
+      <p>Nous avons des tags accessibles, par contre lorsqu'on supprime un tag à l'aide du clavier, le focus reste positionné sur le tag qui disparaît. La position du focus n'est donc plus visible après suppression. Cela se corrige facilement avec un peu de Javascript. Il suffit de repositionner le focus sur l'élément précédent par exemple :</p>
 
       <pre><code>    
         $("button").on("click", function () {
@@ -192,10 +192,23 @@
         <p><a target="_blank" title="ouvrir l'exemple 8" href="exemple8.html"><img src="exemple8.png" alt="ouvrir l'exemple 8 (nouvelle fenêtre)"></a></p>
       </div>
 
-      <p>Enfin lorsqu'un tag est supprimé, nous le voyons disparaitre. Par contre pour qu'un utilisateur navigant au lecteur d'écran soit également certain que celui-ci a été suprrimé, l'idéal c'est de faire vocalisation un message de confirmation à l'utilisateur.</p>
-TODO
-      ...fonction speak ...
+      <p>Lorsqu'un tag est supprimé, nous le voyons disparaitre à l'écran. Par contre pour qu'un utilisateur navigant au lecteur d'écran soit également certain que celui-ci a été supprimé, l'idéal, c'est de faire vocaliser un message de confirmation à l'utilisateur.</p>
+      <p>Pour cela nous pouvons utiliser par exemple notre <a href="../speak/index.html">fonction Javascript srSpeak</a> qui utilise de l'ARIA pour faire parler le lecteur d'écran.</p>
 
+      <pre><code>    
+        $("button").on("click", function () {
+            <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+            $(this).parent().remove();
+            srSpeak($(this).text() + "supprimé");
+        });
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 9</h3>
+        <p><a target="_blank" title="ouvrir l'exemple 9" href="exemple9.html"><img src="exemple9.png" alt="ouvrir l'exemple 9 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <p>Cette fois, nous avons bien des "tag" accessibles à la souris, au clavier et au lecteur d'écran.</p>
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>
