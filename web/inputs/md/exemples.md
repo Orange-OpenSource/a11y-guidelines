@@ -41,6 +41,11 @@
             <img class="hidden-sm-down" alt="" src="./images/exemples/menu.png"><span>Menu déroulant</span>
         </a>
     </li>
+    <li>
+        <a href="exemples/speak/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Faire parler le lecteur d'écran via Javascript</span>
+        </a>
+    </li>
 </ul>
 
 ## Niveau avancé
