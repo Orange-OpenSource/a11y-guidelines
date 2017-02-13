@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exemple 5 : les tags - recommandations accessibilité Orange</title>
+  <script src="../../../js/jquery.min.js"></script>
+  <script src="script5.js"></script>
+
+  <style>
+    html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: "Arial";
+    }
+    
+    ul {
+        font-family: "Arial";
+        font-size: 1rem;
+        border: .2rem solid #000;
+        margin: 1rem 0 2rem 0;
+        list-style: none;
+        padding: .25rem;     
+        min-height: 2.5rem;   
+    }
+
+    li {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;                
+        margin: .25rem;
+        padding: .25rem;
+    }
+
+    li button:after {
+        content: "x";    
+        margin: .25rem .25rem .25rem .75rem;
+        padding-left: .4rem;    
+        border-left: .15rem solid #fff;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        font-family: "Arial";
+        font-size: 1rem;
+    }
+  </style>
+ 
+</head>
+
+<body>    
+    <ul>
+        <li><button aria-label="Retirer Alcatel de la liste">Alcatel</button></li>
+        <li><button aria-label="Retirer Doro de la liste">Doro</button></li>
+        <li><button aria-label="Retirer Apple de la liste">Apple</button></li>
+        <li><button aria-label="Retirer LG de la liste">LG</button></li>
+        <li><button aria-label="Retirer Sony de la liste">Sony</button></li>
+    </ul>
+</body>
+
+</html>
+  
