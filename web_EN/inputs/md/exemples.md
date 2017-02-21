@@ -41,6 +41,21 @@
             <img class="hidden-sm-down" alt="" src="./images/exemples/menu.png"><span>Dropdown menu</span>
         </a>
     </li>
+    <li>
+        <a href="exemples/speak/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Make screenreader speak using Javascript</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/tag/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Create accessible "tags" 1/2</span>
+        </a>
+    </li>    
+        <li>
+        <a href="exemples/tag-exemples/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Create accessible "tags" 2/2 (examples)</span>
+        </a>
+    </li>        
 </ul>
 
 ## Advanced level
