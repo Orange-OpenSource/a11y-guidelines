@@ -24,6 +24,11 @@
         margin-top: 1rem;
     }
 
+    h2 {
+        font-size: inherit;
+        display: inline;
+    }
+
     .field {
         border: .2rem solid #000;
     }
@@ -206,10 +211,9 @@
 
     <h1>Test ajout de destinataires</h1>
     <form>
-        <label id="selection-list-label">Liste des destinataires<span aria-hidden="true"> (saisir les noms et prénoms séparés par une virgule)</span></label>
+        <label for="to"><h2>Liste des destinataires</h2> (saisir les noms et prénoms séparés par une virgule) :</label>
         <div class="field">                
-            <ul id="selection-list" aria-labelledby="selection-list-label"></ul>
-            <label class="sr-only" for="to">Ajouter des destinataires (saisir les noms et prénoms séparés par une virgule) :</label>
+            <ul id="selection-list" aria-labelledby="selection-list-label"></ul>            
             <input id="to">
         </div>
 
