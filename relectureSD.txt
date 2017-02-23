@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-./web/inputs/md/fondamentaux-tech.md
 ./web/inputs/md/fondamentaux.md
 ./web/inputs/md/htmlaria.md
 ./web/inputs/md/index.md
@@ -187,3 +186,4 @@ DONE post v2
 ./web/inputs/md/exemples.md
 ./web/inputs/md/exigences.md
 ./web/inputs/md/fondamentaux-nontech.md
+./web/inputs/md/fondamentaux-tech.md
