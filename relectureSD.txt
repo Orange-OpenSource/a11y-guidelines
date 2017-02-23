@@ -4,9 +4,6 @@ Pour chaque fichier :
 - "..." → "…"
 - "'" → "’"
 
-UNDETERMINED
-./mobile_EN/inputs/md/exigences.md
-
 TODO
 
 ./web/inputs/md/fondamentaux-nontech.md
@@ -105,6 +102,38 @@ TODO
 ./web_EN/theme/default/_layout.html
 ./web_EN/theme/default/_manifests.html
 ./web_EN/theme/default/_page.html
+
+TODO (added after b228595)
+web/inputs/html/exemples/speak/index.html
+web/inputs/html/exemples/tag-exemples/Exemple destinataire.html
+web/inputs/html/exemples/tag-exemples/Exemple filtre.html
+web/inputs/html/exemples/tag-exemples/index.html
+web/inputs/html/exemples/tag/exemple1.html
+web/inputs/html/exemples/tag/exemple2.html
+web/inputs/html/exemples/tag/exemple3.html
+web/inputs/html/exemples/tag/exemple4.html
+web/inputs/html/exemples/tag/exemple5.html
+web/inputs/html/exemples/tag/exemple6.html
+web/inputs/html/exemples/tag/exemple7.html
+web/inputs/html/exemples/tag/exemple8.html
+web/inputs/html/exemples/tag/exemple9.html
+web/inputs/html/exemples/tag/index.html
+web_EN/inputs/html/exemples/speak/index.html
+web_EN/inputs/html/exemples/tag-exemples/Exemple destinataire.html
+web_EN/inputs/html/exemples/tag-exemples/Exemple filtre.html
+web_EN/inputs/html/exemples/tag-exemples/index.html
+web_EN/inputs/html/exemples/tag/exemple1.html
+web_EN/inputs/html/exemples/tag/exemple2.html
+web_EN/inputs/html/exemples/tag/exemple3.html
+web_EN/inputs/html/exemples/tag/exemple4.html
+web_EN/inputs/html/exemples/tag/exemple5.html
+web_EN/inputs/html/exemples/tag/exemple6.html
+web_EN/inputs/html/exemples/tag/exemple7.html
+web_EN/inputs/html/exemples/tag/exemple8.html
+web_EN/inputs/html/exemples/tag/exemple9.html
+web_EN/inputs/html/exemples/tag/index.html
+
+------------------------------
 
 DONE before v2
 ./home/inputs/md/about.md OK v2
