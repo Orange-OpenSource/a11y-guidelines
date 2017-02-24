@@ -96,7 +96,7 @@ Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamme
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
 
 **Exemple non valide&nbsp;: **  
-Le texte « film | 20h40… » ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
+Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)
 
@@ -461,10 +461,10 @@ Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](./exemp
 
 **Description&nbsp;: **
 
-Rendre compréhensibles les intitulés des liens hors contexte pour tous les utilisateurs, en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens « en savoir plus », il sera impossible de les différencier les uns des autres.  
+Rendre compréhensibles les intitulés des liens hors contexte pour tous les utilisateurs, en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  
 
 S’il n’est pas possible de rendre un lien plus explicite, faute de place, mais que l’intitulé du lien actuel est suffisant pour les personnes qui ont accès à l’écran, le texte du lien peut être complété par un contenu supplétif caché ou en utilisant un attribut `aria-label` ou `aria-labelledby`, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
-Par exemple dans l’image ci-dessous, les deux liens « valider » ne sont pas suffisamment explicites pour une personne déficiente visuelle. Par contre quand on voit l’écran, la disposition fait qu’il n’y a pas d’ambiguïté sur le rôle de chaque bouton.
+Par exemple dans l’image ci-dessous, les deux liens «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne déficiente visuelle. Par contre quand on voit l’écran, la disposition fait qu’il n’y a pas d’ambiguïté sur le rôle de chaque bouton.
 
 ![capture d’écran présentant deux liens valider dont le libellé doit être explicité](./images/liens-valider.png)
 
@@ -477,7 +477,7 @@ Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masqu
 ```
 
 Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé du lien.  
-En complément de ces solutions, on pourrait ici également utiliser ** un attribut `title` ** pour faire apparaître une info-bulle « valider le paiement en plusieurs fois » au survol du lien avec la souris.
+En complément de ces solutions, on pourrait ici également utiliser ** un attribut `title` ** pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol du lien avec la souris.
 
 
 **À vérifier&nbsp;: **
@@ -491,10 +491,10 @@ Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaîtr
 Expliciter les liens permet d’améliorer le référencement naturel.
 
 **Exemple valide&nbsp;:**      
-Associer à un lien « cliquer ici », un texte caché hors écran&nbsp;: « commander votre téléphone ».
+Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».
  
 **Exemple non-valide&nbsp;:**      
-Liens « Cliquez ici » ou « Lire la suite… » sans plus de précision.
+Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus de précision.
 
 **Référence&nbsp;:** WCAG 2.4.9
 
@@ -506,7 +506,7 @@ Liens « Cliquez ici » ou « Lire la suite… » sans plus de précision.
 **Description&nbsp;:**
 
 Prévenir l’utilisateur de l’ouverture de toute nouvelle fenêtre en l’indiquant dans l’intitulé du lien. 
-En cas d’impossibilité avérée, utiliser un icône (image avec un `alt`) en ajoutant l’indication d’ouverture d’une nouvelle fenêtre ou juste « nouvelle fenêtre ».  
+En cas d’impossibilité avérée, utiliser un icône (image avec un `alt`) en ajoutant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;».  
 En dernier recours, un texte  en <a href="./exemples/masquage/index.html">masquage accessible</a> (hors écran).
 
 **Exemple&nbsp;: **  
@@ -515,13 +515,13 @@ Exemple d’icône pouvant indiquer l’ouverture d’une nouvelle fenêtre.
 ![capture d’écran d’un lien accompagné d’une icône indiquant l’ouverture d’une nouvelle fenêtre](./images/nouvelle-fenetre.png)  
 
 **À vérifier&nbsp;: **
-Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type « (nouvelle fenêtre) » est présente dans l’intitulé du lien, ou la mention « (nouvelle fenêtre) » est positionnée hors écran via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">masquage accessible</a>).
+Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type «&nbsp;(nouvelle fenêtre)&nbsp;» est présente dans l’intitulé du lien, ou la mention «&nbsp;(nouvelle fenêtre)&nbsp;» est positionnée hors écran via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">masquage accessible</a>).
 
 **Objectif utilisateur&nbsp;: **
 Éviter l’ouverture inattendue de fenêtre, car cela peut gêner, perturber ou désorienter l’utilisateur. En particulier, pour des personnes en mobilité, utilisant des synthèses vocales ou présentant des déficiences cognitives.
 
 **Exemple valide&nbsp;:**      
-Pour un lien pointant à l’extérieur du site et ouvrant une nouvelle fenêtre, l’intitulé du lien texte « Accéder au site orange.com (nouvelle fenêtre) ».
+Pour un lien pointant à l’extérieur du site et ouvrant une nouvelle fenêtre, l’intitulé du lien texte «&nbsp;Accéder au site orange.com (nouvelle fenêtre)&nbsp;».
 Pour une image-lien, un attribut `alt="consulter les conditions générales d’utilisation (nouvelle fenêtre)"`.    
  
 **Référence&nbsp;:** WCAG 3.2.2
@@ -542,7 +542,7 @@ Toutes les actions importantes effectuées à la souris peuvent aussi l’être 
 
 **Exemple valide&nbsp;:**      
 - Un sous-menu qui se déroule au survol doit aussi se dérouler quand l’item de menu parent reçoit le focus clavier.
-- Dans un webmail, un clic droit permet d’accéder à un menu pour vider la corbeille, un bouton « vider la corbeille » est également présent dans l’interface quand la corbeille est en cours de consultation. 
+- Dans un webmail, un clic droit permet d’accéder à un menu pour vider la corbeille, un bouton «&nbsp;vider la corbeille&nbsp;» est également présent dans l’interface quand la corbeille est en cours de consultation. 
  
 **Exemple non-valide&nbsp;:**      
 Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n drop</i> et sans équivalent au clavier.
@@ -590,12 +590,12 @@ Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dan
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).
 
 **Exemple valide&nbsp;:**  
-Focus positionné sur le lien « HTC Desire 620 ».
+Focus positionné sur le lien «&nbsp;HTC Desire 620&nbsp;».
   
 ![capture d’écran montrant un lien dont le focus est clairement visible](./images/focus-ok.png)  
  
 **Exemple non-valide&nbsp;:**  
-Focus positionné sur le lien « HTC Desire 620 ».
+Focus positionné sur le lien «&nbsp;HTC Desire 620&nbsp;».
     
 ![capture d’écran montrant un lien dont le focus n’est pas suffisamment visible](./images/focus-ko.png)   
 
@@ -617,7 +617,7 @@ Lorsqu’un lien d’évitement est activé, vérifier que le focus est bien dé
 Faciliter la navigation pour des utilisateurs naviguant au clavier, des utilisateurs malvoyants, utilisateurs de loupe logicielle ou de téléphone mobile.
      
 **Exemple&nbsp;: **  
-Des liens d’évitement (« Aller à la navigation », « Aller au contenu ») sont disponibles sur ce site.
+Des liens d’évitement («&nbsp;Aller à la navigation&nbsp;», «&nbsp;Aller au contenu&nbsp;») sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d’adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche `TAB`.
 
 ![capture d’écran du site orange.com](images/skiplink.png)   
@@ -638,7 +638,7 @@ Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper 
 ![capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation](./images/carrousel.png)  
 
 Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsque celui-ci a le focus.  
-Il est également possible d’ajouter un bouton « pause » directement dans l’interface.
+Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.
 
 **Référence&nbsp;:** WCAG 2.2.2
 
