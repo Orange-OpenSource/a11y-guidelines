@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Test ajout destinataires</title>
+  <title>Test: adding a recipient</title>
 
   <style>
     html {
@@ -173,7 +173,7 @@
 
  function removeItem(item) {
       item.remove();
-      speak(item.find("button").text() + " supprimé des destinataires, " + $("#selection-list li").length + " destinataires sélectionnés");
+      speak(item.find("button").text() + " remove from recipients, " + $("#selection-list li").length + " recipients selected");
  }
 
  function addItem(text) {
@@ -181,9 +181,9 @@
           return;
       }
 
-      var link = $("<button>").attr("aria-label", "retirer " + text + " de la liste.").text(text);
+      var link = $("<button>").attr("aria-label", "remove " + text + " from the list.").text(text);
       $("<li>").html('<span class="sr-only">' + text + '</span>').append(link).appendTo("#selection-list");
-      speak(text + " ajouté aux destinataires, " + $("#selection-list li").length + " destinataires ajoutés");
+      speak(text + " added to reciptiens, " + $("#selection-list li").length + " recipients");
   }
 
   function speak(text, priority) {
@@ -209,15 +209,15 @@
 
 <body>
 
-    <h1>Test ajout de destinataires</h1>
+    <h1>Test: adding a recipient</h1>
     <form>
-        <label for="to"><h2>Liste des destinataires</h2> (saisir les noms et prénoms séparés par une virgule) :</label>
+        <label for="to"><h2>Recipients list</h2> (please inut names and first names separated by commas):</label>
         <div class="field">                
             <ul id="selection-list" aria-labelledby="selection-list-label"></ul>            
             <input id="to">
         </div>
 
-        <label for="message">Message : </label>
+        <label for="message">Message: </label>
         <textarea id="message"></textarea>
         <input type="submit" value="Envoyer">
     </form>
