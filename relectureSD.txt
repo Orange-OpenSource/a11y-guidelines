@@ -5,8 +5,6 @@ Pour chaque fichier :
 - "'" → "’"
 
 TRANSLATE
-web_EN/inputs/html/exemples/tag-exemples/Exemple destinataire.html
-web_EN/inputs/html/exemples/tag-exemples/Exemple filtre.html
 web_EN/inputs/html/exemples/tag-exemples/index.html
 web_EN/inputs/html/exemples/tag/exemple1.html
 web_EN/inputs/html/exemples/tag/exemple2.html
@@ -203,3 +201,5 @@ DONE post v2
 ./web/inputs/md/fondamentaux-tech.md
 ./web/inputs/md/fondamentaux.md
 web_EN/inputs/html/exemples/speak/index.html
+web_EN/inputs/html/exemples/tag-exemples/Exemple destinataire.html
+web_EN/inputs/html/exemples/tag-exemples/Exemple filtre.html

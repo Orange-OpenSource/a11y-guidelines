@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Test filtre par marque</title>
+  <title>Test: filter by brand</title>
 
   <style>
     html {
@@ -144,10 +144,10 @@
           return;
       }
 
-      var link = $("<button>").attr("aria-label", "retirer " + item + " de la liste.").text(item);
+      var link = $("<button>").attr("aria-label", "remove " + item + " from the list.").text(item);
       $("<li>").html('<span class="sr-only">' + item + '</span>').append(link).appendTo("#selection-list");
       if (!noSpeak) {
-        speak(item + " ajouté à la sélection, " + $("#selection-list li").length + " élément sélectionné");
+        speak(item + " added to the selection, " + $("#selection-list li").length + " elements selected");
       }
   }
 
@@ -158,13 +158,13 @@
         addItem(itemText, true);
         itemsText += itemText;
       });
-      speak(itemsText + " ajouté à la sélection, " + $("#selection-list li").length + " élément sélectionné");
+      speak(itemsText + " added to the selection, " + $("#selection-list li").length + " elements selected");
   }
 
   function removeItem(item) {         
       $("<option>").text(item.text()).appendTo("#brand-list");
       item.parent().remove();
-      speak(item.text() + " supprimé de la sélection, " + $("#selection-list li").length + " élément sélectionné.");
+      speak(item.text() + " removed from the selection, " + $("#selection-list li").length + " elements selected.");
   }
 
   function speak(text, priority) {
@@ -189,8 +189,8 @@
 
 <body>
 
-  <h1>Filtre par marque</h1>
-  <label for="brand-list">Sélectionner des marques :</label>
+  <h1>Filter by brand</h1>
+  <label for="brand-list">Select brands:</label>
   <select id="brand-list" multiple="multiple">
     <option>Alcatel</option>
     <option>Apple</option>
@@ -207,9 +207,9 @@
     <option>Wiko</option>
   </select>
 
-  <button id="addBrands" class="sr-only">Ajouter les marques</button>
+  <button id="addBrands" class="sr-only">Add brands</button>
 
-  <h2 id="selection-list-label">Liste des marques sélectionnées :</h2>
+  <h2 id="selection-list-label">List of selected brands:</h2>
   <ul id="selection-list"></ul>
 
 </body>
