@@ -4,18 +4,6 @@ Pour chaque fichier :
 - "..." → "…"
 - "'" → "’"
 
-TRANSLATE
-web_EN/inputs/html/exemples/tag/exemple1.html
-web_EN/inputs/html/exemples/tag/exemple2.html
-web_EN/inputs/html/exemples/tag/exemple3.html
-web_EN/inputs/html/exemples/tag/exemple4.html
-web_EN/inputs/html/exemples/tag/exemple5.html
-web_EN/inputs/html/exemples/tag/exemple6.html
-web_EN/inputs/html/exemples/tag/exemple7.html
-web_EN/inputs/html/exemples/tag/exemple8.html
-web_EN/inputs/html/exemples/tag/exemple9.html
-web_EN/inputs/html/exemples/tag/index.html
-
 TODO
 
 ./web/inputs/md/htmlaria.md
@@ -203,3 +191,13 @@ web_EN/inputs/html/exemples/speak/index.html
 web_EN/inputs/html/exemples/tag-exemples/Exemple destinataire.html
 web_EN/inputs/html/exemples/tag-exemples/Exemple filtre.html
 web_EN/inputs/html/exemples/tag-exemples/index.html
+web_EN/inputs/html/exemples/tag/exemple1.html
+web_EN/inputs/html/exemples/tag/exemple2.html
+web_EN/inputs/html/exemples/tag/exemple3.html
+web_EN/inputs/html/exemples/tag/exemple4.html
+web_EN/inputs/html/exemples/tag/exemple5.html
+web_EN/inputs/html/exemples/tag/exemple6.html
+web_EN/inputs/html/exemples/tag/exemple7.html
+web_EN/inputs/html/exemples/tag/exemple8.html
+web_EN/inputs/html/exemples/tag/exemple9.html
+web_EN/inputs/html/exemples/tag/index.html
