@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/md/methodes-outils.md
 web/inputs/md/nos-outils.md
 web/inputs/md/pushmail.md
 web_EN/inputs/md/about.md
@@ -187,3 +186,4 @@ web/inputs/md/methodes-outils-extensions.md
 web/inputs/md/methodes-outils-lecteur-ecran.md
 web/inputs/md/methodes-outils-liste-titres.md
 web/inputs/md/methodes-outils-zoom.md
+web/inputs/md/methodes-outils.md
