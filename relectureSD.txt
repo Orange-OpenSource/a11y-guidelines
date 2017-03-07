@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/md/methodes-outils-extensions.md
 web/inputs/md/methodes-outils-lecteur-ecran.md
 web/inputs/md/methodes-outils-liste-titres.md
 web/inputs/md/methodes-outils-zoom.md
@@ -187,3 +186,4 @@ web/inputs/md/htmlaria.md
 web/inputs/md/index.md
 web/inputs/md/methodes-outils-clavier.md
 web/inputs/md/methodes-outils-contrastes.md
+web/inputs/md/methodes-outils-extensions.md
