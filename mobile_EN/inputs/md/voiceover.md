@@ -48,11 +48,15 @@ When VoiceOver is on, the standard gestures behave differently. Furthermore, add
       <h3>Swipe left using one finger.</h3>
       <p>Move the focus to the previous item.</p>
   </li>
+  <li class="clearfix">   
+      <img src="./images/gesture7.png" alt="" width="80">    
+      <h3>Swipe up using one finger</h3>
+      <p>Increase the value of an adjustable element.</p>
+  </li>
   <li class="clearfix">
-      <img src="./images/gesture7.png" alt="" width="80">
-      <img src="./images/gesture8.png" alt="" width="80">
-      <h3>Swipe up or down using one finger</h3>
-      <p>Performs or moves to the selected rotor option</p>
+      <img src="./images/gesture8.png" alt="" width="80">    
+      <h3>Swipe down using one finger</h3>
+      <p>Decrease the value of an adjustable element.</p>
   </li>
 </ul>
 
