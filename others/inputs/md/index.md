@@ -4,11 +4,11 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile :
+Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&nbsp;:
 
-- [Créer des documents powerpoint accessibles](./powerpoint.html) : section consacrée à la réalisation de présentations PowerPoint accessibles.
+- [Créer des documents powerpoint accessibles](./powerpoint.html)&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.
 
-- [Créer des pushmail accessibles](./pushmail.html) : section consacrée à la réalisation d'emails accessibles.
+- [Créer des pushmail accessibles](./pushmail.html)&nbsp;: section consacrée à la réalisation d’emails accessibles.
 
 
 &nbsp;
