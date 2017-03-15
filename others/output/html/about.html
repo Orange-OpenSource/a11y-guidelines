@@ -3,20 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= @manifest.title %></title>
-    <% if @manifest.options.css: %>
-        <link type="text/css" rel="stylesheet" href="<%- @manifest.options.css %>">
-    <% end %>    
-      
-       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
       <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
       <!-- Copyright © 2016 Orange SA. All rights reserved -->
       <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
       <link rel="stylesheet" href="../boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
-      <link rel="stylesheet" href="../css/dark.min.css">
+      <link rel="stylesheet" href="./css/dark.min.css">
 
       <!-- Styles perso -->
       <link rel="stylesheet" href="../css/reco.css">
@@ -27,7 +25,7 @@
       <script src="./js/lunr.min.js"></script>
       <script src="./js/lunr.stemmer.support.js"></script>
       <script src="./js/lunr.fr.min.js"></script>      
-      
+
       <!-- Favicons -->
       <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
       <link rel="icon" href="/images/favicon.ico">            
@@ -43,29 +41,24 @@
               <span class="sr-only">Menu de navigation</span>
               <span class="icon-menu"></span>
           </button>
-          
+
               <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
-                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
-                  <li class="nav-item">
-                    <a class="nav-link" href="../web/index.html">Web</a>                      
-                  </li>
-                  <li class="nav-item active mobile">
-                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
-                    <ul id="navigation" class="nav navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Éditorial</a>
+                      <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-mobile" href="criteria-mobile.html">Critères mobiles</a></li>  
-                        <li><a class="page-dev-mobile" href="dev-mobile.html">Guide pour les développeurs</a></li>                
-                        <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
-                        <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d'écran</a></li>
-                        <li><a class="page-links" href="links.html">Liens utiles</a></li>
+                        <li><a class="page-powerpoint" href="powerpoint.html">Powerpoint</a></li>
+                        <li><a class="page-pushmail" href="pushmail.html">Email</a></li>
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">A propos</a></li>                        
-                    </ul>                                        
-                  </li>   
-                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
+                        <li><a class="page-about" href="about.html">A propos</a></li>
+                    </ul>
+                  </li>
                   <li class="nav-item language hidden-sm-up">
-                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
                   </li>
               </ul> 
               <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
@@ -78,7 +71,7 @@
                   </span>
                 </li>
                 <li class="nav-item language hidden-xs-down">
-                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a> 
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
                 </li>
                 <li class="nav-item">
                     <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
@@ -98,10 +91,10 @@
           </form>
       </nav>      
     </header>
-    
+
     <span class="sr-only">Vous êtes ici : </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="/others/index.html">Éditorial</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -109,7 +102,20 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <%- @content %>          
+          <h1 id="a-propos">A propos</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"A propos"}]);
+});</script>
+
+<p>Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>. Le code source de ce site ainsi que celui des exemples est disponible <a href="https://github.com/Orange-OpenSource/a11y-guidelines">sur notre compte github</a>.  </p>
+<p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange:  </p>
+<p>Copyright (C) 2016 Orange SA All rights reserved<br><a href="/NOTICE.txt">Liste des fichiers concernés</a></p>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+          
         </div>
       </div>
     </main>

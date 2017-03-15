@@ -1,0 +1,11 @@
+{
+    "title": "Recommandations accessibilité Orange",
+    "files": [
+        "output/markdown/about.md",
+        "output/markdown/contact.md",        
+        "output/markdown/index.md",  
+        "output/markdown/powerpoint.md",
+        "output/markdown/pushmail.md"
+    ],
+    "maxTocLevel":"1"
+}

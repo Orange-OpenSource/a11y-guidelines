@@ -11,7 +11,9 @@ module.exports = function(grunt) {
           web_EN: ['web_EN/output/*', 'output/web_EN/*'],
 
           mobile: ['mobile/output/*', 'output/mobile/*'],
-          mobile_EN: ['mobile_EN/output/*', 'output/mobile_EN/*']
+          mobile_EN: ['mobile_EN/output/*', 'output/mobile_EN/*'],
+
+          others: ['others/output/*', 'output/others/*']
         },
         
       
@@ -84,8 +86,17 @@ module.exports = function(grunt) {
               theme: 'mobile_EN/theme/default',
               baseUrl: ''
             }
+          },
+          others: {
+            options: {
+              title: 'Recommandations accessiblité Orange pour les autres plateformes',
+              manifest: 'others/manifest.json',
+              dest: 'others/output/html',
+              theme: 'others/theme/default',
+              baseUrl: ''
+            }
           }
-        },
+        },         
         watch: {
           home: {
             files: ['home/theme/**/*', 'home/inputs/**/*', 'home_EN/theme/**/*', 'home_EN/inputs/**/*'],
@@ -175,11 +186,13 @@ module.exports = function(grunt) {
     grunt.registerTask('build-mobile', ['clean:mobile', 'createMarkdown:mobile', 'bfdocs:mobile', 'dist:mobile']);    
     grunt.registerTask('build-mobile_EN', ['clean:mobile_EN', 'createMarkdown:mobile_EN', 'bfdocs:mobile_EN', 'dist:mobile_EN']);
 
+    grunt.registerTask('build-others', ['clean:others', 'createMarkdown:others', 'bfdocs:others', 'dist:others']);    
+
     // Default task
-    grunt.registerTask('default', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
+    grunt.registerTask('default', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-others', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
         
     grunt.registerTask('home', ['build-home', 'build-home_EN', 'watch:home']);
     grunt.registerTask('web', ['build-web', 'build-web_EN', 'watch:web']);
-    grunt.registerTask('mobile', ['build-mobile', 'build-mobile_EN', 'watch:mobile']);
+    grunt.registerTask('mobile', ['build-mobile', 'build-mobile_EN', 'watch:mobile']);    
     
 };
