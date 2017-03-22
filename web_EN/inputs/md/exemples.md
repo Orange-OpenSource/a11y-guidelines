@@ -43,17 +43,17 @@
     </li>
     <li>
         <a href="exemples/speak/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Make screenreader speak using Javascript</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Make a screen reader speak using Javascript</span>
         </a>
     </li>
     <li>
         <a href="exemples/tag/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Create accessible "tags" 1/2</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Create accessible “tags” 1/2</span>
         </a>
     </li>    
         <li>
         <a href="exemples/tag-exemples/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Create accessible "tags" 2/2 (examples)</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Create accessible “tags” 2/2 (examples)</span>
         </a>
     </li>        
 </ul>
@@ -63,17 +63,17 @@
 <ul class="examples-list">
     <li>
         <a href="exemples/listbox/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox.png"><span>ARIA lists (listbox) 1/3</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox.png"><span><abbr>ARIA</abbr> lists (listbox) 1/3</span>
         </a>
     </li>
     <li>
         <a href="exemples/check-listbox/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox2.png"><span>ARIA lists (listbox) 2/3 (with checkboxes)</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox2.png"><span><abbr>ARIA</abbr> lists (listbox) 2/3 (with checkboxes)</span>
         </a>
     </li> 
     <li>
         <a href="exemples/listbox-pattern-aria/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox3.png"><span>The listbox and patterns ARIA 3/3 (keyboard navigation)</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox3.png"><span>The listbox and <abbr>ARIA</abbr> patterns 3/3 (keyboard navigation)</span>
         </a>
     </li>
     <li>
@@ -83,7 +83,7 @@
     </li>
     <li>
         <a href="exemples/dynFocus/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/live-region.png"><span>The live regions, dynamic content, handling focus and ARIA</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/live-region.png"><span>Live regions, dynamic content, handling focus and <abbr>ARIA</abbr></span>
         </a>
     </li>
 </ul>
