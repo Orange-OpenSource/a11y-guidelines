@@ -27,11 +27,11 @@ index.add({
 
 
 
-documentTitles["index.html#recommandations-accessibilite-orange-pour-les-autres-plateformes"] = "Recommandations accessibilité Orange pour les autres plateformes";
+documentTitles["index.html#recommandations-accessibilite-orange-pour-leditorial"] = "Recommandations accessibilité Orange pour l'éditorial";
 index.add({
-    url: "index.html#recommandations-accessibilite-orange-pour-les-autres-plateformes",
-    title: "Recommandations accessibilité Orange pour les autres plateformes",    
-    body: "# Recommandations accessibilité Orange pour les autres plateformes  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&amp;nbsp;:  - [Créer des documents powerpoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Créer des pushmail accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la réalisation d’emails accessibles.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "index.html#recommandations-accessibilite-orange-pour-leditorial",
+    title: "Recommandations accessibilité Orange pour l'éditorial",    
+    body: "# Recommandations accessibilité Orange pour l'éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&amp;nbsp;:  - [Créer des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Créer des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Créer des pushmail accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la réalisation d’emails accessibles.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -47,7 +47,7 @@ documentTitles["powerpoint.html#introduction"] = "Introduction";
 index.add({
     url: "powerpoint.html#introduction",
     title: "Introduction",    
-    body: "## Introduction Produire des documents PowerPoint accessibles demande quelques efforts. Heureusement PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments n’étaient pas toujours correctement vocalisés par les lecteurs d’écran (SmartArt, tableaux ...). Une fois votre document accessible, l’export en PDF permet d’en améliorer la restitution avec les outils d’assistance.  "
+    body: "## Introduction Produire des documents PowerPoint accessibles demande quelques efforts. Heureusement PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran et notamment par JAWS 17. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  "
 });
 
 documentTitles["powerpoint.html#recommandations"] = "Recommandations";
@@ -68,7 +68,7 @@ documentTitles["powerpoint.html#2-donner-des-titres-aux-diapositives"] = "2. Don
 index.add({
     url: "powerpoint.html#2-donner-des-titres-aux-diapositives",
     title: "2. Donner des titres aux diapositives",    
-    body: "### 2. Donner des titres aux diapositives Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&amp;nbsp;: \&quot;Cliquer pour ajouter un titre\&quot;. Si les titres sont renseignés correctement, il sera aisé pour tous les utilisateurs de naviguer à l’intérieur de la présentation.  "
+    body: "### 2. Donner des titres aux diapositives Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&amp;nbsp;: «&amp;nbsp;Cliquer pour ajouter un titre&amp;nbsp;». Si les titres sont renseignés correctement, il sera aisé pour tous les utilisateurs de naviguer à l’intérieur de la présentation.  "
 });
 
 documentTitles["powerpoint.html#3-renseigner-une-alternative-textuelle-sur-les-images"] = "3. Renseigner une alternative textuelle sur les images";
@@ -106,11 +106,18 @@ index.add({
     body: "### 7. Assurer un contraste suffisant  Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant.  "
 });
 
-documentTitles["powerpoint.html#8-utiliser-le-verificateur-integre"] = "8. Utiliser le vérificateur intégré";
+documentTitles["powerpoint.html#8-langue"] = "8. Langue";
 index.add({
-    url: "powerpoint.html#8-utiliser-le-verificateur-integre",
-    title: "8. Utiliser le vérificateur intégré",    
-    body: "### 8. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.  "
+    url: "powerpoint.html#8-langue",
+    title: "8. Langue",    
+    body: "### 8. Langue Sélectionner la langue du document (menu : Fichier &gt; Options &gt; Langue). Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision &gt; Langue &gt; Définir la langue de vérification)  "
+});
+
+documentTitles["powerpoint.html#9-utiliser-le-verificateur-integre"] = "9. Utiliser le vérificateur intégré";
+index.add({
+    url: "powerpoint.html#9-utiliser-le-verificateur-integre",
+    title: "9. Utiliser le vérificateur intégré",    
+    body: "### 9. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.  "
 });
 
 documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
@@ -118,6 +125,148 @@ index.add({
     url: "powerpoint.html#ressources-externes",
     title: "Ressources externes",    
     body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle des systèmes d’information et de communication\&quot;&gt;DISIC&lt;/abbr&gt; (français). - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["word.html#creer-des-documents-word-accessibles"] = "Créer des documents Word accessibles";
+index.add({
+    url: "word.html#creer-des-documents-word-accessibles",
+    title: "Créer des documents Word accessibles",    
+    body: "# Créer des documents Word accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Word accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+});
+
+documentTitles["word.html#introduction"] = "Introduction";
+index.add({
+    url: "word.html#introduction",
+    title: "Introduction",    
+    body: "## Introduction Produire des documents Word accessibles, c’est la garantie que vos documents puissent être consultés par tous les utilisateurs. Créer des documents Word accessibles ne demande pas beaucoup d’efforts et permet également de produire des documents PDF accessibles grâce à la fonctionnalité d’export PDF intégrée à Word.  "
+});
+
+documentTitles["word.html#recommandations"] = "Recommandations";
+index.add({
+    url: "word.html#recommandations",
+    title: "Recommandations",    
+    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle des systèmes d’information et de communication\&quot;&gt;DISIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides pour la rédaction de documents accessibles.  "
+});
+
+documentTitles["word.html#1-definir-des-titres"] = "1. Définir des titres";
+index.add({
+    url: "word.html#1-definir-des-titres",
+    title: "1. Définir des titres",    
+    body: "### 1. Définir des titres Pour garantir une bonne restitution de votre présentation par les outils d’assistance, veiller à sélectionner un style «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour tous vos titres et sous-titres.  "
+});
+
+documentTitles["word.html#2-definir-les-paragraphes"] = "2. Définir les paragraphes";
+index.add({
+    url: "word.html#2-definir-les-paragraphes",
+    title: "2. Définir les paragraphes",    
+    body: "### 2. Définir les paragraphes Le texte des paragraphes doit être identifié à l’aide du style «&amp;nbsp;Normal&amp;nbsp;» (style par défaut).  "
+});
+
+documentTitles["word.html#3-ne-pas-inserer-de-lignes-vides"] = "3. Ne pas insérer de lignes vides";
+index.add({
+    url: "word.html#3-ne-pas-inserer-de-lignes-vides",
+    title: "3. Ne pas insérer de lignes vides",    
+    body: "### 3. Ne pas insérer de lignes vides Plusieurs lignes vides successives peuvent être perçues comme la fin du document à l’aide d’une synthèse vocale. Utiliser les options d’espacement pour modifier l’espace avant et après un paragraphe. Utiliser les «&amp;nbsp;sauts&amp;nbsp;» (saut de page, page vierge) pour reprendre l’écriture sur la page suivante ou insérer une page vierge.  "
+});
+
+documentTitles["word.html#4-utiliser-les-listes-a-puces"] = "4. Utiliser les listes à puces";
+index.add({
+    url: "word.html#4-utiliser-les-listes-a-puces",
+    title: "4. Utiliser les listes à puces",    
+    body: "### 4. Utiliser les listes à puces Ne pas réaliser de listes en utilisant des tirets dans le texte mais utiliser l’option liste à puces ou liste numérotée de Word pour identifier correctement les listes.  "
+});
+
+documentTitles["word.html#5-utiliser-les-notes-de-bas-de-page"] = "5. Utiliser les notes de bas de page";
+index.add({
+    url: "word.html#5-utiliser-les-notes-de-bas-de-page",
+    title: "5. Utiliser les notes de bas de page",    
+    body: "### 5. Utiliser les notes de bas de page Pour insérer des notes dans votre texte, utiliser les options «&amp;nbsp;notes de bas de page&amp;nbsp;» et «&amp;nbsp;notes de fin&amp;nbsp;» de document. Celles-ci seront ainsi correctement restituées.  "
+});
+
+documentTitles["word.html#6-numeroter-vos-pages"] = "6. Numéroter vos pages";
+index.add({
+    url: "word.html#6-numeroter-vos-pages",
+    title: "6. Numéroter vos pages",    
+    body: "### 6. Numéroter vos pages La numérotation des pages permet de se repérer dans un document. Utiliser l’option «&amp;nbsp;Numéro de page&amp;nbsp;» intégrée à Word.  "
+});
+
+documentTitles["word.html#7-colonnes"] = "7. Colonnes";
+index.add({
+    url: "word.html#7-colonnes",
+    title: "7. Colonnes",    
+    body: "### 7. Colonnes Ne pas utiliser de tableau pour créer une mise en page sous forme de colonnes mais préférer l’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page.  "
+});
+
+documentTitles["word.html#8-objets-flottants"] = "8. Objets flottants";
+index.add({
+    url: "word.html#8-objets-flottants",
+    title: "8. Objets flottants",    
+    body: "### 8. Objets flottants Éviter les objets flottants. Lors de l’insertion d’objets (image, forme, smart art, etc.), leur définir un point d’ancrage. Dans les options d’habillage du texte, choisir l’option \&quot;Aligné sur le texte\&quot; ou \&quot;Haut et bas\&quot;.  "
+});
+
+documentTitles["word.html#9-zones-de-texte"] = "9. Zones de texte";
+index.add({
+    url: "word.html#9-zones-de-texte",
+    title: "9. Zones de texte",    
+    body: "### 9. Zones de texte Éviter les zones de texte. Celles-ci ne sont pas toujours correctement restituées. Vous pouvez réaliser un encadré en ajoutant des bordures à un paragraphe.  "
+});
+
+documentTitles["word.html#10-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+index.add({
+    url: "word.html#10-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
+    title: "10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
+    body: "### 10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur (important pour les daltoniens, les malvoyants et les aveugles).  "
+});
+
+documentTitles["word.html#11-assurer-un-contraste-suffisant"] = "11. Assurer un contraste suffisant";
+index.add({
+    url: "word.html#11-assurer-un-contraste-suffisant",
+    title: "11. Assurer un contraste suffisant",    
+    body: "### 11. Assurer un contraste suffisant  Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant.  "
+});
+
+documentTitles["word.html#12-utiliser-les-styles"] = "12. Utiliser les styles";
+index.add({
+    url: "word.html#12-utiliser-les-styles",
+    title: "12. Utiliser les styles",    
+    body: "### 12. Utiliser les styles Utiliser les styles pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.  "
+});
+
+documentTitles["word.html#13-langue"] = "13. Langue";
+index.add({
+    url: "word.html#13-langue",
+    title: "13. Langue",    
+    body: "### 13. Langue Sélectionner la langue du document (menu&amp;nbsp;: Fichier &gt; Options &gt; Langue). Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu&amp;nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification)  "
+});
+
+documentTitles["word.html#14-renseigner-une-alternative-textuelle-sur-les-images"] = "14. Renseigner une alternative textuelle sur les images";
+index.add({
+    url: "word.html#14-renseigner-une-alternative-textuelle-sur-les-images",
+    title: "14. Renseigner une alternative textuelle sur les images",    
+    body: "### 14. Renseigner une alternative textuelle sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement (champ description). Si l’image au contraire est purement décorative, il n’y a rien à faire. Sans texte de remplacement celle-ci sera ignorée par les outils d’assistance.  "
+});
+
+documentTitles["word.html#15-tableaux"] = "15. Tableaux";
+index.add({
+    url: "word.html#15-tableaux",
+    title: "15. Tableaux",    
+    body: "### 15. Tableaux Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas correctement restituées). Ne pas hésiter à insérer une légende si nécessaire (Menu&amp;nbsp;: Référence &gt; Insérer une légende).  À noter que Word prévoit la possibilité d’ajouter une alternative textuelle aux tableaux. Par contre, contrairement aux images l’alternative sur les tableaux ne semble pas toujours vocalisée par les outils d’assistance.  "
+});
+
+documentTitles["word.html#16-utiliser-le-verificateur-integre"] = "16. Utiliser le vérificateur intégré";
+index.add({
+    url: "word.html#16-utiliser-le-verificateur-integre",
+    title: "16. Utiliser le vérificateur intégré",    
+    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.  "
+});
+
+documentTitles["word.html#ressources-externes"] = "Ressources externes";
+index.add({
+    url: "word.html#ressources-externes",
+    title: "Ressources externes",    
+    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle des systèmes d’information et de communication\&quot;&gt;DISIC&lt;/abbr&gt; (français). - [Accessibilité Word](http://webaim.org/techniques/word/), WebAIM (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

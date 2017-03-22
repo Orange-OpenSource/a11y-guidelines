@@ -9,8 +9,9 @@
 Produire des documents PowerPoint accessibles demande quelques efforts. Heureusement PowerPoint est doté d’un outil permettant de vérifier l’accessibilité.
 Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.
 
-Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments n’étaient pas toujours correctement vocalisés par les lecteurs d’écran (SmartArt, tableaux ...).
-Une fois votre document accessible, l’export en PDF permet d’en améliorer la restitution avec les outils d’assistance.
+Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran et notamment par JAWS 17.
+C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser. 
+En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.
 
 ## Recommandations
 
@@ -21,7 +22,7 @@ Pour plus de détails, n’hésitez pas à consulter <a href="https://disic.gith
 Pour garantir une bonne restitution de votre présentation par les outils d’assistance, veiller à bien utiliser les masques de diapositive. En effet toute zone de texte ajoutée à la main ne sera pas vocalisée par les lecteurs d’écran.
 
 ### 2. Donner des titres aux diapositives
-Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&nbsp;: "Cliquer pour ajouter un titre". Si les titres sont renseignés correctement, il sera aisé pour tous les utilisateurs de naviguer à l’intérieur de la présentation.
+Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&nbsp;: «&nbsp;Cliquer pour ajouter un titre&nbsp;». Si les titres sont renseignés correctement, il sera aisé pour tous les utilisateurs de naviguer à l’intérieur de la présentation.
 
 ### 3. Renseigner une alternative textuelle sur les images
 Si l’image apporte de l’information il faut lui associer un texte de remplacement (champ description). Si l’image au contraire est purement décorative, il n’y a rien à faire. Sans texte de remplacement celle-ci sera ignorée par les outils d’assistance.
@@ -41,7 +42,11 @@ Ne pas véhiculer l’information que par la couleur (important pour les daltoni
 ### 7. Assurer un contraste suffisant 
 Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant.
 
-### 8. Utiliser le vérificateur intégré
+### 8. Langue
+Sélectionner la langue du document (menu : Fichier > Options > Langue).
+Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision > Langue > Définir la langue de vérification)
+
+### 9. Utiliser le vérificateur intégré
 PowerPoint intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.
 
 ## Ressources externes
