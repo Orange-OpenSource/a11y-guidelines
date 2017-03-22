@@ -205,7 +205,7 @@ Améliore globalement la maintenabilité.
 
 **Description&nbsp;: **  
 
-Le code source de la page doit être valide au niveau <abbr>HTML</abbr>.
+Ecrire un code sans erreur de <span lang="en">parsing</span>.
 
 **À vérifier&nbsp;: **
 

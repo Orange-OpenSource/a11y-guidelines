@@ -206,7 +206,7 @@ Improves maintainability.
 
 **Description: **  
 
-The source code of the page must have a valid HTML.
+Write code without parsing error.
 
 **Checklist **
 
