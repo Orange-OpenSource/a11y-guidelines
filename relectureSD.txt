@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web_EN/inputs/md/about.md
 web_EN/inputs/md/contact.md
 web_EN/inputs/md/exemples.md
 web_EN/inputs/md/exigences.md
@@ -187,3 +186,4 @@ web/inputs/md/methodes-outils-zoom.md
 web/inputs/md/methodes-outils.md
 web/inputs/md/nos-outils.md
 web/inputs/md/pushmail.md
+web_EN/inputs/md/about.md
