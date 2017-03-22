@@ -50,12 +50,12 @@
         <a href="exemples/tag/index.html">
             <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 1/2</span>
         </a>
-    </li>    
+    </li>
         <li>
         <a href="exemples/tag-exemples/index.html">
             <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 2/2 (exemples)</span>
         </a>
-    </li>    
+    </li>
 </ul>
 
 ## Niveau avancé
