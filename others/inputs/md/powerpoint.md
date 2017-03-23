@@ -51,7 +51,7 @@ Sélectionner la langue du document (menu : Fichier > Options > Langue).
 Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision > Langue > Définir la langue de vérification).
 
 ### 11. Utiliser le vérificateur intégré
-PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés.
+PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus. 
 
 ### 12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information
 Ne pas véhiculer l’information que par la couleur. Ceci est important, notamment, pour les daltoniens, les malvoyants et les aveugles.
