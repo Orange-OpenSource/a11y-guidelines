@@ -117,7 +117,7 @@ documentTitles["powerpoint.html#9-assurer-un-contraste-suffisant"] = "9. Assurer
 index.add({
     url: "powerpoint.html#9-assurer-un-contraste-suffisant",
     title: "9. Assurer un contraste suffisant",    
-    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant. Il peut être vérifié avec l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
+    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant : - 4.5:1 pour du texte de taille normale - 3:1 pour du texte de grande taille (18pt minimum ou 14pt minimum pour du texte gras).  Celui-ci peut être vérifié avec l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
 });
 
 documentTitles["powerpoint.html#10-definir-la-langue"] = "10. Définir la langue";
@@ -131,14 +131,7 @@ documentTitles["powerpoint.html#11-utiliser-le-verificateur-integre"] = "11. Uti
 index.add({
     url: "powerpoint.html#11-utiliser-le-verificateur-integre",
     title: "11. Utiliser le vérificateur intégré",    
-    body: "### 11. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés.  "
-});
-
-documentTitles["powerpoint.html#12-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
-index.add({
-    url: "powerpoint.html#12-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
-    title: "12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
-    body: "### 12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur. Ceci est important, notamment, pour les daltoniens, les malvoyants et les aveugles.  "
+    body: "### 11. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus.   "
 });
 
 documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
@@ -161,7 +154,7 @@ documentTitles["word.html#introduction"] = "Introduction";
 index.add({
     url: "word.html#introduction",
     title: "Introduction",    
-    body: "## Introduction Produire des documents Word accessibles, c’est la garantie que vos documents puissent être consultés par tous les utilisateurs. Créer des documents Word accessibles ne demande pas beaucoup d’efforts et permet également de produire des documents PDF accessibles grâce à la fonctionnalité d’export PDF intégrée à Word.  "
+    body: "## Introduction Produire des documents Word accessibles, c’est la garantie que vos documents puissent être consultés par tous les utilisateurs. Créer des documents Word accessibles ne demande pas beaucoup d’efforts et permet également de produire des documents PDF accessibles grâce à la fonctionnalité d’export PDF intégrée à Word. Il est important de noter que des documents issus d'un traitment de texte et en particulier Word, sont très accessibles et utilisables pour peu que l'on respecte les recommandations ci-dessous.  "
 });
 
 documentTitles["word.html#recommandations"] = "Recommandations";
@@ -280,7 +273,7 @@ documentTitles["word.html#16-utiliser-le-verificateur-integre"] = "16. Utiliser 
 index.add({
     url: "word.html#16-utiliser-le-verificateur-integre",
     title: "16. Utiliser le vérificateur intégré",    
-    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.  "
+    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité).  Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus.   "
 });
 
 documentTitles["word.html#ressources-externes"] = "Ressources externes";

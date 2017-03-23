@@ -7,6 +7,7 @@
 
 ## Introduction
 Produire des documents Word accessibles, c’est la garantie que vos documents puissent être consultés par tous les utilisateurs. Créer des documents Word accessibles ne demande pas beaucoup d’efforts et permet également de produire des documents PDF accessibles grâce à la fonctionnalité d’export PDF intégrée à Word.
+Il est important de noter que des documents issus d'un traitment de texte et en particulier Word, sont très accessibles et utilisables pour peu que l'on respecte les recommandations ci-dessous.
 
 ## Recommandations
 
@@ -63,7 +64,8 @@ Ne pas hésiter à insérer une légende si nécessaire (Menu&nbsp;: Référence
 À noter que Word prévoit la possibilité d’ajouter une alternative textuelle aux tableaux. En revanche, contrairement aux images l’alternative sur les tableaux ne semble pas toujours vocalisée par les outils d’assistance.
 
 ### 16. Utiliser le vérificateur intégré
-Word intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.
+Word intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). 
+Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus. 
 
 ## Ressources externes
 

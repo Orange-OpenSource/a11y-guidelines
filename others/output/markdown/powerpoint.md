@@ -44,17 +44,18 @@ Le contenu des graphiques doit être décrit dans le texte de remplacement du gr
 Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…
 
 ### 9. Assurer un contraste suffisant
-Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant. Il peut être vérifié avec l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
+Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant :
+- 4.5:1 pour du texte de taille normale
+- 3:1 pour du texte de grande taille (18pt minimum ou 14pt minimum pour du texte gras).
+
+Celui-ci peut être vérifié avec l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
 
 ### 10. Définir la langue
 Sélectionner la langue du document (menu : Fichier > Options > Langue).  
 Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision > Langue > Définir la langue de vérification).
 
 ### 11. Utiliser le vérificateur intégré
-PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés.
-
-### 12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information
-Ne pas véhiculer l’information que par la couleur. Ceci est important, notamment, pour les daltoniens, les malvoyants et les aveugles.
+PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus. 
 
 ## Ressources externes
 
