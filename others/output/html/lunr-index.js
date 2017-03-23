@@ -47,84 +47,105 @@ documentTitles["powerpoint.html#introduction"] = "Introduction";
 index.add({
     url: "powerpoint.html#introduction",
     title: "Introduction",    
-    body: "## Introduction Produire des documents PowerPoint accessibles demande quelques efforts. Heureusement PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran et notamment par JAWS 17. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  "
+    body: "## Introduction Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  "
 });
 
 documentTitles["powerpoint.html#recommandations"] = "Recommandations";
 index.add({
     url: "powerpoint.html#recommandations",
     title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles.  Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle des systèmes d’information et de communication\&quot;&gt;DISIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides pour la rédaction de documents accessibles.  "
+    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles (version 2013).  Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides pour la rédaction de documents accessibles.  "
 });
 
 documentTitles["powerpoint.html#1-utiliser-les-masques-de-diapositive"] = "1. Utiliser les masques de diapositive";
 index.add({
     url: "powerpoint.html#1-utiliser-les-masques-de-diapositive",
     title: "1. Utiliser les masques de diapositive",    
-    body: "### 1. Utiliser les masques de diapositive Pour garantir une bonne restitution de votre présentation par les outils d’assistance, veiller à bien utiliser les masques de diapositive. En effet toute zone de texte ajoutée à la main ne sera pas vocalisée par les lecteurs d’écran.  "
+    body: "### 1. Utiliser les masques de diapositive Les présentations doivent être créeés en utilisant les masques de diapositive, masques créés à l’aide des options « insérer un espace réservé », cases à cocher « titre » ou « pieds de page ».   "
 });
 
-documentTitles["powerpoint.html#2-donner-des-titres-aux-diapositives"] = "2. Donner des titres aux diapositives";
+documentTitles["powerpoint.html#2-verifier-lordre-de-lecture-des-elements"] = "2. Vérifier l’ordre de lecture des éléments";
 index.add({
-    url: "powerpoint.html#2-donner-des-titres-aux-diapositives",
-    title: "2. Donner des titres aux diapositives",    
-    body: "### 2. Donner des titres aux diapositives Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&amp;nbsp;: «&amp;nbsp;Cliquer pour ajouter un titre&amp;nbsp;». Si les titres sont renseignés correctement, il sera aisé pour tous les utilisateurs de naviguer à l’intérieur de la présentation.  "
+    url: "powerpoint.html#2-verifier-lordre-de-lecture-des-elements",
+    title: "2. Vérifier l’ordre de lecture des éléments",    
+    body: "### 2. Vérifier l’ordre de lecture des éléments Pour les utilisateurs qui naviguent à l’aide du clavier (touche TAB), il est important de vérifier l’ordre de lecture des éléments depuis le volet de sélection (accueil, organiser, volet de sélection). Attention : le dernier élément dans la liste est lu en premier par les lecteurs d’écran ; l’ordre doit donc être indiqué de bas en haut dès la définition des masques de dispositives.  "
 });
 
-documentTitles["powerpoint.html#3-renseigner-une-alternative-textuelle-sur-les-images"] = "3. Renseigner une alternative textuelle sur les images";
+documentTitles["powerpoint.html#3-donner-des-titres-uniques-aux-diapositives"] = "3. Donner des titres uniques aux diapositives";
 index.add({
-    url: "powerpoint.html#3-renseigner-une-alternative-textuelle-sur-les-images",
-    title: "3. Renseigner une alternative textuelle sur les images",    
-    body: "### 3. Renseigner une alternative textuelle sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement (champ description). Si l’image au contraire est purement décorative, il n’y a rien à faire. Sans texte de remplacement celle-ci sera ignorée par les outils d’assistance.  "
+    url: "powerpoint.html#3-donner-des-titres-uniques-aux-diapositives",
+    title: "3. Donner des titres uniques aux diapositives",    
+    body: "### 3. Donner des titres uniques aux diapositives Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&amp;nbsp;: «&amp;nbsp;Cliquer pour ajouter un titre&amp;nbsp;».  "
 });
 
-documentTitles["powerpoint.html#4-verifier-lordre-de-lecture-des-elements"] = "4. Vérifier l’ordre de lecture des éléments";
+documentTitles["powerpoint.html#4-renseigner-un-texte-de-remplacement-sur-les-images"] = "4. Renseigner un texte de remplacement sur les images";
 index.add({
-    url: "powerpoint.html#4-verifier-lordre-de-lecture-des-elements",
-    title: "4. Vérifier l’ordre de lecture des éléments",    
-    body: "### 4. Vérifier l’ordre de lecture des éléments Pour les utilisateurs qui naviguent à l’aide du clavier (touche TAB), il est important de vérifier l’ordre de lecture des éléments depuis le volet de sélection (attention ordre inversé, dernier élément lu en premier dans la liste).  "
+    url: "powerpoint.html#4-renseigner-un-texte-de-remplacement-sur-les-images",
+    title: "4. Renseigner un texte de remplacement sur les images",    
+    body: "### 4. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement décrivant le contenu (clic droit, format de l’image, texte de remplacement, champ description).    Si l’image est purement décorative, le champ description du texte de remplacement doit être vide.  "
 });
 
-documentTitles["powerpoint.html#5-tableaux"] = "5. Tableaux";
+documentTitles["powerpoint.html#5-faire-des-tableaux-simples"] = "5. Faire des tableaux simples";
 index.add({
-    url: "powerpoint.html#5-tableaux",
-    title: "5. Tableaux",    
-    body: "### 5. Tableaux Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas correctement restituées). Ne pas hésiter à insérer un titre, une légende voir une description sous forme de texte à l’intérieur de la diapositive.    À noter que PowerPoint prévoit la possibilité d’ajouter une alternative textuelle aux tableaux. Par contre, contrairement aux images l’alternative sur les tableaux ne semble pas toujours vocalisée par les outils d’assistance.  "
+    url: "powerpoint.html#5-faire-des-tableaux-simples",
+    title: "5. Faire des tableaux simples",    
+    body: "### 5. Faire des tableaux simples Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu) ; Ne pas laisser de cellules vides.   "
 });
 
-documentTitles["powerpoint.html#6-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "6. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+documentTitles["powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques"] = "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques";
 index.add({
-    url: "powerpoint.html#6-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
-    title: "6. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
-    body: "### 6. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur (important pour les daltoniens, les malvoyants et les aveugles).  "
+    url: "powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques",
+    title: "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques",    
+    body: "### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés : il est possible d’ajouter un texte alternatif (format de l’objet, texte de remplacement description).   "
 });
 
-documentTitles["powerpoint.html#7-assurer-un-contraste-suffisant"] = "7. Assurer un contraste suffisant";
+documentTitles["powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques"] = "7. Renseigner un texte de remplacement aux graphiques";
 index.add({
-    url: "powerpoint.html#7-assurer-un-contraste-suffisant",
-    title: "7. Assurer un contraste suffisant",    
-    body: "### 7. Assurer un contraste suffisant  Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant.  "
+    url: "powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques",
+    title: "7. Renseigner un texte de remplacement aux graphiques",    
+    body: "### 7. Renseigner un texte de remplacement aux graphiques Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (format de l’objet, texte de remplacement descritption).   "
 });
 
-documentTitles["powerpoint.html#8-langue"] = "8. Langue";
+documentTitles["powerpoint.html#8-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
 index.add({
-    url: "powerpoint.html#8-langue",
-    title: "8. Langue",    
-    body: "### 8. Langue Sélectionner la langue du document (menu : Fichier &gt; Options &gt; Langue). Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision &gt; Langue &gt; Définir la langue de vérification)  "
+    url: "powerpoint.html#8-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
+    title: "8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
+    body: "### 8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…  "
 });
 
-documentTitles["powerpoint.html#9-utiliser-le-verificateur-integre"] = "9. Utiliser le vérificateur intégré";
+documentTitles["powerpoint.html#9-assurer-un-contraste-suffisant"] = "9. Assurer un contraste suffisant";
 index.add({
-    url: "powerpoint.html#9-utiliser-le-verificateur-integre",
-    title: "9. Utiliser le vérificateur intégré",    
-    body: "### 9. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité. Celui-ci permet d’identifier les contenus susceptibles de poser des difficultés.  "
+    url: "powerpoint.html#9-assurer-un-contraste-suffisant",
+    title: "9. Assurer un contraste suffisant",    
+    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant. Il peut être vérifié avec l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
+});
+
+documentTitles["powerpoint.html#10-definir-la-langue"] = "10. Définir la langue";
+index.add({
+    url: "powerpoint.html#10-definir-la-langue",
+    title: "10. Définir la langue",    
+    body: "### 10. Définir la langue Sélectionner la langue du document (menu : Fichier &gt; Options &gt; Langue).   Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision &gt; Langue &gt; Définir la langue de vérification).  "
+});
+
+documentTitles["powerpoint.html#11-utiliser-le-verificateur-integre"] = "11. Utiliser le vérificateur intégré";
+index.add({
+    url: "powerpoint.html#11-utiliser-le-verificateur-integre",
+    title: "11. Utiliser le vérificateur intégré",    
+    body: "### 11. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés.  "
+});
+
+documentTitles["powerpoint.html#12-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+index.add({
+    url: "powerpoint.html#12-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
+    title: "12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
+    body: "### 12. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur. Ceci est important, notamment, pour les daltoniens, les malvoyants et les aveugles.  "
 });
 
 documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
 index.add({
     url: "powerpoint.html#ressources-externes",
     title: "Ressources externes",    
-    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle des systèmes d’information et de communication\&quot;&gt;DISIC&lt;/abbr&gt; (français). - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -154,21 +175,21 @@ documentTitles["word.html#1-definir-des-titres"] = "1. Définir des titres";
 index.add({
     url: "word.html#1-definir-des-titres",
     title: "1. Définir des titres",    
-    body: "### 1. Définir des titres Pour garantir une bonne restitution de votre présentation par les outils d’assistance, veiller à sélectionner un style «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour tous vos titres et sous-titres.  "
+    body: "### 1. Définir des titres Pour garantir une bonne restitution de votre présentation par les outils d’assistance, veiller à sélectionner un style «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour tous vos titres et sous-titres pour mettre en place une hiérarchie cohérente, logique et reflettant le contenu.  "
 });
 
 documentTitles["word.html#2-definir-les-paragraphes"] = "2. Définir les paragraphes";
 index.add({
     url: "word.html#2-definir-les-paragraphes",
     title: "2. Définir les paragraphes",    
-    body: "### 2. Définir les paragraphes Le texte des paragraphes doit être identifié à l’aide du style «&amp;nbsp;Normal&amp;nbsp;» (style par défaut).  "
+    body: "### 2. Définir les paragraphes Le texte des paragraphes doit être identifiés à l’aide du style «&amp;nbsp;Normal&amp;nbsp;» (style par défaut).  "
 });
 
 documentTitles["word.html#3-ne-pas-inserer-de-lignes-vides"] = "3. Ne pas insérer de lignes vides";
 index.add({
     url: "word.html#3-ne-pas-inserer-de-lignes-vides",
     title: "3. Ne pas insérer de lignes vides",    
-    body: "### 3. Ne pas insérer de lignes vides Plusieurs lignes vides successives peuvent être perçues comme la fin du document à l’aide d’une synthèse vocale. Utiliser les options d’espacement pour modifier l’espace avant et après un paragraphe. Utiliser les «&amp;nbsp;sauts&amp;nbsp;» (saut de page, page vierge) pour reprendre l’écriture sur la page suivante ou insérer une page vierge.  "
+    body: "### 3. Ne pas insérer de lignes vides Plusieurs lignes vides successives peuvent être perçues comme la fin du document pour un utilsiateur de synthèse vocale. Utiliser les options d’espacement pour modifier l’espace avant et après un paragraphe. Utiliser les «&amp;nbsp;sauts&amp;nbsp;» (saut de page, page vierge) pour reprendre l’écriture sur la page suivante ou insérer une page vierge.  "
 });
 
 documentTitles["word.html#4-utiliser-les-listes-a-puces"] = "4. Utiliser les listes à puces";
@@ -192,32 +213,32 @@ index.add({
     body: "### 6. Numéroter vos pages La numérotation des pages permet de se repérer dans un document. Utiliser l’option «&amp;nbsp;Numéro de page&amp;nbsp;» intégrée à Word.  "
 });
 
-documentTitles["word.html#7-colonnes"] = "7. Colonnes";
+documentTitles["word.html#7-definir-des-colonnes-pour-la-mise-en-page"] = "7. Définir des colonnes pour la mise en page";
 index.add({
-    url: "word.html#7-colonnes",
-    title: "7. Colonnes",    
-    body: "### 7. Colonnes Ne pas utiliser de tableau pour créer une mise en page sous forme de colonnes mais préférer l’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page.  "
+    url: "word.html#7-definir-des-colonnes-pour-la-mise-en-page",
+    title: "7. Définir des colonnes pour la mise en page",    
+    body: "### 7. Définir des colonnes pour la mise en page Ne pas utiliser de tableau pour créer une mise en page sous forme de colonnes mais préférer l’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page.  "
 });
 
-documentTitles["word.html#8-objets-flottants"] = "8. Objets flottants";
+documentTitles["word.html#8-eviter-les-objets-flottants"] = "8. Éviter les objets flottants";
 index.add({
-    url: "word.html#8-objets-flottants",
-    title: "8. Objets flottants",    
-    body: "### 8. Objets flottants Éviter les objets flottants. Lors de l’insertion d’objets (image, forme, smart art, etc.), leur définir un point d’ancrage. Dans les options d’habillage du texte, choisir l’option \&quot;Aligné sur le texte\&quot; ou \&quot;Haut et bas\&quot;.  "
+    url: "word.html#8-eviter-les-objets-flottants",
+    title: "8. Éviter les objets flottants",    
+    body: "### 8. Éviter les objets flottants Lors de l’insertion d’objets (image, forme, smart art, etc.), préférer leur définir un point d’ancrage. Dans les options d’habillage du texte, choisir l’option \&quot;Aligné sur le texte\&quot; ou \&quot;Haut et bas\&quot;.  "
 });
 
-documentTitles["word.html#9-zones-de-texte"] = "9. Zones de texte";
+documentTitles["word.html#9-eviter-les-zones-de-texte"] = "9. Éviter les zones de texte";
 index.add({
-    url: "word.html#9-zones-de-texte",
-    title: "9. Zones de texte",    
-    body: "### 9. Zones de texte Éviter les zones de texte. Celles-ci ne sont pas toujours correctement restituées. Vous pouvez réaliser un encadré en ajoutant des bordures à un paragraphe.  "
+    url: "word.html#9-eviter-les-zones-de-texte",
+    title: "9. Éviter les zones de texte",    
+    body: "### 9. Éviter les zones de texte Celles-ci ne sont pas toujours correctement restituées. Vous pouvez réaliser un encadré en ajoutant des bordures à un paragraphe.  "
 });
 
 documentTitles["word.html#10-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
 index.add({
     url: "word.html#10-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
     title: "10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
-    body: "### 10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur (important pour les daltoniens, les malvoyants et les aveugles).  "
+    body: "### 10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur. Ceci est important, notamment, pour les daltoniens, les malvoyants et les aveugles.  "
 });
 
 documentTitles["word.html#11-assurer-un-contraste-suffisant"] = "11. Assurer un contraste suffisant";
@@ -231,28 +252,28 @@ documentTitles["word.html#12-utiliser-les-styles"] = "12. Utiliser les styles";
 index.add({
     url: "word.html#12-utiliser-les-styles",
     title: "12. Utiliser les styles",    
-    body: "### 12. Utiliser les styles Utiliser les styles pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.  "
+    body: "### 12. Utiliser les styles Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.  "
 });
 
-documentTitles["word.html#13-langue"] = "13. Langue";
+documentTitles["word.html#13-definir-la-langue"] = "13. Définir la Langue";
 index.add({
-    url: "word.html#13-langue",
-    title: "13. Langue",    
-    body: "### 13. Langue Sélectionner la langue du document (menu&amp;nbsp;: Fichier &gt; Options &gt; Langue). Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu&amp;nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification)  "
+    url: "word.html#13-definir-la-langue",
+    title: "13. Définir la Langue",    
+    body: "### 13. Définir la Langue  Sélectionner la langue du document (menu&amp;nbsp;: Fichier &gt; Options &gt; Langue). Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu&amp;nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification)  "
 });
 
 documentTitles["word.html#14-renseigner-une-alternative-textuelle-sur-les-images"] = "14. Renseigner une alternative textuelle sur les images";
 index.add({
     url: "word.html#14-renseigner-une-alternative-textuelle-sur-les-images",
     title: "14. Renseigner une alternative textuelle sur les images",    
-    body: "### 14. Renseigner une alternative textuelle sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement (champ description). Si l’image au contraire est purement décorative, il n’y a rien à faire. Sans texte de remplacement celle-ci sera ignorée par les outils d’assistance.  "
+    body: "### 14. Renseigner une alternative textuelle sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement (champ description uniquement). Si l’image au contraire est purement décorative, il n’y a rien à faire. Sans texte de remplacement celle-ci sera ignorée par les outils d’assistance.  "
 });
 
-documentTitles["word.html#15-tableaux"] = "15. Tableaux";
+documentTitles["word.html#15-rendre-les-tableaux-plus-accessibles"] = "15. Rendre les tableaux plus accessibles";
 index.add({
-    url: "word.html#15-tableaux",
-    title: "15. Tableaux",    
-    body: "### 15. Tableaux Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas correctement restituées). Ne pas hésiter à insérer une légende si nécessaire (Menu&amp;nbsp;: Référence &gt; Insérer une légende).  À noter que Word prévoit la possibilité d’ajouter une alternative textuelle aux tableaux. Par contre, contrairement aux images l’alternative sur les tableaux ne semble pas toujours vocalisée par les outils d’assistance.  "
+    url: "word.html#15-rendre-les-tableaux-plus-accessibles",
+    title: "15. Rendre les tableaux plus accessibles",    
+    body: "### 15. Rendre les tableaux plus accessibles Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas correctement restituées). Ne pas laisser de cellules vides ou sans contenu.  Ne pas hésiter à insérer une légende si nécessaire (Menu&amp;nbsp;: Référence &gt; Insérer une légende).  À noter que Word prévoit la possibilité d’ajouter une alternative textuelle aux tableaux. En revanche, contrairement aux images l’alternative sur les tableaux ne semble pas toujours vocalisée par les outils d’assistance.  "
 });
 
 documentTitles["word.html#16-utiliser-le-verificateur-integre"] = "16. Utiliser le vérificateur intégré";
