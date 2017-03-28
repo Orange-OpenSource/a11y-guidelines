@@ -22,7 +22,7 @@ Give each page a title that is specific to it and which reflects its content or 
 The page title is the first element read by a screen reader, it must help to formally identify the page where you are.
 
 **Checklist: **
-- Even if there is no rule, in general (opening many tabs in multiple applications), we go from the most specific information to the least specific (e.g. title of the current page - name of the site). For windowing a multitude of applications, the approach is different, in this case we will prefer going from the least specific information to the most specific (eg name of the site - title of the current page).
+- Even if there is no rule, in general (opening many tabs in multiple applications), we go from the most specific information to the least specific (e.g. title of the current page - name of the site). When opening a multitude of applications, the approach is different, in this case we will prefer going from the least specific information to the most specific (eg name of the site - title of the current page).
 - When the content of the page is dynamic (displaying the result of a search, errors in a form, user adding content…), the title of the page should reflect this change.
 
 **Do:**  
@@ -37,7 +37,7 @@ The page title is the first element read by a screen reader, it must help to for
 
 **Description:**  
 Identifying heading tags (`h1` to `h6` <abbr>HTML</abbr> tags) used to structure the content of the pages.
-Visually impaired people browsing with a screen reader can access the list of titles of the page to navigate quickly. 
+Visually impaired people browsing with a screen reader can access the list of headings in the page to navigate quickly. 
 Just like in a Word document, it is possible to use the table of contents only if the heading tags have been properly set within the document.  
 
 **Checklist: **
@@ -86,7 +86,7 @@ The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastan
  
 ## 4. Do not use colour or sensory characteristics as the unique source of information
 **Target: ** everyone, especially the colour-blind and more generally people with visual impairments, cognitive limitations, hearing impairments and elderly people.  
-**When: ** from the design and during development.
+**When: ** as of design and during development.
 
 **Description: **  
 Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization…) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.
