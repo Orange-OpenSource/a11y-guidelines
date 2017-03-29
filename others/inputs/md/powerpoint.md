@@ -19,7 +19,7 @@ Vous trouverez ci-dessous un résumé des recommandations à respecter pour prod
 Pour plus de détails, n’hésitez pas à consulter <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a> qui propose des guides.
 
 ### 1. Utiliser les masques de diapositive
-Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage > Masque des diapositives). Ensuite utiliser les cases à cocher « titre », « pieds de page » et le menu « insérer un espace réservé ».
+Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage > Masque des diapositives). Ensuite utiliser les cases à cocher « Titre », « Pieds de page » et le menu « Insérer un espace réservé ».
 
 ### 2. Vérifier l’ordre de lecture des éléments
 L’ordre de lecture doit être vérifié depuis le volet de sélection (menu Accueil > Organiser > Volet de sélection). Attention&nbsp;: le dernier élément dans la liste est lu en premier par les lecteurs d’écran&nbsp;; l’ordre doit donc être indiqué de bas en haut dès la définition des masques de diapositives.
@@ -28,17 +28,17 @@ L’ordre de lecture doit être vérifié depuis le volet de sélection (menu Ac
 Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&nbsp;: «&nbsp;Cliquer pour ajouter un titre&nbsp;».
 
 ### 4. Renseigner un texte de remplacement sur les images
-Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, format de l’image, texte de remplacement, champ description).   
-Si l’image est purement décorative, le champ description du texte de remplacement doit être vide.
+Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image > Texte de remplacement > champ Description).   
+Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.
 
 ### 5. Faire des tableaux simples
-Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; Ne pas laisser de cellules vides. 
+Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. 
 
 ### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques
-Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&nbsp;: il est possible d’ajouter un texte alternatif (format de l’objet, texte de remplacement description). 
+Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet > Texte de remplacement > Description). 
 
 ### 7. Renseigner un texte de remplacement aux graphiques
-Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (format de l’objet, texte de remplacement description).
+Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet > Texte de remplacement > Description).
 
 ### 8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information
 Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…
@@ -48,7 +48,7 @@ Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan d
 - 4.5:1 pour du texte de taille normale.
 - 3:1 pour du texte de grande taille.
 
-Celui-ci peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
+Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
 
 ### 10. Définir la langue
 Sélectionner la langue du document (menu&nbsp;: Fichier > Options > Langue).  

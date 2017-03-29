@@ -54,21 +54,21 @@ documentTitles["powerpoint.html#recommandations"] = "Recommandations";
 index.add({
     url: "powerpoint.html#recommandations",
     title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles (version 2013).  Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides pour la rédaction de documents accessibles.  "
+    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles (version 2013).  Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides.  "
 });
 
 documentTitles["powerpoint.html#1-utiliser-les-masques-de-diapositive"] = "1. Utiliser les masques de diapositive";
 index.add({
     url: "powerpoint.html#1-utiliser-les-masques-de-diapositive",
     title: "1. Utiliser les masques de diapositive",    
-    body: "### 1. Utiliser les masques de diapositive Les présentations doivent être créeés en utilisant les masques de diapositive, masques créés à l’aide des options « insérer un espace réservé », cases à cocher « titre » ou « pieds de page ».   "
+    body: "### 1. Utiliser les masques de diapositive Les présentations doivent être créées en utilisant les masques de diapositive (menu&amp;nbsp;: Affichage &gt; Masque des diapositives). Ensuite utiliser les cases à cocher « Titre », « Pieds de page » et le menu « Insérer un espace réservé ».  "
 });
 
 documentTitles["powerpoint.html#2-verifier-lordre-de-lecture-des-elements"] = "2. Vérifier l’ordre de lecture des éléments";
 index.add({
     url: "powerpoint.html#2-verifier-lordre-de-lecture-des-elements",
     title: "2. Vérifier l’ordre de lecture des éléments",    
-    body: "### 2. Vérifier l’ordre de lecture des éléments Pour les utilisateurs qui naviguent à l’aide du clavier (touche TAB), il est important de vérifier l’ordre de lecture des éléments depuis le volet de sélection (accueil, organiser, volet de sélection). Attention : le dernier élément dans la liste est lu en premier par les lecteurs d’écran ; l’ordre doit donc être indiqué de bas en haut dès la définition des masques de dispositives.  "
+    body: "### 2. Vérifier l’ordre de lecture des éléments L’ordre de lecture doit être vérifié depuis le volet de sélection (menu Accueil &gt; Organiser &gt; Volet de sélection). Attention&amp;nbsp;: le dernier élément dans la liste est lu en premier par les lecteurs d’écran&amp;nbsp;; l’ordre doit donc être indiqué de bas en haut dès la définition des masques de diapositives.  "
 });
 
 documentTitles["powerpoint.html#3-donner-des-titres-uniques-aux-diapositives"] = "3. Donner des titres uniques aux diapositives";
@@ -82,28 +82,28 @@ documentTitles["powerpoint.html#4-renseigner-un-texte-de-remplacement-sur-les-im
 index.add({
     url: "powerpoint.html#4-renseigner-un-texte-de-remplacement-sur-les-images",
     title: "4. Renseigner un texte de remplacement sur les images",    
-    body: "### 4. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement décrivant le contenu (clic droit, format de l’image, texte de remplacement, champ description).    Si l’image est purement décorative, le champ description du texte de remplacement doit être vide.  "
+    body: "### 4. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image &gt; Texte de remplacement &gt; champ Description).    Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.  "
 });
 
 documentTitles["powerpoint.html#5-faire-des-tableaux-simples"] = "5. Faire des tableaux simples";
 index.add({
     url: "powerpoint.html#5-faire-des-tableaux-simples",
     title: "5. Faire des tableaux simples",    
-    body: "### 5. Faire des tableaux simples Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu) ; Ne pas laisser de cellules vides.   "
+    body: "### 5. Faire des tableaux simples Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&amp;nbsp;; ne pas laisser de cellules vides.   "
 });
 
 documentTitles["powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques"] = "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques";
 index.add({
     url: "powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques",
     title: "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques",    
-    body: "### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés : il est possible d’ajouter un texte alternatif (format de l’objet, texte de remplacement description).   "
+    body: "### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&amp;nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet &gt; Texte de remplacement &gt; Description).   "
 });
 
 documentTitles["powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques"] = "7. Renseigner un texte de remplacement aux graphiques";
 index.add({
     url: "powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques",
     title: "7. Renseigner un texte de remplacement aux graphiques",    
-    body: "### 7. Renseigner un texte de remplacement aux graphiques Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (format de l’objet, texte de remplacement descritption).   "
+    body: "### 7. Renseigner un texte de remplacement aux graphiques Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet &gt; Texte de remplacement &gt; Description).  "
 });
 
 documentTitles["powerpoint.html#8-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
@@ -117,21 +117,28 @@ documentTitles["powerpoint.html#9-assurer-un-contraste-suffisant"] = "9. Assurer
 index.add({
     url: "powerpoint.html#9-assurer-un-contraste-suffisant",
     title: "9. Assurer un contraste suffisant",    
-    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant : - 4.5:1 pour du texte de taille normale - 3:1 pour du texte de grande taille (18pt minimum ou 14pt minimum pour du texte gras).  Celui-ci peut être vérifié avec l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
+    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
 });
 
 documentTitles["powerpoint.html#10-definir-la-langue"] = "10. Définir la langue";
 index.add({
     url: "powerpoint.html#10-definir-la-langue",
     title: "10. Définir la langue",    
-    body: "### 10. Définir la langue Sélectionner la langue du document (menu : Fichier &gt; Options &gt; Langue).   Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu : Révision &gt; Langue &gt; Définir la langue de vérification).  "
+    body: "### 10. Définir la langue Sélectionner la langue du document (menu&amp;nbsp;: Fichier &gt; Options &gt; Langue).   Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu&amp;nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification).  "
 });
 
 documentTitles["powerpoint.html#11-utiliser-le-verificateur-integre"] = "11. Utiliser le vérificateur intégré";
 index.add({
     url: "powerpoint.html#11-utiliser-le-verificateur-integre",
     title: "11. Utiliser le vérificateur intégré",    
-    body: "### 11. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus.   "
+    body: "### 11. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité (menu&amp;nbsp;: Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés.   "
+});
+
+documentTitles["powerpoint.html#12-exporter-la-presentation-en-document-pdf"] = "12. Exporter la présentation en document PDF";
+index.add({
+    url: "powerpoint.html#12-exporter-la-presentation-en-document-pdf",
+    title: "12. Exporter la présentation en document PDF",    
+    body: "### 12. Exporter la présentation en document PDF Pour exporter en PDF il suffit d'aller dans le menu&amp;nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.  "
 });
 
 documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
