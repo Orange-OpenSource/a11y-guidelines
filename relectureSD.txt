@@ -5,6 +5,30 @@ Pour chaque fichier :
 - "'" → "’"
 
 TODO
+others/inputs/md/about.md
+others/inputs/md/contact.md
+others/inputs/md/index.md
+others/inputs/md/powerpoint.md
+others/inputs/md/pushmail.md
+others/inputs/md/word.md
+others/output/markdown/about.md
+others/output/markdown/contact.md
+others/output/markdown/index.md
+others/output/markdown/powerpoint.md
+others/output/markdown/pushmail.md
+others/output/markdown/word.md
+others/output/html/about.html
+others/output/html/all.html
+others/output/html/contact.html
+others/output/html/index.html
+others/output/html/powerpoint.html
+others/output/html/pushmail.html
+others/output/html/search.html
+others/output/html/word.html
+others/theme/default/search.html
+others/theme/default/_layout.html
+others/theme/default/_manifests.html
+others/theme/default/_page.html
 
 web_EN/inputs/md/fondamentaux.md
 web_EN/inputs/md/htmlaria.md
