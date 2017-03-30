@@ -11,12 +11,14 @@ Celui-ci identifie les principales erreurs et propose des solutions pour y remé
 
 Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran.
 C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser. 
-En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.
+En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  
+
+Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et NVDA 2017-1.
 
 ## Recommandations
 
-Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles (version 2013). 
-Pour plus de détails, n’hésitez pas à consulter <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a> qui propose des guides.
+Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles. 
+Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.
 
 ### 1. Utiliser les masques de diapositive
 Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage > Masque des diapositives). Ensuite utiliser les cases à cocher « Titre », « Pieds de page » et le menu « Insérer un espace réservé ».
@@ -36,6 +38,8 @@ Les tableaux de données doivent rester simples. Éviter de fusionner des cellul
 
 ### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques
 Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet > Texte de remplacement > Description). 
+
+A noter que ce texte alternatif a été correctement vocalisé par NVDA, ce qui n'a pas été le cas de JAWS (version 17) lors des tests que nous avons effectués.
 
 ### 7. Renseigner un texte de remplacement aux graphiques
 Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet > Texte de remplacement > Description).
@@ -58,12 +62,37 @@ Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu
 PowerPoint intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés. 
 
 ### 12. Exporter la présentation en document PDF
-Pour exporter en PDF il suffit d'aller dans le menu&nbsp;: Fichier > Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.
+Pour exporter en PDF il suffit d'aller dans le menu&nbsp;: Fichier > Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.  
+A vérifier la première fois : dans les options d'export, la case à cocher «&nbsp;Balises de structure de document pour l'accessiblité&nbsp;» doit être cochée.
 
 ## Ressources externes
 
 - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
 - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).
+
+## Résultats des tests effectués
+Nous avons testé le comportement des lecteurs d'écran NVDA (version 2017.1) et JAWS (version 17) avec un fichier PDF généré à l'aide de PowerPoint 2010.
+
+### Tableaux
+Les tableaux sont vocalisés correctement avec Jaws et NVDA.
+
+### Tableaux avec textes de remplacement
+NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.  
+JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.
+
+### Smart Art
+Même comportement pour Jaws et NVDA, les textes des Smart Art sont vocalisés (pas toujours dans le bon ordre).
+
+### Smart Art avec textes de remplacement
+NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du Smart Art.  
+JAWS : les Smart Art ne sont plus vocalisés, les textes de remplacement sont ignorés.
+
+### Graphiques
+Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.
+
+### Graphiques avec textes de remplacement
+Comportement attendu pour Jaws et NVDA, le texte de remplacement est vocalisé à la place du graphique.
+
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

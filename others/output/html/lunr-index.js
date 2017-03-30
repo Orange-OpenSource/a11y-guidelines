@@ -47,14 +47,14 @@ documentTitles["powerpoint.html#introduction"] = "Introduction";
 index.add({
     url: "powerpoint.html#introduction",
     title: "Introduction",    
-    body: "## Introduction Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  "
+    body: "## Introduction Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.    Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et NVDA 2017-1.  "
 });
 
 documentTitles["powerpoint.html#recommandations"] = "Recommandations";
 index.add({
     url: "powerpoint.html#recommandations",
     title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles (version 2013).  Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides.  "
+    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles.  Pour plus de détails, n’hésitez pas à consulter les guides proposés sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["powerpoint.html#1-utiliser-les-masques-de-diapositive"] = "1. Utiliser les masques de diapositive";
@@ -96,7 +96,7 @@ documentTitles["powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblag
 index.add({
     url: "powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques",
     title: "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques",    
-    body: "### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&amp;nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet &gt; Texte de remplacement &gt; Description).   "
+    body: "### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&amp;nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet &gt; Texte de remplacement &gt; Description).   A noter que ce texte alternatif a été correctement vocalisé par NVDA, ce qui n'a pas été le cas de JAWS (version 17) lors des tests que nous avons effectués.  "
 });
 
 documentTitles["powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques"] = "7. Renseigner un texte de remplacement aux graphiques";
@@ -138,14 +138,63 @@ documentTitles["powerpoint.html#12-exporter-la-presentation-en-document-pdf"] = 
 index.add({
     url: "powerpoint.html#12-exporter-la-presentation-en-document-pdf",
     title: "12. Exporter la présentation en document PDF",    
-    body: "### 12. Exporter la présentation en document PDF Pour exporter en PDF il suffit d'aller dans le menu&amp;nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.  "
+    body: "### 12. Exporter la présentation en document PDF Pour exporter en PDF il suffit d'aller dans le menu&amp;nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.   A vérifier la première fois : dans les options d'export, la case à cocher «&amp;nbsp;Balises de structure de document pour l'accessiblité&amp;nbsp;» doit être cochée.  "
 });
 
 documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
 index.add({
     url: "powerpoint.html#ressources-externes",
     title: "Ressources externes",    
-    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).  "
+});
+
+documentTitles["powerpoint.html#resultats-des-tests-effectues"] = "Résultats des tests effectués";
+index.add({
+    url: "powerpoint.html#resultats-des-tests-effectues",
+    title: "Résultats des tests effectués",    
+    body: "## Résultats des tests effectués Nous avons testé le comportement des lecteurs d'écran NVDA (version 2017.1) et JAWS (version 17) avec un fichier PDF généré à l'aide de PowerPoint 2010.  "
+});
+
+documentTitles["powerpoint.html#tableaux"] = "Tableaux";
+index.add({
+    url: "powerpoint.html#tableaux",
+    title: "Tableaux",    
+    body: "### Tableaux Les tableaux sont vocalisés correctement avec Jaws et NVDA.  "
+});
+
+documentTitles["powerpoint.html#tableaux-avec-textes-de-remplacement"] = "Tableaux avec textes de remplacement";
+index.add({
+    url: "powerpoint.html#tableaux-avec-textes-de-remplacement",
+    title: "Tableaux avec textes de remplacement",    
+    body: "### Tableaux avec textes de remplacement NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.   JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
+});
+
+documentTitles["powerpoint.html#smart-art"] = "Smart Art";
+index.add({
+    url: "powerpoint.html#smart-art",
+    title: "Smart Art",    
+    body: "### Smart Art Même comportement pour Jaws et NVDA, les textes des Smart Art sont vocalisés (pas toujours dans le bon ordre).  "
+});
+
+documentTitles["powerpoint.html#smart-art-avec-textes-de-remplacement"] = "Smart Art avec textes de remplacement";
+index.add({
+    url: "powerpoint.html#smart-art-avec-textes-de-remplacement",
+    title: "Smart Art avec textes de remplacement",    
+    body: "### Smart Art avec textes de remplacement NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du Smart Art.   JAWS : les Smart Art ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
+});
+
+documentTitles["powerpoint.html#graphiques"] = "Graphiques";
+index.add({
+    url: "powerpoint.html#graphiques",
+    title: "Graphiques",    
+    body: "### Graphiques Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.  "
+});
+
+documentTitles["powerpoint.html#graphiques-avec-textes-de-remplacement"] = "Graphiques avec textes de remplacement";
+index.add({
+    url: "powerpoint.html#graphiques-avec-textes-de-remplacement",
+    title: "Graphiques avec textes de remplacement",    
+    body: "### Graphiques avec textes de remplacement Comportement attendu pour Jaws et NVDA, le texte de remplacement est vocalisé à la place du graphique.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -161,126 +210,133 @@ documentTitles["word.html#introduction"] = "Introduction";
 index.add({
     url: "word.html#introduction",
     title: "Introduction",    
-    body: "## Introduction Produire des documents Word accessibles, c’est la garantie que vos documents puissent être consultés par tous les utilisateurs. Créer des documents Word accessibles ne demande pas beaucoup d’efforts et permet également de produire des documents PDF accessibles grâce à la fonctionnalité d’export PDF intégrée à Word. Il est important de noter que des documents issus d'un traitment de texte et en particulier Word, sont très accessibles et utilisables pour peu que l'on respecte les recommandations ci-dessous.  "
+    body: "## Introduction Des documents Word accessibles sont la garantie que les documents peuvent être lus par tous les utilisateurs. Créer des documents Word accessibles demande de respecter les recommandations suivantes. Cela permet également de produire des documents PDF accessibles grâce à la fonctionnalité d’export PDF intégrée à Word.   "
 });
 
 documentTitles["word.html#recommandations"] = "Recommandations";
 index.add({
     url: "word.html#recommandations",
     title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle des systèmes d’information et de communication\&quot;&gt;DISIC&lt;/abbr&gt;&lt;/a&gt; qui propose des guides pour la rédaction de documents accessibles.  "
+    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
-documentTitles["word.html#1-definir-des-titres"] = "1. Définir des titres";
+documentTitles["word.html#1-utiliser-les-styles-nbsptitrenbsp-pour-les-titres-et-sous-titres"] = "1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres";
 index.add({
-    url: "word.html#1-definir-des-titres",
-    title: "1. Définir des titres",    
-    body: "### 1. Définir des titres Pour garantir une bonne restitution de votre présentation par les outils d’assistance, veiller à sélectionner un style «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour tous vos titres et sous-titres pour mettre en place une hiérarchie cohérente, logique et reflettant le contenu.  "
+    url: "word.html#1-utiliser-les-styles-nbsptitrenbsp-pour-les-titres-et-sous-titres",
+    title: "1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres",    
+    body: "### 1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres Les titres et sous-titres doivent utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour permettre d’être identifiés comme titres par les personnes utilisant un lecteur d’écran.  "
 });
 
-documentTitles["word.html#2-definir-les-paragraphes"] = "2. Définir les paragraphes";
+documentTitles["word.html#2-utiliser-le-style-nbspnormalnbsp-pour-les-textes"] = "2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes";
 index.add({
-    url: "word.html#2-definir-les-paragraphes",
-    title: "2. Définir les paragraphes",    
-    body: "### 2. Définir les paragraphes Le texte des paragraphes doit être identifiés à l’aide du style «&amp;nbsp;Normal&amp;nbsp;» (style par défaut).  "
+    url: "word.html#2-utiliser-le-style-nbspnormalnbsp-pour-les-textes",
+    title: "2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes",    
+    body: "### 2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes Le style «&amp;nbsp;Normal&amp;nbsp;» doit être attribué à tous les textes des paragraphes (style par défaut).  "
 });
 
-documentTitles["word.html#3-ne-pas-inserer-de-lignes-vides"] = "3. Ne pas insérer de lignes vides";
+documentTitles["word.html#3-utiliser-des-styles-dedies-pour-mettre-en-evidence-certains-contenus"] = "3. Utiliser des styles dédiés pour mettre en évidence certains contenus";
 index.add({
-    url: "word.html#3-ne-pas-inserer-de-lignes-vides",
-    title: "3. Ne pas insérer de lignes vides",    
-    body: "### 3. Ne pas insérer de lignes vides Plusieurs lignes vides successives peuvent être perçues comme la fin du document pour un utilsiateur de synthèse vocale. Utiliser les options d’espacement pour modifier l’espace avant et après un paragraphe. Utiliser les «&amp;nbsp;sauts&amp;nbsp;» (saut de page, page vierge) pour reprendre l’écriture sur la page suivante ou insérer une page vierge.  "
+    url: "word.html#3-utiliser-des-styles-dedies-pour-mettre-en-evidence-certains-contenus",
+    title: "3. Utiliser des styles dédiés pour mettre en évidence certains contenus",    
+    body: "### 3. Utiliser des styles dédiés pour mettre en évidence certains contenus Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.  "
 });
 
-documentTitles["word.html#4-utiliser-les-listes-a-puces"] = "4. Utiliser les listes à puces";
+documentTitles["word.html#4-ne-pas-inserer-de-lignes-vides"] = "4. Ne pas insérer de lignes vides";
 index.add({
-    url: "word.html#4-utiliser-les-listes-a-puces",
-    title: "4. Utiliser les listes à puces",    
-    body: "### 4. Utiliser les listes à puces Ne pas réaliser de listes en utilisant des tirets dans le texte mais utiliser l’option liste à puces ou liste numérotée de Word pour identifier correctement les listes.  "
+    url: "word.html#4-ne-pas-inserer-de-lignes-vides",
+    title: "4. Ne pas insérer de lignes vides",    
+    body: "### 4. Ne pas insérer de lignes vides Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option espacement qui permet de définir l’espace avant et après un paragraphe.  Les sauts de page doivent être créés à l’aide des «&amp;nbsp;sauts&amp;nbsp;» (Insertion &gt; Saut de page, page vierge). Plusieurs lignes vides successives peuvent être perçues comme la fin du document pour un utilisateur de synthèse vocale.  "
 });
 
-documentTitles["word.html#5-utiliser-les-notes-de-bas-de-page"] = "5. Utiliser les notes de bas de page";
+documentTitles["word.html#5-utiliser-les-listes-a-puces"] = "5. Utiliser les listes à puces";
 index.add({
-    url: "word.html#5-utiliser-les-notes-de-bas-de-page",
-    title: "5. Utiliser les notes de bas de page",    
-    body: "### 5. Utiliser les notes de bas de page Pour insérer des notes dans votre texte, utiliser les options «&amp;nbsp;notes de bas de page&amp;nbsp;» et «&amp;nbsp;notes de fin&amp;nbsp;» de document. Celles-ci seront ainsi correctement restituées.  "
+    url: "word.html#5-utiliser-les-listes-a-puces",
+    title: "5. Utiliser les listes à puces",    
+    body: "### 5. Utiliser les listes à puces Les listes doivent être réalisées en utilisant l’option liste à puces ou liste numérotée et non en utilisant des tirets dans le texte.  "
 });
 
-documentTitles["word.html#6-numeroter-vos-pages"] = "6. Numéroter vos pages";
+documentTitles["word.html#6-utiliser-les-notes-de-bas-de-page"] = "6. Utiliser les notes de bas de page";
 index.add({
-    url: "word.html#6-numeroter-vos-pages",
-    title: "6. Numéroter vos pages",    
-    body: "### 6. Numéroter vos pages La numérotation des pages permet de se repérer dans un document. Utiliser l’option «&amp;nbsp;Numéro de page&amp;nbsp;» intégrée à Word.  "
+    url: "word.html#6-utiliser-les-notes-de-bas-de-page",
+    title: "6. Utiliser les notes de bas de page",    
+    body: "### 6. Utiliser les notes de bas de page Pour insérer des notes dans votre texte, utiliser les options «&amp;nbsp;notes de bas de page&amp;nbsp;» et «&amp;nbsp;notes de fin&amp;nbsp;» de documents.  "
 });
 
-documentTitles["word.html#7-definir-des-colonnes-pour-la-mise-en-page"] = "7. Définir des colonnes pour la mise en page";
+documentTitles["word.html#7-numeroter-vos-pages"] = "7. Numéroter vos pages";
 index.add({
-    url: "word.html#7-definir-des-colonnes-pour-la-mise-en-page",
-    title: "7. Définir des colonnes pour la mise en page",    
-    body: "### 7. Définir des colonnes pour la mise en page Ne pas utiliser de tableau pour créer une mise en page sous forme de colonnes mais préférer l’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page.  "
+    url: "word.html#7-numeroter-vos-pages",
+    title: "7. Numéroter vos pages",    
+    body: "### 7. Numéroter vos pages Utiliser l’option «&amp;nbsp;Numéro de page&amp;nbsp;» pour permettre de se repérer dans le document.  "
 });
 
-documentTitles["word.html#8-eviter-les-objets-flottants"] = "8. Éviter les objets flottants";
+documentTitles["word.html#8-utiliser-la-mise-en-page-nbspcolonnesnbsp-pour-distribuer-le-texte"] = "8. Utiliser la mise en page «&amp;nbsp;colonnes&amp;nbsp;»  pour distribuer le texte";
 index.add({
-    url: "word.html#8-eviter-les-objets-flottants",
-    title: "8. Éviter les objets flottants",    
-    body: "### 8. Éviter les objets flottants Lors de l’insertion d’objets (image, forme, smart art, etc.), préférer leur définir un point d’ancrage. Dans les options d’habillage du texte, choisir l’option \&quot;Aligné sur le texte\&quot; ou \&quot;Haut et bas\&quot;.  "
+    url: "word.html#8-utiliser-la-mise-en-page-nbspcolonnesnbsp-pour-distribuer-le-texte",
+    title: "8. Utiliser la mise en page «&amp;nbsp;colonnes&amp;nbsp;»  pour distribuer le texte",    
+    body: "### 8. Utiliser la mise en page «&amp;nbsp;colonnes&amp;nbsp;»  pour distribuer le texte Utiliser l’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.  "
 });
 
-documentTitles["word.html#9-eviter-les-zones-de-texte"] = "9. Éviter les zones de texte";
+documentTitles["word.html#9-definir-le-point-dancrage-des-objets-inseres"] = "9. Définir le point d’ancrage des objets insérés";
 index.add({
-    url: "word.html#9-eviter-les-zones-de-texte",
-    title: "9. Éviter les zones de texte",    
-    body: "### 9. Éviter les zones de texte Celles-ci ne sont pas toujours correctement restituées. Vous pouvez réaliser un encadré en ajoutant des bordures à un paragraphe.  "
+    url: "word.html#9-definir-le-point-dancrage-des-objets-inseres",
+    title: "9. Définir le point d’ancrage des objets insérés",    
+    body: "### 9. Définir le point d’ancrage des objets insérés Lors de l’insertion d’objets (image, forme, smart art, etc.), il est nécessaire de définir un point d’ancrage : dans les options d’habillage du texte, choisir l’option «&amp;nbsp;Aligné sur le texte&amp;nbsp;» ou «&amp;nbsp;Haut et bas&amp;nbsp;».  "
 });
 
-documentTitles["word.html#10-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+documentTitles["word.html#10-eviter-les-zones-de-texte"] = "10. Éviter les zones de texte";
 index.add({
-    url: "word.html#10-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
-    title: "10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
-    body: "### 10. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Ne pas véhiculer l’information que par la couleur. Ceci est important, notamment, pour les daltoniens, les malvoyants et les aveugles.  "
+    url: "word.html#10-eviter-les-zones-de-texte",
+    title: "10. Éviter les zones de texte",    
+    body: "### 10. Éviter les zones de texte Celles-ci ne sont pas toujours correctement restituées. Les textes peuvent être mis en valeur en ajoutant des bordures à un paragraphe.  "
 });
 
-documentTitles["word.html#11-assurer-un-contraste-suffisant"] = "11. Assurer un contraste suffisant";
+documentTitles["word.html#11-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
 index.add({
-    url: "word.html#11-assurer-un-contraste-suffisant",
-    title: "11. Assurer un contraste suffisant",    
-    body: "### 11. Assurer un contraste suffisant  Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant.  "
+    url: "word.html#11-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
+    title: "11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
+    body: "### 11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…  "
 });
 
-documentTitles["word.html#12-utiliser-les-styles"] = "12. Utiliser les styles";
+documentTitles["word.html#12-assurer-un-contraste-suffisant"] = "12. Assurer un contraste suffisant";
 index.add({
-    url: "word.html#12-utiliser-les-styles",
-    title: "12. Utiliser les styles",    
-    body: "### 12. Utiliser les styles Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.  "
+    url: "word.html#12-assurer-un-contraste-suffisant",
+    title: "12. Assurer un contraste suffisant",    
+    body: "### 12. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  "
 });
 
 documentTitles["word.html#13-definir-la-langue"] = "13. Définir la Langue";
 index.add({
     url: "word.html#13-definir-la-langue",
     title: "13. Définir la Langue",    
-    body: "### 13. Définir la Langue  Sélectionner la langue du document (menu&amp;nbsp;: Fichier &gt; Options &gt; Langue). Préciser les mots ou groupes de mots qui sont dans une langue étrangère (Menu&amp;nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification)  "
+    body: "### 13. Définir la Langue Sélectionner la langue du document (menu&amp;nbsp;: Fichier &gt; Options &gt; Langue).   Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu&amp;nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification).  "
 });
 
-documentTitles["word.html#14-renseigner-une-alternative-textuelle-sur-les-images"] = "14. Renseigner une alternative textuelle sur les images";
+documentTitles["word.html#14-renseigner-un-texte-de-remplacement-sur-les-images"] = "14. Renseigner un texte de remplacement sur les images";
 index.add({
-    url: "word.html#14-renseigner-une-alternative-textuelle-sur-les-images",
-    title: "14. Renseigner une alternative textuelle sur les images",    
-    body: "### 14. Renseigner une alternative textuelle sur les images Si l’image apporte de l’information il faut lui associer un texte de remplacement (champ description uniquement). Si l’image au contraire est purement décorative, il n’y a rien à faire. Sans texte de remplacement celle-ci sera ignorée par les outils d’assistance.  "
+    url: "word.html#14-renseigner-un-texte-de-remplacement-sur-les-images",
+    title: "14. Renseigner un texte de remplacement sur les images",    
+    body: "### 14. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image &gt; Texte de remplacement &gt; champ Description).    Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.  "
 });
 
-documentTitles["word.html#15-rendre-les-tableaux-plus-accessibles"] = "15. Rendre les tableaux plus accessibles";
+documentTitles["word.html#15-faire-des-tableaux-simples"] = "15. Faire des tableaux simples";
 index.add({
-    url: "word.html#15-rendre-les-tableaux-plus-accessibles",
-    title: "15. Rendre les tableaux plus accessibles",    
-    body: "### 15. Rendre les tableaux plus accessibles Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas correctement restituées). Ne pas laisser de cellules vides ou sans contenu.  Ne pas hésiter à insérer une légende si nécessaire (Menu&amp;nbsp;: Référence &gt; Insérer une légende).  À noter que Word prévoit la possibilité d’ajouter une alternative textuelle aux tableaux. En revanche, contrairement aux images l’alternative sur les tableaux ne semble pas toujours vocalisée par les outils d’assistance.  "
+    url: "word.html#15-faire-des-tableaux-simples",
+    title: "15. Faire des tableaux simples",    
+    body: "### 15. Faire des tableaux simples Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&amp;nbsp;; ne pas laisser de cellules vides.   "
 });
 
 documentTitles["word.html#16-utiliser-le-verificateur-integre"] = "16. Utiliser le vérificateur intégré";
 index.add({
     url: "word.html#16-utiliser-le-verificateur-integre",
     title: "16. Utiliser le vérificateur intégré",    
-    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité).  Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus.   "
+    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus.   "
+});
+
+documentTitles["word.html#17-exporter-le-document-au-format-pdf"] = "17. Exporter le document au format PDF";
+index.add({
+    url: "word.html#17-exporter-le-document-au-format-pdf",
+    title: "17. Exporter le document au format PDF",    
+    body: "### 17. Exporter le document au format PDF Pour exporter en PDF il suffit d'aller dans le menu&amp;nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.   A vérifier la première fois : dans les options d'export, la case à cocher «&amp;nbsp;Balises de structure de document pour l'accessiblité&amp;nbsp;» doit être cochée.  "
 });
 
 documentTitles["word.html#ressources-externes"] = "Ressources externes";
