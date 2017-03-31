@@ -13,12 +13,12 @@ Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aper�
 C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser. 
 En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  
 
-Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et NVDA 2017-1.
-
 ## Recommandations
 
 Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles. 
 Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.
+
+Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et NVDA 2017-1. Les recommandations ci-dessous découlent de ces tests.
 
 ### 1. Utiliser les masques de diapositive
 Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage > Masque des diapositives). Ensuite utiliser les cases à cocher « Titre », « Pieds de page » et le menu « Insérer un espace réservé ».
@@ -37,9 +37,7 @@ Si l’image est purement décorative, le champ Description du texte de remplace
 Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. 
 
 ### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques
-Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet > Texte de remplacement > Description). 
-
-A noter que ce texte alternatif a été correctement vocalisé par NVDA, ce qui n'a pas été le cas de JAWS (version 17) lors des tests que nous avons effectués.
+Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés.
 
 ### 7. Renseigner un texte de remplacement aux graphiques
 Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet > Texte de remplacement > Description).
@@ -80,12 +78,12 @@ Les tableaux sont vocalisés correctement avec Jaws et NVDA.
 NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.  
 JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.
 
-### Smart Art
-Même comportement pour Jaws et NVDA, les textes des Smart Art sont vocalisés (pas toujours dans le bon ordre).
+### SmartArt
+Même comportement pour Jaws et NVDA, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).
 
-### Smart Art avec textes de remplacement
-NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du Smart Art.  
-JAWS : les Smart Art ne sont plus vocalisés, les textes de remplacement sont ignorés.
+### SmartArt avec textes de remplacement
+NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.  
+JAWS : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.
 
 ### Graphiques
 Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.

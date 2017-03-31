@@ -162,10 +162,10 @@ Celui-ci identifie les principales erreurs et propose des solutions pour y remé
 <p>Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran.
 C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser. 
 En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  </p>
-<p>Nos tests ont été réalisé avec Office 2010 et les lecteurs d&#39;écran Jaws 17 et NVDA 2017-1.</p>
 <h2 id="recommandations">Recommandations</h2>
 <p>Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles. 
 Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.</p>
+<p>Nos tests ont été réalisé avec Office 2010 et les lecteurs d&#39;écran Jaws 17 et NVDA 2017-1. Les recommandations ci-dessous découlent de ces tests.</p>
 <h3 id="1-utiliser-les-masques-de-diapositive">1. Utiliser les masques de diapositive</h3>
 <p>Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage &gt; Masque des diapositives). Ensuite utiliser les cases à cocher « Titre », « Pieds de page » et le menu « Insérer un espace réservé ».</p>
 <h3 id="2-v-rifier-l-ordre-de-lecture-des-l-ments">2. Vérifier l’ordre de lecture des éléments</h3>
@@ -177,8 +177,7 @@ Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a
 <h3 id="5-faire-des-tableaux-simples">5. Faire des tableaux simples</h3>
 <p>Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. </p>
 <h3 id="6-utiliser-des-smartart-plut-t-que-des-assemblages-de-textes-et-formes-sp-cifiques">6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques</h3>
-<p>Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés&nbsp;: il est possible d’ajouter un texte alternatif (Format de l’objet &gt; Texte de remplacement &gt; Description). </p>
-<p>A noter que ce texte alternatif a été correctement vocalisé par NVDA, ce qui n&#39;a pas été le cas de JAWS (version 17) lors des tests que nous avons effectués.</p>
+<p>Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés.</p>
 <h3 id="7-renseigner-un-texte-de-remplacement-aux-graphiques">7. Renseigner un texte de remplacement aux graphiques</h3>
 <p>Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet &gt; Texte de remplacement &gt; Description).</p>
 <h3 id="8-s-assurer-que-la-couleur-n-est-pas-le-seul-moyen-utilis-pour-communiquer-l-information">8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information</h3>
@@ -207,10 +206,10 @@ Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a
 <p>Les tableaux sont vocalisés correctement avec Jaws et NVDA.</p>
 <h3 id="tableaux-avec-textes-de-remplacement">Tableaux avec textes de remplacement</h3>
 <p>NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.<br>JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.</p>
-<h3 id="smart-art">Smart Art</h3>
-<p>Même comportement pour Jaws et NVDA, les textes des Smart Art sont vocalisés (pas toujours dans le bon ordre).</p>
-<h3 id="smart-art-avec-textes-de-remplacement">Smart Art avec textes de remplacement</h3>
-<p>NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du Smart Art.<br>JAWS : les Smart Art ne sont plus vocalisés, les textes de remplacement sont ignorés.</p>
+<h3 id="smartart">SmartArt</h3>
+<p>Même comportement pour Jaws et NVDA, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).</p>
+<h3 id="smartart-avec-textes-de-remplacement">SmartArt avec textes de remplacement</h3>
+<p>NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.<br>JAWS : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.</p>
 <h3 id="graphiques">Graphiques</h3>
 <p>Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.</p>
 <h3 id="graphiques-avec-textes-de-remplacement">Graphiques avec textes de remplacement</h3>
@@ -239,16 +238,15 @@ Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a
 <p>Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.</p>
 <h3 id="4-ne-pas-ins-rer-de-lignes-vides">4. Ne pas insérer de lignes vides</h3>
 <p>Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option espacement qui permet de définir l’espace avant et après un paragraphe. 
-Les sauts de page doivent être créés à l’aide des «&nbsp;sauts&nbsp;» (Insertion &gt; Saut de page, page vierge).
-Plusieurs lignes vides successives peuvent être perçues comme la fin du document pour un utilisateur de synthèse vocale.</p>
+Les sauts de page doivent être créés à l’aide des «&nbsp;sauts&nbsp;» (Insertion &gt; Saut de page, page vierge).</p>
 <h3 id="5-utiliser-les-listes-puces">5. Utiliser les listes à puces</h3>
-<p>Les listes doivent être réalisées en utilisant l’option liste à puces ou liste numérotée et non en utilisant des tirets dans le texte.</p>
+<p>Les listes doivent être réalisées en utilisant l’option «&nbsp;liste à puces&nbsp;» ou «&nbsp;liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.</p>
 <h3 id="6-utiliser-les-notes-de-bas-de-page">6. Utiliser les notes de bas de page</h3>
-<p>Pour insérer des notes dans votre texte, utiliser les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» de documents.</p>
+<p>Les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» permettent d&#39;insérer des notes dans votre document.</p>
 <h3 id="7-num-roter-vos-pages">7. Numéroter vos pages</h3>
-<p>Utiliser l’option «&nbsp;Numéro de page&nbsp;» pour permettre de se repérer dans le document.</p>
+<p>L’option «&nbsp;Numéro de page&nbsp;» pour permettre de se repérer dans le document.</p>
 <h3 id="8-utiliser-la-mise-en-page-nbsp-colonnes-nbsp-pour-distribuer-le-texte">8. Utiliser la mise en page «&nbsp;colonnes&nbsp;»  pour distribuer le texte</h3>
-<p>Utiliser l’option «&nbsp;colonnes&nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.</p>
+<p>L’option «&nbsp;colonnes&nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.</p>
 <h3 id="9-d-finir-le-point-d-ancrage-des-objets-ins-r-s">9. Définir le point d’ancrage des objets insérés</h3>
 <p>Lors de l’insertion d’objets (image, forme, smart art, etc.), il est nécessaire de définir un point d’ancrage : dans les options d’habillage du texte, choisir l’option «&nbsp;Aligné sur le texte&nbsp;» ou «&nbsp;Haut et bas&nbsp;».</p>
 <h3 id="10-viter-les-zones-de-texte">10. Éviter les zones de texte</h3>
@@ -262,18 +260,18 @@ Plusieurs lignes vides successives peuvent être perçues comme la fin du docume
 <li>3:1 pour du texte de grande taille.</li>
 </ul>
 <h3 id="13-d-finir-la-langue">13. Définir la Langue</h3>
-<p>Sélectionner la langue du document (menu&nbsp;: Fichier &gt; Options &gt; Langue).<br>Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu&nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification).</p>
+<p>La langue doit être définie dans le menu&nbsp;: Fichier &gt; Options &gt; Langue.<br>Les mots ou groupes de mots qui sont dans une langue étrangère doivent être précisés (menu&nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification).</p>
 <h3 id="14-renseigner-un-texte-de-remplacement-sur-les-images">14. Renseigner un texte de remplacement sur les images</h3>
 <p>Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image &gt; Texte de remplacement &gt; champ Description).<br>Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.</p>
 <h3 id="15-faire-des-tableaux-simples">15. Faire des tableaux simples</h3>
 <p>Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. </p>
 <h3 id="16-utiliser-le-v-rificateur-int-gr-">16. Utiliser le vérificateur intégré</h3>
-<p>Word intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d&#39;une grande aide, cependant, il ne dispense pas de vérifier et d&#39;appliquer à la main l&#39;ensemble des recommandations ci-dessus. </p>
+<p>Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d&#39;une grande aide, cependant, il ne dispense pas de vérifier et d&#39;appliquer à la main l&#39;ensemble des recommandations ci-dessus. </p>
 <h3 id="17-exporter-le-document-au-format-pdf">17. Exporter le document au format PDF</h3>
-<p>Pour exporter en PDF il suffit d&#39;aller dans le menu&nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.<br>A vérifier la première fois : dans les options d&#39;export, la case à cocher «&nbsp;Balises de structure de document pour l&#39;accessiblité&nbsp;» doit être cochée.</p>
+<p>Pour exporter en PDF il suffit d&#39;aller dans le menu&nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.<br>A vérifier la première fois : dans les options d&#39;export, la case à cocher «&nbsp;Balises de structure de document pour l&#39;accessibilité&nbsp;» doit être cochée.</p>
 <h2 id="ressources-externes">Ressources externes</h2>
 <ul>
-<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle des systèmes d’information et de communication">DISIC</abbr> (français).</li>
+<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
 <li><a href="http://webaim.org/techniques/word/">Accessibilité Word</a>, WebAIM (anglais).</li>
 </ul>
 <p>&nbsp;

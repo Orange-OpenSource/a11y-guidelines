@@ -24,19 +24,18 @@ Utiliser les styles prédéfinis pour mettre en évidence certains contenus (cit
 ### 4. Ne pas insérer de lignes vides
 Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option espacement qui permet de définir l’espace avant et après un paragraphe. 
 Les sauts de page doivent être créés à l’aide des «&nbsp;sauts&nbsp;» (Insertion > Saut de page, page vierge).
-Plusieurs lignes vides successives peuvent être perçues comme la fin du document pour un utilisateur de synthèse vocale.
 
 ### 5. Utiliser les listes à puces
-Les listes doivent être réalisées en utilisant l’option liste à puces ou liste numérotée et non en utilisant des tirets dans le texte.
+Les listes doivent être réalisées en utilisant l’option «&nbsp;liste à puces&nbsp;» ou «&nbsp;liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.
 
 ### 6. Utiliser les notes de bas de page
-Pour insérer des notes dans votre texte, utiliser les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» de documents.
+Les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» permettent d'insérer des notes dans votre document.
 
 ### 7. Numéroter vos pages
-Utiliser l’option «&nbsp;Numéro de page&nbsp;» pour permettre de se repérer dans le document.
+L’option «&nbsp;Numéro de page&nbsp;» pour permettre de se repérer dans le document.
 
 ### 8. Utiliser la mise en page «&nbsp;colonnes&nbsp;»  pour distribuer le texte
-Utiliser l’option «&nbsp;colonnes&nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.
+L’option «&nbsp;colonnes&nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.
 
 ### 9. Définir le point d’ancrage des objets insérés
 Lors de l’insertion d’objets (image, forme, smart art, etc.), il est nécessaire de définir un point d’ancrage : dans les options d’habillage du texte, choisir l’option «&nbsp;Aligné sur le texte&nbsp;» ou «&nbsp;Haut et bas&nbsp;».
@@ -53,8 +52,8 @@ Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan d
 - 3:1 pour du texte de grande taille.
 
 ### 13. Définir la Langue
-Sélectionner la langue du document (menu&nbsp;: Fichier > Options > Langue).  
-Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu&nbsp;: Révision > Langue > Définir la langue de vérification).
+La langue doit être définie dans le menu&nbsp;: Fichier > Options > Langue.  
+Les mots ou groupes de mots qui sont dans une langue étrangère doivent être précisés (menu&nbsp;: Révision > Langue > Définir la langue de vérification).
 
 ### 14. Renseigner un texte de remplacement sur les images
 Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image > Texte de remplacement > champ Description).   
@@ -64,15 +63,15 @@ Si l’image est purement décorative, le champ Description du texte de remplace
 Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. 
 
 ### 16. Utiliser le vérificateur intégré
-Word intègre un vérificateur d’accessibilité (fichier, vérifier la présence de problèmes, vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus. 
+Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus. 
 
 ### 17. Exporter le document au format PDF
 Pour exporter en PDF il suffit d'aller dans le menu&nbsp;: Fichier > Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.  
-A vérifier la première fois : dans les options d'export, la case à cocher «&nbsp;Balises de structure de document pour l'accessiblité&nbsp;» doit être cochée.
+A vérifier la première fois : dans les options d'export, la case à cocher «&nbsp;Balises de structure de document pour l'accessibilité&nbsp;» doit être cochée.
 
 ## Ressources externes
 
-- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle des systèmes d’information et de communication">DISIC</abbr> (français).
+- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
 - [Accessibilité Word](http://webaim.org/techniques/word/), WebAIM (anglais).
 
 &nbsp;
