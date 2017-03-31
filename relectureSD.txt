@@ -5,30 +5,24 @@ Pour chaque fichier :
 - "'" → "’"
 
 TODO
+
+
+home_EN/theme/default/_layout.html
+home/theme/default/_layout.html
+mobile_EN/theme/default/_layout.html
+mobile/theme/default/_layout.html
 others/inputs/md/about.md
 others/inputs/md/contact.md
 others/inputs/md/index.md
 others/inputs/md/powerpoint.md
 others/inputs/md/pushmail.md
 others/inputs/md/word.md
-others/output/markdown/about.md
-others/output/markdown/contact.md
-others/output/markdown/index.md
-others/output/markdown/powerpoint.md
-others/output/markdown/pushmail.md
-others/output/markdown/word.md
-others/output/html/about.html
-others/output/html/all.html
-others/output/html/contact.html
-others/output/html/index.html
-others/output/html/powerpoint.html
-others/output/html/pushmail.html
-others/output/html/search.html
-others/output/html/word.html
-others/theme/default/search.html
 others/theme/default/_layout.html
 others/theme/default/_manifests.html
 others/theme/default/_page.html
+others/theme/default/search.html
+web_EN/theme/default/_layout.html
+web/theme/default/_layout.html
 
 web_EN/inputs/md/fondamentaux.md
 web_EN/inputs/md/htmlaria.md
@@ -46,7 +40,6 @@ home/theme/default/search.html
 home/theme/default/_manifests.html
 home/theme/default/_page.html
 home_EN/theme/default/search.html
-home_EN/theme/default/_layout.html
 home_EN/theme/default/_manifests.html
 home_EN/theme/default/_page.html
 mobile/inputs/html/exemples/stepbar/index.html
