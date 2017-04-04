@@ -190,7 +190,7 @@ Séparer strictement le contenu (<abbr>HTML</abbr>), l’interactivité (Javascr
 
 **Objectif utilisateur&nbsp;: **
 
-Permettre aux utilisateurs, via leur agent utilisateur ou aide technique (par exemple, leur navigateur) de modifier le rendu visuel de la page (grossissement, couleur, position…). Par exemple, de grossir le texte sans problème de mise en pages.
+Permettre aux utilisateurs, via leur agent utilisateur ou aide technique (par exemple, leur navigateur), de modifier le rendu visuel de la page (grossissement, couleur, position…). Par exemple, de grossir le texte sans problème de mise en pages.
 
 **Objectif technique&nbsp;: **
 
@@ -235,8 +235,8 @@ Des erreurs de validation peuvent empêcher l’accès à certains contenus.
 
 **Description&nbsp;: **  
 
-Spécifier la langue principale du document grâce à l’attribut `lang` et/ou `xml:lang` dans la balise `html`. 
-Préciser également la langue d’un contenu exprimé dans une langue autre que la langue principale, en utilisant l’attribut `lang` et/ou `xml:lang` dans l’élément <abbr>HTML</abbr> contenant l’expression en langue étrangère.  
+Spécifier la langue principale du document grâce à l’attribut `lang` dans la balise `html`. 
+Préciser également la langue d’un contenu exprimé dans une langue autre que la langue principale, en utilisant l’attribut `lang` dans l’élément <abbr>HTML</abbr> contenant l’expression en langue étrangère.  
 
 **À vérifier&nbsp;: **
 
@@ -256,7 +256,7 @@ Permettre aux moteurs de recherche d’identifier la langue d’une page pour am
 - pour du <abbr>XHTML</abbr>&nbsp;: `<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">`
 
 **Exemple de changement de langue&nbsp;: **  
-`découvrir Orange <span lang="fr">live</span> TV`
+`découvrir Orange <span lang="en">live</span> TV`
 
 **Référence&nbsp;: **WCAG 3.1.1, 3.1.2
 
@@ -269,7 +269,7 @@ Permettre aux moteurs de recherche d’identifier la langue d’une page pour am
 
 Chaque champ de formulaire doit être accompagné d’un libellé permettant d’identifier le rôle du champ, le type de donnée et le format attendu. 
 
-Le libellé doit être proche visuellement du champ afin qu’on fasse facilement le lien entre eux (notamment pour les utilisateur de zoom ou de loupe logicielle, voire sur mobile).
+Le libellé doit être proche visuellement du champ afin qu’on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle, voire sur mobile).
 
 Chaque libellé doit être inclus dans une balise `label`, elle-même associée au champ de formulaire grâce à un attribut `for` renseigné, reprenant la valeur de l’`id` du champ.
 
@@ -416,16 +416,13 @@ Pour des données tabulaires&nbsp;:
 **À vérifier&nbsp;: **
 
 - Rappel&nbsp;: ne pas utiliser de tableaux à des fins de mise en page. 
-- La légende (`caption`) peut être remplacé par un titre de section (`hx`) placé avant le tableau. L’attribut `summary`, quant à lui, n’est nécessaire que pour des tableaux complexes.
+- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau. L’attribut `summary`, quant à lui, n’est nécessaire que pour des tableaux complexes.
 - Préférer scinder un tableau complexe en plusieurs tableaux plus simples.
 - Mettre un résumé (attribut `summary`) dans le tableau pour expliciter la structure dans le cas d’un tableau complexe.
 - Les balises `tbody`, `tfoot` et `thead` n’ont aucune influence sur l’accessibilité, il n’y a donc pas d’obligation à les utiliser.
 
 **Objectif utilisateur&nbsp;: **
 Donner un résumé et un titre aux tableaux de données permet à tous d’en connaître l’objet rapidement sans avoir à le parcourir. Pour des utilisateurs déficients visuels, lier les cellules aux en-têtes permet de se situer dans le tableau et de comprendre les données de celui-ci.
-
-**Objectif technique&nbsp;: **
-Optimiser le référencement naturel.
 
 **Référence&nbsp;:** WCAG 1.3.1
 
@@ -535,7 +532,7 @@ Pour une image-lien, un attribut `alt="consulter les conditions générales d’
 Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris. 
 
 **À vérifier&nbsp;: **
-Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’ndrop</i>, gestes à plusieurs doigts sur mobile …).
+Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …).
 
 **Objectif utilisateur&nbsp;: **
  Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.
@@ -545,7 +542,7 @@ Toutes les actions importantes effectuées à la souris peuvent aussi l’être 
 - Dans un webmail, un clic droit permet d’accéder à un menu pour vider la corbeille, un bouton «&nbsp;vider la corbeille&nbsp;» est également présent dans l’interface quand la corbeille est en cours de consultation. 
  
 **Exemple non-valide&nbsp;:**      
-Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n drop</i> et sans équivalent au clavier.
+Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n'drop</i> et sans équivalent au clavier.
 
 **Référence&nbsp;:** WCAG 2.1.1
 
@@ -561,7 +558,7 @@ Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le fo
 **À vérifier&nbsp;: **
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 19, ci-dessous.
 - Attention à l’ordre d’insertion des éléments dans le code <abbr>HTML</abbr>, cela a une influence sur l’ordre de déplacement du focus. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
-- Pour la maintenabilité, éviter l’utilisation de l’attribut `tabindex` avec des valeurs supérieur à 0.
+- Pour la maintenabilité, éviter l’utilisation de l’attribut `tabindex` avec des valeurs supérieures à 0.
 
 **Objectif utilisateur&nbsp;: **
 Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).
@@ -590,12 +587,12 @@ Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dan
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).
 
 **Exemple valide&nbsp;:**  
-Focus positionné sur le lien «&nbsp;HTC Desire 620&nbsp;».
+Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».
   
 ![capture d’écran montrant un lien dont le focus est clairement visible](./images/focus-ok.png)  
  
 **Exemple non-valide&nbsp;:**  
-Focus positionné sur le lien «&nbsp;HTC Desire 620&nbsp;».
+  Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».
     
 ![capture d’écran montrant un lien dont le focus n’est pas suffisamment visible](./images/focus-ko.png)   
 
@@ -637,7 +634,7 @@ Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper 
 **Exemple&nbsp;: **  
 ![capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation](./images/carrousel.png)  
 
-Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsque celui-ci a le focus.  
+Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu'il a le focus.  
 Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.
 
 **Référence&nbsp;:** WCAG 2.2.2
@@ -649,7 +646,7 @@ Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directeme
 
 **Description&nbsp;: **
 
-Respecter les recommandations générales d’accessibilité, utiliser en priorité les composants standards <abbr>HTML</abbr>, sinon, utiliser l’<abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>) pour les composants d’interface complexes.
+Respecter les recommandations générales d’accessibilité, utiliser en priorité les composants standards <abbr>HTML</abbr>, sinon, utiliser <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>) pour les composants d’interface complexes.
 
 
 **À vérifier&nbsp;: **
@@ -684,7 +681,7 @@ Voir [l’exemple de menu déroulant](./exemples/simple-menu/simple-menu.html) p
 - Le déplacement du focus s’effectue de manière logique (ordre de lecture naturel).
 - L’ordre de lecture n’a pas été redéfini en utilisant des attributs `tabindex` (avec des valeurs positives).
   
-En pratique, l’attribut `tabindex` devrait être utilisé qu’avec deux valeurs&nbsp;:
+En pratique, l’attribut `tabindex` ne devrait être utilisé qu’avec deux valeurs&nbsp;:
 - `tabindex="-1"`&nbsp;: pour interdire à un élément de recevoir le focus via la touche `TAB` et l’autoriser à recevoir le focus via Javascript.
 - `tabindex="0"`&nbsp;: pour rendre un élément focusable via la touche `TAB` et via Javascript.
 
@@ -705,7 +702,7 @@ Ne pas induire de changement de contexte lors de la prise de focus, la saisie de
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.
 
 **Exemple&nbsp;:**    
-Un formulaire doit obligatoirement avoir un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.
+Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.
 
 **Référence&nbsp;:** WCAG 3.2.1, 3.2.2
 
@@ -717,7 +714,7 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 
 **À vérifier&nbsp;:** 
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
-- S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon.
+- S’assurer que les composants et les regroupements qui ont la même fonction sont identifiés (visuellement) de la même façon.
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.
 
 **Objectif utilisateur&nbsp;:**
@@ -732,7 +729,7 @@ Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure b
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
 **Exemple&nbsp;: Les balises <abbr>HTML</abbr>5 et <i lang="en">landmarks</i> <abbr>ARIA</abbr>**
-Pour donner une structure sémantique aux grandes régions d’une page, on peut utiliser les balises de structure <abbr>HTML</abbr>5 (`main` pour le contenu principal de la page, `nav` pour la navigation principale, `header` pour l’entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d’autres) même si leur support par les technologies d"assistance/navigateurs n’est pas total mais il s’améliore rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, [les <i lang="en">landmarks</i> <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meilleur&nbsp;!
+Pour donner une structure sémantique aux grandes régions d’une page, on peut utiliser les balises de structure <abbr>HTML</abbr>5 (`main` pour le contenu principal de la page, `nav` pour la navigation principale, `header` pour l’entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d’autres) même si leur support par les technologies d’assistance/navigateurs n’est pas total mais il s’améliore rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, [les <i lang="en">landmarks</i> <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meilleur&nbsp;!
 
 Mettre en place ce type de sémantique permet aux déficients visuels d’identifier et comprendre l’organisation, la structure globale de la page et donc de naviguer plus facilement.
 

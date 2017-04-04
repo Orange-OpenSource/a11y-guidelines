@@ -234,8 +234,8 @@ The validation errors can prevent the user from accessing some content.
 
 **Description: **  
 
-Specify the primary language of the document with the attribute `lang` and / or` xml:lang` in the `html` tag.
-Also specify the language of a content in a language other than the primary one, using the `lang` and / or `xml:lang` in the <abbr>HTML</abbr> element containing the foreign language text.  
+Specify the primary language of the document with the attribute `lang` in the `html` tag.
+Also specify the language of a content in a language other than the primary one, using the `lang` attribute in the <abbr>HTML</abbr> element containing the foreign language text.  
 
 **Checklist: **
 
@@ -612,12 +612,12 @@ In many front-end frameworks or <abbr>CSS</abbr> resets, the `outline` property 
 Allow focus visibility on all elements, especially for keyboard users (visually impaired, motor disabled or those with attention or memory difficulties and using devices outdoors).
 
 **Do:**  
-Focus set on the “HTC Desire 620” link, clearly visible.
+Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;» link, clearly visible.
   
 ![screenshot showing a link whose focus is clearly visible](./images/focus-ok.png)  
  
 **Don’t:**  
-Focus set on the “HTC Desire 620” link, not visible enough.
+Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
     
 ![screenshot showing a link whose focus is not visible enough](./images/focus-ko.png)   
 
