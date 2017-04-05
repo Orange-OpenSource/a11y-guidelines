@@ -10,8 +10,9 @@ Cette section du site contient des recommandations d'accessibilité concernant l
 
 - [Créer des documents PowerPoint accessibles](./powerpoint.html)&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.
 
+<!--
 - [Créer des pushmail accessibles](./pushmail.html)&nbsp;: section consacrée à la réalisation d’emails accessibles.
-
+-->
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

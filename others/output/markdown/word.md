@@ -13,7 +13,7 @@ Des documents Word accessibles sont la garantie que les documents peuvent être 
 Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.
 
 ### 1. Utiliser les styles «&nbsp;Titre&nbsp;» pour les titres et sous-titres
-Les titres et sous-titres doivent utiliser les styles «&nbsp;Titre&nbsp;» (Titre 1, Titre 2, etc.) pour permettre d’être identifiés comme titres par les personnes utilisant un lecteur d’écran.
+Les titres et sous-titres doivent utiliser les styles «&nbsp;Titre&nbsp;» (Titre 1, Titre 2, etc.) pour structurer le contenu du document et  permettre  d’y accéder directement.
 
 ### 2. Utiliser le style «&nbsp;Normal&nbsp;» pour les textes
 Le style «&nbsp;Normal&nbsp;» doit être attribué à tous les textes des paragraphes (style par défaut).
@@ -23,19 +23,19 @@ Utiliser les styles prédéfinis pour mettre en évidence certains contenus (cit
 
 ### 4. Ne pas insérer de lignes vides
 Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option espacement qui permet de définir l’espace avant et après un paragraphe. 
-Les sauts de page doivent être créés à l’aide des «&nbsp;sauts&nbsp;» (Insertion > Saut de page, page vierge).
+Les sauts de page doivent être créés à l’aide des «&nbsp;Sauts&nbsp;» (Insertion > Saut de page, page vierge).
 
 ### 5. Utiliser les listes à puces
-Les listes doivent être réalisées en utilisant l’option «&nbsp;liste à puces&nbsp;» ou «&nbsp;liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.
+Les listes doivent être réalisées en utilisant l’option «&nbsp;Liste à puces&nbsp;» ou «&nbsp;Liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.
 
 ### 6. Utiliser les notes de bas de page
-Les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» permettent d'insérer des notes dans votre document.
+Les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» permettent d’insérer des notes dans votre document.
 
 ### 7. Numéroter vos pages
 L’option «&nbsp;Numéro de page&nbsp;» pour permettre de se repérer dans le document.
 
 ### 8. Utiliser la mise en page «&nbsp;colonnes&nbsp;»  pour distribuer le texte
-L’option «&nbsp;colonnes&nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.
+L’option «&nbsp;colonnes&nbsp;» de l’onglet mise en page (et non des tableaux) doit être utilisée pour créer une mise en page sous forme de colonnes.
 
 ### 9. Définir le point d’ancrage des objets insérés
 Lors de l’insertion d’objets (image, forme, smart art, etc.), il est nécessaire de définir un point d’ancrage : dans les options d’habillage du texte, choisir l’option «&nbsp;Aligné sur le texte&nbsp;» ou «&nbsp;Haut et bas&nbsp;».
@@ -51,23 +51,25 @@ Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan d
 - 4.5:1 pour du texte de taille normale.
 - 3:1 pour du texte de grande taille.
 
+Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
+
 ### 13. Définir la Langue
 La langue doit être définie dans le menu&nbsp;: Fichier > Options > Langue.  
 Les mots ou groupes de mots qui sont dans une langue étrangère doivent être précisés (menu&nbsp;: Révision > Langue > Définir la langue de vérification).
 
 ### 14. Renseigner un texte de remplacement sur les images
 Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image > Texte de remplacement > champ Description).   
-Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.
+Si l’image est purement décorative, le champ Description du texte de remplacement doit être laissé vide.
 
 ### 15. Faire des tableaux simples
 Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. 
 
 ### 16. Utiliser le vérificateur intégré
-Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus. 
+Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d’une grande aide ; cependant il ne dispense pas de vérifier et d’appliquer à la main l’ensemble des recommandations ci-dessus. 
 
 ### 17. Exporter le document au format PDF
-Pour exporter en PDF il suffit d'aller dans le menu&nbsp;: Fichier > Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.  
-A vérifier la première fois : dans les options d'export, la case à cocher «&nbsp;Balises de structure de document pour l'accessibilité&nbsp;» doit être cochée.
+Pour exporter en PDF il suffit d’aller dans le menu&nbsp;: Fichier > Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier PDF.  
+À vérifier la première fois : dans les options d’export, la case à cocher «&nbsp;Balises de structure de document pour l’accessibilité&nbsp;» doit être cochée.
 
 ## Ressources externes
 

@@ -31,7 +31,7 @@ documentTitles["index.html#recommandations-accessibilite-orange-pour-leditorial"
 index.add({
     url: "index.html#recommandations-accessibilite-orange-pour-leditorial",
     title: "Recommandations accessibilité Orange pour l'éditorial",    
-    body: "# Recommandations accessibilité Orange pour l'éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&amp;nbsp;:  - [Créer des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Créer des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Créer des pushmail accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la réalisation d’emails accessibles.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange pour l'éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&amp;nbsp;:  - [Créer des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Créer des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  &lt;!-- - [Créer des pushmail accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la réalisation d’emails accessibles. --&gt;  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -224,7 +224,7 @@ documentTitles["word.html#1-utiliser-les-styles-nbsptitrenbsp-pour-les-titres-et
 index.add({
     url: "word.html#1-utiliser-les-styles-nbsptitrenbsp-pour-les-titres-et-sous-titres",
     title: "1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres",    
-    body: "### 1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres Les titres et sous-titres doivent utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour permettre d’être identifiés comme titres par les personnes utilisant un lecteur d’écran.  "
+    body: "### 1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres Les titres et sous-titres doivent utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour structurer le contenu du document et  permettre  d’y accéder directement.  "
 });
 
 documentTitles["word.html#2-utiliser-le-style-nbspnormalnbsp-pour-les-textes"] = "2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes";
@@ -245,21 +245,21 @@ documentTitles["word.html#4-ne-pas-inserer-de-lignes-vides"] = "4. Ne pas insér
 index.add({
     url: "word.html#4-ne-pas-inserer-de-lignes-vides",
     title: "4. Ne pas insérer de lignes vides",    
-    body: "### 4. Ne pas insérer de lignes vides Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option espacement qui permet de définir l’espace avant et après un paragraphe.  Les sauts de page doivent être créés à l’aide des «&amp;nbsp;sauts&amp;nbsp;» (Insertion &gt; Saut de page, page vierge).  "
+    body: "### 4. Ne pas insérer de lignes vides Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option espacement qui permet de définir l’espace avant et après un paragraphe.  Les sauts de page doivent être créés à l’aide des «&amp;nbsp;Sauts&amp;nbsp;» (Insertion &gt; Saut de page, page vierge).  "
 });
 
 documentTitles["word.html#5-utiliser-les-listes-a-puces"] = "5. Utiliser les listes à puces";
 index.add({
     url: "word.html#5-utiliser-les-listes-a-puces",
     title: "5. Utiliser les listes à puces",    
-    body: "### 5. Utiliser les listes à puces Les listes doivent être réalisées en utilisant l’option «&amp;nbsp;liste à puces&amp;nbsp;» ou «&amp;nbsp;liste numérotée&amp;nbsp;» et non en utilisant des tirets dans le texte.  "
+    body: "### 5. Utiliser les listes à puces Les listes doivent être réalisées en utilisant l’option «&amp;nbsp;Liste à puces&amp;nbsp;» ou «&amp;nbsp;Liste numérotée&amp;nbsp;» et non en utilisant des tirets dans le texte.  "
 });
 
 documentTitles["word.html#6-utiliser-les-notes-de-bas-de-page"] = "6. Utiliser les notes de bas de page";
 index.add({
     url: "word.html#6-utiliser-les-notes-de-bas-de-page",
     title: "6. Utiliser les notes de bas de page",    
-    body: "### 6. Utiliser les notes de bas de page Les options «&amp;nbsp;notes de bas de page&amp;nbsp;» et «&amp;nbsp;notes de fin&amp;nbsp;» permettent d'insérer des notes dans votre document.  "
+    body: "### 6. Utiliser les notes de bas de page Les options «&amp;nbsp;notes de bas de page&amp;nbsp;» et «&amp;nbsp;notes de fin&amp;nbsp;» permettent d’insérer des notes dans votre document.  "
 });
 
 documentTitles["word.html#7-numeroter-vos-pages"] = "7. Numéroter vos pages";
@@ -273,7 +273,7 @@ documentTitles["word.html#8-utiliser-la-mise-en-page-nbspcolonnesnbsp-pour-distr
 index.add({
     url: "word.html#8-utiliser-la-mise-en-page-nbspcolonnesnbsp-pour-distribuer-le-texte",
     title: "8. Utiliser la mise en page «&amp;nbsp;colonnes&amp;nbsp;»  pour distribuer le texte",    
-    body: "### 8. Utiliser la mise en page «&amp;nbsp;colonnes&amp;nbsp;»  pour distribuer le texte L’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page et non des tableaux pour créer une mise en page sous forme de colonnes.  "
+    body: "### 8. Utiliser la mise en page «&amp;nbsp;colonnes&amp;nbsp;»  pour distribuer le texte L’option «&amp;nbsp;colonnes&amp;nbsp;» de l’onglet mise en page (et non des tableaux) doit être utilisée pour créer une mise en page sous forme de colonnes.  "
 });
 
 documentTitles["word.html#9-definir-le-point-dancrage-des-objets-inseres"] = "9. Définir le point d’ancrage des objets insérés";
@@ -301,7 +301,7 @@ documentTitles["word.html#12-assurer-un-contraste-suffisant"] = "12. Assurer un 
 index.add({
     url: "word.html#12-assurer-un-contraste-suffisant",
     title: "12. Assurer un contraste suffisant",    
-    body: "### 12. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  "
+    body: "### 12. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
 });
 
 documentTitles["word.html#13-definir-la-langue"] = "13. Définir la Langue";
@@ -315,7 +315,7 @@ documentTitles["word.html#14-renseigner-un-texte-de-remplacement-sur-les-images"
 index.add({
     url: "word.html#14-renseigner-un-texte-de-remplacement-sur-les-images",
     title: "14. Renseigner un texte de remplacement sur les images",    
-    body: "### 14. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image &gt; Texte de remplacement &gt; champ Description).    Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.  "
+    body: "### 14. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image &gt; Texte de remplacement &gt; champ Description).    Si l’image est purement décorative, le champ Description du texte de remplacement doit être laissé vide.  "
 });
 
 documentTitles["word.html#15-faire-des-tableaux-simples"] = "15. Faire des tableaux simples";
@@ -329,14 +329,14 @@ documentTitles["word.html#16-utiliser-le-verificateur-integre"] = "16. Utiliser 
 index.add({
     url: "word.html#16-utiliser-le-verificateur-integre",
     title: "16. Utiliser le vérificateur intégré",    
-    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité (menu&amp;nbsp;: Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d'une grande aide, cependant, il ne dispense pas de vérifier et d'appliquer à la main l'ensemble des recommandations ci-dessus.   "
+    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité (menu&amp;nbsp;: Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d’une grande aide ; cependant il ne dispense pas de vérifier et d’appliquer à la main l’ensemble des recommandations ci-dessus.   "
 });
 
 documentTitles["word.html#17-exporter-le-document-au-format-pdf"] = "17. Exporter le document au format PDF";
 index.add({
     url: "word.html#17-exporter-le-document-au-format-pdf",
     title: "17. Exporter le document au format PDF",    
-    body: "### 17. Exporter le document au format PDF Pour exporter en PDF il suffit d'aller dans le menu&amp;nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.   A vérifier la première fois : dans les options d'export, la case à cocher «&amp;nbsp;Balises de structure de document pour l'accessibilité&amp;nbsp;» doit être cochée.  "
+    body: "### 17. Exporter le document au format PDF Pour exporter en PDF il suffit d’aller dans le menu&amp;nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier PDF.   À vérifier la première fois : dans les options d’export, la case à cocher «&amp;nbsp;Balises de structure de document pour l’accessibilité&amp;nbsp;» doit être cochée.  "
 });
 
 documentTitles["word.html#ressources-externes"] = "Ressources externes";

@@ -205,7 +205,7 @@ Améliore globalement la maintenabilité.
 
 **Description&nbsp;: **  
 
-Ecrire un code sans erreur de <span lang="en">parsing</span>.
+Valider la syntaxe du code HTML (notamment l'absence de balise non fermée, d'id dupliqué…).
 
 **À vérifier&nbsp;: **
 

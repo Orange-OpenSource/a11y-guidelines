@@ -22,7 +22,7 @@ Donner à chaque page un titre qui lui est spécifique et qui reflète son conte
 Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier formellement la page sur laquelle on se trouve.
 
 **À vérifier&nbsp;: **
-- Bien qu’il n’y ait pas de règle, en général (ouverture de nombreux onglets de multiples applications), on va de l’information la plus spécifique vers la moins spécifique (ex: nom de la page courante - nom du site). Pour le fenêtrage d’une multitude d’applications, le contexte d’utilisation est différent, dans ce cas, on préférera aller de l’information la moins spécifique vers la plus spécifique.
+- Bien qu’il n’y ait pas de règle, en général (ouverture de nombreux onglets de multiples applications), on va de l’information la plus spécifique vers la moins spécifique (ex: nom de la page courante - nom du site). Pour le fenêtrage d’une multitude d’applications, le contexte d’utilisation est différent ; dans ce cas, on préférera aller de l’information la moins spécifique vers la plus spécifique.
 - Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d’une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu…), le titre de la page doit refléter cette modification du contenu.
 
 **Exemple valide&nbsp;:**  
@@ -169,7 +169,7 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 **Exemple&nbsp;: **  
 ![capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation](./images/carrousel.png)  
 
-Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsque celui-ci reçoit le focus.  
+Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il reçoit le focus.  
 Il est également possible d’ajouter un bouton « pause » directement dans l’interface.
 
 ## 9. Libellé des liens
@@ -267,7 +267,7 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 **À vérifier&nbsp;:** 
 
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
-- S’assurer que les composants et les regroupements, qui ont la même fonction, sont identifiés (visuellement) de la même façon.
+- S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon.
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.
 
 **Objectif utilisateur&nbsp;:**
