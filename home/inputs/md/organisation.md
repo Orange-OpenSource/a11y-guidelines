@@ -1,6 +1,4 @@
-# Recommandations accessibilité Orange
-
-<h2 class="page-title">Organisation du site</h2>
+# Recommandations accessibilité Orange <h2 class="page-title">Organisation du site</h2>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Organisation du site"}]);
 });</script>
@@ -34,6 +32,11 @@ Les recommandations accessibilité pour les mobiles.
 - Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile,
 - Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement <span lang="en">VoiceOver</span> et <span lang="en">TalkBack</span>.
 
+#### Éditorial
+
+Les recommandations pour la rédaction de documents Word et PowerPoint accessibles.
+
+&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
