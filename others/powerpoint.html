@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Éditorial</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-word" href="word.html" lang="en">Microsoft Word</a></li>                        
+                        <li><a class="page-powerpoint" href="powerpoint.html" lang="en">Microsoft PowerPoint</a></li>                        
+<!--                        <li><a class="page-pushmail" href="pushmail.html">Email</a></li>
+-->
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">A propos</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rerchercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <span class="sr-only">Vous êtes ici : </span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/others/index.html">Éditorial</a></li>        
+    </ol>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="cr-er-des-documents-powerpoint-accessibles">Créer des documents PowerPoint accessibles</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"PowerPoint accessible"}]);
+});</script>
+
+<style>h3 {font-size: 1rem;}</style>
+
+<h2 id="introduction">Introduction</h2>
+<p>Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité.
+Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.</p>
+<p>Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran.
+C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en PDF avant de la diffuser. 
+En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  </p>
+<h2 id="recommandations">Recommandations</h2>
+<p>Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles. 
+Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.</p>
+<p>Nos tests ont été réalisé avec Office 2010 et les lecteurs d&#39;écran Jaws 17 et NVDA 2017-1. Les recommandations ci-dessous découlent de ces tests.</p>
+<h3 id="1-utiliser-les-masques-de-diapositive">1. Utiliser les masques de diapositive</h3>
+<p>Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage &gt; Masque des diapositives). Ensuite utiliser les cases à cocher « Titre », « Pieds de page » et le menu « Insérer un espace réservé ».</p>
+<h3 id="2-v-rifier-l-ordre-de-lecture-des-l-ments">2. Vérifier l’ordre de lecture des éléments</h3>
+<p>L’ordre de lecture doit être vérifié depuis le volet de sélection (menu Accueil &gt; Organiser &gt; Volet de sélection). Attention&nbsp;: le dernier élément dans la liste est lu en premier par les lecteurs d’écran&nbsp;; l’ordre doit donc être indiqué de bas en haut dès la définition des masques de diapositives.</p>
+<h3 id="3-donner-des-titres-uniques-aux-diapositives">3. Donner des titres uniques aux diapositives</h3>
+<p>Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&nbsp;: «&nbsp;Cliquer pour ajouter un titre&nbsp;».</p>
+<h3 id="4-renseigner-un-texte-de-remplacement-sur-les-images">4. Renseigner un texte de remplacement sur les images</h3>
+<p>Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image &gt; Texte de remplacement &gt; champ Description).<br>Si l’image est purement décorative, le champ Description du texte de remplacement doit être vide.</p>
+<h3 id="5-faire-des-tableaux-simples">5. Faire des tableaux simples</h3>
+<p>Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. </p>
+<h3 id="6-utiliser-des-smartart-plut-t-que-des-assemblages-de-textes-et-formes-sp-cifiques">6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques</h3>
+<p>Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés.</p>
+<h3 id="7-renseigner-un-texte-de-remplacement-aux-graphiques">7. Renseigner un texte de remplacement aux graphiques</h3>
+<p>Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet &gt; Texte de remplacement &gt; Description).</p>
+<h3 id="8-s-assurer-que-la-couleur-n-est-pas-le-seul-moyen-utilis-pour-communiquer-l-information">8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information</h3>
+<p>Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…</p>
+<h3 id="9-assurer-un-contraste-suffisant">9. Assurer un contraste suffisant</h3>
+<p>Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&nbsp;:</p>
+<ul>
+<li>4.5:1 pour du texte de taille normale.</li>
+<li>3:1 pour du texte de grande taille.</li>
+</ul>
+<p>Le contraste peut être vérifié à l&#39;aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyzer</a>.</p>
+<h3 id="10-d-finir-la-langue">10. Définir la langue</h3>
+<p>Sélectionner la langue du document (menu&nbsp;: Fichier &gt; Options &gt; Langue).<br>Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu&nbsp;: Révision &gt; Langue &gt; Définir la langue de vérification).</p>
+<h3 id="11-utiliser-le-v-rificateur-int-gr-">11. Utiliser le vérificateur intégré</h3>
+<p>PowerPoint intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés. </p>
+<h3 id="12-exporter-la-pr-sentation-en-document-pdf">12. Exporter la présentation en document PDF</h3>
+<p>Pour exporter en PDF il suffit d&#39;aller dans le menu&nbsp;: Fichier &gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier PDF.<br>A vérifier la première fois : dans les options d&#39;export, la case à cocher «&nbsp;Balises de structure de document pour l&#39;accessiblité&nbsp;» doit être cochée.</p>
+<h2 id="ressources-externes">Ressources externes</h2>
+<ul>
+<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
+<li><a href="http://webaim.org/techniques/PowerPoint/">Accessibilité PowerPoint</a>, WebAIM (anglais).</li>
+</ul>
+<h2 id="r-sultats-des-tests-effectu-s">Résultats des tests effectués</h2>
+<p>Nous avons testé le comportement des lecteurs d&#39;écran NVDA (version 2017.1) et JAWS (version 17) avec un fichier PDF généré à l&#39;aide de PowerPoint 2010.</p>
+<h3 id="tableaux">Tableaux</h3>
+<p>Les tableaux sont vocalisés correctement avec Jaws et NVDA.</p>
+<h3 id="tableaux-avec-textes-de-remplacement">Tableaux avec textes de remplacement</h3>
+<p>NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.<br>JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.</p>
+<h3 id="smartart">SmartArt</h3>
+<p>Même comportement pour Jaws et NVDA, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).</p>
+<h3 id="smartart-avec-textes-de-remplacement">SmartArt avec textes de remplacement</h3>
+<p>NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.<br>JAWS : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.</p>
+<h3 id="graphiques">Graphiques</h3>
+<p>Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.</p>
+<h3 id="graphiques-avec-textes-de-remplacement">Graphiques avec textes de remplacement</h3>
+<p>Comportement attendu pour Jaws et NVDA, le texte de remplacement est vocalisé à la place du graphique.</p>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../js/highlight.min.js"></script>
+</body>
+</html>

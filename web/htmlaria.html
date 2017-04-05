@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
-      <link rel="stylesheet" href="./css/dark.min.css">
+      <link rel="stylesheet" href="/css/dark.min.css">
 
       <!-- Styles perso -->
       <link rel="stylesheet" href="../css/reco.css">
@@ -59,7 +59,8 @@
                         <li><a class="page-about" href="about.html">A propos</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -67,12 +68,14 @@
               <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
                 <li class="nav-item hidden-xs-down">
                   <span id="cdu">
-                    <a href="#" title="Confort plus" id="uci_link">
-                      Confort
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
                       <span>+</span>
                     </a>
                   </span>
-                </li>
+                </li>                  
                 <li class="nav-item language hidden-xs-down">
                   <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
                 </li>
@@ -105,47 +108,46 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="html5-aria">HTML5 &amp; ARIA</h1>
+          <h1 id="-abbr-html-abbr-5-abbr-aria-abbr-"><abbr>HTML</abbr>5 &amp; <abbr>ARIA</abbr></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"HTML5 & ARIA"}]);
+    setBreadcrumb([{"label":"<abbr>HTML</abbr>5 & <abbr>ARIA</abbr>"}]);
 });</script>
 
 <h2 id="introduction">Introduction</h2>
-<p>Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d’interface complexes : slider, datepicker…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le HTML classique. </p>
-<p>Même avec l’évolution due au HTML5, on manque encore d’informations sémantiques à fournir aux aides techniques (lecteurs d’écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées.</p>
-<h2 id="qu-est-ce-">Qu’est-ce ?</h2>
-<p>Pour remédier à ces limitations, le W3c/WAI a officiellement publié une recommandation appelée ARIA, pour Accessible Rich Internet Applications, ainsi qu’une suite de documents traitant de l’utilisation d’ARIA.</p>
-<p>ARIA est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que HTML, SVG, XML, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (AT). Grâce à ARIA, on peut décrire des éléments et leurs comportements en HTML lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. ARIA définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. <strong> ARIA prend tout son sens et exprime tout son potentiel lorsqu&#39;il est utilisé dans du HTML5 </strong>.</p>
-<p>Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d’interface. Il faut donc toujours assurer la mise en forme grâce aux CSS, le contrôle du contenu et la gestion de l’interactivité via Javascript.</p>
+<p>Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d’interface complexes&nbsp;: <i lang="en">slider</i>, <i lang="en">datepicker</i>…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le <abbr>HTML</abbr> classique. </p>
+<p>Même avec l’évolution due au <abbr>HTML</abbr>5, on manque encore d’informations sémantiques à fournir aux aides techniques (lecteurs d’écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées.</p>
+<h2 id="qu-est-ce-que-c-est-nbsp-">Qu’est-ce que c’est&nbsp;?</h2>
+<p>Pour remédier à ces limitations, le <abbr>W3c</abbr>/<abbr>WAI</abbr> a officiellement publié une recommandation appelée <abbr>ARIA</abbr>, pour <i lang="en">Accessible Rich Internet Applications</i>, ainsi qu’une suite de documents traitant de l’utilisation d’<abbr>ARIA</abbr>.</p>
+<p><abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. <strong> <abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu’il est utilisé dans du <abbr>HTML</abbr>5 </strong>.</p>
+<p>Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d’interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l’interactivité via Javascript.</p>
 <h2 id="le-support">Le support</h2>
-<p>Le support d’ARIA s’améliore constamment et est déjà présent depuis longtemps :</p>
+<p>Le support d’<abbr>ARIA</abbr> s’améliore constamment et est déjà présent depuis longtemps&nbsp;:</p>
 <ul>
 <li>Dans les navigateurs modernes (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera &gt;=9.5, Internet Explorer 8 pour un support basique, Internet Explorer &gt;=9 et Edge pour un support avancé).</li>
-<li>Dans les aides techniques (NVDA &gt;=2010, Orca &gt;= 2 + Firefox uniquement, VoiceOver OSX &gt;=10.5, iOS &gt;=4, JAWS &gt;=8, Window-Eyes &gt;=7, ZoomText 10 pour un support basique, ZoomText &gt;=11 pour un support avancé).  </li>
+<li>Dans les aides techniques (<abbr>NVDA</abbr> &gt;=2010, Orca &gt;= 2 + Firefox uniquement, VoiceOver <abbr>OSX</abbr> &gt;=10.5, <abbr>iOS</abbr> &gt;=4, <abbr>JAWS</abbr> &gt;=8, Window-Eyes &gt;=7, ZoomText 10 pour un support basique, ZoomText &gt;=11 pour un support avancé).  </li>
 </ul>
-<p>De plus, l’efficacité optimale de la prise en charge d’ARIA dépend du couple navigateur, aide technique, Firefox avec NVDA, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
-<h2 id="faut-il-l-utiliser-">Faut-il l’utiliser ?</h2>
-<p>Globalement, ARIA améliore l’accessibilité pour des composants pas nativement présents en html (ou pas accessibles notamment certains 
-HTML5). La robustesse et l’interopérabilité d’ARIA sont maintenant suffisantes pour qu’<a href="https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html">une vingtaine de techniques WCAG 2.0 soient spécifiques à ARIA</a> (contre 10 techniques HTML5). En conséquence, pour des applications Internet riches, l’ARIA est incontournable pour leur mise en accessibilité.</p>
-<p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/NVDA.</p>
-<p>Dans un environnement maitrisé (intranet), les environnements cibles sont connus et en nombre fini, donc, on peut statuer plus facilement !</p>
+<p>De plus, l’efficacité optimale de la prise en charge d’<abbr>ARIA</abbr> dépend du couple navigateur&nbsp;/ aide technique&nbsp;: Firefox avec <abbr>NVDA</abbr>, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
+<h2 id="faut-il-l-utiliser-nbsp-">Faut-il l’utiliser&nbsp;?</h2>
+<p>Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents en <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML</abbr>5). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’<a href="https://www.w3.org/&lt;abbr&gt;WAI&lt;/abbr&gt;/GL/WCAG20-TECHS/aria.html">une vingtaine de techniques WCAG 2.0 soient spécifiques à <abbr>ARIA</abbr></a> (contre 10 techniques <abbr>HTML</abbr>5). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.</p>
+<p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs&nbsp;/ aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p>
+<p>Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement&nbsp;!</p>
 <h2 id="webographie">Webographie</h2>
 <ul>
-<li>Page de synthèse sur &quot;ARIA in HTML&quot; : <a href="https://specs.webplatform.org/html-aria/webspecs/master/">https://specs.webplatform.org/html-aria/webspecs/master/</a></li>
-<li>W3c :<ul>
-<li>Introduction à ARIA : <a href="http://www.w3.org/TR/wai-aria/introduction">http://www.w3.org/TR/wai-aria/introduction</a> </li>
-<li>Spécification ARIA : <a href="http://www.w3.org/TR/wai-aria/">http://www.w3.org/TR/wai-aria/</a></li>
-<li>Mettre en place ARIA : <a href="http://www.w3.org/TR/wai-aria-practices/">http://www.w3.org/TR/wai-aria-practices/</a>, attention « working draft »</li>
-<li>Utiliser ARIA en HTML (5) : <a href="http://www.w3.org/TR/aria-in-html/">http://www.w3.org/TR/aria-in-html/</a> , attention « working draft »</li>
-<li>Techniques ARIA dans les WCAG 2 : <a href="https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html">https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html</a> </li>
+<li><a href="https://specs.webplatform.org/html-aria/webspecs/master/">Page de synthèse sur «&nbsp;<i lang="en"><abbr>ARIA</abbr> in <abbr>HTML</abbr></i>&nbsp;»</a></li>
+<li><abbr>W3c</abbr>&nbsp;:<ul>
+<li><a href="http://www.w3.org/TR/wai-aria/introduction">Introduction à <abbr>ARIA</abbr></a></li>
+<li><a href="http://www.w3.org/TR/wai-aria/">Spécification <abbr>ARIA</abbr></a></li>
+<li><a href="http://www.w3.org/TR/wai-aria-practices/">Mettre en place <abbr>ARIA</abbr></a>, attention «&nbsp;<i lang="en">working draft</i>&nbsp;»</li>
+<li><a href="http://www.w3.org/TR/aria-in-html/">Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr> (5)</a> , attention «&nbsp;<i lang="en">working draft</i>&nbsp;»</li>
+<li><a href="https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html">Techniques <abbr>ARIA</abbr> dans les <abbr>WCAG</abbr> 2</a></li>
 </ul>
 </li>
-<li>Introduction à ARIA chez Site Point : <a href="http://www.sitepoint.com/introduction-wai-aria/">http://www.sitepoint.com/introduction-wai-aria/</a> </li>
-<li>Introduction et liste de liens vers des sources sur ARIA : <a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA</a> <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+<li><a href="http://www.sitepoint.com/introduction-wai-aria/">Introduction à <abbr>ARIA</abbr> chez Site Point</a></li>
+<li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction et liste de liens vers des sources sur <abbr>ARIA</abbr></a></li>
 </ul>
-
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>
@@ -156,8 +158,6 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
-
-    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>    
+    <script type="text/javascript" src="../js/highlight.min.js"></script>    
 </body>
 </html>

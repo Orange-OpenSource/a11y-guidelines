@@ -1,3 +1,5 @@
+app = {};
+
 $(document).ready( function () {
   var title = " - " + $("head title").text();
   if ($(".page-title:first").length > 0) {
@@ -87,11 +89,18 @@ $(document).ready( function () {
 
   // Lien retour en haut de page
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-        $('#back-to-top').fadeIn();
-    } else {
-        $('#back-to-top').fadeOut();
+    if (app.scrollTimer) {
+      window.clearTimeout(app.scrollTimer);
     }
+    app.scrollTimer = window.setTimeout(() => {
+      if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+            $('#back-to-top').tooltip('show');
+      } else {
+          $('#back-to-top').fadeOut();
+          $('#back-to-top').tooltip('hide');
+      }
+    }, 500);
   });
 
   // Déplacement du focus à l'affichage du formulaire de recherche
@@ -106,8 +115,6 @@ $(document).ready( function () {
     }, 800);
     return false;
   });
-
-  $('#back-to-top').tooltip('show');
 
   if ($("li .subtitle").length == 0) { // if no submenu displayed
     $(window).on("scroll", function(){    
@@ -138,7 +145,6 @@ function setBreadcrumb(param) {
 }
 
 function addSubMenu(subMenus) {
-console.log("Add submenu : ", subMenus);  
     var currentItem, htmlStringToAppend, insertPoint = $('.subtitles');
 
     currentItem = getCurrentItem().last();

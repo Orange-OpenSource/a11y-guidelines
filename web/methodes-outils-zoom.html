@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
-      <link rel="stylesheet" href="./css/dark.min.css">
+      <link rel="stylesheet" href="/css/dark.min.css">
 
       <!-- Styles perso -->
       <link rel="stylesheet" href="../css/reco.css">
@@ -59,7 +59,8 @@
                         <li><a class="page-about" href="about.html">A propos</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -67,12 +68,14 @@
               <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
                 <li class="nav-item hidden-xs-down">
                   <span id="cdu">
-                    <a href="#" title="Confort plus" id="uci_link">
-                      Confort
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
                       <span>+</span>
                     </a>
                   </span>
-                </li>
+                </li>                  
                 <li class="nav-item language hidden-xs-down">
                   <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
                 </li>
@@ -114,22 +117,22 @@
 
 <p><span data-menuitem="methodes-outils"></span></p>
 <h2 id="comment-on-teste-">Comment on teste ?</h2>
-<p>Une des recommandations d&#39;accessibilité est la possibilité pour l&#39;utilisateur d&#39;agrandir la taille du texte à 200%. Il s&#39;agit bien d&#39;agrandir uniquement le texte et non l&#39;ensemble de la page. En effet, si vous utilisez le zoom par défaut du navigateur, toute la page est agrandie ce qui entraîne l&#39;apparition systématique d&#39;ascenseurs horizontaux et verticaux. La lecture d&#39;un article de blog par exemple devient fastidieuse puisqu&#39;il faut jouer constamment avec l&#39;ascenseur horizontal.</p>
-<p>L&#39;agrandissement du texte seul, n&#39;entraîne pas systématiquement l&#39;apparition de barres de défilement horizontale. Vous devez vérifier qu&#39;a ce niveau de zoom (200%), le texte reste lisible. Aucun texte ne doit être tronqué, ni superposé. L&#39;information doit rester accessible même si la présentation peut être quelque peu altérée, </p>
-<p>Pour agrandir le texte uniquement, il faut cocher l&#39;option &quot;zoom texte seulement&quot; dans Firefox. Pour agrandir le texte de 200%, faire <code>Ctrl+</code> quatre fois. </p>
-<p><img src="images/zoom-firefox.png" alt="capture d&#39;écran de l&#39;option zoom texte seulement, dans Firefox"> </p>
+<p>Une des recommandations d’accessibilité est la possibilité pour l’utilisateur d’agrandir la taille du texte à 200%. Il s’agit bien d’agrandir uniquement le texte et non l’ensemble de la page. En effet, si vous utilisez le zoom par défaut du navigateur, toute la page est agrandie, ce qui entraîne l’apparition systématique d’ascenseurs horizontaux et verticaux. La lecture d’un article de blog par exemple devient fastidieuse puisqu’il faut jouer constamment avec l’ascenseur horizontal.</p>
+<p>L’agrandissement du texte seul, n’entraîne pas systématiquement l’apparition de barres de défilement horizontale. Vous devez vérifier qu’a ce niveau de zoom (200%), le texte reste lisible. Aucun texte ne doit être tronqué, ni superposé. L’information doit rester accessible même si la présentation peut être quelque peu altérée.</p>
+<p>Pour agrandir le texte uniquement, il faut cocher l’option «&nbsp;zoom texte seulement&nbsp;» dans Firefox. Pour agrandir le texte de 200%, faire <kbd>Ctrl&nbsp;:+</kbd> quatre fois. </p>
+<p><img src="images/zoom-firefox.png" alt="capture d’écran de l’option zoom texte seulement, dans Firefox"> </p>
 <h2 id="quelles-cons-quences-sur-le-d-veloppement-">Quelles conséquences sur le développement ?</h2>
-<p>Si votre page ne s&#39;affiche pas correctement lorsque vous agrandissez le texte, il se peut que ceci soit lié à l&#39;utilisation du pixel comme unité pour dimensionner la taille des textes et la taille des éléments (hauteur ou largeur des <code>div</code>...).
-Pour corriger les problèmes d&#39;affichage lorsque le zoom est à 200%, il ne s&#39;agit pas nécessairement de tout revoir et de supprimer les pixels définitivement. L&#39;idée est de revoir uniquement les éléments qui posent un problème (remplacer les px par des em, rem ou %).</p>
-<p><strong> Exemple zoom à 100% </strong><br><img src="images/zoom.png" alt="capture d&#39;une page avec zoom à 100%"></p>
+<p>Si votre page ne s’affiche pas correctement lorsque vous agrandissez le texte, il se peut que ceci soit lié à l’utilisation du pixel comme unité pour dimensionner la taille des textes et la taille des éléments (hauteur ou largeur des <code>div</code>…).
+Pour corriger les problèmes d’affichage lorsque le zoom est à 200%, il ne s’agit pas nécessairement de tout revoir et de supprimer les pixels définitivement. L’idée est de revoir uniquement les éléments qui posent un problème (remplacer les <code>px</code> par des <code>em</code>, <code>rem</code> ou <code>%</code>).</p>
+<p><strong> Exemple zoom à 100% </strong><br><img src="images/zoom.png" alt="capture d’une page avec zoom à 100%"></p>
 <p>&nbsp;</p>
-<p><strong> Exemple zoom à 200% et taille en pixel</strong><br>La hauteur des éléments n&#39;étant pas fonction de la taille du texte, ceux-ci ne s&#39;agrandissent pas.</p>
-<p><img src="images/zoom-ko.png" alt="capture d&#39;une page avec zoom à 100%"></p>
+<p><strong> Exemple zoom à 200% et taille en pixels</strong><br>La hauteur des éléments n’étant pas fonction de la taille du texte, ceux-ci ne s’agrandissent pas.</p>
+<p><img src="images/zoom-ko.png" alt="capture d’une page avec zoom à 100%"></p>
 <p>&nbsp;</p>
-<p><strong> Exemple zoom à 200% et hauteur des éléments en unités relatives (rem)</strong><br>La hauteur des éléments contenant le texte a été renseignée avec une unité relative qui varie en fonction de la taille du texte (rem). Les éléments s&#39;agrandissent, le texte reste lisible.</p>
-<p><img src="images/zoom-ok.png" alt="capture d&#39;une page avec zoom à 100%"></p>
+<p><strong> Exemple zoom à 200% et hauteur des éléments en unités relatives (<code>rem</code>)</strong><br>La hauteur des éléments contenant le texte a été renseignée avec une unité relative qui varie en fonction de la taille du texte (<code>rem</code>). Les éléments s’agrandissent, le texte reste lisible.</p>
+<p><img src="images/zoom-ok.png" alt="capture d’une page avec zoom à 100%"></p>
 <p>&nbsp;
-Plus d&#39;information dans la rubrique <strong>exemples</strong> : <a href="exemples/zoom/index.html">gestion de l&#39;agrandissement de la taille du texte à 200%</a>.  </p>
+Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="exemples/zoom/index.html">gestion de l’agrandissement de la taille du texte à 200%</a>.  </p>
 <p>&nbsp; </p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -144,8 +147,6 @@ Plus d&#39;information dans la rubrique <strong>exemples</strong> : <a href="exe
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
-
-    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>    
+    <script type="text/javascript" src="../js/highlight.min.js"></script>    
 </body>
 </html>

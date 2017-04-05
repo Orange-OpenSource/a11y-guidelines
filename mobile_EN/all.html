@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
-      <link rel="stylesheet" href="../css/dark.min.css">
+      <link rel="stylesheet" href="/css/dark.min.css">
 
       <!-- Styles perso -->
       <link rel="stylesheet" href="../css/reco.css">
@@ -65,9 +65,11 @@
               </ul> 
               <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
                 <li class="nav-item hidden-xs-down">
-                  <span id="cdu">
-                    <a href="#" title="Confort plus" id="uci_link">
-                      Confort
+                  <span id="cdu">                  
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
                       <span>+</span>
                     </a>
                   </span>
@@ -1462,11 +1464,12 @@ remoteView.accessibilityElements?.append(fourButton)
       <a name="swipe-left-using-one-finger"></a><h3>Swipe left using one finger.</h3>
       <p>Move the focus to the previous item.</p>
   </li>
+  <li class="clearfix"><br>      <img src="./images/gesture7.png" alt="" width="80"><br>      <a name="swipe-up-using-one-finger"></a><h3>Swipe up using one finger</h3>
+      <p>Increase the value of an adjustable element.</p>
+  </li>
   <li class="clearfix">
-      <img src="./images/gesture7.png" alt="" width="80">
-      <img src="./images/gesture8.png" alt="" width="80">
-      <a name="swipe-up-or-down-using-one-finger"></a><h3>Swipe up or down using one finger</h3>
-      <p>Performs or moves to the selected rotor option</p>
+      <img src="./images/gesture8.png" alt="" width="80"><br>      <a name="swipe-down-using-one-finger"></a><h3>Swipe down using one finger</h3>
+      <p>Decrease the value of an adjustable element.</p>
   </li>
 </ul>
 
@@ -1523,8 +1526,5 @@ remoteView.accessibilityElements?.append(fourButton)
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
     <script type="text/javascript" src="../js/highlight.min.js"></script>
-
-    <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"> </script>    
-
 </body>
 </html>
