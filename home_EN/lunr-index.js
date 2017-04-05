@@ -8,20 +8,20 @@ var documentTitles = {};
 
 
 
-documentTitles["contact.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["contact.html#orange-accessibility-guidelines-h2-classpage-titleyour-opinion-mattersh2"] = "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;";
 index.add({
-    url: "contact.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines  &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Have a bug or a feature request?    Please first check [the issues](https://github.com/Orange-OpenSource/a11y-guidelines/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).  &amp;nbsp;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "contact.html#orange-accessibility-guidelines-h2-classpage-titleyour-opinion-mattersh2",
+    title: "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;",    
+    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Have a bug or a feature request?    Please first check [the issues](https://github.com/Orange-OpenSource/a11y-guidelines/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).  &amp;nbsp;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["organisation.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["organisation.html#orange-accessibility-guidelines-h2-classpage-titlesite-organizationh2"] = "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt;";
 index.add({
-    url: "organisation.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines  &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organization\&quot;}]); });&lt;/script&gt;  This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.   These different topics are available through the navigation menu located in the header.  Each section contains: - Recommendations for the targeted platform - Resources to learn and test yourself - Technical examples  "
+    url: "organisation.html#orange-accessibility-guidelines-h2-classpage-titlesite-organizationh2",
+    title: "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt;",    
+    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organization\&quot;}]); });&lt;/script&gt;  This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.   These different topics are available through the navigation menu located in the header.  Each section contains: - Recommendations for the targeted platform - Resources to learn and test yourself - Technical examples  "
 });
 
 documentTitles["organisation.html#headings-list"] = "Headings list";
@@ -112,11 +112,11 @@ index.add({
 
 
 
-documentTitles["about.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["about.html#orange-accessibility-guidelines-h2-classpage-titleabouth2"] = "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt;";
 index.add({
-    url: "about.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines  &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "about.html#orange-accessibility-guidelines-h2-classpage-titleabouth2",
+    title: "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt;",    
+    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

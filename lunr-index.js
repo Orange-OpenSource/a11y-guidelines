@@ -9,20 +9,20 @@ var documentTitles = {};
 
 
 
-documentTitles["contact.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["contact.html#recommandations-accessibilite-orange-h2-classpage-titlevotre-avis-compteh2"] = "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt;";
 index.add({
-    url: "contact.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
+    url: "contact.html#recommandations-accessibilite-orange-h2-classpage-titlevotre-avis-compteh2",
+    title: "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt;",    
     body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?    Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["organisation.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["organisation.html#recommandations-accessibilite-orange-h2-classpage-titleorganisation-du-siteh2"] = "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;";
 index.add({
-    url: "organisation.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange  &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.   Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.  Chaque rubrique contient&amp;nbsp;: - Des recommandations en fonction de la plateforme visée, - Des ressources pour apprendre et tester soi-même, - Des exemples techniques.  "
+    url: "organisation.html#recommandations-accessibilite-orange-h2-classpage-titleorganisation-du-siteh2",
+    title: "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;",    
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.   Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.  Chaque rubrique contient&amp;nbsp;: - Des recommandations en fonction de la plateforme visée, - Des ressources pour apprendre et tester soi-même, - Des exemples techniques.  "
 });
 
 documentTitles["organisation.html#liste-des-rubriques"] = "Liste des rubriques";
@@ -50,7 +50,14 @@ documentTitles["organisation.html#mobile"] = "Mobile";
 index.add({
     url: "organisation.html#mobile",
     title: "Mobile",    
-    body: "#### Mobile  Les recommandations accessibilité pour les mobiles. - Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible,  - Tout ce qu’il faut savoir pour coder accessible sur mobile, sous Android ou iOS, - Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile, - Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement &lt;span lang=\&quot;en\&quot;&gt;VoiceOver&lt;/span&gt; et &lt;span lang=\&quot;en\&quot;&gt;TalkBack&lt;/span&gt;.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "#### Mobile  Les recommandations accessibilité pour les mobiles. - Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible,  - Tout ce qu’il faut savoir pour coder accessible sur mobile, sous Android ou iOS, - Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile, - Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement &lt;span lang=\&quot;en\&quot;&gt;VoiceOver&lt;/span&gt; et &lt;span lang=\&quot;en\&quot;&gt;TalkBack&lt;/span&gt;.  "
+});
+
+documentTitles["organisation.html#editorial"] = "Éditorial";
+index.add({
+    url: "organisation.html#editorial",
+    title: "Éditorial",    
+    body: "#### Éditorial  Les recommandations pour la rédaction de documents Word et PowerPoint accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
