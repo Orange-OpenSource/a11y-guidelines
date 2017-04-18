@@ -83,7 +83,9 @@ Un titrage de page avec un saut de niveau h2->h4&nbsp;:
         <h4>Êtes-vous éligible&nbsp;?</h4>
 ```
    
- 
+**Outil :**  
+L’extension [HeadingsMaps](https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309), disponible pour [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), permet d’extraire les titres et de les visualiser sous forme de plan de document.
+
 **Référence&nbsp;:** WCAG 1.3.1
 
 ## 3. Assurer un contraste suffisant entre texte et fond
@@ -451,21 +453,21 @@ Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](./exemp
 
 **Référence&nbsp;:** WCAG 1.4.4
 
-## 15. Rendre l’intitulé d’un lien compréhensible hors contexte
+## 15. Rendre l’intitulé des liens et des boutons compréhensibles hors contexte
 
 **Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.  
 **Quand&nbsp;: ** dès la phase de conception et lors du développement.
 
 **Description&nbsp;: **
 
-Rendre compréhensibles les intitulés des liens hors contexte pour tous les utilisateurs, en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  
+Rendre les intitulés des liens et des boutons compréhensibles hors contexte en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  
 
-S’il n’est pas possible de rendre un lien plus explicite, faute de place, mais que l’intitulé du lien actuel est suffisant pour les personnes qui ont accès à l’écran, le texte du lien peut être complété par un contenu supplétif caché ou en utilisant un attribut `aria-label` ou `aria-labelledby`, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
-Par exemple dans l’image ci-dessous, les deux liens «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne déficiente visuelle. Par contre quand on voit l’écran, la disposition fait qu’il n’y a pas d’ambiguïté sur le rôle de chaque bouton.
+S’il n’est pas possible de rendre un lien ou un bouton plus explicite, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, cet intitulé peut être complété par un contenu supplétif caché ou en utilisant un attribut `aria-label` ou `aria-labelledby`, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
+Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. Par contre quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
 
 ![capture d’écran présentant deux liens valider dont le libellé doit être explicité](./images/liens-valider.png)
 
-Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé du lien. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
+Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
 
 **Exemple&nbsp;:**  
 ```html
@@ -473,19 +475,19 @@ Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masqu
 <a href="…">valider<span class="masquage-accessible"> le paiement en une seule fois</span></a>
 ```
 
-Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé du lien.  
-En complément de ces solutions, on pourrait ici également utiliser ** un attribut `title` ** pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol du lien avec la souris.
+Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé.  
+En complément de ces solutions, on pourrait ici également utiliser ** un attribut `title` ** pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.
 
 
 **À vérifier&nbsp;: **
-S’assurer que les liens isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
-Une page ne doit pas avoir plusieurs liens dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.
+S’assurer que les liens et les boutons isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
+Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.
 
 **Objectif utilisateur&nbsp;: **
-Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. 
+Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l'action du bouton. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. 
 
 **Objectif technique&nbsp;: **
-Expliciter les liens permet d’améliorer le référencement naturel.
+Expliciter les liens et les boutons permet d’améliorer le référencement naturel.
 
 **Exemple valide&nbsp;:**      
 Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».

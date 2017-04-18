@@ -81,6 +81,9 @@ Page with a break in the heading hierarchy h2 → h4:
 <h2>Fiber broadband is coming!</h2>
 <h4>Check eligibility</h4>
 ```
+
+**Tool :**  
+[HeadingsMaps](https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309) extension, available for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) and [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), extract and display page titles for the current page.
    
  
 **Reference:** <abbr>WCAG</abbr> 1.3.1
@@ -465,14 +468,14 @@ See the example [handling zoom, increasing the text size](./exemples/zoom/index.
 
 **Reference:** <abbr>WCAG</abbr> 1.4.4
 
-## 15. Link label must be understandable out of context
+## 15. Link and button labels must be understandable out of context
 
 **Target: ** everyone, especially people with visual impairments, cognitive limitations or attention difficulties.  
 **When: ** as of design and during development.
 
 **Description: **
 
-Make the link labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  
+Make the link and button labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  
 
 If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, the link label can have an extra hidden text or an `aria-label` or `aria-labelledby` attribute, specifically for screen reader users.
 For example, in the image below, the two “next” links are not explicit enough for a person with visual impairments. However, when one sees the screen, the positioning makes obvious the function of each button.
