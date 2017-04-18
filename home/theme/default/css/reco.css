@@ -3,6 +3,12 @@ body {
   background-color: #f6f6f6;
 }
 
+pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+}
+
 .container-fluid {
   margin: 0;
 }
