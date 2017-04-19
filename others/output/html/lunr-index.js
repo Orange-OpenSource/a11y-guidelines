@@ -27,11 +27,69 @@ index.add({
 
 
 
+documentTitles["editorial.html#recommandations-editoriales-generales"] = "Recommandations éditoriales générales";
+index.add({
+    url: "editorial.html#recommandations-editoriales-generales",
+    title: "Recommandations éditoriales générales",    
+    body: "# Recommandations éditoriales générales &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Recommandations éditoriales générales\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+});
+
+documentTitles["editorial.html#introduction"] = "Introduction";
+index.add({
+    url: "editorial.html#introduction",
+    title: "Introduction",    
+    body: "## Introduction Cette section propose quelques recommandations générales à respecter pour garantir l’accessibilité de vos contenus quelque soit le type de document.  "
+});
+
+documentTitles["editorial.html#recommandations"] = "Recommandations";
+index.add({
+    url: "editorial.html#recommandations",
+    title: "Recommandations",    
+    body: "## Recommandations  "
+});
+
+documentTitles["editorial.html#1-assurer-un-contraste-suffisant"] = "1. Assurer un contraste suffisant";
+index.add({
+    url: "editorial.html#1-assurer-un-contraste-suffisant",
+    title: "1. Assurer un contraste suffisant",    
+    body: "### 1. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
+});
+
+documentTitles["editorial.html#2-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "2. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+index.add({
+    url: "editorial.html#2-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
+    title: "2. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
+    body: "### 2. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
 documentTitles["index.html#recommandations-accessibilite-orange-pour-leditorial"] = "Recommandations accessibilité Orange pour l'éditorial";
 index.add({
     url: "index.html#recommandations-accessibilite-orange-pour-leditorial",
     title: "Recommandations accessibilité Orange pour l'éditorial",    
-    body: "# Recommandations accessibilité Orange pour l'éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&amp;nbsp;:  - [Créer des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Créer des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  &lt;!-- - [Créer des pushmail accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la réalisation d’emails accessibles. --&gt;  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange pour l'éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
+});
+
+documentTitles["index.html#introduction"] = "Introduction";
+index.add({
+    url: "index.html#introduction",
+    title: "Introduction",    
+    body: "## Introduction L’écrit est présent partout dans nos échanges au quotidien. Qu’il s’agisse d’échanges par messagerie instantanée ou par e-mail, de présentations PowerPoint, de documents Word, PDF, de sites web ou d’applications mobiles. L’écrit est indissociable de notre façon de travailler d’où l’importance de veiller à l’accessibilité des contenus que nous produisons. Il arrive encore trop souvent que des utilisateurs n’aient pas accès à certaines informations (mise en page ou choix de couleurs inappropriés...).    Les rubriques suivantes proposent des recommandations à respecter pour garantir l’accessibilité de vos documents et de vos e-mails.   "
+});
+
+documentTitles["index.html#recommandations-editoriales-generales"] = "Recommandations éditoriales générales";
+index.add({
+    url: "index.html#recommandations-editoriales-generales",
+    title: "Recommandations éditoriales générales",    
+    body: "### Recommandations éditoriales générales Les recommandations générales décrivent les recommandations à respecter quelque soit le type de contenu (web, e-mail, document Word, etc.). - [Accéder aux recommandations éditoriales générales](./editorial.html) "
+});
+
+documentTitles["index.html#recommandations-par-type-de-document"] = "Recommandations par type de document";
+index.add({
+    url: "index.html#recommandations-par-type-de-document",
+    title: "Recommandations par type de document",    
+    body: "### Recommandations par type de document  Les recommandations suivantes décrivent les règles à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des e-mails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

@@ -2,8 +2,9 @@
     "title": "Recommandations accessibilité Orange",
     "files": [
         "output/markdown/about.md",
-        "output/markdown/contact.md",        
-        "output/markdown/index.md",  
+        "output/markdown/contact.md",
+        "output/markdown/editorial.md",
+        "output/markdown/index.md",
         "output/markdown/powerpoint.md",
         "output/markdown/word.md",
         "output/markdown/pushmail.md"

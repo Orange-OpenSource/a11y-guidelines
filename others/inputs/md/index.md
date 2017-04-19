@@ -4,15 +4,22 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-Cette section du site contient des recommandations d'accessibilité concernant les plateformes autres que Web et Mobile&nbsp;:
+## Introduction
+L’écrit est présent partout dans nos échanges au quotidien. Qu’il s’agisse d’échanges par messagerie instantanée ou par e-mail, de présentations PowerPoint, de documents Word, PDF, de sites web ou d’applications mobiles. L’écrit est indissociable de notre façon de travailler d’où l’importance de veiller à l’accessibilité des contenus que nous produisons. Il arrive encore trop souvent que des utilisateurs n’aient pas accès à certaines informations (mise en page ou choix de couleurs inappropriés...).  
 
-- [Créer des documents Word accessibles](./word.html)&nbsp;: section consacrée à la rédaction de documents Word accessibles.
+Les rubriques suivantes proposent des recommandations à respecter pour garantir l’accessibilité de vos documents et de vos e-mails. 
 
-- [Créer des documents PowerPoint accessibles](./powerpoint.html)&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.
+### Recommandations éditoriales générales
+Les recommandations générales décrivent les recommandations à respecter quelque soit le type de contenu (web, e-mail, document Word, etc.).
+- [Accéder aux recommandations éditoriales générales](./editorial.html)
+### Recommandations par type de document
 
-<!--
-- [Créer des pushmail accessibles](./pushmail.html)&nbsp;: section consacrée à la réalisation d’emails accessibles.
--->
+Les recommandations suivantes décrivent les règles à respecter en fonction du type de document&nbsp;:
+- [Rédiger des documents Word accessibles](./word.html)&nbsp;: section consacrée à la rédaction de documents Word accessibles.
+
+- [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.
+
+- [Rédiger des e-mails accessibles](./pushmail.html)&nbsp;: section consacrée à la rédaction de «&nbsp;<i lang="en">pushmail</i>&nbsp;» accessibles.
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
