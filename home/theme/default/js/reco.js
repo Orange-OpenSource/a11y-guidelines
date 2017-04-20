@@ -92,7 +92,7 @@ $(document).ready( function () {
     if (app.scrollTimer) {
       window.clearTimeout(app.scrollTimer);
     }
-    app.scrollTimer = window.setTimeout(() => {
+    app.scrollTimer = window.setTimeout(function () {
       if ($(this).scrollTop() > 50) {
           $('#back-to-top').fadeIn();
             $('#back-to-top').tooltip('show');
