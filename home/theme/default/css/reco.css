@@ -566,8 +566,7 @@ blockquote::after {
     font-size:2rem
 }
 blockquote {
-  margin: 0 1rem 0 1rem;
-  padding: 0 1rem 0 1rem;
+  padding: 1rem;
   background-color: #888;
   color: #f6f6f6;
   quotes: "«\00A0" "\00A0»"

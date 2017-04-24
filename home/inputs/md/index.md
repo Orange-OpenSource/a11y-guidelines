@@ -93,7 +93,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
         <li>Les utilisateurs ayant un bas débit</li>
         <li>Les séniors</li>
         <li>Les environnements bruyants tels que open space, boutiques, accueil…</li>
-        <li>Les personnes avec un handicap temporaire (bras cassé, baisse de l'acuité visuelle...)
+        <li>Les personnes avec un handicap temporaire (bras cassé, infection de l'oeil...)
         <li>Matériel non approprié (imprimante noir et blanc…)</li>
     </ul>
 </div>

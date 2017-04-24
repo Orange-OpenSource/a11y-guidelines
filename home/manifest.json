@@ -4,7 +4,8 @@
         "output/markdown/contact.md",
         "output/markdown/organisation.md",
         "output/markdown/index.md",        
-        "output/markdown/about.md"
+        "output/markdown/about.md",
+        "output/markdown/faq.md"
     ],
     "maxTocLevel":"1"
 }
