@@ -4,9 +4,17 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
+## Qui sommes nous ?
+
+EASE, "E-Accessibility for Everyone", un centre de compétences d'Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
+
 <h2 class="page-title">Qu'est ce que l'accessibilité numérique ?</h2>
 
-L’accessibilité numérique permet de rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
+<blockquote> La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel. </blockquote>
+
+Tim Berners-Lee, directeur du W3C et inventeur du World Wide Web.
+
+L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
 
 Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.
 
@@ -37,7 +45,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
         <li>Personnes sourdes-aveugles</li>
         <li>Difficulté de perception de la parole dans un environnement bruyant</li>
     </ul>
-**Solutions adaptées&nbsp;:** ajout de script ou de sous-titres
+**Solutions adaptées&nbsp;:** ajout de transcrit (récit de la vidéo) ou de sous-titres
 </div>
 
 ### Le handicap visuel
@@ -85,6 +93,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
         <li>Les utilisateurs ayant un bas débit</li>
         <li>Les séniors</li>
         <li>Les environnements bruyants tels que open space, boutiques, accueil…</li>
+        <li>Les personnes avec un handicap temporaire (bras cassé, baisse de l'acuité visuelle...)
         <li>Matériel non approprié (imprimante noir et blanc…)</li>
     </ul>
 </div>
