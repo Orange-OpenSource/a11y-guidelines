@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-home_EN/theme/default/_layout.html
 home_EN/theme/default/_manifests.html
 home_EN/theme/default/_page.html
 home_EN/theme/default/search.html
@@ -199,3 +198,4 @@ web_EN/inputs/md/exemples.md
 web_EN/inputs/md/exigences.md
 web_EN/inputs/md/fondamentaux-nontech.md
 web_EN/inputs/md/fondamentaux-tech.md
+home_EN/theme/default/_layout.html
