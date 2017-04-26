@@ -4,15 +4,19 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-## Qui sommes nous ?
+## Qui sommes-nous ?
 
-EASE, "E-Accessibility for Everyone", un centre de compétences d'Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
+<abbr>EASE</abbr>, «&nbsp;<i lang="en">E-Accessibility for Everyone</i>&nbsp;», un centre de compétences d'Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
 
 <h2 class="page-title">Qu'est ce que l'accessibilité numérique ?</h2>
 
-<blockquote> La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel. </blockquote>
+<blockquote> La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel. 
 
+<footer>
 Tim Berners-Lee, directeur du W3C et inventeur du World Wide Web.
+</footer>
+</blockquote>
+
 
 L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
 
@@ -41,7 +45,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
 <div class="axs-picto auditif">
     <ul>
         <li>Personnes sourdes</li>
-        <li>Personnes malentendantes</li>
+        <li>Personnes malentendantes</li>
         <li>Personnes sourdes-aveugles</li>
         <li>Difficulté de perception de la parole dans un environnement bruyant</li>
     </ul>
@@ -54,7 +58,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
     <ul>
         <li>Personnes avec un petit reste visuel ou celles qui ont une vue incorrigible</li>
         <li>Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)</li>
-        <li>Personnes sensibles à une luminosité accrue des couleurs</li>
+        <li>Personnes sensibles à une luminosité accrue des couleurs</li>
         <li>Personnes complètement aveugles</li>
         <li>Personnes sourdes-aveugles</li>
     </ul>
@@ -91,9 +95,9 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
     <ul>
         <li>Les utilisateurs de mobiles et smartphones</li>
         <li>Les utilisateurs ayant un bas débit</li>
-        <li>Les séniors</li>
+        <li>Les seniors</li>
         <li>Les environnements bruyants tels que open space, boutiques, accueil…</li>
-        <li>Les personnes avec un handicap temporaire (bras cassé, infection de l'oeil...)
+        <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)
         <li>Matériel non approprié (imprimante noir et blanc…)</li>
     </ul>
 </div>
