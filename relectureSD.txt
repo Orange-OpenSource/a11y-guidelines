@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-mobile/theme/default/_layout.html
 mobile/theme/default/_manifests.html
 mobile/theme/default/_page.html
 mobile/theme/default/search.html
@@ -196,3 +195,4 @@ mobile_EN/theme/default/_layout.html
 mobile_EN/theme/default/_manifests.html
 mobile_EN/theme/default/_page.html
 mobile_EN/theme/default/search.html
+mobile/theme/default/_layout.html
