@@ -6,9 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-home/theme/default/_manifests.html
-home/theme/default/_page.html
-home/theme/default/search.html
 mobile_EN/inputs/html/exemples/stepbar/index.html
 mobile_EN/theme/default/_layout.html
 mobile_EN/theme/default/_manifests.html
@@ -198,3 +195,6 @@ home_EN/theme/default/search.html
 home/inputs/md/faq.md
 home/inputs/md/index.md
 home/theme/default/_layout.html
+home/theme/default/_manifests.html
+home/theme/default/_page.html
+home/theme/default/search.html
