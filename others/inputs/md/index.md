@@ -5,12 +5,12 @@
 });</script>
 
 ## Introduction
-L’écrit est présent partout dans nos échanges au quotidien. Qu’il s’agisse d’échanges par messagerie instantanée ou par e-mail, de présentations PowerPoint, de documents Word, PDF, de sites web ou d’applications mobiles. L’écrit est indissociable de notre façon de travailler d’où l’importance de veiller à l’accessibilité des contenus que nous produisons. Il arrive encore trop souvent que des utilisateurs n’aient pas accès à certaines informations (mise en page ou choix de couleurs inappropriés…).  
+L’écrit est présent partout dans nos échanges au quotidien. Qu’il s’agisse d’échanges par messagerie instantanée ou par e-mail, de présentations PowerPoint, de documents Word, <abbr>PDF</abbr>, de sites web ou d’applications mobiles. L’écrit est indissociable de notre façon de travailler, d’où l’importance de veiller à l’accessibilité des contenus que nous produisons. Il arrive encore trop souvent que des utilisateurs n’aient pas accès à certaines informations (mise en page ou choix de couleurs inappropriés…).  
 
 Les rubriques suivantes proposent des recommandations à respecter pour garantir l’accessibilité de vos documents et de vos e-mails. 
 
 ### Recommandations éditoriales générales
-Les recommandations générales décrivent les recommandations à respecter quelque soit le type de contenu (web, e-mail, document Word, etc.).
+Les recommandations générales décrivent les recommandations à respecter quel que soit le type de contenu (web, e-mail, document Word, etc.).
 <ul role="presentation">
 <li><a href="./editorial.html">Accéder aux recommandations éditoriales générales</a></li>
 </ul>
