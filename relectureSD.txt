@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-others/inputs/md/about.md
 others/inputs/md/contact.md
 others/inputs/md/editorial.md
 others/inputs/md/index.md
@@ -196,3 +195,4 @@ mobile/theme/default/_layout.html
 mobile/theme/default/_manifests.html
 mobile/theme/default/_page.html
 mobile/theme/default/search.html
+others/inputs/md/about.md
