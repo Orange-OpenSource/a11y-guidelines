@@ -6,7 +6,7 @@
 <style>h3 {font-size: 1rem;}</style>
 
 ## Introduction
-Cette section propose quelques recommandations générales à respecter pour garantir l’accessibilité de vos contenus quelque soit le type de document.
+Cette section propose quelques recommandations générales à respecter pour garantir l’accessibilité de vos contenus quel que soit le type de document.
 
 ## Recommandations
 
