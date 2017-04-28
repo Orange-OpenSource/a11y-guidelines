@@ -41,21 +41,21 @@
 	  </ul>
 	  
 	  <h2>Content triggered by a user action with page reloading</h2>
-	  <p>This case where we reload the whole page just to modify part of this page should be avoided even if it was triggered by the user, there is a loss of context and an asynchronous would be more suitable.<br />
+	  <p>This case where we reload the whole page just to modify part of this page should be avoided even if it was triggered by the user, as there is a loss of context and a partial asynchronous update would be more suitable.<br />
 	  If there is no way to do asynchronous loading, you must at least:</p>
 	  <ol>
-	  <li>Warn the user with a message like "Loading, please wait" and set the focus on it if there is loss of context.</li>
+	  <li>Warn the user with a message like “Loading, please wait” and set the focus on it if there is loss of context.</li>
 	  <li>When reloading, put the focus on the generated content or when the content is removed put the focus on the triggering element (if it still exists after reload) or just set the focus right before the removed content.</li>
-	  <li> Ensure that the focus moves in a logical a sequential way when hiding or showing content.</li>
+	  <li> Ensure that the focus moves in a logical and sequential order when hiding or showing content.</li>
 	  </ol>
 	  
 	  <h2>Dynamic content triggered by a user action without page reloading (asynchronous)</h2>
-	  <p>It is the most common case, the page is not reloaded, only the DOM is modified by adding or removing content on a user action (for example, displaying the search results, displaying a dialog...). <br />
+	  <p>It is the most common case: the page is not reloaded, only the <abbr>DOM</abbr> is modified by adding or removing content on a user action (for example, displaying the search results, displaying a dialogue...). <br />
 	  To make the new content accessible:</p>
 	  <ul>
-	  <li>When adding content, alert the user that content has appeared if needed (e.g. for a sub-menu that can be unfolded, one can add the "unfold" label and put the <code>aria-haspopup</code> property) and set the focus on the new content that has appeared (the container, a title, a link, a button...). If this content is susceptible to disappear (e.g. a dialog), save the triggering element and set it back when the content desappears.</li>
-	  <li>When removing content, warn the user before he triggers the removal.</li>
-	  <li> Ensure that the focus moves in a logical and sequential way after adding / removing content.</li>
+	  <li>When adding content, alert the user that content has appeared if needed (e.g. for a sub-menu that can be unfolded, one can add the “unfold” label and put the <code>aria-haspopup</code> property) and set the focus on the new content that has appeared (the container, a title, a link, a button...). If this content is susceptible to disappear (e.g. a dialogue), save the triggering element and set it back when the content disappears.</li>
+	  <li>When removing content, warn the user before they trigger the removal.</li>
+	  <li> Ensure that the focus moves in a logical and sequential way after adding&nbsp;/ removing content.</li>
 	  </ul>
 	  
 	    <h2>Special case: dynamic <code>iframes</code></h2>
@@ -63,7 +63,7 @@
 	  <ul>
 	  <li>Inform the user of this update and update the <code>title</code> attribute to inform the user of this update. </li>
 	  <li> If necessary (the user must have access to the modified <code>iframe</code>  immediately after the action that triggered the update), you must put the focus on the <code>iframe</code> tag.</li>
-	  <li> Ensure that the focus moves in a logical and sequential inside the page and the <code>iframe</code>.</li>
+	  <li> Ensure that the focus moves in a logical and sequential order inside the page and the <code>iframe</code>.</li>
 	  </ul>
     </main>
 
