@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web_EN/inputs/html/exemples/ARIA-clavier/index.html
 web_EN/inputs/html/exemples/check-listbox/index.html
 web_EN/inputs/html/exemples/dynFocus/index.html
 web_EN/inputs/html/exemples/files/index.html
@@ -196,3 +195,4 @@ others/theme/default/_layout.html
 others/theme/default/_manifests.html
 others/theme/default/_page.html
 others/theme/default/search.html
+web_EN/inputs/html/exemples/ARIA-clavier/index.html
