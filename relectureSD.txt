@@ -6,8 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-others/theme/default/_manifests.html
-others/theme/default/_page.html
 others/theme/default/search.html
 web_EN/inputs/html/exemples/ARIA-clavier/index.html
 web_EN/inputs/html/exemples/check-listbox/index.html
@@ -196,3 +194,5 @@ others/inputs/md/powerpoint.md
 others/inputs/md/pushmail.md
 others/inputs/md/word.md
 others/theme/default/_layout.html
+others/theme/default/_manifests.html
+others/theme/default/_page.html
