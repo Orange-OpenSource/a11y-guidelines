@@ -1,11 +1,11 @@
-# A propos    
+# À propos    
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"A propos"}]);
+    setBreadcrumb([{"label":"À propos"}]);
 });</script>
 
 Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).  
 
-Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange:  
+Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&nbsp;:  
 
 Copyright (C) 2016 Orange SA All rights reserved  
 [Liste des fichiers concernés](/NOTICE.txt)
