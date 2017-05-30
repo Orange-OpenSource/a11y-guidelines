@@ -10,13 +10,12 @@
 
 <h2 class="page-title">Qu'est ce que l'accessibilité numérique ?</h2>
 
-<blockquote> La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel. 
-
-<footer>
-Tim Berners-Lee, directeur du W3C et inventeur du World Wide Web.
-</footer>
+<blockquote>
+    <p>La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel.</p>
+    <footer>
+        Tim Berners-Lee, directeur du W3C et inventeur du World Wide Web.
+    </footer>
 </blockquote>
-
 
 L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.
 
