@@ -71,6 +71,8 @@ Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier&nbsp;> V�
 Pour exporter en <abbr>PDF</abbr> il suffit d’aller dans le menu&nbsp;: Fichier&nbsp;> Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier <abbr>PDF</abbr>.  
 À vérifier la première fois&nbsp;: dans les options d’export, la case à cocher «&nbsp;Balises de structure de document pour l’accessibilité&nbsp;» doit être cochée.
 
+A noter, qu'avec Word pour Office 2010, les documents PDF générés peuvent souffrir de problèmes d'accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
+
 ## Ressources externes
 
 - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
