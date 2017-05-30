@@ -76,7 +76,7 @@ $(document).ready( function () {
 
   // Ajout d'ancres sur les titres
   $("h1, h2" ).wrapInner(function () {
-   return '<a class="anchor" href="#' + $(this).attr("id") + '"></a>';
+   return '<a tabindex="-1" role="presentation" class="anchor" href="#' + $(this).attr("id") + '"></a>';
   });
 
   if (window.location.search.indexOf('print') !== -1) {
