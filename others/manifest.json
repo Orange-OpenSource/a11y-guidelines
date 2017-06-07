@@ -7,6 +7,7 @@
         "output/markdown/index.md",
         "output/markdown/powerpoint.md",
         "output/markdown/word.md",
+        "output/markdown/PDF.md",
         "output/markdown/pushmail.md"
     ],
     "maxTocLevel":"1"
