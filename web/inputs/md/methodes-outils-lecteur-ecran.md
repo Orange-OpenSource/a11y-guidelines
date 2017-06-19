@@ -22,7 +22,7 @@ Il existe plusieurs lecteurs d’écran, les plus connus sont&nbsp;:
 
 Télécharger le fichier d’installation de <abbr>NVDA</abbr> sur le [site officiel](http://nvda-fr.org/).
 
-La voix par défaut n’est pas de très bonne qualité mais elle est très réactive. Ce n’est pas indispensable, mais le téléchargement d’une voix de meilleure qualité est conseillé comme celle d’[Hortense](http://www.nvda-fr.org/voix.php). Il suffit ensuite de se rendre dans les préférences de <abbr>NVDA</abbr> pour modifier les paramètres vocaux.
+La voix par défaut n’est pas de très bonne qualité mais elle est très réactive. Ce n’est pas indispensable, mais le téléchargement d’une voix de meilleure qualité est conseillé comme celle d’[Hortense](https://www.nvda-fr.org/voix/). Il suffit ensuite de se rendre dans les préférences de <abbr>NVDA</abbr> pour modifier les paramètres vocaux.
 
 ### Configuration
 

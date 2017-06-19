@@ -22,7 +22,7 @@ NVDA is a free screen reader available for Windows.
 
 Download the NVDA installer on the [official website](http://nvda-fr.org/).
 
-The default voice is not very good but it is very reactive. It is not mandatory, but you can download a better voice named [Hortense](http://www.nvda-fr.org/voix.php). Then just go to preferences to change NVDA voice settings.
+The default voice is not very good but it is very reactive. It is not mandatory, but you can download a better voice named [Hortense](https://www.nvda-fr.org/voix/). Then just go to preferences to change NVDA voice settings.
 
 ### Configuration
 
