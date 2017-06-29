@@ -577,9 +577,10 @@ Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur
 
 **Description&nbsp;: **
 
-Ne pas masquer le focus et si nécessaire le rendre suffisamment visible (par exemple, en modifiant la propriété <abbr>CSS</abbr> `outline`) sur tous les éléments susceptibles de recevoir celui-ci (liens, boutons, éléments de formulaire). Vous pouvez même amplifier la visibilité du focus afin qu’il soit plus facilement identifiable.
+Ne pas masquer le focus et si nécessaire accentuez sa visibilité sur tous les éléments focusables par exemple, en modifiant la propriété <abbr>CSS</abbr> `outline`.
+Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)).
 
-Lorsqu’un effet est visible sur un élément lors du survol de la souris (`:hover` en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (`:focus`).
+Lorsqu’un effet est visible sur un élément au survol de la souris (`:hover` en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (`:focus`).
 
 
 **À vérifier&nbsp;: **
@@ -588,15 +589,13 @@ Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dan
 **Objectif utilisateur&nbsp;: **
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).
 
-**Exemple valide&nbsp;:**  
-Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».
-  
-![capture d’écran montrant un lien dont le focus est clairement visible](./images/focus-ok.png)  
- 
-**Exemple non-valide&nbsp;:**  
-  Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».
-    
-![capture d’écran montrant un lien dont le focus n’est pas suffisamment visible](./images/focus-ko.png)   
+**Exemples valides&nbsp;: **  
+Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».  
+La première capture présente le comportement par défaut (focus représenté par des pointillés).
+Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.  
+![capture d’écran présentant l’affichage du focus par défaut](images/focus.png)
+![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](images/focus2.png)
+
 
 **Référence&nbsp;:** WCAG 2.4.7
 

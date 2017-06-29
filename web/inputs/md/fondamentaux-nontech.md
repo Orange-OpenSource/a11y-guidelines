@@ -122,9 +122,11 @@ Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception 
 **Quand&nbsp;: ** lors de la conception graphique et lors du développement.
 
 **Description&nbsp;:**  
-La position du focus clavier doit être visible à tous moment. Lorsqu’un élément cliquable reçoit le focus (lien, bouton …), ceci doit être visible pour l’utilisateur. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour le rendre plus visible (assurer un contraste suffisant, par exemple) par un effet personnalisé, mais ne doit pas être supprimé. Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus.    
+La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour être rendu plus visible mais ne doit pas être supprimé. 
+Veiller à fournir un niveau de contraste suffisant (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.
 
 L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.
+
 
     
 **Exemples valides&nbsp;: **  
