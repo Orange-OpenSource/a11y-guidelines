@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-home/inputs/md/index.md
 home/theme/default/css/reco.css
 home/theme/default/js/reco.js
 others/inputs/md/editorial.md
@@ -212,3 +211,4 @@ web_EN/inputs/html/exemples/dynFocus/index.html
 web_EN/inputs/html/exemples/files/index.html
 web_EN/inputs/html/exemples/files/step1/components/file.html
 web_EN/inputs/html/exemples/files/step1/index.html
+home/inputs/md/index.md

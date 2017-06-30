@@ -4,16 +4,16 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-## Qui sommes-nous ?
+## Qui sommes-nous&nbsp;?
 
-<abbr>EASE</abbr>, «&nbsp;<i lang="en">E-Accessibility for Everyone</i>&nbsp;», un centre de compétences d'Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
+<abbr>EASE</abbr>, «&nbsp;<i lang="en">E-Accessibility for Everyone</i>&nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
 
-<h2 class="page-title">Qu'est ce que l'accessibilité numérique ?</h2>
+<h2 class="page-title">Qu’est ce que l’accessibilité numérique&nbsp;?</h2>
 
 <blockquote>
     <p>La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel.</p>
     <footer>
-        Tim Berners-Lee, directeur du W3C et inventeur du World Wide Web.
+        Tim Berners-Lee, directeur du <abbr title="World Wide Web Consortium">W3C</abbr> et inventeur du World Wide Web.
     </footer>
 </blockquote>
 
@@ -28,11 +28,11 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
 
 &nbsp;
 <div class="sr-only">
-    Les citations suivantes en sont l'illustration&nbsp;:
+    Les citations suivantes en sont l’illustration&nbsp;:
     <ul>
-        <li>Les sous-titres me sont utiles car ma langue maternelle n'est pas le français.</li>
-        <li>C'est utile de ne pas être obligé d'imprimer en couleur pour comprendre cette carte.</li>
-        <li>Après avoir travaillé toute la journée derrière un écran, j'ai plus de difficultés à lire certains textes trop petits.</li>
+        <li>Les sous-titres me sont utiles car ma langue maternelle n’est pas le français.</li>
+        <li>C’est utile de ne pas être obligé d’imprimer en couleur pour comprendre cette carte.</li>
+        <li>Après avoir travaillé toute la journée derrière un écran, j’ai plus de difficultés à lire certains textes trop petits.</li>
     </ul>
 </div>  
 
@@ -84,7 +84,7 @@ Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à 
         <li>Lésions rhumatismales</li>
         <li>Un bras cassé</li>
     </ul>
-** Solutions adaptées&nbsp;:** périphériques adaptés (souris, claviers…)
+** Solutions adaptées&nbsp;:** périphériques adaptés (souris, claviers…), outils de dictée
 </div>
 
 ### Le handicap matériel
