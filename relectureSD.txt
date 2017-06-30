@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-others/inputs/md/editorial.md
 others/inputs/md/index.md
 others/inputs/md/PDF.md
 others/inputs/md/pushmail.md
@@ -212,3 +211,4 @@ web_EN/inputs/html/exemples/files/step1/index.html
 home/inputs/md/index.md
 home/theme/default/css/reco.css
 home/theme/default/js/reco.js
+others/inputs/md/editorial.md
