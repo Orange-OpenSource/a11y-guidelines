@@ -1,4 +1,4 @@
-# Recommandations accessibilité Orange pour l'éditorial
+# Recommandations accessibilité Orange pour l’éditorial
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);
