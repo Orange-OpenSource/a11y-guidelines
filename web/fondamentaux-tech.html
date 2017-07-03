@@ -168,6 +168,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
     &lt;h2&gt;La fibre arrive&amp;nbsp;!&lt;/h2&gt;
         &lt;h4&gt;Êtes-vous éligible&amp;nbsp;?&lt;/h4&gt;
 </code></pre>
+<p><strong>Outil :</strong><br>L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a>, disponible pour <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> et <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, permet d’extraire les titres et de les visualiser sous forme de plan de document.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.3.1</p>
 <h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
@@ -383,26 +384,26 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte pour plus aisément accéder à l’information.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Voir l’exemple <a href="./exemples/zoom/index.html">gestion du zoom, agrandissement de la taille du texte</a> pour plus d’informations.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.4.4</p>
-<h2 id="15-rendre-l-intitul-d-un-lien-compr-hensible-hors-contexte">15. Rendre l’intitulé d’un lien compréhensible hors contexte</h2>
+<h2 id="15-rendre-l-intitul-des-liens-et-des-boutons-compr-hensibles-hors-contexte">15. Rendre l’intitulé des liens et des boutons compréhensibles hors contexte</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
-<p>Rendre compréhensibles les intitulés des liens hors contexte pour tous les utilisateurs, en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
-<p>S’il n’est pas possible de rendre un lien plus explicite, faute de place, mais que l’intitulé du lien actuel est suffisant pour les personnes qui ont accès à l’écran, le texte du lien peut être complété par un contenu supplétif caché ou en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code>, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
-Par exemple dans l’image ci-dessous, les deux liens «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne déficiente visuelle. Par contre quand on voit l’écran, la disposition fait qu’il n’y a pas d’ambiguïté sur le rôle de chaque bouton.</p>
+<p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
+<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, cet intitulé peut être complété par un contenu supplétif caché ou en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code>, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
+Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. Par contre quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens valider dont le libellé doit être explicité"></p>
-<p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé du lien. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
+<p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
 <p><strong>Exemple&nbsp;:</strong>  </p>
 <pre><code class="lang-html">&lt;a href=&quot;…&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
 &lt;a href=&quot;…&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
-<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé du lien.<br>En complément de ces solutions, on pourrait ici également utiliser <strong> un attribut <code>title</code> </strong> pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol du lien avec la souris.</p>
+<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé.<br>En complément de ces solutions, on pourrait ici également utiliser <strong> un attribut <code>title</code> </strong> pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.</p>
 <p><strong>À vérifier&nbsp;: </strong>
-S’assurer que les liens isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
-Une page ne doit pas avoir plusieurs liens dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
+S’assurer que les liens et les boutons isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
+Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
 <p><strong>Objectif utilisateur&nbsp;: </strong>
-Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
+Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l&#39;action du bouton. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
 <p><strong>Objectif technique&nbsp;: </strong>
-Expliciter les liens permet d’améliorer le référencement naturel.</p>
+Expliciter les liens et les boutons permet d’améliorer le référencement naturel.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus de précision.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.9</p>
@@ -452,16 +453,16 @@ Permettre la navigation logique sans piège au clavier dans les pages de l’app
 <h2 id="19-rendre-visible-le-focus-en-toute-circonstance">19. Rendre visible le focus en toute circonstance</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d’attention et en mobilité.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
-<p>Ne pas masquer le focus et si nécessaire le rendre suffisamment visible (par exemple, en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>) sur tous les éléments susceptibles de recevoir celui-ci (liens, boutons, éléments de formulaire). Vous pouvez même amplifier la visibilité du focus afin qu’il soit plus facilement identifiable.</p>
-<p>Lorsqu’un effet est visible sur un élément lors du survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
+<p>Ne pas masquer le focus et si nécessaire accentuez sa visibilité sur tous les éléments focusables par exemple, en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>.
+Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).</p>
+<p>Lorsqu’un effet est visible sur un élément au survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
 <p><strong>À vérifier&nbsp;: </strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
 <p><strong>Objectif utilisateur&nbsp;: </strong>
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).</p>
-<p><strong>Exemple valide&nbsp;:</strong><br>Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».</p>
-<p><img src="./images/focus-ok.png" alt="capture d’écran montrant un lien dont le focus est clairement visible">  </p>
-<p><strong>Exemple non-valide&nbsp;:</strong><br>  Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».</p>
-<p><img src="./images/focus-ko.png" alt="capture d’écran montrant un lien dont le focus n’est pas suffisamment visible">   </p>
+<p><strong>Exemples valides&nbsp;: </strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
+Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
+<img src="images/focus2.png" alt="capture d’écran présentant un comportement personnalisé pour l’affichage du focus"></p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.7</p>
 <h2 id="20-fournir-des-liens-d-vitement">20. Fournir des liens d’évitement</h2>
 <p><strong>Cible&nbsp;: </strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>

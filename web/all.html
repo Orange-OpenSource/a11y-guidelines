@@ -239,6 +239,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
     &lt;h2&gt;La fibre arrive&amp;nbsp;!&lt;/h2&gt;
         &lt;h4&gt;Êtes-vous éligible&amp;nbsp;?&lt;/h4&gt;
 </code></pre>
+<p><strong>Outil :</strong><br>L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a>, disponible pour <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> et <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, permet d’extraire les titres et de les visualiser sous forme de plan de document.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.3.1</p>
 <h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
@@ -454,26 +455,26 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte pour plus aisément accéder à l’information.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Voir l’exemple <a href="./exemples/zoom/index.html">gestion du zoom, agrandissement de la taille du texte</a> pour plus d’informations.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.4.4</p>
-<h2 id="15-rendre-l-intitul-d-un-lien-compr-hensible-hors-contexte">15. Rendre l’intitulé d’un lien compréhensible hors contexte</h2>
+<h2 id="15-rendre-l-intitul-des-liens-et-des-boutons-compr-hensibles-hors-contexte">15. Rendre l’intitulé des liens et des boutons compréhensibles hors contexte</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
-<p>Rendre compréhensibles les intitulés des liens hors contexte pour tous les utilisateurs, en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
-<p>S’il n’est pas possible de rendre un lien plus explicite, faute de place, mais que l’intitulé du lien actuel est suffisant pour les personnes qui ont accès à l’écran, le texte du lien peut être complété par un contenu supplétif caché ou en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code>, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
-Par exemple dans l’image ci-dessous, les deux liens «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne déficiente visuelle. Par contre quand on voit l’écran, la disposition fait qu’il n’y a pas d’ambiguïté sur le rôle de chaque bouton.</p>
+<p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
+<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, cet intitulé peut être complété par un contenu supplétif caché ou en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code>, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
+Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. Par contre quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens valider dont le libellé doit être explicité"></p>
-<p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé du lien. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
+<p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
 <p><strong>Exemple&nbsp;:</strong>  </p>
 <pre><code class="lang-html">&lt;a href=&quot;…&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
 &lt;a href=&quot;…&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
-<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé du lien.<br>En complément de ces solutions, on pourrait ici également utiliser <strong> un attribut <code>title</code> </strong> pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol du lien avec la souris.</p>
+<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé.<br>En complément de ces solutions, on pourrait ici également utiliser <strong> un attribut <code>title</code> </strong> pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.</p>
 <p><strong>À vérifier&nbsp;: </strong>
-S’assurer que les liens isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
-Une page ne doit pas avoir plusieurs liens dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
+S’assurer que les liens et les boutons isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
+Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
 <p><strong>Objectif utilisateur&nbsp;: </strong>
-Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
+Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l&#39;action du bouton. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
 <p><strong>Objectif technique&nbsp;: </strong>
-Expliciter les liens permet d’améliorer le référencement naturel.</p>
+Expliciter les liens et les boutons permet d’améliorer le référencement naturel.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus de précision.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.9</p>
@@ -523,16 +524,16 @@ Permettre la navigation logique sans piège au clavier dans les pages de l’app
 <h2 id="19-rendre-visible-le-focus-en-toute-circonstance">19. Rendre visible le focus en toute circonstance</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d’attention et en mobilité.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
-<p>Ne pas masquer le focus et si nécessaire le rendre suffisamment visible (par exemple, en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>) sur tous les éléments susceptibles de recevoir celui-ci (liens, boutons, éléments de formulaire). Vous pouvez même amplifier la visibilité du focus afin qu’il soit plus facilement identifiable.</p>
-<p>Lorsqu’un effet est visible sur un élément lors du survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
+<p>Ne pas masquer le focus et si nécessaire accentuez sa visibilité sur tous les éléments focusables par exemple, en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>.
+Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).</p>
+<p>Lorsqu’un effet est visible sur un élément au survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
 <p><strong>À vérifier&nbsp;: </strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
 <p><strong>Objectif utilisateur&nbsp;: </strong>
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).</p>
-<p><strong>Exemple valide&nbsp;:</strong><br>Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».</p>
-<p><img src="./images/focus-ok.png" alt="capture d’écran montrant un lien dont le focus est clairement visible">  </p>
-<p><strong>Exemple non-valide&nbsp;:</strong><br>  Focus positionné sur le lien «&nbsp;Apple iPhone 5s argent&nbsp;».</p>
-<p><img src="./images/focus-ko.png" alt="capture d’écran montrant un lien dont le focus n’est pas suffisamment visible">   </p>
+<p><strong>Exemples valides&nbsp;: </strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
+Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
+<img src="images/focus2.png" alt="capture d’écran présentant un comportement personnalisé pour l’affichage du focus"></p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.7</p>
 <h2 id="20-fournir-des-liens-d-vitement">20. Fournir des liens d’évitement</h2>
 <p><strong>Cible&nbsp;: </strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
@@ -755,7 +756,8 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/player.png" alt="capture d’écran d’un lecteur vidéo contenant plusieurs boutons">   </p>
 <h2 id="6-assurer-la-visibilit-du-focus">6. Assurer la visibilité du focus</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand&nbsp;: </strong> lors de la conception graphique et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible à tous moment. Lorsqu’un élément cliquable reçoit le focus (lien, bouton …), ceci doit être visible pour l’utilisateur. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour le rendre plus visible (assurer un contraste suffisant, par exemple) par un effet personnalisé, mais ne doit pas être supprimé. Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus.    </p>
+<p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour être rendu plus visible mais ne doit pas être supprimé. 
+Veiller à fournir un niveau de contraste suffisant (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.</p>
 <p>L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.</p>
 <p><strong>Exemples valides&nbsp;: </strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
@@ -1053,7 +1055,7 @@ Il existe plusieurs lecteurs d’écran, les plus connus sont&nbsp;:</p>
 <p><abbr>NVDA</abbr> est un lecteur d’écran gratuit disponible pour Windows.</p>
 <h3 id="installation">Installation</h3>
 <p>Télécharger le fichier d’installation de <abbr>NVDA</abbr> sur le <a href="http://nvda-fr.org/">site officiel</a>.</p>
-<p>La voix par défaut n’est pas de très bonne qualité mais elle est très réactive. Ce n’est pas indispensable, mais le téléchargement d’une voix de meilleure qualité est conseillé comme celle d’<a href="http://www.nvda-fr.org/voix.php">Hortense</a>. Il suffit ensuite de se rendre dans les préférences de <abbr>NVDA</abbr> pour modifier les paramètres vocaux.</p>
+<p>La voix par défaut n’est pas de très bonne qualité mais elle est très réactive. Ce n’est pas indispensable, mais le téléchargement d’une voix de meilleure qualité est conseillé comme celle d’<a href="https://www.nvda-fr.org/voix/">Hortense</a>. Il suffit ensuite de se rendre dans les préférences de <abbr>NVDA</abbr> pour modifier les paramètres vocaux.</p>
 <h3 id="configuration">Configuration</h3>
 <p>Au premier démarrage, <abbr>NVDA</abbr> est configuré pour vocaliser tout ce que survole le pointeur de la souris. Ce mode est utilisé par certaines personnes malvoyantes qui ont des difficultés à lire les textes affichés à l’écran par exemple. Il est conseillé de désactiver cette option si vous utilisez <abbr>NVDA</abbr> pour faire des tests d’accessibilité sur vos pages. 
 Pour désactiver ce mode de navigation, faites un clic droit sur l’icône de <abbr>NVDA</abbr> dans la barre Windows à côté de l’heure. Puis aller dans <em>Préférences &gt; Paramètres</em> de la souris et désactiver la case «&nbsp;Activer le suivi de la souris&nbsp;».</p>
@@ -1280,189 +1282,6 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="recommandations-accessibilit-pushmail-orange">Recommandations accessibilité pushmail Orange</h1>
-<script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Pushmails"}]);
-});</script>
-
-
-<h2 id="introduction-nbsp-l-accessibilit-des-mails">Introduction&nbsp;: l’accessibilité des mails</h2>
-<p>Les mails au format texte et sans image, comme souvent les mails entre salariés, sont accessibles. Le problème de non accessibilité est plutôt le fait des <i lang="en">push mails</i>. Ces mails, à la mise en forme évoluée (liens, mise en page complexe, illustrations, schémas), permettent la publication de quantité d’informations et sont un outil essentiel de la communication d’entreprise.</p>
-<h3 id="des-solutions-alternatives">Des solutions alternatives</h3>
-<p>Et si la mise en page du <i lang="en">push mail</i> est complexe, que l’on n’a pas la possibilité de rendre le <i lang="en">push mail</i> accessible, il existe des solutions alternatives moins élégantes, mais qui fonctionnent toujours&nbsp;:</p>
-<ul>
-<li>Proposer un lien redirigeant vers une page web </li>
-<li>Mettre en place un lien en début de mail pointant vers un fichier texte ou un fichier Word accessible</li>
-</ul>
-<h3 id="qui-est-impact-nbsp-">Qui est impacté&nbsp;?</h3>
-<ul>
-<li>Les personnes qui ne voient pas <ul>
-<li>synthèse vocale</li>
-<li>plage braille</li>
-</ul>
-</li>
-<li>Les personnes qui voient mal<ul>
-<li>malvoyant, âgé</li>
-<li>contexte visuel contraint</li>
-</ul>
-</li>
-<li>Les personnes qui lisent avec difficulté <ul>
-<li>autre langue maternelle</li>
-<li>contraintes cognitives et illettrisme</li>
-</ul>
-</li>
-<li>Les personnes qui ont des difficultés à manipuler</li>
-<li>Les personnes cumulant des difficultés légères (seniors)</li>
-</ul>
-<h2 id="les-crit-res-respecter">Les critères à respecter</h2>
-<h3 id="consid-ration-g-n-rale">Considération générale</h3>
-<p>Ces critères sont génériques et ne présument pas de la manière de fabriquer les mails, mais supposent que le contenu soit du <abbr>HTML</abbr>, seul format permettant une mise en page complexe. Pour les exemples utilisés dans ces recommandations, nous les avons mis en œuvre dans Word qui semble être l’outil privilégié pour fabriquer les <i lang="en">push mail</i> et les gabarits des <i lang="en">newsletters</i>, en interne Orange. Bien sûr, ces recommandations peuvent être appliquées dans n’importe quel outil permettant de fabriquer des mails.</p>
-<h3 id="simplifier-la-r-daction-du-contenu">Simplifier la rédaction du contenu</h3>
-<p><strong>Pour qui&nbsp;: </strong> tout le monde et en particulier, les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d’attention.  </p>
-<p><strong>Description&nbsp;: </strong><br>Simplifier le rédactionnel pour tous les utilisateurs.</p>
-<p><strong>À vérifier&nbsp;: </strong><br>S’assurer que le rédacteur utilise&nbsp;:</p>
-<ul>
-<li>Des tournures de phrases limpides<ul>
-<li>des phrases courtes et à la construction simple&nbsp;: sujet, verbe, complément</li>
-<li>une idée par phrase</li>
-<li>des mots simples et les mots compliqués doivent être expliqués</li>
-<li>le présent</li>
-<li>de préférence, le style direct et la forme active (pas de subjonctif, pas de conjonctions)</li>
-</ul>
-</li>
-<li>Les caractères typographiques du Français  <ul>
-<li>Tiret - , cadratin —,«&nbsp;guillemets français&nbsp;»</li>
-<li>Accents même aux majuscules (éèêçàïùÉÈÊÇÀÏÙ)
-et n’utilisent pas&nbsp;:</li>
-</ul>
-</li>
-<li>de mots en anglais, de sigles ou abréviations sauf ceux passés dans le langage courant </li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong><br>Permettre aux utilisateurs de comprendre facilement le sens du contenu.</p>
-<h3 id="structurer-s-mantiquement-le-contenu">Structurer sémantiquement le contenu</h3>
-<p><strong>Pour qui&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d’attention.  </p>
-<p><strong>Description&nbsp;: </strong><br>Donner une structure cohérente au contenu rédactionnel grâce à la mise en place&nbsp;:</p>
-<ul>
-<li>de titres (balises <abbr>HTML</abbr> <code>h1</code> jusqu’à <code>h6</code>) </li>
-<li>de listes (balises <abbr>HTML</abbr> <code>ol</code>, <code>ul</code> et <code>li</code>) </li>
-</ul>
-<p><strong>À vérifier&nbsp;: </strong>  </p>
-<ul>
-<li>Les titres doivent être pertinents et non vides.</li>
-<li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d’un titre <code>h2</code> à un titre <code>h4</code>).</li>
-<li>On peut mettre plusieurs <code>h1</code> par mail (se limiter tout de même à deux dans la majorité des cas).</li>
-<li>les listes doivent être de réelles listes de plusieurs éléments et les listes ordonnées doivent être différenciées de celles qui ne le sont pas.</li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong><br>Permettre aux utilisateurs de facilement comprendre et hiérarchiser le contenu.</p>
-<p><strong>Exemple dans Word&nbsp;: </strong><br>Pour donner une structure sémantique au contenu, il faut utiliser la palette des Styles. En donnant un style (titre, emphase, liste…) à une partie de vote contenu, vous modifiez son apparence mais surtout vous lui donnez de la sémantique.
-Cliquer sur le bouton d’ouverture (en bas à droite de l’outil Style dans l’onglet Accueil) ou grâce au raccourci clavier <kbd>Ctrl + Alt + Maj + s</kbd> permet l’ouverture du panneau Style.</p>
-<p><img src="images/style_word.jpg" alt=" "></p>
-<p>  Vous avez accès à des listes (comme avec les boutons dans le bandeau «&nbsp;Accueil&nbsp;» dans le menu «&nbsp;Paragraphe&nbsp;»), aux titres et à toute une série de styles. De préférence utiliser les styles par défaut proposés, il en existe suffisamment. </p>
-<p><img src="images/palette_style.jpg" alt=" "></p>
-<h3 id="simplifier-la-pr-sentation">Simplifier la présentation</h3>
-<p><strong>Pour qui&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou avec un déficit d’attention.  </p>
-<p><strong>Description&nbsp;: </strong><br>Simplifier la présentation du contenu et respecter les bonnes pratiques pour ce qui est de la présentation. </p>
-<p><strong>À vérifier&nbsp;: </strong><br>Pour assurer une lecture facile&nbsp;:</p>
-<ul>
-<li>Aligner le texte à gauche, mais ne pas le justifier</li>
-<li>Utiliser une police de caractères facilement lisible en corps 12 pixels minimum</li>
-<li>Mettre  en place une ponctuation simple</li>
-<li>Ne pas mettre d’italiques, ni de phrases en majuscules, mais une majuscule en début de phrase</li>
-<li>Éviter les fonds texturés (images)</li>
-<li>Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&nbsp;Paragraphe &gt; Espacement&nbsp;» ou «&nbsp;Retrait&nbsp;» dans Word)</li>
-<li>Éviter les tableaux de mise en page ou de données</li>
-<li>Mettre en place un indicateur de fin de mail (par exemple, une image indiquant«&nbsp;fin de mail&nbsp;», un texte blanc sur fond blanc «&nbsp;fin de mail&nbsp;»)</li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong>
-S’assurer que la présentation n’empêche pas l’accès au contenu et à sa compréhension.</p>
-<h3 id="donner-une-alternative-aux-images">Donner une alternative aux images</h3>
-<p><strong>Pour qui&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles ou cognitives.  </p>
-<p><strong>Description&nbsp;: </strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (images, icônes…). 
-Mettre pour toute image (balise <code>img</code> en <abbr>HTML</abbr>) une alternative pertinente (un attribut <code>alt</code> en <abbr>HTML</abbr>)&nbsp;: </p>
-<ul>
-<li>Pour les images cliquables&nbsp;: préciser la fonction / la cible du lien dans l’alternative,</li>
-<li>Pour les images porteuses d’information&nbsp;: mettre une alternative décrivant l’information contenue dans l’image,</li>
-<li>Pour les images contenant du texte&nbsp;: mettre une alternative reprenant au moins le texte de l’image,</li>
-<li>Pour les images décoratives&nbsp;: mettre une alternative vide,</li>
-<li>Pour les images dont le contenu de l’alternative serait trop long (schémas, graphes…), mettre à proximité de l’image décrite soit sa description sous forme d’une texte dans le mail, soit un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.</li>
-</ul>
-<p><strong>À vérifier&nbsp;: </strong><br>Toute image doit posséder une alternative qui ne reflète que le contenu informatif qu’elle porte.
-Pour les graphes, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffre en bas du mail, par exemple.
-Une alternative doit être&nbsp;:</p>
-<ul>
-<li>Précise et équivalente au contenu de l’image ou sa fonction</li>
-<li>Succincte : quelques mots à deux phrases courtes</li>
-<li>Non redondante&nbsp;: ne pas fournir la même information que dans le texte environnant</li>
-<li>Sans texte générique, pas besoin d’alternative du type «&nbsp;image de…&nbsp;», «&nbsp;graphique sur…&nbsp;», «&nbsp;lien vers…&nbsp;», etc.</li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong><br>Permettre l’accès à l’information véhiculée dans une image pour des utilisateurs qui n’y ont pas accès.
-Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).</p>
-<p><strong>Exemple dans Word&nbsp;: </strong>  </p>
-<p>Il faut donner une alternative textuelle (texte de replacement) à toute image dans Word. Pour cela, il faut accéder aux propriétés de cette image. Sélectionner l’image, faire un clic droit, puis «&nbsp;Format de l’image&nbsp;» et «&nbsp;Texte de remplacement&nbsp;».</p>
-<p><img src="images/menu_context_im.jpg" alt=" "> </p>
-<p>Ne pas remplir le champ «&nbsp;Titre&nbsp;», le laisser vide. En revanche, saisir dans le champ «&nbsp;Description&nbsp;» (seul champ lu par une synthèse vocale) le texte alternatif donnant l’information équivalente à celle contenue dans l’image. Si l’image ne porte pas d’information, laisser les deux champs «&nbsp;Titre&nbsp;» et «&nbsp;Description&nbsp;» vides.</p>
-<p><img src="images/format_img.jpg" alt=" "></p>
-<h3 id="sp-cifier-la-langue-du-mail-et-les-changements-ventuels">Spécifier la langue du mail et les changements éventuels</h3>
-<p><strong>Pour qui&nbsp;: </strong> les personnes déficientes visuelles.  </p>
-<p><strong>Description&nbsp;: </strong><br>Spécifier la langue principale du document (l’attribut <code>lang</code> et/ou <code>xml:lang</code> dans la balise <code>html</code>). 
-Préciser également la langue d’un contenu exprimé dans une langue autre que la langue principale (l’attribut <code>lang</code> et/ou <code>xml:lang</code> dans l’élément <abbr>HTML</abbr> contenant l’expression en langue étrangère).  </p>
-<p><strong>À vérifier&nbsp;: </strong><br>Pour les mots ou les expressions en langue étrangère passés dans l’usage courant (Google, newsletter…) ou les noms propres, ne pas indiquer de changement de langue.</p>
-<p><strong>Objectif&nbsp;: </strong><br>Cette indication permet à la synthèse vocale d’adapter la prononciation en fonction de la langue utilisée.</p>
-<p><strong>Exemple pour une page en français&nbsp;: </strong>  </p>
-<ul>
-<li>pour du <abbr>HTML</abbr>&nbsp;: <code>&lt;html lang=&quot;fr&quot;&gt;</code></li>
-<li>pour du XHTML&nbsp;: <code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;</code></li>
-</ul>
-<p><strong>Exemple de changement de langue&nbsp;: </strong><br><code>découvrir Orange &lt;span lang=&quot;fr&quot;&gt;live&lt;/span&gt; TV</code></p>
-<p><strong>Exemple pour Word&nbsp;:</strong>
-Pour modifier la langue du document ou d’une partie du contenu (après sélection de ce contenu), on utilise dans l’onglet «&nbsp;Révision&nbsp;», l’élément «&nbsp;Langue&nbsp;». </p>
-<p><img src="images/revision.jpg" alt=" "> </p>
-<p>Dans le sous-menu de «&nbsp;Langue&nbsp;», on clique sur «&nbsp;Définir la langue de vérification&nbsp;» et dans la fenêtre «&nbsp;Langue&nbsp;», on choisit la langue voulue.</p>
-<p><img src="images/langue.jpg" alt=" "> </p>
-<h3 id="fournir-une-mise-en-page-des-tableaux-accessible">Fournir une mise en page (des tableaux) accessible</h3>
-<p><strong>Pour qui&nbsp;: </strong> les personnes déficientes visuelles.  </p>
-<p><strong>Description&nbsp;: </strong><br>Simplifier la mise en page, bien que les clients de messagerie (Outlook inclus) obligent à utiliser une mise en page en tableau.</p>
-<p><strong>À vérifier&nbsp;: </strong><br>Globalement, ne pas utiliser de mise en page complexe (fusion de cellules d’un tableau, multicolonnage…), </p>
-<ul>
-<li>Éviter d’imbriquer les tableaux de mise en page (grand maximum, 2 niveaux d’imbrication), mais aussi&nbsp;:<ul>
-<li>Ne pas fusionner les cellules d’un tableau, mais utiliser plusieurs tableaux plus simples</li>
-<li>Pas de cellules vides</li>
-<li>Pas d’images de fond </li>
-</ul>
-</li>
-<li>Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas)</li>
-<li>Éviter les tableaux de données, les graphiques ou les schémas complexes</li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong><br>Permettre, notamment aux utilisateurs de lecteurs d’écran, de comprendre facilement le contenu quelle que soit la mise en page utilisée.</p>
-<h3 id="rendre-accessibles-les-couleurs-et-le-contraste">Rendre accessibles les couleurs et le contraste</h3>
-<p><strong>Pour qui&nbsp;: </strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.   </p>
-<p><strong>Description&nbsp;: </strong>  </p>
-<ul>
-<li>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.</li>
-<li>La couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle…) ne doit pas être la seule façon de véhiculer de l’information, d’indiquer une action, de solliciter une réponse ou de distinguer un élément.</li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong><br>Un niveau de contraste insuffisant est préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
-De même, utiliser des informations sensorielles (forme, taille, son, orientation, localisation visuelle…) seules sans alternative empêche ceux qui ne peuvent les interpréter d’agir efficacement voire d’agir tout simplement. </p>
-<p><strong>Outil&nbsp;: </strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/"><i lang="en">Colour Contrast Analyser</i></a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
-<h3 id="identifier-les-liens-et-leurs-cibles">Identifier les liens et leurs cibles</h3>
-<p><strong>Pour qui&nbsp;: </strong> tout le monde, en particulier les malvoyants, les non-voyants et les personnes ayant des difficultés de lecture.</p>
-<p><strong>Description&nbsp;: </strong><br>Rendre les liens identifiables et compréhensibles hors contexte</p>
-<p><strong>À vérifier&nbsp;: </strong>  </p>
-<ul>
-<li>Souligner les liens pour éviter aux personnes de faire un effort cognitif pour les identifier et ne pas obliger les personnes déficientes motrices (utilisant le clavier) ou malvoyantes à ne les trouver qu’en naviguant dans tout le contenu.</li>
-<li>Ne pas utiliser des intitulés comme «&nbsp;Cliquez ici&nbsp;», «&nbsp;Pour en savoir plus&nbsp;», «&nbsp;Suivez ce lien&nbsp;», «&nbsp;Plus de détails&nbsp;», «&nbsp;Lire la suite&nbsp;», mais des intitulés qui identifient  bien leur cible</li>
-<li>Indiquer l’ouverture de toute nouvelle fenêtre (adresse e-mail, site internet…) en rajoutant à l’intitulé du texte «&nbsp;nouvelle fenêtre&nbsp;» par exemple, car le multifenêtrage qui peut être déjà troublant pour un voyant et tout simplement bloquant pour un non-voyant.</li>
-</ul>
-<p><strong>Objectif&nbsp;: </strong><br>Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
-<h3 id="word-et-accessibilit-quelques-liens">Word et accessibilité, quelques liens</h3>
-<ul>
-<li><a href="http://www.webaim.org/techniques/word/"><i lang="en">WebAIM: Microsoft Word - Creating Accessible Documents</i></a> </li>
-<li><a href="https://support.office.com/en-us/article/Creating-accessible-Word-documents-D9BF3683-87AC-47EA-B91A-78DCACB3C66D"><i lang="en">Make your Word documents accessible – Microsoft Office Support</i></a></li>
-<li><a href="http://www.anysurfer.be/fr/en-pratique/documents/word">Accessibilité des documents Word (en français)</a></li>
-</ul>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 
           
         </div>

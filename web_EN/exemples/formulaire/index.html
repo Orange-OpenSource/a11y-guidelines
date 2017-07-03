@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form - Orange web accessibility guidelines</title>
+    <title>Forms - Orange web accessibility guidelines</title>
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
       <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -54,7 +54,7 @@
                               <label for="serial-number">Please enter the serial number *</label>
                               <input placeholder="e.g.: TS-4521" type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number" aria-describedby="helpblock" aria-required="true">
                         </div>
-                        <p id="helpblock" class="help-block">Serial number beginning with "TS-" followed by 4 digits.</p>
+                        <p id="helpblock" class="help-block">Serial number beginning with “TS-” followed by 4 digits.</p>
                       
                         <div class="form-group">                                    
                               <label for="address">Address *</label>
@@ -73,19 +73,19 @@
      
       <h2>Implementation</h2>
       <h3>Add label to form fields</h3>
-      <p>All form fields should be labeled with an appropriate label. Thus, the screen reader will automatically vocalize the form field label.</p>
-      <p>Additionally, field labels (<code>label</code>) must be visually close to their associated field in order to facilitate the visually impaired or cognitive impaired or having trouble concentrating.</p>
+      <p>All form fields should be labelled with an appropriate label. Thus, the screen reader will automatically vocalize the form field label.</p>
+      <p>Additionally, field labels (<code>label</code>) must be visually close to their associated field in order to facilitate the visually impaired or cognitive impaired or people having trouble concentrating.</p>
       <p>To label a field, there are several solutions.</p>
       
       <h4>Using the <code>label</code> tag</h4>
-      <p>That is the standard solution, it should be used as a priority, it is supported by most of assistive tools.</p>
-      <p>Use a <code>label</code> tag and its <code>for</code> attribute with the id of the associated form field. It is important for screen reader users, but it also improves the usability of the form. Indeed, when the label is correctly associated with the form field, it becomes possible to tick a check box or select a radio button by clicking on its label.</p>
+      <p>This is the standard solution, it should be used in priority, as it is supported by most of the assistive tools.</p>
+      <p>Use a <code>label</code> tag and its <code>for</code> attribute with the `id` of the associated form field. It is important for screen reader users, but it also improves the usability of the form: when the label is correctly associated with the form field, it becomes possible to tick a check box or select a radio button by clicking on its label.</p>
       <pre><code>
             &lt;input type="checkbox" <span class="important">id="tos"</span>&gt;
             &lt;label <span class="important">for="tos"</span>&gt;Please accept the TOS.&lt;/label&gt;
       </code></pre>           
     
-      <p>In rare cases, it may be not necessary to display a label (e.g. search field). 
+      <p>In rare cases, it may not be necessary to display a label (e.g. search field). 
           You should still provide a label for screen readers and hide it using one of the following 3 methods:</p>
       
       <h4>Accessible hiding</h4>
@@ -113,7 +113,7 @@
       &lt;input class="form-control" id="complement" type="text"&gt;</strong>
       </code></pre>
       
-      <p>Accessible hiding lets you hide the item on the screen while maintaining its vocalization by assistive tools. Caution, do not use CSS conventional hiding (<code>display: none;</code> or <code>visibility: hidden;</code>) because the item will also be hidden for screen readers.</p>
+      <p>Accessible hiding lets you hide the item on the screen while maintaining its vocalization by assistive tools. Caution, do not use <abbr>CSS</abbr> conventional hiding (<code>display: none;</code> or <code>visibility: hidden;</code>) because the item will also be hidden for screen readers.</p>
       <p>See <a href="../masquage/index.html">the accessible hiding example</a> for more information.</p>
         
       <h4>Using the <code>title</code> attribute</h4>
@@ -123,10 +123,10 @@
       </code></pre>     
       <p><strong>Note:</strong> the <code>title</code> attribute positioned elsewhere than on a form field (e.g. in an image) does not give you the certainty that its content will be vocalized by a screen reader.</p>
      
-      <h4>Using the <code>aria-label</code> or <code>aria-labelledby</code> ARIA attribute</h4>
+      <h4>Using the <code>aria-label</code> or <code>aria-labelledby</code> <abbr>ARIA</abbr> attribute</h4>
       <p>The <code>aria-label</code> and <code>aria-labelledby</code> attributes can be used to label the form fields and is supported on the main browsers:</p>
       <ul>
-            <li>The <code>aria-labelledby</code> attribute is used to specify the id of an element that will be used to label the field.</li>
+            <li>The <code>aria-labelledby</code> attribute is used to specify the `id` of an element that will be used to label the field.</li>
             <li>The <code>aria-label</code> attribute is used to directly specify a label as a string.</li>
       </ul>
       
@@ -145,17 +145,17 @@
            </code></pre>
      
     <h4><code>placeholder</code> and <code>label</code></h4>
-    <p>The <code>placeholder</code> (hint) attribute cannot be used instead of a <code>label</code>. Indeed, the text of <code>placeholder</code> which appears in the field has usually:</p>
+    <p>The <code>placeholder</code> (hint) attribute cannot be used instead of a <code>label</code>. Indeed, the text of <code>placeholder</code> which appears in the field poses problems:</p>
     <ul> 
-          <li>not enough contrast</li>
-          <li>disappears when something is typed on the field (causes difficulties for cognitive impaired)</li>
-          <li>when it does not disappear, it must be done manually by the user (causes difficulties for the motor disabled)</li>
+          <li>It usually does not have enough contrast.</li>
+          <li>It disappears when something is typed on the field (causes difficulties for cognitive impaired).</li>
+          <li>When it does not disappear, it must be done manually by the user (causes difficulties for the motor disabled).</li>
           <li><code>placeholder</code> is not always read by assistive technology.</li>
-          <li>prevents the user to verify the input before validating if used instead of the label</li>
-          <li>makes error corrections difficult if no label displayed</li>
-          <li>makes them less visible than the input fields without <code>placeholder</code></li>
+          <li>It prevents the user from verifying the input before validating if used instead of the label.</li>
+          <li>It makes error corrections difficult if no label is displayed.</li>
+          <li>It makes them less visible than the input fields without <code>placeholder</code></li>
     </ul>
-    <p>In contrast, the <code>placeholder</code> can guide the user, helping to fill a field (for example, offer the expected format or value), do not hesitate to use it in this situation.</p>
+    <p>In contrast, the <code>placeholder</code> can guide the user, helping to fill a field (for example by describing the expected format or value): do not hesitate to use it in this situation.</p>
     <div class="form-group">                                    
         <label for="serial-number2">Please enter the serial number *</label>
         <input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number2" aria-describedby="helpblock" aria-required="true" placeholder="e.g. TS-0000">
@@ -170,8 +170,8 @@
      
      <h3>Specify the required fields</h3>
      
-     <p>You must, of course, clearly indicate to any user that a field is mandatory. This can be done using a distinctive sign (indication, pictogram, image, etc.) but also with a simple text (e.g. "mandatory") in the field <code>label</code>. If necessary, add a mention at the beginning of the form to indicate that the symbol or pictogram indicates a required field.</p>
-     <p>Required fields must be provided in the code using the <code>required</code> HTML5 attribute or the <code>aria-required</code> ARIA attribute especially for the visually impaired.</p>
+     <p>You must, of course, clearly indicate to any user that a field is mandatory. This can be done using a distinctive sign (indication, pictogram, image, etc.) but also with a simple text (e.g. “mandatory”) in the field <code>label</code>. If necessary, add a mention at the beginning of the form to indicate that the symbol or pictogram indicates a required field.</p>
+     <p>Required fields must be provided in the code using the <code>required</code> <abbr>HTML5</abbr> attribute or the <code>aria-required</code> <abbr>ARIA</abbr> attribute, especially for the visually impaired.</p>
      
      <pre><code>
       &lt;input type="text" name="phone" required&gt;
@@ -185,11 +185,11 @@
             &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
             &lt;input type="text" id="serial-number" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
       &lt;/div&gt;
-      &lt;span <span class="important">id="helpblock"</span> class="help-block"&gt;Serial number starting with "TS-" followed by for digits (e.g. "TS-4521").&lt;/span&gt;           
+      &lt;span <span class="important">id="helpblock"</span> class="help-block"&gt;Serial number starting with “TS-” followed by for digits (e.g. “TS-4521”).&lt;/span&gt;           
      </code></pre>
      
      <h3>Grouping similar information</h3>
-     <p>The fields of the same kind shall be put together if necessary (fields with the same label or with a tag not explicit enough), using a <code>fieldset</code> tag. The first child of the <code>fieldset</code> must be an explicit legend (<code>legend</code> tag). The <code>fieldset/legend</code> is necessary, particularly when the <code>legend</code> is useful for the understanding or the differentiation of the (distinguish identical <code>label</code> in the same form) <code>label</code> tags included in the <code>fieldset</code>.</p>  
+     <p>Fields of the same kind shall be grouped together if necessary (fields with the same label or with a tag not explicit enough), using a <code>fieldset</code> tag. The first child of the <code>fieldset</code> must be an explicit legend (<code>legend</code> tag). The <code>fieldset</code>/<code>legend</code> pair is necessary, particularly when the <code>legend</code> is useful for the understanding or the differenciation of otherwise undistinguishable labels using the <code>label</code> tags included in the <code>fieldset</code>.</p>  
       
      <pre><code>
       &lt;fieldset&gt;                                    
@@ -233,7 +233,7 @@
           
      <h4>Warn the user in case of input error</h4>
      <p>If input errors prevent validation of the form, the user must be warned. Often messages appear on the screen, but by default they are not vocalized by the screen reader. One solution is to automatically move the focus in the first field containing an error. This will vocalize the label(s) of the concerned input field.</p>
-     <p>In this accessible form example, error messages are reported as <code>label</code> and are associated with input fields. Thus, when the focus moves in a field, the screen reader vocalize the field label and the associated error message.</p>
+     <p>In this accessible form example, error messages are reported as <code>label</code> and are associated with input fields. Thus, when the focus moves in a field, the screen reader vocalizes the field label and the associated error message.</p>
      <p>This mechanism is supported out of the box by the <a href="http://jqueryvalidation.org/">validate</a> jQuery plugin.</p>
      
      <pre><code>
@@ -242,21 +242,21 @@
       &lt;label <span class="important">for="serial-number"</span> class="error" id="serial-number-error"&gt;Serial number is mandatory.&lt;/label&gt;            
      </code></pre>
      
-      <p><strong>Please note</strong>, although it is perfectly valid to use multiple label for a single form field, it is for the time advised to double with an <code>aria-labelledby</code> attribute. Read <a href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/">Steve Faulkner</a> blog post for more information on the subject.</p>
+      <p><strong>Please note</strong>, although it is perfectly valid to use multiple labels for a single form field, it is for the time advised to double it with an <code>aria-labelledby</code> attribute. Read <a href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/">Steve Faulkner’s blog post for more information</a>.</p>
 
       <pre><code>      
-      &lt;label id="serie-label" for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
+      &lt;label id="serie-label" for="numero-serie"&gt;Please enter the serial number *&lt;/label&gt;
       &lt;input aria-invalid="true" class="error" <span class="important">aria-labelledby="serie-label serie-error"</span> id="numero-serie" aria-describedby="helpblock" aria-required="true" type="text"&gt;
-      &lt;label id="serie-error" for="numero-serie" class="error" id="numero-serie-error"&gt;Le champ numéro de série est obligatoire.&lt;/label&gt;                    
+      &lt;label id="serie-error" for="numero-serie" class="error" id="numero-serie-error"&gt;Serial number is mandatory.&lt;/label&gt;                    
      </code></pre>
 
      <h4>Display explicit error messages and, if necessary, suggest corrections</h4>
-     <p>The error messages should be relevant and, if necessary, provide valid input examples</p>
+     <p>Error messages should be relevant and, if necessary, provide valid input examples.</p>
      <p><strong>Do:</strong><br>
-     <img alt="screenshot of a form displaying error messages valid" src="../../images/formulaire-ok.png">
+     <img alt="Screenshot of a form displaying valid error messages" src="../../images/formulaire-ok.png">
      </p>
-     <p><strong>Don't:</strong><br>
-     <img alt="screenshot of a form displaying non-valid error messages" src="../../images/formulaire-ko.png">          
+     <p><strong>Don’t:</strong><br>
+     <img alt="Screenshot of a form displaying non-valid error messages" src="../../images/formulaire-ko.png">          
     </p>
     </main>
 

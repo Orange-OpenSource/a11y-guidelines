@@ -76,7 +76,7 @@ $(document).ready( function () {
 
   // Ajout d'ancres sur les titres
   $("h1, h2" ).wrapInner(function () {
-   return '<a class="anchor" href="#' + $(this).attr("id") + '"></a>';
+   return '<a tabindex="-1" role="presentation" class="anchor" href="#' + $(this).attr("id") + '"></a>';
   });
 
   if (window.location.search.indexOf('print') !== -1) {
@@ -92,7 +92,7 @@ $(document).ready( function () {
     if (app.scrollTimer) {
       window.clearTimeout(app.scrollTimer);
     }
-    app.scrollTimer = window.setTimeout(() => {
+    app.scrollTimer = window.setTimeout(function () {
       if ($(this).scrollTop() > 50) {
           $('#back-to-top').fadeIn();
             $('#back-to-top').tooltip('show');

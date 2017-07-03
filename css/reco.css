@@ -3,6 +3,12 @@ body {
   background-color: #f6f6f6;
 }
 
+pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+}
+
 .container-fluid {
   margin: 0;
 }
@@ -548,4 +554,28 @@ h1:before, h2:before {
 
 .subtitles ul {
   padding: 0; 
+}
+blockquote p::before {
+  content: open-quote;
+    font-weight: bold;
+    font-size:2rem;
+}
+blockquote p::after {
+    content: close-quote;
+    font-weight: bold;
+    font-size:2rem;    
+}
+blockquote p {
+  padding-left: 0 !important;
+}
+blockquote {
+  padding: 1rem;  
+  quotes: "«\00A0" "\00A0»";
+  background-color: #fff;
+  padding: 0 0 0 1rem;
+  margin-bottom: 0;
+  font-weight: bold;  
+}
+blockquote footer {
+  font-weight: normal;
 }

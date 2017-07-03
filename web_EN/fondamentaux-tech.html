@@ -161,7 +161,8 @@ Page with a break in the heading hierarchy h2 → h4:</p>
 &lt;h2&gt;News&lt;/h2&gt;
 &lt;h2&gt;Fiber broadband is coming!&lt;/h2&gt;
 &lt;h4&gt;Check eligibility&lt;/h4&gt;
-</code></pre><p><strong>Reference:</strong> <abbr>WCAG</abbr> 1.3.1</p>
+</code></pre><p><strong>Tool :</strong><br><a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a> extension, available for <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> and <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, extract and display page titles for the current page.</p>
+<p><strong>Reference:</strong> <abbr>WCAG</abbr> 1.3.1</p>
 <h2 id="3-provide-enough-contrast-between-text-and-background">3. Provide enough contrast between text and background</h2>
 <p><strong>Target: </strong> everyone, especially the mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong><br>The contrast between the text and its background should be high enough.
@@ -385,10 +386,10 @@ Blocking point: an image without textual description is unusable by people with 
 <p>Allow users (visually impaired, using a device outdoors, elderly people…) to increase the font size so they can access easily the information.</p>
 <p><strong>Example:</strong><br>See the example <a href="./exemples/zoom/index.html">handling zoom, increasing the text size</a> for more details.</p>
 <p><strong>Reference:</strong> <abbr>WCAG</abbr> 1.4.4</p>
-<h2 id="15-link-label-must-be-understandable-out-of-context">15. Link label must be understandable out of context</h2>
+<h2 id="15-link-and-button-labels-must-be-understandable-out-of-context">15. Link and button labels must be understandable out of context</h2>
 <p><strong>Target: </strong> everyone, especially people with visual impairments, cognitive limitations or attention difficulties.<br><strong>When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
-<p>Make the link labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  </p>
+<p>Make the link and button labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  </p>
 <p>If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, the link label can have an extra hidden text or an <code>aria-label</code> or <code>aria-labelledby</code> attribute, specifically for screen reader users.
 For example, in the image below, the two “next” links are not explicit enough for a person with visual impairments. However, when one sees the screen, the positioning makes obvious the function of each button.</p>
 <p><img src="./images/liens-valider.png" alt="screenshot showing two valid links that should be clarified"></p>
