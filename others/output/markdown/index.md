@@ -1,4 +1,4 @@
-# Recommandations accessibilité Orange pour l'éditorial
+# Recommandations accessibilité Orange pour l’éditorial
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);
@@ -8,6 +8,8 @@ Les recommandations suivantes décrivent les règles spécifiques à respecter e
 - [Rédiger des documents Word accessibles](./word.html)&nbsp;: section consacrée à la rédaction de documents Word accessibles.
 
 - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.
+
+- [Rédiger des documents PDF](./pdf.html)&nbsp;: section consacrée à la rédaction de documents PDF accessibles.
 
 - [Rédiger des emails accessibles](./pushmail.html)&nbsp;: section consacrée à la rédaction de «&nbsp;<i lang="en">pushmail</i>&nbsp;» accessibles.
 
