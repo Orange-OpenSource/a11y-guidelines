@@ -707,7 +707,20 @@ Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas
 
 **Référence&nbsp;:** WCAG 3.2.1, 3.2.2
 
-## 25. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
+## 25. Eviter les captcha
+**Cible&nbsp;: ** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Quand&nbsp;: ** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur: 
+- Double authentification
+- Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur
+- Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne
+- Un contrôle permettant de s'assurer qu'une même combinaison IP/User agent ne tente pas de soumettre le formulaire plus de N fois par seconde.
+
+Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel clasique...
+
+## 26. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
 **Description&nbsp;:**
@@ -796,7 +809,10 @@ Pour une page qui n’est pas en <abbr>HTML</abbr>5, ajouter les <i lang="en">la
 </body>
 ```
 
-**Référence WCAG&nbsp;:** 3.2.3., 3.2.4
+**Référence WCAG&nbsp;:** 3.2.3., 3.2.4  
+
+&nbsp;
+
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

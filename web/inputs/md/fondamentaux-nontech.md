@@ -263,7 +263,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
-**Description&nbsp;:**
+**Description&nbsp;:**  
 Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.
 
 **À vérifier&nbsp;:** 
@@ -276,12 +276,31 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.
 
 **Exemple valide&nbsp;:**  
+
 ![capture d’écran du site 100% pratique](images/groupement.jpg)  
+&nbsp;  
 Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.
 
 **Exemple non-valide&nbsp;:**  
+
 ![capture d’écran du site fnac.com](images/groupement2.jpg)  
+&nbsp;  
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
+
+## 15. Eviter les captcha
+**Cible&nbsp;: ** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Quand&nbsp;: ** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur: 
+- Double authentification
+- Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur
+- Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne
+- Un contrôle permettant de s'assurer qu'une même combinaison IP/User agent ne tente pas de soumettre le formulaire plus de N fois par seconde.
+
+Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel clasique...
+
+&nbsp;
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
