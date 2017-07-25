@@ -248,8 +248,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <p><img src="images/skiplink.png" alt="capture d’écran du site orange.com"></p>
 <h2 id="14-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
-<p><strong>Description&nbsp;:</strong>
-Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
+<p><strong>Description&nbsp;:</strong><br>Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier&nbsp;:</strong> </p>
 <ul>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
@@ -258,8 +257,21 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
-<p><strong>Exemple valide&nbsp;:</strong><br><img src="images/groupement.jpg" alt="capture d’écran du site 100% pratique"><br>Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
-<p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com"><br>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
+<p><strong>Exemple valide&nbsp;:</strong>  </p>
+<p><img src="images/groupement.jpg" alt="capture d’écran du site 100% pratique"><br>&nbsp;<br>Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
+<p><strong>Exemple non-valide&nbsp;:</strong>  </p>
+<p><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com"><br>&nbsp;<br>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
+<h2 id="15-eviter-les-captcha">15. Eviter les captcha</h2>
+<p><strong>Cible&nbsp;: </strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur: </p>
+<ul>
+<li>Double authentification</li>
+<li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur</li>
+<li>Mise à disposition d&#39;un support téléphonique afin de s&#39;assurer que le client est une vraie personne</li>
+<li>Un contrôle permettant de s&#39;assurer qu&#39;une même combinaison IP/User agent ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
+</ul>
+<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel clasique...</p>
+<p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
