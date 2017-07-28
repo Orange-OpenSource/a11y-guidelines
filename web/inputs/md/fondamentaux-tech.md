@@ -582,6 +582,19 @@ Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visib
 
 Lorsqu’un effet est visible sur un élément au survol de la souris (`:hover` en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (`:focus`).
 
+Il est possible, avec du code Javascript, de n'afficher le outline que lors d'une navigation au clavier (c'est à dire de ne pas afficher le outline lors d'un clic souris, qui active également l'état `:focus`) :
+```javascript
+var head = document.head || document.getElementsByTagName('head')[0];
+var axsStyles = head.appendChild(document.createElement('style'));
+document.addEventListener('mousedown', function() {
+	axsStyles.innerHTML = '* {outline:none !important}';
+});
+document.addEventListener('keydown', function() {
+	axsStyles.innerHTML = '';
+});
+```
+
+<a href="https://codepen.io/paipai/pen/jwLyzK">Demonstration de la visibilité du focus à la navigation clavier uniquement</a>
 
 **À vérifier&nbsp;: **
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété `outline` (qui permet de visualiser le focus) est désactivée (`outline: none;`), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.
