@@ -33,10 +33,10 @@
       <h1>Dropdown menu</h1>
 
       <h2>Introduction</h2>
-      <p>In this example we will use the <a href="http://boosted.orange.com/components/#dropdowns">drop-down menu</a> available in the <a href="http://boosted.orange.com/">boosted</a> library. This library based on bootstrap allows you to quickly create UI components branded with the Orange colors.</p>
+      <p>In this example we will use the <a href="http://boosted.orange.com/components/#dropdowns">drop-down menu</a> available in the <a href="http://boosted.orange.com/">Boosted</a> library. This library based on Bootstrap allows you to quickly create <abbr title="User Interface">UI</abbr> components branded with the Orange colours.</p>
 
       <h2>Final example</h2>
-      <p>This is how the dropdown looks with our library.</p>
+      <p>This is how the drop-down looks with our library.</p>
 
       <!-- Final menu -->
       <div class="dropdown">
@@ -73,37 +73,37 @@
       </code></pre>
 
       <h2>Testing</h2>
-      For this menu to be accessible it must be usable with a mouse, keyboard and screen reader.
+      <p>For this menu to be accessible, it must be usable with a mouse, keyboard and screen reader.</p>
 
       <h3>Keyboard navigation</h3>
        <dl>
-         <dt>Move the focus on the "My Account" using the <code>TAB</code> key and press the "enter" key.</dt>
+         <dt>Move the focus to “My Account” using the <kbd>Tab</kbd> key and press the <kbd>Enter</kbd> key.</dt>
          <dd>The menu opens.</dd>
-         <dt>Use the up / down arrows.</dt>
-         <dd>These allow you to navigate on the different menu items.</dd>
-         <dt>Press <code>Escape</code>.</dt>
-         <dd>The menu closes. On closing, the focus is automatically repositioned on the button that opened the menu</dd>
+         <dt>Use the <kbd>up</kbd> / <kbd>down</kbd> arrows.</dt>
+         <dd>These allow you to navigate the different menu items.</dd>
+         <dt>Press <kbd>Escape</kbd>.</dt>
+         <dd>The menu closes. On closing, the focus is automatically repositioned onto the button that opened the menu.</dd>
          <dt></dt>
       </dl>
 
       <h3>Screen reader navigation</h3>
        <dl>
-         <dt>Position on the "My Account"</dt>
-         <dd>The screen reader says there is a dropdown menu, and vocalize the dropdown state (open or closed).</dd>
-         <dt>Press the enter key</dt>
+         <dt>Position the cursor on “My Account”.</dt>
+         <dd>The screen reader says there is a drop-down menu, and vocalizes the drop-down state (open or closed).</dd>
+         <dt>Press the <kbd>Enter</kbd> key.</dt>
          <dd>The menu opens, the first item is selected. This element is automatically vocalized by the screen reader.</dd>
-         <dt>Use the up / down arrows.</dt>
-         <dd>These allow you to navigate on the different menu items.</dd>
-         <dt>Select a menu item using the enter key</dt>
-         <dd>The menu closes. As the focus is placed automatically, the screen reader again vocalize the menu button, and its state.</dd>
+         <dt>Use the <kbd>up</kbd> / <kbd>down</kbd> arrows.</dt>
+         <dd>These allow you to navigate to the different menu items.</dd>
+         <dt>Select a menu item using the <kbd>Enter</kbd> key.</dt>
+         <dd>The menu closes. As the focus is repositioned automatically, the screen reader again vocalizes the menu button, and its state.</dd>
        </dl>
 
-       <h2>ARIA attributes</h2>
-       <p>If you do not already use an accessible dropdown component, you will need to use some ARIA attributes in order to be correctly vocalized by the screen reader.</p>
+       <h2><abbr>ARIA</abbr> attributes</h2>
+       <p>If you do not already use an accessible drop-down component, you will need to add some <abbr>ARIA</abbr> attributes in order to be correctly vocalized by the screen reader.</p>
        On the opening button:
        <ul>
-         <li>The <code>aria-haspopup="true"</code> attribute allows the screen reader to vocalize that it is a dropdown menu.</li>
-         <li>The <code>aria-expanded</code> attribute with value <code>true/false</code>, allows to vocalize menu states (open or closed).
+         <li>The <code>aria-haspopup="true"</code> attribute allows the screen reader to vocalize that it is a drop-down menu.</li>
+         <li>The <code>aria-expanded</code> attribute with a <code>true</code>/<code>false</code> value, allows to vocalize menu states (open or closed).
       </ul>
 
       Example:
