@@ -6,8 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-others/inputs/md/editorial.md
-web_EN/inputs/html/exemples/role-dialog2/role-dialog.html
 web_EN/inputs/html/exemples/simple-menu/simple-menu.html
 web_EN/inputs/html/exemples/stepbar/stepbar.html
 web_EN/inputs/html/exemples/tooltip/tooltip.html
@@ -211,3 +209,5 @@ web_EN/inputs/html/exemples/listbox-pattern-aria/index.html
 web_EN/inputs/html/exemples/listbox/index.html
 web_EN/inputs/html/exemples/masquage/index.html
 web_EN/inputs/html/exemples/role-dialog/role-dialog.html
+others/inputs/md/editorial.md
+web_EN/inputs/html/exemples/role-dialog2/role-dialog.html
