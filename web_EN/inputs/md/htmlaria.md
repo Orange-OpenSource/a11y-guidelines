@@ -6,9 +6,9 @@
 
 ## Introduction
 
-Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker...). So it is very difficult or impossible to make these components accessible with conventional <abbr>HTML</abbr>.
+Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker…). So it is very difficult or impossible to make these components accessible with conventional <abbr>HTML</abbr>.
 
-Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide technical aids (screen readers, magnifiying software, ...), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user.
+Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user.
 
 ## What is it ?
 
