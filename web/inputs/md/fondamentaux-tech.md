@@ -146,30 +146,35 @@ Cet exemple n’est pas valide, car l’information est transmise uniquement par
 
 **Référence&nbsp;:** WCAG 1.4.1
 
-## 5. Mettre en place des listes
+## 5. Respecter la sémantique HTML
 
 **Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles, avec des déficiences cognitives.  
 **Quand&nbsp;: ** dès la conception et à la rédaction du contenu.
 
 **Description&nbsp;: ** 
-
-La page, si besoin, doit posséder des listes sémantiquement pertinentes. 
-Sémantiser le contenu <abbr>HTML</abbr> en utilisant les balises&nbsp;:
- - `ol` pour les listes ordonnées,
- - `ul` pour les listes non ordonnées,
- - `li` pour les éléments de liste.
+Utiliser correctement les éléments HTML en respectant ce pourquoi ils sont faits (spécifications) et donc leur sémantique afin qu’ils puissent être interprétés efficacement par les aides techniques.
 
 **À vérifier&nbsp;: ** 
-- Il ne doit pas y avoir de liste vide.
-- Il ne doit pas y avoir de liste avec un seul élément (car ce n’est pas une liste, à moins que cette liste ne soit générée dynamiquement&nbsp;!).
+Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes (pas de liste vides ou contenant qu'un seul élément)&nbsp;:
+ - `<ol>` pour les listes ordonnées,
+ - `<ul>` pour les listes non ordonnées,
+ - `<li>` pour les éléments de liste.
+S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise h et hiérarchisés de h1 à h6) pour plus de détails : Donner des titres aux rubriques afin de structurer le contenu de la page.
+S'assurer de bien baiser les citation longues `<blockquote>` ou brèves `<q>`.
+•S’assurer que les liens sont bien des liens (i.e. balise `<a>`),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…
+S’assurer que les boutons sont bien des boutons (i.e. balise button, ou input type=button), et qu’ils déclenchent une action, une validation, ou encore permettent de faire un choix…
+Penser à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci.
 
 ** Objectif utilisateur&nbsp;: **
-
-Utiliser des listes permet d’identifier, regrouper et présenter séquentiellement des éléments de même nature.
+Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les comportements possibles pour un élément d’interface donné.
 
 **Objectif technique&nbsp;: ** 
-
 Oblige à la structuration cohérente du contenu par le créateur du site.
+
+**Exemple non-valide&nbsp;: **
+![Exemple non-valide de mauvaise utilisation d 'un lien](./images/nv-semantiq.jpg)
+Dans cet exemple, le lien « Actualiser » devrait être un bouton « Actualiser » car ici il déclenche une action et non le chargement d’une URL (page).
+
 
 **Référence&nbsp;: ** WCAG 1.3.1
 
@@ -200,7 +205,7 @@ Améliore globalement la maintenabilité.
 
 **Référence&nbsp;:** WCAG 1.3.1, 1.4.5
 
-## 7. Valider le code
+## 7. Valider le code HTML
 
 **Cible&nbsp;: ** tout le monde.  
 **Quand&nbsp;: ** pendant et à la fin du développement.
@@ -280,7 +285,9 @@ L’attribut `title` positionné sur une balise de champ de formulaire peut fair
 
 **À vérifier&nbsp;: **
 
-Pour tout élément de formulaire, le libellé est proche visuellement du champ qu’il identifie.
+S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.
+
+Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères, au-delà, aligner tous les libellés à droite.
 
 Pour les boutons radio et les cases à cocher, l’utilisation de la balise `label` est, parfois, à compléter par un autre dispositif (`title`, `aria-labelledby`, `aria-label` ou `fieldset` et `legend`).
 Pour les champs obligatoires, ceci doit être précisé dans le `label` via une image, un symbole texte (`*` par exemple) ou du texte et/ou une propriété `aria-required`.
@@ -291,11 +298,12 @@ Ne pas respecter cette exigence est un point bloquant pour tout utilisateur de s
 
 **Exemple valide&nbsp;: **  
 ![capture d’écran d’un formulaire valide](images/formulaire.png)
-  
+![capture d’écran d’un formulaire label proche champ](images/v_label.jpg)
 &nbsp;
 
 **Exemple non-valide&nbsp;: **  
 ![capture d’écran d’un formulaire auquel il manque un label](images/formulaire2.png)
+![capture d’écran d’un formulaire label loin du champ](images/nv_label.jpg)
 
 &nbsp;  
 **Exemple de formulaire accessible&nbsp;: **
@@ -336,7 +344,7 @@ Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.htm
 
 **Référence&nbsp;: **WCAG 3.3.1, 3.3.3
 
-## 11. Fournir un équivalent textuel pour les images
+## 11. Fournir un équivalent textuel pour les images et les cadres
 
 **Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles ou cognitives.  
 **Quand&nbsp;: ** lors de la conception et lors du développement.
@@ -349,6 +357,7 @@ Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;:
 - Pour les images contenant du texte&nbsp;: mettre un attribut `alt` reprenant au moins le texte de l’image.
 - Pour les images décoratives&nbsp;: mettre un attribut `alt` vide.
 - Pour les images dont le contenu du `alt` serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.
+Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d'information pour l'utilisateur (purement technique), la rendre invisible avec un `display:none` ou `aria-hidden='true'` et donc ne pas mettre de `title`.
 
 **À vérifier&nbsp;: **
 
@@ -480,6 +489,9 @@ En complément de ces solutions, on pourrait ici également utiliser ** un attri
 
 
 **À vérifier&nbsp;: **
+S'assurer que la sémantique HTML soit respectée&nbsp;:
+- un lien permette de changer d'URL, de page, télécharger un ficher, faire apparaitre/disparaitre du contenu, aller à ancre.
+- un bouton permette de soumettre/réinitialiser un formulaire, d'ouvrir une fenêtre modale, faire aparaitre un sous menu, piloter un media, déclencher une action via JS.
 S’assurer que les liens et les boutons isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
 Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.
 
@@ -561,6 +573,7 @@ Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le fo
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 19, ci-dessous.
 - Attention à l’ordre d’insertion des éléments dans le code <abbr>HTML</abbr>, cela a une influence sur l’ordre de déplacement du focus. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
 - Pour la maintenabilité, éviter l’utilisation de l’attribut `tabindex` avec des valeurs supérieures à 0.
+- Même lors d'apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.
 
 **Objectif utilisateur&nbsp;: **
 Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).
@@ -657,17 +670,17 @@ En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un 
 **Objectif utilisateur&nbsp;: **
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.
 
-## 23. Conserver un ordre de tabulation logique lors d’une insertion ou d’une modification dynamique
+## 23. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu
 
-**Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.  
+**Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention.  
 **Quand&nbsp;: **lors du développement.
 
 **Description&nbsp;: **
 Lorsqu’un élément est affiché suite à une interaction de l’utilisateur&nbsp;: 
 - celui-ci doit apparaître dans le code source juste après l’élément déclenchant (exemple&nbsp;: menu dépliant), 
-- ou le focus doit être déplacé sur un des premiers éléments du contenu généré (lien, bouton, titre, paragraphe…).  
+- et/ou le focus doit être déplacé sur un des premiers éléments du contenu généré (lien, bouton, titre, paragraphe…).  
    
-Lors de la disparition de contenu, le focus doit être redonné à l’élément déclenchant.  
+Lors de la disparition de contenu, le focus doit être redonné à l’élément déclenchant ou, si c'est impossible, positionné juste avant le contenu qui a disparu.  
 Par exemple à la fermeture d’une boîte de dialogue, le focus doit être repositionné sur l’élément qui a déclenché l’ouverture (bouton, lien, …).
 
 Pour rappel&nbsp;: le contenu dynamiquement généré doit être accessible et donc respecter tous les critères d’accessibilité.  
@@ -688,6 +701,27 @@ En pratique, l’attribut `tabindex` ne devrait être utilisé qu’avec deux va
 
 **Objectif utilisateur&nbsp;: **
 Permettre à l’utilisateur, par exemple non ou malvoyant, de repérer l’apparition de nouveaux contenus et d’interagir avec ceux-ci.  
+
+**Exemple valide&nbsp;:**
+
+Menu replié : 
+
+![capture d’écran d'un menu replié](images/v_gererFocus1.jpg)  
+
+Menu déplié :
+
+![capture d’écran d'un menu déplié](images/v_gererFocus2.jpg)  
+
+Sur ce site, le menu principal de navigation est fermé par défaut et une mention « menu fermé » est mis en alternative de l’icone hamburger pour les malvoyants. Lors de son ouverture, l’icone hamburger se change en croix (permettant la fermeture du menu) et donc l’alternative est dès lors « fermer le menu ». 
+
+De plus, le focus est positionné directement sur le premier item du menu apparu, c'est la bonne manière de gérer le focus pour ce type de menu dépliant.
+
+**Exemple non-valide&nbsp;:** 
+
+![capture d’écran de résultats d'une recherche dynamique](images/nv_gererFocus.jpg)  
+
+Sur ce site, la recherche est dynamique, elle se met à jour dès que l’utilisateur active (sélectionne) un filtre ou qu’il tape « entrée » après avoir saisi un mot clé. Le problème est que la région qui affiche dynamiquement les résultats est très éloignée de la zone de critères de recherche. Il est donc difficile voire impossible pour certains utilisateurs (déficients visuels, cognitifs ou avec troubles de l’attention) d’identifier la zone de résultats et de savoir quand celle-ci est mise à jour.
+Il faudrait pousser le focus sur la zone de résultats à chaque recherche.
 
 **Référence&nbsp;:** WCAG 2.4.3
 
@@ -718,7 +752,7 @@ Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la
 - Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne
 - Un contrôle permettant de s'assurer qu'une même combinaison IP/User agent ne tente pas de soumettre le formulaire plus de N fois par seconde.
 
-Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel clasique...
+Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha : un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...
 
 ## 26. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
@@ -810,6 +844,26 @@ Pour une page qui n’est pas en <abbr>HTML</abbr>5, ajouter les <i lang="en">la
 ```
 
 **Référence WCAG&nbsp;:** 3.2.3., 3.2.4  
+
+## 27. Fournir des accès multiples et une localisation
+
+** Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
+
+** Description&nbsp;: **
+Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchainent les unes après les autres, ce critère peut être ignoré.
+
+** À vérifier&nbsp;:**
+S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site : un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
+Objectif utilisateur :
+Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.
+
+** Exemple valide&nbsp;: **
+Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.
+
+** Exemple invalide&nbsp;: **
+Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
+
+**Référence WCAG&nbsp;: ** 2.4.5., 2.4.8
 
 &nbsp;
 
