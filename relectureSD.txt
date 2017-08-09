@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web_EN/inputs/html/exemples/zoom/exemple2.html
 web_EN/inputs/html/exemples/zoom/index.html
 web_EN/inputs/md/fondamentaux.md
 web_EN/inputs/md/htmlaria.md
@@ -211,3 +210,4 @@ web_EN/inputs/html/exemples/stepbar/stepbar.html
 web_EN/inputs/html/exemples/tooltip/tooltip.html
 web_EN/inputs/html/exemples/webmail/index.html
 web_EN/inputs/html/exemples/zoom/exemple1.html
+web_EN/inputs/html/exemples/zoom/exemple2.html
