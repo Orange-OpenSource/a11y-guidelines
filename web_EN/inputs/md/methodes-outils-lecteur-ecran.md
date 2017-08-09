@@ -8,10 +8,10 @@
 
 <span data-menuitem="methodes-outils"></span>
 
-A screen reader is a voice synthesis software used by the visually impaired and blind. It allows the user to interact with the computer and listen to what is displayed as text (usually) on the screen.
+A screen reader is a voice synthesis software used by the visually impaired and the blind. It allows the user to interact with the computer and listen to what is displayed as text (usually) on the screen.
 There are several screen readers, the most prevalent are:
 - [NVDA](http://nvda-fr.org/): free, available for Windows.
-- [Jaws](http://www.freedomscientific.com/Downloads/JAWS): commercial, available for Windows. In trial, you can only use it 40 min, but if you restart your computer you can use it again.
+- [Jaws](http://www.freedomscientific.com/Downloads/JAWS): commercial, available for Windows. In trial mode, you can only use it for 40 minutes, but if you restart your computer you can use it again.
 - [VoiceOver](http://www.apple.com/fr/accessibility/osx/voiceover/): free, available for Mac. It is directly integrated into the MacOS system.
 
 ## Getting started with NVDA
@@ -20,48 +20,48 @@ NVDA is a free screen reader available for Windows.
 
 ### Installation
 
-Download the NVDA installer on the [official website](http://nvda-fr.org/).
+Download the NVDA installer on the [official website](https://www.nvaccess.org/).
 
-The default voice is not very good but it is very reactive. It is not mandatory, but you can download a better voice named [Hortense](https://www.nvda-fr.org/voix/). Then just go to preferences to change NVDA voice settings.
+The default voice is not very good but it is very reactive. It is not mandatory, but you can [download extra voices](https://github.com/nvaccess/nvda/wiki/ExtraVoices). Then just go to preferences to change NVDA voice settings.
 
 ### Configuration
 
-At first startup, NVDA is configured to vocalize whatever the mouse is hover. This mode is used by visually impaired people who have difficulties reading the text displayed on the screen, for example. It is recommended to disable this option if you use NVDA to test accessibility on your pages.
-To disable this navigation mode, right click on the NVDA icon located in the notification area. Then go to *Preferences >> Mouse settings* and uncheck "Enable mouse tracking".
+At first startup, NVDA is configured to vocalize whatever the mouse pointer is over. This mode is used by visually-impaired people who have difficulties reading the text displayed on the screen, for example. It is recommended to disable this option if you use NVDA to test accessibility on your pages.
+To disable this navigation mode, right-click on the NVDA icon located in the notification area. Then go to *Preferences&nbsp;&gt; Mouse settings* and uncheck “Enable mouse tracking”.
 
-Finally, it is advisable to change the default playback mode. On a webpage use the following keyboard shortcut `INS + v` to disable the "screen layout is preserved" and then save this configuration as default using the shortcut `INS + Ctrl + c`.
+Finally, it is advisable to change the default playback mode. On a webpage use the following keyboard shortcut <kbd>Ins + v</kbd> to disable the “screen layout is preserved” option and then save this configuration as default using the shortcut <kbd>Ins + Ctrl + c</kbd>.
 
 ### Navigating web pages
 
-The main useful shortcuts to test navigation in a web page using NVDA:
-- `Up` and `down` keys to go to the next or the prior line.
-- `Left` and `right` keys to move forward or backward one character
-- `Ctrl + Home` to move to the top of the page.
-- `Ctrl + End` to move to the bottom of the page.
-- `INS + F7` to display the heading list and the link list.
-- `Ctrl` to mute NVDA.
-- `INS + T` to read the page title.
-- `H` and `shift + H` to jump to the next title or the previous title (`H1` to` H6` title tags).
-- `B` and `shift + B` to move through buttons.
-- `C` and `shift + C` to move through drop down lists (Combobox).
-- `D` and `shift + D` to move through ARIA landmarks.
-- `E` and `shift + E` to move through text fields.
-- `F` and `shift + F` to move through forms.
-- `G` and `shift + G` to move through images (Graphics).
-- `I` and `shift + I` to move through HTML list items.
-- `K` and `shift + K` to move through links.
-- `L` and `shift + L` to move through HTML lists.
-- `M` and `shift + M` to move through frames and iframes.
-- `O` and `shift + O` to move through embedded objects (flash). Press INS + Space to start interaction. Esc to finish interaction.
-- `Q` and `shift + Q` to move through quotes (blockquote).
-- `R` and `shift + R` to move through radio buttons.
-- `T` and `shift + T` to move through tables.
-- `X` and `shift + X` to move through checkboxes.
-- `Spacebar` to check or uncheck a checkbox.
-- `INS + shift + S` allows to pause NVDA only in the current application.
-- `INS + Q` to exit NVDA.
+The main useful shortcuts to test navigation in a web page using NVDA are:
+- <kbd>Up</kbd> and <kbd>down</kbd> keys to go to the next or the prior line.
+- <kbd>Left</kbd> and <kbd>right</kbd> keys to move forward or backward one character
+- <kbd>Ctrl + Home</kbd> to move to the top of the page.
+- <kbd>Ctrl + End</kbd> to move to the bottom of the page.
+- <kbd>Ins + F7</kbd> to display the heading list and the link list.
+- <kbd>Ctrl</kbd> to mute NVDA.
+- <kbd>Ins + T</kbd> to read the page title.
+- <kbd>H</kbd> and <kbd>shift + H</kbd> to jump to the next title or the previous title (`H1` to `H6` title tags).
+- <kbd>B</kbd> and <kbd>shift + B</kbd> to move through buttons.
+- <kbd>C</kbd> and <kbd>shift + C</kbd> to move through drop down lists (Combobox).
+- <kbd>D</kbd> and <kbd>shift + D</kbd> to move through ARIA landmarks.
+- <kbd>E</kbd> and <kbd>shift + E</kbd> to move through text fields.
+- <kbd>F</kbd> and <kbd>shift + F</kbd> to move through forms.
+- <kbd>G</kbd> and <kbd>shift + G</kbd> to move through images (Graphics).
+- <kbd>I</kbd> and <kbd>shift + I</kbd> to move through HTML list items.
+- <kbd>K</kbd> and <kbd>shift + K</kbd> to move through links.
+- <kbd>L</kbd> and <kbd>shift + L</kbd> to move through HTML lists.
+- <kbd>M</kbd> and <kbd>shift + M</kbd> to move through frames and iframes.
+- <kbd>O</kbd> and <kbd>shift + O</kbd> to move through embedded objects (flash). Press <kbd>Ins + Space</kbd> to start interaction. <kbd>Esc</kbd> to finish interaction.
+- <kbd>Q</kbd> and <kbd>shift + Q</kbd> to move through quotes (blockquote).
+- <kbd>R</kbd> and <kbd>shift + R</kbd> to move through radio buttons.
+- <kbd>T</kbd> and <kbd>shift + T</kbd> to move through tables.
+- <kbd>X</kbd> and <kbd>shift + X</kbd> to move through checkboxes.
+- <kbd>Spacebar</kbd> to check or uncheck a checkbox.
+- <kbd>Ins + shift + S</kbd> allows to pause NVDA only in the current application.
+- <kbd>Ins + Q</kbd> to exit NVDA.
 
-Also note that NVDA has a speech viewer (*tools >> speech viewer*), it displays everything that is vocalized.
+Also note that NVDA has a speech viewer (*Tools&nbsp;&gt; Speech viewer*), it displays everything that is vocalized.
 
 ## Getting Started with Jaws
 
@@ -74,27 +74,28 @@ You can download Jaws directly from [the Freedom Scientific site](http://www.fre
 ### Navigating web pages
 
 The most useful shortcuts to test navigation in a Web page with JAWS:
-- `Up` and `down` keys to go to the next or the prior line.
-- `INS + T` to read the page title.
-- `INS + F5` to display the form fields list.
-- `INS + F6` to display header list.
-- `INS + F7` to display link list.
-- `Spacebar` to check or uncheck a checkbox.
-- `Ctrl` to mute Jaws.
+- <kbd>Up</kbd> and <kbd>down</kbd> keys to go to the next or the prior line.
+- <kbd>Ins + T</kbd> to read the page title.
+- <kbd>Ins + F5</kbd> to display the form fields list.
+- <kbd>Ins + F6</kbd> to display header list.
+- <kbd>Ins + F7</kbd> to display link list.
+- <kbd>Spacebar</kbd> to check or uncheck a checkbox.
+- <kbd>Ctrl</kbd> to mute Jaws.
 
 ## Getting Started with VoiceOver
 
 VoiceOver screen reader is only available on Mac. It requires no installation since it is integrated directly into the system.
-To can activate VoiceOver from System Preferences >> accessibility. Or directly using the shortcut Command + `F5`.
+You can activate VoiceOver from *System Preferences&nbsp;&gt; Accessibility*. Or directly using the shortcut <kbd>Command + F5</kbd>.
 
 ### Navigating web pages
 
 When launching VoiceOver, it displays an interactive guide to learn the key shortcuts. You should have a look at it.
 But here are the main shortcuts:
-- `Ctrl + Option + Right` and `Ctrl + Option + Left` to go to the next or the prior line.
-- `Ctrl + Option + U` to access the header, link, form field lists... (use the left and right arrows to navigate between lists).
-- `Ctrl` to mute VoiceOver.
-- `Ctrl + Option`
+- <kbd>Ctrl + Option + Right</kbd> and <kbd>Ctrl + Option + Left</kbd> to go to the next or the prior line.
+- <kbd>Ctrl + Option + U</kbd> to access the header, link, form field lists... (use the left and right arrows to navigate between lists).
+- <kbd>Ctrl</kbd> to mute VoiceOver.
+- <kbd>Ctrl + Option</kbd> [Uh-oh, something is missing here, we’ll come back to it, sorry.]
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
