@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web_EN/inputs/md/index.md
 web_EN/inputs/md/methodes-outils-clavier.md
 web_EN/inputs/md/methodes-outils-contrastes.md
 web_EN/inputs/md/methodes-outils-extensions.md
@@ -211,3 +210,4 @@ web_EN/inputs/html/exemples/zoom/exemple2.html
 web_EN/inputs/html/exemples/zoom/index.html
 web_EN/inputs/md/fondamentaux.md
 web_EN/inputs/md/htmlaria.md
+web_EN/inputs/md/index.md
