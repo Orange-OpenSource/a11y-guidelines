@@ -1,26 +1,26 @@
-# Open source Orange test tools  
+# Orange Open source tools  
   
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Open source Orange test tools"}]);
+    setBreadcrumb([{"label":"Orange Open source tools"}]);
 });</script>
   
   Here is our list of open source tools for the web: 
-- **Orange Boosted:** allows you to create accessible web sites branded with Orange colors.
-- **Orange Comfort+:** allows you to improve user comfort while viewing your website.
+- **Orange Boosted:** allows you to create accessible web sites branded with Orange colours.
+- **Orange Comfort+:** allows you to improve user comfort while browsing your website.
 
 ## Orange Boosted
 
 ### Presentation
-Orange Boosted is an HTML, CSS and Javascript framework based on the popular [Twitter Bootstrap](http://getbootstrap.com/).
-It allows to create quickly a responsive website branded with the Orange colors.
+Orange Boosted is an <abbr>HTML</abbr>, <abbr>CSS</abbr> and Javascript framework based on the popular framework [Bootstrap](http://getbootstrap.com/).
+It allows to quickly create a responsive and accessible website branded with the Orange colours.
 
 ### Why you should use it?
- - Based on [Twitter Bootstrap](http://getbootstrap.com/)
+ - Based on [Bootstrap](http://getbootstrap.com/)
  - Orange branded
  - Enhanced with **more accessible** components
  - Enriched with specific components we use at Orange
- - Examples pages
- - Open source, MIT license
+ - Example pages
+ - Open source, <abbr>MIT</abbr> license
 
 ### Official site
 
@@ -31,7 +31,7 @@ It allows to create quickly a responsive website branded with the Orange colors.
 ### Presentation
 The Orange Comfort+ service can adapt the layout of a website to improve comfort during the navigation. It has a wide range of settings that can improve the comfort of all users. It also provides valuable assistance to users with motor, visual or cognitive disabilities.
 
-You can test the service by clicking on the "Comfort+" button at the top right of this page.
+You can test the service by clicking on the “Comfort+” button at the top right of this page.
 
 ### Its main features:
 - Useful for all users
@@ -40,12 +40,12 @@ You can test the service by clicking on the "Comfort+" button at the top right o
 - Also available as a browser extension
 - Open source, MIT license
 
-![screenshot of the service more comfort](./images/confort-plus.png)
+![screenshot of the Comfort+ service](./images/confort-plus.png)
 
 ### Browser Extensions
-- Firefox: https://addons.mozilla.org/fr/firefox/addon/orange-confort
-- Chrome: https://chrome.google.com/webstore/detail/orange-confort%2B/ddnpdohiipephjpdpohikkamhdikbldp
-- IE11, 64 or 32 bits: http://confort-plus.orange.com/
+- [Firefox](https://addons.mozilla.org/fr/firefox/addon/orange-confort)
+- [Chrome](https://chrome.google.com/webstore/detail/orange-confort%2B/ddnpdohiipephjpdpohikkamhdikbldp)
+- [IE11, 64 or 32 bits](http://confort-plus.orange.com/)
 
 ### Official website
 [Orange Comfort+](http://confort-plus.orange.com/)
