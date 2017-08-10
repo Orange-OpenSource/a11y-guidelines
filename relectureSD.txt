@@ -6,10 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web_EN/theme/default/_layout.html
-web_EN/theme/default/_manifests.html
-web_EN/theme/default/_page.html
-web_EN/theme/default/search.html
 web/inputs/html/exemples/ARIA-clavier/index.html
 web/inputs/html/exemples/check-listbox/index.html
 web/inputs/html/exemples/dynFocus/index.html
@@ -211,3 +207,7 @@ web_EN/inputs/md/methodes-outils-liste-titres.md
 web_EN/inputs/md/methodes-outils-zoom.md
 web_EN/inputs/md/methodes-outils.md
 web_EN/inputs/md/nos-outils.md
+web_EN/theme/default/_layout.html
+web_EN/theme/default/_manifests.html
+web_EN/theme/default/_page.html
+web_EN/theme/default/search.html
