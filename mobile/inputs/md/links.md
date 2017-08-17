@@ -22,7 +22,7 @@ Application <span lang="en">AccessibilityScanner</span> pour vous aider à teste
 
 ## Pour iOS
 Présentation de l’accessibilité sous iOS et de l’<abbr>API</abbr> Apple
-- [Documentation officielle de l’<abbr>API</abbr> d’accessiblité Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html)
+- [Documentation officielle de l’<abbr>API</abbr> d’accessibilité Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html)
 - [Présentation des options d’accessibilité d’iOS](http://www.apple.com/fr/accessibility/)
 - [Page officielle de l’accessibilité sous Apple](https://developer.apple.com/accessibility/ios/)
 - [Utilisation de <span lang="en">VoiceOver</span>](https://help.apple.com/iphone/9/#/iph3e2e415f)

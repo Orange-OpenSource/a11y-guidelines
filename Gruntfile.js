@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         bfdocs: {
           home: {
             options: {
-              title: 'Recommandations accessiblité Orange',
+              title: 'Recommandations accessibilité Orange',
               manifest: 'home/manifest.json',
               dest: 'home/output/html',
               theme: 'home/theme/default',
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           },          
           web: {
             options: {
-              title: 'Recommandations accessiblité Orange pour le web',
+              title: 'Recommandations accessibilité Orange pour le web',
               manifest: 'web/manifest.json',
               dest: 'web/output/html',
               theme: 'web/theme/default',
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
           },
           mobile: {
             options: {
-              title: 'Recommandations accessiblité Orange pour les mobiles',
+              title: 'Recommandations accessibilité Orange pour les mobiles',
               manifest: 'mobile/manifest.json',
               dest: 'mobile/output/html',
               theme: 'mobile/theme/default',
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
           },
           others: {
             options: {
-              title: 'Recommandations accessiblité Orange pour les autres plateformes',
+              title: 'Recommandations accessibilité Orange pour les autres plateformes',
               manifest: 'others/manifest.json',
               dest: 'others/output/html',
               theme: 'others/theme/default',

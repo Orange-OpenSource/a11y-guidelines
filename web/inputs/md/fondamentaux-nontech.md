@@ -105,7 +105,7 @@ Cet exemple n’est pas valide, car l’information est transmise uniquement par
 **Quand&nbsp;: ** dès la conception et pendant le développement.
 
 **Description&nbsp;:**  
-Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icônes). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.
+Mettre en place des alternatives textuelles pour tous les éléments informatifs non-textuels (alternatives aux images, icônes). De même, prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.
 
 **Exemple&nbsp;: **  
 Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton&nbsp;:
@@ -126,8 +126,6 @@ La position du focus clavier doit être visible par tous les utilisateurs. Par d
 Veiller à fournir un niveau de contraste suffisant (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.
 
 L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.
-
-
     
 **Exemples valides&nbsp;: **  
 Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».  
@@ -174,12 +172,12 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il reçoit le focus.  
 Il est également possible d’ajouter un bouton « pause » directement dans l’interface.
 
-## 9. Libellé des liens
+## 9. Libellé des liens et des boutons
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.  
 **Quand&nbsp;: ** lors de la conception du service et lors de la conception graphique.
 
 **Description&nbsp;:**  
-Les libellés des liens doivent être suffisamment explicites.
+Les libellés des liens et des boutons doivent être suffisamment explicites.
 Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale.
 
 **Exemple valide&nbsp;:**  
@@ -202,6 +200,7 @@ Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glisser-d
 Dans un webmail, si un clic droit sur le dossier « corbeille » permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton « vider la corbeille » ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.
 
 ## 11. Rendre utilisables les formulaires
+
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;: ** lors de la conception et lors du développement.
 
@@ -247,7 +246,9 @@ Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas jus
 ![Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse](images/dialog.png)
 
 ## 13. Fournir des liens d’évitement
+
 **Cible&nbsp;: ** utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.  
+
 **Quand&nbsp;: ** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -263,13 +264,15 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 
 **Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
+**Quand&nbsp;: ** lors de la conception.
+
 **Description&nbsp;:**  
 Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.
 
 **À vérifier&nbsp;:** 
 
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
-- S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon.
+- S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés...).
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.
 
 **Objectif utilisateur&nbsp;:**
@@ -287,7 +290,28 @@ Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure b
 &nbsp;  
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
-## 15. Eviter les captcha
+## 15. Situer explicitement la page dans le site et fournir plusieur moyens d'y accéder
+
+** Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
+
+**Quand&nbsp;: ** lors de la conception.
+
+** Description&nbsp;: **
+Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchainent les unes après les autres, ce critère peut être ignoré.
+
+** À vérifier&nbsp;:**
+S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site : un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
+** Objectif utilisateur&nbsp;: **
+Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.
+
+** Exemple valide&nbsp;: **
+Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.
+
+** Exemple invalide&nbsp;: **
+Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
+
+## 16. Eviter les captcha
+
 **Cible&nbsp;: ** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;: ** lors de la conception et lors du développement.
 
