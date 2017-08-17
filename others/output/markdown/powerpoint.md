@@ -61,7 +61,7 @@ PowerPoint intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier&nbs
 
 ### 12. Exporter la présentation en document <abbr>PDF</abbr>
 Pour exporter en <abbr>PDF</abbr> il suffit d'aller dans le menu&nbsp;: Fichier&nbsp;> Enregistrer sous. Choisissez un nom et sélectionner le type de fichier <abbr>PDF</abbr>.  
-A vérifier la première fois : dans les options d'export, la case à cocher «&nbsp;Balises de structure de document pour l'accessiblité&nbsp;» doit être cochée.
+A vérifier la première fois : dans les options d'export, la case à cocher «&nbsp;Balises de structure de document pour l'accessibilité&nbsp;» doit être cochée.
 
 ## Ressources externes
 
