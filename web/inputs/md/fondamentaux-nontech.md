@@ -126,8 +126,6 @@ La position du focus clavier doit être visible par tous les utilisateurs. Par d
 Veiller à fournir un niveau de contraste suffisant (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.
 
 L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.
-
-
     
 **Exemples valides&nbsp;: **  
 Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».  
@@ -274,7 +272,7 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 **À vérifier&nbsp;:** 
 
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
-- S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon.
+- S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés...).
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.
 
 **Objectif utilisateur&nbsp;:**
@@ -292,7 +290,7 @@ Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure b
 &nbsp;  
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
-## 15. Fournir des accès multiples et une localisation
+## 15. Situer explicitement la page dans le site et fournir plusieur moyens d'y accéder
 
 ** Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
 
@@ -303,7 +301,7 @@ Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu s
 
 ** À vérifier&nbsp;:**
 S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site : un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
-Objectif utilisateur :
+** Objectif utilisateur&nbsp;: **
 Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.
 
 ** Exemple valide&nbsp;: **
@@ -311,8 +309,6 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 
 ** Exemple invalide&nbsp;: **
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
-
-**Référence WCAG&nbsp;: ** 2.4.5., 2.4.8
 
 ## 16. Eviter les captcha
 

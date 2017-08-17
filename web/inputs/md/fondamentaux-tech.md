@@ -154,16 +154,22 @@ Cet exemple n’est pas valide, car l’information est transmise uniquement par
 **Description&nbsp;: ** 
 Utiliser correctement les éléments HTML en respectant ce pourquoi ils sont faits (spécifications) et donc leur sémantique afin qu’ils puissent être interprétés efficacement par les aides techniques.
 
-**À vérifier&nbsp;: ** 
+**À vérifier&nbsp;: **
+
 Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes (pas de liste vides ou contenant qu'un seul élément)&nbsp;:
- - `<ol>` pour les listes ordonnées,
+ -* `<ol>` pour les listes ordonnées,
  - `<ul>` pour les listes non ordonnées,
  - `<li>` pour les éléments de liste.
+ - `<dl>`, `<dt>` et `<dd>` pour les listes de définitions
+
 S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise h et hiérarchisés de h1 à h6) pour plus de détails : Donner des titres aux rubriques afin de structurer le contenu de la page.
+
 S'assurer de bien baiser les citation longues `<blockquote>` ou brèves `<q>`.
 •S’assurer que les liens sont bien des liens (i.e. balise `<a>`),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…
+
 S’assurer que les boutons sont bien des boutons (i.e. balise button, ou input type=button), et qu’ils déclenchent une action, une validation, ou encore permettent de faire un choix…
-Penser à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci.
+
+Penser, dans la mesure du possible, à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci.
 
 ** Objectif utilisateur&nbsp;: **
 Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les comportements possibles pour un élément d’interface donné.
@@ -357,13 +363,16 @@ Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;:
 - Pour les images contenant du texte&nbsp;: mettre un attribut `alt` reprenant au moins le texte de l’image.
 - Pour les images décoratives&nbsp;: mettre un attribut `alt` vide.
 - Pour les images dont le contenu du `alt` serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.
+
 Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d'information pour l'utilisateur (purement technique), la rendre invisible avec un `display:none` ou `aria-hidden='true'` et donc ne pas mettre de `title`.
 
 **À vérifier&nbsp;: **
 
-Toute balise `img` doit posséder un attribut `alt`.
-Pour les images non-porteuses d’information, il est préférable de les passer en image de fond <abbr>CSS</abbr>.
-Pour les graphes, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffres (le faire apparaître dans la même page ou sur une autre page).
+- Toute balise `img` doit posséder un attribut `alt`.
+
+- Pour les images non-porteuses d’information, il est préférable de les passer en image de fond <abbr>CSS</abbr>.
+
+- Pour les graphes, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffres (le faire apparaître dans la même page ou sur une autre page).
 
 **Objectif utilisateur&nbsp;: **
 Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès.
@@ -472,7 +481,7 @@ Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](./exemp
 Rendre les intitulés des liens et des boutons compréhensibles hors contexte en particulier les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  
 
 S’il n’est pas possible de rendre un lien ou un bouton plus explicite, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, cet intitulé peut être complété par un contenu supplétif caché ou en utilisant un attribut `aria-label` ou `aria-labelledby`, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
-Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. Par contre quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
+Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
 
 ![capture d’écran présentant deux liens valider dont le libellé doit être explicité](./images/liens-valider.png)
 
@@ -491,12 +500,14 @@ En complément de ces solutions, on pourrait ici également utiliser ** un attri
 **À vérifier&nbsp;: **
 S'assurer que la sémantique HTML soit respectée&nbsp;:
 - un lien permette de changer d'URL, de page, télécharger un ficher, faire apparaitre/disparaitre du contenu, aller à ancre.
-- un bouton permette de soumettre/réinitialiser un formulaire, d'ouvrir une fenêtre modale, faire aparaitre un sous menu, piloter un media, déclencher une action via JS.
+- un bouton permette de soumettre/réinitialiser un formulaire, d'ouvrir une fenêtre modale, faire apparaitre un sous menu, piloter un media, déclencher une action via JS.
 S’assurer que les liens et les boutons isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.
 Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.
 
 **Objectif utilisateur&nbsp;: **
-Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l'action du bouton. Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. 
+Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l'action du bouton.
+
+Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. 
 
 **Objectif technique&nbsp;: **
 Expliciter les liens et les boutons permet d’améliorer le référencement naturel.
@@ -664,6 +675,7 @@ Respecter les recommandations générales d’accessibilité, utiliser en priori
 
 
 **À vérifier&nbsp;: **
+
 S’assurer de l’absence de point bloquant avec les couples navigateur/lecteur d’écran (Firefox/<abbr>NVDA</abbr>, <abbr>IE</abbr>/Jaws, Safari/VoiceOver) dans les parcours utilisateurs (scénarios d’utilisation des principales fonctionnalités de l’application).
 En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un manque d’accessibilité, on repère un grand nombre de problèmes en vérifiant cette exigence.
 
@@ -676,6 +688,7 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 **Quand&nbsp;: **lors du développement.
 
 **Description&nbsp;: **
+
 Lorsqu’un élément est affiché suite à une interaction de l’utilisateur&nbsp;: 
 - celui-ci doit apparaître dans le code source juste après l’élément déclenchant (exemple&nbsp;: menu dépliant), 
 - et/ou le focus doit être déplacé sur un des premiers éléments du contenu généré (lien, bouton, titre, paragraphe…).  
@@ -854,7 +867,7 @@ Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu s
 
 ** À vérifier&nbsp;:**
 S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site : un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
-Objectif utilisateur :
+** Objectif utilisateur&nbsp;: **
 Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.
 
 ** Exemple valide&nbsp;: **
