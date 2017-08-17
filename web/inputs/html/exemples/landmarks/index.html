@@ -30,13 +30,13 @@
 <body>
 
     <main role="main" class="container">
-      <h1>les régions ou landmarks ARIA</h1>
+      <h1>Les régions ou <i lang="en">landmarks</i> <abbr>ARIA</abbr></h1>
 
       <h2>Préambule</h2>
       <p>Dans cet exemple, nous allons voir comment améliorer la navigation dans la page en ajoutant de la sémantique au contenu permettant de repérer plus facilement les grandes régions de la page.</p>
       <h2>Théorie</h2>
-      <p> HTML5 introduit de nouvelles balises, notamment des balises sémantiques (<code>main</code>, <code>aside</code>, <code>footer</code> et <code>header</code>).</p>
-      <p>Ces balises doivent être utilisées avec les rôles ARIA correspondants pour être sûr de mieux servir les utilisateurs, notamment ceux qui utilisent des aides techniques :</p>
+      <p> <abbr>HTML5</abbr> introduit de nouvelles balises, notamment des balises sémantiques (<code>main</code>, <code>aside</code>, <code>footer</code> et <code>header</code>).</p>
+      <p>Ces balises doivent être utilisées avec les rôles <abbr>ARIA</abbr> correspondants pour être sûr de mieux servir les utilisateurs, notamment ceux qui utilisent des aides techniques&nbsp;:</p>
       <pre><code>
     &lt;header role="banner"&gt;[…]&lt;/header&gt;
 
@@ -48,7 +48,7 @@
     &lt;/div&gt;
 
     &lt;main role="main"&gt;
-      &lt;nav aria-label="Fil d'Ariane"&gt;[…]&lt;/nav&gt;
+      &lt;nav aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
       […]
     &lt;/main&gt;
 
@@ -58,17 +58,17 @@
       
       <h3>Usages</h3>
       <ul>
-        <li>Il ne peut y avoir qu'une seule balise <code>main</code> et donc un seul <code>role=main</code> par page afin d'identifier le contenu principal d'une page.</li>
-        <li>Le <code>role=navigation</code> couplé à la balise <code>nav</code> permet d'identifier les principales navigations internes au site. Les bonnes pratiques demandent que l'on utilise 3 balises/roles nav/navigation maximum par page.</li>
-        <li>La balise <code>footer</code> et le <code>role=contentinfo</code> permettent d'identifier le pied de page. Il doit être unique dans la page.</li>
-        <li>Le couple balise <code>header</code>, <code>role=header</code> identifie l'en-tête de la page. Lui aussi doit être unique.</li>
-        <li>Pour identifier le formulaire de recherche dans le site, on utilisera seul le <code>role=search</code> ARIA.</li>
-        <li>Si besoin, le contenu annexe au contenu principal de la page (information complémentaire, pub...) doit être identifier en utilisant la balise <code>aside</code> et le <code>role=complementary</code>.</li>
+        <li>Il ne peut y avoir qu’une seule balise <code>main</code> et donc un seul <code>role=main</code> par page afin d’identifier le contenu principal d’une page.</li>
+        <li>Le <code>role=navigation</code> couplé à la balise <code>nav</code> permet d’identifier les principales navigations internes au site. Les bonnes pratiques demandent que l’on utilise 3 balises/rôles <code>nav</code>/navigation maximum par page.</li>
+        <li>La balise <code>footer</code> et le <code>role=contentinfo</code> permettent d’identifier le pied de page. Il doit être unique dans la page.</li>
+        <li>Le couple balise <code>header</code>, <code>role=header</code> identifie l’en-tête de la page. Lui aussi doit être unique.</li>
+        <li>Pour identifier le formulaire de recherche dans le site, on utilisera seul le <code>role=search</code> <abbr>ARIA</abbr>.</li>
+        <li>Si besoin, le contenu annexe au contenu principal de la page (information complémentaire, publicité…) doit être identifié en utilisant la balise <code>aside</code> et le <code>role=complementary</code>.</li>
       </ul>
 
-      <h3>Landmark, utilisateurs et aides techniques</h3>
-      <p>En effet, les balises HTML5 définissant les grandes régions de la page n'ont, pour l'instant, qu'un support insuffisant avec les aides techniques (lecteur d'écran, loupe logicielle...). Il faut donc les doubler avec leur équivalent ARIA dont le support est meilleur.</p>
-      <p>Mettre en place ces landmarks ARIA est une bonne pratique, car elle peut améliorer la navigations de certains utilisiateurs sans impacter celle des autres, c'est un plus indéniable !</p>
+      <h3><i lang="en">Landmarks</i>, utilisateurs et aides techniques</h3>
+      <p>Les balises HTML5 définissant les grandes régions de la page n’ont, pour l’instant, qu’un support insuffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). Il faut donc les doubler avec leur équivalent <abbr>ARIA</abbr> dont le support est meilleur.</p>
+      <p>Mettre en place ces <i lang="en">landmarks</i> <abbr>ARIA</abbr> est une bonne pratique, car elle peut améliorer la navigations de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>
