@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/listbox/index.html
 web/inputs/html/exemples/masquage/index.html
 web/inputs/html/exemples/role-dialog/role-dialog.html
 web/inputs/html/exemples/role-dialog2/role-dialog.html
@@ -211,3 +210,4 @@ web/inputs/html/exemples/files/step1/index.html
 web/inputs/html/exemples/formulaire/index.html
 web/inputs/html/exemples/landmarks/index.html
 web/inputs/html/exemples/listbox-pattern-aria/index.html
+web/inputs/html/exemples/listbox/index.html
