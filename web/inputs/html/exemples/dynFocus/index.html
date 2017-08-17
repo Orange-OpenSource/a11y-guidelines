@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestion dynamique du focus - recommandations accessiblité web Orange</title>
+    <title>Gestion dynamique du focus - recommandations accessibilité web Orange</title>
 
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
       <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -33,37 +33,37 @@
       <h1>Gérer le focus pour du contenu dynamiquement généré</h1>
 
       <h2>Introduction</h2>
-      <p>La gestion du focus dans des applications riches est complexe. Plusieurs cas se présentent : </p>
+      <p>La gestion du focus dans des applications riches est complexe. Plusieurs cas se présentent&nbsp;: </p>
 	  <ul>
 	  <li>Apparition/disparition de contenu généré par une action utilisateur avec rechargement de page</li>
 	  <li>Apparition/disparition de contenu dynamique généré par une action utilisateur sans rechargement de page</li>
-	  <li>Cas particulier : les <code>iframes</code> dynamiques </li>
+	  <li>Cas particulier&nbsp;: les <code>iframes</code> dynamiques </li>
 	  </ul>
 	  
 	  <h2>Contenu généré par une action utilisateur avec rechargement de page</h2>
-	  <p>Ce cas, où l'on recharge la page pour modifier une partie du contenu de cette page, est à éviter car, même si c'est une action utilisateur, il y a perte de contexte et dans tout les cas un chargement asynchrone aurait été bien plus efficace. <br />
-	  Donc, s'il n'y a aucun moyen de faire du chargement asynchrone, il faut pour le moins :</p>
+	  <p>Ce cas, où l’on recharge la page pour modifier une partie du contenu de cette page, est à éviter car, même si c’est une action utilisateur, il y a perte de contexte et dans tout les cas un chargement asynchrone aurait été bien plus efficace. <br />
+	  Donc, s’il n’y a aucun moyen de faire du chargement asynchrone, il faut pour le moins&nbsp;:</p>
 	  <ol>
-	  <li>Prévenir l'utilisateur de ce rechargement de page avec un message de type "Chargement en cours, veuillez patientez" sur lequel on met le focus, si il y a perte de contexte.</li>
-	  <li>Au rechargement, mettre le focus, sur le contenu généré ou, lors d'une disparition, sur l'élement déclenchant (s'il existe toujours après rechargement) ou positionner le focus juste avant la partie qui a été enlevée.</li>
-	  <li> S'assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</li>
+	  <li>Prévenir l’utilisateur de ce rechargement de page avec un message de type «&nbsp;Chargement en cours, veuillez patientez&nbsp;» sur lequel on met le focus, si il y a perte de contexte.</li>
+	  <li>Au rechargement, mettre le focus, sur le contenu généré ou, lors d’une disparition, sur l’élément déclenchant (s’il existe toujours après rechargement) ou positionner le focus juste avant la partie qui a été enlevée.</li>
+	  <li> S’assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</li>
 	  </ol>
 	  
 	  <h2>Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</h2>
-	  <p>C'est le cas le plus fréquent, la page n'est pas rechargée, seul le DOM est modifié par addition ou supression de contenu lors d'une action utilisateur (par exemple, affichage des résultats d'un moteur de recherche, apparition d'une popin...).<br />
-	  Pour rendre accessible ce type de contenu :</p>
+	  <p>C’est le cas le plus fréquent : la page n’est pas rechargée, seul le DOM est modifié par addition ou suppression de contenu lors d’une action utilisateur (par exemple, affichage des résultats d’un moteur de recherche, apparition d’une popin…).<br />
+	  Pour rendre accessible ce type de contenu&nbsp;:</p>
 	  <ul>
-	  <li>Pour de l'addition de contenu, prévenir, si besoin, l'utilisateur de l'apparition de contenu (par exemple, pour un sous-menu à déplier, on peut ajouter un texte "déplier" et mettre une propriété <code>aria-haspopup</code>) et pousser le focus sur le nouveau contenu qui est apparu (le container, un titre, un lien, un bouton...). Si ce contenu est suceptible de disparaitre (popin, par exemple), garder en mémoire l'élement déclenchant l'apparition pour y pousser le focus lors de la disparition.</li>
-	  <li>Pour de la soustraction de contenu, prévenir, si besoin, l'utilisateur avant qu'il ne déclenche cette dispariton et le focus est remis juste avant la partie de contenu qui  a disparue.</li>
-	  <li> S'assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</li>
+	  <li>Pour de l’addition de contenu, prévenir si besoin l’utilisateur de l’apparition de contenu (par exemple, pour un sous-menu à déplier, on peut ajouter un texte «&nbsp;déplier&nbsp;» et mettre une propriété <code>aria-haspopup</code>) et pousser le focus sur le nouveau contenu qui est apparu (le container, un titre, un lien, un bouton…). Si ce contenu est susceptible de disparaître (popin, par exemple), garder en mémoire l’élément déclenchant l’apparition pour y remettre le focus lors de la disparition.</li>
+	  <li>Pour de la soustraction de contenu, prévenir si besoin l’utilisateur avant qu’il ne déclenche cette disparition et remettre le focus juste avant la partie de contenu qui a disparu.</li>
+	  <li> S’assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</li>
 	  </ul>
 	  
-	    <h2>Cas particulier d'une modification dynamique d'une <code>iframe</code></h2>
-	  <p>Lors qu'une <code>iframe</code> est mise à jour dynamiquement par une action utilisateur, il faut :</p>
+	    <h2>Cas particulier d’une modification dynamique d’une <code>iframe</code></h2>
+	  <p>Lorsqu’une <code>iframe</code> est mise à jour dynamiquement par une action utilisateur, il faut&nbsp;:</p>
 	  <ul>
-	  <li>Informer l'utilisateur de cette mise à jour et mettre à jour l'attribut <code>title</code> pour informer l'utilisateur de cette mise à jour. </li>
-	  <li> Si besoin (l'utilisateur doit avoir accès à l'<code>iframe</code> modifié immédiatement après l'action ayant abouti à la mise à jour), il faut mettre le focus sur la balise <code>iframe</code>.</li>
-	  <li> S'assurer que le parcours du focus reste logique et séquentiel dans la page comme à l'intérieur de l'<code>iframe</code>.</li>
+	  <li>Informer l’utilisateur de cette mise à jour et mettre à jour l’attribut <code>title</code> pour informer l’utilisateur de cette mise à jour. </li>
+	  <li> Si besoin (l’utilisateur doit avoir accès à l’<code>iframe</code> modifié immédiatement après l’action ayant abouti à la mise à jour), il faut mettre le focus sur la balise <code>iframe</code>.</li>
+	  <li> S’assurer que le parcours du focus reste logique et séquentiel dans la page comme à l’intérieur de l’<code>iframe</code>.</li>
 	  </ul>
     </main>
 
