@@ -6,8 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/files/step1/components/file.html
-web/inputs/html/exemples/files/step1/index.html
 web/inputs/html/exemples/formulaire/index.html
 web/inputs/html/exemples/landmarks/index.html
 web/inputs/html/exemples/listbox-pattern-aria/index.html
@@ -211,3 +209,5 @@ web/inputs/html/exemples/ARIA-clavier/index.html
 web/inputs/html/exemples/check-listbox/index.html
 web/inputs/html/exemples/dynFocus/index.html
 web/inputs/html/exemples/files/index.html
+web/inputs/html/exemples/files/step1/components/file.html
+web/inputs/html/exemples/files/step1/index.html
