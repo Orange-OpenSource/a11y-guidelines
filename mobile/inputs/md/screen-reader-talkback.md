@@ -1,11 +1,14 @@
 # Guide d’utilisation de <span lang="en">TalkBack</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"lecteur d’écran", "url":"./screen-reader.html"},{"label":"Guide d’utilisation de <span lang="en">TalkBack</span>"}]);
+    setBreadcrumb([
+        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
+        {"label":"Guide d’utilisation de <span lang=\"en\">TalkBack</span>"}
+    ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"screen-reader.html", "expanded": true}, 
-        {"label":"Guide pour iOS","url":"voiceover.html"}
-    ]);                        
+        {"label":"Sous Android","url":"screen-reader-talkback.html", "expanded": true}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
+    ]);
 });</script>
 
 <span data-menuitem="screen-reader"></span>

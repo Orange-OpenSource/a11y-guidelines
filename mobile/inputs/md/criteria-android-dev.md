@@ -1,17 +1,17 @@
-# Guide d’accessibilité Android
+# Les critères incontournables sous Android pour le développement
 
 <script>$(document).ready(function () {
     
-    setBreadcrumb([{"label":"Guide développeur", "url": "./dev-mobile.html"},
-        {"label":"Guide développeur Android"}
+    setBreadcrumb([{"label":"Critères incontournables sous Android", "url": "./criteria-android.html"},
+        {"label":"Pour le développement"}
 	]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"dev-mobile.html", "expanded": true}, 
-        {"label":"Guide pour iOS","url":"dev-ios.html"}
+        {"label":"Pour la conception","url":"criteria-android-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-android-dev.html", "expanded": true}
     ]);
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="criteria-android"></span>
 
 Ce guide a pour objectif de présenter les différentes options d’accessibilité du SDK Android.  À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.
 

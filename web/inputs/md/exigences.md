@@ -1,6 +1,6 @@
-# Exigences accessibilité web Orange
+# Référentiels complets d'accessibilité web
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Ensemble des exigences"}]);
+    setBreadcrumb([{"label":"Référentiels complets"}]);
 });</script>
 ## Le référentiel <abbr>WCAG</abbr>
 

@@ -1,11 +1,14 @@
 # Guide d’utilisation de <span lang="en">VoiceOver</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"lecteur d’écran", "url":"./screen-reader.html"},{"label":"Guide d’utilisation de <span lang="en">VoiceOver</span>"}]);
+    setBreadcrumb([
+        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
+        {"label":"Guide d’utilisation de <span lang=\"en\">VoiceOver</span>"}
+    ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"talkback.html"}, 
-        {"label":"Guide pour iOS","url":"screen-reader.html", "expanded": true}
-    ]);                    
+        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html", "expanded": true}
+    ]);
 });</script>
 
 <span data-menuitem="screen-reader"></span>

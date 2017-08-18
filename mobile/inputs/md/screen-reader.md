@@ -3,8 +3,8 @@
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Lecteur d’écran"}]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"talkback.html"}, 
-        {"label":"Guide pour iOS","url":"voiceover.html"}
+        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
     ]);                
 });</script>
 

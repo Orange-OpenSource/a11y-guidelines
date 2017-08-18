@@ -1,18 +1,17 @@
-# Guide d’accessibilité iOS
+# Les critères incontournables sous iOS pour le développement
 
 <script>$(document).ready(function () {
     
-    setBreadcrumb([{"label":"Guide développeur", "url": "./dev-mobile.html"},
-        {"label":"Guide développeur iOS"}
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+        {"label":"Pour le développement"}
 	]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"dev-android.html"}, 
-        {"label":"Guide pour iOS","url":"dev-mobile.html", "expanded": true}
-    ]);    
-    
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html", "expanded": true}
+    ]);	
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="criteria-ios"></span>
 
 Ce guide a pour objectif de présenter les différentes options d’accessibilité du <abbr>SDK</abbr> iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d’Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).
 
