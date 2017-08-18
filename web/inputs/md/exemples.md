@@ -56,6 +56,11 @@
             <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 2/2 (exemples)</span>
         </a>
     </li>
+    <li>
+        <a href="exemples/iframes-techniques/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Les iframes "techniques"</span>
+        </a>
+    </li>
 </ul>
 
 ## Niveau avancé
