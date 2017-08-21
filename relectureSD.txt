@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/tooltip/tooltip.html
 web/inputs/html/exemples/webmail/index.html
 web/inputs/html/exemples/zoom/exemple1.html
 web/inputs/html/exemples/zoom/exemple2.html
@@ -231,3 +230,4 @@ web/inputs/html/exemples/tag/exemple7.html
 web/inputs/html/exemples/tag/exemple8.html
 web/inputs/html/exemples/tag/exemple9.html
 web/inputs/html/exemples/tag/index.html
+web/inputs/html/exemples/tooltip/tooltip.html

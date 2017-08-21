@@ -30,19 +30,19 @@
 <body>
 
     <main role="main" class="container">
-      <h1>Les info-bulles (tooltip)</h1>
+      <h1>Les info-bulles (<i lang="en">tooltips</i>)</h1>
 
       <h2>Préambule</h2>
       <p>
-            Les info-bulles font partie des composants que l'on retrouve classiquement sur les sites web. 
-            Le langage HTML a prévu la possibilité d'afficher des info-bulles via l'attribut `title`. Cela dit, cette solution n'est malheureusement pas très esthétique puisqu'il est impossible de modifier son apparence.
-            La solution consiste donc bien souvent à créer des info-bulles à partir d'éléments HTML classiques (`span`, `div` ...) dont l'apparence pourra être adapté aux besoins à l'aide de CSS.
-            Cependant pour que ces info-bulles soient accessibles pour les utilisateurs qui n'utilisent pas de souris, certaines précautions doivent être prises.            
+            Les info-bulles font partie des composants que l’on retrouve classiquement sur les sites web. 
+            Le langage <abbr>HTML</abbr> a prévu la possibilité d’afficher des info-bulles via l’attribut <code>title</code>. Cela dit, cette solution n’est malheureusement pas très esthétique puisqu’il est impossible de modifier son apparence.
+            La solution consiste donc bien souvent à créer des info-bulles à partir d’éléments <abbr>HTML</abbr> classiques (<code>span</code>, <code>div</code>…) dont l’apparence pourra être adaptée aux besoins à l’aide de <abbr>CSS</abbr>.
+            Cependant pour que ces info-bulles soient accessibles pour les utilisateurs qui n’utilisent pas de souris, certaines précautions doivent être prises.            
       </p>
           
       <h2>La solution simple</h2>
       <p>
-            La solution la plus simple pour afficher des info-bulles consiste à utiliser un composant javascript déja accessible. C'est le cas des <a href="http://boosted.orange.com/javascript/#tooltips">info-bulles de la librairie Boosted</a>.                                           
+            La solution la plus simple pour afficher des info-bulles consiste à utiliser un composant Javascript déjà accessible. C’est le cas des <a href="http://boosted.orange.com/javascript/#tooltips">info-bulles de la librairie Boosted</a>.                                           
       </p>
       
       <h3>Exemple</h3>
@@ -52,7 +52,7 @@
                   <div class="col-md-6">
                         <form>
                               <div class="form-group">
-                                    <label for="numero-serie">Veuillez saisir le numéro de série <span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="inscrit au dos de l'appareil"></span></label>
+                                    <label for="numero-serie">Veuillez saisir le numéro de série <span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="inscrit au dos de l’appareil"></span></label>
                                     <input type="text" class="form-control" id="numero-serie">
                               </div>                              
                               <button type="submit" class="btn btn-default">Envoyer</button>
@@ -61,13 +61,13 @@
             </div>      
       </p>
 
-      <h2>Code de l'exemple</h3>
+      <h2>Code de l’exemple</h3>
       <pre><code>
             &lt;form&gt;
                   &lt;div class="form-group"&gt;
                         &lt;label for="numero-serie"&gt;
                               Veuillez saisir le numéro de série
-                              &lt;span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="inscrit au dos de l'appareil"&gt;&lt;/span&gt;
+                              &lt;span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="inscrit au dos de l’appareil"&gt;&lt;/span&gt;
                         &lt;/label&gt;
                         &lt;input type="email" class="form-control" id="numero-serie"&gt;
                   &lt;/div&gt;                              
@@ -77,13 +77,13 @@
       
       <h2>Place aux tests</h3>
       <dl>
-         <dt>Déplacer le focus sur l'icone "i" à l'aide de la touche <code>TAB</code>.</dt>
-         <dd>L'info-bulle apparait.</dd>
-         <dt>Naviguer dans l'exemple à l'aide d'un lecteur d'écran.</dt>
-         <dd>Le texte de l'info-bulle est correctement vocalisé.</dd>         
+         <dt>Déplacer le focus sur l’icône «&nbsp;i&nbsp;» à l’aide de la touche <kbd>Tab</kbd>.</dt>
+         <dd>L’info-bulle apparaît.</dd>
+         <dt>Naviguer dans l’exemple à l’aide d’un lecteur d’écran.</dt>
+         <dd>Le texte de l’info-bulle est correctement vocalisé.</dd>         
       </dl>
       
-      <p><strong>À noter : </strong>l'attribut <code>tabindex</code> est nécessaire lorsque l'info-bulle est utilisée comme ici sur un élément non focusable (<code>span</code>). Sans cet attribut, l'info-bulle ne serait pas accessible au clavier.</p>
+      <p><strong>À noter&nbsp;: </strong>l’attribut <code>tabindex</code> est nécessaire lorsque l’info-bulle est utilisée comme ici sur un élément non focusable (<code>span</code>). Sans cet attribut, l’info-bulle ne serait pas accessible au clavier.</p>
 
     </main>
 
