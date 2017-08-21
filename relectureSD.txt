@@ -38,6 +38,26 @@ web/theme/default/_manifests.html
 web/theme/default/_page.html
 web/theme/default/js/reco.js
 web/theme/default/search.html
+mobile/inputs/md/criteria-android-conception.md
+mobile/inputs/md/criteria-android-dev.md
+mobile/inputs/md/criteria-android.md
+mobile/inputs/md/criteria-ios-conception.md
+mobile/inputs/md/criteria-ios-dev.md
+mobile/inputs/md/criteria-ios.md
+mobile/inputs/md/criteria-mobile.md
+mobile/inputs/md/dev-mobile.md
+mobile/inputs/md/mdan.md
+mobile/inputs/md/screen-reader-talkback.md
+mobile/inputs/md/screen-reader-voiceover.md
+mobile/inputs/md/screen-reader.md
+mobile/manifest.json
+mobile/theme/default/_layout.html
+web/inputs/md/confort-plus.md
+web/inputs/md/exigences.md
+web/inputs/md/orange-boosted.md
+web/manifest.json
+web/theme/default/_layout.html
+
 
 ------------------------------
 
