@@ -82,7 +82,7 @@ Voici les principaux raccourcis utiles pour tester la navigation au sein d’une
 - <kbd>Barre espace</kbd> pour cocher ou décocher une case à cocher.
 - <kbd>Ctrl</kbd> pour faire taire Jaws.
 
-## Prise en main de VoiceOver
+## Prise en main de VoiceOver (sous Mac)
 
 VoiceOver est le lecteur d’écran disponible sur Mac. Celui-ci nécessite aucune installation puisqu’il est intégré directement au système.  
 Pour pouvez activer VoiceOver depuis les *Préférences systèmes &gt; Accessibilité*. Ou directement en utilisant le raccourci <kbd>Commande + F5</kbd>.
@@ -95,6 +95,11 @@ Voici néanmoins les raccourcis principaux&nbsp;:
 - <kbd>Ctrl + Option + U</kbd> pour accéder à la liste des titres, liens, champs de formulaires… (utiliser les flèches gauche et droite pour naviguer entre les différentes listes). 
 - <kbd>Ctrl</kbd> pour faire taire VoiceOver.
 - <kbd>Ctrl + Option</kbd> <!-- MISSING SOMETHING HERE? (sd) -->
+
+## Prise en main des lecteurs d'écran sous mobile
+Pour tester un site web sur mobile : 
+- <a href="http://localhost:8080/mobile/screen-reader-talkback.html">Guide d’utilisation de TalkBack (sous Android)</a>
+- <a href="http://localhost:8080/mobile/screen-reader-voiceover.html">Guide d’utilisation de VoiceOver (sous iOS)</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
