@@ -18,14 +18,14 @@ Deux versions sont disponibles&nbsp;:
 
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only"><span lang="en">TalkBack</span></h2>          
-    <a href="./talkback.html" class="btn btn-info">
+    <a href="./screen-reader-talkback.html" class="btn btn-info">
         ![](./images/android.png)
         <div>Guide d’utilisation de <span lang="en">TalkBack</span></div>
     </a>
 </div>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">Voiceover</h2>          
-    <a href="./voiceover.html" class="btn btn-info">
+    <a href="./screen-reader-voiceover.html" class="btn btn-info">
         ![](./images/iphone.png)
         <div>Guide d’utilisation de <span lang="en">VoiceOver</span></div>
     </a>
