@@ -6,16 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/tag/exemple1.html
-web/inputs/html/exemples/tag/exemple2.html
-web/inputs/html/exemples/tag/exemple3.html
-web/inputs/html/exemples/tag/exemple4.html
-web/inputs/html/exemples/tag/exemple5.html
-web/inputs/html/exemples/tag/exemple6.html
-web/inputs/html/exemples/tag/exemple7.html
-web/inputs/html/exemples/tag/exemple8.html
-web/inputs/html/exemples/tag/exemple9.html
-web/inputs/html/exemples/tag/index.html
 web/inputs/html/exemples/tooltip/tooltip.html
 web/inputs/html/exemples/webmail/index.html
 web/inputs/html/exemples/zoom/exemple1.html
@@ -231,3 +221,13 @@ web/inputs/html/exemples/role-dialog2/role-dialog.html
 web/inputs/html/exemples/simple-menu/simple-menu.html
 web/inputs/html/exemples/speak/index.html
 web/inputs/html/exemples/stepbar/stepbar.html
+web/inputs/html/exemples/tag/exemple1.html
+web/inputs/html/exemples/tag/exemple2.html
+web/inputs/html/exemples/tag/exemple3.html
+web/inputs/html/exemples/tag/exemple4.html
+web/inputs/html/exemples/tag/exemple5.html
+web/inputs/html/exemples/tag/exemple6.html
+web/inputs/html/exemples/tag/exemple7.html
+web/inputs/html/exemples/tag/exemple8.html
+web/inputs/html/exemples/tag/exemple9.html
+web/inputs/html/exemples/tag/index.html
