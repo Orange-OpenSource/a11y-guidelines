@@ -6,9 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/tag-exemples/Exemple destinataire.html
-web/inputs/html/exemples/tag-exemples/Exemple filtre.html
-web/inputs/html/exemples/tag-exemples/index.html
 web/inputs/html/exemples/tag/exemple1.html
 web/inputs/html/exemples/tag/exemple2.html
 web/inputs/html/exemples/tag/exemple3.html
@@ -51,6 +48,9 @@ web/inputs/md/exigences.md
 web/inputs/md/orange-boosted.md
 web/manifest.json
 web/theme/default/_layout.html
+web/inputs/html/exemples/tag-exemples/Exemple destinataire.html
+web/inputs/html/exemples/tag-exemples/Exemple filtre.html
+web/inputs/html/exemples/tag-exemples/index.html
 
 
 ------------------------------
