@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/simple-menu/simple-menu.html
 web/inputs/html/exemples/speak/index.html
 web/inputs/html/exemples/stepbar/stepbar.html
 web/inputs/html/exemples/tag-exemples/Exemple destinataire.html
@@ -231,3 +230,4 @@ web/inputs/html/exemples/listbox/index.html
 web/inputs/html/exemples/masquage/index.html
 web/inputs/html/exemples/role-dialog/role-dialog.html
 web/inputs/html/exemples/role-dialog2/role-dialog.html
+web/inputs/html/exemples/simple-menu/simple-menu.html
