@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Les boites de dialogue 2/2 - recommandations accessibilité web Orange</title>
+    <title>Les boîtes de dialogue 2/2 - recommandations accessibilité web Orange</title>
 
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -30,28 +30,28 @@
 <body>
 
     <main role="main" class="container">
-      <h1>Les boites de dialogue 2/2</h1>
+      <h1>Les boîtes de dialogue 2/2</h1>
 
       <h2>Présentation</h2>
-      <p>Voici un autre exemple de boite de dialogue qui cette fois au lieu d'afficher un message à l'utilisateur, lui demande de sélectionner un dossier parmis une liste.</p>
+      <p>Voici un autre exemple de boite de dialogue qui cette fois, au lieu d’afficher un message à l’utilisateur, lui demande de sélectionner un dossier parmi une liste.</p>
       
       <h2>Exemple</h2>
       <p>Voici le rendu final de cet exemple.</p>
 
-      <button id="openButton" class="btn btn-secondary">Ouvrir l'exemple final</button>
+      <p><button id="openButton" class="btn btn-secondary">Ouvrir l’exemple final</button></p>
 
       <!-- Final dialog -->
       <div id="dialog" role="dialog" aria-labelledby="dialogTitle">
         <span tabindex="0" class="dialog-start"></span>
         <div class="dialogContainer">
           <button class="closeButton" aria-label="Fermer" title="Fermer">X</button>
-          <div id="dialogTitle">Déplacer les éléments vers :</div>
+          <div id="dialogTitle">Déplacer les éléments vers&nbsp;:</div>
           <div class="dialogContent">
             <p id="list-label">Mes fichiers</p>
             <div role="listbox" tabindex="0" class="defaultFocus" aria-labelledby="list-label">            
               <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Mes fichiers ajoutés</span></div>
               <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Divers</span></div>
-              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Musique festivales</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Musique festivals</span></div>
               <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Photos vacances</span></div>  
               <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Voyages Espagne</span></div>
               <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">VTT</span></div>
@@ -72,7 +72,7 @@
 
       <h2>Réalisation</h2>
 
-      <p>Pas beaucoup de modifications par rapport au <a href="../role-dialog/role-dialog.html">premier exemple sur les boites de dialogue</a>, si ce n'est, l'utilisation d'une listbox. Dans cas il suffit de bien veiller à labeliser celle-ci en utilisant un attribut <code>aria-labelledby</code></p>
+      <p>Pas beaucoup de modifications par rapport au <a href="../role-dialog/role-dialog.html">premier exemple sur les boîtes de dialogue</a>, si ce n’est l’utilisation d’une listbox. Dans cas il suffit de bien veiller à étiqueter celle-ci en utilisant un attribut <code>aria-labelledby</code>.</p>
 
       <pre><code>
           &lt;p id="list-label"&gt;Mes fichiers&lt;/p&gt;
