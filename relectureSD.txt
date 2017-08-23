@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/md/confort-plus.md
 web/inputs/md/exigences.md
 web/inputs/md/orange-boosted.md
 web/manifest.json
@@ -231,3 +230,4 @@ mobile/inputs/md/screen-reader-voiceover.md
 mobile/inputs/md/screen-reader.md
 mobile/manifest.json
 mobile/theme/default/_layout.html
+web/inputs/md/confort-plus.md
