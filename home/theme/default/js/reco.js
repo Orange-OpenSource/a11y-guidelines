@@ -131,6 +131,8 @@ $(document).ready( function () {
     });
   }
   
+  // list glossary items
+  generateGlossaryLinks();
 });
 
 function setBreadcrumb(param) {
@@ -187,4 +189,32 @@ function getCurrentItem() {
   } else {
     return false;
   }
+}
+
+/*
+  Glossary
+*/
+var Glossary = { // collection of all terms to be defined
+  "CSS":"<span lang='en'>Cascading StyleSheets</span>",
+  "HTML":"<span lang='en'>HyperText Markup Language</span>",
+  "HTML5":"<span lang='en'>HyperText Markup Language version 5</span>",
+  "JS":"Javascript",
+  "RGAA":"Référentiel général d’Accessibilité des Administrations",
+  "URL":"<span lang='en'>Universal Resource Locator</span>",
+  "W3C":"<span lang='en'>World Wide Web Consortium</span>",
+  "XHTML":"<span lang='en'>eXtensible HyperText Markup Language</span>",
+};
+function generateGlossaryLinks() {
+  $('#content abbr').each(function(){
+    var $abbr = $(this), text = $(this).text().toUpperCase(); // storing variable to go faster
+     $abbr.css('background','#99ffff'); // REMOVE THIS BEFORE MERGING
+    
+    if( Glossary[text] ) {
+      // if the innerText of the node is found in Glossary and is not undefined
+      // then insert a text node with the expanded text
+      $abbr.after("<i style='background:#99ffff'> [" + Glossary[text] + "]</i>");
+      // then undefine the Glossary item to only show the expanded text the first time
+      Glossary[text] = undefined;
+    }
+  });
 }
