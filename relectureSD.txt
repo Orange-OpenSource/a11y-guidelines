@@ -6,7 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/md/methodes-outils-lecteur-ecran.md
 web/theme/default/_layout.html
 web/theme/default/_manifests.html
 web/theme/default/_page.html
@@ -231,3 +230,4 @@ web/inputs/html/exemples/zoom/exemple2.html
 web/inputs/html/exemples/zoom/index.html
 web/inputs/md/fondamentaux-nontech.md
 web/inputs/md/fondamentaux-tech.md
+web/inputs/md/methodes-outils-lecteur-ecran.md
