@@ -6,11 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-mobile/inputs/md/screen-reader-talkback.md
-mobile/inputs/md/screen-reader-voiceover.md
-mobile/inputs/md/screen-reader.md
-mobile/manifest.json
-mobile/theme/default/_layout.html
 web/inputs/md/confort-plus.md
 web/inputs/md/exigences.md
 web/inputs/md/orange-boosted.md
@@ -231,3 +226,8 @@ mobile/inputs/md/criteria-ios.md
 mobile/inputs/md/criteria-mobile.md
 mobile/inputs/md/dev-mobile.md
 mobile/inputs/md/mdan.md
+mobile/inputs/md/screen-reader-talkback.md
+mobile/inputs/md/screen-reader-voiceover.md
+mobile/inputs/md/screen-reader.md
+mobile/manifest.json
+mobile/theme/default/_layout.html
