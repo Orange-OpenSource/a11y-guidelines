@@ -1,4 +1,4 @@
-# Référentiels complets d'accessibilité web
+# Référentiels complets d’accessibilité web
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Référentiels complets"}]);
 });</script>
