@@ -16,18 +16,18 @@ Si la mise en page du <span lang="en">pushmail</span> est complexe, notamment si
 En interne Orange, nous utilisons principalement trois méthodes pour composer les <span lang="en">pushmails</span>&nbsp;: 
 - Création du <span lang="en">pushmail</span> via Word.
 - Utilisation d'un outil dédié comme «&nbsp;Mes Pushmails&nbsp;».
-- Composition directe ou indirecte (via des frameworks) en HTML.
+- Composition directe ou indirecte (via des <i lang="en">frameworks</i>) en <abbr>HTML</abbr>.
 
 Quelle que soit la méthode choisie, il faut au préalable respecter les [recommandations générales](./editorial.html) pour tout document rédactionnel.
 
 ### Création à partir d’un document Word 
-Créer un document Word accessible en suivant les [recommandations Word](./word.html). Puis utiliser l’option «&nbsp;Envoyer au destinataire du message&nbsp;» (option à ajouter la première fois via Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message). 
+Créer un document Word accessible en suivant les [recommandations Word](./word.html). Puis utiliser l’option «&nbsp;Envoyer au destinataire du message&nbsp;» (option à ajouter la première fois via Fichier&nbsp;> Option&nbsp;> Barre d’outils accès rapide&nbsp;> Envoyer au destinataire du message). 
 
-### Création à partir d’HTML ou d'un outil dédié
-Créer des pages HTML accessibles en suivant [les recommandations Web](../web/index.html), si besoin et les recommandations spécifiques ci dessous.  
-Á noter&nbsp;: en interne, l’outil «&nbsp;Mes Pushmails&nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](./editorial.html) pour du contenu éditorial.
+### Création à partir d’<abbr>HTML</abbr> ou d'un outil dédié
+Créer des pages <abbr>HTML</abbr> accessibles en suivant [les recommandations Web](../web/index.html), si besoin et les recommandations spécifiques ci dessous.  
+Á noter&nbsp;: en interne à Orange, l’outil «&nbsp;Mes Pushmails&nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](./editorial.html) pour du contenu éditorial.
 
-## Règle spécifique <span lang="en">pushmail</span> HTML
+## Règle spécifique <span lang="en">pushmail</span> <abbr>HTML</abbr>
 
 ### Fournir des marges homogènes
 Pour s'assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques `hx`, `p` et les listes `ul`, `ol` doivent avoir une marge nulle fixée en <abbr>CSS</abbr> (`style="margin:0"`).
@@ -42,7 +42,7 @@ Pour les titres `hx`, on ajoute en plus la propriété <abbr>CSS</abbr> spécifi
 Mettre un attribut <code>role="presentation"</code> dans la balise `table` d'un tableau de présentation pour que la sémantique du tableau soit ignorée par les aides techniques.  
 
 ## Liens utiles
-- [Outil pour valider l'accessibilité du code HTML de ses <span lang="en">pushmails</span> (en anglais)](http://www.accessible-email.org/)
+- <a href="http://www.accessible-email.org/" hreflang="en">Outil pour valider l'accessibilité du code <abbr>HTML</abbr> de ses <span lang="en">pushmails</span></a> (en anglais)
 - Article en anglais sur le site de Microsoft&nbsp;: <a lang="en" href="https://support.office.com/en-us/article/Make-your-Outlook-email-accessible-71ce71f4-7b15-4b7a-a2e3-cf91721bbacb" hreflang="en">Make your Outlook email accessible – Microsoft Office Support</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

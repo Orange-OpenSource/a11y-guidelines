@@ -29,7 +29,7 @@ Les sauts de page doivent être créés à l’aide des «&nbsp;Sauts&nbsp;» (I
 Les listes doivent être réalisées en utilisant l’option «&nbsp;Liste à puces&nbsp;» ou «&nbsp;Liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.
 
 ### 6. Utiliser les notes de bas de page
-Les options «&nbsp;notes de bas de page&nbsp;» et «&nbsp;notes de fin&nbsp;» permettent d’insérer des notes dans votre document.
+Les options «&nbsp;Notes de bas de page&nbsp;» et «&nbsp;Notes de fin&nbsp;» permettent d’insérer des notes dans votre document.
 
 ### 7. Numéroter vos pages
 L’option «&nbsp;Numéro de page&nbsp;» permet de se repérer dans le document.
@@ -51,7 +51,7 @@ Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan d
 - 4.5:1 pour du texte de taille normale.
 - 3:1 pour du texte de grande taille.
 
-Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
+Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.
 
 ### 13. Définir la Langue
 La langue doit être définie dans le menu&nbsp;: Fichier&nbsp;> Options&nbsp;> Langue.  
@@ -71,12 +71,12 @@ Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier&nbsp;> V�
 Pour exporter en <abbr>PDF</abbr> il suffit d’aller dans le menu&nbsp;: Fichier&nbsp;> Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier <abbr>PDF</abbr>.  
 À vérifier la première fois&nbsp;: dans les options d’export, la case à cocher «&nbsp;Balises de structure de document pour l’accessibilité&nbsp;» doit être cochée.
 
-À noter, qu’avec Word pour Office 2010, les documents <abbr>PDF</abbr> générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
+À noter qu’avec Word pour Office 2010, les documents <abbr>PDF</abbr> générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
 
 ## Ressources externes
 
 - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
-- [Accessibilité Word](http://webaim.org/techniques/word/), WebAIM (anglais).
+- <a href="http://webaim.org/techniques/word/" hreflang="en">Accessibilité Word, WebAIM</a> (anglais).
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

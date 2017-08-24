@@ -9,7 +9,7 @@
 Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité.
 Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.
 
-Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran.
+Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux…) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran.
 C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en <abbr>PDF</abbr> avant de la diffuser. 
 En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.  
 
@@ -18,7 +18,7 @@ En effet, l’option d’export intégrée à PowerPoint permet d’améliorer l
 Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles. 
 Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.
 
-Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et NVDA 2017-1. Les recommandations ci-dessous découlent de ces tests.
+Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et <abbr>NVDA</abbr> 2017-1. Les recommandations ci-dessous découlent de ces tests.
 
 ### 1. Utiliser les masques de diapositive
 Les présentations doivent être créées en utilisant les masques de diapositive (menu&nbsp;: Affichage&nbsp;> Masque des diapositives). Ensuite utiliser les cases à cocher «&nbsp;Titre&nbsp;», «&nbsp;Pieds de page&nbsp;» et le menu «&nbsp;Insérer un espace réservé&nbsp;».
@@ -50,7 +50,7 @@ Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan d
 - 4.5:1 pour du texte de taille normale.
 - 3:1 pour du texte de grande taille.
 
-Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).
+Le contraste peut être vérifié à l'aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.
 
 ### 10. Définir la langue
 Sélectionner la langue du document (menu&nbsp;: Fichier&nbsp;> Options&nbsp;> Langue).  
@@ -66,30 +66,30 @@ A vérifier la première fois : dans les options d'export, la case à cocher «&
 ## Ressources externes
 
 - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
-- [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).
+- <a href="http://webaim.org/techniques/PowerPoint/" hreflang="en">Accessibilité PowerPoint, WebAIM</a> (anglais).
 
 ## Résultats des tests effectués
-Nous avons testé le comportement des lecteurs d'écran NVDA (version 2017.1) et JAWS (version 17) avec un fichier <abbr>PDF</abbr> généré à l'aide de PowerPoint 2010.
+Nous avons testé le comportement des lecteurs d'écran <abbr>NVDA</abbr> (version 2017.1) et Jaws (version 17) avec un fichier <abbr>PDF</abbr> généré à l'aide de PowerPoint 2010.
 
 ### Tableaux
-Les tableaux sont vocalisés correctement avec Jaws et NVDA.
+Les tableaux sont vocalisés correctement avec Jaws et <abbr>NVDA</abbr>.
 
 ### Tableaux avec textes de remplacement
-NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.  
-JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.
+<abbr>NVDA</abbr> : les tableaux restent vocalisés, les textes de remplacement sont ignorés.  
+Jaws : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.
 
 ### SmartArt
-Même comportement pour Jaws et NVDA, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).
+Même comportement pour Jaws et <abbr>NVDA</abbr>, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).
 
 ### SmartArt avec textes de remplacement
-NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.  
-JAWS : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.
+<abbr>NVDA</abbr> : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.  
+Jaws : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.
 
 ### Graphiques
-Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.
+Même comportement pour Jaws et <abbr>NVDA</abbr>, les chiffres apparaissant dans les graphiques sont vocalisés.
 
 ### Graphiques avec textes de remplacement
-Comportement attendu pour Jaws et NVDA, le texte de remplacement est vocalisé à la place du graphique.
+Comportement attendu pour Jaws et <abbr>NVDA</abbr>, le texte de remplacement est vocalisé à la place du graphique.
 
 
 &nbsp;
