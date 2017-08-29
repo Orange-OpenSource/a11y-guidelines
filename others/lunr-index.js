@@ -47,14 +47,14 @@ documentTitles["powerpoint.html#introduction"] = "Introduction";
 index.add({
     url: "powerpoint.html#introduction",
     title: "Introduction",    
-    body: "## Introduction Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux ...) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.    "
+    body: "## Introduction Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux…) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.    "
 });
 
 documentTitles["powerpoint.html#recommandations"] = "Recommandations";
 index.add({
     url: "powerpoint.html#recommandations",
     title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles.  Pour plus de détails, n’hésitez pas à consulter les guides proposés sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;.  Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et NVDA 2017-1. Les recommandations ci-dessous découlent de ces tests.  "
+    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles.  Pour plus de détails, n’hésitez pas à consulter les guides proposés sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;.  Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et &lt;abbr&gt;NVDA&lt;/abbr&gt; 2017-1. Les recommandations ci-dessous découlent de ces tests.  "
 });
 
 documentTitles["powerpoint.html#1-utiliser-les-masques-de-diapositive"] = "1. Utiliser les masques de diapositive";
@@ -117,7 +117,7 @@ documentTitles["powerpoint.html#9-assurer-un-contraste-suffisant"] = "9. Assurer
 index.add({
     url: "powerpoint.html#9-assurer-un-contraste-suffisant",
     title: "9. Assurer un contraste suffisant",    
-    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l'aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
+    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l'aide de l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
 });
 
 documentTitles["powerpoint.html#10-definir-la-langue"] = "10. Définir la langue";
@@ -138,63 +138,63 @@ documentTitles["powerpoint.html#12-exporter-la-presentation-en-document-abbrpdfa
 index.add({
     url: "powerpoint.html#12-exporter-la-presentation-en-document-abbrpdfabbr",
     title: "12. Exporter la présentation en document &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 12. Exporter la présentation en document &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d'aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   A vérifier la première fois : dans les options d'export, la case à cocher «&amp;nbsp;Balises de structure de document pour l'accessiblité&amp;nbsp;» doit être cochée.  "
+    body: "### 12. Exporter la présentation en document &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d'aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   A vérifier la première fois : dans les options d'export, la case à cocher «&amp;nbsp;Balises de structure de document pour l'accessibilité&amp;nbsp;» doit être cochée.  "
 });
 
 documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
 index.add({
     url: "powerpoint.html#ressources-externes",
     title: "Ressources externes",    
-    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - [Accessibilité PowerPoint](http://webaim.org/techniques/PowerPoint/), WebAIM (anglais).  "
+    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;http://webaim.org/techniques/PowerPoint/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité PowerPoint, WebAIM&lt;/a&gt; (anglais).  "
 });
 
 documentTitles["powerpoint.html#resultats-des-tests-effectues"] = "Résultats des tests effectués";
 index.add({
     url: "powerpoint.html#resultats-des-tests-effectues",
     title: "Résultats des tests effectués",    
-    body: "## Résultats des tests effectués Nous avons testé le comportement des lecteurs d'écran NVDA (version 2017.1) et JAWS (version 17) avec un fichier &lt;abbr&gt;PDF&lt;/abbr&gt; généré à l'aide de PowerPoint 2010.  "
+    body: "## Résultats des tests effectués Nous avons testé le comportement des lecteurs d'écran &lt;abbr&gt;NVDA&lt;/abbr&gt; (version 2017.1) et Jaws (version 17) avec un fichier &lt;abbr&gt;PDF&lt;/abbr&gt; généré à l'aide de PowerPoint 2010.  "
 });
 
 documentTitles["powerpoint.html#tableaux"] = "Tableaux";
 index.add({
     url: "powerpoint.html#tableaux",
     title: "Tableaux",    
-    body: "### Tableaux Les tableaux sont vocalisés correctement avec Jaws et NVDA.  "
+    body: "### Tableaux Les tableaux sont vocalisés correctement avec Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;.  "
 });
 
 documentTitles["powerpoint.html#tableaux-avec-textes-de-remplacement"] = "Tableaux avec textes de remplacement";
 index.add({
     url: "powerpoint.html#tableaux-avec-textes-de-remplacement",
     title: "Tableaux avec textes de remplacement",    
-    body: "### Tableaux avec textes de remplacement NVDA : les tableaux restent vocalisés, les textes de remplacement sont ignorés.   JAWS : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
+    body: "### Tableaux avec textes de remplacement &lt;abbr&gt;NVDA&lt;/abbr&gt; : les tableaux restent vocalisés, les textes de remplacement sont ignorés.   Jaws : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
 });
 
 documentTitles["powerpoint.html#smartart"] = "SmartArt";
 index.add({
     url: "powerpoint.html#smartart",
     title: "SmartArt",    
-    body: "### SmartArt Même comportement pour Jaws et NVDA, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).  "
+    body: "### SmartArt Même comportement pour Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).  "
 });
 
 documentTitles["powerpoint.html#smartart-avec-textes-de-remplacement"] = "SmartArt avec textes de remplacement";
 index.add({
     url: "powerpoint.html#smartart-avec-textes-de-remplacement",
     title: "SmartArt avec textes de remplacement",    
-    body: "### SmartArt avec textes de remplacement NVDA : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.   JAWS : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
+    body: "### SmartArt avec textes de remplacement &lt;abbr&gt;NVDA&lt;/abbr&gt; : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.   Jaws : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
 });
 
 documentTitles["powerpoint.html#graphiques"] = "Graphiques";
 index.add({
     url: "powerpoint.html#graphiques",
     title: "Graphiques",    
-    body: "### Graphiques Même comportement pour Jaws et NVDA, les chiffres apparaissant dans les graphiques sont vocalisés.  "
+    body: "### Graphiques Même comportement pour Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;, les chiffres apparaissant dans les graphiques sont vocalisés.  "
 });
 
 documentTitles["powerpoint.html#graphiques-avec-textes-de-remplacement"] = "Graphiques avec textes de remplacement";
 index.add({
     url: "powerpoint.html#graphiques-avec-textes-de-remplacement",
     title: "Graphiques avec textes de remplacement",    
-    body: "### Graphiques avec textes de remplacement Comportement attendu pour Jaws et NVDA, le texte de remplacement est vocalisé à la place du graphique.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "### Graphiques avec textes de remplacement Comportement attendu pour Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;, le texte de remplacement est vocalisé à la place du graphique.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -259,7 +259,7 @@ documentTitles["word.html#6-utiliser-les-notes-de-bas-de-page"] = "6. Utiliser l
 index.add({
     url: "word.html#6-utiliser-les-notes-de-bas-de-page",
     title: "6. Utiliser les notes de bas de page",    
-    body: "### 6. Utiliser les notes de bas de page Les options «&amp;nbsp;notes de bas de page&amp;nbsp;» et «&amp;nbsp;notes de fin&amp;nbsp;» permettent d’insérer des notes dans votre document.  "
+    body: "### 6. Utiliser les notes de bas de page Les options «&amp;nbsp;Notes de bas de page&amp;nbsp;» et «&amp;nbsp;Notes de fin&amp;nbsp;» permettent d’insérer des notes dans votre document.  "
 });
 
 documentTitles["word.html#7-numeroter-vos-pages"] = "7. Numéroter vos pages";
@@ -301,7 +301,7 @@ documentTitles["word.html#12-assurer-un-contraste-suffisant"] = "12. Assurer un 
 index.add({
     url: "word.html#12-assurer-un-contraste-suffisant",
     title: "12. Assurer un contraste suffisant",    
-    body: "### 12. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/).  "
+    body: "### 12. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l’aide de l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
 });
 
 documentTitles["word.html#13-definir-la-langue"] = "13. Définir la Langue";
@@ -336,14 +336,14 @@ documentTitles["word.html#17-exporter-le-document-au-format-abbrpdfabbr"] = "17.
 index.add({
     url: "word.html#17-exporter-le-document-au-format-abbrpdfabbr",
     title: "17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d’aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   À vérifier la première fois&amp;nbsp;: dans les options d’export, la case à cocher «&amp;nbsp;Balises de structure de document pour l’accessibilité&amp;nbsp;» doit être cochée.  À noter, qu’avec Word pour Office 2010, les documents &lt;abbr&gt;PDF&lt;/abbr&gt; générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.  "
+    body: "### 17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d’aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   À vérifier la première fois&amp;nbsp;: dans les options d’export, la case à cocher «&amp;nbsp;Balises de structure de document pour l’accessibilité&amp;nbsp;» doit être cochée.  À noter qu’avec Word pour Office 2010, les documents &lt;abbr&gt;PDF&lt;/abbr&gt; générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.  "
 });
 
 documentTitles["word.html#ressources-externes"] = "Ressources externes";
 index.add({
     url: "word.html#ressources-externes",
     title: "Ressources externes",    
-    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - [Accessibilité Word](http://webaim.org/techniques/word/), WebAIM (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;http://webaim.org/techniques/word/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité Word, WebAIM&lt;/a&gt; (anglais).  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -380,14 +380,14 @@ documentTitles["pdf.html#avec-adobe-indesign"] = "Avec Adobe InDesign";
 index.add({
     url: "pdf.html#avec-adobe-indesign",
     title: "Avec Adobe InDesign",    
-    body: "### Avec Adobe InDesign  Vous trouverez les recommandations Adobe inDesign sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; de Accede PDF.  Ce document est issu de la phase 1 d’AcceDe PDF (2011), par Atalan en partenariat avec 9 entreprises&amp;nbsp;: Spie, Air Liquide, Société Générale, BNP Paribas, Areva, LVMH, Capgemini, Thales et SNCF, en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
+    body: "### Avec Adobe InDesign  Vous trouverez les recommandations Adobe inDesign sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.  Ce document est issu de la phase 1 d’AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; (2011), par Atalan en partenariat avec 9 entreprises&amp;nbsp;: Spie, Air Liquide, Société Générale, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Areva, &lt;abbr&gt;LVMH&lt;/abbr&gt;, Capgemini, Thales et &lt;abbr&gt;SNCF&lt;/abbr&gt;, en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
 });
 
 documentTitles["pdf.html#avec-adobe-acrobat-pro"] = "Avec Adobe Acrobat Pro";
 index.add({
     url: "pdf.html#avec-adobe-acrobat-pro",
     title: "Avec Adobe Acrobat Pro",    
-    body: "### Avec Adobe Acrobat Pro  Vous trouverez les recommandations Adobe Acrobat Pro sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Acrobat Pro&lt;/a&gt; de Accede PDF.   Ce document est issu de la phase 2 d’AcceDe PDF (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&amp;nbsp;: La Poste, Siemens, Spie, Thales, Atos, BNP Paribas, Devoteam, Manpower et EDF en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
+    body: "### Avec Adobe Acrobat Pro  Vous trouverez les recommandations Adobe Acrobat Pro sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Acrobat Pro&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.   Ce document est issu de la phase 2 d’AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&amp;nbsp;: La Poste, Siemens, Spie, Thales, Atos, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Devoteam, Manpower et &lt;abbr&gt;EDF&lt;/abbr&gt; en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
 });
 
 documentTitles["pdf.html#criteres-incontournables"] = "Critères incontournables";
@@ -401,49 +401,49 @@ documentTitles["pdf.html#structure-du-document"] = "Structure du document";
 index.add({
     url: "pdf.html#structure-du-document",
     title: "Structure du document",    
-    body: "### Structure du document  Le document doit contenir a minima un titre de document et une langue par défaut (les changements de langues seront indiqués dans le document).  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF16.html\&quot; title=\&quot;Technique PDF16 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF16 des WCAG 2.0\&quot;&gt;PDF16&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF17.html\&quot; title=\&quot;Technique PDF17 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF17 des WCAG 2.0\&quot;&gt;PDF17&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF18.html\&quot; title=\&quot;Technique PDF18 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF18 des WCAG 2.0\&quot;&gt;PDF18&lt;/a&gt;.  Le document est structuré à l’aide de titres, par l’usage approprié de «&amp;nbsp;tags&amp;nbsp;» (balises) titres. De plus, les documents longs proposeront des signets afin de faciliter la navigation.  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF2.html\&quot; title=\&quot;Technique PDF2 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF2 des WCAG 2.0\&quot;&gt;PDF2&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF9.html\&quot; title=\&quot;Technique PDF9 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF9 des WCAG 2.0\&quot;&gt;PDF9&lt;/a&gt;.  L’usage d’en-têtes et de pieds de page doit permettre à l’utilisateur de se situer dans le document.  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF14.html\&quot; title=\&quot;Technique PDF14 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF14 des WCAG 2.0\&quot;&gt;PDF14&lt;/a&gt;.  "
+    body: "### Structure du document  Le document doit contenir a minima un titre de document et une langue par défaut (les changements de langues seront indiqués dans le document).  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF16.html\&quot; title=\&quot;Technique PDF16 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF16 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF16&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF17.html\&quot; title=\&quot;Technique PDF17 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF17 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF17&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF18.html\&quot; title=\&quot;Technique PDF18 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF18 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF18&lt;/abbr&gt;&lt;/a&gt;.  Le document est structuré à l’aide de titres, par l’usage approprié de «&amp;nbsp;tags&amp;nbsp;» (balises) titres. De plus, les documents longs proposeront des signets afin de faciliter la navigation.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF2.html\&quot; title=\&quot;Technique PDF2 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF2 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF2&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF9.html\&quot; title=\&quot;Technique PDF9 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF9 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF9&lt;/abbr&gt;&lt;/a&gt;.  L’usage d’en-têtes et de pieds de page doit permettre à l’utilisateur de se situer dans le document.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF14.html\&quot; title=\&quot;Technique PDF14 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF14 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF14&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#navigation-clavier-et-ordre-de-lecture"] = "Navigation clavier et ordre de lecture";
 index.add({
     url: "pdf.html#navigation-clavier-et-ordre-de-lecture",
     title: "Navigation clavier et ordre de lecture",    
-    body: "### Navigation clavier et ordre de lecture  L’ordre de lecture restitué par un outil d’assistance, ainsi que l’ordre de la navigation clavier (par tabulation) reflètent la structure du document. Il ne doit pas y avoir de piège clavier (la navigation au clavier doit être possible dans l’ensemble du document sans blocage).  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF3.html\&quot; title=\&quot;Technique PDF3 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF3 des WCAG 2.0\&quot;&gt;PDF3&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/G21.html\&quot; title=\&quot;Technique G21 des WCAG 2.0\&quot; aria-label=\&quot;Technique G21 des WCAG 2.0\&quot;&gt;G21&lt;/a&gt;.  "
+    body: "### Navigation clavier et ordre de lecture  L’ordre de lecture restitué par un outil d’assistance, ainsi que l’ordre de la navigation clavier (par tabulation) reflètent la structure du document. Il ne doit pas y avoir de piège clavier (la navigation au clavier doit être possible dans l’ensemble du document sans blocage).  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF3.html\&quot; title=\&quot;Technique PDF3 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF3 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF3&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/G21.html\&quot; title=\&quot;Technique G21 des WCAG 2.0\&quot; aria-label=\&quot;Technique G21 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;G21&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#images"] = "Images";
 index.add({
     url: "pdf.html#images",
     title: "Images",    
-    body: "### Images  Les images comportant une information ont une alternative textuelle appropriée. Les documents scannés sont convertis correctement en texte par reconnaissance optique des caractères (OCR). Les images décoratives sont cachées.  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF1.html\&quot; title=\&quot;Technique PDF1 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF1 des WCAG 2.0\&quot;&gt;PDF1&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF4.html\&quot; title=\&quot;Technique PDF4 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF4 des WCAG 2.0\&quot;&gt;PDF4&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF7.html\&quot; title=\&quot;Technique PDF7 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF7 des WCAG 2.0\&quot;&gt;PDF7&lt;/a&gt;.  "
+    body: "### Images  Les images comportant une information ont une alternative textuelle appropriée. Les documents scannés sont convertis correctement en texte par reconnaissance optique des caractères (&lt;abbr&gt;OCR&lt;/abbr&gt;). Les images décoratives sont cachées.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF1.html\&quot; title=\&quot;Technique PDF1 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF1 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF1&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF4.html\&quot; title=\&quot;Technique PDF4 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF4 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF4&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF7.html\&quot; title=\&quot;Technique PDF7 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF7 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF7&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#tableaux"] = "Tableaux";
 index.add({
     url: "pdf.html#tableaux",
     title: "Tableaux",    
-    body: "### Tableaux  Un tableau de données doit être structuré par un «&amp;nbsp;tag&amp;nbsp;» (balise)`table` contenant au moins une ligne. Les en-têtes de tableaux sont utilisées de manière appropriée. Toutes les lignes contiennent le même nombre de cellules. Les cellules fusionnées indiquent de manière appropriée une fusion par ligne ou colonne (attribut `rowSpan` ou `colSpan`).   Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF6.html\&quot; title=\&quot;Technique PDF6 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF6 des WCAG 2.0\&quot;&gt;PDF6&lt;/a&gt;.  "
+    body: "### Tableaux  Un tableau de données doit être structuré par un «&amp;nbsp;tag&amp;nbsp;» (balise) `table` contenant au moins une ligne. Les en-têtes de tableaux sont utilisées de manière appropriée. Toutes les lignes contiennent le même nombre de cellules. Les cellules fusionnées indiquent de manière appropriée une fusion par ligne ou colonne (attribut `rowSpan` ou `colSpan`).   Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF6.html\&quot; title=\&quot;Technique PDF6 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF6 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF6&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#liens"] = "Liens";
 index.add({
     url: "pdf.html#liens",
     title: "Liens",    
-    body: "### Liens  Les intitulés de liens sont explicites, ou les liens possèdent une alternative explicite.  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF11.html\&quot; title=\&quot;Technique PDF11 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF11 des WCAG 2.0\&quot;&gt;PDF11&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF13.html\&quot; title=\&quot;Technique PDF13 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF13 des WCAG 2.0\&quot;&gt;PDF13&lt;/a&gt;.  "
+    body: "### Liens  Les intitulés de liens sont explicites, ou les liens possèdent une alternative explicite.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF11.html\&quot; title=\&quot;Technique PDF11 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF11 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF11&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF13.html\&quot; title=\&quot;Technique PDF13 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF13 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF13&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#listes"] = "Listes";
 index.add({
     url: "pdf.html#listes",
     title: "Listes",    
-    body: "### Listes  Les listes utilisent les «&amp;nbsp;tags&amp;nbsp;» (balises) appropriés (tag liste `L`,  tag item de liste `LI`, tag label de l’item de liste `Lbl` - par exemple le numéro de l’item, tag contenu de l’item de liste `LBody`).  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF21.html\&quot; title=\&quot;Technique PDF21 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF21 des WCAG 2.0\&quot;&gt;PDF21&lt;/a&gt;, section 14.8.4.3.3 de la &lt;a href=\&quot;http://www.adobe.com/devnet/pdf/pdf_reference.html\&quot;&gt;spécification PDF&lt;/a&gt;.  "
+    body: "### Listes  Les listes utilisent les «&amp;nbsp;tags&amp;nbsp;» (balises) appropriés (tag liste `L`,  tag item de liste `LI`, tag label de l’item de liste `Lbl` - par exemple le numéro de l’item, tag contenu de l’item de liste `LBody`).  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF21.html\&quot; title=\&quot;Technique PDF21 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF21 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF21&lt;/abbr&gt;&lt;/a&gt;, section 14.8.4.3.3 de la &lt;a href=\&quot;http://www.adobe.com/devnet/pdf/pdf_reference.html\&quot;&gt;spécification &lt;abbr&gt;PDF&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#formulaires"] = "Formulaires";
 index.add({
     url: "pdf.html#formulaires",
     title: "Formulaires",    
-    body: "### Formulaires  Les champs de formulaire ont un nom, un rôle, une valeur, et un état (si approprié). Visuellement, les labels sont correctement positionnés en relation avec le champ. Les champs obligatoires et les formats attendus sont indiqués. Les champs sont accessibles et modifiables au clavier. Les formulaires pouvant être soumis possèdent un bouton de soumission.  Voir &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF5.html\&quot; title=\&quot;Technique PDF5 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF5 des WCAG 2.0\&quot;&gt;PDF5&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF10.html\&quot; title=\&quot;Technique PDF10 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF10 des WCAG 2.0\&quot;&gt;PDF10&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF12.html\&quot; title=\&quot;Technique PDF12 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF12 des WCAG 2.0\&quot;&gt;PDF12&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF15.html\&quot; title=\&quot;Technique PDF15 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF15 des WCAG 2.0\&quot;&gt;PDF15&lt;/a&gt;, &lt;a href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF22.html\&quot; title=\&quot;Technique PDF22 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF22 des WCAG 2.0\&quot;&gt;PDF22&lt;/a&gt;.  "
+    body: "### Formulaires  Les champs de formulaire ont un nom, un rôle, une valeur, et un état (si approprié). Visuellement, les labels sont correctement positionnés en relation avec le champ. Les champs obligatoires et les formats attendus sont indiqués. Les champs sont accessibles et modifiables au clavier. Les formulaires pouvant être soumis possèdent un bouton de soumission.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF5.html\&quot; title=\&quot;Technique PDF5 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF5 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF5&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF10.html\&quot; title=\&quot;Technique PDF10 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF10 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF10&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF12.html\&quot; title=\&quot;Technique PDF12 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF12 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF12&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF15.html\&quot; title=\&quot;Technique PDF15 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF15 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF15&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF22.html\&quot; title=\&quot;Technique PDF22 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF22 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF22&lt;/abbr&gt;&lt;/a&gt;.  "
 });
 
 documentTitles["pdf.html#couleurs"] = "Couleurs";
@@ -457,7 +457,7 @@ documentTitles["pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr"] = "Tes
 index.add({
     url: "pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr",
     title: "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "## Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;  Installer &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (PAC 2)&lt;/a&gt;.   Ce logiciel permet entre autres&amp;nbsp;:  - d’exécuter des tests automatiques sur un document &lt;abbr&gt;PDF&lt;/abbr&gt; et détecter des erreurs d’accessibilité, &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;copie d’écran des résultats des tests automatiques dans PAC 2\&quot;/&gt; &lt;figcaption&gt;Résultats des tests automatiques&lt;/figcaption&gt; &lt;/figure&gt; &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac2.png\&quot; alt=\&quot;copie d’écran du détail d’une erreur dans PAC 2\&quot;/&gt; &lt;figcaption&gt;Détail d’une erreur d’accessibilité détectée automatiquement&lt;/figcaption&gt; &lt;/figure&gt; - de pré-visualiser le document tel qu’il sera restitué par les outils d’assistance, afin de vérifier l’ordre de lecture et l’utilisation pertinente de la sémantique (titre, paragraphe…), &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac3.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt; - d’accéder à une vue détaillée des informations accessibles à un outil d’assistance. &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac4.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt;"
+    body: "## Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;  Installer &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (&lt;abbr&gt;PAC 2&lt;/abbr&gt;)&lt;/a&gt;.   Ce logiciel permet entre autres&amp;nbsp;:  - d’exécuter des tests automatiques sur un document &lt;abbr&gt;PDF&lt;/abbr&gt; et détecter des erreurs d’accessibilité, &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;copie d’écran des résultats des tests automatiques dans PAC 2\&quot;/&gt; &lt;figcaption&gt;Résultats des tests automatiques&lt;/figcaption&gt; &lt;/figure&gt; &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac2.png\&quot; alt=\&quot;copie d’écran du détail d’une erreur dans PAC 2\&quot;/&gt; &lt;figcaption&gt;Détail d’une erreur d’accessibilité détectée automatiquement&lt;/figcaption&gt; &lt;/figure&gt; - de pré-visualiser le document tel qu’il sera restitué par les outils d’assistance, afin de vérifier l’ordre de lecture et l’utilisation pertinente de la sémantique (titre, paragraphe…), &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac3.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt; - d’accéder à une vue détaillée des informations accessibles à un outil d’assistance. &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac4.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt;"
 });
 
 
@@ -487,28 +487,28 @@ documentTitles["pushmail.html#methodes-de-creation-des-span-langenpushmailspan"]
 index.add({
     url: "pushmail.html#methodes-de-creation-des-span-langenpushmailspan",
     title: "Méthodes de création des &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt;",    
-    body: "## Méthodes de création des &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; En interne Orange, nous utilisons principalement trois méthodes pour composer les &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt;&amp;nbsp;:  - Création du &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; via Word. - Utilisation d'un outil dédié comme «&amp;nbsp;Mes Pushmails&amp;nbsp;». - Composition directe ou indirecte (via des frameworks) en HTML.  Quelle que soit la méthode choisie, il faut au préalable respecter les [recommandations générales](./editorial.html) pour tout document rédactionnel.  "
+    body: "## Méthodes de création des &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; En interne Orange, nous utilisons principalement trois méthodes pour composer les &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt;&amp;nbsp;:  - Création du &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; via Word. - Utilisation d'un outil dédié comme «&amp;nbsp;Mes Pushmails&amp;nbsp;». - Composition directe ou indirecte (via des &lt;i lang=\&quot;en\&quot;&gt;frameworks&lt;/i&gt;) en &lt;abbr&gt;HTML&lt;/abbr&gt;.  Quelle que soit la méthode choisie, il faut au préalable respecter les [recommandations générales](./editorial.html) pour tout document rédactionnel.  "
 });
 
 documentTitles["pushmail.html#creation-a-partir-dun-document-word"] = "Création à partir d’un document Word";
 index.add({
     url: "pushmail.html#creation-a-partir-dun-document-word",
     title: "Création à partir d’un document Word",    
-    body: "### Création à partir d’un document Word  Créer un document Word accessible en suivant les [recommandations Word](./word.html). Puis utiliser l’option «&amp;nbsp;Envoyer au destinataire du message&amp;nbsp;» (option à ajouter la première fois via Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message).   "
+    body: "### Création à partir d’un document Word  Créer un document Word accessible en suivant les [recommandations Word](./word.html). Puis utiliser l’option «&amp;nbsp;Envoyer au destinataire du message&amp;nbsp;» (option à ajouter la première fois via Fichier&amp;nbsp;&gt; Option&amp;nbsp;&gt; Barre d’outils accès rapide&amp;nbsp;&gt; Envoyer au destinataire du message).   "
 });
 
-documentTitles["pushmail.html#creation-a-partir-dhtml-ou-dun-outil-dedie"] = "Création à partir d’HTML ou d'un outil dédié";
+documentTitles["pushmail.html#creation-a-partir-dabbrhtmlabbr-ou-dun-outil-dedie"] = "Création à partir d’&lt;abbr&gt;HTML&lt;/abbr&gt; ou d'un outil dédié";
 index.add({
-    url: "pushmail.html#creation-a-partir-dhtml-ou-dun-outil-dedie",
-    title: "Création à partir d’HTML ou d'un outil dédié",    
-    body: "### Création à partir d’HTML ou d'un outil dédié Créer des pages HTML accessibles en suivant [les recommandations Web](../web/index.html), si besoin et les recommandations spécifiques ci dessous.   Á noter&amp;nbsp;: en interne, l’outil «&amp;nbsp;Mes Pushmails&amp;nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](./editorial.html) pour du contenu éditorial.  "
+    url: "pushmail.html#creation-a-partir-dabbrhtmlabbr-ou-dun-outil-dedie",
+    title: "Création à partir d’&lt;abbr&gt;HTML&lt;/abbr&gt; ou d'un outil dédié",    
+    body: "### Création à partir d’&lt;abbr&gt;HTML&lt;/abbr&gt; ou d'un outil dédié Créer des pages &lt;abbr&gt;HTML&lt;/abbr&gt; accessibles en suivant [les recommandations Web](../web/index.html), si besoin et les recommandations spécifiques ci dessous.   Á noter&amp;nbsp;: en interne à Orange, l’outil «&amp;nbsp;Mes Pushmails&amp;nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](./editorial.html) pour du contenu éditorial.  "
 });
 
-documentTitles["pushmail.html#regle-specifique-span-langenpushmailspan-html"] = "Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; HTML";
+documentTitles["pushmail.html#regle-specifique-span-langenpushmailspan-abbrhtmlabbr"] = "Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; &lt;abbr&gt;HTML&lt;/abbr&gt;";
 index.add({
-    url: "pushmail.html#regle-specifique-span-langenpushmailspan-html",
-    title: "Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; HTML",    
-    body: "## Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; HTML  "
+    url: "pushmail.html#regle-specifique-span-langenpushmailspan-abbrhtmlabbr",
+    title: "Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; &lt;abbr&gt;HTML&lt;/abbr&gt;",    
+    body: "## Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; &lt;abbr&gt;HTML&lt;/abbr&gt;  "
 });
 
 documentTitles["pushmail.html#fournir-des-marges-homogenes"] = "Fournir des marges homogènes";
@@ -529,7 +529,7 @@ documentTitles["pushmail.html#liens-utiles"] = "Liens utiles";
 index.add({
     url: "pushmail.html#liens-utiles",
     title: "Liens utiles",    
-    body: "## Liens utiles - [Outil pour valider l'accessibilité du code HTML de ses &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt; (en anglais)](http://www.accessible-email.org/) - Article en anglais sur le site de Microsoft&amp;nbsp;: &lt;a lang=\&quot;en\&quot; href=\&quot;https://support.office.com/en-us/article/Make-your-Outlook-email-accessible-71ce71f4-7b15-4b7a-a2e3-cf91721bbacb\&quot; hreflang=\&quot;en\&quot;&gt;Make your Outlook email accessible – Microsoft Office Support&lt;/a&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Liens utiles - &lt;a href=\&quot;http://www.accessible-email.org/\&quot; hreflang=\&quot;en\&quot;&gt;Outil pour valider l'accessibilité du code &lt;abbr&gt;HTML&lt;/abbr&gt; de ses &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt;&lt;/a&gt; (en anglais) - Article en anglais sur le site de Microsoft&amp;nbsp;: &lt;a lang=\&quot;en\&quot; href=\&quot;https://support.office.com/en-us/article/Make-your-Outlook-email-accessible-71ce71f4-7b15-4b7a-a2e3-cf91721bbacb\&quot; hreflang=\&quot;en\&quot;&gt;Make your Outlook email accessible – Microsoft Office Support&lt;/a&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

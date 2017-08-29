@@ -44,8 +44,8 @@
       <h1>Stepbar or multi-step process</h1>
 
       <h2>Introduction</h2>
-      <p>In this example we will see how to improve the vocalization of a "stepbar" component.</p>
-      <p>To achieve this we will use the <a href="http://boosted.orange.com/components/#dropdowns">stepbar</a> component available in the <a href="http://boosted.orange.com/">boosted</a> library. Some styles have been modified to fit onto a single line.</p>
+      <p>In this example we will see how to improve the vocalization of a “stepbar” component.</p>
+      <p>To achieve this we will use the <a href="http://boosted.orange.com/components/#dropdowns">stepbar</a> component available in the <a href="http://boosted.orange.com/">Boosted</a> library. Some styles have been modified to fit onto a single line.</p>
 
       <h2>Non accessible example</h2>
      <p> Here is the final appearance of the stepbar.
@@ -113,23 +113,23 @@
       <p>At this stage, the vocalization of the stepbar is unsatisfactory.</p>
       <p>If you listen to the component using a screen reader, a list of 5 items is read. Each item is properly vocalized; however, we have no indication of the current step.</p>       
 
-      <h2>Supports vocalization</h2>
+      <h2>Vocalization support</h2>
       <p>To improve the vocalization of this component it is necessary to think about the information that seems relevant to the user.<br>
-      Visually, when we see this stepbar we have access to the following information:
+      <p>Visually, when we see this stepbar we have access to the following information:</p>
       <ul>
-            <li><b>The name of the current step</b></li>
-            <li><b>The number of total steps</b></li>
-            <li><b>The number of remaining steps</b></li>
-            <li>The name of each steps</li>
+            <li><b>The name of the current step,</b></li>
+            <li><b>the number of total steps,</b></li>
+            <li><b>the number of remaining steps,</b></li>
+            <li>the name of each step.</li>
       </ul>
       
-      <p>Ideally we should have the same level of information with a without the screen reader. That being said it can be tedious to have too much information to listen. Therefore, we will focus on the bold information listed above.</p>
+      <p>Ideally we should have the same level of information with as without a screen reader. That being said, it can be tedious to have too much information to listen to. Therefore, we will focus on the bold information listed above (the three first items in our list).</p>
       
-      <p><b>Possible example of vocalization: </b>"Delivery options, step 3 of 5."</p>
+      <p><b>Possible example of vocalization:</b> “Delivery options, step 3 of 5.”</p>
       
       <p>Technically, there are several ways to achieve this. We could try to hide inactive items from the screen reader and modify the vocalization of the selected item. However, given that this component changes according to the width of the screen (responsive design), the easiest way is to completely hide this component from the screen reader with the <code>aria-hidden="true"</code> attribute. Finally, add an <a href="../masquage/index.html">accessible hiding</a> <code>span</code> containing the text to vocalize.</p>
 
-      <p>The accessible hiding allows to hide a text, but ensuring that it is correctly vocalized by the screen reader. This is a simple CSS class. In the <a href="http://boosted.orange.com/css/#helper-classes-screen-readers">boosted</a> and <a href="http://getbootstrap.com/css/#helper-classes-screen-readers">bootstrap</a> libraries there is an accessible hiding class named: <code>sr-only</code>.</p>
+      <p>Accessible hiding allows to hide a text, but ensures that it is correctly vocalized by the screen reader. It is done through a simple <abbr>CSS</abbr> class. In the <a href="http://boosted.orange.com/css/#helper-classes-screen-readers">Boosted</a> and <a href="http://getbootstrap.com/css/#helper-classes-screen-readers">Bootstrap</a> libraries there is an accessible hiding class named <code>sr-only</code>.</p>
       <p>See <a href="../masquage/index.html">the accessible hiding example</a> for more information.</p> 
       
       <h2>Accessible example</h2>
@@ -160,9 +160,7 @@
       </ul>
       </div>
       
-      <br>
-      
-      <p>This new example now vocalizes: "Delivery options, step 3 of 5".</p>
+      <p>This new example now vocalizes: “Delivery options, step 3 of 5”.</p>
       
       <h3>Accessible example code</h3>
       <!-- Accessible example code -->

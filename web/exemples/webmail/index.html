@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exemple de webmail ARIA - recommandations accessiblité web Orange</title>
+    <title>Exemple de webmail ARIA - recommandations accessibilité web Orange</title>
 
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
       <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -40,15 +40,15 @@
       </nav>
     </header>
     <main role="main" class="container-fluid">
-      <h1 class="sr-only">Exemple de webmail ARIA</h1>
+      <h1 class="sr-only">Exemple de webmail <abbr>ARIA</abbr></h1>
 
       <div class="row"> 
         <!-- Liste des dossiers email -->             
-        <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-2" aria-labelledby="list-folders" aria-label="liste des dossiers">
-            <li aria-describedby="list-folders" tabindex="-1" role="option">Boite de réception (24) <span class="sr-only">messages non lus</span></li>
-            <li aria-describedby="list-folders" tabindex="-1" role="option">Eléments envoyés</li>
-            <li aria-describedby="list-folders" tabindex="-1" role="option">Brouillons</li>
-            <li aria-describedby="list-folders" tabindex="-1" role="option">Corbeille</li>          
+        <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-2" aria-label="liste des dossiers">
+            <li tabindex="-1" role="option">Boite de réception (24) <span class="sr-only">messages non lus</span></li>
+            <li tabindex="-1" role="option">Éléments envoyés</li>
+            <li tabindex="-1" role="option">Brouillons</li>
+            <li tabindex="-1" role="option">Corbeille</li>          
         </ul> 
          
         <!-- liste des email -->
@@ -84,7 +84,7 @@
         </ul>
         
         <div class="col-md-5">
-            Volet de lecture ...
+            Volet de lecture…
         </div>
                                
       </div>   

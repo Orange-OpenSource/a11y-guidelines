@@ -50,13 +50,14 @@
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
                         <li><a class="page-fondamentaux" href="fondamentaux.html">Critères incontournables</a></li>
-                        <li><a class="page-exigences" href="exigences.html">Ensemble des exigences</a></li>
-                        <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
-                        <li><a class="page-nos-outils" href="nos-outils.html">Outils Orange open source</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
+                        <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
                         <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">A propos</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
@@ -69,7 +70,7 @@
                 <li class="nav-item hidden-xs-down">
                   <span id="cdu">
                     <a href="http://confort-plus.orange.com/" target="_blank" 
-                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)" 
                       aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
                       Découvrir Confort
                       <span>+</span>
@@ -91,14 +92,14 @@
             <label for="search">Rechercher</label>
             <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
             <button type="submit" class="btn btn-secondary icon">
-              <span class="sr-only">Rerchercher</span>
+              <span class="sr-only">Rechercher</span>
               <span class="icon-search" aria-hidden="true"></span>
             </button>
           </form>
       </nav>      
     </header>
 
-    <span class="sr-only">Vous êtes ici : </span>
+    <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/web/index.html">Web</a></li>        
     </ol>
@@ -122,37 +123,37 @@
 
 <p><span data-menuitem="fondamentaux"></span></p>
 <h2 id="1-donner-un-titre-aux-pages">1. Donner un titre aux pages</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> dès la conception et pendant le développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> dès la conception et pendant le développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Donner à chaque page un titre qui lui est spécifique et qui reflète son contenu ou sa fonction (balise <code>&lt;title&gt;</code>).<br>Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier formellement la page sur laquelle on se trouve.</p>
-<p><strong>À vérifier&nbsp;: </strong></p>
+<p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
-<li>Bien qu’il n’y ait pas de règle, en général (ouverture de nombreux onglets de multiples applications), on va de l’information la plus spécifique vers la moins spécifique (ex: nom de la page courante - nom du site). Pour le fenêtrage d’une multitude d’applications, le contexte d’utilisation est différent ; dans ce cas, on préférera aller de l’information la moins spécifique vers la plus spécifique.</li>
+<li>Bien qu’il n’y ait pas de règle, en général (ouverture de nombreux onglets de multiples applications), on va de l’information la plus spécifique vers la moins spécifique (ex&nbsp;: nom de la page courante - nom du site). Pour le fenêtrage d’une multitude d’applications, le contexte d’utilisation est différent&nbsp;; dans ce cas, on préférera aller de l’information la moins spécifique vers la plus spécifique.</li>
 <li>Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d’une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu…), le titre de la page doit refléter cette modification du contenu.</li>
 </ul>
 <p><strong>Exemple valide&nbsp;:</strong><br><code>Accueil - Espace client Orange</code></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><code>Accueil</code></p>
 <h2 id="2-donner-des-titres-aux-rubriques">2. Donner des titres aux rubriques</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes cognitives, ayant des difficultés pour lire ou déficientes visuelles.<br><strong>Quand&nbsp;: </strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Identifier les balises de titres à utiliser (balises HTML <code>h1</code> jusqu’à <code>h6</code>) pour structurer le contenu des pages.
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes cognitives, ayant des difficultés pour lire ou déficientes visuelles.<br><strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Identifier les balises de titres à utiliser (balises <abbr>HTML</abbr> <code>h1</code> jusqu’à <code>h6</code>) pour structurer le contenu des pages.
 Les personnes malvoyantes naviguant à l’aide d’un lecteur d’écran peuvent accéder à la liste des titres de la page pour naviguer rapidement. 
 Tout comme dans un fichier Word, il est possible d’utiliser la table des matières si des titres ont correctement été positionnés à l’intérieur du document.  </p>
-<p><strong>À vérifier&nbsp;: </strong></p>
+<p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Les titres doivent être pertinents, refléter la structure de l’information contenue dans la page.</li>
 <li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d’un titre <code>h2</code> à un titre <code>h4</code>).</li>
 <li>On peut mettre plusieurs <code>h1</code> par page (se limiter tout de même à deux dans la majorité des cas).</li>
 </ul>
-<p><strong>Exemple valide&nbsp;: </strong>  </p>
+<p><strong>Exemple valide&nbsp;:</strong>  </p>
 <p>Un titrage de page cohérent et pertinent&nbsp;:</p>
 <pre><code>(Titre 1) Accueil - Orange
     (Titre 2) Les actualités
     (Titre 2) La fibre arrive&amp;nbsp;!
         (Titre 3) Êtes-vous éligible&amp;nbsp;?
 </code></pre><h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;: </strong><br>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
+<p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
-<p><strong>Exemple non-valide&nbsp;: </strong><br>Le texte « film | 20h40… » ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br>Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
@@ -160,117 +161,137 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 <li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
 </ul>
-<p><strong>Outil&nbsp;: </strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
+<p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
 <h2 id="4-ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">4. Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde, en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;: </strong><br>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle…) comme la seule façon de véhiculer de l’information, d’indiquer une action, de solliciter une réponse ou de distinguer un élément. L’information fournie par un changement de couleur ou une information sensorielle doit être complétée par une information textuelle (alternative) ou/et structuration sémantique.</p>
-<p><strong>Exemple valide&nbsp;: </strong>  </p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle…) comme la seule façon de véhiculer de l’information, d’indiquer une action, de solliciter une réponse ou de distinguer un élément. L’information fournie par un changement de couleur ou une information sensorielle doit être complétée par une information textuelle (alternative) ou/et structuration sémantique.</p>
+<p><strong>Exemple valide&nbsp;:</strong>  </p>
 <p><img src="images/couleur-ok.png" alt="illustration utilisant des icônes de couleurs avec des formes différenciées pour transmettre l’information"></p>
-<p><strong>Exemple non-valide&nbsp;: </strong></p>
+<p><strong>Exemple non-valide&nbsp;:</strong></p>
 <p><img src="images/couleur-ko.png" alt="illustration utilisant des icônes de couleurs avec des formes identiques pour transmettre l’information">  </p>
 <p>Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.</p>
-<p><strong>À vérifier&nbsp;: </strong></p>
+<p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.</li>
 <li>Couper le son, le niveau d’information doit rester identique.</li>
 </ul>
 <h2 id="5-d-finir-des-quivalents-textuels">5. Définir des équivalents textuels</h2>
-<p><strong>Cible&nbsp;: </strong> les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.<br><strong>Quand&nbsp;: </strong> dès la conception et pendant le développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Mettre en place des alternatives textuelles à tous les éléments informatifs non-textuels (alternatives aux images, icônes). De même prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.</p>
-<p><strong>Exemple&nbsp;: </strong><br>Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton&nbsp;:</p>
+<p><strong>Cible&nbsp;:</strong> les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.<br><strong>Quand&nbsp;:</strong> dès la conception et pendant le développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Mettre en place des alternatives textuelles pour tous les éléments informatifs non-textuels (alternatives aux images, icônes). De même, prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.</p>
+<p><strong>Exemple&nbsp;:</strong><br>Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton&nbsp;:</p>
 <ul>
-<li>« menu »,</li>
-<li>« réglages »,</li>
-<li>« chaîne précédente »</li>
-<li>« couper le son »</li>
+<li>«&nbsp;menu&nbsp;»,</li>
+<li>«&nbsp;réglages&nbsp;»,</li>
+<li>«&nbsp;chaîne précédente&nbsp;»</li>
+<li>«&nbsp;couper le son&nbsp;»</li>
 <li>…  </li>
 </ul>
 <p><img src="images/player.png" alt="capture d’écran d’un lecteur vidéo contenant plusieurs boutons">   </p>
 <h2 id="6-assurer-la-visibilit-du-focus">6. Assurer la visibilité du focus</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand&nbsp;: </strong> lors de la conception graphique et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception graphique et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour être rendu plus visible mais ne doit pas être supprimé. 
 Veiller à fournir un niveau de contraste suffisant (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.</p>
 <p>L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.</p>
-<p><strong>Exemples valides&nbsp;: </strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien « 209 SMS/mois ».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
+<p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
 <img src="images/focus2.png" alt="capture d’écran présentant un comportement personnalisé pour l’affichage du focus"></p>
 <h2 id="7-agrandissement-de-la-taille-du-texte">7. Agrandissement de la taille du texte</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;: </strong> lors de la conception graphique et principalement lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). A ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors de la conception graphique et principalement lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). À ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).
 Bien que ceci doive être pris en compte pendant la phase de développement, on peut identifier les zones de l’écran qui doivent ou non s’agrandir en même temps que la taille du texte dès la phase de conception graphique. Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.</p>
-<p><strong>Exemple&nbsp;: </strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d’écran avec zoom à 100%">    </p>
-<p>&nbsp;<br><strong>Exemple valide&nbsp;: </strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d’écran avec zoom à 200% et texte lisible">    </p>
-<p>&nbsp;<br><strong>Exemple non-valide&nbsp;: </strong><br>Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d’écran avec zoom à 200% et texte tronqué">  </p>
+<p><strong>Exemple&nbsp;:</strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d’écran avec zoom à 100%">    </p>
+<p><strong>Exemple valide&nbsp;:</strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d’écran avec zoom à 200% et texte lisible">    </p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br>Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d’écran avec zoom à 200% et texte tronqué">  </p>
 <h2 id="8-permettre-le-contr-le-des-animations">8. Permettre le contrôle des animations</h2>
-<p><strong>Cible&nbsp;: </strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d’attention ou de compréhension, les personnes épileptiques.<br><strong>Quand&nbsp;: </strong> lors de la conception du service et lors de la conception graphique.</p>
+<p><strong>Cible&nbsp;:</strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d’attention ou de compréhension, les personnes épileptiques.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description&nbsp;:</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d’épilepsie</a>).</p>
-<p><strong>Exemple&nbsp;: </strong><br><img src="./images/carrousel.png" alt="capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation">  </p>
-<p>Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il reçoit le focus.<br>Il est également possible d’ajouter un bouton « pause » directement dans l’interface.</p>
-<h2 id="9-libell-des-liens">9. Libellé des liens</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;: </strong> lors de la conception du service et lors de la conception graphique.</p>
-<p><strong>Description&nbsp;:</strong><br>Les libellés des liens doivent être suffisamment explicites.
+<p><strong>Exemple&nbsp;:</strong><br><img src="./images/carrousel.png" alt="capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation">  </p>
+<p>Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il reçoit le focus.<br>Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.</p>
+<h2 id="9-libell-des-liens-et-des-boutons">9. Libellé des liens et des boutons</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
+<p><strong>Description&nbsp;:</strong><br>Les libellés des liens et des boutons doivent être suffisamment explicites.
 Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale.</p>
-<p><strong>Exemple valide&nbsp;:</strong><br>« découvrez nos offres »</p>
-<p><strong>Exemples non-valides&nbsp;:</strong><br>« cliquez ici »<br>« en savoir plus »</p>
+<p><strong>Exemple valide&nbsp;:</strong><br>«&nbsp;découvrez nos offres&nbsp;»</p>
+<p><strong>Exemples non-valides&nbsp;:</strong><br>«&nbsp;cliquez ici&nbsp;»<br>«&nbsp;en savoir plus&nbsp;»</p>
 <h2 id="10-permettre-la-navigation-au-clavier">10. Permettre la navigation au clavier</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;: </strong> lors de la conception du service et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Toutes les fonctionnalités doivent être utilisables à l’aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l’aide de la touche TAB).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glisser-déposer, menu apparaissant au clic droit…), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l’interface (bouton, icône, menu…). </p>
-<p><strong>Exemple&nbsp;: </strong><br>Dans un webmail, si un clic droit sur le dossier « corbeille » permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton « vider la corbeille » ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Toutes les fonctionnalités doivent être utilisables à l’aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l’aide de la touche <kbd>Tab</kbd>).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glisser-déposer, menu apparaissant au clic droit…), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l’interface (bouton, icône, menu…). </p>
+<p><strong>Exemple&nbsp;:</strong><br>Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton «&nbsp;Vider la corbeille&nbsp;» ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.</p>
 <h2 id="11-rendre-utilisables-les-formulaires">11. Rendre utilisables les formulaires</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin qu’on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle, voire sur mobile). Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher …). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
-<p><strong>Exemple valide&nbsp;: </strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide"></p>
-<p>&nbsp;</p>
-<p><strong>Exemple non-valide&nbsp;: </strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label"></p>
-<p>&nbsp;</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin qu’on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle, voire sur mobile). Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
+<p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide"></p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label"></p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas prévoir tout de même un libellé. Celui-ci ne sera pas affiché à l’écran mais sera tout de même associé au champ de formulaire lors du développement pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
 <p>Enfin les libellés des messages d’erreur doivent être explicites.</p>
-<p><strong>Exemple valide&nbsp;: </strong><br><img src="images/formulaire-ok.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides">  </p>
-<p><strong>Exemple non-valide&nbsp;: </strong><br><img src="images/formulaire-ko.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides"></p>
+<p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire-ok.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides">  </p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire-ko.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides"></p>
 <h2 id="12-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">12. Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</h2>
-<p><strong>Cible&nbsp;: </strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand&nbsp;: </strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte « nouvelle fenêtre » soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.
+<p><strong>Cible&nbsp;:</strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.
 De même éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Celles-ci posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.</p>
-<p><strong>Exemple non-valide&nbsp;: </strong><br>Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas justifié. L’utilisation d’un page web standard permettrait&nbsp;:</p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br>Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas justifié. L’utilisation d’une page web standard permettrait&nbsp;:</p>
 <ul>
 <li>de laisser plus d’espace au contenu (en supprimant les marges autour de la boite de dialogue),</li>
-<li>de pouvoir utiliser le bouton « précédent » du navigateur pour revenir en arrière lors de la navigation entre les différentes pages de la boite de dialogue,</li>
+<li>de pouvoir utiliser le bouton «&nbsp;Précédent&nbsp;» du navigateur pour revenir en arrière lors de la navigation entre les différentes pages de la boite de dialogue,</li>
 <li>de faciliter l’affichage sur les petits écrans,</li>
 <li>d’éviter des problèmes d’accessibilité pour les personnes qui naviguent à l’aide du clavier ou à l’aide d’un lecteur d’écran,</li>
 <li>d’alléger le poids de la page et le temps de chargement, car dans cet exemple la page derrière la boite de dialogue doit être chargée.  </li>
 </ul>
 <p><img src="images/dialog.png" alt="Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse"></p>
 <h2 id="13-fournir-des-liens-d-vitement">13. Fournir des liens d’évitement</h2>
-<p><strong>Cible&nbsp;: </strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.<br><strong>Quand&nbsp;: </strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Fournir des liens d’évitement du type « Aller au contenu » sur chaque page. Ceux-ci facilitent la navigation pour les personnes utilisant le clavier, en mobilité ou navigant à l’aide d’un lecteur d’écran. En cas de <strong>fortes contraintes,</strong> les liens peuvent être masqués à l’écran et apparaître uniquement lors de la navigation au clavier.</p>
-<p><strong>Exemple&nbsp;: </strong><br>Des liens d’évitement (« Aller à la navigation », « Aller au contenu ») sont disponibles sur ce site.
-Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d’adresse de votre navigateur par exemple, puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
+<p><strong>Cible&nbsp;:</strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.  </p>
+<p><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Fournir des liens d’évitement du type «&nbsp;Aller au contenu&nbsp;» sur chaque page. Ceux-ci facilitent la navigation pour les personnes utilisant le clavier, en mobilité ou navigant à l’aide d’un lecteur d’écran. En cas de <strong>fortes contraintes,</strong> les liens peuvent être masqués à l’écran et apparaître uniquement lors de la navigation au clavier.</p>
+<p><strong>Exemple&nbsp;:</strong><br>Des liens d’évitement («&nbsp;Aller à la navigation&nbsp;», «&nbsp;Aller au contenu&nbsp;») sont disponibles sur ce site.
+Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d’adresse de votre navigateur par exemple, puis appuyer plusieurs fois sur la touche <kbd>Tab</kbd>.</p>
 <p><img src="images/skiplink.png" alt="capture d’écran du site orange.com"></p>
 <h2 id="14-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
-<p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
+<p><strong>Quand&nbsp;:</strong> lors de la conception.</p>
 <p><strong>Description&nbsp;:</strong><br>Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier&nbsp;:</strong> </p>
 <ul>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
-<li>S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon.</li>
+<li>S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés…).</li>
 <li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
 <p><strong>Exemple valide&nbsp;:</strong>  </p>
-<p><img src="images/groupement.jpg" alt="capture d’écran du site 100% pratique"><br>&nbsp;<br>Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
+<p><img src="images/groupement.jpg" alt="capture d’écran du site 100% pratique">  </p>
+<p>Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong>  </p>
-<p><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com"><br>&nbsp;<br>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
-<h2 id="15-eviter-les-captcha">15. Eviter les captcha</h2>
-<p><strong>Cible&nbsp;: </strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur: </p>
+<p><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com">  </p>
+<p>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
+<h2 id="15-situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-d-y-acc-der">15. Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
+<p><strong>Quand&nbsp;:</strong> lors de la conception.</p>
+<p><strong>Description&nbsp;:</strong>
+Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, ce critère peut être ignoré.</p>
+<p><strong>À vérifier&nbsp;:</strong>
+S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…</p>
+<p><strong>Objectif utilisateur&nbsp;:</strong>
+Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.</p>
+<p><strong>Exemple valide&nbsp;:</strong>
+Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
+<p><strong>Exemple invalide&nbsp;:</strong>
+Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
+<h2 id="16-eviter-les-captcha">16. Eviter les captcha</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
-<li>Double authentification</li>
-<li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur</li>
-<li>Mise à disposition d&#39;un support téléphonique afin de s&#39;assurer que le client est une vraie personne</li>
-<li>Un contrôle permettant de s&#39;assurer qu&#39;une même combinaison IP/User agent ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
+<li>Double authentification&nbsp;;</li>
+<li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur&nbsp;;</li>
+<li>Mise à disposition d&#39;un support téléphonique afin de s&#39;assurer que le client est une vraie personne&nbsp;;</li>
+<li>Un contrôle permettant de s&#39;assurer qu&#39;une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
-<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel clasique...</p>
+<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;:</p>
+<ul>
+<li>un captcha  audio&nbsp;+ visuel,</li>
+<li>des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique</li>
+<li>…</li>
+</ul>
 <p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

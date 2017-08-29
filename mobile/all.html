@@ -42,7 +42,7 @@
               <span class="icon-menu"></span>
           </button>
           
-              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item">
@@ -52,13 +52,13 @@
                     <a href="../mobile/index.html" class="nav-link">Mobile</a>
                     <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-mobile" href="criteria-mobile.html">Critères mobiles</a></li>  
-                        <li><a class="page-dev-mobile" href="dev-mobile.html">Guide pour les développeurs</a></li>                
-                        <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
-                        <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d'écran</a></li>
+                        <li><a class="page-criteria-android" href="criteria-android.html">Critères incontournables sous Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html">Critères incontournables sous iOS</a></li>            
+                        <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
+                        <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d’écran</a></li>
                         <li><a class="page-links" href="links.html">Liens utiles</a></li>
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">A propos</a></li>                        
+                        <li><a class="page-about" href="about.html">À propos</a></li>                        
                     </ul>                                        
                   </li>   
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
@@ -70,8 +70,8 @@
                 <li class="nav-item hidden-xs-down">
                   <span id="cdu">
                     <a href="http://confort-plus.orange.com/" target="_blank" 
-                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
-                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      title="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web (nouvelle fenêtre)">
                       Découvrir Confort
                       <span>+</span>
                     </a>
@@ -101,7 +101,7 @@
     
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="/mobile/index.html">Mobile</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -134,51 +134,19 @@
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="guide-d-veloppeur-mobile">Guide développeur mobile</h1>
-<script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Guide pour les développeurs mobiles"}]);
-    addSubMenu([
-        {"label":"Guide pour Android","url":"dev-android.html"}, 
-        {"label":"Guide pour iOS","url":"dev-ios.html"}
-    ]);    
-});</script>
-
-<p><span data-menuitem="dev-mobile"></span></p>
-<p>Le guide pour développeur a pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> Android/iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google/Apple.</p>
-<p>Deux versions sont donc disponibles :</p>
-<ul>
-<li><strong>Version Android</strong> concerne le développement d’application destiné à la plate-forme de Google, Android.</li>
-<li><strong>Version iOS</strong> concerne le développement d’application destiné à la plate-forme d’Apple, iOS.</li>
-</ul>
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">critères Android</h2><br>    <a href="./dev-android.html" class="btn btn-info">
-        <img src="./images/android.png" alt="">
-        <div>Guide développeur Android</div>
-    </a>
-</div>
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">critères iOS</h2><br>    <a href="./dev-ios.html" class="btn btn-info">
-        <img src="./images/iphone.png" alt="">
-        <div>Guide développeur iOS</div>
-    </a>
-</div>    
-
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="guide-d-accessibilit-android">Guide d’accessibilité Android</h1>
+<h1 id="les-crit-res-incontournables-sous-android-pour-le-d-veloppement">Les critères incontournables sous Android pour le développement</h1>
 <script>$(document).ready(function () {
 
-    setBreadcrumb([{"label":"Guide développeur", "url": "./dev-mobile.html"},
-        {"label":"Guide développeur Android"}
+    setBreadcrumb([{"label":"Critères incontournables sous Android", "url": "./criteria-android.html"},
+        {"label":"Pour le développement"}
     ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"dev-mobile.html", "expanded": true}, 
-        {"label":"Guide pour iOS","url":"dev-ios.html"}
+        {"label":"Pour la conception","url":"criteria-android-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-android-dev.html", "expanded": true}
     ]);
 });</script>
 
-<p><span data-menuitem="dev-mobile"></span></p>
+<p><span data-menuitem="criteria-android"></span></p>
 <p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du SDK Android.  À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.</p>
 <h2 id="alternatives-textuelles">Alternatives textuelles</h2>
 <p><strong>Description&nbsp;: </strong>  </p>
@@ -409,20 +377,19 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="guide-d-accessibilit-ios">Guide d’accessibilité iOS</h1>
+<h1 id="les-crit-res-incontournables-sous-ios-pour-le-d-veloppement">Les critères incontournables sous iOS pour le développement</h1>
 <script>$(document).ready(function () {
 
-    setBreadcrumb([{"label":"Guide développeur", "url": "./dev-mobile.html"},
-        {"label":"Guide développeur iOS"}
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+        {"label":"Pour le développement"}
     ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"dev-android.html"}, 
-        {"label":"Guide pour iOS","url":"dev-mobile.html", "expanded": true}
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html", "expanded": true}
     ]);    
-
 });</script>
 
-<p><span data-menuitem="dev-mobile"></span></p>
+<p><span data-menuitem="criteria-ios"></span></p>
 <p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du <abbr>SDK</abbr> iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d’Apple. Des exemples de codes sont aussi présents pour illustrer les propos (la plupart du temps en Swift).</p>
 <h2 id="alternatives-textuelles">Alternatives textuelles</h2>
 <p><strong>Description&nbsp;: </strong>  </p>
@@ -691,53 +658,19 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, aViewO
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="les-crit-res-mobiles">Les critères mobiles</h1>
-<script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Critères mobiles"}]);
-    addSubMenu([
-        {"label":"Guide pour Android","url":"criteria-android.html"}, 
-        {"label":"Guide pour iOS","url":"criteria-ios.html"}
-    ]);    
-});</script>
-
-<p><span data-menuitem="criteria-mobile"></span></p>
-<p>Ces socles de critères destinés aux applications mobiles Android et iOS Orange permettent d’éviter les erreurs d’accessibilité.<br>La mise en œuvre de ces socles doit permettre d’obtenir à coup sûr un site accessible. Ces socles posent les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.</p>
-<p>Le respect de la charte Orange pour Android et iOS, documents disponibles sur <a href="http://brand.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ces socles.
-Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.</p>
-<p>Deux versions sont disponibles&nbsp;:</p>
-<ul>
-<li><strong>Version Android</strong> concerne le développement d’applications destinées à la plate-forme de Google, Android.</li>
-<li><strong>Version iOS</strong> concerne le développement d’applications destinées à la plate-forme d’Apple, iOS.</li>
-</ul>
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">critères Android</h2><br>    <a href="./criteria-android.html" class="btn btn-info">
-        <img src="./images/android.png" alt="">
-        <div>Guide d’accessibilité Android</div>
-    </a>
-</div>
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">critères iOS</h2><br>    <a href="./criteria-ios.html" class="btn btn-info">
-        <img src="./images/iphone.png" alt="">
-        <div>Guide d’accessibilité iOS</div>
-    </a>
-</div>            
-
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="guide-d-accessibilit-android">Guide d’accessibilité Android</h1>
+<h1 id="les-crit-res-incontournables-sous-android-pour-la-conception">Les critères incontournables sous Android pour la conception</h1>
 <script>$(document).ready(function () {
 
-    setBreadcrumb([{"label":"Critères mobiles", "url": "./criteria-mobile.html"},
-        {"label":"Guide d’accessibilité Android"}
+    setBreadcrumb([{"label":"Critères incontournables sous Android", "url": "./criteria-android.html"},
+        {"label":"Pour la conception"}
     ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"criteria-mobile.html", "expanded": true}, 
-        {"label":"Guide pour iOS","url":"criteria-ios.html"}
+        {"label":"Pour la conception","url":"criteria-android-conception.html", "expanded": true}, 
+        {"label":"Pour le développement","url":"criteria-android-dev.html"}
     ]);        
 });</script>
 
-<p><span data-menuitem="criteria-mobile"></span></p>
+<p><span data-menuitem="criteria-android"></span></p>
 <p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application <a href="./mdan.html">mDAN</a> pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la <a href="./TalkBack.html">section concernant <span lang="en">TalkBack</span></a>.</p>
 <h2 id="images">Images</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors de la conception et pendant le développement.</p>
@@ -1006,19 +939,19 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="guide-d-accessibilit-ios">Guide d’accessibilité iOS</h1>
+<h1 id="les-crit-res-incontournables-sous-ios-pour-la-conception">Les critères incontournables sous iOS pour la conception</h1>
 <script>$(document).ready(function () {
 
-    setBreadcrumb([{"label":"Critères mobiles", "url": "./criteria-mobile.html"},
-        {"label":"Guide d’accessibilité iOS"}
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+        {"label":"Pour la conception"}
     ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"criteria-android.html"}, 
-        {"label":"Guide pour iOS","url":"criteria-mobile.html", "expanded": true}
+        {"label":"Pour la conception","url":"criteria-ios-conception.html", "expanded": true}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"}
     ]);    
 });</script>
 
-<p><span data-menuitem="criteria-mobile"></span></p>
+<p><span data-menuitem="criteria-ios"></span></p>
 <p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application <a href="./mdan.html">mDAN</a> pour obtenir des exemples fonctionnels avec <span lang="en">VoiceOver</span>, le lecteur d’écran d’iOS, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la <a href="./VoiceOver.html">section correspondant à <span lang="en">VoiceOver</span></a>.  </p>
 <p>À noter&nbsp;: les quelques exemples de code dans cette section seront présentés en Swift.</p>
 <h2 id="images">Images</h2>
@@ -1254,6 +1187,70 @@ remoteView.accessibilityElements?.append(fourButton)
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="les-crit-res-incontournables-sous-android">Les critères incontournables sous Android</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous Android"}]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-android-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-android-dev.html"}
+    ]);    
+});</script>
+
+<p><span data-menuitem="criteria-android"></span></p>
+<h2 id="pour-la-conception">Pour la conception</h2>
+<p>Ce socle de critères destiné aux applications mobiles Android Orange permettent d’éviter les erreurs d’accessibilité.<br>La mise en œuvre de ce socle doit permettre d’obtenir à coup sûr un site accessible. Ce socle pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.</p>
+<p>Le respect de la charte Orange pour Android, document disponible sur <a href="http://brand.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ce socle.
+Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.</p>
+<h2 id="pour-la-d-veloppement">Pour la développement</h2>
+<p>Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google.</p>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">Critères incontournables sous Android pour la conception</h2><br>    <a href="./criteria-android-conception.html" class="btn btn-info">
+        <img src="./images/android.png" alt="">
+        <div>Critères incontournables sous Android pour la conception</div>
+    </a>
+</div>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">Critères incontournables sous Android pour le développement</h2><br>    <a href="./criteria-android-dev.html" class="btn btn-info">
+        <img src="./images/android.png" alt="">
+        <div>Critères incontournables sous Android pour le développement</div>
+    </a>
+</div>    
+
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="les-crit-res-incontournables-sous-ios">Les critères incontournables sous iOS</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS"}]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"}
+    ]);    
+});</script>
+
+<p><span data-menuitem="criteria-ios"></span></p>
+<h2 id="pour-la-conception">Pour la conception</h2>
+<p>Ce socle de critères destiné aux applications mobiles iOS Orange permettent d’éviter les erreurs d’accessibilité.<br>La mise en œuvre de ce socle doit permettre d’obtenir à coup sûr un site accessible. Ce socle pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.</p>
+<p>Le respect de la charte Orange pour iOS, document disponible sur <a href="http://brand.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ce socle.
+Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.</p>
+<h2 id="pour-la-d-veloppement">Pour la développement</h2>
+<p>Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d&#39;Apple.</p>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">Critères incontournables sous iOS pour la conception</h2><br>    <a href="./criteria-ios-conception.html" class="btn btn-info">
+        <img src="./images/iphone.png" alt="">
+        <div>Critères incontournables sous iOS pour la conception</div>
+    </a>
+</div>
+<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
+    <h2 class="sr-only">Critères incontournables sous iOS pour le développement</h2><br>    <a href="./criteria-ios-dev.html" class="btn btn-info">
+        <img src="./images/iphone.png" alt="">
+        <div>Critères incontournables sous iOS pour le développement</div>
+    </a>
+</div>    
+
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="recommandations-accessibilit-orange-pour-les-mobiles">Recommandations accessibilité Orange pour les mobiles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);
@@ -1287,9 +1284,9 @@ remoteView.accessibilityElements?.append(fourButton)
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="mdan">mDAN</h1>
+<h1 id="d-monstrateur-d-accessibilit-sur-mobile-mdan">Démonstrateur d’accessibilité sur mobile mDAN</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"mDAN"}]);
+    setBreadcrumb([{"label":"Démonstrateur d’accessibilité sur mobile mDAN"}]);
 });</script>
 
 <p><span data-menuitem="mdan"></span></p>
@@ -1324,8 +1321,8 @@ remoteView.accessibilityElements?.append(fourButton)
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Lecteur d’écran"}]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"talkback.html"}, 
-        {"label":"Guide pour iOS","url":"voiceover.html"}
+        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
     ]);                
 });</script>
 
@@ -1337,13 +1334,13 @@ remoteView.accessibilityElements?.append(fourButton)
 <li><strong><span lang="en">VoiceOver</span></strong>  le lecteur d’écran intégré à iOS.</li>
 </ul>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only"><span lang="en">TalkBack</span></h2><br>    <a href="./talkback.html" class="btn btn-info">
+    <h2 class="sr-only"><span lang="en">TalkBack</span></h2><br>    <a href="./screen-reader-talkback.html" class="btn btn-info">
         <img src="./images/android.png" alt="">
         <div>Guide d’utilisation de <span lang="en">TalkBack</span></div>
     </a>
 </div>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">Voiceover</h2><br>    <a href="./voiceover.html" class="btn btn-info">
+    <h2 class="sr-only">Voiceover</h2><br>    <a href="./screen-reader-voiceover.html" class="btn btn-info">
         <img src="./images/iphone.png" alt="">
         <div>Guide d’utilisation de <span lang="en">VoiceOver</span></div>
     </a>
@@ -1354,11 +1351,14 @@ remoteView.accessibilityElements?.append(fourButton)
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="guide-d-utilisation-de-span-lang-en-talkback-span-">Guide d’utilisation de <span lang="en">TalkBack</span></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"lecteur d’écran", "url":"./screen-reader.html"},{"label":"Guide d’utilisation de <span lang="en">TalkBack</span>"}]);
+    setBreadcrumb([
+        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
+        {"label":"Guide d’utilisation de <span lang=\"en\">TalkBack</span>"}
+    ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"screen-reader.html", "expanded": true}, 
-        {"label":"Guide pour iOS","url":"voiceover.html"}
-    ]);                        
+        {"label":"Sous Android","url":"screen-reader-talkback.html", "expanded": true}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
+    ]);
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
@@ -1411,11 +1411,14 @@ remoteView.accessibilityElements?.append(fourButton)
 
 <h1 id="guide-d-utilisation-de-span-lang-en-voiceover-span-">Guide d’utilisation de <span lang="en">VoiceOver</span></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"lecteur d’écran", "url":"./screen-reader.html"},{"label":"Guide d’utilisation de <span lang="en">VoiceOver</span>"}]);
+    setBreadcrumb([
+        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
+        {"label":"Guide d’utilisation de <span lang=\"en\">VoiceOver</span>"}
+    ]);
     addSubMenu([
-        {"label":"Guide pour Android","url":"talkback.html"}, 
-        {"label":"Guide pour iOS","url":"screen-reader.html", "expanded": true}
-    ]);                    
+        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html", "expanded": true}
+    ]);
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
@@ -1491,7 +1494,7 @@ remoteView.accessibilityElements?.append(fourButton)
 <h2 id="pour-ios">Pour iOS</h2>
 <p>Présentation de l’accessibilité sous iOS et de l’<abbr>API</abbr> Apple</p>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html">Documentation officielle de l’<abbr>API</abbr> d’accessiblité Apple</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html">Documentation officielle de l’<abbr>API</abbr> d’accessibilité Apple</a></li>
 <li><a href="http://www.apple.com/fr/accessibility/">Présentation des options d’accessibilité d’iOS</a></li>
 <li><a href="https://developer.apple.com/accessibility/ios/">Page officielle de l’accessibilité sous Apple</a></li>
 <li><a href="https://help.apple.com/iphone/9/#/iph3e2e415f">Utilisation de <span lang="en">VoiceOver</span></a></li>

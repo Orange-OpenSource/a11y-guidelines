@@ -12,14 +12,14 @@ documentTitles["index.html#orange-web-accessibility-guidelines"] = "Orange web a
 index.add({
     url: "index.html#orange-web-accessibility-guidelines",
     title: "Orange web accessibility guidelines",    
-    body: "# Orange web accessibility guidelines    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  *** The accessibility, a benefit for all, a need for some! ***  "
+    body: "# Orange web accessibility guidelines    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  *** Accessibility, a benefit for all, a need for some! ***  "
 });
 
 documentTitles["index.html#web-accessibility-definition"] = "Web accessibility definition";
 index.add({
     url: "index.html#web-accessibility-definition",
     title: "Web accessibility definition",    
-    body: "## Web accessibility definition ** It is a web service usable by everyone **  - Healthy person - Elderly people - People with disabilities (temporary or permanent)  ** and in all situations **  - With any kind of material: web browser, PC, MAC, mobile phones, tablet - In an unfavorable environment: poor luminosity, touchpad while moving, etc. - With specific software that compensate the handicap    "
+    body: "## Web accessibility definition ** An accessible web service can be used by anyone: **  - A valid person, - elderly people, - people with disabilities (temporary or permanent).  ** and in all situations: **  - with any kind of material: web browser, PC, MAC, mobile phones, tablet; - in an unfavourable environment: poor luminosity, touchpad while moving, etc.; - with specific software that compensates a disability.    "
 });
 
 documentTitles["index.html#site-organization"] = "Site organization";
@@ -33,21 +33,21 @@ documentTitles["index.html#essential-criteria"] = "Essential criteria";
 index.add({
     url: "index.html#essential-criteria",
     title: "Essential criteria",    
-    body: "### Essential criteria List of the most important criteria according to your profile, based on a subset of the recommendations WCAG 2.0 level AA. A good way to be aware of the main criteria and commit progressively in accessibility.    "
+    body: "### Essential criteria List of the most important criteria according to your profile, based on a subset of the WCAG 2.0 level AA recommendations. A good way to be aware of the main criteria and commit progressively to accessibility.    "
 });
 
-documentTitles["index.html#list-of-the-requirements"] = "List of the requirements";
+documentTitles["index.html#requirements-list"] = "Requirements list";
 index.add({
-    url: "index.html#list-of-the-requirements",
-    title: "List of the requirements",    
-    body: "### List of the requirements Section for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.  "
+    url: "index.html#requirements-list",
+    title: "Requirements list",    
+    body: "### Requirements list This section is for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.  "
 });
 
 documentTitles["index.html#methods-and-testing-tools"] = "Methods and testing tools";
 index.add({
     url: "index.html#methods-and-testing-tools",
     title: "Methods and testing tools",    
-    body: "### Methods and testing tools For those who want to check the accessibility of their websites more or less automatically with tools. Finally, all the technical and methodological tools to review its pages.  "
+    body: "### Methods and testing tools For those who want to check the accessibility of their websites more or less automatically with tools. Finally, all the technical and methodological tools to review pages.  "
 });
 
 documentTitles["index.html#open-source-orange-tools"] = "Open source Orange tools";
@@ -61,7 +61,7 @@ documentTitles["index.html#examples"] = "Examples";
 index.add({
     url: "index.html#examples",
     title: "Examples",    
-    body: "### Examples Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible and frequently used. Everything is explained, just go ahead!  These examples use the [boosted](http://boosted.orange.com/) library. The latter is based on [bootstrap](http://getbootstrap.com/) and let you create and test quickly the accessibility and responsiveness of a website. This library is branded with the Orange colors.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "### Examples Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible but frequently used. Everything is explained, just go ahead!  These examples use the [Boosted](http://boosted.orange.com/) library. It is based on [Bootstrap](http://getbootstrap.com/) and lets you create and quickly test the accessibility and responsiveness of a website. This library is branded with the Orange colours.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -70,7 +70,7 @@ documentTitles["fondamentaux.html#essential-criteria"] = "Essential criteria";
 index.add({
     url: "fondamentaux.html#essential-criteria",
     title: "Essential criteria",    
-    body: "# Essential criteria  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Essential criteria\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;For designers\&quot;,\&quot;url\&quot;:\&quot;fondamentaux-nontech.html\&quot;},          {\&quot;label\&quot;:\&quot;For developers\&quot;,\&quot;url\&quot;:\&quot;fondamentaux-tech.html\&quot;}     ]);     });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt; This base criteria for the Orange websites and applications avoids the major accessibility errors. It is a subset of the accessibility requirements.    Its implementation does not give you the guarantee to be 100% accessible, but is a clean bedrock so you can engage in a progressive accessibility implementation process.  Following the Orange guidelines (Design for digital platforms Guideline), available on the [Orange brand site](http://brand.orange.com/) is a prerequisite to the use of this base criteria.  Some elements already present in the Orange Brand (such as the use of colors, text alignment...) have not been included in this list of criteria.  Two versions are available: - **The first version** does not mention the code, it is aimed at product designers, designers, project managers, etc. - **The second version** mentions the code and is aimed at developers, technical managers, validation teams, testers, etc.  &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-4\&quot;&gt;     &lt;h2 class=\&quot;sr-only\&quot;&gt;For the product designers, designers, project managers&lt;/h2&gt;               &lt;a href=\&quot;./fondamentaux-nontech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;         ![](./images/perso1.png)         &lt;div&gt;Essential criteria for designers&lt;/div&gt;     &lt;/a&gt; &lt;/div&gt; &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-4\&quot;&gt;     &lt;h2 class=\&quot;sr-only\&quot;&gt;For the developers&lt;/h2&gt;               &lt;a href=\&quot;./fondamentaux-tech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;         ![](./images/perso3.png)         &lt;div&gt;Essential criteria for the developers&lt;/div&gt;     &lt;/a&gt; &lt;/div&gt;              &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Essential criteria  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Essential criteria\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;For designers\&quot;,\&quot;url\&quot;:\&quot;fondamentaux-nontech.html\&quot;},          {\&quot;label\&quot;:\&quot;For developers\&quot;,\&quot;url\&quot;:\&quot;fondamentaux-tech.html\&quot;}     ]);     });&lt;/script&gt;  &lt;span data-menuitem=\&quot;fondamentaux\&quot;&gt;&lt;/span&gt; This base criteria for the Orange websites and applications avoids the major accessibility errors. It is a subset of the accessibility requirements.    Its implementation does not give you the guarantee to be 100% accessible, but is a clean bedrock so you can engage in a progressive accessibility implementation process.  Following the Orange guidelines (&lt;cite&gt;Design for digital platforms Guidelines&lt;/cite&gt;), available on the [Orange brand site](http://brand.orange.com/) is a prerequisite to the use of this base criteria.  Some elements already present in the Orange Brand (such as the use of colours, text alignment...) have not been included in this list of criteria.  Two versions are available: - **The first version** does not mention the code, it is aimed at product designers, designers, project managers, etc. - **The second version** mentions the code and is aimed at developers, technical managers, validation teams, testers, etc.  &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-4\&quot;&gt;     &lt;h2 class=\&quot;sr-only\&quot;&gt;For product designers, designers, project managers&lt;/h2&gt;               &lt;a href=\&quot;./fondamentaux-nontech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;         ![](./images/perso1.png)         &lt;div&gt;Essential criteria for designers&lt;/div&gt;     &lt;/a&gt; &lt;/div&gt; &lt;div class=\&quot;perso col-xs-12 col-md-6 col-lg-4\&quot;&gt;     &lt;h2 class=\&quot;sr-only\&quot;&gt;For developers&lt;/h2&gt;               &lt;a href=\&quot;./fondamentaux-tech.html\&quot; class=\&quot;btn btn-info\&quot;&gt;         ![](./images/perso3.png)         &lt;div&gt;Essential criteria for developers&lt;/div&gt;     &lt;/a&gt; &lt;/div&gt;              &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -382,46 +382,46 @@ index.add({
 
 
 
-documentTitles["htmlaria.html#html5-aria"] = "HTML5 &amp; ARIA";
+documentTitles["htmlaria.html#abbrhtml5abbr-abbrariaabbr"] = "&lt;abbr&gt;HTML5&lt;/abbr&gt; &amp; &lt;abbr&gt;ARIA&lt;/abbr&gt;";
 index.add({
-    url: "htmlaria.html#html5-aria",
-    title: "HTML5 &amp; ARIA",    
-    body: "# HTML5 &amp; ARIA  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;HTML5 &amp; ARIA\&quot;}]); });&lt;/script&gt;  "
+    url: "htmlaria.html#abbrhtml5abbr-abbrariaabbr",
+    title: "&lt;abbr&gt;HTML5&lt;/abbr&gt; &amp; &lt;abbr&gt;ARIA&lt;/abbr&gt;",    
+    body: "# &lt;abbr&gt;HTML5&lt;/abbr&gt; &amp; &lt;abbr&gt;ARIA&lt;/abbr&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;HTML5 &amp; ARIA\&quot;}]); });&lt;/script&gt;  "
 });
 
 documentTitles["htmlaria.html#introduction"] = "Introduction";
 index.add({
     url: "htmlaria.html#introduction",
     title: "Introduction",    
-    body: "## Introduction  Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker...). So it is very difficult or impossible to make these components accessible with conventional HTML.  Even with the HTML5 change, we still lack semantic information to provide technical aids (screen readers, magnifiers software ...), keyboard navigation is often impossible, the complex handling of the keyboard focus is missing and live regions are not notified to the user.  "
+    body: "## Introduction  Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker…). So it is very difficult or impossible to make these components accessible with conventional &lt;abbr&gt;HTML&lt;/abbr&gt;.  Even with the &lt;abbr&gt;HTML5&lt;/abbr&gt; change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user.  "
 });
 
 documentTitles["htmlaria.html#what-is-it"] = "What is it ?";
 index.add({
     url: "htmlaria.html#what-is-it",
     title: "What is it ?",    
-    body: "## What is it ?  To overcome these limitations, the W3C / WAI has officially issued a recommendation called ARIA, standing for Accessible Rich Internet Applications, and several documents on the use of ARIA.  ARIA is a semantic wrapper based on the attribute / value combination used in markup languages ​​such as HTML, SVG, XML, etc. This recommendation consists of roles, states and properties that will specifically interact with assistive technologies (AT). With ARIA, one can describe the elements and behaviors with simple HTML when not natively semantically explicit, for example, tabs, dropdown, live regions, tooltips, modal windows. ARIA also defines how an interface component has to behave with the keyboard in order to standardize the user experience with keyboard navigation. **ARIA makes sense and delivers its full potential when used with HTML5**.  ARIA does not add any particular behavior or any style to UI components. So always be sure the presentation is done through CSS, content control and interaction via Javascript.  "
+    body: "## What is it ?  To overcome these limitations, the W3C&amp;nbsp;/ WAI has officially issued a recommendation called &lt;abbr&gt;ARIA&lt;/abbr&gt;, standing for Accessible Rich Internet Applications, and several documents on the use of &lt;abbr&gt;ARIA&lt;/abbr&gt;.  &lt;abbr&gt;ARIA&lt;/abbr&gt; is a semantic wrapper based on the attribute&amp;nbsp;/ value combination used in markup languages such as &lt;abbr&gt;HTML&lt;/abbr&gt;, &lt;abbr&gt;SVG&lt;/abbr&gt;, &lt;abbr&gt;XML&lt;/abbr&gt;, etc. This recommendation consists of roles, states and properties that will specifically interact with assistive technologies (&lt;abbr&gt;AT&lt;/abbr&gt;). With &lt;abbr&gt;ARIA&lt;/abbr&gt;, one can describe elements and behaviours with simple HTML when they do not exist natively, for example tabs, drop-downs, live regions, tooltips, modal windows, etc. &lt;abbr&gt;ARIA&lt;/abbr&gt; also defines how an interface component has to behave with the keyboard in order to standardize the user experience with keyboard navigation. **&lt;abbr&gt;ARIA&lt;/abbr&gt; makes sense and delivers its full potential when used with &lt;abbr&gt;HTML5&lt;/abbr&gt;**.  &lt;abbr&gt;ARIA&lt;/abbr&gt; does not add any particular behaviour or any style to &lt;abbr&gt;UI&lt;/abbr&gt; components as it is only descriptive. So always make sure presentation is done through &lt;abbr&gt;CSS&lt;/abbr&gt;, content control and interaction via Javascript.  "
 });
 
-documentTitles["htmlaria.html#the-support"] = "The support";
+documentTitles["htmlaria.html#support"] = "Support";
 index.add({
-    url: "htmlaria.html#the-support",
-    title: "The support",    
-    body: "## The support  ARIA support improves quickly and is already supported : - In modern browsers (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera 9.5&gt;=, Internet Explorer 8 for a basic support, Internet Explorer &gt;=9 and Edge for advanced support)  - In assistive technologies (NVDA &gt;=2010, Orca &gt;=2 + Firefox only, VoiceOver OSX &gt;=10.5, iOS &gt;=4, JAWS &gt;=8, Window-Eyes &gt;=7, ZoomText 10 for a basic support, ZoomText &gt;=11 for advanced support).   Moreover, the optimal efficiency of the ARIA compatibility depends heavily on the combination browser/assistive technologies, Firefox with NVDA, Jaws with Internet Explorer and Safari with VoiceOver, for example.  "
+    url: "htmlaria.html#support",
+    title: "Support",    
+    body: "## Support  &lt;abbr&gt;ARIA&lt;/abbr&gt; support improves quickly and is already supported : - in modern browsers (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera 9.5&gt;=, Internet Explorer 8 for a basic support, Internet Explorer &gt;=9 and Edge for advanced support); - in assistive technologies (&lt;abbr&gt;NVDA&lt;/abbr&gt; &gt;=2010, Orca &gt;=2 + Firefox only, VoiceOver &lt;abbr&gt;OSX&lt;/abbr&gt; &gt;=10.5, iOS &gt;=4, JAWS &gt;=8, Window-Eyes &gt;=7, ZoomText 10 for a basic support, ZoomText &gt;=11 for advanced support).   Moreover, the optimal efficiency of the &lt;abbr&gt;ARIA&lt;/abbr&gt; compatibility depends heavily on the browser/assistive technology combination: Firefox with &lt;abbr&gt;NVDA&lt;/abbr&gt;, Jaws with Internet Explorer or Safari with VoiceOver, for example.  "
 });
 
 documentTitles["htmlaria.html#should-we-use-it"] = "Should we use it?";
 index.add({
     url: "htmlaria.html#should-we-use-it",
     title: "Should we use it?",    
-    body: "## Should we use it?  ARIA improves the accessibility for components not natively available in HTML (or inaccessible HTML5 components). The ARIA robustness and interoperability is rather complacent, [twenty WCAG 2.0 techniques are specific to ARIA](https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html) (10 are HTML5 techniques). Therefore, for rich Internet applications, ARIA is essential for accessibility implementation.  In all cases, you have to test developments in the target environments (browsers/assistive technologies combination). This is a tough task absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/NVDA.  In a well-defined environment (e.g. intranet), target environments are known and in a finite number, so it gets easier!  "
+    body: "## Should we use it?  &lt;abbr&gt;ARIA&lt;/abbr&gt; improves the accessibility of components that are not natively available in HTML (or inaccessible &lt;abbr&gt;HTML5&lt;/abbr&gt; components). &lt;abbr&gt;ARIA&lt;/abbr&gt;’s robustness and interoperability is rather complacent, [twenty &lt;abbr&gt;WCAG&lt;/abbr&gt; 2.0 techniques are specific to &lt;abbr&gt;ARIA&lt;/abbr&gt;](https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html) (10 are &lt;abbr&gt;HTML5&lt;/abbr&gt; techniques). Therefore, for rich Internet applications, &lt;abbr&gt;ARIA&lt;/abbr&gt; is essential for accessibility implementation.  In all cases, you have to test developments in the target environments (browser/assistive technology combinations). This is a tough task, but absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/&lt;abbr&gt;NVDA&lt;/abbr&gt;.  In a well-defined environment (e.g. intranet), target environments are known and in a finite number, so it gets easier!  "
 });
 
 documentTitles["htmlaria.html#webography"] = "Webography";
 index.add({
     url: "htmlaria.html#webography",
     title: "Webography",    
-    body: "## Webography * \&quot;ARIA in HTML\&quot; summary  https://specs.webplatform.org/html-aria/webspecs/master/ * W3C:   * Introduction to ARIA: http://www.w3.org/TR/wai-aria/introduction   * ARIA specification: http://www.w3.org/TR/wai-aria/   * ARIA implementation: http://www.w3.org/TR/wai-aria-practices/, careful with \&quot;working draft\&quot;   * Use ARIA HTML (5): http://www.w3.org/TR/aria-in-html/, careful with  \&quot;working draft\&quot;   * ARIA techniques in WCAG 2: https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html * Introduction to ARIA by Site Point: http://www.sitepoint.com/introduction-wai-aria/ * Introduction and link list to ARIA sources: http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Webography * W3C:   * [Introduction to &lt;abbr&gt;ARIA&lt;/abbr&gt;](http://www.w3.org/TR/wai-aria/introduction)   * [&lt;abbr&gt;ARIA&lt;/abbr&gt; specification](http://www.w3.org/TR/wai-aria/)   * [&lt;abbr&gt;ARIA&lt;/abbr&gt; implementation](http://www.w3.org/TR/wai-aria-practices/) (be careful as it’s a “working draft”)   * [Use &lt;abbr&gt;ARIA&lt;/abbr&gt; HTML (5)](http://www.w3.org/TR/aria-in-html/) (be careful as it’s a “working draft”)   * [&lt;abbr&gt;ARIA&lt;/abbr&gt; techniques in &lt;abbr&gt;WCAG&lt;/abbr&gt; 2](https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html) * [Introduction to &lt;abbr&gt;ARIA&lt;/abbr&gt; by Site Point](http://www.sitepoint.com/introduction-wai-aria/) * [Introduction and link list to &lt;abbr&gt;ARIA&lt;/abbr&gt; sources](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -430,7 +430,7 @@ documentTitles["methodes-outils.html#methods-and-testing-tools"] = "Methods and 
 index.add({
     url: "methodes-outils.html#methods-and-testing-tools",
     title: "Methods and testing tools",    
-    body: "# Methods and testing tools  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Test tools\&quot;}]); });&lt;/script&gt;  You will find articles describing useful methods and tools to test the accessibility of your web pages.  "
+    body: "# Methods and testing tools  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Test tools\&quot;}]); });&lt;/script&gt;  You will find here articles describing useful methods and tools to test the accessibility of your web pages.  "
 });
 
 documentTitles["methodes-outils.html#manual-test-and-assistive-technology"] = "Manual test and assistive technology";
@@ -444,23 +444,23 @@ documentTitles["methodes-outils.html#automated-testing-tools"] = "Automated test
 index.add({
     url: "methodes-outils.html#automated-testing-tools",
     title: "Automated testing tools",    
-    body: "## Automated testing tools [Browser extensions](./methodes-outils-extensions.html) Some extensions allow you to perform automated tests on the current page.  "
+    body: "## Automated testing tools [Browser extensions](./methodes-outils-extensions.html) Some extensions that allow you to perform automated tests on a page.  "
 });
 
 documentTitles["methodes-outils.html#test-criteria"] = "Test criteria";
 index.add({
     url: "methodes-outils.html#test-criteria",
     title: "Test criteria",    
-    body: "## Test criteria [Measure the color contrast level](./methodes-outils-contrastes.html) Introducing the color contrast analyzer tool.  [Accessing page headers (`H1` to `H6` tags)](./methodes-outils-liste-titres.html) The different ways to access the list of page headers.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Test criteria [Measure the colour contrast level](./methodes-outils-contrastes.html) Introducing the Colour Contrast Analyser tool.  [Accessing page headers (`H1` to `H6` tags)](./methodes-outils-liste-titres.html) Different ways to access the list of page headers.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["nos-outils.html#open-source-orange-test-tools"] = "Open source Orange test tools";
+documentTitles["nos-outils.html#orange-open-source-tools"] = "Orange Open source tools";
 index.add({
-    url: "nos-outils.html#open-source-orange-test-tools",
-    title: "Open source Orange test tools",    
-    body: "# Open source Orange test tools      &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Open source Orange test tools\&quot;}]); });&lt;/script&gt;      Here is our list of open source tools for the web:  - **Orange Boosted:** allows you to create accessible web sites branded with Orange colors. - **Orange Comfort+:** allows you to improve user comfort while viewing your website.  "
+    url: "nos-outils.html#orange-open-source-tools",
+    title: "Orange Open source tools",    
+    body: "# Orange Open source tools      &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Orange Open source tools\&quot;}]); });&lt;/script&gt;      Here is our list of open source tools for the web:  - **Orange Boosted:** allows you to create accessible web sites branded with Orange colours. - **Orange Comfort+:** allows you to improve user comfort while browsing your website.  "
 });
 
 documentTitles["nos-outils.html#orange-boosted"] = "Orange Boosted";
@@ -474,14 +474,14 @@ documentTitles["nos-outils.html#presentation"] = "Presentation";
 index.add({
     url: "nos-outils.html#presentation",
     title: "Presentation",    
-    body: "### Presentation Orange Boosted is an HTML, CSS and Javascript framework based on the popular [Twitter Bootstrap](http://getbootstrap.com/). It allows to create quickly a responsive website branded with the Orange colors.  "
+    body: "### Presentation Orange Boosted is an &lt;abbr&gt;HTML&lt;/abbr&gt;, &lt;abbr&gt;CSS&lt;/abbr&gt; and Javascript framework based on the popular framework [Bootstrap](http://getbootstrap.com/). It allows to quickly create a responsive and accessible website branded with the Orange colours.  "
 });
 
 documentTitles["nos-outils.html#why-you-should-use-it"] = "Why you should use it?";
 index.add({
     url: "nos-outils.html#why-you-should-use-it",
     title: "Why you should use it?",    
-    body: "### Why you should use it?  - Based on [Twitter Bootstrap](http://getbootstrap.com/)  - Orange branded  - Enhanced with **more accessible** components  - Enriched with specific components we use at Orange  - Examples pages  - Open source, MIT license  "
+    body: "### Why you should use it?  - Based on [Bootstrap](http://getbootstrap.com/)  - Orange branded  - Enhanced with **more accessible** components  - Enriched with specific components we use at Orange  - Example pages  - Open source, &lt;abbr&gt;MIT&lt;/abbr&gt; license  "
 });
 
 documentTitles["nos-outils.html#official-site"] = "Official site";
@@ -502,21 +502,21 @@ documentTitles["nos-outils.html#presentation"] = "Presentation";
 index.add({
     url: "nos-outils.html#presentation",
     title: "Presentation",    
-    body: "### Presentation The Orange Comfort+ service can adapt the layout of a website to improve comfort during the navigation. It has a wide range of settings that can improve the comfort of all users. It also provides valuable assistance to users with motor, visual or cognitive disabilities.  You can test the service by clicking on the \&quot;Comfort+\&quot; button at the top right of this page.  "
+    body: "### Presentation The Orange Comfort+ service can adapt the layout of a website to improve comfort during the navigation. It has a wide range of settings that can improve the comfort of all users. It also provides valuable assistance to users with motor, visual or cognitive disabilities.  You can test the service by clicking on the “Comfort+” button at the top right of this page.  "
 });
 
 documentTitles["nos-outils.html#its-main-features"] = "Its main features:";
 index.add({
     url: "nos-outils.html#its-main-features",
     title: "Its main features:",    
-    body: "### Its main features: - Useful for all users - Supports different user disabilities - Works with all websites - Also available as a browser extension - Open source, MIT license  ![screenshot of the service more comfort](./images/confort-plus.png)  "
+    body: "### Its main features: - Useful for all users - Supports different user disabilities - Works with all websites - Also available as a browser extension - Open source, MIT license  ![screenshot of the Comfort+ service](./images/confort-plus.png)  "
 });
 
 documentTitles["nos-outils.html#browser-extensions"] = "Browser Extensions";
 index.add({
     url: "nos-outils.html#browser-extensions",
     title: "Browser Extensions",    
-    body: "### Browser Extensions - Firefox: https://addons.mozilla.org/fr/firefox/addon/orange-confort - Chrome: https://chrome.google.com/webstore/detail/orange-confort%2B/ddnpdohiipephjpdpohikkamhdikbldp - IE11, 64 or 32 bits: http://confort-plus.orange.com/  "
+    body: "### Browser Extensions - [Firefox](https://addons.mozilla.org/fr/firefox/addon/orange-confort) - [Chrome](https://chrome.google.com/webstore/detail/orange-confort%2B/ddnpdohiipephjpdpohikkamhdikbldp) - [IE11, 64 or 32 bits](http://confort-plus.orange.com/)  "
 });
 
 documentTitles["nos-outils.html#official-website"] = "Official website";
@@ -528,11 +528,11 @@ index.add({
 
 
 
-documentTitles["methodes-outils-contrastes.html#measure-the-color-contrast-level"] = "Measure the color contrast level";
+documentTitles["methodes-outils-contrastes.html#measure-the-colour-contrast-level"] = "Measure the colour contrast level";
 index.add({
-    url: "methodes-outils-contrastes.html#measure-the-color-contrast-level",
-    title: "Measure the color contrast level",    
-    body: "# Measure the color contrast level  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Measure the color contrast level\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  The contrast level can be measured simply by using the [color contrast analyzer tool](http://www.paciellogroup.com/resources/contrastanalyser/).  This tool is available for Mac and Windows. It measures the contrast between two colors (text color and background color). You can select them using an eyedropper directly into a web page, image or application.  ![screenshot of the color contrast analyzer tool](./images/contraste2.png)&lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "methodes-outils-contrastes.html#measure-the-colour-contrast-level",
+    title: "Measure the colour contrast level",    
+    body: "# Measure the colour contrast level  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Measure the colour contrast level\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  The contrast level can be measured simply by using the [Colour Contrast Analyser tool](http://www.paciellogroup.com/resources/contrastanalyser/).  This tool is available for Mac and Windows. It measures the contrast between two colours (text colour and background colour). You can select them using an eyedropper directly into a web page, image or application.  ![Screenshot of the Colour Contrast Analyser tool](./images/contraste2.png)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -548,7 +548,7 @@ documentTitles["methodes-outils-clavier.html#list-of-keyboard-shortcuts"] = "Lis
 index.add({
     url: "methodes-outils-clavier.html#list-of-keyboard-shortcuts",
     title: "List of keyboard shortcuts:",    
-    body: "## List of keyboard shortcuts:  - The `TAB` key: to move the focus. - The `shift + TAB` keys: to move backwards the focus. - The `Return` key to activate the element that has the focus (link, button, menu...). - The spacebar to check / uncheck a checkbox. - The arrow keys to change the selection of the radio buttons, to move in a drop-down list, or to scroll (scrollbar) when available.  ** Note on mac, the keyboard navigation must be enabled first: **   In Safari: Edit&gt; Preferences...&gt; Advanced   Then check the box *\&quot;Press tab to highlight each item on a webpage\&quot;*.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## List of keyboard shortcuts:  - The &lt;kbd&gt;Tab&lt;/kbd&gt; key: to move the focus. - The &lt;kbd&gt;shift + Tab&lt;/kbd&gt; keys: to move backwards the focus. - The &lt;kbd&gt;Return&lt;/kbd&gt; key to activate the element that has the focus (link, button, menu…). - The &lt;kbd&gt;Spacebar&lt;/kbd&gt; to check / uncheck a checkbox. - The arrow keys to change the selection of the radio buttons, to move in a drop-down list, or to scroll (scrollbar) when available.  ** Note: on Mac, keyboard navigation must be enabled first: **   In Safari: Edit &gt; Preferences… &gt; Advanced   Then check the box *“Press tab to highlight each item on a webpage”*.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -557,7 +557,7 @@ documentTitles["methodes-outils-liste-titres.html#accessing-page-headers-h1-to-h
 index.add({
     url: "methodes-outils-liste-titres.html#accessing-page-headers-h1-to-h6-tags",
     title: "Accessing page headers (`H1` to `H6` tags)",    
-    body: "# Accessing page headers (`H1` to `H6` tags)  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Accessing page headers\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  To check if the headers have been properly positioned on the page, there are several solutions: - Browse the page code source by hand. - Use an extension such as [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/) for Firefox, [Wave for Chrome](http://wave.webaim.org/extension/) or [Web Developer Toolbar](http://chrispederick.com/work/web-developer/). - Access the headers list from a screen reader (see the [screen reader](./methodes-outils-lecteur-ecran.html) section).  The last solution is the most reliable, because extensions do not always take into account the CSS and any ARIA attributes positioned on the HTML tags. You can find more information in this article: [navigation with a screen reader](./methods-tools-player-ecran.html).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Accessing page headers (`H1` to `H6` tags)  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Accessing page headers\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  To check if the headers have been properly positioned on the page, there are several solutions: - Browse the page code source by hand. - Use an extension such as [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/) for Firefox, [WAVE for Chrome](http://wave.webaim.org/extension/) or [Web Developer Toolbar](http://chrispederick.com/work/web-developer/). - Access the headers list from a screen reader (see the [screen reader](./methodes-outils-lecteur-ecran.html) section).  The last solution is the most reliable, because extensions do not always take into account the CSS and any ARIA attributes positioned on the HTML tags. You can find more information in this article: [Navigation with a screen reader](./methodes-outils-lecteur-ecran.html).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -566,7 +566,7 @@ documentTitles["methodes-outils-lecteur-ecran.html#navigating-with-a-screen-read
 index.add({
     url: "methodes-outils-lecteur-ecran.html#navigating-with-a-screen-reader",
     title: "Navigating with a screen reader",    
-    body: "# Navigating with a screen reader  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Navigating with a screen reader\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  A screen reader is a voice synthesis software used by the visually impaired and blind. It allows the user to interact with the computer and listen to what is displayed as text (usually) on the screen. There are several screen readers, the most prevalent are: - [NVDA](http://nvda-fr.org/): free, available for Windows. - [Jaws](http://www.freedomscientific.com/Downloads/JAWS): commercial, available for Windows. In trial, you can only use it 40 min, but if you restart your computer you can use it again. - [VoiceOver](http://www.apple.com/fr/accessibility/osx/voiceover/): free, available for Mac. It is directly integrated into the MacOS system.  "
+    body: "# Navigating with a screen reader  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Navigating with a screen reader\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  A screen reader is a voice synthesis software used by the visually impaired and the blind. It allows the user to interact with the computer and listen to what is displayed as text (usually) on the screen. There are several screen readers, the most prevalent are: - [NVDA](http://nvda-fr.org/): free, available for Windows. - [Jaws](http://www.freedomscientific.com/Downloads/JAWS): commercial, available for Windows. In trial mode, you can only use it for 40 minutes, but if you restart your computer you can use it again. - [VoiceOver](http://www.apple.com/fr/accessibility/osx/voiceover/): free, available for Mac. It is directly integrated into the MacOS system.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#getting-started-with-nvda"] = "Getting started with NVDA";
@@ -580,21 +580,21 @@ documentTitles["methodes-outils-lecteur-ecran.html#installation"] = "Installatio
 index.add({
     url: "methodes-outils-lecteur-ecran.html#installation",
     title: "Installation",    
-    body: "### Installation  Download the NVDA installer on the [official website](http://nvda-fr.org/).  The default voice is not very good but it is very reactive. It is not mandatory, but you can download a better voice named [Hortense](https://www.nvda-fr.org/voix/). Then just go to preferences to change NVDA voice settings.  "
+    body: "### Installation  Download the NVDA installer on the [official website](https://www.nvaccess.org/).  The default voice is not very good but it is very reactive. It is not mandatory, but you can [download extra voices](https://github.com/nvaccess/nvda/wiki/ExtraVoices). Then just go to preferences to change NVDA voice settings.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#configuration"] = "Configuration";
 index.add({
     url: "methodes-outils-lecteur-ecran.html#configuration",
     title: "Configuration",    
-    body: "### Configuration  At first startup, NVDA is configured to vocalize whatever the mouse is hover. This mode is used by visually impaired people who have difficulties reading the text displayed on the screen, for example. It is recommended to disable this option if you use NVDA to test accessibility on your pages. To disable this navigation mode, right click on the NVDA icon located in the notification area. Then go to *Preferences &gt;&gt; Mouse settings* and uncheck \&quot;Enable mouse tracking\&quot;.  Finally, it is advisable to change the default playback mode. On a webpage use the following keyboard shortcut `INS + v` to disable the \&quot;screen layout is preserved\&quot; and then save this configuration as default using the shortcut `INS + Ctrl + c`.  "
+    body: "### Configuration  At first startup, NVDA is configured to vocalize whatever the mouse pointer is over. This mode is used by visually-impaired people who have difficulties reading the text displayed on the screen, for example. It is recommended to disable this option if you use NVDA to test accessibility on your pages. To disable this navigation mode, right-click on the NVDA icon located in the notification area. Then go to *Preferences&amp;nbsp;&amp;gt; Mouse settings* and uncheck “Enable mouse tracking”.  Finally, it is advisable to change the default playback mode. On a webpage use the following keyboard shortcut &lt;kbd&gt;Ins + v&lt;/kbd&gt; to disable the “screen layout is preserved” option and then save this configuration as default using the shortcut &lt;kbd&gt;Ins + Ctrl + c&lt;/kbd&gt;.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#navigating-web-pages"] = "Navigating web pages";
 index.add({
     url: "methodes-outils-lecteur-ecran.html#navigating-web-pages",
     title: "Navigating web pages",    
-    body: "### Navigating web pages  The main useful shortcuts to test navigation in a web page using NVDA: - `Up` and `down` keys to go to the next or the prior line. - `Left` and `right` keys to move forward or backward one character - `Ctrl + Home` to move to the top of the page. - `Ctrl + End` to move to the bottom of the page. - `INS + F7` to display the heading list and the link list. - `Ctrl` to mute NVDA. - `INS + T` to read the page title. - `H` and `shift + H` to jump to the next title or the previous title (`H1` to` H6` title tags). - `B` and `shift + B` to move through buttons. - `C` and `shift + C` to move through drop down lists (Combobox). - `D` and `shift + D` to move through ARIA landmarks. - `E` and `shift + E` to move through text fields. - `F` and `shift + F` to move through forms. - `G` and `shift + G` to move through images (Graphics). - `I` and `shift + I` to move through HTML list items. - `K` and `shift + K` to move through links. - `L` and `shift + L` to move through HTML lists. - `M` and `shift + M` to move through frames and iframes. - `O` and `shift + O` to move through embedded objects (flash). Press INS + Space to start interaction. Esc to finish interaction. - `Q` and `shift + Q` to move through quotes (blockquote). - `R` and `shift + R` to move through radio buttons. - `T` and `shift + T` to move through tables. - `X` and `shift + X` to move through checkboxes. - `Spacebar` to check or uncheck a checkbox. - `INS + shift + S` allows to pause NVDA only in the current application. - `INS + Q` to exit NVDA.  Also note that NVDA has a speech viewer (*tools &gt;&gt; speech viewer*), it displays everything that is vocalized.  "
+    body: "### Navigating web pages  The main useful shortcuts to test navigation in a web page using NVDA are: - &lt;kbd&gt;Up&lt;/kbd&gt; and &lt;kbd&gt;down&lt;/kbd&gt; keys to go to the next or the prior line. - &lt;kbd&gt;Left&lt;/kbd&gt; and &lt;kbd&gt;right&lt;/kbd&gt; keys to move forward or backward one character - &lt;kbd&gt;Ctrl + Home&lt;/kbd&gt; to move to the top of the page. - &lt;kbd&gt;Ctrl + End&lt;/kbd&gt; to move to the bottom of the page. - &lt;kbd&gt;Ins + F7&lt;/kbd&gt; to display the heading list and the link list. - &lt;kbd&gt;Ctrl&lt;/kbd&gt; to mute NVDA. - &lt;kbd&gt;Ins + T&lt;/kbd&gt; to read the page title. - &lt;kbd&gt;H&lt;/kbd&gt; and &lt;kbd&gt;shift + H&lt;/kbd&gt; to jump to the next title or the previous title (`H1` to `H6` title tags). - &lt;kbd&gt;B&lt;/kbd&gt; and &lt;kbd&gt;shift + B&lt;/kbd&gt; to move through buttons. - &lt;kbd&gt;C&lt;/kbd&gt; and &lt;kbd&gt;shift + C&lt;/kbd&gt; to move through drop down lists (Combobox). - &lt;kbd&gt;D&lt;/kbd&gt; and &lt;kbd&gt;shift + D&lt;/kbd&gt; to move through ARIA landmarks. - &lt;kbd&gt;E&lt;/kbd&gt; and &lt;kbd&gt;shift + E&lt;/kbd&gt; to move through text fields. - &lt;kbd&gt;F&lt;/kbd&gt; and &lt;kbd&gt;shift + F&lt;/kbd&gt; to move through forms. - &lt;kbd&gt;G&lt;/kbd&gt; and &lt;kbd&gt;shift + G&lt;/kbd&gt; to move through images (Graphics). - &lt;kbd&gt;I&lt;/kbd&gt; and &lt;kbd&gt;shift + I&lt;/kbd&gt; to move through HTML list items. - &lt;kbd&gt;K&lt;/kbd&gt; and &lt;kbd&gt;shift + K&lt;/kbd&gt; to move through links. - &lt;kbd&gt;L&lt;/kbd&gt; and &lt;kbd&gt;shift + L&lt;/kbd&gt; to move through HTML lists. - &lt;kbd&gt;M&lt;/kbd&gt; and &lt;kbd&gt;shift + M&lt;/kbd&gt; to move through frames and iframes. - &lt;kbd&gt;O&lt;/kbd&gt; and &lt;kbd&gt;shift + O&lt;/kbd&gt; to move through embedded objects (flash). Press &lt;kbd&gt;Ins + Space&lt;/kbd&gt; to start interaction. &lt;kbd&gt;Esc&lt;/kbd&gt; to finish interaction. - &lt;kbd&gt;Q&lt;/kbd&gt; and &lt;kbd&gt;shift + Q&lt;/kbd&gt; to move through quotes (blockquote). - &lt;kbd&gt;R&lt;/kbd&gt; and &lt;kbd&gt;shift + R&lt;/kbd&gt; to move through radio buttons. - &lt;kbd&gt;T&lt;/kbd&gt; and &lt;kbd&gt;shift + T&lt;/kbd&gt; to move through tables. - &lt;kbd&gt;X&lt;/kbd&gt; and &lt;kbd&gt;shift + X&lt;/kbd&gt; to move through checkboxes. - &lt;kbd&gt;Spacebar&lt;/kbd&gt; to check or uncheck a checkbox. - &lt;kbd&gt;Ins + shift + S&lt;/kbd&gt; allows to pause NVDA only in the current application. - &lt;kbd&gt;Ins + Q&lt;/kbd&gt; to exit NVDA.  Also note that NVDA has a speech viewer (*Tools&amp;nbsp;&amp;gt; Speech viewer*), it displays everything that is vocalized.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#getting-started-with-jaws"] = "Getting Started with Jaws";
@@ -615,21 +615,21 @@ documentTitles["methodes-outils-lecteur-ecran.html#navigating-web-pages"] = "Nav
 index.add({
     url: "methodes-outils-lecteur-ecran.html#navigating-web-pages",
     title: "Navigating web pages",    
-    body: "### Navigating web pages  The most useful shortcuts to test navigation in a Web page with JAWS: - `Up` and `down` keys to go to the next or the prior line. - `INS + T` to read the page title. - `INS + F5` to display the form fields list. - `INS + F6` to display header list. - `INS + F7` to display link list. - `Spacebar` to check or uncheck a checkbox. - `Ctrl` to mute Jaws.  "
+    body: "### Navigating web pages  The most useful shortcuts to test navigation in a Web page with JAWS: - &lt;kbd&gt;Up&lt;/kbd&gt; and &lt;kbd&gt;down&lt;/kbd&gt; keys to go to the next or the prior line. - &lt;kbd&gt;Ins + T&lt;/kbd&gt; to read the page title. - &lt;kbd&gt;Ins + F5&lt;/kbd&gt; to display the form fields list. - &lt;kbd&gt;Ins + F6&lt;/kbd&gt; to display header list. - &lt;kbd&gt;Ins + F7&lt;/kbd&gt; to display link list. - &lt;kbd&gt;Spacebar&lt;/kbd&gt; to check or uncheck a checkbox. - &lt;kbd&gt;Ctrl&lt;/kbd&gt; to mute Jaws.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#getting-started-with-voiceover"] = "Getting Started with VoiceOver";
 index.add({
     url: "methodes-outils-lecteur-ecran.html#getting-started-with-voiceover",
     title: "Getting Started with VoiceOver",    
-    body: "## Getting Started with VoiceOver  VoiceOver screen reader is only available on Mac. It requires no installation since it is integrated directly into the system. To can activate VoiceOver from System Preferences &gt;&gt; accessibility. Or directly using the shortcut Command + `F5`.  "
+    body: "## Getting Started with VoiceOver  VoiceOver screen reader is only available on Mac. It requires no installation since it is integrated directly into the system. You can activate VoiceOver from *System Preferences&amp;nbsp;&amp;gt; Accessibility*. Or directly using the shortcut &lt;kbd&gt;Command + F5&lt;/kbd&gt;.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#navigating-web-pages"] = "Navigating web pages";
 index.add({
     url: "methodes-outils-lecteur-ecran.html#navigating-web-pages",
     title: "Navigating web pages",    
-    body: "### Navigating web pages  When launching VoiceOver, it displays an interactive guide to learn the key shortcuts. You should have a look at it. But here are the main shortcuts: - `Ctrl + Option + Right` and `Ctrl + Option + Left` to go to the next or the prior line. - `Ctrl + Option + U` to access the header, link, form field lists... (use the left and right arrows to navigate between lists). - `Ctrl` to mute VoiceOver. - `Ctrl + Option` &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "### Navigating web pages  When launching VoiceOver, it displays an interactive guide to learn the key shortcuts. You should have a look at it. But here are the main shortcuts: - &lt;kbd&gt;Ctrl + Option + Right&lt;/kbd&gt; and &lt;kbd&gt;Ctrl + Option + Left&lt;/kbd&gt; to go to the next or the prior line. - &lt;kbd&gt;Ctrl + Option + U&lt;/kbd&gt; to access the header, link, form field lists... (use the left and right arrows to navigate between lists). - &lt;kbd&gt;Ctrl&lt;/kbd&gt; to mute VoiceOver. - &lt;kbd&gt;Ctrl + Option&lt;/kbd&gt; [Uh-oh, something is missing here, we’ll come back to it, sorry.]  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -638,21 +638,21 @@ documentTitles["methodes-outils-extensions.html#browser-extensions"] = "Browser 
 index.add({
     url: "methodes-outils-extensions.html#browser-extensions",
     title: "Browser extensions",    
-    body: "# Browser extensions  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Browser extensions\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  Some extensions allow you to perform automated tests on the displayed current page.  "
+    body: "# Browser extensions  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Test tools\&quot;, \&quot;url\&quot;: \&quot;./methodes-outils.html\&quot;},         {\&quot;label\&quot;:\&quot;Browser extensions\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;methodes-outils\&quot;&gt;&lt;/span&gt;  Some extensions allow you to perform automated tests on the current page.  "
 });
 
 documentTitles["methodes-outils-extensions.html#axe-accessibility-audit"] = "aXe accessibility audit";
 index.add({
     url: "methodes-outils-extensions.html#axe-accessibility-audit",
     title: "aXe accessibility audit",    
-    body: "## aXe accessibility audit [aXe](http://www.deque.com/products/axe/) is an extension available for Chrome and Firefox for performing several tests based on the [WCAG](https://www.w3.org/WAI/intro/wcag).  ![screenshot of the aXe extension](images/aXe.png) &amp;nbsp;  "
+    body: "## aXe accessibility audit [aXe](http://www.deque.com/products/axe/) is an extension available for Chrome and Firefox to perform several tests based on the [WCAG](https://www.w3.org/WAI/intro/wcag).  ![screenshot of the aXe extension](images/aXe.png) &amp;nbsp;  "
 });
 
-documentTitles["methodes-outils-extensions.html#wave-toolbar"] = "Wave toolbar";
+documentTitles["methodes-outils-extensions.html#wave-toolbar"] = "WAVE Toolbar";
 index.add({
     url: "methodes-outils-extensions.html#wave-toolbar",
-    title: "Wave toolbar",    
-    body: "## Wave toolbar [Wave toolbar](http://wave.webaim.org/extension/) is a toolbar extension for Chrome. It allows performing several tests on the current page just like aXe. Unlike the latter which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A [bookmarklet (or favlet) for Wave](http://wave.webaim.org/help) is also available.  ![screenshot of the wave toolbar extension](images/wave.png) &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    title: "WAVE Toolbar",    
+    body: "## WAVE Toolbar [WAVE Toolbar](http://wave.webaim.org/extension/) is a toolbar extension for Chrome. It allows to perform several tests on the current page just like aXe. Unlike aXe, which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A [bookmarklet (or favelet) for WAVE](http://wave.webaim.org/help) is also available.  ![screenshot of the WAVE Toolbar extension](images/wave.png)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -668,14 +668,14 @@ documentTitles["methodes-outils-zoom.html#how-to-test"] = "How to test?";
 index.add({
     url: "methodes-outils-zoom.html#how-to-test",
     title: "How to test?",    
-    body: "## How to test?  One of the accessibility requirements is being able to enlarge the text up to 200%, only the text size, not the entire page. Actually when you use the browser default zoom it enlarges the entire page adding vertical and horizontal scrollbars. For example, reading a blog could be very tedious because you would have to scroll all the time to access the content.  Increasing only the text size does not necessarily add a horizontal scrollbar. You must verify that at this zoom level (200%), the text remains readable. No text must be truncated or superposed. Information must be accessible even if the presentation can be somewhat altered.   To enlarge only the text size, tick the \&quot;Zoom Text Only\&quot; option in Firefox. To enlarge the text by 200% press `Ctrl +` four times.     ![screenshot of the Zoom text only option, in Firefox](images/zoom-firefox.png)   "
+    body: "## How to test?  One of the accessibility requirements is being able to enlarge the text up to 200% —only the text size, not the entire page. Actually when you use the browser default zoom it enlarges the entire page adding vertical and horizontal scrollbars. For example, reading a blog could be very tedious because you would have to scroll all the time to access the content.  Increasing only the text size does not necessarily add a horizontal scrollbar. You must verify that at this zoom level (200%), the text remains readable. No text must be truncated or superposed. Information must be accessible even if the presentation can be somewhat altered.   To enlarge only the text size, tick the “Zoom Text Only” option in Firefox. To enlarge the text by 200% press &lt;kbd&gt;Ctrl +&lt;/kbd&gt; four times.     ![screenshot of the “Zoom text only” option, in Firefox](images/zoom-firefox.png)   "
 });
 
 documentTitles["methodes-outils-zoom.html#what-implications-for-development"] = "What implications for development?";
 index.add({
     url: "methodes-outils-zoom.html#what-implications-for-development",
     title: "What implications for development?",    
-    body: "## What implications for development?  If your page is not displayed correctly when you enlarge the text, it might be because you use the pixel as length unit for text size and container size (height or width of a `div`...). To fix display issues when the zoom is set to 200%, it is not necessary to remove all pixels units from all your code but correct only the unreadable content (replacing px by %, em or rem).  ** Example with 100% zoom **   ![screenshot of a page with 100% zoom](images/zoom.png)  &amp;nbsp;  ** Example with 200% zoom and using pixel as length unit**   The height of the elements is not based on the size of the text, they do not expand.  ![screenshot of a page with 200% zoom](images/zoom-ko.png)  &amp;nbsp;    ** Example with 200% zoom and using relative length units(rem)**   The height of the elements containing the text has been set with a relative unit which varies depending on the text size (rem). The elements become larger, the text remains readable.  ![screenshot of a page with 100% zoom](images/zoom-ok.png)  &amp;nbsp; More information in the **examples** section: [handling zoom, increasing the text size](examples/zoom/index.html). &amp;nbsp;   &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## What implications for development?  If your page is not displayed correctly when you enlarge the text, it might be because you use the pixel as length unit for text size and container size (height or width of a `div`...). To fix display issues when the zoom is set to 200%, it is not necessary to remove all pixels units from all your code but correct only the unreadable content (replacing `px` by `%`, `em` or `rem`).  ** Example with 100% zoom **   ![screenshot of a page with 100% zoom](images/zoom.png)  &amp;nbsp;  ** Example with 200% zoom and using pixel as length unit**   The height of the elements is not based on the size of the text, they do not expand.  ![screenshot of a page with 200% zoom](images/zoom-ko.png)  &amp;nbsp;    ** Example with 200% zoom and using relative length units(`rem`)**   The height of the elements containing the text has been set with a relative unit which varies depending on the text size (`rem`). The elements become larger, the text remains readable.  ![screenshot of a page with 100% zoom](images/zoom-ok.png)  &amp;nbsp; More information in the **examples** section: [handling zoom, increasing the text size](examples/zoom/index.html). &amp;nbsp;   &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
