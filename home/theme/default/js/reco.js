@@ -413,6 +413,6 @@ function generateGlossaryLinks() {
   };
   // append glossary to #content
   var glossarytitle = (GlossaryTitle[pagelang]) ? GlossaryTitle[pagelang] : GlossaryTitle.en;
-  glossarytext = "<h2>" + glossarytitle + "</h2><dl>" + glossarytext + "</dl>";
+  glossarytext = "<div id='glossary' role='complementary'><h2>" + glossarytitle + "</h2><dl>" + glossarytext + "</dl></div>";
   $('#content').append(glossarytext);
 }
