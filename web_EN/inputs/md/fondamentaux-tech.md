@@ -422,7 +422,7 @@ For tabular data:
 - Use the `table` element with `th`(for table headers), `td`,` tr` children elements.
 - Use the `scope` attribute with `row` / `col` values to associate header cells and data cells. For complex tables, use the` id` and `headers` attributes.
 - Use the `caption` tag, a `h1` to `h6` tag just before the table or use a text near the table via an `aria-labelledby` attribute in the `table` element to associate a title to the table.
-- Add the `summary` attribute to the `table` tag to explain the structure in the case of a complex table. Keep in mind that this attribute is deprecated in <abbr>HTML</abbr>5, therefore it can be necessary to add the `summary` in the table title.
+- Add the `summary` attribute to the `table` tag to explain the structure in the case of a complex table. Keep in mind that this attribute is deprecated in <abbr>HTML5</abbr>, therefore it can be necessary to add the `summary` in the table title.
 
 **Checklist: **
 

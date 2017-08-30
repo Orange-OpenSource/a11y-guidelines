@@ -428,7 +428,7 @@ Pour des données tabulaires&nbsp;:
 - Utiliser l’élément `table` avec les éléments enfants `th` (pour les cellules d’entêtes), `td`, `tr`.
 - Utiliser l’attribut `scope` avec la valeur `row`/`col` pour associer les cellules d’en-têtes et les cellules de données ; pour des tableaux complexes, utiliser les attributs `id` et `headers`.
 - Utiliser la balise `caption`, une balise `h1` à `h6` juste avant le tableau ou lier un texte proche du tableau via un attribut `aria-labelledby` dans l’élément `table` pour associer un titre au tableau.
-- Mettre un attribut `summary` dans l’élément `table` pour expliciter la structure dans le cas d’un tableau complexe. Attention cet attribut est déprécié en <abbr>HTML</abbr>5, il faudra donc rajouter, si besoin, le contenu du `summary` dans le titre du tableau.
+- Mettre un attribut `summary` dans l’élément `table` pour expliciter la structure dans le cas d’un tableau complexe. Attention cet attribut est déprécié en <abbr>HTML5</abbr>, il faudra donc rajouter, si besoin, le contenu du `summary` dans le titre du tableau.
 
 **À vérifier&nbsp;:**
 
@@ -803,14 +803,14 @@ Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure b
 ![capture d’écran du site fnac.com](images/groupement2.jpg)  
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
-**Exemple&nbsp;: Les balises <abbr>HTML</abbr>5 et <i lang="en">landmarks</i> <abbr>ARIA</abbr>**
-Pour donner une structure sémantique aux grandes régions d’une page, on peut utiliser les balises de structure <abbr>HTML</abbr>5 (`main` pour le contenu principal de la page, `nav` pour la navigation principale, `header` pour l’entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d’autres) même si leur support par les technologies d’assistance/navigateurs n’est pas total mais il s’améliore rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, [les <i lang="en">landmarks</i> <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meilleur&nbsp;!
+**Exemple&nbsp;: Les balises <abbr>HTML5</abbr> et <i lang="en">landmarks</i> <abbr>ARIA</abbr>**
+Pour donner une structure sémantique aux grandes régions d’une page, on peut utiliser les balises de structure <abbr>HTML5</abbr> (`main` pour le contenu principal de la page, `nav` pour la navigation principale, `header` pour l’entête de page, `footer` pour le pied de page, `aside` pour du contenu complémentaire au contenu principal, et d’autres) même si leur support par les technologies d’assistance/navigateurs n’est pas total mais il s’améliore rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, [les <i lang="en">landmarks</i> <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) et là, le support est bien meilleur&nbsp;!
 
 Mettre en place ce type de sémantique permet aux déficients visuels d’identifier et comprendre l’organisation, la structure globale de la page et donc de naviguer plus facilement.
 
-Pour aller plus loin (en anglais)&nbsp;: <a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html" hreflang="en"><abbr>HTML</abbr>5 et <i lang="en">landmarks</i> <abbr>ARIA</abbr></a> 
+Pour aller plus loin (en anglais)&nbsp;: <a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html" hreflang="en"><abbr>HTML5</abbr> et <i lang="en">landmarks</i> <abbr>ARIA</abbr></a> 
 
-Pour une page en <abbr>HTML</abbr>5&nbsp;:
+Pour une page en <abbr>HTML5</abbr>&nbsp;:
 
 ```html
 <head>
@@ -840,7 +840,7 @@ Pour une page en <abbr>HTML</abbr>5&nbsp;:
 </body>
 ```
    
-Pour une page qui n’est pas en <abbr>HTML</abbr>5, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:
+Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:
 
 ```html
 <head>
