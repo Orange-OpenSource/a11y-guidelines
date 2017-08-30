@@ -164,7 +164,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 
 S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise `h` et hiérarchisés de `h1` à `h6`) pour plus de détails&nbsp;: Donner des titres aux rubriques afin de structurer le contenu de la page.
 
-S’assurer de bien baliser les citation longues `<blockquote>` ou brèves `<q>`.
+S’assurer de bien baliser les citations longues `<blockquote>` ou brèves `<q>`.
 
 S’assurer que les liens sont bien des liens (i.e. balise `<a>`),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…
 
