@@ -363,7 +363,7 @@ Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;:
 - Pour les images décoratives&nbsp;: mettre un attribut `alt` vide.
 - Pour les images dont le contenu du `alt` serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.
 
-Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible avec un `display:none` ou `aria-hidden=’true’` et donc ne pas mettre de `title`.
+Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: [Masquer les iframe techniques de manière accessible](./exemples/iframes-techniques/index.html)
 
 **À vérifier&nbsp;:**
 
