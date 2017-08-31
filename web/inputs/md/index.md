@@ -39,7 +39,6 @@ Des exemples didactiques pour certains types de composants ou d’éléments d�
 
 Ces exemples utilisent la librairie [Boosted](http://boosted.orange.com/). Cette librairie basée sur [Bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.
 
-&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
