@@ -390,6 +390,12 @@ function generateGlossaryLinks() {
 
   });
 
+  // if glossary is empty => exit  
+  if (!!!GlossaryTable.length) {
+    console.log("Exit !");
+    return true;
+  }
+
   // generate glossary HTML
   // first, sort result table
   GlossaryTable.sort(function(a, b) {
