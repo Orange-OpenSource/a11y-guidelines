@@ -385,6 +385,11 @@ function generateGlossaryLinks() {
       // wrap $abbr in a link to the glossary table entry
       $abbr.wrap($("<a class='abbrlink' href='#" + anchor + "'>"));
 
+      // add a title to the abbr if it doesn't already have one
+      if ( !$abbr.attr('title') ) {
+        $abbr.attr('title', $(Glossary[text]["base"]).text() );
+      }
+
     }
 
 
