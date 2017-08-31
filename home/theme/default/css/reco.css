@@ -580,3 +580,13 @@ blockquote {
 blockquote footer {
   font-weight: normal;
 }
+
+a.abbrlink {
+  text-decoration: none !important;
+}
+
+abbr {
+  text-decoration: none !important;  
+  border-bottom: .1px dotted #444 !important;
+  cursor: help;
+}
