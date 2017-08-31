@@ -396,8 +396,7 @@ function generateGlossaryLinks() {
   });
 
   // if glossary is empty => exit  
-  if (!!!GlossaryTable.length) {
-    console.log("Exit !");
+  if (!!!GlossaryTable.length) {    
     return true;
   }
 
