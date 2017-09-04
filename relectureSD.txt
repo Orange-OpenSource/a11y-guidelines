@@ -6,10 +6,6 @@ Pour chaque fichier :
 
 TODO
 
-web/inputs/html/exemples/tag-exemples/Exemple destinataire.html
-web/inputs/html/exemples/tag-exemples/Exemple filtre.html
-web/inputs/html/exemples/tag-exemples/index.html
-
 
 ------------------------------
 
@@ -239,3 +235,6 @@ others/inputs/md/PDF.md
 others/inputs/md/powerpoint.md
 others/inputs/md/pushmail.md
 others/inputs/md/word.md
+web/inputs/html/exemples/tag-exemples/Exemple destinataire.html
+web/inputs/html/exemples/tag-exemples/Exemple filtre.html
+web/inputs/html/exemples/tag-exemples/index.html

@@ -28,12 +28,12 @@
 <ul class="examples-list">
     <li>
         <a href="exemples/role-dialog/role-dialog.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog1.png"><span>Les boites de dialogue 1/2</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog1.png"><span>Les boîtes de dialogue 1/2</span>
         </a>
     </li>
     <li>
         <a href="exemples/role-dialog2/role-dialog.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog2.png"><span>Les boites de dialogue 2/2</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog2.png"><span>Les boîtes de dialogue 2/2</span>
         </a>
     </li>
     <li>
@@ -43,22 +43,22 @@
     </li>
     <li>
         <a href="exemples/speak/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Faire parler le lecteur d'écran via Javascript</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Faire parler le lecteur d’écran via Javascript</span>
         </a>
     </li>
     <li>
         <a href="exemples/tag/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 1/2</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des «&nbsp;tags&nbsp;» accessibles 1/2</span>
         </a>
     </li>
         <li>
         <a href="exemples/tag-exemples/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des "tag" accessibles 2/2 (exemples)</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des «&nbsp;tags&nbsp;» accessibles 2/2 (exemples)</span>
         </a>
     </li>
     <li>
         <a href="exemples/iframes-techniques/index.html">
-            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Les iframes "techniques"</span>
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Les iframes «&nbsp;techniques&nbsp;»</span>
         </a>
     </li>
 </ul>
