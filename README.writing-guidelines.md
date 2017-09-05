@@ -22,7 +22,7 @@ Donc&nbsp;:
 
 ## Guillemets
 
-Les guillemets droits, c’est le mal <span aria-title="clin d’oeil">;)</span> sauf dans le code.
+Les guillemets droits, c’est le mal <span aria-label="clin d’oeil">;)</span> sauf dans le code.
 
 En résumé&nbsp;:
 
