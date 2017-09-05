@@ -66,8 +66,10 @@ Une apostrophe doit être arrondie&nbsp;: `'` → `’`.
 
 ## Ponctuation et accents
 
-En français, ettez des majuscules accentuées au début de vos phrases, et des cédilles&nbsp;: À, É, Ç, etc.
+En français, mettez des majuscules accentuées au début de vos phrases, et des cédilles&nbsp;: À, É, Ç, etc.
 
 ## Sémantique HTML&nbsp;: abréviations
 
 Quand j’écris `HTML`, je dois a minima écrire `<abbr>HTML</abbr>`.
+
+Si vous voulez faire les choses comme il faut, écrivez la signification de l’abréviation en entier lors de sa première apparition. Par exemple ici&nbsp;: `<abbr>HTML</abbr> <span lang="en">(Hypertext Markup Language)</span>`. Note&nbsp;: sur ce site de recommandations, nous avons mis en place un système de glossaire qui fait des liens automatiques sur chaque `abbr` vers sa signification en pied de page.
