@@ -13,7 +13,7 @@ Cette section propose des recommandations générales à respecter pour garantir
 - S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information.
 - Assurer un niveau de contraste suffisant entre la couleur du texte et celle de l’arrière-plan.  
 
-Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/)&nbsp;:
+Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>&nbsp;:
  - 4.5:1 pour du texte de taille normale.
  - 3:1 pour du texte de grande taille.
 
@@ -24,16 +24,16 @@ Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Anal
 -	Mettre en place une ponctuation simple.
 -	Ne pas mettre d’italique, ni de phrase en majuscule, mais une majuscule en début de phrase.
 -	Éviter les fonds texturés (images).
--	Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&nbsp;Paragraphe > Espacement&nbsp;» ou «&nbsp;Retrait&nbsp;» dans Word, par exemple).
+-	Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&nbsp;Paragraphe&nbsp;&gt; Espacement&nbsp;» ou «&nbsp;Retrait&nbsp;» dans Word, par exemple).
 -	Éviter les tableaux de mise en page ou de données.
 -	Éviter le contenu image porteur d’information&nbsp;: graphes, schémas, diagrammes…
 -	Mettre en place un indicateur de fin de document (par exemple, une image indiquant «&nbsp;fin de mail&nbsp;», un texte blanc sur fond blanc «&nbsp;fin de document&nbsp;»).
 -	Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple&nbsp;: sujet, verbe, complément. Une idée par phrase, des mots simples.
--   Expliquer les mots compliqués.
+-	Expliquer les mots compliqués.
 -	Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).
 -	Utiliser les caractères typographiques du Français&nbsp;: tiret - , cadratin — , «&nbsp;guillemets français&nbsp;».
--	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ (Insertion > Symbole > Texte normal). 
--   Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.
+-	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&nbsp;Insertion&nbsp;&gt; Symbole&nbsp;&gt; Texte normal&nbsp;»). 
+-	Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.
 
 ## Fournir une mise en page des tableaux accessibles
 
