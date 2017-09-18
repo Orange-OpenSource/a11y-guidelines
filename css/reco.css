@@ -22,7 +22,8 @@ pre {
 #content h3,
 #content h4,
 #content h5,
-#content h6 {
+#content h6,
+#glossary dl {
   background: #fff;
   padding: 1rem;  
 }
@@ -39,9 +40,9 @@ pre {
   padding-top: 0;
 }
 
-#content p+h2, #content ul+h2 {
+#content p+h2, #content ul+h2, #glossary h2 {
   border-top: 1rem solid #fff;
-  padding-top: 1rem;
+  padding-top: 1rem !important;
 }
 
 #content ul {
@@ -578,4 +579,14 @@ blockquote {
 }
 blockquote footer {
   font-weight: normal;
+}
+
+a.abbrlink {
+  text-decoration: none !important;
+}
+
+abbr {
+  text-decoration: none !important;  
+  border-bottom: .1px dotted #444 !important;
+  cursor: help;
 }

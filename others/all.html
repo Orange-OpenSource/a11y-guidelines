@@ -219,11 +219,9 @@ Pour plus de détails, n’hésitez pas à consulter les guides proposés sur <a
 <p>Même comportement pour Jaws et <abbr>NVDA</abbr>, les chiffres apparaissant dans les graphiques sont vocalisés.</p>
 <h3 id="graphiques-avec-textes-de-remplacement">Graphiques avec textes de remplacement</h3>
 <p>Comportement attendu pour Jaws et <abbr>NVDA</abbr>, le texte de remplacement est vocalisé à la place du graphique.</p>
-<p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="cr-er-des-documents-word-accessibles">Créer des documents Word accessibles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Word accessible"}]);
@@ -281,11 +279,9 @@ Les sauts de page doivent être créés à l’aide des «&nbsp;Sauts&nbsp;» (I
 <li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
 <li><a href="http://webaim.org/techniques/word/" hreflang="en">Accessibilité Word, WebAIM</a> (anglais).</li>
 </ul>
-<p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="cr-er-des-documents-abbr-pdf-abbr-accessibles">Créer des documents <abbr>PDF</abbr> accessibles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Recommandations PDF"}]);
@@ -402,7 +398,47 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
 <style>h3 {font-size: 1rem;}</style>
 
 <h2 id="introduction">Introduction</h2>
-<p>Cette section est en cours de rédaction et sera disponible très prochainement.</p>
+<p>Cette section propose des recommandations générales à respecter pour garantir l’accessibilité de vos contenus quel que soit le support utilisé (email, Web, Word, etc.).</p>
+<h2 id="v-rifier-les-couleurs">Vérifier les couleurs</h2>
+<ul>
+<li>S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information.</li>
+<li>Assurer un niveau de contraste suffisant entre la couleur du texte et celle de l’arrière-plan.  </li>
+</ul>
+<p>Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>&nbsp;:</p>
+<ul>
+<li>4.5:1 pour du texte de taille normale.</li>
+<li>3:1 pour du texte de grande taille.</li>
+</ul>
+<h2 id="faciliter-la-lecture">Faciliter la lecture</h2>
+<ul>
+<li>Aligner le texte à gauche, mais ne pas le justifier.</li>
+<li>Utiliser une police de caractères facilement lisible en corps 12 pixels minimum.</li>
+<li>Mettre en place une ponctuation simple.</li>
+<li>Ne pas mettre d’italique, ni de phrase en majuscule, mais une majuscule en début de phrase.</li>
+<li>Éviter les fonds texturés (images).</li>
+<li>Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&nbsp;Paragraphe&nbsp;&gt; Espacement&nbsp;» ou «&nbsp;Retrait&nbsp;» dans Word, par exemple).</li>
+<li>Éviter les tableaux de mise en page ou de données.</li>
+<li>Éviter le contenu image porteur d’information&nbsp;: graphes, schémas, diagrammes…</li>
+<li>Mettre en place un indicateur de fin de document (par exemple, une image indiquant «&nbsp;fin de mail&nbsp;», un texte blanc sur fond blanc «&nbsp;fin de document&nbsp;»).</li>
+<li>Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple&nbsp;: sujet, verbe, complément. Une idée par phrase, des mots simples.</li>
+<li>Expliquer les mots compliqués.</li>
+<li>Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).</li>
+<li>Utiliser les caractères typographiques du Français&nbsp;: tiret - , cadratin — , «&nbsp;guillemets français&nbsp;».</li>
+<li>Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&nbsp;Insertion&nbsp;&gt; Symbole&nbsp;&gt; Texte normal&nbsp;»). </li>
+<li>Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.</li>
+</ul>
+<h2 id="fournir-une-mise-en-page-des-tableaux-accessibles">Fournir une mise en page des tableaux accessibles</h2>
+<p>Simplifier les tableaux sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une mise en page en tableau.</p>
+<p>À vérifier&nbsp;: </p>
+<ul>
+<li>Globalement, ne pas utiliser de mise en page complexe de tableau (fusion de cellules d’un tableau, multicolonnage…).</li>
+<li>Éviter d’imbriquer les tableaux de mise en page (grand maximum, 2 niveaux d’imbrication), mais aussi&nbsp;:</li>
+<li>Ne pas fusionner les cellules d’un tableau, mais utiliser plusieurs tableaux plus simples.</li>
+<li>Ne pas conserver de cellules vides.</li>
+<li>Ne pas ajouter d’images de fond.</li>
+<li>Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas).</li>
+<li>Éviter les tableaux de données, mais aussi les graphiques ou les schémas complexes.</li>
+</ul>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

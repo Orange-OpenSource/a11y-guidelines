@@ -34,14 +34,14 @@
       <h1>Masquer les <code>iframe</code> techniques de manière accessible</h1>
 
       <h2>Introduction</h2>
-      <p>On entends par <code>iframe</code> technique une <code>iframe</code> qui a un rôle purement technique mais n'est pas visible aux utilisateurs, par exemple une <code>iframe</code> qui execute un script pour compter le nombre de visiteurs d'un site.</p>
+      <p>On entend par <code>iframe</code> technique une <code>iframe</code> qui a un rôle purement technique mais qui n'est pas visible aux utilisateurs. Par exemple une <code>iframe</code> qui execute un script pour compter le nombre de visiteurs d'un site.</p>
       <p>Hors, les référentiels d'accessibilité nous demandent d'indiquer dans l'attribut <code>title</code> le contenu qui sera présent dans l'<code>iframe</code>, information qui sera accessible aux outils d'assistance (un lecteur d'écran vocalisera l'attribut <code>title</code> d'une <code>iframe</code>).</p>
       
       <h2>Cacher l'<code>iframe</code> à tous les utilisateurs</h2>
-      <p>La solution pour cacher l'<code>iframe</code> y compris aux utilisateurs d'outils d'assistance est de mettre un attribut <code>hidden</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront executés.</p>
-      <p>Il est toujours obligatoire de renseigner l'attribut <code>title</code> de l'<code>iframe</code>.</p>
+      <p>La solution pour cacher l'<code>iframe</code> y compris aux utilisateurs d'outils d'assistance est d'ajouter un attribut <code>aria-hidden</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront executés.</p>
+      <p>Par ailleurs, on peut ajouter un attribut <code>tabindex</code> pour interdire au focus de se déplacer dans l'<code>iframe</code>. Ainsi les utilisateurs qui naviguent à l'aide du clavier, n'iront pas se perdre à l'intérieur de cette dernière.</p>
       <pre><code>
-      &lt;iframe title="contenu technique" hidden src="http://www.orange.com/"&gt;&lt;/iframe&gt;
+      &lt;iframe title="contenu technique" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
       </code></pre>
       
     </main>

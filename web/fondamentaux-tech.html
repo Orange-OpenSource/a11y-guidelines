@@ -215,7 +215,7 @@ Utiliser correctement les éléments <abbr>HTML</abbr> en respectant ce pourquoi
 <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> et <code>&lt;dd&gt;</code> pour les listes de définitions</li>
 </ul>
 <p>S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise <code>h</code> et hiérarchisés de <code>h1</code> à <code>h6</code>) pour plus de détails&nbsp;: Donner des titres aux rubriques afin de structurer le contenu de la page.</p>
-<p>S’assurer de bien baliser les citation longues <code>&lt;blockquote&gt;</code> ou brèves <code>&lt;q&gt;</code>.</p>
+<p>S’assurer de bien baliser les citations longues <code>&lt;blockquote&gt;</code> ou brèves <code>&lt;q&gt;</code>.</p>
 <p>S’assurer que les liens sont bien des liens (i.e. balise <code>&lt;a&gt;</code>),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…</p>
 <p>S’assurer que les boutons sont bien des boutons (i.e. balise <code>&lt;button&gt;</code>, ou <code>&lt;input type=&quot;button&quot;&gt;</code>), et qu’ils déclenchent une action, une validation, ou encore permettent de faire un choix…</p>
 <p>Penser, dans la mesure du possible, à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à leur aspect spécifique.</p>
@@ -330,7 +330,7 @@ Pour les champs obligatoires, ceci doit être précisé dans le <code>label</cod
 <li>Pour les images décoratives&nbsp;: mettre un attribut <code>alt</code> vide.</li>
 <li>Pour les images dont le contenu du <code>alt</code> serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.</li>
 </ul>
-<p>Mettre un attribut <code>title</code> décrivant le contenu et/ou la fonction de toute <code>frame</code> ou <code>iframe</code>. Si la <code>frame</code> ou <code>iframe</code> ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible avec un <code>display:none</code> ou <code>aria-hidden=’true’</code> et donc ne pas mettre de <code>title</code>.</p>
+<p>Mettre un attribut <code>title</code> décrivant le contenu et/ou la fonction de toute <code>frame</code> ou <code>iframe</code>. Si la <code>frame</code> ou <code>iframe</code> ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: <a href="./exemples/iframes-techniques/index.html">Masquer les iframe techniques de manière accessible</a></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Toute balise <code>img</code> doit posséder un attribut <code>alt</code>.</li>
@@ -366,7 +366,7 @@ Point bloquant&nbsp;: une image sans description textuelle est inexploitable par
 <li>Utiliser l’élément <code>table</code> avec les éléments enfants <code>th</code> (pour les cellules d’entêtes), <code>td</code>, <code>tr</code>.</li>
 <li>Utiliser l’attribut <code>scope</code> avec la valeur <code>row</code>/<code>col</code> pour associer les cellules d’en-têtes et les cellules de données ; pour des tableaux complexes, utiliser les attributs <code>id</code> et <code>headers</code>.</li>
 <li>Utiliser la balise <code>caption</code>, une balise <code>h1</code> à <code>h6</code> juste avant le tableau ou lier un texte proche du tableau via un attribut <code>aria-labelledby</code> dans l’élément <code>table</code> pour associer un titre au tableau.</li>
-<li>Mettre un attribut <code>summary</code> dans l’élément <code>table</code> pour expliciter la structure dans le cas d’un tableau complexe. Attention cet attribut est déprécié en <abbr>HTML</abbr>5, il faudra donc rajouter, si besoin, le contenu du <code>summary</code> dans le titre du tableau.</li>
+<li>Mettre un attribut <code>summary</code> dans l’élément <code>table</code> pour expliciter la structure dans le cas d’un tableau complexe. Attention cet attribut est déprécié en <abbr>HTML5</abbr>, il faudra donc rajouter, si besoin, le contenu du <code>summary</code> dans le titre du tableau.</li>
 </ul>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
@@ -593,11 +593,11 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/groupement.jpg" alt="capture d’écran du site 100% pratique"><br>Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com"><br>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
-<p><strong>Exemple&nbsp;: Les balises <abbr>HTML</abbr>5 et <i lang="en">landmarks</i> <abbr>ARIA</abbr></strong>
-Pour donner une structure sémantique aux grandes régions d’une page, on peut utiliser les balises de structure <abbr>HTML</abbr>5 (<code>main</code> pour le contenu principal de la page, <code>nav</code> pour la navigation principale, <code>header</code> pour l’entête de page, <code>footer</code> pour le pied de page, <code>aside</code> pour du contenu complémentaire au contenu principal, et d’autres) même si leur support par les technologies d’assistance/navigateurs n’est pas total mais il s’améliore rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html">les <i lang="en">landmarks</i> <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>)</a> et là, le support est bien meilleur&nbsp;!</p>
+<p><strong>Exemple&nbsp;: Les balises <abbr>HTML5</abbr> et <i lang="en">landmarks</i> <abbr>ARIA</abbr></strong>
+Pour donner une structure sémantique aux grandes régions d’une page, on peut utiliser les balises de structure <abbr>HTML5</abbr> (<code>main</code> pour le contenu principal de la page, <code>nav</code> pour la navigation principale, <code>header</code> pour l’entête de page, <code>footer</code> pour le pied de page, <code>aside</code> pour du contenu complémentaire au contenu principal, et d’autres) même si leur support par les technologies d’assistance/navigateurs n’est pas total mais il s’améliore rapidement. On peut aussi utiliser, pour mettre en place cette structure de page, <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html">les <i lang="en">landmarks</i> <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>)</a> et là, le support est bien meilleur&nbsp;!</p>
 <p>Mettre en place ce type de sémantique permet aux déficients visuels d’identifier et comprendre l’organisation, la structure globale de la page et donc de naviguer plus facilement.</p>
-<p>Pour aller plus loin (en anglais)&nbsp;: <a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html" hreflang="en"><abbr>HTML</abbr>5 et <i lang="en">landmarks</i> <abbr>ARIA</abbr></a> </p>
-<p>Pour une page en <abbr>HTML</abbr>5&nbsp;:</p>
+<p>Pour aller plus loin (en anglais)&nbsp;: <a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html" hreflang="en"><abbr>HTML5</abbr> et <i lang="en">landmarks</i> <abbr>ARIA</abbr></a> </p>
+<p>Pour une page en <abbr>HTML5</abbr>&nbsp;:</p>
 <pre><code class="lang-html">&lt;head&gt;
   …
   &lt;title&gt;Titre de la page&lt;/title&gt;
@@ -624,7 +624,7 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
   &lt;/footer&gt;
 &lt;/body&gt;
 </code></pre>
-<p>Pour une page qui n’est pas en <abbr>HTML</abbr>5, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:</p>
+<p>Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:</p>
 <pre><code class="lang-html">&lt;head&gt;
   …
   &lt;title&gt;Titre de la page&lt;/title&gt;
@@ -665,7 +665,6 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 <p><strong> Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
 <p><strong>Référence WCAG&nbsp;:</strong> 2.4.5., 2.4.8</p>
-<p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
