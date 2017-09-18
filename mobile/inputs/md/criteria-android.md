@@ -18,7 +18,7 @@ La mise en œuvre de ce socle doit permettre d’obtenir à coup sûr un site ac
 Le respect de la charte Orange pour Android, document disponible sur [le site de la marque Orange](http://brand.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.
 
-## Pour la développement
+## Pour le développement
 
 Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google.
 <div class="col-xs-12">
