@@ -114,13 +114,6 @@ header .subtitles {
     text-decoration: none;
 }
 
-#cdu_zone {
-    position: fixed !important;
-    top: 0px;
-    width: 100%;
-    border-bottom: 1px solid rgb(136, 136, 136);
-}
-
 #cdu a {
     color: #fff;        
     text-decoration: none;
@@ -134,10 +127,6 @@ header .subtitles {
 
 #cdu span {
     color: #f16e00;
-}
-
-#cdu_close {
-    display: none !important;
 }
 
 #language {
