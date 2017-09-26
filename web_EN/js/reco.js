@@ -71,10 +71,6 @@ $(document).ready( function () {
     return window.print();
   }
 
-  $("#cdu a").on("click", function () {
-    $("#cdu_close button").click();
-  });
-
   // Lien retour en haut de page
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
