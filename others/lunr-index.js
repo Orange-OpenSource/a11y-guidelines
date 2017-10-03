@@ -31,7 +31,21 @@ documentTitles["index.html#recommandations-accessibilite-orange-pour-leditorial"
 index.add({
     url: "index.html#recommandations-accessibilite-orange-pour-leditorial",
     title: "Recommandations accessibilité Orange pour l’éditorial",    
-    body: "# Recommandations accessibilité Orange pour l’éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange pour l’éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
+});
+
+documentTitles["index.html#recommandations-editoriales-generales"] = "Recommandations éditoriales générales";
+index.add({
+    url: "index.html#recommandations-editoriales-generales",
+    title: "Recommandations éditoriales générales",    
+    body: "## Recommandations éditoriales générales Les recommandations générales décrivent les recommandations à respecter quel que soit le type de contenu (web, email, document Word, etc.). &lt;ul role=\&quot;presentation\&quot;&gt; &lt;li&gt;&lt;a href=\&quot;./editorial.html\&quot;&gt;Accéder aux recommandations éditoriales générales&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  "
+});
+
+documentTitles["index.html#recommandations-specifiques-par-type-de-document"] = "Recommandations spécifiques par type de document";
+index.add({
+    url: "index.html#recommandations-specifiques-par-type-de-document",
+    title: "Recommandations spécifiques par type de document",    
+    body: "## Recommandations spécifiques par type de document Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

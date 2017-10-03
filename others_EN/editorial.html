@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Orange accessibility guidelines</title>
-    
-
+        
+      
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
       <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
       <!-- Copyright © 2016 Orange SA. All rights reserved -->
@@ -26,7 +26,7 @@
 
       <!-- Favicons -->
       <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="icon" href="/images/favicon.ico">            
+      <link rel="icon" href="/images/favicon.ico">                  
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -43,39 +43,41 @@
               <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                  </li>
+
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Web</a>
+                    <a class="nav-link" href="./index.html">Editorial</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Presentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html">Essential criteria</a></li>
-                        <li><a class="page-exigences" href="exigences.html">All requirements</a></li>
-                        <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
-                        <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Examples</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
+                        <li><a class="page-editorial" href="editorial.html">General editorial recommendations</a></li>
+                        
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">About</a></li>
-                    </ul>                    
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                    </ul>
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial</a></li>                                    
                   <li class="nav-item language hidden-sm-up">
-                    <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
+                    <a lang="fr" aria-label="version française" href="../others_EN/index.html" class="nav-link">fr</a>
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="english version">en</a>                    
                   </li>
               </ul> 
+                 
               <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
                 <li class="nav-item hidden-xs-down">
-                  <span id="cdu">
+                  <span id="cdu">                  
                     <a href="http://confort-plus.orange.com/" target="_blank" 
-                      title="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website." 
-                      aria-label="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website.">
+                      title="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website.">
                       Discover Confort
                       <span>+</span>
                     </a>
                   </span>
                 </li>
                 <li class="nav-item language hidden-xs-down">
-                  <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a> 
+                    <a lang="fr" aria-label="version française" href="../others/index.html" class="nav-link">fr</a>
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="english version">en</a>                    
                 </li>
                 <li class="nav-item">
                     <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
@@ -96,9 +98,9 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here : </span>
+    <span class="sr-only">You are here: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../web_EN/index.html">Web</a></li>        
+      <li class="breadcrumb-item"><a href="../others_EN/index.html">Editorial</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -106,25 +108,54 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="keyboard-navigation">Keyboard navigation</h1>
+          <h1 id="general-editorial-recommendations">General editorial recommendations</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([
-        {"label":"Test tools", "url": "./methodes-outils.html"},
-        {"label":"Keyboard navigation"}]);
+    setBreadcrumb([{"label":"General editorial recommendations"}]);
 });</script>
 
-<p><span data-menuitem="methodes-outils"></span></p>
-<p>Navigation in a web page should be possible using only the keyboard, particularly for people who cannot use a mouse. This feature is supported directly by the browser. It is important to verify it is operating correctly, as some developments can lead to difficulties to properly navigate the page.</p>
-<p>To test if your service is accessible using the keyboard, you can try to navigate without your mouse. All available features must be accessible.<br><strong> Reminder: </strong>the focus must be visible enough on all focusable elements.</p>
-<h2 id="list-of-keyboard-shortcuts-">List of keyboard shortcuts:</h2>
+<style>h3 {font-size: 1rem;}</style>
+
+<h2 id="introduction">Introduction</h2>
+<p>This section proposes general recommendations to ensure your contents are accessible whatever the medium used (email, Web, Word, etc.).</p>
+<h2 id="check-colours">Check colours</h2>
 <ul>
-<li>The <kbd>Tab</kbd> key: to move the focus.</li>
-<li>The <kbd>shift + Tab</kbd> keys: to move backwards the focus.</li>
-<li>The <kbd>Return</kbd> key to activate the element that has the focus (link, button, menu…).</li>
-<li>The <kbd>Spacebar</kbd> to check / uncheck a checkbox.</li>
-<li>The arrow keys to change the selection of the radio buttons, to move in a drop-down list, or to scroll (scrollbar) when available.</li>
+<li>Make sure colour is not the only means used to convey information.</li>
+<li>Make sure there is sufficient contrast between the text colour and the background.</li>
 </ul>
-<p><strong> Note: on Mac, keyboard navigation must be enabled first: </strong><br>In Safari: Edit &gt; Preferences… &gt; Advanced<br>Then check the box <em>“Press tab to highlight each item on a webpage”</em>.</p>
+<p>The contrast can be checked with <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>&nbsp;:</p>
+<ul>
+<li>4.5:1 for normal size text.</li>
+<li>3:1 for big text.</li>
+</ul>
+<h2 id="facilitate-reading">Facilitate reading</h2>
+<ul>
+<li>Align text to the left, don’t justify it.</li>
+<li>Use an easily-readable font family with a minimum size of 12 pixels.</li>
+<li>Use simple punctuation.</li>
+<li>Avoid italics, completely capitalised sentences; but always put a capital at the beginning of a sentence.</li>
+<li>Avoid textured backgrounds (images).</li>
+<li>Do not do too many repeated carriage returns or tabs to space contents (rather, use “Paragraph&nbsp;&gt; Spacing” or “Indent” in Word for instance).</li>
+<li>Avoid layout and data tables.</li>
+<li>Avoid information-conveying content in images (graphs, schemas, diagrams,…)</li>
+<li>Signal the end of the document (for instance, an image saying “End of email”, or a white-on-white text “End of document”).</li>
+<li>Use simple, clear and short phrase turns: subject, verb, complement. One idea per sentence, with simple words.</li>
+<li>Explain complicated words.</li>
+<li>Use the present tense, preferably direct style, and active form (no subjunctive, no conjunctions).</li>
+<li>Use proper typographic characters: dash -, em-dash —, “rounded quotes”.<!-- removed 1 line re: accents and caps – not relevant in English --> </li>
+<li>Avoid foreign words, abbreviations except those that are genuinely used.</li>
+</ul>
+<h2 id="provide-accessible-layout-tables">Provide accessible layout tables</h2>
+<p>Simplify tables, even if we know that email clients (including Outlook) still often demand to use tables for layout.</p>
+<p>Checkpoints:</p>
+<ul>
+<li>In general, don’t do complex table layouts (merging cells, multicolumn,…).</li>
+<li>Avoid embedding layout tables (maximum two levels of embedding), but also:</li>
+<li>Don’t merge table cells, but use several simpler tables.</li>
+<li>Don’t keep empty cells.</li>
+<li>Don’t add background images.</li>
+<li>Make sure that the sequential order is correct (one can read left to right and top to bottom).</li>
+<li>Avoid complex data tables, graphs or schemas.</li>
+</ul>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
