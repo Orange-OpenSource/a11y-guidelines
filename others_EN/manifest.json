@@ -1,0 +1,10 @@
+{
+    "title": "Orange accessibility guidelines",
+    "files": [                
+        "output/markdown/about.md",
+        "output/markdown/contact.md",        
+        "output/markdown/index.md",        
+        "output/markdown/editorial.md"
+    ],
+    "maxTocLevel":"1"
+}

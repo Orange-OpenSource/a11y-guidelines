@@ -13,7 +13,8 @@ module.exports = function(grunt) {
           mobile: ['mobile/output/*', 'output/mobile/*'],
           mobile_EN: ['mobile_EN/output/*', 'output/mobile_EN/*'],
 
-          others: ['others/output/*', 'output/others/*']
+          others: ['others/output/*', 'output/others/*'],
+          others_EN: ['others_EN/output/*', 'output/others_EN/*']
         },
         
       
@@ -93,6 +94,15 @@ module.exports = function(grunt) {
               manifest: 'others/manifest.json',
               dest: 'others/output/html',
               theme: 'others/theme/default',
+              baseUrl: ''
+            }
+          },
+          others_EN: {
+            options: {
+              title: 'Orange accessibility recommendations for other platforms',
+              manifest: 'others_EN/manifest.json',
+              dest: 'others_EN/output/html',
+              theme: 'others_EN/theme/default',
               baseUrl: ''
             }
           }
@@ -187,9 +197,10 @@ module.exports = function(grunt) {
     grunt.registerTask('build-mobile_EN', ['clean:mobile_EN', 'createMarkdown:mobile_EN', 'bfdocs:mobile_EN', 'dist:mobile_EN']);
 
     grunt.registerTask('build-others', ['clean:others', 'createMarkdown:others', 'bfdocs:others', 'dist:others']);    
+    grunt.registerTask('build-others_EN', ['clean:others_EN', 'createMarkdown:others_EN', 'bfdocs:others_EN', 'dist:others_EN']);    
 
     // Default task
-    grunt.registerTask('default', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-others', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
+    grunt.registerTask('default', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-others', 'build-others_EN', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
         
     grunt.registerTask('home', ['build-home', 'build-home_EN', 'watch:home']);
     grunt.registerTask('web', ['build-web', 'build-web_EN', 'watch:web']);

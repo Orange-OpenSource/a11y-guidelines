@@ -4,6 +4,13 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
+## Recommandations éditoriales générales
+Les recommandations générales décrivent les recommandations à respecter quel que soit le type de contenu (web, email, document Word, etc.).
+<ul role="presentation">
+<li><a href="./editorial.html">Accéder aux recommandations éditoriales générales</a></li>
+</ul>
+
+## Recommandations spécifiques par type de document
 Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&nbsp;:
 - [Rédiger des documents Word accessibles](./word.html)&nbsp;: section consacrée à la rédaction de documents Word accessibles.
 
