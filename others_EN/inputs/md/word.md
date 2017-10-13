@@ -85,7 +85,7 @@ Data tables must stay simple. Avoid blending cells together. Avoid inserting ima
 
 ### 16. Use the automated Accessibility checker
 
-Word provides an Accessibility checker (menu File&nbsp;> Check fro problems&nbsp;> Check accessibility). It lists all contents prone to be hard to deal with and automatically detected failures. This tool must be used as it provides a huge help; however it does not prevent you from checking and applying all the recommendations provided in this page.
+Word provides an Accessibility checker (menu File&nbsp;> Check for problems&nbsp;> Check accessibility). It lists all contents prone to be hard to deal with and automatically detected failures. This tool must be used as it provides a huge help; however it does not prevent you from checking and applying all the recommendations provided in this page.
 
 ### 17. Exporting the document to <abbr>PDF</abbr>
 
