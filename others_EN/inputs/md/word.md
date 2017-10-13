@@ -96,7 +96,7 @@ Please note that in Word for Office 2010 generated <abbr>PDF</abbr> documents ca
 
 ## External resources
 
-- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in Frnech)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.
+- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in French)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.
 - <a href="http://webaim.org/techniques/word/" hreflang="en">Word Accessibility, WebAIM</a>.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
