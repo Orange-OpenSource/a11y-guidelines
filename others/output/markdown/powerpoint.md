@@ -66,7 +66,7 @@ A vérifier la première fois : dans les options d'export, la case à cocher «&
 ## Ressources externes
 
 - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
-- <a href="http://webaim.org/techniques/PowerPoint/" hreflang="en">Accessibilité PowerPoint, WebAIM</a> (anglais).
+- <a href="https://webaim.org/techniques/powerpoint/" hreflang="en">Accessibilité PowerPoint, WebAIM</a> (anglais).
 
 ## Résultats des tests effectués
 Nous avons testé le comportement des lecteurs d'écran <abbr>NVDA</abbr> (version 2017.1) et Jaws (version 17) avec un fichier <abbr>PDF</abbr> généré à l'aide de PowerPoint 2010.
