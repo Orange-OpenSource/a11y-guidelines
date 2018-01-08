@@ -176,7 +176,7 @@ Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directeme
 
 **Description&nbsp;:**  
 Les libellés des liens et des boutons doivent être suffisamment explicites.
-Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale.
+Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technoogies d'assistance).
 
 **Exemple valide&nbsp;:**  
 «&nbsp;découvrez nos offres&nbsp;»

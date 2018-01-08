@@ -5,6 +5,7 @@
   "repository": "https://github.com/Orange-OpenSource/a11y-guidelines",
   "main": "index.js",
   "dependencies": {
+    "beautiful-docs": "^1.0.3",
     "boosted": "4.0.0-alpha.4",
     "grunt": "^0.4.5",
     "grunt-beautiful-docs": "https://github.com/PigeardSylvain/grunt-beautiful-docs.git#reco",

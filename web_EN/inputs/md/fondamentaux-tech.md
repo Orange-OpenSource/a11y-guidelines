@@ -52,7 +52,7 @@ Just like in a Word document, it is possible to use the table of contents only i
 - The headings must be relevant, reflect the structure of the information contained in the page.
 - There must be no break in the heading hierarchy (we cannot jump from a `h2` title to a `h4` title).
 - You can use several `h1` headings per page (Don’t exceed two in most cases).
-- Hidden tags are dismissed by screen readers (`visibility: hidden;`, `display: none;`or `aria-hidden`).
+- Hidden tags are dismissed by screen readers (`visibility: hidden;`, `display: none;` or `aria-hidden`).
 - The dynamically-generated content must also meet this requirement.
 
 **Goal: **
@@ -139,6 +139,7 @@ This example is not valid because the information is conveyed only by colour.
 **Checklist: **
 - Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.
 - Turn off the speakers, the level of information should remain the same.
+- Be sure that links are not only identified by a different colour, usually underline them.
 
 **Users’ goal: **
 
@@ -146,30 +147,37 @@ Allow users not distinguishing colours or sensory information (colour blind, vis
 
 **Reference:** <abbr>WCAG</abbr> 1.4.1
 
-## 5. Use lists
+## 5. Use HTML semantics
 
 **Target: ** everyone, and especially people with visual impairments and cognitive limitations.  
 **When: ** as of design and during content writing.
 
-**Description: ** 
+**Description: **
+Use HTML elements as they should, for that they have been made (specifications) and respect their semantics to be sure to be fully interpreted by assistive technologies. 
 
+**Checklist: **
 Pages, if required, must contain semantically relevant lists. 
 Add semantics to the <abbr>HTML</abbr> content using the following tags:
  - `ol` for ordered lists
  - `ul` for unordered lists
  - `li` for list items
+ - `dl`, `dt` and `dd` for definition lists
 
-**Checklist: ** 
-- There must be no empty list.
-- There must be no list with a single element (because this is not a list, unless this list is generated dynamically!).
+There must be no empty list and a list must contain at least two elemets to be a real list (unless this list is generated dynamically!).
 
-**Users’ goal: **
+Use `<blockquote>` for long citations and `<q>` for short ones.
 
-Using lists allows users to identify, consolidate and sequentially display elements of the same kind.
+Links are real links (a `<a>` tag):  they open a new URL, page or tab…
 
-**Technical goal: ** 
+Buttons are real buttons (a `button`, ou `input type=button` tag): they trigger an action, a validation or allow a choice…
 
-Requires coherent structuring of the content by the creator of the site.
+Respect as much as possible, the classic aspect of these elements to avoid bothering the user, accustomed to a specific aspect for them.
+
+** Objectif utilisateur&nbsp;: **
+Allows all users to anticipate how to use and possible behaviors for a given interface element.
+
+**Objectif technique&nbsp;: ** 
+Forces the coherent structuring of the content by the creator of the site.
 
 **Reference: ** <abbr>WCAG</abbr> 1.3.1
 
@@ -336,7 +344,7 @@ See [the accessible form example](./exemples/formulaire/index.html) for more det
 
 **Reference: ** <abbr>WCAG</abbr> 3.3.1, 3.3.3
 
-## 11. Set a text alternatives for images
+## 11. Set a text alternatives for images and frames
 
 **Target: ** everyone and especially people with visual impairments and cognitive limitations.  
 **When: ** from design and during development.
@@ -349,6 +357,8 @@ All `img` tags should have an `alt` attribute with a relevant description:
 - For images containing text: add an `alt` attribute containing at least the text from the image,
 - For decorative images: add an empty `alt` attribute,
 - For images having `alt` attributes that won’t be convenient when the text is too long (diagrams, graphs…), add a describing text close to the image, or add a link pointing to an <abbr>HTML</abbr> page with the description.
+
+Add a `title` attribute to describe all `frame` or `iframe` content or function. If a `frame` or `iframe` doesn't convey information for the user (only technical), render it invisible, see example: [Hidden accessible frames technics](./exemples/iframes-techniques/index.html)
 
 **Checklist: **
 

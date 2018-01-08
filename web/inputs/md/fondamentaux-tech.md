@@ -128,6 +128,7 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 **À vérifier&nbsp;:**
 - Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.
 - Couper le son, le niveau d’information doit rester identique. 
+- S'assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement).
 
 **Objectif utilisateur&nbsp;:**
 
@@ -162,13 +163,13 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
  - `<li>` pour les éléments de liste.
  - `<dl>`, `<dt>` et `<dd>` pour les listes de définitions
 
-S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise `h` et hiérarchisés de `h1` à `h6`) pour plus de détails&nbsp;: Donner des titres aux rubriques afin de structurer le contenu de la page.
+ Les listes ne sont pas vide d'éléments ou ont au moins deux éléments car sinon ce ne sont pas des listes (sauf si elles sont générées dynamiquement)
 
 S’assurer de bien baliser les citations longues `<blockquote>` ou brèves `<q>`.
 
-S’assurer que les liens sont bien des liens (i.e. balise `<a>`),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…
+Les liens sont bien des liens (i.e. balise `<a>`)&nbsp;: ils pointent effectivement vers une autre adresse, page ou onglet…
 
-S’assurer que les boutons sont bien des boutons (i.e. balise `<button>`, ou `<input type="button">`), et qu’ils déclenchent une action, une validation, ou encore permettent de faire un choix…
+Les boutons sont bien des boutons (i.e. balise `<button>`, ou `<input type="button">`)&nbsp;: ils déclenchent une action, une validation, ou encore permettent de faire un choix…
 
 Penser, dans la mesure du possible, à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à leur aspect spécifique.
 

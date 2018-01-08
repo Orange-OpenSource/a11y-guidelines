@@ -184,13 +184,13 @@ Also, avoid as much as possible flashing content and sudden brightness changes (
 A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.
 It is also possible to add a “pause” button directly in the interface.
 
-## 9. Link labels
+## 9. Link and button labels
 **Target: ** everyone and especially people with visual impairments, cognitive limitations or attention difficulties.  
 **When: ** when designing the service and during graphic design.
 
 **Description:**  
-The wording of the links should be explicit enough.
-In exceptional cases when it is technically impossible, provide a proper label so a screen reader can use it.
+The wording of the links ad buttons should be explicit enough.
+In exceptional cases when it is technically impossible, provide a explicit label that can be read only by screen reader (and other assistive technologies).
 
 **Do:**  
 `Learn about our offers`

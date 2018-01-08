@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Exemple iframe technique - recommandations accessibilité web Orange</title>
+    <title>Example of technical iframe - Orange web accessibility guidelines</title>
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
       <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -31,17 +31,16 @@
 <body>
 
     <main role="main" class="container">
-      <h1>Masquer les <code>iframe</code> techniques de manière accessible</h1>
+      <h1>Hiding technical <code>iframe</code> in an accessible way</h1>
 
       <h2>Introduction</h2>
-      <p>On entend par <code>iframe</code> technique une <code>iframe</code> qui a un rôle purement technique et qui n'est pas visible aux utilisateurs. Par exemple, une <code>iframe</code> qui execute un script pour pouvoir enregistrer les actions de l'utilisateur sur la page.</p>
-      <p>Or, les référentiels d'accessibilité nous demandent d'indiquer dans l'attribut <code>title</code> le contenu qui sera présent dans l'<code>iframe</code>, information qui sera accessible aux outils d'assistance (un lecteur d'écran vocalisera l'attribut <code>title</code> d'une <code>iframe</code>).</p>
-      
-      <h2>Cacher l'<code>iframe</code> à tous les utilisateurs</h2>
-      <p>La solution pour cacher l'<code>iframe</code>, y compris aux utilisateurs d'outils d'assistance, est d'ajouter un attribut <code>aria-hidden='true'</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront toujours executés.</p>
-      <p>Par ailleurs, on rajouter un attribut <code>tabindex</code> pour interdire au focus de se déplacer dans l'<code>iframe</code>. Ainsi les utilisateurs qui naviguent à l'aide du clavier, n'iront pas se perdre à l'intérieur de cette dernière.</p>
+      <p>A technical <code>iframe</code> is <code>iframe</code> with only a technical role and invisible to users.For example, an <code> iframe </code> that executes a script to collect the user actions on the page.</p>
+        <p>So, the accessibility repositories ask us to indicate in the <code>title</code> attribute the content that will be present in the <code>iframe</code>, information that will be accessible to the assistive tools (a screen reader will vocalize the <code>title</code> attribute of an <code>iframe</code>).</p>
+      <h2>Hide the <code>iframe</code> to all users </h2>
+        <p> The solution for hiding the <code>iframe</code>, including help tools users, is to add a <code>aria-hidden='true'</code> attribute on the <code>iframe</code>. The scripts contained in the <code>iframe</code> will always be executed. </p>
+        <p>In addition, you can add a <code>tabindex</code> attribute to prevent the focus from moving in the <code>iframe</code>. So users who navigate using the keyboard will not get lost inside it.</p>
       <pre><code>
-      &lt;iframe title="contenu technique" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
+      &lt;iframe title="technical content" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
       </code></pre>
       
     </main>
