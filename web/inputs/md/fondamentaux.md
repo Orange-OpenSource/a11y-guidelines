@@ -12,7 +12,7 @@
 Ce socle de critères destiné aux sites et applications web Orange permet d’éviter les principales erreurs d’accessibilité. Il s’agit d’un sous-ensemble des exigences d’accessibilité.   
 La mise en œuvre de ce socle ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
 
-Le respect de la charte Orange (<span lang="en">Design for digital platforms Guideline</span>), disponible sur [le site de la marque Orange](http://brand.orange.com/) est un prérequis à l’utilisation de ce socle.
+Le respect de la charte Orange appelée la Brand (<span lang="en">Design for digital platforms Guideline</span>), disponible sur [le site de la marque Orange](http://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
 Deux versions sont disponibles&nbsp;

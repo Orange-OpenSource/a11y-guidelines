@@ -559,6 +559,8 @@ Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniqu
 **À vérifier&nbsp;:**
 Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …).
 
+Voir [la façon de naviguer au clavier](./methodes-outils-clavier.html) dans un navigateur web.
+
 **Objectif utilisateur&nbsp;:**
  Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.
 

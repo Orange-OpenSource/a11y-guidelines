@@ -206,7 +206,8 @@ In exceptional cases when it is technically impossible, provide a explicit label
 **Description:**  
 All features must be accessible using the keyboard. Pressing the keyboard <kbd>Tab</kbd> key, the browser passes the focus between clickable elements.  
 Moreover, if the features are mouse-specific (drag and drop, right click menu…), ensure that these are also available through other means elsewhere in the interface (button, icon, menu…).
-
+s
+See [how to navigate with a keyboard](./methodes-outils-clavier.html) in a web browser.
 
 **Example: **  
 In the webmail, right-clicking on the “trash” opens a menu to empty the trash, this option should be also available through an “empty the trash” button elsewhere in the interface or from a drop-down menu accessible with the keyboard.

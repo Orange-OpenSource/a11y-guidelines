@@ -567,6 +567,8 @@ Implement event handlers that don’t rely on mouse events only.
 
 All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag & drop, mobile touch gestures…).
 
+See [how to navigate with a keyboard](./methodes-outils-clavier.html) in a web browser.
+
 **Users’ goal: **
  
 Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor…) to access the main features of the application with the keyboard.
