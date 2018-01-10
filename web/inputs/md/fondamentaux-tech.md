@@ -163,7 +163,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
  - `<li>` pour les éléments de liste.
  - `<dl>`, `<dt>` et `<dd>` pour les listes de définitions
 
- Les listes ne sont pas vide d'éléments ou ont au moins deux éléments car sinon ce ne sont pas des listes (sauf si elles sont générées dynamiquement)
+Les listes possèdent au moins deux éléments car sinon ce ne sont pas des listes (sauf si elles sont générées dynamiquement)
 
 S’assurer de bien baliser les citations longues `<blockquote>` ou brèves `<q>`.
 
