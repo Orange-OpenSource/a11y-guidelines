@@ -2,8 +2,11 @@
     "title": "Recommandations accessibilité Orange",
     "files": [        
         "output/markdown/contact.md",
+        "output/markdown/index.md",       
+        "output/markdown/focus.md",
+        "output/markdown/focus-cognitif.md",        
+        "output/markdown/focus-seniors.md",       
         "output/markdown/organisation.md",
-        "output/markdown/index.md",        
         "output/markdown/about.md",
         "output/markdown/faq.md"
     ],
