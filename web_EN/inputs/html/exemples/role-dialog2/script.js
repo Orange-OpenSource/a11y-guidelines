@@ -18,7 +18,7 @@ $(document).ready(function() {
   });
 
   // Gestion de la touche échap
-  $('#dialog').on('keypress', function (e) {
+  $('#dialog').on('keydown', function (e) {
     if (e.keyCode == 27) {
       $('#'+$("#dialog").attr('data-focusBack')).focus();
       $("#dialog").hide();

@@ -18,7 +18,7 @@ $(document).ready(function() {
   });
 
   // Gestion de la touche échap
-  $('#final-dialog').on('keypress', function (e) {
+  $('#final-dialog').on('keydown', function (e) {
     if (e.keyCode == 27) {
       $('#'+$(this).attr('data-focusBack')).focus();
       $(this).hide();
@@ -84,7 +84,7 @@ $(document).ready(function() {
   })
 
   // Gestion de la touche échap
-  $('#step2-dialog').on('keypress', function (e) {
+  $('#step2-dialog').on('keydown', function (e) {
     if (e.keyCode == 27) {
       $('#'+$(this).attr('data-focusBack')).focus();
       $(this).hide();
