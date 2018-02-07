@@ -71,7 +71,7 @@ documentTitles["captcha.html#les-captchas-et-laccessibilite"] = "Les CAPTCHAs et
 index.add({
     url: "captcha.html#les-captchas-et-laccessibilite",
     title: "Les CAPTCHAs et l'accessibilité",    
-    body: "# Les CAPTCHAs et l'accessibilité    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Confort+\&quot;}]); });&lt;/script&gt;    "
+    body: "# Les CAPTCHAs et l'accessibilité    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;CAPTCHA et accessibilité\&quot;}]); });&lt;/script&gt;    "
 });
 
 documentTitles["captcha.html#introduction"] = "Introduction";
