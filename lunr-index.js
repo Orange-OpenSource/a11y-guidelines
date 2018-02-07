@@ -18,6 +18,154 @@ index.add({
 
 
 
+documentTitles["index.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+index.add({
+    url: "index.html#recommandations-accessibilite-orange",
+    title: "Recommandations accessibilité Orange",    
+    body: "# Recommandations accessibilité Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
+});
+
+documentTitles["index.html#qui-sommes-nousnbsp"] = "Qui sommes-nous&amp;nbsp;?";
+index.add({
+    url: "index.html#qui-sommes-nousnbsp",
+    title: "Qui sommes-nous&amp;nbsp;?",    
+    body: "## Qui sommes-nous&amp;nbsp;?  &lt;abbr&gt;EASE&lt;/abbr&gt;, «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;E-Accessibility for Everyone&lt;/i&gt;&amp;nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.  &lt;h2 class=\&quot;page-title\&quot;&gt;Qu’est ce que l’accessibilité numérique&amp;nbsp;?&lt;/h2&gt;  &lt;blockquote&gt;     &lt;p&gt;La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel.&lt;/p&gt;     &lt;footer&gt;         Tim Berners-Lee, directeur du &lt;abbr title=\&quot;World Wide Web Consortium\&quot;&gt;W3C&lt;/abbr&gt; et inventeur du World Wide Web.     &lt;/footer&gt; &lt;/blockquote&gt;  L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.  Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.  "
+});
+
+documentTitles["index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp"] = "Qui est concerné par l’accessibilité numérique&amp;nbsp;?";
+index.add({
+    url: "index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp",
+    title: "Qui est concerné par l’accessibilité numérique&amp;nbsp;?",    
+    body: "## Qui est concerné par l’accessibilité numérique&amp;nbsp;?  Les situations de handicap identifiées ne sont pas seulement celles que l’on voit.    Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.  &amp;nbsp; &lt;div class=\&quot;sr-only\&quot;&gt;     Les citations suivantes en sont l’illustration&amp;nbsp;:     &lt;ul&gt;         &lt;li&gt;Les sous-titres me sont utiles car ma langue maternelle n’est pas le français.&lt;/li&gt;         &lt;li&gt;C’est utile de ne pas être obligé d’imprimer en couleur pour comprendre cette carte.&lt;/li&gt;         &lt;li&gt;Après avoir travaillé toute la journée derrière un écran, j’ai plus de difficultés à lire certains textes trop petits.&lt;/li&gt;     &lt;/ul&gt; &lt;/div&gt;    &lt;img src=\&quot;./images/chat.png\&quot; alt=\&quot;\&quot; class=\&quot;img-fluid\&quot;&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["focus.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+index.add({
+    url: "focus.html#recommandations-accessibilite-orange",
+    title: "Recommandations accessibilité Orange",    
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Les situations de handicap&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  "
+});
+
+documentTitles["focus.html#le-handicap-auditif"] = "Le handicap auditif";
+index.add({
+    url: "focus.html#le-handicap-auditif",
+    title: "Le handicap auditif",    
+    body: "### Le handicap auditif &lt;div class=\&quot;axs-picto auditif\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Personnes sourdes&lt;/li&gt;         &lt;li&gt;Personnes malentendantes&lt;/li&gt;         &lt;li&gt;Personnes sourdes-aveugles&lt;/li&gt;         &lt;li&gt;Difficulté de perception de la parole dans un environnement bruyant&lt;/li&gt;     &lt;/ul&gt; **Solutions adaptées&amp;nbsp;:** ajout de transcrit (récit de la vidéo) ou de sous-titres &lt;/div&gt;  "
+});
+
+documentTitles["focus.html#le-handicap-visuel"] = "Le handicap visuel";
+index.add({
+    url: "focus.html#le-handicap-visuel",
+    title: "Le handicap visuel",    
+    body: "### Le handicap visuel  &lt;div class=\&quot;axs-picto visuel\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Personnes avec un petit reste visuel ou celles qui ont une vue incorrigible&lt;/li&gt;         &lt;li&gt;Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)&lt;/li&gt;         &lt;li&gt;Personnes sensibles à une luminosité accrue des couleurs&lt;/li&gt;         &lt;li&gt;Personnes complètement aveugles&lt;/li&gt;         &lt;li&gt;Personnes sourdes-aveugles&lt;/li&gt;     &lt;/ul&gt;     **Solutions adaptées&amp;nbsp;:** tablette Braille, synthèses vocales, personnalisation de l’affichage. &lt;/div&gt;  "
+});
+
+documentTitles["focus.html#le-handicap-cognitif"] = "Le handicap cognitif";
+index.add({
+    url: "focus.html#le-handicap-cognitif",
+    title: "Le handicap cognitif",    
+    body: "### Le handicap cognitif &lt;div class=\&quot;axs-picto cognitif\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Les troubles DYS&lt;/li&gt;         &lt;li&gt;Autres troubles affectant la lecture, la mémorisation, la concentration, la compréhension, la résolution des problèmes, le raisonnement et le langage.&lt;/li&gt;     &lt;/ul&gt; **Solutions adaptées&amp;nbsp;:** hiérarchisation et simplification de l’information, attention apportées à la mise en page. &lt;/div&gt;  "
+});
+
+documentTitles["focus.html#le-handicap-moteur-et-de-prehension"] = "Le handicap moteur et de préhension";
+index.add({
+    url: "focus.html#le-handicap-moteur-et-de-prehension",
+    title: "Le handicap moteur et de préhension",    
+    body: "### Le handicap moteur et de préhension &lt;div class=\&quot;axs-picto physique\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Troubles de la réalisation des gestes (dyspraxies)&lt;/li&gt;          &lt;li&gt;Dystrophies musculaires&lt;/li&gt;         &lt;li&gt;Lésions rhumatismales&lt;/li&gt;         &lt;li&gt;Un bras cassé&lt;/li&gt;     &lt;/ul&gt; ** Solutions adaptées&amp;nbsp;:** périphériques adaptés (souris, claviers…), outils de dictée &lt;/div&gt;  "
+});
+
+documentTitles["focus.html#le-handicap-materiel"] = "Le handicap matériel";
+index.add({
+    url: "focus.html#le-handicap-materiel",
+    title: "Le handicap matériel",    
+    body: "### Le handicap matériel &lt;div class=\&quot;axs-picto materiel\&quot;&gt;     Les règles d’accessibilité servent au-delà des situations de handicaps identifiées.       L’accessibilité numérique apporte du confort pour tous&amp;nbsp;:         &lt;ul&gt;         &lt;li&gt;Les utilisateurs de mobiles et smartphones&lt;/li&gt;         &lt;li&gt;Les utilisateurs ayant un bas débit&lt;/li&gt;         &lt;li&gt;Les seniors&lt;/li&gt;         &lt;li&gt;Les environnements bruyants tels que open space, boutiques, accueil…&lt;/li&gt;         &lt;li&gt;Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)         &lt;li&gt;Matériel non approprié (imprimante noir et blanc…)&lt;/li&gt;     &lt;/ul&gt; &lt;/div&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["focus-cognitif.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+index.add({
+    url: "focus-cognitif.html#recommandations-accessibilite-orange",
+    title: "Recommandations accessibilité Orange",    
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Le handicap cognitif&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  **Le handicap cognitif** est la conséquence de dysfonctionnements des fonctions cognitives : troubles de l’attention, de la mémoire, de l’adaptation au changement, du langage, des identifications perceptives (gnosies) et des gestes (praxies). Le handicap cognitif n’implique **pas de déficience intellectuelle** mais des difficultés à mobiliser ses capacités. A ne pas confondre avec le handicap mental et le handicap psychique : - Le handicap mental, qui est la conséquence d’une déficience intellectuelle, considérée comme une capacité plus limitée d’apprentissage et un développement intellectuel significativement inférieur à la moyenne et se traduit par des difficultés plus ou moins importantes de réflexion, de conceptualisation, de communication, de décision, etc. - Le handicap psychique qui est la conséquence de troubles psychiques invalidants. Comme le handicap cognitif, le handicap psychique n’implique pas de déficience intellectuelle. Il est caractérisé par une alternance d’états psychiques calmes ou tendus et par des difficultés à acquérir ou à exprimer des habiletés psychosociales, avec des déficits d’attention et des difficultés à élaborer et suivre un plan d’action. Il peut donc notamment se traduire par des angoisses, des troubles cognitifs (mémorisation, attention, capacités d’organisation, d’anticipation, adaptation au contexte de la situation) et des difficultés dans la relation à autrui et la communication.  "
+});
+
+documentTitles["focus-cognitif.html#les-troubles-dys"] = "Les troubles DYS";
+index.add({
+    url: "focus-cognitif.html#les-troubles-dys",
+    title: "Les troubles DYS",    
+    body: "### Les troubles DYS Les troubles DYS sont des troubles neurologiques durables qui vont affecter une fonction cognitive particulière comme la lecture, le geste, le calcul… Il ne s’agit pas d’une déficience intellectuelle, mais d’un mode de raisonnement différent. Les troubles DYS rassemblent différents type de troubles : - La dyslexie = Trouble de la lecture - La dysorthographie = Trouble de l’écriture - La dysphasie = Trouble du langage - La dyscalculie = Trouble du calcul et du raisonnement logico-mathématique - La dyspraxie = Dysfonctionnement des praxies  La dyslexie est un trouble impactant l’accessibilité numérique.  "
+});
+
+documentTitles["focus-cognitif.html#exemples-dobstacles-rencontres-par-un-internautes-dyslexiques"] = "Exemples d’obstacles rencontrés par un internautes dyslexiques";
+index.add({
+    url: "focus-cognitif.html#exemples-dobstacles-rencontres-par-un-internautes-dyslexiques",
+    title: "Exemples d’obstacles rencontrés par un internautes dyslexiques",    
+    body: "#### Exemples d’obstacles rencontrés par un internautes dyslexiques - des pages surchargées d’informations - une mise en page non linéaire - de longs blocs de texte - un police de caractère avec empattement - des mots soulignés, en italique ou en majuscule - des fonds blancs éblouissants ou non uniformes - des éléments animés  - des champs de formulaire rigides…   &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["focus-seniors.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+index.add({
+    url: "focus-seniors.html#recommandations-accessibilite-orange",
+    title: "Recommandations accessibilité Orange",    
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Les séniors&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  "
+});
+
+documentTitles["focus-seniors.html#problematique"] = "Problématique";
+index.add({
+    url: "focus-seniors.html#problematique",
+    title: "Problématique",    
+    body: "### Problématique  Un sénior est une personne plus ou moins âgée faisant partie d’une catégorie de personnes dont la définition varie selon le contexte : travail, santé, etc. D’un point de vue de la santé,  l’Organisation Mondiale de la Santé considère comme personne âgée une personne de plus de 60 ans. Elle estime qu’entre 2000 et 2050, cette population doublera au niveau mondial de 11% à 22%. Selon l’INSERM, le déclin des capacités cognitives commencent dès 45 ans.   Les déficiences qui peuvent être liées à l’âge ont un impact sur l’utilisation des technologies numériques.  "
+});
+
+documentTitles["focus-seniors.html#obstacles-rencontres"] = "Obstacles rencontrés";
+index.add({
+    url: "focus-seniors.html#obstacles-rencontres",
+    title: "Obstacles rencontrés",    
+    body: "### Obstacles rencontrés  Les obstacles rencontrés par les séniors présentant des déficiences liées à l’âge peuvent-être multiples : - Le déclin de la **vision**, comme la réduction de la sensibilité aux contrastes, de la perception des couleurs, de la capacité à se concentrer sur des objets proches, rend difficile la lecture d’une ressource numérique. - Le déclin des **capacités motrices**, comme la diminution de la dextérité, du contrôle moteur fin, rend difficile l’usage de la souris et le clic sur des éléments petits. - Le déclin de l’**audition**, comme la capacité à percevoir les sons les plus aigus, à séparer les sons, rend difficile l’écoute de documents audio (particulièrement dans un environnement bruyant). - Le déclin des **capacités cognitives**, comme la mémoire à court terme, la concentration, rend difficile la navigation et l’exécution de tâches.  "
+});
+
+documentTitles["focus-seniors.html#exemple-de-solutions"] = "Exemple de solutions";
+index.add({
+    url: "focus-seniors.html#exemple-de-solutions",
+    title: "Exemple de solutions",    
+    body: "### Exemple de solutions "
+});
+
+documentTitles["focus-seniors.html#declin-de-la-vision"] = "Déclin de la vision";
+index.add({
+    url: "focus-seniors.html#declin-de-la-vision",
+    title: "Déclin de la vision",    
+    body: "#### Déclin de la vision - L’utilisateur peut paramétrer la taille de tous les contenus textuels de l’application - Les contrastes de couleurs sont élevés  - Les vidéos ont une audiodescription ou une transcription textuelle - Les images ont une alternative textuelle  "
+});
+
+documentTitles["focus-seniors.html#declin-des-capacites-motrices"] = "Déclin des capacités motrices";
+index.add({
+    url: "focus-seniors.html#declin-des-capacites-motrices",
+    title: "Déclin des capacités motrices",    
+    body: "#### Déclin des capacités motrices - La navigation clavier permet d’accéder à toutes les fonctionnalités sans piège clavier - Le focus est bien visible - Les zones cliquables sont suffisamment grandes (largeur et hauteur d’au moins 48 px)  "
+});
+
+documentTitles["focus-seniors.html#declin-de-laudition"] = "Déclin de l’audition";
+index.add({
+    url: "focus-seniors.html#declin-de-laudition",
+    title: "Déclin de l’audition",    
+    body: "#### Déclin de l’audition -	Les vidéos ont des sous titres ou une transcription textuelle  "
+});
+
+documentTitles["focus-seniors.html#declin-des-capacites-cognitives"] = "Déclin des capacités cognitives";
+index.add({
+    url: "focus-seniors.html#declin-des-capacites-cognitives",
+    title: "Déclin des capacités cognitives",    
+    body: "#### Déclin des capacités cognitives - Les écrans suivent toutes la même logique d’organisation des contenus et de la navigation - Les composants d’interfaces (liens, boutons, etc.) sont facilement identifiables - Il est possible de mettre en pause ou arrêter les éléments en mouvement et les sons - L’utilisateur n’est pas limité en temps pour effectuer une action - Les labels des champs de formulaire sont explicitement libellés, une aide à la saisie est proposée si besoin, les erreurs de saisies sont identifiées et expliquées - Une aide utilisateur est disponible  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
 documentTitles["organisation.html#recommandations-accessibilite-orange-h2-classpage-titleorganisation-du-siteh2"] = "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;";
 index.add({
     url: "organisation.html#recommandations-accessibilite-orange-h2-classpage-titleorganisation-du-siteh2",
@@ -58,71 +206,6 @@ index.add({
     url: "organisation.html#editorial",
     title: "Éditorial",    
     body: "#### Éditorial  Les recommandations pour la rédaction de documents Word et PowerPoint accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
-});
-
-
-
-documentTitles["index.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
-index.add({
-    url: "index.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
-});
-
-documentTitles["index.html#qui-sommes-nousnbsp"] = "Qui sommes-nous&amp;nbsp;?";
-index.add({
-    url: "index.html#qui-sommes-nousnbsp",
-    title: "Qui sommes-nous&amp;nbsp;?",    
-    body: "## Qui sommes-nous&amp;nbsp;?  &lt;abbr&gt;EASE&lt;/abbr&gt;, «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;E-Accessibility for Everyone&lt;/i&gt;&amp;nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.  &lt;h2 class=\&quot;page-title\&quot;&gt;Qu’est ce que l’accessibilité numérique&amp;nbsp;?&lt;/h2&gt;  &lt;blockquote&gt;     &lt;p&gt;La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel.&lt;/p&gt;     &lt;footer&gt;         Tim Berners-Lee, directeur du &lt;abbr title=\&quot;World Wide Web Consortium\&quot;&gt;W3C&lt;/abbr&gt; et inventeur du World Wide Web.     &lt;/footer&gt; &lt;/blockquote&gt;  L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.  Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.  "
-});
-
-documentTitles["index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp"] = "Qui est concerné par l’accessibilité numérique&amp;nbsp;?";
-index.add({
-    url: "index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp",
-    title: "Qui est concerné par l’accessibilité numérique&amp;nbsp;?",    
-    body: "## Qui est concerné par l’accessibilité numérique&amp;nbsp;?  Les situations de handicap identifiées ne sont pas seulement celles que l’on voit.    Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.  &amp;nbsp; &lt;div class=\&quot;sr-only\&quot;&gt;     Les citations suivantes en sont l’illustration&amp;nbsp;:     &lt;ul&gt;         &lt;li&gt;Les sous-titres me sont utiles car ma langue maternelle n’est pas le français.&lt;/li&gt;         &lt;li&gt;C’est utile de ne pas être obligé d’imprimer en couleur pour comprendre cette carte.&lt;/li&gt;         &lt;li&gt;Après avoir travaillé toute la journée derrière un écran, j’ai plus de difficultés à lire certains textes trop petits.&lt;/li&gt;     &lt;/ul&gt; &lt;/div&gt;    &lt;img src=\&quot;./images/chat.png\&quot; alt=\&quot;\&quot; class=\&quot;img-fluid\&quot;&gt;  "
-});
-
-documentTitles["index.html#les-situations-de-handicap"] = "Les situations de handicap";
-index.add({
-    url: "index.html#les-situations-de-handicap",
-    title: "Les situations de handicap",    
-    body: "## Les situations de handicap  "
-});
-
-documentTitles["index.html#le-handicap-auditif"] = "Le handicap auditif";
-index.add({
-    url: "index.html#le-handicap-auditif",
-    title: "Le handicap auditif",    
-    body: "### Le handicap auditif &lt;div class=\&quot;axs-picto auditif\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Personnes sourdes&lt;/li&gt;         &lt;li&gt;Personnes malentendantes&lt;/li&gt;         &lt;li&gt;Personnes sourdes-aveugles&lt;/li&gt;         &lt;li&gt;Difficulté de perception de la parole dans un environnement bruyant&lt;/li&gt;     &lt;/ul&gt; **Solutions adaptées&amp;nbsp;:** ajout de transcrit (récit de la vidéo) ou de sous-titres &lt;/div&gt;  "
-});
-
-documentTitles["index.html#le-handicap-visuel"] = "Le handicap visuel";
-index.add({
-    url: "index.html#le-handicap-visuel",
-    title: "Le handicap visuel",    
-    body: "### Le handicap visuel  &lt;div class=\&quot;axs-picto visuel\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Personnes avec un petit reste visuel ou celles qui ont une vue incorrigible&lt;/li&gt;         &lt;li&gt;Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)&lt;/li&gt;         &lt;li&gt;Personnes sensibles à une luminosité accrue des couleurs&lt;/li&gt;         &lt;li&gt;Personnes complètement aveugles&lt;/li&gt;         &lt;li&gt;Personnes sourdes-aveugles&lt;/li&gt;     &lt;/ul&gt;     **Solutions adaptées&amp;nbsp;:** tablette Braille, synthèses vocales, personnalisation de l’affichage. &lt;/div&gt;  "
-});
-
-documentTitles["index.html#le-handicap-cognitif"] = "Le handicap cognitif";
-index.add({
-    url: "index.html#le-handicap-cognitif",
-    title: "Le handicap cognitif",    
-    body: "### Le handicap cognitif &lt;div class=\&quot;axs-picto cognitif\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Dyslexie, mémorisation, concentration, compréhension&lt;/li&gt;         &lt;li&gt;Résolution des problèmes&lt;/li&gt;          &lt;li&gt;Lecture&lt;/li&gt;         &lt;li&gt;Langage&lt;/li&gt;         &lt;li&gt;Raisonnement&lt;/li&gt;     &lt;/ul&gt; **Solutions adaptées&amp;nbsp;:** hiérarchisation et simplification de l’information, attention apportées à la mise en page. &lt;/div&gt;  "
-});
-
-documentTitles["index.html#le-handicap-moteur-et-de-prehension"] = "Le handicap moteur et de préhension";
-index.add({
-    url: "index.html#le-handicap-moteur-et-de-prehension",
-    title: "Le handicap moteur et de préhension",    
-    body: "### Le handicap moteur et de préhension &lt;div class=\&quot;axs-picto physique\&quot;&gt;     &lt;ul&gt;         &lt;li&gt;Troubles de la réalisation des gestes (dyspraxies)&lt;/li&gt;          &lt;li&gt;Dystrophies musculaires&lt;/li&gt;         &lt;li&gt;Lésions rhumatismales&lt;/li&gt;         &lt;li&gt;Un bras cassé&lt;/li&gt;     &lt;/ul&gt; ** Solutions adaptées&amp;nbsp;:** périphériques adaptés (souris, claviers…), outils de dictée &lt;/div&gt;  "
-});
-
-documentTitles["index.html#le-handicap-materiel"] = "Le handicap matériel";
-index.add({
-    url: "index.html#le-handicap-materiel",
-    title: "Le handicap matériel",    
-    body: "### Le handicap matériel &lt;div class=\&quot;axs-picto materiel\&quot;&gt;     Les règles d’accessibilité servent au-delà des situations de handicaps identifiées.       L’accessibilité numérique apporte du confort pour tous&amp;nbsp;:         &lt;ul&gt;         &lt;li&gt;Les utilisateurs de mobiles et smartphones&lt;/li&gt;         &lt;li&gt;Les utilisateurs ayant un bas débit&lt;/li&gt;         &lt;li&gt;Les seniors&lt;/li&gt;         &lt;li&gt;Les environnements bruyants tels que open space, boutiques, accueil…&lt;/li&gt;         &lt;li&gt;Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)         &lt;li&gt;Matériel non approprié (imprimante noir et blanc…)&lt;/li&gt;     &lt;/ul&gt; &lt;/div&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

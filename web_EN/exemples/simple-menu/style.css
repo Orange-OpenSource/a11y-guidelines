@@ -9,3 +9,13 @@ dd {
 dt {
   margin-top: 1rem;
 }
+
+.dropdown-divider {
+  margin: 0; 
+}
+
+.dropdown-item {
+  font-weight: bold;
+  padding: .4rem 1.4rem .4rem 1.2rem;
+  text-decoration: none;
+}

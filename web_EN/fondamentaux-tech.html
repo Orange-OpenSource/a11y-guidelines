@@ -141,7 +141,7 @@ Just like in a Word document, it is possible to use the table of contents only i
 <li>The headings must be relevant, reflect the structure of the information contained in the page.</li>
 <li>There must be no break in the heading hierarchy (we cannot jump from a <code>h2</code> title to a <code>h4</code> title).</li>
 <li>You can use several <code>h1</code> headings per page (Don’t exceed two in most cases).</li>
-<li>Hidden tags are dismissed by screen readers (<code>visibility: hidden;</code>, <code>display: none;</code>or <code>aria-hidden</code>).</li>
+<li>Hidden tags are dismissed by screen readers (<code>visibility: hidden;</code>, <code>display: none;</code> or <code>aria-hidden</code>).</li>
 <li>The dynamically-generated content must also meet this requirement.</li>
 </ul>
 <p><strong>Goal: </strong></p>
@@ -191,29 +191,33 @@ Insufficient contrast level will have detrimental impact on users with visual di
 <ul>
 <li>Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.</li>
 <li>Turn off the speakers, the level of information should remain the same.</li>
+<li>Be sure that links are not only identified by a different colour, usually underline them.</li>
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments …) to access the same information by other means.</p>
 <p><strong>Reference:</strong> <abbr>WCAG</abbr> 1.4.1</p>
-<h2 id="5-use-lists">5. Use lists</h2>
+<h2 id="5-use-html-semantics">5. Use HTML semantics</h2>
 <p><strong>Target: </strong> everyone, and especially people with visual impairments and cognitive limitations.<br><strong>When: </strong> as of design and during content writing.</p>
-<p><strong>Description: </strong> </p>
-<p>Pages, if required, must contain semantically relevant lists. 
+<p><strong>Description: </strong>
+Use HTML elements as they should, for that they have been made (specifications) and respect their semantics to be sure to be fully interpreted by assistive technologies. </p>
+<p><strong>Checklist: </strong>
+Pages, if required, must contain semantically relevant lists. 
 Add semantics to the <abbr>HTML</abbr> content using the following tags:</p>
 <ul>
 <li><code>ol</code> for ordered lists</li>
 <li><code>ul</code> for unordered lists</li>
 <li><code>li</code> for list items</li>
+<li><code>dl</code>, <code>dt</code> and <code>dd</code> for definition lists</li>
 </ul>
-<p><strong>Checklist: </strong> </p>
-<ul>
-<li>There must be no empty list.</li>
-<li>There must be no list with a single element (because this is not a list, unless this list is generated dynamically!).</li>
-</ul>
-<p><strong>Users’ goal: </strong></p>
-<p>Using lists allows users to identify, consolidate and sequentially display elements of the same kind.</p>
-<p><strong>Technical goal: </strong> </p>
-<p>Requires coherent structuring of the content by the creator of the site.</p>
+<p>There must be no empty list and a list must contain at least two elemets to be a real list (unless this list is generated dynamically!).</p>
+<p>Use <code>&lt;blockquote&gt;</code> for long citations and <code>&lt;q&gt;</code> for short ones.</p>
+<p>Links are real links (a <code>&lt;a&gt;</code> tag):  they open a new URL, page or tab…</p>
+<p>Buttons are real buttons (a <code>button</code>, ou <code>input type=button</code> tag): they trigger an action, a validation or allow a choice…</p>
+<p>Respect as much as possible, the classic aspect of these elements to avoid bothering the user, accustomed to a specific aspect for them.</p>
+<p><strong> Objectif utilisateur&nbsp;: </strong>
+Allows all users to anticipate how to use and possible behaviors for a given interface element.</p>
+<p><strong>Objectif technique&nbsp;: </strong> 
+Forces the coherent structuring of the content by the creator of the site.</p>
 <p><strong>Reference: </strong> <abbr>WCAG</abbr> 1.3.1</p>
 <h2 id="6-decoupling-content-from-interaction-and-presentation">6. Decoupling content from interaction and presentation</h2>
 <p><strong>Target: </strong> everyone, especially people with visual disabilities, reading or attention difficulties.<br><strong>When: </strong> during development.</p>
@@ -305,7 +309,7 @@ The <code>title</code> attribute set on a form element can also be used like a l
 <p>&nbsp;<br><strong>Example of an accessible form: </strong></p>
 <p>See <a href="./exemples/formulaire/index.html">the accessible form example</a> for more details.</p>
 <p><strong>Reference: </strong> <abbr>WCAG</abbr> 3.3.1, 3.3.3</p>
-<h2 id="11-set-a-text-alternatives-for-images">11. Set a text alternatives for images</h2>
+<h2 id="11-set-a-text-alternatives-for-images-and-frames">11. Set a text alternatives for images and frames</h2>
 <p><strong>Target: </strong> everyone and especially people with visual impairments and cognitive limitations.<br><strong>When: </strong> from design and during development.</p>
 <p><strong>Description: </strong> </p>
 <p>All <code>img</code> tags should have an <code>alt</code> attribute with a relevant description: </p>
@@ -316,6 +320,7 @@ The <code>title</code> attribute set on a form element can also be used like a l
 <li>For decorative images: add an empty <code>alt</code> attribute,</li>
 <li>For images having <code>alt</code> attributes that won’t be convenient when the text is too long (diagrams, graphs…), add a describing text close to the image, or add a link pointing to an <abbr>HTML</abbr> page with the description.</li>
 </ul>
+<p>Add a <code>title</code> attribute to describe all <code>frame</code> or <code>iframe</code> content or function. If a <code>frame</code> or <code>iframe</code> doesn&#39;t convey information for the user (only technical), render it invisible, see example: <a href="./exemples/iframes-techniques/index.html">Hidden accessible frames technics</a></p>
 <p><strong>Checklist: </strong></p>
 <p>Each <code>img</code> tag must have an <code>alt</code> attribute.
 For images not carrying information, set them as background images preferably (<abbr>CSS</abbr>). 
@@ -429,6 +434,7 @@ If it is not possible, use an icon (image with <code>alt</code> attribute) indic
 <p>Implement event handlers that don’t rely on mouse events only.</p>
 <p><strong>Checklist: </strong></p>
 <p>All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag &amp; drop, mobile touch gestures…).</p>
+<p>See <a href="./methodes-outils-clavier.html">how to navigate with a keyboard</a> in a web browser.</p>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor…) to access the main features of the application with the keyboard.</p>
 <p><strong>Do:</strong>      </p>

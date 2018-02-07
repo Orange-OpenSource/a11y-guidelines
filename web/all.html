@@ -52,6 +52,7 @@
                         <li><a class="page-fondamentaux" href="fondamentaux.html">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
                         <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
+                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
                         <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
                         <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
@@ -144,6 +145,84 @@
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="les-captchas-et-l-accessibilit-">Les CAPTCHAs et l&#39;accessibilité</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Confort+"}]);
+});</script>
+
+<h2 id="introduction">Introduction</h2>
+<p>Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Humans Apart », en français  « Test public de Turing complètement automatisé pour différencier les humains des ordinateurs ») est un test destiné à différencier un utilisateur d’un programme informatique. Il est utilisé notamment sur les formulaires pour se prémunir du SPAM.</p>
+<p>Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visuels où on demande à l’utilisateur de saisir une série de lettres déformées affichées à l’écran.</p>
+<p><img src="./images/captchas/captcha.png" alt="Capture d&#39;écran d&#39;un captcha visuel"><br><strong>Exemple de CAPTCHA visuel</strong></p>
+<h2 id="premier-constat-le-captcha-et-les-utilisateurs">Premier constat : le Captcha et les utilisateurs</h2>
+<p>Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C&#39;est d&#39;ailleurs la première source de difficultés citée par les utilisateurs malvoyants d&#39;après <a href="https://webaim.org/projects/screenreadersurvey7">le sondage réalisé par le site WebAIM fin 2017</a> :<br><img src="./images/captchas/webaim.png" alt="Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème">  </p>
+<p><strong>Les CAPTCHA pointés du doigt par les utilisateurs malvoyants (sondage WebAIM 2017)</strong></p>
+<p>L’explosion des moyens de calcul permet aux bots et autres programmes informatiques d’être de plus en plus performants. Il est aujourd’hui simple de concevoir un programme permettant de deviner le texte inscrit dans une image ou vocalisé dans un fichier audio.
+Pour que le CAPTCHA reste efficace vis-à-vis des bots, il est donc nécessaire d’accentuer la déformation de l’image ou du son proposé par le CAPTCHA : cela accentue d’autant les difficultés pour l’utilisateur.</p>
+<p>C’est pourquoi Google tente de trouver des alternatives pour différencier un utilisateur humain d’un robot. Ils proposent le « No Captcha », une simple case à cocher du point de vue de l’utilisateur. Celui-ci utilise des données annexes telles que la résolution de l’écran, le déplacement du pointeur de la souris ou le temps de saisie d&#39;un formulaire…etc.</p>
+<p><img src="./images/captchas/nocaptcha.png" alt="Capture d&#39;écran du no captcha de google"><br><strong>No CAPTCHA de Google</strong></p>
+<p>Bien que cette solution soit plus efficace, elle n’est pas aujourd’hui satisfaisante en termes d’accessibilité car en cas de doute, un CAPTCHA standard est affiché à l’écran. C’est souvent le cas pour un utilisateur qui ne peut pas utiliser une souris et qui navigue au clavier ou pour un utilisateur qui navigue à l’aide d’un lecteur d’écran (cas des personnes malvoyantes). Il faut donc toujours proposer un moyen de contact alternatif (email, téléphone….) dans le cas où le CAPTCHA ne pourrait pas être renseigné.</p>
+<p>Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arrivent et ceux qui ne comprennent pas ce qu’il faut faire, la mise en place d’un CAPTCHA n’est pas anodine pour l’audience d’un site. Partant du principe que les CAPTCHAs posent des difficultés à de nombreux utilisateurs, la première recommandation est donc de ne pas utiliser de CAPTCHA.</p>
+<h2 id="deuxi-me-constat-le-captcha-et-la-s-curit-">Deuxième constat : Le CAPTCHA et la sécurité</h2>
+<p>Dans <a href="https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html">un article de Google publié en 2014</a>, on apprend qu’une intelligence artificielle obtient un score de 99,8% pour résoudre des CAPTCHAs visuels parmi les plus difficiles, soit un meilleur score que celui obtenu par un « vrai » utilisateur ! Des services sont en effet capables de déterminer la police de caractères utilisée dans une image ou bien de deviner si l’image contient un objet (un chat, une voiture, un chapeau, etc.).</p>
+<p>Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revient à notre première recommandation qui est de ne pas utiliser de CAPTCHA.</p>
+<h2 id="les-solutions-pr-conis-es">Les solutions préconisées</h2>
+<p>L’idée est donc dans un premier temps de déterminer les risques et de se poser les questions suivantes :</p>
+<ul>
+<li>Quels sont les risques en cas d’attaque ?</li>
+<li>Quel est le besoin réel, entre éliminer les requêtes des bots et apporter une solution sécurisée ?</li>
+</ul>
+<p>En fonction des réponses, il s’agit de mettre en place la solution la plus adaptée.</p>
+<h2 id="honeypot-et-time-mesuring-deux-techniques-simples-mettre-en-place-pour-identifier-les-bots">HoneyPot et Time mesuring, deux techniques  simples à mettre en place pour identifier les bots</h2>
+<p>Si les risques sont limités, ces 2 techniques ont l’avantage d’être transparentes pour l’utilisateur.
+La première solution consiste à ajouter un champ masqué à l’écran dans le formulaire. Celui-ci ne sera donc jamais renseigné par un utilisateur. Coté serveur si on constate que ce champ a été renseigné, c’est qu’il s’agit d’un programme malveillant.
+La seconde technique consiste à mesurer le temps que l’utilisateur met pour saisir le formulaire. Si celui-ci s’avère très rapide, il s’agit très probablement d’un programme malveillant.</p>
+<h2 id="des-solutions-anti-spam-et-liste-noire-pour-liminer-les-requ-tes-de-bots">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots</h2>
+<p>Il est également possible coté serveur de trier les informations reçues à l’aide d’un logiciel anti-SPAM qui supprime automatiquement les soumissions des logiciels malveillants en analysant les données et l’adresse IP à l’origine de la requête.</p>
+<h2 id="un-test-logique-ou-math-matique-textuel-appel-aussi-captcha-textuel">Un test logique ou mathématique textuel, appelé aussi Captcha textuel</h2>
+<p>Il s’agit de simples phrases demandant de recopier un mot, de résoudre une opération mathématique simple, etc.</p>
+<p>« Recopier le mot : maison »
+« Combien font deux plus deux ? »
+« Quel animal fait miaou ? »
+« De quelle couleur est le ciel ? »</p>
+<p>A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.</p>
+<h2 id="une-v-rification-par-email-sms-ou-t-l-phone-pour-une-s-curit-renforc-e">Une vérification par email, SMS ou téléphone pour une sécurité renforcée</h2>
+<p>Cette solution consiste à envoyer un email, un SMS ou à téléphoner directement à l’utilisateur pour que celui-ci confirme la transaction en cliquant sur un lien ou en renseignant le code indiqué.</p>
+<p>C&#39;est à la fois à la fois plus contraignante pour l’utilisateur qui doit communiquer des informations personnelles et plus lourd à mettre en place mais c’est une solution très efficace quand un niveau de sécurité fort est nécessaire.</p>
+<h2 id="pour-r-capituler">Pour récapituler</h2>
+<p>Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.<br>&nbsp;</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="-abbr-html5-abbr-abbr-aria-abbr-"><abbr>HTML5</abbr> &amp; <abbr>ARIA</abbr></h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"<abbr>ARIA</abbr> Label, labelledy et describedby"}]);
+});</script>
+
+<h2 id="introduction">Introduction</h2>
+<h3 id="nom-et-description-accessible">Nom et description accessible</h3>
+<p>Un nom accessible est l&#39;information qui permet à l&#39;<abbr>AT</abbr> d&#39;identifier l&#39;élément en question. Il peut être fourni par l&#39;intitulé ou le contenu d&#39;un élément, un attribut (par exemple, un attribut <code>alt</code> pour une image) ou par un élément associé (par exemple, une balise <code>label</code> pour un champ <code>input</code>).</p>
+<p>Une description accessible est une information plus étendue qui est utilisée par l&#39;<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n&#39;est pas suffisant.</p>
+<p>Le nom accessible comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d&#39;image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>)</p>
+<h3 id="les-attributs-abbr-aria-abbr-nbsp-aria-label-aria-labelledby-et-aria-describedby-">Les attributs <abbr>ARIA</abbr>&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h3>
+<p>Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code>. Ils permettent de rajouter de l&#39;information à un élément <abbr>HTML</abbr>&nbsp;:</p>
+<ul>
+<li><code>aria-label</code>, <code>aria-labelledby</code> permettent de donner un nom accessible à un élément</li>
+<li><code>aria-describedby</code> permet de rajouter, si besoin, une description accessible à un élément</li>
+</ul>
+<p>Lorsque les deux attributs aria-labelledby et aria-label sont utilisés, les agents utilisateurs donnent la priorité à aria-labelledby lors du calcul de la propriété de nom accessible.</p>
+<p>Cependant, ils ne fonctionnent bien qu&#39;avec certains éléments :</p>
+<ul>
+<li>les éléments interactifs&nbsp;: <code>a</code> (avec un attribut <code>href</code>), <code>audio</code> et <code>video</code> (avec un attribut <code>controls</code>), <code>input</code> (sauf si <code>type=&quot;hidden&quot;</code>), <code>select</code>, <code>button</code> et <code>textarea</code></li>
+<li>les éléments <code>img</code> et <code>iframe</code></li>
+<li>les éléments possédant un rôle de landmark explicite, donc, avec un attribut <code>role</code> ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: <code>header</code>, <code>footer</code>, <code>main</code>, <code>nav</code>, <code>aside</code> et <code>section</code>) </li>
+<li>les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d&#39;<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a></li>
+</ul>
+<h2 id="faut-il-l-utiliser-nbsp-">Faut-il l’utiliser&nbsp;?</h2>
+<p>If you use aria-label, aria-labelledby, or aria-describedby with any other elements (like div, span, p, blockquote, or strong etc.), they generally won’t work across all browser/assistive technology combinations.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="liste-des-crit-res-incontournables">Liste des critères incontournables</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Liste des critères incontournables"}]);
@@ -155,7 +234,7 @@
 
 <p><span data-menuitem="fondamentaux"></span>
 Ce socle de critères destiné aux sites et applications web Orange permet d’éviter les principales erreurs d’accessibilité. Il s’agit d’un sous-ensemble des exigences d’accessibilité.<br>La mise en œuvre de ce socle ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.</p>
-<p>Le respect de la charte Orange (<span lang="en">Design for digital platforms Guideline</span>), disponible sur <a href="http://brand.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ce socle.
+<p>Le respect de la charte Orange appelée la Brand (<span lang="en">Design for digital platforms Guideline</span>), disponible sur <a href="http://design.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.</p>
 <p>Deux versions sont disponibles&nbsp;</p>
 <ul>
@@ -263,6 +342,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <ul>
 <li>Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.</li>
 <li>Couper le son, le niveau d’information doit rester identique. </li>
+<li>S&#39;assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement).</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Permettre aux utilisateurs ne distinguant pas les couleurs ou l’information sensorielle (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant…), d’accéder tout de même à l’information par d’autres moyens.</p>
@@ -283,10 +363,10 @@ Utiliser correctement les éléments <abbr>HTML</abbr> en respectant ce pourquoi
 <li><code>&lt;li&gt;</code> pour les éléments de liste.</li>
 <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> et <code>&lt;dd&gt;</code> pour les listes de définitions</li>
 </ul>
-<p>S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise <code>h</code> et hiérarchisés de <code>h1</code> à <code>h6</code>) pour plus de détails&nbsp;: Donner des titres aux rubriques afin de structurer le contenu de la page.</p>
+<p>Les listes possèdent au moins deux éléments car sinon ce ne sont pas des listes (sauf si elles sont générées dynamiquement)</p>
 <p>S’assurer de bien baliser les citations longues <code>&lt;blockquote&gt;</code> ou brèves <code>&lt;q&gt;</code>.</p>
-<p>S’assurer que les liens sont bien des liens (i.e. balise <code>&lt;a&gt;</code>),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…</p>
-<p>S’assurer que les boutons sont bien des boutons (i.e. balise <code>&lt;button&gt;</code>, ou <code>&lt;input type=&quot;button&quot;&gt;</code>), et qu’ils déclenchent une action, une validation, ou encore permettent de faire un choix…</p>
+<p>Les liens sont bien des liens (i.e. balise <code>&lt;a&gt;</code>)&nbsp;: ils pointent effectivement vers une autre adresse, page ou onglet…</p>
+<p>Les boutons sont bien des boutons (i.e. balise <code>&lt;button&gt;</code>, ou <code>&lt;input type=&quot;button&quot;&gt;</code>)&nbsp;: ils déclenchent une action, une validation, ou encore permettent de faire un choix…</p>
 <p>Penser, dans la mesure du possible, à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à leur aspect spécifique.</p>
 <p><strong> Objectif utilisateur&nbsp;:</strong>
 Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les comportements possibles pour un élément d’interface donné.</p>
@@ -513,6 +593,7 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris. </p>
 <p><strong>À vérifier&nbsp;:</strong>
 Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …).</p>
+<p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
  Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.</p>
 <p><strong>Exemple valide&nbsp;:</strong>      </p>
@@ -838,12 +919,13 @@ Bien que ceci doive être pris en compte pendant la phase de développement, on 
 <h2 id="9-libell-des-liens-et-des-boutons">9. Libellé des liens et des boutons</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description&nbsp;:</strong><br>Les libellés des liens et des boutons doivent être suffisamment explicites.
-Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale.</p>
+Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technologies d&#39;assistance).</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>«&nbsp;découvrez nos offres&nbsp;»</p>
 <p><strong>Exemples non-valides&nbsp;:</strong><br>«&nbsp;cliquez ici&nbsp;»<br>«&nbsp;en savoir plus&nbsp;»</p>
 <h2 id="10-permettre-la-navigation-au-clavier">10. Permettre la navigation au clavier</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Toutes les fonctionnalités doivent être utilisables à l’aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l’aide de la touche <kbd>Tab</kbd>).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glisser-déposer, menu apparaissant au clic droit…), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l’interface (bouton, icône, menu…). </p>
+<p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton «&nbsp;Vider la corbeille&nbsp;» ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.</p>
 <h2 id="11-rendre-utilisables-les-formulaires">11. Rendre utilisables les formulaires</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>

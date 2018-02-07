@@ -105,48 +105,60 @@
         </div>
 
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="recommandations-accessibilit-orange-h2-class-page-title-organisation-du-site-h2-">Recommandations accessibilité Orange <h2 class="page-title">Organisation du site</h2></h1>
+          <h1 id="recommandations-accessibilit-orange">Recommandations accessibilité Orange</h1>
+<h2 class="page-title">Les séniors</h2>
+
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Organisation du site"}]);
+    setBreadcrumb([{"label":"Les situations de handicap", "url": "./focus.html"},
+        {"label":"Les séniors"}]);
+    addSubMenu([
+        {"label":"Le handicap cognitif","url":"focus-cognitif.html"},
+        {"label":"Les séniors","url":"focus-seniors.html"}
+    ]);
 });</script>
 
-<p>Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.<br>Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.</p>
-<p>Chaque rubrique contient&nbsp;:</p>
+<p><span data-menuitem="focus"></span></p>
+<h3 id="probl-matique">Problématique</h3>
+<p>Un sénior est une personne plus ou moins âgée faisant partie d’une catégorie de personnes dont la définition varie selon le contexte : travail, santé, etc. D’un point de vue de la santé,  l’Organisation Mondiale de la Santé considère comme personne âgée une personne de plus de 60 ans. Elle estime qu’entre 2000 et 2050, cette population doublera au niveau mondial de 11% à 22%. Selon l’INSERM, le déclin des capacités cognitives commencent dès 45 ans. </p>
+<p>Les déficiences qui peuvent être liées à l’âge ont un impact sur l’utilisation des technologies numériques.</p>
+<h3 id="obstacles-rencontr-s">Obstacles rencontrés</h3>
+<p>Les obstacles rencontrés par les séniors présentant des déficiences liées à l’âge peuvent-être multiples :</p>
 <ul>
-<li>Des recommandations en fonction de la plateforme visée,</li>
-<li>Des ressources pour apprendre et tester soi-même,</li>
-<li>Des exemples techniques.</li>
+<li>Le déclin de la <strong>vision</strong>, comme la réduction de la sensibilité aux contrastes, de la perception des couleurs, de la capacité à se concentrer sur des objets proches, rend difficile la lecture d’une ressource numérique.</li>
+<li>Le déclin des <strong>capacités motrices</strong>, comme la diminution de la dextérité, du contrôle moteur fin, rend difficile l’usage de la souris et le clic sur des éléments petits.</li>
+<li>Le déclin de l’<strong>audition</strong>, comme la capacité à percevoir les sons les plus aigus, à séparer les sons, rend difficile l’écoute de documents audio (particulièrement dans un environnement bruyant).</li>
+<li>Le déclin des <strong>capacités cognitives</strong>, comme la mémoire à court terme, la concentration, rend difficile la navigation et l’exécution de tâches.</li>
 </ul>
-<h3 id="liste-des-rubriques">Liste des rubriques</h3>
-<h4 id="accueil">Accueil</h4>
-<p>Il s’agit de la rubrique actuelle&nbsp;:</p>
+<h3 id="exemple-de-solutions">Exemple de solutions</h3>
+<h4 id="d-clin-de-la-vision">Déclin de la vision</h4>
 <ul>
-<li>Présentation succincte de l&#39;accessibilité,</li>
-<li>Organisation de ce site.</li>
+<li>L’utilisateur peut paramétrer la taille de tous les contenus textuels de l’application</li>
+<li>Les contrastes de couleurs sont élevés </li>
+<li>Les vidéos ont une audiodescription ou une transcription textuelle</li>
+<li>Les images ont une alternative textuelle</li>
 </ul>
-<h4 id="web">Web</h4>
-<p>Les recommandations accessibilité pour le Web.</p>
+<h4 id="d-clin-des-capacit-s-motrices">Déclin des capacités motrices</h4>
 <ul>
-<li>Les critères indispensables à respecter,</li>
-<li>Les recommandations techniques pour le Web,</li>
-<li>Des méthodes et des outils pour rendre un site accessible,</li>
-<li>Des exemples fonctionnels.</li>
+<li>La navigation clavier permet d’accéder à toutes les fonctionnalités sans piège clavier</li>
+<li>Le focus est bien visible</li>
+<li>Les zones cliquables sont suffisamment grandes (largeur et hauteur d’au moins 48 px)</li>
 </ul>
-<h4 id="mobile">Mobile</h4>
-<p>Les recommandations accessibilité pour les mobiles.</p>
+<h4 id="d-clin-de-l-audition">Déclin de l’audition</h4>
 <ul>
-<li>Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible, </li>
-<li>Tout ce qu’il faut savoir pour coder accessible sur mobile, sous Android ou iOS,</li>
-<li>Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile,</li>
-<li>Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement <span lang="en">VoiceOver</span> et <span lang="en">TalkBack</span>.</li>
+<li>Les vidéos ont des sous titres ou une transcription textuelle</li>
 </ul>
-<h4 id="-ditorial">Éditorial</h4>
-<p>Les recommandations pour la rédaction de documents Word et PowerPoint accessibles.</p>
-<p>&nbsp;
+<h4 id="d-clin-des-capacit-s-cognitives">Déclin des capacités cognitives</h4>
+<ul>
+<li>Les écrans suivent toutes la même logique d’organisation des contenus et de la navigation</li>
+<li>Les composants d’interfaces (liens, boutons, etc.) sont facilement identifiables</li>
+<li>Il est possible de mettre en pause ou arrêter les éléments en mouvement et les sons</li>
+<li>L’utilisateur n’est pas limité en temps pour effectuer une action</li>
+<li>Les labels des champs de formulaire sont explicitement libellés, une aide à la saisie est proposée si besoin, les erreurs de saisies sont identifiées et expliquées</li>
+<li>Une aide utilisateur est disponible</li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>

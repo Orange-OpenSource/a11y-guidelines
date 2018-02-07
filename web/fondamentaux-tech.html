@@ -52,6 +52,7 @@
                         <li><a class="page-fondamentaux" href="fondamentaux.html">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
                         <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
+                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
                         <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
                         <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
@@ -194,6 +195,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <ul>
 <li>Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.</li>
 <li>Couper le son, le niveau d’information doit rester identique. </li>
+<li>S&#39;assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement).</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Permettre aux utilisateurs ne distinguant pas les couleurs ou l’information sensorielle (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant…), d’accéder tout de même à l’information par d’autres moyens.</p>
@@ -214,10 +216,10 @@ Utiliser correctement les éléments <abbr>HTML</abbr> en respectant ce pourquoi
 <li><code>&lt;li&gt;</code> pour les éléments de liste.</li>
 <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> et <code>&lt;dd&gt;</code> pour les listes de définitions</li>
 </ul>
-<p>S’assurer que les titres de rubriques sont bien des titres (i.e. titres insérés dans une balise <code>h</code> et hiérarchisés de <code>h1</code> à <code>h6</code>) pour plus de détails&nbsp;: Donner des titres aux rubriques afin de structurer le contenu de la page.</p>
+<p>Les listes possèdent au moins deux éléments car sinon ce ne sont pas des listes (sauf si elles sont générées dynamiquement)</p>
 <p>S’assurer de bien baliser les citations longues <code>&lt;blockquote&gt;</code> ou brèves <code>&lt;q&gt;</code>.</p>
-<p>S’assurer que les liens sont bien des liens (i.e. balise <code>&lt;a&gt;</code>),  et qu’ils pointent effectivement vers une autre adresse, page ou onglet…</p>
-<p>S’assurer que les boutons sont bien des boutons (i.e. balise <code>&lt;button&gt;</code>, ou <code>&lt;input type=&quot;button&quot;&gt;</code>), et qu’ils déclenchent une action, une validation, ou encore permettent de faire un choix…</p>
+<p>Les liens sont bien des liens (i.e. balise <code>&lt;a&gt;</code>)&nbsp;: ils pointent effectivement vers une autre adresse, page ou onglet…</p>
+<p>Les boutons sont bien des boutons (i.e. balise <code>&lt;button&gt;</code>, ou <code>&lt;input type=&quot;button&quot;&gt;</code>)&nbsp;: ils déclenchent une action, une validation, ou encore permettent de faire un choix…</p>
 <p>Penser, dans la mesure du possible, à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à leur aspect spécifique.</p>
 <p><strong> Objectif utilisateur&nbsp;:</strong>
 Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les comportements possibles pour un élément d’interface donné.</p>
@@ -444,6 +446,7 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris. </p>
 <p><strong>À vérifier&nbsp;:</strong>
 Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …).</p>
+<p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
  Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.</p>
 <p><strong>Exemple valide&nbsp;:</strong>      </p>

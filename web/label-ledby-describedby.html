@@ -110,35 +110,35 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Recherche"}]);
+          <h1 id="-abbr-html5-abbr-abbr-aria-abbr-"><abbr>HTML5</abbr> &amp; <abbr>ARIA</abbr></h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"<abbr>ARIA</abbr> Label, labelledy et describedby"}]);
 });</script>
-<h2>Search results for "<span id="search-q"></span>"</h2>
-<ul id="search-results"></ul>
-<script type="text/javascript" src="lunr-index.js"></script>
-<script type="text/javascript">
-    function getParameterByName(name) {
-        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
 
-    $(function() {
-        var q = getParameterByName('q'), 
-            ul = $('#search-results').empty(),
-            results = index.search(q);
-
-        $('#search-q').text(q);
-        if (results.length > 0) {
-            for (var i = 0; i < results.length; i++) {
-                ul.append($('<li><a href="' + results[i].ref + '">' + documentTitles[results[i].ref] + '</a></li>'));
-            }
-        } else {
-            ul.append($('<li class="no-results">No results found</li>'));
-        }
-    })
-</script>
+<h2 id="introduction">Introduction</h2>
+<h3 id="nom-et-description-accessible">Nom et description accessible</h3>
+<p>Un nom accessible est l&#39;information qui permet à l&#39;<abbr>AT</abbr> d&#39;identifier l&#39;élément en question. Il peut être fourni par l&#39;intitulé ou le contenu d&#39;un élément, un attribut (par exemple, un attribut <code>alt</code> pour une image) ou par un élément associé (par exemple, une balise <code>label</code> pour un champ <code>input</code>).</p>
+<p>Une description accessible est une information plus étendue qui est utilisée par l&#39;<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n&#39;est pas suffisant.</p>
+<p>Le nom accessible comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d&#39;image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>)</p>
+<h3 id="les-attributs-abbr-aria-abbr-nbsp-aria-label-aria-labelledby-et-aria-describedby-">Les attributs <abbr>ARIA</abbr>&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h3>
+<p>Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code>. Ils permettent de rajouter de l&#39;information à un élément <abbr>HTML</abbr>&nbsp;:</p>
+<ul>
+<li><code>aria-label</code>, <code>aria-labelledby</code> permettent de donner un nom accessible à un élément</li>
+<li><code>aria-describedby</code> permet de rajouter, si besoin, une description accessible à un élément</li>
+</ul>
+<p>Lorsque les deux attributs aria-labelledby et aria-label sont utilisés, les agents utilisateurs donnent la priorité à aria-labelledby lors du calcul de la propriété de nom accessible.</p>
+<p>Cependant, ils ne fonctionnent bien qu&#39;avec certains éléments :</p>
+<ul>
+<li>les éléments interactifs&nbsp;: <code>a</code> (avec un attribut <code>href</code>), <code>audio</code> et <code>video</code> (avec un attribut <code>controls</code>), <code>input</code> (sauf si <code>type=&quot;hidden&quot;</code>), <code>select</code>, <code>button</code> et <code>textarea</code></li>
+<li>les éléments <code>img</code> et <code>iframe</code></li>
+<li>les éléments possédant un rôle de landmark explicite, donc, avec un attribut <code>role</code> ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: <code>header</code>, <code>footer</code>, <code>main</code>, <code>nav</code>, <code>aside</code> et <code>section</code>) </li>
+<li>les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d&#39;<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a></li>
+</ul>
+<h2 id="faut-il-l-utiliser-nbsp-">Faut-il l’utiliser&nbsp;?</h2>
+<p>If you use aria-label, aria-labelledby, or aria-describedby with any other elements (like div, span, p, blockquote, or strong etc.), they generally won’t work across all browser/assistive technology combinations.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>
