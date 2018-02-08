@@ -29,13 +29,13 @@ C’est pourquoi Google tente de trouver des alternatives pour différencier un 
 
 Bien que cette solution soit plus efficace, elle n’est pas aujourd’hui satisfaisante en termes d’accessibilité car en cas de doute, un CAPTCHA standard est affiché à l’écran. C’est souvent le cas pour un utilisateur qui ne peut pas utiliser une souris et qui navigue au clavier ou pour un utilisateur qui navigue à l’aide d’un lecteur d’écran (cas des personnes malvoyantes). Il faut donc toujours proposer un moyen de contact alternatif (email, téléphone….) dans le cas où le CAPTCHA ne pourrait pas être renseigné.
 
-Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arrivent et ceux qui ne comprennent pas ce qu’il faut faire, la mise en place d’un CAPTCHA n’est pas anodine pour l’audience d’un site. Partant du principe que les CAPTCHAs posent des difficultés à de nombreux utilisateurs, la première recommandation est donc de ne pas utiliser de CAPTCHA.
+Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arrivent et ceux qui ne comprennent pas ce qu’il faut faire, la mise en place d’un CAPTCHA n’est pas anodine pour l’audience d’un site. Partant du principe que les CAPTCHAs posent des difficultés à de nombreux utilisateurs, la première recommandation est donc de **ne pas utiliser de CAPTCHA**.
 
 ## Deuxième constat : Le CAPTCHA et la sécurité
 
 Dans [un article de Google publié en 2014](https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html), on apprend qu’une intelligence artificielle obtient un score de 99,8% pour résoudre des CAPTCHAs visuels parmi les plus difficiles, soit un meilleur score que celui obtenu par un « vrai » utilisateur ! Des services sont en effet capables de déterminer la police de caractères utilisée dans une image ou bien de deviner si l’image contient un objet (un chat, une voiture, un chapeau, etc.).
 
-Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revient à notre première recommandation qui est de ne pas utiliser de CAPTCHA.
+Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revient à notre première recommandation qui est de **ne pas utiliser de CAPTCHA**.
 
 ## Les solutions préconisées
 
@@ -46,7 +46,7 @@ L’idée est donc dans un premier temps de déterminer les risques et de se pos
 
 En fonction des réponses, il s’agit de mettre en place la solution la plus adaptée.
 
-## HoneyPot et Time mesuring, deux techniques  simples à mettre en place pour identifier les bots
+## HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots
 
 Si les risques sont limités, ces 2 techniques ont l’avantage d’être transparentes pour l’utilisateur.
 La première solution consiste à ajouter un champ masqué à l’écran dans le formulaire. Celui-ci ne sera donc jamais renseigné par un utilisateur. Coté serveur si on constate que ce champ a été renseigné, c’est qu’il s’agit d’un programme malveillant.
@@ -60,12 +60,13 @@ Il est également possible coté serveur de trier les informations reçues à l�
 
 Il s’agit de simples phrases demandant de recopier un mot, de résoudre une opération mathématique simple, etc.
 
-« Recopier le mot : maison »
-« Combien font deux plus deux ? »
-« Quel animal fait miaou ? »
-« De quelle couleur est le ciel ? »
+« Recopier le mot : maison »  
+« Combien font deux plus deux ? »  
+« Quel animal fait miaou ? »  
+« De quelle couleur est le ciel ? »  
 
 A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.
+Comme il est précisé dans [la notice du site acceDe Web](https://www.accede-web.com/notices/graphique/7-formulaires/7-13-tests-de-securite-tests-logiques/) une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.
 
 ## Une vérification par email, SMS ou téléphone pour une sécurité renforcée
 

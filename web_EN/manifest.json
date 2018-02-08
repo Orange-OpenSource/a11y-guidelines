@@ -2,6 +2,7 @@
     "title": "Orange accessibility guidelines",
     "files": [
         "output/markdown/index.md",
+        "output/markdown/captcha.md",
         "output/markdown/fondamentaux.md",
         "output/markdown/fondamentaux-tech.md",
         "output/markdown/fondamentaux-nontech.md",
