@@ -61,6 +61,7 @@ This is done through a simple sentence asking the user to copy a word, to solve 
 - “What colour is the sky?”
 
 Under the condition that the questions stay very basic, this kind of CAPTCHA will not be problematic to users.
+A good practice in this case will be to provide a refresh solution, which will be very helpful for people with cognitive impairments.
 
 ## An email, SMS or phone verification for reinforced security
 
