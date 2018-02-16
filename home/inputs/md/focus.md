@@ -62,7 +62,7 @@
         <li>Les utilisateurs ayant un bas débit</li>
         <li>Les seniors</li>
         <li>Les environnements bruyants tels que open space, boutiques, accueil…</li>
-        <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)
+        <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)</li>
         <li>Matériel non approprié (imprimante noir et blanc…)</li>
     </ul>
 </div>
