@@ -28,7 +28,7 @@ Les troubles DYS rassemblent différents type de troubles :
 
 La dyslexie est un trouble impactant l’accessibilité numérique.
 
-#### Exemples d’obstacles rencontrés par un internautes dyslexiques
+#### Exemples d’obstacles rencontrés par un internaute dyslexique
 - des pages surchargées d’informations
 - une mise en page non linéaire
 - de longs blocs de texte
