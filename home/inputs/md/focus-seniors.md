@@ -14,7 +14,7 @@
 
 ### Problématique
 
-Un sénior est une personne plus ou moins âgée faisant partie d’une catégorie de personnes dont la définition varie selon le contexte : travail, santé, etc. D’un point de vue de la santé,  l’Organisation Mondiale de la Santé considère comme personne âgée une personne de plus de 60 ans. Elle estime qu’entre 2000 et 2050, cette population doublera au niveau mondial de 11% à 22%. Selon l’INSERM, le déclin des capacités cognitives commencent dès 45 ans. 
+Un sénior est une personne plus ou moins âgée faisant partie d’une catégorie de personnes dont la définition varie selon le contexte : travail, santé, etc. D’un point de vue de la santé,  l’Organisation Mondiale de la Santé considère comme personne âgée une personne de plus de 60 ans. Elle estime qu’entre 2000 et 2050, cette population doublera au niveau mondial de 11% à 22%. Selon l’INSERM, le déclin des capacités cognitives commence dès 45 ans. 
 
 Les déficiences qui peuvent être liées à l’âge ont un impact sur l’utilisation des technologies numériques.
 
