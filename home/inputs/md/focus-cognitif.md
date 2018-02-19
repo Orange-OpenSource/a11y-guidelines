@@ -32,7 +32,7 @@ La dyslexie est un trouble impactant l’accessibilité numérique.
 - des pages surchargées d’informations
 - une mise en page non linéaire
 - de longs blocs de texte
-- un police de caractère avec empattement
+- une police de caractère avec empattements
 - des mots soulignés, en italique ou en majuscule
 - des fonds blancs éblouissants ou non uniformes
 - des éléments animés 
