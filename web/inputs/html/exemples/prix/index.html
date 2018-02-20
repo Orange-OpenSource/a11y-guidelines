@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Affichage et vocalisation des prix - recommandations accessibilité web Orange</title>
+    <title>Vocalisation des prix - recommandations accessibilité web Orange</title>
 
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
@@ -30,16 +30,88 @@
 <body>
 
     <main role="main" class="container">
-      <h1>Affichage et vocalisation des prix</h1>
+        <h1>Affichage et vocalisation des prix</h1>
 
-      <h2>Préambule</h2>
-      
-      <span>299<sup>,90€</sup></span>
+        <h2>Préambule</h2>
+        <p>
+            L'affichage des prix peut parfois poser des problèmes de vocalisation avec les lecteurs d'écran (utilisateurs malvoyants) notamment lorsqu'on souhaite une mise en page particulière ou afficher des promotions (prix barré).
+        </p>
+        
+        <h2>Exemple présentant des problème de vocalisation</h2>
+        
+        <h3>Exemple 1</h3>
 
+        <p>A l'aide d'un lecteur d'écran, l'exemple suivant est vocalisé comme trois éléments distinctes :</p>
+        <ul>
+          <li>"à partir de 120"</li>
+          <li>"90 euros"</li>
+          <li>"barre oblique mois"</li>
+        </ul>
+
+        <p>On ne sait pas si le prix est de 120€ ou 90€, alors que le vrai prix est 120,90€.</p>
+
+        <p class="example">
+        à partir de 
+        <span class="price">
+            120<sup>,90€</sup><sub>/mois</sub>
+        </span>
+        <p>
+
+        <strong>Code de l'exemple</strong>
+        
+        <pre><code>
+    à partir de
+    &lt;span class="price"&gt;
+        120&lt;sup&gt;,90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+    &lt;/span&gt;
+        </code></pre>
+
+        <h3>Exemple 2</h3>
+
+        <p>L'exemple suivant est vocalisé :</p>
+        <ul>
+            <li>à partir de 1 euro astérix 129 euros</li>
+            <li>astérix voir condition</li>
+        </ul>
+
+        <div class="example2">
+            <img src="./images/phone.png">
+            <p>
+                <strong>à partir de </strong><span class="price">1€*</span>
+                <span class="line-through">129,90€</span><br>
+                *voir condition
+            </p>
+        <div>           
+
+        <h2>Solution pour corriger la vocalisation</h2>
+
+        <p>Pour corriger ces problèmes le plus simple est de faire ignorer le prix affiché à l'écran et d'ajouter un texte en masquage accessible contenant le prix à vocaliser.</p>
+        <p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible.</p>
+
+        <p class="example" aria-hidden="true">
+        à partir de 
+        <span class="price">
+            120<sup>,90€</sup><sub>/mois</sub>
+        </span>
+        <p>
+        <span class="sr-only">à partir de 120,90€ par mois</span>
+
+        <pre><code>
+    &lt;p class="example" aria-hidden="true"&gt;
+    à partir de 
+    &lt;span class="price"&gt;
+        120&lt;sup&gt;,90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+    &lt;/span&gt;
+    &lt;p&gt;
+    &lt;span class="sr-only"&gt;à partir de 120,90€ par mois&lt;/span&gt;
+        </code></pre><pre><code>
+    window.console('test');
+        </code></pre>        
+                
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>
