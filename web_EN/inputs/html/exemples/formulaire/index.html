@@ -22,9 +22,9 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/jquery.validate.min.js"></script>
 
-      <script src="../main-script.js"></script>
+      <script src="../../../exemples/main-script.js"></script>
       <script src="script.js"></script>
-      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -80,7 +80,7 @@
       <h4>Using the <code>label</code> tag</h4>
       <p>This is the standard solution, it should be used in priority, as it is supported by most of the assistive tools.</p>
       <p>Use a <code>label</code> tag and its <code>for</code> attribute with the `id` of the associated form field. It is important for screen reader users, but it also improves the usability of the form: when the label is correctly associated with the form field, it becomes possible to tick a check box or select a radio button by clicking on its label.</p>
-      <pre><code>
+      <pre><code class="html">
             &lt;input type="checkbox" <span class="important">id="tos"</span>&gt;
             &lt;label <span class="important">for="tos"</span>&gt;Please accept the TOS.&lt;/label&gt;
       </code></pre>           
@@ -92,7 +92,7 @@
       <p>This is the method used in the second input field of the address in the accessible form example (using the <code>sr-only</code> Bootstrap/Boosted class).</p>
       
       <p><strong>CSS</strong></p>
-      <pre><code>   
+      <pre><code class="css">
       .sr-only {
             position: absolute;
             width: 1px;
@@ -106,7 +106,7 @@
       </code></pre>
       
       <p><strong>HTML</strong></p>
-      <pre><code>      
+      <pre><code class="html">      
       &lt;label for="address"&gt;Address *&lt;/label&gt;
       &lt;input name="address" data-displayname="Code" class="form-control" id="address" aria-required="true" type="text"&gt;
       <strong>&lt;label <span class="important">class="sr-only"</span> for="complement"&gt;Address complement&lt;/label&gt;
@@ -118,7 +118,7 @@
         
       <h4>Using the <code>title</code> attribute</h4>
       <p>The <code>title</code> attribute is not useful for accessibility except in this case. It is a robust way to label a form field. It will also show a tooltip when the mouse is over the field.</p>                  
-      <pre><code>
+      <pre><code class="html">
       &lt;input type="text" title="Search in the catalog"&gt;
       </code></pre>     
       <p><strong>Note:</strong> the <code>title</code> attribute positioned elsewhere than on a form field (e.g. in an image) does not give you the certainty that its content will be vocalized by a screen reader.</p>
@@ -130,14 +130,14 @@
             <li>The <code>aria-label</code> attribute is used to directly specify a label as a string.</li>
       </ul>
       
-      <pre><code>
+      <pre><code class="html">
       &lt;span id="label-address"&gt;Address *&lt;/span&gt;
       &lt;input type="text" aria-labelledby="label-address"&gt;            
       &lt;input type="text" aria-label="address complement"&gt;
       </code></pre>
       
       <p>For example, to enter a date in a form with 3 fields, one for the day, one for the month and one for the year, a possible solution could be:</p>
-           <pre><code>
+           <pre><code class="html">
            &lt;label for="birthDay"&gt;Birthday&lt;/label&gt;
            &lt;input type="text" id="birthDay" aria-label="Day of birth (DD)"&gt;
            &lt;input type="text" id="birthMonth" aria-label="Month of birth (MM)"&gt;
@@ -159,7 +159,7 @@
         <label for="serial-number2">Please enter the serial number *</label>
         <input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number2" aria-describedby="helpblock" aria-required="true" placeholder="e.g. TS-0000">
 </div>
-    <pre><code>
+    <pre><code class="html">
       &lt;div class="form-group"&gt;                                    
             &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
             &lt;input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number" aria-describedby="helpblock" 
@@ -172,14 +172,14 @@
      <p>You must, of course, clearly indicate to any user that a field is mandatory. This can be done using a distinctive sign (indication, pictogram, image, etc.) but also with a simple text (e.g. “mandatory”) in the field <code>label</code>. If necessary, add a mention at the beginning of the form to indicate that the symbol or pictogram indicates a required field.</p>
      <p>Required fields must be provided in the code using the <code>required</code> <abbr>HTML5</abbr> attribute or the <code>aria-required</code> <abbr>ARIA</abbr> attribute, especially for the visually impaired.</p>
      
-     <pre><code>
+     <pre><code class="html">
       &lt;input type="text" name="phone" required&gt;
       &lt;input type="text" name="phone" aria-required="true"&gt;
      </code></pre>
      
      <h3>Specify the type or the expected format</h3>
      <p>When necessary, specify the type or format of the expected data. For this information to be vocalized automatically by screen readers, add it to the <code>label</code> preferably or otherwise use the <code>aria-describedby</code> attribute.</p>     
-     <pre><code>
+     <pre><code class="html">
       &lt;div class="form-group"&gt;                                    
             &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
             &lt;input type="text" id="serial-number" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
@@ -190,7 +190,7 @@
      <h3>Grouping similar information</h3>
      <p>Fields of the same kind shall be grouped together if necessary (fields with the same label or with a tag not explicit enough), using a <code>fieldset</code> tag. The first child of the <code>fieldset</code> must be an explicit legend (<code>legend</code> tag). The <code>fieldset</code>/<code>legend</code> pair is necessary, particularly when the <code>legend</code> is useful for the understanding or the differenciation of otherwise undistinguishable labels using the <code>label</code> tags included in the <code>fieldset</code>.</p>  
       
-     <pre><code>
+     <pre><code class="html">
       &lt;fieldset&gt;                                    
             &lt;legend&gt;Phone color&lt;/legend&gt;
             &lt;input type="radio" name="color" id="white" checked&gt;
@@ -200,7 +200,7 @@
       &lt;/fieldset&gt;
      </code></pre>
            
-     <pre><code>
+     <pre><code class="html">
       &lt;fieldset&gt;                                    
             &lt;legend&gt;Shipping address&lt;/legend&gt;
             &lt;label for="name"&gt;Contact&lt;/label&gt;
@@ -226,7 +226,7 @@
      <p>During validation, if mandatory fields are not filled, or if the format of the data entered is not valid, the user must be warned.</p>
      <h4>Use the <code>aria-invalid</code> attribute to indicate an input error.</h4>
      <p>Specify in the code the invalid fields.</p>
-     <pre><code>
+     <pre><code class="html">
       &lt;input type="text" name="phone" <span class="important">aria-invalid="true"</span>&gt;
      </code></pre>
           
@@ -235,7 +235,7 @@
      <p>In this accessible form example, error messages are reported as <code>label</code> and are associated with input fields. Thus, when the focus moves in a field, the screen reader vocalizes the field label and the associated error message.</p>
      <p>This mechanism is supported out of the box by the <a href="http://jqueryvalidation.org/">validate</a> jQuery plugin.</p>
      
-     <pre><code>
+     <pre><code class="html">
       &lt;label <span class="important">for="serial-number"</span>&gt;Please enter the serial number *&lt;/label&gt;
       &lt;input aria-invalid="true" class="error" <span class="important">id="serial-number"</span> aria-describedby="helpblock" aria-required="true" type="text"&gt;
       &lt;label <span class="important">for="serial-number"</span> class="error" id="serial-number-error"&gt;Serial number is mandatory.&lt;/label&gt;            
@@ -243,7 +243,7 @@
      
       <p><strong>Please note</strong>, although it is perfectly valid to use multiple labels for a single form field, it is for the time advised to double it with an <code>aria-labelledby</code> attribute. Read <a href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/">Steve Faulkner’s blog post for more information</a>.</p>
 
-      <pre><code>      
+      <pre><code class="html">      
       &lt;label id="serie-label" for="numero-serie"&gt;Please enter the serial number *&lt;/label&gt;
       &lt;input aria-invalid="true" class="error" <span class="important">aria-labelledby="serie-label serie-error"</span> id="numero-serie" aria-describedby="helpblock" aria-required="true" type="text"&gt;
       &lt;label id="serie-error" for="numero-serie" class="error" id="numero-serie-error"&gt;Serial number is mandatory.&lt;/label&gt;                    
@@ -260,7 +260,7 @@
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

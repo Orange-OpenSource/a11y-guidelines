@@ -112,7 +112,7 @@ Provide access to application information to screen reader users.
 
 Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge means that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
 <img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left">
-<pre><code>containerView.setContentDescription("3 unread mails button"); //We add a complete alternative (dynamically built before) on the container
+<pre><code class="java">containerView.setContentDescription("3 unread mails button"); //We add a complete alternative (dynamically built before) on the container
 containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //The container is a View, not visible by the default accessibility API. We make it visible.
 mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //We hide the button icon to avoid information redundancy
 badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //The text is hidden to avoid information redundancy</code></pre>
@@ -412,7 +412,7 @@ Ensure logic order and coherent reading to screen reader users.
 In this example, the default playback order depends completely on the implementation  and on the order of element declaration. In this case: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. A more consistent reading order is `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-`.
 
 <img src="./images/order.png" alt="Example of reading order" width="300">
-<pre><code>volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+<pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 channelupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channelup).getId());

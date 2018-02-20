@@ -68,11 +68,7 @@ $(document).ready( function () {
   });
 
   // Mise en forme des exemples de code
-  if (typeof hljs !== "undefined" && hljs !== null) {
-    $('pre code').each(function(i, el) {
-      return hljs.highlightBlock(el);
-    });
-  }
+  hljs.initHighlightingOnLoad();
 
   // Ajout d'ancres sur les titres
   $("h1, h2" ).wrapInner(function () {
