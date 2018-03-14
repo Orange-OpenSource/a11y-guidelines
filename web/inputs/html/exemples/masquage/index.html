@@ -51,7 +51,7 @@
       
       
       <p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez utiliser la classe <abbr>CSS</abbr> <code>sr-only</code> (screen reader only) dont voici le code&nbsp;:</p>
-      <pre><code>
+      <pre><code class="css">
       .sr-only {
             position: absolute;
             width: 1px;
@@ -69,7 +69,7 @@
       <h3>Mise en œuvre</h3>
       <p>La classe de masquage accessible peut s’employer dans beaucoup de cas. Par exemple, pour expliciter le libellé d’un lien&nbsp;:</p>
       
-      <pre><code>
+      <pre><code class="html">
       &lt;a href="…"&gt;En savoir plus&lt;span <span class="important">class="sr-only"</span>&gt; sur nos offres mobiles&lt;/span&gt;&lt;/a&gt;
       </code></pre>
       
@@ -77,7 +77,7 @@
       <p><a href="#">En savoir plus<span class="sr-only"> sur nos offres mobiles</span></a></p>
       
       <p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien comme ceci:
-      <pre><code>
+      <pre><code class="html">
       &lt;a href="…" aria-label="En savoir plus sur nos offres mobiles">En savoir plus&lt;/a&gt;
       </code></pre>
       <p>La solution utilisant la classe de masquage accessible offre néanmoins un avantage par rapport à la solution <code>aria-label</code>. Si les <abbr>CSS</abbr> sont désactivées (pour les remplacer par des <abbr>CSS</abbr> personnalisées adaptées à une certaine pathologie, par exemple), les textes en masquage accessible apparaîtront automatiquement à l’écran.</p>
@@ -96,7 +96,7 @@
       
       <p>Pour éviter de perturber l’utilisateur inutilement, le plus simple est de masquer ces deux boutons (pour les lecteurs d’écran) à l’aide d’un attribut <code>aria-hidden</code>.
       
-      <pre><code>      
+      <pre><code class="html">      
       &lt;div class="icon icon-arrow-left2" <span class="important">aria-hidden="true"</span>&gt;
             &lt;div class="nextPreviousChannelName OrangeMedium" &gt;Animaux&lt;/div&gt;
       &lt;/div&gt;

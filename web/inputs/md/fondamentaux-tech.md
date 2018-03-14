@@ -66,22 +66,22 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
    
 Un titrage de page cohérent et pertinent&nbsp;:
 
-```html
-<h1>Accueil – Orange</h1>
-    <h2>Les actualités</h2>
-    <h2>La fibre arrive&nbsp;!</h2>
-        <h3>Êtes-vous éligible&nbsp;?</h3>
-```
+<pre><code class="html">
+&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
+    &lt;h2&gt;Les actualités&lt;/h2&gt;
+    &lt;h2&gt;La fibre arrive&nbsp;!&lt;/h2&gt;
+        &lt;h3&gt;Êtes-vous éligible&nbsp;?&lt;/h3&gt;
+</code></pre>
  
 **Exemple non-valide&nbsp;:**      
 Un titrage de page avec un saut de niveau h2 → h4&nbsp;:
 
-```html
-<h1>Accueil – Orange</h1>
-    <h2>Les actualités</h2>
-    <h2>La fibre arrive&nbsp;!</h2>
-        <h4>Êtes-vous éligible&nbsp;?</h4>
-```
+<pre><code class="html">
+&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
+    &lt;h2&gt;Les actualités&lt;/h2&gt;
+    &lt;h2&gt;La fibre arrive&nbsp;!&lt;/h2&gt;
+        &lt;h4&gt;Êtes-vous éligible&nbsp;?&lt;/h4&gt;
+</code></pre>
    
 **Outil :**  
 L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>, disponible pour [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), permet d’extraire les titres et de les visualiser sous forme de plan de document.
@@ -486,10 +486,10 @@ Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;
 Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
 
 **Exemple&nbsp;:**  
-```html
-<a href="…">valider<span class="masquage-accessible"> le paiement en plusieurs fois</span></a>
-<a href="…">valider<span class="masquage-accessible"> le paiement en une seule fois</span></a>
-```
+<pre><code class="html">
+&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
+</code></pre>
 
 Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé.  
 En complément de ces solutions, on pourrait ici également utiliser **un attribut `title`** pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.
@@ -610,7 +610,7 @@ Lorsqu’un effet est visible sur un élément au survol de la souris (`:hover` 
 
 Il est possible, avec du code Javascript, de n’afficher l’<i lang="en">outline</i> que lors d’une navigation au clavier (c’est à dire de ne pas afficher l’<i lang="en">outline</i> lors d’un clic souris, qui active également l’état `:focus`)&nbsp;:
 
-```javascript
+<pre><code class="javascript">
 var head = document.head || document.getElementsByTagName(’head’)[0];
 var axsStyles = head.appendChild(document.createElement(’style’));
 document.addEventListener(’mousedown’, function() {
@@ -619,7 +619,7 @@ document.addEventListener(’mousedown’, function() {
 document.addEventListener(’keydown’, function() {
 	axsStyles.innerHTML = ’’;
 });
-```
+</code></pre>
 
 <a href="https://codepen.io/paipai/pen/jwLyzK">Demonstration de la visibilité du focus à la navigation clavier uniquement</a>
 
@@ -815,63 +815,63 @@ Pour aller plus loin (en anglais)&nbsp;: <a href="https://dequeuniversity.com/as
 
 Pour une page en <abbr>HTML5</abbr>&nbsp;:
 
-```html
-<head>
+<pre><code class="html">
+&lt;head&gt;
   …
-  <title>Titre de la page</title>
+  &lt;title&gt;Titre de la page&lt;/title&gt;
   …
-</head>
-<body>
-  <header>
-    <h1>…</h1>
-    <nav>…navigation…</nav>
-    <p>en tête de page&nbsp;: logo, baseline…</p>
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;…&lt;/h1&gt;
+    &lt;nav&gt;…navigation…&lt;/nav&gt;
+    &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
     …
-  </header>
-  <main>
-    <p>contenu principal</p>
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;p&gt;contenu principal&lt;/p&gt;
     …
-  </main>
-  <aside>
-    <p>contenu annexe en relation avec le contenu principal</p>
+  &lt;/main&gt;
+  &lt;aside&gt;
+    &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
     …
-  </aside>
-  <footer>
-    <p>contenu du pied de page&nbsp;: copyright…</p>
+  &lt;/aside&gt;
+  &lt;footer&gt;
+    &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
     …
-  </footer>
-</body>
-```
+  &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
    
 Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:
 
-```html
-<head>
+<pre><code class="html">
+&lt;head&gt;
   …
-  <title>Titre de la page</title>
+  &lt;title&gt;Titre de la page&lt;/title&gt;
   …
-</head>
-<body>
-  <div role="banner">
-    <h1>…</h1>
-    <div role="navigation">…navigation…</div>
-    <p>en tête de page&nbsp;: logo, baseline…</p>
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div role="banner"&gt;
+    &lt;h1&gt;…&lt;/h1&gt;
+    &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
+    &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
     …
-  </div>
-  <div role="main">
-    <p>contenu principal</p>
+  &lt;/div&gt;
+  &lt;div role="main"&gt;
+    &lt;p&gt;contenu principal&lt;/p&gt;
     …
-  </div>
-  <div role="complementary">
-    <p>contenu annexe en relation avec le contenu principal</p>
+  &lt;/div&gt;
+  &lt;div role="complementary"&gt;
+    &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
     …
-  </div>
-  <div role="contentinfo">
-    <p>contenu du pied de page&nbsp;: copyright…</p>
+  &lt;/div&gt;
+  &lt;div role="contentinfo"&gt;
+    &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
     …
-  </div>
-</body>
-```
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
 
 **Référence WCAG&nbsp;:** 3.2.3., 3.2.4  
 

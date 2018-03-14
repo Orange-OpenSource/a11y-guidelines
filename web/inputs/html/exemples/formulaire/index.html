@@ -80,7 +80,7 @@
       <h4>Utilisation d’une balise <code>label</code></h4>
       <p>Il s’agit de la solution standard, à utiliser en priorité, pour étiqueter un champ de formulaire, la mieux supportée par les outils d’assistance.</p>
       <p>Utiliser une balise <code>label</code> et renseigner son attribut <code>for</code> avec l’<code>id</code> du champ de formulaire auquel elle est associée. C’est important pour les utilisateurs de lecteurs d’écran, mais cela permet également d’améliorer l’ergonomie du formulaire. En effet, lorsque le label est correctement associé à son champ de formulaire, il devient possible de cocher une case à cocher ou de sélectionner un bouton radio en cliquant directement sur son label.</p>
-      <pre><code>
+      <pre><code class="html">
             &lt;input type="checkbox" <span class="important">id="cgu"</span>&gt;
             &lt;label <span class="important">for="cgu"</span>&gt;Veuillez accepter les &lt;abbr&gt;CGU&lt;/abbr&gt;.&lt;/label&gt;
       </code></pre>           
@@ -92,7 +92,7 @@
       <p>C’est la méthode utilisée sur le second champ de saisie de l’adresse dans cet exemple de formulaire accessible (utilisation de la classe <code>sr-only</code> de Bootstrap/Boosted).</p>
       
       <p><strong>Code <abbr>CSS</abbr></strong></p>
-      <pre><code>   
+      <pre><code class="css">   
       .sr-only {
             position: absolute;
             width: 1px;
@@ -106,7 +106,7 @@
       </code></pre>
       
       <p><strong>Code <abbr>HTML</abbr></strong></p>
-      <pre><code>      
+      <pre><code class="html">      
       &lt;label for="adresse"&gt;Adresse *&lt;/label&gt;
       &lt;input name="adresse" data-displayname="adresse" class="form-control" id="adresse" aria-required="true" type="text"&gt;
       <strong>&lt;label <span class="important">class="sr-only"</span> for="complement"&gt;Complément d’adresse&lt;/label&gt;
@@ -118,7 +118,7 @@
         
       <h4>Utilisation d’un attribut <code>title</code></h4>
       <p>L’attribut <code>title</code> n’est pas utile pour l’accessibilité sauf dans ce cas précis. Il permet d’étiqueter un champ de formulaire de manière robuste. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris.</p>                  
-      <pre><code>
+      <pre><code class="html">
       &lt;input type="text" title="Rechercher dans le catalogue"&gt;
       </code></pre>     
       <p><strong>À noter&nbsp;:</strong> l’attribut <code>title</code> positionné ailleurs que sur un champ de formulaire (par exemple sur une image) ne fournit aucune garantie que son contenu sera vocalisé par un lecteur d’écran.</p>
@@ -130,14 +130,14 @@
             <li>L’attribut <code>aria-label</code> permet de préciser directement un label sous forme d’une chaîne de caractères.</li>
       </ul>
       
-      <pre><code>
+      <pre><code class="html">
       &lt;span id="label-adress"&gt;Adresse *&lt;/span&gt;
       &lt;input type="text" aria-labelledby="label-adress"&gt;            
       &lt;input type="text" aria-label="complément d’adresse"&gt;
       </code></pre>
       
       <p>Par exemple, pour entrer une date sous forme de 3 champs, un pour le jour, un pour le mois et un pour l’année, voici une solution possible&nbsp;:</p>
-           <pre><code>
+           <pre><code class="html">
            &lt;label for="jourNaissance"&gt;Date de naissance&lt;/label&gt;
            &lt;input type="text" id="jourNaissance" aria-label="jour de naissance (JJ)"&gt;
            &lt;input type="text" id="adresse" aria-label="mois de naissance (MM)"&gt;
@@ -159,7 +159,7 @@
         <label for="numero-serie2">Veuillez saisir le numéro de série *</label>
         <input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie2" aria-describedby="helpblock" aria-required="true" placeholder="exemple : TS-0000">
 </div>
-    <pre><code>
+    <pre><code class="html">
       &lt;div class="form-group"&gt;                                    
             &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
             &lt;input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie" aria-describedby="helpblock" 
@@ -172,14 +172,14 @@
      <p>Il faut bien sûr clairement indiquer pour tout utilisateur le fait qu’un champ soit obligatoire. Ceci peut être fait en utilisant un signe distinctif (mention, pictogramme, image, etc.) mais aussi avec un simple texte (par exemple, «&nbsp;obligatoire&nbsp;») dans le <code>label</code> du champ. Rajouter, si besoin, une mention au début du formulaire pour indiquer que le symbole ou le pictogramme signale un champ obligatoire.</p>
      <p>Les champs obligatoires doivent aussi être indiqués dans le code à l’aide de l’attribut <abbr>HTML5</abbr> <code>required</code> ou de l’attribut <abbr>ARIA</abbr> <code>aria-required</code> notamment pour les déficients visuels.</p>
      
-     <pre><code>
+     <pre><code class="html">
       &lt;input type="text" name="telephone" required&gt;
       &lt;input type="text" name="telephone" aria-required="true"&gt;
      </code></pre>
      
      <h3>Préciser le type ou le format attendu</h3>
      <p>Lorsque c’est nécessaire, préciser le type ou le format de la donnée attendu. Pour que cette information soit vocalisée automatiquement par les lecteurs d’écran, préférer simplement mettre ces informations dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code>.</p>     
-     <pre><code>
+     <pre><code class="html">
       &lt;div class="form-group"&gt;                                    
             &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
             &lt;input type="text" id="numero-serie" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
@@ -190,7 +190,7 @@
      <h3>Regrouper les informations de même nature</h3>
      <p>Les champs de même nature doivent être regroupés, si nécessaire (champs ayant la même étiquette ou étiquette insuffisante à elle seule pour comprendre quoi mettre dans le champ), à l’aide d’une balise <code>fieldset</code>. Le <code>fieldset</code> doit également posséder comme premier enfant une légende explicite (balise <code>legend</code>). Le <code>fieldset/legend</code> est nécessaire, notamment, lorsque le <code>legend</code> est utile à la compréhension ou l’individualisation (différencier des <code>label</code> identiques dans un même formulaire) des balises <code>label</code> incluses dans le <code>fieldset</code>.</p>  
       
-     <pre><code>
+     <pre><code class="html">
       &lt;fieldset&gt;                                    
             &lt;legend&gt;Couleur du capot de votre téléphone&lt;/legend&gt;
             &lt;input type="radio" name="couleur" id="blanc" checked&gt;
@@ -200,7 +200,7 @@
       &lt;/fieldset&gt;
      </code></pre>
            
-     <pre><code>
+     <pre><code class="html">
       &lt;fieldset&gt;                                    
             &lt;legend&gt;Adresse de livraison&lt;/legend&gt;
             &lt;label for="nom"&gt;Contact&lt;/label&gt;
@@ -226,7 +226,7 @@
      <p>Lors de la validation, si des champs obligatoires ne sont pas renseignés, ou si le format de la donnée saisie n’est pas valide, il faut prévenir l’utilisateur.</p>
      <h4>Utiliser l’attribut <code>aria-invalid</code> pour indiquer une erreur de saisie.</h4>
      <p>Indiquer dans le code les champs en erreur.</p>
-     <pre><code>
+     <pre><code class="html">
       &lt;input type="text" name="telephone" <span class="important">aria-invalid="true"</span>&gt;
      </code></pre>
           
@@ -234,7 +234,7 @@
      <p>Si des erreurs de saisie empêchent la validation du formulaire, il faut en avertir l’utilisateur. Bien souvent des messages apparaissent à l’écran, mais par défaut ils ne sont pas vocalisés au lecteur d’écran. Une des solutions consiste à déplacer automatiquement le focus dans le premier champ en erreur. Ceci aura pour effet de faire vocaliser le ou les libellés du champ de saisie en question.</p>
      <p>Dans cet exemple de formulaire accessible, les messages d’erreurs sont déclarés comme des <code>label</code> et sont associés aux champs de saisie. Ainsi lorsque le focus arrive dans un champ, le lecteur d’écran vocalise le libellé du champ puis le message d’erreur associé.</p>
      <p>Ce mécanisme est pris en charge directement par le plugin jQuery <a href="http://jqueryvalidation.org/" lang="en" hreflang="en">validate</a>.</p>     
-     <pre><code>
+     <pre><code class="html">
       &lt;label <span class="important">for="numero-serie"</span>&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
       &lt;input aria-invalid="true" class="error" <span class="important">id="numero-serie"</span> aria-describedby="helpblock" aria-required="true" type="text"&gt;
       &lt;label <span class="important">for="numero-serie"</span> class="error" id="numero-serie-error"&gt;Le champ numéro de série est obligatoire.&lt;/label&gt;            
@@ -242,7 +242,7 @@
      
      <p><strong>Attention</strong>, bien qu’il soit tout à fait valide d’utiliser plusieurs <code>label</code> pour un même champ de formulaire, il est pour le moment conseillé de doubler avec un attribut <code>aria-labelledby</code>. Consulter <a href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/" hreflang="en">l’article de Steve Faulkner</a> pour plus d’information sur le sujet.</p>
 
-      <pre><code>      
+      <pre><code class="html">      
       &lt;label id="serie-label" for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
       &lt;input aria-invalid="true" class="error" <span class="important">aria-labelledby="serie-label serie-error"</span> id="numero-serie" aria-describedby="helpblock" aria-required="true" type="text"&gt;
       &lt;label id="serie-error" for="numero-serie" class="error" id="numero-serie-error"&gt;Le champ numéro de série est obligatoire.&lt;/label&gt;                    

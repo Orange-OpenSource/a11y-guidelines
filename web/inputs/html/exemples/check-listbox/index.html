@@ -43,7 +43,7 @@
       <h3>Code <abbr>HTML</abbr></h3>
       <p>Le code reprend celui de l’exemple sur les <i lang="en">listbox</i> auquel nous ajoutons l’information concernant l’état coché / non coché. Pour cela nous utilisons l’attribut <code>aria-checked</code>.</p>
       
-      <pre><code>
+      <pre><code class="html">
         &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;
             &lt;li tabindex="-1" role="option" aria-checked="false"&gt;Informations importantes concernant votre compte&lt;/li&gt;
             …
@@ -53,7 +53,7 @@
       <p>Pour afficher à l’écran l’état «&nbsp;coché&nbsp;» de l’élément, on pourrait très bien le faire via <abbr>CSS</abbr>, en affichant un pictogramme juste avant les éléments ayant un attribut <code>aria-checked="true"</code>.<p>
       <p>Dans cet exemple, nous allons insérer de vraies cases à cocher à l’intérieur des options. Celles-ci ne seront pas vocalisées par le lecteur d’écran grâce à la présence du <code>role="option"</code> (pour le lecteur d’écran, ce sera une option et peu importe ce qu’on met à l’intérieur).</p>
  
-      <pre><code>
+      <pre><code class="html">
         &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;            
             &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
                 &lt;input tabindex="-1" type="checkbox"&gt;Informations importantes concernant votre compte
@@ -65,7 +65,7 @@
       <p>Ne pas oublier d’ajouter un attribut <code>tabindex="-1"</code> pour empêcher le focus sur les cases à cocher.</p>
       <p>Si nous voulons des cases à cocher un peu plus jolies, on peut utiliser celles de <a href="http://boosted.orange.com/">la librairie Boosted</a> par exemple.<br>  
       Dans ce cas, il faut ajouter également une balise <code>label</code>.</p>
-      <pre><code>
+      <pre><code class="html">
         &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;            
             &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
                 &lt;input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
@@ -80,7 +80,7 @@
       <h3>Interactions</h3>
       <p>Pour gérer l’interaction à la souris, il suffit de modifier la valeur de l’attribut <code>aria-checked</code> lorsqu’une case à cocher est cliquée.</p>
       
-      <pre><code>
+      <pre><code class="js">
        $("[type=checkbox]").on("click", function () {
            if ($(this).prop("checked")) {
                $(this).parent().attr("aria-checked", "true");
@@ -91,7 +91,7 @@
        </code></pre>
        
       <p>Il ne reste plus qu’à gérer l’interaction au clavier. Un élément doit pouvoir être coché ou décoché à l’aide de la barre espace. On insère ce comportement à la suite du code qui gère déjà les flèches du clavier (cf. <a href="../listbox/index.html">exemple sur les <i lang="en">listbox</i></a>).</p>         
-      <pre><code>
+      <pre><code class="js">
         $("[role=listbox]").on("keydown", function (e) {            
         var currentItem = $(this).find("[aria-selected=true]");          
         switch (e.keyCode) {

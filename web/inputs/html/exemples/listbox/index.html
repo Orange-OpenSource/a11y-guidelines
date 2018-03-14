@@ -46,7 +46,7 @@
       <h3>Code <abbr>HTML</abbr></h3>
       <p>Pour créer une <i lang="en">listbox</i>, il suffit d’appliquer le rôle <code>listbox</code> à un conteneur parent. Puis d’appliquer le rôle <code>option</code> aux différentes options de la liste. On n’oubliera pas de rendre cette liste focusable pour les utilisateurs qui naviguent à l’aide du clavier (ajout d’un attribut <code>tabindex="0"</code>) ni d’ajouter un label (<code>aria-label</code> ou <code>aria-labelledby</code>) pour les personnes qui utilisent un lecteur d’écran. Enfin, on ajoutera également un attribut <code>tabindex="-1"</code> aux options pour qu’elles puissent recevoir le focus via Javascript.</p>
       
-      <pre><code>
+      <pre><code class="html">
     &lt;ul role="listbox" tabindex="0" aria-label="liste des dossiers"&gt;
         &lt;li tabindex="-1" role="option"&gt;Boite de réception (4) &lt;span class="sr-only"&gt;messages non lus&lt;/span&gt;&lt;/li&gt;
         &lt;li tabindex="-1" role="option"&gt;Eléments envoyés&lt;/li&gt;
@@ -62,7 +62,7 @@
       <p>Lors de la prise du focus, si aucun élément n’est sélectionné, on doit automatiquement sélectionner la première option.
       Si un élément est déjà sélectionné lorsque la <i lang="en">listbox</i> reçoit le focus, on doit déplacer le focus sur celui-ci.</p>            
       
-      <pre><code>
+      <pre><code class="js">
        $("[role=listbox]").on("focus", function () {
            // If no selected element, select the first by default
            if (!$(this).find("[aria-selected=true]").length) {               
@@ -79,7 +79,7 @@
           <li>Flèche bas pour sélectionner l’élément suivant</li>
       </ul>
       
-      <pre><code>
+      <pre><code class="javascript">
     $("[role=listbox]").on("keydown", function (e) {            
         var currentItem = $(this).find("[aria-selected=true]");          
         switch (e.keyCode) {
@@ -102,7 +102,7 @@
       </code></pre>
           
       <p>Enfin, il nous reste à gérer la souris. Lorsqu’une option est sélectionnée, on modifie son attribut <code>aria-selected</code>.</p>
-      <pre><code>
+      <pre><code class="javascript">
     $("[role=option]").on("mousedown", function (e) {
         $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
         $(this).attr("aria-selected", "true");
@@ -112,7 +112,7 @@
       
       <p>On ajoute un peu de cosmétique en modifiant le pointeur de la souris au survol des options.<p>
       
-      <pre><code>
+      <pre><code class="css">
     [role=option] {
         cursor: pointer;
     }
@@ -143,7 +143,7 @@
       <p>Lorsque le focus est positionné sur un élément de la liste, la combinaison de touches <kbd>Maj+Tab</kbd> fait remonter le focus sur le premier élément focusable qui dans ce cas est l’élément <code>listbox</code>. Or, dès que la <i lang="en">listbox</i> reçoit le focus, on déplace automatiquement le focus sur l’élément sélectionné.</p>   
       <p>Pour corriger le problème, il suffit de rendre la <i lang="en">listbox</i> non focusable une fois que le focus est situé sur une des options.</p>
       
-      <pre><code>
+      <pre><code class="javascript">
        $("[role=option]").on("focus", function (e) {
            $(this).parent().attr("tabindex", "-1");
        });

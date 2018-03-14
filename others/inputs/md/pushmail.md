@@ -33,10 +33,10 @@ Créer des pages <abbr>HTML</abbr> accessibles en suivant [les recommandations W
 Pour s'assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques `hx`, `p` et les listes `ul`, `ol` doivent avoir une marge nulle fixée en <abbr>CSS</abbr> (`style="margin:0"`).
 Pour les titres `hx`, on ajoute en plus la propriété <abbr>CSS</abbr> spécifique `mso-line-height-rule:exactly` pour que dans Outlook la hauteur de ligne soit fixe et cohérente.
 
-```
+<pre><code class="html">
 <h1 style="margin:0; mso-line-height-rule:exactly;">Titre</h1>
   <p style="margin:0;">Paragraphe</p>
-```
+</code></pre>
 
 ### Rendre accessibles les tableaux
 Mettre un attribut <code>role="presentation"</code> dans la balise `table` d'un tableau de présentation pour que la sémantique du tableau soit ignorée par les aides techniques.  

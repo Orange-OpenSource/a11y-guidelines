@@ -77,7 +77,7 @@
       </div>
 
       <!-- Example 1 code -->
-      <pre><code>
+      <pre><code class="html">
       &lt;div class="dialog"&gt;
         &lt;div class="dialogContainer"&gt;
           &lt;button&gt;X&lt;/button&gt;
@@ -124,7 +124,7 @@
       <p>We also have to prevent the focus from going out of the dialog. When the focus is set on the last element it should go back to the first element and vice versa. There are several solutions to create this behaviour. In this example, two empty <code>span</code> tags are added at the beginning and at the end of the dialog. These are made ​​focusable using the <code>tabindex="0"</code> attribute. When the first <code>span</code> tag receives the focus, it is moved to the last element of the dialog. When the last <code>span</code> receives the focus, it is moved to the first element of the dialog.</p>
       <p>Empty <code>span</code> tags have the advantage of not being vocalized by screen readers.</p>
 
-      <pre><code>
+      <pre><code class="javascript">
        $('.dialog-start').on('focus', function () {
           $(this).parent().find('button:last').focus();
        });
@@ -149,7 +149,7 @@
 
       Finally, we listen to the <code>onKeyDown</code> event to close the dialog when the <kbd>Escape</kbd> key is pressed.<br>
       Here is the updated <abbr>HTML</abbr> code for the dialog:
-      <pre><code>
+      <pre><code class="html">
       &lt;div id="step2-dialog" class="dialog"&gt;
         &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
         &lt;div class="dialogContainer"&gt;
@@ -182,7 +182,7 @@
 
       <p>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of the element containing the title of the dialog. This will be spoken automatically by the screen reader. The <code>aria-describedby</code> attribute is used to specify the <code>id</code> of the element containing the description. This description will automatically be vocalized after the title of the dialog. Finally, the <code>aria-label</code> attribute on the close button (“X”) specifies a label to be vocalized (otherwise “X” will be read).</p>
 
-      <pre><code>
+      <pre><code class="html">
       &lt;div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description"&gt;
         &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
         &lt;div class="dialogContainer"&gt;
@@ -209,7 +209,7 @@
       <p>In native applications, navigation is mainly using the <kbd>Tab</kbd> key. This navigation mode is called “application mode.” Using the <abbr>ARIA</abbr> dialog role, the screen reader goes into the “application mode”, <abbr>i.e.</abbr> the navigation with the mouse is no longer available when a dialog is displayed. In this case you must use the <kbd>Tab</kbd> key to navigate between the buttons of the dialog.</p>
       
       <p><strong>Note</strong> that it is also possible to force the use of the “application” or “document” mode with the attribute <code>role</code>, however users are not used to these navigation mode changes and it is currently  <strong>not recommended to do it</strong>, except in exceptional cases:</p>
-      <pre><code>
+      <pre><code class="html">
       &lt;div role="application"&gt;…&lt;/div&gt;
       &lt;div role="document"&gt;…&lt;/div&gt;
       </code></pre>

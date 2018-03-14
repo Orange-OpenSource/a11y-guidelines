@@ -75,12 +75,12 @@ Page with consistent and relevant headings:
 **Don’t: **
 Page with a break in the heading hierarchy h2 → h4:
 
-```
-<h1>Home – Orange</h1>
-<h2>News</h2>
-<h2>Fiber broadband is coming!</h2>
-<h4>Check eligibility</h4>
-```
+<pre><code class="html">
+&lt;h1&gt;Home – Orange&lt;/h1&gt;
+&lt;h2&gt;News&lt;/h2&gt;
+&lt;h2&gt;Fiber broadband is coming!&lt;/h2&gt;
+&lt;h4&gt;Check eligibility&lt;/h4&gt;
+</code></pre>
 
 **Tool :**  
 [HeadingsMaps](https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309) extension, available for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) and [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), extract and display page titles for the current page.
@@ -495,10 +495,10 @@ For example, in the image below, the two “next” links are not explicit enoug
 In this case, add an <a href="./exemples/masquage/index.html">accessible hidden content</a> using `span` to complete the link label. This will not be displayed on the screen, but will be vocalized by assistive technologies.
 
 **Example:**  
-```
-<a href="…">next<span class="accessible-hidden-content"> to pay by installments</span></a>
-<a href="…">next<span class="accessible-hidden-content"> to pay in one go</span></a>
-```
+<pre><code class="html">
+&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
+</code></pre>
 
 Another solution is to use an `aria-label` or `aria-labelledby` attribute to clarify the link label.
 In addition to these solutions, we could also use ** a `title` attribute ** to display a “confirm to pay in installments” tooltip when the mouse is over the link.
