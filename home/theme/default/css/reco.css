@@ -358,6 +358,10 @@ pre code {
   background-color: #f16e00;
 }
 
+.source-nav li button:focus {
+  color: #000 !important;
+}
+
 /* collapsed sidebar styles */
 @media screen and (max-width: 479px) {
   
