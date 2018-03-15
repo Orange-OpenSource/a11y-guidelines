@@ -73,6 +73,14 @@ Pour exporter en <abbr>PDF</abbr> il suffit d’aller dans le menu&nbsp;: Fichie
 
 À noter qu’avec Word pour Office 2010, les documents <abbr>PDF</abbr> générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
 
+
+### 18. Insérer une table des matières
+
+Pour tout document long (>2 pages), penser à insérer une table des matière générée automatiquement, dans le menu&nbsp;: Références&nbsp;> Table des matières.
+Cela permet à tous de se repérer plus facilement et d'aller rapidement au contenu que l'on souhaite lire.
+
+À noter qu'il faut mettre à jour cette table des matières dès qu'on change la structure du contenu, donc préférer générer la table des matières en fin de rédaction du contenu.
+
 ## Ressources externes
 
 - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).

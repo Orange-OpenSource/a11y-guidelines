@@ -94,6 +94,13 @@ The first time, make sure that the “Accessibility-friendly document structure 
 
 Please note that in Word for Office 2010 generated <abbr>PDF</abbr> documents can show accessibility issues, e.g. for the vocalisation of images. These issues were corrected in the following versions of Microsoft Office.
 
+### 18. Insert an table of contents
+
+For any long document (more than 2 pages), insert an automatically generated table of contents, in the menu & nbsp ;: References & nbsp;> Table of contents.
+It makes easier for everyone to find their way around and quickly go to the content you want to read.
+
+Note that you must update this table of contents as soon as you change the structure of the content, so prefer to generate the table of contents at the end of the content modifications.
+
 ## External resources
 
 - <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in French)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.

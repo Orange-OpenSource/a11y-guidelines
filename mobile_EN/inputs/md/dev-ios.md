@@ -120,7 +120,7 @@ The `accessibilityElement` attribute is available via the interface builder but 
 ### Example
 A red square will be drawn and contain two other squares (blue and yellow) in order to apply the attributes defined hereabove.
 
-<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesÉléments_1.png" />
+<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" />
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -446,7 +446,7 @@ Grouping elements may be used to vocalize the bundle once and to associate a ded
 </br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
 ### Example
 We wish to obtain a 'label' and a 'switch control' as one unique block.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesÉléments.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -675,6 +675,158 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
 ### Link
 - [`UIAccessibilityContainer`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilitycontainer?language=objc)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
+
+## Date, time and numbers
+### Description
+Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.
+#### Date and time vocalization
+The rendering isn't natural if the date or time data are imported text in a `label`.
+</br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" />
+<pre><code class="objective-c">
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+    
+    NSDate * date = [dateFormatter dateFromString:@"01/04/2015 05:30"];
+    
+    dateLabel.text = [NSDateFormatter localizedStringFromDate:date
+                                                    dateStyle:NSDateFormatterShortStyle
+                                                    timeStyle:NSDateFormatterNoStyle];
+    
+    dateLabel.accessibilityLabel = [NSDateFormatter localizedStringFromDate:date
+                                                                  dateStyle:NSDateFormatterMediumStyle
+                                                                  timeStyle:NSDateFormatterNoStyle];
+
+    
+    hourLabel.text = [NSDateFormatter localizedStringFromDate:date
+                                                    dateStyle:NSDateFormatterNoStyle
+                                                    timeStyle:NSDateFormatterShortStyle];
+    
+    NSDateComponents * hourComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitHour | NSCalendarUnitMinute
+                                                                        fromDate:date];
+                                                                        
+    hourLabel.accessibilityLabel = [NSDateComponentsFormatter localizedStringFromDateComponents:hourComponents
+                                                                                     unitsStyle:NSDateComponentsFormatterUnitsStyleSpellOut];
+</code></pre><pre><code class="swift">
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+    let date = dateFormatter.date(from: "01/04/2015 05:30")
+        
+    dateLabel.text = DateFormatter.localizedString(from: date!,
+                                                   dateStyle: .short,
+                                                   timeStyle: .none)
+                                                       
+    dateLabel.accessibilityLabel = DateFormatter.localizedString(from: date!,
+                                                                 dateStyle: .medium,
+                                                                 timeStyle: .none)
+        
+        
+    hourLabel.text = DateFormatter.localizedString(from: date!,
+                                                   dateStyle: .none,
+                                                   timeStyle: .short)
+        
+    let hourComponents = Calendar.current.dateComponents([.hour, .minute],
+                                                         from: date!)
+    hourLabel.accessibilityLabel = DateComponentsFormatter.localizedString(from: hourComponents,
+                                                                           unitsStyle: .spellOut)
+</code></pre>
+#### Numbers vocalization
+If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood. 
+</br>As the previous chapter dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+<pre><code class="objective-c">
+    NSNumber * numberValue = @54038921.7;
+    
+    NSNumberFormatter * numberFormatter = [[NSNumberFormatter alloc]init];
+    numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    numberLabel.text = [numberFormatter stringFromNumber:numberValue];
+    
+    numberLabel.accessibilityLabel = [NSNumberFormatter localizedStringFromNumber:numberValue
+                                                                      numberStyle:NSNumberFormatterSpellOutStyle];
+</code></pre><pre><code class="swift">
+    let numberValue = NSNumber(value: 54038921.7)
+        
+    numberLabel.text = NumberFormatter.localizedString(from: numberValue,
+                                                       number: .decimal)
+                                                           
+    numberLabel.accessibilityLabel = NumberFormatter.localizedString(from: numberValue,
+                                                                     number: .spellOut)
+</code></pre>
+#### Phone numbers vocalization
+Once more, formatting data is an essential step for a phone number vocalization including the special cases of the "0" figures.
+</br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
+</br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
+<pre><code class="objective-c">
+    NSString * phoneNumberValue = @"06.11.22.33.06";
+    NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
+    
+    NSNumberFormatter * nbFormatter = [[NSNumberFormatter alloc]init];
+    nbFormatter.numberStyle = NSNumberFormatterSpellOutStyle;
+    
+    NSMutableString * spelledOutString = [[NSMutableString alloc]init];
+    
+    [phoneNumberElts enumerateObjectsUsingBlock:^(id  _Nonnull obj,
+                                                  NSUInteger idx,
+                                                  BOOL * _Nonnull stop) {
+        NSString * elt = (NSString *)obj;
+        
+        if (idx != 0) {
+            [spelledOutString appendString:@","];
+        }
+        
+        if ([elt hasPrefix:@"0"]) {
+            
+            NSString * firstFigure = [nbFormatter stringFromNumber:@([[elt substringToIndex:1] integerValue])];
+            NSString * secondFigure = [nbFormatter stringFromNumber:@([[elt substringFromIndex:1] integerValue])];
+            
+            [spelledOutString appendString:firstFigure];
+            [spelledOutString appendString:secondFigure];
+            
+        } else {
+            [spelledOutString appendString:[nbFormatter stringFromNumber:@([elt integerValue])]];
+        }
+    }];
+    
+    phoneNumberLabel.text = phoneNumberValue;
+    phoneNumberLabel.accessibilityLabel = spelledOutString;
+</code></pre><pre><code class="swift">
+        let phoneNumberValue = "06.11.22.33.06"
+        let phoneNumberElts = phoneNumberValue.components(separatedBy: ".")
+        
+        let nbFormatter = NumberFormatter()
+        nbFormatter.numberStyle = .spellOut
+        
+        var spelledOutString = String()
+        
+        for (index, elt) in phoneNumberElts.enumerated() {
+            
+            if (index != 0) {
+                spelledOutString.append(",")
+            }
+            
+            if (elt.hasPrefix("0")) {
+                
+                let firstFigureValue = Int(String(elt[elt.startIndex]))!
+                let firstFigure = nbFormatter.string(from: NSNumber(value:firstFigureValue))
+                spelledOutString.append(firstFigure!)
+                
+                let secondFigureValue = Int(String(elt[elt.index(elt.startIndex, offsetBy: 1)]))!
+                let secondFigure = nbFormatter.string(from: NSNumber(value:secondFigureValue))
+                spelledOutString.append(secondFigure!)
+                
+            } else {
+                
+                let figure = nbFormatter.string(from: NSNumber(value:Int(elt)!))
+                spelledOutString.append(figure!)
+            }
+        }
+
+        phoneNumberLabel.text = phoneNumberValue
+        phoneNumberLabel.accessibilityLabel = spelledOutString
+</code></pre>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
