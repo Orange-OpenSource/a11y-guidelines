@@ -21,6 +21,11 @@
             <img class="hidden-sm-down" alt="" src="./images/exemples/zoom.png"><span>Gestion du zoom, agrandissement de la taille du texte</span>
         </a>
     </li>
+    <li>
+        <a href="exemples/prix/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/prix.png"><span>Affichage et vocalisation des prix</span>
+        </a>
+    </li>
 </ul>
 
 ## Niveau intermédiaire
