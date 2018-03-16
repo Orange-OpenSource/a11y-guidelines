@@ -828,6 +828,138 @@ Once more, formatting data is an essential step for a phone number vocalization 
         phoneNumberLabel.accessibilityLabel = spelledOutString
 </code></pre>
 
+## Switch Control
+### Description
+The accessibility Switch Control feature revolves around the point mode and the item mode.
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControl.png" />
+</br>The element selection using the item mode works fine when the user interface isn't too complicated and uses native elements.
+</br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
+#### Customization of the item mode
+The Xcode InterfaceBuilder shows the structure used for the example hereunder :
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControlIB.png" />
+</br>The following steps represent the customization :
+- Creation of 2 groups {Test_1 + Test_2 ; Btn 5 + Btn 6} that must be selectable in the item mode.
+- Within the other elements, only Btn 1 et Btn 2 must be separately accessible.
+
+<pre><code class="objective-c">
+@interface ViewController2 ()
+
+@property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
+@property (weak, nonatomic) IBOutlet UIButton * btn1;
+@property (weak, nonatomic) IBOutlet UIButton * btn2;
+@property (weak, nonatomic) IBOutlet UIButton * btn5;
+@property (weak, nonatomic) IBOutlet UIButton * btn6;
+
+@end
+
+
+@implementation ViewController2
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
+    UIButton * testOneButton = [self.view viewWithTag:1];
+    UIButton * testTwoButton = [self.view viewWithTag:2];
+    CGRect testWrapFrame = CGRectUnion(testOneButton.frame, testTwoButton.frame);
+    
+    UIAccessibilityElement * testWrap = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    
+    testWrap.isAccessibilityElement = false;
+    testWrap.accessibilityFrame = testWrapFrame;
+    testWrap.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined; //Property specific to Switch Control.
+    testWrap.accessibilityElements = @[testOneButton, testTwoButton];
+    
+    
+    //Creation of the 'secondGroup' SEPARATING the first two buttons.
+    CGRect secondGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
+    CGRect secondGroupFrame = [_btnsParentView convertRect:secondGroupRect
+                                                    toView:self.view];
+    UIAccessibilityElement * secondGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+    
+    secondGroup.isAccessibilityElement = false;
+    secondGroup.accessibilityFrame = secondGroupFrame;
+    secondGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleSeparate;
+    secondGroup.accessibilityElements = @[_btn1, _btn2];
+
+    
+    //Creation of the 'thirdGroup' COMBINING the last two buttons.
+    CGRect thirdGroupRect = CGRectUnion(_btn5.frame, _btn6.frame);
+    CGRect thirdGroupFrame = [_btnsParentView convertRect:thirdGroupRect
+                                                   toView:self.view];
+    UIAccessibilityElement * thirdGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+    
+    thirdGroup.isAccessibilityElement = false;
+    thirdGroup.accessibilityFrame = thirdGroupFrame;
+    thirdGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined;
+    thirdGroup.accessibilityElements = @[_btn5, _btn6];
+    
+    
+    self.view.accessibilityElements = @[testWrap, 
+                                        secondGroup, 
+                                        thirdGroup];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var btnsParentView: UIStackView!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn5: UIButton!
+    @IBOutlet weak var btn6: UIButton!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
+        let testOneButton = self.view.viewWithTag(1) as? UIButton
+        let testTwoButton = self.view.viewWithTag(2) as? UIButton
+        let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
+
+        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view)
+
+        testWrap.isAccessibilityElement = false
+        testWrap.accessibilityFrame = testWrapFrame!
+        testWrap.accessibilityNavigationStyle = .combined   //Property specific to Switch Control.
+        testWrap.accessibilityElements = [testOneButton!, testTwoButton!]
+
+
+        //Creation of the 'secondGroup' SEPARATING the first two buttons.
+        let secondGroupRect = btn1.frame.union(btn2.frame)
+        let secondGroupFrame = btnsParentView.convert(secondGroupRect,
+                                                      to: self.view)
+        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
+
+        secondGroup.isAccessibilityElement = false
+        secondGroup.accessibilityFrame = secondGroupFrame
+        secondGroup.accessibilityNavigationStyle = .separate
+        secondGroup.accessibilityElements = [btn1, btn2]
+
+
+        //Creation of the 'thirdGroup' COMBINING the last two buttons.
+        let thirdGroupRect = btn5.frame.union(btn6.frame)
+        let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
+                                                     to: self.view)
+        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
+
+        thirdGroup.isAccessibilityElement = false
+        thirdGroup.accessibilityFrame = thirdGroupFrame
+        thirdGroup.accessibilityNavigationStyle = .combined
+        thirdGroup.accessibilityElements = [btn5, btn6]
+
+
+        self.view.accessibilityElements = [testWrap,
+                                           secondGroup, 
+                                           thirdGroup]
+    }
+}
+</code></pre>
+
+</br>The visual rendering is exposed hereunder :
+</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
+</br>Once activated, the created groups allow to reach directly the elements which they contain.
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

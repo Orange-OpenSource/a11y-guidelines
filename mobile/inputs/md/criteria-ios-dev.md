@@ -840,6 +840,142 @@ La problématique liée à la vocalisation d'un numéro de téléphone est ident
         phoneNumberLabel.accessibilityLabel = spelledOutString
 </code></pre>
 
+### Liens
+- [`UIAccessibilityContainer`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilitycontainer?language=objc)
+- [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
+
+## Contrôle de sélection
+### Description
+L'utilisation du contrôle de sélection s'articule autour du mode point et du mode élément définis ci-dessous.
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
+</br>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l'application n'est pas trop compliquée graphiquement.
+</br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l'ordre désiré.
+#### Personnalisation du mode élément
+La structure utilisée pour l'exemple est présentée ci-dessous grâce à l'<span lang="en">InterfaceBuilder</span> de Xcode :
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
+</br>Afin de personnaliser la sélection de ces éléments, on souhaite :
+- Créer 2 groupes {Test_1 + Test_2 ; Btn 5 + Btn 6} sélectionnables en mode élément.
+- Avoir uniquement les éléments restants Btn 1 et Btn 2 accessibles séparément.
+
+<pre><code class="objective-c">
+@interface ViewController2 ()
+
+@property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
+@property (weak, nonatomic) IBOutlet UIButton * btn1;
+@property (weak, nonatomic) IBOutlet UIButton * btn2;
+@property (weak, nonatomic) IBOutlet UIButton * btn5;
+@property (weak, nonatomic) IBOutlet UIButton * btn6;
+
+@end
+
+
+@implementation ViewController2
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    //Création du premier groupe 'testWrap' en COMBINANT les boutons 'Test_1' et 'Test_2'.
+    UIButton * testOneButton = [self.view viewWithTag:1];
+    UIButton * testTwoButton = [self.view viewWithTag:2];
+    CGRect testWrapFrame = CGRectUnion(testOneButton.frame, testTwoButton.frame);
+    
+    UIAccessibilityElement * testWrap = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    
+    testWrap.isAccessibilityElement = false;
+    testWrap.accessibilityFrame = testWrapFrame;
+    testWrap.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined; //Property specifique au contrôle de sélection.
+    testWrap.accessibilityElements = @[testOneButton, testTwoButton];
+    
+    
+    //Création du second groupe 'secondGroup' en SÉPARANT les boutons 1 et 2.
+    CGRect secondGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
+    CGRect secondGroupFrame = [_btnsParentView convertRect:secondGroupRect
+                                                    toView:self.view];
+    UIAccessibilityElement * secondGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+    
+    secondGroup.isAccessibilityElement = false;
+    secondGroup.accessibilityFrame = secondGroupFrame;
+    secondGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleSeparate;
+    secondGroup.accessibilityElements = @[_btn1, _btn2];
+
+    
+    //Création du troisième groupe 'thirdGroup' en COMBINANT les boutons 5 et 6.
+    CGRect thirdGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
+    CGRect thirdGroupFrame = [_btnsParentView convertRect:thirdGroupRect
+                                                   toView:self.view];
+    UIAccessibilityElement * thirdGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+    
+    thirdGroup.isAccessibilityElement = false;
+    thirdGroup.accessibilityFrame = thirdGroupFrame;
+    thirdGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined;
+    thirdGroup.accessibilityElements = @[_btn5, _btn6];
+    
+    
+    self.view.accessibilityElements = @[testWrap, 
+                                        secondGroup, 
+                                        thirdGroup];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var btnsParentView: UIStackView!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn5: UIButton!
+    @IBOutlet weak var btn6: UIButton!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Création du premier groupe 'testWrap' en COMBINANT les boutons 'Test_1' et 'Test_2'.
+        let testOneButton = self.view.viewWithTag(1) as? UIButton
+        let testTwoButton = self.view.viewWithTag(2) as? UIButton
+        let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
+
+        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view)
+
+        testWrap.isAccessibilityElement = false
+        testWrap.accessibilityFrame = testWrapFrame!
+        testWrap.accessibilityNavigationStyle = .combined   //Property specifique au contrôle de sélection.
+        testWrap.accessibilityElements = [testOneButton!, testTwoButton!]
+
+
+        //Création du second groupe 'secondGroup' en SÉPARANT les boutons 1 et 2.
+        let secondGroupRect = btn1.frame.union(btn2.frame)
+        let secondGroupFrame = btnsParentView.convert(secondGroupRect,
+                                                      to: self.view)
+        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
+
+        secondGroup.isAccessibilityElement = false
+        secondGroup.accessibilityFrame = secondGroupFrame
+        secondGroup.accessibilityNavigationStyle = .separate
+        secondGroup.accessibilityElements = [btn1, btn2]
+
+
+        //Création du troisième groupe 'thirdGroup' en COMBINANT les boutons 5 et 6.
+        let thirdGroupRect = btn5.frame.union(btn6.frame)
+        let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
+                                                     to: self.view)
+        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
+
+        thirdGroup.isAccessibilityElement = false
+        thirdGroup.accessibilityFrame = thirdGroupFrame
+        thirdGroup.accessibilityNavigationStyle = .combined
+        thirdGroup.accessibilityElements = [btn5, btn6]
+
+
+        self.view.accessibilityElements = [testWrap,
+                                           secondGroup, 
+                                           thirdGroup]
+    }
+}
+</code></pre>
+
+</br>Le rendu de ce code est visualisable ci-dessous :
+</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
+</br>Les groupes créés permettent d'accéder directement aux éléments qu'ils contiennent dès qu'ils sont activés.
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
