@@ -15,7 +15,7 @@ For technical solutions, you should consult [essential criteria](./fondamentaux.
 The <abbr>RGAA</abbr> is the French government’s [General Accessibility Reference for Administrations (in French)](http://references.modernisation.gouv.fr/referentiel/). It is meant to provide a way to check compliance against <abbr>WCAG</abbr> 2.0.
 If your are familiar with this reference, you can use it to test your site.
 
-An [English translation](http://disic.github.io/RGAA_referentiel_en/RGAA3.0_Criteria_English_version_v1.html) is available for informational purposes only. 
+An [English translation](https://disic.github.io/rgaa_referentiel_en/introduction-RGAA.html) is available for informational purposes only. 
 
 ## Accede-web references
 

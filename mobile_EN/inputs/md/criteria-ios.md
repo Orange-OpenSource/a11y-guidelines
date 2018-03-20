@@ -210,7 +210,7 @@ If a touch target of a component is too small, it can prevent some users from en
 
 **Checklist: **
 
-- 44 pt is the recommended touch target size for elements according to Apple (height and width); [see more information on the Apple guidelines](https://developer.apple.com/ios/human-interface-guidelines/visual-design/layout/).
+- 44 pt is the recommended touch target size for elements according to Apple (height and width); [see more information on the Apple guidelines](https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/).
 
 **Users’ goal: **
 

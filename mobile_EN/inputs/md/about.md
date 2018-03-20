@@ -3,7 +3,7 @@
     setBreadcrumb([{"label":"About"}]);
 });</script>
 
-Documentation under the [CC BY SA 3.0 license](/LICENSE.txt), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).  
+Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).  
 
 The Orange logo and some images or screenshots are the property of Orange:
 

@@ -35,9 +35,7 @@ Dans tous les cas, il faut tester les développements sur les environnements cib
 Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement&nbsp;!
 
 ## Webographie
-* [Page de synthèse sur «&nbsp;<i lang="en"><abbr>ARIA</abbr> in <abbr>HTML</abbr></i>&nbsp;»](https://specs.webplatform.org/html-aria/webspecs/master/)
 * <abbr>W3c</abbr>&nbsp;:
-  * [Introduction à <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria/introduction)
   * [Spécification <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria/)
   * [Mettre en place <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria-practices/), attention «&nbsp;<i lang="en">working draft</i>&nbsp;»
   * [Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr> (5)](http://www.w3.org/TR/aria-in-html/) , attention «&nbsp;<i lang="en">working draft</i>&nbsp;»

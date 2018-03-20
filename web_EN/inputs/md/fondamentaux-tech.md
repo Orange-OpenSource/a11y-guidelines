@@ -543,7 +543,7 @@ Example of an icon that indicates the opening of a new window.
 
 **Checklist: **
 
-For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./examples/hiding/index.html">accessible hidden content</a>).
+For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">accessible hidden content</a>).
 
 **Users’ goal: **
 

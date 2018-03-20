@@ -41,7 +41,7 @@ The height of the elements containing the text has been set with a relative unit
 ![screenshot of a page with 100% zoom](images/zoom-ok.png)
 
 &nbsp;
-More information in the **examples** section: [handling zoom, increasing the text size](examples/zoom/index.html).
+More information in the **examples** section: [handling zoom, increasing the text size](exemples/zoom/index.html).
 &nbsp; 
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
