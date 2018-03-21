@@ -99,7 +99,7 @@ Certaines images sont régulièrement associées à du texte pour donner une inf
 
 L’alternative textuelle d’un élément est renseignée via les attributs `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` et `accessibilityTrait` (via le protocole `UIAccessibility` implémenté par tout élément standard dérivant de `UIView`).  
 L’ordre de vocalisation est toujours le suivant : `label`, `value`, `trait` et `hint`. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  
-Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](./dev-ios.html#alternatives-textuelles).
+Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](./criteria-ios-dev.html#alternatives-textuelles).
 
 **À vérifier&nbsp;: **
 
@@ -234,7 +234,7 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 
 Bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">VoiceOver</span> est capable de lire les informations d’une vue qui est placée «&nbsp;sous&nbsp;» une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.  
   
-Un exemple fréquent d’élément fantôme survient lors de la création de composant personnalisé tel que des «&nbsp;<span lang="en">alert dialog</span>&nbsp;» (notification utilisateur). Notons toutefois que ce genre de composant personnalisé est tout à fait susceptible d’être accessible. Nous vous invitons à lire la section correspondante dans la [partie développeur](./dev-ios.html#masquer-des-l-ments-l-accessibilit-).
+Un exemple fréquent d’élément fantôme survient lors de la création de composant personnalisé tel que des «&nbsp;<span lang="en">alert dialog</span>&nbsp;» (notification utilisateur). Notons toutefois que ce genre de composant personnalisé est tout à fait susceptible d’être accessible. Nous vous invitons à lire la section correspondante dans la [partie développeur](./criteria-ios-dev.html#masquer-des-l-ments-l-accessibilit-).
 
 **À vérifier&nbsp;: **
 
@@ -291,7 +291,7 @@ Il existe plusieurs notifications de modification, mais les deux plus utiles son
 - `UIAccessibilityLayoutChangedNotification`&nbsp;: permet de spécifier à l’<abbr>API</abbr> d’accessibilité qu’une partie de la page a été modifiée.
 - `UIAccessibilityScreenChangedNotification`&nbsp;: permet d’annoncer un changement global de la page.
 
-Pour plus d’information technique sur ces méthodes, nous vous invitons à regarder la section correspondante dans le [guide développeur pour iOS](./dev-ios.html#informer-d-une-modification-sur-la-page).
+Pour plus d’information technique sur ces méthodes, nous vous invitons à regarder la section correspondante dans le [guide développeur pour iOS](./criteria-ios-dev.html#informer-d-une-modification-sur-la-page).
 
 **À vérifier&nbsp;: **
 

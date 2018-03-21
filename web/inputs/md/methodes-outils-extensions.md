@@ -11,7 +11,7 @@
 Certaines extensions permettent d’effectuer des tests automatiques sur la page en cours de consultation.
 
 ## <span lang="en">aXe accessibility audit</span>
-[aXe](http://www.deque.com/products/axe/) est une extension disponible pour Chrome et Firefox permettant d’effectuer une série de tests basés sur les [WCAG](https://www.w3.org/WAI/intro/wcag).
+[aXe](http://www.deque.com/axe/) est une extension disponible pour Chrome et Firefox permettant d’effectuer une série de tests basés sur les [WCAG](https://www.w3.org/WAI/intro/wcag).
 
 ![capture d’écran de l’extension axe](images/aXe.png)
 &nbsp;

@@ -36,7 +36,6 @@ In a well-defined environment (e.g. intranet), target environments are known and
 
 ## Webography
 * W3C:
-  * [Introduction to <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria/introduction)
   * [<abbr>ARIA</abbr> specification](http://www.w3.org/TR/wai-aria/)
   * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/) (be careful as it’s a “working draft”)
   * [Use <abbr>ARIA</abbr> HTML (5)](http://www.w3.org/TR/aria-in-html/) (be careful as it’s a “working draft”)

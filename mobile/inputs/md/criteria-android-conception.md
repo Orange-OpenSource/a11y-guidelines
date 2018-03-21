@@ -168,7 +168,7 @@ Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informati
 **Exemple&nbsp;: **
 
 <img src="./images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400">  
-Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du [guide développeur](./dev-android.html#alternatives-textuelles) correspondante.
+Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du [guide développeur](./criteria-android-dev.html#alternatives-textuelles) correspondante.
   
 
 ## Composant standard

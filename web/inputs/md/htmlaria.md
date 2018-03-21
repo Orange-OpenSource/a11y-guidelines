@@ -28,7 +28,7 @@ De plus, l’efficacité optimale de la prise en charge d’<abbr>ARIA</abbr> d�
 
 ## Faut-il l’utiliser&nbsp;?
 
-Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents en <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’[une vingtaine de techniques WCAG 2.0 soient spécifiques à <abbr>ARIA</abbr>](https://www.w3.org/<abbr>WAI</abbr>/GL/WCAG20-TECHS/aria.html) (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.
+Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents en <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’[une vingtaine de techniques WCAG 2.0 soient spécifiques à <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html) (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.
 
 Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs&nbsp;/ aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.
 
