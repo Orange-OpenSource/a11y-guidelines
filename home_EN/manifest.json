@@ -1,10 +1,13 @@
 {
     "title": "Orange accessibility guidelines",
     "files": [        
+        "output/markdown/about.md",
         "output/markdown/contact.md",
+        "output/markdown/focus.md",
+        "output/markdown/focus-cognitif.md",
+        "output/markdown/focus-seniors.md",
         "output/markdown/organisation.md",
-        "output/markdown/index.md",        
-        "output/markdown/about.md"
+        "output/markdown/index.md"
     ],
     "maxTocLevel":"1"
 }
