@@ -713,6 +713,7 @@ Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour leq
 La lecture des date, heure et nombres n'est pas compliquée mais peut très vite devenir un réel casse-tête avec <span lang="en">VoiceOver</span>&nbsp;.
 #### Lecture des dates et des heures
 Si on met directement sous forme de texte la date ou l'heure dans le `label`, on s'aperçoit rapidement que le rendu n'est pas naturel à l'écoute.
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.
 </br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" />
 <pre><code class="objective-c">
@@ -765,6 +766,7 @@ Si on met directement sous forme de texte la date ou l'heure dans le `label`, on
 </code></pre>
 #### Lecture des nombres
 En indiquant la valeur d'un nombre directement dans le texte d'un `label`, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.
+</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 </br>Comme pour les date et heure, il faut formater la donnée en entrée pour qu'elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu'elle représente.
 </br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" />
 <pre><code class="objective-c">
@@ -789,8 +791,9 @@ En indiquant la valeur d'un nombre directement dans le texte d'un `label`, la vo
 #### Lecture des numéros de téléphone
 La problématique liée à la vocalisation d'un numéro de téléphone est identique à celle des nombres puisqu'elle s'appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres "0".
 </br>L'exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n'importe quel type de format de numérotation.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" />
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" />
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -991,12 +994,182 @@ class ViewController: UIViewController {
     }
 }
 </code></pre>
-### Lien
-- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
 
 </br>Le rendu de ce code est visualisable ci-dessous :
 </br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
 </br>Les groupes créés permettent d'accéder directement aux éléments qu'ils contiennent dès qu'ils sont activés.
+### Lien
+- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
+
+## Valeurs continûment ajustables
+### Description
+Des éléments graphiques comme le `picker`, le `stepper` ou encore le `slider` permettent de changer de façon continue la valeur qu'ils proposent de modifier.
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br>Quand on ne voit pas la modification dynamique se faire ou qu'on n'en est pas informé vocalement, il devient très compliqué de pouvoir se rendre compte de ce qui se passe.
+</br>La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c'est pourquoi seul le cas du `stepper` sera traité.
+</br></br>L'implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
+</br>Si on crée un <span lang="en">stepper</span> auquel on ajoute un `label` pour afficher sa valeur, on obtient le résultat suivant :
+</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br>À partir de là, on s'aperçoit que le focus doit être déplacé pour :
+- Atteindre chacun des deux éléments permettant d'augmenter ou de diminuer la valeur.
+- Connaître la valeur obtenue via le `label`.
+
+De plus, il n'y a aucune indication de changement de la valeur en temps réel.
+</br>Certes, rien n'est bloquant mais, si l'on souhaite réellement mettre en place cet objet avec un rendu le plus fluide possible, ces quelques remarques conduisent tout naturellement à concevoir différemment cet exemple pourtant si simple.
+</br></br>L'idée est de pouvoir changer la valeur du <span lang="en">stepper</span>, être informé de son changement et d'en connaître la valeur par le biais d'un unique objet.
+</br>Il faut donc **regrouper le <span lang="en">stepper</span> et le `label`** *(à l'aide d'une <span lang="en">StackView</span> par exemple)* puis associer **`UIAccessibilityTraitAdjustable`** à ce nouveau groupe accessible.
+</br>Ce nouveau `trait` va permettre de modifier de façon continue la valeur de l'objet auquel il est associé en implémentant **OBLIGATOIREMENT** les méthodes `accessibilityIncrement()` et `accessibilityDecrement()`.
+</br></br>On élimine ainsi toutes les contraintes rencontrées initialement et on obtient, en plus, un `hint` lié à ce nouveau `trait` qui indique la manipulation nécessaire au bon fonctionnement.
+</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" />
+- Pour aboutir à ce résultat, on définit tout d'abord une classe conteneur {<span lang="en">stepper</span> + `label`} qui va permettre la délégation pour la modification ultérieure de la valeur.
+
+<pre><code class="objective-c">
+-===== StepperWrapper.h =====-
+NS_ASSUME_NONNULL_BEGIN
+@class StepperWrapper;
+
+@protocol AdjustableForAccessibilityDelegate <NSObject>
+
+- (void)adjustableDecrementForView:(StepperWrapper *)view;
+- (void)adjustableIncrementForView:(StepperWrapper *)view;
+@end
+
+
+@interface StepperWrapper : UIStackView
+@property(nonatomic,weak) id<AdjustableForAccessibilityDelegate> delegate;
+@end
+NS_ASSUME_NONNULL_END
+    
+    
+-===== StepperWrapper.m =====-
+NS_ASSUME_NONNULL_BEGIN
+@implementation StepperWrapper
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    
+    self = [super initWithCoder:coder];
+    
+    self.isAccessibilityElement = YES;
+    self.accessibilityTraits = UIAccessibilityTraitAdjustable;
+    
+    return self;
+}
+
+- (void)accessibilityDecrement {
+    [_delegate adjustableDecrementForView:self];
+}
+
+- (void)accessibilityIncrement {
+    [_delegate adjustableIncrementForView:self];
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+protocol AdjustableForAccessibilityDelegate: class {
+    func adjustableDecrementFor(_ view: StepperWrapper)
+    func adjustableIncrementFor(_ view: StepperWrapper)
+}
+
+
+class StepperWrapper: UIStackView {
+
+    weak var delegate: AdjustableForAccessibilityDelegate?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        isAccessibilityElement = true
+        accessibilityTraits = UIAccessibilityTraitAdjustable
+    }
+    
+    override func accessibilityDecrement() {
+        delegate?.adjustableDecrementFor(self)
+    }
+    
+    override func accessibilityIncrement() {
+        delegate?.adjustableIncrementFor(self)
+    }
+}
+</code></pre>
+
+- Ensuite, il faut redéfinir les 2 méthodes du protocole implémenté pour indiquer ce qu'elles doivent réaliser avant de mettre à jour la valeur modifiée et de la présenter vocalement dans le <span lang="en">ViewController</span>.
+
+<pre><code class="objective-c">
+NS_ASSUME_NONNULL_BEGIN
+@interface ViewController () <AdjustableForAccessibilityDelegate>
+
+@property (weak, nonatomic) IBOutlet UIStepper * stepperNoAccess;
+@property (weak, nonatomic) IBOutlet UILabel * stepperValueNoAccess;
+
+@property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
+@property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
+@property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
+@end
+
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _stepperStackViewAccess.delegate = self;
+    _stepperStackViewAccess.accessibilityLabel = @"Compteur pour adapter la valeur";
+    _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
+}
+
+- (void)adjustableDecrementForView:(StepperWrapper *)view {
+    _stepperAccess.value  -= _stepperAccess.stepValue;
+    [self updateStepperValue];
+}
+
+- (void)adjustableIncrementForView:(StepperWrapper *)view {
+    _stepperAccess.value  += _stepperAccess.stepValue;
+    [self updateStepperValue];
+}
+
+- (void) updateStepperValue {
+    _stepperValueAccess.text = [NSString stringWithFormat:@"Valeur = %0.1f",_stepperAccess.value];
+    _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
+    
+    @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
+    @IBOutlet weak var stepperAccess: UIStepper!
+    @IBOutlet weak var stepperValueAccess: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        stepperStackViewAccess.delegate = self
+        stepperStackViewAccess.accessibilityLabel = "Compteur pour adapter la valeur"
+        stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+    }
+    
+    func adjustableDecrementFor(_ view: StepperWrapper) {
+        stepperAccess.value -= stepperAccess.stepValue
+        updateStepperValue()
+    }
+    
+    func adjustableIncrementFor(_ view: StepperWrapper) {
+        stepperAccess.value += stepperAccess.stepValue
+        updateStepperValue()
+    }
+    
+    private func updateStepperValue() {
+        stepperValueAccess.text = "Valeur = \(stepperAccess.value)"
+        stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+    }
+}
+</code></pre>
+### Lien
+- [`UIAccessibilityTraitAdjustable`](https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

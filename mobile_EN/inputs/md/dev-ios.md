@@ -701,6 +701,7 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
 Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.
 #### Date and time vocalization
 The rendering isn't natural if the date or time data are imported text in a `label`.
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
 </br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" />
 <pre><code class="objective-c">
@@ -752,7 +753,8 @@ The rendering isn't natural if the date or time data are imported text in a `lab
                                                                            unitsStyle: .spellOut)
 </code></pre>
 #### Numbers vocalization
-If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood. 
+If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
+</br><img style="max-width: 475px; height: auto; " src="./images/iOSdev/DateHeureNombres_12.png" />
 </br>As the previous chapter dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
 </br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 <pre><code class="objective-c">
@@ -777,8 +779,9 @@ If a number is imported as is in a `label`text, the vocalization will be made on
 #### Phone numbers vocalization
 Once more, formatting data is an essential step for a phone number vocalization including the special cases of the "0" figures.
 </br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -975,12 +978,180 @@ class ViewController: UIViewController {
     }
 }
 </code></pre>
-### Link
-- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
 
 </br>The visual rendering is exposed hereunder :
 </br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
 </br>Once activated, the created groups allow to reach directly the elements which they contain.
+### Link
+- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
+
+## Continuous adjustable values
+### Description
+Graphics like `picker`, `stepper` or `slider` have the ability to continuously change the value they provide.
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br>It's hard to render what's happening when the changing isn't graphically or vocally notified.
+</br>The following methodology to resolve this problem for blind people using VoiceOver may be the same for these three graphics, that's why only the `stepper` will be handled.
+</br></br>Creating a `stepper` with a `label` to display its value provides the following rendering :
+</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br>The focus must change to :
+- Get each element that increases or decreases the value.
+- Know the value provided by the `label`.
+
+Moreover, there is no real time notification dealing with the value changing.
+</br>Nothing is definitely blocking in use but these latest remarks lead to a new design for this example that used to be so simple.
+</br></br>The rationale behind is to be able to change the `stepper` value, to be informed of this modification and to know the new value thanks to a single and unique object.
+</br>**Group the `stepper`and the `label`** *(a StackView should do the job)* then put **`UIAccessibilityTraitAdjustable`** as a new trait for this new accessible group.
+</br>This `trait` is **MANDATORY** linked to the `accessibilityIncrement()` and `accessibilityDecrement()` methods that must be implemented to define the continous way of changing the value.
+</br></br>As a result, all the previous constraints are removed and a `hint` is natively provided by this `trait` to mention the proper way of using this object.
+</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_4.png" />
+- To get this result, the container class {`stepper` + `label`} is first created to allow the delegation for the future value changing.
+
+<pre><code class="objective-c">
+-===== StepperWrapper.h =====-
+NS_ASSUME_NONNULL_BEGIN
+@class StepperWrapper;
+
+@protocol AdjustableForAccessibilityDelegate <NSObject>
+- (void)adjustableDecrementForView:(StepperWrapper *)view;
+- (void)adjustableIncrementForView:(StepperWrapper *)view;
+@end
+
+
+@interface StepperWrapper : UIStackView
+@property(nonatomic,weak) id<AdjustableForAccessibilityDelegate> delegate;
+@end
+NS_ASSUME_NONNULL_END
+    
+    
+-===== StepperWrapper.m =====-
+NS_ASSUME_NONNULL_BEGIN
+@implementation StepperWrapper
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    
+    self = [super initWithCoder:coder];
+    
+    self.isAccessibilityElement = YES;
+    self.accessibilityTraits = UIAccessibilityTraitAdjustable;
+    
+    return self;
+}
+
+- (void)accessibilityDecrement {
+    [_delegate adjustableDecrementForView:self];
+}
+
+- (void)accessibilityIncrement {
+    [_delegate adjustableIncrementForView:self];
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+protocol AdjustableForAccessibilityDelegate: class {
+    func adjustableDecrementFor(_ view: StepperWrapper)
+    func adjustableIncrementFor(_ view: StepperWrapper)
+}
+
+
+class StepperWrapper: UIStackView {
+
+    weak var delegate: AdjustableForAccessibilityDelegate?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        isAccessibilityElement = true
+        accessibilityTraits = UIAccessibilityTraitAdjustable
+    }
+    
+    override func accessibilityDecrement() {
+        delegate?.adjustableDecrementFor(self)
+    }
+    
+    override func accessibilityIncrement() {
+        delegate?.adjustableIncrementFor(self)
+    }
+}
+</code></pre>
+
+- Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
+
+<pre><code class="objective-c">
+NS_ASSUME_NONNULL_BEGIN
+@interface ViewController () <AdjustableForAccessibilityDelegate>
+
+@property (weak, nonatomic) IBOutlet UIStepper * stepperNoAccess;
+@property (weak, nonatomic) IBOutlet UILabel * stepperValueNoAccess;
+
+@property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
+@property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
+@property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
+@end
+
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _stepperStackViewAccess.delegate = self;
+    _stepperStackViewAccess.accessibilityLabel = @"Increase or decrease the value";
+    _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
+}
+
+- (void)adjustableDecrementForView:(StepperWrapper *)view {
+    _stepperAccess.value  -= _stepperAccess.stepValue;
+    [self updateStepperValue];
+}
+
+- (void)adjustableIncrementForView:(StepperWrapper *)view {
+    _stepperAccess.value  += _stepperAccess.stepValue;
+    [self updateStepperValue];
+}
+
+- (void) updateStepperValue {
+    _stepperValueAccess.text = [NSString stringWithFormat:@"Value = %0.1f",_stepperAccess.value];
+    _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
+    
+    @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
+    @IBOutlet weak var stepperAccess: UIStepper!
+    @IBOutlet weak var stepperValueAccess: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        stepperStackViewAccess.delegate = self
+        stepperStackViewAccess.accessibilityLabel = "Increase or decrease the value"
+        stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+    }
+    
+    func adjustableDecrementFor(_ view: StepperWrapper) {
+        stepperAccess.value -= stepperAccess.stepValue
+        updateStepperValue()
+    }
+    
+    func adjustableIncrementFor(_ view: StepperWrapper) {
+        stepperAccess.value += stepperAccess.stepValue
+        updateStepperValue()
+    }
+    
+    private func updateStepperValue() {
+        stepperValueAccess.text = "Value = \(stepperAccess.value)"
+        stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+    }
+}
+</code></pre>
+### Link
+- [`UIAccessibilityTraitAdjustable`](https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
