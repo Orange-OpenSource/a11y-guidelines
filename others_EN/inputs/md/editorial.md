@@ -1,6 +1,6 @@
-# General editorial recommendations
+# General recommendations for content
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"General editorial recommendations"}]);
+    setBreadcrumb([{"label":"General recommendations for content"}]);
 });</script>
 
 <style>h3 {font-size: 1rem;}</style>

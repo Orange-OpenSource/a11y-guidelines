@@ -1,13 +1,13 @@
-# Accessibility recommendations Orange for editorial
+# Accessibility recommendations Orange for content
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Presentation"}]);
 });</script>
 
-## General editorial recommendations
+## General recommendations for content
 The general recommendations describe the recommendations to respect whatever the type of content (web, email, Word document, etc.).
 <ul role="presentation">
-<li><a href="./editorial.html">Access to general editorial recommendations</a></li>
+<li><a href="./editorial.html">Access to general recommendations for content</a></li>
 </ul>
 
 &nbsp;
