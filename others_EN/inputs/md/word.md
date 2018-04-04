@@ -72,7 +72,7 @@ Contrast can be verified with the <a href="https://www.paciellogroup.com/resourc
 ### 13. Define language
 
 Language must be defined through the menu: File&nbsp;> Options&nbsp;> Language.
-Words or grops of words in another language must be explicitly described as such (menu: Revision&nbsp;> Language&nbsp;> Define the verification language).
+Words or groups of words in another language must be explicitly described as such (menu: Revision&nbsp;> Language&nbsp;> Define the verification language).
 
 ### 14. Provide replacement text for images
 
