@@ -285,6 +285,10 @@ h1:before, h2:before {
   text-decoration: underline;
 }
 
+.breadcrumb-item.active {
+  color: #000;
+}
+
 #secondNavBar .nav-item.language a {
   display: inline-block;
   font-size: 1.05rem;  
