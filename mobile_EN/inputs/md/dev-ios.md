@@ -120,7 +120,7 @@ The `accessibilityElement` attribute is available via the interface builder but 
 ### Example
 A red square will be drawn and contain two other squares (blue and yellow) in order to apply the attributes defined hereabove.
 
-<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" />
+<img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" />
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -340,7 +340,7 @@ In the case of dynamically modified element or component not inheriting from `UI
 - **accessibilityActivationPoint**&nbsp;: the activation «&nbsp;point&nbsp;» of an element for accessibility tools.
 </br>By default, this point is at the centre of the element.
 ### Example
-<img style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
 <pre><code class="objective-c">
 float xVal;
 float yVal;
@@ -446,7 +446,7 @@ Grouping elements may be used to vocalize the bundle once and to associate a ded
 </br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
 ### Example
 We wish to obtain a 'label' and a 'switch control' as one unique block.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -564,7 +564,7 @@ All accessibility events are available on the <a href="https://developer.apple.c
 ### Description
 Dynamic font size on iOS is very tricky.
 </br>Since iOS7, it is possible to use an <abbr>API</abbr> to make the text size dynamic according to the phone settings.
-</br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:
  - Choose the system fonts even if it's possible to use its own fonts inherited from `UIFont` and assisted with `UIFontMetrics` (iOS11 new feature).
  <pre><code class="objective-c">
@@ -634,18 +634,18 @@ Exactly like text, images and tab/tool bar items have a scalable size thanks to 
 </br>The example below to illustrate these new features is obtained by following the steps hereafter &nbsp;:
 </br></br>1. Under Xcode, import the image to be enlarged with a `pdf` extension and a x1 resolution in the `xcassets` catalog.
 </br></br>2. In the new Image Set, tick `Preserve Vector Data` and specify `Single Scale` as Scales attribute &nbsp;:
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
 </br></br>3. If a storyboard is used for this image, tick `Adjusts Image Size` in the Image View section, otherwise put the `adjustsImageSizeForAccessibilityContentSizeCategory` image property to `true` in code &nbsp;:
-</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
 </br></br>4. If a **tab bar** or a **tool bar** is used in the application, first repeat the previous 3 steps for each image included in the items to be enlarged in the middle of the screen and then link the image to its appropriate item &nbsp;:
-</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
 </br>**WARNING : don't forget to check your layout with these new images larger sizes.**
 ### Example
 An application with a tab bar, whose second bar item displays the Orange logo (added `Aspect Fit` content mode and constraints to stretch the image view), is created to test the features exposed in the description.
 </br></br>With the `Larger Accessibility Sizes` activation in the settings (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:
 - A larger Orange image size.
 - A larger version of the bar item in an overlay if you touch and hold over it.
-</br><img style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" />
+</br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" />
 ### Link
 - [`adjustsImageSizeForAccessibilityContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility)
 
@@ -701,9 +701,9 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
 Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.
 #### Date and time vocalization
 The rendering isn't natural if the date or time data are imported text in a `label`.
-</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
-</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" />
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" />
 <pre><code class="objective-c">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
@@ -754,9 +754,9 @@ The rendering isn't natural if the date or time data are imported text in a `lab
 </code></pre>
 #### Numbers vocalization
 If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
-</br><img style="max-width: 475px; height: auto; " src="./images/iOSdev/DateHeureNombres_12.png" />
+</br><img alt="" style="max-width: 475px; height: auto; " src="./images/iOSdev/DateHeureNombres_12.png" />
 </br>As the previous chapter dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 <pre><code class="objective-c">
     NSNumber * numberValue = @54038921.7;
     
@@ -779,9 +779,9 @@ If a number is imported as is in a `label`text, the vocalization will be made on
 #### Phone numbers vocalization
 Once more, formatting data is an essential step for a phone number vocalization including the special cases of the "0" figures.
 </br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
+</br><img alt="default vocalization is not valid for the following phone number : 06.11.22.33.06" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
+</br><img alt="in this case the phone number is well vocalized" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -854,12 +854,12 @@ Once more, formatting data is an essential step for a phone number vocalization 
 ## Switch Control
 ### Description
 The accessibility Switch Control feature revolves around the point mode and the item mode.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControl.png" />
+</br><img alt="accessibility switch control screenshots" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControl.png" />
 </br>The element selection using the item mode works fine when the user interface isn't too complicated and uses native elements.
 </br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
 #### Customization of the item mode
 The Xcode InterfaceBuilder shows the structure used for the example hereunder :
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControlIB.png" />
+</br><img alt="xcode screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControlIB.png" />
 </br>The following steps represent the customization :
 - Creation of 2 groups {Test_1 + Test_2 ; Btn 5 + Btn 6} that must be selectable in the item mode.
 - Within the other elements, only Btn 1 et Btn 2 must be separately accessible.
@@ -980,7 +980,7 @@ class ViewController: UIViewController {
 </code></pre>
 
 </br>The visual rendering is exposed hereunder :
-</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
+</br><img alt="visual rendering screenshot" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
 </br>Once activated, the created groups allow to reach directly the elements which they contain.
 ### Link
 - [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
@@ -988,11 +988,11 @@ class ViewController: UIViewController {
 ## Continuous adjustable values
 ### Description
 Graphics like `picker`, `stepper` or `slider` have the ability to continuously change the value they provide.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br><img alt="picker, stepper and slider screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
 </br>It's hard to render what's happening when the changing isn't graphically or vocally notified.
 </br>The following methodology to resolve this problem for blind people using VoiceOver may be the same for these three graphics, that's why only the `stepper` will be handled.
 </br></br>Creating a `stepper` with a `label` to display its value provides the following rendering :
-</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br><img alt="stepper is vocalize like 3 differents objects" style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
 </br>The focus must change to :
 - Get each element that increases or decreases the value.
 - Know the value provided by the `label`.
@@ -1003,7 +1003,7 @@ Moreover, there is no real time notification dealing with the value changing.
 </br>**Group the `stepper`and the `label`** *(a StackView should do the job)* then put **`UIAccessibilityTraitAdjustable`** as a new trait for this new accessible group.
 </br>This `trait` is **MANDATORY** linked to the `accessibilityIncrement()` and `accessibilityDecrement()` methods that must be implemented to define the continous way of changing the value.
 </br></br>As a result, all the previous constraints are removed and a `hint` is natively provided by this `trait` to mention the proper way of using this object.
-</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_4.png" />
+</br><img alt="stepper is well vocalized" style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_4.png" />
 - To get this result, the container class {`stepper` + `label`} is first created to allow the delegation for the future value changing.
 
 <pre><code class="objective-c">
