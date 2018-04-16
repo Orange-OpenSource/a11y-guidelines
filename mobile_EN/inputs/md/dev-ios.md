@@ -655,8 +655,8 @@ Redefining the VoiceOver reading order is done using the **UIAccessibilityContai
 ### Example
 The best way to illustrate this feature is the keyboard whose keys order isn't necessary the appropriate one.
 </br>Here's the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br>Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :
-</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
+</br><span aria-hidden="true">Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :</span>
+</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;

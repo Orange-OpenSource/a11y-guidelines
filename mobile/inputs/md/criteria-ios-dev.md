@@ -667,8 +667,8 @@ Redéfinir l’ordre de lecture pour <span lang="en">VoiceOver</span> s’effect
 ### Exemple
 Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l'ordre natif proposé par <span lang="en">VoiceOver</span>.
 </br>Dans cet exemple, on veut l'ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br>On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :
-</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
+</br><span aria-hidden="true">On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :</span>
+</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
