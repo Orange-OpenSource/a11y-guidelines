@@ -770,7 +770,7 @@ Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas
 
 **Référence&nbsp;:** WCAG 3.2.1, 3.2.2
 
-## 25. Eviter les captcha
+## 25. Éviter les captcha
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
@@ -894,6 +894,48 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
 
 **Référence WCAG&nbsp;:** 2.4.5., 2.4.8
+
+## 28. Définir des zones sensibles de taille suffisante
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
+Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).
+
+## 29. Autoriser l'utilisation du zoom
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
+
+**Description&nbsp;:**  
+Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur les mobiles).
+
+## 30. Permettre d'annuler le déclenchement des interactions gestuelles
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors du développement.
+
+**Description&nbsp;:**  
+Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin de l'interaction de plus l'action n'est pas déclenchée si l'élément déclencheur perd le focus.
+
+## 31. Proposer une alternative aux gestuelles complexes
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
+De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...).
+
+## 32. Donner accès au contenu quelle que soit l'orientation de l'écran
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage).
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

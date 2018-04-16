@@ -306,7 +306,7 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 **Exemple invalide&nbsp;:**
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
 
-## 16. Eviter les captcha
+## 16. Éviter les captcha
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -323,6 +323,51 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 - un captcha  audio&nbsp;+ visuel,
 - des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique
 - …
+
+## 17. Définir des zones sensibles de taille suffisante
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
+Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).
+
+## 18. Autoriser l'utilisation du zoom
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
+
+**Description&nbsp;:**  
+Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur les mobiles).
+
+## 19. Permettre d'annuler le déclenchement des interactions gestuelles
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors du développement.
+
+**Description&nbsp;:**  
+Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin de l'interaction de plus l'action n'est pas déclenchée si l'élément déclencheur perd le focus.
+
+## 20. Proposer une alternative aux gestuelles complexes
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
+De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...).
+
+## 21. Donner accès au contenu quelle que soit l'orientation de l'écran
+
+**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**  
+L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage).
+
+
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
