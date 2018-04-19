@@ -36,7 +36,6 @@ La dyslexie est un trouble impactant l’accessibilité numérique.
 - des mots soulignés, en italique ou en majuscule
 - des fonds blancs éblouissants ou non uniformes
 - des éléments animés 
-- des champs de formulaire rigides…
 
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
