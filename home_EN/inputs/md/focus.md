@@ -1,5 +1,5 @@
 # Orange accessibility guidelines
-<h2 class="page-title">Types of Disabilities situations</h2>
+<h2 class="page-title">Types of Disabilities</h2>
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Disability situations"}]);
@@ -17,7 +17,7 @@
         <li>Deaf-blind people</li>
         <li>Difficulty understanding speech in noisy environments</li>
     </ul>
-**Examples of Aadapted solutions for video:** transcript (text document that contains the text spoken in a video), captions (text appearing on screen as subtitle or other part of a video).
+**Examples of adapted solutions for video:** transcript (text document that contains the text spoken in a video), captions (text appearing on screen as subtitle or other part of a video).
 </div>
 
 ### Visual impairments
