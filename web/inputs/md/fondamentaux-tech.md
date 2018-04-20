@@ -472,7 +472,7 @@ Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](./exemp
 ## 15. Permettre d'aérer le texte
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;:** lors du développement.
+**Quand&nbsp;:** lors de la conception et du développement.
 
 Si l'utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
 

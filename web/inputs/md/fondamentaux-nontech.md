@@ -156,7 +156,38 @@ Avec zoom du texte à 200%.
 Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.  
 ![capture d’écran avec zoom à 200% et texte tronqué](images/zoom-ko.png)  
 
-## 8. Permettre le contrôle des animations
+## 8. Permettre d'aérer le texte
+
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et du développement.
+
+Même si c'est pendant la phase de développement que l'on va s'assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l'espacement des paragraphes. Il est courramment admis qu'une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d'obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
+
+**Description :**  
+Si l'utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
+
+- La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.
+- L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.
+- L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.
+- L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.
+
+Pour info les critères cités précédemment reviennent à appliquer les styles CSS suivants au niveau de code : 
+<pre><code class="css">
+  * {
+      line-height: 1.5!important;
+      letter-spacing:.12em!important;
+      word-spacing: .16em !important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+</code></pre>
+
+Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant qui appliquera ces styles à la page courante de votre navigateur (bookmarklet à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a>
+
+
+## 9. Permettre le contrôle des animations
 **Cible&nbsp;:** les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d’attention ou de compréhension, les personnes épileptiques.  
 **Quand&nbsp;:** lors de la conception du service et lors de la conception graphique.
 
@@ -170,7 +201,7 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il reçoit le focus.  
 Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.
 
-## 9. Libellé des liens et des boutons
+## 10. Libellé des liens et des boutons
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.  
 **Quand&nbsp;:** lors de la conception du service et lors de la conception graphique.
 
@@ -185,7 +216,7 @@ Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir q
 «&nbsp;cliquez ici&nbsp;»  
 «&nbsp;en savoir plus&nbsp;»
 
-## 10. Permettre la navigation au clavier
+## 11. Permettre la navigation au clavier
 **Cible&nbsp;:** tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception du service et lors du développement.
 
@@ -198,7 +229,7 @@ Voir [la façon de naviguer au clavier](./methodes-outils-clavier.html) dans un 
 **Exemple&nbsp;:**  
 Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton «&nbsp;Vider la corbeille&nbsp;» ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.
 
-## 11. Rendre utilisables les formulaires
+## 12. Rendre utilisables les formulaires
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -222,7 +253,7 @@ Enfin les libellés des messages d’erreur doivent être explicites.
 **Exemple non-valide&nbsp;:**  
 ![capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides](images/formulaire-ko.png)
 
-## 12. Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres
+## 13. Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres
 **Cible&nbsp;:** les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
@@ -240,7 +271,7 @@ Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas jus
 
 ![Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse](images/dialog.png)
 
-## 13. Fournir des liens d’évitement
+## 14. Fournir des liens d’évitement
 
 **Cible&nbsp;:** utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.  
 
@@ -255,7 +286,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 
 ![capture d’écran du site orange.com](images/skiplink.png)
 
-## 14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
+## 15. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
@@ -285,7 +316,7 @@ Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure b
 
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
-## 15. Situer explicitement la page dans le site et fournir plusieurs moyens d'y accéder
+## 16. Situer explicitement la page dans le site et fournir plusieurs moyens d'y accéder
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
 
@@ -306,7 +337,7 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 **Exemple invalide&nbsp;:**
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
 
-## 16. Éviter les captcha
+## 17. Éviter les captcha
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -324,7 +355,7 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 - des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique
 - …
 
-## 17. Définir des zones sensibles de taille suffisante
+## 18. Définir des zones sensibles de taille suffisante
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -333,7 +364,7 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).
 
-## 18. Autoriser l'utilisation du zoom
+## 19. Autoriser l'utilisation du zoom
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du développement.
@@ -341,7 +372,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 **Description&nbsp;:**  
 Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur les mobiles).
 
-## 19. Permettre d'annuler le déclenchement des interactions gestuelles
+## 20. Permettre d'annuler le déclenchement des interactions gestuelles
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors du développement.
@@ -349,7 +380,7 @@ Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur le
 **Description&nbsp;:**  
 Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin de l'interaction de plus l'action n'est pas déclenchée si l'élément déclencheur perd le focus.
 
-## 20. Proposer une alternative aux gestuelles complexes
+## 21. Proposer une alternative aux gestuelles complexes
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -358,7 +389,7 @@ Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin
 Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
 De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...).
 
-## 21. Donner accès au contenu quelle que soit l'orientation de l'écran
+## 22. Donner accès au contenu quelle que soit l'orientation de l'écran
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
