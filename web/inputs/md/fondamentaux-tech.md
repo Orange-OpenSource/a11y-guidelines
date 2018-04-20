@@ -469,7 +469,40 @@ Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](./exemp
 
 **Référence&nbsp;:** WCAG 1.4.4
 
-## 15. Rendre les intitulés des liens et des boutons compréhensibles hors contexte
+## 15. Permettre d'aérer le texte
+
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
+
+Si l'utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
+
+- La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.
+- L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.
+- L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.
+- L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.
+
+Cela revient à appliquer les styles CSS suivants : 
+<pre><code class="css">
+  * {
+      line-height: 1.5!important;
+      letter-spacing:.12em!important;
+      word-spacing: .16em !important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+</code></pre>
+
+Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a>
+
+**Objectif utilisateur&nbsp;:**
+Permettre aux personnes déficientes visuelles et cognitives d'améliorer le confort de lecture.
+
+**Référence&nbsp;:** WCAG 1.4.12 
+
+
+## 16. Rendre les intitulés des liens et des boutons compréhensibles hors contexte
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -520,7 +553,7 @@ Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus 
 
 **Référence&nbsp;:** WCAG 2.4.9
 
-## 16. Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre
+## 17. Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -548,7 +581,7 @@ Pour une image-lien, un attribut `alt="consulter les conditions générales d’
  
 **Référence&nbsp;:** WCAG 3.2.2
 
-## 17. Permettre d’utiliser les principales fonctionnalités de l’application au clavier
+## 18. Permettre d’utiliser les principales fonctionnalités de l’application au clavier
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, motrices et en mobilité.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -573,7 +606,7 @@ Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n�
 
 **Référence&nbsp;:** WCAG 2.1.1
 
-## 18. Rendre le parcours du focus séquentiel et logique sans piège clavier
+## 19. Rendre le parcours du focus séquentiel et logique sans piège clavier
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.  
 **Quand&nbsp;:** lors du développement.
@@ -596,7 +629,7 @@ Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur
  
 **Référence&nbsp;:** WCAG 2.4.3, 2.1.2
 
-## 19. Rendre visible le focus en toute circonstance
+## 20. Rendre visible le focus en toute circonstance
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d’attention et en mobilité.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -639,7 +672,7 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 
 **Référence&nbsp;:** WCAG 2.4.7
 
-## 20. Fournir des liens d’évitement
+## 21. Fournir des liens d’évitement
 
 **Cible&nbsp;:** utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -663,7 +696,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 **Référence&nbsp;:** WCAG 2.4.1
 
 
-## 21. Permettre le contrôle des animations
+## 22. Permettre le contrôle des animations
 **Cible&nbsp;:** les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d’attention ou de compréhension, les personnes épileptiques.  
 **Quand&nbsp;:** lors de la conception du service et lors de la conception graphique.
 
@@ -680,7 +713,7 @@ Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directeme
 
 **Référence&nbsp;:** WCAG 2.2.2
 
-## 22. S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran
+## 23. S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:**lors du développement.
@@ -698,7 +731,7 @@ En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un 
 **Objectif utilisateur&nbsp;:**
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.
 
-## 23. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu
+## 24. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention.  
 **Quand&nbsp;:**lors du développement.
@@ -754,7 +787,7 @@ Il faudrait pousser le focus sur la zone de résultats à chaque recherche.
 
 **Référence&nbsp;:** WCAG 2.4.3
 
-## 24. S’assurer que l’utilisateur garde le contrôle lors des interactions
+## 25. S’assurer que l’utilisateur garde le contrôle lors des interactions
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -770,7 +803,7 @@ Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas
 
 **Référence&nbsp;:** WCAG 3.2.1, 3.2.2
 
-## 25. Éviter les captcha
+## 26. Éviter les captcha
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
@@ -784,7 +817,7 @@ Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la 
 
 Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...
 
-## 26. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
+## 27. Identifier et conserver la cohérence des regroupements et des différentes régions de la page
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.
 
 **Description&nbsp;:**
@@ -875,7 +908,7 @@ Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">la
 
 **Référence WCAG&nbsp;:** 3.2.3., 3.2.4  
 
-## 27. Fournir des accès multiples et une localisation
+## 28. Fournir des accès multiples et une localisation
 
 ** Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
 
@@ -895,7 +928,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 
 **Référence WCAG&nbsp;:** 2.4.5., 2.4.8
 
-## 28. Définir des zones sensibles de taille suffisante
+## 29. Définir des zones sensibles de taille suffisante
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -904,7 +937,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).
 
-## 29. Autoriser l'utilisation du zoom
+## 30. Autoriser l'utilisation du zoom
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du développement.
@@ -912,7 +945,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 **Description&nbsp;:**  
 Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur les mobiles).
 
-## 30. Permettre d'annuler le déclenchement des interactions gestuelles
+## 31. Permettre d'annuler le déclenchement des interactions gestuelles
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors du développement.
@@ -920,7 +953,7 @@ Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur le
 **Description&nbsp;:**  
 Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin de l'interaction de plus l'action n'est pas déclenchée si l'élément déclencheur perd le focus.
 
-## 31. Proposer une alternative aux gestuelles complexes
+## 32. Proposer une alternative aux gestuelles complexes
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -929,7 +962,7 @@ Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin
 Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
 De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...).
 
-## 32. Donner accès au contenu quelle que soit l'orientation de l'écran
+## 33. Donner accès au contenu quelle que soit l'orientation de l'écran
 
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
