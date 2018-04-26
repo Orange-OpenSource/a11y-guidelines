@@ -7,7 +7,8 @@
 	]);
     addSubMenu([
         {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html", "expanded": true}
+        {"label":"Pour le développement","url":"criteria-ios-dev.html", "expanded": true},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);	
 });</script>
 
@@ -130,7 +131,7 @@ L’attribut `accessibilityElement` est disponible via l’<i lang="en">interfac
 </br>Les deux autres attributs sont utilisables uniquement via le code.
 ### Exemple
 L'idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et jaune) pour appliquer les attributs définis précedémment.
-<img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" />
+<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" />
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -347,7 +348,7 @@ Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas d
 - **accessibilityActivationPoint**&nbsp;: le «&nbsp;point&nbsp;» d’activation d’un élément pour les outils d’accessibilité.
 </br>Par défaut, ce point est au centre de l’élément.
 ### Exemple
-<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
+<img style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
 <pre><code class="objective-c">
 float xVal;
 float yVal;
@@ -454,7 +455,7 @@ On peut envisager de grouper des éléments pour vocaliser l'ensemble formé en 
 </br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).
 ### Exemple
 Nous avons un 'label' et un 'switch control' que nous allons souhaitons regrouper et traiter d'un seul bloc.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -573,7 +574,7 @@ Tous les événements sont disponibles sur la <a href="https://developer.apple.c
 ### Description
 La gestion des polices dynamiques sous iOS est complexe.
 </br>Depuis iOS7, il est possible d’utiliser une <abbr>API</abbr> permettant de modifier dynamiquement la taille des textes d'une application à l’aide du paramétrage du téléphone.
-</br><img alt="capture d'écran, option police plus grande sur iPhone" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>Quelques points sont néanmoins essentiels pour la bonne utilisation de cette <abbr>API</abbr>&nbsp;:
  - Utiliser les polices système pour les textes de l’application afin d'éviter les mauvaises surprises même s'il est toutefois possible de définir ses propres polices dérivées de la classe `UIFont` surtout depuis l'arrivée de `UIFontMetrics` avec iOS11.
  <pre><code class="objective-c">
@@ -644,18 +645,18 @@ Tout comme la taille des textes est adaptable selon les réglages d'accessibilit
 </br></br>En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l'image à grossir au format `pdf` à la résolution x1 dans le catalogue `xcassets`.
 </br></br>2. Dans l'<span lang="en">Image Set</span> qui vient d'être créé, cocher la case `Preserve Vector Data` et spécifier `Single Scale` :
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
 </br></br>3. Si un <span lang="en">storyboard</span> est utilisé pour intégrer l'image, cocher `Adjusts Image Size` dans la partie <span lang="en">Image View</span>, sinon mettre à `true` la propriété `adjustsImageSizeForAccessibilityContentSizeCategory` de l'image si cette opération se fait de façon programmatique :
-</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
+</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
 </br></br>4. Si une **barre de tabulation** ou une **barre d'outils** est aussi à intégrer dans l'application, renouveler les 3 étapes précédentes pour chacune des images à utiliser en grossissement de l'onglet au milieu de l'écran puis associer l'image souhaitée aux différents éléments impactés :
-</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
+</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
 </br>**ATTENTION : s'assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.**
 ### Exemple
 De façon à pouvoir tester à la fois le grossissement des images et celui d'un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l'image du logo Orange.
 </br></br>Après modification du grossissement de texte dans les réglages (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), on revient dans l'application pour constater :
 - Une taille de l'image Orange nettement plus conséquente.
 - Au milieu de l'écran, l'affichage grossi de l'onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.
-</br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" />
+</br><img style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" />
 ### Lien
 - [`adjustsImageSizeForAccessibilityContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility)
  
@@ -667,8 +668,8 @@ Redéfinir l’ordre de lecture pour <span lang="en">VoiceOver</span> s’effect
 ### Exemple
 Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l'ordre natif proposé par <span lang="en">VoiceOver</span>.
 </br>Dans cet exemple, on veut l'ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br><span aria-hidden="true">On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :</span>
-</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
+</br>On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :
+</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -713,9 +714,9 @@ Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour leq
 La lecture des date, heure et nombres n'est pas compliquée mais peut très vite devenir un réel casse-tête avec <span lang="en">VoiceOver</span>&nbsp;.
 #### Lecture des dates et des heures
 Si on met directement sous forme de texte la date ou l'heure dans le `label`, on s'aperçoit rapidement que le rendu n'est pas naturel à l'écoute.
-</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.
-</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" />
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" />
 <pre><code class="objective-c">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
@@ -766,9 +767,9 @@ Si on met directement sous forme de texte la date ou l'heure dans le `label`, on
 </code></pre>
 #### Lecture des nombres
 En indiquant la valeur d'un nombre directement dans le texte d'un `label`, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.
-</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 </br>Comme pour les date et heure, il faut formater la donnée en entrée pour qu'elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu'elle représente.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" />
 <pre><code class="objective-c">
     NSNumber * numberValue = @54038921.7;
     
@@ -791,9 +792,9 @@ En indiquant la valeur d'un nombre directement dans le texte d'un `label`, la vo
 #### Lecture des numéros de téléphone
 La problématique liée à la vocalisation d'un numéro de téléphone est identique à celle des nombres puisqu'elle s'appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres "0".
 </br>L'exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n'importe quel type de format de numérotation.
-</br><img alt="par défaut la vocalisation avec voiceover du numéro de téléphone suivant n'est pas bonne : 06.11.22.33.06" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.
-</br><img alt="numéro de téléphone vocalisé correctement si le label contient le même numéro dont les paires de chiffres sont séparées par des virgules" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" />
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" />
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -870,12 +871,12 @@ La problématique liée à la vocalisation d'un numéro de téléphone est ident
 ## Contrôle de sélection
 ### Description
 L'utilisation du contrôle de sélection s'articule autour du mode point et du mode élément définis ci-dessous.
-</br><img alt="captures d'écran du mode point et mode élément du controle de sélection" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
 </br>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l'application n'est pas trop compliquée graphiquement.
 </br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l'ordre désiré.
 #### Personnalisation du mode élément
 La structure utilisée pour l'exemple est présentée ci-dessous grâce à l'<span lang="en">InterfaceBuilder</span> de Xcode :
-</br><img alt="capture d'écran d'interface builder" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
 </br>Afin de personnaliser la sélection de ces éléments, on souhaite :
 - Créer 2 groupes {Test_1 + Test_2 ; Btn 5 + Btn 6} sélectionnables en mode élément.
 - Avoir uniquement les éléments restants Btn 1 et Btn 2 accessibles séparément.
@@ -996,7 +997,7 @@ class ViewController: UIViewController {
 </code></pre>
 
 </br>Le rendu de ce code est visualisable ci-dessous :
-</br><img alt="capture d'écran rendu du code précédent" style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
+</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
 </br>Les groupes créés permettent d'accéder directement aux éléments qu'ils contiennent dès qu'ils sont activés.
 ### Lien
 - [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
@@ -1004,12 +1005,12 @@ class ViewController: UIViewController {
 ## Valeurs continûment ajustables
 ### Description
 Des éléments graphiques comme le `picker`, le `stepper` ou encore le `slider` permettent de changer de façon continue la valeur qu'ils proposent de modifier.
-</br><img alt="capture d'écran picker, stepper et slider" style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
 </br>Quand on ne voit pas la modification dynamique se faire ou qu'on n'en est pas informé vocalement, il devient très compliqué de pouvoir se rendre compte de ce qui se passe.
 </br>La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c'est pourquoi seul le cas du `stepper` sera traité.
 </br></br>L'implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
 </br>Si on crée un <span lang="en">stepper</span> auquel on ajoute un `label` pour afficher sa valeur, on obtient le résultat suivant :
-</br><img alt="le stepper est vu par voiceover comme trois éléments distincts" style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
 </br>À partir de là, on s'aperçoit que le focus doit être déplacé pour :
 - Atteindre chacun des deux éléments permettant d'augmenter ou de diminuer la valeur.
 - Connaître la valeur obtenue via le `label`.
@@ -1020,7 +1021,7 @@ De plus, il n'y a aucune indication de changement de la valeur en temps réel.
 </br>Il faut donc **regrouper le <span lang="en">stepper</span> et le `label`** *(à l'aide d'une <span lang="en">StackView</span> par exemple)* puis associer **`UIAccessibilityTraitAdjustable`** à ce nouveau groupe accessible.
 </br>Ce nouveau `trait` va permettre de modifier de façon continue la valeur de l'objet auquel il est associé en implémentant **OBLIGATOIREMENT** les méthodes `accessibilityIncrement()` et `accessibilityDecrement()`.
 </br></br>On élimine ainsi toutes les contraintes rencontrées initialement et on obtient, en plus, un `hint` lié à ce nouveau `trait` qui indique la manipulation nécessaire au bon fonctionnement.
-</br><img alt="le stepper est vocalisé correctement" style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" />
+</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" />
 - Pour aboutir à ce résultat, on définit tout d'abord une classe conteneur {<span lang="en">stepper</span> + `label`} qui va permettre la délégation pour la modification ultérieure de la valeur.
 
 <pre><code class="objective-c">
