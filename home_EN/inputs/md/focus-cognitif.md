@@ -12,36 +12,35 @@
 
 <span data-menuitem="focus"></span>
 
-**Cognitive disability** is the consequence of cognitive dysfunctions: attention or memory trouble, problems with coping with change, with language, with perceptive identification and gestures. Cognitive disability **does not imply intellectual deficiency**, but difficulties to muster capacities.
+**Cognitive disability** is the consequence of cognitive dysfunctions: difficulties with memory, problems coping with change, language, receptive identification and gestures. Cognitive disability **does not imply intellectual deficiency**, but difficulties to muster capacities.
 
 This should not be mistaken for mental or psychological handicap:
 
-- Mental handicap, which results from an intellectual disability: a limited capacity to learn and an intellectual development significantly lower than average that translates as more or less important difficulties to think, conceptualise, communicate, decide, etc.
-- Psychological handicap, which results from invalidating psychological trouble. Like cognitive handicap, psychological handicap does not imply intellectual deficiency. It is characterised by alternating mental states of calm and tension, and by difficulties to acquire or express psychosocial abilities, with attention deficits and difficulties to elaborate and follow a plan of action. It can be translated in anguish, cognitive crises (problems with memorisation, attention, organisation, anticipation, adaptation to a context) and in difficulties to relate to people and in communication.
+- Mental handicap, which results from an intellectual disability: a limited capacity to learn and an intellectual development significantly lower than average that is reflected in some difficulty thinking, conceptualizing, communicating, making decisions, etc.
+- Psychological handicap, which results from invalidating psychological trouble. Like cognitive handicap, psychological handicap does not imply intellectual deficiency. It is characterized by alternating mental states of calm and tension, and by difficulties to acquire or express psychosocial abilities, with attention deficits and difficulties to elaborate and follow a plan of action. It can be translated in anguish, cognitive crises (problems with memorization, attention, organization, anticipation, adaptation to a context) and in difficulties to relate to people and in communication.
 
-### Dys* troubles
+### Learning disabilities (“Dys”orders)
 
-Dys* troubles are lasting neurological troubles that affect a particular cognitive function like reading, gestures, computing… it is not an intellectual deficiency, but a different mode of reasoning.
+Learning disabilities are lasting neurologically-based processing problems. These problems can interfere with cognitive function such as reading, motor coordination, computing… it is not an intellectual deficiency, but a different mode of reasoning.
 
-Dys* troubles encompass several conditions:
+Learning disabilities encompass different types of problems:
 
 - Dyslexia: reading disorder
-- Dysorthographia: writing disorder
+- Dysorthograph: writing disorder
 - Dysphasia: language disorder
-- Dyscalculia: trouble with arithmetic and logic and mathematical reasoning
+- Dyscalculia: trouble with arithmetic, logic, and mathematical reasoning
 - Dyspraxia: coordination disorder
 
-Dyslexia impacts digital accessibility.
+Digital accessibility has also to take in account cognitive disabilities. 
 
-#### Examples of obstacles met by a dyslexic user
+#### Examples of barriers met by dyslexic users:
 
-- Pages overloaded with information
-- Non linear layout
+- Information overload
+- Column layout
 - Long blocks of text
-- A serif font
+- Serif font
 - Blinding white of non uniform backgrounds
 - Animated elements
-- Rigid form fields…
 
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
