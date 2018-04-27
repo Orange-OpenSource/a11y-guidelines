@@ -17,20 +17,20 @@
         <li>Personnes sourdes-aveugles</li>
         <li>Difficulté de perception de la parole dans un environnement bruyant</li>
     </ul>
-**Solutions adaptées&nbsp;:** ajout de transcrit (récit de la vidéo) ou de sous-titres
+**Solutions adaptées&nbsp;:** transcrition, sous-titres
 </div>
 
 ### Le handicap visuel
 
 <div class="axs-picto visuel">
     <ul>
-        <li>Personnes avec un petit reste visuel ou celles qui ont une vue incorrigible</li>
+        <li>Personnes malvoyantes</li>
         <li>Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)</li>
-        <li>Personnes sensibles à une luminosité accrue des couleurs</li>
-        <li>Personnes complètement aveugles</li>
+        <li>Personnes sensibles à une forte luminosité des couleurs</li>
+        <li>Personnes aveugles</li>
         <li>Personnes sourdes-aveugles</li>
     </ul>
-    **Solutions adaptées&nbsp;:** tablette Braille, synthèses vocales, personnalisation de l’affichage.
+    **Solutions adaptées&nbsp;:** tablette Braille, synthèse vocale, personnalisation de l’affichage (ajustement des couleurs).
 </div>
 
 ### Le handicap cognitif
@@ -39,31 +39,30 @@
         <li>Les troubles DYS</li>
         <li>Autres troubles affectant la lecture, la mémorisation, la concentration, la compréhension, la résolution des problèmes, le raisonnement et le langage.</li>
     </ul>
-**Solutions adaptées&nbsp;:** hiérarchisation et simplification de l’information, attention apportées à la mise en page.
+**Solutions adaptées&nbsp;:** hiérarchisation et simplification de l’information, mise en page linéaire, police sans serif (Arial, OpenDyslexic, AccessibleDfa), logiciels de dictée.  
+&nbsp;
 </div>
 
 ### Le handicap moteur et de préhension
 <div class="axs-picto physique">
     <ul>
-        <li>Troubles de la réalisation des gestes (dyspraxies)</li> 
-        <li>Dystrophies musculaires</li>
-        <li>Lésions rhumatismales</li>
-        <li>Un bras cassé</li>
+        <li>Difficultés de préhension et de contrôle des mouvements.</li>
+        <li>Difficultés pour réaliser des combinaisons de touches</li>
+        <li>Tremblements des mains</li>
+        <li>Personnes avec une seule main ou sans main</li>        
     </ul>
-** Solutions adaptées&nbsp;:** périphériques adaptés (souris, claviers…), outils de dictée
+** Solutions adaptées&nbsp;:** périphériques adaptés (souris ou clavier ergonomique, guide-doigts pour clavier, trackball, joystick, contacteur…), logiciels de dictée
 </div>
+&nbsp;
 
-### Le handicap matériel
-<div class="axs-picto materiel">
-    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées.  
-    L’accessibilité numérique apporte du confort pour tous&nbsp;:    
+<h2 class="page-title">L'accessibilité numérique</h2>
+
+<div class="axs-picto">
+    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées et apportent du confort pour tous; quelques cas ci-dessous:      
     <ul>
-        <li>Les utilisateurs de mobiles et smartphones</li>
-        <li>Les utilisateurs ayant un bas débit</li>
-        <li>Les seniors</li>
-        <li>Les environnements bruyants tels que open space, boutiques, accueil…</li>
+        <li>Les environnements bruyants tels que open space, boutiques, hall d'accueil…</li>
         <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)</li>
-        <li>Matériel non approprié (imprimante noir et blanc…)</li>
+        <li>Un matériel ou service inapproprié (imprimante noir et blanc, bas débit…)</li>
     </ul>
 </div>
 
