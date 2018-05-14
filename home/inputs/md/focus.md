@@ -17,7 +17,7 @@
         <li>Personnes sourdes-aveugles</li>
         <li>Difficulté de perception de la parole dans un environnement bruyant</li>
     </ul>
-**Solutions adaptées&nbsp;:** transcrition, sous-titres
+**Solutions adaptées&nbsp;:** transcrition, sous-titres.
 </div>
 
 ### Le handicap visuel
@@ -36,7 +36,7 @@
 ### Le handicap cognitif
 <div class="axs-picto cognitif">
     <ul>
-        <li>Les troubles DYS</li>
+        <li>Personnes avec des troubles DYS</li>
         <li>Autres troubles affectant la lecture, la mémorisation, la concentration, la compréhension, la résolution des problèmes, le raisonnement et le langage.</li>
     </ul>
 **Solutions adaptées&nbsp;:** hiérarchisation et simplification de l’information, mise en page linéaire, police sans serif (Arial, OpenDyslexic, AccessibleDfa), logiciels de dictée.  
@@ -47,9 +47,9 @@
 <div class="axs-picto physique">
     <ul>
         <li>Difficultés de préhension et de contrôle des mouvements.</li>
-        <li>Difficultés pour réaliser des combinaisons de touches</li>
-        <li>Tremblements des mains</li>
-        <li>Personnes avec une seule main ou sans main</li>        
+        <li>Personnes ayant des difficultés pour réaliser des combinaisons de touches</li>
+        <li>Personnes dont les mains tremblements</li>
+        <li>Personnes ne pouvant se servir de ses mains ou d'une main</li>        
     </ul>
 ** Solutions adaptées&nbsp;:** périphériques adaptés (souris ou clavier ergonomique, guide-doigts pour clavier, trackball, joystick, contacteur…), logiciels de dictée
 </div>
@@ -63,6 +63,7 @@
         <li>Les environnements bruyants tels que open space, boutiques, hall d'accueil…</li>
         <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)</li>
         <li>Un matériel ou service inapproprié (imprimante noir et blanc, bas débit…)</li>
+        <li>Les formulaires à renseigner : la navigation au clavier permet de remplir les formulaires sans utiliser la souris et apporte un gain de temps appréciable</li>
     </ul>
 </div>
 
