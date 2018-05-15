@@ -301,6 +301,10 @@ var Glossary = { // collection of all terms to be defined
     "base":"<span lang='en'>To Be Done</span>",
     "fr":"à faire"
   },
+  "TICS":{
+    "base":"<span lang='fr'>Technologies de l'Information et de la Communication</span>",
+    "fr":""
+  },
   "TTS":{
     "base":"<span lang='en'>Text To Speech</span>",
     "fr":"conversion texte vers parole"
