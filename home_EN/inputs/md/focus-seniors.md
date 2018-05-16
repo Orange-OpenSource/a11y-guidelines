@@ -6,7 +6,7 @@
         {"label":"Older people"}]);
     addSubMenu([
         {"label":"Cognitive disability","url":"focus-cognitif.html"},
-        {"label":"Les séniors","url":"focus-seniors.html"}
+        {"label":"Older people","url":"focus-seniors.html"}
     ]);
 });</script>
 
