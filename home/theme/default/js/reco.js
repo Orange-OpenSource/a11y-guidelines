@@ -191,6 +191,10 @@ var GlossaryTitle = {
   "en":"Glossary"
 };
 var Glossary = { // collection of all terms to be defined
+  "AIDES TECHNIQUES":{
+    "base":"<span lang='fr'>Une aide technique est un matériel ou logiciel utilisé par une personne en situation de handicap destiné à compenser, limiter ou neutraliser la déficience.</span>",
+    "fr":""
+  },
   "API":{
     "base":"<span lang='en'>Application Programming Interface</span>",
     "fr":"interface de programmation"
