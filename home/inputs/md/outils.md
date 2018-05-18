@@ -16,7 +16,7 @@ Ces aides ne fonctionnent que si les applications ou contenus ont été créés 
 ### La synthèse vocale
 La **synthèse vocale** est une voix qui lit les textes et images affichés à l’écran.  
 
-Autre terme utilisé : lecteur d’écran (note : le lecteur d’écran est en fait un logiciel qui récupère le texte présent sur l’écran. Le texte est ensuite  restitué vocalement ou en Braille).  
+Autre terme utilisé : lecteur d’écran (note : le lecteur d’écran est un logiciel qui récupère le texte présent sur l’écran. Le texte est ensuite  restitué vocalement ou en Braille).  
 Exemples : Jaws et NVDA sur PC Windows, TalkBack sur mobile Android, VoiceOver sur mobile Apple ou Mac.
 
 <img src="./images/audio.jpg" alt="" class="img-fluid">
