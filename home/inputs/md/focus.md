@@ -17,7 +17,7 @@
         <li>Personnes sourdes-aveugles</li>
         <li>Difficulté de perception de la parole dans un environnement bruyant</li>
     </ul>
-**Solutions adaptées&nbsp;:** transcrition, sous-titres.
+**Solutions adaptées&nbsp;:** transcription, sous-titres.
 </div>
 
 ### Le handicap visuel
@@ -48,8 +48,8 @@
     <ul>
         <li>Difficultés de préhension et de contrôle des mouvements.</li>
         <li>Personnes ayant des difficultés pour réaliser des combinaisons de touches</li>
-        <li>Personnes dont les mains tremblements</li>
-        <li>Personnes ne pouvant se servir de ses mains ou d'une main</li>        
+        <li>Personnes dont les mains tremblent</li>
+        <li>Personnes ne pouvant pas se servir d'une main ou de ses deux main(s)</li>        
     </ul>
 ** Solutions adaptées&nbsp;:** périphériques adaptés (souris ou clavier ergonomique, guide-doigts pour clavier, trackball, joystick, contacteur…), logiciels de dictée
 </div>
