@@ -28,6 +28,12 @@ Examples of testing:
 - [Text size enlargement](./methodes-outils-zoom.html): zoom guide.
 - [Navigating with screen reader](./methodes-outils-lecteur-ecran.html): screen readers commonly used.
 
+## User evaluation
+
+These tests are performed once the technical and functional tests have confirmed a good level of accessibility. Participants will use their usual environment and assistive technologies to realize the main tasks of the product or service to be tested. Focus on accessibility issues, these tests aim at raising usage problems and assessing the critical importance of remaining problems.  
+
+These tests are managed by accessibility experts.
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
