@@ -22,10 +22,10 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/jquery.validate.min.js"></script>
 
-      <script src="../main-script.js"></script>
+      <script src="../../../exemples/main-script.js"></script>
       <script src="script.js"></script>
       <script src="wgxpath.install.js"></script>
-      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -126,7 +126,7 @@
       <p>The functionality to automatically select the item by typing the first letters is not easy to implement. The following example uses <abbr title="XML Path Language">XPath</abbr>.</p>
       <p>The first thing to do is listen to the keyboard once the focus is on the list. Depending on the key, it performs an action (selecting an item, moving the selected item…).</p>
 
-      <pre><code>
+      <pre><code class="javascript">
     …
     // On keydown
     $("[role=listbox]").on("keydown", function (e) {            
@@ -151,7 +151,7 @@
 
       <p>Other keys that are not used to perform an action on the list, i.e. letters and digits, are saved to create the search string. When the user does not type anything for a few milliseconds (500 in our example), we look for a list item that begins with the typed string and select it.</p>
 
-      <pre><code>
+      <pre><code class="javascript">
     …
     case 65: // Ctrl + A
         if (e.ctrlKey) {
@@ -191,7 +191,7 @@
     </main>
     
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

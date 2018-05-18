@@ -59,7 +59,7 @@
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial</a></li>                                    
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                    
                   <li class="nav-item language hidden-sm-up">
                     <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
                   </li>
@@ -109,30 +109,37 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="methods-and-testing-tools">Methods and testing tools</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Test tools"}]);
+    setBreadcrumb([{"label":"Methods and testing tools"}]);
 });</script>
 
-<p>You will find here articles describing useful methods and tools to test the accessibility of your web pages.</p>
-<h2 id="manual-test-and-assistive-technology">Manual test and assistive technology</h2>
-<p><a href="./methodes-outils-clavier.html">Keyboard navigation</a>
-List of the main shortcuts to navigate with the keyboard in a web page.</p>
-<p><a href="./methodes-outils-zoom.html">Text size enlargement</a>
-Zoom guide.</p>
-<p><a href="./methodes-outils-lecteur-ecran.html">Navigating with a screen reader</a>
-The screen readers commonly used.</p>
-<h2 id="automated-testing-tools">Automated testing tools</h2>
-<p><a href="./methodes-outils-extensions.html">Browser extensions</a>
-Some extensions that allow you to perform automated tests on a page.</p>
-<h2 id="test-criteria">Test criteria</h2>
-<p><a href="./methodes-outils-contrastes.html">Measure the colour contrast level</a>
-Introducing the Colour Contrast Analyser tool.</p>
-<p><a href="./methodes-outils-liste-titres.html">Accessing page headers (<code>H1</code> to <code>H6</code> tags)</a>
-Different ways to access the list of page headers.</p>
-<p>&nbsp;
+<p>When developing or redesigning sites or applications, accessibility must be evaluated early and throughout the project cycle process to identify accessibility problems early, when it is easier to address them.  </p>
+<p>Digital accessibility evaluation within Orange is performed with 3 types of testing:</p>
+<ul>
+<li><strong>Technical evaluation</strong> consists in checking code and colors contrast in order to verify compliance against the criteria of the international standard <abbr>WCAG</abbr> 2.1. level AA.</li>
+<li><strong>Functional evaluation</strong> verifies the application works with <abbr>assistive technologies</abbr> and there are no blocking defects.</li>
+<li><strong>User evaluation</strong> evaluates the application by participants with disabilities watching for potential barriers related to accessibility when they complete tasks using their assistive technologies.</li>
+</ul>
+<h2 id="technical-evaluation">Technical evaluation</h2>
+<p>There are different tools for automatic accessibility testing that help ensure that the web content meets the required standards. However most criteria require human evaluation. These tests are performed within project teams, though manual testing is mostly realized by accessibility experts.</p>
+<p>Examples of tools:</p>
+<ul>
+<li><a href="./methodes-outils-extensions.html">Perform automated tests on a page</a>: browser extensions.</li>
+<li><a href="./methodes-outils-contrastes.html">Measure the colour contrast level</a>: introducing the &quot;Colour Contrast Analyser&quot; tool.</li>
+</ul>
+<h2 id="functional-evaluation">Functional evaluation</h2>
+<p>These tests are usually performed by accessibility experts but can also be realized by projects actors trained to assistive technologies.  </p>
+<p>Examples of testing:</p>
+<ul>
+<li><a href="./methodes-outils-clavier.html">Keyboard navigation</a>: main shorcuts to navigate web pages with keyboard alone.</li>
+<li><a href="./methodes-outils-zoom.html">Text size enlargement</a>: zoom guide.</li>
+<li><a href="./methodes-outils-lecteur-ecran.html">Navigating with screen reader</a>: screen readers commonly used.</li>
+</ul>
+<h2 id="user-evaluation">User evaluation</h2>
+<p>These tests are performed once the technical and functional tests have confirmed a good level of accessibility. Participants will use their usual environment and assistive technologies to realize the main tasks of the product or service to be tested. Focus on accessibility issues, these tests aim at raising usage problems and assessing the critical importance of remaining problems.  </p>
+<p>These tests are managed by accessibility experts.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>
@@ -143,6 +150,6 @@ Different ways to access the list of page headers.</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
 </body>
 </html>

@@ -68,11 +68,7 @@ $(document).ready( function () {
   });
 
   // Mise en forme des exemples de code
-  if (typeof hljs !== "undefined" && hljs !== null) {
-    $('pre code').each(function(i, el) {
-      return hljs.highlightBlock(el);
-    });
-  }
+  hljs.initHighlightingOnLoad();
 
   // Ajout d'ancres sur les titres
   $("h1, h2" ).wrapInner(function () {
@@ -195,6 +191,14 @@ var GlossaryTitle = {
   "en":"Glossary"
 };
 var Glossary = { // collection of all terms to be defined
+  "AIDES TECHNIQUES":{
+    "base":"<span lang='fr'>Une aide technique est un matériel ou logiciel utilisé par une personne en situation de handicap destiné à compenser, limiter ou neutraliser la déficience.</span>",
+    "fr":""
+  },
+  "ASSISTIVE TECHNOLOGIES":{
+    "base":"<span lang='en'>Assistive technologies are any product or software that is used to increase, maintain, or improve the functional capabilities of people with disabilities. Ergonomic keyboards, screen readers, magnifier and switch devices are examples.</span>",
+    "fr":""
+  },
   "API":{
     "base":"<span lang='en'>Application Programming Interface</span>",
     "fr":"interface de programmation"
@@ -304,6 +308,10 @@ var Glossary = { // collection of all terms to be defined
   "TBD":{
     "base":"<span lang='en'>To Be Done</span>",
     "fr":"à faire"
+  },
+  "TICS":{
+    "base":"<span lang='fr'>Technologies de l'Information et de la Communication</span>",
+    "fr":""
   },
   "TTS":{
     "base":"<span lang='en'>Text To Speech</span>",

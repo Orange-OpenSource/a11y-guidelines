@@ -59,7 +59,7 @@
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial</a></li>                                    
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                    
                   <li class="nav-item language hidden-sm-up">
                     <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
                   </li>
@@ -159,11 +159,14 @@ Just like in a Word document, it is possible to use the table of contents only i
 (Heading 3) Check eligibility
 </code></pre><p><strong>Don’t: </strong>
 Page with a break in the heading hierarchy h2 → h4:</p>
-<pre><code>&lt;h1&gt;Home – Orange&lt;/h1&gt;
+<pre><code class="html">
+&lt;h1&gt;Home – Orange&lt;/h1&gt;
 &lt;h2&gt;News&lt;/h2&gt;
 &lt;h2&gt;Fiber broadband is coming!&lt;/h2&gt;
 &lt;h4&gt;Check eligibility&lt;/h4&gt;
-</code></pre><p><strong>Tool :</strong><br><a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a> extension, available for <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> and <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, extract and display page titles for the current page.</p>
+</code></pre>
+
+<p><strong>Tool :</strong><br><a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a> extension, available for <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> and <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, extract and display page titles for the current page.</p>
 <p><strong>Reference:</strong> <abbr>WCAG</abbr> 1.3.1</p>
 <h2 id="3-provide-enough-contrast-between-text-and-background">3. Provide enough contrast between text and background</h2>
 <p><strong>Target: </strong> everyone, especially the mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong> as of design and during development.</p>
@@ -402,9 +405,12 @@ For example, in the image below, the two “next” links are not explicit enoug
 <p><img src="./images/liens-valider.png" alt="screenshot showing two valid links that should be clarified"></p>
 <p>In this case, add an <a href="./exemples/masquage/index.html">accessible hidden content</a> using <code>span</code> to complete the link label. This will not be displayed on the screen, but will be vocalized by assistive technologies.</p>
 <p><strong>Example:</strong>  </p>
-<pre><code>&lt;a href=&quot;…&quot;&gt;next&lt;span class=&quot;accessible-hidden-content&quot;&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
-&lt;a href=&quot;…&quot;&gt;next&lt;span class=&quot;accessible-hidden-content&quot;&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
-</code></pre><p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label.
+<pre><code class="html">
+&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+
+<p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label.
 In addition to these solutions, we could also use <strong> a <code>title</code> attribute </strong> to display a “confirm to pay in installments” tooltip when the mouse is over the link.</p>
 <p><strong>Checklist: </strong></p>
 <p>Ensure that links, out of context, give good information about the triggered action or destination.
@@ -424,7 +430,7 @@ If it is not possible, use an icon (image with <code>alt</code> attribute) indic
 <p><strong>Example: </strong>  </p>
 <p>Example of an icon that indicates the opening of a new window.<br><img src="./images/nouvelle-fenetre.png" alt="screenshot of a link with an icon indicating the opening of a new window">  </p>
 <p><strong>Checklist: </strong></p>
-<p>For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./examples/hiding/index.html">accessible hidden content</a>).</p>
+<p>For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">accessible hidden content</a>).</p>
 <p><strong>Users’ goal: </strong></p>
 <p>Avoid the unexpected opening of a window, because this can disturb, disrupt, or confuse the user. In particular for persons using mobile browsers, using speech synthesis or cognitively impaired.</p>
 <p><strong>Do:</strong><br>For any external link and opening a new window, the label could be: “Go to the orange.com site (new window)”, for a picture-link the <code>alt</code> attribute could be: “consult the <abbr>EULA</abbr> (new window)”.    </p>
@@ -555,6 +561,6 @@ There are several solutions to warn the user in case of appearing/disappearing o
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
 </body>
 </html>

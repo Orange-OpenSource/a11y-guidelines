@@ -350,7 +350,14 @@ documentTitles["word.html#17-exporter-le-document-au-format-abbrpdfabbr"] = "17.
 index.add({
     url: "word.html#17-exporter-le-document-au-format-abbrpdfabbr",
     title: "17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d’aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   À vérifier la première fois&amp;nbsp;: dans les options d’export, la case à cocher «&amp;nbsp;Balises de structure de document pour l’accessibilité&amp;nbsp;» doit être cochée.  À noter qu’avec Word pour Office 2010, les documents &lt;abbr&gt;PDF&lt;/abbr&gt; générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.  "
+    body: "### 17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d’aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   À vérifier la première fois&amp;nbsp;: dans les options d’export, la case à cocher «&amp;nbsp;Balises de structure de document pour l’accessibilité&amp;nbsp;» doit être cochée.  À noter qu’avec Word pour Office 2010, les documents &lt;abbr&gt;PDF&lt;/abbr&gt; générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.   "
+});
+
+documentTitles["word.html#18-inserer-une-table-des-matieres"] = "18. Insérer une table des matières";
+index.add({
+    url: "word.html#18-inserer-une-table-des-matieres",
+    title: "18. Insérer une table des matières",    
+    body: "### 18. Insérer une table des matières  Pour tout document long (&gt;2 pages), penser à insérer une table des matière générée automatiquement, dans le menu&amp;nbsp;: Références&amp;nbsp;&gt; Table des matières. Cela permet à tous de se repérer plus facilement et d'aller rapidement au contenu que l'on souhaite lire.  À noter qu'il faut mettre à jour cette table des matières dès qu'on change la structure du contenu, donc préférer générer la table des matières en fin de rédaction du contenu.  "
 });
 
 documentTitles["word.html#ressources-externes"] = "Ressources externes";
@@ -529,7 +536,7 @@ documentTitles["pushmail.html#fournir-des-marges-homogenes"] = "Fournir des marg
 index.add({
     url: "pushmail.html#fournir-des-marges-homogenes",
     title: "Fournir des marges homogènes",    
-    body: "### Fournir des marges homogènes Pour s'assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques `hx`, `p` et les listes `ul`, `ol` doivent avoir une marge nulle fixée en &lt;abbr&gt;CSS&lt;/abbr&gt; (`style=\&quot;margin:0\&quot;`). Pour les titres `hx`, on ajoute en plus la propriété &lt;abbr&gt;CSS&lt;/abbr&gt; spécifique `mso-line-height-rule:exactly` pour que dans Outlook la hauteur de ligne soit fixe et cohérente.  ``` &lt;h1 style=\&quot;margin:0; mso-line-height-rule:exactly;\&quot;&gt;Titre&lt;/h1&gt;   &lt;p style=\&quot;margin:0;\&quot;&gt;Paragraphe&lt;/p&gt; ```  "
+    body: "### Fournir des marges homogènes Pour s'assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques `hx`, `p` et les listes `ul`, `ol` doivent avoir une marge nulle fixée en &lt;abbr&gt;CSS&lt;/abbr&gt; (`style=\&quot;margin:0\&quot;`). Pour les titres `hx`, on ajoute en plus la propriété &lt;abbr&gt;CSS&lt;/abbr&gt; spécifique `mso-line-height-rule:exactly` pour que dans Outlook la hauteur de ligne soit fixe et cohérente.  &lt;pre&gt;&lt;code class=\&quot;html\&quot;&gt; &lt;h1 style=\&quot;margin:0; mso-line-height-rule:exactly;\&quot;&gt;Titre&lt;/h1&gt;   &lt;p style=\&quot;margin:0;\&quot;&gt;Paragraphe&lt;/p&gt; &lt;/code&gt;&lt;/pre&gt;  "
 });
 
 documentTitles["pushmail.html#rendre-accessibles-les-tableaux"] = "Rendre accessibles les tableaux";

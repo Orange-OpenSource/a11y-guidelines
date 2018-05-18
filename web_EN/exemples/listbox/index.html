@@ -22,9 +22,9 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/jquery.validate.min.js"></script>
 
-      <script src="../main-script.js"></script>
+      <script src="../../../exemples/main-script.js"></script>
       <script src="script.js"></script>
-      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,7 +46,7 @@
       <h3><abbr title="Hypertext Markup Language">HTML</abbr> code</h3>
       <p>To create a listbox, just apply the role <code>listbox</code> to a parent container. Then apply the <code>option</code> role to the list items. We must make it focusable for users who navigate using the keyboard (adding the <code>tabindex="0"</code> attribute) or adding the <code>aria-label</code> or <code>aria-labelledby</code> label for people using a screen reader. Finally, we will also add the <code>tabindex="-1"</code> attribute to the options so that they can receive the focus using javascript.</p>
       
-      <pre><code>
+      <pre><code class="html">
     &lt;ul role="listbox" tabindex="0" aria-label="folder list"&gt;
         &lt;li tabindex="-1" role="option"&gt;Inbox (4) &lt;span class="sr-only"&gt;unread messages&lt;/span&gt;&lt;/li&gt;
         &lt;li tabindex="-1" role="option"&gt;Sent&lt;/li&gt;
@@ -62,7 +62,7 @@
       <p>When taking the focus, if no item is selected, it should automatically select the first item.
       If an item is already selected when the listbox receives the focus, it must move the focus to it.</p>            
       
-      <pre><code>
+      <pre><code class="javascript">
        $("[role=listbox]").on("focus", function () {
            // If no selected element, select the first by default
            if (!$(this).find("[aria-selected=true]").length) {               
@@ -79,7 +79,7 @@
           <li><kbd>Down</kbd> arrow to select the next item</li>
       </ul>
       
-      <pre><code>
+      <pre><code class="javascript">
     $("[role=listbox]").on("keydown", function (e) {            
         var currentItem = $(this).find("[aria-selected=true]");          
         switch (e.keyCode) {
@@ -102,7 +102,7 @@
       </code></pre>
           
       <p>Finally, we have to handle the mouse. When clicked, it sets the attribute <code>aria-selected</code>.</p>
-      <pre><code>
+      <pre><code class="javascript">
     $("[role=option]").on("mousedown", function (e) {
         $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
         $(this).attr("aria-selected", "true");
@@ -112,7 +112,7 @@
       
       <p>We customize the mouse pointer when the mouse is over an item.<p>
       
-      <pre><code>
+      <pre><code class="css">
     [role=option] {
         cursor: pointer;
     }
@@ -143,7 +143,7 @@
       <p>When the focus is positioned on a list item, the <kbd>Shift+Tab</kbd> key combination brings up the focus to the first focusable element, in this case it is the <code>listbox</code> element. But as soon as the <code>listbox</code> receives the focus, it automatically moves the focus on the selected item.</p>   
       <p>To correct the problem, simply make listbox unfocusable once one of the list item has got the focus.</p>
       
-      <pre><code>
+      <pre><code class="javascript">
        $("[role=option]").on("focus", function (e) {
            $(this).parent().attr("tabindex", "-1");
        });
@@ -179,14 +179,14 @@
      <h2>Links</h2>
      More information on <abbr>ARIA</abbr> and listbox:
      <ul>
-        <li><a href="http://w3c.github.io/aria/practices/aria-practices.html#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a></li>
-        <li><a href="https://www.w3.org/TR/wai-aria/roles#listbox">The listbox role model</a></li>
+        <li><a href="http://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a></li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles">The listbox role model</a></li>
      </ul>
      
     </main>
         
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

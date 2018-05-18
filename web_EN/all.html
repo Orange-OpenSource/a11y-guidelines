@@ -59,7 +59,7 @@
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial</a></li>                                    
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                    
                   <li class="nav-item language hidden-sm-up">
                     <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
                   </li>
@@ -284,11 +284,14 @@ Just like in a Word document, it is possible to use the table of contents only i
 (Heading 3) Check eligibility
 </code></pre><p><strong>Don’t: </strong>
 Page with a break in the heading hierarchy h2 → h4:</p>
-<pre><code>&lt;h1&gt;Home – Orange&lt;/h1&gt;
+<pre><code class="html">
+&lt;h1&gt;Home – Orange&lt;/h1&gt;
 &lt;h2&gt;News&lt;/h2&gt;
 &lt;h2&gt;Fiber broadband is coming!&lt;/h2&gt;
 &lt;h4&gt;Check eligibility&lt;/h4&gt;
-</code></pre><p><strong>Tool :</strong><br><a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a> extension, available for <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> and <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, extract and display page titles for the current page.</p>
+</code></pre>
+
+<p><strong>Tool :</strong><br><a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a> extension, available for <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> and <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, extract and display page titles for the current page.</p>
 <p><strong>Reference:</strong> <abbr>WCAG</abbr> 1.3.1</p>
 <h2 id="3-provide-enough-contrast-between-text-and-background">3. Provide enough contrast between text and background</h2>
 <p><strong>Target: </strong> everyone, especially the mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong> as of design and during development.</p>
@@ -527,9 +530,12 @@ For example, in the image below, the two “next” links are not explicit enoug
 <p><img src="./images/liens-valider.png" alt="screenshot showing two valid links that should be clarified"></p>
 <p>In this case, add an <a href="./exemples/masquage/index.html">accessible hidden content</a> using <code>span</code> to complete the link label. This will not be displayed on the screen, but will be vocalized by assistive technologies.</p>
 <p><strong>Example:</strong>  </p>
-<pre><code>&lt;a href=&quot;…&quot;&gt;next&lt;span class=&quot;accessible-hidden-content&quot;&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
-&lt;a href=&quot;…&quot;&gt;next&lt;span class=&quot;accessible-hidden-content&quot;&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
-</code></pre><p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label.
+<pre><code class="html">
+&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+
+<p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label.
 In addition to these solutions, we could also use <strong> a <code>title</code> attribute </strong> to display a “confirm to pay in installments” tooltip when the mouse is over the link.</p>
 <p><strong>Checklist: </strong></p>
 <p>Ensure that links, out of context, give good information about the triggered action or destination.
@@ -549,7 +555,7 @@ If it is not possible, use an icon (image with <code>alt</code> attribute) indic
 <p><strong>Example: </strong>  </p>
 <p>Example of an icon that indicates the opening of a new window.<br><img src="./images/nouvelle-fenetre.png" alt="screenshot of a link with an icon indicating the opening of a new window">  </p>
 <p><strong>Checklist: </strong></p>
-<p>For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./examples/hiding/index.html">accessible hidden content</a>).</p>
+<p>For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">accessible hidden content</a>).</p>
 <p><strong>Users’ goal: </strong></p>
 <p>Avoid the unexpected opening of a window, because this can disturb, disrupt, or confuse the user. In particular for persons using mobile browsers, using speech synthesis or cognitively impaired.</p>
 <p><strong>Do:</strong><br>For any external link and opening a new window, the label could be: “Go to the orange.com site (new window)”, for a picture-link the <code>alt</code> attribute could be: “consult the <abbr>EULA</abbr> (new window)”.    </p>
@@ -837,7 +843,7 @@ To make them appear, move the focus on the top of the page by clicking on your b
 <h2 id="-abbr-rgaa-abbr-"><abbr>RGAA</abbr></h2>
 <p>The <abbr>RGAA</abbr> is the French government’s <a href="http://references.modernisation.gouv.fr/referentiel/">General Accessibility Reference for Administrations (in French)</a>. It is meant to provide a way to check compliance against <abbr>WCAG</abbr> 2.0.
 If your are familiar with this reference, you can use it to test your site.</p>
-<p>An <a href="http://disic.github.io/RGAA_referentiel_en/RGAA3.0_Criteria_English_version_v1.html">English translation</a> is available for informational purposes only. </p>
+<p>An <a href="https://disic.github.io/rgaa_referentiel_en/introduction-RGAA.html">English translation</a> is available for informational purposes only. </p>
 <h2 id="accede-web-references">Accede-web references</h2>
 <p>The <a href="http://wiki.accede-web.com/en/">Accede-web</a> site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities: </p>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
@@ -886,7 +892,6 @@ If your are familiar with this reference, you can use it to test your site.</p>
 <h2 id="webography">Webography</h2>
 <ul>
 <li>W3C:<ul>
-<li><a href="http://www.w3.org/TR/wai-aria/introduction">Introduction to <abbr>ARIA</abbr></a></li>
 <li><a href="http://www.w3.org/TR/wai-aria/"><abbr>ARIA</abbr> specification</a></li>
 <li><a href="http://www.w3.org/TR/wai-aria-practices/"><abbr>ARIA</abbr> implementation</a> (be careful as it’s a “working draft”)</li>
 <li><a href="http://www.w3.org/TR/aria-in-html/">Use <abbr>ARIA</abbr> HTML (5)</a> (be careful as it’s a “working draft”)</li>
@@ -901,30 +906,37 @@ If your are familiar with this reference, you can use it to test your site.</p>
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="methods-and-testing-tools">Methods and testing tools</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Test tools"}]);
+    setBreadcrumb([{"label":"Methods and testing tools"}]);
 });</script>
 
-<p>You will find here articles describing useful methods and tools to test the accessibility of your web pages.</p>
-<h2 id="manual-test-and-assistive-technology">Manual test and assistive technology</h2>
-<p><a href="./methodes-outils-clavier.html">Keyboard navigation</a>
-List of the main shortcuts to navigate with the keyboard in a web page.</p>
-<p><a href="./methodes-outils-zoom.html">Text size enlargement</a>
-Zoom guide.</p>
-<p><a href="./methodes-outils-lecteur-ecran.html">Navigating with a screen reader</a>
-The screen readers commonly used.</p>
-<h2 id="automated-testing-tools">Automated testing tools</h2>
-<p><a href="./methodes-outils-extensions.html">Browser extensions</a>
-Some extensions that allow you to perform automated tests on a page.</p>
-<h2 id="test-criteria">Test criteria</h2>
-<p><a href="./methodes-outils-contrastes.html">Measure the colour contrast level</a>
-Introducing the Colour Contrast Analyser tool.</p>
-<p><a href="./methodes-outils-liste-titres.html">Accessing page headers (<code>H1</code> to <code>H6</code> tags)</a>
-Different ways to access the list of page headers.</p>
-<p>&nbsp;
+<p>When developing or redesigning sites or applications, accessibility must be evaluated early and throughout the project cycle process to identify accessibility problems early, when it is easier to address them.  </p>
+<p>Digital accessibility evaluation within Orange is performed with 3 types of testing:</p>
+<ul>
+<li><strong>Technical evaluation</strong> consists in checking code and colors contrast in order to verify compliance against the criteria of the international standard <abbr>WCAG</abbr> 2.1. level AA.</li>
+<li><strong>Functional evaluation</strong> verifies the application works with <abbr>assistive technologies</abbr> and there are no blocking defects.</li>
+<li><strong>User evaluation</strong> evaluates the application by participants with disabilities watching for potential barriers related to accessibility when they complete tasks using their assistive technologies.</li>
+</ul>
+<h2 id="technical-evaluation">Technical evaluation</h2>
+<p>There are different tools for automatic accessibility testing that help ensure that the web content meets the required standards. However most criteria require human evaluation. These tests are performed within project teams, though manual testing is mostly realized by accessibility experts.</p>
+<p>Examples of tools:</p>
+<ul>
+<li><a href="./methodes-outils-extensions.html">Perform automated tests on a page</a>: browser extensions.</li>
+<li><a href="./methodes-outils-contrastes.html">Measure the colour contrast level</a>: introducing the &quot;Colour Contrast Analyser&quot; tool.</li>
+</ul>
+<h2 id="functional-evaluation">Functional evaluation</h2>
+<p>These tests are usually performed by accessibility experts but can also be realized by projects actors trained to assistive technologies.  </p>
+<p>Examples of testing:</p>
+<ul>
+<li><a href="./methodes-outils-clavier.html">Keyboard navigation</a>: main shorcuts to navigate web pages with keyboard alone.</li>
+<li><a href="./methodes-outils-zoom.html">Text size enlargement</a>: zoom guide.</li>
+<li><a href="./methodes-outils-lecteur-ecran.html">Navigating with screen reader</a>: screen readers commonly used.</li>
+</ul>
+<h2 id="user-evaluation">User evaluation</h2>
+<p>These tests are performed once the technical and functional tests have confirmed a good level of accessibility. Participants will use their usual environment and assistive technologies to realize the main tasks of the product or service to be tested. Focus on accessibility issues, these tests aim at raising usage problems and assessing the critical importance of remaining problems.  </p>
+<p>These tests are managed by accessibility experts.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="orange-open-source-tools">Orange Open source tools</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Orange Open source tools"}]);
@@ -1159,7 +1171,7 @@ To fix display issues when the zoom is set to 200%, it is not necessary to remov
 <p><strong> Example with 200% zoom and using relative length units(<code>rem</code>)</strong><br>The height of the elements containing the text has been set with a relative unit which varies depending on the text size (<code>rem</code>). The elements become larger, the text remains readable.</p>
 <p><img src="images/zoom-ok.png" alt="screenshot of a page with 100% zoom"></p>
 <p>&nbsp;
-More information in the <strong>examples</strong> section: <a href="examples/zoom/index.html">handling zoom, increasing the text size</a>.
+More information in the <strong>examples</strong> section: <a href="exemples/zoom/index.html">handling zoom, increasing the text size</a>.
 &nbsp; </p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -1294,6 +1306,6 @@ More information in the <strong>examples</strong> section: <a href="examples/zoo
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
 </body>
 </html>

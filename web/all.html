@@ -304,17 +304,21 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 </ul>
 <p><strong>Exemple valide&nbsp;:</strong>   </p>
 <p>Un titrage de page cohérent et pertinent&nbsp;:</p>
-<pre><code class="lang-html">&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
+<pre><code class="html">
+&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
     &lt;h2&gt;Les actualités&lt;/h2&gt;
-    &lt;h2&gt;La fibre arrive&amp;nbsp;!&lt;/h2&gt;
-        &lt;h3&gt;Êtes-vous éligible&amp;nbsp;?&lt;/h3&gt;
+    &lt;h2&gt;La fibre arrive&nbsp;!&lt;/h2&gt;
+        &lt;h3&gt;Êtes-vous éligible&nbsp;?&lt;/h3&gt;
 </code></pre>
+
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Un titrage de page avec un saut de niveau h2 → h4&nbsp;:</p>
-<pre><code class="lang-html">&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
+<pre><code class="html">
+&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
     &lt;h2&gt;Les actualités&lt;/h2&gt;
-    &lt;h2&gt;La fibre arrive&amp;nbsp;!&lt;/h2&gt;
-        &lt;h4&gt;Êtes-vous éligible&amp;nbsp;?&lt;/h4&gt;
+    &lt;h2&gt;La fibre arrive&nbsp;!&lt;/h2&gt;
+        &lt;h4&gt;Êtes-vous éligible&nbsp;?&lt;/h4&gt;
 </code></pre>
+
 <p><strong>Outil :</strong><br>L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>, disponible pour <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> et <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, permet d’extraire les titres et de les visualiser sous forme de plan de document.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.3.1</p>
 <h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
@@ -551,9 +555,11 @@ Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
 <p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
 <p><strong>Exemple&nbsp;:</strong>  </p>
-<pre><code class="lang-html">&lt;a href=&quot;…&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
-&lt;a href=&quot;…&quot;&gt;valider&lt;span class=&quot;masquage-accessible&quot;&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
+<pre><code class="html">
+&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
+
 <p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé.<br>En complément de ces solutions, on pourrait ici également utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.</p>
 <p><strong>À vérifier&nbsp;:</strong>
 S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:</p>
@@ -623,7 +629,8 @@ Permettre la navigation logique sans piège au clavier dans les pages de l’app
 Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).</p>
 <p>Lorsqu’un effet est visible sur un élément au survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
 <p>Il est possible, avec du code Javascript, de n’afficher l’<i lang="en">outline</i> que lors d’une navigation au clavier (c’est à dire de ne pas afficher l’<i lang="en">outline</i> lors d’un clic souris, qui active également l’état <code>:focus</code>)&nbsp;:</p>
-<pre><code class="lang-javascript">var head = document.head || document.getElementsByTagName(’head’)[0];
+<pre><code class="javascript">
+var head = document.head || document.getElementsByTagName(’head’)[0];
 var axsStyles = head.appendChild(document.createElement(’style’));
 document.addEventListener(’mousedown’, function() {
     axsStyles.innerHTML = ’* {outline:none !important}’;
@@ -632,6 +639,7 @@ document.addEventListener(’keydown’, function() {
     axsStyles.innerHTML = ’’;
 });
 </code></pre>
+
 <p><a href="https://codepen.io/paipai/pen/jwLyzK">Demonstration de la visibilité du focus à la navigation clavier uniquement</a></p>
 <p><strong>À vérifier&nbsp;:</strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
@@ -717,7 +725,7 @@ Ne pas induire de changement de contexte lors de la prise de focus, la saisie de
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 3.2.1, 3.2.2</p>
-<h2 id="25-eviter-les-captcha">25. Eviter les captcha</h2>
+<h2 id="25-viter-les-captcha">25. Éviter les captcha</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
@@ -746,7 +754,8 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
 <p>Mettre en place ce type de sémantique permet aux déficients visuels d’identifier et comprendre l’organisation, la structure globale de la page et donc de naviguer plus facilement.</p>
 <p>Pour aller plus loin (en anglais)&nbsp;: <a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html" hreflang="en"><abbr>HTML5</abbr> et <i lang="en">landmarks</i> <abbr>ARIA</abbr></a> </p>
 <p>Pour une page en <abbr>HTML5</abbr>&nbsp;:</p>
-<pre><code class="lang-html">&lt;head&gt;
+<pre><code class="html">
+&lt;head&gt;
   …
   &lt;title&gt;Titre de la page&lt;/title&gt;
   …
@@ -755,7 +764,7 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
   &lt;header&gt;
     &lt;h1&gt;…&lt;/h1&gt;
     &lt;nav&gt;…navigation…&lt;/nav&gt;
-    &lt;p&gt;en tête de page&amp;nbsp;: logo, baseline…&lt;/p&gt;
+    &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
     …
   &lt;/header&gt;
   &lt;main&gt;
@@ -767,38 +776,41 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
     …
   &lt;/aside&gt;
   &lt;footer&gt;
-    &lt;p&gt;contenu du pied de page&amp;nbsp;: copyright…&lt;/p&gt;
+    &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
     …
   &lt;/footer&gt;
 &lt;/body&gt;
 </code></pre>
+
 <p>Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:</p>
-<pre><code class="lang-html">&lt;head&gt;
+<pre><code class="html">
+&lt;head&gt;
   …
   &lt;title&gt;Titre de la page&lt;/title&gt;
   …
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div role=&quot;banner&quot;&gt;
+  &lt;div role="banner"&gt;
     &lt;h1&gt;…&lt;/h1&gt;
-    &lt;div role=&quot;navigation&quot;&gt;…navigation…&lt;/div&gt;
-    &lt;p&gt;en tête de page&amp;nbsp;: logo, baseline…&lt;/p&gt;
+    &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
+    &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
     …
   &lt;/div&gt;
-  &lt;div role=&quot;main&quot;&gt;
+  &lt;div role="main"&gt;
     &lt;p&gt;contenu principal&lt;/p&gt;
     …
   &lt;/div&gt;
-  &lt;div role=&quot;complementary&quot;&gt;
+  &lt;div role="complementary"&gt;
     &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
     …
   &lt;/div&gt;
-  &lt;div role=&quot;contentinfo&quot;&gt;
-    &lt;p&gt;contenu du pied de page&amp;nbsp;: copyright…&lt;/p&gt;
+  &lt;div role="contentinfo"&gt;
+    &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
     …
   &lt;/div&gt;
 &lt;/body&gt;
 </code></pre>
+
 <p><strong>Référence WCAG&nbsp;:</strong> 3.2.3., 3.2.4  </p>
 <h2 id="27-fournir-des-acc-s-multiples-et-une-localisation">27. Fournir des accès multiples et une localisation</h2>
 <p><strong> Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
@@ -813,6 +825,23 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 <p><strong> Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
 <p><strong>Référence WCAG&nbsp;:</strong> 2.4.5., 2.4.8</p>
+<h2 id="28-d-finir-des-zones-sensibles-de-taille-suffisante">28. Définir des zones sensibles de taille suffisante</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
+Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
+<h2 id="29-autoriser-l-utilisation-du-zoom">29. Autoriser l&#39;utilisation du zoom</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
+<h2 id="30-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">30. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
+<h2 id="31-proposer-une-alternative-aux-gestuelles-complexes">31. Proposer une alternative aux gestuelles complexes</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
+De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
+<h2 id="32-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">32. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -985,7 +1014,7 @@ Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilem
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
 <p><strong>Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
-<h2 id="16-eviter-les-captcha">16. Eviter les captcha</h2>
+<h2 id="16-viter-les-captcha">16. Éviter les captcha</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
@@ -998,11 +1027,28 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <ul>
 <li>un captcha  audio&nbsp;+ visuel,</li>
 <li>des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique</li>
-<li>…<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+<li>…</li>
 </ul>
-
+<h2 id="17-d-finir-des-zones-sensibles-de-taille-suffisante">17. Définir des zones sensibles de taille suffisante</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
+Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
+<h2 id="18-autoriser-l-utilisation-du-zoom">18. Autoriser l&#39;utilisation du zoom</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
+<h2 id="19-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">19. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
+<h2 id="20-proposer-une-alternative-aux-gestuelles-complexes">20. Proposer une alternative aux gestuelles complexes</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
+De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
+<h2 id="21-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">21. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
+<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="r-f-rentiels-complets-d-accessibilit-web">Référentiels complets d’accessibilité web</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Référentiels complets"}]);
@@ -1057,14 +1103,12 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
 </ul>
 <p>De plus, l’efficacité optimale de la prise en charge d’<abbr>ARIA</abbr> dépend du couple navigateur&nbsp;/ aide technique&nbsp;: Firefox avec <abbr>NVDA</abbr>, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
 <h2 id="faut-il-l-utiliser-nbsp-">Faut-il l’utiliser&nbsp;?</h2>
-<p>Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents en <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’<a href="https://www.w3.org/&lt;abbr&gt;WAI&lt;/abbr&gt;/GL/WCAG20-TECHS/aria.html">une vingtaine de techniques WCAG 2.0 soient spécifiques à <abbr>ARIA</abbr></a> (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.</p>
+<p>Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents en <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’<a href="https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html">une vingtaine de techniques WCAG 2.0 soient spécifiques à <abbr>ARIA</abbr></a> (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.</p>
 <p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs&nbsp;/ aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p>
 <p>Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement&nbsp;!</p>
 <h2 id="webographie">Webographie</h2>
 <ul>
-<li><a href="https://specs.webplatform.org/html-aria/webspecs/master/">Page de synthèse sur «&nbsp;<i lang="en"><abbr>ARIA</abbr> in <abbr>HTML</abbr></i>&nbsp;»</a></li>
 <li><abbr>W3c</abbr>&nbsp;:<ul>
-<li><a href="http://www.w3.org/TR/wai-aria/introduction">Introduction à <abbr>ARIA</abbr></a></li>
 <li><a href="http://www.w3.org/TR/wai-aria/">Spécification <abbr>ARIA</abbr></a></li>
 <li><a href="http://www.w3.org/TR/wai-aria-practices/">Mettre en place <abbr>ARIA</abbr></a>, attention «&nbsp;<i lang="en">working draft</i>&nbsp;»</li>
 <li><a href="http://www.w3.org/TR/aria-in-html/">Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr> (5)</a> , attention «&nbsp;<i lang="en">working draft</i>&nbsp;»</li>
@@ -1082,27 +1126,33 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
     setBreadcrumb([{"label":"Outils de test"}]);
 });</script>
 
-<p>Vous trouverez ci-dessous des articles décrivant les méthodes et outils utiles pour tester l’accessibilité de vos pages web.</p>
-<h2 id="tests-manuel-et-outils-d-assistance">Tests manuel et outils d’assistance</h2>
-<p><a href="./methodes-outils-clavier.html">Navigation au clavier</a>&nbsp;:
-Liste des principaux raccourcis pour naviguer au clavier dans une page web.</p>
-<p><a href="./methodes-outils-zoom.html">Agrandissement de la taille du texte</a>&nbsp;: 
-Un guide sur la gestion du zoom.</p>
-<p><a href="./methodes-outils-lecteur-ecran.html">Navigation à l’aide d’un lecteur d’écran</a>&nbsp;: 
-Les principaux lecteurs d’écrans utilisés.</p>
-<h2 id="outils-de-test-automatis-s">Outils de test automatisés</h2>
-<p><a href="./methodes-outils-extensions.html">Extensions pour navigateur</a>&nbsp;: 
-Certaines extensions permettent d’effectuer des tests automatiques sur la page en cours de consultation.</p>
-<h2 id="test-des-crit-res">Test des critères</h2>
-<p><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>&nbsp;: 
-Présentation de l’outil <i lang="en">Colour Contrast Analyser</i>.</p>
-<p><a href="./methodes-outils-liste-titres.html">Accéder à la liste des titres de la page (balises <code>H1</code> à <code>H6</code>)</a>&nbsp;: 
-Les différentes façons d’accéder à la liste des titres d’une page.</p>
-<p>&nbsp;
+<p>Orange évalue l’accessibilité d’une application ou d’un site à l’aide de trois méthodes complémentaires :</p>
+<ul>
+<li><strong>Évaluation technique :</strong> inspecter le code et le contraste des couleurs pour mesurer la conformité des pages Web aux règles <abbr>WCAG</abbr> 2.0 niveau AA.</li>
+<li><strong>Évaluation fonctionnelle :</strong> tester le comportement de l’interface avec différentes <abbr>aides techniques</abbr> pour vérifier que les contenus évalués sont exempts de points bloquants.</li>
+<li><strong>Évaluation utilisateur :</strong> faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur. </li>
+</ul>
+<h2 id="-valuation-technique">Évaluation technique</h2>
+<p>Une partie des tests peut-être réalisée automatiquement par des outils, mais la majorité nécessite un contrôle manuel. Les tests automatisés sont à réaliser par les acteurs projet, les tests manuels essentiellement par les experts accessibilité.</p>
+<p>Exemple d&#39;outils : </p>
+<ul>
+<li><a href="./methodes-outils-extensions.html">Outils de tests automatique sur la page en cours de consultation</a>&nbsp;: extension navigateur.</li>
+<li><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>&nbsp;: présentation de l&#39;outil <span lang="en">Colour Contrast Analyser</span>.</li>
+</ul>
+<h2 id="-valuation-fonctionnelle">Évaluation fonctionnelle</h2>
+<p>Ces tests sont réalisés généralement par les experts accessibilité, ils peuvent également être menés par des acteurs projet.</p>
+<p>Quelques exemples de tests :</p>
+<ul>
+<li><a href="./methodes-outils-clavier.html">Navigation au clavier</a>&nbsp;: liste des principaux raccourcis pour naviguer au clavier dans une page web.</li>
+<li><a href="./methodes-outils-zoom.html">Agrandissement de la taille du texte</a>&nbsp;: un guide sur la gestion du zoom.</li>
+<li><a href="./methodes-outils-lecteur-ecran.html">Navigation à l’aide d’un lecteur d’écran</a>&nbsp;: les principaux lecteurs d’écrans utilisés.</li>
+</ul>
+<h2 id="-valuation-par-des-utilisateurs-en-situation-de-handicap">Évaluation par des utilisateurs en situation de handicap</h2>
+<p>Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les  tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées.  </p>
+<p>Ces tests sont conduits par des experts accessibilité.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="orange-boosted">Orange Boosted</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Orange Boosted"}]);
@@ -1310,7 +1360,7 @@ Pour désactiver ce mode de navigation, faites un clic droit sur l’icône de <
 <p><span data-menuitem="methodes-outils"></span></p>
 <p>Certaines extensions permettent d’effectuer des tests automatiques sur la page en cours de consultation.</p>
 <h2 id="-span-lang-en-axe-accessibility-audit-span-"><span lang="en">aXe accessibility audit</span></h2>
-<p><a href="http://www.deque.com/products/axe/">aXe</a> est une extension disponible pour Chrome et Firefox permettant d’effectuer une série de tests basés sur les <a href="https://www.w3.org/WAI/intro/wcag">WCAG</a>.</p>
+<p><a href="http://www.deque.com/axe/">aXe</a> est une extension disponible pour Chrome et Firefox permettant d’effectuer une série de tests basés sur les <a href="https://www.w3.org/WAI/intro/wcag">WCAG</a>.</p>
 <p><img src="images/aXe.png" alt="capture d’écran de l’extension axe">
 &nbsp;</p>
 <h2 id="-span-lang-en-wave-toolbar-span-"><span lang="en">Wave toolbar</span></h2>
@@ -1368,6 +1418,11 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <li>
         <a href="exemples/zoom/index.html">
             <img class="hidden-sm-down" alt="" src="./images/exemples/zoom.png"><span>Gestion du zoom, agrandissement de la taille du texte</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/prix/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/prix.png"><span>Affichage et vocalisation des prix</span>
         </a>
     </li>
 </ul>
@@ -1479,6 +1534,6 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>    
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
 </body>
 </html>

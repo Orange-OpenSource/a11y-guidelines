@@ -115,27 +115,33 @@
     setBreadcrumb([{"label":"Outils de test"}]);
 });</script>
 
-<p>Vous trouverez ci-dessous des articles décrivant les méthodes et outils utiles pour tester l’accessibilité de vos pages web.</p>
-<h2 id="tests-manuel-et-outils-d-assistance">Tests manuel et outils d’assistance</h2>
-<p><a href="./methodes-outils-clavier.html">Navigation au clavier</a>&nbsp;:
-Liste des principaux raccourcis pour naviguer au clavier dans une page web.</p>
-<p><a href="./methodes-outils-zoom.html">Agrandissement de la taille du texte</a>&nbsp;: 
-Un guide sur la gestion du zoom.</p>
-<p><a href="./methodes-outils-lecteur-ecran.html">Navigation à l’aide d’un lecteur d’écran</a>&nbsp;: 
-Les principaux lecteurs d’écrans utilisés.</p>
-<h2 id="outils-de-test-automatis-s">Outils de test automatisés</h2>
-<p><a href="./methodes-outils-extensions.html">Extensions pour navigateur</a>&nbsp;: 
-Certaines extensions permettent d’effectuer des tests automatiques sur la page en cours de consultation.</p>
-<h2 id="test-des-crit-res">Test des critères</h2>
-<p><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>&nbsp;: 
-Présentation de l’outil <i lang="en">Colour Contrast Analyser</i>.</p>
-<p><a href="./methodes-outils-liste-titres.html">Accéder à la liste des titres de la page (balises <code>H1</code> à <code>H6</code>)</a>&nbsp;: 
-Les différentes façons d’accéder à la liste des titres d’une page.</p>
-<p>&nbsp;
+<p>Orange évalue l’accessibilité d’une application ou d’un site à l’aide de trois méthodes complémentaires :</p>
+<ul>
+<li><strong>Évaluation technique :</strong> inspecter le code et le contraste des couleurs pour mesurer la conformité des pages Web aux règles <abbr>WCAG</abbr> 2.0 niveau AA.</li>
+<li><strong>Évaluation fonctionnelle :</strong> tester le comportement de l’interface avec différentes <abbr>aides techniques</abbr> pour vérifier que les contenus évalués sont exempts de points bloquants.</li>
+<li><strong>Évaluation utilisateur :</strong> faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur. </li>
+</ul>
+<h2 id="-valuation-technique">Évaluation technique</h2>
+<p>Une partie des tests peut-être réalisée automatiquement par des outils, mais la majorité nécessite un contrôle manuel. Les tests automatisés sont à réaliser par les acteurs projet, les tests manuels essentiellement par les experts accessibilité.</p>
+<p>Exemple d&#39;outils : </p>
+<ul>
+<li><a href="./methodes-outils-extensions.html">Outils de tests automatique sur la page en cours de consultation</a>&nbsp;: extension navigateur.</li>
+<li><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>&nbsp;: présentation de l&#39;outil <span lang="en">Colour Contrast Analyser</span>.</li>
+</ul>
+<h2 id="-valuation-fonctionnelle">Évaluation fonctionnelle</h2>
+<p>Ces tests sont réalisés généralement par les experts accessibilité, ils peuvent également être menés par des acteurs projet.</p>
+<p>Quelques exemples de tests :</p>
+<ul>
+<li><a href="./methodes-outils-clavier.html">Navigation au clavier</a>&nbsp;: liste des principaux raccourcis pour naviguer au clavier dans une page web.</li>
+<li><a href="./methodes-outils-zoom.html">Agrandissement de la taille du texte</a>&nbsp;: un guide sur la gestion du zoom.</li>
+<li><a href="./methodes-outils-lecteur-ecran.html">Navigation à l’aide d’un lecteur d’écran</a>&nbsp;: les principaux lecteurs d’écrans utilisés.</li>
+</ul>
+<h2 id="-valuation-par-des-utilisateurs-en-situation-de-handicap">Évaluation par des utilisateurs en situation de handicap</h2>
+<p>Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les  tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées.  </p>
+<p>Ces tests sont conduits par des experts accessibilité.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
-
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>
@@ -146,6 +152,6 @@ Les différentes façons d’accéder à la liste des titres d’une page.</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>    
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
 </body>
 </html>

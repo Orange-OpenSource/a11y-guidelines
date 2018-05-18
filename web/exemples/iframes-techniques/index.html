@@ -22,9 +22,9 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/jquery.validate.min.js"></script>
 
-      <script src="../main-script.js"></script>
+      <script src="../../../exemples/main-script.js"></script>
       <script src="script.js"></script>
-      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
       <link rel="stylesheet" href="style.css">
 
 </head>
@@ -40,14 +40,14 @@
       <h2>Cacher l'<code>iframe</code> à tous les utilisateurs</h2>
       <p>La solution pour cacher l'<code>iframe</code>, y compris aux utilisateurs d'outils d'assistance, est d'ajouter un attribut <code>aria-hidden='true'</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront toujours executés.</p>
       <p>Par ailleurs, on rajouter un attribut <code>tabindex</code> pour interdire au focus de se déplacer dans l'<code>iframe</code>. Ainsi les utilisateurs qui naviguent à l'aide du clavier, n'iront pas se perdre à l'intérieur de cette dernière.</p>
-      <pre><code>
+      <pre><code class="html">
       &lt;iframe title="contenu technique" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
       </code></pre>
       
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

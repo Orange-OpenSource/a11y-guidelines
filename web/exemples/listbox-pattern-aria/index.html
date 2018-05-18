@@ -22,10 +22,10 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/jquery.validate.min.js"></script>
 
-      <script src="../main-script.js"></script>
+      <script src="../../../exemples/main-script.js"></script>
       <script src="script.js"></script>
       <script src="wgxpath.install.js"></script>
-      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -126,7 +126,7 @@
       <p>La fonctionnalité permettant de sélectionner automatiquement l’élément dont l’utilisateur tape les premières lettres n’est pas forcément simple à implémenter. Voici un exemple qui utilise <code>XPath</code>.</p>
       <p>La première chose à faire est d’écouter le clavier lorsque le focus est positionné sur la liste. En fonction de la touche pressée, on effectue une action (déplacement de l’élément sélectionné, sélection d’un élément…).</p>
 
-      <pre><code>
+      <pre><code class="javascript">
     …
     // On keydown
     $("[role=listbox]").on("keydown", function (e) {            
@@ -151,7 +151,7 @@
 
       <p>Pour les autres touches qui ne servent pas à effectuer une action sur la liste, c’est à dire les lettres et les chiffres, on les mémorise pour former une chaîne de caractère. Lorsque l’utilisateur ne tape pas de touche pendant quelques millisecondes (500 dans notre exemple), on recherche si un élément de liste commence par la chaîne tapée et on sélectionne cet élément de liste.</p>
 
-      <pre><code>
+      <pre><code class="javascript">
     …
     case 65: // Ctrl + A
         if (e.ctrlKey) {
@@ -192,7 +192,7 @@
     </main>
     
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

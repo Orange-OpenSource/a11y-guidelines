@@ -1,11 +1,12 @@
 body {  
   padding-top: 9rem;
   background-color: #f6f6f6;
+  line-height: 1.5;
 }
 
 pre {
   margin: 0;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   background-color: #fff;
 }
 
@@ -18,6 +19,7 @@ pre {
 }
 
 #content p,
+#content figure,
 #content h2, 
 #content h3,
 #content h4,
@@ -26,6 +28,10 @@ pre {
 #glossary dl {
   background: #fff;
   padding: 1rem;  
+}
+
+figure {
+  margin: 0;
 }
 
  #content ul, #content h2, #content h3, #content h4, #content p {
@@ -285,6 +291,10 @@ h1:before, h2:before {
   text-decoration: underline;
 }
 
+.breadcrumb-item.active {
+  color: #000;
+}
+
 #secondNavBar .nav-item.language a {
   display: inline-block;
   font-size: 1.05rem;  
@@ -325,6 +335,41 @@ h1:before, h2:before {
   font-size: 2rem;
   margin: 0;
   background: transparent;
+}
+
+/* Source code */
+pre code {
+  border: .2rem solid #eee;
+}
+.source-nav {
+  margin: 0 !important;
+  padding: 1rem 0 0 1rem !important
+}
+.source-nav li {
+  list-style-type: none !important;
+  display: inline;
+}
+.source-nav li button {
+  font-weight: bold;
+  color: #fff !important;
+  background-color: #767676;  
+  text-decoration: none !important;
+  padding: .5rem 1rem;    
+  border: none;
+}
+.source-nav li.active button {
+  color: #fff !important;
+  background-color: #f16e00;  
+}
+.source-nav li button:hover {
+  background-color: #888;
+}
+.source-nav li.active button:hover {
+  background-color: #f16e00;
+}
+
+.source-nav li button:focus {
+  color: #000 !important;
 }
 
 /* collapsed sidebar styles */

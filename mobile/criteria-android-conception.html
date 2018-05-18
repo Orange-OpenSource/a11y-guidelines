@@ -122,7 +122,7 @@
 });</script>
 
 <p><span data-menuitem="criteria-android"></span></p>
-<p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application <a href="./mdan.html">mDAN</a> pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la <a href="./TalkBack.html">section concernant <span lang="en">TalkBack</span></a>.</p>
+<p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application <a href="./mdan.html">mDAN</a> pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la <a href="./screen-reader-talkback.html">section concernant <span lang="en">TalkBack</span></a>.</p>
 <h2 id="images">Images</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong> lors de la conception et pendant le développement.</p>
 <p><strong>Description&nbsp;: </strong></p>
@@ -212,7 +212,7 @@ infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_
 <p><strong>Objectif utilisateur&nbsp;: </strong></p>
 <p>Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informations des composants, leur état, leur nature afin qu’ils puissent les utiliser sans difficultés.</p>
 <p><strong>Exemple&nbsp;: </strong></p>
-<p><img src="./images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"><br>Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du <a href="./dev-android.html#alternatives-textuelles">guide développeur</a> correspondante.</p>
+<p><img src="./images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"><br>Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du <a href="./criteria-android-dev.html#alternatives-textuelles">guide développeur</a> correspondante.</p>
 <h2 id="composant-standard">Composant standard</h2>
 <p><strong>Cible&nbsp;: </strong> tout le monde.<br><strong>Quand&nbsp;: </strong> en phase de sélection des briques logicielles et lors des développements.</p>
 <p><strong>Description&nbsp;: </strong>  </p>
@@ -400,6 +400,6 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
 </body>
 </html>

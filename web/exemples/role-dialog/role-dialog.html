@@ -22,9 +22,9 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/jquery.validate.min.js"></script>
 
-      <script src="../main-script.js"></script>
+      <script src="../../../exemples/main-script.js"></script>
       <script src="script.js"></script>
-      <link rel="stylesheet" href="../main-style.css">
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
       <link rel="stylesheet" href="style.css">  
 </head>
 <body>
@@ -77,7 +77,7 @@
       </div>
 
       <!-- Code de l’exemple 1 -->
-      <pre><code>
+      <pre><code class="html">
       &lt;div class="dialog"&gt;
         &lt;div class="dialogContainer"&gt;
           &lt;button&gt;X&lt;/button&gt;
@@ -124,7 +124,7 @@
       <p>On empêche le focus de sortir de la boîte de dialogue. Lorsque celui-ci arrive sur le dernier élément on le repositionne sur le premier et inversement. Il existe plusieurs solutions pour créer ce comportement. Dans cet exemple, on ajoute deux balises <code>span</code> vides au début et à la fin de la dialogue. Celles-ci sont rendues focusables à l’aide d’un attribut <code>tabindex="0"</code>. Lorsque la première balise <code>span</code> reçoit le focus, on déplace celui-ci sur le dernier élément de la boîte de dialogue. Lorsque le dernier <code>span</code> reçoit le focus, on déplace celui-ci en haut de la boîte de dialogue.</p>
       <p>Les balises <code>span</code> vides offrent l’avantage de ne pas être vocalisées par les lecteurs d’écran.</p>
 
-      <pre><code>
+      <pre><code class="javascript">
        $(’.dialog-start’).on(’focus’, function () {
           $(this).parent().find(’button:last’).focus();
        });
@@ -149,7 +149,7 @@
 
       <p>Enfin on écoute l’événement <code>onKeyDown</code> pour fermer la dialogue lorsque la touche <kbd>Échap</kbd> est pressée.</p>
       <p>Voici le code HTML à jour de la boîte de dialogue&nbsp;:</p>
-      <pre><code>
+      <pre><code class="html">
       &lt;div id="step2-dialog" class="dialog"&gt;
         &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
         &lt;div class="dialogContainer"&gt;
@@ -182,7 +182,7 @@
 
       <p>L’attribut <code>aria-labelledby</code> permet d’indiquer l’<code>id</code> de l’élément contenant le titre de la boîte de dialogue. Celui-ci sera vocalisé automatiquement par le lecteur d’écran. L’attribut <code>aria-describedby</code> permet d’indiquer l’<code>id</code> de l’élément contenant la description. Cette description sera vocalisée automatiquement après le titre de la boîte de dialogue. Enfin l’attribut <code>aria-label</code> sur le bouton de fermeture «&nbsp;X&nbsp;» permet de spécifier un libellé à vocaliser (sinon par défaut celui-ci sera vocalisé&nbsp;: «&nbsp;x&nbsp;»).</p>
 
-      <pre><code>
+      <pre><code class="html">
       &lt;div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description"&gt;
         &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
         &lt;div class="dialogContainer"&gt;
@@ -209,7 +209,7 @@
       <p>Dans les applications natives, la navigation s’effectue principalement à l’aide de la touche <kbd>Tab</kbd>. Ce mode de navigation est appelé «&nbsp;mode application&nbsp;». L’utilisation du rôle ARIA <code>dialog</code>, passe le lecteur d’écran dans le «&nbsp;mode application&nbsp;», c’est à dire que la navigation avec les flèches n’est plus disponible lorsqu’une boîte de dialogue est affichée. Dans ce cas il faut utiliser la touche <kbd>Tab</kbd> pour naviguer entre les différents boutons de la dialogue.</p>
       
       <p><strong>À noter</strong> qu’il est également possible de forcer l’utilisation du mode «&nbsp;application&nbsp;» ou «&nbsp;document&nbsp;» à l’aide de l’attribut <code>role</code>. Cependant les utilisateurs n’étant pas habitués à ces changements de modes de navigation il est pour le moment <strong>déconseillé de les utiliser</strong>, sauf cas exceptionnels&nbsp;:</p>
-      <pre><code>
+      <pre><code class="html">
       &lt;div role="application"&gt;…&lt;/div&gt;
       &lt;div role="document"&gt;…&lt;/div&gt;
       </code></pre>
@@ -219,7 +219,7 @@
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </body>

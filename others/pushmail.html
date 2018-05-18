@@ -135,9 +135,12 @@ Le problème de non accessibilité est plutôt le fait des <span lang="en">pushm
 <h3 id="fournir-des-marges-homog-nes">Fournir des marges homogènes</h3>
 <p>Pour s&#39;assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques <code>hx</code>, <code>p</code> et les listes <code>ul</code>, <code>ol</code> doivent avoir une marge nulle fixée en <abbr>CSS</abbr> (<code>style=&quot;margin:0&quot;</code>).
 Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abbr> spécifique <code>mso-line-height-rule:exactly</code> pour que dans Outlook la hauteur de ligne soit fixe et cohérente.</p>
-<pre><code>&lt;h1 style=&quot;margin:0; mso-line-height-rule:exactly;&quot;&gt;Titre&lt;/h1&gt;
-  &lt;p style=&quot;margin:0;&quot;&gt;Paragraphe&lt;/p&gt;
-</code></pre><h3 id="rendre-accessibles-les-tableaux">Rendre accessibles les tableaux</h3>
+<pre><code class="html">
+<h1 style="margin:0; mso-line-height-rule:exactly;">Titre</h1>
+  <p style="margin:0;">Paragraphe</p>
+</code></pre>
+
+<h3 id="rendre-accessibles-les-tableaux">Rendre accessibles les tableaux</h3>
 <p>Mettre un attribut <code>role=&quot;presentation&quot;</code> dans la balise <code>table</code> d&#39;un tableau de présentation pour que la sémantique du tableau soit ignorée par les aides techniques.  </p>
 <h2 id="liens-utiles">Liens utiles</h2>
 <ul>
@@ -157,6 +160,6 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
 </body>
 </html>

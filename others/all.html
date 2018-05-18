@@ -281,6 +281,10 @@ Les sauts de page doivent être créés à l’aide des «&nbsp;Sauts&nbsp;» (I
 <h3 id="17-exporter-le-document-au-format-abbr-pdf-abbr-">17. Exporter le document au format <abbr>PDF</abbr></h3>
 <p>Pour exporter en <abbr>PDF</abbr> il suffit d’aller dans le menu&nbsp;: Fichier&nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier <abbr>PDF</abbr>.<br>À vérifier la première fois&nbsp;: dans les options d’export, la case à cocher «&nbsp;Balises de structure de document pour l’accessibilité&nbsp;» doit être cochée.</p>
 <p>À noter qu’avec Word pour Office 2010, les documents <abbr>PDF</abbr> générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.</p>
+<h3 id="18-ins-rer-une-table-des-mati-res">18. Insérer une table des matières</h3>
+<p>Pour tout document long (&gt;2 pages), penser à insérer une table des matière générée automatiquement, dans le menu&nbsp;: Références&nbsp;&gt; Table des matières.
+Cela permet à tous de se repérer plus facilement et d&#39;aller rapidement au contenu que l&#39;on souhaite lire.</p>
+<p>À noter qu&#39;il faut mettre à jour cette table des matières dès qu&#39;on change la structure du contenu, donc préférer générer la table des matières en fin de rédaction du contenu.</p>
 <h2 id="ressources-externes">Ressources externes</h2>
 <ul>
 <li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
@@ -385,9 +389,12 @@ Le problème de non accessibilité est plutôt le fait des <span lang="en">pushm
 <h3 id="fournir-des-marges-homog-nes">Fournir des marges homogènes</h3>
 <p>Pour s&#39;assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques <code>hx</code>, <code>p</code> et les listes <code>ul</code>, <code>ol</code> doivent avoir une marge nulle fixée en <abbr>CSS</abbr> (<code>style=&quot;margin:0&quot;</code>).
 Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abbr> spécifique <code>mso-line-height-rule:exactly</code> pour que dans Outlook la hauteur de ligne soit fixe et cohérente.</p>
-<pre><code>&lt;h1 style=&quot;margin:0; mso-line-height-rule:exactly;&quot;&gt;Titre&lt;/h1&gt;
-  &lt;p style=&quot;margin:0;&quot;&gt;Paragraphe&lt;/p&gt;
-</code></pre><h3 id="rendre-accessibles-les-tableaux">Rendre accessibles les tableaux</h3>
+<pre><code class="html">
+<h1 style="margin:0; mso-line-height-rule:exactly;">Titre</h1>
+  <p style="margin:0;">Paragraphe</p>
+</code></pre>
+
+<h3 id="rendre-accessibles-les-tableaux">Rendre accessibles les tableaux</h3>
 <p>Mettre un attribut <code>role=&quot;presentation&quot;</code> dans la balise <code>table</code> d&#39;un tableau de présentation pour que la sémantique du tableau soit ignorée par les aides techniques.  </p>
 <h2 id="liens-utiles">Liens utiles</h2>
 <ul>
@@ -462,6 +469,6 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="../boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../js/highlight.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
 </body>
 </html>

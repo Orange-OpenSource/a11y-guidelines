@@ -12,7 +12,7 @@ documentTitles["about.html#about"] = "About";
 index.add({
     url: "about.html#about",
     title: "About",    
-    body: "# About     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](/LICENSE.txt), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are the property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# About     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are the property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -26,27 +26,27 @@ index.add({
 
 
 
-documentTitles["index.html#accessibility-recommendations-orange-for-editorial"] = "Accessibility recommendations Orange for editorial";
+documentTitles["index.html#accessibility-recommendations-orange-for-content"] = "Accessibility recommendations Orange for content";
 index.add({
-    url: "index.html#accessibility-recommendations-orange-for-editorial",
-    title: "Accessibility recommendations Orange for editorial",    
-    body: "# Accessibility recommendations Orange for editorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  "
+    url: "index.html#accessibility-recommendations-orange-for-content",
+    title: "Accessibility recommendations Orange for content",    
+    body: "# Accessibility recommendations Orange for content  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  "
 });
 
-documentTitles["index.html#general-editorial-recommendations"] = "General editorial recommendations";
+documentTitles["index.html#general-recommendations-for-content"] = "General recommendations for content";
 index.add({
-    url: "index.html#general-editorial-recommendations",
-    title: "General editorial recommendations",    
-    body: "## General editorial recommendations The general recommendations describe the recommendations to respect whatever the type of content (web, email, Word document, etc.). &lt;ul role=\&quot;presentation\&quot;&gt; &lt;li&gt;&lt;a href=\&quot;./editorial.html\&quot;&gt;Access to general editorial recommendations&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "index.html#general-recommendations-for-content",
+    title: "General recommendations for content",    
+    body: "## General recommendations for content The general recommendations describe the recommendations to respect whatever the type of content (web, email, Word document, etc.). &lt;ul role=\&quot;presentation\&quot;&gt; &lt;li&gt;&lt;a href=\&quot;./editorial.html\&quot;&gt;Access to general recommendations for content&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["editorial.html#general-editorial-recommendations"] = "General editorial recommendations";
+documentTitles["editorial.html#general-recommendations-for-content"] = "General recommendations for content";
 index.add({
-    url: "editorial.html#general-editorial-recommendations",
-    title: "General editorial recommendations",    
-    body: "# General editorial recommendations &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;General editorial recommendations\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+    url: "editorial.html#general-recommendations-for-content",
+    title: "General recommendations for content",    
+    body: "# General recommendations for content &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;General recommendations for content\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
 });
 
 documentTitles["editorial.html#introduction"] = "Introduction";
