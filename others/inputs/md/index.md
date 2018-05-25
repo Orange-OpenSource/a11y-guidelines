@@ -20,7 +20,7 @@ Les recommandations suivantes décrivent les règles spécifiques à respecter e
 
 - [Rédiger des emails accessibles](./pushmail.html)&nbsp;: section consacrée à la rédaction de «&nbsp;<i lang="en">pushmail</i>&nbsp;» accessibles.
 
-- [Fournir des contenus vidéos ou audios](./video_audio.html)&nbsp;: section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.
+- [Fournir des contenus vidéos ou audios](./video-audio.html)&nbsp;: section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
