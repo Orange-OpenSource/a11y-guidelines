@@ -20,7 +20,12 @@ This section regroups [presentations at the WWDC](https://developer.apple.com/vi
 ## [2017 - What's New in Accessibility](./dev-ios-wwdc-17215.html)
 Introduction of new iOS 11 accessibility features merging the user and the developer sides.
 </br><a href="./dev-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
-    
+
+## [2017 - Building Apps with Dynamic Type](./dev-ios-wwdc-17245.html)
+`Dynamic Type` highlights the iOS capacity to adapt the text size according to the user settings.
+</br>This video contains a theoretical approach to understand all the `Dynamic Type` possibilities as well as a practical part dealing with the developer side to avoid common pitfalls.
+</br><a href="./dev-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245.png" />
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
