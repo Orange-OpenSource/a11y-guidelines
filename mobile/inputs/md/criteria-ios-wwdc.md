@@ -1,6 +1,7 @@
 # WWDC : World Wide Developers Conference
 
 <script>$(document).ready(function () {
+    
     setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
         {"label":"WWDC"}
 	]);
@@ -21,6 +22,11 @@ Cette partie regroupe des [présentations faites à la WWDC](https://developer.a
 Présentation des nouvelles fonctionnalités d'accessibilité iOS 11 en associant la pratique de l'utilisateur à la conception du développeur.
 </br><a href="./criteria-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
 
+## [2017 - Application du Dynamic Type](./criteria-ios-wwdc-17245.html)
+Permettre à l'utilisateur de déterminer la taille de texte nécessaire à son confort visuel et adapter son application à cette modification sont des éléments essentiels que le `Dynamic Type` met en avant.
+</br>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le `Dynamic Type` ainsi qu'une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.
+</br><a href="./criteria-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245.png" />
+ 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
