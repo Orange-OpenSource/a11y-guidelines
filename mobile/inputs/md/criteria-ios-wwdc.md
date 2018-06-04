@@ -17,15 +17,16 @@
 Cette partie regroupe des [présentations faites à la WWDC](https://developer.apple.com/videos/) et liées à l'accessibilité.
 </br>Chacune de ces présentations est détaillée et comprend une description de chaque thème qui fait référence à une indication temporelle au sein de la vidéo.
 </br></br>La plupart des illustrations proviennent des supports de présentations fournies par Apple et sont disponibles dans la partie `Resources` de l'onglet `Overview` propre à chaque vidéo.
+</br>L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation.
 
 ## [2017 - Les nouveautés en accessibilité](./criteria-ios-wwdc-17215.html)
 Présentation des nouvelles fonctionnalités d'accessibilité iOS 11 en associant la pratique de l'utilisateur à la conception du développeur.
-</br><a href="./criteria-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
+</br><a href="./criteria-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="Accès aux nouveautés en accessibilité 2017." src="./images/iOSdev/wwdc17-215.png" />
 
 ## [2017 - Application du Dynamic Type](./criteria-ios-wwdc-17245.html)
 Permettre à l'utilisateur de déterminer la taille de texte nécessaire à son confort visuel et adapter son application à cette modification sont des éléments essentiels que le `Dynamic Type` met en avant.
 </br>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le `Dynamic Type` ainsi qu'une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.
-</br><a href="./criteria-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245.png" />
+</br><a href="./criteria-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'application du dynalic type." src="./images/iOSdev/wwdc17-245.png" />
  
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
