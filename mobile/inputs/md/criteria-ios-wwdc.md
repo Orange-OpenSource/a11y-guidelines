@@ -28,6 +28,10 @@ Permettre à l'utilisateur de déterminer la taille de texte nécessaire à son 
 </br>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le `Dynamic Type` ainsi qu'une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.
 </br><a href="./criteria-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'application du dynalic type." src="./images/iOSdev/wwdc17-245.png" />
  
+## [2016 - Audit d'une app en accessibilité](./criteria-ios-wwdc-16407.html)
+Après un rappel sur le fonctionnement de <span lang="en">VoiceOver</span> au niveau programmatique, cette présentation va détailler les différentes fonctionnalités proposées par l'outil <span lang="en">Accessibility Inspector</span> de Xcode en s'appuyant sur un exemple très simple pour une mise en situation concrète.
+</br><a href="./criteria-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'audit d'une app en accessibilité" src="./images/iOSdev/wwdc16-407.png" />
+    
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

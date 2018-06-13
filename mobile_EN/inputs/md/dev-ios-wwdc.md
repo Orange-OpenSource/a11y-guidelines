@@ -27,6 +27,10 @@ Introduction of new iOS 11 accessibility features merging the user and the devel
 </br>This video contains a theoretical approach to understand all the `Dynamic Type` possibilities as well as a practical part dealing with the developer side to avoid common pitfalls.
 </br><a href="./dev-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Access to building apps with dynamic type." src="./images/iOSdev/wwdc17-245.png" />
 
+## [2016 - Auditing Your Apps for Accessibility](./dev-ios-wwdc-16407.html)
+This presentation is a detailed explanation of the `Accessibility Inspector` Xcode tool with a programatic VoiceOver introduction at the begining.
+</br><a href="./dev-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Access to auditing your apps for accessibility" src="./images/iOSdev/wwdc16-407.png" />
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
