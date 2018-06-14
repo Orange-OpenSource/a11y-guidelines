@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orange accessibility guidelines</title>
+        
+      
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">                  
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                  </li>
+
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Content</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Presentation</a></li>
+                        <li><a class="page-editorial" href="editorial.html">General recommendations for content</a></li>
+                                                
+                        <li><a class="page-word" href="word.html" lang="en">Microsoft Word</a></li>                        
+                        <li><a class="page-powerpoint" href="powerpoint.html" lang="en">Microsoft PowerPoint</a></li>                        
+                        <li><a class="page-pdf" href="pdf.html" lang="en"><abbr>PDF</abbr> documents</a></li>                         
+                        <li><a class="page-video" href="video.html">Videos, audios, and animated components </a></li>
+
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">About</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a lang="fr" aria-label="version française" href="../others_EN/index.html" class="nav-link">fr</a>
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="english version">en</a>                    
+                  </li>
+              </ul> 
+                 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">                  
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                    <a lang="fr" aria-label="version française" href="../others/index.html" class="nav-link">fr</a>
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="english version">en</a>                    
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <span class="sr-only">You are here: </span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../others_EN/index.html">Content</a></li>        
+    </ol>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="creating-accessible-powerpoint-documents">Creating accessible PowerPoint documents</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Accessible PowerPoint"}]);
+});</script>
+
+<style>h3 {font-size: 1rem;}</style>
+
+<h2 id="introduction">Introduction</h2>
+<p>To produce accessible PowerPoint documents, one has to follow recommendations. Fortunately, PowerPoint comes equipped with a tool to check accessibility.
+It pinpoints the main issues and suggests solutions to remedy them.</p>
+<p>This being said, even after correcting said issues, we realised that some elements (SmartArt, tables, …) were not always correctly vocalised by screen readers.
+This is why, when your presentation is done, we recommend to export it in PDF before broadcasting the document: the Export option in PowerPoint gives better results with assistive technologies; also it removes animations, which are often a problem for people with vision problems.</p>
+<h2 id="recommendations">Recommendations</h2>
+<p>Below you will find a summary of recommendations that provide better accessibility with PowerPoint.
+For more information, please refer to the guides provided on <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">the <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr> website (in French)</a>.</p>
+<p>Our tests were done using Office 2010 with Jaws 17 and <abbr>NVDA</abbr> 2017-1. The below recommendations are the result of these tests.</p>
+<h3 id="1-use-slide-masks">1. Use slide masks</h3>
+<p>Presentations must be created using slide masks (menu: Display&nbsp;&gt; Slide masks). Then use checkboxes “Title”, “Footers”, and the menu “Insert reserved space”.</p>
+<h3 id="2-check-the-reading-order-of-elements">2. Check the reading order of elements</h3>
+<p>The reading order must be checked through the Selection pane (menu Home&nbsp;&gt; Organise&nbsp;&gt; Selection pane). Be careful: the last element in the list is the first read by screen readers: the reading order must thus be from bottom to top in your slide masks.</p>
+<h3 id="3-give-a-unique-title-to-each-slide">3. Give a unique title to each slide</h3>
+<p>Each slide must have a unique title. This must be added in the zone titled “Click to add a title”.</p>
+<h3 id="4-provide-replacement-text-for-images">4. Provide replacement text for images</h3>
+<p>If the image conveys information, you must provide a replacement text describing its content (right click, Image format&nbsp;&gt; Replacement text&nbsp;&gt; Description field).
+If the image is strictly for decoration, the Description field must be left empty.</p>
+<h3 id="5-make-simple-tables">5. Make simple tables</h3>
+<p>Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.</p>
+<h3 id="6-use-smartart-rather-than-assembling-text-and-shapes">6. Use SmartArt rather than assembling text and shapes</h3>
+<p>SmartArt enables you to integrate images and text that will be vocalised in the proper order. All SmartArt clips are not correct yet, be careful.</p>
+<h3 id="7-add-a-replacement-text-to-graphics">7. Add a replacement text to graphics</h3>
+<p>The content of graphics must be described in the Replacement text for the graphic (Object format&nbsp;&gt; Replacement text&nbsp;&gt; Description).</p>
+<h3 id="8-ensure-colour-is-not-the-only-means-to-convey-information">8. Ensure colour is not the only means to convey information</h3>
+<p>Information given through colour must also be conveyed via another means like shape, position, size…</p>
+<h3 id="9-ensure-a-sufficient-contrast">9. Ensure a sufficient contrast</h3>
+<p>Contrast between the colour of text and of its background must be sufficient:</p>
+<ul>
+<li>4.5:1 for normal-size text;</li>
+<li>3:1 for bigger text.</li>
+</ul>
+<p>Contrast can be verified with the <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.</p>
+<h3 id="10-define-language">10. Define language</h3>
+<p>Language must be defined through the menu: File&nbsp;&gt; Options&nbsp;&gt; Language.
+Words or grops of words in another language must be explicitly described as such (menu: Revision&nbsp;&gt; Language&nbsp;&gt; Define the verification language).</p>
+<h3 id="11-use-the-automated-accessibility-checker">11. Use the automated Accessibility checker</h3>
+<p>PowerPoint provides an Accessibility checker (menu File&nbsp;&gt; Check for problems&nbsp;&gt; Check accessibility). It lists all contents prone to be hard to deal with.</p>
+<h3 id="12-exporting-the-presentation-to-abbr-pdf-abbr-">12. Exporting the presentation to <abbr>PDF</abbr></h3>
+<p>To export to <abbr>PDF</abbr> you only need to go to File&nbsp;&gt; Save as. Choose a name and select <abbr>PDF</abbr> as file type.
+The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.</p>
+<h2 id="external-resources">External resources</h2>
+<ul>
+<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in French)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.</li>
+<li><a href="https://webaim.org/techniques/powerpoint/" hreflang="en">PowerPoint accessibility, WebAIM</a>.</li>
+</ul>
+<h2 id="results-of-our-tests">Results of our tests</h2>
+<p>We tested the behaviour of <abbr>NVDA</abbr> (version 2017.1) and Jaws (version 17) under Windows with a <abbr>PDF</abbr> file generated with PowerPoint 2010.</p>
+<h3 id="tables">Tables</h3>
+<p>Tables were vocalised correctly with Jaws and <abbr>NVDA</abbr>.</p>
+<h3 id="tables-with-replacement-text">Tables with replacement text</h3>
+<p><abbr>NVDA</abbr>: tables were still vocalised, replacement texts were ignored.
+Jaws: tables were not vocalised any more, replacement texts were ignored.</p>
+<h3 id="smartart">SmartArt</h3>
+<p>Same behaviour for Jaws and <abbr>NVDA</abbr>: SmartArt texts were vocalised (not always in the proper order though).</p>
+<h3 id="smartart-with-replacement-texts">SmartArt with replacement texts</h3>
+<p><abbr>NVDA</abbr>: expected behaviour, replacement texts were read instead of the SmartArt.
+Jaws: SmartArt were not vocalised any more, replacement texts were ignored.</p>
+<h3 id="graphics">Graphics</h3>
+<p>Jaws and <abbr>NVDA</abbr> had the same behaviour: figures in graphics were vocalised.</p>
+<h3 id="graphics-with-replacement-texts">Graphics with replacement texts</h3>
+<p>Jaws and <abbr>NVDA</abbr> behaved as expected: replacement texts were vocalised instead of the graphics.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+</body>
+</html>

@@ -385,7 +385,8 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
     ]);
     addSubMenu([
         {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html", "expanded": true}
+        {"label":"Pour le développement","url":"criteria-ios-dev.html", "expanded": true},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);    
 });</script>
 
@@ -508,7 +509,7 @@ func customTraits() {
 </br>Les deux autres attributs sont utilisables uniquement via le code.</p>
 <h3 id="exemple">Exemple</h3>
 <p>L&#39;idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et jaune) pour appliquer les attributs définis précedémment.
-<img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
+<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -731,7 +732,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 </br>Par défaut, ce point est au centre de l’élément.</li>
 </ul>
 <h3 id="exemple">Exemple</h3>
-<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
+<p><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
 <pre><code class="objective-c">
 float xVal;
 float yVal;
@@ -839,7 +840,7 @@ float heightVal;
 </br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
 <h3 id="exemple">Exemple</h3>
 <p>Nous avons un &#39;label&#39; et un &#39;switch control&#39; que nous allons souhaitons regrouper et traiter d&#39;un seul bloc.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" /></p>
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" /></p>
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -958,7 +959,7 @@ float heightVal;
 <h3 id="description">Description</h3>
 <p>La gestion des polices dynamiques sous iOS est complexe.
 </br>Depuis iOS7, il est possible d’utiliser une <abbr>API</abbr> permettant de modifier dynamiquement la taille des textes d&#39;une application à l’aide du paramétrage du téléphone.
-</br><img alt="capture d'écran, option police plus grande sur iPhone" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>Quelques points sont néanmoins essentiels pour la bonne utilisation de cette <abbr>API</abbr>&nbsp;:</p>
 <ul>
 <li><p>Utiliser les polices système pour les textes de l’application afin d&#39;éviter les mauvaises surprises même s&#39;il est toutefois possible de définir ses propres polices dérivées de la classe <code>UIFont</code> surtout depuis l&#39;arrivée de <code>UIFontMetrics</code> avec iOS11.</p>
@@ -1032,11 +1033,11 @@ float heightVal;
 </br></br>En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l&#39;image à grossir au format <code>pdf</code> à la résolution x1 dans le catalogue <code>xcassets</code>.
 </br></br>2. Dans l&#39;<span lang="en">Image Set</span> qui vient d&#39;être créé, cocher la case <code>Preserve Vector Data</code> et spécifier <code>Single Scale</code> :
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
 </br></br>3. Si un <span lang="en">storyboard</span> est utilisé pour intégrer l&#39;image, cocher <code>Adjusts Image Size</code> dans la partie <span lang="en">Image View</span>, sinon mettre à <code>true</code> la propriété <code>adjustsImageSizeForAccessibilityContentSizeCategory</code> de l&#39;image si cette opération se fait de façon programmatique :
-</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
+</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
 </br></br>4. Si une <strong>barre de tabulation</strong> ou une <strong>barre d&#39;outils</strong> est aussi à intégrer dans l&#39;application, renouveler les 3 étapes précédentes pour chacune des images à utiliser en grossissement de l&#39;onglet au milieu de l&#39;écran puis associer l&#39;image souhaitée aux différents éléments impactés :
-</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
+</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
 </br><strong>ATTENTION : s&#39;assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.</strong></p>
 <h3 id="exemple">Exemple</h3>
 <p>De façon à pouvoir tester à la fois le grossissement des images et celui d&#39;un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l&#39;image du logo Orange.
@@ -1044,7 +1045,7 @@ float heightVal;
 <ul>
 <li>Une taille de l&#39;image Orange nettement plus conséquente.</li>
 <li>Au milieu de l&#39;écran, l&#39;affichage grossi de l&#39;onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.
-</br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
+</br><img style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
 </ul>
 <h3 id="lien">Lien</h3>
 <ul>
@@ -1058,8 +1059,8 @@ float heightVal;
 <h3 id="exemple">Exemple</h3>
 <p>Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l&#39;ordre natif proposé par <span lang="en">VoiceOver</span>.
 </br>Dans cet exemple, on veut l&#39;ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br><span aria-hidden="true">On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :</span>
-</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
+</br>On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :
+</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -1105,9 +1106,9 @@ float heightVal;
 <p>La lecture des date, heure et nombres n&#39;est pas compliquée mais peut très vite devenir un réel casse-tête avec <span lang="en">VoiceOver</span>&nbsp;.</p>
 <h4 id="lecture-des-dates-et-des-heures">Lecture des dates et des heures</h4>
 <p>Si on met directement sous forme de texte la date ou l&#39;heure dans le <code>label</code>, on s&#39;aperçoit rapidement que le rendu n&#39;est pas naturel à l&#39;écoute.
-</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.
-</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" /></p>
+</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" /></p>
 <pre><code class="objective-c">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
@@ -1158,9 +1159,9 @@ float heightVal;
 </code></pre>
 <h4 id="lecture-des-nombres">Lecture des nombres</h4>
 <p>En indiquant la valeur d&#39;un nombre directement dans le texte d&#39;un <code>label</code>, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.
-</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 </br>Comme pour les date et heure, il faut formater la donnée en entrée pour qu&#39;elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu&#39;elle représente.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" /></p>
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" /></p>
 <pre><code class="objective-c">
     NSNumber * numberValue = @54038921.7;
 
@@ -1183,9 +1184,9 @@ float heightVal;
 <h4 id="lecture-des-num-ros-de-t-l-phone">Lecture des numéros de téléphone</h4>
 <p>La problématique liée à la vocalisation d&#39;un numéro de téléphone est identique à celle des nombres puisqu&#39;elle s&#39;appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres &quot;0&quot;.
 </br>L&#39;exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n&#39;importe quel type de format de numérotation.
-</br><img alt="par défaut la vocalisation avec voiceover du numéro de téléphone suivant n'est pas bonne : 06.11.22.33.06" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>L&#39;idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.
-</br><img alt="numéro de téléphone vocalisé correctement si le label contient le même numéro dont les paires de chiffres sont séparées par des virgules" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" /></p>
+</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" /></p>
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -1263,12 +1264,12 @@ float heightVal;
 <h2 id="contr-le-de-s-lection">Contrôle de sélection</h2>
 <h3 id="description">Description</h3>
 <p>L&#39;utilisation du contrôle de sélection s&#39;articule autour du mode point et du mode élément définis ci-dessous.
-</br><img alt="captures d'écran du mode point et mode élément du controle de sélection" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
 </br>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l&#39;application n&#39;est pas trop compliquée graphiquement.
 </br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l&#39;ordre désiré.</p>
 <h4 id="personnalisation-du-mode-l-ment">Personnalisation du mode élément</h4>
 <p>La structure utilisée pour l&#39;exemple est présentée ci-dessous grâce à l&#39;<span lang="en">InterfaceBuilder</span> de Xcode :
-</br><img alt="capture d'écran d'interface builder" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
 </br>Afin de personnaliser la sélection de ces éléments, on souhaite :</p>
 <ul>
 <li>Créer 2 groupes {Test_1 + Test_2 ; Btn 5 + Btn 6} sélectionnables en mode élément.</li>
@@ -1390,7 +1391,7 @@ class ViewController: UIViewController {
 </code></pre>
 
 <p></br>Le rendu de ce code est visualisable ci-dessous :
-</br><img alt="capture d'écran rendu du code précédent" style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
+</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
 </br>Les groupes créés permettent d&#39;accéder directement aux éléments qu&#39;ils contiennent dès qu&#39;ils sont activés.</p>
 <h3 id="lien">Lien</h3>
 <ul>
@@ -1399,12 +1400,12 @@ class ViewController: UIViewController {
 <h2 id="valeurs-contin-ment-ajustables">Valeurs continûment ajustables</h2>
 <h3 id="description">Description</h3>
 <p>Des éléments graphiques comme le <code>picker</code>, le <code>stepper</code> ou encore le <code>slider</code> permettent de changer de façon continue la valeur qu&#39;ils proposent de modifier.
-</br><img alt="capture d'écran picker, stepper et slider" style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
 </br>Quand on ne voit pas la modification dynamique se faire ou qu&#39;on n&#39;en est pas informé vocalement, il devient très compliqué de pouvoir se rendre compte de ce qui se passe.
 </br>La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c&#39;est pourquoi seul le cas du <code>stepper</code> sera traité.
 </br></br>L&#39;implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
 </br>Si on crée un <span lang="en">stepper</span> auquel on ajoute un <code>label</code> pour afficher sa valeur, on obtient le résultat suivant :
-</br><img alt="le stepper est vu par voiceover comme trois éléments distincts" style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
 </br>À partir de là, on s&#39;aperçoit que le focus doit être déplacé pour :</p>
 <ul>
 <li>Atteindre chacun des deux éléments permettant d&#39;augmenter ou de diminuer la valeur.</li>
@@ -1416,7 +1417,7 @@ class ViewController: UIViewController {
 </br>Il faut donc <strong>regrouper le <span lang="en">stepper</span> et le <code>label</code></strong> <em>(à l&#39;aide d&#39;une <span lang="en">StackView</span> par exemple)</em> puis associer <strong><code>UIAccessibilityTraitAdjustable</code></strong> à ce nouveau groupe accessible.
 </br>Ce nouveau <code>trait</code> va permettre de modifier de façon continue la valeur de l&#39;objet auquel il est associé en implémentant <strong>OBLIGATOIREMENT</strong> les méthodes <code>accessibilityIncrement()</code> et <code>accessibilityDecrement()</code>.
 </br></br>On élimine ainsi toutes les contraintes rencontrées initialement et on obtient, en plus, un <code>hint</code> lié à ce nouveau <code>trait</code> qui indique la manipulation nécessaire au bon fonctionnement.
-</br><img alt="le stepper est vocalisé correctement" style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" /></p>
+</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" /></p>
 <ul>
 <li>Pour aboutir à ce résultat, on définit tout d&#39;abord une classe conteneur {<span lang="en">stepper</span> + <code>label</code>} qui va permettre la délégation pour la modification ultérieure de la valeur.</li>
 </ul>
@@ -1862,7 +1863,8 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
     ]);
     addSubMenu([
         {"label":"Pour la conception","url":"criteria-ios-conception.html", "expanded": true}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"}
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);    
 });</script>
 
@@ -2143,37 +2145,325 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
     setBreadcrumb([{"label":"Les critères incontournables sous iOS"}]);
     addSubMenu([
         {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"}
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);    
 });</script>
 
 <p><span data-menuitem="criteria-ios"></span></p>
 <h2 id="pour-la-conception">Pour la conception</h2>
-<p>Ce socle de critères destiné aux applications mobiles iOS Orange permettent d’éviter les erreurs d’accessibilité.<br>La mise en œuvre de ce socle doit permettre d’obtenir à coup sûr un site accessible. Ce socle pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.</p>
-<p>Le respect de la charte Orange pour iOS, document disponible sur <a href="http://design.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ce socle.
-Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.</p>
-<h2 id="pour-la-d-veloppement">Pour la développement</h2>
-<p>Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> iOS. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d&#39;Apple.</p>
-<p><div class="col-xs-12">
-    <div class="row">
-        <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-            <h2 class="sr-only">Critères incontournables sous iOS pour la conception</h2><br>            <a href="./criteria-ios-conception.html" class="btn btn-info">
-                <img src="./images/iphone.png" alt="">
-                <div>Critères incontournables sous iOS pour la conception</div>
-            </a>
-        </div>
-        <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-            <h2 class="sr-only">Critères incontournables sous iOS pour le développement</h2><br>            <a href="./criteria-ios-dev.html" class="btn btn-info">
-                <img src="./images/iphone.png" alt="">
-                <div>Critères incontournables sous iOS pour le développement</div>
-            </a>
-        </div><br>    </div>
-    &nbsp;&nbsp;
-</div>
+<p>Ce socle de critères destiné aux applications mobiles iOS Orange pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.
+</br>Le respect de la charte Orange pour iOS, document disponible sur <a href="http://design.orange.com/">le site de la marque Orange</a>, est un prérequis à l’utilisation de ce socle.
+</br>Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.</p>
+<h2 id="pour-le-d-veloppement">Pour le développement</h2>
+<p>Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> iOS.
+</br>À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d&#39;Apple.</p>
+<h2 id="wwdc">WWDC</h2>
+<p>Cette section regroupe des présentations concernant l&#39;accessibilité faites par Apple à la World Wide Developers Conference.
+</br>Chacune de ces présentations est détaillée et chaque thème décrit fait référence à une indication temporelle au sein de la vidéo de façon à pouvoir le visualiser le plus rapidement possible.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="wwdc-world-wide-developers-conference">WWDC : World Wide Developers Conference</h1>
+<script>$(document).ready(function () {
 
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+        {"label":"WWDC"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html", "expanded": true}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios"></span></p>
+<p>Cette partie regroupe des <a href="https://developer.apple.com/videos/">présentations faites à la WWDC</a> et liées à l&#39;accessibilité.
+</br>Chacune de ces présentations est détaillée et comprend une description de chaque thème qui fait référence à une indication temporelle au sein de la vidéo.
+</br></br>La plupart des illustrations proviennent des supports de présentations fournies par Apple et sont disponibles dans la partie <code>Resources</code> de l&#39;onglet <code>Overview</code> propre à chaque vidéo.
+</br>L&#39;accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l&#39;image de présentation.</p>
+<h2 id="-2017-les-nouveaut-s-en-accessibilit-criteria-ios-wwdc-17215-html-"><a href="./criteria-ios-wwdc-17215.html">2017 - Les nouveautés en accessibilité</a></h2>
+<p>Présentation des nouvelles fonctionnalités d&#39;accessibilité iOS 11 en associant la pratique de l&#39;utilisateur à la conception du développeur.
+</br><a href="./criteria-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="Accès aux nouveautés en accessibilité 2017." src="./images/iOSdev/wwdc17-215.png" /></p>
+<h2 id="-2017-application-du-dynamic-type-criteria-ios-wwdc-17245-html-"><a href="./criteria-ios-wwdc-17245.html">2017 - Application du Dynamic Type</a></h2>
+<p>Permettre à l&#39;utilisateur de déterminer la taille de texte nécessaire à son confort visuel et adapter son application à cette modification sont des éléments essentiels que le <code>Dynamic Type</code> met en avant.
+</br>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le <code>Dynamic Type</code> ainsi qu&#39;une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.
+</br><a href="./criteria-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'application du dynalic type." src="./images/iOSdev/wwdc17-245.png" /></p>
+<h2 id="-2016-audit-d-une-app-en-accessibilit-criteria-ios-wwdc-16407-html-"><a href="./criteria-ios-wwdc-16407.html">2016 - Audit d&#39;une app en accessibilité</a></h2>
+<p>Après un rappel sur le fonctionnement de <span lang="en">VoiceOver</span> au niveau programmatique, cette présentation va détailler les différentes fonctionnalités proposées par l&#39;outil <span lang="en">Accessibility Inspector</span> de Xcode en s&#39;appuyant sur un exemple très simple pour une mise en situation concrète.
+</br><a href="./criteria-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'audit d'une app en accessibilité" src="./images/iOSdev/wwdc16-407.png" /></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="wwdc-2016-audit-d-une-app-en-accessibilit-">WWDC 2016 : Audit d&#39;une app en accessibilité</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2016 - Audit d'une app en accessibilité"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2016/407/">session 407</a>) a pour but d&#39;expliquer l&#39;outil de développement <span lang="en">Accessibility Inspector</span> et comment l&#39;utiliser par le biais d&#39;une application d&#39;exemple très simple.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc16-logo.png" />
+<img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><a href="#AccessibilityInspector">Accessibility Inspector</a> (09:38)</li>
+<li><a href="#Audit">Audit</a> (11:21)</li>
+<li><a href="#Inspection">Inspection</a> (20:30)</li>
+<li><a href="#Settings">Settings</a> (28:33)</li>
+</ul>
+<p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.</p>
+<p><a name="AccessibilityInspector"></a></p>
+<h3 id="-accessibility-inspector-09-38-https-developer-apple-com-videos-play-wwdc2016-407-time-578-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=578">Accessibility Inspector (09:38)</a></h3>
+<p>Présentation générale de l&#39;outil en décrivant son contenu ainsi que les différents thèmes autour desquels va s&#39;articuler cette présentation.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-AccessibilityInspector.png" />
+</br>La suite va s&#39;attacher à détailler spécifiquement les parties <span lang="en">audit</span>, <span lang="en">inspection</span> et <span lang="en">settings</span>.</p>
+<p><a name="Audit"></a></p>
+<h3 id="-audit-11-21-https-developer-apple-com-videos-play-wwdc2016-407-time-681-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=681">Audit (11:21)</a></h3>
+<p>Explications fournies sur l&#39;intérêt et l&#39;utilisation de cette fonctionnalité avec une démonstration par un exemple pratique <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=742">(12:22)</a> qui permet de mettre en avant la façon de trouver une solution au problème décelé par l&#39;outil <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=864">(14:24)</a> tout en pouvant remonter rapidement ce problème sous forme de rapport <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1027">(17:07)</a>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Audit.png" />
+</br>Ce type d&#39;audit automatique est très important mais un <strong>audit manuel</strong> complémentaire est <strong>indispensable</strong> car il permet d&#39;éviter des écueils qui pourraient être dévastateurs dans l&#39;utilisation de l&#39;application <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1135">(18:55)</a>.</p>
+<p><a name="Inspection"></a></p>
+<h3 id="-inspection-20-30-https-developer-apple-com-videos-play-wwdc2016-407-time-1230-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1230">Inspection (20:30)</a></h3>
+<p>Seconde fonctionnalité expliquée en s&#39;appuyant sur un exemple <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1318">(21:58)</a> qui peut permettre de déceler différents types de problèmes :</p>
+<ul>
+<li>Ordonnancement chaotique d&#39;éléments dans la navigation. <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1391">(23:11)</a></li>
+<li>Description absconse d&#39;un élément. <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1414">(23:34)</a></li>
+<li>Action non souhaitée déclenchée par un élément. <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1442">(24:02)</a></li>
+</ul>
+<p>Lors de la visualisation de la hiérarchie des éléments par cette fonctionnalité <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1480">(24:40)</a>, il est précisé que les composants gérés par <span lang="en">CALayer</span> ne sont pas traités nativement par <span lang="en">VoiceOver</span>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Inspection.png" /></p>
+<p><a name="Settings"></a></p>
+<h3 id="-settings-28-33-https-developer-apple-com-videos-play-wwdc2016-407-time-1713-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1713">Settings (28:33)</a></h3>
+<p>Dernière fonctionnalité de l&#39;outil qui permet d&#39;éviter des allers-retours entre l&#39;application testée et les modifications des principaux réglages d&#39;accessibilité qu&#39;une démonstration met en évidence <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1825">(30:25)</a>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Settings.png" /></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="wwdc-2017-les-nouveaut-s-en-accessibilit-">WWDC 2017 : les nouveautés en accessibilité</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2017 - Les nouveautés en accessibilité"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/215/">session 215</a>) a pour but de mettre en avant les principales nouveautés iOS 11 en terme d&#39;accessibilité avec une importance notable pour <span lang="en">VoiceOver</span>.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
+<img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><a href="#ImageTextDetection">Détection de texte dans une image</a> (07:07)</li>
+<li><a href="#ImprovedPhotoDescription">Amélioration de la description d&#39;une photo</a> (08:01)</li>
+<li><a href="#TypeToSIRI">Ecrire des infos pour SIRI</a> (11:37)</li>
+<li><a href="#AccessibilityInspector">Accessibility Inspector : cas pratique</a> (15:35)</li>
+<li><a href="#UIAccessibilityProtocol">Découvrir UIAccessibilityProtocol</a> (21:14)</li>
+<li><a href="#AttributedProperties">Attributed Accessibility Properties</a> (26:07)</li>
+<li><a href="#AccessibilityContainer">Accessibility Container Type</a> (27:20)</li>
+<li><a href="#CustomActions">Les actions personnalisées</a> (35:43)</li>
+<li><a href="#DefaultActivation">Action par défaut</a> (37:38)</li>
+<li><a href="#AdjustableValues">Les valeurs continûment ajustables</a> (38:22)</li>
+<li><a href="#PassThrough">Sélection en défilement continu</a> (39:40)</li>
+<li><a href="#CustomScrolling">Défilement personnalisé</a> (41:02)</li>
+<li><a href="#DragAndDrop">Drag &amp; Drop</a> (42:54)</li>
+</ul>
+<p></br>Au cours de cette présentation, de nombreuses solutions sont proposées par le biais d&#39;une application d&#39;exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span> (regarder l&#39;<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">application d&#39;exemple</a> avant de lire la suite) :</p>
+<ul>
+<li>Rendre un élément (in)accessible <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a>.</li>
+<li>Remplir des propriétés <code>label</code> et <code>value</code> ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a>.</li>
+<li>Rassembler plusieurs éléments pour n&#39;en former qu&#39;un seul ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a>.</li>
+</ul>
+<p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.</p>
+<p><a name="ImageTextDetection"></a></p>
+<h3 id="-d-tection-de-texte-dans-une-image-07-07-https-developer-apple-com-videos-play-wwdc2017-215-time-427-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=427">Détection de texte dans une image (07:07)</a></h3>
+<p>Il est désormais possible de <strong>déterminer si du texte est incrusté dans une image</strong>.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-ImageTextDetection.png" />
+</br>Cette détection très basique est obtenue en réalisant un <strong>tap avec 3 doigts</strong>.
+</br>Elle permet ainsi de vocaliser cette inscription à une personne qui ne peut initialement pas la détecter.</p>
+<p><a name="ImprovedPhotoDescription"></a></p>
+<h3 id="-am-lioration-de-la-description-d-une-photo-08-01-https-developer-apple-com-videos-play-wwdc2017-215-time-481-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=481">Amélioration de la description d&#39;une photo (08:01)</a></h3>
+<p>La <strong>vocalisation de la description d&#39;une photo</strong> est une nouvelle fonctionnalité de Voice Over et est obtenue par un simple <span lang="en">tap</span> à l&#39;aide de 3 doigts.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-ImprovedPhotoDescription.png" />
+</br>Une détection très simple du contexte, des visages et de leurs expressions est donc exposée à l&#39;utilisateur pour qui ce type d&#39;informations devient plus que jamais un lien fort avec son environnement.</p>
+<p><a name="TypeToSIRI"></a></p>
+<h3 id="-ecrire-des-infos-pour-siri-11-37-https-developer-apple-com-videos-play-wwdc2017-215-time-697-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=697">Ecrire des infos pour SIRI (11:37)</a></h3>
+<p>Nouveauté très utile pour les <strong>personnes ne pouvant pas utiliser SIRI vocalement</strong> ou désirant simplement <strong>effectuer des requêtes de façon discrète</strong>.
+</br>Pour utiliser cette fonctionnalité, il faut se rendre dans la partie <code>Accessibilité</code> des <code>Réglages</code> pour rendre l&#39;activation effective.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-TypeToSiri.png" /></p>
+<p><a name="AccessibilityInspector"></a></p>
+<h3 id="-accessibility-inspector-cas-pratique-15-35-https-developer-apple-com-videos-play-wwdc2017-215-time-935-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=935">Accessibility Inspector : cas pratique (15:35)</a></h3>
+<p>Dans cette partie, l&#39;outil <span lang="en">Accessibility Inspector</span> de Xcode est utilisé pour une démonstration d&#39;audit accessibilité d&#39;une application.
+</br>Des exemples sont fournis sans expliquer fondamentalement les notions propres à l&#39;outil qui sont détaillées dans la session <a href="https://developer.apple.com/videos/play/wwdc2016/407/">407</a> (2016).</p>
+<p><a name="UIAccessibilityProtocol"></a></p>
+<h3 id="-d-couvrir-uiaccessibilityprotocol-21-14-https-developer-apple-com-videos-play-wwdc2017-215-time-1274-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">Découvrir UIAccessibilityProtocol (21:14)</a></h3>
+<p>Petit rappel sur les fondements de <code>UIAccessibilityProtocol</code> qui vont être utilisés dans la suite de la présentation.
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /></p>
+<p><a name="AttributedProperties"></a></p>
+<h3 id="-attributed-accessibility-properties-26-07-https-developer-apple-com-videos-play-wwdc2017-215-time-1567-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1567">Attributed Accessibility Properties (26:07)</a></h3>
+<p>iOS 11 permet de transformer les propriétés d&#39;accessibilité <code>label</code>, <code>value</code> et <code>hint</code> de base en <code>NSAttributedString</code> de façon à pouvoir <strong>agir sur la façon dont ils vont être vocalisés</strong>.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-AttributedStrings.png" />
+</br>Parmi les exemples fournis, on trouve la possibilité de vocaliser en langue étrangère un élément accessible bien particulier.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-AttributedStringsExample.png" />
+</br>L&#39;ensemble des clés utilisables se trouve sur la <a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibility/speech_attributes_for_attributed_strings">documentation officielle Apple</a>.</p>
+<p><a name="AccessibilityContainer"></a></p>
+<h3 id="-accessibility-container-type-27-20-https-developer-apple-com-videos-play-wwdc2017-215-time-1640-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1640">Accessibility Container Type (27:20)</a></h3>
+<p>Une définition de <strong>conteneur typé</strong> au niveau accessibilité est disponible en <strong>iOS 11</strong>.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-ContainerType.png" />
+</br>La notion de conteneur existait déjà mais rien ne permettait à <span lang="en">VoiceOver</span> de savoir ce qu&#39;était réellement ce conteneur.
+</br>Ce nouveau typage va donc permettre à <span lang="en">VoiceOver</span> de faciliter et de mieux appréhender la façon dont l&#39;utilisateur va pouvoir naviguer au sein de ce conteneur.</p>
+<p><a name="CustomActions"></a></p>
+<h3 id="-les-actions-personnalis-es-35-43-https-developer-apple-com-videos-play-wwdc2017-215-time-2143-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2143">Les actions personnalisées (35:43)</a></h3>
+<p>Il est possible de définir sur une vue un ensemble constitué de <code>accessibilityCustomAction</code> de façon à lui <strong>attribuer différentes actions possibles</strong>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
+</br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet de déterminer l&#39;action de son choix.</p>
+<p><a name="DefaultActivation"></a></p>
+<h3 id="-action-par-d-faut-37-38-https-developer-apple-com-videos-play-wwdc2017-215-time-2258-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2258">Action par défaut (37:38)</a></h3>
+<p>Afin de limiter ou de rendre plus faciles les manipulations à réaliser par les utilsateurs de <span lang="en">VoiceOver</span>, il est possible de déclencher des actions appropriées dès qu&#39;un élément est activé par un double tap.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-DefaultAction.png" /></p>
+<p><a name="AdjustableValues"></a></p>
+<h3 id="-les-valeurs-contin-ment-ajustables-38-22-https-developer-apple-com-videos-play-wwdc2017-215-time-2302-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2302">Les valeurs continûment ajustables (38:22)</a></h3>
+<p>La <strong>modification de valeur</strong> pour des éléments tels que le <code>slider</code> ou le <code>picker</code> peut se faire de façon <strong>très fluide</strong> grâce à l&#39;implémentation de deux fonctions :
+</br><img style="max-width: 470px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-AdjustableValues.png" />
+</br>Dès que la vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet d&#39;augmenter (vers le haut) ou de diminuer (vers le bas) la valeur.
+</br>La mise en place programmatique de ce type de fonctionnement est présentée dans la partie <a href="./criteria-ios-dev.html#valeurs-contin-ment-ajustables">développement</a>.</p>
+<p><a name="PassThrough"></a></p>
+<h3 id="-s-lection-en-d-filement-continu-39-40-https-developer-apple-com-videos-play-wwdc2017-215-time-2380-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2380">Sélection en défilement continu (39:40)</a></h3>
+<p>L&#39;application d&#39;une <strong>double pression d&#39;un doigt accompagnée d&#39;un maintien à l&#39;issue</strong> sur un défilement panoramique permet de déclencher la fonctionnalité <span lang="en">pass-through</span> de <span lang="en">VoiceOver</span>.
+</br><img style="max-width: 400px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-PassThrough_1.png" />
+</br>Cette fonctionnalité permet d&#39;obtenir une sélection beaucoup plus précise de la valeur remontée.
+</br>Il est donc possible de préciser à <span lang="en">VoiceOver</span> le focus de l&#39;élément sélectionné grâce à l&#39;attribut <a href="./criteria-ios-dev.html#modifier-la-zone-de-focus-de-span-lang-en-voiceover-span-">accessibilityActivationPoint</a> de façon à indiquer finement à l&#39;utilisateur où il se trouve au niveau du panoramique.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-PassThrough_2.png" /></p>
+<p><a name="CustomScrolling"></a></p>
+<h3 id="-d-filement-personnalis-41-02-https-developer-apple-com-videos-play-wwdc2017-215-time-2462-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2462">Défilement personnalisé (41:02)</a></h3>
+<p>Le défilement classique de pages proposé par <span lang="en">VoiceOver</span> se fait avec un <span lang="en">swipe</span> à l&#39;aide de 3 doigts.
+</br>Il est toutefois possible de personnaliser le résultat obtenu grâce à la méthode <code>accessibilityScroll</code> présente dans le protocole <code>UIAccessibilityAction</code>.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomScrolling.png" /></p>
+<p><a name="DragAndDrop"></a></p>
+<h3 id="-drag-drop-42-54-https-developer-apple-com-videos-play-wwdc2017-215-time-2574-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2574">Drag &amp; Drop (42:54)</a></h3>
+<p>Nouveauté iOS11, le <span lang="en">drag-and-drop</span> présenté en accessibilité ne décrit pas la nouvelle API mais rappelle les 2 principes primordiaux autour desquels s&#39;appuie son fonctionnement : les <span lang="en">drag sources</span> et les <span lang="en">drop points</span>.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-DragAndDrop.png" />
+</br>Leur utilisation est ensuite succinctement proposée par le biais d&#39;un <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2729">exemple</a>.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="wwdc-2017-application-du-dynamic-type">WWDC 2017 : Application du Dynamic Type</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2017 - Application du Dynamic Type"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/245/">session 245</a>) a pour but d&#39;expliquer ce qu&#39;est le <span lang="en">Dynamic Type</span> et comment le mettre en oeuvre par le biais de bonnes pratiques.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
+<img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><a href="#TextStyles">Styles de texte</a> (06:06)</li>
+<li><a href="#CustomFonts">Police personnalisée</a> (08:17)</li>
+<li><a href="#WebViews">Utilisation de pages web</a> (09:25)</li>
+<li><a href="#WrapToMultipleLines">Affichage sur plusieurs lignes</a> (10:14)</li>
+<li><a href="#AutoLayoutSystemSpacingConstraints">ConstraintEqualToSystemSpacingBelow</a> (11:31)</li>
+<li><a href="#ScaledValue">ScaledValue</a> (12:56)</li>
+<li><a href="#SideBySideText">Grossissement d&#39;éléments voisins</a> (13:36)</li>
+<li><a href="#PreferredContentSizeCategory">PreferredContentSizeCategory</a> (15:23)</li>
+<li><a href="#TableViewCells">Table view cells</a> (16:38)</li>
+<li><a href="#Images">Images</a> (20:13)</li>
+<li><a href="#Demo">Exemple</a> (24:32)</li>
+</ul>
+<p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.</p>
+<p><a name="TextStyles"></a></p>
+<h3 id="-styles-de-texte-06-06-https-developer-apple-com-videos-play-wwdc2017-245-time-366-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Styles de texte (06:06)</a></h3>
+<p>Avec iOS 11, <strong>tous les styles de texte utilisés en accessibilité s&#39;adaptent aux 12 tailles de texte possibles</strong>.
+</br>Dans l&#39;<span lang="en">Interface Builder</span> de Xcode, il suffit d&#39;indiquer le style souhaité dans la partie <span lang="en">Attribute Inspector</span> et de cocher la case <span lang="en">Dynamic Type</span> qui permettra d&#39;adapter automatiquement la taille selon les réglages (nouveauté iOS 11).
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_1.png" />
+</br>Au niveau code, on obtient exactement le même résulat de la façon suivante :
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_2.png" /></p>
+<p><a name="CustomFonts"></a></p>
+<h3 id="-police-personnalis-e-08-17-https-developer-apple-com-videos-play-wwdc2017-245-time-497-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=497">Police personnalisée (08:17)</a></h3>
+<p>L&#39;introduction de la classe <code>UIFontMetrics</code> en iOS 11 permet à une police personnalisée de respecter le comportement du grossissement de caractères.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-CustomFonts.png" /></p>
+<p><a name="WebViews"></a></p>
+<h3 id="-utilisation-de-pages-web-09-25-https-developer-apple-com-videos-play-wwdc2017-245-time-565-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=565">Utilisation de pages web (09:25)</a></h3>
+<p>Afin d&#39;assurer une compatibilité entre le comportement attendu sur un <strong>terminal iOS</strong> utilisant le <span lang="en">Dynamic Type</span> et l&#39;<strong>affichage de pages web</strong> sur ce même type de terminal, il est possible d&#39;indiquer le style de texte souhaité au niveau CSS :
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-WebViews.png" /></p>
+<p><a name="WrapToMultipleLines"></a></p>
+<h3 id="-affichage-sur-plusieurs-lignes-10-14-https-developer-apple-com-videos-play-wwdc2017-245-time-614-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=614">Affichage sur plusieurs lignes (10:14)</a></h3>
+<p>Afin d&#39;éviter la troncature d&#39;un texte trop long dans un <code>label</code> après grossissement, il est conseillé de mettre la valeur <code>0</code> dans le nombre de lignes à afficher, ce qui aura pour signification d&#39;afficher l&#39;ensemble des lignes.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-WrapToMultipleLines.png" /></p>
+<p><a name="AutoLayoutSystemSpacingConstraints"></a></p>
+<h3 id="-constraintequaltosystemspacingbelow-11-31-https-developer-apple-com-videos-play-wwdc2017-245-time-691-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=691">ConstraintEqualToSystemSpacingBelow (11:31)</a></h3>
+<p>Dans la mise en place de contraintes graphiques entre deux éléments de type <code>label</code> s&#39;appuyant sur leur &#39;baseline&#39;, il est préférable de ne pas mettre de valeur fixe pour ne pas rencontrer la situation ci-dessous lors de grossissement de caractères :
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-AutoLayoutsystemSpacingConstraints_1.png" />
+</br>Une constante égale à &#39;Standard Value&#39; dans l&#39;<span lang="en">Interface Builder</span> de Xcode ou une définition programmatique de la contrainte utilisant <code>constraintEqualToSystemSpacingBelow</code> (nouveauté iOS 11) permet de résoudre ce problème.
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-AutoLayoutsystemSpacingConstraints_2.png" /></p>
+<p><a name="ScaledValue"></a></p>
+<h3 id="-scaledvalue-12-56-https-developer-apple-com-videos-play-wwdc2017-245-time-776-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=776">ScaledValue (12:56)</a></h3>
+<p>Introduite en iOS 11, la méthode <strong>scaledValue</strong> permet de déterminer la hauteur d&#39;un élement graphique contenant du texte selon le grossissement implémenté.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-ScaledValue.png" />
+</br>À utiliser par exemple pour un bouton contenant du texte dont la taille est liée au <span lang="en">Dynamic Type</span> et dont on souhaite connaître la hauteur.</p>
+<p><a name="SideBySideText"></a></p>
+<h3 id="-grossissement-d-l-ments-voisins-13-36-https-developer-apple-com-videos-play-wwdc2017-245-time-816-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=816">Grossissement d&#39;éléments voisins (13:36)</a></h3>
+<p>Arrivé à un certain seuil de grossissement, des éléments verticalement voisins peuvent finir par devenir illisibles et même transformer une interface graphique initialement ergonomique en une juxtaposition grossière d&#39;objets.
+</br>Dans ce cas, il est recommandé de passer à un alignement horizontal lorsque le grossisement problématique est atteint.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-SideBySideText.png" /></p>
+<p><a name="PreferredContentSizeCategory"></a></p>
+<h3 id="-preferredcontentsizecategory-15-23-https-developer-apple-com-videos-play-wwdc2017-245-time-923-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=923">PreferredContentSizeCategory (15:23)</a></h3>
+<p>Il existe <strong>2 familles</strong> bien distinctes qui contiennent les paliers de grossissement souhaités :</p>
+<ul>
+<li>La première comprend les <strong>7 seuils</strong> de base allant de <code>extraSmall</code> à <code>extraExtraExtraLarge</code>.</li>
+<li>La seconde est <strong>spécifique à l&#39;accessibilité</strong> et doit être activée pour être prise en compte : elle comprend <strong>5 seuils</strong> qui vont de <code>accessibilityMedium</code> à <code>accessibilityExtraExtraExtraLarge</code>.</li>
+</ul>
+<p>Ces différents seuils sont accessibles depuis le <code>traitCollection</code> de la vue ou bien directement depuis l&#39;application par le biais de la méthode <strong>preferredContentSizeCategory</strong>.
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-PreferredContentSizeCategory_1.png" />
+</br>Il est possible de mettre en place des conditions pour savoir si un seuil de grossissement a été atteint de façon à faire un réarrangement graphique des éléments quand cela est nécessaire.
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-PreferredContentSizeCategory_2.png" /></p>
+<p><a name="TableViewCells"></a></p>
+<h3 id="-table-view-cells-16-38-https-developer-apple-com-videos-play-wwdc2017-245-time-998-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=998">Table view cells (16:38)</a></h3>
+<p>L&#39;utilisation de <span lang="en">table view cells</span> standards va permettre d&#39;adapter automatiquement la disposition d&#39;une cellule en fonction du <span lang="en">Dynamic Type</span> grâce au <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1058">cell-sizing</a>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TableViews_1.png" />
+</br>Dans le cadre de cellules personnalisées, il faut mettre en place les contraintes pour définir le rendu souhaité et laisser le <span lang="en">cell-sizing</span> opérer.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TableViews_2.png" /></p>
+<p><a name="Images"></a></p>
+<h3 id="-images-20-13-https-developer-apple-com-videos-play-wwdc2017-245-time-1213-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1213">Images (20:13)</a></h3>
+<p>Le <span lang="en">Dynamic Type</span> permet aussi le grossissement des images à la fois sur les vues et les barres de tabulation.
+</br>Les explications détaillées de ce point se trouvent dans la partie <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">développement</a>.</p>
+<p><a name="Demo"></a></p>
+<h3 id="-exemple-24-32-https-developer-apple-com-videos-play-wwdc2017-245-time-1472-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1472">Exemple (24:32)</a></h3>
+<p>Une application d&#39;exemple est proposée pour répondre aux questions que se posent les développeurs face aux éventuels problèmes rencontrés dans l&#39;implémentation du <span lang="en">Dynamic Type</span> (regarder l&#39;<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1506">introduction</a> avant de lire la suite) :</p>
+<ul>
+<li><strong>Pourquoi mon implémentation du <span lang="en">Dynamic Type</span> ne fonctionne-t-elle pas</strong> ?
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1579">(26:19)</a> (aide = <span lang="en"><code>adjustsFontForContentSizeCategory</code></span> (code) ou <span lang="en"><code>Automatically Adjusts Font</code></span> (<span lang="en">Attribute Inspector</span>) + <span lang="en"><code>scaledFont</code></span> si police personnalisée)</li>
+<li><strong>Comment modifier le positionnement des éléments pour adapter la lisibilité à la largeur maximale de texte</strong> ?
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1681">(28:01)</a> (aide = mettre en place les contraintes à activer pour un positionnement vertical des éléments impactés + déterminer le moment auquel activer ces nouvelles contraintes avec <span lang="en"><code>preferredContentSizeCategory</code></span> + <span lang="en"><code>traitCollectionDidChange</code></span> pour être notifié d&#39;un changement de taille de texte)</li>
+<li><strong>Comment adapter la taille de mes <span lang="en"><code>table view cells</code></span> à leur contenu</strong> ?
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1863">(31:03)</a> (aide = <span lang="en"><code>UITableViewAutomaticDimension</code></span> + <span lang="en"><code>estimatedRowHeight</code></span>)</li>
+<li><strong>Pourquoi la taille de mes images ne suit pas le grossissement de texte</strong> ? <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1931">(32:11)</a> (aide = <span lang="en"><code>adjustsImageSizeForAccessibilityContentSizeCategory</code></span>)</li>
+<li><strong>Comment mettre une définition visuelle parfaite aux images après grossissement</strong> ? <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1987">(33:07)</a> (aide = <span lang="en"><code>Preserve Vector Data</code></span> dans l&#39;<span lang="en">Attribute Inspector</span> du .xcassets)</li>
+<li><strong>Comment utiliser l&#39;instrument <span lang="en">Accessibility Inspector</span> pour vérifer le grossissement de texte</strong> ? <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=2096">(34:56)</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="recommandations-accessibilit-orange-pour-les-mobiles">Recommandations accessibilité Orange pour les mobiles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Présentation"}]);

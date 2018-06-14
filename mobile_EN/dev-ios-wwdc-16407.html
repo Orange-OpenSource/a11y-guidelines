@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orange accessibility guidelines</title>
+        
+      
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">                  
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                  </li>
+                  <li class="nav-item active mobile">
+                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <ul id="navigation" class="nav navbar-nav">
+                      <li><a class="page-index" href="index.html">Presentation</a></li>
+                      <li><a class="page-criteria-mobile" href="criteria-mobile.html">Mobile criteria</a></li>  
+                      <li><a class="page-dev-mobile" href="dev-mobile.html">Guide for developers</a></li>                
+                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
+                      <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
+                      <li><a class="page-links" href="links.html">Useful links</a></li>
+                      <li><a class="page-contact" href="contact.html">Contact</a></li>
+                      <li><a class="page-about" href="about.html">About</a></li>                        
+                    </ul>                      
+                  </li>  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                  
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">                  
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <span class="sr-only">You are here: </span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile</a></li>        
+    </ol>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="wwdc-2016-auditing-your-apps-for-accessibility">WWDC 2016 : Auditing Your Apps for Accessibility</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
+                   {"label":"iOS WWDC", "url": "./dev-ios-wwdc.html"},
+                   {"label":"2016 - Auditing Your Apps for Accessibility"}
+    ]);
+    addSubMenu([
+        {"label":"Android guide","url":"dev-android.html"}, 
+        {"label":"iOS guide","url":"dev-mobile.html"},
+        {"label":"iOS WWDC","url":"dev-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="dev-mobile"></span></p>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2016/407/">session 407</a>) aims at defining and using the <code>Accessibility Inspector</code> tool of Xcode, based on good practice implementation.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc16-logo.png" />
+<img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407.png" />
+</br></br>Various contents and their video timelapse are indicated hereunder :</p>
+<ul>
+<li><a href="#AccessibilityInspector">Accessibility Inspector</a> (09:38)</li>
+<li><a href="#Audit">Audit</a> (11:21)</li>
+<li><a href="#Inspection">Inspection</a> (20:30)</li>
+<li><a href="#Settings">Settings</a> (28:33)</li>
+</ul>
+<p>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.</p>
+<p><a name="AccessibilityInspector"></a></p>
+<h3 id="-accessibility-inspector-09-38-https-developer-apple-com-videos-play-wwdc2016-407-time-578-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=578">Accessibility Inspector (09:38)</a></h3>
+<p>Overview of the tool pointing out the themes to be developed : audit, inspection and settings.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-AccessibilityInspector.png" /></p>
+<p><a name="Audit"></a></p>
+<h3 id="-audit-11-21-https-developer-apple-com-videos-play-wwdc2016-407-time-681-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=681">Audit (11:21)</a></h3>
+<p>This part contains a demo <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=742">(12:22)</a> that highlights the way to find out a solution for the problem detected by the tool <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=864">(14:24)</a> while providing a bug report <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1027">(17:07)</a>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Audit.png" />
+</br>A complementary <strong>manual audit</strong> is also <strong>mandatory</strong> to avoid bypassing some kind of hidden problems <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1135">(18:55)</a>.</p>
+<p><a name="Inspection"></a></p>
+<h3 id="-inspection-20-30-https-developer-apple-com-videos-play-wwdc2016-407-time-1230-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1230">Inspection (20:30)</a></h3>
+<p>This feature explanation is build on an example <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1318">(21:58)</a> that points out possible kinds of problems in an app like :</p>
+<ul>
+<li>Inappropriate sequencing of elements during the navigation. <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1391">(23:11)</a></li>
+<li>Abstruse description of an element. <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1414">(23:34)</a></li>
+<li>Improper action of an element. <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1442">(24:02)</a></li>
+</ul>
+<p>The presentation of the view hierarchy of this feature <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1480">(24:40)</a> comes along with an important point dealing with CALayer elements that aren&#39;t taken into account by VoiceOver.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Inspection.png" /></p>
+<p><a name="Settings"></a></p>
+<h3 id="-settings-28-33-https-developer-apple-com-videos-play-wwdc2016-407-time-1713-"><a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1713">Settings (28:33)</a></h3>
+<p>Last but not least, this feature (highlighted thanks to a demo - <a href="https://developer.apple.com/videos/play/wwdc2016/407/?time=1825">30:25</a>) avoids switching back and forth between changing some accessibility settings and verifying the result on the app.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Settings.png" /></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+</body>
+</html>

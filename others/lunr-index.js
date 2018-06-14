@@ -41,11 +41,11 @@ index.add({
     body: "## Recommandations éditoriales générales Les recommandations générales décrivent les recommandations à respecter quel que soit le type de contenu (web, email, document Word, etc.). &lt;ul role=\&quot;presentation\&quot;&gt; &lt;li&gt;&lt;a href=\&quot;./editorial.html\&quot;&gt;Accéder aux recommandations éditoriales générales&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  "
 });
 
-documentTitles["index.html#recommandations-specifiques-par-type-de-document"] = "Recommandations spécifiques par type de document";
+documentTitles["index.html#recommandations-specifiques-par-type-de-contenu"] = "Recommandations spécifiques par type de contenu";
 index.add({
-    url: "index.html#recommandations-specifiques-par-type-de-document",
-    title: "Recommandations spécifiques par type de document",    
-    body: "## Recommandations spécifiques par type de document Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "index.html#recommandations-specifiques-par-type-de-contenu",
+    title: "Recommandations spécifiques par type de contenu",    
+    body: "## Recommandations spécifiques par type de contenu Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  - [Fournir des contenus vidéos ou audios](./video-audio.html)&amp;nbsp;: section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -588,6 +588,64 @@ index.add({
     url: "editorial.html#fournir-une-mise-en-page-des-tableaux-accessibles",
     title: "Fournir une mise en page des tableaux accessibles",    
     body: "## Fournir une mise en page des tableaux accessibles  Simplifier les tableaux sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une mise en page en tableau.  À vérifier&amp;nbsp;:   - Globalement, ne pas utiliser de mise en page complexe de tableau (fusion de cellules d’un tableau, multicolonnage…). - Éviter d’imbriquer les tableaux de mise en page (grand maximum, 2 niveaux d’imbrication), mais aussi&amp;nbsp;: - Ne pas fusionner les cellules d’un tableau, mais utiliser plusieurs tableaux plus simples. - Ne pas conserver de cellules vides. - Ne pas ajouter d’images de fond. - Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas). - Éviter les tableaux de données, mais aussi les graphiques ou les schémas complexes.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["video-audio.html#recommandations-accessibilite-des-contenus-videos-et-audios-orange"] = "Recommandations accessibilité des contenus vidéos et audios Orange";
+index.add({
+    url: "video-audio.html#recommandations-accessibilite-des-contenus-videos-et-audios-orange",
+    title: "Recommandations accessibilité des contenus vidéos et audios Orange",    
+    body: "# Recommandations accessibilité des contenus vidéos et audios Orange    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Vidéo audio\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+});
+
+documentTitles["video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-et-audios"] = "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos et audios";
+index.add({
+    url: "video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-et-audios",
+    title: "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos et audios",    
+    body: "## Introduction&amp;nbsp;: l’accessibilité des contenus vidéos et audios Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&amp;nbsp;: - que ces vidéos et audios eux-même soient accessibles - mais également, que l'interface qui permet la diffusion de ces fichiers soit accessible.  "
+});
+
+documentTitles["video-audio.html#rendre-les-videos-ou-audios-accessibles"] = "Rendre les vidéos ou audios accessibles";
+index.add({
+    url: "video-audio.html#rendre-les-videos-ou-audios-accessibles",
+    title: "Rendre les vidéos ou audios accessibles",    
+    body: "## Rendre les vidéos ou audios accessibles  Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :  - Une transcription intégrale, seule nécessité pour un fichier audio. - Des sous-titres. - Une audiodescription, si besoin.  "
+});
+
+documentTitles["video-audio.html#transcription-integrale"] = "Transcription intégrale";
+index.add({
+    url: "video-audio.html#transcription-integrale",
+    title: "Transcription intégrale",    
+    body: "### Transcription intégrale La transcription doit restituer textuellement l’ensemble des informations véhiculées par la vidéo (paroles, messages affichés à l’écran, ...). La transcription peut être agrémentée d’images, si besoin.  **La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.**  Cette transcription doit, par ordre de préférence, être&amp;nbsp;: 1. accessible directement à travers le lecteur audio/vidéo, lui-même. 1. directement présente dans la page ou le document à proximité immédiate (l'élément qui suit directement, en fait) de la vidéo ou audio. 1. accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.  Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.  "
+});
+
+documentTitles["video-audio.html#sous-titres"] = "Sous-titres";
+index.add({
+    url: "video-audio.html#sous-titres",
+    title: "Sous-titres",    
+    body: "### Sous-titres Les sous-titres doivent restituer l’ensemble des contenus (tout son porteur d'information : voix, coup de feu, ...) véhiculés par la bande son de la vidéo. Ils doivent être au format texte et synchronisés avec le son de la vidéo.  Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais doivent être associées à cette dernière grâce à un fichier texte indépendant (souvent un fichier .xml ou .srt).  "
+});
+
+documentTitles["video-audio.html#audiodescription"] = "Audiodescription";
+index.add({
+    url: "video-audio.html#audiodescription",
+    title: "Audiodescription",    
+    body: "### Audiodescription  L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsque la vidéo est juste une interview, sans autre information visuelle.  Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).  De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).  "
+});
+
+documentTitles["video-audio.html#le-lecteur-audio-ou-video"] = "Le lecteur audio ou vidéo";
+index.add({
+    url: "video-audio.html#le-lecteur-audio-ou-video",
+    title: "Le lecteur audio ou vidéo",    
+    body: "## Le lecteur audio ou vidéo  Le lecteur vidéo utilisé doit&amp;nbsp;: - prendre en charge d'au moins deux éléments&amp;nbsp;: sous-titres et audiodescription.  - permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).  - permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.  - ne pas lancer automatiquement l'audio ou la vidéo mais laisser la main à l'utilisateur.  "
+});
+
+documentTitles["video-audio.html#liens-utiles"] = "Liens utiles";
+index.add({
+    url: "video-audio.html#liens-utiles",
+    title: "Liens utiles",    
+    body: "## Liens utiles -  Article en anglais sur le site de SitePoint&amp;nbsp;:  &lt;a href=\&quot;https://www.sitepoint.com/accessible-video/\&quot; hreflang=\&quot;en\&quot;&gt;8 Steps to Creating Accessible Video&lt;/a&gt; (en anglais) - Notice  d’accessibilité éditoriale AccedeWeb&amp;nbsp;: &lt;a href=\&quot;https://www.accede-web.com/notices/editoriale/8-contenus-riches-multimedias/\&quot;&gt;Utiliser correctement les contenus riches et multimédias&lt;/a&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

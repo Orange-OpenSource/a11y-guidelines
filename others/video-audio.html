@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Éditorial</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-editorial" href="editorial.html">Recommandations générales</a></li>
+                        <li><a class="page-word" href="word.html" lang="en">Microsoft Word</a></li>                        
+                        <li><a class="page-powerpoint" href="powerpoint.html" lang="en">Microsoft PowerPoint</a></li>                        
+                        <li><a class="page-pdf" href="pdf.html" lang="en">Documents <abbr>PDF</abbr></a></li>                         
+                        <li><a class="page-pushmail" href="pushmail.html">Email</a></li>
+                        <li><a class="page-video-audio" href="video-audio.html">Contenus vidéos ou audios</a></li>
+
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../others_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../others_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <span class="sr-only">Vous êtes ici&nbsp;: </span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/others/index.html">Éditorial</a></li>        
+    </ol>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="recommandations-accessibilit-des-contenus-vid-os-et-audios-orange">Recommandations accessibilité des contenus vidéos et audios Orange</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Vidéo audio"}]);
+});</script>
+
+<style>h3 {font-size: 1rem;}</style>
+
+<h2 id="introduction-nbsp-l-accessibilit-des-contenus-vid-os-et-audios">Introduction&nbsp;: l’accessibilité des contenus vidéos et audios</h2>
+<p>Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&nbsp;:</p>
+<ul>
+<li>que ces vidéos et audios eux-même soient accessibles</li>
+<li>mais également, que l&#39;interface qui permet la diffusion de ces fichiers soit accessible.</li>
+</ul>
+<h2 id="rendre-les-vid-os-ou-audios-accessibles">Rendre les vidéos ou audios accessibles</h2>
+<p>Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :</p>
+<ul>
+<li>Une transcription intégrale, seule nécessité pour un fichier audio.</li>
+<li>Des sous-titres.</li>
+<li>Une audiodescription, si besoin.</li>
+</ul>
+<h3 id="transcription-int-grale">Transcription intégrale</h3>
+<p>La transcription doit restituer textuellement l’ensemble des informations véhiculées par la vidéo (paroles, messages affichés à l’écran, ...). La transcription peut être agrémentée d’images, si besoin.</p>
+<p><strong>La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.</strong></p>
+<p>Cette transcription doit, par ordre de préférence, être&nbsp;:</p>
+<ol>
+<li>accessible directement à travers le lecteur audio/vidéo, lui-même.</li>
+<li>directement présente dans la page ou le document à proximité immédiate (l&#39;élément qui suit directement, en fait) de la vidéo ou audio.</li>
+<li>accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.</li>
+</ol>
+<p>Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.</p>
+<h3 id="sous-titres">Sous-titres</h3>
+<p>Les sous-titres doivent restituer l’ensemble des contenus (tout son porteur d&#39;information : voix, coup de feu, ...) véhiculés par la bande son de la vidéo. Ils doivent être au format texte et synchronisés avec le son de la vidéo.</p>
+<p>Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais doivent être associées à cette dernière grâce à un fichier texte indépendant (souvent un fichier .xml ou .srt).</p>
+<h3 id="audiodescription">Audiodescription</h3>
+<p>L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n&#39;est pas forcement nécessaire, par exemple, lorsque la vidéo est juste une interview, sans autre information visuelle.</p>
+<p>Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).</p>
+<p>De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).</p>
+<h2 id="le-lecteur-audio-ou-vid-o">Le lecteur audio ou vidéo</h2>
+<p>Le lecteur vidéo utilisé doit&nbsp;:</p>
+<ul>
+<li><p>prendre en charge d&#39;au moins deux éléments&nbsp;: sous-titres et audiodescription.</p>
+</li>
+<li><p>permettre d&#39;utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l&#39;audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d&#39;écran, loupes logicielles, claviers, ...).</p>
+</li>
+<li><p>permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d&#39;affichage des sous-titres.</p>
+</li>
+<li><p>ne pas lancer automatiquement l&#39;audio ou la vidéo mais laisser la main à l&#39;utilisateur.</p>
+</li>
+</ul>
+<h2 id="liens-utiles">Liens utiles</h2>
+<ul>
+<li>Article en anglais sur le site de SitePoint&nbsp;:  <a href="https://www.sitepoint.com/accessible-video/" hreflang="en">8 Steps to Creating Accessible Video</a> (en anglais)</li>
+<li>Notice  d’accessibilité éditoriale AccedeWeb&nbsp;: <a href="https://www.accede-web.com/notices/editoriale/8-contenus-riches-multimedias/">Utiliser correctement les contenus riches et multimédias</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+</body>
+</html>
