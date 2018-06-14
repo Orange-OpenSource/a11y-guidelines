@@ -34,11 +34,11 @@ figure {
   margin: 0;
 }
 
- #content ul, #content h2, #content h3, #content h4, #content p {
+#content ol, #content ul, #content h2, #content h3, #content h4, #content p {
    margin-bottom: 0;  
  }
 
- #content p, #content ul {
+ #content p, #content ol, #content ul {
    padding-bottom: 0;
  }
 
@@ -51,7 +51,7 @@ figure {
   padding-top: 1rem !important;
 }
 
-#content ul {
+#content ul, #content ol {
   background: #fff;
   padding: 1rem;
   padding-left: 3rem;  

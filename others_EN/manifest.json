@@ -3,8 +3,13 @@
     "files": [                
         "output/markdown/about.md",
         "output/markdown/contact.md",        
+        "output/markdown/editorial.md",
         "output/markdown/index.md",        
-        "output/markdown/editorial.md"
+        "output/markdown/pdf.md",
+        "output/markdown/powerpoint.md",
+        "output/markdown/video.md",
+        "output/markdown/word.md"
+        
     ],
     "maxTocLevel":"1"
 }
