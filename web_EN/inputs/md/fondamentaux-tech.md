@@ -193,7 +193,7 @@ Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) 
 **Checklist: **
 
 - Do not use tables to design the page layout, they should be used only for tabular data. 
-- Avoid using images to display text, prefer <abbr>CSS</abbr> styling.
+- Do not use image to display text, except when the visual presentation cannot be achieved using <abbr>CSS</abbr>.
 - Use <abbr>CSS</abbr> classes rather than manipulating inline <abbr>CSS</abbr> styles in <abbr>HTML</abbr>.
 - Do not use <abbr>CSS</abbr> pseudo-elements (::before, ::after…) to display information (or provide an alternative for screen readers especially).
 - Do not write Javascript events directly inside the <abbr>HTML</abbr>, use a separate script or <abbr>JS</abbr> file instead.

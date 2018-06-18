@@ -198,7 +198,7 @@ Séparer strictement le contenu (<abbr>HTML</abbr>), l’interactivité (Javascr
 **À vérifier&nbsp;:**
 
 - Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. 
-- Éviter d’utiliser des images pour afficher du texte, préférer les habillages <abbr>CSS</abbr>.
+- Ne pas utiliser d'image pour afficher du texte sauf exception (présentation qui ne peut pas être réalisée via <abbr>CSS</abbr>).
 - Utiliser des classes <abbr>CSS</abbr> plutôt que manipuler des styles <abbr>CSS</abbr> en ligne dans le code <abbr>HTML</abbr>.
 - Ne pas utiliser les pseudo éléments <abbr>CSS</abbr> (::before, ::after…) pour afficher du contenu porteur d’information
 - Ne pas câbler des événements Javascript directement dans le code <abbr>HTML</abbr> mais gérer l’interactivité dans un script ou un fichier <abbr>JS</abbr> à part.
