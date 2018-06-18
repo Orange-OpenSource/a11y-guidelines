@@ -793,7 +793,9 @@ Il faudrait pousser le focus sur la zone de résultats à chaque recherche.
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
-Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti. 
+Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  
+
+Si des raccourcis clavier à une seule lettre (majuscule/minuscules) sont disponibles, s'assurer qu'il soit possible de désactiver ou modifier ces raccourcis.
 
 **Objectif utilisateur&nbsp;:**
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.
