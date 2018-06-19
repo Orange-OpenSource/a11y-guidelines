@@ -563,11 +563,10 @@ All accessibility events are available on the <a href="https://developer.apple.c
 
 ## Text size
 ### Description
-Dynamic font size on iOS is very tricky.
-</br>Since iOS7, it is possible to use an <abbr>API</abbr> to make the text size dynamic according to the phone settings.
+Since iOS7, it is possible to make the text size dynamic according to the phone settings.
 </br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:
- - Choose the system fonts even if it's possible to use its own fonts inherited from `UIFont` and assisted with `UIFontMetrics` (iOS11 new feature).
+ - Choose the system font to facilitate your programing even if the use of other fonts is well assisted by the `UIFontMetrics` new class (iOS11).
  <pre><code class="objective-c">
     __weak IBOutlet UILabel * fontHeadline;
     __weak IBOutlet UILabel * fontFootNote;
@@ -591,7 +590,8 @@ Dynamic font size on iOS is very tricky.
     let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
- - Listen to the font size settings change event **UIContentSizeCategoryDidChange** or directly use the property **adjustsFontForContentSizeCategory** to have an automatic update if you're programming in iOS11.
+ - Listen to the font size settings change event **UIContentSizeCategoryDidChange** or directly use the property **adjustsFontForContentSizeCategory** to have an automatic update of your system font size if you're programming in iOS10 (this attribute applies to custom fonts only with the `UIFontMetrics` class).
+</br>Note that the **traitCollectionDidChange** method that belongs to the `UITraitEnvironment` informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes *(class/content size, portrait/landscape)*.
 <pre><code class="objective-c">
     //Listens to the notification dealing with the font size changing from the mobile settings.
     [[NSNotificationCenter defaultCenter] addObserver:self

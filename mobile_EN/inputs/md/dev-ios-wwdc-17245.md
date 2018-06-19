@@ -34,8 +34,8 @@ Thereafter, the selection of a title will give rise to the video playback on the
 
 <a name="TextStyles"></a>
 ### [Text styles (06:06)](https://developer.apple.com/videos/play/wwdc2017/245/?time=366)
-**All the text styles used in accessibility can have the 12 available sizes** in iOS 11.
-</br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick `Dynamic Type` to adjust the text size to the device settings (iOS 11 feature).
+**All the text styles can have the 5 accessibility sizes** in iOS 11 whereas it was only the case for the *body* text style before.
+</br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick `Dynamic Type` to adjust the text size to the device settings.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_1.png" />
 </br>Get the exact same result with the following code :
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_2.png" />
