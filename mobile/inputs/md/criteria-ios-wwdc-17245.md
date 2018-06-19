@@ -34,8 +34,8 @@ Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de prés
 
 <a name="TextStyles"></a>
 ### [Styles de texte (06:06)](https://developer.apple.com/videos/play/wwdc2017/245/?time=366)
-Avec iOS 11, **tous les styles de texte utilisés en accessibilité s'adaptent aux 12 tailles de texte possibles**.
-</br>Dans l'<span lang="en">Interface Builder</span> de Xcode, il suffit d'indiquer le style souhaité dans la partie <span lang="en">Attribute Inspector</span> et de cocher la case <span lang="en">Dynamic Type</span> qui permettra d'adapter automatiquement la taille selon les réglages (nouveauté iOS 11).
+Avec iOS 11, **tous les styles de texte s'adaptent aux 5 tailles de texte disponibles en accessibilité** ce qui n'était le cas que pour le style *body* auparavant.
+</br>Dans l'<span lang="en">Interface Builder</span> de Xcode, il suffit d'indiquer le style souhaité dans la partie <span lang="en">Attribute Inspector</span> et de cocher la case <span lang="en">Dynamic Type</span> qui permettra d'adapter automatiquement la taille selon les réglages.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_1.png" />
 </br>Au niveau code, on obtient exactement le même résulat de la façon suivante :
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_2.png" />

@@ -572,11 +572,10 @@ Tous les événements sont disponibles sur la <a href="https://developer.apple.c
 
 ## Taille des textes
 ### Description
-La gestion des polices dynamiques sous iOS est complexe.
-</br>Depuis iOS7, il est possible d’utiliser une <abbr>API</abbr> permettant de modifier dynamiquement la taille des textes d'une application à l’aide du paramétrage du téléphone.
+Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'une application à l’aide du paramétrage du téléphone.
 </br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
-</br>Quelques points sont néanmoins essentiels pour la bonne utilisation de cette <abbr>API</abbr>&nbsp;:
- - Utiliser les polices système pour les textes de l’application afin d'éviter les mauvaises surprises même s'il est toutefois possible de définir ses propres polices dérivées de la classe `UIFont` surtout depuis l'arrivée de `UIFontMetrics` avec iOS11.
+</br>Quelques points sont néanmoins essentiels pour la bonne utilisation de l'<abbr>API</abbr> mise à disposition&nbsp;:
+ - Utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l'utilisation d'autres polices est devenue nettement plus aisée depuis l'arrivée de `UIFontMetrics` avec iOS11.
  <pre><code class="objective-c">
     __weak IBOutlet UILabel * fontHeadline;
     __weak IBOutlet UILabel * fontFootNote;
@@ -601,7 +600,8 @@ La gestion des polices dynamiques sous iOS est complexe.
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
  - Penser à écouter la notification **UIContentSizeCategoryDidChange** qui annonce le changement de la taille du texte à partir des paramètres du téléphone.
-</br>Cette tâche est simplifiée depuis iOS11 où l'attribut **adjustsFontForContentSizeCategory** se charge de la mise à jour automatique de la nouvelle taille de police au sein de l'application.
+</br>Cette tâche est simplifiée depuis iOS10 où l'attribut **adjustsFontForContentSizeCategory** se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l'application (cet attribut ne peut s'appliquer aux polices personnalisées qu'avec l'utilisation de `UIFontMetrics` en iOS11).
+</br>Il est aussi possible d'utiliser la méthode **traitCollectionDidChange** du protocole informel `UITraitEnvironment` qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra *(class/content size, portrait/paysage)*.
 <pre><code class="objective-c">
     //Écoute de la notification annonçant le changement de taille de la police.
     [[NSNotificationCenter defaultCenter] addObserver:self

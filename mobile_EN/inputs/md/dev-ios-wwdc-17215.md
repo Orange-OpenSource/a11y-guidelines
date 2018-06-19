@@ -33,9 +33,9 @@ This video available on the **official Apple website** ([session 215](https://de
 - [Drag & Drop](#DragAndDrop) (42:54)
 
 </br>During this presentation, the following solutions for accessibility development pitfalls are suggested thanks to a simple application ([take a look at it](https://developer.apple.com/videos/play/wwdc2017/215/?time=1007)) :
-- How to define an (in)accessible element ? [(31:10)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1870).
-- How to fill the `label` and `value` properties? [(29:59)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1799).
-- How to gather several elements into a single one ? [(31:50)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1910).
+- How to define an (in)accessible element ? [(31:10)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1870)
+- How to fill the `label` and `value` properties? [(29:59)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1799)
+- How to gather several elements into a single one ? [(31:50)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1910)
 
 Thereafter, the selection of a title will give rise to the video playback directly at the proper moment.
 

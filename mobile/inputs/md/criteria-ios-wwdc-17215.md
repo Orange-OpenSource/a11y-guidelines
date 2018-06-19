@@ -33,9 +33,9 @@ Cette présentation visualisable sur le **site développeur officiel d'Apple** (
 - [Drag & Drop](#DragAndDrop) (42:54)
 
 </br>Au cours de cette présentation, de nombreuses solutions sont proposées par le biais d'une application d'exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span> (regarder l'[application d'exemple](https://developer.apple.com/videos/play/wwdc2017/215/?time=1007) avant de lire la suite) :
-- Rendre un élément (in)accessible [(31:10)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1870).
-- Remplir des propriétés `label` et `value` ? [(29:59)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1799).
-- Rassembler plusieurs éléments pour n'en former qu'un seul ? [(31:50)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1910).
+- Rendre un élément (in)accessible [(31:10)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1870)
+- Remplir des propriétés `label` et `value` [(29:59)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1799).
+- Rassembler plusieurs éléments pour n'en former qu'un seul [(31:50)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1910).
 
 Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.
 
