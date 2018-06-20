@@ -145,7 +145,7 @@ Pour un graphique type camembert, où chaque partie est colorée différemment, 
 
 Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.
 
-**Référence&nbsp;:** WCAG 1.4.1
+**Référence&nbsp;:** WCAG 1.4.11.4.1
 
 ## 5. Respecter la sémantique HTML
 
@@ -797,13 +797,17 @@ Ne pas induire de changement de contexte lors de la prise de focus, la saisie de
 
 Si des raccourcis clavier à une seule lettre (majuscule/minuscules) sont disponibles, s'assurer qu'il soit possible de désactiver ou modifier ces raccourcis.
 
+Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
+- Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche échap).
+- Pouvoir déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.
+
 **Objectif utilisateur&nbsp;:**
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.
 
 **Exemple&nbsp;:**    
 Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.
 
-**Référence&nbsp;:** WCAG 3.2.1, 3.2.2
+**Référence&nbsp;:** WCAG 3.2.1, 3.2.2, 1.4.13
 
 ## 26. Éviter les captcha
 **Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
