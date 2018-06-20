@@ -327,7 +327,10 @@ Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.htm
 
 Les erreurs sont automatiquement détectées, l’utilisateur est averti par la modification du titre de la page, l’élément de formulaire en erreur est identifié et l’erreur est décrite à l’utilisateur sous forme de texte. Si besoin, une correction est suggérée.
 
-Enfin les libellés des messages d’erreur doivent être explicites.
+Les libellés des messages d’erreur doivent être explicites.
+
+Pour les pages Web qui entraînent des actions importantes (engagement juridique, transaction financière, modification ou effacement de données importantes, réponse à un test ou examen...), l'action doit être réversible ou passer par une étape de confirmation permettant de vérifier ou rectifier la saisie en cas d'erreur.
+
 
 **À vérifier&nbsp;:**
 
