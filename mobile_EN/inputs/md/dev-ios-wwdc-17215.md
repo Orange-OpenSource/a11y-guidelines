@@ -65,7 +65,7 @@ In this part, the Xcode accessibility inspector instrument is used to show basic
 
 <a name="UIAccessibilityProtocol"></a>
 ### [UIAccessibilityProtocol (21:14)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1274)
-Reminder on the `UIAccessibilityProtocol` fundamentals that will be used during the presentation.
+Reminder on the `UIAccessibility` informal protocol fundamentals that will be used during the presentation.
 </br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" />
 
 <a name="AttributedProperties"></a>
