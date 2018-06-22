@@ -22,7 +22,7 @@ Cette présentation visualisable sur le **site développeur officiel d'Apple** (
 - [Amélioration de la description d'une photo](#ImprovedPhotoDescription) (08:01)
 - [Ecrire des infos pour SIRI](#TypeToSIRI) (11:37)
 - [Accessibility Inspector : cas pratique](#AccessibilityInspector) (15:35)
-- [Découvrir UIAccessibilityProtocol](#UIAccessibilityProtocol) (21:14)
+- [Découvrir le protocole UIAccessibility](#UIAccessibilityProtocol) (21:14)
 - [Attributed Accessibility Properties](#AttributedProperties) (26:07)
 - [Accessibility Container Type](#AccessibilityContainer) (27:20)
 - [Les actions personnalisées](#CustomActions) (35:43)
@@ -64,8 +64,8 @@ Dans cette partie, l'outil <span lang="en">Accessibility Inspector</span> de Xco
 </br>Des exemples sont fournis sans expliquer fondamentalement les notions propres à l'outil qui sont détaillées dans la session [407](https://developer.apple.com/videos/play/wwdc2016/407/) (2016).
 
 <a name="UIAccessibilityProtocol"></a>
-### [Découvrir UIAccessibilityProtocol (21:14)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1274)
-Petit rappel sur les fondements de `UIAccessibilityProtocol` qui vont être utilisés dans la suite de la présentation.
+### [Découvrir le protocole UIAccessibility (21:14)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1274)
+Petit rappel sur les fondements du protocole informel `UIAccessibility` qui vont être utilisés dans la suite de la présentation.
 </br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" />
 
 <a name="AttributedProperties"></a>
