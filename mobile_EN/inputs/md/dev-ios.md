@@ -115,7 +115,7 @@ It is possible via an accessibility attribute to hide elements from accessibilit
   
 - **isAccessibilityElement**&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).
 - **accessibilityElementsHidden**&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.
-- **accessibilityViewIsModal**&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popin views for example.
+- **accessibilityViewIsModal**&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popup views for example.
   
 The `accessibilityElement` attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.
 ### Example
