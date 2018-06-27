@@ -1,4 +1,4 @@
-# Recommandations accessibilité des contenus vidéos et audios Orange  
+# Recommandations accessibilité des contenus vidéos, animations et audios Orange  
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Vidéo audio"}]);
@@ -6,12 +6,12 @@
 
 <style>h3 {font-size: 1rem;}</style>
 
-## Introduction&nbsp;: l’accessibilité des contenus vidéos et audios
+## Introduction&nbsp;: l’accessibilité des contenus vidéos, animations et audios
 Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&nbsp;:
-- que ces vidéos et audios eux-même soient accessibles
+- que ces vidéos, animations et audios eux-même soient accessibles
 - mais également, que l'interface qui permet la diffusion de ces fichiers soit accessible.
 
-## Rendre les vidéos ou audios accessibles
+## Rendre les vidéos, animations ou audios accessibles
 
 Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :
 
@@ -20,7 +20,7 @@ Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doiven
 - Une audiodescription, si besoin.
 
 ### Transcription intégrale
-La transcription doit restituer textuellement l’ensemble des informations véhiculées par la vidéo (paroles, messages affichés à l’écran, ...). La transcription peut être agrémentée d’images, si besoin.
+La transcription doit restituer textuellement l’ensemble des informations véhiculées par le contenu (paroles, messages affichés à l’écran, graphes, animations ...). La transcription peut être agrémentée d’images, si besoin.
 
 **La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.**
 
@@ -38,11 +38,17 @@ Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais
 
 ### Audiodescription
 
-L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsque la vidéo est juste une interview, sans autre information visuelle.
+L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsque une vidéo est juste une interview, sans autre information visuelle.
 
 Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).
 
 De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).
+
+### Lors de la lecture
+
+Lors de la lecture du fichier embarqué dans la page web, vérifier :
+- Ne pas lancer automatiquement, au chargement de la page, la vidéo, l'animation ou l'audio mais laisser la main à l'utilisateur.
+- Pour une vidéo ou une animation, celle-ci doit être exempte de tout élément qui flashe plus de trois fois par seconde ou ce flash doit se situer sous <a href="https://www.w3.org/Translations/WCAG20-fr/#general-thresholddef">le seuil de flash générique et le seuil de flash rouge</a>.
 
 ## Le lecteur audio ou vidéo
 
@@ -52,8 +58,6 @@ Le lecteur vidéo utilisé doit&nbsp;:
 - permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).
 
 - permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.
-
-- ne pas lancer automatiquement l'audio ou la vidéo mais laisser la main à l'utilisateur.
 
 ## Liens utiles
 -  Article en anglais sur le site de SitePoint&nbsp;:  <a href="https://www.sitepoint.com/accessible-video/" hreflang="en">8 Steps to Creating Accessible Video</a> (en anglais)
