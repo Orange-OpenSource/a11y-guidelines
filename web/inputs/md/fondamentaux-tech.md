@@ -616,7 +616,7 @@ Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n�
 
 **Description&nbsp;:**
 
-Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre logique pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
+Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquenciel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
 
 **À vérifier&nbsp;:**
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 19, ci-dessous.
