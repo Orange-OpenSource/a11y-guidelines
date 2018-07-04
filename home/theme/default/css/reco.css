@@ -1,5 +1,5 @@
 body {  
-  padding-top: 9rem;
+  padding-top: 9.5rem;
   background-color: #f6f6f6;
   line-height: 1.5;
 }
@@ -16,18 +16,23 @@ pre {
 
 #content {
   margin-bottom: 3rem;  
+  background: #fff;
+  margin-left: .5rem;
 }
 
-#content p,
-#content figure,
+#content h1,
 #content h2, 
-#content h3,
-#content h4,
-#content h5,
-#content h6,
-#glossary dl {
-  background: #fff;
-  padding: 1rem;  
+#content h3 {
+  margin: 2rem 0;
+}
+
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  display: block; 
+  content: " "; 
+  margin-top: -10rem; 
+  height: 10rem; 
+  visibility: hidden; 
+  pointer-events: none;
 }
 
 figure {
@@ -35,7 +40,7 @@ figure {
 }
 
 #content ol, #content ul, #content h2, #content h3, #content h4, #content p {
-   margin-bottom: 0;  
+   /*margin-bottom: 0;  */
  }
 
  #content p, #content ol, #content ul {
@@ -47,8 +52,8 @@ figure {
 }
 
 #content p+h2, #content ul+h2, #glossary h2 {
-  border-top: 1rem solid #fff;
-  padding-top: 1rem !important;
+  /*border-top: 1rem solid #fff;
+  padding-top: 1rem !important;*/
 }
 
 #content ul, #content ol {
@@ -154,14 +159,14 @@ h1 a:active, h1 a:hover, h1 a:focus,
 h2 a:active, h2 a:hover, h2 a:focus {
   color: #000;
 }
-
+/*
 h1:before, h2:before {
    content: '';
    display: block;
    position: relative;
    width: 0; 
 }
-
+*/
 [role="search"] input {
   border-color: #000;
 }
@@ -281,7 +286,7 @@ h1:before, h2:before {
   position: fixed;
   top: 6.2rem;
   width: 100%;
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   z-index: 100;
   padding: .75rem;
   font-size: .94rem;
@@ -602,14 +607,12 @@ blockquote p::after {
 }
 blockquote p {
   padding-left: 0 !important;
+  margin: 0;
 }
-blockquote {
-  padding: 1rem;  
+blockquote {  
   quotes: "«\00A0" "\00A0»";
-  background-color: #fff;
-  padding: 0 0 0 1rem;
-  margin-bottom: 0;
-  font-weight: bold;  
+  background-color: #fff;  
+  font-weight: bold;    
 }
 blockquote footer {
   font-weight: normal;
