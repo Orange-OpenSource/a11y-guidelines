@@ -17,7 +17,7 @@ pre {
 #content {
   margin-bottom: 3rem;  
   background: #fff;
-  margin-left: .5rem;
+  border-left: .5rem solid #f6f6f6;
 }
 
 #content h1,
@@ -26,7 +26,7 @@ pre {
   margin: 2rem 0;
 }
 
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, #glossary dt::before {
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, #glossary dt  ::before {
   display: block; 
   content: " "; 
   margin-top: -10rem; 
@@ -51,11 +51,6 @@ figure {
   padding-top: 0;
 }
 
-#content p+h2, #content ul+h2, #glossary h2 {
-  /*border-top: 1rem solid #fff;
-  padding-top: 1rem !important;*/
-}
-
 #content ul, #content ol {
   background: #fff;
   padding: 1rem;
@@ -68,6 +63,10 @@ figure {
 
 header .subtitles {
   display: none;
+}
+
+#collapsingNavbar {
+  margin-left: 3rem;
 }
 
 .highlight-zone {
@@ -100,18 +99,33 @@ header .subtitles {
     cursor: default;
 }
 
+.navbar {
+  padding: 3.6rem 1.4rem 0 1.4rem;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+}
+
 .top-nav a[aria-disabled=true]:hover {
     color: #fff !important;
 }
 
-.navbar {
-    padding: 0 1.4rem;
+.navbar .nav-item {
+  margin-left: .25rem !important;
+}
+
+.navbar .nav-item .nav-link {
+    padding: 0 0.75rem;
     font-size: 1.05rem;
+    margin-top: 0;
 }
 
 #searchIcon {  
   padding-top: 0;
-  margin-top: 3.4rem;
+  margin-top: 0;
   margin-left: .5rem;
 }
 
@@ -159,18 +173,10 @@ h1 a:active, h1 a:hover, h1 a:focus,
 h2 a:active, h2 a:hover, h2 a:focus {
   color: #000;
 }
-/*
-h1:before, h2:before {
-   content: '';
-   display: block;
-   position: relative;
-   width: 0; 
-}
-*/
+
 [role="search"] input {
   border-color: #000;
 }
-
 
 #left-navigation {  
   background-color: #fff;
@@ -253,7 +259,6 @@ h1:before, h2:before {
   list-style: none;
   display: inline;
   padding-left: 0;
-  font-size: 1.6rem;
 }
 
 .language a {
@@ -275,7 +280,7 @@ h1:before, h2:before {
 }
 
 #cdu a {
-  margin-top: 3.66rem;
+  margin-top: 0;
 }
 
 .dropdown-item {
@@ -304,7 +309,7 @@ h1:before, h2:before {
   display: inline-block;
   font-size: 1.05rem;  
   margin-left: .4rem;
-  margin-top: 3.8rem;
+  margin-top: 0;
 }
 
 #searchbar {
@@ -380,6 +385,10 @@ pre code {
 /* collapsed sidebar styles */
 @media screen and (max-width: 479px) {
   
+  .navbar {
+    padding: 0;
+  }
+
   #back-to-top {
     display: none !important;
   }
