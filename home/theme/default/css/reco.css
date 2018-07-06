@@ -26,7 +26,7 @@ pre {
   margin: 2rem 0;
 }
 
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, #glossary dt::before {
   display: block; 
   content: " "; 
   margin-top: -10rem; 
