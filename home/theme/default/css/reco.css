@@ -39,10 +39,6 @@ figure {
   margin: 0;
 }
 
-#content ol, #content ul, #content h2, #content h3, #content h4, #content p {
-   /*margin-bottom: 0;  */
- }
-
  #content p, #content ol, #content ul {
    padding-bottom: 0;
  }
@@ -125,7 +121,7 @@ header .subtitles {
 
 #searchIcon {  
   padding-top: 0;
-  margin-top: 0;
+  margin-top: -.5rem;
   margin-left: .5rem;
 }
 
@@ -275,6 +271,11 @@ h2 a:active, h2 a:hover, h2 a:focus {
   padding-left: .5rem;
 }
 
+#secondNavBar {
+  line-height: 1;
+  font-size: 1.05rem;
+}
+
 #secondNavBar li:first-child {
   margin-left: 0;
 }
@@ -387,6 +388,8 @@ pre code {
   
   .navbar {
     padding: 0;
+    max-height: 100%;
+    overflow: auto;
   }
 
   #back-to-top {
@@ -413,7 +416,7 @@ pre code {
     position: absolute;
     margin: 0 4.5rem 0 0;
     padding: 0;
-    right: 0;
+    right: 0;    
   }
 
   #secondNavBar a {
@@ -435,7 +438,7 @@ pre code {
 
   #navigation a {
     color: #fff;
-    padding: .75rem;
+    padding: .75rem 0 .75rem 1.5rem;
     display: block;    
   }
 
@@ -461,15 +464,19 @@ pre code {
 
   #collapsingNavbar {
     border-top: .1rem solid #4f4f4f;
+    margin-left: 0;
+    position: static;
   }
 
   #collapsingNavbar .nav-item {    
-    font-size: 1.25rem;
-    padding: .75rem 0 .75rem 1.5rem;    
+    font-size: 1.25rem;    
+    padding: .75rem 0
   }
 
   #collapsingNavbar .nav-item.language a {
     display: inline;
+    padding: 0 1rem;
+    margin: 0;
   }
 
   #navigation li, #collapsingNavbar .language {
@@ -483,10 +490,6 @@ pre code {
   #collapsingNavbar .nav-item:last-child {
     border-top: .1rem solid #4f4f4f !important;
   }  
-
-  .nav-item.mobile {
-    margin-bottom: 1rem;
-  }
 
   .nav-item.active>a {
     color: #fff !important;
@@ -552,7 +555,6 @@ pre code {
 .subtitle{
   text-overflow: ellipsis;
   overflow: hidden;
-  /*white-space: nowrap;*/
   padding-left: .5rem;
   font-size: .95rem;
   font-weight: normal;
