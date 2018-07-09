@@ -94,7 +94,7 @@ L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**  
-Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
+Le niveau de contraste entre le texte et l’arrière-plan même pour des éléments graphiques porteurs de sens doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
 
 **Exemple non valide&nbsp;:**  
@@ -102,11 +102,22 @@ Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)
 
+Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors  avoir un contraste de couleur de 3:1.
+
+![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](images/icones.png)
+
 **À vérifier&nbsp;:**
 
 - Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.
+- Pour les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère, si :
+  -	le composant graphique est un logo
+  -	si un texte comme un label apporte la même information que l’icône
+  -	si la modification du taux de contraste de l’image nuit au réalisme de celle-ci
 - Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
 - Les liens doivent être facilement identifiables par rapport au reste du texte.
+
+Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.
+Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils doivent être ignorés par l’utilisateur.
 
 **Objectif utilisateur&nbsp;:**
 
@@ -296,13 +307,15 @@ L’attribut `title` positionné sur une balise de champ de formulaire peut fair
 S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.
 
 Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.
+Si cela est pertinent, les champs ont un attribut « autocompleted » afin que l’utilisateur ait la possibilité d’utiliser une liste de propositions pré-enregistrées ou en auto-complétion.
 
 Pour les boutons radio et les cases à cocher, l’utilisation de la balise `label` est, parfois, à compléter par un autre dispositif (`title`, `aria-labelledby`, `aria-label` ou `fieldset` et `legend`).
 Pour les champs obligatoires, ceci doit être précisé dans le `label` via une image, un symbole texte (`*` par exemple) ou du texte et/ou une propriété `aria-required`.
 
 **Objectif utilisateur&nbsp;:**
 
-Ne pas respecter cette exigence est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
+Ne pas respecter ces recommandation est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
+Pour les listes de contenus en auto-complétion pour les champs, elles permettent d’éviter les erreurs de saisie.
 
 **Exemple valide&nbsp;:**  
 ![capture d’écran d’un formulaire valide](images/formulaire.png)
@@ -316,7 +329,7 @@ Ne pas respecter cette exigence est un point bloquant pour tout utilisateur de s
   
 Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.html) pour plus d’informations.
 
-**Référence&nbsp;:**WCAG 3.3.2
+**Référence&nbsp;:**WCAG 3.3.2, 3.3.5
 
 ## 10. Détecter, identifier les erreurs et suggérer des corrections
 
@@ -514,7 +527,10 @@ Permettre aux personnes déficientes visuelles et cognitives d'améliorer le con
 
 Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  
 
-S’il n’est pas possible de rendre un lien ou un bouton plus explicite, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, cet intitulé peut être complété par un contenu supplétif caché ou en utilisant un attribut `aria-label` ou `aria-labelledby`, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
+S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l'intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, mais également compléter l'intitulé par un contenu supplétif, au choix, via :
+- un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
+- en utilisant un attribut `aria-label` ou `aria-labelledby`
+
 Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
 
 ![capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité](./images/liens-valider.png)
@@ -523,13 +539,11 @@ Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masqu
 
 **Exemple&nbsp;:**  
 <pre><code class="html">
-&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
-&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider un paiement en plusieurs fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider un paiement unique"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé.  
-En complément de ces solutions, on pourrait ici également utiliser **un attribut `title`** pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.
-
 
 **À vérifier&nbsp;:**
 S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:
@@ -704,7 +718,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 **Quand&nbsp;:** lors de la conception du service et lors de la conception graphique.
 
 **Description&nbsp;:**  
-Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur.  
+Tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement (par exemple un carrousel) doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur si cette animation dure plus de 5 secondes.  
 Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. [Le logo des <abbr>JO</abbr> provoque des crises d’épilepsie](http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php)).
 Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l’animation, la mise à jour ou le clignotement via un bouton par exemple.
 
