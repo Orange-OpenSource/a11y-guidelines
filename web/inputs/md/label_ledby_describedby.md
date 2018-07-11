@@ -1,39 +1,57 @@
-# <abbr>HTML5</abbr> & <abbr>ARIA</abbr>
+# Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&nbsp;: `aria-label`, `aria-labelledby` et `aria-describedby` 
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"<abbr>ARIA</abbr> Label, labelledy et describedby"}]);
+    setBreadcrumb([{"label":"<abbr>ARIA</abbr> aria-Label, labelledy et describedby"}]);
 });</script>
 
 ## Introduction
 ### Nom et description accessible
 
-Un nom accessible est l'information qui permet à l'<abbr>AT</abbr> d'identifier l'élément en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (par exemple, un attribut `alt` pour une image) ou par un élément associé (par exemple, une balise `label` pour un champ `input`).
+Un nom accessible est l'information qui permet à l'aide technique (<abbr>AT</abbr>), par exemple, un lecteur d'écranou un:e loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (par exemple, un attribut `alt` pour une image) ou par un élément associé (par exemple, une balise `label` pour un champ `input`).
 
 Une description accessible est une information plus étendue qui est utilisée par l'<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n'est pas suffisant.
 
-Le nom accessible comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d'image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>)
+Le nom accessible comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d'image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>...)
 
 ### Les attributs <abbr>ARIA</abbr>&nbsp;: `aria-label`, `aria-labelledby` et `aria-describedby`
 
 Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: `aria-label`, `aria-labelledby` et `aria-describedby`. Ils permettent de rajouter de l'information à un élément <abbr>HTML</abbr>&nbsp;:
 - `aria-label`, `aria-labelledby` permettent de donner un nom accessible à un élément
-- `aria-describedby` permet de rajouter, si besoin, une description accessible à un élément
-
-Lorsque les deux attributs aria-labelledby et aria-label sont utilisés, les agents utilisateurs donnent la priorité à aria-labelledby lors du calcul de la propriété de nom accessible.
+- `aria-describedby` permet de rajouter au nom accessible, si besoin, en sus, une description accessible à un élément
 
 Cependant, ils ne fonctionnent bien qu'avec certains éléments :
 - les éléments interactifs&nbsp;: `a` (avec un attribut `href`), `audio` et `video` (avec un attribut `controls`), `input` (sauf si `type="hidden"`), `select`, `button` et `textarea`
 - les éléments `img` et `iframe`
 - les éléments possédant un rôle de landmark explicite, donc, avec un attribut `role` ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: `header`, `footer`, `main`, `nav`, `aside` et `section`) 
-- les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d'<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>
+- les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d'<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>.
 
-## Faut-il l’utiliser&nbsp;?
+Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couple <abbr>AT</abr>/navigateur, donc ne pas l'utiliser comme seul moyen de passer une information nécessaire.
+
+## Faut-il l’utiliser et comment&nbsp;?
 	
+Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.
 
-If you use aria-label, aria-labelledby, or aria-describedby with any other elements (like div, span, p, blockquote, or strong etc.), they generally won’t work across all browser/assistive technology combinations.
+Il faut savoir que `aria-label` doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour `aria-labelledby` et `aria-describedby`, la valeur de cet attribut référence l'`id` dun élément de la page dont le contenu sera utilisé le nom accessible de l'élément.
 
+Lorsqu'on utilise `aria-label` ou `aria-labelledby` sur un élément, le contenu ou l'intitulé de cet élément n'est plus restitué au <abbr>AT</abbr> mais remplacé par le nom accessible (pour `aria-label` le contenu de cet attribut, pour `aria-labelledby` le contenu de l'élément référencé). Donc, seul, le nom accessible doit donner l'ensemble des informations nécessaires à <abbr>at</abbr> et donc à l'utilisateur.
 
+Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à aria-labelledby lors du calcul de la propriété de nom accessible.
+
+Quant à lui, `aria-describedby" va rajouter au nom accessible de l'élément, une description accessible en plus. 
+
+###Exemples###
+
+<button aria-label="accéder au code Hypertext markup language">html</button>
+sortie pour un lecteur d'écran : "accéder au code Hypertext markup language"
+
+<h2 id="titre">Code de la page HTML<h2>
+<button aria-label="accéder au code Hypertext markup language" aria-labelledby="titre">html</buttton>
+sortie pour un lecteur d'écran : "Code de la page HTML"
+
+<h3 id="titre">Code de la page de formulaire de connexion<h3>
+<button aria-label="accéder au code HTML" aria-describedby="titre">html</buttton>
+sortie pour un lecteur d'écran : "accéder au code HTML code de la page de connexion"
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
+ Copyright (C) 2018  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
