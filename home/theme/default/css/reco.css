@@ -96,7 +96,7 @@ header .subtitles {
 }
 
 .navbar {
-  padding: 3.6rem 1.4rem 0 1.4rem;
+  padding: 3.1rem 1.4rem 0 1.4rem;
   width: 100vw;
 }
 
@@ -115,14 +115,14 @@ header .subtitles {
 }
 
 .navbar .nav-item .nav-link {
-    padding: 0 0.75rem;
+    padding: .5rem 0.75rem;
     font-size: 1.05rem;
     margin-top: 0;
 }
 
 #searchIcon {  
   padding-top: 0;
-  margin-top: -.5rem;
+  margin-top: 0;
   margin-left: .5rem;
 }
 
@@ -279,6 +279,7 @@ h2 a:active, h2 a:hover, h2 a:focus {
 
 #secondNavBar li:first-child {
   margin-left: 0;
+  padding: .5rem;
 }
 
 #cdu a {
