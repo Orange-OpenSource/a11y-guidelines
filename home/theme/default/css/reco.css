@@ -97,6 +97,7 @@ header .subtitles {
 
 .navbar {
   padding: 3.6rem 1.4rem 0 1.4rem;
+  width: 100vw;
 }
 
 .navbar-brand {
@@ -292,6 +293,7 @@ h2 a:active, h2 a:hover, h2 a:focus {
   position: fixed;
   top: 6.2rem;
   width: 100%;
+  width: 100vw;
   background-color: #fafafa;
   z-index: 100;
   padding: .75rem;
@@ -408,6 +410,26 @@ pre code {
     top: 3rem;
   }
 
+  .breadcrumb li {
+    display: none;
+  }
+
+  .breadcrumb .last {
+    display: block;
+  }
+
+  .breadcrumb-item.last::before {
+    display: inline-block;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    font-family: "icon-orange";
+    font-size: 0.625rem;
+    line-height: 1;
+    color: #000;
+    content: "";
+    transform : rotate(180deg);
+  }
+  
   #searchbar {
     top: 3rem;
   }
