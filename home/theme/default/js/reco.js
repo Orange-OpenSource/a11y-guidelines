@@ -136,6 +136,10 @@ function setBreadcrumb(param) {
         }
     });
     $(".breadcrumb li:last").addClass("active");
+
+    if ($(".breadcrumb li a:last").attr('href').split('/').pop() != location.href.split('/').pop()) {
+      $(".breadcrumb li a:last").parent().addClass("last");
+    }
 }
 
 function addSubMenu(subMenus) {
