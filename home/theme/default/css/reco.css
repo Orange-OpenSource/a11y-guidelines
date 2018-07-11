@@ -256,6 +256,7 @@ h2 a:active, h2 a:hover, h2 a:focus {
   list-style: none;
   display: inline;
   padding-left: 0;
+  padding-top: .5rem;
 }
 
 .language a {
@@ -314,6 +315,7 @@ h2 a:active, h2 a:hover, h2 a:focus {
   font-size: 1.05rem;  
   margin-left: .4rem;
   margin-top: 0;
+  padding: 0 .5rem;
 }
 
 #searchbar {
@@ -507,7 +509,7 @@ pre code {
   }
 
   #collapsingNavbar .language {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   #collapsingNavbar .nav-item:last-child {
