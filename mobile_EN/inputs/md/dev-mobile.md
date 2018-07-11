@@ -15,10 +15,10 @@ The developer guide is intended to help developers with the major Android&nbsp;/
 </br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the official documentation of Google&nbsp;/ Apple.
 
 Two versions are available:
-- **Android version** is about application development for the Google platform: Android.
-- **iOS version** is about application development for the Apple platform: iOS.
+- **[Android version](./dev-android.html)** is about application development for the Google platform: Android.
+- **[iOS version](./dev-ios.html)** is about application development for the Apple platform: iOS.
 
-The **iOS WWDC** section is dedicated to some World Wide Developers Conference presentations.
+The **[iOS WWDC](./dev-ios-wwdc.html)** section is dedicated to some World Wide Developers Conference presentations.
        
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

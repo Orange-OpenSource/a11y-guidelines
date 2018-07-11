@@ -11,16 +11,16 @@
 
 <span data-menuitem="criteria-ios"></span>
 
-## Pour la conception
+## [Pour la conception](./criteria-ios-conception.html)
 Ce socle de critères destiné aux applications mobiles iOS Orange pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.
 </br>Le respect de la charte Orange pour iOS, document disponible sur [le site de la marque Orange](http://design.orange.com/), est un prérequis à l’utilisation de ce socle.
 </br>Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.
 
-## Pour le développement
+## [Pour le développement](./criteria-ios-dev.html)
 Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du <abbr>SDK</abbr> iOS.
 </br>À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle d'Apple.
 
-## WWDC
+## [WWDC](./criteria-ios-wwdc.html)
 Cette section regroupe des présentations concernant l'accessibilité faites par Apple à la World Wide Developers Conference.
 </br>Chacune de ces présentations est détaillée et chaque thème décrit fait référence à une indication temporelle au sein de la vidéo de façon à pouvoir le visualiser le plus rapidement possible.
 
