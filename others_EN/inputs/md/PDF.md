@@ -29,6 +29,16 @@ You will find Adobe Acrobat Pro recommendations at <a href="http://www.pdf-acces
 
 This document was produced by AcceDe <abbr>PDF</abbr> phase 2 (2015), driven by Atalan together with Orange and 9 other enterprises: La Poste, Siemens, Spie, Thales, Atos, <abbr>BNP</abbr> Paribas, Devoteam, Manpower and <abbr>EDF</abbr>, who relied on a review team made up of numerous professionals and organisations involved in digital accessibility.
 
+## Testing the accessibility of a <abbr>PDF</abbr> document
+
+Install <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>. 
+
+This tool can, among other things, run automatic tests on a <abbr>PDF</abbr> document and check for accessibility issues.
+<figure>
+<img class="center" src="/others/images/pac1.png" alt="Screenshot of automatic tests in PAC"/>
+<figcaption>Screenshot of the tool</figcaption>
+</figure>
+
 ## Mandatory criteria
 
 The following are the main criteria for a <abbr>PDF</abbr> document to be accessible, regardless of the method used to create it. Mandatory criteria will be useful for people creating <abbr>PDF</abbr> documents even when they don’t rely on publication software (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro), e.g. developers whose applications generate <abbr>PDF</abbr> documents.
@@ -92,23 +102,3 @@ Colours must not be the only means to convey information.
 Contrast between the colour of text and of its background must be sufficient:
 - 4.5:1 for normal-size text;
 - 3:1 for bigger text.
-
-## Testing the accessibility of a <abbr>PDF</abbr> document
-
-Install <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC 2</abbr>)</a>. 
-
-This tool can, among other things:
-
-- run automatic tests on a <abbr>PDF</abbr> document and check for accessibility issues,
-<figure>
-<img class="center" src="/others/images/pac1.png" alt="Screenshot of automatic tests in PAC 2"/>
-<figcaption>Results of automatic tests</figcaption>
-</figure>
-<figure>
-<img class="center" src="/others/images/pac2.png" alt="Screenshot of an error detail in PAC 2"/>
-<figcaption>Detail of an automatically detected issue</figcaption>
-</figure>
-- pre-visualise the document the way it will be presented to assistive tools, so as to check the reading order and the semantics used (title, paragraph, …),
-<div><img class="center" src="/others/images/pac3.png" alt=""/></div>
-- give access to a detailed view of the accessible information given to an assistive tool.
-<div><img class="center" src="/others/images/pac4.png" alt=""/></div>
