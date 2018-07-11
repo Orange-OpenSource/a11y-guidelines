@@ -29,6 +29,16 @@ Vous trouverez les recommandations Adobe Acrobat Pro sur la notice <a href="http
 
 Ce document est issu de la phase 2 d’AcceDe <abbr>PDF</abbr> (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&nbsp;: La Poste, Siemens, Spie, Thales, Atos, <abbr>BNP</abbr> Paribas, Devoteam, Manpower et <abbr>EDF</abbr> en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.
 
+## Tester l’accessibilité d’un document <abbr>PDF</abbr>
+
+Installer <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>. 
+
+Ce logiciel permet entre autres l’exécution des tests automatiques sur un document <abbr>PDF</abbr> et la détection des problèmes d’accessibilité,
+<figure>
+<img class="center" src="/others/images/pac1.png" alt="copie d’écran des résultats des tests automatiques dans PAC"/>
+<figcaption>Capture d'écran de l'outil.</figcaption>
+</figure>
+
 ## Critères incontournables
 
 Ce sont les principaux critères à respecter pour qu’un document <abbr>PDF</abbr> soit accessible, indépendamment de la procédure utilisée pour le créer. Les critères incontournables seront utiles aux personnes créant des documents <abbr>PDF</abbr> sans utiliser les logiciels d’éditions (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro), par exemple les développeurs dont les applications génèrent des documents <abbr>PDF</abbr>.
@@ -91,23 +101,3 @@ Le contraste entre le texte et l’arrière-plan est suffisant&nbsp;:
 
 -	4.5:1 pour du texte de taille normale.
 -	3:1 pour du texte de grande taille.
-
-## Tester l’accessibilité d’un document <abbr>PDF</abbr>
-
-Installer <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC 2</abbr>)</a>. 
-
-Ce logiciel permet entre autres&nbsp;:
-
-- d’exécuter des tests automatiques sur un document <abbr>PDF</abbr> et détecter des erreurs d’accessibilité,
-<figure>
-<img class="center" src="/others/images/pac1.png" alt="copie d’écran des résultats des tests automatiques dans PAC 2"/>
-<figcaption>Résultats des tests automatiques</figcaption>
-</figure>
-<figure>
-<img class="center" src="/others/images/pac2.png" alt="copie d’écran du détail d’une erreur dans PAC 2"/>
-<figcaption>Détail d’une erreur d’accessibilité détectée automatiquement</figcaption>
-</figure>
-- de pré-visualiser le document tel qu’il sera restitué par les outils d’assistance, afin de vérifier l’ordre de lecture et l’utilisation pertinente de la sémantique (titre, paragraphe…),
-<div><img class="center" src="/others/images/pac3.png" alt=""/></div>
-- d’accéder à une vue détaillée des informations accessibles à un outil d’assistance.
-<div><img class="center" src="/others/images/pac4.png" alt=""/></div>
