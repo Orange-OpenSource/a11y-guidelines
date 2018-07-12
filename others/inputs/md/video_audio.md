@@ -38,7 +38,7 @@ Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais
 
 ### Audiodescription
 
-L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsque une vidéo est juste une interview, sans autre information visuelle.
+L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsqu'une vidéo est juste une interview, sans autre information visuelle.
 
 Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).
 
@@ -54,9 +54,7 @@ Lors de la lecture du fichier embarqué dans la page web, vérifier :
 
 Le lecteur vidéo utilisé doit&nbsp;:
 - prendre en charge d'au moins deux éléments&nbsp;: sous-titres et audiodescription.
-
 - permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).
-
 - permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.
 
 ## Liens utiles
