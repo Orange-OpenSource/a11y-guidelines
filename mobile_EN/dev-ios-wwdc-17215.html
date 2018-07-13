@@ -44,14 +44,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                    <a class="nav-link" href="../web_EN/index.html">Website</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" class="nav-link">Mobile app</a>
                     <ul id="navigation" class="nav navbar-nav">
                       <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html">Guide for developers</a></li>                
+                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
+                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
                       <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
                       <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
@@ -59,7 +59,7 @@
                       <li><a class="page-about" href="about.html">About</a></li>                        
                     </ul>                      
                   </li>  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
                   </li>
@@ -99,7 +99,7 @@
 
     <span class="sr-only">You are here: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -142,9 +142,9 @@
 </ul>
 <p></br>During this presentation, the following solutions for accessibility development pitfalls are suggested thanks to a simple application (<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">take a look at it</a>) :</p>
 <ul>
-<li>How to define an (in)accessible element ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a>.</li>
-<li>How to fill the <code>label</code> and <code>value</code> properties? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a>.</li>
-<li>How to gather several elements into a single one ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a>.</li>
+<li>How to define an (in)accessible element ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a></li>
+<li>How to fill the <code>label</code> and <code>value</code> properties? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a></li>
+<li>How to gather several elements into a single one ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a></li>
 </ul>
 <p>Thereafter, the selection of a title will give rise to the video playback directly at the proper moment.</p>
 <p><a name="ImageTextDetection"></a></p>
@@ -169,7 +169,7 @@ can&#39;t initially read it.</p>
 </br>Examples are provided without explaining in depth the tool itself to which a former Apple session (<a href="https://developer.apple.com/videos/play/wwdc2016/407/">2016 - 407</a>) is dedicated.</p>
 <p><a name="UIAccessibilityProtocol"></a></p>
 <h3 id="-uiaccessibilityprotocol-21-14-https-developer-apple-com-videos-play-wwdc2017-215-time-1274-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">UIAccessibilityProtocol (21:14)</a></h3>
-<p>Reminder on the <code>UIAccessibilityProtocol</code> fundamentals that will be used during the presentation.
+<p>Reminder on the <code>UIAccessibility</code> informal protocol fundamentals that will be used during the presentation.
 </br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /></p>
 <p><a name="AttributedProperties"></a></p>
 <h3 id="-attributed-accessibility-properties-26-07-https-developer-apple-com-videos-play-wwdc2017-215-time-1567-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1567">Attributed Accessibility Properties (26:07)</a></h3>

@@ -46,14 +46,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web/index.html">Web</a>                      
+                    <a class="nav-link" href="../web/index.html">Site Web</a>
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <a href="../mobile/index.html" class="nav-link">Application mobile</a>
                     <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-android" href="criteria-android.html">Critères incontournables sous Android</a></li>
-                        <li><a class="page-criteria-ios" href="criteria-ios.html">Critères incontournables sous iOS</a></li>            
+                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
                         <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
                         <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d’écran</a></li>
                         <li><a class="page-links" href="links.html">Liens utiles</a></li>
@@ -61,7 +61,7 @@
                         <li><a class="page-about" href="about.html">À propos</a></li>                        
                     </ul>                                        
                   </li>   
-                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -101,7 +101,7 @@
     
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
     </ol>
 
     <main role="main" class="container-fluid">
@@ -235,7 +235,7 @@ func customTraits() {
 <li><strong>isAccessibilityElement</strong>&nbsp;: booléen qui permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité (de <span lang="en">VoiceOver</span> ou autre).</li>
 <li><strong>accessibilityElementsHidden</strong>&nbsp;: booléen qui permet d’indiquer que les éléments fils de l’élément cible sont visibles ou non de l’<abbr>API</abbr> d’accessibilité.</li>
 <li><strong>accessibilityViewIsModal</strong>&nbsp;: booléen qui permet de rendre visible ou non les éléments frères de l’élément cible à l’<abbr>API</abbr> d’accessibilité.
-</br>Très utile pour rendre accessible des <i lang="en">popin custom view</i> par exemple.  </li>
+</br>Très utile pour rendre accessible des <i lang="en">popup custom view</i> par exemple.  </li>
 </ul>
 <p>L’attribut <code>accessibilityElement</code> est disponible via l’<i lang="en">interface builder</i> de Xcode mais est également utilisable directement via le code.
 </br>Les deux autres attributs sont utilisables uniquement via le code.</p>
@@ -689,12 +689,11 @@ float heightVal;
 <p>Tous les événements sont disponibles sur la <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">documentation officielle d&#39;Apple</a>.</p>
 <h2 id="taille-des-textes">Taille des textes</h2>
 <h3 id="description">Description</h3>
-<p>La gestion des polices dynamiques sous iOS est complexe.
-</br>Depuis iOS7, il est possible d’utiliser une <abbr>API</abbr> permettant de modifier dynamiquement la taille des textes d&#39;une application à l’aide du paramétrage du téléphone.
+<p>Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide du paramétrage du téléphone.
 </br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
-</br>Quelques points sont néanmoins essentiels pour la bonne utilisation de cette <abbr>API</abbr>&nbsp;:</p>
+</br>Quelques points sont néanmoins essentiels pour la bonne utilisation de l&#39;<abbr>API</abbr> mise à disposition&nbsp;:</p>
 <ul>
-<li><p>Utiliser les polices système pour les textes de l’application afin d&#39;éviter les mauvaises surprises même s&#39;il est toutefois possible de définir ses propres polices dérivées de la classe <code>UIFont</code> surtout depuis l&#39;arrivée de <code>UIFontMetrics</code> avec iOS11.</p>
+<li><p>Utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l&#39;utilisation d&#39;autres polices est devenue nettement plus aisée depuis l&#39;arrivée de <code>UIFontMetrics</code> avec iOS11.</p>
 <pre><code class="objective-c">
  __weak IBOutlet UILabel * fontHeadline;
  __weak IBOutlet UILabel * fontFootNote;
@@ -719,7 +718,8 @@ float heightVal;
  fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre></li>
 <li><p>Penser à écouter la notification <strong>UIContentSizeCategoryDidChange</strong> qui annonce le changement de la taille du texte à partir des paramètres du téléphone.
-</br>Cette tâche est simplifiée depuis iOS11 où l&#39;attribut <strong>adjustsFontForContentSizeCategory</strong> se charge de la mise à jour automatique de la nouvelle taille de police au sein de l&#39;application.</p>
+</br>Cette tâche est simplifiée depuis iOS10 où l&#39;attribut <strong>adjustsFontForContentSizeCategory</strong> se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l&#39;application (cet attribut ne peut s&#39;appliquer aux polices personnalisées qu&#39;avec l&#39;utilisation de <code>UIFontMetrics</code> en iOS11).
+</br>Il est aussi possible d&#39;utiliser la méthode <strong>traitCollectionDidChange</strong> du protocole informel <code>UITraitEnvironment</code> qui sera automatiquement appelée dès qu&#39;une modification concernant l&#39;environnement de l&#39;interface iOS surviendra <em>(class/content size, portrait/paysage)</em>.</p>
 <pre><code class="objective-c">
  //Écoute de la notification annonçant le changement de taille de la police.
  [[NSNotificationCenter defaultCenter] addObserver:self

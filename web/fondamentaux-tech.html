@@ -46,10 +46,10 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Web</a>
+                    <a class="nav-link" href="./index.html">Site Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html">Critères incontournables</a></li>
+                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
                         <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
                         <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
@@ -61,8 +61,8 @@
                         <li><a class="page-about" href="about.html">À propos</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
-                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -102,7 +102,7 @@
 
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Web</a></li>        
+      <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -125,15 +125,17 @@
 <p><span data-menuitem="fondamentaux"></span></p>
 <h2 id="1-donner-un-titre-aux-pages">1. Donner un titre aux pages</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> dès la conception et pendant le développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Donner à chaque page un titre qui lui est spécifique et qui reflète son contenu ou sa fonction (balise <code>&lt;title&gt;</code>).<br>Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier formellement la page sur laquelle on se trouve.</p>
+<p><strong>Description&nbsp;:</strong><br>Donner à chaque page un titre qui lui est spécifique et qui reflète son contenu ou sa fonction (balise <code>&lt;title&gt;</code>).<br>Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier la page sur laquelle on se trouve.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
-<li>Bien qu’il n’y ait pas de règle, en général, on va de l’information la plus spécifique vers la moins spécifique (ex.&nbsp;: nom de la page courante - nom du site). Dans d’autres contextes d’utilisation pour lesquels l’utilisateur a de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l’information la plus générale vers la plus spécifique (ex.&amp;nbsp ;: nom du site - nom de la page).</li>
+<li>Bien qu’il n’y ait pas de règle, en général, on va de l’information la plus spécifique vers la moins spécifique (exemple : nom de la page courante - nom du site). Dans d’autres contextes d’utilisation pour lesquels l’utilisateur a de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l’information la plus générale vers la plus spécifique (exemple : nom du site - nom de la page).</li>
 <li>Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d’une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu…), le titre de la page doit refléter cette modification du contenu.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong><br>Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et se faire une idée précise du contenu de la page sans avoir à le lire. C’est, notamment, le premier élément vocalisé par un lecteur d’écran.</p>
-<p><strong>Exemple valide&nbsp;:</strong><br><code>&lt;title&gt;Accueil - Espace client Orange&lt;/title&gt;</code>        </p>
-<p><strong>Exemple non-valide&nbsp;:</strong><br><code>&lt;title&gt;Accueil&lt;/title&gt;</code></p>
+<p><strong>Exemple valide&nbsp;:</strong>
+<code>&lt;title&gt;Accueil - Espace client Orange&lt;/title&gt;</code></p>
+<p><strong>Exemple non-valide&nbsp;:</strong>
+<code>&lt;title&gt;Accueil&lt;/title&gt;</code></p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.2</p>
 <h2 id="2-donner-des-titres-aux-rubriques">2. Donner des titres aux rubriques</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes cognitives, avec des difficultés pour lire et déficientes visuelles.<br><strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
@@ -174,20 +176,34 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
         &lt;h4&gt;Êtes-vous éligible&nbsp;?&lt;/h4&gt;
 </code></pre>
 
-<p><strong>Outil :</strong><br>L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>, disponible pour <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr">Chrome</a> et <a href="https://addons.mozilla.org/fr/firefox/addon/headingsmap/">Firefox</a>, permet d’extraire les titres et de les visualiser sous forme de plan de document.</p>
+<p><strong>Outils :</strong><br>Des extensions à installer dans votre navigateur permettent d&#39;extraire la liste des titres : </p>
+<ul>
+<li>L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>.</li>
+<li>L&#39;extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a>.</li>
+</ul>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.3.1</p>
 <h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
+<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan même pour des éléments graphiques porteurs de sens doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non valide&nbsp;:</strong><br>Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
+<p>Les images suivantes sont porteuses d’information pour les utilisateurs. Elles doivent fournir un contraste de couleur de 3:1 minimum.</p>
+<p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.</li>
+<li>Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère, si :<ul>
+<li>le composant graphique est un logo</li>
+<li>si un texte comme un label apporte la même information que l’icône</li>
+<li>si la modification du taux de contraste de l’image nuit au réalisme de celle-ci</li>
+</ul>
+</li>
 <li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 <li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
 </ul>
+<p>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.
+Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils doivent être ignorés par l’utilisateur.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).</p>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
@@ -240,7 +256,7 @@ Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Ne pas faire de mise en pages en tableaux, ceux-ci étant réservés aux données tabulaires. </li>
-<li>Éviter d’utiliser des images pour afficher du texte, préférer les habillages <abbr>CSS</abbr>.</li>
+<li>Ne pas utiliser d&#39;image pour afficher du texte sauf exception (présentation qui ne peut pas être réalisée via <abbr>CSS</abbr>).</li>
 <li>Utiliser des classes <abbr>CSS</abbr> plutôt que manipuler des styles <abbr>CSS</abbr> en ligne dans le code <abbr>HTML</abbr>.</li>
 <li>Ne pas utiliser les pseudo éléments <abbr>CSS</abbr> (::before, ::after…) pour afficher du contenu porteur d’information</li>
 <li>Ne pas câbler des événements Javascript directement dans le code <abbr>HTML</abbr> mais gérer l’interactivité dans un script ou un fichier <abbr>JS</abbr> à part.</li>
@@ -272,7 +288,7 @@ Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&
 <p><strong>Référence&nbsp;:</strong> WCAG 4.1.1  </p>
 <p><strong>Outil&nbsp;:</strong> <a href="https://validator.w3.org/">validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr></a></p>
 <h2 id="8-indiquer-la-langue-principale-et-les-changements-de-langue">8. Indiquer la langue principale et les changements de langue</h2>
-<p><strong>Cible&nbsp;:</strong> pour tous, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du le développement.</p>
+<p><strong>Cible&nbsp;:</strong> pour tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du le développement.</p>
 <p><strong>Description&nbsp;:</strong>  </p>
 <p>Spécifier la langue principale du document grâce à l’attribut <code>lang</code> dans la balise <code>html</code>. 
 Préciser également la langue d’un contenu exprimé dans une langue autre que la langue principale, en utilisant l’attribut <code>lang</code> dans l’élément <abbr>HTML</abbr> contenant l’expression en langue étrangère.  </p>
@@ -292,32 +308,35 @@ Préciser également la langue d’un contenu exprimé dans une langue autre que
 <h2 id="9-associer-une-tiquette-pertinente-chaque-champ-de-formulaire">9. Associer une étiquette pertinente à chaque champ de formulaire</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong>  </p>
-<p>Chaque champ de formulaire doit être accompagné d’un libellé permettant d’identifier le rôle du champ, le type de donnée et le format attendu. </p>
-<p>Le libellé doit être proche visuellement du champ afin qu’on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle, voire sur mobile).</p>
-<p>Chaque libellé doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
+<p>Chaque champ de formulaire doit être accompagné d’un libellé ou d&#39;instructions permettant d’identifier le rôle du champ, le type de donnée et le format attendu. </p>
+<p>Ces informations doivent être proches visuellement du champ afin que l&#39;utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile).</p>
+<p>Chaque libellé (ou instructions) doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
-L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> dans cet ordre de préférence.</p>
+L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) dans cet ordre de préférence.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <p>S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.</p>
-<p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.</p>
+<p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.
+Si cela est pertinent, les champs ont un attribut « autocompleted » afin que l’utilisateur ait la possibilité d’utiliser une liste de propositions pré-enregistrées ou en auto-complétion.</p>
 <p>Pour les boutons radio et les cases à cocher, l’utilisation de la balise <code>label</code> est, parfois, à compléter par un autre dispositif (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> ou <code>fieldset</code> et <code>legend</code>).
 Pour les champs obligatoires, ceci doit être précisé dans le <code>label</code> via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
-<p>Ne pas respecter cette exigence est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.</p>
+<p>Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
+Pour les listes de contenus en auto-complétion pour les champs, elles permettent d’éviter les erreurs de saisie.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide">
 <img src="images/v_label.jpg" alt="capture d’écran d’un formulaire label proche du champ"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label">
 <img src="images/nv_label.jpg" alt="capture d’écran d’un formulaire label loin du champ"></p>
 <p><strong>Exemple de formulaire accessible&nbsp;:</strong></p>
 <p>Consulter <a href="./exemples/formulaire/index.html">l’exemple de formulaire accessible</a> pour plus d’informations.</p>
-<p><strong>Référence&nbsp;:</strong>WCAG 3.3.2</p>
+<p><strong>Référence&nbsp;:</strong>WCAG 3.3.2, 3.3.5</p>
 <h2 id="10-d-tecter-identifier-les-erreurs-et-sugg-rer-des-corrections">10. Détecter, identifier les erreurs et suggérer des corrections</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives, avec des difficultés pour lire ou ayant un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong> </p>
 <p>Les erreurs sont automatiquement détectées, l’utilisateur est averti par la modification du titre de la page, l’élément de formulaire en erreur est identifié et l’erreur est décrite à l’utilisateur sous forme de texte. Si besoin, une correction est suggérée.</p>
-<p>Enfin les libellés des messages d’erreur doivent être explicites.</p>
+<p>Les libellés des messages d’erreur doivent être explicites.</p>
+<p>Pour les pages Web qui entraînent des actions importantes (engagement juridique, transaction financière, modification ou effacement de données importantes, réponse à un test ou examen...), l&#39;action doit être réversible ou passer par une étape de confirmation permettant de vérifier ou rectifier la saisie en cas d&#39;erreur.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
-<p>L’identification du champ en erreur ainsi qu’une éventuelle suggestion de correction peuvent être ajoutées dynamiquement à la balise <code>label</code>, en priorité, mais aussi à l’attribut <code>title</code> ou les attributs <code>aria-label</code> et <code>aria-labelledby</code> selon le contexte et les besoins.</p>
+<p>L’identification du champ en erreur ainsi qu’une éventuelle suggestion de correction peuvent être ajoutées dynamiquement à la balise <code>label</code>, en priorité, mais aussi à l’attribut <code>title</code> ou les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) selon le contexte et les besoins.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Guider l’utilisateur en cas d’erreurs permet d’améliorer la compréhension et la correction des erreurs, pour tous les utilisateurs, en particulier pour les novices sur internet, les seniors et les personnes déficientes cognitives.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire-ok.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides">  </p>
@@ -349,16 +368,21 @@ Point bloquant&nbsp;: une image sans description textuelle est inexploitable par
 <p><strong>Objectif technique&nbsp;:</strong></p>
 <p>Améliorer le référencement naturel.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;Retour à l’accueil&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.&quot;&gt;</code></p>
-<p><strong>Exemple d’alternative vide&nbsp;:</strong><br>Dans l’exemple ci-dessous, le picto à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.<br>Renseigner l’attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
+<p><strong>Exemple d’alternative vide&nbsp;:</strong><br>Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.<br>Renseigner l’attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
 <p><img src="./images/service-24.png" alt="exemple d’image décorative">  </p>
 <p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
+<p><strong>Outils :</strong><br>L&#39;extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a> (possibilité d&#39;afficher les alternatives textuelles de toutes les images).</p>
 <p><strong>Référence&nbsp;:</strong>WCAG 1.1.1</p>
-<h2 id="12-fournir-un-transcrit-pour-toute-piste-audio-ou-vid-o">12. Fournir un transcrit pour toute piste audio ou vidéo</h2>
+<h2 id="12-fournir-une-transcription-pour-toute-piste-audio-ou-vid-o">12. Fournir une transcription pour toute piste audio ou vidéo</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong> </p>
-<p>Fournir, pour toute piste audio ou vidéo porteuse d’information, un transcrit complet dans la page elle-même ou grâce à un lien à proximité de la piste audio ou vidéo.</p>
-<p><strong>À vérifier&nbsp;:</strong></p>
-<p>Un transcrit complet est le texte contenant l’ensemble des informations visuelles et auditives porteuses de sens. </p>
+<p>Fournir, pour toute piste audio ou vidéo porteuse d’information :</p>
+<ul>
+<li>Une transcription complète dans la page elle-même ou grâce à un lien à proximité de la piste audio ou vidéo.</li>
+<li>Des sous-titres (pour les vidéos).</li>
+<li>Une audiodescription si nécessaire.</li>
+</ul>
+<p>Pour plus d&#39;infos consulter <a href="../others/video-audio.html">les recommandations accessibilité pour les contenus vidéos, animations et audios Orange</a>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, environnement lumineux ou bruyant.</p>
 <p><strong>Objectif technique&nbsp;:</strong></p>
@@ -371,7 +395,7 @@ Point bloquant&nbsp;: une image sans description textuelle est inexploitable par
 <ul>
 <li>Utiliser l’élément <code>table</code> avec les éléments enfants <code>th</code> (pour les cellules d’entêtes), <code>td</code>, <code>tr</code>.</li>
 <li>Utiliser l’attribut <code>scope</code> avec la valeur <code>row</code>/<code>col</code> pour associer les cellules d’en-têtes et les cellules de données ; pour des tableaux complexes, utiliser les attributs <code>id</code> et <code>headers</code>.</li>
-<li>Utiliser la balise <code>caption</code>, une balise <code>h1</code> à <code>h6</code> juste avant le tableau ou lier un texte proche du tableau via un attribut <code>aria-labelledby</code> dans l’élément <code>table</code> pour associer un titre au tableau.</li>
+<li>Utiliser la balise <code>caption</code>, une balise <code>h1</code> à <code>h6</code> juste avant le tableau ou lier un texte proche du tableau via un attribut <code>aria-labelledby</code> dans l’élément <code>table</code> pour associer un titre au tableau (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
 <li>Mettre un attribut <code>summary</code> dans l’élément <code>table</code> pour expliciter la structure dans le cas d’un tableau complexe. Attention cet attribut est déprécié en <abbr>HTML5</abbr>, il faudra donc rajouter, si besoin, le contenu du <code>summary</code> dans le titre du tableau.</li>
 </ul>
 <p><strong>À vérifier&nbsp;:</strong></p>
@@ -401,21 +425,61 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte pour plus aisément accéder à l’information.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Voir l’exemple <a href="./exemples/zoom/index.html">gestion du zoom, agrandissement de la taille du texte</a> pour plus d’informations.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 1.4.4</p>
-<h2 id="15-rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">15. Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h2>
+<h2 id="15-permettre-d-a-rer-le-texte">15. Permettre d&#39;aérer le texte</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
+<p>Si l&#39;utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
+<ul>
+<li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.</li>
+<li>L&#39;espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.</li>
+<li>L&#39;espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.</li>
+<li>L&#39;espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.</li>
+</ul>
+<p>Cela revient à appliquer les styles CSS suivants : </p>
+<pre><code class="css">
+  * {
+      line-height: 1.5!important;
+      letter-spacing:.12em!important;
+      word-spacing: .16em !important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+</code></pre>
+
+<p>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
+<p><strong>Objectif utilisateur&nbsp;:</strong>
+Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le confort de lecture.</p>
+<p><strong>Référence&nbsp;:</strong> WCAG 1.4.12 </p>
+<h2 id="16-rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">16. Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
-<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, cet intitulé peut être complété par un contenu supplétif caché ou en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code>, spécifiquement pour les utilisateurs qui naviguent à l’aide d’un lecteur d’écran.
-Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
+<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplétif, au choix, via :</p>
+<ul>
+<li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
+<li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
+</ul>
+<p>Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
-<p>Dans ce cas, ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
-<p><strong>Exemple&nbsp;:</strong>  </p>
+<p><strong>Solutions&nbsp;:</strong>  </p>
+<p>Ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
 <pre><code class="html">
-&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
-&lt;a href="…"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en plusieurs fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
-<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé.<br>En complément de ces solutions, on pourrait ici également utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle «&nbsp;valider le paiement en plusieurs fois&nbsp;» au survol avec la souris.</p>
+<p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).  </p>
+<pre><code class="html">
+&lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider la paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+
+<pre><code class="html">
+&lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider la paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+
 <p><strong>À vérifier&nbsp;:</strong>
 S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:</p>
 <ul>
@@ -432,29 +496,34 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 <p><strong>Exemple valide&nbsp;:</strong><br>Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus de précision.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.9</p>
-<h2 id="16-pr-venir-l-utilisateur-de-l-ouverture-d-une-nouvelle-fen-tre">16. Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</h2>
+<h2 id="17-pr-venir-l-utilisateur-de-l-ouverture-d-une-nouvelle-fen-tre">17. Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Prévenir l’utilisateur de l’ouverture de toute nouvelle fenêtre en l’indiquant dans l’intitulé du lien. 
-En cas d’impossibilité avérée, utiliser un icône (image avec un <code>alt</code>) en ajoutant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;».<br>En dernier recours, un texte  en <a href="./exemples/masquage/index.html">masquage accessible</a> (hors écran).</p>
+En cas d’impossibilité avérée utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, et compléter l&#39;intitulé par au choix :</p>
+<ul>
+<li>un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
+<li>un morceau de texte caché en <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
+<li>l&#39;utilisation d&#39;une icône (image avec un <code>alt</code> indiquant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;»).</li>
+</ul>
 <p><strong>Exemple&nbsp;:</strong>  </p>
 <p>Exemple d’icône pouvant indiquer l’ouverture d’une nouvelle fenêtre.<br><img src="./images/nouvelle-fenetre.png" alt="capture d’écran d’un lien accompagné d’une icône indiquant l’ouverture d’une nouvelle fenêtre">  </p>
 <p><strong>À vérifier&nbsp;:</strong>
-Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type «&nbsp;(nouvelle fenêtre)&nbsp;» est présente dans l’intitulé du lien, ou la mention «&nbsp;(nouvelle fenêtre)&nbsp;» est positionnée hors écran via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">masquage accessible</a>).</p>
+Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type «&nbsp;(nouvelle fenêtre)&nbsp;» est présente dans l’intitulé du lien, ou la mention «&nbsp;(nouvelle fenêtre)&nbsp;» est indiquée à l&#39;utilisateur via le lecteur d&#39;écran et via la présence d&#39;une info-bulle sur le lien en question.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Éviter l’ouverture inattendue de fenêtre, car cela peut gêner, perturber ou désorienter l’utilisateur. En particulier, pour des personnes en mobilité, utilisant des synthèses vocales ou présentant des déficiences cognitives.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Pour un lien pointant à l’extérieur du site et ouvrant une nouvelle fenêtre, l’intitulé du lien texte «&nbsp;Accéder au site orange.com (nouvelle fenêtre)&nbsp;».
 Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions générales d’utilisation (nouvelle fenêtre)&quot;</code>.    </p>
 <p><strong>Référence&nbsp;:</strong> WCAG 3.2.2</p>
-<h2 id="17-permettre-d-utiliser-les-principales-fonctionnalit-s-de-l-application-au-clavier">17. Permettre d’utiliser les principales fonctionnalités de l’application au clavier</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices et en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<h2 id="18-permettre-d-utiliser-les-principales-fonctionnalit-s-de-l-application-au-clavier">18. Permettre d’utiliser les principales fonctionnalités de l’application au clavier</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives, motrices et en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong>
 Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris. </p>
 <p><strong>À vérifier&nbsp;:</strong>
 Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …).</p>
 <p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
- Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.</p>
+ Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, cognitives, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.</p>
 <p><strong>Exemple valide&nbsp;:</strong>      </p>
 <ul>
 <li>Un sous-menu qui se déroule au survol doit aussi se dérouler quand l’item de menu parent reçoit le focus clavier.</li>
@@ -462,10 +531,10 @@ Toutes les actions importantes effectuées à la souris peuvent aussi l’être 
 </ul>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n’drop</i> et sans équivalent au clavier.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.1.1</p>
-<h2 id="18-rendre-le-parcours-du-focus-s-quentiel-et-logique-sans-pi-ge-clavier">18. Rendre le parcours du focus séquentiel et logique sans piège clavier</h2>
+<h2 id="19-rendre-le-parcours-du-focus-s-quentiel-et-logique-sans-pi-ge-clavier">19. Rendre le parcours du focus séquentiel et logique sans piège clavier</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre logique pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). </p>
+<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). </p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété <code>outline</code> et <code>:focus</code> en <abbr>CSS</abbr>), voir exigence 19, ci-dessous.</li>
@@ -477,7 +546,7 @@ Toutes les actions importantes effectuées à la souris peuvent aussi l’être 
 Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        </p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.3, 2.1.2</p>
-<h2 id="19-rendre-visible-le-focus-en-toute-circonstance">19. Rendre visible le focus en toute circonstance</h2>
+<h2 id="20-rendre-visible-le-focus-en-toute-circonstance">20. Rendre visible le focus en toute circonstance</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d’attention et en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>.
@@ -495,7 +564,7 @@ document.addEventListener(’keydown’, function() {
 });
 </code></pre>
 
-<p><a href="https://codepen.io/paipai/pen/jwLyzK">Demonstration de la visibilité du focus à la navigation clavier uniquement</a></p>
+<p><a href="https://codepen.io/paipai/pen/jwLyzK">Démonstration de la visibilité du focus à la navigation clavier uniquement</a></p>
 <p><strong>À vérifier&nbsp;:</strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
@@ -504,7 +573,7 @@ Permettre la visibilité du focus sur tous les éléments actifs, notamment pour
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
 <img src="images/focus2.png" alt="capture d’écran présentant un comportement personnalisé pour l’affichage du focus"></p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.7</p>
-<h2 id="20-fournir-des-liens-d-vitement">20. Fournir des liens d’évitement</h2>
+<h2 id="21-fournir-des-liens-d-vitement">21. Fournir des liens d’évitement</h2>
 <p><strong>Cible&nbsp;:</strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Mettre en place des liens d’accès direct (liens d’évitement) permettant d’accéder aux principales zones de la page (navigation, contenu, pied de page, recherche…) grâce à des liens internes vers des ancres (balises <code>&lt;a&gt;</code> ou tout élément <abbr>HTML</abbr> possédant un attribut <code>id</code>). En cas de <strong>fortes contraintes,</strong> ces liens peuvent être cachés et affichés uniquement lors de la navigation clavier.</p>
@@ -516,15 +585,15 @@ Faciliter la navigation pour des utilisateurs naviguant au clavier, des utilisat
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d’adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <code>TAB</code>.</p>
 <p><img src="images/skiplink.png" alt="capture d’écran du site orange.com">   </p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.1</p>
-<h2 id="21-permettre-le-contr-le-des-animations">21. Permettre le contrôle des animations</h2>
+<h2 id="22-permettre-le-contr-le-des-animations">22. Permettre le contrôle des animations</h2>
 <p><strong>Cible&nbsp;:</strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d’attention ou de compréhension, les personnes épileptiques.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
-<p><strong>Description&nbsp;:</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des <abbr>JO</abbr> provoque des crises d’épilepsie</a>).
+<p><strong>Description&nbsp;:</strong><br>Tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement (par exemple un carrousel) doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur si cette animation dure plus de 5 secondes.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des <abbr>JO</abbr> provoque des crises d’épilepsie</a>).
 Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l’animation, la mise à jour ou le clignotement via un bouton par exemple.</p>
 <p><strong>Exemple&nbsp;:</strong><br><img src="./images/carrousel.png" alt="capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation">  </p>
 <p>Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il a le focus.<br>Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.2.2</p>
-<h2 id="22-s-assurer-que-les-principales-fonctionnalit-s-sont-utilisables-avec-les-lecteurs-d-cran">22. S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong>lors du développement.</p>
+<h2 id="23-s-assurer-que-les-principales-fonctionnalit-s-sont-utilisables-avec-les-lecteurs-d-cran">23. S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</h2>
+<p><strong>Cible&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong>lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Respecter les recommandations générales d’accessibilité, utiliser en priorité les composants standards <abbr>HTML</abbr>, sinon, utiliser <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>) pour les composants d’interface complexes.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
@@ -532,8 +601,8 @@ Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper 
 En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un manque d’accessibilité, on repère un grand nombre de problèmes en vérifiant cette exigence.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.</p>
-<h2 id="23-g-rer-dynamiquement-le-focus-lors-d-une-insertion-ou-d-une-modification-du-contenu">23. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention.<br><strong>Quand&nbsp;:</strong>lors du développement.</p>
+<h2 id="24-g-rer-dynamiquement-le-focus-lors-d-une-insertion-ou-d-une-modification-du-contenu">24. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Lorsqu’un élément est affiché suite à une interaction de l’utilisateur&nbsp;: </p>
 <ul>
@@ -572,16 +641,22 @@ Permettre à l’utilisateur, par exemple non ou malvoyant, de repérer l’appa
 <p>Sur ce site, la recherche est dynamique, elle se met à jour dès que l’utilisateur active (sélectionne) un filtre ou qu’il tape <kbd>Entrée</kbd> après avoir saisi un mot clé. Le problème est que la région qui affiche dynamiquement les résultats est très éloignée de la zone de critères de recherche. Il est donc difficile voire impossible pour certains utilisateurs (déficients visuels, cognitifs ou avec troubles de l’attention) d’identifier la zone de résultats et de savoir quand celle-ci est mise à jour.
 Il faudrait pousser le focus sur la zone de résultats à chaque recherche.</p>
 <p><strong>Référence&nbsp;:</strong> WCAG 2.4.3</p>
-<h2 id="24-s-assurer-que-l-utilisateur-garde-le-contr-le-lors-des-interactions">24. S’assurer que l’utilisateur garde le contrôle lors des interactions</h2>
+<h2 id="25-s-assurer-que-l-utilisateur-garde-le-contr-le-lors-des-interactions">25. S’assurer que l’utilisateur garde le contrôle lors des interactions</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong>
-Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti. </p>
+Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </p>
+<p>Si des raccourcis clavier à une seule lettre (majuscule/minuscules) sont disponibles, s&#39;assurer qu&#39;il soit possible de désactiver ou modifier ces raccourcis.</p>
+<p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
+<ul>
+<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche échap).</li>
+<li>Pouvoir déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
+</ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
-<p><strong>Référence&nbsp;:</strong> WCAG 3.2.1, 3.2.2</p>
-<h2 id="25-viter-les-captcha">25. Éviter les captcha</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Référence&nbsp;:</strong> WCAG 3.2.1, 3.2.2, 1.4.13</p>
+<h2 id="26-viter-les-captcha">26. Éviter les captcha</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
 <li>Double authentification</li>
@@ -590,7 +665,7 @@ Donner à tous les utilisateurs la maîtrise des changements de contexte lié à
 <li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
 <p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...</p>
-<h2 id="26-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">26. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
+<h2 id="27-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">27. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
 <p><strong>Description&nbsp;:</strong>
 Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
@@ -667,7 +742,7 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
 </code></pre>
 
 <p><strong>Référence WCAG&nbsp;:</strong> 3.2.3., 3.2.4  </p>
-<h2 id="27-fournir-des-acc-s-multiples-et-une-localisation">27. Fournir des accès multiples et une localisation</h2>
+<h2 id="28-fournir-des-acc-s-multiples-et-une-localisation">28. Fournir des accès multiples et une localisation</h2>
 <p><strong> Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
 <p><strong> Description&nbsp;:</strong>
 Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, ce critère peut être ignoré.</p>
@@ -680,22 +755,22 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 <p><strong> Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
 <p><strong>Référence WCAG&nbsp;:</strong> 2.4.5., 2.4.8</p>
-<h2 id="28-d-finir-des-zones-sensibles-de-taille-suffisante">28. Définir des zones sensibles de taille suffisante</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<h2 id="29-d-finir-des-zones-sensibles-de-taille-suffisante">29. Définir des zones sensibles de taille suffisante</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
-<h2 id="29-autoriser-l-utilisation-du-zoom">29. Autoriser l&#39;utilisation du zoom</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<h2 id="30-autoriser-l-utilisation-du-zoom">30. Autoriser l&#39;utilisation du zoom</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
-<h2 id="30-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">30. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<h2 id="31-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">31. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
-<h2 id="31-proposer-une-alternative-aux-gestuelles-complexes">31. Proposer une alternative aux gestuelles complexes</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<h2 id="32-proposer-une-alternative-aux-gestuelles-complexes">32. Proposer une alternative aux gestuelles complexes</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
 De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
-<h2 id="32-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">32. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<h2 id="33-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">33. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

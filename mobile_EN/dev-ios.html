@@ -44,14 +44,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                    <a class="nav-link" href="../web_EN/index.html">Website</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" class="nav-link">Mobile app</a>
                     <ul id="navigation" class="nav navbar-nav">
                       <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html">Guide for developers</a></li>                
+                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
+                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
                       <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
                       <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
@@ -59,7 +59,7 @@
                       <li><a class="page-about" href="about.html">About</a></li>                        
                     </ul>                      
                   </li>  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
                   </li>
@@ -99,7 +99,7 @@
 
     <span class="sr-only">You are here: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -222,7 +222,7 @@ func customTraits() {
 <ul>
 <li><strong>isAccessibilityElement</strong>&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
 <li><strong>accessibilityElementsHidden</strong>&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
-<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popin views for example.</li>
+<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popup views for example.</li>
 </ul>
 <p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.</p>
 <h3 id="example">Example</h3>
@@ -673,12 +673,11 @@ float heightVal;
 <p>All accessibility events are available on the <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">official documentation from Apple</a>.</p>
 <h2 id="text-size">Text size</h2>
 <h3 id="description">Description</h3>
-<p>Dynamic font size on iOS is very tricky.
-</br>Since iOS7, it is possible to use an <abbr>API</abbr> to make the text size dynamic according to the phone settings.
+<p>Since iOS7, it is possible to make the text size dynamic according to the phone settings.
 </br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:</p>
 <ul>
-<li><p>Choose the system fonts even if it&#39;s possible to use its own fonts inherited from <code>UIFont</code> and assisted with <code>UIFontMetrics</code> (iOS11 new feature).</p>
+<li><p>Choose the system font to facilitate your programing even if the use of other fonts is well assisted by the <code>UIFontMetrics</code> new class (iOS11).</p>
 <pre><code class="objective-c">
  __weak IBOutlet UILabel * fontHeadline;
  __weak IBOutlet UILabel * fontFootNote;
@@ -702,7 +701,8 @@ float heightVal;
  let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
  fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre></li>
-<li><p>Listen to the font size settings change event <strong>UIContentSizeCategoryDidChange</strong> or directly use the property <strong>adjustsFontForContentSizeCategory</strong> to have an automatic update if you&#39;re programming in iOS11.</p>
+<li><p>Listen to the font size settings change event <strong>UIContentSizeCategoryDidChange</strong> or directly use the property <strong>adjustsFontForContentSizeCategory</strong> to have an automatic update of your system font size if you&#39;re programming in iOS10 (this attribute applies to custom fonts only with the <code>UIFontMetrics</code> class).
+</br>Note that the <strong>traitCollectionDidChange</strong> method that belongs to the <code>UITraitEnvironment</code> informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes <em>(class/content size, portrait/landscape)</em>.</p>
 <pre><code class="objective-c">
  //Listens to the notification dealing with the font size changing from the mobile settings.
  [[NSNotificationCenter defaultCenter] addObserver:self

@@ -45,10 +45,10 @@
               <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Site Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Éditorial</a>
+                    <a class="nav-link" href="./index.html">Contenu éditorial</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
                         <li><a class="page-editorial" href="editorial.html">Recommandations générales</a></li>
@@ -101,7 +101,7 @@
 
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/others/index.html">Éditorial</a></li>        
+      <li class="breadcrumb-item"><a href="/others/index.html">Contenu éditorial</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -315,6 +315,14 @@ Cela permet à tous de se repérer plus facilement et d&#39;aller rapidement au 
 <h3 id="avec-adobe-acrobat-pro">Avec Adobe Acrobat Pro</h3>
 <p>Vous trouverez les recommandations Adobe Acrobat Pro sur la notice <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat">Créer des documents <abbr>PDF</abbr> accessibles avec Adobe Acrobat Pro</a> de AcceDe <abbr>PDF</abbr>. </p>
 <p>Ce document est issu de la phase 2 d’AcceDe <abbr>PDF</abbr> (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&nbsp;: La Poste, Siemens, Spie, Thales, Atos, <abbr>BNP</abbr> Paribas, Devoteam, Manpower et <abbr>EDF</abbr> en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.</p>
+<h2 id="tester-l-accessibilit-d-un-document-abbr-pdf-abbr-">Tester l’accessibilité d’un document <abbr>PDF</abbr></h2>
+<p>Installer <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>. </p>
+<p>Ce logiciel permet entre autres l’exécution des tests automatiques sur un document <abbr>PDF</abbr> et la détection des problèmes d’accessibilité,</p>
+<figure>
+<img class="center" src="/others/images/pac1.png" alt="copie d’écran des résultats des tests automatiques dans PAC"/>
+<figcaption>Capture d&#39;écran de l&#39;outil.</figcaption>
+</figure>
+
 <h2 id="crit-res-incontournables">Critères incontournables</h2>
 <p>Ce sont les principaux critères à respecter pour qu’un document <abbr>PDF</abbr> soit accessible, indépendamment de la procédure utilisée pour le créer. Les critères incontournables seront utiles aux personnes créant des documents <abbr>PDF</abbr> sans utiliser les logiciels d’éditions (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro), par exemple les développeurs dont les applications génèrent des documents <abbr>PDF</abbr>.</p>
 <h3 id="structure-du-document">Structure du document</h3>
@@ -348,21 +356,6 @@ Cela permet à tous de se repérer plus facilement et d&#39;aller rapidement au 
 <ul>
 <li>4.5:1 pour du texte de taille normale.</li>
 <li>3:1 pour du texte de grande taille.</li>
-</ul>
-<h2 id="tester-l-accessibilit-d-un-document-abbr-pdf-abbr-">Tester l’accessibilité d’un document <abbr>PDF</abbr></h2>
-<p>Installer <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC 2</abbr>)</a>. </p>
-<p>Ce logiciel permet entre autres&nbsp;:</p>
-<ul>
-<li>d’exécuter des tests automatiques sur un document <abbr>PDF</abbr> et détecter des erreurs d’accessibilité,<figure>
-<img class="center" src="/others/images/pac1.png" alt="copie d’écran des résultats des tests automatiques dans PAC 2"/>
-<figcaption>Résultats des tests automatiques</figcaption>
-</figure>
-<figure>
-<img class="center" src="/others/images/pac2.png" alt="copie d’écran du détail d’une erreur dans PAC 2"/>
-<figcaption>Détail d’une erreur d’accessibilité détectée automatiquement</figcaption>
-</figure></li>
-<li>de pré-visualiser le document tel qu’il sera restitué par les outils d’assistance, afin de vérifier l’ordre de lecture et l’utilisation pertinente de la sémantique (titre, paragraphe…),<div><img class="center" src="/others/images/pac3.png" alt=""/></div></li>
-<li>d’accéder à une vue détaillée des informations accessibles à un outil d’assistance.<div><img class="center" src="/others/images/pac4.png" alt=""/></div></li>
 </ul>
 
 <h1 id="recommandations-accessibilit-span-lang-en-pushmail-span-orange">Recommandations accessibilité <span lang="en">pushmail</span> Orange</h1>
@@ -461,20 +454,20 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="recommandations-accessibilit-des-contenus-vid-os-et-audios-orange">Recommandations accessibilité des contenus vidéos et audios Orange</h1>
+<h1 id="recommandations-accessibilit-des-contenus-vid-os-animations-et-audios-orange">Recommandations accessibilité des contenus vidéos, animations et audios Orange</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Vidéo audio"}]);
 });</script>
 
 <style>h3 {font-size: 1rem;}</style>
 
-<h2 id="introduction-nbsp-l-accessibilit-des-contenus-vid-os-et-audios">Introduction&nbsp;: l’accessibilité des contenus vidéos et audios</h2>
+<h2 id="introduction-nbsp-l-accessibilit-des-contenus-vid-os-animations-et-audios">Introduction&nbsp;: l’accessibilité des contenus vidéos, animations et audios</h2>
 <p>Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&nbsp;:</p>
 <ul>
-<li>que ces vidéos et audios eux-même soient accessibles</li>
+<li>que ces vidéos, animations et audios eux-même soient accessibles</li>
 <li>mais également, que l&#39;interface qui permet la diffusion de ces fichiers soit accessible.</li>
 </ul>
-<h2 id="rendre-les-vid-os-ou-audios-accessibles">Rendre les vidéos ou audios accessibles</h2>
+<h2 id="rendre-les-vid-os-animations-ou-audios-accessibles">Rendre les vidéos, animations ou audios accessibles</h2>
 <p>Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :</p>
 <ul>
 <li>Une transcription intégrale, seule nécessité pour un fichier audio.</li>
@@ -482,7 +475,7 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
 <li>Une audiodescription, si besoin.</li>
 </ul>
 <h3 id="transcription-int-grale">Transcription intégrale</h3>
-<p>La transcription doit restituer textuellement l’ensemble des informations véhiculées par la vidéo (paroles, messages affichés à l’écran, ...). La transcription peut être agrémentée d’images, si besoin.</p>
+<p>La transcription doit restituer textuellement l’ensemble des informations véhiculées par le contenu (paroles, messages affichés à l’écran, graphes, animations ...). La transcription peut être agrémentée d’images, si besoin.</p>
 <p><strong>La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.</strong></p>
 <p>Cette transcription doit, par ordre de préférence, être&nbsp;:</p>
 <ol>
@@ -495,20 +488,21 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
 <p>Les sous-titres doivent restituer l’ensemble des contenus (tout son porteur d&#39;information : voix, coup de feu, ...) véhiculés par la bande son de la vidéo. Ils doivent être au format texte et synchronisés avec le son de la vidéo.</p>
 <p>Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais doivent être associées à cette dernière grâce à un fichier texte indépendant (souvent un fichier .xml ou .srt).</p>
 <h3 id="audiodescription">Audiodescription</h3>
-<p>L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n&#39;est pas forcement nécessaire, par exemple, lorsque la vidéo est juste une interview, sans autre information visuelle.</p>
+<p>L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n&#39;est pas forcement nécessaire, par exemple, lorsqu&#39;une vidéo est juste une interview, sans autre information visuelle.</p>
 <p>Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).</p>
 <p>De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).</p>
+<h3 id="lors-de-la-lecture">Lors de la lecture</h3>
+<p>Lors de la lecture du fichier embarqué dans la page web, vérifier :</p>
+<ul>
+<li>Ne pas lancer automatiquement, au chargement de la page, la vidéo, l&#39;animation ou l&#39;audio mais laisser la main à l&#39;utilisateur.</li>
+<li>Pour une vidéo ou une animation, celle-ci doit être exempte de tout élément qui flashe plus de trois fois par seconde ou ce flash doit se situer sous <a href="https://www.w3.org/Translations/WCAG20-fr/#general-thresholddef">le seuil de flash générique et le seuil de flash rouge</a>.</li>
+</ul>
 <h2 id="le-lecteur-audio-ou-vid-o">Le lecteur audio ou vidéo</h2>
 <p>Le lecteur vidéo utilisé doit&nbsp;:</p>
 <ul>
-<li><p>prendre en charge d&#39;au moins deux éléments&nbsp;: sous-titres et audiodescription.</p>
-</li>
-<li><p>permettre d&#39;utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l&#39;audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d&#39;écran, loupes logicielles, claviers, ...).</p>
-</li>
-<li><p>permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d&#39;affichage des sous-titres.</p>
-</li>
-<li><p>ne pas lancer automatiquement l&#39;audio ou la vidéo mais laisser la main à l&#39;utilisateur.</p>
-</li>
+<li>prendre en charge d&#39;au moins deux éléments&nbsp;: sous-titres et audiodescription.</li>
+<li>permettre d&#39;utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l&#39;audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d&#39;écran, loupes logicielles, claviers, ...).</li>
+<li>permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d&#39;affichage des sous-titres.</li>
 </ul>
 <h2 id="liens-utiles">Liens utiles</h2>
 <ul>

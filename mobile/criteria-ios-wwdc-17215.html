@@ -46,14 +46,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web/index.html">Web</a>                      
+                    <a class="nav-link" href="../web/index.html">Site Web</a>
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <a href="../mobile/index.html" class="nav-link">Application mobile</a>
                     <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-android" href="criteria-android.html">Critères incontournables sous Android</a></li>
-                        <li><a class="page-criteria-ios" href="criteria-ios.html">Critères incontournables sous iOS</a></li>            
+                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
                         <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
                         <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d’écran</a></li>
                         <li><a class="page-links" href="links.html">Liens utiles</a></li>
@@ -61,7 +61,7 @@
                         <li><a class="page-about" href="about.html">À propos</a></li>                        
                     </ul>                                        
                   </li>   
-                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -101,7 +101,7 @@
     
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
     </ol>
 
     <main role="main" class="container-fluid">
@@ -132,7 +132,7 @@
 <li><a href="#ImprovedPhotoDescription">Amélioration de la description d&#39;une photo</a> (08:01)</li>
 <li><a href="#TypeToSIRI">Ecrire des infos pour SIRI</a> (11:37)</li>
 <li><a href="#AccessibilityInspector">Accessibility Inspector : cas pratique</a> (15:35)</li>
-<li><a href="#UIAccessibilityProtocol">Découvrir UIAccessibilityProtocol</a> (21:14)</li>
+<li><a href="#UIAccessibilityProtocol">Découvrir le protocole UIAccessibility</a> (21:14)</li>
 <li><a href="#AttributedProperties">Attributed Accessibility Properties</a> (26:07)</li>
 <li><a href="#AccessibilityContainer">Accessibility Container Type</a> (27:20)</li>
 <li><a href="#CustomActions">Les actions personnalisées</a> (35:43)</li>
@@ -144,9 +144,9 @@
 </ul>
 <p></br>Au cours de cette présentation, de nombreuses solutions sont proposées par le biais d&#39;une application d&#39;exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span> (regarder l&#39;<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">application d&#39;exemple</a> avant de lire la suite) :</p>
 <ul>
-<li>Rendre un élément (in)accessible <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a>.</li>
-<li>Remplir des propriétés <code>label</code> et <code>value</code> ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a>.</li>
-<li>Rassembler plusieurs éléments pour n&#39;en former qu&#39;un seul ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a>.</li>
+<li>Rendre un élément (in)accessible <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a></li>
+<li>Remplir des propriétés <code>label</code> et <code>value</code> <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a>.</li>
+<li>Rassembler plusieurs éléments pour n&#39;en former qu&#39;un seul <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a>.</li>
 </ul>
 <p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.</p>
 <p><a name="ImageTextDetection"></a></p>
@@ -170,8 +170,8 @@
 <p>Dans cette partie, l&#39;outil <span lang="en">Accessibility Inspector</span> de Xcode est utilisé pour une démonstration d&#39;audit accessibilité d&#39;une application.
 </br>Des exemples sont fournis sans expliquer fondamentalement les notions propres à l&#39;outil qui sont détaillées dans la session <a href="https://developer.apple.com/videos/play/wwdc2016/407/">407</a> (2016).</p>
 <p><a name="UIAccessibilityProtocol"></a></p>
-<h3 id="-d-couvrir-uiaccessibilityprotocol-21-14-https-developer-apple-com-videos-play-wwdc2017-215-time-1274-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">Découvrir UIAccessibilityProtocol (21:14)</a></h3>
-<p>Petit rappel sur les fondements de <code>UIAccessibilityProtocol</code> qui vont être utilisés dans la suite de la présentation.
+<h3 id="-d-couvrir-le-protocole-uiaccessibility-21-14-https-developer-apple-com-videos-play-wwdc2017-215-time-1274-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">Découvrir le protocole UIAccessibility (21:14)</a></h3>
+<p>Petit rappel sur les fondements du protocole informel <code>UIAccessibility</code> qui vont être utilisés dans la suite de la présentation.
 </br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /></p>
 <p><a name="AttributedProperties"></a></p>
 <h3 id="-attributed-accessibility-properties-26-07-https-developer-apple-com-videos-play-wwdc2017-215-time-1567-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1567">Attributed Accessibility Properties (26:07)</a></h3>

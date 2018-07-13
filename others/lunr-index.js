@@ -411,6 +411,13 @@ index.add({
     body: "### Avec Adobe Acrobat Pro  Vous trouverez les recommandations Adobe Acrobat Pro sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Acrobat Pro&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.   Ce document est issu de la phase 2 d’AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&amp;nbsp;: La Poste, Siemens, Spie, Thales, Atos, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Devoteam, Manpower et &lt;abbr&gt;EDF&lt;/abbr&gt; en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
 });
 
+documentTitles["pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr"] = "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;";
+index.add({
+    url: "pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr",
+    title: "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;",    
+    body: "## Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;  Installer &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (&lt;abbr&gt;PAC&lt;/abbr&gt;)&lt;/a&gt;.   Ce logiciel permet entre autres l’exécution des tests automatiques sur un document &lt;abbr&gt;PDF&lt;/abbr&gt; et la détection des problèmes d’accessibilité, &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;copie d’écran des résultats des tests automatiques dans PAC\&quot;/&gt; &lt;figcaption&gt;Capture d'écran de l'outil.&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
 documentTitles["pdf.html#criteres-incontournables"] = "Critères incontournables";
 index.add({
     url: "pdf.html#criteres-incontournables",
@@ -471,14 +478,7 @@ documentTitles["pdf.html#couleurs"] = "Couleurs";
 index.add({
     url: "pdf.html#couleurs",
     title: "Couleurs",    
-    body: "### Couleurs  Les couleurs ne sont pas le seul moyen utilisé pour communiquer l’information.  Le contraste entre le texte et l’arrière-plan est suffisant&amp;nbsp;:  -	4.5:1 pour du texte de taille normale. -	3:1 pour du texte de grande taille.  "
-});
-
-documentTitles["pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr"] = "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;";
-index.add({
-    url: "pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr",
-    title: "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "## Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;  Installer &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (&lt;abbr&gt;PAC 2&lt;/abbr&gt;)&lt;/a&gt;.   Ce logiciel permet entre autres&amp;nbsp;:  - d’exécuter des tests automatiques sur un document &lt;abbr&gt;PDF&lt;/abbr&gt; et détecter des erreurs d’accessibilité, &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;copie d’écran des résultats des tests automatiques dans PAC 2\&quot;/&gt; &lt;figcaption&gt;Résultats des tests automatiques&lt;/figcaption&gt; &lt;/figure&gt; &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac2.png\&quot; alt=\&quot;copie d’écran du détail d’une erreur dans PAC 2\&quot;/&gt; &lt;figcaption&gt;Détail d’une erreur d’accessibilité détectée automatiquement&lt;/figcaption&gt; &lt;/figure&gt; - de pré-visualiser le document tel qu’il sera restitué par les outils d’assistance, afin de vérifier l’ordre de lecture et l’utilisation pertinente de la sémantique (titre, paragraphe…), &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac3.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt; - d’accéder à une vue détaillée des informations accessibles à un outil d’assistance. &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac4.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt;"
+    body: "### Couleurs  Les couleurs ne sont pas le seul moyen utilisé pour communiquer l’information.  Le contraste entre le texte et l’arrière-plan est suffisant&amp;nbsp;:  -	4.5:1 pour du texte de taille normale. -	3:1 pour du texte de grande taille. "
 });
 
 
@@ -592,32 +592,32 @@ index.add({
 
 
 
-documentTitles["video-audio.html#recommandations-accessibilite-des-contenus-videos-et-audios-orange"] = "Recommandations accessibilité des contenus vidéos et audios Orange";
+documentTitles["video-audio.html#recommandations-accessibilite-des-contenus-videos-animations-et-audios-orange"] = "Recommandations accessibilité des contenus vidéos, animations et audios Orange";
 index.add({
-    url: "video-audio.html#recommandations-accessibilite-des-contenus-videos-et-audios-orange",
-    title: "Recommandations accessibilité des contenus vidéos et audios Orange",    
-    body: "# Recommandations accessibilité des contenus vidéos et audios Orange    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Vidéo audio\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+    url: "video-audio.html#recommandations-accessibilite-des-contenus-videos-animations-et-audios-orange",
+    title: "Recommandations accessibilité des contenus vidéos, animations et audios Orange",    
+    body: "# Recommandations accessibilité des contenus vidéos, animations et audios Orange    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Vidéo audio\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
 });
 
-documentTitles["video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-et-audios"] = "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos et audios";
+documentTitles["video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-animations-et-audios"] = "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos, animations et audios";
 index.add({
-    url: "video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-et-audios",
-    title: "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos et audios",    
-    body: "## Introduction&amp;nbsp;: l’accessibilité des contenus vidéos et audios Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&amp;nbsp;: - que ces vidéos et audios eux-même soient accessibles - mais également, que l'interface qui permet la diffusion de ces fichiers soit accessible.  "
+    url: "video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-animations-et-audios",
+    title: "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos, animations et audios",    
+    body: "## Introduction&amp;nbsp;: l’accessibilité des contenus vidéos, animations et audios Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&amp;nbsp;: - que ces vidéos, animations et audios eux-même soient accessibles - mais également, que l'interface qui permet la diffusion de ces fichiers soit accessible.  "
 });
 
-documentTitles["video-audio.html#rendre-les-videos-ou-audios-accessibles"] = "Rendre les vidéos ou audios accessibles";
+documentTitles["video-audio.html#rendre-les-videos-animations-ou-audios-accessibles"] = "Rendre les vidéos, animations ou audios accessibles";
 index.add({
-    url: "video-audio.html#rendre-les-videos-ou-audios-accessibles",
-    title: "Rendre les vidéos ou audios accessibles",    
-    body: "## Rendre les vidéos ou audios accessibles  Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :  - Une transcription intégrale, seule nécessité pour un fichier audio. - Des sous-titres. - Une audiodescription, si besoin.  "
+    url: "video-audio.html#rendre-les-videos-animations-ou-audios-accessibles",
+    title: "Rendre les vidéos, animations ou audios accessibles",    
+    body: "## Rendre les vidéos, animations ou audios accessibles  Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :  - Une transcription intégrale, seule nécessité pour un fichier audio. - Des sous-titres. - Une audiodescription, si besoin.  "
 });
 
 documentTitles["video-audio.html#transcription-integrale"] = "Transcription intégrale";
 index.add({
     url: "video-audio.html#transcription-integrale",
     title: "Transcription intégrale",    
-    body: "### Transcription intégrale La transcription doit restituer textuellement l’ensemble des informations véhiculées par la vidéo (paroles, messages affichés à l’écran, ...). La transcription peut être agrémentée d’images, si besoin.  **La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.**  Cette transcription doit, par ordre de préférence, être&amp;nbsp;: 1. accessible directement à travers le lecteur audio/vidéo, lui-même. 1. directement présente dans la page ou le document à proximité immédiate (l'élément qui suit directement, en fait) de la vidéo ou audio. 1. accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.  Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.  "
+    body: "### Transcription intégrale La transcription doit restituer textuellement l’ensemble des informations véhiculées par le contenu (paroles, messages affichés à l’écran, graphes, animations ...). La transcription peut être agrémentée d’images, si besoin.  **La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.**  Cette transcription doit, par ordre de préférence, être&amp;nbsp;: 1. accessible directement à travers le lecteur audio/vidéo, lui-même. 1. directement présente dans la page ou le document à proximité immédiate (l'élément qui suit directement, en fait) de la vidéo ou audio. 1. accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.  Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.  "
 });
 
 documentTitles["video-audio.html#sous-titres"] = "Sous-titres";
@@ -631,14 +631,21 @@ documentTitles["video-audio.html#audiodescription"] = "Audiodescription";
 index.add({
     url: "video-audio.html#audiodescription",
     title: "Audiodescription",    
-    body: "### Audiodescription  L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsque la vidéo est juste une interview, sans autre information visuelle.  Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).  De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).  "
+    body: "### Audiodescription  L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsqu'une vidéo est juste une interview, sans autre information visuelle.  Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).  De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).  "
+});
+
+documentTitles["video-audio.html#lors-de-la-lecture"] = "Lors de la lecture";
+index.add({
+    url: "video-audio.html#lors-de-la-lecture",
+    title: "Lors de la lecture",    
+    body: "### Lors de la lecture  Lors de la lecture du fichier embarqué dans la page web, vérifier : - Ne pas lancer automatiquement, au chargement de la page, la vidéo, l'animation ou l'audio mais laisser la main à l'utilisateur. - Pour une vidéo ou une animation, celle-ci doit être exempte de tout élément qui flashe plus de trois fois par seconde ou ce flash doit se situer sous &lt;a href=\&quot;https://www.w3.org/Translations/WCAG20-fr/#general-thresholddef\&quot;&gt;le seuil de flash générique et le seuil de flash rouge&lt;/a&gt;.  "
 });
 
 documentTitles["video-audio.html#le-lecteur-audio-ou-video"] = "Le lecteur audio ou vidéo";
 index.add({
     url: "video-audio.html#le-lecteur-audio-ou-video",
     title: "Le lecteur audio ou vidéo",    
-    body: "## Le lecteur audio ou vidéo  Le lecteur vidéo utilisé doit&amp;nbsp;: - prendre en charge d'au moins deux éléments&amp;nbsp;: sous-titres et audiodescription.  - permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).  - permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.  - ne pas lancer automatiquement l'audio ou la vidéo mais laisser la main à l'utilisateur.  "
+    body: "## Le lecteur audio ou vidéo  Le lecteur vidéo utilisé doit&amp;nbsp;: - prendre en charge d'au moins deux éléments&amp;nbsp;: sous-titres et audiodescription. - permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...). - permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.  "
 });
 
 documentTitles["video-audio.html#liens-utiles"] = "Liens utiles";

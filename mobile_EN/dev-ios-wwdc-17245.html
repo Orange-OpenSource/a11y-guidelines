@@ -44,14 +44,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                    <a class="nav-link" href="../web_EN/index.html">Website</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" class="nav-link">Mobile app</a>
                     <ul id="navigation" class="nav navbar-nav">
                       <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html">Guide for developers</a></li>                
+                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
+                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
                       <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
                       <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
@@ -59,7 +59,7 @@
                       <li><a class="page-about" href="about.html">About</a></li>                        
                     </ul>                      
                   </li>  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
                   </li>
@@ -99,7 +99,7 @@
 
     <span class="sr-only">You are here: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -141,8 +141,8 @@
 <p>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.</p>
 <p><a name="TextStyles"></a></p>
 <h3 id="-text-styles-06-06-https-developer-apple-com-videos-play-wwdc2017-245-time-366-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Text styles (06:06)</a></h3>
-<p><strong>All the text styles used in accessibility can have the 12 available sizes</strong> in iOS 11.
-</br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick <code>Dynamic Type</code> to adjust the text size to the device settings (iOS 11 feature).
+<p><strong>All the text styles can have the 5 accessibility sizes</strong> in iOS 11 whereas it was only the case for the <em>body</em> text style before.
+</br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick <code>Dynamic Type</code> to adjust the text size to the device settings.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_1.png" />
 </br>Get the exact same result with the following code :
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_2.png" /></p>

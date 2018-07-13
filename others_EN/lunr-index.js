@@ -128,6 +128,13 @@ index.add({
     body: "### With Adobe Acrobat Pro  You will find Adobe Acrobat Pro recommendations at &lt;a href=\&quot;http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf\&quot;&gt;Making &lt;abbr&gt;PDF&lt;/abbr&gt; documents accessible with Adobe Acrobat Pro&lt;/a&gt; by the AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; initiative.  This document was produced by AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; phase 2 (2015), driven by Atalan together with Orange and 9 other enterprises: La Poste, Siemens, Spie, Thales, Atos, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Devoteam, Manpower and &lt;abbr&gt;EDF&lt;/abbr&gt;, who relied on a review team made up of numerous professionals and organisations involved in digital accessibility.  "
 });
 
+documentTitles["pdf.html#testing-the-accessibility-of-a-abbrpdfabbr-document"] = "Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document";
+index.add({
+    url: "pdf.html#testing-the-accessibility-of-a-abbrpdfabbr-document",
+    title: "Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document",    
+    body: "## Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document  Install &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (&lt;abbr&gt;PAC&lt;/abbr&gt;)&lt;/a&gt;.   This tool can, among other things, run automatic tests on a &lt;abbr&gt;PDF&lt;/abbr&gt; document and check for accessibility issues. &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;Screenshot of automatic tests in PAC\&quot;/&gt; &lt;figcaption&gt;Screenshot of the tool&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
 documentTitles["pdf.html#mandatory-criteria"] = "Mandatory criteria";
 index.add({
     url: "pdf.html#mandatory-criteria",
@@ -188,14 +195,7 @@ documentTitles["pdf.html#colours"] = "Colours";
 index.add({
     url: "pdf.html#colours",
     title: "Colours",    
-    body: "### Colours  Colours must not be the only means to convey information.  Contrast between the colour of text and of its background must be sufficient: - 4.5:1 for normal-size text; - 3:1 for bigger text.  "
-});
-
-documentTitles["pdf.html#testing-the-accessibility-of-a-abbrpdfabbr-document"] = "Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document";
-index.add({
-    url: "pdf.html#testing-the-accessibility-of-a-abbrpdfabbr-document",
-    title: "Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document",    
-    body: "## Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document  Install &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (&lt;abbr&gt;PAC 2&lt;/abbr&gt;)&lt;/a&gt;.   This tool can, among other things:  - run automatic tests on a &lt;abbr&gt;PDF&lt;/abbr&gt; document and check for accessibility issues, &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;Screenshot of automatic tests in PAC 2\&quot;/&gt; &lt;figcaption&gt;Results of automatic tests&lt;/figcaption&gt; &lt;/figure&gt; &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac2.png\&quot; alt=\&quot;Screenshot of an error detail in PAC 2\&quot;/&gt; &lt;figcaption&gt;Detail of an automatically detected issue&lt;/figcaption&gt; &lt;/figure&gt; - pre-visualise the document the way it will be presented to assistive tools, so as to check the reading order and the semantics used (title, paragraph, …), &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac3.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt; - give access to a detailed view of the accessible information given to an assistive tool. &lt;div&gt;&lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac4.png\&quot; alt=\&quot;\&quot;/&gt;&lt;/div&gt;"
+    body: "### Colours  Colours must not be the only means to convey information.  Contrast between the colour of text and of its background must be sufficient: - 4.5:1 for normal-size text; - 3:1 for bigger text."
 });
 
 

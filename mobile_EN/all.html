@@ -44,14 +44,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web_EN/index.html">Web</a>                                        
+                    <a class="nav-link" href="../web_EN/index.html">Website</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" class="nav-link">Mobile app</a>
                     <ul id="navigation" class="nav navbar-nav">
                       <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html">Guide for developers</a></li>                
+                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
+                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
                       <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
                       <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
@@ -59,7 +59,7 @@
                       <li><a class="page-about" href="about.html">About</a></li>                        
                     </ul>                      
                   </li>  
-                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Content</a></li>                                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
                   </li>
@@ -99,7 +99,7 @@
 
     <span class="sr-only">You are here: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -1074,7 +1074,7 @@ func customTraits() {
 <ul>
 <li><strong>isAccessibilityElement</strong>&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
 <li><strong>accessibilityElementsHidden</strong>&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
-<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popin views for example.</li>
+<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popup views for example.</li>
 </ul>
 <p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.</p>
 <h3 id="example">Example</h3>
@@ -1525,12 +1525,11 @@ float heightVal;
 <p>All accessibility events are available on the <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">official documentation from Apple</a>.</p>
 <h2 id="text-size">Text size</h2>
 <h3 id="description">Description</h3>
-<p>Dynamic font size on iOS is very tricky.
-</br>Since iOS7, it is possible to use an <abbr>API</abbr> to make the text size dynamic according to the phone settings.
+<p>Since iOS7, it is possible to make the text size dynamic according to the phone settings.
 </br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:</p>
 <ul>
-<li><p>Choose the system fonts even if it&#39;s possible to use its own fonts inherited from <code>UIFont</code> and assisted with <code>UIFontMetrics</code> (iOS11 new feature).</p>
+<li><p>Choose the system font to facilitate your programing even if the use of other fonts is well assisted by the <code>UIFontMetrics</code> new class (iOS11).</p>
 <pre><code class="objective-c">
  __weak IBOutlet UILabel * fontHeadline;
  __weak IBOutlet UILabel * fontFootNote;
@@ -1554,7 +1553,8 @@ float heightVal;
  let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
  fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre></li>
-<li><p>Listen to the font size settings change event <strong>UIContentSizeCategoryDidChange</strong> or directly use the property <strong>adjustsFontForContentSizeCategory</strong> to have an automatic update if you&#39;re programming in iOS11.</p>
+<li><p>Listen to the font size settings change event <strong>UIContentSizeCategoryDidChange</strong> or directly use the property <strong>adjustsFontForContentSizeCategory</strong> to have an automatic update of your system font size if you&#39;re programming in iOS10 (this attribute applies to custom fonts only with the <code>UIFontMetrics</code> class).
+</br>Note that the <strong>traitCollectionDidChange</strong> method that belongs to the <code>UITraitEnvironment</code> informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes <em>(class/content size, portrait/landscape)</em>.</p>
 <pre><code class="objective-c">
  //Listens to the notification dealing with the font size changing from the mobile settings.
  [[NSNotificationCenter defaultCenter] addObserver:self
@@ -2248,9 +2248,9 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 </ul>
 <p></br>During this presentation, the following solutions for accessibility development pitfalls are suggested thanks to a simple application (<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">take a look at it</a>) :</p>
 <ul>
-<li>How to define an (in)accessible element ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a>.</li>
-<li>How to fill the <code>label</code> and <code>value</code> properties? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a>.</li>
-<li>How to gather several elements into a single one ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a>.</li>
+<li>How to define an (in)accessible element ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a></li>
+<li>How to fill the <code>label</code> and <code>value</code> properties? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a></li>
+<li>How to gather several elements into a single one ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a></li>
 </ul>
 <p>Thereafter, the selection of a title will give rise to the video playback directly at the proper moment.</p>
 <p><a name="ImageTextDetection"></a></p>
@@ -2275,7 +2275,7 @@ can&#39;t initially read it.</p>
 </br>Examples are provided without explaining in depth the tool itself to which a former Apple session (<a href="https://developer.apple.com/videos/play/wwdc2016/407/">2016 - 407</a>) is dedicated.</p>
 <p><a name="UIAccessibilityProtocol"></a></p>
 <h3 id="-uiaccessibilityprotocol-21-14-https-developer-apple-com-videos-play-wwdc2017-215-time-1274-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">UIAccessibilityProtocol (21:14)</a></h3>
-<p>Reminder on the <code>UIAccessibilityProtocol</code> fundamentals that will be used during the presentation.
+<p>Reminder on the <code>UIAccessibility</code> informal protocol fundamentals that will be used during the presentation.
 </br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /></p>
 <p><a name="AttributedProperties"></a></p>
 <h3 id="-attributed-accessibility-properties-26-07-https-developer-apple-com-videos-play-wwdc2017-215-time-1567-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1567">Attributed Accessibility Properties (26:07)</a></h3>
@@ -2356,8 +2356,8 @@ can&#39;t initially read it.</p>
 <p>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.</p>
 <p><a name="TextStyles"></a></p>
 <h3 id="-text-styles-06-06-https-developer-apple-com-videos-play-wwdc2017-245-time-366-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Text styles (06:06)</a></h3>
-<p><strong>All the text styles used in accessibility can have the 12 available sizes</strong> in iOS 11.
-</br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick <code>Dynamic Type</code> to adjust the text size to the device settings (iOS 11 feature).
+<p><strong>All the text styles can have the 5 accessibility sizes</strong> in iOS 11 whereas it was only the case for the <em>body</em> text style before.
+</br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick <code>Dynamic Type</code> to adjust the text size to the device settings.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_1.png" />
 </br>Get the exact same result with the following code :
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_2.png" /></p>
@@ -2445,10 +2445,10 @@ can&#39;t initially read it.</p>
 </br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the official documentation of Google&nbsp;/ Apple.</p>
 <p>Two versions are available:</p>
 <ul>
-<li><strong>Android version</strong> is about application development for the Google platform: Android.</li>
-<li><strong>iOS version</strong> is about application development for the Apple platform: iOS.</li>
+<li><strong><a href="./dev-android.html">Android version</a></strong> is about application development for the Google platform: Android.</li>
+<li><strong><a href="./dev-ios.html">iOS version</a></strong> is about application development for the Apple platform: iOS.</li>
 </ul>
-<p>The <strong>iOS WWDC</strong> section is dedicated to some World Wide Developers Conference presentations.</p>
+<p>The <strong><a href="./dev-ios-wwdc.html">iOS WWDC</a></strong> section is dedicated to some World Wide Developers Conference presentations.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

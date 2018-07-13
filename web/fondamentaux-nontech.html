@@ -46,10 +46,10 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Web</a>
+                    <a class="nav-link" href="./index.html">Site Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html">Critères incontournables</a></li>
+                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
                         <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
                         <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
@@ -61,8 +61,8 @@
                         <li><a class="page-about" href="about.html">À propos</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
-                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -102,7 +102,7 @@
 
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Web</a></li>        
+      <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
     </ol>
 
     <main role="main" class="container-fluid">
@@ -156,9 +156,17 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
+<p>Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors avoir un contraste de couleur de 3:1.</p>
+<p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
 <li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.</li>
+<li>Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… Il n’est pas tenu d’appliquer ce critère, si :<ul>
+<li>le composant graphique est un logo</li>
+<li>si un texte comme un label apporte la même information que l’icône</li>
+<li>si la modification du taux de contraste de l’image nuit au réalisme de celle-ci</li>
+</ul>
+</li>
 <li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 <li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
 </ul>
@@ -203,32 +211,57 @@ Bien que ceci doive être pris en compte pendant la phase de développement, on 
 <p><strong>Exemple&nbsp;:</strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d’écran avec zoom à 100%">    </p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d’écran avec zoom à 200% et texte lisible">    </p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d’écran avec zoom à 200% et texte tronqué">  </p>
-<h2 id="8-permettre-le-contr-le-des-animations">8. Permettre le contrôle des animations</h2>
+<h2 id="8-permettre-d-a-rer-le-texte">8. Permettre d&#39;aérer le texte</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
+<p>Même si c&#39;est pendant la phase de développement que l&#39;on va s&#39;assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l&#39;espacement des paragraphes. Il est courramment admis qu&#39;une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d&#39;obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.</p>
+<p><strong>Description :</strong><br>Si l&#39;utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
+<ul>
+<li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.</li>
+<li>L&#39;espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.</li>
+<li>L&#39;espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.</li>
+<li>L&#39;espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.</li>
+</ul>
+<p>Pour info les critères cités précédemment reviennent à appliquer les styles CSS suivants au niveau de code : </p>
+<pre><code class="css">
+  * {
+      line-height: 1.5!important;
+      letter-spacing:.12em!important;
+      word-spacing: .16em !important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+</code></pre>
+
+<p>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant qui appliquera ces styles à la page courante de votre navigateur (bookmarklet à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
+<h2 id="9-permettre-le-contr-le-des-animations">9. Permettre le contrôle des animations</h2>
 <p><strong>Cible&nbsp;:</strong> les personnes malvoyantes, les personnes éprouvant des difficultés de lecture, d’attention ou de compréhension, les personnes épileptiques.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
-<p><strong>Description&nbsp;:</strong><br>Tout contenu en mouvement, mis à jour, clignotant doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur.<br>Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d’épilepsie</a>).</p>
+<p><strong>Description&nbsp;:</strong><br>Tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur si cette animation dure plus de 5 secondes. 
+Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. <a href="http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php">Le logo des JO provoque des crises d’épilepsie</a>).</p>
 <p><strong>Exemple&nbsp;:</strong><br><img src="./images/carrousel.png" alt="capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation">  </p>
 <p>Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il reçoit le focus.<br>Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.</p>
-<h2 id="9-libell-des-liens-et-des-boutons">9. Libellé des liens et des boutons</h2>
+<h2 id="10-libell-des-liens-et-des-boutons">10. Libellé des liens et des boutons</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description&nbsp;:</strong><br>Les libellés des liens et des boutons doivent être suffisamment explicites.
 Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technologies d&#39;assistance).</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>«&nbsp;découvrez nos offres&nbsp;»</p>
 <p><strong>Exemples non-valides&nbsp;:</strong><br>«&nbsp;cliquez ici&nbsp;»<br>«&nbsp;en savoir plus&nbsp;»</p>
-<h2 id="10-permettre-la-navigation-au-clavier">10. Permettre la navigation au clavier</h2>
+<h2 id="11-permettre-la-navigation-au-clavier">11. Permettre la navigation au clavier</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Toutes les fonctionnalités doivent être utilisables à l’aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l’aide de la touche <kbd>Tab</kbd>).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glisser-déposer, menu apparaissant au clic droit…), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l’interface (bouton, icône, menu…). </p>
 <p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton «&nbsp;Vider la corbeille&nbsp;» ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.</p>
-<h2 id="11-rendre-utilisables-les-formulaires">11. Rendre utilisables les formulaires</h2>
+<h2 id="12-rendre-utilisables-les-formulaires">12. Rendre utilisables les formulaires</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin qu’on fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom ou de loupe logicielle, voire sur mobile). Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
+<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé (ou d&#39;instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l&#39;utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label"></p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas prévoir tout de même un libellé. Celui-ci ne sera pas affiché à l’écran mais sera tout de même associé au champ de formulaire lors du développement pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
 <p>Enfin les libellés des messages d’erreur doivent être explicites.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire-ok.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides">  </p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire-ko.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides"></p>
-<h2 id="12-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">12. Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</h2>
+<h2 id="13-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">13. Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</h2>
 <p><strong>Cible&nbsp;:</strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.
 De même éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Celles-ci posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.</p>
@@ -241,14 +274,14 @@ De même éviter le recours systématique aux boîtes de dialogue pour présente
 <li>d’alléger le poids de la page et le temps de chargement, car dans cet exemple la page derrière la boite de dialogue doit être chargée.  </li>
 </ul>
 <p><img src="images/dialog.png" alt="Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse"></p>
-<h2 id="13-fournir-des-liens-d-vitement">13. Fournir des liens d’évitement</h2>
+<h2 id="14-fournir-des-liens-d-vitement">14. Fournir des liens d’évitement</h2>
 <p><strong>Cible&nbsp;:</strong> utile pour les utilisateurs de mobile et tablette, les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité.  </p>
 <p><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Fournir des liens d’évitement du type «&nbsp;Aller au contenu&nbsp;» sur chaque page. Ceux-ci facilitent la navigation pour les personnes utilisant le clavier, en mobilité ou navigant à l’aide d’un lecteur d’écran. En cas de <strong>fortes contraintes,</strong> les liens peuvent être masqués à l’écran et apparaître uniquement lors de la navigation au clavier.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Des liens d’évitement («&nbsp;Aller à la navigation&nbsp;», «&nbsp;Aller au contenu&nbsp;») sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d’adresse de votre navigateur par exemple, puis appuyer plusieurs fois sur la touche <kbd>Tab</kbd>.</p>
 <p><img src="images/skiplink.png" alt="capture d’écran du site orange.com"></p>
-<h2 id="14-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">14. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
+<h2 id="15-identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">15. Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant des troubles de l’attention.</p>
 <p><strong>Quand&nbsp;:</strong> lors de la conception.</p>
 <p><strong>Description&nbsp;:</strong><br>Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
@@ -266,7 +299,7 @@ Permettre aux utilisateurs d’identifier et localiser les éléments d’interf
 <p><strong>Exemple non-valide&nbsp;:</strong>  </p>
 <p><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com">  </p>
 <p>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
-<h2 id="15-situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-d-y-acc-der">15. Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</h2>
+<h2 id="16-situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-d-y-acc-der">16. Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
 <p><strong>Quand&nbsp;:</strong> lors de la conception.</p>
 <p><strong>Description&nbsp;:</strong>
@@ -279,7 +312,7 @@ Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilem
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
 <p><strong>Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
-<h2 id="16-viter-les-captcha">16. Éviter les captcha</h2>
+<h2 id="17-viter-les-captcha">17. Éviter les captcha</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
@@ -294,21 +327,21 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <li>des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique</li>
 <li>…</li>
 </ul>
-<h2 id="17-d-finir-des-zones-sensibles-de-taille-suffisante">17. Définir des zones sensibles de taille suffisante</h2>
+<h2 id="18-d-finir-des-zones-sensibles-de-taille-suffisante">18. Définir des zones sensibles de taille suffisante</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
-<h2 id="18-autoriser-l-utilisation-du-zoom">18. Autoriser l&#39;utilisation du zoom</h2>
+<h2 id="19-autoriser-l-utilisation-du-zoom">19. Autoriser l&#39;utilisation du zoom</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
-<h2 id="19-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">19. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
+<h2 id="20-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">20. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
-<h2 id="20-proposer-une-alternative-aux-gestuelles-complexes">20. Proposer une alternative aux gestuelles complexes</h2>
+<h2 id="21-proposer-une-alternative-aux-gestuelles-complexes">21. Proposer une alternative aux gestuelles complexes</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
 De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
-<h2 id="21-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">21. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
+<h2 id="22-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">22. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
 <p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

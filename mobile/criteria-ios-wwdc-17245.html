@@ -46,14 +46,14 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item">
-                    <a class="nav-link" href="../web/index.html">Web</a>                      
+                    <a class="nav-link" href="../web/index.html">Site Web</a>
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <a href="../mobile/index.html" class="nav-link">Application mobile</a>
                     <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-android" href="criteria-android.html">Critères incontournables sous Android</a></li>
-                        <li><a class="page-criteria-ios" href="criteria-ios.html">Critères incontournables sous iOS</a></li>            
+                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
                         <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
                         <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d’écran</a></li>
                         <li><a class="page-links" href="links.html">Liens utiles</a></li>
@@ -61,7 +61,7 @@
                         <li><a class="page-about" href="about.html">À propos</a></li>                        
                     </ul>                                        
                   </li>   
-                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Éditorial</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
                   </li>
@@ -101,7 +101,7 @@
     
     <span class="sr-only">Vous êtes ici&nbsp;: </span>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Mobile</a></li>        
+      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
     </ol>
 
     <main role="main" class="container-fluid">
@@ -143,8 +143,8 @@
 <p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.</p>
 <p><a name="TextStyles"></a></p>
 <h3 id="-styles-de-texte-06-06-https-developer-apple-com-videos-play-wwdc2017-245-time-366-"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Styles de texte (06:06)</a></h3>
-<p>Avec iOS 11, <strong>tous les styles de texte utilisés en accessibilité s&#39;adaptent aux 12 tailles de texte possibles</strong>.
-</br>Dans l&#39;<span lang="en">Interface Builder</span> de Xcode, il suffit d&#39;indiquer le style souhaité dans la partie <span lang="en">Attribute Inspector</span> et de cocher la case <span lang="en">Dynamic Type</span> qui permettra d&#39;adapter automatiquement la taille selon les réglages (nouveauté iOS 11).
+<p>Avec iOS 11, <strong>tous les styles de texte s&#39;adaptent aux 5 tailles de texte disponibles en accessibilité</strong> ce qui n&#39;était le cas que pour le style <em>body</em> auparavant.
+</br>Dans l&#39;<span lang="en">Interface Builder</span> de Xcode, il suffit d&#39;indiquer le style souhaité dans la partie <span lang="en">Attribute Inspector</span> et de cocher la case <span lang="en">Dynamic Type</span> qui permettra d&#39;adapter automatiquement la taille selon les réglages.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_1.png" />
 </br>Au niveau code, on obtient exactement le même résulat de la façon suivante :
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-TextStyle_2.png" /></p>
