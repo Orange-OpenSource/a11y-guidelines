@@ -23,16 +23,16 @@ Donner à chaque page un titre qui lui est spécifique et qui reflète son conte
 Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier la page sur laquelle on se trouve.
 
 **À vérifier&nbsp;:**
-- Bien qu’il n’y ait pas de règle, en général, on va de l’information la plus spécifique vers la moins spécifique (exemple : nom de la page courante - nom du site). Dans d’autres contextes d’utilisation pour lesquels l’utilisateur a de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l’information la plus générale vers la plus spécifique (ex.&nbsp ;: nom du site - nom de la page).
+- Bien qu’il n’y ait pas de règle, en général, on va de l’information la plus spécifique vers la moins spécifique (exemple : nom de la page courante - nom du site). Dans d’autres contextes d’utilisation pour lesquels l’utilisateur a de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l’information la plus générale vers la plus spécifique (exemple : nom du site - nom de la page).
 - Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d’une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu…), le titre de la page doit refléter cette modification du contenu.
 
 **Objectif utilisateur&nbsp;:**  
 Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et se faire une idée précise du contenu de la page sans avoir à le lire. C’est, notamment, le premier élément vocalisé par un lecteur d’écran.
 
-**Exemple valide&nbsp;:**      
-`<title>Accueil - Espace client Orange</title>`        
+**Exemple valide&nbsp;:**
+`<title>Accueil - Espace client Orange</title>`
  
-**Exemple non-valide&nbsp;:**      
+**Exemple non-valide&nbsp;:**
 `<title>Accueil</title>`
 
 **Référence&nbsp;:** WCAG 2.4.2
@@ -535,21 +535,27 @@ Rendre les intitulés des liens et des boutons compréhensibles hors contexte, e
 
 S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l'intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, mais également compléter l'intitulé par un contenu supplétif, au choix, via :
 - un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
-- en utilisant un attribut `aria-label` ou `aria-labelledby`
+- en utilisant un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title`.
 
 Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
 
 ![capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité](./images/liens-valider.png)
 
-Dans ce cas, ajouter un `span` en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
+**Solutions&nbsp;:**  
 
-**Exemple&nbsp;:**  
+Ajouter un `span` en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
+
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
 &lt;a href="…" title="Valider le paiement en une seule fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé.  
+
+<pre><code class="html">
+&lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider la paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+</code></pre>
 
 **À vérifier&nbsp;:**
 S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:
@@ -585,7 +591,7 @@ Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus 
 
 Prévenir l’utilisateur de l’ouverture de toute nouvelle fenêtre en l’indiquant dans l’intitulé du lien. 
 En cas d’impossibilité avérée utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, et compléter l'intitulé par au choix :
-- un attribut `aria-label` ou `aria-labelledby`
+- un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title`.
 - un morceau de texte caché en <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
 - l'utilisation d'une icône (image avec un `alt` indiquant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;»).
 
