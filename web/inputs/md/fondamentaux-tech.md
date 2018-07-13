@@ -20,10 +20,10 @@
 
 **Description&nbsp;:**  
 Donner à chaque page un titre qui lui est spécifique et qui reflète son contenu ou sa fonction (balise `<title>`).  
-Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier formellement la page sur laquelle on se trouve.
+Le titre de la page est le premier élément lu par la synthèse vocale, il doit permettre d’identifier la page sur laquelle on se trouve.
 
 **À vérifier&nbsp;:**
-- Bien qu’il n’y ait pas de règle, en général, on va de l’information la plus spécifique vers la moins spécifique (ex.&nbsp;: nom de la page courante - nom du site). Dans d’autres contextes d’utilisation pour lesquels l’utilisateur a de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l’information la plus générale vers la plus spécifique (ex.&nbsp ;: nom du site - nom de la page).
+- Bien qu’il n’y ait pas de règle, en général, on va de l’information la plus spécifique vers la moins spécifique (exemple : nom de la page courante - nom du site). Dans d’autres contextes d’utilisation pour lesquels l’utilisateur a de nombreuses applications ou sites ouverts en même temps, il vaut mieux aller de l’information la plus générale vers la plus spécifique (ex.&nbsp ;: nom du site - nom de la page).
 - Lorsque le contenu de la page est modifié dynamiquement (affichage du résultat d’une recherche, erreurs dans un formulaire, action utilisateur ajoutant du contenu…), le titre de la page doit refléter cette modification du contenu.
 
 **Objectif utilisateur&nbsp;:**  
@@ -83,8 +83,10 @@ Un titrage de page avec un saut de niveau h2 → h4&nbsp;:
         &lt;h4&gt;Êtes-vous éligible&nbsp;?&lt;/h4&gt;
 </code></pre>
    
-**Outil :**  
-L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>, disponible pour [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), permet d’extraire les titres et de les visualiser sous forme de plan de document.
+**Outils :**  
+Des extensions à installer dans votre navigateur permettent d'extraire la liste des titres : 
+- L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>.
+- L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a>.
 
 **Référence&nbsp;:** WCAG 1.3.1
 
@@ -102,7 +104,7 @@ Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)
 
-Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors  avoir un contraste de couleur de 3:1.
+Les images suivantes sont porteuses d’information pour les utilisateurs. Elles doivent fournir un contraste de couleur de 3:1 minimum.
 
 ![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](images/icones.png)
 
@@ -156,7 +158,7 @@ Pour un graphique type camembert, où chaque partie est colorée différemment, 
 
 Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.
 
-**Référence&nbsp;:** WCAG 1.4.11.4.1
+**Référence&nbsp;:** WCAG 1.4.1
 
 ## 5. Respecter la sémantique HTML
 
@@ -256,7 +258,7 @@ Des erreurs de validation peuvent empêcher l’accès à certains contenus.
 
 ## 8. Indiquer la langue principale et les changements de langue
 
-**Cible&nbsp;:** pour tous, et en particulier les personnes déficientes visuelles.  
+**Cible&nbsp;:** pour tout le monde, et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du le développement.
 
 **Description&nbsp;:**  
@@ -293,7 +295,7 @@ Permettre aux moteurs de recherche d’identifier la langue d’une page pour am
 
 **Description&nbsp;:**  
 
-Chaque champ de formulaire doit être accompagné d’un libellé ou d'insctructions permettant d’identifier le rôle du champ, le type de donnée et le format attendu. 
+Chaque champ de formulaire doit être accompagné d’un libellé ou d'instructions permettant d’identifier le rôle du champ, le type de donnée et le format attendu. 
 
 Ces informations doivent être proches visuellement du champ afin que l'utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile).
 
@@ -314,7 +316,7 @@ Pour les champs obligatoires, ceci doit être précisé dans le `label` via une 
 
 **Objectif utilisateur&nbsp;:**
 
-Ne pas respecter ces recommandation est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
+Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
 Pour les listes de contenus en auto-complétion pour les champs, elles permettent d’éviter les erreurs de saisie.
 
 **Exemple valide&nbsp;:**  
@@ -401,7 +403,7 @@ Améliorer le référencement naturel.
 `<img src="banner_bouquet_famille.png" alt="Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.">`
 
 **Exemple d’alternative vide&nbsp;:**  
-Dans l’exemple ci-dessous, le picto à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.  
+Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.  
 Renseigner l’attribut `alt` dans ce cas apporterait une information redondante.  
 
 ![exemple d’image décorative](./images/service-24.png)  
@@ -409,20 +411,24 @@ Renseigner l’attribut `alt` dans ce cas apporterait une information redondante
 `<h3>Le service 24h garanti</h3>`  
 `<img src="service-24.png" alt="">`
 
+**Outils :**  
+L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a> (possibilité d'afficher les alternatives textuelles de toutes les images).
+
 **Référence&nbsp;:**WCAG 1.1.1
 
-## 12. Fournir un transcrit pour toute piste audio ou vidéo
+## 12. Fournir une transcription pour toute piste audio ou vidéo
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:** 
 
-Fournir, pour toute piste audio ou vidéo porteuse d’information, un transcrit complet dans la page elle-même ou grâce à un lien à proximité de la piste audio ou vidéo.
+Fournir, pour toute piste audio ou vidéo porteuse d’information :
+- Une transcription complète dans la page elle-même ou grâce à un lien à proximité de la piste audio ou vidéo.
+- Des sous-titres (pour les vidéos).
+- Une audiodescription si nécessaire.
 
-**À vérifier&nbsp;:**
-
-Un transcrit complet est le texte contenant l’ensemble des informations visuelles et auditives porteuses de sens. 
+Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
 
 **Objectif utilisateur&nbsp;:**
 
@@ -578,8 +584,10 @@ Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus 
 **Description&nbsp;:**
 
 Prévenir l’utilisateur de l’ouverture de toute nouvelle fenêtre en l’indiquant dans l’intitulé du lien. 
-En cas d’impossibilité avérée, utiliser un icône (image avec un `alt`) en ajoutant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;».  
-En dernier recours, un texte  en <a href="./exemples/masquage/index.html">masquage accessible</a> (hors écran).
+En cas d’impossibilité avérée utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, et compléter l'intitulé par au choix :
+- un attribut `aria-label` ou `aria-labelledby`
+- un morceau de texte caché en <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
+- l'utilisation d'une icône (image avec un `alt` indiquant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;»).
 
 **Exemple&nbsp;:**  
   
@@ -587,7 +595,7 @@ Exemple d’icône pouvant indiquer l’ouverture d’une nouvelle fenêtre.
 ![capture d’écran d’un lien accompagné d’une icône indiquant l’ouverture d’une nouvelle fenêtre](./images/nouvelle-fenetre.png)  
 
 **À vérifier&nbsp;:**
-Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type «&nbsp;(nouvelle fenêtre)&nbsp;» est présente dans l’intitulé du lien, ou la mention «&nbsp;(nouvelle fenêtre)&nbsp;» est positionnée hors écran via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">masquage accessible</a>).
+Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type «&nbsp;(nouvelle fenêtre)&nbsp;» est présente dans l’intitulé du lien, ou la mention «&nbsp;(nouvelle fenêtre)&nbsp;» est indiquée à l'utilisateur via le lecteur d'écran et via la présence d'une info-bulle sur le lien en question.
 
 **Objectif utilisateur&nbsp;:**
 Éviter l’ouverture inattendue de fenêtre, car cela peut gêner, perturber ou désorienter l’utilisateur. En particulier, pour des personnes en mobilité, utilisant des synthèses vocales ou présentant des déficiences cognitives.
@@ -600,7 +608,7 @@ Pour une image-lien, un attribut `alt="consulter les conditions générales d’
 
 ## 18. Permettre d’utiliser les principales fonctionnalités de l’application au clavier
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, motrices et en mobilité.  
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives, motrices et en mobilité.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
@@ -612,7 +620,7 @@ Toutes les actions importantes effectuées à la souris peuvent aussi l’être 
 Voir [la façon de naviguer au clavier](./methodes-outils-clavier.html) dans un navigateur web.
 
 **Objectif utilisateur&nbsp;:**
- Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.
+ Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, cognitives, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.
 
 **Exemple valide&nbsp;:**      
 - Un sous-menu qui se déroule au survol doit aussi se dérouler quand l’item de menu parent reçoit le focus clavier.
@@ -630,7 +638,7 @@ Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n�
 
 **Description&nbsp;:**
 
-Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquenciel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
+Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
 
 **À vérifier&nbsp;:**
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 19, ci-dessous.
@@ -671,7 +679,7 @@ document.addEventListener(’keydown’, function() {
 });
 </code></pre>
 
-<a href="https://codepen.io/paipai/pen/jwLyzK">Demonstration de la visibilité du focus à la navigation clavier uniquement</a>
+<a href="https://codepen.io/paipai/pen/jwLyzK">Démonstration de la visibilité du focus à la navigation clavier uniquement</a>
 
 **À vérifier&nbsp;:**
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété `outline` (qui permet de visualiser le focus) est désactivée (`outline: none;`), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.
@@ -732,8 +740,8 @@ Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directeme
 
 ## 23. S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;:**lors du développement.
+**Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;: **lors du développement.
 
 **Description&nbsp;:**
 
@@ -751,7 +759,7 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 ## 24. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention.  
-**Quand&nbsp;:**lors du développement.
+**Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**
 
@@ -827,7 +835,7 @@ Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas
 **Référence&nbsp;:** WCAG 3.2.1, 3.2.2, 1.4.13
 
 ## 26. Éviter les captcha
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -953,7 +961,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 
 ## 29. Définir des zones sensibles de taille suffisante
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -962,7 +970,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 
 ## 30. Autoriser l'utilisation du zoom
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**  
@@ -970,7 +978,7 @@ Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur le
 
 ## 31. Permettre d'annuler le déclenchement des interactions gestuelles
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**  
@@ -978,7 +986,7 @@ Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin
 
 ## 32. Proposer une alternative aux gestuelles complexes
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -987,7 +995,7 @@ De même pour les interactions nécessitant un changement d'orientation de l'éc
 
 ## 33. Donner accès au contenu quelle que soit l'orientation de l'écran
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
