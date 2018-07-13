@@ -72,6 +72,11 @@
 
 <ul class="examples-list">
     <li>
+        <a href="label-ledby-describedby.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/aria.png"><span>Les attributs ARIA qui peuvent vous sauver</span>
+        </a>
+    </li>
+    <li>
         <a href="exemples/listbox/index.html">
             <img class="hidden-sm-down" alt="" src="./images/exemples/listbox.png"><span>Les listes <abbr>ARIA</abbr> (listbox) 1/3</span>
         </a>

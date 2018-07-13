@@ -7,7 +7,7 @@
 ## Introduction
 ### Nom et description accessible
 
-Un nom accessible est l'information qui permet à l'aide technique (<abbr>AT</abbr>), par exemple, un lecteur d'écranou un:e loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (par exemple, un attribut `alt` pour une image) ou par un élément associé (par exemple, une balise `label` pour un champ `input`).
+Un nom accessible est l'information qui permet à l'aide technique (<abbr>AT</abbr>), par exemple, un lecteur d'écran ou une loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (par exemple, un attribut `alt` pour une image) ou par un élément associé (par exemple, une balise `label` pour un champ `input`).
 
 Une description accessible est une information plus étendue qui est utilisée par l'<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n'est pas suffisant.
 
@@ -39,18 +39,24 @@ Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les
 
 Quant à lui, `aria-describedby" va rajouter au nom accessible de l'élément, une description accessible en plus. 
 
-###Exemples###
+## Exemples
 
-<button aria-label="accéder au code Hypertext markup language">html</button>
-sortie pour un lecteur d'écran : "accéder au code Hypertext markup language"
+<pre><code class="html">
+&lt;button aria-label="accéder au code Hypertext markup language"&gt;html&lt;/button&gt;
+</code></pre>
+Sortie pour un lecteur d'écran : "accéder au code Hypertext markup language"
 
-<h2 id="titre">Code de la page HTML<h2>
-<button aria-label="accéder au code Hypertext markup language" aria-labelledby="titre">html</buttton>
-sortie pour un lecteur d'écran : "Code de la page HTML"
+<pre><code class="html">
+&lt;h2 id="titre"&gt;Code de la page HTML&lt;h2&gt;
+&lt;button aria-label="accéder au code Hypertext markup language" aria-labelledby="titre"&gt;html&lt;/buttton&gt;
+</code></pre>
+Sortie pour un lecteur d'écran : "Code de la page HTML"
 
-<h3 id="titre">Code de la page de formulaire de connexion<h3>
-<button aria-label="accéder au code HTML" aria-describedby="titre">html</buttton>
-sortie pour un lecteur d'écran : "accéder au code HTML code de la page de connexion"
+<pre><code class="html">
+&lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;h3&gt;
+&lt;button aria-label="accéder au code HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
+</code></pre>
+Sortie pour un lecteur d'écran : "accéder au code HTML code de la page de connexion"
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
