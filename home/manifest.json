@@ -8,8 +8,7 @@
         "output/markdown/focus-seniors.md",       
         "output/markdown/organisation.md",
         "output/markdown/outils.md",
-        "output/markdown/about.md",
-        "output/markdown/faq.md"
+        "output/markdown/about.md"
     ],
     "maxTocLevel":"1"
 }
