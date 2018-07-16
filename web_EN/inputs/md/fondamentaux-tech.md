@@ -591,6 +591,9 @@ A functionality only available through drag & drop and without any keyboard equi
 
 Elements (links, buttons, form fields) must receive the focus in a logical order for the user, without being trapped or blocked, even for dynamically-generated content appearing or disappearing (changing the DOM, Ajax,…). 
 
+Example (numbered bullets indicate how focus moves in the page) :  
+![Screenshot showing focus order](./images/focus/focus-order.png)
+
 **Checklist: **
 
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 19 below.

@@ -646,6 +646,9 @@ Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n�
 
 Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
 
+Exemple, les puces numérotées indiquent l'ordre de déplacement du focus dans cette page :  
+![Capture d'écran indiquant l'ordre de déplacement du focus dans une page](./images/focus/focus-order.png)
+
 **À vérifier&nbsp;:**
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 19, ci-dessous.
 - Attention à l’ordre d’insertion des éléments dans le code <abbr>HTML</abbr>, cela a une influence sur l’ordre de déplacement du focus. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
