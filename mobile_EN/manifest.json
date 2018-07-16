@@ -17,6 +17,7 @@
         "output/markdown/links.md",
         "output/markdown/mdan.md",
         "output/markdown/screen-reader.md",
+        "output/markdown/screen-reader-voiceover-iphonex.md",
         "output/markdown/talkback.md",
         "output/markdown/voiceover.md"
     ],

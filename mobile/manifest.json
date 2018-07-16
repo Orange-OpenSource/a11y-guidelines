@@ -18,6 +18,7 @@
         "output/markdown/screen-reader.md",
         "output/markdown/screen-reader-talkback.md",
         "output/markdown/screen-reader-voiceover.md",
+        "output/markdown/screen-reader-voiceover-iphonex.md",
         "output/markdown/links.md"        
     ],
     "maxTocLevel":"1"
