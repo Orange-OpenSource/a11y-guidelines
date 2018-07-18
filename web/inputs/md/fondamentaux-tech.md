@@ -466,34 +466,37 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 
 **Référence&nbsp;:** WCAG 1.3.1
 
-## 14. Utiliser des tailles relatives pour permettre le grossissement des textes
+## 14. Utiliser des tailles relatives et faire du web adaptatif
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, en mobilité et seniors.  
 **Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**
 
-N’utiliser pour les tailles de police que des tailles relatives (`em`, `rem`, `%`) et pour les éléments conteneurs permettant l’agrandissement du texte seul de 200%.
+N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (`em`, `rem`, `%`)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design).
 
 **À vérifier&nbsp;:**
-- Ne pas utiliser le pixel (`px`) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes.
+- Ne pas utiliser le pixel (`px`) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).
 - Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.
 - Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.
-- Dans Firefox, faire Affichage>Zoom>Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).    
+- Dans Firefox, faire Affichage>Zoom>Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  
+- Le contenu doit être consultable, sauf si besoin particulier (carte, tableau, diagrammes...) :
+  - verticalement, sans scroll horizontal quand on réduit la largeur de la zone d'affichage à 320 px CSS
+  - horizontalement sans scroll vertical quand on réduit la hauteur à 240 px CSS
 
 ![capture d’écran réglage du zoom dans Firefox](./images/zoom-200.png)
 
 **Objectif utilisateur&nbsp;:**
-Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte pour plus aisément accéder à l’information.
+Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte et zoomer pour plus aisément accéder à l’information.
 
 **Exemple&nbsp;:**  
 Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](./exemples/zoom/index.html) pour plus d’informations.
 
-**Référence&nbsp;:** WCAG 1.4.4
+**Référence&nbsp;:** WCAG 1.4.4, 1.4.10
 
 ## 15. Permettre d'aérer le texte
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et dyslexiques.  
 **Quand&nbsp;:** lors de la conception et du développement.
 
 Si l'utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
@@ -618,10 +621,12 @@ Pour une image-lien, un attribut `alt="consulter les conditions générales d’
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
-Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris. 
+Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris, permettent donc d'être pilotable au clavier et ceci sans limite de temps. 
 
 **À vérifier&nbsp;:**
-Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …).
+- Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …) tout en évitant d'innombrables frappes.
+
+- Utiliser au maximum les composants <abbr>HTML</abbr> interactifs de base (champs, liens, boutons), ceux-ci étant nativement accessibles au clavier. À défaut, veiller à ce que les composants personnalisés soient opérables au clavier de manière classique.
 
 Voir [la façon de naviguer au clavier](./methodes-outils-clavier.html) dans un navigateur web.
 

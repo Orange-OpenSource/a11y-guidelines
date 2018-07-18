@@ -141,14 +141,17 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 ![capture d’écran présentant l’affichage du focus par défaut](images/focus.png)
 ![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](images/focus2.png)
   
-## 7. Agrandissement de la taille du texte
+## 7. Agrandissement de texte et adaptation à la taille d'affichage
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.  
 **Quand&nbsp;:** lors de la conception graphique et principalement lors du développement.
 
 **Description&nbsp;:**  
 La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). À ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).
-Bien que ceci doive être pris en compte pendant la phase de développement, on peut identifier les zones de l’écran qui doivent ou non s’agrandir en même temps que la taille du texte dès la phase de conception graphique. Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.
+
+De plus, il faut s'assurer de faire du contenu web adaptatif (responsive web design) donc prévoir les différents affichages selon des largeurs type d'écran (points de rupture) en amont du développement. 
+
+Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.
 
     
 **Exemple&nbsp;:**    
@@ -165,7 +168,7 @@ Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n
 
 ## 8. Permettre d'aérer le texte
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et dyslexiques.  
 **Quand&nbsp;:** lors de la conception et du développement.
 
 Même si c'est pendant la phase de développement que l'on va s'assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l'espacement des paragraphes. Il est courramment admis qu'une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d'obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
