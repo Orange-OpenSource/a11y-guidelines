@@ -349,7 +349,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 
 ## 17. Éviter les captcha
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Cible&nbsp;:** tous le monde en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -367,7 +367,7 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 
 ## 18. Définir des zones sensibles de taille suffisante
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -376,7 +376,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 
 ## 19. Autoriser l'utilisation du zoom
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes déficientes visuelles.  
+**Cible&nbsp;:** tous le monde en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**  
@@ -392,7 +392,7 @@ Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin
 
 ## 21. Proposer une alternative aux gestuelles complexes
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -401,12 +401,31 @@ De même pour les interactions nécessitant un changement d'orientation de l'éc
 
 ## 22. Donner accès au contenu quelle que soit l'orientation de l'écran
 
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
 L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage).
 
+## 23. Fournir une transcription pour toute piste audio ou vidéo
+
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:** 
+
+Fournir, pour toute piste audio ou vidéo porteuse d’information :
+- Une transcription complète dans la page elle-même ou grâce à un lien à proximité de la piste audio ou vidéo.
+- Des sous-titres (pour les vidéos).
+- Une audiodescription si nécessaire.
+
+Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
+
+Par ailleurs pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
+
+**Objectif utilisateur&nbsp;:**
+
+Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, environnement lumineux ou bruyant.
 
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

@@ -284,7 +284,7 @@ This label should be visually close to the field so we can easily link them (esp
 Each label must be set in a `label` tag, which is associated to the form field with a` for` attribute, using the `id` attribute of the form element.
 
 In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
-The `title` attribute set on a form element can also be used like a label. You can also use the `aria-label` and `aria-labelledby`, attributes preferably in this order.
+The `title` attribute set on a form element can also be used like a label. You can also use the `aria-label` and `aria-labelledby` attributes (see [ARIA attributes that can save you](./label-ledby-describedby.html)),  preferably in this order.
 
 **Checklist: **
 
@@ -325,7 +325,7 @@ Finally, the wording of the error messages should be explicit.
 
 **Checklist: **
 
-Identifying the invalid field, as well as displaying a suggestion of correction can be dynamically added to the `label` tag, but also to the `title` tag or `aria-label` and `aria-labelledby` tags depending on the needs.
+Identifying the invalid field, as well as displaying a suggestion of correction can be dynamically added to the `label` tag, but also to the `title` tag or `aria-label` and `aria-labelledby` tags (see [ARIA attributes that can save you](./label-ledby-describedby.html)) depending on the needs.
 
 **Users’ goal: **
 
@@ -431,7 +431,7 @@ Allow audio and video referencing.
 For tabular data:
 - Use the `table` element with `th`(for table headers), `td`,` tr` children elements.
 - Use the `scope` attribute with `row` / `col` values to associate header cells and data cells. For complex tables, use the` id` and `headers` attributes.
-- Use the `caption` tag, a `h1` to `h6` tag just before the table or use a text near the table via an `aria-labelledby` attribute in the `table` element to associate a title to the table.
+- Use the `caption` tag, a `h1` to `h6` tag just before the table or use a text near the table via an `aria-labelledby` attribute in the `table` element to associate a title to the table (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
 - Add the `summary` attribute to the `table` tag to explain the structure in the case of a complex table. Keep in mind that this attribute is deprecated in <abbr>HTML5</abbr>, therefore it can be necessary to add the `summary` in the table title.
 
 **Checklist: **
@@ -487,7 +487,7 @@ See the example [handling zoom, increasing the text size](./exemples/zoom/index.
 
 Make the link and button labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  
 
-If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, the link label can have an extra hidden text or an `aria-label` or `aria-labelledby` attribute, specifically for screen reader users.
+If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, the link label can have an extra hidden text or an `aria-label` or `aria-labelledby` attribute (see [ARIA attributes that can save you](./label-ledby-describedby.html)), specifically for screen reader users.
 For example, in the image below, the two “next” links are not explicit enough for a person with visual impairments. However, when one sees the screen, the positioning makes obvious the function of each button.
 
 ![screenshot showing two valid links that should be clarified](./images/liens-valider.png)
@@ -500,8 +500,13 @@ In this case, add an <a href="./exemples/masquage/index.html">accessible hidden 
 &lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
-Another solution is to use an `aria-label` or `aria-labelledby` attribute to clarify the link label.
+Another solution is to use an `aria-label` or `aria-labelledby` attribute to clarify the link label (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
 In addition to these solutions, we could also use ** a `title` attribute ** to display a “confirm to pay in installments” tooltip when the mouse is over the link.
+
+<pre><code class="html">
+&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;next&lt;/a&gt;
+&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;next&lt;/a&gt;
+</code></pre>
 
 
 **Checklist: **
@@ -561,7 +566,10 @@ For any external link and opening a new window, the label could be: “Go to the
 
 **Description: **
 
-Implement event handlers that don’t rely on mouse events only.
+Implement event handlers that don’t rely on mouse events only. When it's impossible, use a `title` attribute to display a tooltip, containing all the necessary information at the mouse over, and complete the title by : 
+- using an `aria-label` or `aria-labelledby` with the same content as the `title` (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
+- a piece of hidden text <a href="./exemples/masquage/index.html">accessible hiding</a> through CSS 
+- using an icon (picture with `alt` attribute explaining that a new tab will open or simply  «&nbsp;new window&nbsp;»).
 
 **Checklist: **
 
