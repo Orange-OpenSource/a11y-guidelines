@@ -430,6 +430,8 @@ Fournir, pour toute piste audio ou vidéo porteuse d’information :
 
 Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
 
+Par ailleurs pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
+
 **Objectif utilisateur&nbsp;:**
 
 Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, environnement lumineux ou bruyant.
@@ -438,7 +440,7 @@ Fournir un moyen d’accès à l’information visuelle et auditive pour des per
 
 Permet le référencement de tout contenu audio et vidéo.
 
-**Référence&nbsp;:**WCAG 1.2.3
+**Référence&nbsp;:**WCAG 1.2.3, 1.4.2
 
 ## 13. Structurer les tableaux de données
 
