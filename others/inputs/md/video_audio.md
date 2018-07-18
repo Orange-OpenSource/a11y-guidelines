@@ -53,9 +53,9 @@ Lors de la lecture du fichier embarqué dans la page web, vérifier :
 ## Le lecteur audio ou vidéo
 
 Le lecteur vidéo utilisé doit&nbsp;:
-- prendre en charge d'au moins deux éléments&nbsp;: sous-titres et audiodescription.
-- permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).
-- permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.
+- Prendre en charge au moins deux éléments&nbsp;: sous-titres et audiodescription.
+- Permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).
+- Permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.
 
 ## Liens utiles
 -  Article en anglais sur le site de SitePoint&nbsp;:  <a href="https://www.sitepoint.com/accessible-video/" hreflang="en">8 Steps to Creating Accessible Video</a> (en anglais)
