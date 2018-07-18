@@ -70,17 +70,17 @@
       <ul>
         <li>Il ne peut y avoir qu’une seule balise <code>main</code> ou donc un seul <code>role=main</code> par page afin d’identifier le contenu principal d’une page.</li>
         <li>La balise <code>section</code> permet de thématiquement regrouper du contenu, par exemple, des chapitres d'un livre, les grandes parties d'une page d'accueil...</li>
-        <li>La balise <code>article</code>est une portion autonome de la page, en général, réutilisable, par exemple, un article de blog, d'un journal, un commentaire d'un blog...</li>
+        <li>La balise <code>article</code> est une portion autonome de la page, en général, réutilisable, par exemple, un article de blog, d'un journal, un commentaire d'un blog...</li>
         <li>Le <code>role=navigation</code> ou la balise <code>nav</code> permet d’identifier les principales navigations internes au site. Les bonnes pratiques demandent que l’on utilise 3 balises ou rôles <code>nav</code>ou navigation maximum par page.</li>
         <li>La balise <code>footer</code> ou le <code>role=contentinfo</code> permettent d’identifier le pied de page. Il doit être unique dans la page, sauf lorsqu'il est présent dans des balises <code>section</code> ou <code>article</code>.</li>
         <li>Le couple balise <code>header</code>, <code>role=header</code> identifie l’en-tête de la page. Lui aussi doit être unique, sauf lorsqu'il est présent dans des balises <code>section</code> ou <code>article</code>.</li>
         <li>Pour identifier le formulaire de recherche dans le site, on utilisera seul le <code>role=search</code> <abbr>ARIA</abbr>.</li>
         <li>Si besoin, le contenu annexe au contenu principal de la page (information complémentaire, publicité…) doit être identifié en utilisant la balise <code>aside</code> ou le <code>role=complementary</code>.</li>
       </ul>
-<p>Toutes ces landmarks/régions peuvent s'appuyer sur les attributs <abbr>ARIA</abbr> que sont <code>aria-label</code>, <code>aria-labelledby</code>` et <code>aria-describedby</code> afin de leur fournir un nom accessible plus pertinent. Pour plus de détails sur <a href="../../../label_ledby_describedby.htm">"Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"</a>.</p>
+<p>Toutes ces landmarks/régions peuvent s'appuyer sur les attributs <abbr>ARIA</abbr> que sont <code>aria-label</code>, <code>aria-labelledby</code>` et <code>aria-describedby</code> afin de leur fournir un nom accessible plus pertinent. Plus de détails sur <a href="../../label-ledby-describedby.html">"Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"</a>.</p>
       <h3><i lang="en">Landmarks</i>, utilisateurs et aides techniques</h3>
       <p>Les balises HTML5 définissant les grandes régions de la page ont un support suffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). On doit donc les utiliser pour structurer sa page sans leur adjoindre des rôles landmarks.</p>
-      <p>Mettre en place ces <i lang="en">landmarks</i> <abbr>ARIA</abbr> est une bonne pratique, car elle peut améliorer la navigations de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
+      <p>Mettre en place ces <i lang="en">landmarks</i> <abbr>ARIA</abbr> est une bonne pratique, car elle peut améliorer la navigation de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
     </main>
 
     <script src="../../../boosted/js/boosted.min.js"></script>

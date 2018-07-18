@@ -4,6 +4,7 @@
 * See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
 body {
   border-top: 15px solid #000;
+  line-height: 1.5;
 }
 
 pre code .important {

@@ -953,6 +953,8 @@ Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">la
 &lt;/body&gt;
 </code></pre>
 
+Pour plus de détails consultez [l'exemple concernant les régions ARIA](./exemples/landmarks/index.html).
+
 **Référence WCAG&nbsp;:** 3.2.3., 3.2.4  
 
 ## 28. Fournir des accès multiples et une localisation

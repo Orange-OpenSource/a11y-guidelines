@@ -32,6 +32,11 @@
 
 <ul class="examples-list">
     <li>
+        <a href="exemples/landmarks/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/landmarks.png"><span>Les régions ARIA</span>
+        </a>
+    </li>
+    <li>
         <a href="exemples/role-dialog/role-dialog.html">
             <img class="hidden-sm-down" alt="" src="./images/exemples/dialog1.png"><span>Les boîtes de dialogue 1/2</span>
         </a>
