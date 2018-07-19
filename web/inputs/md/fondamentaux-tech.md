@@ -742,8 +742,10 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 **Quand&nbsp;:** lors de la conception du service et lors de la conception graphique.
 
 **Description&nbsp;:**  
-Tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement (par exemple un carrousel) doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur si cette animation dure plus de 5 secondes.  
-Par ailleurs, éviter autant que possible les flashs lumineux et les changements brusques de luminosité (cf. [Le logo des <abbr>JO</abbr> provoque des crises d’épilepsie](http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php)).
+Tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement (par exemple un carrousel) doit pouvoir être stoppé, caché ou mis en pause par l’utilisateur si cette animation dure plus de 5 secondes.
+
+Par ailleurs, aucun élément de la page ne doit produire de flashs lumineux ou de changements brusques de luminosité plus de 3 fois en une seconde (cf. [Le logo des <abbr>JO</abbr> provoque des crises d’épilepsie](http://www.leparisien.fr/societe/le-logo-des-jo-provoque-des-crises-d-epilepsie-09-06-2007-2008107333.php)).
+
 Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l’animation, la mise à jour ou le clignotement via un bouton par exemple.
 
 **Exemple&nbsp;:**  
@@ -752,7 +754,7 @@ Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper 
 Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il a le focus.  
 Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.
 
-**Référence&nbsp;:** WCAG 2.2.2
+**Référence&nbsp;:** WCAG 2.2.2, 2.3.1
 
 ## 23. S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran
 
