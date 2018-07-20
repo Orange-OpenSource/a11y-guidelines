@@ -131,7 +131,6 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d’une a
 **À vérifier&nbsp;: ** 
 
 - Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour),
-- Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l’<abbr>API</abbr> d’accessibilité comme tels.
 
 ** Objectif utilisateur&nbsp;: **
 
