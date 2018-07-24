@@ -478,7 +478,39 @@ See the example [handling zoom, increasing the text size](./exemples/zoom/index.
 
 **Reference:** <abbr>WCAG</abbr> 1.4.4
 
-## 15. Link and button labels must be understandable out of context
+## 15. Allow text spacing
+
+**Target: ** everyone, particularly people with visual disabilities.  
+**When: ** as of design and during development.
+
+If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
+
+- The line height must be adjustable to at least 1.5 times the font size.
+- The space between two paragraphs must be adjustable to at least 2 times the font size.
+- The letter spacing must be adjustable to 0.12 times the font size.
+- The word spacing between words must be adjustable to at least 0.16 times the font size.
+
+This can be done by applying the following CSS rules : 
+<pre><code class="css">
+  * {
+      line-height: 1.5!important;
+      letter-spacing:.12em!important;
+      word-spacing: .16em !important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+</code></pre>
+
+To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
+
+**Users’ goal: **
+Improve reading comfort for people with cognitive and visual disabilities.
+
+**Reference:** WCAG 1.4.12 
+
+## 16. Link and button labels must be understandable out of context
 
 **Target: ** everyone, especially people with visual impairments, cognitive limitations or attention difficulties.  
 **When: ** as of design and during development.
@@ -530,7 +562,7 @@ Associate a link labelled “click here” with a hidden label: “order you mob
 
 **Reference:** <abbr>WCAG</abbr> 2.4.9
 
-## 16. Preventing the user from opening a new window
+## 17. Preventing the user from opening a new window
 
 **Target: ** everyone, especially people with visual impairments, cognitive limitations or having attention difficulties.  
 **When: ** as of design and during development.
@@ -559,7 +591,7 @@ For any external link and opening a new window, the label could be: “Go to the
  
 **Reference:** <abbr>WCAG</abbr> 3.2.2
 
-## 17. Allow to use the main features of the application with the keyboard
+## 18. Allow to use the main features of the application with the keyboard
 
 **Target: ** everyone, especially people with motor or visual impairment and using a device outdoors.  
 **When: ** as of design and during development.
@@ -590,7 +622,7 @@ A functionality only available through drag & drop and without any keyboard equi
 
 **Reference:** <abbr>WCAG</abbr> 2.1.1
 
-## 18. The focus order must be sequential and logical without keyboard trap
+## 19. The focus order must be sequential and logical without keyboard trap
 
 **Target: ** everyone, especially people with motor or visual impairments and using a device outdoors.  
 **When: ** during development.
@@ -617,7 +649,7 @@ A page containing a video player where the focus can enter inside the player, bu
  
 **Reference:** <abbr>WCAG</abbr> 2.4.3, 2.1.2
 
-## 19. Make the focus visible at all times
+## 20. Make the focus visible at all times
 
 **Target: ** everyone and especially people with visual impairments, cognitive limitations, motor disabled, having attention difficulties or using a device outdoors.  
 **When: ** as of design and during development.
@@ -649,7 +681,7 @@ Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
 
 **Reference:** <abbr>WCAG</abbr> 2.4.7
 
-## 20. Provide skip links
+## 21. Provide skip links
 
 **Target: ** useful for mobile and tablet users, people with visual impairments, motor disabilities or using a device outdoors.  
 **When: ** as of design and during development.
@@ -674,7 +706,7 @@ To make them appear, move the focus on the top of the page by clicking on your b
 **Reference:** <abbr>WCAG</abbr> 2.4.1
 
 
-## 21. Animation
+## 22. Animation
 **Target: ** people with visual impairments, reading, attention or understanding difficulties, people with seizure disorders.  
 **When: ** when designing the service and graphic design.
 
@@ -691,7 +723,7 @@ It is also possible to add a “pause” button directly in the interface.
 
 **Reference:** <abbr>WCAG</abbr> 2.2.2
 
-## 22. Make sure the main features can be used with screen readers
+## 23. Make sure the main features can be used with screen readers
 
 **Target: ** everyone, especially people with visual impairments.  
 **When: ** during development.
@@ -710,7 +742,7 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
 
-## 23. Keep a logical tab order on dynamic insertion or modification
+## 24. Keep a logical tab order on dynamic insertion or modification
 
 **Target: ** everyone, especially people with visual disabilities, cognitive limitations, or attention difficulties.  
 **When: ** during development.
@@ -746,7 +778,7 @@ Allow a user, for example a blind or visually impaired user, to detect and inter
 
 **Reference:** <abbr>WCAG</abbr> 2.4.3
 
-## 24. Ensure the user keeps control during interactions
+## 25. Ensure the user keeps control during interactions
 
 **Target: ** everyone, especially people with visual impairments, cognitive limitations or attention difficulties.  
 **When: ** as of design and during development.
