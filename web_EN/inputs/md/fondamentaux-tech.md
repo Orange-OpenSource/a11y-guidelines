@@ -483,9 +483,7 @@ Use relative length units for font size (`em`, `rem`, `%`) and for containers ha
 - Form fields must also have relative sizes to enlarge properly.
 - Try to make the container adaptive so they can increase in size when the text is zoomed in.
 - In Firefox, go to View>Zoom and activate Zoom text only, set the zoom to 200%. Verify that there is no loss of information (disappearance or overlapping text).
-- The content must be legible, unless special needs (map, table, diagrams ...):
-   - vertically, without horizontal scroll when reducing the width of the display area (viewport) to 320 px CSS
-   - horizontally without vertical scroll when reducing the height (viewport) to 240 px CSS
+- Content must respond to screen size changes, adjusting its contents without horizontal scroll even when screen width is reduced to 320 CSS pixels, unless special needs (map, table, diagram... ).
 
 ![screenshot Zoom settings In Firefox](./images/zoom-200.png)
 
