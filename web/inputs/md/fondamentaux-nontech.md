@@ -171,9 +171,9 @@ Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et dyslexiques.  
 **Quand&nbsp;:** lors de la conception et du développement.
 
-Même si c'est pendant la phase de développement que l'on va s'assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l'espacement des paragraphes. Il est courramment admis qu'une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d'obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
+Même si c'est pendant la phase de développement que l'on va s'assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l'espacement des paragraphes et du texte. Il est couramment admis qu'une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d'obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
 
-**Description :**  
+**Description&nbsp;:**  
 Si l'utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
 
 - La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.
@@ -241,11 +241,13 @@ Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» perme
 
 ## 12. Rendre utilisables les formulaires
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-Chaque champ de formulaire doit être accompagné d’un libellé (ou d'instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l'utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.
+Chaque champ de formulaire doit être accompagné d’un libellé (ou d'instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l'utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). 
+
+Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.
 
 **Exemple valide&nbsp;:**  
 ![capture d’écran d’un formulaire valide](images/formulaire.png)
@@ -269,6 +271,7 @@ Enfin les libellés des messages d’erreur doivent être explicites.
 
 **Description&nbsp;:**  
 Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.
+
 De même éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Celles-ci posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.
 
 **Exemple non-valide&nbsp;:**  
@@ -311,9 +314,6 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 - S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés…).
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.
 
-**Objectif utilisateur&nbsp;:**
-Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.
-
 **Exemple valide&nbsp;:**  
 
 ![capture d’écran du site 100% pratique](images/groupement.jpg)  
@@ -338,9 +338,6 @@ Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu s
 **À vérifier&nbsp;:**
 S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
 
-**Objectif utilisateur&nbsp;:**
-Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.
-
 **Exemple valide&nbsp;:**
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.
 
@@ -357,12 +354,11 @@ Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la
 - Double authentification&nbsp;;
 - Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur&nbsp;;
 - Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne&nbsp;;
-- Un contrôle permettant de s'assurer qu'une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.
+- Un contrôle permettant de s'assurer qu'une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.
 
 Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;:
-
 - un captcha  audio&nbsp;+ visuel,
-- des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique
+- des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel classique
 - …
 
 ## 18. Définir des zones sensibles de taille suffisante
@@ -407,26 +403,33 @@ De même pour les interactions nécessitant un changement d'orientation de l'éc
 **Description&nbsp;:**  
 L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage).
 
-## 23. Fournir une transcription pour toute piste audio ou vidéo
+## 23. Rendre accessible les pistes audio ou vidéo
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:** 
 
-Fournir, pour toute piste audio ou vidéo porteuse d’information :
-- Une transcription complète dans la page elle-même ou grâce à un lien à proximité de la piste audio ou vidéo.
-- Des sous-titres (pour les vidéos).
-- Une audiodescription si nécessaire.
+Pour être accessibles, les contenus multimédias doivent&nbsp;: 
+1. proposer une transcription intégrale
+2.	proposer des sous-titres (vidéo uniquement) 
+3.	proposer une audiodescription (vidéo uniquement)
+4.	choisir un lecteur média accessible
+5.	proscrire le démarrage automatique de la vidéo au chargement de la page
+6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
+7. par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
 
 Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
 
-Par ailleurs pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
-
 **Objectif utilisateur&nbsp;:**
 
-Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, environnement lumineux ou bruyant.
+Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.
 
+**Objectif technique&nbsp;:**
+
+Permet le référencement de tout contenu audio et vidéo.
+
+**Référence&nbsp;:**<abbr>WCAG</abbr>  1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.4.2
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

@@ -121,14 +121,6 @@ In the screenshot below, the design phase should provide  text alternatives for 
 
 ![screenshot of a video player with multiple buttons](images/player.png)   
 
-**Note about CAPTCHA :**  
-Captcha are often a source of problems for users. If the implementation of an anti-spam system can not be avoided, it is desirable to move towards a more flexible solution for the user:
- - Hidden input form left empty (honeypot technique), not visible to the user.
- - Logical test (question whose answer is obvious, simple math test …).
- - Double authentication.
-
-If the presence of a captcha can not be avoided, **it is essential to provide an audio alternative**.
-
 ## 6. Focus visibility
 **Target: ** everyone and especially people with visual impairments or cognitive limitations, motor disabilities and using a device outdoors.  
 **When: ** as of graphic design and during development.
@@ -140,8 +132,8 @@ The focus indicator as well as the hover indicator (when the mouse is over an el
 
     
 **Do: **  
-In the following screenshots, the focus is located on the “209 SMS&nbsp;/ month”. 
-The first figure shows the default behaviour (focus represented by a dotted box).
+In the following screenshots, the focus is located on the “209 SMS/month”. 
+The first figure shows the default behavior (focus represented by a dotted box).
 In the second capture, the dotted lines have been removed, replaced by a coloured box to explicitly indicate the location of the focus.  
 ![screenshot showing the default focus](images/focus.png)
 ![screenshot with a custom focus](images/focus2.png)
@@ -149,7 +141,7 @@ In the second capture, the dotted lines have been removed, replaced by a coloure
 ## 7. Changing text size
 
 **Target: ** everyone and especially people with visual impairments, using a device outdoors, and elderly people.  
-**Who: ** as of graphic design and mainly during development.
+**When: ** as of graphic design and mainly during development.
 
 **Description:**  
 The text size should be able to be doubled (set the zoom to 200% in the browser settings). At this zoom level, the page layout can be altered, but the information must be readable (text or bunk not truncated).
@@ -170,7 +162,37 @@ Zoom set to 200%.
 Zoom set to 200%. In this case the height of the text container did not resized according to text size.  
 ![screenshot with 200% zoom and truncated text](images/zoom-ko.png)  
 
-## 8. Animation
+## 8. Allow text spacing
+
+**Target: ** Everyone, especially people with visual and dyslexic disabilities.
+** When;: ** **When: ** as of graphic design and during development.
+
+Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and rtext. It is generally accepted that a line height (<span lang = "en"> line-height </span>) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href = " https://www.invisionapp.com/blog/line-spacing/ "lang =" en "> Why you should go big with line spacing </a>.
+
+**Description: **
+If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
+
+- The height of the lines must be able to be adjusted to 1.5 times minimum the size of the font.
+- The space between two paragraphs must be adjustable to at least 2 times the size of the font.
+- The spacing between the letters must be able to be adjusted to 0.12 times the size of the font.
+- The spacing between words must be able to be adjusted to 0.16 times minimum the size of the font.
+
+For information, the criteria mentioned above is like applying the following CSS styles at the code level:
+<pre> <code class = "css">
+  * {
+      line-height: 1.5! important;
+      letter-spacing: .12em! important;
+      word-spacing: .16em! important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+  </code></pre>
+
+  To make the test easier, you can use the following bookmarklet that will apply these styles to your browser's current page (bookmarklet to slide in your bookmarks bar):  <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
+
+## 9. Allowing control of animations
 **Target: ** people with visual impairments, reading/attention/understanding difficulties and seizure disorders.  
 **When: ** when designing the service and during graphic design.
 
@@ -184,7 +206,7 @@ Also, avoid as much as possible flashing content and sudden brightness changes (
 A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.
 It is also possible to add a “pause” button directly in the interface.
 
-## 9. Link and button labels
+## 10. Link and button labels
 **Target: ** everyone and especially people with visual impairments, cognitive limitations or attention difficulties.  
 **When: ** when designing the service and during graphic design.
 
@@ -199,7 +221,7 @@ In exceptional cases when it is technically impossible, provide a explicit label
 `click here`  
 `more details`
 
-## 10. Navigating with the keyboard
+## 11. Navigating with the keyboard
 **Target: ** everyone, especially people with motor or visual impairments or using a device outdoors.  
 **When: ** when designing the service and during development.
 
@@ -212,12 +234,14 @@ See [how to navigate with a keyboard](./methodes-outils-clavier.html) in a web b
 **Example: **  
 In the webmail, right-clicking on the “trash” opens a menu to empty the trash, this option should be also available through an “empty the trash” button elsewhere in the interface or from a drop-down menu accessible with the keyboard.
 
-## 11. Forms
-**Target: ** everyone and especially people with visual impairments.  
+## 12. Usable forms
+**Target: ** everyone and especially people with visual impairments, dyslexia and cognitive disabilities.  
 **When: ** during design and development.
 
 **Description:**  
-Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. This label should be visually close to the field so we can easily link them (especially for people using zoom or a software magnifier, or even for mobile users). Error messages should clearly identify the invalid field, and if necessary suggest a correction. This applies to input fields, but also to other types of fields (drop-down list, radio button, checkbox…). From the development perspective, this label must be associated with the form field to facilitate the navigation with a screen reader.
+Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. This label should be visually close to the field so we can easily mentally link them (especially for people using zoom or a software magnifier, or even for mobile users). 
+
+Error messages should clearly identify the invalid field, and if necessary suggest a correction. This applies to input fields, but also to other types of fields (drop-down list, radio button, checkbox…). From the development perspective, this label must be associated with the form field to facilitate the navigation with a screen reader.
 
 **Do: **  
 ![screenshot of a valid form](images/formulaire.png)
@@ -239,12 +263,13 @@ Lastly, the wording of the error messages should be explicit.
 **Don’t: **  
 ![screenshot of a form displaying irrelevant error messages](images/formulaire-ko.png)
 
-## 12. Dialogues and opening new windows
+## 13. Avoid dialogues and opening new windows
 **Target: ** elderly people, people with cognitive or visual impairments or using a device outdoors.  
-**When: ** as ofdesign and in the development.
+**When: ** as of design and in the development.
 
 **Description:**  
 Avoid as much as possible the actions that open a new window (or tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
+
 Also avoid the systematic use of dialogues to display information in the pages (presentation of service…). They often cause accessibility problems for people who navigate with a keyboard or a screen reader, and they will require special attention during the development phase.
 
 **Don’t: **  
@@ -257,7 +282,7 @@ In the example below the use of a dialogue is not justified. Using a standard we
 
 ![screenshot of a dialogue way too big](images/dialog.png)
 
-## 13. Provide skip links
+## 14. Provide skip links
 **Target: ** useful for mobile and tablet users, people with visual impairments, motor disabilities or using a device outdoors.  
 **When: ** as of the design phase and in the development.
 
@@ -269,6 +294,138 @@ Skip links (“Skip to navigation”, “Skip to content”) are available on th
 To make them appear, move the focus on the top of the page by clicking on your browser’s address bar, for example, then repeatedly press the <kbd>TAB</kbd> key.
 
 ![screenshot of the orange.com site](images/skiplink.png)
+
+## 15. Identify and maintain consistency of groupings and different regions of the page
+
+**Target: ** Everyone, especially people with visual, cognitive or attention deficit disorders.
+
+**When: ** when designing.
+
+**Description: **
+Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.
+
+**Checklist: **
+
+- Make sure that the navigation mechanisms are always located at the same place in a set of pages.
+- Ensure that the components and groupings that have the same function, are identified (visually) in the same way and, as far as possible, respect the classic appearance of these elements so as not to disturb the user accustomed to a specific aspect of them (for example, links are usually underlined ...).
+- Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast ...) or that there is a way to visually distinguish the groups (sub-menu, drop-down list ...) as well as the different regions of the page.
+
+**Do: **
+
+! [screenshot of the site 100% practical](images/groupement.jpg)
+
+Here, the tooltip (<i lang = "en"> tooltip </i>) is delimited by a visible border and sufficiently contrasted, to identify its content.
+
+**Don't: **
+
+! [screenshot of the fnac.com website](images/groupement2.jpg)
+
+It is very difficult to associate the themes (" par region", "par genre"...) and the sub-themes in columns, especially since the horizontal borders are not enough contrasted.
+
+## 16. Explicitly locate the page in the site and provide several ways to access it
+
+** Target: ** Everyone, especially people who are visually or cognitively impaired.
+
+**When: ** when designing.
+
+**Description: **
+Give the user several ways to locate and access specific content, locate the web page being viewed in a set of pages. When the page is a step in a process where the pages follow one after the other, this criterion can be ignored.
+
+**Checklist: **
+Make sure that several systems allow you to locate and access a page or content in the site: a search tool on the entire site, a site map, a global navigation menu, a breadcrumb trail ...
+
+**Do: **
+The site offers, at the same time, a complete and precise main navigation and a breadcrumb trail.
+
+**Don't: **
+An application provides a parcel navigation menu and no other way for the user to navigate the pages or locate where the current page is in the tree.
+
+## 17. Avoid captcha
+
+**Target: ** Everyone in particular, visually impaired people.
+**When: ** during design and development.
+
+**Description **
+Captchas are often the source of difficulties for all users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user:
+- Double authentication;
+- Hidden form field left blank (honeypot technique), not visible to the user;
+- Providing phone support to make sure the customer is a real person;
+- A check to ensure that the same <abbr> IP </abbr> / User agent combination does not attempt to submit the form more than N times per second.
+
+If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha:
+- an audio captcha + visual,
+- logical tests (question whose answer is obvious, simple mathematical test ...) + classic visual captcha
+- …
+
+## 18. Define sensitive areas of sufficient size
+
+**Target: ** Everyone in particular, people with motor or visual disability and mobility.
+**When: ** during design and development.
+
+**Description: **
+Each sensitive area must have a sufficient size (minimum 9mm width and height).
+In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).
+
+## 19. Allow zooming
+
+**Target: ** Everyone in particular, visually impaired people.
+**When: ** during development.
+
+**Description: **
+The site must not prohibit or limit the use of the zoom (especially on mobiles).
+
+## 20. Allow to cancel the triggering of gestural interactions
+
+**Target: ** all users in particular, people with motor or visual disability and mobility.
+**When: ** during development.
+
+**Description: **
+During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.
+
+## 21. Offer an alternative to complex gestures
+
+**Target: ** Everyone in particular, people with motor or visual disability and mobility.
+**When & nbsp;: ** during design and development.
+
+**Description: **
+For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
+Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...).
+
+## 22. Give access to the content regardless of the orientation of the screen
+
+**Target: ** Everyone in particular, people with motor or visual disability and mobility.
+**When: ** during design and development.
+
+**Description: **
+Access to the content must not depend on the orientation of the screen (portrait and landscape).
+
+## 23. Provide accessible audio or video tracks
+
+**Target: **everyone and particularly people with visual disabilities, hearing impairments, cognitive limitations, or difficulties with English.  
+**When: **during design and development.
+
+**Description: **
+
+To be accessible, the multimedia contents must:
+1. propose a full transcript
+2. offer subtitles (video only)
+3. offer audio description (video only)
+4. choose an accessible media player
+5. Prohibit the automatic start of the video when loading the page
+6. Prohibit videos that have more than 3 flashes per second
+7. Furthermore, for any sound that has been emitted for more than 3 seconds, the user must have the option of either stopping or pausing it or controlling its volume regardless of the overall system volume.
+
+For more info check out [accessibility recommendations for video content, animations and Orange audios](../others/video-audio.html).
+
+**Users’ goal: **
+
+Provide access to visual and hearing information for people who cannot access it: visually impaired, blind, deaf, cognitively deficient, computer without speakers, noisy or bright environment.
+
+**Technical goal: **
+
+Allow audio and video referencing.
+
+**Reference: **<abbr>WCAG</abbr> 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.4.2
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

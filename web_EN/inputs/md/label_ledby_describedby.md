@@ -1,4 +1,4 @@
-# <abbr>ARIA</abbr> attributes that can save you&nbsp;: `aria-label`, `aria-labelledby` and `aria-describedby` 
+# <abbr>ARIA</abbr> attributes that can save you: `aria-label`, `aria-labelledby` and `aria-describedby` 
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"<abbr>ARIA</abbr> aria-Label, labelledy and describedby"}]);
@@ -11,18 +11,18 @@ An accessible name is the information that allows assistive technology (<abbr>AT
 
 An accessible description is more extensive information that is used by the <abbr>AT</abbr> allowing it to complete the accessible name by specifying and adding meaning where the accessible name is not sufficient.
 
-The accessible name as the accessible description can be visually noticeable or not (link title&nbsp;: visible, alternative image&nbsp;: hidden and usable only by <abbr>AT</abbr>...)
+The accessible name as the accessible description can be visually noticeable or not (link title: visible, alternative image: hidden and usable only by <abbr>AT</abbr>...)
 
-### <abbr>ARIA</abbr> attributes&nbsp;: `aria-label`, `aria-labelledby` and `aria-describedby`
+###<abbr>ARIA</abbr> attributes: `aria-label`, `aria-labelledby` and `aria-describedby`
 
-Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr>AT</abbr>: `aria-label`, `aria-labelledby` and `aria-describedby`. They allow to add extra information to an <abbr>HTML</abbr> tag&nbsp;:
+Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr>AT</abbr>: `aria-label`, `aria-labelledby` and `aria-describedby`. They allow to add extra information to an <abbr>HTML</abbr> tag:
 - `aria-label`, `aria-labelledby` allow to give an accessible name to an element
 - `aria-describedby` allows to add to the accessible name, if necessary, in addition, an accessible description to an element
 
-However, they only work well with certain elements :
-- interactive elements&nbsp;: `a` (with `href` attribute), `audio` and `video` (with `controls` attribute), `input` (exept `type="hidden"`), `select`, `button` and `textarea`
+However, they only work well with certain elements:
+- interactive elements: `a` (with `href` attribute), `audio` and `video` (with `controls` attribute), `input` (exept `type="hidden"`), `select`, `button` and `textarea`
 - `img` and `iframe` elements
-- elements with an explicit landmark role, therefore, with a `role` attribute or an implicit landmark (a <abbr>HTML5</abbr> sstructural tag&nbsp;: `header`, `footer`, `main`, `nav`, `aside` and `section`) 
+- elements with an explicit landmark role, therefore, with a `role` attribute or an implicit landmark (a <abbr>HTML5</abbr> structural tag: `header`, `footer`, `main`, `nav`, `aside` and `section`) 
 - One of the <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en"><abbr>ARIA</abbr> widget roles (27 in <abbr>ARIA</abbr> 1.1)</a>.
 
 For any other <abbr>HTML</abbr> element, these three <abbr>ARIA</abbr> attributes have few or even random support depending on the <abbr>AT</abr> / browser pair, so do not use as the only way of giving necessary information.
@@ -44,19 +44,19 @@ At last, `aria-describedby' will add an accessible description in addition to th
 <pre><code class="html">
 &lt;button aria-label="Access Hypertext markup language"&gt;html&lt;/button&gt;
 </code></pre>
-Screen reader output : "Access Hypertext markup language"
+Screen reader output: "Access Hypertext markup language"
 
 <pre><code class="html">
 &lt;h2 id="titre"&gt;HTML source&lt;h2&gt;
 &lt;button aria-label="Access Hypertext markup language" aria-labelledby="titre"&gt;html&lt;/buttton&gt;
 </code></pre>
-Screen reader output : "HTML source"
+Screen reader output: "HTML source"
 
 <pre><code class="html">
 &lt;h3 id="titre"&gt;Login page sourcecode&lt;h3&gt;
 &lt;button aria-label="Access HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
 </code></pre>
-Screen reader output : "Access HTML Login page sourcecode"
+Screen reader output: "Access HTML Login page sourcecode"
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
