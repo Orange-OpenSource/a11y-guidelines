@@ -35,7 +35,8 @@ Allow users to identify the topic of a page, find and get a clear idea of the co
 **Don’t:** 
 `<title>Home</title>`
 
-**Reference: **<abbr>WCAG</abbr> 2.4.2
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- <a href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page Titled</a>
 
 ## 2. Give a title to headings
 
@@ -86,7 +87,8 @@ Page with a break in the heading hierarchy h2 → h4:
 [HeadingsMaps](https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309) extension, available for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) and [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), extract and display page titles for the current page.
    
  
-**Reference:** <abbr>WCAG</abbr> 1.3.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## 3. Provide enough contrast between text and background
 
@@ -122,7 +124,9 @@ Ease of reading for all users, especially the visually impaired, or people in a 
 **Tool: ** 
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  
 
-**Reference:** <abbr>WCAG</abbr> 1.4.3
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
+- <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non-text Contrast</a>
 
 ## 4. Do not use colour or sensory characteristics as the unique source of information
 
@@ -132,13 +136,13 @@ The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastan
 **Description: ** 
 Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization …) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.
 
-**Example:**     
+**Example:**  
 For a pie chart, where each part is coloured differently, you could add different pattern fills to identify them without colour.
  
-**Do: ** 
+**Do: **  
 ![illustration using coloured icons to convey information](images/couleur-ok.png)
 
-**Don’t: ** 
+**Don’t: **  
 ![illustration using coloured icons to convey information](images/couleur-ko.png)  
 
 This example is not valid because the information is conveyed only by colour.
@@ -152,7 +156,9 @@ This example is not valid because the information is conveyed only by colour.
 
 Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments …) to access the same information by other means.
 
-**Reference:** <abbr>WCAG</abbr> 1.4.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- <a href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory Characteristics</a>
+- <a href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color</a>
 
 ## 5. Use HTML semantics
 
@@ -180,13 +186,14 @@ Buttons are real buttons (a `button`, ou `input type=button` tag): they trigger 
 
 Respect as much as possible, the classic aspect of these elements to avoid bothering the user, accustomed to a specific aspect for them.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;: **  
 Allows all users to anticipate how to use and possible behaviors for a given interface element.
 
-**Objectif technique&nbsp;: **
+**Objectif technique&nbsp;: **  
 Forces the coherent structuring of the content by the creator of the site.
 
-**Reference: **<abbr>WCAG</abbr> 1.3.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## 6. Decoupling content from interaction and presentation
 
@@ -213,37 +220,37 @@ Allow users, via their User Agent or technical assistance (e.g. their browser) t
 
 Improves maintainability.
 
-**Reference:** <abbr>WCAG</abbr> 1.3.1, 1.4.5
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
 
 ## 7. Code validation
 
 **Target: **everyone and assistive technologies users.  
 **When: **during and at the end of development.
 
-**Description: ** 
-
+**Description: **  
 Write code without parsing error.
 
-**Checklist **
-
+**Checklist **  
 In the <abbr>HTML</abbr> code, ensure that:
 - Elements must have opening and closing tags
 - Elements can be nested according to their specifications
 - Elements cannot contain duplicate attributes
 - Each <abbr>ID</abbr> must be unique
 
-**Users’ goal: **
-
+**Users’ goal: **  
 The validation errors can prevent the user from accessing some content. 
 
-**Technical goal: **
-
+**Technical goal: **  
 - Ensure <abbr>HTML</abbr> interoperability and maintainability.
 - Increase the compatibility with assistive technologies.
 
-**Reference:** <abbr>WCAG</abbr> 4.1.1  
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
 
-**Tool: **[<abbr>HTML</abbr> and <abbr>CSS</abbr> Validation Service](https://validator.w3.org/)
+**Tool:  
+**[<abbr>HTML</abbr> and <abbr>CSS</abbr> Validation Service](https://validator.w3.org/)
 
 ## 8. Declaring the main language and language changes 
 
@@ -275,7 +282,9 @@ Enable search engines to identify the language of a page to improve the natural 
 **Example of language change: ** 
 `découvrir Orange <span lang="en">live</span> TV`
 
-**Reference: **<abbr>WCAG</abbr> 3.1.1, 3.1.2
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a>
+- <a href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a>
 
 ## 9. Associate a relevant label to form fields
 
@@ -309,12 +318,12 @@ For required fields, this should be specified in the label using an image, a tex
 
 Not meeting this requirement is a blocking point for all users using speech synthesis. For mobile users and motor deficient it allows to click on the form elements more easily.
 
-**Do: ** 
+**Do: **  
 ![screenshot of a valid form](images/formulaire.png)
   
 &nbsp;
 
-**Don’t: ** 
+**Don’t: **  
 ![screenshot of a form with a missing label](images/formulaire2.png)
 
 &nbsp;  
@@ -323,7 +332,9 @@ Not meeting this requirement is a blocking point for all users using speech synt
   
 See [the example of an accessible form](./exemples/formulaire/index.html) for more details.
 
-**Reference: **<abbr>WCAG</abbr> 3.3.2, 3.3.5
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>
+- <a href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a>
 
 ## 10. Detect, identify errors and suggest corrections
 
@@ -346,10 +357,10 @@ Identifying the invalid field, as well as displaying a suggestion of correction 
 
 Guide users when errors happen to improve the understanding and help them correct the errors, especially for internet beginners, elderly people and cognitively deficient.
 
-**Do: ** 
+**Do: **  
 ![screenshot of a form that displays relevant error messages](images/formulaire-ok.png)  
 
-**Don’t: ** 
+**Don’t: **  
 ![screenshot of a form displaying irrelevant error messages](images/formulaire-ko.png)
 
 &nbsp;  
@@ -357,7 +368,10 @@ Guide users when errors happen to improve the understanding and help them correc
   
 See [the accessible form example](./exemples/formulaire/index.html) for more details.
 
-**Reference: **<abbr>WCAG</abbr> 3.3.1, 3.3.3
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error Identification</a>
+- <a href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error Suggestion</a>
+- <a href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>
 
 ## 11. Set a text alternatives for images and frames
 
@@ -407,7 +421,8 @@ In this case setting the `alt` attribute to something other than empty would pro
 **Tools: **
 The <a href="https://chrispederick.com/work/web-developer/" lang="en"> Web developer </a> extension (ability to display text alternatives for all images). 
 
-**Reference: **<abbr>WCAG</abbr> 1.1.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
 ## 12. Provide accessible audio or video tracks
 
@@ -435,7 +450,13 @@ Provide access to visual and hearing information for people who cannot access it
 
 Allow audio and video referencing.
 
-**Reference: **<abbr>WCAG</abbr> 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.4.2
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG21/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a>
+- <a href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a>
 
 ## 13. Structuring data tables
 
@@ -466,7 +487,8 @@ Giving a summary and title for data tables allows everyone to know quickly its p
 
 Improve natural referencing.
 
-**Reference:** <abbr>WCAG</abbr> 1.3.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## 14. Use relative size to allow changing text size and responsive design
 
@@ -494,7 +516,9 @@ Allow users (visually impaired, using a device outdoors, elderly people…) to i
 **Example:** 
 See the example [handling zoom, increasing the text size](./exemples/zoom/index.html) for more details.
 
-**Reference:** <abbr>WCAG</abbr> 1.4.4, 1.4.10
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
+- <a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
 
 ## 15. Allow text spacing
 
@@ -526,7 +550,8 @@ To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a
 **Users’ goal: **
 Improve reading comfort for people with cognitive and visual disabilities.
 
-**Reference:** WCAG 1.4.12 
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
 
 ## 16. Link and button labels must be understandable out of context
 
@@ -588,7 +613,8 @@ Associate a link labelled “click here” with a hidden label: “order you mob
 **Don’t:**     
 “Click here” or “Read more…” links without clarification.
 
-**Reference:** <abbr>WCAG</abbr> 2.4.9
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a>
 
 ## 17. Warn the user when opening a new window
 
@@ -616,8 +642,9 @@ Avoid the unexpected opening of a window, because this can disturb, disrupt, or 
 
 **Do:**     
 For any external link and opening a new window, the label could be: “Go to the orange.com site (new window)”, for a picture-link the `alt` attribute could be: “consult the <abbr>EULA</abbr> (new window)”.    
- 
-**Reference:** <abbr>WCAG</abbr> 3.2.2
+
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
 
 ## 18. Allow the use of the main features of the application with the keyboard
 
@@ -647,7 +674,8 @@ Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor
 **Don’t:**     
 A functionality only available through drag & drop and without any keyboard equivalent.
 
-**Reference:** <abbr>WCAG</abbr> 2.1.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
 
 ## 19. The focus order must be sequential and logical without keyboard trap
 
@@ -674,8 +702,11 @@ Allowing logical navigation without “trapping” the keyboard in the pages of 
 
 **Don’t:**     
 A page containing a video player where the focus can enter inside the player, but cannot get out (keyboard trap).        
- 
-**Reference:** <abbr>WCAG</abbr> 2.4.3, 2.1.2
+
+**Reference <abbr>WCAG</abbr>&nbsp;:**
+- [1.3.2 Meaningful Sequence](https://www.w3.org/TR/WCAG21/#meaningful-sequence)
+- [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap)
+- [2.4.3 Focus Order](https://www.w3.org/TR/WCAG21/#focus-order)
 
 ## 20. Make the focus visible at all times
 
@@ -724,7 +755,8 @@ Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
     
 ![screenshot showing a link whose focus is not visible enough](./images/focus-ko.png)   
 
-**Reference:** <abbr>WCAG</abbr> 2.4.7
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
 
 ## 21. Provide skip links
 
@@ -748,7 +780,8 @@ To make them appear, move the focus on the top of the page by clicking on your b
 
 ![screenshot of the site orange.com](images/skiplink.png)   
 
-**Reference:** <abbr>WCAG</abbr> 2.4.1
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#bypass-blocks">2.4.1 Bypass Blocks</a>
 
 
 ## 22. Allowing animations control
@@ -762,13 +795,15 @@ Also, avoid as much as possible flashing content and sudden brightness changes (
 
 Therefore, it is necessary to pause the animation when loading the page or to give a way to stop or pause the animation, the update or the flashing via a button for example.
 
-**Example: ** 
+**Example: **  
 ![screenshot of a carousel with a button to pause the animation](./images/carrousel.png)  
 
 A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.  
 It is also possible to add a “pause” button directly in the interface.
 
-**Reference:** <abbr>WCAG</abbr> 2.2.2
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
+- <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
 
 ## 23. Make sure the main features can be used with screen readers
 
@@ -823,7 +858,8 @@ In practice, `tabindex` should be used with only two attribute values:
 
 Allow a user, for example a blind or visually impaired user, to detect and interact with new appearing content.  
 
-**Reference:** <abbr>WCAG</abbr> 2.4.3
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
 
 ## 25. Ensure the user keeps control during interactions
 
@@ -848,7 +884,11 @@ Give all users control of the context changes related to their action and give t
 **Example: **
 A form must have a send button. It should not be sent automatically after the user input.
 
-**Reference:** <abbr>WCAG</abbr> 2.2.1, 3.2.1, 3.2.2, 1.4.13
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
+- <a href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
+- <a href="https://www.w3.org/TR/WCAG21/#on-focus">3.2.1 On Focus</a>
+- <a href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
 
 ## 26. Avoid captcha
 **Target: **Everyone in particular, visually impaired people.
@@ -863,6 +903,9 @@ Captchas are often the source of difficulties for users. If the implementation o
 - A check to ensure that the same <abbr>IP</abbr>/<i lang = "en">User agent</i> combination does not attempt to submit the form more than N times per second.
 
 If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple ...) + classic visual captcha ...
+
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
 ## 27. Identify and maintain consistency of groupings and different regions of the page
 **Target: **Everyone, especially people with visual, cognitive or attention deficit disorders.
@@ -893,7 +936,9 @@ All about <a href="./examples/landmarks/index.html">the <i lang="en">landmarks</
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
-**Reference: **<abbr>WCAG</abbr> 3.2.3., 3.2.4
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a>
+- <a href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a>
 
 ## 28. Provide multiple access and location
 
@@ -914,7 +959,9 @@ The site offers, at the same time, a complete and precise main navigation and a 
 **Don't: **
 An application provides a parcel navigation menu and no other way for the user to navigate the pages or locate where the current page is in the tree.
 
-**Reference:** <abbr>WCAG</abbr> 2.4.5., 2.4.8
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#multiple-ways">2.4.5 Multiple Ways</a>
+- <a href="https://www.w3.org/TR/WCAG21/#location">2.4.8 Location</a>
 
 ## 29. Define sensitive areas of sufficient size
 
@@ -941,6 +988,9 @@ The site must not prohibit or limit the use of the zoom (especially on mobiles).
 **Description: **
 During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.
 
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+
 ## 32. Offer an alternative to complex gestures
 
 **Target: **Everyone, especially people with motor or visual disabilities and mobility.
@@ -950,6 +1000,9 @@ During gesture interaction, the action is triggered only at the end of the inter
 For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
 Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...), an alternative must exist.
 
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
+
 ## 33. Give access to the content regardless of the orientation of the screen
 
 **Target: **Everyone, especially people with motor or visual disabilities and mobility.
@@ -957,6 +1010,9 @@ Similarly for interactions requiring a change of orientation of the screen (tilt
 
 **Description: **
 Access to the content must not depend on the orientation of the screen (portrait and landscape).
+
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
 
 ## 34. Allow to know the result of a user interaction with status messages
 
@@ -977,7 +1033,8 @@ Provide the user with status messages that give him feedback on the action he ha
 **User Objective: **
     For all users, have feedback on the essential actions it performs.
 
-**Reference:** WCAG 4.1.3
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
