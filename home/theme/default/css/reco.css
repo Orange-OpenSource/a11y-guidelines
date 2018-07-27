@@ -49,7 +49,7 @@ figure {
 
 #content ul, #content ol {
   background: #fff;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   padding-left: 3rem;  
 }
 
