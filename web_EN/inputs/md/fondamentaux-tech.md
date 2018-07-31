@@ -166,7 +166,7 @@ Allow users not distinguishing colours or sensory information (colour blind, vis
 **When: **as of design and during content writing.
 
 **Description: **
-Use HTML elements as they should, for that they have been made (specifications) and respect their semantics to be sure to be fully interpreted by assistive technologies. 
+Use HTML elements as they should, for that they have been made (code validation and compliance with specifications) and respect their semantics to be sure to be fully interpreted by assistive technologies. 
 
 **Checklist: **
 Pages, if required, must contain semantically relevant lists. 
@@ -186,6 +186,13 @@ Buttons are real buttons (a `button`, ou `input type=button` tag): they trigger 
 
 Respect as much as possible, the classic aspect of these elements to avoid bothering the user, accustomed to a specific aspect for them.
 
+In the <abbr>HTML</abbr> code, ensure, when you validate, that, at least:
+- Elements must have opening and closing tags
+- Elements can be nested according to their specifications
+- Elements cannot contain duplicate attributes
+- Each <abbr>ID</abbr> is unique
+
+
 **Objectif utilisateur&nbsp;: **  
 Allows all users to anticipate how to use and possible behaviors for a given interface element.
 
@@ -194,6 +201,11 @@ Forces the coherent structuring of the content by the creator of the site.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**
 - <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
+- <a href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+
+**Tool:  
+**[<abbr>HTML</abbr> and <abbr>CSS</abbr> Validation Service](https://validator.w3.org/)
 
 ## 6. Decoupling content from interaction and presentation
 
@@ -223,34 +235,6 @@ Improves maintainability.
 **Reference <abbr>WCAG</abbr>&nbsp;:**
 - <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
-
-## 7. Code validation
-
-**Target: **everyone and assistive technologies users.  
-**When: **during and at the end of development.
-
-**Description: **  
-Write code without parsing error.
-
-**Checklist **  
-In the <abbr>HTML</abbr> code, ensure that:
-- Elements must have opening and closing tags
-- Elements can be nested according to their specifications
-- Elements cannot contain duplicate attributes
-- Each <abbr>ID</abbr> must be unique
-
-**Users’ goal: **  
-The validation errors can prevent the user from accessing some content. 
-
-**Technical goal: **  
-- Ensure <abbr>HTML</abbr> interoperability and maintainability.
-- Increase the compatibility with assistive technologies.
-
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
-
-**Tool:  
-**[<abbr>HTML</abbr> and <abbr>CSS</abbr> Validation Service](https://validator.w3.org/)
 
 ## 8. Declaring the main language and language changes 
 
@@ -317,6 +301,7 @@ For required fields, this should be specified in the label using an image, a tex
 **Users’ goal: **
 
 Not meeting this requirement is a blocking point for all users using speech synthesis. For mobile users and motor deficient it allows to click on the form elements more easily.
+For fields with auto-completion, this avoids users input errors.
 
 **Do: **  
 ![screenshot of a valid form](images/formulaire.png)
@@ -335,6 +320,7 @@ See [the example of an accessible form](./exemples/formulaire/index.html) for mo
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>
 - <a href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a>
+- <a href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
 
 ## 10. Detect, identify errors and suggest corrections
 
@@ -562,7 +548,7 @@ Improve reading comfort for people with cognitive and visual disabilities.
 
 Make the link and button labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  
 
-If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, **a `title`**attribute must use to display a tooltip, containing all the necessary information, at the mouse rollover, but also to complete the title with additional content, as you wish, via:
+If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, **a `title`**attribute must use to display a tooltip, containing all the necessary information, at the mouse rollover, but also to complete the title with additional content with, at choice:
 - a piece of text hidden by <a href="./examples/masking/index.html"> accessible display </a> via CSS
 - by using an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you](./ label-ledby-describedby.html)).
 
@@ -574,18 +560,16 @@ In this case, add an <a href="./exemples/masquage/index.html">accessible hidden 
 
 **Example:** 
 <pre><code class="html">
-&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
-&lt;a href="…"&gt;next&lt;span class="accessible-hidden-content"&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Validate the payment by installments"&gt;Validate&lt;span class="accessible-hidden-content"&gt; to pay by installments&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Validate the payment in one go"&gt;Validate&lt;span class="accessible-hidden-content"&gt; to pay in one go&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 Another solution is to use an `aria-label` or `aria-labelledby` attribute to clarify the link label (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
-In addition to these solutions, we could also use **a `title` attribute **to display a “confirm to pay in installments” tooltip when the mouse is over the link.
 
 <pre><code class="html">
 &lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;next&lt;/a&gt;
 &lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;next&lt;/a&gt;
 </code></pre>
-
 
 **Checklist: **
 Make sure that the semantics <abbr>HTML</abbr> are respected:
@@ -623,9 +607,11 @@ Associate a link labelled “click here” with a hidden label: “order you mob
 
 **Description:**
 
-Notify the user of any new window opening by mentioning it in the title of the link.
-If it is not possible, use an icon (image with `alt` attribute) indicating the new window opening or just add a ‘new window’ in the label.  
-As a last resort, use an <a href="./exemples/masquage/index.html">accessibly hidden text</a> (off-screen).
+Notify the user of any new window opening by mentioning it in the text of the link.
+If it is not possible, use the `title` attribute with the whole information needed (e.g. "buy the Nokia  7510 (new window)") and add, at choice: 
+- the use of an icon (image with an `alt` indicating the opening of a new window or just "(new window)").
+- a hidden piece of text in <a href="./examples/masking/index.html"> accessible display </a> via CSS.
+- an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you] (./ label-ledby-describedby.html)).
 
 **Example: ** 
   
@@ -692,9 +678,9 @@ Example (numbered bullets indicate how focus moves in the page) :
 **Checklist: **
 
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 20 below.
-- Be careful of the order of elements in the <abbr>HTML</abbr> code, it affects the focus order. An element at the end of the source code, but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive focus.
+- Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
 - For maintainability, avoid using the `tabindex` attribute with values higher than 0.
-- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path.
+- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for single page application (SPA). For more details, see [Manage Focus for Dynamic Content](./examples/dynFocus/index.html)
 
 **Users’ goal: **
 
@@ -824,43 +810,6 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
 
-## 24. Keep a logical tab order on dynamic insertion or modification
-
-**Target: **everyone, especially people with visual disabilities, cognitive limitations, or attention difficulties.  
-**When: **during development.
-
-**Description: **
-
-When an element is displayed after a user interaction:
-- it must appear in the source code right after the triggering element (e.g. drop down menu),
-- or the focus must be set on one of the first elements of the generated content (link, button, title, paragraph…).  
-   
-When the content disappears, the focus must be restored to the triggering element.
-For example, when closing a dialogue, the focus must be moved to the element that triggered the popup opening (button, link…).
-
-Reminder: dynamically-generated content must be accessible and therefore respect all accessibility criteria. 
-There are several solutions to warn the user in case of appearing/disappearing of content:
-- via text,
-- moving the focus,
-- using <abbr>ARIA</abbr>.
-
-See [the drop down menu example](./exemples/simple-menu/simple-menu.html) for the `aria-haspopup` attribute implementation.
-
-**Checklist: **
-- The focus moves in a logical way (natural reading order).
-- The focus order must not be defined using the `tabindex` attribute (with positive values).
-  
-In practice, `tabindex` should be used with only two attribute values:
-- `tabindex="-1"`: prevents an element from being focusable via the <kbd>TAB</kbd> key and allows it to be focusable via Javascript.
-- `tabindex="0"`: makes an element focusable via the <kbd>TAB</kbd> key and via Javascript.
-
-**Users’ goal: **
-
-Allow a user, for example a blind or visually impaired user, to detect and interact with new appearing content.  
-
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
-
 ## 25. Ensure the user keeps control during interactions
 
 **Target: **Everyone, especially those who are visually impaired, cognitive or with attention deficit.
@@ -869,13 +818,13 @@ Allow a user, for example a blind or visually impaired user, to detect and inter
 **Description: **
 Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.
 
-Do not impose on the user a time limit to perform an action and must be able to extend a given time to perform an action (exceptions: limited time promotional offer, action of more than 20 hours).
+Do not impose on the user a time limit to perform an action and must be able to extend a given time to perform an action.
 
 **Checklist:**
-If single-letter (upper/lower case) keyboard shortcuts are available, make sure that you can disable or modify these shortcuts.
+If keyboard shortcuts are available, make sure that you can disable, modify these shortcuts or they can activated only when the component has focus.
 
 If content appears on mouse over or focus (eg tooltip), the user must be able to:
-- Hide this new content without the need to move the pointer or focus (eg with the escape key).
+- Hide this new content without the need to move the pointer or focus (eg with the <<kbd>esc.</kbd> key).
 - Move the mouse pointer on this new content without it disappearing.
 
 **User Objective: **
@@ -889,6 +838,7 @@ A form must have a send button. It should not be sent automatically after the us
 - <a href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
 - <a href="https://www.w3.org/TR/WCAG21/#on-focus">3.2.1 On Focus</a>
 - <a href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
+- <a href="https://www.w3.org/TR/WCAG21/#character-key-shortcuts">2.1.4 Character key shortcuts</a>
 
 ## 26. Avoid captcha
 **Target: **Everyone in particular, visually impaired people.
@@ -1023,7 +973,7 @@ Access to the content must not depend on the orientation of the screen (portrait
 Provide the user with status messages that give him feedback on the action he has just completed.
 
 **Checklist: **
-   Contextual messages must be perceived by anyone using a <abbr>AT</abbr> (sppech synthesis) without taking focus on the message.
+   Contextual messages must be perceived by anyone using a <abbr>AT</abbr> (speech synthesis) without taking focus on the message.
    
    A status message or pop-up message can be & nbsp ;:
 - a message that gives the user information on the result of an interaction (ex: Your request has been taken into account)

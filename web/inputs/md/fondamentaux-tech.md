@@ -172,7 +172,7 @@ Cet exemple n’est pas valide, car l’information est transmise uniquement par
 **Quand&nbsp;:** dès la conception et à la rédaction du contenu.
 
 **Description&nbsp;:** 
-Utiliser correctement les éléments <abbr>HTML</abbr> en respectant ce pourquoi ils sont faits (spécifications) et donc leur sémantique, afin qu’ils puissent être interprétés efficacement par les aides techniques.
+Utiliser correctement les éléments <abbr>HTML</abbr>, en respectant ce pourquoi ils sont faits (validation du code et respect des spécifications) et donc leur sémantique.
 
 **À vérifier&nbsp;:**
 Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes (pas de liste vides ou ne contenant qu’un seul élément)&nbsp;:
@@ -191,11 +191,17 @@ Les boutons sont bien des boutons (i.e. balise `<button>`, ou `<input type="butt
 
 Penser, dans la mesure du possible, à respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à leur aspect spécifique.
 
-** Objectif utilisateur&nbsp;:**  
-Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les comportements possibles pour un élément d’interface donné.
+Dans le code <abbr>HTML</abbr> s’assurer, lors de la validation, qu'à minima&nbsp;:
+- les éléments ont des balises de début et de fin,
+- les éléments sont imbriqués conformément à leurs spécifications,
+- les éléments ne contiennent pas d’attributs dupliqués,
+- chaque `id` est unique.
+
+**Objectif utilisateur&nbsp;:**  
+Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les comportements possibles pour un élément d’interface donné, en assurant que le bon fonctionnement des <abbr>AT</abbr>.
 
 **Objectif technique&nbsp;:**  
-Oblige à la structuration cohérente du contenu par le créateur du site.
+Oblige à la structuration cohérente du contenu par le créateur du site et permet d'améliorer la maintenabilité.
 
 **Exemple non-valide&nbsp;:**  
 ![Exemple non-valide de mauvaise utilisation d ’un lien](./images/nv-semantiq.jpg)  
@@ -203,6 +209,10 @@ Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+
+**Outil&nbsp;: **[validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)
 
 ## 6. Séparer le contenu de l’interactivité et de la présentation
 
@@ -232,33 +242,6 @@ Améliore globalement la maintenabilité.
 **Référence <abbr>WCAG</abbr>&nbsp;:**
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
-
-## 7. Valider le code <abbr>HTML</abbr>
-
-**Cible&nbsp;:** tout le monde et les utilisateur de technologies d'assistance.  
-**Quand&nbsp;:** pendant et à la fin du développement.
-
-**Description&nbsp;:**  
-Valider la syntaxe du code <abbr>HTML</abbr> (notamment l’absence de balise non fermée, d’`id` dupliqué…).
-
-**À vérifier&nbsp;:**  
-Dans le code <abbr>HTML</abbr> s’assurer que&nbsp;:
-- les éléments ont des balises de début et de fin,
-- les éléments sont imbriqués conformément à leurs spécifications,
-- les éléments ne contiennent pas d’attributs dupliqués,
-- chaque `id` est unique.
-
-**Objectif utilisateur&nbsp;:**  
-Des erreurs de validation peuvent empêcher l’accès à certains contenus. 
-
-**Objectif technique&nbsp;:**  
-- Assurer l’interopérabilité, la maintenabilité du code <abbr>HTML</abbr>.
-- Accroître la compatibilité avec les aides techniques.
-
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
-
-**Outil&nbsp;: **[validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)
 
 ## 8. Indiquer la langue principale et les changements de langue
 
@@ -326,7 +309,7 @@ Pour les champs obligatoires, ceci doit être précisé dans le `label` via une 
 
 Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
 
-Pour les listes de contenus en auto-complétion pour les champs, elles permettent d’éviter les erreurs de saisie.
+Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de saisie.
 
 **Exemple valide&nbsp;:**  
 ![capture d’écran d’un formulaire valide](images/formulaire.png)
@@ -343,6 +326,7 @@ Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.htm
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
 
 ## 10. Détecter, identifier les erreurs et suggérer des corrections
 
@@ -620,10 +604,10 @@ Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus 
 **Description&nbsp;:**
 
 Prévenir l’utilisateur de l’ouverture de toute nouvelle fenêtre en l’indiquant dans l’intitulé du lien. 
-En cas d’impossibilité avérée utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, et compléter l'intitulé par au choix :
+En cas d’impossibilité avérée, utiliser **un attribut `title`** avec l'ensemble de l'information nécessaire (exemple : "Acheter le Nokia 7510 (nouvelle fenêtre)") et compléter l'intitulé par, au choix :
+- l'utilisation d'une icône (image avec un `alt` indiquant l’ouverture d’une nouvelle fenêtre ou juste «&nbsp;(nouvelle fenêtre)&nbsp;»).
+- un morceau de texte caché en <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS.
 - un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).
-- un morceau de texte caché en <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
-- l'utilisation d'une icône (image avec un `alt` indiquant l’indication d’ouverture d’une nouvelle fenêtre ou juste «&nbsp;nouvelle fenêtre&nbsp;»).
 
 **Exemple&nbsp;:**  
   
@@ -673,7 +657,7 @@ Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n�
 
 ## 19. Rendre le parcours du focus séquentiel et logique sans piège clavier
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.  
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention 1et en mobilité.  
 **Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**
@@ -685,9 +669,10 @@ Exemple, les puces numérotées indiquent l'ordre de déplacement du focus dans 
 
 **À vérifier&nbsp;:**
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 20, ci-dessous.
-- Attention à l’ordre d’insertion des éléments dans le code <abbr>HTML</abbr>, cela a une influence sur l’ordre de déplacement du focus. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
+- Attention à l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>est le même  que l'ordre de déplacement du focus dans la page. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
 - Pour la maintenabilité, éviter l’utilisation de l’attribut `tabindex` avec des valeurs supérieures à 0.
 - Même lors d’apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.
+ Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en">SPA (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir [Gérer le focus pour du contenu dynamique](./exemples/dynFocus/index.html)
 
 **Objectif utilisateur&nbsp;:**
 Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).
@@ -798,7 +783,6 @@ Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directeme
 
 Respecter les recommandations générales d’accessibilité, utiliser en priorité les composants standards <abbr>HTML</abbr>, sinon, utiliser <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>) pour les composants d’interface complexes.
 
-
 **À vérifier&nbsp;:**
 
 S’assurer de l’absence de point bloquant avec les couples navigateur/lecteur d’écran (Firefox/<abbr>NVDA</abbr>, <abbr>IE</abbr>/Jaws, Safari/VoiceOver) dans les parcours utilisateurs (scénarios d’utilisation des principales fonctionnalités de l’application).
@@ -807,62 +791,6 @@ En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un 
 **Objectif utilisateur&nbsp;:**
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.
 
-## 24. Gérer dynamiquement le focus lors d’une insertion ou d’une modification du contenu
-
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention.  
-**Quand&nbsp;:** lors du développement.
-
-**Description&nbsp;:**
-
-Lorsqu’un élément est affiché suite à une interaction de l’utilisateur&nbsp;: 
-- celui-ci doit apparaître dans le code source juste après l’élément déclenchant (exemple&nbsp;: menu dépliant), 
-- et/ou le focus doit être déplacé sur un des premiers éléments du contenu généré (lien, bouton, titre, paragraphe…).  
-   
-Lors de la disparition de contenu, le focus doit être redonné à l’élément déclenchant ou, si c’est impossible, positionné juste avant le contenu qui a disparu.  
-Par exemple à la fermeture d’une boîte de dialogue, le focus doit être repositionné sur l’élément qui a déclenché l’ouverture (bouton, lien, …).
-
-Pour rappel&nbsp;: le contenu dynamiquement généré doit être accessible et donc respecter tous les critères d’accessibilité.  
-Il existe plusieurs solutions pour prévenir l’utilisateur en cas d’apparition/disparition de contenu&nbsp;:
-- via du texte,
-- en déplaçant le focus,
-- en utilisant de l’<abbr>ARIA</abbr>.
-
-Voir [l’exemple de menu déroulant](./exemples/simple-menu/simple-menu.html) pour la mise en pratique de l’attribut `aria-haspopup`.
-
-**À vérifier&nbsp;:**
-- Le déplacement du focus s’effectue de manière logique (ordre de lecture naturel).
-- L’ordre de lecture n’a pas été redéfini en utilisant des attributs `tabindex` (avec des valeurs positives).
-  
-En pratique, l’attribut `tabindex` ne devrait être utilisé qu’avec deux valeurs&nbsp;:
-- `tabindex="-1"`&nbsp;: pour interdire à un élément de recevoir le focus via la touche <kbd>TAB</kbd> et l’autoriser à recevoir le focus via Javascript.
-- `tabindex="0"`&nbsp;: pour rendre un élément focusable via la touche <kbd>TAB</kbd> et via Javascript.
-
-**Objectif utilisateur&nbsp;:**
-Permettre à l’utilisateur, par exemple non ou malvoyant, de repérer l’apparition de nouveaux contenus et d’interagir avec ceux-ci.  
-
-**Exemple valide&nbsp;:**
-
-Menu replié : 
-
-![capture d’écran d’un menu replié](images/v_gererFocus1.jpg)  
-
-Menu déplié :
-
-![capture d’écran d’un menu déplié](images/v_gererFocus2.jpg)  
-
-Sur ce site, le menu principal de navigation est fermé par défaut et une mention «&nbsp;menu fermé&nbsp;» est mise en alternative de l’icône hamburger pour les malvoyants. Lors de son ouverture, l’icône hamburger se change en croix (permettant la fermeture du menu) et donc l’alternative est dès lors «&nbsp;fermer le menu&nbsp;». 
-
-De plus, le focus est positionné directement sur le premier item du menu apparu, c’est la bonne manière de gérer le focus pour ce type de menu dépliant.
-
-**Exemple non-valide&nbsp;:** 
-
-![capture d’écran de résultats d’une recherche dynamique](images/nv_gererFocus.jpg)  
-
-Sur ce site, la recherche est dynamique, elle se met à jour dès que l’utilisateur active (sélectionne) un filtre ou qu’il tape <kbd>Entrée</kbd> après avoir saisi un mot clé. Le problème est que la région qui affiche dynamiquement les résultats est très éloignée de la zone de critères de recherche. Il est donc difficile voire impossible pour certains utilisateurs (déficients visuels, cognitifs ou avec troubles de l’attention) d’identifier la zone de résultats et de savoir quand celle-ci est mise à jour.
-Il faudrait pousser le focus sur la zone de résultats à chaque recherche.
-
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
 
 ## 25. S’assurer que l’utilisateur garde le contrôle lors des interactions
 
@@ -872,14 +800,13 @@ Il faudrait pousser le focus sur la zone de résultats à chaque recherche.
 **Description&nbsp;:**
 Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  
 
-Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action et doit être en mesure de rallonger un temps imparti pour effectuer une action (exceptions : offre promotionnelle à durée limitée, action de plus de 20 heures).
-
+Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action et doit être en mesure de rallonger un temps imparti pour effectuer une action.
 
 **À vérifier&nbsp;:**
-Si des raccourcis clavier à une seule lettre (majuscule/minuscules) sont disponibles, s'assurer qu'il soit possible de désactiver ou modifier ces raccourcis.
+Si des raccourcis clavier sont disponibles, s'assurer qu'il soit possible de désactiver, modifier ces raccourcis et qu'ils sont activables que lorsque le composant a le focus.
 
 Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
-- Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche échap).
+- Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche <kbd>échap.</kbd>).
 - Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.
 
 **Objectif utilisateur&nbsp;:**
@@ -893,6 +820,7 @@ Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#on-focus">3.2.1 On Focus</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#character-key-shortcuts">2.1.4 Character key shortcuts</a>
 
 ## 26. Éviter les captcha
 **Cible&nbsp;:** tout le monde en particulier, les personnes déficientes visuelles.  
