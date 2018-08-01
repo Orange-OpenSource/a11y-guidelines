@@ -672,7 +672,7 @@ Exemple, les puces numérotées indiquent l'ordre de déplacement du focus dans 
 - Attention à l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>est le même  que l'ordre de déplacement du focus dans la page. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
 - Pour la maintenabilité, éviter l’utilisation de l’attribut `tabindex` avec des valeurs supérieures à 0.
 - Même lors d’apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.
- Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en">SPA (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir [Gérer le focus pour du contenu dynamique](./exemples/dynFocus/index.html)
+ Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en"><abbr>SPA</abbr> (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir [Gérer le focus pour du contenu dynamique](./exemples/dynFocus/index.html)
 
 **Objectif utilisateur&nbsp;:**
 Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).

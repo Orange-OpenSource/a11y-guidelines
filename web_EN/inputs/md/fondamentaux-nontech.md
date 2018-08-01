@@ -126,7 +126,7 @@ In the screenshot below, the design phase should provide  text alternatives for 
 **When: ** as of graphic design and during development.
 
 **Description:**  
-The position of the keyboard focus must be visible at all times. When a clickable element receives the focus (link, button…), this must be visible to the user. By default, the browser sets a dotted or a coloured box around the element. This behaviour can be replaced by a custom effect (improving the contrast, for example) but must not be deleted. Users who navigate using the keyboard (<kbd>TAB</kbd>) need to know the position of the focus.    
+The position of the keyboard focus must be visible at all times. When a clickable element receives the focus (link, button…), this must be visible to the user. By default, the browser sets a dotted or a coloured box around the element. This behavior can be replaced by a custom effect (improving the contrast, for example) but must not be deleted. Users who navigate using the keyboard (<kbd>TAB</kbd>) need to know the position of the focus.    
 
 The focus indicator as well as the hover indicator (when the mouse is over an element) should be carefully considered since the graphic design.
 
@@ -167,7 +167,7 @@ Zoom set to 200%. In this case the height of the text container did not resized 
 **Target: ** Everyone, especially people with visual and dyslexic disabilities.
 ** When;: ** **When: ** as of graphic design and during development.
 
-Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and rtext. It is generally accepted that a line height (<span lang = "en"> line-height </span>) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href = " https://www.invisionapp.com/blog/line-spacing/ "lang =" en "> Why you should go big with line spacing </a>.
+Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and text. It is generally accepted that a line height (line-height) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href = " https://www.invisionapp.com/blog/line-spacing/ "lang =" en "> Why you should go big with line spacing </a>.
 
 **Description: **
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
@@ -270,7 +270,10 @@ Lastly, the wording of the error messages should be explicit.
 **Description:**  
 Avoid as much as possible the actions that open a new window (or tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
 
-Also avoid the systematic use of dialogues to display information in the pages (presentation of service…). They often cause accessibility problems for people who navigate with a keyboard or a screen reader, and they will require special attention during the development phase.
+Also avoid the systematic use of dialogues to display information in the pages (presentation of service…).
+They must be reserved for important information that requires immediate attention and remain small.
+
+ These modal windows or pop-in often cause accessibility problems for people who navigate with a keyboard or a screen reader, and they will require special attention during the development phase.
 
 **Don’t: **  
 In the example below the use of a dialogue is not justified. Using a standard web page would:
@@ -314,13 +317,13 @@ Provide ways to identify and visually distinguish the different parts of the pag
 
 ! [screenshot of the site 100% practical](images/groupement.jpg)
 
-Here, the tooltip (<i lang = "en"> tooltip </i>) is delimited by a visible border and sufficiently contrasted, to identify its content.
+Here, the tooltip (tooltip) is delimited by a visible border and sufficiently contrasted, to identify its content.
 
 **Don't: **
 
 ! [screenshot of the fnac.com website](images/groupement2.jpg)
 
-It is very difficult to associate the themes (" par region", "par genre"...) and the sub-themes in columns, especially since the horizontal borders are not enough contrasted.
+It is very difficult to associate the themes ("par region", "par genre"...) and the sub-themes in columns, especially since the horizontal borders are not enough contrasted.
 
 ## 16. Explicitly locate the page in the site and provide several ways to access it
 
@@ -366,22 +369,6 @@ If no other alternative is possible, it is essential to provide an alternative f
 Each sensitive area must have a sufficient size (minimum 9mm width and height).
 In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).
 
-## 19. Allow zooming
-
-**Target: ** Everyone in particular, visually impaired people.
-**When: ** during development.
-
-**Description: **
-The site must not prohibit or limit the use of the zoom (especially on mobiles).
-
-## 20. Allow to cancel the triggering of gestural interactions
-
-**Target: ** all users in particular, people with motor or visual disability and mobility.
-**When: ** during development.
-
-**Description: **
-During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.
-
 ## 21. Offer an alternative to complex gestures
 
 **Target: ** Everyone in particular, people with motor or visual disability and mobility.
@@ -424,8 +411,6 @@ Provide access to visual and hearing information for people who cannot access it
 **Technical goal: **
 
 Allow audio and video referencing.
-
-**Reference: **<abbr>WCAG</abbr> 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.4.2
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

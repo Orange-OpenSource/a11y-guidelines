@@ -272,7 +272,9 @@ Enfin les libellés des messages d’erreur doivent être explicites.
 **Description&nbsp;:**  
 Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.
 
-De même éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Celles-ci posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.
+De même, éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Elles doivent être réservées à une information importante qui requiert une attention immédiate et rester de taille réduite.
+
+Ces fenêtres modales ou pop-in posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.
 
 **Exemple non-valide&nbsp;:**  
 Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas justifié. L’utilisation d’une page web standard permettrait&nbsp;:
@@ -370,22 +372,6 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).
 
-## 19. Autoriser l'utilisation du zoom
-
-**Cible&nbsp;:** tous le monde en particulier, les personnes déficientes visuelles.  
-**Quand&nbsp;:** lors du développement.
-
-**Description&nbsp;:**  
-Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur les mobiles).
-
-## 20. Permettre d'annuler le déclenchement des interactions gestuelles
-
-**Cible&nbsp;:** tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
-**Quand&nbsp;:** lors du développement.
-
-**Description&nbsp;:**  
-Lors d'une interaction gestuelle, l'action est déclenchée uniquement à la fin de l'interaction de plus l'action n'est pas déclenchée si l'élément déclencheur perd le focus.
-
 ## 21. Proposer une alternative aux gestuelles complexes
 
 **Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
@@ -428,8 +414,6 @@ Fournir un moyen d’accès à l’information visuelle et auditive pour des per
 **Objectif technique&nbsp;:**
 
 Permet le référencement de tout contenu audio et vidéo.
-
-**Référence&nbsp;:**<abbr>WCAG</abbr>  1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.4.2
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

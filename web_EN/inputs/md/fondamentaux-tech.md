@@ -405,7 +405,7 @@ In this case setting the `alt` attribute to something other than empty would pro
 `<img src="service-24.png" alt="">` 
 
 **Tools: **
-The <a href="https://chrispederick.com/work/web-developer/" lang="en"> Web developer </a> extension (ability to display text alternatives for all images). 
+The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> extension (ability to display text alternatives for all images). 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
@@ -643,7 +643,7 @@ Implement event handlers that don’t rely on mouse events only, therefore allow
 
 **Checklist: **
 
-- All the important actions performed with the mouse can also be done with the keyboard, even if you have to provide a specific alternative for the complex interactions (<i lang = "en"> drag'n'drop </i>, gestures with several fingers on mobile ...) while avoiding countless strikes.
+- All the important actions performed with the mouse can also be done with the keyboard, even if you have to provide a specific alternative for the complex interactions (drag'n'drop, gestures with several fingers on mobile ...) while avoiding countless strikes.
 - Make maximum use of the basic <abbr>HTML</abbr> interactive components (fields, links, buttons), these being natively accessible to the keyboard. Otherwise, ensure that the custom components are keyboard operable in a conventional manner.
 - All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag & drop, mobile touch gestures…).
 
@@ -680,7 +680,7 @@ Example (numbered bullets indicate how focus moves in the page) :
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 20 below.
 - Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
 - For maintainability, avoid using the `tabindex` attribute with values higher than 0.
-- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for single page application (SPA). For more details, see [Manage Focus for Dynamic Content](./examples/dynFocus/index.html)
+- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see [Manage Focus for Dynamic Content](./examples/dynFocus/index.html)
 
 **Users’ goal: **
 
@@ -850,7 +850,7 @@ Captchas are often the source of difficulties for users. If the implementation o
 - Double authentication
 - Hidden form field to leave blank (honeypot technique), not visible to the user
 - Providing phone support to ensure that the customer is a real person
-- A check to ensure that the same <abbr>IP</abbr>/<i lang = "en">User agent</i> combination does not attempt to submit the form more than N times per second.
+- A check to ensure that the same <abbr>IP</abbr>/User agent combination does not attempt to submit the form more than N times per second.
 
 If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple ...) + classic visual captcha ...
 
@@ -873,16 +873,16 @@ Allow users to identify and locate interface elements in all pages.
 
 **Do: **
 ! [screenshot of the site 100% practical](images/groupement.jpg)
-Here, the tooltip (<i lang="en">tooltip</i>) is delimited by a visible edge and sufficiently contrasted, to identify its content.
+Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently contrasted, to identify its content.
 
 **Don't: **
 ! [screenshot of the fnac.com website](images/groupement2.jpg)
 It is very difficult to associate the themes ("par region", "par genre", ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
 
-**Example: The <abbr>HTML5</abbr> and <i lang="en">landmarks </i> <abbr>ARIA</abbr> **
-To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the <i lang = "en"> landmarks </i> <abbr> ARIA </abbr> (<i lang="en">Accessible Rich Internet Applications</i>)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) and there, the support is much better & nbsp ;!
+**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **
+To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) and there, the support is much better & nbsp ;!
 
-All about <a href="./examples/landmarks/index.html">the <i lang="en">landmarks</i> <abbr>ARIA</abbr> in our examples</a>.
+All about <a href="./examples/landmarks/index.html">the landmarks <abbr>ARIA</abbr> in our examples</a>.
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
