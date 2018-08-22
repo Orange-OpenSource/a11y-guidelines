@@ -57,6 +57,14 @@ figure {
   text-decoration: underline;
 }
 
+#content ul.nav-tabs {
+  padding: 0;
+}
+
+#content div.tab-content {
+  margin-bottom: 1rem;
+}
+
 header .subtitles {
   display: none;
 }
