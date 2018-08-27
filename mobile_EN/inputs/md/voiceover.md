@@ -160,8 +160,7 @@ Hereunder are unusual features that may be useful to a VoiceOver user on any dev
 <a name="Scrub"></a>
 </br>Gesture : **swipe with 2 fingers** drawing a **Z-shape** anywhere on the screen.
 </br>This ends exactly in the same result as the click on the native back button.
-</br><img style="max-width: 600px; height: auto;" alt="" src="./images/
-iphonex_vo_en_scrub.png" />
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_scrub.png" />
 
 <a name="ItemChooserList"></a>
 </br>Gesture : **triple-tap with 2 fingers** anywhere on the screen.
