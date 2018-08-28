@@ -21,7 +21,7 @@ $(document).ready( function () {
   $(window).resize(function(){resize();});
 
   // Fill left navigation menu
-  $("#navigation").clone().attr("id", "left-navigation").appendTo("#sidebar");
+  $("#navigation").clone(true).attr("id", "left-navigation").appendTo("#sidebar");
 
   // Skip links
   $(".skip-links a").on("focus", function () {
@@ -143,36 +143,62 @@ function setBreadcrumb(param) {
 }
 
 function addSubMenu(subMenus) {
-    var currentItem, htmlStringToAppend, insertPoint = $('.subtitles');
+    var currentItem, htmlStringToAppend, itemsQuery, item;
+    var collapsible = " onClick='expandCollapse(this)' ";
 
     currentItem = getCurrentItem().last();
     currentItem.after('<ul class="subtitles" class="hidden-xs">');    
 
     if (subMenus) {
-      subMenus.forEach(function(subMenu) {          
-        var htmlStringToAppend = '<li class="subtitle submenu"><a aria-haspopup="true" aria-expanded="' + (subMenu.expanded === true?"true":"false") + '" href="' + (subMenu.url?subMenu.url:"#") + '">' + subMenu.label + '</a></li>';
-        if (subMenu.expanded === true) {
-          htmlStringToAppend+="<ul></ul>";
+      subMenus.forEach(function(subMenu) {
+        
+        var htmlStringToAppend = '<li class="subtitle submenu"><a' + (subMenu.className?' class="' + subMenu.className + '" ':' ') + 'aria-haspopup="true" aria-expanded="' + (subMenu.expanded === true?"true":"false") + '" href="' + (subMenu.url?subMenu.url:"#") + '"'+ (subMenu.url?'':collapsible) +'>' + subMenu.label + '</a></li>';
+        
+        if (subMenu.expanded === true || !subMenu.url) {
+          if (!subMenu.expanded) {
+            htmlStringToAppend+="<ul style='display: none;'></ul>";
+          } else {
+            htmlStringToAppend+="<ul></ul>";
+          }
         }
 
-        $('.subtitles').append(htmlStringToAppend);      
-        if (subMenu.expanded === true) {
-          insertPoint = $(".subtitles ul");
-        }
+        $('.subtitles').append(htmlStringToAppend);
+        
+        if (subMenu.onExpand) {
+          $(".subtitle a:last").on("expand", subMenu.onExpand);
+        }                          
+
+        if (subMenu.expanded === true || !subMenu.url) {          
+          itemsQuery = subMenu.itemsQuery?subMenu.itemsQuery:'h2';          
+          $(itemsQuery).each(function() {          
+            item = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
+            $(".subtitles ul:last").append(item);
+          });
+        }        
+
       });
     }
 
     currentItem.parent().parent().addClass("autoscroll");
-
-    $('h2').each(function() {          
-      htmlStringToAppend = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
-      insertPoint.append(htmlStringToAppend);      
-    });
+    
     $('.subtitle:last').after('</ul>');
 
     currentItem.attr("aria-haspopup", "true").attr("aria-expanded", "true");    
 }
     
+function expandCollapse(el) {
+  if ($(el).attr("aria-expanded")==="true") {      
+      $(el).parent().next().fadeOut();      
+      $(el).attr("aria-expanded", "false");
+  } else if ($(el).attr("aria-expanded")==="false") {
+      $(el).parent().parent().find("ul").fadeOut()
+      $(el).parent().parent().find("a[aria-expanded]").attr("aria-expanded","false");
+      $(el).parent().next().fadeIn();
+      $(el).trigger("expand");
+      $(el).attr("aria-expanded", "true");
+  }
+}
+
 function getCurrentItem() {
   var pageName;
   if ($("[data-menuitem]").length > 0) {
