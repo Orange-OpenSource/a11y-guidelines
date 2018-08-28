@@ -23,9 +23,7 @@ Deux versions sont disponibles&nbsp;
 <li class="nav-item">
 <a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développeurs</a>
 </li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab">
+</ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab">
 
 ## Contenu textuel
 
