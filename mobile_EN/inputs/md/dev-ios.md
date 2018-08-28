@@ -1154,6 +1154,108 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 ### Link
 - [`UIAccessibilityTraitAdjustable`](https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable)
 
+## Actions
+### Description
+Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
+</br>A convincing example is the iOS native mail that may suggest some actions as follows :
+</br><img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
+</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the next accessible element instead of suggesting actions as above.
+</br></br>A solution may consist of **associating the selected element with an array of actions** that will be automatically introduced to the user.
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" />
+
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * persoElt;
+
+@end
+
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    UIAccessibilityCustomAction * a11yMoreAction = [[UIAccessibilityCustomAction alloc]initWithName:@"more"
+                                                                                                target:self
+                                                                                              selector:@selector(moreAction)];
+    UIAccessibilityCustomAction * a11yFlagAction = [[UIAccessibilityCustomAction alloc]initWithName:@"flag"
+                                                                                                target:self
+                                                                                              selector:@selector(flagAction)];
+    UIAccessibilityCustomAction * a11yDeleteAction = [[UIAccessibilityCustomAction alloc]initWithName:@"delete"
+                                                                                                  target:self
+                                                                                                selector:@selector(deleteAction)];
+    
+    _persoElt.accessibilityCustomActions = @[a11yMoreAction,
+                                             a11yFlagAction,
+                                             a11yDeleteAction];
+}
+
+- (BOOL)moreAction {
+    //Code to be implemented for the appropriate action.
+    return YES;
+}
+
+- (BOOL)flagAction {
+    //Code to be implemented for the appropriate action.
+    return YES;
+}
+
+- (BOOL)deleteAction {
+    //Code to be implemented for the appropriate action.
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var persoElt: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let a11yMoreAction = UIAccessibilityCustomAction(name: "more",
+                                                         target: self,
+                                                         selector: #selector(moreAction))
+        
+        let a11yFlagAction = UIAccessibilityCustomAction(name: "flag",
+                                                         target: self,
+                                                         selector: #selector(flagAction))
+        
+        let a11yDeleteAction = UIAccessibilityCustomAction(name: "delete",
+                                                           target: self,
+                                                           selector: #selector(deleteAction))
+        
+        persoElt.accessibilityCustomActions = [a11yMoreAction,
+                                               a11yFlagAction,
+                                               a11yDeleteAction]
+    }
+    
+    
+    @objc func moreAction() -> Bool {
+        //Code to be implemented for the appropriate action.
+        return true
+    }
+    
+    @objc func flagAction() -> Bool {
+        //Code to be implemented for the appropriate action.
+        return true
+    }
+    
+    @objc func deleteAction() -> Bool {
+        //Code to be implemented for the appropriate action.
+        return true
+    }
+}
+</code></pre>
+
+</br>The code above gives rise to the following result thanks to consecutive flicks on the selected accessible element :
+</br><img alt="flick up to vocalize suggesterd actions with VoiceOver activated" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" />
+
+### Links
+- [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
+- [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
