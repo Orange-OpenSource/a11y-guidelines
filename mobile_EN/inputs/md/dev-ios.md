@@ -1256,6 +1256,75 @@ class ViewController: UIViewController {
 - [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
 - [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
 
+## Focus
+### Description
+The **UIAccessibilityFocus** informal protocol provides programming elements to be informed of the accessible element focus :
+- **accessibilityElementDidBecomeFocused** : called when the accessible element is focused.
+- **accessibilityElementDidLoseFocus** : fired when the accessible element lost focus.
+- **accessibilityElementIsFocused** : boolean value indicating the accessible element selection.
+
+Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
+</br>However, if they are implemented in the accessible element itself, you won't be disappointed.
+</br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it's not accessible... like a view controller for instance.
+</br></br>The example below enables to follow the focus of an accessible element identified by its `accessibleIdentifier`.
+<pre><code class="objective-c">
+#import "UIView+focus.h"
+
+@implementation UIView (focus)
+
+- (void)accessibilityElementDidBecomeFocused {
+    
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"My element has become focused.");
+    }
+}
+
+- (void)accessibilityElementDidLoseFocus {
+    
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"My element has lost focus.");
+    }
+}
+
+- (BOOL)accessibilityElementIsFocused {
+    
+    if ([self.accessibilityIdentifier isEqualToString:@"myAccessibleElt"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+extension UIView {
+    override open func accessibilityElementDidBecomeFocused() {
+        
+        if self.accessibilityElementIsFocused() {
+            print("My element has become focused.")
+        }
+    }
+    
+    override open func accessibilityElementDidLoseFocus() {
+        
+        if self.accessibilityElementIsFocused() {
+            print("My element has lost focus.")
+        }
+    }
+    
+    override open func accessibilityElementIsFocused() -> Bool {
+        
+        if (self.accessibilityIdentifier == "myAccessibleElt") {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+</code></pre>
+
+### Link
+- [`UIAccessibilityFocus`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus)
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
