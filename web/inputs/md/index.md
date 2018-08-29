@@ -23,7 +23,7 @@
 ## Organisation de ce site
 
 ### Critères incontournables
-Liste des critères principaux selon votre profil, basés sur un sous-ensemble des recommandations <abbr>WCAG</abbr> 2.0 niveau AA. Un bon moyen de prendre connaissance des principaux critères à respecter pour s’engager vers une démarche de mise en accessibilité progressive.  
+Liste des critères principaux selon votre profil, basés sur un sous-ensemble des recommandations <abbr>WCAG</abbr> 2.1 niveau AA. Un bon moyen de prendre connaissance des principaux critères à respecter pour s’engager vers une démarche de mise en accessibilité progressive.  
 
 ### Ensemble des exigences
 Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible et pour effectuer les tests permettant de valider ses développements.

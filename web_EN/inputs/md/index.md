@@ -22,7 +22,7 @@
 ## Site organization
 
 ### Essential criteria
-List of the most important criteria according to your profile, based on a subset of the WCAG 2.0 level AA recommendations. A good way to be aware of the main criteria and commit progressively to accessibility.  
+List of the most important criteria according to your profile, based on a subset of the WCAG 2.1 level AA recommendations. A good way to be aware of the main criteria and commit progressively to accessibility.  
 
 ### Requirements list
 This section is for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.

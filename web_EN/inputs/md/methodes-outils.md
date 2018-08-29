@@ -8,7 +8,7 @@ When developing or redesigning sites or applications, accessibility must be eval
 
 Digital accessibility evaluation within Orange is performed with 3 types of testing:
 
-- **Technical evaluation** consists in checking code and colors contrast in order to verify compliance against the criteria of the international standard <abbr>WCAG</abbr> 2.1. level AA.
+- **Technical evaluation** consists in checking code and colors contrast in order to verify compliance against the criteria of the international standard <abbr>WCAG</abbr> 2.1 level AA.
 - **Functional evaluation** verifies the application works with <abbr>assistive technologies</abbr> and there are no blocking defects.
 - **User evaluation** evaluates the application by participants with disabilities watching for potential barriers related to accessibility when they complete tasks using their assistive technologies.
 
