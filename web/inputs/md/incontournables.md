@@ -2,28 +2,6 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Liste des critères incontournables"}]);
-    addSubMenu([
-        {
-            "label":"Concepteurs", "url":"", "expanded":true, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
-            "onExpand": function () {
-                $("#incontournables-concepteurs-tab").tab("show");
-            }
-        },
-        {
-            "label":"Développeurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
-            "onExpand": function () {
-                $("#incontournables-developpeurs-tab").tab("show");
-            }
-        }
-    ]);
-
-    $("#incontournables-concepteurs-tab").on("click", function() {
-        expandCollapse($("#left-navigation .menuitem-conception"));
-    })
-    $("#incontournables-developpeurs-tab").on("click", function() {
-        expandCollapse($("#left-navigation .menuitem-development"));
-    })
-
 });</script>
 
 <span data-menuitem="incontournables"></span>
