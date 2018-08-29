@@ -8,6 +8,11 @@ $(document).ready( function () {
      title = $("h1:first").text() + title;
   }
 
+  // Masquage du focus pour la nav. souris
+  axsStyles = (document.head || document.getElementsByTagName('head')[0]).appendChild(document.createElement('style'));
+  document.addEventListener('mousedown',function(){axsStyles.innerHTML='* {outline:none !important}'});
+  document.addEventListener('keydown',function(){axsStyles.innerHTML=''});
+
   // Mise à jour du titre de la page
   $("head title").text(title);
   document.title = title;
