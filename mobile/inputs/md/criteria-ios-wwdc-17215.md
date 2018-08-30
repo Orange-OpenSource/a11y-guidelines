@@ -88,6 +88,7 @@ Une définition de **conteneur typé** au niveau accessibilité est disponible e
 Il est possible de définir sur une vue un ensemble constitué de `accessibilityCustomAction` de façon à lui **attribuer différentes actions possibles**.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
 </br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un **swipe vertical avec un doigt** permet de déterminer l'action de son choix.
+</br>La mise en place programmatique de ce type de fonctionnement est présentée dans la partie [développement](./criteria-ios-dev.html#actions-personnalis-es).
 
 <a name="DefaultActivation"></a>
 ### [Action par défaut (37:38)](https://developer.apple.com/videos/play/wwdc2017/215/?time=2258)

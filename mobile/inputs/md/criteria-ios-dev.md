@@ -1172,7 +1172,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 ### Lien
 - [`UIAccessibilityTraitAdjustable`](https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable)
 
-## Actions
+## Actions personnalisées
 ### Description
 Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.
 </br>Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensemble d'actions comme le montre le schéma suivant :
@@ -1274,7 +1274,7 @@ class ViewController: UIViewController {
 - [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
 - [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
 
-## FOCUS
+## Focus d'un élément
 ### Description
 Le protocole informel **UIAccessibilityFocus** fournit des éléments de programmation efficaces de façon à pouvoir être informé d'une sélection passé, active ou à venir d'un élément accessible :
 - **accessibilityElementDidBecomeFocused** : méthode appelée dès que l'élément accessible est sélectionné.

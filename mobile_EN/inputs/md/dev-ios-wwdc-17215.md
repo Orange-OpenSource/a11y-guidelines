@@ -87,6 +87,7 @@ A new accessibility **typed container** is available in **iOS 11**.
 **Many different actions may be attributed** to an element thanks to a bunch of `accessibilityCustomAction`.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
 </br>As soon as this element is selected, a **vertical swipe with one finger** will be proposing the choices of possible actions.
+</br>The programming implementation of this feature is detailed in the [development part](./dev-ios.html#custom-actions).
 
 <a name="DefaultActivation"></a>
 ### [Default activation (37:38)](https://developer.apple.com/videos/play/wwdc2017/215/?time=2258)

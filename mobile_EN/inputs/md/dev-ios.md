@@ -1154,7 +1154,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 ### Link
 - [`UIAccessibilityTraitAdjustable`](https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable)
 
-## Actions
+## Custom actions
 ### Description
 Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
 </br>A convincing example is the iOS native mail that may suggest some actions as follows :
@@ -1256,7 +1256,7 @@ class ViewController: UIViewController {
 - [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
 - [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
 
-## Focus
+## Focus an element
 ### Description
 The **UIAccessibilityFocus** informal protocol provides programming elements to be informed of the accessible element focus :
 - **accessibilityElementDidBecomeFocused** : called when the accessible element is focused.
