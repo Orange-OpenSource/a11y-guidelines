@@ -1,5 +1,23 @@
 app = {};
 
+/* Google Analaytic */
+dataLayer = [{
+  'site_name': 'accessibility-guidelines',                
+  'phase': 'dev'  // dev, qa, prod
+}];
+
+/* Cookie banner */
+tarteaucitron.init({
+  "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
+  "highPrivacy": false, /* désactiver le consentement implicite (en naviguant) ? */
+  "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+  "adblocker": false, /* Afficher un message si un adblocker est détecté */
+  "showAlertSmall": false, /* afficher le petit bandeau en bas à droite ? */
+  "cookieslist": true, /* Afficher la liste des cookies installés ? */
+  "removeCredit": false, /* supprimer le lien vers la source ? */
+  "handleBrowserDNTRequest": false /* Deny everything if DNT is on */            
+});
+
 $(document).ready( function () {
   var title = " - " + $("head title").text();
   if ($(".page-title:first").length > 0) {
