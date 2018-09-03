@@ -33,8 +33,7 @@ $(document).ready(function() {
       "handleBrowserDNTRequest": false /* Deny everything if DNT is on */            
     });
 
-    //tarteaucitron.user.googletagmanagerId = 'GTM-N3M5VXS';
-    tarteaucitron.user.googletagmanagerId = 'GTM-XXXX';
+    tarteaucitron.user.googletagmanagerId = 'GTM-N3M5VXS';
     (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
   });
 
