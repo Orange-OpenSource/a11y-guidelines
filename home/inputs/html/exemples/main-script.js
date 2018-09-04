@@ -3,9 +3,13 @@
 * Copyright (C) 2016  Orange SA
 * See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
 /* Google Analaytic */
+
+// App config insert here at build (from /config files)
+app = {};
+
 dataLayer = [{
     'site_name': 'accessibility-guidelines',                
-    'phase': 'dev'  // dev, qa, prod
+    'phase': app.config.phase  // dev, qa, prod
 }];
 
 $(document).ready(function() {
@@ -33,7 +37,7 @@ $(document).ready(function() {
       "handleBrowserDNTRequest": false /* Deny everything if DNT is on */            
     });
 
-    tarteaucitron.user.googletagmanagerId = 'GTM-N3M5VXS';
+    tarteaucitron.user.googletagmanagerId = app.config.googletagmanagerId;
     (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
   });
 
