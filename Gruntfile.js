@@ -33,6 +33,38 @@ module.exports = function(grunt) {
           }         
         },
       
+        insert: {
+          options: {},
+           dev: {
+             files: [
+              {
+               src: "config/config-dev.js",
+               dest: "output/js/reco.js",
+               match: "app = {};"
+              },
+              {
+               src: "config/config-dev.js",
+               dest: "output/exemples/main-script.js",
+               match: "app = {};"
+              }
+            ]
+           },
+          prod: {
+            files: [
+              {
+               src: "config/config-prod.js",
+               dest: "output/js/reco.js",
+               match: "app = {};"
+              },
+              {
+               src: "config/config-prod.js",
+               dest: "output/exemples/main-script.js",
+               match: "app = {};"
+              }
+            ]
+          },
+        },
+
         bfdocs: {
           home: {
             options: {
@@ -186,6 +218,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-beautiful-docs');    
     grunt.loadNpmTasks('grunt-banner');
+    grunt.loadNpmTasks('grunt-banner');
+    grunt.loadNpmTasks('grunt-insert');
             
     grunt.registerTask('build-home', ['clean:home', 'createMarkdown:home', 'bfdocs:home', 'dist:home']);    
     grunt.registerTask('build-home_EN', ['clean:home_EN', 'createMarkdown:home_EN', 'bfdocs:home_EN', 'dist:home_EN']);
@@ -199,8 +233,13 @@ module.exports = function(grunt) {
     grunt.registerTask('build-others', ['clean:others', 'createMarkdown:others', 'bfdocs:others', 'dist:others']);    
     grunt.registerTask('build-others_EN', ['clean:others_EN', 'createMarkdown:others_EN', 'bfdocs:others_EN', 'dist:others_EN']);    
 
-    // Default task
-    grunt.registerTask('default', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-others', 'build-others_EN', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
+    grunt.registerTask('build-all', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-others', 'build-others_EN', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
+
+    // Build for dev (default task)
+    grunt.registerTask('default', ['build-all', 'insert:dev']);
+
+    // Build for production
+    grunt.registerTask('prod', ['build-all', 'insert:prod']);
         
     grunt.registerTask('home', ['build-home', 'build-home_EN', 'watch:home']);
     grunt.registerTask('web', ['build-web', 'build-web_EN', 'watch:web']);

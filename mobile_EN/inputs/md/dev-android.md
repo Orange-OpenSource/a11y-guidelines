@@ -254,7 +254,7 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 
 `WebView`s are a special thing on Android. First, if you want a page to be accessible, its <abbr>HTML</abbr> content must be accessible as well, it must follow the international standards: the <abbr>WCAG</abbr>2. To know the requirements and learn techniques for developing an accessible Web, please visit the following section in our site: [accessibility recommendations for the Web](../web/index.html).
 
-Second, on Android you must ensure that the `WebView` allows JavaScript `mWebView.getSettings.setJavaScriptEnabled(true);`
+Second, on Android you must ensure that the `WebView` allows JavaScript `mWebView.getSettings().setJavaScriptEnabled(true);`
 In these conditions, the page displayed through the `WebView` properly responds to the Accessibility <abbr>API</abbr>. 
 
 
