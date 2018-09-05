@@ -6,7 +6,7 @@
 
 For Orange internal accessibility requirements, we have chosen to rely on the [Web Content Accessibility Guidelines v2](https://www.w3.org/TR/WCAG20/) (<abbr>WCAG</abbr> 2). Those guidelines are international guidelines published by the World Wide Web Consortium (<abbr>W3C</abbr>) Web Accessibility Initiative (<abbr>WAI</abbr>) task force, which comply with the <abbr>ISO</abbr> standard 40500:2012.
 
-All <abbr>HTML</abbr> pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.0, without blocking point** for the user after testing the main features of the site or application.
+All <abbr>HTML</abbr> pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without blocking point** for the user after testing the main features of the site or application.
 
 For technical solutions, you should consult [essential criteria](./fondamentaux.html) and [examples](./exemples.html) sections. You can also refer to an external resource available at [Accede-Web references](http://wiki.accede-web.com/en/home).
 
