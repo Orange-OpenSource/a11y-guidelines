@@ -1,6 +1,13 @@
 // App config insert here at build (from /config files)
 app = {};
 
+if (!app.config) {
+  app.config = {
+    "phase":"",
+    "googletagmanagerId":""
+  }
+}
+
 /* Google Analaytic */
 dataLayer = [{
   'site_name': 'accessibility-guidelines',                
@@ -164,7 +171,7 @@ function setBreadcrumb(param) {
     if (element.url) {
             $(".breadcrumb").append($("<li class=\"breadcrumb-item\"><a href='" + element.url + "'>" + element.label + "</a></li>"));
         } else {
-            $(".breadcrumb").append($("<li class=\"breadcrumb-item\">" + element.label + "</li>"));
+            $(".breadcrumb").append($("<li aria-current=\"page\" class=\"breadcrumb-item\">" + element.label + "</li>"));
         }
     });
     $(".breadcrumb li:last").addClass("active");
