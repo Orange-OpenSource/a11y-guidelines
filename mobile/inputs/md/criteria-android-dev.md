@@ -94,7 +94,7 @@ Attention: nous parlons ici de vocalisation <span lang="en">TalkBack</span> et n
 **Exemple&nbsp;: **
 
 Il est fréquent de tester la version d’Android avant de déclencher une vocalisation <span lang="en">TalkBack</span>. En effet, `announceForAccessibility` ne fonctionne que depuis l’arrivée d’Android <i lang="en">Jelly Bean</i>.
-<pre><code>if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+<pre><code class="java">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
 	getView().announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
 }</code></pre>
 
@@ -151,7 +151,7 @@ L’ordre du focus de la synthèse vocale par défaut prend en compte plusieurs 
 
 **Exemple&nbsp;: ** 
 
-<pre><code>volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+<pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre>
@@ -216,7 +216,7 @@ Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.
 **Exemple&nbsp;: **
 
 Dans cet exemple, on intercepte les événements d’accessibilité. En fonction de leur type (un texte a changé dans la vue ou <span lang="en">TalkBack</span> a mis le focus sur le composant), nous construisons une vocalisation à destination de <span lang="en">TalkBack</span>.
-<pre><code>@Override
+<pre><code class="java">@Override
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 
