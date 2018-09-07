@@ -21,7 +21,7 @@
     "grunt-contrib-copy": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test \" && exit 0"
   },
   "author": "Orange SA",
   "license": "CC-BY-SA-3.0"
