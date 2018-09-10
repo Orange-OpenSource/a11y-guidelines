@@ -1325,6 +1325,120 @@ extension UIView {
 ### Link
 - [`UIAccessibilityFocus`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus)
 
+## Custom rotor
+### Description
+Since iOS10, adding a new rotor option is possible thanks to the **UIAccessibilityCustomRotor** whose creation is based on 2 elements :
+- **UIAccessibilityCustomRotorSearchPredicate** : defines the logic according to the flick type on the screen.
+- **UIAccessibilityCustomRotorItemResult** : ensued element from the logic above.
+
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
+</br></br>To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
+@property (weak, nonatomic) IBOutlet UILabel * upLabel;
+@property (weak, nonatomic) IBOutlet UILabel * downLabel;
+
+@end
+
+
+@implementation ViewController
+
+static NSInteger flicksUp;
+static NSInteger flicksDown;
+
+
++ (void)initialize {
+    
+    flicksUp = 0;
+    flicksDown = 0;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
+    self.accessibilityCustomRotors = @[rotor];
+}
+
+
+- (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
+    
+    return [[UIAccessibilityCustomRotor alloc]initWithName:name
+                                           itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
+                                               
+                                               if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
+                                                   
+                                                   flicksDown += 1;
+                                                   self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
+                                                   
+                                               } else {
+                                                   
+                                                   flicksUp += 1;
+                                                   self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
+                                               }
+                                               
+                                               return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
+                                                                                                              targetRange:nil];
+                                           }];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var rotorTitle: UILabel!
+    
+    static var flicksUp = 0
+    @IBOutlet weak var upLabel: UILabel!
+    
+    static var flicksDown = 0
+    @IBOutlet weak var downLabel: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let rotor = buildMyRotor("Rotor info")
+        self.accessibilityCustomRotors = [rotor]
+    }
+    
+    
+    func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+        
+        return  UIAccessibilityCustomRotor.init(name: name,
+                                                itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
+                                                    
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+                                                        
+                                                        ViewController.flicksDown += 1
+                                                        self.downLabel.text = String(ViewController.flicksDown)
+                                                        
+                                                    } else {
+                                                        
+                                                        ViewController.flicksUp += 1
+                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                    }
+                                                    
+                                                    return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
+                                                                                                     targetRange: nil)
+        })
+    }
+}
+</code></pre>
+
+</br>The code above gives rise to the following illustrated steps :
+</br><img alt="changed display with a rotor option" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
+</br>The use of a custom rotor is definitely not a natural part of a mobile application, that's why its **functioning** and **purpose** must be **fully explained** to assist the user experience.
+</br></br>The main difference between a rotor option and a custom action or an adjustable element relies on the fact that it can be activated whatever the selected element.
+</br>However, if this selected element is adjustable or holds any custom actions, **its actions will prevail over those of the rotor**.
+</br></br>Such a feature must be implemented with **caution** and according to **specific needs** whose only purpose should be to **improve and facilitate the user experience**.
+### Links
+- [`UIAccessibilityCustomRotor`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor)
+- [`UIAccessibilityCustomRotorItemResult`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult)
+- [`UIAccessibilityCustomRotorSearchPredicate`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate)
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

@@ -1342,6 +1342,120 @@ extension UIView {
 ### Lien
 - [`UIAccessibilityFocus`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus)
 
+## Rotor personnalisé
+### Description
+Depuis iOS10, il est possible d'ajouter une action spécifique au rotor de <span lang="en">VoiceOver</span> en s'appuyant sur l'objet **UIAccessibilityCustomRotor** dont la construction prend en compte 2 éléments principaux en entrée :
+- **UIAccessibilityCustomRotorSearchPredicate** : définit la logique à mettre en oeuvre selon le type de balayage effectué sur l'écran.
+- **UIAccessibilityCustomRotorItemResult** : correspond à l'élément issu de la logique précedente.
+
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
+</br></br>Le code fourni ci-dessous permet de compter et d'afficher le nombre de balayages haut et bas *(finalité inutile avec le rotor mais qui permet de mettre en avant sa création programmatique)*.
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
+@property (weak, nonatomic) IBOutlet UILabel * upLabel;
+@property (weak, nonatomic) IBOutlet UILabel * downLabel;
+
+@end
+
+
+@implementation ViewController
+
+static NSInteger flicksUp;
+static NSInteger flicksDown;
+
+
++ (void)initialize {
+    
+    flicksUp = 0;
+    flicksDown = 0;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
+    self.accessibilityCustomRotors = @[rotor];
+}
+
+
+- (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
+    
+    return [[UIAccessibilityCustomRotor alloc]initWithName:name
+                                           itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
+                                               
+                                               if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
+                                                   
+                                                   flicksDown += 1;
+                                                   self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
+                                                   
+                                               } else {
+                                                   
+                                                   flicksUp += 1;
+                                                   self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
+                                               }
+                                               
+                                               return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
+                                                                                                              targetRange:nil];
+                                           }];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var rotorTitle: UILabel!
+    
+    static var flicksUp = 0
+    @IBOutlet weak var upLabel: UILabel!
+    
+    static var flicksDown = 0
+    @IBOutlet weak var downLabel: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let rotor = buildMyRotor("Rotor info")
+        self.accessibilityCustomRotors = [rotor]
+    }
+    
+    
+    func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+        
+        return  UIAccessibilityCustomRotor.init(name: name,
+                                                itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
+                                                    
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+                                                        
+                                                        ViewController.flicksDown += 1
+                                                        self.downLabel.text = String(ViewController.flicksDown)
+                                                        
+                                                    } else {
+                                                        
+                                                        ViewController.flicksUp += 1
+                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                    }
+                                                    
+                                                    return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
+                                                                                                     targetRange: nil)
+        })
+    }
+}
+</code></pre>
+
+</br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant :
+</br><img alt="affichage modifié avec une action du rotor" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
+</br>L'utilisation d'un rotor personnalisé n'est pas du tout naturelle au sein d'une application, c'est pourquoi il est primordial de **bien annoncer son fonctionnement et sa finalité** pour faciliter au maximum l'expérience utilisateur.
+</br></br>La majeure différence du rotor avec les actions personnalisées ou encore les valeurs continûment ajustables réside dans sa possible utilisation quel que soit l'élément sélectionné sur l'écran.
+</br>Cependant, si l'élément sélectionné est `ajustable` ou contient des actions personnalisées, **ses actions prévaudront sur celles du rotor**.
+</br></br>L'implémentation d'une telle fonctionnalité au sein d'une application est donc à envisager selon des **besoins bien spécifiques** dont le seul objectif doit être de **faciliter l'expérience utilisateur**.
+### Liens
+- [`UIAccessibilityCustomRotor`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor)
+- [`UIAccessibilityCustomRotorItemResult`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult)
+- [`UIAccessibilityCustomRotorSearchPredicate`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate)
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
