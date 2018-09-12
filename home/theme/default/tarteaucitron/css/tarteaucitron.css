@@ -449,6 +449,10 @@ h2#tarteaucitronCookiesNumberBis {
     font-weight: 700;
 }
 
+#tarteaucitronPrivacyUrl {
+    display: none;
+}
+
 #tarteaucitronAlertBig #tarteaucitronCloseAlert, #tarteaucitronAlertBig #tarteaucitronPersonalize, #tarteaucitronAlertBig #tarteaucitronPrivacyUrl {
     background: #f16e00;
     font-weight: bold;
