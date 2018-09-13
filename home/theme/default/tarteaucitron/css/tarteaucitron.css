@@ -453,7 +453,7 @@ h2#tarteaucitronCookiesNumberBis {
     display: none;
 }
 
-#tarteaucitronAlertBig #tarteaucitronCloseAlert, #tarteaucitronAlertBig #tarteaucitronPersonalize, #tarteaucitronAlertBig #tarteaucitronPrivacyUrl {
+#tarteaucitronAlertBig #tarteaucitronCloseAlert, #tarteaucitronAlertBig #tarteaucitronPersonalize {
     background: #f16e00;
     font-weight: bold;
     color: #fff;
