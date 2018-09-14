@@ -105,7 +105,7 @@ S'assurer, qu'une alternative aux contenus non-textuels soit proposée à l'util
 
 - [Fournir un équivalent textuel pour les images et les cadres](equivalent-textuel.html)
 - [Rendre accessible les pistes audio ou vidéo](audio-video.html)
-- [Éviter les captcha](captcha.html)
+- [Éviter les captcha](crit-captcha.html)
 
 ## Couleurs et contrastes
 

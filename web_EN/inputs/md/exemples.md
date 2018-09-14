@@ -1,6 +1,6 @@
-# Examples      
+# Web accessibility techniques
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Examples"}]);
+    setBreadcrumb([{"label":"Techniques"}]);
 });</script>
 
 <style>
@@ -9,6 +9,8 @@
 </style>
 
 <dl>
+    <dt><a href="captcha.html">CAPTCHA Accessibility</a></dt>
+    <dd>CAPTCHA and accessibility</dd>
     <dt><a href="exemples/masquage/index.html">Accessible hiding</a></dt>
     <dd>Elements not visible on the screen but accessible to assistive technology.</dd>
     <dt><a href="exemples/formulaire/index.html">Handling forms</a></dt>

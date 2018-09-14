@@ -12,7 +12,7 @@
         "output/markdown/incontournables/developpeurs/annuler-gestuelle.md",
         "output/markdown/incontournables/developpeurs/audio-video.md",
         "output/markdown/incontournables/developpeurs/autoriser-zoom.md",
-        "output/markdown/incontournables/developpeurs/captcha.md",
+        "output/markdown/incontournables/developpeurs/crit-captcha.md",
         "output/markdown/incontournables/developpeurs/changement-langue.md",
         "output/markdown/incontournables/developpeurs/coherence-navigation.md",
         "output/markdown/incontournables/developpeurs/contrastes.md",
@@ -50,8 +50,7 @@
         "output/markdown/methodes-outils-lecteur-ecran.md",
         "output/markdown/methodes-outils-extensions.md",
         "output/markdown/methodes-outils-zoom.md",
-        "output/markdown/exemples.md",                                
-        "output/markdown/contact.md",
+        "output/markdown/exemples.md",
         "output/markdown/about.md"        
     ],
     "maxTocLevel":"1"

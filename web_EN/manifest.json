@@ -16,8 +16,7 @@
         "output/markdown/methodes-outils-lecteur-ecran.md",
         "output/markdown/methodes-outils-extensions.md",
         "output/markdown/methodes-outils-zoom.md",
-        "output/markdown/exemples.md",                                
-        "output/markdown/contact.md",
+        "output/markdown/exemples.md",        
         "output/markdown/about.md"
     ],
     "maxTocLevel":"1"

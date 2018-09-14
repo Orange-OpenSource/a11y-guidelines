@@ -1,6 +1,6 @@
-# Liste des exemples      
+# Techniques pour la mise en place de l'accessibilité
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Exemples"}]);
+    setBreadcrumb([{"label":"Techniques"}]);
 });</script>
 
 <style>
@@ -9,8 +9,10 @@
 </style>
 
 <dl>
+    <dt><a href="captcha.html">Les CAPTCHAs</a></dt>
+    <dd>Les CAPTCHAs et l'accessibilité</dd>
     <dt><a href="exemples/masquage/index.html">Masquage accessible</a></dt>
-    <dd>Des éléments non-visibles à l'écran mais accessibles aux outils d'assistances.</dd>
+    <dd>Créer des éléments non-visibles à l'écran mais accessibles aux outils d'assistances.</dd>
     <dt><a href="exemples/formulaire/index.html">Gestion des formulaires</a><dt>
     <dd>Exemple de formulaire accessible.</dd>
     <dt><a href="exemples/zoom/index.html">Gestion du zoom, agrandissement de la taille du texte</a><dt>
