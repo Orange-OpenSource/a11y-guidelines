@@ -33,7 +33,7 @@ For those who want to check the accessibility of their websites more or less aut
 ### Open source Orange tools
 Presentation of the Boosted library and the Comfort+ service.
 
-### Examples
+### Techniques
 Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible but frequently used. Everything is explained, just go ahead!
 
 These examples use the [Boosted](http://boosted.orange.com/) library. It is based on [Bootstrap](http://getbootstrap.com/) and lets you create and quickly test the accessibility and responsiveness of a website. This library is branded with the Orange colours.
