@@ -264,7 +264,7 @@ L’utilisateur doit rester maître du contenu à tout instant. C’est particul
 
 **À vérifier&nbsp;: **
 
-- Les contenus interactifs peuvent être maîtrisés par l’utilisateur (pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)
+- Les contenus interactifs peuvent être maîtrisés par l’utilisateur (bouton accessible pour sortir du mode plein-écran par exemple).
 
 **Objectif utilisateur&nbsp;: **
 

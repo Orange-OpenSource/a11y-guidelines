@@ -263,11 +263,11 @@ In the example below, the custom alert dialog has a ghost element. When VoiceOve
 **Description: **
 
 On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
-The user must control the content at any time. This is especially true with interactive content. So avoid video player launching directly in full screen mode, or videos starting automatically without user action, or a carousel scrolling automatically etc.
+The user must control the content at any time. This is especially true with interactive content. So avoid video player launching directly in full screen mode or videos starting automatically without user action or a carousel scrolling automatically for instance.
 
 **Checklist: **
 
-- All interactive content must be controlled by the user (pausing a carousel, adding an accessible button to exit full-screen mode etc.).
+- All interactive content must be controlled by the user (adding an accessible button to exit full-screen mode for instance).
 
 **Users’ goal: **
 

@@ -177,7 +177,7 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_last_elt.png" />
 
 <a name="CurtainScreen"></a>
-</br>Mouvement : **triple tap avec 2 doigts** n'importe où sur l'écran.
+</br>Mouvement : **triple tap avec 3 doigts** n'importe où sur l'écran.
 </br>Si la fonctionnalité `zoom` est activée dans les réglages, il faudra réaliser un **quadruple tap** pour obtenir le résultat souhaité.
 </br>Cette fonctionnalité permet de continuer la navigation avec VoiceOver en ayant un écran éteint favorisant ainsi à la fois la confidentialité et la longévité de la batterie.
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_curtain_screen.png" />

@@ -175,7 +175,7 @@ Hereunder are unusual features that may be useful to a VoiceOver user on any dev
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_last_elt.png" />
 
 <a name="CurtainScreen"></a>
-</br>Gesture : **triple-tap with 2 fingers** anywhere on the screen.
+</br>Gesture : **triple-tap with 3 fingers** anywhere on the screen.
 </br>If the `zoom` functionality is activated in the settings, a **quadruple-tap** will be mandatory to obtain the same result.
 </br>It will allow a VoiceOver using with a dark screen promoting the confidentiality and the longevity of the battery at the same time.
 </br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_curtain_screen.png" />
