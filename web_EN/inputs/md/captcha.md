@@ -1,6 +1,9 @@
 # CAPTCHA Accessibility
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"CAPTCHA Accessibility"}]);
+    setBreadcrumb([
+        {"label":"Technical articles", "url":"techniques.html"},
+        {"label":"CAPTCHA Accessibility"}
+    ]);
 });</script>
 
 ## Introduction

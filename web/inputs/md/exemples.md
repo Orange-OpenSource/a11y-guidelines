@@ -1,4 +1,4 @@
-# Techniques pour la mise en place de l'accessibilité
+# Exemples
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Techniques"}]);
 });</script>
@@ -9,8 +9,6 @@
 </style>
 
 <dl>
-    <dt><a href="captcha.html">Les CAPTCHAs</a></dt>
-    <dd>Les CAPTCHAs et l'accessibilité</dd>
     <dt><a href="exemples/masquage/index.html">Masquage accessible</a></dt>
     <dd>Créer des éléments non-visibles à l'écran mais accessibles aux outils d'assistances.</dd>
     <dt><a href="exemples/formulaire/index.html">Gestion des formulaires</a><dt>
@@ -35,8 +33,6 @@
     <dd>Exemple d'étiquettes accessibles (partie 2).</dd>
     <dt><a href="exemples/iframes-techniques/index.html">Les <span lang="en">iframes</span> «&nbsp;techniques&nbsp;»</a><dt>
     <dd>Comment masquer les <span lang="en">iframes</span> aux outils d'assistance.</dd>
-    <dt><a href="exemples/html5aria/index.html">HTML 5 et ARIA</a></dt>
-    <dd>Introduction HTML 5 et ARIA.</dd>
     <dt><a href="label-ledby-describedby.html">Les attributs ARIA qui peuvent vous sauver</a><dt>
     <dd>Quelques attributs ARIA à connaître.</dd>
     <dt><a href="exemples/listbox/index.html">Les listes <abbr>ARIA</abbr> (listbox) 1/3</a><dt>

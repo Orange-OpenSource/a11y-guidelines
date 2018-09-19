@@ -2,7 +2,7 @@
   
 <script>$(document).ready(function () {
     setBreadcrumb([
-            {"label":"Techniques", "url":"exemples.html"},
+            {"label":"Articles techniques", "url":"techniques.html"},
             {"label":"CAPTCHA et accessibilité"}
         ]);
 });</script>

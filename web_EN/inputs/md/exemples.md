@@ -1,4 +1,4 @@
-# Web accessibility techniques
+# Examples
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Techniques"}]);
 });</script>
@@ -9,8 +9,6 @@
 </style>
 
 <dl>
-    <dt><a href="captcha.html">CAPTCHA Accessibility</a></dt>
-    <dd>CAPTCHA and accessibility</dd>
     <dt><a href="exemples/masquage/index.html">Accessible hiding</a></dt>
     <dd>Elements not visible on the screen but accessible to assistive technology.</dd>
     <dt><a href="exemples/formulaire/index.html">Handling forms</a></dt>
@@ -29,8 +27,6 @@
     <dd>Sample code to make accessible tags (part 2) examples.</dd>
     <dt><a href="exemples/iframes-techniques/index.html">Hidding technical <code>iframes</code></a></dt>
     <dd>Hidding iframes to assistive technology.</dd>
-    <dt><a href="exemples/html5aria/index.html">HTML 5 and ARIA</a></dt>
-    <dd>HTML 5 and ARIA introduction</dd>
     <dt><a href="label-ledby-describedby.html"><abbr>ARIA</abbr> attributes that can save you</a></dt>
     <dd>Some ARIA attributes to know.</dd>
     <dt><a href="exemples/listbox/index.html"><abbr>ARIA</abbr> lists (listbox) 1/3</a></dt>
