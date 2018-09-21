@@ -1,6 +1,6 @@
-# Orange web accessibility requirements
+# Requirements and resources
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"All requirements"}]);
+    setBreadcrumb([{"label":"Requirements and resources"}]);
 });</script>
 ## WCAG
 

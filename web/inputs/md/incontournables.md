@@ -1,7 +1,7 @@
-# Liste des critères incontournables
+# Liste des critères WCAG par thème
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Liste des critères incontournables"}]);
+    setBreadcrumb([{"label":"Critères WCAG par thème"}]);
 });</script>
 
 <span data-menuitem="incontournables"></span>

@@ -1,6 +1,6 @@
-# Référentiels complets d’accessibilité web
+# Référentiels et ressources
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Référentiels complets"}]);
+    setBreadcrumb([{"label":"Référentiels et ressources"}]);
 });</script>
 ## Le référentiel <abbr>WCAG</abbr>
 
