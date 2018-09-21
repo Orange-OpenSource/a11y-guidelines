@@ -446,63 +446,144 @@ Grouping elements may be used to vocalize the bundle once and to associate a ded
 </br></br>Another grouping elements case could use the **shouldGroupAccessibilityChildren** attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
 </br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
 ### Example
-We wish to obtain a 'label' and a 'switch control' as one unique block.
+We wish to obtain a 'label' and a 'switch control' as one unique block behaving like a `switch control`.
 </br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
+</br>Create your wrapper as an accessible element :
 <pre><code class="objective-c">
+#import "MyViewController.h"
+#import "MyWrapView.h"
+
+@interface MyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation MyViewController
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    //View that will encapsulate the 'label' and the 'Switch Control'.
-    CGRect wrapFrame = CGRectUnion(myLabel.frame, mySwitchControl.frame);
-    wrapView = [[UIView alloc]initWithFrame: wrapFrame];
+    //Create the view that will encapsulate the 'label' and the 'Switch Control'.
+    MyWrapView * wrap = [[MyWrapView alloc] initWith:_myLabel
+                                                 and:_mySwitch];
     
-    wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = myLabel.accessibilityLabel;
-    wrapView.accessibilityValue = mySwitchControl.accessibilityValue;
-    
-    
-    //Gesture for action on the previous created view.
-    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                  action:@selector(changeValue:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [wrapView addGestureRecognizer:tapGesture];
-    
-    [self.view addSubview:wrapView];
+    [self.view addSubview:wrap];
 }
-
-- (void)changeValue:(UITapGestureRecognizer *)sender {
-    mySwitchControl.on = ![mySwitchControl.accessibilityValue boolValue];
-}
+@end
 </code></pre><pre><code class="swift">
+    class MyViewController: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        //View that will encapsulate the 'label' and the 'Switch Control'.
-        let wrapFrame = myLabel.frame.union(mySwitchControl.frame)
-        let wrapView = UIView.init(frame: wrapFrame)
+        //Create the view that will encapsulate the 'label' and the 'Switch Control'.
+        let wrap = MyWrapView.init(with: myLabel,
+                                   and: mySwitch)
         
-        wrapView.isAccessibilityElement = true
-        wrapView.accessibilityLabel = myLabel.accessibilityLabel
-        wrapView.accessibilityValue = mySwitchControl.accessibilityValue
-        
-        
-        //Gesture for action on the previous created view.
-        let tapGesture = UITapGestureRecognizer.init(target: self,
-                                                     action: #selector(changeValue(sender:)))
-        tapGesture.numberOfTapsRequired = 1;
-        wrapView.addGestureRecognizer(tapGesture)
-        
-        self.view.addSubview(wrapView)
+        self.view.addSubview(wrap)
+    }
+}
+</code></pre>
+
+</br>... and implement the wrapper class to define accurately the
+<a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios-wwdc-17215.html#DefaultActivation">action when a double tap occurs</a> :
+<pre><code class="objective-c">
+@implementation MyWrapView
+
+//Indexes for the array containing all the wrapped elements.
+int indexLabel = 0;
+int indexSwitch = 1;
+
+
+- (instancetype)initWith:(UILabel *)label and:(UISwitch *)aSwitch {
+    
+    CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
+    MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
+    
+    wrapView.accessibilityElements = @[label, aSwitch];
+    
+    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+    
+    wrapView.isAccessibilityElement = YES;
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                                   @"the switch control is",
+                                   switchValue.description];
+    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+    
+    return wrapView;
+}
+
+
+//Function called by the system when a double tap occurs on the selected wrapper.
+- (BOOL)accessibilityActivate {
+    
+    UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
+    [theSwitch setOn:!(theSwitch.isOn)];
+    
+    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+    
+    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                               @"the switch control is",
+                               switchValue.description];
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+    class MyWrapView: UIView {
+    
+    //Indexes for the array containing all the wrapped elements.
+    let indexLabel = 0
+    let indexSwitch = 1
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
-    @objc func changeValue(sender: UITapGestureRecognizer) {
-        
-        let switchBoolValue = NSString(string:mySwitchControl.accessibilityValue!).boolValue
-        mySwitchControl.setOn(!switchBoolValue,
-                              animated: false)
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
+    
+    
+    convenience init(with label: UILabel,and aSwitch: UISwitch) {
+        
+        let viewFrame = label.frame.union(aSwitch.frame)
+        self.init(frame: viewFrame)
+        
+        self.accessibilityElements = [label, aSwitch]
+        
+        let switchValue = (aSwitch.isOn) ? "on" : "off"
+        
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "the switch control is" + switchValue.description
+        self.accessibilityHint = "tap twice to change the switch control status."
+    }
+    
+    
+    //Function called by the system when a double tap occurs on the selected wrapper.
+    override func accessibilityActivate() -> Bool {
+        
+        let theSwitch = self.accessibilityElements?[indexSwitch] as? UISwitch
+        theSwitch?.setOn(!((theSwitch?.isOn)!), animated: false)
+        
+        let switchValue = (theSwitch?.isOn)! ? "on" : "off"
+        
+        self.accessibilityLabel = "the switch control is" + switchValue.description
+        
+        return true
+    }
+}
 </code></pre>
-### Link
+### Links
+- [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
 
 ## Accessibility events
