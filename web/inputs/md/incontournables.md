@@ -2,6 +2,29 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Critères WCAG par thème"}]);
+    addSubMenu([
+        {
+            "label":"Concepteurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
+            "onExpand": function () {
+                $("#incontournables-concepteurs-tab").tab("show");
+            }
+        },
+        {
+            "label":"Développeurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
+            "onExpand": function () {
+                $("#incontournables-developpeurs-tab").tab("show");
+            }
+        }
+    ]);
+    $("#incontournables-concepteurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-conception"));
+    })
+    $("#incontournables-developpeurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-development"));
+    })
+    if (window.location.hash == "#dev") {
+        $("#incontournables-developpeurs-tab").trigger("click");
+    }
 });</script>
 
 <span data-menuitem="incontournables"></span>
@@ -88,82 +111,90 @@ S'assurer que l'utilisateur garde le contrôle sur les interactions, en particul
 
 </div>
 <div class="tab-pane" id="incontournables-developpeurs" role="tabpanel" aria-labelledby="incontournables-developpeurs-tab">
-
-## Contenu textuel
+<h2 id="dev-contenu-textuel">Contenu textuel</h2>
 
 S'assurer que les contenus textuels soient structurés avec la sémantique appropriée
+<ul>
+    <li>[Donner un titre aux pages](inc-dev-titre-pages.html)</li>
+    <li>[Donner des titres aux rubriques](inc-dev-titre-rubriques.html)</li>
+    <li>[Respecter la sémantique HTML](inc-dev-semantique-html.html)</li>
+    <li>[Indiquer la langue principale et les changements de langue](inc-dev-changement-langue.html)</li>
+    <li>[Structurer les tableaux de données](inc-dev-tableaux.html)</li>
+</ul>
 
-- [Donner un titre aux pages](inc-dev-titre-pages.html)
-- [Donner des titres aux rubriques](inc-dev-titre-rubriques.html)
-- [Respecter la sémantique HTML](inc-dev-semantique-html.html)
-- [Indiquer la langue principale et les changements de langue](inc-dev-changement-langue.html)
-- [Structurer les tableaux de données](inc-dev-tableaux.html)
-
-## Contenu non-textuel
+<h2 id="dev-contenu-non-textuel">Contenu non-textuel</h2>
 
 S'assurer, qu'une alternative aux contenus non-textuels soit proposée à l'utilisateur
+<ul>
+    <li>[Fournir un équivalent textuel pour les images et les cadres](inc-dev-equivalent-textuel.html)</li>
+    <li>[Rendre accessible les pistes audio ou vidéo](inc-dev-audio-video.html)</li>
+    <li>[Éviter les captcha](inc-dev-crit-captcha.html)</li>
+</ul>
 
-- [Fournir un équivalent textuel pour les images et les cadres](inc-dev-equivalent-textuel.html)
-- [Rendre accessible les pistes audio ou vidéo](inc-dev-audio-video.html)
-- [Éviter les captcha](inc-dev-crit-captcha.html)
-
-## Couleurs et contrastes
+<h2 id="dev-couleurs-et-contrastes">Couleurs et contrastes</h2>
 
 S'assurer que les couleurs utilisés ne posent pas de problème à l'utilisateur
+<ul>
+    <li>[Assurer un contraste suffisant entre texte et fond](inc-dev-contrastes.html)</li>
+    <li>[Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information](inc-dev-information-sensorielle.html)</li>
+</ul>
 
-- [Assurer un contraste suffisant entre texte et fond](inc-dev-contrastes.html)
-- [Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information](inc-dev-information-sensorielle.html)
-
-## Navigation générale
+<h2 id="dev-navigation-generale">Navigation générale</h2>
 
 S'assurer que l'utilisateur navigue facilement dans une page et plus globalement dans un site
+<ul>
+    <li>[Rendre les intitulés des liens et des boutons compréhensibles hors contexte](inc-dev-intitules-hors-contexte.html)</li>
+    <li>[Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre](inc-dev-nouvelle-fenetre.html)</li>
+    <li>[Fournir des liens d’évitement](inc-dev-liens-evitement.html)</li>
+    <li>[S’assurer que l’utilisateur garde le contrôle lors des interactions](inc-dev-controle-interactions.html)</li>
+    <li>[Fournir des accès multiples et une localisation](inc-dev-acces-multiples.html)</li>
+    <li>[Permettre de connaître le résultat d'une interaction utilisateur à l'aide de messages contextuels](inc-dev-message-contextuel.html)</li>
+    <li>[Permettre le contrôle des animations](inc-dev-controle-animations.html)</li>
+</ul>
 
-- [Rendre les intitulés des liens et des boutons compréhensibles hors contexte](inc-dev-intitules-hors-contexte.html)
-- [Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre](inc-dev-nouvelle-fenetre.html)
-- [Fournir des liens d’évitement](inc-dev-liens-evitement.html)
-- [S’assurer que l’utilisateur garde le contrôle lors des interactions](inc-dev-controle-interactions.html)
-- [Fournir des accès multiples et une localisation](inc-dev-acces-multiples.html)
-- [Permettre de connaître le résultat d'une interaction utilisateur à l'aide de messages contextuels](inc-dev-message-contextuel.html)
-- [Permettre le contrôle des animations](inc-dev-controle-animations.html)
-
-## Navigation clavier
+<h2 id="dev-navigation-clavier">Navigation clavier</h2>
 
 S'assurer que l'utilisateur puisse naviguer uniquement à l'aide du clavier
+<ul>
+    <li>[Permettre d’utiliser les principales fonctionnalités de l’application au clavier](inc-dev-utilisation-clavier.html)</li>
+    <li>[Rendre le parcours du focus séquentiel et logique sans piège clavier](inc-dev-parcours-focus.html)</li>
+    <li>[Rendre visible le focus en toute circonstance](inc-dev-visibilite-focus.html)</li>
+</ul>
 
-- [Permettre d’utiliser les principales fonctionnalités de l’application au clavier](inc-dev-utilisation-clavier.html)
-- [Rendre le parcours du focus séquentiel et logique sans piège clavier](inc-dev-parcours-focus.html)
-- [Rendre visible le focus en toute circonstance](inc-dev-visibilite-focus.html)
-
-## Mise en page
+<h2 id="dev-mise-en-page">Mise en page</h2>
 
 S'assurer que la mise en page soit adaptée à l'utilisateur.
+<ul>
+    <li>[Utiliser des tailles relatives et faire du web adaptatif](inc-dev-adaptatif.html)</li>
+    <li>[Permettre d'aérer le texte](inc-dev-aerer-texte.html)</li>
+    <li>[Identifier et conserver la cohérence des regroupements et des différentes régions de la page](inc-dev-coherence-navigation.html)</li>
+    <li>[Définir des zones sensibles de taille suffisante](inc-dev-taille-zones.html)</li>
+</ul>
 
-- [Utiliser des tailles relatives et faire du web adaptatif](inc-dev-adaptatif.html)
-- [Permettre d'aérer le texte](inc-dev-aerer-texte.html)
-- [Identifier et conserver la cohérence des regroupements et des différentes régions de la page](inc-dev-coherence-navigation.html)
-- [Définir des zones sensibles de taille suffisante](inc-dev-taille-zones.html)
-
-## Formulaires
+<h2 id="dev-formulaires">Formulaires</h2>
 
 S'assurer que l'utilisateur puisse efficacement compléter les formulaires
+<ul>
+    <li>[Associer une étiquette pertinente à chaque champ de formulaire](inc-dev-etiquette-formulaires.html)</li>
+    <li>[Détecter, identifier les erreurs et suggérer des corrections](inc-dev-identifier-erreurs.html)</li>
+</ul>
 
-- [Associer une étiquette pertinente à chaque champ de formulaire](inc-dev-etiquette-formulaires.html)
-- [Détecter, identifier les erreurs et suggérer des corrections](inc-dev-identifier-erreurs.html)
-
-## Tactile et interactions
+<h2 id="dev-tactile-et-interactions">Tactile et interactions</h2>
 
 S'assurer que l'utilisateur garde le contrôle sur les interactions, en particulier tactiles
+<ul>
+    <li>[Autoriser l'utilisation du zoom](inc-dev-autoriser-zoom.html)</li>
+    <li>[Permettre d'annuler le déclenchement des interactions gestuelles](inc-dev-annuler-gestuelle.html)</li>
+    <li>[Proposer une alternative aux gestuelles complexes](inc-dev-alternative-gestures.html)</li>
+    <li>[Donner accès au contenu quelle que soit l'orientation de l'écran](inc-dev-orientation-ecran.html)</li>
+</ul>
 
-- [Autoriser l'utilisation du zoom](inc-dev-autoriser-zoom.html)
-- [Permettre d'annuler le déclenchement des interactions gestuelles](inc-dev-annuler-gestuelle.html)
-- [Proposer une alternative aux gestuelles complexes](inc-dev-alternative-gestures.html)
-- [Donner accès au contenu quelle que soit l'orientation de l'écran](inc-dev-orientation-ecran.html)
-
-## Aides techniques
+<h2 id="dev-aides-techniques">Aides techniques</h2>
 
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application
-
-- [S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran](inc-dev-lecteur-ecran.html)
+<ul>
+    <li>[S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran](inc-dev-lecteur-ecran.html)</li>
+</ul>
 
 </div>
 </div>

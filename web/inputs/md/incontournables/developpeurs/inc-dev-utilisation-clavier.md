@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Permettre d’utiliser les principales fonctionnalités de l’application au clavier"}
     ]);
 });</script>

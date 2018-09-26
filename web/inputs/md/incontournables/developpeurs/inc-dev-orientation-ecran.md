@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Donner accès au contenu quelle que soit l'orientation de l'écran"}
     ]);
 });</script>

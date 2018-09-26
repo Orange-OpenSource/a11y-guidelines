@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Identifier et conserver la cohérence des regroupements et des différentes régions de la page"}
     ]);
 });</script>

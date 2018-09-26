@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran"}
     ]);
 });</script>
