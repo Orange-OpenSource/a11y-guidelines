@@ -455,15 +455,22 @@ For tabular data:
 - Use the `table` element with `th`(for table headers), `td`,` tr` children elements.
 - Use the `scope` attribute with `row` / `col` values to associate header cells and data cells. For complex tables, use the` id` and `headers` attributes.
 - Use the `caption` tag, a `h1` to `h6` tag just before the table or use a text near the table via an `aria-labelledby` attribute in the `table` element to associate a title to the table (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
-- Add the `summary` attribute to the `table` tag to explain the structure in the case of a complex table. Keep in mind that this attribute is deprecated in <abbr>HTML5</abbr>, therefore it can be necessary to add the `summary` in the table title.
+- Add a summary to explain the structure of a complex table :
+ - **HTML5**: add the summary directly in the `caption`.
+ - **Previous version:** add the summary in a `summary` attribute.
+
 
 **Checklist: **
 
 - Reminder: Do not use tables for page layout purposes. 
-- The caption (`caption`) can be replaced by a section title (`hx`) located before the table. `summary`, meanwhile, is only needed for complex tables.
+- The caption (`caption`) can be replaced by a section title (`hx`) located before the table.
 - Prefer splitting a complex table into several simpler tables.
-- Add a summary (`summary` attribute) in the table to explain the structure in the case of a complex table.
 - The `tbody`, `tfoot` and `thead` tags have no influence on accessibility, hence, there is no obligation to use them.
+
+In the case of a complex table, a summary is present to explain the structure:
+- **HTML5**: the summary of the table is present in the legend (`caption`).
+- **HTML5 - alternative solution**: the summary is linked to the array via an `aria-describedby` attribute.
+- **Previous version:** the summary is present in a `summary` attribute of the table.
 
 **Users’ goal: **
 
