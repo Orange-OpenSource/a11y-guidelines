@@ -338,8 +338,6 @@ In the case of dynamically modified element or component not inheriting from `UI
 - **accessibilityFrame**&nbsp;: sets the area via a rectangle (`CGRect`).
 </br>Usually, for an element inheriting from `UIView`, this area is the «&nbsp;visible&nbsp;» part of the view.
 - **accessibilityPath**&nbsp;: equivalent to `AccessibilityFrame` but sets the area via Bezier curves.
-- **accessibilityActivationPoint**&nbsp;: the activation «&nbsp;point&nbsp;» of an element for accessibility tools.
-</br>By default, this point is at the centre of the element.
 ### Example
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
 <pre><code class="objective-c">

@@ -345,8 +345,6 @@ Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas d
 - **accessibilityFrame**&nbsp;: permet de définir cette zone via un rectangle (`CGRect`).
 </br>Par défaut pour un élément dérivant de `UIView`, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.
 - **accessibilityPath**&nbsp;: équivalent à `AccessibilityFrame` mais permet de définir la zone via des courbes de Bézier.
-- **accessibilityActivationPoint**&nbsp;: le «&nbsp;point&nbsp;» d’activation d’un élément pour les outils d’accessibilité.
-</br>Par défaut, ce point est au centre de l’élément.
 ### Exemple
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
 <pre><code class="objective-c">
