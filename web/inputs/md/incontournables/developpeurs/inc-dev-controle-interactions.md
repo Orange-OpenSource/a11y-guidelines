@@ -13,22 +13,25 @@
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
-Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  
+- Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  
+- Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.
+- Si des raccourcis clavier reposant sur une seule touche sont disponibles, il est nécessaire de prendre certaines mesures afin d'éviter d'éventuels conflits avec des outils d'assistance.
 
-Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action et doit être en mesure de rallonger un temps imparti pour effectuer une action.
+**À vérifier&nbsp;:**  
 
-**À vérifier&nbsp;:**
-Si des raccourcis clavier sont disponibles, s'assurer qu'il soit possible de désactiver, modifier ces raccourcis et qu'ils sont activables que lorsque le composant a le focus.
+Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes est vraie:
+- **désactivation**: le raccourci peut être désactivé.
+- **modification**: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).
+- **activation au focus**: le raccourci est actif uniquement à la prise du focus de l'élément concerné. 
 
 Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
-- Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche <kbd>échap.</kbd>).
+- Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d'écran).
 - Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.
 
 **Objectif utilisateur&nbsp;:**
-Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.
+donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.
 
-**Exemple&nbsp;:**    
-Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.
+**Exemple&nbsp;:** un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
