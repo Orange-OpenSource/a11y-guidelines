@@ -819,26 +819,29 @@ Allow the screen reader users to access the main features of the application, bu
 
 ## 25. Ensure the user keeps control during interactions
 
-**Target: **Everyone, especially those who are visually impaired, cognitive or with attention deficit.
+**Target: **Everyone, especially those who are visually impaired, cognitive or with attention deficit.  
 **When: **early in the design phase and during development.
 
-**Description: **
-Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.
+**Description: **  
+- Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.
+- Do not impose on the user a time limit to perform an action. This must be able to extend a time limit if appropriate.
+- If keyboard shortcuts based on a single key is available, it is necessary to take some measures to avoid possible conflicts with assistive technology.
 
-Do not impose on the user a time limit to perform an action and must be able to extend a given time to perform an action.
+**Checklist:**  
+Regarding shortcuts, make sure that at least one of the following statements is true:
 
-**Checklist:**
-If keyboard shortcuts are available, make sure that you can disable, modify these shortcuts or they can activated only when the component has focus.
+- **turn off**: the shortcut can be turned off.
+- **modification**: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).
+- **focus activation**: the keyboard shortcut for a user interface component is only active when that component has focus.
 
 If content appears on mouse over or focus (eg tooltip), the user must be able to:
-- Hide this new content without the need to move the pointer or focus (eg with the <<kbd>esc.</kbd> key).
+
+- Hide this new content without the need to move the pointer or focus; eg with the <kbd>esc.</kbd> key (useful especially for screen magnifier users).
 - Move the mouse pointer on this new content without it disappearing.
 
-**User Objective: **
-Give all users control of the context changes related to their action and give them the necessary time to perform an action.
+**User Objective: ** give all users control of the context changes related to their action and give them the necessary time to perform an action.
 
-**Example: **
-A form must have a send button. It should not be sent automatically after the user input.
+**Example: ** a form must have a send button. It should not be sent automatically after the user input.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
