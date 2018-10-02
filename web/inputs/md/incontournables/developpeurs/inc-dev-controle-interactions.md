@@ -16,6 +16,7 @@
 - Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  
 - Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.
 - Si des raccourcis clavier reposant sur une seule touche sont disponibles, il est nécessaire de prendre certaines mesures afin d'éviter d'éventuels conflits avec des outils d'assistance.
+- L'utilisateur doit avoir le contrôle des contenus s'ouvrant au survol ou à la prise de focus.
 
 **À vérifier&nbsp;:**  
 
@@ -27,6 +28,8 @@ Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes 
 Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
 - Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d'écran).
 - Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.
+
+Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.
 
 **Objectif utilisateur&nbsp;:**
 donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.
