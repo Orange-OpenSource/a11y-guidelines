@@ -40,8 +40,8 @@ Allow users to identify the topic of a page, find and get a clear idea of the co
 
 ## 2. Give a title to headings
 
-**Target:**everyone and especially people with cognitive limitations, reading difficulties and visual disabilities.  
-**When: **as of design, during content writing and development.
+**Target:** everyone and especially people with cognitive limitations, reading difficulties and visual disabilities.  
+**When: ** as of design, during content writing and development.
 
 **Description:** 
 One must identify the heading tags (`h1` to `h6` <abbr>HTML</abbr> tags) used to structure the content of the pages.
@@ -758,7 +758,7 @@ Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
 
 **Description: **
 
-Provide skip links allowing to access directly the main page areas (navigation, content, bottom of the page, search…) with internal links pointing to anchors. (`<a>` tags or any <abbr>HTML</abbr> element with an `id` attribute). In **very specific**cases, the links can be hidden on the screen and appear only when keyboard navigation is detected.
+Provide skip links allowing to access directly the main page areas (navigation, content, bottom of the page, search…) with internal links pointing to anchors. (`<a>` tags or any <abbr>HTML</abbr> element with an `id` attribute). In **very specific** cases, the links can be hidden on the screen and appear only when keyboard navigation is detected.
 
 **Checklist: **
 When a skip link is activated, make sure the focus is correctly set (not only scrolled to the right position).
@@ -781,7 +781,7 @@ To make them appear, move the focus on the top of the page by clicking on your b
 **Target: **people with visual impairments, reading, attention or understanding difficulties, people with seizure disorders.  
 **When: **when designing the service and graphic design.
 
-**Description:** 
+**Description:**  
 All moving, refreshed, flashing or scrolling content (eg a carousel) must be able to be stopped, hidden or paused by the user if this animation lasts more than 5 seconds.
 
 Also, avoid as much as possible flashing content and sudden brightness changes (see [The logo of the Olympics causes seizures](http://news.bbc.co.uk/2/hi/uk_news/england/london/6724245.stm)).
@@ -826,18 +826,19 @@ Allow the screen reader users to access the main features of the application, bu
 - Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.
 - Do not impose on the user a time limit to perform an action. This must be able to extend a time limit if appropriate.
 - If keyboard shortcuts based on a single key is available, it is necessary to take some measures to avoid possible conflicts with assistive technology.
+- The user must have control on the contents opening on hover or focus.
 
 **Checklist:**  
-Regarding shortcuts, make sure that at least one of the following statements is true:
+1. Regarding shortcuts, make sure that at least one of the following statements is true:
+ - **turn off**: the shortcut can be turned off.
+ - **modification**: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).
+ - **focus activation**: the keyboard shortcut for a user interface component is only active when that component has focus.
 
-- **turn off**: the shortcut can be turned off.
-- **modification**: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).
-- **focus activation**: the keyboard shortcut for a user interface component is only active when that component has focus.
+2. If content appears on mouse over or focus (eg tooltip), the user must be able to:
+ - Hide this new content without the need to move the pointer or focus; eg with the <kbd>esc.</kbd> key (useful especially for screen magnifier users).
+ - Move the mouse pointer on this new content without it disappearing.
 
-If content appears on mouse over or focus (eg tooltip), the user must be able to:
-
-- Hide this new content without the need to move the pointer or focus; eg with the <kbd>esc.</kbd> key (useful especially for screen magnifier users).
-- Move the mouse pointer on this new content without it disappearing.
+3. If actions are to be performed in a timely manner, verify that the user can extend or remove this restriction.
 
 **User Objective: ** give all users control of the context changes related to their action and give them the necessary time to perform an action.
 
@@ -851,7 +852,7 @@ If content appears on mouse over or focus (eg tooltip), the user must be able to
 - <a href="https://www.w3.org/TR/WCAG21/#character-key-shortcuts">2.1.4 Character key shortcuts</a>
 
 ## 26. Avoid captcha
-**Target: **Everyone in particular, visually impaired people.
+**Target: **Everyone in particular, visually impaired people.  
 **When: **during design and development.
 
 **Description: **
@@ -878,18 +879,18 @@ Provide ways to identify and visually distinguish the different parts of the pag
 - Ensure that the components and groupings that have the same function are identified (visually and semantically) in the same way.
 - Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast ...) or that there is a way to visually distinguish the groups (sub-menu, drop-down list ...) as well as the different regions of the page.
 
-**User Objective: **
+**User Objective: **  
 Allow users to identify and locate interface elements in all pages.
 
-**Do: **
-! [screenshot of the site 100% practical](images/groupement.jpg)
+**Do: **  
+![screenshot of the site 100% practical](./images/groupement.jpg)  
 Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently contrasted, to identify its content.
 
-**Don't: **
-! [screenshot of the fnac.com website](images/groupement2.jpg)
+**Don't: **  
+![screenshot of the fnac.com website](./images/groupement2.jpg)  
 It is very difficult to associate the themes ("par region", "par genre", ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
 
-**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **
+**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **  
 To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) and there, the support is much better & nbsp ;!
 
 All about <a href="./examples/landmarks/index.html">the landmarks <abbr>ARIA</abbr> in our examples</a>.
@@ -902,21 +903,21 @@ Setting up this type of semantics allows visually impaired people to identify an
 
 ## 28. Provide multiple access and location
 
-*Target: **Everyone, especially people who are visually or cognitively impaired.
+**Target:** Everyone, especially people who are visually or cognitively impaired.
 
-**Description: **
-Give the user several ways to locate and access specific content, locate the web page being viewed in a set of pages. When the page is a step in a process where the pages follow one after the other, this criterion can be ignored.
+**Description: **  
+Give the user several ways to locate and access specific content, locate the web page being viewed in a set of pages. When the page is a step in a process where the pages follow one after the other, providing a way to locate can be ignored.
 
-**Checklist: **
+**Checklist: **  
 Make sure that several systems allow you to locate and access a page or content in the site & nbsp ;: a search tool on the entire site, a site map, a global navigation menu, a breadcrumb trail...
 
-**User Objective: **
+**User Objective: **  
 Allow all users to find their way in order to access more easily all the content of the site.
 
-**Do: **
+**Do: **  
 The site offers, at the same time, a complete and precise main navigation and a breadcrumb trail.
 
-**Don't: **
+**Don't: **  
 An application provides a parcel navigation menu and no other way for the user to navigate the pages or locate where the current page is in the tree.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
@@ -925,27 +926,27 @@ An application provides a parcel navigation menu and no other way for the user t
 
 ## 29. Define sensitive areas of sufficient size
 
-**Target: **Everyone, especially people with motor or visual disabilities and mobility.
-**When: **during design and development.
+**Target: **Everyone, especially people with motor or visual disabilities and mobility.  
+**When: **during design and development.  
 
-**Description: **
+**Description: **  
 Each sensitive area must have a sufficient size (minimum 9mm width and height).
 In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).
 
 ## 30. Allow zooming
 
-**Target: **Everyone especially the visually impaired.
-**When: **during development.
+**Target: ** everyone especially the visually impaired.  
+**When: ** during development.
 
-**Description: **
+**Description: **  
 The site must not prohibit or limit the use of the zoom (especially on mobiles).
 
 ## 31. Allow to cancel the triggering of gestural interactions
 
-**Target: **Everyone, especially people with motor or visual disabilities and mobility.
-**When: **during development.
+**Target: ** Everyone, especially people with motor or visual disabilities and mobility.  
+**When: ** during development.
 
-**Description: **
+**Description: **  
 During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
@@ -953,10 +954,10 @@ During gesture interaction, the action is triggered only at the end of the inter
 
 ## 32. Offer an alternative to complex gestures
 
-**Target: **Everyone, especially people with motor or visual disabilities and mobility.
+**Target: **Everyone, especially people with motor or visual disabilities and mobility.  
 **When: **during design and development.
 
-**Description: **
+**Description: **  
 For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
 Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...), an alternative must exist.
 
@@ -965,10 +966,10 @@ Similarly for interactions requiring a change of orientation of the screen (tilt
 
 ## 33. Give access to the content regardless of the orientation of the screen
 
-**Target: **Everyone, especially people with motor or visual disabilities and mobility.
+**Target: **Everyone, especially people with motor or visual disabilities and mobility.  
 **When: **during design and development.
 
-**Description: **
+**Description: **  
 Access to the content must not depend on the orientation of the screen (portrait and landscape).
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
@@ -976,13 +977,13 @@ Access to the content must not depend on the orientation of the screen (portrait
 
 ## 34. Allow to know the result of a user interaction with status messages
 
-**Target: ** Everyone, especially people with visual, cognitive and attention deficit disorders
+**Target: ** Everyone, especially people with visual, cognitive and attention deficit disorders  
 **When: ** during conception to content writing and development.
 
-**Description: **
+**Description: **  
 Provide the user with status messages that give him feedback on the action he has just completed.
 
-**Checklist: **
+**Checklist: **  
    Contextual messages must be perceived by anyone using a <abbr>AT</abbr> (speech synthesis) without taking focus on the message.
    
    A status message or pop-up message can be & nbsp ;:
@@ -990,7 +991,7 @@ Provide the user with status messages that give him feedback on the action he ha
 - a waiting message that indicates that the triggered action is running and indicates an approximate wait time
 - a message that gives information on a change of context
 
-**User Objective: **
+**User Objective: **  
     For all users, have feedback on the essential actions it performs.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  

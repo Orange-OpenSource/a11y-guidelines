@@ -20,16 +20,16 @@
 
 **À vérifier&nbsp;:**  
 
-Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes est vraie:
-- **désactivation**: le raccourci peut être désactivé.
-- **modification**: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).
-- **activation au focus**: le raccourci est actif uniquement à la prise du focus de l'élément concerné. 
+1. Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes est vraie:
+ - **désactivation**: le raccourci peut être désactivé.
+ - **modification**: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).
+ - **activation au focus**: le raccourci est actif uniquement à la prise du focus de l'élément concerné. 
 
-Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
-- Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d'écran).
-- Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.
+2. Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
+ - **Masquer ce nouveau contenu** sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d'écran).
+ - **Déplacer le pointeur de la souris** sur ce nouveau contenu sans que celui-ci disparaisse.
 
-Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.
+3. Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.
 
 **Objectif utilisateur&nbsp;:**
 donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.

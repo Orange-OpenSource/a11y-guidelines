@@ -12,10 +12,11 @@
 ** Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
 
 ** Description&nbsp;:**
-Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, ce critère peut être ignoré.
+Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, l’implémentation d’accès multiples peut être ignorée.
 
 ** À vérifier&nbsp;:**
-S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
+S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation principal présentant la position courante de l'utilisateur, un fil d’Ariane…
+
 ** Objectif utilisateur&nbsp;:**
 Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.
 
