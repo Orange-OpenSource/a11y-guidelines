@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information"}
     ]);
 });</script>

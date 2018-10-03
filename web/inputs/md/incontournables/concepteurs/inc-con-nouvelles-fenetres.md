@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres"}
     ]);
 });</script>

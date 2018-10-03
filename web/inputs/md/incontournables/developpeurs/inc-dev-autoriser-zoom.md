@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Autoriser l'utilisation du zoom"}
     ]);
 });</script>

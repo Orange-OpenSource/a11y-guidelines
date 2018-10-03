@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"S’assurer que l’utilisateur garde le contrôle lors des interactions"}
     ]);
 });</script>
