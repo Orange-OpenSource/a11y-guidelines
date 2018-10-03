@@ -10,12 +10,15 @@
 <span data-menuitem="incontournables"></span>
 
 
-**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
-Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).
+Pour les utilisateurs de périphériques tactiles (smartphones, tablettes...), les zones tactiles doivent avoir une taille suffisante pour permettre une navigation aisée. Par ailleurs celles-ci doivent être également suffisamment espacées les unes des autres.
+
+** A vérifier **
+- La taille des zones tactiles doit être de 9mm minimum de largeur et de hauteur.
+- L'espacement entre les zones tactiles ne doit pas être inférieur à 2mm.
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

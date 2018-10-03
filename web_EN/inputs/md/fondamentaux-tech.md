@@ -443,6 +443,8 @@ Allow audio and video referencing.
 - <a href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a>
 - <a href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a>
 - <a href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a>
+- <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
+- <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
 
 ## 13. Structuring data tables
 
@@ -538,6 +540,7 @@ This can be done by applying the following CSS rules :
   }
 </code></pre>
 
+**Bookmarklet:**  
 To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
 
 **Users’ goal: **
@@ -700,6 +703,7 @@ A page containing a video player where the focus can enter inside the player, bu
 - [1.3.2 Meaningful Sequence](https://www.w3.org/TR/WCAG21/#meaningful-sequence)
 - [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap)
 - [2.4.3 Focus Order](https://www.w3.org/TR/WCAG21/#focus-order)
+- [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value)
 
 ## 20. Make the focus visible at all times
 
@@ -816,6 +820,9 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 **Users’ goal: **
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
+
+**Reference <abbr>WCAG</abbr>&nbsp;:**  
+- [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value)
 
 ## 25. Ensure the user keeps control during interactions
 
@@ -961,6 +968,9 @@ During gesture interaction, the action is triggered only at the end of the inter
 For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
 Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...), an alternative must exist.
 
+**Complex gesture:** any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.  
+**Simplified gesture:** an alternative requiring a single pointer (one finger) without path-based gesture.
+
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
 
@@ -970,7 +980,7 @@ Similarly for interactions requiring a change of orientation of the screen (tilt
 **When: **during design and development.
 
 **Description: **  
-Access to the content must not depend on the orientation of the screen (portrait and landscape).
+Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>

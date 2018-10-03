@@ -14,7 +14,7 @@
 **Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**  
-Le site ne doit pas interdire ou limiter l'utilisation du zoom (notamment sur les mobiles).
+L'utilisateur doit être capable de zoomer le contenu de la page facilement sur périphérique tactile (smartphone, tablette...). Cette fonctionnalité de base offerte par le navigateur ne doit pas être désactivée au niveau du code (ne pas utiliser de balise `meta` interdisant le zoom).
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

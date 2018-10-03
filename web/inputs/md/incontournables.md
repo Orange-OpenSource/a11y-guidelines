@@ -36,8 +36,8 @@ Le respect de la charte Orange appelée la Brand (<span lang="en">Design for dig
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
 Deux versions sont disponibles&nbsp;
-- **La première version** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
-- **La seconde version** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
+- **La version concepteurs** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
+- **La version développeurs** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
 
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item">

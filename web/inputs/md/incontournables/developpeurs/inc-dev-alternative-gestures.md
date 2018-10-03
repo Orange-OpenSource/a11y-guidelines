@@ -15,7 +15,11 @@
 
 **Description&nbsp;:**  
 Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...), une alternative oit exister.
+De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...), une alternative doit exister.
+
+**Gestuelles complexes**: tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.  
+**Gestuelle simplifiée**: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.
+
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
