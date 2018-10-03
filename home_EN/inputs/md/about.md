@@ -10,6 +10,10 @@ The Orange logo and some images or screenshots are property of Orange:
 Copyright (C) 2016 Orange SA All rights reserved  
 [List of the concerned files](/NOTICE.txt)
 
+## Cookie management
+
+You can change your preferences at any time directly from the <a role="button" href="javascript:tarteaucitron.userInterface.openPanel();">Cookie Management Panel</a>.
+
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

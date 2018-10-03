@@ -1,7 +1,7 @@
-# Essential criteria
+# WCAG criteria by theme
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Essential criteria"}]);
+    setBreadcrumb([{"label":"WCAG criteria by theme"}]);
     addSubMenu([
         {"label":"For designers","url":"fondamentaux-nontech.html"}, 
         {"label":"For developers","url":"fondamentaux-tech.html"}
@@ -23,14 +23,14 @@ Two versions are available:
     <h2 class="sr-only">For product designers, designers, project managers</h2>          
     <a href="./fondamentaux-nontech.html" class="btn btn-info">
         ![](./images/perso1.png)
-        <div>Essential criteria for designers</div>
+        <div>Criteria for designers</div>
     </a>
 </div>
 <div class="perso col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">For developers</h2>          
     <a href="./fondamentaux-tech.html" class="btn btn-info">
         ![](./images/perso3.png)
-        <div>Essential criteria for developers</div>
+        <div>Criteria for developers</div>
     </a>
 </div>            
 

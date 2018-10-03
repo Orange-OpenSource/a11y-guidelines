@@ -1,7 +1,10 @@
 # Les CAPTCHAs et l'accessibilité
   
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"CAPTCHA et accessibilité"}]);
+    setBreadcrumb([
+            {"label":"Articles techniques", "url":"techniques.html"},
+            {"label":"CAPTCHA et accessibilité"}
+        ]);
 });</script>
   
 ## Introduction

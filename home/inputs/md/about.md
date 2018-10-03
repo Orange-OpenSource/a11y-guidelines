@@ -12,6 +12,9 @@ Le logo Orange ainsi que certaines images et captures sont la propriété d'Oran
 <span lang="en">Copyright (C) 2016 Orange SA All rights reserved</span>  
 [Liste des fichiers concernés](/NOTICE.txt)
 
+## Gestion des cookies
+
+Vous pouvez modifier à tous moments vos préférences directement depuis le <a role="button" href="javascript:tarteaucitron.userInterface.openPanel();">panneau de gestion des cookies</a>.
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

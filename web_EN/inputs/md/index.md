@@ -22,7 +22,7 @@
 ## Site organization
 
 ### Essential criteria
-List of the most important criteria according to your profile, based on a subset of the WCAG 2.0 level AA recommendations. A good way to be aware of the main criteria and commit progressively to accessibility.  
+List of the most important criteria according to your profile, based on a subset of the WCAG 2.1 level AA recommendations. A good way to be aware of the main criteria and commit progressively to accessibility.  
 
 ### Requirements list
 This section is for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.
@@ -37,6 +37,9 @@ Presentation of the Boosted library and the Comfort+ service.
 Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible but frequently used. Everything is explained, just go ahead!
 
 These examples use the [Boosted](http://boosted.orange.com/) library. It is based on [Bootstrap](http://getbootstrap.com/) and lets you create and quickly test the accessibility and responsiveness of a website. This library is branded with the Orange colours.
+
+### Technical articles
+Technical articles on setting up web accessibility.
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

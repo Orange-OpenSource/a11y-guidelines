@@ -29,7 +29,7 @@ pre {
 h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, #glossary dt  ::before {
   display: block; 
   content: " "; 
-  margin-top: -10rem; 
+  margin-top: -11rem; 
   height: 10rem; 
   visibility: hidden; 
   pointer-events: none;
@@ -49,12 +49,20 @@ figure {
 
 #content ul, #content ol {
   background: #fff;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   padding-left: 3rem;  
 }
 
 #content p a, #content ul a {
   text-decoration: underline;
+}
+
+#content ul.nav-tabs {
+  padding: 0;
+}
+
+#content div.tab-content {
+  margin-bottom: 1rem;
 }
 
 header .subtitles {

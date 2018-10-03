@@ -31,13 +31,13 @@ Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abb
 	
 Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.
 
-Il faut savoir que `aria-label` doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour `aria-labelledby` et `aria-describedby`, la valeur de cet attribut référence l'`id` dun élément de la page dont le contenu sera utilisé le nom accessible de l'élément.
+Il faut savoir que `aria-label` doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour `aria-labelledby` et `aria-describedby`, la valeur de cet attribut référence l'`id` d'un élément de la page dont le contenu sera utilisé comme nom accessible de l'élément portant l'attribut <abbr>Aria</abbr>.
 
-Lorsqu'on utilise `aria-label` ou `aria-labelledby` sur un élément, le contenu ou l'intitulé de cet élément n'est plus restitué au <abbr>AT</abbr> mais remplacé par le nom accessible (pour `aria-label` le contenu de cet attribut, pour `aria-labelledby` le contenu de l'élément référencé). Donc, seul, le nom accessible doit donner l'ensemble des informations nécessaires à <abbr>at</abbr> et donc à l'utilisateur.
+Lorsqu'on utilise `aria-label` ou `aria-labelledby` sur un élément, le contenu ou l'intitulé de cet élément n'est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour `aria-label` le contenu de cet attribut, pour `aria-labelledby` le contenu de l'élément référencé). Donc, seul, le nom accessible doit donner l'ensemble des informations nécessaires à l'<abbr>AT</abbr> et donc à l'utilisateur.
 
-Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à aria-labelledby lors du calcul de la propriété de nom accessible.
+Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à `aria-labelledby` lors du calcul de la propriété de nom accessible.
 
-Quant à lui, `aria-describedby" va rajouter au nom accessible de l'élément, une description accessible en plus. 
+Quant à lui, `aria-describedby` va rajouter au nom accessible de l'élément, une description accessible, en plus. 
 
 ## Exemples
 

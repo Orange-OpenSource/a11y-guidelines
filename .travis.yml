@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - '10'
+before_install: npm install -g grunt-cli
+install: npm install
+before_script: grunt
+deploy:
+  provider: pages
+  local-dir: output
+  repo: PigeardSylvain/reco-release
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository (in Travis), as a secure variable
+  keep-history: true  
+  target-branch: master
+  on:
+    branch: wcag21

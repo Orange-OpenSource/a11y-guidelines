@@ -6,7 +6,7 @@
 
 Orange évalue l’accessibilité d’une application ou d’un site à l’aide de trois méthodes complémentaires :
 
-- **Évaluation technique :** inspecter le code et le contraste des couleurs pour mesurer la conformité des pages Web aux règles <abbr>WCAG</abbr> 2.0 niveau AA.
+- **Évaluation technique :** inspecter le code et le contraste des couleurs pour mesurer la conformité des pages Web aux règles <abbr>WCAG</abbr> 2.1 niveau AA.
 - **Évaluation fonctionnelle :** tester le comportement de l’interface avec différentes <abbr>aides techniques</abbr> pour vérifier que les contenus évalués sont exempts de points bloquants.
 - **Évaluation utilisateur :** faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur. 
 
