@@ -13,7 +13,14 @@ documentTitles["about.html#a-propos"] = "À propos";
 index.add({
     url: "about.html#a-propos",
     title: "À propos",    
-    body: "# À propos     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    Copyright (C) 2016 Orange SA All rights reserved   [Liste des fichiers concernés](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# À propos     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    Copyright (C) 2016 Orange SA All rights reserved   [Liste des fichiers concernés](/NOTICE.txt)  "
+});
+
+documentTitles["about.html#gestion-des-cookies"] = "Gestion des cookies";
+index.add({
+    url: "about.html#gestion-des-cookies",
+    title: "Gestion des cookies",    
+    body: "## Gestion des cookies  Vous pouvez modifier à tous moments vos préférences directement depuis le &lt;a role=\&quot;button\&quot; href=\&quot;javascript:tarteaucitron.userInterface.openPanel();\&quot;&gt;panneau de gestion des cookies&lt;/a&gt;.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -54,161 +61,126 @@ documentTitles["powerpoint.html#creer-des-documents-powerpoint-accessibles"] = "
 index.add({
     url: "powerpoint.html#creer-des-documents-powerpoint-accessibles",
     title: "Créer des documents PowerPoint accessibles",    
-    body: "# Créer des documents PowerPoint accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;PowerPoint accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+    body: "# Créer des documents PowerPoint accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;PowerPoint accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}&lt;/style&gt;  Produire un document PowerPoint accessible nécessite de respecter différentes recommandations. Elles sont synthétisées ci-après (guides détaillés consultables sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;). Pour vous aider PowerPoint intègre un outil permettant de vérifier l’accessibilité d’une présentation. Cet outil identifie les principales erreurs et propose des solutions. N’hésitez pas à vous y référer.   "
 });
 
-documentTitles["powerpoint.html#introduction"] = "Introduction";
+documentTitles["powerpoint.html#masques-de-diapositive"] = "Masques de diapositive";
 index.add({
-    url: "powerpoint.html#introduction",
-    title: "Introduction",    
-    body: "## Introduction Produire des documents PowerPoint accessibles demande de suivre quelques recommandations. Heureusement, PowerPoint est doté d’un outil permettant de vérifier l’accessibilité. Celui-ci identifie les principales erreurs et propose des solutions pour y remédier.  Ceci étant dit, même après avoir corrigé les erreurs, nous nous sommes aperçus que certains éléments (SmartArt, tableaux…) n’étaient pas toujours correctement vocalisés par les lecteurs d’écran. C’est pourquoi lorsque votre présentation est terminée, nous vous conseillons de l’exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; avant de la diffuser.  En effet, l’option d’export intégrée à PowerPoint permet d’améliorer la restitution avec les outils d’assistance et supprime également les animations, sources de difficultés pour les personnes malvoyantes.    "
+    url: "powerpoint.html#masques-de-diapositive",
+    title: "Masques de diapositive",    
+    body: "## Masques de diapositive Définir des masques de diapositives est la première chose à faire  et une condition sine qua none pour créer une présentation homogène et accessible. - Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet `Affichage`, sélectionner `Masque des diapositives`). - Utiliser les sous-menus `Mise en pages du masque` et `Insérer un espace réservé`. - Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu `Insertion`. - Créer autant de masques que de types de diapositives nécessaires. &lt;img alt=\&quot;Captures d'écran relatives à la création d'un masque de diapositive dans poweroint\&quot; title=\&quot;Captures d'écran relatives à la création d'un masque de diapositive dans poweroint\&quot; src=\&quot;./images/masques.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Remarque : Si vous modifiez le masque des diapositives ou les mises en pages après avoir créé les différentes diapositives, vous devrez réappliquer les mises en page modifiées aux diapositives existantes de votre présentation en mode Normal.  "
 });
 
-documentTitles["powerpoint.html#recommandations"] = "Recommandations";
+documentTitles["powerpoint.html#attributs-de-la-presentation"] = "Attributs de la présentation";
 index.add({
-    url: "powerpoint.html#recommandations",
-    title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter pour produire des présentations PowerPoint accessibles.  Pour plus de détails, n’hésitez pas à consulter les guides proposés sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;.  Nos tests ont été réalisé avec Office 2010 et les lecteurs d'écran Jaws 17 et &lt;abbr&gt;NVDA&lt;/abbr&gt; 2017-1. Les recommandations ci-dessous découlent de ces tests.  "
+    url: "powerpoint.html#attributs-de-la-presentation",
+    title: "Attributs de la présentation",    
+    body: "## Attributs de la présentation  "
 });
 
-documentTitles["powerpoint.html#1-utiliser-les-masques-de-diapositive"] = "1. Utiliser les masques de diapositive";
+documentTitles["powerpoint.html#1-la-langue"] = "1. La langue";
 index.add({
-    url: "powerpoint.html#1-utiliser-les-masques-de-diapositive",
-    title: "1. Utiliser les masques de diapositive",    
-    body: "### 1. Utiliser les masques de diapositive Les présentations doivent être créées en utilisant les masques de diapositive (menu&amp;nbsp;: Affichage&amp;nbsp;&gt; Masque des diapositives). Ensuite utiliser les cases à cocher «&amp;nbsp;Titre&amp;nbsp;», «&amp;nbsp;Pieds de page&amp;nbsp;» et le menu «&amp;nbsp;Insérer un espace réservé&amp;nbsp;».  "
+    url: "powerpoint.html#1-la-langue",
+    title: "1. La langue",    
+    body: "### 1. La langue Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votre présentation :   - La langue principale doit être définie dans le menu : `Fichier &gt; Options &gt; Langue`. - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision &gt; Langue &gt; Définir la langue de vérification`.  "
 });
 
-documentTitles["powerpoint.html#2-verifier-lordre-de-lecture-des-elements"] = "2. Vérifier l’ordre de lecture des éléments";
+documentTitles["powerpoint.html#2-les-autres-proprietes"] = "2.	Les autres propriétés";
 index.add({
-    url: "powerpoint.html#2-verifier-lordre-de-lecture-des-elements",
-    title: "2. Vérifier l’ordre de lecture des éléments",    
-    body: "### 2. Vérifier l’ordre de lecture des éléments L’ordre de lecture doit être vérifié depuis le volet de sélection (menu Accueil&amp;nbsp;&gt; Organiser&amp;nbsp;&gt; Volet de sélection). Attention&amp;nbsp;: le dernier élément dans la liste est lu en premier par les lecteurs d’écran&amp;nbsp;; l’ordre doit donc être indiqué de bas en haut dès la définition des masques de diapositives.  "
+    url: "powerpoint.html#2-les-autres-proprietes",
+    title: "2.	Les autres propriétés",    
+    body: "### 2.	Les autres propriétés Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier &gt; Informations`.    &lt;img alt=\&quot;Capture d'écran, propriétés d'un document poweroint\&quot; title=\&quot;Capture d'écran, propriétés d'un document poweroint\&quot; src=\&quot;./images/attributs.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.  &lt;img alt=\&quot;Capture d'écran, propriétés d'un document poweroint dans l'explorateur Windows\&quot; title=\&quot;Capture d'écran, propriétés d'un document poweroint dans l'explorateur Windows\&quot; src=\&quot;./images/attributs2.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#3-donner-des-titres-uniques-aux-diapositives"] = "3. Donner des titres uniques aux diapositives";
+documentTitles["powerpoint.html#titre-des-diapositives"] = "Titre des diapositives";
 index.add({
-    url: "powerpoint.html#3-donner-des-titres-uniques-aux-diapositives",
-    title: "3. Donner des titres uniques aux diapositives",    
-    body: "### 3. Donner des titres uniques aux diapositives Chaque diapositive doit posséder un titre unique. Celui-ci doit être renseigné dans la zone&amp;nbsp;: «&amp;nbsp;Cliquer pour ajouter un titre&amp;nbsp;».  "
+    url: "powerpoint.html#titre-des-diapositives",
+    title: "Titre des diapositives",    
+    body: "## Titre des diapositives  Pour éviter toute confusion entre des diapositives, notamment si l’utilisateur parcourt une présentation à l’aide d’un lecteur d’écran :   donner un titre spécifique à chaque diapositive, à insérer dans la zone : « Cliquer pour ajouter un titre ».  "
 });
 
-documentTitles["powerpoint.html#4-renseigner-un-texte-de-remplacement-sur-les-images"] = "4. Renseigner un texte de remplacement sur les images";
+documentTitles["powerpoint.html#redaction-des-contenus"] = "Rédaction des contenus";
 index.add({
-    url: "powerpoint.html#4-renseigner-un-texte-de-remplacement-sur-les-images",
-    title: "4. Renseigner un texte de remplacement sur les images",    
-    body: "### 4. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image&amp;nbsp;&gt; Texte de remplacement&amp;nbsp;&gt; champ Description).    Si l’image est purement décorative, le champ «&amp;nbsp;Description du texte de remplacement&amp;nbsp;» doit être vide.  "
+    url: "powerpoint.html#redaction-des-contenus",
+    title: "Rédaction des contenus",    
+    body: "## Rédaction des contenus  Limiter les abréviations et acronymes, et expliciter à la première occurrence ceux qui ne font pas partie du langage courant.  Conserver l’accentuation sur les majuscules (exemple : É  ou Ç) pour qu’elles puissent être lues correctement par un lecteur d’écran ; pour ce faire :  utiliser le menu `Insertion &gt; Symbole` ou les raccourcis clavier ci-dessous. &lt;table class=\&quot;table table-striped\&quot;&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th scope=\&quot;col\&quot;&gt;Lettre&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Windows&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Mac&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;À&lt;/th&gt;       &lt;td&gt;Alt Gr + \` (touche 7) puis A majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis à&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ç&lt;/th&gt;       &lt;td&gt;alt + 128&lt;/td&gt;       &lt;td&gt;Option + ç&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;È&lt;/th&gt;       &lt;td&gt;Alt Gr + ` (touche 7) puis E majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis è&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;É&lt;/th&gt;       &lt;td&gt;alt + 144&lt;/td&gt;       &lt;td&gt;Maj lock puis é&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ê&lt;/th&gt;       &lt;td&gt;^ puis E majuscule &lt;/td&gt;       &lt;td&gt;^ puis E majuscule&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  "
 });
 
-documentTitles["powerpoint.html#5-faire-des-tableaux-simples"] = "5. Faire des tableaux simples";
+documentTitles["powerpoint.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
 index.add({
-    url: "powerpoint.html#5-faire-des-tableaux-simples",
-    title: "5. Faire des tableaux simples",    
-    body: "### 5. Faire des tableaux simples Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&amp;nbsp;; ne pas laisser de cellules vides.   "
+    url: "powerpoint.html#mise-en-forme-des-contenus",
+    title: "Mise en forme des contenus",    
+    body: "## Mise en forme des contenus Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial et Helvetica) en corps 12 pixels minimum.  Commencer les phrases par une majuscule et ne pas abuser des phrases entièrement écrites en majuscules. Eviter de justifier le texte et privilégier l’alignement à gauche. Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit &gt; Paragraphe &gt; Retrait et Espacement`.  &lt;img alt=\&quot;Capture d'écran, fenêtre paragraphe, retrait et espacement dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre paragraphe, retrait et espacement dans powerpoint\&quot; src=\&quot;./images/paragraphe.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques"] = "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques";
+documentTitles["powerpoint.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
 index.add({
-    url: "powerpoint.html#6-utiliser-des-smartart-plutot-que-des-assemblages-de-textes-et-formes-specifiques",
-    title: "6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques",    
-    body: "### 6. Utiliser des SmartArt plutôt que des assemblages de textes et formes spécifiques Les SmartArt permettent d’intégrer des images et des textes qui sont vocalisés dans le bon ordre. Tous les SmartArt ne sont pas encore correctement vocalisés.  "
+    url: "powerpoint.html#couleurs-et-contrastes",
+    title: "Couleurs et contrastes",    
+    body: "## Couleurs et contrastes  1.	Assurer un contraste suffisant entre la couleur du texte et celle du fond :  - 4.5:1 pour du texte de taille normale (12pts ou 16px).  - 3:1 pour du texte de grande taille (150% minimum de la taille normale ou 120% si gras). Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil &lt;a href=\&quot;https://developer.paciellogroup.com/resources/contrastanalyser/\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyser&lt;/a&gt; qui vous permettra de vérifier très simplement la qualité de vos contrastes. 2.	S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen suppléant la couleur pour véhiculer l’information.  &lt;figure&gt;   &lt;img src=\&quot;./images/color-ko.png\&quot; alt=\&quot;Exemple d'image transmettant de l'information via des puces de couleur (rouge, vert...) pour indiquer l'état d'un élément\&quot; /&gt;   &lt;figcaption&gt;**Exemple incorrect** : l'information est transmise uniquement par la couleur.&lt;/figcaption&gt; &lt;/figure&gt;    &amp;nbsp;  &lt;figure&gt;   &lt;img src=\&quot;./images/color-ok.png\&quot; alt=\&quot;Dans cet exemple, les puces ont été remplacées par des icones de forme différente (croix rouge, coche verte ...)\&quot; /&gt;   &lt;figcaption&gt;**Exemple correct** : l'information est transmise par la forme et la couleur.&lt;/figcaption&gt; &lt;/figure&gt;  "
 });
 
-documentTitles["powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques"] = "7. Renseigner un texte de remplacement aux graphiques";
+documentTitles["powerpoint.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
 index.add({
-    url: "powerpoint.html#7-renseigner-un-texte-de-remplacement-aux-graphiques",
-    title: "7. Renseigner un texte de remplacement aux graphiques",    
-    body: "### 7. Renseigner un texte de remplacement aux graphiques Le contenu des graphiques doit être décrit dans le texte de remplacement du graphique (Format de l’objet&amp;nbsp;&gt; Texte de remplacement&amp;nbsp;&gt; Description).  "
+    url: "powerpoint.html#listes-a-puces-ou-numerotees",
+    title: "Listes à puces ou numérotées",    
+    body: "## Listes à puces ou numérotées   Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.  &lt;img alt=\&quot;Capture d'écran, option listes à puces dans powerpoint\&quot; title=\&quot;Capture d'écran, option listes à puces dans powerpoint\&quot; src=\&quot;./images/puce.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#8-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+documentTitles["powerpoint.html#images"] = "Images";
 index.add({
-    url: "powerpoint.html#8-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
-    title: "8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
-    body: "### 8. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…  "
+    url: "powerpoint.html#images",
+    title: "Images",    
+    body: "## Images Un document peut tout à fait contenir des images et être accessible à une personne non-voyante. Il faut simplement que l’information portée par l’image soit retranscrite textuellement.  - **Pour les images porteuses d’informations** : associer un texte de remplacement décrivant le contenu informatif via un `clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »`. - **Pour les images décoratives/illustratives** : laisser le champ `description` vide. - **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)   &lt;img alt=\&quot;Capture d'écran, de la fenêtre permettant de saisir un texte de remplacement sur une image dans powerpoint\&quot; title=\&quot;Capture d'écran, de la fenêtre permettant de saisir un texte de remplacement sur une image dans powerpoint\&quot; src=\&quot;./images/remplacement.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion &gt; SmartArt`).   Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`Format de l’objet ou de l’image &gt; Texte de remplacement &gt; Description`).   "
 });
 
-documentTitles["powerpoint.html#9-assurer-un-contraste-suffisant"] = "9. Assurer un contraste suffisant";
+documentTitles["powerpoint.html#liens"] = "Liens";
 index.add({
-    url: "powerpoint.html#9-assurer-un-contraste-suffisant",
-    title: "9. Assurer un contraste suffisant",    
-    body: "### 9. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l'aide de l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
+    url: "powerpoint.html#liens",
+    title: "Liens",    
+    body: "## Liens Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel  et doit donc se suffire à lui-même.  Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).  Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé). &lt;img alt=\&quot;Capture d'écran, fenêtre modifier le lien hypertexte dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre modifier le lien hypertexte dans powerpoint\&quot; src=\&quot;./images/lien.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.  "
 });
 
-documentTitles["powerpoint.html#10-definir-la-langue"] = "10. Définir la langue";
+documentTitles["powerpoint.html#tableaux-de-donnees"] = "Tableaux de données";
 index.add({
-    url: "powerpoint.html#10-definir-la-langue",
-    title: "10. Définir la langue",    
-    body: "### 10. Définir la langue Sélectionner la langue du document (menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Options&amp;nbsp;&gt; Langue).   Préciser les mots ou groupes de mots qui sont dans une langue étrangère (menu&amp;nbsp;: Révision&amp;nbsp;&gt; Langue&amp;nbsp;&gt; Définir la langue de vérification).  "
+    url: "powerpoint.html#tableaux-de-donnees",
+    title: "Tableaux de données",    
+    body: "## Tableaux de données Les tableaux sont des composants par définition difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie et les structurer le plus simplement possible. Ne pas utiliser les tableaux à des fins de mise en forme. Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. Ajouter une description s'il s'agit d'un tableau complexe, clic droit : `Format de la forme &gt; Texte de remplacement &gt; Description`  "
 });
 
-documentTitles["powerpoint.html#11-utiliser-le-verificateur-integre"] = "11. Utiliser le vérificateur intégré";
+documentTitles["powerpoint.html#contenus-audio-ou-video"] = "Contenus audio ou vidéo";
 index.add({
-    url: "powerpoint.html#11-utiliser-le-verificateur-integre",
-    title: "11. Utiliser le vérificateur intégré",    
-    body: "### 11. Utiliser le vérificateur intégré PowerPoint intègre un vérificateur d’accessibilité (menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Vérifier la présence de problèmes&amp;nbsp;&gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés.   "
+    url: "powerpoint.html#contenus-audio-ou-video",
+    title: "Contenus audio ou vidéo",    
+    body: "## Contenus audio ou vidéo La communication audiovisuelle est aujourd’hui très fréquente en entreprise. Mais parce que certaines personnes peuvent ne pas voir ou ne pas entendre il est primordial de suppléer l’information transmise dans une modalité par une autre. Fournir une transcription intégrale des contenus audio (solution nécessaire et suffisante). Empêcher toute lecture automatique de contenu vidéo ou audio (menu `Animations` : démarrer au clic).  &lt;img alt=\&quot;Capture d'écran, menu animation dans powerpoint\&quot; title=\&quot;Capture d'écran, menu animation dans powerpoint\&quot; src=\&quot;./images/video.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Tout contenu vidéo doit respecter ces prérequis : - Fournir des sous-titres pour restituer l’ensemble des informations véhiculées par la bande son. - Fournir une audiodescription si la vidéo présente des informations accessibles seulement via les images. - Utiliser des vidéos sans flashs rapides (pas plus de 3 clignotements par seconde).  "
 });
 
-documentTitles["powerpoint.html#12-exporter-la-presentation-en-document-abbrpdfabbr"] = "12. Exporter la présentation en document &lt;abbr&gt;PDF&lt;/abbr&gt;";
+documentTitles["powerpoint.html#ordre-de-lecture-des-elements"] = "Ordre de lecture des éléments";
 index.add({
-    url: "powerpoint.html#12-exporter-la-presentation-en-document-abbrpdfabbr",
-    title: "12. Exporter la présentation en document &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 12. Exporter la présentation en document &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d'aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionner le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   A vérifier la première fois : dans les options d'export, la case à cocher «&amp;nbsp;Balises de structure de document pour l'accessibilité&amp;nbsp;» doit être cochée.  "
+    url: "powerpoint.html#ordre-de-lecture-des-elements",
+    title: "Ordre de lecture des éléments",    
+    body: "## Ordre de lecture des éléments L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection (menu `Accueil &gt; Organiser &gt; Volet de sélection`).   **Attention** : l’ordre doit être décroissant car c’est le dernier élément de la liste qui est lu en premier par le lecteur.  &lt;img alt=\&quot;Capture d'écran, du volet de sélection dans powerpoint\&quot; title=\&quot;Capture d'écran, du volet de sélection dans powerpoint\&quot; src=\&quot;./images/volet.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Il est important de vérifier cet ordre directement dans les masques des diapositives.  "
 });
 
-documentTitles["powerpoint.html#ressources-externes"] = "Ressources externes";
+documentTitles["powerpoint.html#verificateur-daccessibilite-integre"] = "Vérificateur d’accessibilité intégré";
 index.add({
-    url: "powerpoint.html#ressources-externes",
-    title: "Ressources externes",    
-    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;https://webaim.org/techniques/powerpoint/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité PowerPoint, WebAIM&lt;/a&gt; (anglais).  "
+    url: "powerpoint.html#verificateur-daccessibilite-integre",
+    title: "Vérificateur d’accessibilité intégré",    
+    body: "## Vérificateur d’accessibilité intégré Il est important de contrôler l’accessibilité de la présentation à l'aide du vérificateur d’accessibilité (menu : `Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité`). &lt;img alt=\&quot;Capture d'écran, du vérificateur d'accessibilité dans powerpoint\&quot; title=\&quot;Capture d'écran, du vérificateur d'accessibilité dans powerpoint\&quot; src=\&quot;./images/verificateur.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#resultats-des-tests-effectues"] = "Résultats des tests effectués";
+documentTitles["powerpoint.html#convertir-une-presentation-powerpoint-en-fichier-pdf"] = "Convertir une présentation PowerPoint en fichier PDF";
 index.add({
-    url: "powerpoint.html#resultats-des-tests-effectues",
-    title: "Résultats des tests effectués",    
-    body: "## Résultats des tests effectués Nous avons testé le comportement des lecteurs d'écran &lt;abbr&gt;NVDA&lt;/abbr&gt; (version 2017.1) et Jaws (version 17) avec un fichier &lt;abbr&gt;PDF&lt;/abbr&gt; généré à l'aide de PowerPoint 2010.  "
+    url: "powerpoint.html#convertir-une-presentation-powerpoint-en-fichier-pdf",
+    title: "Convertir une présentation PowerPoint en fichier PDF",    
+    body: "## Convertir une présentation PowerPoint en fichier PDF  Enregistrer la présentation en &lt;abbr&gt;PDF&lt;/abbr&gt; : `Fichier &gt; Enregistrer sous` et de sélectionner le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;. Cocher la case « Balises de structure de document pour l'accessibilité ».  &lt;img alt=\&quot;Capture d'écran, fenêtre d'export en PDF dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre d'export en PDF dans powerpoint\&quot; src=\&quot;./images/export.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe : `Édition &gt; Préférences &gt; Lecture &gt; Option de lecteur d’écran` : « Lire l’intégralité du document »  &lt;img alt=\&quot;Capture d'écran de la fenêtre des préférences dans Adobe reader\&quot; title=\&quot;Capture d'écran de la fenêtre des préférences dans Adobe reader\&quot; src=\&quot;./images/adobe.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Et pour vérifier l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt; : télécharger &lt;a href=\&quot;https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot; lang=\&quot;en\&quot;&gt;PDF Accessiblity Checker (PAC 3)&lt;/a&gt;.  "
 });
 
-documentTitles["powerpoint.html#tableaux"] = "Tableaux";
+documentTitles["powerpoint.html#ressources"] = "Ressources";
 index.add({
-    url: "powerpoint.html#tableaux",
-    title: "Tableaux",    
-    body: "### Tableaux Les tableaux sont vocalisés correctement avec Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;.  "
-});
-
-documentTitles["powerpoint.html#tableaux-avec-textes-de-remplacement"] = "Tableaux avec textes de remplacement";
-index.add({
-    url: "powerpoint.html#tableaux-avec-textes-de-remplacement",
-    title: "Tableaux avec textes de remplacement",    
-    body: "### Tableaux avec textes de remplacement &lt;abbr&gt;NVDA&lt;/abbr&gt; : les tableaux restent vocalisés, les textes de remplacement sont ignorés.   Jaws : les tableaux ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
-});
-
-documentTitles["powerpoint.html#smartart"] = "SmartArt";
-index.add({
-    url: "powerpoint.html#smartart",
-    title: "SmartArt",    
-    body: "### SmartArt Même comportement pour Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;, les textes des SmartArt sont vocalisés (pas toujours dans le bon ordre).  "
-});
-
-documentTitles["powerpoint.html#smartart-avec-textes-de-remplacement"] = "SmartArt avec textes de remplacement";
-index.add({
-    url: "powerpoint.html#smartart-avec-textes-de-remplacement",
-    title: "SmartArt avec textes de remplacement",    
-    body: "### SmartArt avec textes de remplacement &lt;abbr&gt;NVDA&lt;/abbr&gt; : comportement attendu, les textes de remplacement sont correctement vocalisés à la place du SmartArt.   Jaws : les SmartArt ne sont plus vocalisés, les textes de remplacement sont ignorés.  "
-});
-
-documentTitles["powerpoint.html#graphiques"] = "Graphiques";
-index.add({
-    url: "powerpoint.html#graphiques",
-    title: "Graphiques",    
-    body: "### Graphiques Même comportement pour Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;, les chiffres apparaissant dans les graphiques sont vocalisés.  "
-});
-
-documentTitles["powerpoint.html#graphiques-avec-textes-de-remplacement"] = "Graphiques avec textes de remplacement";
-index.add({
-    url: "powerpoint.html#graphiques-avec-textes-de-remplacement",
-    title: "Graphiques avec textes de remplacement",    
-    body: "### Graphiques avec textes de remplacement Comportement attendu pour Jaws et &lt;abbr&gt;NVDA&lt;/abbr&gt;, le texte de remplacement est vocalisé à la place du graphique.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "powerpoint.html#ressources",
+    title: "Ressources",    
+    body: "## Ressources  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;https://webaim.org/techniques/powerpoint/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité PowerPoint, WebAIM&lt;/a&gt; (anglais).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -645,7 +617,7 @@ documentTitles["video-audio.html#le-lecteur-audio-ou-video"] = "Le lecteur audio
 index.add({
     url: "video-audio.html#le-lecteur-audio-ou-video",
     title: "Le lecteur audio ou vidéo",    
-    body: "## Le lecteur audio ou vidéo  Le lecteur vidéo utilisé doit&amp;nbsp;: - prendre en charge d'au moins deux éléments&amp;nbsp;: sous-titres et audiodescription. - permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...). - permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.  "
+    body: "## Le lecteur audio ou vidéo  Le lecteur vidéo utilisé doit&amp;nbsp;: - Prendre en charge au moins deux éléments&amp;nbsp;: sous-titres et audiodescription. - Permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...). - Permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.  "
 });
 
 documentTitles["video-audio.html#liens-utiles"] = "Liens utiles";

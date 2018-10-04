@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)" 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>                  
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
+        {"label":"Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres"}
+    ]);
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p><strong>Cible&nbsp;:</strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.</p>
+<p>De même, éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Elles doivent être réservées à une information importante qui requiert une attention immédiate et rester de taille réduite.</p>
+<p>Ces fenêtres modales ou pop-in posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.</p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br>Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas justifié. L’utilisation d’une page web standard permettrait&nbsp;:</p>
+<ul>
+<li>de laisser plus d’espace au contenu (en supprimant les marges autour de la boite de dialogue),</li>
+<li>de pouvoir utiliser le bouton «&nbsp;Précédent&nbsp;» du navigateur pour revenir en arrière lors de la navigation entre les différentes pages de la boite de dialogue,</li>
+<li>de faciliter l’affichage sur les petits écrans,</li>
+<li>d’éviter des problèmes d’accessibilité pour les personnes qui naviguent à l’aide du clavier ou à l’aide d’un lecteur d’écran,</li>
+<li>d’alléger le poids de la page et le temps de chargement, car dans cet exemple la page derrière la boite de dialogue doit être chargée.  </li>
+</ul>
+<p><img src="images/dialog.png" alt="Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse"></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
+</body>
+</html>

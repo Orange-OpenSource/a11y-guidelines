@@ -99,11 +99,13 @@
       </nav>      
     </header>
     
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
-    </ol>
-
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -241,7 +243,7 @@ func customTraits() {
 </br>Les deux autres attributs sont utilisables uniquement via le code.</p>
 <h3 id="exemple">Exemple</h3>
 <p>L&#39;idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et jaune) pour appliquer les attributs définis précedémment.
-<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
+<img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -460,11 +462,9 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 <li><strong>accessibilityFrame</strong>&nbsp;: permet de définir cette zone via un rectangle (<code>CGRect</code>).
 </br>Par défaut pour un élément dérivant de <code>UIView</code>, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.</li>
 <li><strong>accessibilityPath</strong>&nbsp;: équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.</li>
-<li><strong>accessibilityActivationPoint</strong>&nbsp;: le «&nbsp;point&nbsp;» d’activation d’un élément pour les outils d’accessibilité.
-</br>Par défaut, ce point est au centre de l’élément.</li>
 </ul>
 <h3 id="exemple">Exemple</h3>
-<p><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
+<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
 <pre><code class="objective-c">
 float xVal;
 float yVal;
@@ -571,64 +571,144 @@ float heightVal;
 </br></br>Une autre possibilité de groupement d&#39;éléments pourrait utiliser l’attribut <strong>shouldGroupAccessibilityChildren</strong>, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
 </br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
 <h3 id="exemple">Exemple</h3>
-<p>Nous avons un &#39;label&#39; et un &#39;switch control&#39; que nous allons souhaitons regrouper et traiter d&#39;un seul bloc.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" /></p>
+<p>Nous avons un &#39;label&#39; et un &#39;switch control&#39; que nous souhaitons regrouper et traiter d&#39;un seul bloc.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
+</br>Création de l&#39;élément accessible qui va regrouper les éléments souhaités :</p>
 <pre><code class="objective-c">
+#import "MyViewController.h"
+#import "MyWrapView.h"
+
+@interface MyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation MyViewController
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     //Création de la vue qui va encapsuler le 'label' et le 'Switch Control'.
-    CGRect wrapFrame = CGRectUnion(myLabel.frame, mySwitchControl.frame);
-    wrapView = [[UIView alloc]initWithFrame: wrapFrame];
+    MyWrapView * wrap = [[MyWrapView alloc] initWith:_myLabel
+                                                 and:_mySwitch];
 
-    wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = myLabel.accessibilityLabel;
-    wrapView.accessibilityValue = mySwitchControl.accessibilityValue;
-
-
-    //Création de la manipulation qui va permettre une action sur la vue précédente.
-    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                  action:@selector(changeValue:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [wrapView addGestureRecognizer:tapGesture];
-
-    [self.view addSubview:wrapView];
+    [self.view addSubview:wrap];
 }
-
-- (void)changeValue:(UITapGestureRecognizer *)sender {
-    mySwitchControl.on = ![mySwitchControl.accessibilityValue boolValue];
-}
+@end
 </code></pre><pre><code class="swift">
+    class MyViewController: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         //Création de la vue qui va encapsuler le 'label' et le 'Switch Control'.
-        let wrapFrame = myLabel.frame.union(mySwitchControl.frame)
-        let wrapView = UIView.init(frame: wrapFrame)
+        let wrap = MyWrapView.init(with: myLabel,
+                                   and: mySwitch)
 
-        wrapView.isAccessibilityElement = true
-        wrapView.accessibilityLabel = myLabel.accessibilityLabel
-        wrapView.accessibilityValue = mySwitchControl.accessibilityValue
-
-
-        //Création de la manipulation qui va permettre une action sur la vue précédente.
-        let tapGesture = UITapGestureRecognizer.init(target: self,
-                                                     action: #selector(changeValue(sender:)))
-        tapGesture.numberOfTapsRequired = 1;
-        wrapView.addGestureRecognizer(tapGesture)
-
-        self.view.addSubview(wrapView)
+        self.view.addSubview(wrap)
     }
-
-    @objc func changeValue(sender: UITapGestureRecognizer) {
-
-        let switchBoolValue = NSString(string:mySwitchControl.accessibilityValue!).boolValue
-        mySwitchControl.setOn(!switchBoolValue,
-                              animated: false)
-    }
+}
 </code></pre>
-<h3 id="lien">Lien</h3>
+
+<p></br>... et implémentation de la classe utilisée pour définir de façon précise l&#39;<a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-wwdc-17215.html#DefaultActivation">action à associer au double tap d&#39;activation</a> :</p>
+<pre><code class="objective-c">
+@implementation MyWrapView
+
+//Index utilisés pour repérer les éléments accessibles dans la vue de regroupement.
+int indexLabel = 0;
+int indexSwitch = 1;
+
+
+- (instancetype)initWith:(UILabel *)label and:(UISwitch *)aSwitch {
+
+    CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
+    MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
+
+    wrapView.accessibilityElements = @[label, aSwitch];
+
+    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+
+    wrapView.isAccessibilityElement = YES;
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                                   @"the switch control is",
+                                   switchValue.description];
+    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+
+    return wrapView;
+}
+
+
+//Fonction appelée par le système quand un double tap est réalisé sur l'élément sélectionné pour l'activer.
+- (BOOL)accessibilityActivate {
+
+    UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
+    [theSwitch setOn:!(theSwitch.isOn)];
+
+    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+
+    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                               @"the switch control is",
+                               switchValue.description];
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+    class MyWrapView: UIView {
+
+    //Index utilisés pour repérer les éléments accessibles dans la vue de regroupement.
+    let indexLabel = 0
+    let indexSwitch = 1
+
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+
+    convenience init(with label: UILabel,and aSwitch: UISwitch) {
+
+        let viewFrame = label.frame.union(aSwitch.frame)
+        self.init(frame: viewFrame)
+
+        self.accessibilityElements = [label, aSwitch]
+
+        let switchValue = (aSwitch.isOn) ? "activé" : "désactivé"
+
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "le contrôle est" + switchValue.description
+        self.accessibilityHint = "tapez deux fois pour changer sa valeur."
+    }
+
+
+    //Fonction appelée par le système quand un double tap est réalisé sur l'élément sélectionné pour l'activer.
+    override func accessibilityActivate() -> Bool {
+
+        let theSwitch = self.accessibilityElements?[indexSwitch] as? UISwitch
+        theSwitch?.setOn(!((theSwitch?.isOn)!), animated: false)
+
+        let switchValue = (theSwitch?.isOn)! ? "activé" : "désactivé"
+
+        self.accessibilityLabel = "le contrôle est" + switchValue.description
+
+        return true
+    }
+}
+</code></pre>
+<h3 id="liens">Liens</h3>
 <ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
 <h2 id="-v-nements-d-accessibilit-">Événements d’accessibilité</h2>
@@ -690,7 +770,7 @@ float heightVal;
 <h2 id="taille-des-textes">Taille des textes</h2>
 <h3 id="description">Description</h3>
 <p>Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide du paramétrage du téléphone.
-</br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>Quelques points sont néanmoins essentiels pour la bonne utilisation de l&#39;<abbr>API</abbr> mise à disposition&nbsp;:</p>
 <ul>
 <li><p>Utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l&#39;utilisation d&#39;autres polices est devenue nettement plus aisée depuis l&#39;arrivée de <code>UIFontMetrics</code> avec iOS11.</p>
@@ -765,11 +845,11 @@ float heightVal;
 </br></br>En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l&#39;image à grossir au format <code>pdf</code> à la résolution x1 dans le catalogue <code>xcassets</code>.
 </br></br>2. Dans l&#39;<span lang="en">Image Set</span> qui vient d&#39;être créé, cocher la case <code>Preserve Vector Data</code> et spécifier <code>Single Scale</code> :
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
 </br></br>3. Si un <span lang="en">storyboard</span> est utilisé pour intégrer l&#39;image, cocher <code>Adjusts Image Size</code> dans la partie <span lang="en">Image View</span>, sinon mettre à <code>true</code> la propriété <code>adjustsImageSizeForAccessibilityContentSizeCategory</code> de l&#39;image si cette opération se fait de façon programmatique :
-</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
 </br></br>4. Si une <strong>barre de tabulation</strong> ou une <strong>barre d&#39;outils</strong> est aussi à intégrer dans l&#39;application, renouveler les 3 étapes précédentes pour chacune des images à utiliser en grossissement de l&#39;onglet au milieu de l&#39;écran puis associer l&#39;image souhaitée aux différents éléments impactés :
-</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
 </br><strong>ATTENTION : s&#39;assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.</strong></p>
 <h3 id="exemple">Exemple</h3>
 <p>De façon à pouvoir tester à la fois le grossissement des images et celui d&#39;un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l&#39;image du logo Orange.
@@ -777,7 +857,7 @@ float heightVal;
 <ul>
 <li>Une taille de l&#39;image Orange nettement plus conséquente.</li>
 <li>Au milieu de l&#39;écran, l&#39;affichage grossi de l&#39;onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.
-</br><img style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
+</br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
 </ul>
 <h3 id="lien">Lien</h3>
 <ul>
@@ -792,7 +872,7 @@ float heightVal;
 <p>Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l&#39;ordre natif proposé par <span lang="en">VoiceOver</span>.
 </br>Dans cet exemple, on veut l&#39;ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
 </br>On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :
-</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
+</br><img alt="affichage des vues grise et bleue pour l'exemple" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -838,9 +918,9 @@ float heightVal;
 <p>La lecture des date, heure et nombres n&#39;est pas compliquée mais peut très vite devenir un réel casse-tête avec <span lang="en">VoiceOver</span>&nbsp;.</p>
 <h4 id="lecture-des-dates-et-des-heures">Lecture des dates et des heures</h4>
 <p>Si on met directement sous forme de texte la date ou l&#39;heure dans le <code>label</code>, on s&#39;aperçoit rapidement que le rendu n&#39;est pas naturel à l&#39;écoute.
-</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.
-</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" /></p>
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" /></p>
 <pre><code class="objective-c">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
@@ -891,9 +971,9 @@ float heightVal;
 </code></pre>
 <h4 id="lecture-des-nombres">Lecture des nombres</h4>
 <p>En indiquant la valeur d&#39;un nombre directement dans le texte d&#39;un <code>label</code>, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.
-</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 </br>Comme pour les date et heure, il faut formater la donnée en entrée pour qu&#39;elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu&#39;elle représente.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" /></p>
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" /></p>
 <pre><code class="objective-c">
     NSNumber * numberValue = @54038921.7;
 
@@ -916,9 +996,9 @@ float heightVal;
 <h4 id="lecture-des-num-ros-de-t-l-phone">Lecture des numéros de téléphone</h4>
 <p>La problématique liée à la vocalisation d&#39;un numéro de téléphone est identique à celle des nombres puisqu&#39;elle s&#39;appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres &quot;0&quot;.
 </br>L&#39;exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n&#39;importe quel type de format de numérotation.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
+</br><img alt="" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>L&#39;idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" /></p>
+</br><img alt="" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" /></p>
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -996,19 +1076,19 @@ float heightVal;
 <h2 id="contr-le-de-s-lection">Contrôle de sélection</h2>
 <h3 id="description">Description</h3>
 <p>L&#39;utilisation du contrôle de sélection s&#39;articule autour du mode point et du mode élément définis ci-dessous.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
+</br><img alt="modes point et élément pour le contrôle de sélection" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
 </br>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l&#39;application n&#39;est pas trop compliquée graphiquement.
 </br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l&#39;ordre désiré.</p>
 <h4 id="personnalisation-du-mode-l-ment">Personnalisation du mode élément</h4>
 <p>La structure utilisée pour l&#39;exemple est présentée ci-dessous grâce à l&#39;<span lang="en">InterfaceBuilder</span> de Xcode :
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
+</br><img alt="exemple de l'interface graphique de xcode" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
 </br>Afin de personnaliser la sélection de ces éléments, on souhaite :</p>
 <ul>
 <li>Créer 2 groupes {Test_1 + Test_2 ; Btn 5 + Btn 6} sélectionnables en mode élément.</li>
 <li>Avoir uniquement les éléments restants Btn 1 et Btn 2 accessibles séparément.</li>
 </ul>
 <pre><code class="objective-c">
-@interface ViewController2 ()
+@interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
 @property (weak, nonatomic) IBOutlet UIButton * btn1;
@@ -1019,7 +1099,7 @@ float heightVal;
 @end
 
 
-@implementation ViewController2
+@implementation ViewController
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
@@ -1123,7 +1203,7 @@ class ViewController: UIViewController {
 </code></pre>
 
 <p></br>Le rendu de ce code est visualisable ci-dessous :
-</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
+</br><img alt="rendu final avec le code implémenté" style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
 </br>Les groupes créés permettent d&#39;accéder directement aux éléments qu&#39;ils contiennent dès qu&#39;ils sont activés.</p>
 <h3 id="lien">Lien</h3>
 <ul>
@@ -1132,12 +1212,12 @@ class ViewController: UIViewController {
 <h2 id="valeurs-contin-ment-ajustables">Valeurs continûment ajustables</h2>
 <h3 id="description">Description</h3>
 <p>Des éléments graphiques comme le <code>picker</code>, le <code>stepper</code> ou encore le <code>slider</code> permettent de changer de façon continue la valeur qu&#39;ils proposent de modifier.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
 </br>Quand on ne voit pas la modification dynamique se faire ou qu&#39;on n&#39;en est pas informé vocalement, il devient très compliqué de pouvoir se rendre compte de ce qui se passe.
 </br>La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c&#39;est pourquoi seul le cas du <code>stepper</code> sera traité.
 </br></br>L&#39;implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
 </br>Si on crée un <span lang="en">stepper</span> auquel on ajoute un <code>label</code> pour afficher sa valeur, on obtient le résultat suivant :
-</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br><img alt="exemple de stepper sans une bonne implémentation" style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
 </br>À partir de là, on s&#39;aperçoit que le focus doit être déplacé pour :</p>
 <ul>
 <li>Atteindre chacun des deux éléments permettant d&#39;augmenter ou de diminuer la valeur.</li>
@@ -1149,7 +1229,7 @@ class ViewController: UIViewController {
 </br>Il faut donc <strong>regrouper le <span lang="en">stepper</span> et le <code>label</code></strong> <em>(à l&#39;aide d&#39;une <span lang="en">StackView</span> par exemple)</em> puis associer <strong><code>UIAccessibilityTraitAdjustable</code></strong> à ce nouveau groupe accessible.
 </br>Ce nouveau <code>trait</code> va permettre de modifier de façon continue la valeur de l&#39;objet auquel il est associé en implémentant <strong>OBLIGATOIREMENT</strong> les méthodes <code>accessibilityIncrement()</code> et <code>accessibilityDecrement()</code>.
 </br></br>On élimine ainsi toutes les contraintes rencontrées initialement et on obtient, en plus, un <code>hint</code> lié à ce nouveau <code>trait</code> qui indique la manipulation nécessaire au bon fonctionnement.
-</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" /></p>
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" /></p>
 <ul>
 <li>Pour aboutir à ce résultat, on définit tout d&#39;abord une classe conteneur {<span lang="en">stepper</span> + <code>label</code>} qui va permettre la délégation pour la modification ultérieure de la valeur.</li>
 </ul>
@@ -1302,6 +1382,293 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 <h3 id="lien">Lien</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable"><code>UIAccessibilityTraitAdjustable</code></a></li>
+</ul>
+<h2 id="actions-personnalis-es">Actions personnalisées</h2>
+<h3 id="description">Description</h3>
+<p>Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.
+</br>Un exemple probant est celui du mail iOS natif qui permet d&#39;accéder à un ensemble d&#39;actions comme le montre le schéma suivant :
+</br><img alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
+</br>La gestuelle utilisée graphiquement ne peut convenir à VoiceOver : un balayage vers la gauche sélectionnerait l&#39;élément accessible suivant au lieu de proposer les choix avancés dans l&#39;exemple précédent.
+</br></br>Une solution consiste à <strong>associer à l&#39;élément sélectionné un tableau d&#39;actions</strong> dont le système se chargera d&#39;indiquer automatiquement la présence en informant vocalement l&#39;utilisateur de leur disponibilité.
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * persoElt;
+
+@end
+
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIAccessibilityCustomAction * a11yOptionsAction = [[UIAccessibilityCustomAction alloc]initWithName:@"options"
+                                                                                                target:self
+                                                                                              selector:@selector(optionsAction)];
+    UIAccessibilityCustomAction * a11yDrapeauAction = [[UIAccessibilityCustomAction alloc]initWithName:@"drapeau"
+                                                                                                target:self
+                                                                                              selector:@selector(drapeauAction)];
+    UIAccessibilityCustomAction * a11yCorbeilleAction = [[UIAccessibilityCustomAction alloc]initWithName:@"corbeille"
+                                                                                                  target:self
+                                                                                                selector:@selector(corbeilleAction)];
+
+    _persoElt.accessibilityCustomActions = @[a11yOptionsAction,
+                                             a11yDrapeauAction,
+                                             a11yCorbeilleAction];
+}
+
+- (BOOL)optionsAction {
+    //Code à implémenter pour cette action.
+    return YES;
+}
+
+- (BOOL)drapeauAction {
+    //Code à implémenter pour cette action.
+    return YES;
+}
+
+- (BOOL)corbeilleAction {
+    //Code à implémenter pour cette action.
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var persoElt: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let a11yOptionsAction = UIAccessibilityCustomAction(name: "options",
+                                                            target: self,
+                                                            selector: #selector(optionsAction))
+
+        let a11yDrapeauAction = UIAccessibilityCustomAction(name: "drapeau",
+                                                            target: self,
+                                                            selector: #selector(drapeauAction))
+
+        let a11yCorbeilleAction = UIAccessibilityCustomAction(name: "corbeille",
+                                                              target: self,
+                                                              selector: #selector(corbeilleAction))
+
+        persoElt.accessibilityCustomActions = [a11yOptionsAction,
+                                               a11yDrapeauAction,
+                                               a11yCorbeilleAction]
+    }
+
+
+    @objc func optionsAction() -> Bool {
+        //Code à implémenter pour cette action.
+        return true
+    }
+
+    @objc func drapeauAction() -> Bool {
+        //Code à implémenter pour cette action.
+        return true
+    }
+
+    @objc func corbeilleAction() -> Bool {
+        //Code à implémenter pour cette action.
+        return true
+    }
+}
+</code></pre>
+
+<p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant par balayages successifs sur l&#39;élément accessible utilisé :
+</br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" /></p>
+<h3 id="liens">Liens</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions"><code>accessibilityCustomActions</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction"><code>UIAccessibilityCustomAction</code></a></li>
+</ul>
+<h2 id="focus-d-un-l-ment">Focus d&#39;un élément</h2>
+<h3 id="description">Description</h3>
+<p>Le protocole informel <strong>UIAccessibilityFocus</strong> fournit des éléments de programmation efficaces de façon à pouvoir être informé d&#39;une sélection passé, active ou à venir d&#39;un élément accessible :</p>
+<ul>
+<li><strong>accessibilityElementDidBecomeFocused</strong> : méthode appelée dès que l&#39;élément accessible est sélectionné.</li>
+<li><strong>accessibilityElementDidLoseFocus</strong> : méthode appelée dès que l&#39;élément accessible perd le focus.</li>
+<li><strong>accessibilityElementIsFocused</strong> : valeur booléenne qui permet de savoir si un élément accessible est sélectionné.</li>
+</ul>
+<p>Attention, ces méthodes ne sont pas appelées au sein d&#39;un contrôleur de vue si un de ses élements accessibles est sélectionné mais uniquemnet si elles sont implémentées sur l&#39;élément accessible lui-même.
+</br>Cette erreur à laquelle on ne pense pas de prime abord provient du caractère informel du protocole <strong>UIAccessibilityFocus</strong> dont les éléments peuvent subir un <span lang="en">override</span> sur tout objet héritant de NSObject même s&#39;il n&#39;est pas accessible... comme un contrôleur de vue par exemple.
+</br></br>L&#39;exemple de code ci-dessous permet de suivre le focus d&#39;un élément accessible identifié par son <code>accessibleIdentifier</code>.</p>
+<pre><code class="objective-c">
+#import "UIView+focus.h"
+
+@implementation UIView (focus)
+
+- (void)accessibilityElementDidBecomeFocused {
+
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"Mon élément est sélectionné.");
+    }
+}
+
+- (void)accessibilityElementDidLoseFocus {
+
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"Mon élément a perdu le focus.");
+    }
+}
+
+- (BOOL)accessibilityElementIsFocused {
+
+    if ([self.accessibilityIdentifier isEqualToString:@"monEltAccessible"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+extension UIView {
+    override open func accessibilityElementDidBecomeFocused() {
+
+        if self.accessibilityElementIsFocused() {
+            print("Mon élément est sélectionné.")
+        }
+    }
+
+    override open func accessibilityElementDidLoseFocus() {
+
+        if self.accessibilityElementIsFocused() {
+            print("Mon élément a perdu le focus.")
+        }
+    }
+
+    override open func accessibilityElementIsFocused() -> Bool {
+
+        if (self.accessibilityIdentifier == "monEltAccessible") {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+</code></pre>
+
+<h3 id="lien">Lien</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus"><code>UIAccessibilityFocus</code></a></li>
+</ul>
+<h2 id="rotor-personnalis-">Rotor personnalisé</h2>
+<h3 id="description">Description</h3>
+<p>Depuis iOS10, il est possible d&#39;ajouter une action spécifique au rotor de <span lang="en">VoiceOver</span> en s&#39;appuyant sur l&#39;objet <strong>UIAccessibilityCustomRotor</strong> dont la construction prend en compte 2 éléments principaux en entrée :</p>
+<ul>
+<li><strong>UIAccessibilityCustomRotorSearchPredicate</strong> : définit la logique à mettre en oeuvre selon le type de balayage effectué sur l&#39;écran.</li>
+<li><strong>UIAccessibilityCustomRotorItemResult</strong> : correspond à l&#39;élément issu de la logique précedente.</li>
+</ul>
+<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
+</br></br>Le code fourni ci-dessous permet de compter et d&#39;afficher le nombre de balayages haut et bas <em>(finalité inutile avec le rotor mais qui permet de mettre en avant sa création programmatique)</em>.</p>
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
+@property (weak, nonatomic) IBOutlet UILabel * upLabel;
+@property (weak, nonatomic) IBOutlet UILabel * downLabel;
+
+@end
+
+
+@implementation ViewController
+
+static NSInteger flicksUp;
+static NSInteger flicksDown;
+
+
++ (void)initialize {
+
+    flicksUp = 0;
+    flicksDown = 0;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
+    self.accessibilityCustomRotors = @[rotor];
+}
+
+
+- (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
+
+    return [[UIAccessibilityCustomRotor alloc]initWithName:name
+                                           itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
+
+                                               if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
+
+                                                   flicksDown += 1;
+                                                   self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
+
+                                               } else {
+
+                                                   flicksUp += 1;
+                                                   self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
+                                               }
+
+                                               return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
+                                                                                                              targetRange:nil];
+                                           }];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var rotorTitle: UILabel!
+
+    static var flicksUp = 0
+    @IBOutlet weak var upLabel: UILabel!
+
+    static var flicksDown = 0
+    @IBOutlet weak var downLabel: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let rotor = buildMyRotor("Rotor info")
+        self.accessibilityCustomRotors = [rotor]
+    }
+
+
+    func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+
+        return  UIAccessibilityCustomRotor.init(name: name,
+                                                itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
+
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+
+                                                        ViewController.flicksDown += 1
+                                                        self.downLabel.text = String(ViewController.flicksDown)
+
+                                                    } else {
+
+                                                        ViewController.flicksUp += 1
+                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                    }
+
+                                                    return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
+                                                                                                     targetRange: nil)
+        })
+    }
+}
+</code></pre>
+
+<p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant :
+</br><img alt="affichage modifié avec une action du rotor" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
+</br>L&#39;utilisation d&#39;un rotor personnalisé n&#39;est pas du tout naturelle au sein d&#39;une application, c&#39;est pourquoi il est primordial de <strong>bien annoncer son fonctionnement et sa finalité</strong> pour faciliter au maximum l&#39;expérience utilisateur.
+</br></br>La majeure différence du rotor avec les actions personnalisées ou encore les valeurs continûment ajustables réside dans sa possible utilisation quel que soit l&#39;élément sélectionné sur l&#39;écran.
+</br>Cependant, si l&#39;élément sélectionné est <code>ajustable</code> ou contient des actions personnalisées, <strong>ses actions prévaudront sur celles du rotor</strong>.
+</br></br>L&#39;implémentation d&#39;une telle fonctionnalité au sein d&#39;une application est donc à envisager selon des <strong>besoins bien spécifiques</strong> dont le seul objectif doit être de <strong>faciliter l&#39;expérience utilisateur</strong>.</p>
+<h3 id="liens">Liens</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor"><code>UIAccessibilityCustomRotor</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult"><code>UIAccessibilityCustomRotorItemResult</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate"><code>UIAccessibilityCustomRotorSearchPredicate</code></a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

@@ -44,21 +44,19 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Website</a>
+                    <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Presentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Essential criteria</a></li>
-                        <li><a class="page-exigences" href="exigences.html">All requirements</a></li>
+                        <li><a class="page-fondamentaux" href="fondamentaux.html">WCAG criteria by theme</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Requirements and resources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
                         <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Examples</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA Accessibility</a></li>                        
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">About</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Componant examples</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Technical articles</a></li>
+                        <li><a class="page-about" href="about.html">About / Contact</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile app</a></li>                  
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
                   <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>                                    
                   <li class="nav-item language hidden-sm-up">
                     <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
@@ -97,10 +95,12 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here : </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../web_EN/index.html">Website</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">You are here : </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../web_EN/index.html">Website</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
@@ -109,7 +109,10 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="-abbr-html5-abbr-abbr-aria-abbr-"><abbr>HTML5</abbr> &amp; <abbr>ARIA</abbr></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"HTML5 & ARIA"}]);
+    setBreadcrumb([
+        {"label":"Technical articles", "url":"techniques.html"},
+        {"label":"HTML5 & ARIA"}
+    ]);
 });</script>
 
 <h2 id="introduction">Introduction</h2>
@@ -127,7 +130,7 @@
 </ul>
 <p>Moreover, the optimal efficiency of the <abbr>ARIA</abbr> compatibility depends heavily on the browser/assistive technology combination: Firefox with <abbr>NVDA</abbr>, Jaws with Internet Explorer or Safari with VoiceOver, for example.</p>
 <h2 id="should-we-use-it-">Should we use it?</h2>
-<p><abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). <abbr>ARIA</abbr>’s robustness and interoperability is rather complacent, <a href="https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html">twenty <abbr>WCAG</abbr> 2.0 techniques are specific to <abbr>ARIA</abbr></a> (10 are <abbr>HTML5</abbr> techniques). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.</p>
+<p><abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). <abbr>ARIA</abbr>’s robustness and interoperability is rather complacent, <a href="https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html">twenty <abbr>WCAG</abbr> 2.1 techniques are specific to <abbr>ARIA</abbr></a> (10 are <abbr>HTML5</abbr> techniques). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.</p>
 <p>In all cases, you have to test developments in the target environments (browser/assistive technology combinations). This is a tough task, but absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/<abbr>NVDA</abbr>.</p>
 <p>In a well-defined environment (e.g. intranet), target environments are known and in a finite number, so it gets easier!</p>
 <h2 id="webography">Webography</h2>

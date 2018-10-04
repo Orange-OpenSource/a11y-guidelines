@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landmarks ARIA - Orange web accessibility guidelines</title>
+
+<!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Landmarks <abbr>ARIA</abbr></h1>
+
+        <h2>Introduction</h2>
+        <p>In this example, we'll see how to improve page navigation by adding semantics to content that makes it easier to find the major regions of the page.</p>
+        <h2> Theory</h2>
+        <p><abbr>HTML5</abbr> introduces new tags, including semantic tags (<code>main</code> , <code>aside</code> , <code>footer</code> , and <code>header</code> , ...).</p>
+        <p>These tags should be used alone without the corresponding <abbr>ARIA</abbr> roles because their support is good in the vast majority of browsers and assistive devices.</p>
+     
+        For a page in <abbr>HTML5</abbr>:
+      
+      <pre><code class="html">
+      &lt;head&gt;
+        …
+        &lt;title&gt;Titre de la page&lt;/title&gt;
+        …
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;h1&gt;…&lt;/h1&gt;
+          &lt;nav&gt;…navigation…&lt;/nav&gt;
+          &lt;p&gt;page header&nbsp;: logo, baseline…&lt;/p&gt;
+          …
+        &lt;/header&gt;
+        &lt;main&gt;
+           &lt;nav aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
+           &lt;section&gt;
+             &lt;header&gt;
+               &lt;h1&gt;News&lt;/h1&gt; 
+               &lt;p&gt;June 21th, 2018 - Music festival&lt;/p&gt;
+             &lt;/header&gt;
+             &lt;p&gt;section's content&lt;/p&gt;
+             &lt;footer&gt;
+               &lt;p&gt;section footer's content &nbsp;: copyright…&lt;/p&gt;
+               …
+             &lt;/footer&gt;
+          &lt;/section&gt;
+          &lt;article&gt;
+          […]
+          &lt;/article&gt;
+
+          […]
+
+        &lt;/main&gt;
+        &lt;aside&gt;
+          &lt;p&gt;aside's content&lt;/p&gt;
+          […]
+        &lt;/aside&gt;
+        &lt;footer&gt;
+          &lt;p&gt;footer's content&nbsp;: copyright…&lt;/p&gt;
+          […]
+        &lt;/footer&gt;
+      &lt;/body&gt;
+     </code> </pre>
+         
+      For a page that is not in <abbr>HTML5</abbr>, add the landmarks <abbr>ARIA</abbr>:
+      
+  <pre><code class="html">
+    &lt;head&gt;
+        …
+      &lt;title&gt;Page title&lt;/title&gt;
+        …
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div role="banner"&gt;
+          &lt;h1&gt;…&lt;/h1&gt;
+          &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
+          &lt;p&gt;page header&nbsp;: logo, baseline…&lt;/p&gt;
+          …
+        &lt;/div&gt;
+      &lt;div role="main"&gt;
+      &lt;div role="navigation" aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
+        &lt;div role="region"&gt;
+          &lt;div role="header"&gt;
+            &lt;h1&gt;News&lt;/h1&gt; 
+            &lt;p&gt;June 21th, 2018 - Music festival&lt;/p&gt;
+          &lt;/header&gt;
+          &lt;p&gt;region's content&lt;/p&gt;
+          &lt;div role="contentinfo"&gt;
+            &lt;p&gt;region footer's content&nbsp;: copyright…&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div role="article"&gt;
+        […]
+        &lt;/div&gt;
+
+      […]
+
+      &lt;/div&gt;
+      &lt;div role="complementary"&gt;
+        &lt;p&gt;aside's content&lt;/p&gt;
+          […]
+        &lt;/div&gt;
+      &lt;div role="contentinfo"&gt;
+        &lt;p&gt;footer's content&nbsp;: copyright…&lt;/p&gt;
+          […]
+      &lt;/div&gt;
+    &lt;/body&gt;
+ </code> </pre>
+
+
+  <h3>Usage </h3>
+    <ul>
+      <li>There can only be one <code>main</code> tag or one <code>role=main</code> per page to identify the main content of a page. </li>
+      <li>The <code>section</code> or <code>role=region</code> tag is used to thematically group content, for example, chapters of a book, large parts of a page of Home... </li>
+      <li>The <code>article</code> or <code>role=article</code> tag is an autonomous portion of the page, usually reusable, for example, a blog post, a newspaper, a comment of a blog... </li>
+      <li>The <code>role=navigation</code> or the <code>nav</code> tag identifies the main navigations internal to the site. Good practice requires that you use 3 <code>nav</code> tags maximum per page. </li>
+      <li> The <code>footer</code> tag or the <code>role=contentinfo</code> identifies the footer. It must be unique in the page, except when it is present in <code>section</code> tags, <code>role=region</code> or <code>article</code> , <code>role=article</code> . </li>
+      <li> The tag couple <code>header</code>, <code>role = header</code> identifies the header of the page. It must also be unique, except when it is present in <code>section</code> tags, <code>role=region</code> or <code>article</code>, <code>role=article</code>.</li>
+      <li> To identify the search form in the site, we will use <code>role=search</code> <abbr>ARIA</abbr> alone.</li>
+      <li> If necessary, the content annexed to the main content of the page (additional information, advertising...) must be identified by using the <code>aside</code> tag or the <code>role=complementary</code>.</li>
+    </ul>
+<p>All these landmarks can rely on the <abbr>ARIA</abbr> attributes that are <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code> to provide them with a more relevant accessible name. 
+  
+  More details on <a href="../../label-ledby-describedby.html"> "The <abbr>ARIA</abbr> attributes that can save you" </a>. </p>
+  
+    <h3>Landmarks, users and assistive devices</h3>
+    <p> The <abbr>HTML5</abbr> tags defining the main regions of the page have sufficient support with technical aids (screen readers, magnifying software...). We must therefore use them to structure his page without adding roles Landmarks.</p>
+    <p>Setting up these landmarks <abbr>ARIA</abbr> is a good practice, because it can improve the browsing of some users without impacting that of others.It's really a good practice! </p>
+  </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

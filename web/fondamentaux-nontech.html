@@ -46,22 +46,20 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Site Web</a>
+                    <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Critères incontournables</a></li>
-                        <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
-                        <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
@@ -100,10 +98,12 @@
       </nav>      
     </header>
 
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
@@ -204,17 +204,18 @@ Veiller à fournir un niveau de contraste suffisant (cf. <a href="methodes-outil
 <p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
 <img src="images/focus2.png" alt="capture d’écran présentant un comportement personnalisé pour l’affichage du focus"></p>
-<h2 id="7-agrandissement-de-la-taille-du-texte">7. Agrandissement de la taille du texte</h2>
+<h2 id="7-agrandissement-de-texte-et-adaptation-la-taille-d-affichage">7. Agrandissement de texte et adaptation à la taille d&#39;affichage</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors de la conception graphique et principalement lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). À ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).
-Bien que ceci doive être pris en compte pendant la phase de développement, on peut identifier les zones de l’écran qui doivent ou non s’agrandir en même temps que la taille du texte dès la phase de conception graphique. Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.</p>
+<p><strong>Description&nbsp;:</strong><br>La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). À ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).</p>
+<p>De plus, il faut s&#39;assurer de faire du contenu web adaptatif (responsive web design) donc prévoir les différents affichages selon des largeurs type d&#39;écran (points de rupture) en amont du développement. </p>
+<p>Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.</p>
 <p><strong>Exemple&nbsp;:</strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d’écran avec zoom à 100%">    </p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d’écran avec zoom à 200% et texte lisible">    </p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d’écran avec zoom à 200% et texte tronqué">  </p>
 <h2 id="8-permettre-d-a-rer-le-texte">8. Permettre d&#39;aérer le texte</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
-<p>Même si c&#39;est pendant la phase de développement que l&#39;on va s&#39;assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l&#39;espacement des paragraphes. Il est courramment admis qu&#39;une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d&#39;obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.</p>
-<p><strong>Description :</strong><br>Si l&#39;utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles et dyslexiques.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
+<p>Même si c&#39;est pendant la phase de développement que l&#39;on va s&#39;assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l&#39;espacement des paragraphes et du texte. Il est couramment admis qu&#39;une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d&#39;obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.</p>
+<p><strong>Description&nbsp;:</strong><br>Si l&#39;utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
 <ul>
 <li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.</li>
 <li>L&#39;espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.</li>
@@ -253,8 +254,9 @@ Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir q
 <p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton «&nbsp;Vider la corbeille&nbsp;» ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.</p>
 <h2 id="12-rendre-utilisables-les-formulaires">12. Rendre utilisables les formulaires</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé (ou d&#39;instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l&#39;utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé (ou d&#39;instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l&#39;utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). </p>
+<p>Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label"></p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas prévoir tout de même un libellé. Celui-ci ne sera pas affiché à l’écran mais sera tout de même associé au champ de formulaire lors du développement pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
@@ -263,8 +265,9 @@ Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir q
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire-ko.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides"></p>
 <h2 id="13-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">13. Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</h2>
 <p><strong>Cible&nbsp;:</strong> les seniors, les personnes déficientes cognitives, malvoyantes ou en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.
-De même éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Celles-ci posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Éviter autant que possible les actions qui ouvrent une nouvelle fenêtre (ou un nouvel onglet) du navigateur. Si un lien déclenche l’ouverture d’une nouvelle fenêtre, il faudra lors du développement faire en sorte que le texte «&nbsp;nouvelle fenêtre&nbsp;» soit vocalisé par les lecteurs d’écran, afin que les personnes malvoyantes sachent qu’une nouvelle fenêtre s’ouvre.</p>
+<p>De même, éviter le recours systématique aux boîtes de dialogue pour présenter des informations dans les pages (présentation du service …). Elles doivent être réservées à une information importante qui requiert une attention immédiate et rester de taille réduite.</p>
+<p>Ces fenêtres modales ou pop-in posent souvent des problèmes d’accessibilité pour les personnes qui naviguent au clavier ou au lecteur d’écran, problèmes qui nécessiteront une attention particulière lors de la phase de développement.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas justifié. L’utilisation d’une page web standard permettrait&nbsp;:</p>
 <ul>
 <li>de laisser plus d’espace au contenu (en supprimant les marges autour de la boite de dialogue),</li>
@@ -291,8 +294,6 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <li>S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés…).</li>
 <li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
 </ul>
-<p><strong>Objectif utilisateur&nbsp;:</strong>
-Permettre aux utilisateurs d’identifier et localiser les éléments d’interface dans toutes les pages.</p>
 <p><strong>Exemple valide&nbsp;:</strong>  </p>
 <p><img src="images/groupement.jpg" alt="capture d’écran du site 100% pratique">  </p>
 <p>Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.</p>
@@ -306,44 +307,54 @@ Permettre aux utilisateurs d’identifier et localiser les éléments d’interf
 Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, ce critère peut être ignoré.</p>
 <p><strong>À vérifier&nbsp;:</strong>
 S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…</p>
-<p><strong>Objectif utilisateur&nbsp;:</strong>
-Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.</p>
 <p><strong>Exemple valide&nbsp;:</strong>
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
 <p><strong>Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
 <h2 id="17-viter-les-captcha">17. Éviter les captcha</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
 <li>Double authentification&nbsp;;</li>
 <li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur&nbsp;;</li>
 <li>Mise à disposition d&#39;un support téléphonique afin de s&#39;assurer que le client est une vraie personne&nbsp;;</li>
-<li>Un contrôle permettant de s&#39;assurer qu&#39;une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
+<li>Un contrôle permettant de s&#39;assurer qu&#39;une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
 <p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;:</p>
 <ul>
 <li>un captcha  audio&nbsp;+ visuel,</li>
-<li>des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel clasique</li>
+<li>des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel classique</li>
 <li>…</li>
 </ul>
 <h2 id="18-d-finir-des-zones-sensibles-de-taille-suffisante">18. Définir des zones sensibles de taille suffisante</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
-<h2 id="19-autoriser-l-utilisation-du-zoom">19. Autoriser l&#39;utilisation du zoom</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
-<h2 id="20-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">20. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
 <h2 id="21-proposer-une-alternative-aux-gestuelles-complexes">21. Proposer une alternative aux gestuelles complexes</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
 De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
 <h2 id="22-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">22. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
-<p><strong>Cible&nbsp;:</strong> tous les utilisateurs en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
+<h2 id="23-rendre-accessible-les-pistes-audio-ou-vid-o">23. Rendre accessible les pistes audio ou vidéo</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong> </p>
+<p>Pour être accessibles, les contenus multimédias doivent&nbsp;: </p>
+<ol>
+<li>proposer une transcription intégrale</li>
+<li>proposer des sous-titres (vidéo uniquement) </li>
+<li>proposer une audiodescription (vidéo uniquement)</li>
+<li>choisir un lecteur média accessible</li>
+<li>proscrire le démarrage automatique de la vidéo au chargement de la page</li>
+<li>proscrire les vidéos qui présentent plus de 3 flashs à la seconde </li>
+<li>par ailleurs, pour tout son émis de plus de 3 secondes, l&#39;utilisateur doit avoir la possibilité soit de l&#39;arrêter ou de le mettre en pause soit d&#39;en contrôler son volume indépendamment du volume général du système.</li>
+</ol>
+<p>Pour plus d&#39;infos consulter <a href="../others/video-audio.html">les recommandations accessibilité pour les contenus vidéos, animations et audios Orange</a>.</p>
+<p><strong>Objectif utilisateur&nbsp;:</strong></p>
+<p>Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.</p>
+<p><strong>Objectif technique&nbsp;:</strong></p>
+<p>Permet le référencement de tout contenu audio et vidéo.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

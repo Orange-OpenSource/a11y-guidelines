@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)" 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>                  
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="associer-une-tiquette-pertinente-chaque-champ-de-formulaire">Associer une étiquette pertinente à chaque champ de formulaire</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
+        {"label":"Associer une étiquette pertinente à chaque champ de formulaire"}
+    ]);
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong>  </p>
+<p>Chaque champ de formulaire doit être accompagné d’un libellé ou d&#39;instructions permettant d’identifier le rôle du champ, le type de donnée et le format attendu. </p>
+<p>Ces informations doivent être proches visuellement du champ afin que l&#39;utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile).</p>
+<p>Chaque libellé (ou instructions) doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
+<p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
+L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) dans cet ordre de préférence.</p>
+<p><strong>À vérifier&nbsp;:</strong></p>
+<p>S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.</p>
+<p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.</p>
+<p>Si cela est pertinent, les champs ont un attribut <code>autocompleted</code> afin que l’utilisateur ait la possibilité d’utiliser une liste de propositions pré-enregistrées ou en auto-complétion.</p>
+<p>Pour les boutons radio et les cases à cocher, l’utilisation de la balise <code>label</code> est, parfois, à compléter par un autre dispositif (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> ou parfois, <code>fieldset</code> et <code>legend</code>).</p>
+<p>Pour les champs obligatoires, ceci doit être précisé dans le <code>label</code> via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
+<p><strong>Objectif utilisateur&nbsp;:</strong></p>
+<p>Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.</p>
+<p>Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de saisie.</p>
+<p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide">
+<img src="images/v_label.jpg" alt="capture d’écran d’un formulaire label proche du champ"></p>
+<p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label">
+<img src="images/nv_label.jpg" alt="capture d’écran d’un formulaire label loin du champ"></p>
+<p><strong>Exemple de formulaire accessible&nbsp;:</strong></p>
+<p>Consulter <a href="./exemples/formulaire/index.html">l’exemple de formulaire accessible</a> pour plus d’informations.</p>
+<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
+</body>
+</html>

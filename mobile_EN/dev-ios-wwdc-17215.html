@@ -97,11 +97,13 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
-    </ol>
-
+    <nav>
+      <span class="sr-only">You are here: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -187,7 +189,8 @@ can&#39;t initially read it.</p>
 <h3 id="-custom-actions-35-43-https-developer-apple-com-videos-play-wwdc2017-215-time-2143-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2143">Custom actions (35:43)</a></h3>
 <p><strong>Many different actions may be attributed</strong> to an element thanks to a bunch of <code>accessibilityCustomAction</code>.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
-</br>As soon as this element is selected, a <strong>vertical swipe with one finger</strong> will be proposing the choices of possible actions.</p>
+</br>As soon as this element is selected, a <strong>vertical swipe with one finger</strong> will be proposing the choices of possible actions.
+</br>The programming implementation of this feature is detailed in the <a href="./dev-ios.html#custom-actions">development part</a>.</p>
 <p><a name="DefaultActivation"></a></p>
 <h3 id="-default-activation-37-38-https-developer-apple-com-videos-play-wwdc2017-215-time-2258-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2258">Default activation (37:38)</a></h3>
 <p>In order to limit or make them easier all the user VoiceOver handlings, it&#39;s possible to trigger appropriate actions as soon as an element is activated thanks to a double tap.

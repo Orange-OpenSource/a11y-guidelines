@@ -46,22 +46,20 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Site Web</a>
+                    <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Critères incontournables</a></li>
-                        <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
-                        <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
@@ -100,10 +98,12 @@
       </nav>      
     </header>
 
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
@@ -115,11 +115,10 @@
     setBreadcrumb([{"label":"Orange Boosted"}]);
 });</script>
 
-<h2 id="boosted" lang="en">Orange Boosted</h2>
-<h3 id="pr-sentation">Présentation</h3>
+<h2 id="pr-sentation">Présentation</h2>
 <p>Orange <span lang="en">Boosted</span> est un framework <abbr>HTML</abbr>, <abbr>CSS</abbr> et Javascript basé sur le très populaire <span lang="en"><a href="http://getbootstrap.com/">Twitter Boostrap</a></span>.
 Il permet la mise en place rapide d’un site web responsive et accessible aux couleurs de la charte Orange.</p>
-<h3 id="pourquoi-l-utiliser-">Pourquoi l’utiliser ?</h3>
+<h2 id="pourquoi-l-utiliser-">Pourquoi l’utiliser ?</h2>
 <ul>
 <li>Basé sur <span lang="en"><a href="http://getbootstrap.com/">Twitter Boostrap</a></span></li>
 <li>À la charte Orange, la Brand</li>
@@ -128,7 +127,7 @@ Il permet la mise en place rapide d’un site web responsive et accessible aux c
 <li>Illustré de pages d’exemples</li>
 <li><span lang="en">Open source</span> sous Licence <abbr lang="en">MIT</abbr></li>
 </ul>
-<h3 id="site-officiel">Site officiel</h3>
+<h2 id="site-officiel">Site officiel</h2>
 <p><span lang="en"><a href="http://boosted.orange.com/">Orange Boosted with Bootstrap</a></span></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

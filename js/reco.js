@@ -1,4 +1,23 @@
-app = {};
+// App config insert here at build (from /config files)
+app = {
+    'config': {
+        'googletagmanagerId': 'GTM-N3M5VXS',
+        'phase': 'prod'
+    }
+};
+
+if (!app.config) {
+  app.config = {
+    "phase":"",
+    "googletagmanagerId":""
+  }
+}
+
+/* Google Analaytic */
+dataLayer = [{
+  'site_name': 'accessibility-guidelines',                
+  'phase': app.config.phase  // dev, qa, prod
+}];
 
 $(document).ready( function () {
   var title = " - " + $("head title").text();
@@ -7,6 +26,11 @@ $(document).ready( function () {
   } else {
      title = $("h1:first").text() + title;
   }
+
+  // Masquage du focus pour la nav. souris
+  axsStyles = (document.head || document.getElementsByTagName('head')[0]).appendChild(document.createElement('style'));
+  document.addEventListener('mousedown',function(){axsStyles.innerHTML='* {outline:none !important}'});
+  document.addEventListener('keydown',function(){axsStyles.innerHTML=''});
 
   // Mise à jour du titre de la page
   $("head title").text(title);
@@ -21,7 +45,7 @@ $(document).ready( function () {
   $(window).resize(function(){resize();});
 
   // Fill left navigation menu
-  $("#navigation").clone().attr("id", "left-navigation").appendTo("#sidebar");
+  $("#navigation").clone(true).attr("id", "left-navigation").appendTo("#sidebar");
 
   // Skip links
   $(".skip-links a").on("focus", function () {
@@ -125,6 +149,26 @@ $(document).ready( function () {
   
   // list glossary items
   generateGlossaryLinks();
+  
+  /* Cookie banner */
+  $.getScript( "../tarteaucitron/tarteaucitron.js", function( data, textStatus, jqxhr ) {  
+
+    tarteaucitronForceLanguage = $("html").attr("lang") || "en";  
+    tarteaucitron.init({
+      "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
+      "highPrivacy": false, /* désactiver le consentement implicite (en naviguant) ? */
+      "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+      "adblocker": false, /* Afficher un message si un adblocker est détecté */
+      "showAlertSmall": false, /* afficher le petit bandeau en bas à droite ? */
+      "cookieslist": true, /* Afficher la liste des cookies installés ? */
+      "removeCredit": false, /* supprimer le lien vers la source ? */
+      "handleBrowserDNTRequest": false /* Deny everything if DNT is on */            
+    });
+
+    tarteaucitron.user.googletagmanagerId = app.config.googletagmanagerId;
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+  });
+
 });
 
 function setBreadcrumb(param) {
@@ -132,7 +176,7 @@ function setBreadcrumb(param) {
     if (element.url) {
             $(".breadcrumb").append($("<li class=\"breadcrumb-item\"><a href='" + element.url + "'>" + element.label + "</a></li>"));
         } else {
-            $(".breadcrumb").append($("<li class=\"breadcrumb-item\">" + element.label + "</li>"));
+            $(".breadcrumb").append($("<li aria-current=\"page\" class=\"breadcrumb-item\">" + element.label + "</li>"));
         }
     });
     $(".breadcrumb li:last").addClass("active");
@@ -143,36 +187,62 @@ function setBreadcrumb(param) {
 }
 
 function addSubMenu(subMenus) {
-    var currentItem, htmlStringToAppend, insertPoint = $('.subtitles');
+    var currentItem, htmlStringToAppend, itemsQuery, item;
+    var collapsible = " onClick='expandCollapse(this)' ";
 
     currentItem = getCurrentItem().last();
     currentItem.after('<ul class="subtitles" class="hidden-xs">');    
 
     if (subMenus) {
-      subMenus.forEach(function(subMenu) {          
-        var htmlStringToAppend = '<li class="subtitle submenu"><a aria-haspopup="true" aria-expanded="' + (subMenu.expanded === true?"true":"false") + '" href="' + (subMenu.url?subMenu.url:"#") + '">' + subMenu.label + '</a></li>';
-        if (subMenu.expanded === true) {
-          htmlStringToAppend+="<ul></ul>";
+      subMenus.forEach(function(subMenu) {
+        
+        var htmlStringToAppend = '<li class="subtitle submenu"><a' + (subMenu.className?' class="' + subMenu.className + '" ':' ') + 'aria-haspopup="true" aria-expanded="' + (subMenu.expanded === true?"true":"false") + '" href="' + (subMenu.url?subMenu.url:"#") + '"'+ (subMenu.url?'':collapsible) +'>' + subMenu.label + '</a></li>';
+        
+        if (subMenu.expanded === true || !subMenu.url) {
+          if (!subMenu.expanded) {
+            htmlStringToAppend+="<ul style='display: none;'></ul>";
+          } else {
+            htmlStringToAppend+="<ul></ul>";
+          }
         }
 
-        $('.subtitles').append(htmlStringToAppend);      
-        if (subMenu.expanded === true) {
-          insertPoint = $(".subtitles ul");
-        }
+        $('.subtitles').append(htmlStringToAppend);
+        
+        if (subMenu.onExpand) {
+          $(".subtitle a:last").on("expand", subMenu.onExpand);
+        }                          
+
+        if (subMenu.expanded === true || !subMenu.url) {          
+          itemsQuery = subMenu.itemsQuery?subMenu.itemsQuery:'h2';          
+          $(itemsQuery).each(function() {          
+            item = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
+            $(".subtitles ul:last").append(item);
+          });
+        }        
+
       });
     }
 
     currentItem.parent().parent().addClass("autoscroll");
-
-    $('h2').each(function() {          
-      htmlStringToAppend = '<li class="subtitle"><a href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>';
-      insertPoint.append(htmlStringToAppend);      
-    });
+    
     $('.subtitle:last').after('</ul>');
 
     currentItem.attr("aria-haspopup", "true").attr("aria-expanded", "true");    
 }
     
+function expandCollapse(el) {
+  if ($(el).attr("aria-expanded")==="true") {      
+      $(el).parent().next().fadeOut();      
+      $(el).attr("aria-expanded", "false");
+  } else if ($(el).attr("aria-expanded")==="false") {
+      $(el).parent().parent().find("ul").fadeOut()
+      $(el).parent().parent().find("a[aria-expanded]").attr("aria-expanded","false");
+      $(el).parent().next().fadeIn();
+      $(el).trigger("expand");
+      $(el).attr("aria-expanded", "true");
+  }
+}
+
 function getCurrentItem() {
   var pageName;
   if ($("[data-menuitem]").length > 0) {

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)" 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>                  
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="donner-des-titres-aux-rubriques">Donner des titres aux rubriques</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
+        {"label":"Donner des titres aux rubriques"}
+    ]);
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes cognitives, avec des difficultés pour lire et déficientes visuelles.<br><strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Identifier les balises de titres à utiliser (balises <abbr>HTML</abbr> <code>h1</code> jusqu’à <code>h6</code>) pour structurer le contenu des pages.
+Les personnes malvoyantes naviguant à l’aide d’un lecteur d’écran peuvent accéder à la liste des titres de la page pour naviguer rapidement. 
+Tout comme dans un fichier Word, il est possible d’utiliser la table des matières si des titres ont correctement été positionnés à l’intérieur du document. </p>
+<p><strong>À vérifier&nbsp;:</strong></p>
+<ul>
+<li>Les titres doivent être pertinents et non vides.</li>
+<li>Il ne doit pas exister de saut dans la hiérarchie des titres (on ne passe pas directement d’un titre <code>h2</code> à un titre <code>h4</code>).</li>
+<li>On peut mettre plusieurs <code>h1</code> par page (se limiter tout de même à deux dans la majorité des cas).</li>
+<li>Les lecteurs d’écran ne prennent pas en compte les titres masqués (<code>visibility: hidden;</code>, <code>display: none;</code> ou <code>aria-hidden</code>).</li>
+<li>Le contenu généré dynamiquement doit aussi respecter cette exigence.</li>
+</ul>
+<p><strong>Objectif utilisateur&nbsp;:</strong></p>
+<ul>
+<li>Pour tous les utilisateurs&nbsp;: améliorer la structure de la page et de son contenu. </li>
+<li>Pour les utilisateurs déficients visuels, déficients cognitifs ou ayant des difficultés de lecture&nbsp;: faciliter la navigation et l’accès au contenu.</li>
+</ul>
+<p><strong>Objectif technique&nbsp;:</strong></p>
+<ul>
+<li>Pour les moteurs de recherche&nbsp;: améliorer le référencement.</li>
+</ul>
+<p><strong>Exemple valide&nbsp;:</strong>   </p>
+<p>Un titrage de page cohérent et pertinent&nbsp;:</p>
+<pre><code class="html">
+&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
+    &lt;h2&gt;Les actualités&lt;/h2&gt;
+    &lt;h2&gt;La fibre arrive&nbsp;!&lt;/h2&gt;
+        &lt;h3&gt;Êtes-vous éligible&nbsp;?&lt;/h3&gt;
+</code></pre>
+
+<p><strong>Exemple non-valide&nbsp;:</strong><br>Un titrage de page avec un saut de niveau h2 → h4&nbsp;:</p>
+<pre><code class="html">
+&lt;h1&gt;Accueil – Orange&lt;/h1&gt;
+    &lt;h2&gt;Les actualités&lt;/h2&gt;
+    &lt;h2&gt;La fibre arrive&nbsp;!&lt;/h2&gt;
+        &lt;h4&gt;Êtes-vous éligible&nbsp;?&lt;/h4&gt;
+</code></pre>
+
+<p><strong>Outils :</strong><br>Des extensions à installer dans votre navigateur permettent d&#39;extraire la liste des titres : </p>
+<ul>
+<li>L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>.</li>
+<li>L&#39;extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a>.</li>
+</ul>
+<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
+</body>
+</html>

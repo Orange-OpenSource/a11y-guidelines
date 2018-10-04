@@ -99,11 +99,13 @@
       </nav>      
     </header>
     
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
-    </ol>
-
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -190,7 +192,8 @@
 <h3 id="-les-actions-personnalis-es-35-43-https-developer-apple-com-videos-play-wwdc2017-215-time-2143-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2143">Les actions personnalisées (35:43)</a></h3>
 <p>Il est possible de définir sur une vue un ensemble constitué de <code>accessibilityCustomAction</code> de façon à lui <strong>attribuer différentes actions possibles</strong>.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
-</br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet de déterminer l&#39;action de son choix.</p>
+</br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet de déterminer l&#39;action de son choix.
+</br>La mise en place programmatique de ce type de fonctionnement est présentée dans la partie <a href="./criteria-ios-dev.html#actions-personnalis-es">développement</a>.</p>
 <p><a name="DefaultActivation"></a></p>
 <h3 id="-action-par-d-faut-37-38-https-developer-apple-com-videos-play-wwdc2017-215-time-2258-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2258">Action par défaut (37:38)</a></h3>
 <p>Afin de limiter ou de rendre plus faciles les manipulations à réaliser par les utilsateurs de <span lang="en">VoiceOver</span>, il est possible de déclencher des actions appropriées dès qu&#39;un élément est activé par un double tap.

@@ -286,58 +286,14 @@ documentTitles["about.html#recommandations-accessibilite-orange"] = "Recommandat
 index.add({
     url: "about.html#recommandations-accessibilite-orange",
     title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  "
 });
 
-
-
-documentTitles["faq.html#recommandations-accessibilite-orange-h2-classpage-titlequestions-habituellesh2"] = "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Questions habituelles…&lt;/h2&gt;";
+documentTitles["about.html#gestion-des-cookies"] = "Gestion des cookies";
 index.add({
-    url: "faq.html#recommandations-accessibilite-orange-h2-classpage-titlequestions-habituellesh2",
-    title: "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Questions habituelles…&lt;/h2&gt;",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Questions habituelles…&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  "
-});
-
-documentTitles["faq.html#qui-peut-utiliser-ces-recommandationsnbsp"] = "Qui peut utiliser ces recommandations&amp;nbsp;?";
-index.add({
-    url: "faq.html#qui-peut-utiliser-ces-recommandationsnbsp",
-    title: "Qui peut utiliser ces recommandations&amp;nbsp;?",    
-    body: "## Qui peut utiliser ces recommandations&amp;nbsp;?  En tant que membre d’une équipe projet, designer, concepteur, développeur… , je me forme en utilisant les recommandations EASE pour améliorer l’accessibilité de mon site/application, je m’auto-évalue en utilisant les outils et les méthodes, j’utilise les exemples, Boosted et ses composants réutilisables, ergonomiques, accessibles et chartés groupe pour gagner du temps.  "
-});
-
-documentTitles["faq.html#a-quel-moment-dois-je-me-soucier-daccessibilitenbsp"] = "À quel moment dois-je me soucier d’accessibilité&amp;nbsp;?";
-index.add({
-    url: "faq.html#a-quel-moment-dois-je-me-soucier-daccessibilitenbsp",
-    title: "À quel moment dois-je me soucier d’accessibilité&amp;nbsp;?",    
-    body: "## À quel moment dois-je me soucier d’accessibilité&amp;nbsp;?  L’accessibilité doit être prise en compte à toutes les étapes de la vie d’un projet, des études préalables à la maintenance. Il est crucial que l’accessibilité soit embarquée dans le projet au plus tôt dès l’étude d’opportunité, car elle peut être structurante pour l’ensemble du projet et notamment lors des choix de technologies.  "
-});
-
-documentTitles["faq.html#quels-sont-les-liens-entre-accessibilite-et-ergonomienbsp"] = "Quels sont les liens entre accessibilité et ergonomie&amp;nbsp;?";
-index.add({
-    url: "faq.html#quels-sont-les-liens-entre-accessibilite-et-ergonomienbsp",
-    title: "Quels sont les liens entre accessibilité et ergonomie&amp;nbsp;?",    
-    body: "## Quels sont les liens entre accessibilité et ergonomie&amp;nbsp;?  L’ergonomie (conception d’outils, machines et dispositifs confortables, sécurisés et efficaces pour le plus grand nombre) inclut l’accessibilité (réalisation d’interfaces utilisables par tous quel que soit leur matériel, leurs logiciels, leur langue, leur culture et leurs aptitudes physiques ou mentales).  L’ergonomie traite de l’utilité (le fonctionnel et le partage des tâches entre opérateur et système) et de l’utilisabilité (l’organisation de l’information et les modes d’actions utilisateur). L’accessibilité se concentre sur l’utilisabilité, elle est donc une partie de l’ergonomie. Rendre une IHM accessible améliore, de fait, l’ergonomie, la réciproque n’étant pas forcément vraie.  Faire intervenir, de concert, ces deux spécialités vous permet d’optimiser la qualité du service rendu à vos utilisateurs.  "
-});
-
-documentTitles["faq.html#a-quel-public-sadresse-laccessibilitenbsp"] = "À quel public s’adresse l’accessibilité&amp;nbsp;?";
-index.add({
-    url: "faq.html#a-quel-public-sadresse-laccessibilitenbsp",
-    title: "À quel public s’adresse l’accessibilité&amp;nbsp;?",    
-    body: "## À quel public s’adresse l’accessibilité&amp;nbsp;?  La prise en compte de l’accessibilité bénéficie en premier lieu aux personnes souffrant d’une déficience ou d’un handicap et qui parfois utilisent des outils d’assistance spécifiques (lecteur d’écrans, joystick, …), même temporairement. Par extension, les seniors sont concernés ainsi que les utilisateurs de matériels et de technologies obsolètes ou vieillissantes.  On estime que 15% de la population, en Europe, est directement impactée par un manque d’accessibilité.  De plus, l’amélioration de l’accessibilité permet une augmentation de l’ergonomie et donc a un impact positif sur l’expérience de tous les utilisateurs.  "
-});
-
-documentTitles["faq.html#combien-ca-coute-et-quest-ce-que-ca-apportenbsp"] = "Combien ça coûte et qu’est ce que ça apporte&amp;nbsp;?";
-index.add({
-    url: "faq.html#combien-ca-coute-et-quest-ce-que-ca-apportenbsp",
-    title: "Combien ça coûte et qu’est ce que ça apporte&amp;nbsp;?",    
-    body: "## Combien ça coûte et qu’est ce que ça apporte&amp;nbsp;?  La prise en compte de l’accessibilité relève principalement de l’application de bonnes pratiques. C’est peu coûteux, 5-10% du développement, voire moins si on en tient compte dès le début et donc que l'équipe projet et les développeurs sont formés. En revanche, une prise en compte tardive peut mener à une refonte de tout ou partie de l’interface et nécessitera d’importants re-développements.  L’amélioration de l’accessibilité permet d’augmenter le nombre d’utilisateurs potentiels mais aussi&amp;nbsp;:      - d’améliorer le référencement par les moteurs de recherche.     - d’assurer une plus grande pérennité de l’application et de faciliter l’adaptation aux contextes de mobilité (tablette, téléphones…).     - de diminuer des coûts de maintenance avec des évolutions plus aisées car basées sur un code de qualité, plus interopérable et plus maintenable.     - d’améliorer l’utilisabilité (ergonomie) avec une plus grande qualité du service pour tous.   "
-});
-
-documentTitles["faq.html#quels-sont-les-outils-mis-a-disposition-par-easenbsp"] = "Quels sont les outils mis à disposition par EASE&amp;nbsp;?";
-index.add({
-    url: "faq.html#quels-sont-les-outils-mis-a-disposition-par-easenbsp",
-    title: "Quels sont les outils mis à disposition par EASE&amp;nbsp;?",    
-    body: "## Quels sont les outils mis à disposition par EASE&amp;nbsp;?  - Orange Boosted, framework front basé sur Bootstrap - confort +, outils de modification de l'apparence et du comportement des pages web - mDAN, application mobile pour apprendre à coder accessible sous iOS et Android - Des outils et méthodes  - Des exemples  "
+    url: "about.html#gestion-des-cookies",
+    title: "Gestion des cookies",    
+    body: "## Gestion des cookies  Vous pouvez modifier à tous moments vos préférences directement depuis le &lt;a role=\&quot;button\&quot; href=\&quot;javascript:tarteaucitron.userInterface.openPanel();\&quot;&gt;panneau de gestion des cookies&lt;/a&gt;. &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

@@ -44,21 +44,19 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Website</a>
+                    <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Presentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Essential criteria</a></li>
-                        <li><a class="page-exigences" href="exigences.html">All requirements</a></li>
+                        <li><a class="page-fondamentaux" href="fondamentaux.html">WCAG criteria by theme</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Requirements and resources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
                         <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Examples</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html">HTML5 & ARIA</a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA Accessibility</a></li>                        
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">About</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Componant examples</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Technical articles</a></li>
+                        <li><a class="page-about" href="about.html">About / Contact</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile app</a></li>                  
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
                   <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>                                    
                   <li class="nav-item language hidden-sm-up">
                     <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
@@ -97,39 +95,41 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here : </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../web_EN/index.html">Website</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">You are here : </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../web_EN/index.html">Website</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="orange-web-accessibility-requirements">Orange web accessibility requirements</h1>
+          <h1 id="requirements-and-resources">Requirements and resources</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"All requirements"}]);
+    setBreadcrumb([{"label":"Requirements and resources"}]);
 });</script>
 <h2 id="wcag">WCAG</h2>
 <p>For Orange internal accessibility requirements, we have chosen to rely on the <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines v2</a> (<abbr>WCAG</abbr> 2). Those guidelines are international guidelines published by the World Wide Web Consortium (<abbr>W3C</abbr>) Web Accessibility Initiative (<abbr>WAI</abbr>) task force, which comply with the <abbr>ISO</abbr> standard 40500:2012.</p>
-<p>All <abbr>HTML</abbr> pages made by the Orange group must <strong>comply with the AA level criteria of Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.0, without blocking point</strong> for the user after testing the main features of the site or application.</p>
+<p>All <abbr>HTML</abbr> pages made by the Orange group must <strong>comply with the AA level criteria of Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without blocking point</strong> for the user after testing the main features of the site or application.</p>
 <p>For technical solutions, you should consult <a href="./fondamentaux.html">essential criteria</a> and <a href="./exemples.html">examples</a> sections. You can also refer to an external resource available at <a href="http://wiki.accede-web.com/en/home">Accede-Web references</a>.</p>
 <h2 id="-abbr-rgaa-abbr-"><abbr>RGAA</abbr></h2>
-<p>The <abbr>RGAA</abbr> is the French government’s <a href="http://references.modernisation.gouv.fr/referentiel/">General Accessibility Reference for Administrations (in French)</a>. It is meant to provide a way to check compliance against <abbr>WCAG</abbr> 2.0.
+<p>The <abbr>RGAA</abbr> is the French government’s <a href="http://references.modernisation.gouv.fr/referentiel/">General Accessibility Reference for Administrations (in French)</a>. It is meant to provide a way to check compliance against <abbr>WCAG</abbr> 2.1.
 If your are familiar with this reference, you can use it to test your site.</p>
 <p>An <a href="https://disic.github.io/rgaa_referentiel_en/introduction-RGAA.html">English translation</a> is available for informational purposes only. </p>
 <h2 id="accede-web-references">Accede-web references</h2>
 <p>The <a href="http://wiki.accede-web.com/en/">Accede-web</a> site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities: </p>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
     <img src="./images/perso1.png" alt=""> 
-    <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info">Accessibility guidelines for graphic design (to ensure <abbr>WCAG</abbr> 2.0 compliance)</a>
+    <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info">Accessibility guidelines for graphic design (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
     <img src="./images/perso2.png" alt=""><br>    <a href="http://wiki.accede-web.com/en/notices/contributeurs" class="btn btn-info">Accessibility guidelines for editors (template)</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    <img src="./images/perso3.png" alt=""><br>    <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info">Accessibility guidelines for <abbr>HTML</abbr> and <abbr>CSS</abbr> (to ensure <abbr>WCAG</abbr> 2.0 compliance)</a>
+    <img src="./images/perso3.png" alt=""><br>    <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info">Accessibility guidelines for <abbr>HTML</abbr> and <abbr>CSS</abbr> (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
     <img src="./images/perso4.png" alt=""><br>    <a href="http://wiki.accede-web.com/en/notices/interfaces-riches-javascript" class="btn btn-info">Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)</a>

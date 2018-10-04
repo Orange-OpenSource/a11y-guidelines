@@ -97,11 +97,13 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
-    </ol>
-
+    <nav>
+      <span class="sr-only">You are here: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -447,8 +449,6 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 <li><strong>accessibilityFrame</strong>&nbsp;: sets the area via a rectangle (<code>CGRect</code>).
 </br>Usually, for an element inheriting from <code>UIView</code>, this area is the «&nbsp;visible&nbsp;» part of the view.</li>
 <li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.</li>
-<li><strong>accessibilityActivationPoint</strong>&nbsp;: the activation «&nbsp;point&nbsp;» of an element for accessibility tools.
-</br>By default, this point is at the centre of the element.</li>
 </ul>
 <h3 id="example">Example</h3>
 <p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
@@ -557,64 +557,145 @@ float heightVal;
 </br></br>Another grouping elements case could use the <strong>shouldGroupAccessibilityChildren</strong> attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
 </br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).</p>
 <h3 id="example">Example</h3>
-<p>We wish to obtain a &#39;label&#39; and a &#39;switch control&#39; as one unique block.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" /></p>
+<p>We wish to obtain a &#39;label&#39; and a &#39;switch control&#39; as one unique block behaving like a <code>switch control</code>.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
+</br>Create your wrapper as an accessible element :</p>
 <pre><code class="objective-c">
+#import "MyViewController.h"
+#import "MyWrapView.h"
+
+@interface MyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation MyViewController
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    //View that will encapsulate the 'label' and the 'Switch Control'.
-    CGRect wrapFrame = CGRectUnion(myLabel.frame, mySwitchControl.frame);
-    wrapView = [[UIView alloc]initWithFrame: wrapFrame];
+    //Create the view that will encapsulate the 'label' and the 'Switch Control'.
+    MyWrapView * wrap = [[MyWrapView alloc] initWith:_myLabel
+                                                 and:_mySwitch];
 
-    wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = myLabel.accessibilityLabel;
-    wrapView.accessibilityValue = mySwitchControl.accessibilityValue;
-
-
-    //Gesture for action on the previous created view.
-    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                  action:@selector(changeValue:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [wrapView addGestureRecognizer:tapGesture];
-
-    [self.view addSubview:wrapView];
+    [self.view addSubview:wrap];
 }
-
-- (void)changeValue:(UITapGestureRecognizer *)sender {
-    mySwitchControl.on = ![mySwitchControl.accessibilityValue boolValue];
-}
+@end
 </code></pre><pre><code class="swift">
+    class MyViewController: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        //View that will encapsulate the 'label' and the 'Switch Control'.
-        let wrapFrame = myLabel.frame.union(mySwitchControl.frame)
-        let wrapView = UIView.init(frame: wrapFrame)
+        //Create the view that will encapsulate the 'label' and the 'Switch Control'.
+        let wrap = MyWrapView.init(with: myLabel,
+                                   and: mySwitch)
 
-        wrapView.isAccessibilityElement = true
-        wrapView.accessibilityLabel = myLabel.accessibilityLabel
-        wrapView.accessibilityValue = mySwitchControl.accessibilityValue
-
-
-        //Gesture for action on the previous created view.
-        let tapGesture = UITapGestureRecognizer.init(target: self,
-                                                     action: #selector(changeValue(sender:)))
-        tapGesture.numberOfTapsRequired = 1;
-        wrapView.addGestureRecognizer(tapGesture)
-
-        self.view.addSubview(wrapView)
+        self.view.addSubview(wrap)
     }
-
-    @objc func changeValue(sender: UITapGestureRecognizer) {
-
-        let switchBoolValue = NSString(string:mySwitchControl.accessibilityValue!).boolValue
-        mySwitchControl.setOn(!switchBoolValue,
-                              animated: false)
-    }
+}
 </code></pre>
-<h3 id="link">Link</h3>
+
+<p></br>... and implement the wrapper class to define accurately the
+<a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios-wwdc-17215.html#DefaultActivation">action when a double tap occurs</a> :</p>
+<pre><code class="objective-c">
+@implementation MyWrapView
+
+//Indexes for the array containing all the wrapped elements.
+int indexLabel = 0;
+int indexSwitch = 1;
+
+
+- (instancetype)initWith:(UILabel *)label and:(UISwitch *)aSwitch {
+
+    CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
+    MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
+
+    wrapView.accessibilityElements = @[label, aSwitch];
+
+    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+
+    wrapView.isAccessibilityElement = YES;
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                                   @"the switch control is",
+                                   switchValue.description];
+    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+
+    return wrapView;
+}
+
+
+//Function called by the system when a double tap occurs on the selected wrapper.
+- (BOOL)accessibilityActivate {
+
+    UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
+    [theSwitch setOn:!(theSwitch.isOn)];
+
+    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+
+    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                               @"the switch control is",
+                               switchValue.description];
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+    class MyWrapView: UIView {
+
+    //Indexes for the array containing all the wrapped elements.
+    let indexLabel = 0
+    let indexSwitch = 1
+
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+
+    convenience init(with label: UILabel,and aSwitch: UISwitch) {
+
+        let viewFrame = label.frame.union(aSwitch.frame)
+        self.init(frame: viewFrame)
+
+        self.accessibilityElements = [label, aSwitch]
+
+        let switchValue = (aSwitch.isOn) ? "on" : "off"
+
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "the switch control is" + switchValue.description
+        self.accessibilityHint = "tap twice to change the switch control status."
+    }
+
+
+    //Function called by the system when a double tap occurs on the selected wrapper.
+    override func accessibilityActivate() -> Bool {
+
+        let theSwitch = self.accessibilityElements?[indexSwitch] as? UISwitch
+        theSwitch?.setOn(!((theSwitch?.isOn)!), animated: false)
+
+        let switchValue = (theSwitch?.isOn)! ? "on" : "off"
+
+        self.accessibilityLabel = "the switch control is" + switchValue.description
+
+        return true
+    }
+}
+</code></pre>
+<h3 id="links">Links</h3>
 <ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
 <h2 id="accessibility-events">Accessibility events</h2>
@@ -1276,6 +1357,294 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 <h3 id="link">Link</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable"><code>UIAccessibilityTraitAdjustable</code></a></li>
+</ul>
+<h2 id="custom-actions">Custom actions</h2>
+<h3 id="description">Description</h3>
+<p>Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
+</br>A convincing example is the iOS native mail that may suggest some actions as follows :
+</br><img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
+</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the next accessible element instead of suggesting actions as above.
+</br></br>A solution may consist of <strong>associating the selected element with an array of actions</strong> that will be automatically introduced to the user.
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * persoElt;
+
+@end
+
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIAccessibilityCustomAction * a11yMoreAction = [[UIAccessibilityCustomAction alloc]initWithName:@"more"
+                                                                                                target:self
+                                                                                              selector:@selector(moreAction)];
+    UIAccessibilityCustomAction * a11yFlagAction = [[UIAccessibilityCustomAction alloc]initWithName:@"flag"
+                                                                                                target:self
+                                                                                              selector:@selector(flagAction)];
+    UIAccessibilityCustomAction * a11yDeleteAction = [[UIAccessibilityCustomAction alloc]initWithName:@"delete"
+                                                                                                  target:self
+                                                                                                selector:@selector(deleteAction)];
+
+    _persoElt.accessibilityCustomActions = @[a11yMoreAction,
+                                             a11yFlagAction,
+                                             a11yDeleteAction];
+}
+
+- (BOOL)moreAction {
+    //Code to be implemented for the appropriate action.
+    return YES;
+}
+
+- (BOOL)flagAction {
+    //Code to be implemented for the appropriate action.
+    return YES;
+}
+
+- (BOOL)deleteAction {
+    //Code to be implemented for the appropriate action.
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var persoElt: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let a11yMoreAction = UIAccessibilityCustomAction(name: "more",
+                                                         target: self,
+                                                         selector: #selector(moreAction))
+
+        let a11yFlagAction = UIAccessibilityCustomAction(name: "flag",
+                                                         target: self,
+                                                         selector: #selector(flagAction))
+
+        let a11yDeleteAction = UIAccessibilityCustomAction(name: "delete",
+                                                           target: self,
+                                                           selector: #selector(deleteAction))
+
+        persoElt.accessibilityCustomActions = [a11yMoreAction,
+                                               a11yFlagAction,
+                                               a11yDeleteAction]
+    }
+
+
+    @objc func moreAction() -> Bool {
+        //Code to be implemented for the appropriate action.
+        return true
+    }
+
+    @objc func flagAction() -> Bool {
+        //Code to be implemented for the appropriate action.
+        return true
+    }
+
+    @objc func deleteAction() -> Bool {
+        //Code to be implemented for the appropriate action.
+        return true
+    }
+}
+</code></pre>
+
+<p></br>The code above gives rise to the following result thanks to consecutive flicks on the selected accessible element :
+</br><img alt="flick up to vocalize suggesterd actions with VoiceOver activated" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" /></p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions"><code>accessibilityCustomActions</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction"><code>UIAccessibilityCustomAction</code></a></li>
+</ul>
+<h2 id="focus-an-element">Focus an element</h2>
+<h3 id="description">Description</h3>
+<p>The <strong>UIAccessibilityFocus</strong> informal protocol provides programming elements to be informed of the accessible element focus :</p>
+<ul>
+<li><strong>accessibilityElementDidBecomeFocused</strong> : called when the accessible element is focused.</li>
+<li><strong>accessibilityElementDidLoseFocus</strong> : fired when the accessible element lost focus.</li>
+<li><strong>accessibilityElementIsFocused</strong> : boolean value indicating the accessible element selection.</li>
+</ul>
+<p>Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
+</br>However, if they are implemented in the accessible element itself, you won&#39;t be disappointed.
+</br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it&#39;s not accessible... like a view controller for instance.
+</br></br>The example below enables to follow the focus of an accessible element identified by its <code>accessibleIdentifier</code>.</p>
+<pre><code class="objective-c">
+#import "UIView+focus.h"
+
+@implementation UIView (focus)
+
+- (void)accessibilityElementDidBecomeFocused {
+
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"My element has become focused.");
+    }
+}
+
+- (void)accessibilityElementDidLoseFocus {
+
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"My element has lost focus.");
+    }
+}
+
+- (BOOL)accessibilityElementIsFocused {
+
+    if ([self.accessibilityIdentifier isEqualToString:@"myAccessibleElt"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+extension UIView {
+    override open func accessibilityElementDidBecomeFocused() {
+
+        if self.accessibilityElementIsFocused() {
+            print("My element has become focused.")
+        }
+    }
+
+    override open func accessibilityElementDidLoseFocus() {
+
+        if self.accessibilityElementIsFocused() {
+            print("My element has lost focus.")
+        }
+    }
+
+    override open func accessibilityElementIsFocused() -> Bool {
+
+        if (self.accessibilityIdentifier == "myAccessibleElt") {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+</code></pre>
+
+<h3 id="link">Link</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus"><code>UIAccessibilityFocus</code></a></li>
+</ul>
+<h2 id="custom-rotor">Custom rotor</h2>
+<h3 id="description">Description</h3>
+<p>Since iOS10, adding a new rotor option is possible thanks to the <strong>UIAccessibilityCustomRotor</strong> whose creation is based on 2 elements :</p>
+<ul>
+<li><strong>UIAccessibilityCustomRotorSearchPredicate</strong> : defines the logic according to the flick type on the screen.</li>
+<li><strong>UIAccessibilityCustomRotorItemResult</strong> : ensued element from the logic above.</li>
+</ul>
+<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
+</br></br>To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.</p>
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
+@property (weak, nonatomic) IBOutlet UILabel * upLabel;
+@property (weak, nonatomic) IBOutlet UILabel * downLabel;
+
+@end
+
+
+@implementation ViewController
+
+static NSInteger flicksUp;
+static NSInteger flicksDown;
+
+
++ (void)initialize {
+
+    flicksUp = 0;
+    flicksDown = 0;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
+    self.accessibilityCustomRotors = @[rotor];
+}
+
+
+- (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
+
+    return [[UIAccessibilityCustomRotor alloc]initWithName:name
+                                           itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
+
+                                               if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
+
+                                                   flicksDown += 1;
+                                                   self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
+
+                                               } else {
+
+                                                   flicksUp += 1;
+                                                   self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
+                                               }
+
+                                               return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
+                                                                                                              targetRange:nil];
+                                           }];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var rotorTitle: UILabel!
+
+    static var flicksUp = 0
+    @IBOutlet weak var upLabel: UILabel!
+
+    static var flicksDown = 0
+    @IBOutlet weak var downLabel: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let rotor = buildMyRotor("Rotor info")
+        self.accessibilityCustomRotors = [rotor]
+    }
+
+
+    func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+
+        return  UIAccessibilityCustomRotor.init(name: name,
+                                                itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
+
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+
+                                                        ViewController.flicksDown += 1
+                                                        self.downLabel.text = String(ViewController.flicksDown)
+
+                                                    } else {
+
+                                                        ViewController.flicksUp += 1
+                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                    }
+
+                                                    return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
+                                                                                                     targetRange: nil)
+        })
+    }
+}
+</code></pre>
+
+<p></br>The code above gives rise to the following illustrated steps :
+</br><img alt="changed display with a rotor option" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
+</br>The use of a custom rotor is definitely not a natural part of a mobile application, that&#39;s why its <strong>functioning</strong> and <strong>purpose</strong> must be <strong>fully explained</strong> to assist the user experience.
+</br></br>The main difference between a rotor option and a custom action or an adjustable element relies on the fact that it can be activated whatever the selected element.
+</br>However, if this selected element is adjustable or holds any custom actions, <strong>its actions will prevail over those of the rotor</strong>.
+</br></br>Such a feature must be implemented with <strong>caution</strong> and according to <strong>specific needs</strong> whose only purpose should be to <strong>improve and facilitate the user experience</strong>.</p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor"><code>UIAccessibilityCustomRotor</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult"><code>UIAccessibilityCustomRotorItemResult</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate"><code>UIAccessibilityCustomRotorSearchPredicate</code></a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

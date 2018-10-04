@@ -97,11 +97,13 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
-    </ol>
-
+    <nav>
+      <span class="sr-only">You are here: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -109,7 +111,8 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="voiceover-user-guide">VoiceOver user guide</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Screen reader", "url":"./screen-reader.html"},{"label":"VoiceOver user guide"}]);
+    setBreadcrumb([{"label":"Screen reader", "url":"./screen-reader.html"},
+                   {"label":"VoiceOver user guide"}]);
     addSubMenu([
         {"label":"Android guide","url":"talkback.html"}, 
         {"label":"iOS guide","url":"voiceover.html", "expanded": true}
@@ -117,8 +120,19 @@
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
-<p>VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen. It is free and it vocalizes all visible elements in the page specially for blind or partially sighted, dyslexic or illiterate users. A tool like VoiceOver is called either screen reader or speech synthesizer, even if a screen reader is actually a software associated with voice synthesis.</p>
-<p>When VoiceOver is on, the standard gestures behave differently. Furthermore, additional gestures let you move the focus on the screen and control the selected items. VoiceOver has gestures with one, two and three fingers to select and to go through elements. We describe here the basic gestures commonly used.</p>
+<p>VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen.
+</br>It vocalizes all visible elements in the page specially for blind or impaired, dyslexic or illiterate users.</p>
+<p>When VoiceOver is on, the standard gestures behave differently and additional gestures let you move the focus on the screen and control the selected items. </p>
+<p>It&#39;s better but not mandatory to <strong>activate the vibration</strong> feature in the accessibility settings in order to feel the trigger of some actions.
+</br><img style="max-width: 350px; height: auto;" alt="" src="./images/iphonex_vo_en_vibration.png" />
+</br>A sound may be heard in case of a disactivated vibration feature but VoiceOver might cover it.</p>
+<p>Two gestures are important to be well understood so as to perfectly harness the provided details thereafter :
+</br><img style="max-width: 100px; height: auto;" alt="" src="./images/iphonex_1finger_flick_up.png" />
+The <strong>flick</strong> consists in raising the finger of the screen at the end of the mopvement while continuing it in the air.
+</br><img style="max-width: 100px; height: auto;" alt="" src="./images/iphonex_1finger_swipe_up.png" />
+The <strong>swipe</strong> consists in doing the gesture while keeping the finger on the screen.</p>
+<p>First, VoiceOver common gestures will be introduced to be followed by iPhoneX dedicated gestures.
+</br>The last part will deal with unusual but useful features for an advanced user.</p>
 <h2 id="common-gestures">Common gestures</h2>
 <ul class="list-gesture">
   <li class="clearfix">
@@ -129,37 +143,128 @@
       <img src="./images/gesture2.png" alt="" width="80"><br>      <a name="double-tap-anywhere-on-the-screen"></a><h3>Double-tap anywhere on the screen</h3>
       <p>Opens or activates the item that you last touched (vocalized).</p>
   </li>
-  <li class="clearfix">
+    <li class="clearfix">
       <img src="./images/gesture9_1.png" alt="" width="80">
       <img src="./images/gesture9_2.png" alt="" width="80"><br>      <a name="swipe-up-or-down-using-three-fingers"></a><h3>Swipe up or down using three fingers</h3>
-      <p>Scroll within lists or pages if selected. Equivalent to a vertical swipe.</p>
+      <p>Scroll within lists or pages if selected. Equivalent to a vertical swipe.</p></br></br>
   </li>
   <li class="clearfix">
       <img src="./images/gesture10_1.png" alt="" width="80">
-      <img src="./images/gesture10_2.png" alt="" width="80">
-      <a name="swipe-left-or-right-using-three-fingers"></a><h3>Swipe left or right using three fingers</h3>
-      <p>Change pages and screens when possible. Equivalent to a horizontal swipe.</p> 
+      <img src="./images/gesture10_2.png" alt="" width="80"><br>      <a name="swipe-left-or-right-using-three-fingers"></a><h3>Swipe left or right using three fingers</h3>
+      <p>Change pages and screens when possible. Equivalent to a horizontal swipe.</p>
   </li>
-  <li class="clearfix">
-      <img src="./images/gesture5.png" alt="" width="80"><br>      <a name="swipe-right-using-one-finger"></a><h3>Swipe right using one finger</h3>
+  <li class="clearfix"><br>      <img src="./images/gesture5.png" alt="" width="80"><br>      <a name="flick-right-using-one-finger"></a><h3>Flick right using one finger</h3>
       <p>Move the focus to the next item.</p>
   </li>
   <li class="clearfix">
-      <img src="./images/gesture6.png" alt="" width="80">
-      <a name="swipe-left-using-one-finger"></a><h3>Swipe left using one finger.</h3>
+      <img src="./images/gesture6.png" alt="" width="80"><br>      <a name="flick-left-using-one-finger"></a><h3>Flick left using one finger.</h3>
       <p>Move the focus to the previous item.</p>
   </li>
-  <li class="clearfix"><br>      <img src="./images/gesture7.png" alt="" width="80"><br>      <a name="swipe-up-using-one-finger"></a><h3>Swipe up using one finger</h3>
+  <li class="clearfix"><br>      <img src="./images/gesture7.png" alt="" width="80"><br>      <a name="flick-up-using-one-finger"></a><h3>Flick up using one finger</h3>
       <p>Increase the value of an adjustable element.</p>
   </li>
   <li class="clearfix">
-      <img src="./images/gesture8.png" alt="" width="80"><br>      <a name="swipe-down-using-one-finger"></a><h3>Swipe down using one finger</h3>
+      <img src="./images/gesture8.png" alt="" width="80"><br>      <a name="flick-down-using-one-finger"></a><h3>Flick down using one finger</h3>
       <p>Decrease the value of an adjustable element.</p>
   </li>
 </ul>
 
 <p><span class="licence">These images are licensed under the Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/">openexhibits</a></span></p>
-<p>For more information about VoiceOver and a detailed description of its features, please read <a href="https://help.apple.com/iphone/9/#/iph3e2e415f">Apple’s official documentation on VoiceOver</a>.</p>
+<p>For more information about VoiceOver and a detailed description of its features, please read <a href="https://help.apple.com/iphone/9/#/iph3e2e415f">Apple’s official documentation on VoiceOver</a>.
+</br></br></br></p>
+<h2 id="iphonex-img-style-max-width-400px-height-auto-alt-src-images-iphonex-jpg-">iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" /></h2>
+<p>The lack of the home button on the main screen for this device has modified the usual gestures.
+</br>These <a href="./screen-reader-voiceover-iphonex.html">new common gestures</a> have induced new VoiceOver behavior for some actions :</p>
+<ul>
+<li><a href="#BackHome">Go to Home Screen.</a></li>
+<li><a href="#Multitask">Get Multitask Pane.</a></li>
+<li><a href="#ControlCenter">Open Control Center.</a></li>
+<li><a href="#NotificationCenter">See Notifications.</a></li>
+</ul>
+<p><a name="BackHome"></a>
+</br>Gesture : <strong>flick up with one finger</strong> from the bottom edge of the screen until you feel a <strong>simple vibration</strong> (approximately the <strong>first lower quarter part of the screen</strong>).
+</br><img style="max-width: 470px; height: auto;" alt="" src="./images/iphonex_vo_en_back_home.png" /></p>
+<p><a name="Multitask"></a>
+</br></br>Gesture : <strong>flick up with one finger</strong> from the bottom edge of the screen until you feel a <strong>double vibration</strong> (approximately <strong>in the middle of the screen</strong>).
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_multitask.png" /></p>
+<p><a name="ControlCenter"></a>
+</br>Gesture: <strong>flick down with one finger</strong> from the top edge of the screen until you feel a <strong>simple vibration</strong> (approximately the <strong>first upper quarter part of the screen</strong>).
+</br><img style="max-width: 520px; height: auto;" alt="" src="./images/iphonex_vo_en_control_center.png" /></p>
+<p><a name="NotificationCenter"></a>
+</br>Gesture: <strong>flick down with one finger</strong> from the top edge of the screen until you feel a <strong>double vibration</strong> (approximately <strong>in the middle of the screen</strong>).
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_notification_center.png" />
+</br></br></br></p>
+<h2 id="tips-tricks">Tips &amp; Tricks</h2>
+<p>Hereunder are unusual features that may be useful to a VoiceOver user on any device :</p>
+<ul>
+<li><a href="#ReadAllElementsFromTop">Read elements from the top.</a></li>
+<li><a href="#ReadAllElementsFromSelection">Read elements from the selection.</a></li>
+<li><a href="#ToggleAutomaticReading">Start/pause the elements vocalization.</a></li>
+<li><a href="#LocateSelectedElement">Locate the selected element.</a></li>
+<li><a href="#ToggleSpeech">Toggle Speech.</a></li>
+<li><a href="#ControlCenter">Open Control Center.</a></li>
+<li><a href="#NotificationCenter">See Notifications.</a></li>
+<li><a href="#ElementActivation">Activate the selected element.</a></li>
+<li><a href="#Scrub">Go back to the previous page.</a></li>
+<li><a href="#ItemChooserList">Use the item chooser list.</a></li>
+<li><a href="#PageFirstElement">Select the first element on the page.</a></li>
+<li><a href="#PageLastElement">Select the last element on the page.</a></li>
+<li><a href="#CurtainScreen">Toggle Curtain Screen.</a></li>
+<li><a href="#CustomLabel">Set a custom label.</a></li>
+<li><a href="#SpotlightSearch">Use Spotlight Search.</a></li>
+</ul>
+<p><a name="ReadAllElementsFromTop"></a>
+</br>Gesture : <strong>flick up with 2 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_all_from_top.png" /></p>
+<p><a name="ReadAllElementsFromSelection"></a>
+</br>Gesture : <strong>flick down with 2 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_all_from_selection.png" /></p>
+<p><a name="ToggleAutomaticReading"></a>
+</br>Gesture : <strong>simple-tap with 2 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_stop_resume_ auto_vocal.png" /></p>
+<p><a name="LocateSelectedElement"></a>
+</br>Gesture : <strong>simple-tap with 3 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_locate_select.png" /></p>
+<p><a name="ToggleSpeech"></a>
+</br>Gesture : <strong>double-tap with 3 fingers</strong> anywhere on the screen.
+</br>If the <code>zoom</code> functionality is activated in the settings, a <strong>triple-tap</strong> will be mandatory to obtain the same result.
+</br><img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex_vo_en_stop_resume_speech.png" /></p>
+<p><a name="ControlCenter"></a>
+</br>First of all, <strong>an element of the status bar must be selected</strong>.
+</br>Gesture: <strong>flick up with 3 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_control_center_bis.png" /></p>
+<p><a name="NotificationCenter"></a>
+</br>First of all, <strong>an element of the status bar must be selected</strong>.
+</br>Gesture: <strong>flick down with 3 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_notification_center_bis.png" /></p>
+<p><a name="ElementActivation"></a>
+</br>Gesture : <strong>select and hold</strong> the element with <strong>one finger</strong>, then make a <strong>simple-tap with another finger</strong> anywhere on the screen.
+</br>This is a very useful gesture when using a keyboard : the index finger select the letter while the middle finger makes the simple-tap.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_activate_elt_bis.png" /></p>
+<p><a name="Scrub"></a>
+</br>Gesture : <strong>swipe with 2 fingers</strong> drawing a <strong>Z-shape</strong> anywhere on the screen.
+</br>This ends exactly in the same result as the click on the native back button.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_scrub.png" /></p>
+<p><a name="ItemChooserList"></a>
+</br>Gesture : <strong>triple-tap with 2 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_item_chooser_list.png" /></p>
+<p><a name="PageFirstElement"></a>
+</br>Gesture : <strong>simple-tap with 4 fingers</strong> in the upper half part of the screen.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_first_elt.png" /></p>
+<p><a name="PageLastElement"></a>
+</br>Gesture : <strong>simple-tap with 4 fingers</strong> in the lower half part of the screen.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_last_elt.png" /></p>
+<p><a name="CurtainScreen"></a>
+</br>Gesture : <strong>triple-tap with 3 fingers</strong> anywhere on the screen.
+</br>If the <code>zoom</code> functionality is activated in the settings, a <strong>quadruple-tap</strong> will be mandatory to obtain the same result.
+</br>It will allow a VoiceOver using with a dark screen promoting the confidentiality and the longevity of the battery at the same time.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_curtain_screen.png" /></p>
+<p><a name="CustomLabel"></a>
+</br>Gesture : <strong>double-tap and hold with 2 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_custom_label.png" /></p>
+<p><a name="SpotlightSearch"></a>
+</br>Gesture : <strong>flick down with 3 fingers</strong> anywhere on the screen.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_en_search.png" /></p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

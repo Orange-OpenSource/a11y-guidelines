@@ -99,11 +99,13 @@
       </nav>      
     </header>
     
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
-    </ol>
-
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -129,6 +131,8 @@
 <p>Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>. Le code source de ce site ainsi que celui des exemples est disponible <a href="https://github.com/Orange-OpenSource/a11y-guidelines">sur notre compte github</a>.  </p>
 <p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange&nbsp;:  </p>
 <p><span lang="en">Copyright (C) 2016 Orange SA All rights reserved</span><br><a href="/NOTICE.txt">Liste des fichiers concernés</a></p>
+<h2 id="gestion-des-cookies">Gestion des cookies</h2>
+<p>Vous pouvez modifier à tous moments vos préférences directement depuis le <a role="button" href="javascript:tarteaucitron.userInterface.openPanel();">panneau de gestion des cookies</a>.</p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -206,7 +210,7 @@ private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
 <p>Attention: nous parlons ici de vocalisation <span lang="en">TalkBack</span> et non pas de <abbr>TTS</abbr> (Text To Speech) qui peut fonctionner indépendamment du statut de <span lang="en">TalkBack</span>.</p>
 <p><strong>Exemple&nbsp;: </strong></p>
 <p>Il est fréquent de tester la version d’Android avant de déclencher une vocalisation <span lang="en">TalkBack</span>. En effet, <code>announceForAccessibility</code> ne fonctionne que depuis l’arrivée d’Android <i lang="en">Jelly Bean</i>.</p>
-<pre><code>if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+<pre><code class="java">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
     getView().announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
 }</code></pre>
 
@@ -250,7 +254,7 @@ boolean isAccessibilityEnabled = am.isEnabled();</code></pre>
 </ul>
 <p>À noter&nbsp;: ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes <code>setAccessibilityTraversalAfter</code> et <code>setAccessibilityTraversalBefore</code>. Ces méthodes sont disponibles pour tout élément qui hérite de <code>View</code>.</p>
 <p><strong>Exemple&nbsp;: </strong> </p>
-<pre><code>volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+<pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre>
@@ -302,7 +306,7 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
 <p>Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.</p>
 <p><strong>Exemple&nbsp;: </strong></p>
 <p>Dans cet exemple, on intercepte les événements d’accessibilité. En fonction de leur type (un texte a changé dans la vue ou <span lang="en">TalkBack</span> a mis le focus sur le composant), nous construisons une vocalisation à destination de <span lang="en">TalkBack</span>.</p>
-<pre><code>@Override
+<pre><code class="java">@Override
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 
@@ -335,7 +339,7 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 <h2 id="-i-lang-en-webview-i-"><i lang="en">WebView</i></h2>
 <p><strong>Description&nbsp;: </strong> </p>
 <p>Les <code>WebView</code> ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet&nbsp;: les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet&nbsp;: <a href="../web/index.html">recommandations accessibilité pour le web</a>.  </p>
-<p>Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le JavaScript&nbsp;: <code>mWebView.getSettings.setJavaScriptEnabled(true);</code><br>Dans ces conditions, la page affichée à travers la <code>WebView</code>  réagit convenablement à l’<abbr>API</abbr> d’accessibilité. </p>
+<p>Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le JavaScript&nbsp;: <code>mWebView.getSettings().setJavaScriptEnabled(true);</code><br>Dans ces conditions, la page affichée à travers la <code>WebView</code>  réagit convenablement à l’<abbr>API</abbr> d’accessibilité. </p>
 <h2 id="vocalisation-des-listes">Vocalisation des listes</h2>
 <p><strong>Description&nbsp;: </strong> </p>
 <p>Il arrive parfois que les listes soient mal vocalisées&nbsp;: la synthèse vocale tente de vocaliser toute la liste en une seule fois (au moins ce qui est affiché à l’écran dans le cas de listes longues). C’est notamment le cas lorsque l’on utilise des <code>RecyclerView</code>. Pour pallier ce problème, une solution simple existe. Il suffit de positionner l’attribut <code>focusable</code> à <code>true</code> pour chaque item de la liste. Cela a pour effet de forcer la synthèse vocale (<span lang="en">TalkBack</span>) à lire les items un par un.</p>
@@ -509,7 +513,7 @@ func customTraits() {
 </br>Les deux autres attributs sont utilisables uniquement via le code.</p>
 <h3 id="exemple">Exemple</h3>
 <p>L&#39;idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et jaune) pour appliquer les attributs définis précedémment.
-<img style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
+<img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -728,11 +732,9 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 <li><strong>accessibilityFrame</strong>&nbsp;: permet de définir cette zone via un rectangle (<code>CGRect</code>).
 </br>Par défaut pour un élément dérivant de <code>UIView</code>, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.</li>
 <li><strong>accessibilityPath</strong>&nbsp;: équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.</li>
-<li><strong>accessibilityActivationPoint</strong>&nbsp;: le «&nbsp;point&nbsp;» d’activation d’un élément pour les outils d’accessibilité.
-</br>Par défaut, ce point est au centre de l’élément.</li>
 </ul>
 <h3 id="exemple">Exemple</h3>
-<p><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
+<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
 <pre><code class="objective-c">
 float xVal;
 float yVal;
@@ -839,64 +841,144 @@ float heightVal;
 </br></br>Une autre possibilité de groupement d&#39;éléments pourrait utiliser l’attribut <strong>shouldGroupAccessibilityChildren</strong>, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
 </br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
 <h3 id="exemple">Exemple</h3>
-<p>Nous avons un &#39;label&#39; et un &#39;switch control&#39; que nous allons souhaitons regrouper et traiter d&#39;un seul bloc.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" /></p>
+<p>Nous avons un &#39;label&#39; et un &#39;switch control&#39; que nous souhaitons regrouper et traiter d&#39;un seul bloc.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
+</br>Création de l&#39;élément accessible qui va regrouper les éléments souhaités :</p>
 <pre><code class="objective-c">
+#import "MyViewController.h"
+#import "MyWrapView.h"
+
+@interface MyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation MyViewController
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     //Création de la vue qui va encapsuler le 'label' et le 'Switch Control'.
-    CGRect wrapFrame = CGRectUnion(myLabel.frame, mySwitchControl.frame);
-    wrapView = [[UIView alloc]initWithFrame: wrapFrame];
+    MyWrapView * wrap = [[MyWrapView alloc] initWith:_myLabel
+                                                 and:_mySwitch];
 
-    wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = myLabel.accessibilityLabel;
-    wrapView.accessibilityValue = mySwitchControl.accessibilityValue;
-
-
-    //Création de la manipulation qui va permettre une action sur la vue précédente.
-    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                  action:@selector(changeValue:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [wrapView addGestureRecognizer:tapGesture];
-
-    [self.view addSubview:wrapView];
+    [self.view addSubview:wrap];
 }
-
-- (void)changeValue:(UITapGestureRecognizer *)sender {
-    mySwitchControl.on = ![mySwitchControl.accessibilityValue boolValue];
-}
+@end
 </code></pre><pre><code class="swift">
+    class MyViewController: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         //Création de la vue qui va encapsuler le 'label' et le 'Switch Control'.
-        let wrapFrame = myLabel.frame.union(mySwitchControl.frame)
-        let wrapView = UIView.init(frame: wrapFrame)
+        let wrap = MyWrapView.init(with: myLabel,
+                                   and: mySwitch)
 
-        wrapView.isAccessibilityElement = true
-        wrapView.accessibilityLabel = myLabel.accessibilityLabel
-        wrapView.accessibilityValue = mySwitchControl.accessibilityValue
-
-
-        //Création de la manipulation qui va permettre une action sur la vue précédente.
-        let tapGesture = UITapGestureRecognizer.init(target: self,
-                                                     action: #selector(changeValue(sender:)))
-        tapGesture.numberOfTapsRequired = 1;
-        wrapView.addGestureRecognizer(tapGesture)
-
-        self.view.addSubview(wrapView)
+        self.view.addSubview(wrap)
     }
-
-    @objc func changeValue(sender: UITapGestureRecognizer) {
-
-        let switchBoolValue = NSString(string:mySwitchControl.accessibilityValue!).boolValue
-        mySwitchControl.setOn(!switchBoolValue,
-                              animated: false)
-    }
+}
 </code></pre>
-<h3 id="lien">Lien</h3>
+
+<p></br>... et implémentation de la classe utilisée pour définir de façon précise l&#39;<a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-wwdc-17215.html#DefaultActivation">action à associer au double tap d&#39;activation</a> :</p>
+<pre><code class="objective-c">
+@implementation MyWrapView
+
+//Index utilisés pour repérer les éléments accessibles dans la vue de regroupement.
+int indexLabel = 0;
+int indexSwitch = 1;
+
+
+- (instancetype)initWith:(UILabel *)label and:(UISwitch *)aSwitch {
+
+    CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
+    MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
+
+    wrapView.accessibilityElements = @[label, aSwitch];
+
+    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+
+    wrapView.isAccessibilityElement = YES;
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                                   @"the switch control is",
+                                   switchValue.description];
+    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+
+    return wrapView;
+}
+
+
+//Fonction appelée par le système quand un double tap est réalisé sur l'élément sélectionné pour l'activer.
+- (BOOL)accessibilityActivate {
+
+    UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
+    [theSwitch setOn:!(theSwitch.isOn)];
+
+    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+
+    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
+                               @"the switch control is",
+                               switchValue.description];
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+    class MyWrapView: UIView {
+
+    //Index utilisés pour repérer les éléments accessibles dans la vue de regroupement.
+    let indexLabel = 0
+    let indexSwitch = 1
+
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+
+    convenience init(with label: UILabel,and aSwitch: UISwitch) {
+
+        let viewFrame = label.frame.union(aSwitch.frame)
+        self.init(frame: viewFrame)
+
+        self.accessibilityElements = [label, aSwitch]
+
+        let switchValue = (aSwitch.isOn) ? "activé" : "désactivé"
+
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "le contrôle est" + switchValue.description
+        self.accessibilityHint = "tapez deux fois pour changer sa valeur."
+    }
+
+
+    //Fonction appelée par le système quand un double tap est réalisé sur l'élément sélectionné pour l'activer.
+    override func accessibilityActivate() -> Bool {
+
+        let theSwitch = self.accessibilityElements?[indexSwitch] as? UISwitch
+        theSwitch?.setOn(!((theSwitch?.isOn)!), animated: false)
+
+        let switchValue = (theSwitch?.isOn)! ? "activé" : "désactivé"
+
+        self.accessibilityLabel = "le contrôle est" + switchValue.description
+
+        return true
+    }
+}
+</code></pre>
+<h3 id="liens">Liens</h3>
 <ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
 <h2 id="-v-nements-d-accessibilit-">Événements d’accessibilité</h2>
@@ -958,7 +1040,7 @@ float heightVal;
 <h2 id="taille-des-textes">Taille des textes</h2>
 <h3 id="description">Description</h3>
 <p>Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide du paramétrage du téléphone.
-</br><img style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>Quelques points sont néanmoins essentiels pour la bonne utilisation de l&#39;<abbr>API</abbr> mise à disposition&nbsp;:</p>
 <ul>
 <li><p>Utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l&#39;utilisation d&#39;autres polices est devenue nettement plus aisée depuis l&#39;arrivée de <code>UIFontMetrics</code> avec iOS11.</p>
@@ -1033,11 +1115,11 @@ float heightVal;
 </br></br>En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l&#39;image à grossir au format <code>pdf</code> à la résolution x1 dans le catalogue <code>xcassets</code>.
 </br></br>2. Dans l&#39;<span lang="en">Image Set</span> qui vient d&#39;être créé, cocher la case <code>Preserve Vector Data</code> et spécifier <code>Single Scale</code> :
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
 </br></br>3. Si un <span lang="en">storyboard</span> est utilisé pour intégrer l&#39;image, cocher <code>Adjusts Image Size</code> dans la partie <span lang="en">Image View</span>, sinon mettre à <code>true</code> la propriété <code>adjustsImageSizeForAccessibilityContentSizeCategory</code> de l&#39;image si cette opération se fait de façon programmatique :
-</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
 </br></br>4. Si une <strong>barre de tabulation</strong> ou une <strong>barre d&#39;outils</strong> est aussi à intégrer dans l&#39;application, renouveler les 3 étapes précédentes pour chacune des images à utiliser en grossissement de l&#39;onglet au milieu de l&#39;écran puis associer l&#39;image souhaitée aux différents éléments impactés :
-</br><img style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
 </br><strong>ATTENTION : s&#39;assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.</strong></p>
 <h3 id="exemple">Exemple</h3>
 <p>De façon à pouvoir tester à la fois le grossissement des images et celui d&#39;un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l&#39;image du logo Orange.
@@ -1045,7 +1127,7 @@ float heightVal;
 <ul>
 <li>Une taille de l&#39;image Orange nettement plus conséquente.</li>
 <li>Au milieu de l&#39;écran, l&#39;affichage grossi de l&#39;onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.
-</br><img style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
+</br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
 </ul>
 <h3 id="lien">Lien</h3>
 <ul>
@@ -1060,7 +1142,7 @@ float heightVal;
 <p>Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l&#39;ordre natif proposé par <span lang="en">VoiceOver</span>.
 </br>Dans cet exemple, on veut l&#39;ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
 </br>On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :
-</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
+</br><img alt="affichage des vues grise et bleue pour l'exemple" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -1106,9 +1188,9 @@ float heightVal;
 <p>La lecture des date, heure et nombres n&#39;est pas compliquée mais peut très vite devenir un réel casse-tête avec <span lang="en">VoiceOver</span>&nbsp;.</p>
 <h4 id="lecture-des-dates-et-des-heures">Lecture des dates et des heures</h4>
 <p>Si on met directement sous forme de texte la date ou l&#39;heure dans le <code>label</code>, on s&#39;aperçoit rapidement que le rendu n&#39;est pas naturel à l&#39;écoute.
-</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.
-</br><img style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" /></p>
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_4.png" /></p>
 <pre><code class="objective-c">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
@@ -1159,9 +1241,9 @@ float heightVal;
 </code></pre>
 <h4 id="lecture-des-nombres">Lecture des nombres</h4>
 <p>En indiquant la valeur d&#39;un nombre directement dans le texte d&#39;un <code>label</code>, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.
-</br><img style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
 </br>Comme pour les date et heure, il faut formater la donnée en entrée pour qu&#39;elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu&#39;elle représente.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" /></p>
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_5.png" /></p>
 <pre><code class="objective-c">
     NSNumber * numberValue = @54038921.7;
 
@@ -1184,9 +1266,9 @@ float heightVal;
 <h4 id="lecture-des-num-ros-de-t-l-phone">Lecture des numéros de téléphone</h4>
 <p>La problématique liée à la vocalisation d&#39;un numéro de téléphone est identique à celle des nombres puisqu&#39;elle s&#39;appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres &quot;0&quot;.
 </br>L&#39;exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n&#39;importe quel type de format de numérotation.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
+</br><img alt="" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>L&#39;idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.
-</br><img style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" /></p>
+</br><img alt="" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_6.png" /></p>
 <pre><code class="objective-c">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -1264,19 +1346,19 @@ float heightVal;
 <h2 id="contr-le-de-s-lection">Contrôle de sélection</h2>
 <h3 id="description">Description</h3>
 <p>L&#39;utilisation du contrôle de sélection s&#39;articule autour du mode point et du mode élément définis ci-dessous.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
+</br><img alt="modes point et élément pour le contrôle de sélection" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControlesDeSelection.png" />
 </br>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l&#39;application n&#39;est pas trop compliquée graphiquement.
 </br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l&#39;ordre désiré.</p>
 <h4 id="personnalisation-du-mode-l-ment">Personnalisation du mode élément</h4>
 <p>La structure utilisée pour l&#39;exemple est présentée ci-dessous grâce à l&#39;<span lang="en">InterfaceBuilder</span> de Xcode :
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
+</br><img alt="exemple de l'interface graphique de xcode" style="max-width: 700px; height: auto; " src="./images/iOSdev/ControleDeSelectionIB_1.png" />
 </br>Afin de personnaliser la sélection de ces éléments, on souhaite :</p>
 <ul>
 <li>Créer 2 groupes {Test_1 + Test_2 ; Btn 5 + Btn 6} sélectionnables en mode élément.</li>
 <li>Avoir uniquement les éléments restants Btn 1 et Btn 2 accessibles séparément.</li>
 </ul>
 <pre><code class="objective-c">
-@interface ViewController2 ()
+@interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
 @property (weak, nonatomic) IBOutlet UIButton * btn1;
@@ -1287,7 +1369,7 @@ float heightVal;
 @end
 
 
-@implementation ViewController2
+@implementation ViewController
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
@@ -1391,7 +1473,7 @@ class ViewController: UIViewController {
 </code></pre>
 
 <p></br>Le rendu de ce code est visualisable ci-dessous :
-</br><img style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
+</br><img alt="rendu final avec le code implémenté" style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
 </br>Les groupes créés permettent d&#39;accéder directement aux éléments qu&#39;ils contiennent dès qu&#39;ils sont activés.</p>
 <h3 id="lien">Lien</h3>
 <ul>
@@ -1400,12 +1482,12 @@ class ViewController: UIViewController {
 <h2 id="valeurs-contin-ment-ajustables">Valeurs continûment ajustables</h2>
 <h3 id="description">Description</h3>
 <p>Des éléments graphiques comme le <code>picker</code>, le <code>stepper</code> ou encore le <code>slider</code> permettent de changer de façon continue la valeur qu&#39;ils proposent de modifier.
-</br><img style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
 </br>Quand on ne voit pas la modification dynamique se faire ou qu&#39;on n&#39;en est pas informé vocalement, il devient très compliqué de pouvoir se rendre compte de ce qui se passe.
 </br>La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c&#39;est pourquoi seul le cas du <code>stepper</code> sera traité.
 </br></br>L&#39;implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
 </br>Si on crée un <span lang="en">stepper</span> auquel on ajoute un <code>label</code> pour afficher sa valeur, on obtient le résultat suivant :
-</br><img style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
+</br><img alt="exemple de stepper sans une bonne implémentation" style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
 </br>À partir de là, on s&#39;aperçoit que le focus doit être déplacé pour :</p>
 <ul>
 <li>Atteindre chacun des deux éléments permettant d&#39;augmenter ou de diminuer la valeur.</li>
@@ -1417,7 +1499,7 @@ class ViewController: UIViewController {
 </br>Il faut donc <strong>regrouper le <span lang="en">stepper</span> et le <code>label</code></strong> <em>(à l&#39;aide d&#39;une <span lang="en">StackView</span> par exemple)</em> puis associer <strong><code>UIAccessibilityTraitAdjustable</code></strong> à ce nouveau groupe accessible.
 </br>Ce nouveau <code>trait</code> va permettre de modifier de façon continue la valeur de l&#39;objet auquel il est associé en implémentant <strong>OBLIGATOIREMENT</strong> les méthodes <code>accessibilityIncrement()</code> et <code>accessibilityDecrement()</code>.
 </br></br>On élimine ainsi toutes les contraintes rencontrées initialement et on obtient, en plus, un <code>hint</code> lié à ce nouveau <code>trait</code> qui indique la manipulation nécessaire au bon fonctionnement.
-</br><img style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" /></p>
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/ValeursAjustables_3.png" /></p>
 <ul>
 <li>Pour aboutir à ce résultat, on définit tout d&#39;abord une classe conteneur {<span lang="en">stepper</span> + <code>label</code>} qui va permettre la délégation pour la modification ultérieure de la valeur.</li>
 </ul>
@@ -1571,6 +1653,293 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable"><code>UIAccessibilityTraitAdjustable</code></a></li>
 </ul>
+<h2 id="actions-personnalis-es">Actions personnalisées</h2>
+<h3 id="description">Description</h3>
+<p>Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.
+</br>Un exemple probant est celui du mail iOS natif qui permet d&#39;accéder à un ensemble d&#39;actions comme le montre le schéma suivant :
+</br><img alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
+</br>La gestuelle utilisée graphiquement ne peut convenir à VoiceOver : un balayage vers la gauche sélectionnerait l&#39;élément accessible suivant au lieu de proposer les choix avancés dans l&#39;exemple précédent.
+</br></br>Une solution consiste à <strong>associer à l&#39;élément sélectionné un tableau d&#39;actions</strong> dont le système se chargera d&#39;indiquer automatiquement la présence en informant vocalement l&#39;utilisateur de leur disponibilité.
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * persoElt;
+
+@end
+
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIAccessibilityCustomAction * a11yOptionsAction = [[UIAccessibilityCustomAction alloc]initWithName:@"options"
+                                                                                                target:self
+                                                                                              selector:@selector(optionsAction)];
+    UIAccessibilityCustomAction * a11yDrapeauAction = [[UIAccessibilityCustomAction alloc]initWithName:@"drapeau"
+                                                                                                target:self
+                                                                                              selector:@selector(drapeauAction)];
+    UIAccessibilityCustomAction * a11yCorbeilleAction = [[UIAccessibilityCustomAction alloc]initWithName:@"corbeille"
+                                                                                                  target:self
+                                                                                                selector:@selector(corbeilleAction)];
+
+    _persoElt.accessibilityCustomActions = @[a11yOptionsAction,
+                                             a11yDrapeauAction,
+                                             a11yCorbeilleAction];
+}
+
+- (BOOL)optionsAction {
+    //Code à implémenter pour cette action.
+    return YES;
+}
+
+- (BOOL)drapeauAction {
+    //Code à implémenter pour cette action.
+    return YES;
+}
+
+- (BOOL)corbeilleAction {
+    //Code à implémenter pour cette action.
+    return YES;
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var persoElt: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let a11yOptionsAction = UIAccessibilityCustomAction(name: "options",
+                                                            target: self,
+                                                            selector: #selector(optionsAction))
+
+        let a11yDrapeauAction = UIAccessibilityCustomAction(name: "drapeau",
+                                                            target: self,
+                                                            selector: #selector(drapeauAction))
+
+        let a11yCorbeilleAction = UIAccessibilityCustomAction(name: "corbeille",
+                                                              target: self,
+                                                              selector: #selector(corbeilleAction))
+
+        persoElt.accessibilityCustomActions = [a11yOptionsAction,
+                                               a11yDrapeauAction,
+                                               a11yCorbeilleAction]
+    }
+
+
+    @objc func optionsAction() -> Bool {
+        //Code à implémenter pour cette action.
+        return true
+    }
+
+    @objc func drapeauAction() -> Bool {
+        //Code à implémenter pour cette action.
+        return true
+    }
+
+    @objc func corbeilleAction() -> Bool {
+        //Code à implémenter pour cette action.
+        return true
+    }
+}
+</code></pre>
+
+<p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant par balayages successifs sur l&#39;élément accessible utilisé :
+</br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" /></p>
+<h3 id="liens">Liens</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions"><code>accessibilityCustomActions</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction"><code>UIAccessibilityCustomAction</code></a></li>
+</ul>
+<h2 id="focus-d-un-l-ment">Focus d&#39;un élément</h2>
+<h3 id="description">Description</h3>
+<p>Le protocole informel <strong>UIAccessibilityFocus</strong> fournit des éléments de programmation efficaces de façon à pouvoir être informé d&#39;une sélection passé, active ou à venir d&#39;un élément accessible :</p>
+<ul>
+<li><strong>accessibilityElementDidBecomeFocused</strong> : méthode appelée dès que l&#39;élément accessible est sélectionné.</li>
+<li><strong>accessibilityElementDidLoseFocus</strong> : méthode appelée dès que l&#39;élément accessible perd le focus.</li>
+<li><strong>accessibilityElementIsFocused</strong> : valeur booléenne qui permet de savoir si un élément accessible est sélectionné.</li>
+</ul>
+<p>Attention, ces méthodes ne sont pas appelées au sein d&#39;un contrôleur de vue si un de ses élements accessibles est sélectionné mais uniquemnet si elles sont implémentées sur l&#39;élément accessible lui-même.
+</br>Cette erreur à laquelle on ne pense pas de prime abord provient du caractère informel du protocole <strong>UIAccessibilityFocus</strong> dont les éléments peuvent subir un <span lang="en">override</span> sur tout objet héritant de NSObject même s&#39;il n&#39;est pas accessible... comme un contrôleur de vue par exemple.
+</br></br>L&#39;exemple de code ci-dessous permet de suivre le focus d&#39;un élément accessible identifié par son <code>accessibleIdentifier</code>.</p>
+<pre><code class="objective-c">
+#import "UIView+focus.h"
+
+@implementation UIView (focus)
+
+- (void)accessibilityElementDidBecomeFocused {
+
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"Mon élément est sélectionné.");
+    }
+}
+
+- (void)accessibilityElementDidLoseFocus {
+
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"Mon élément a perdu le focus.");
+    }
+}
+
+- (BOOL)accessibilityElementIsFocused {
+
+    if ([self.accessibilityIdentifier isEqualToString:@"monEltAccessible"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+extension UIView {
+    override open func accessibilityElementDidBecomeFocused() {
+
+        if self.accessibilityElementIsFocused() {
+            print("Mon élément est sélectionné.")
+        }
+    }
+
+    override open func accessibilityElementDidLoseFocus() {
+
+        if self.accessibilityElementIsFocused() {
+            print("Mon élément a perdu le focus.")
+        }
+    }
+
+    override open func accessibilityElementIsFocused() -> Bool {
+
+        if (self.accessibilityIdentifier == "monEltAccessible") {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+</code></pre>
+
+<h3 id="lien">Lien</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus"><code>UIAccessibilityFocus</code></a></li>
+</ul>
+<h2 id="rotor-personnalis-">Rotor personnalisé</h2>
+<h3 id="description">Description</h3>
+<p>Depuis iOS10, il est possible d&#39;ajouter une action spécifique au rotor de <span lang="en">VoiceOver</span> en s&#39;appuyant sur l&#39;objet <strong>UIAccessibilityCustomRotor</strong> dont la construction prend en compte 2 éléments principaux en entrée :</p>
+<ul>
+<li><strong>UIAccessibilityCustomRotorSearchPredicate</strong> : définit la logique à mettre en oeuvre selon le type de balayage effectué sur l&#39;écran.</li>
+<li><strong>UIAccessibilityCustomRotorItemResult</strong> : correspond à l&#39;élément issu de la logique précedente.</li>
+</ul>
+<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
+</br></br>Le code fourni ci-dessous permet de compter et d&#39;afficher le nombre de balayages haut et bas <em>(finalité inutile avec le rotor mais qui permet de mettre en avant sa création programmatique)</em>.</p>
+<pre><code class="objective-c">
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
+@property (weak, nonatomic) IBOutlet UILabel * upLabel;
+@property (weak, nonatomic) IBOutlet UILabel * downLabel;
+
+@end
+
+
+@implementation ViewController
+
+static NSInteger flicksUp;
+static NSInteger flicksDown;
+
+
++ (void)initialize {
+
+    flicksUp = 0;
+    flicksDown = 0;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
+    self.accessibilityCustomRotors = @[rotor];
+}
+
+
+- (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
+
+    return [[UIAccessibilityCustomRotor alloc]initWithName:name
+                                           itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
+
+                                               if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
+
+                                                   flicksDown += 1;
+                                                   self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
+
+                                               } else {
+
+                                                   flicksUp += 1;
+                                                   self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
+                                               }
+
+                                               return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
+                                                                                                              targetRange:nil];
+                                           }];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var rotorTitle: UILabel!
+
+    static var flicksUp = 0
+    @IBOutlet weak var upLabel: UILabel!
+
+    static var flicksDown = 0
+    @IBOutlet weak var downLabel: UILabel!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let rotor = buildMyRotor("Rotor info")
+        self.accessibilityCustomRotors = [rotor]
+    }
+
+
+    func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+
+        return  UIAccessibilityCustomRotor.init(name: name,
+                                                itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
+
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+
+                                                        ViewController.flicksDown += 1
+                                                        self.downLabel.text = String(ViewController.flicksDown)
+
+                                                    } else {
+
+                                                        ViewController.flicksUp += 1
+                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                    }
+
+                                                    return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
+                                                                                                     targetRange: nil)
+        })
+    }
+}
+</code></pre>
+
+<p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant :
+</br><img alt="affichage modifié avec une action du rotor" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
+</br>L&#39;utilisation d&#39;un rotor personnalisé n&#39;est pas du tout naturelle au sein d&#39;une application, c&#39;est pourquoi il est primordial de <strong>bien annoncer son fonctionnement et sa finalité</strong> pour faciliter au maximum l&#39;expérience utilisateur.
+</br></br>La majeure différence du rotor avec les actions personnalisées ou encore les valeurs continûment ajustables réside dans sa possible utilisation quel que soit l&#39;élément sélectionné sur l&#39;écran.
+</br>Cependant, si l&#39;élément sélectionné est <code>ajustable</code> ou contient des actions personnalisées, <strong>ses actions prévaudront sur celles du rotor</strong>.
+</br></br>L&#39;implémentation d&#39;une telle fonctionnalité au sein d&#39;une application est donc à envisager selon des <strong>besoins bien spécifiques</strong> dont le seul objectif doit être de <strong>faciliter l&#39;expérience utilisateur</strong>.</p>
+<h3 id="liens">Liens</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor"><code>UIAccessibilityCustomRotor</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult"><code>UIAccessibilityCustomRotorItemResult</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate"><code>UIAccessibilityCustomRotorSearchPredicate</code></a></li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -1657,7 +2026,6 @@ infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_
 <p><strong>À vérifier&nbsp;: </strong> </p>
 <ul>
 <li>Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour),</li>
-<li>Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l’<abbr>API</abbr> d’accessibilité comme tels.</li>
 </ul>
 <p><strong> Objectif utilisateur&nbsp;: </strong></p>
 <p>Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et de se faire une idée précise du contenu de la page sans avoir à le lire.</p>
@@ -2008,7 +2376,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <p>Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.<br>L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel défile de manière automatique, etc.</p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
-<li>Les contenus interactifs peuvent être maîtrisés par l’utilisateur (pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)</li>
+<li>Les contenus interactifs peuvent être maîtrisés par l’utilisateur (bouton accessible pour sortir du mode plein-écran par exemple).</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;: </strong></p>
 <p>Permettre aux utilisateurs de rester maître de l’application. Permettre à l’utilisateur de lecteur d’écran d’éviter une pollution sonore qui peut nuire à sa navigation. </p>
@@ -2328,7 +2696,8 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <h3 id="-les-actions-personnalis-es-35-43-https-developer-apple-com-videos-play-wwdc2017-215-time-2143-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2143">Les actions personnalisées (35:43)</a></h3>
 <p>Il est possible de définir sur une vue un ensemble constitué de <code>accessibilityCustomAction</code> de façon à lui <strong>attribuer différentes actions possibles</strong>.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
-</br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet de déterminer l&#39;action de son choix.</p>
+</br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet de déterminer l&#39;action de son choix.
+</br>La mise en place programmatique de ce type de fonctionnement est présentée dans la partie <a href="./criteria-ios-dev.html#actions-personnalis-es">développement</a>.</p>
 <p><a name="DefaultActivation"></a></p>
 <h3 id="-action-par-d-faut-37-38-https-developer-apple-com-videos-play-wwdc2017-215-time-2258-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2258">Action par défaut (37:38)</a></h3>
 <p>Afin de limiter ou de rendre plus faciles les manipulations à réaliser par les utilsateurs de <span lang="en">VoiceOver</span>, il est possible de déclencher des actions appropriées dès qu&#39;un élément est activé par un double tap.
@@ -2635,11 +3004,22 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 });</script>
 
 <p><span data-menuitem="screen-reader"></span></p>
-<p><span lang="en">VoiceOver</span> est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone. Il est gratuit et permet à un utilisateur non- ou malvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. Un outil comme <span lang="en">VoiceOver</span> est appelé indifféremment lecteur d’écran ou synthèse vocale, même si un lecteur d’écran est en fait un logiciel associé à une synthèse vocale.  </p>
-<p>Lorsque <span lang="en">VoiceOver</span> est activé, les gestes standards effectués sur l’écran tactile donnent des résultats différents ; en outre, des gestes supplémentaires permettent de se déplacer à l’écran et de contrôler des éléments sélectionnés. <span lang="en">VoiceOver</span> comprend des gestes de toucher et de balayage à deux, trois et quatre doigts. Nous décrirons ici les gestes de base pour une utilisation courante de <span lang="en">VoiceOver</span>.</p>
+<p><span lang="en">VoiceOver</span> est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone.
+</br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. </p>
+<p>Lorsque <span lang="en">VoiceOver</span> est activé, les gestes standards effectués sur l’écran tactile donnent des résultats différents.
+</br>Cependant, des gestes supplémentaires permettent de se déplacer à l’écran et de contrôler des éléments sélectionnés.</p>
+<p>Il est préférable mais non obligatoire d&#39;<strong>activer la vibration</strong> pour percevoir le point de déclenchement de certaines fonctionnalités.
+</br><img style="max-width: 350px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration.png" />
+</br>Si cette fonction est désactivée, il est toutefois possible d&#39;entendre un bip signalant le déclenchement qui risque néanmoins d&#39;être parasité par la vocalisation.</p>
+<p>Deux mouvements principaux sont importants à maîtriser pour appliquer sans problème les détails fournis par la suite :
+</br><img style="max-width: 100px; height: auto;" alt="" src="./images/iphonex_1finger_flick_up.png" />
+Le <strong>balayage</strong> qui consiste à décoller le doigt de l&#39;écran à l&#39;issue du mouvement tout en le poursuivant.
+</br><img style="max-width: 100px; height: auto;" alt="" src="./images/iphonex_1finger_swipe_up.png" />
+Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en gardant continuellement le contact entre le doigt et l&#39;écran.</p>
+<p>Dans une première partie, nous décrirons les gestes de base liés à une utilisation courante de <span lang="en">VoiceOver</span> pour ensuite traiter le cas spécifique de l&#39;iPhone X et finir avec des manipulations peu courantes mais néanmoins très utiles pour l&#39;utilisateur avancé.</p>
 <h2 id="gestes-de-bases">Gestes de bases</h2>
 <ul class="list-gesture">
-  <li class="clearfix">
+ <li class="clearfix">
     <img src="./images/gesture1.png" alt="" width="80"><br>    <a name="se-deplacer-avec-un-doigt-sur-lecran"></a><h3>Se déplacer avec un doigt sur l’écran</h3>
     <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
   </li>
@@ -2647,11 +3027,10 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
     <a name="double-cliquer-nimporte-ou-sur-lecran"></a><h3>Double-cliquer n’importe où sur l’écran</h3>
     <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
   </li>
-  <li class="clearfix">
-    <img src="./images/gesture9_1.png" alt="" width="80">
-    <img src="./images/gesture9_2.png" alt="" width="80">
-    <a name="slide-vers-le-haut-ou-le-bas-en-utilisant-trois-doigts"></a><h3><span lang="en">Slide</span> vers le haut ou le bas en utilisant trois doigts</h3>
-    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un <span lang="en">slide</span> vertical.</p>
+<li class="clearfix">
+      <img src="./images/gesture9_1.png" alt="" width="80">
+      <img src="./images/gesture9_2.png" alt="" width="80"><br>      <a name="slide-vers-le-haut-ou-le-bas-en-utilisant-trois-doigts"></a><h3><span lang="en">Slide</span> vers le haut ou le bas en utilisant trois doigts</h3>
+    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un <span lang="en">slide</span> vertical.</p></br></br>
   </li>
   <li class="clearfix">
       <img src="./images/gesture10_1.png" alt="" width="80">
@@ -2676,11 +3055,179 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 
 <p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
 <p>Pour plus d’informations sur <span lang="en">VoiceOver</span> et une description détaillée des fonctionnalités qu’il propose, nous vous invitons à lire la <a href="https://help.apple.com/iphone/9/#/iph3e2e415f">documentation officielle d’Apple sur <span lang="en">VoiceOver</span></a>.  </p>
+<h2 id="iphonex-img-style-max-width-400px-height-auto-alt-src-images-iphonex-jpg-">iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" /></h2>
+<p>L&#39;arrivée sur le marché de ce terminal avec iOS11 a quelque peu bouleversé la gestuelle classique dont on avait l&#39;habitude à cause de l&#39;absence de bouton principal.
+</br>Ces <a href="./screen-reader-voiceover-iphonex.html">nouveaux gestes de base</a> ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous.</p>
+<ul>
+<li><a href="#BackHome">Revenir à l&#39;écran d&#39;accueil.</a></li>
+<li><a href="#Multitask">Accéder au multitâche.</a></li>
+<li><a href="#ControlCenter">Accéder au centre de contrôle.</a></li>
+<li><a href="#NotificationCenter">Accéder au centre de notifications.</a></li>
+</ul>
+<p><a name="BackHome"></a>
+</br>Mouvement : <strong>balayage</strong> à partir du bas de l&#39;écran avec <strong>un doigt</strong> jusqu&#39;à sentir l&#39;émission d&#39;une <strong>simple vibration</strong> (environ au <strong>premier quart inférieur de l&#39;écran</strong>).
+</br><img style="max-width: 470px; height: auto;" alt="" src="./images/iphonex_vo_fr_back_home.png" /></p>
+<p><a name="Multitask"></a>
+</br></br>Mouvement : <strong>balayage</strong> à partir du bas de l&#39;écran avec <strong>un doigt</strong> jusqu&#39;à sentir une <strong>double vibration</strong> (environ à la <strong>moitié de l&#39;écran</strong>).
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iphonex_vo_fr_multitask.png" /></p>
+<p><a name="ControlCenter"></a>
+</br>Mouvement: <strong>balayage avec 1 doigt</strong> à partir du haut de l&#39;écran jusqu&#39;à sentir l&#39;émission d&#39;une <strong>simple vibration</strong> (environ au <strong>premier quart supérieur de l&#39;écran</strong>).
+</br><img style="max-width: 520px; height: auto;" alt="" src="./images/iphonex_vo_fr_control_center.png" /></p>
+<p><a name="NotificationCenter"></a>
+</br>Mouvement: <strong>balayage avec 1 doigt</strong> à partir du haut de l&#39;écran jusqu&#39;à sentir l&#39;émission d&#39;une <strong>double vibration</strong> (environ à la <strong>moitié de l&#39;écran</strong>).
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_notification_center.png" /></p>
+<h2 id="trucs-astuces">Trucs &amp; Astuces</h2>
+<p>Cette partie contient des manipulations qui ne sont pas forcément toutes très connues mais qui peuvent s&#39;avérer très utiles sur tout type de terminal :</p>
+<ul>
+<li><a href="#ReadAllElementsFromTop">Lire tous les éléments à partir du haut de la page.</a></li>
+<li><a href="#ReadAllElementsFromSelection">Lire tous les éléments à partir de la sélection.</a></li>
+<li><a href="#ToggleAutomaticReading">Arrêter/redémarrer la lecture automatique des éléments.</a></li>
+<li><a href="#LocateSelectedElement">Localiser l&#39;élément sélectionné.</a></li>
+<li><a href="#ToggleSpeech">Arrêter/redémarrer l&#39;énonciation VoiceOver.</a></li>
+<li><a href="#ControlCenter">Accéder au centre de contrôle.</a></li>
+<li><a href="#NotificationCenter">Accéder au centre de notifications.</a></li>
+<li><a href="#ElementActivation">Activer un élément sélectionné.</a></li>
+<li><a href="#Scrub">Revenir à la page précédente.</a></li>
+<li><a href="#ItemChooserList">Trouver un élément avec le sélecteur d&#39;éléments.</a></li>
+<li><a href="#PageFirstElement">Sélectionner le premier élément d&#39;une page.</a></li>
+<li><a href="#PageLastElement">Sélectionner le dernier élément d&#39;une page.</a></li>
+<li><a href="#CurtainScreen">Activer/désactiver l&#39;écran &quot;rideau&quot;.</a></li>
+<li><a href="#CustomLabel">Changer l&#39;énonciation d&#39;un élément.</a></li>
+<li><a href="#SpotlightSearch">Lancer une recherche</a></li>
+</ul>
+<p><a name="ReadAllElementsFromTop"></a>
+</br>Mouvement : <strong>balayage avec 2 doigts</strong> du bas vers le haut n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_all_from_top.png" /></p>
+<p><a name="ReadAllElementsFromSelection"></a>
+</br>Mouvement : <strong>balayage avec 2 doigts</strong> du haut vers le bas n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_all_from_selection.png" /></p>
+<p><a name="ToggleAutomaticReading"></a>
+</br>Mouvement : <strong>simple tap avec 2 doigts</strong> n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_stop_resume_ auto_vocal.png" /></p>
+<p><a name="LocateSelectedElement"></a>
+</br>Mouvement : <strong>simple tap avec 3 doigts</strong> n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_locate_select.png" /></p>
+<p><a name="ToggleSpeech"></a>
+</br>Mouvement : <strong>double tap avec 3 doigts</strong> n&#39;importe où sur l&#39;écran.
+</br>Si la fonctionnalité <code>zoom</code> est activée dans les réglages, il faudra réaliser un <strong>triple tap</strong> pour obtenir le résultat souhaité.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_stop_resume_speech.png" /></p>
+<p><a name="ControlCenter"></a>
+</br>Il faut au préalable <strong>sélectionner un élément de la barre d&#39;état</strong> en haut de l&#39;écran.
+</br>Mouvement: <strong>balayage avec 3 doigts</strong> du bas vers le haut n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_control_center_bis.png" /></p>
+<p><a name="NotificationCenter"></a>
+</br>Il faut au préalable <strong>sélectionner un élément de la barre d&#39;état</strong> en haut de l&#39;écran.
+</br>Mouvement: <strong>balayage avec 3 doigts</strong> du haut vers le bas n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_fr_notification_center_bis.png" /></p>
+<p><a name="ElementActivation"></a>
+</br>Mouvement : <strong>sélectionner</strong> l&#39;élément désiré <strong>avec un doigt en maintenant la pression</strong> puis effectuer un <strong>simple tap avec un autre doigt</strong> n&#39;importe où sur l&#39;écran.
+</br>Cette gestuelle est très pratique pour taper au clavier en utilisant l&#39;index pour sélectionner la lettre et le majeur pour réaliser le simple tap.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_fr_activate_elt_bis.png" /></p>
+<p><a name="Scrub"></a>
+</br>Mouvement : <strong>glissement avec 2 doigts en dessinant un &#39;Z&#39;</strong> n&#39;importe où sur l&#39;écran.
+</br>Cette manipulation aboutit exactement au même résultat que l&#39;appui sur le bouton retour natif d&#39;un écran.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_fr_scrub.png" /></p>
+<p><a name="ItemChooserList"></a>
+</br>Mouvement : <strong>triple tap avec 2 doigts</strong> n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_fr_item_chooser_list.png" /></p>
+<p><a name="PageFirstElement"></a>
+</br>Mouvement : <strong>simple tap avec 4 doigts</strong> dans la moitié supérieure de l&#39;écran.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_first_elt.png" /></p>
+<p><a name="PageLastElement"></a>
+</br>Mouvement : <strong>simple tap avec 4 doigts</strong> dans la moitié inférieure de l&#39;écran.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_last_elt.png" /></p>
+<p><a name="CurtainScreen"></a>
+</br>Mouvement : <strong>triple tap avec 3 doigts</strong> n&#39;importe où sur l&#39;écran.
+</br>Si la fonctionnalité <code>zoom</code> est activée dans les réglages, il faudra réaliser un <strong>quadruple tap</strong> pour obtenir le résultat souhaité.
+</br>Cette fonctionnalité permet de continuer la navigation avec VoiceOver en ayant un écran éteint favorisant ainsi à la fois la confidentialité et la longévité de la batterie.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_curtain_screen.png" /></p>
+<p><a name="CustomLabel"></a>
+</br>Mouvement : <strong>double tap avec 2 doigts en maintenant la pression</strong> n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_custom_label.png" /></p>
+<p><a name="SpotlightSearch"></a>
+</br>Mouvement : <strong>balayage avec 3 doigts</strong> vers le bas n&#39;importe où sur l&#39;écran.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_fr_search.png" /></p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
+<h1 id="rappels-sur-les-gestes-de-base-avec-un-iphone-x">Rappels sur les gestes de base avec un iPhone X</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"lecteur d’écran", "url": "./screen-reader.html"}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}, 
+        {"label":"Rappels sur les gestes de base avec un iPhone X"}
+    ]);
+    addSubMenu([
+        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
+        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="screen-reader"></span></p>
+<p>Cette page décrit de façon non exhaustive les gestes spécifiques de l&#39;iPhone X à l&#39;aide d&#39;explications textuelles et de schémas permettant de visualiser plus facilement les manipulations à réaliser.</p>
+<p>Par la suite, <strong>la gestuelle graphique sur un terminal possédant un bouton principal est mise en parallèle</strong> de façon à s&#39;approprier plus facilement cette nouvelle logique de manipulation.</p>
+<ul>
+<li><a href="#BackHome">Revenir à l&#39;écran d&#39;accueil.</a></li>
+<li><a href="#UnlockScreen">Déverrouiller l&#39;écran.</a></li>
+<li><a href="#TurnOnLockedScreen">Allumer l&#39;écran verrouillé.</a></li>
+<li><a href="#ControlCenter">Accéder au centre de contrôle.</a></li>
+<li><a href="#Multitask">Accéder au multitâche.</a></li>
+<li><a href="#ChangeOpenedApp">Changer d&#39;application ouverte.</a></li>
+<li><a href="#Reachability">Activer la fonctionnalité accès facile.</a></li>
+<li><a href="#Siri">Poser une question à Siri.</a></li>
+<li><a href="#ApplePay">Accéder à Apple Pay.</a></li>
+<li><a href="#Screenshot">Prendre une capture d&#39;écran.</a></li>
+<li><a href="#PowerOff">Éteindre le terminal.</a></li>
+</ul>
+<p><a name="BackHome"></a>
+</br>Mouvement : <strong>balayage</strong> vers le haut à partir du bas de l&#39;écran avec <strong>1 doigt</strong>.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_back_home.png" />
+</br></br>
+<a name="UnlockScreen"></a></p>
+<h3 id="d-verrouiller-l-cran">Déverrouiller l&#39;écran</h3>
+<p>Mouvement : <strong>balayage</strong> vers le haut à partir du bas de l&#39;écran avec <strong>1 doigt</strong> sur l&#39;écran verrouillé.
+</br>Résultat : déverrouillage automatique de l&#39;écran avec la fonctionnalité <span lang="en">faceID</span> activée.
+</br>La manipulation est exactement la même que précédemment mais elle s&#39;applique ici sur un écran verrouillé.</p>
+<p><a name="TurnOnLockedScreen"></a>
+</br></br></br>Mouvement : <strong>simple tap</strong> sur l&#39;écran avec <strong>1 doigt</strong>.
+</br>Résultat : l&#39;écran verrouillé s&#39;affiche immédiatement.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_turn_on_locked_screen.png" /></p>
+<p><a name="ControlCenter"></a>
+</br>Mouvement : <strong>balayage</strong> vers le bas à partir du coin à droite en haut de l&#39;écran avec <strong>1 doigt</strong>.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_control_center.png" /></p>
+<p><a name="Multitask"></a>
+</br></br>Mouvement : <strong>glissement avec 1 doigt</strong> vers le haut à partir du bas de l&#39;écran et maintenir la pression.
+</br>Ce glissement peut aussi être effectué vers la droite de l&#39;écran toujours à partir du bas de l&#39;écran pour obtenir le même résultat.
+</br></br>Résultat : apparition de toutes les applications actuellement ouvertes sur le terminal.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_multitask.png" /></p>
+<p><a name="ChangeOpenedApp"></a>
+</br>Mouvement : <strong>glissement avec 1 doigt</strong> vers la gauche ou la droite dans la limite la plus basse de l&#39;écran correspondant à la barre d&#39;accueil de l&#39;application ouverte.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_fr_change_opened_app.png" /></p>
+<p><a name="Reachability"></a>
+</br>Mouvement : <strong>balayage avec 1 doigt</strong> vers le bas sur la barre d&#39;accueil.
+</br>Le même mouvement vers le haut permet la désactivation.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_reachability.png" /></p>
+<p><a name="Siri"></a>
+</br>Mouvement : <strong>maintenir la pression</strong> sur le bouton latéral droit.
+</br>Résultat : lancement de Siri après une à deux secondes.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_siri.png" /></p>
+<p><a name="ApplePay"></a>
+</br>Mouvement : effectuer une <strong>double pression</strong> sur le bouton latéral droit.
+</br>Résultat : ouverture de l&#39;Apple Pay avec authentification <span lang="en">faceID</span>.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_apple_pay.png" /></p>
+<p><a name="Screenshot"></a>
+</br>Mouvement : effectuer une <strong>pression rapide</strong> sur le bouton latéral droit et sur le bouton d&#39;augmentation de volume <strong>de façon simultanée</strong>.
+</br>Résultat : capture d&#39;écran enregistrée dans l&#39;application <code>Photos</code> du terminal.
+</br><img style="max-width: 800px; height: auto;" alt="" src="./images/iphonex_fr_screenshot.png" /></p>
+<p><a name="PowerOff"></a>
+</br>Mouvement : effectuer une <strong>pression prolongée</strong> sur le bouton latéral droit et sur le bouton d&#39;augmentation de volume <strong>de façon simultanée</strong>.
+</br>Résultat : mise à jour de l&#39;écran avec proposition d&#39;éteindre le terminal.
+</br><img style="max-width: 800px; height: auto;" alt="" src="./images/iphonex_fr_power_off.png" /></p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="liens-utiles">Liens utiles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Liens utiles"}]);

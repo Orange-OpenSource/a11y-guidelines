@@ -99,11 +99,13 @@
       </nav>      
     </header>
     
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
-    </ol>
-
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -262,7 +264,7 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 <p>Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.<br>L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel défile de manière automatique, etc.</p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
-<li>Les contenus interactifs peuvent être maîtrisés par l’utilisateur (pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)</li>
+<li>Les contenus interactifs peuvent être maîtrisés par l’utilisateur (bouton accessible pour sortir du mode plein-écran par exemple).</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;: </strong></p>
 <p>Permettre aux utilisateurs de rester maître de l’application. Permettre à l’utilisateur de lecteur d’écran d’éviter une pollution sonore qui peut nuire à sa navigation. </p>

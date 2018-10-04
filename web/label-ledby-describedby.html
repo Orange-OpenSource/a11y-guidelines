@@ -46,22 +46,20 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Site Web</a>
+                    <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Critères incontournables</a></li>
-                        <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
-                        <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
@@ -100,10 +98,12 @@
       </nav>      
     </header>
 
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
@@ -136,10 +136,10 @@
 <p>Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couple <abbr>AT</abr>/navigateur, donc ne pas l&#39;utiliser comme seul moyen de passer une information nécessaire.</p>
 <h2 id="faut-il-l-utiliser-et-comment-nbsp-">Faut-il l’utiliser et comment&nbsp;?</h2>
 <p>Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.</p>
-<p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence l&#39;<code>id</code> dun élément de la page dont le contenu sera utilisé le nom accessible de l&#39;élément.</p>
-<p>Lorsqu&#39;on utilise <code>aria-label</code> ou <code>aria-labelledby</code> sur un élément, le contenu ou l&#39;intitulé de cet élément n&#39;est plus restitué au <abbr>AT</abbr> mais remplacé par le nom accessible (pour <code>aria-label</code> le contenu de cet attribut, pour <code>aria-labelledby</code> le contenu de l&#39;élément référencé). Donc, seul, le nom accessible doit donner l&#39;ensemble des informations nécessaires à <abbr>at</abbr> et donc à l&#39;utilisateur.</p>
-<p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité à aria-labelledby lors du calcul de la propriété de nom accessible.</p>
-<p>Quant à lui, `aria-describedby&quot; va rajouter au nom accessible de l&#39;élément, une description accessible en plus. </p>
+<p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence l&#39;<code>id</code> d&#39;un élément de la page dont le contenu sera utilisé comme nom accessible de l&#39;élément portant l&#39;attribut <abbr>Aria</abbr>.</p>
+<p>Lorsqu&#39;on utilise <code>aria-label</code> ou <code>aria-labelledby</code> sur un élément, le contenu ou l&#39;intitulé de cet élément n&#39;est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour <code>aria-label</code> le contenu de cet attribut, pour <code>aria-labelledby</code> le contenu de l&#39;élément référencé). Donc, seul, le nom accessible doit donner l&#39;ensemble des informations nécessaires à l&#39;<abbr>AT</abbr> et donc à l&#39;utilisateur.</p>
+<p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité à <code>aria-labelledby</code> lors du calcul de la propriété de nom accessible.</p>
+<p>Quant à lui, <code>aria-describedby</code> va rajouter au nom accessible de l&#39;élément, une description accessible, en plus. </p>
 <h2 id="exemples">Exemples</h2>
 <p><pre><code class="html">
 &lt;button aria-label=&quot;accéder au code Hypertext markup language&quot;&gt;html&lt;/button&gt;

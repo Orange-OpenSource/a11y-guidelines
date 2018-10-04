@@ -46,22 +46,20 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Site Web</a>
+                    <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-fondamentaux" href="fondamentaux.html" aria-haspopup="true" aria-expanded="false">Critères incontournables</a></li>
-                        <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels et ressources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
-                        <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples de composants</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Articles techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
+                        <!-- <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li> -->
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
-                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
@@ -100,23 +98,25 @@
       </nav>      
     </header>
 
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="r-f-rentiels-complets-d-accessibilit-web">Référentiels complets d’accessibilité web</h1>
+          <h1 id="r-f-rentiels-et-ressources">Référentiels et ressources</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Référentiels complets"}]);
+    setBreadcrumb([{"label":"Référentiels et ressources"}]);
 });</script>
 <h2 id="le-r-f-rentiel-abbr-wcag-abbr-">Le référentiel <abbr>WCAG</abbr></h2>
 <p>Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de nous appuyer sur les <a href="http://www.w3.org/Translations/WCAG20-fr/"><span lang="en">Web Content Accessibility Guidelines</span> v2</a> (<abbr>WCAG</abbr> 2). Il s’agit des recommandations internationales éditées par le groupe de travail <span lang="en">Web Accessibility Initiative</span> (<abbr>WAI</abbr>) du <span lang="en">World Wide Web Consortium</span> (<abbr>W3C</abbr>) qui sont aussi les normes ISO 40500:2012.</p>
-<p>Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.0, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
+<p>Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.</p>
 <p>Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des <a href="./fondamentaux.html">critères incontournables</a> et des <a href="./exemples.html">exemples</a> de ce site. Vous pouvez aussi utiliser les <a href="http://www.accede-web.com/notices/">notices Accede-Web</a> cf. ci-dessous. </p>
 <h2 id="le-r-f-rentiel-g-n-ral-d-accessibilit-des-administrations-abbr-rgaa-abbr-">Le référentiel général d’accessibilité des administrations (<abbr>RGAA</abbr>)</h2>
 <p>Si vous êtes familiarisé avec le <a href="http://references.modernisation.gouv.fr/referentiel">Référentiel Général d’Accessibilité des Administrations</a> (<abbr>RGAA</abbr>), celui-ci peut être utilisé pour effectuer les tests d’accessibilité. 

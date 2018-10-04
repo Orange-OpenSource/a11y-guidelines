@@ -97,11 +97,13 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
-    </ol>
-
+    <nav>
+      <span class="sr-only">You are here: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -265,10 +267,10 @@ To set an item as a header, set the <code>accessibilityTraits</code> attribute o
 <p><strong> Target: </strong> everyone and especially people with visual and cognitive deficiency.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
-The user must control the content at any time. This is especially true with interactive content. So avoid video player launching directly in full screen mode, or videos starting automatically without user action, or a carousel scrolling automatically etc.</p>
+The user must control the content at any time. This is especially true with interactive content. So avoid video player launching directly in full screen mode or videos starting automatically without user action or a carousel scrolling automatically for instance.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
-<li>All interactive content must be controlled by the user (pausing a carousel, adding an accessible button to exit full-screen mode etc.).</li>
+<li>All interactive content must be controlled by the user (adding an accessible button to exit full-screen mode for instance).</li>
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow users to keep control on the application. Allow the screen reader user to avoid noise pollution which may affect navigation.</p>

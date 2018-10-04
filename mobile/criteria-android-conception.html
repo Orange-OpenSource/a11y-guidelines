@@ -99,11 +99,13 @@
       </nav>      
     </header>
     
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
-    </ol>
-
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -192,7 +194,6 @@ infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_
 <p><strong>À vérifier&nbsp;: </strong> </p>
 <ul>
 <li>Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour),</li>
-<li>Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l’<abbr>API</abbr> d’accessibilité comme tels.</li>
 </ul>
 <p><strong> Objectif utilisateur&nbsp;: </strong></p>
 <p>Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et de se faire une idée précise du contenu de la page sans avoir à le lire.</p>

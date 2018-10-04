@@ -29,6 +29,7 @@
       <!-- Favicons -->
       <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
       <link rel="icon" href="/images/favicon.ico">      
+
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -55,8 +56,8 @@
                         <li><a class="page-about" href="about.html">À propos</a></li>
                       </ul>
                   </li>                                    
-                  <li class="nav-item"><a class="nav-link" href="./web/index.html">Site Web</a></li>
-                  <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Application mobile</a></li>                  
+                  <li class="nav-item"><a class="nav-link" href="./web/index.html">Web</a></li>
+                  <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>                  
                   <li class="nav-item language hidden-sm-up">
                     <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a>
@@ -95,10 +96,12 @@
       </nav>      
     </header>
 
-    <span class="sr-only">Vous êtes ici&nbsp;: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
-    </ol>
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
+      </ol>
+    </nav>
 
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
@@ -116,7 +119,9 @@
 <p>Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>. Le code source de ce site ainsi que celui des exemples est disponible <a href="https://github.com/Orange-OpenSource/a11y-guidelines">sur notre compte github</a>.  </p>
 <p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange&nbsp;:  </p>
 <p><span lang="en">Copyright (C) 2016 Orange SA All rights reserved</span><br><a href="/NOTICE.txt">Liste des fichiers concernés</a></p>
-<p>&nbsp;
+<h2 id="gestion-des-cookies">Gestion des cookies</h2>
+<p>Vous pouvez modifier à tous moments vos préférences directement depuis le <a role="button" href="javascript:tarteaucitron.userInterface.openPanel();">panneau de gestion des cookies</a>.
+&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
@@ -132,5 +137,6 @@
     <script src="./boosted/js/boosted.min.js"></script>
     <script type="text/javascript" src="./js/highlight.min.js"></script>
     <script type="text/javascript" src="./js/reco.js"></script>    
+
 </body>
 </html>

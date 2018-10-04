@@ -97,11 +97,13 @@
       </nav>      
     </header>
 
-    <span class="sr-only">You are here: </span>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
-    </ol>
-
+    <nav>
+      <span class="sr-only">You are here: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../mobile_EN/index.html">Mobile app</a></li>        
+      </ol>
+    </nav>
+    
     <main role="main" class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">       
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
@@ -310,7 +312,7 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 <h2 id="webview">WebView</h2>
 <p><strong>Description: </strong> </p>
 <p><code>WebView</code>s are a special thing on Android. First, if you want a page to be accessible, its <abbr>HTML</abbr> content must be accessible as well, it must follow the international standards: the <abbr>WCAG</abbr>2. To know the requirements and learn techniques for developing an accessible Web, please visit the following section in our site: <a href="../web/index.html">accessibility recommendations for the Web</a>.</p>
-<p>Second, on Android you must ensure that the <code>WebView</code> allows JavaScript <code>mWebView.getSettings.setJavaScriptEnabled(true);</code>
+<p>Second, on Android you must ensure that the <code>WebView</code> allows JavaScript <code>mWebView.getSettings().setJavaScriptEnabled(true);</code>
 In these conditions, the page displayed through the <code>WebView</code> properly responds to the Accessibility <abbr>API</abbr>. </p>
 <h2 id="list-vocalization">List vocalization</h2>
 <p><strong>Description: </strong> </p>
