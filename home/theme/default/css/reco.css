@@ -39,6 +39,10 @@ figure {
   margin: 0;
 }
 
+figure img {
+  margin-bottom: 1rem;
+}
+
  #content p, #content ol, #content ul {
    padding-bottom: 0;
  }
