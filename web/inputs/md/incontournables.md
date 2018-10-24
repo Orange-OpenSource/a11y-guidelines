@@ -46,6 +46,9 @@ Deux versions sont disponibles&nbsp;
 <li class="nav-item">
 <a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développeurs</a>
 </li>
+<li class="nav-item">
+<a class="nav-link" id="incontournables-testeurs-tab" data-toggle="tab" href="#incontournables-testeurs" role="tab" aria-controls="incontournables-testeurs" aria-selected="false">Testeurs</a>
+</li>
 </ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab">
 
 ## Contenu textuel
@@ -197,6 +200,7 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 </ul>
 
 </div>
+<div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">Hello</div>
 </div>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
