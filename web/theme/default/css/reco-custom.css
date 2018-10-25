@@ -61,3 +61,17 @@
 .examples-list a:hover img {
   opacity: 1;
 }
+
+/* Custom css pour onglet TESTEURS */
+#refTests h2::before, #refTests h3::before, #refTests h4::before, #refTests h5::before, #refTests h6::before {display:inline-block;}
+#refTests h2, #refTests h3{margin:1rem 0;}
+
+.accordion .card-header a::after, .accordion .card-header button::after {
+    position: absolute;
+    top: 1.3125rem;
+    right: .625rem;
+    width: .875rem;
+    height: .4375rem;
+    content: "";
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+}

@@ -200,7 +200,98 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 </ul>
 
 </div>
-<div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">Hello</div>
+<div class="tab-pane show active" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
+<div class="row">
+<section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+<h2>Contenu textuel</h2>
+<article class="">
+<div class="card-header" role="tab" id="headingOne">
+	<h3><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Donner un titre aux pages</a></h3>
+</div>
+	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+	<div class="card-block">
+				<div class="row">
+						<div class="col-lg-6">
+							<h4>Procédures</h4>
+							<ol>
+								<li>Lancer l'inspecteur de code du navigateur</li>
+								<li>Examiner le titre de page <code>&lt;title&gt;[title]&lt;/title&gt;</code></li>
+							</ol>
+						</div>
+						<div class="col-lg-6">
+							<h4>A vérifier</h4>
+							<ol>
+								<li>Vérifier que le titre de page est renseigné</li>
+								<li>Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<h4>Résultats</h4>
+							<ol>
+								<li>Chaque page possède un titre unique et descriptif</li>
+							</ol>
+						</div>
+					</div>
+					<div class="card-footer text-muted"> AA <i class="fa fa-tag" aria-hidden="true"></i>Test manuel - inspecteur de code</div> 
+				</div>
+	</div>
+</article>
+<article class="">
+<div class="card-header" role="tab" id="headingOne">
+	<h3><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Donner des titres aux rubriques</a></h3>
+</div>
+	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	<div class="card-block">
+				<div class="row">
+						<div class="col-lg-6">
+							<h4>Procédures</h4>
+							<ol>
+								<li>Lancer l'inspecteur de code du navigateur</li>
+								<li>Examiner le titre de page <code>&lt;title&gt;[title]&lt;/title&gt;</code></li>
+							</ol>
+						</div>
+						<div class="col-lg-6">
+							<h4>A vérifier</h4>
+							<ol>
+								<li>Vérifier que le titre de page est renseigné</li>
+								<li>Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<h4>Résultats</h4>
+							<ol>
+								<li>Chaque page possède un titre unique et descriptif</li>
+							</ol>
+						</div>
+					</div>
+					<div class="card-footer text-muted"> AA <i class="fa fa-tag" aria-hidden="true"></i>Test manuel - inspecteur de code</div> 
+				</div>
+	</div>
+</article>
+</section>
+<aside class="col-md-4">
+<h2>Filtres</h2>
+	<ul id="types" class="list-unstyled">
+			<li>
+				<input type="checkbox" id="type0" name="types" value="Test manuel - inspecteur de code">
+				<label for="type0">Test manuel - inspecteur de code</label>
+			</li>
+			<li>
+				<input type="checkbox" id="type1" name="types" value="Wave toolbar">
+				<label for="type1">Wave toolbar</label>
+			</li>
+			<li>
+				<input type="checkbox" id="type2" name="types" value="W3C checker">
+				<label for="type2">W3C checker</label>
+			</li>
+		</ul>
+</aside>
+</div>
+</div>
 </div>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
