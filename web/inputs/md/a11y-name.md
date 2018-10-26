@@ -47,25 +47,30 @@ Donc, un élément de ce type `<button type=”submit”></button>` sans intitul
 
 Par ailleurs, pour les éléments de formulaire, le nom accessible est le `label` lorsqu’il est programmatiquement associé à l'élément via l'attribut `for` référençant l'`id` du champ.
 
-`<label for=”search”>Rechercher</label>
-<input id=”search” type=”text”>`
+<pre><code class="html">
+&lt;label for="search"&lt;Rechercher&gt;/label&gt;
+&lt;input id="search" type="text"&gt;
+</code></pre>
 
-Ici, le lecteur d'écran dira : "Rechercher édition".
+Avec ce code, le lecteur d'écran dira : "Rechercher édition".
 
 ### Avec <abbr>ARIA</abbr> aussi !
 
 <abbr>ARIA</abbr> va pouvoir nous aider pour donner un nom à un élément <abbr>HTML</abbr>, en utilisant `aria-label` et `aria-labelledby`.
 
-`<button class="navbar-toggler" type="button" aria-label="Ouverture menu navigation" ... >
-    <span class="navbar-toggler-icon"></span>
-</button>`
+<pre><code class="html">
+&lt;button class="navbar-toggler" type="button" aria-label="Ouverture menu navigation" ... &gt;
+&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
 
 Ce bouton de menu hamburger a donc un nom : "Ouverture menu navigation". 
 Mais on pourrait aussi utiliser `aria-labelledby` pour référencer un autre élément de la page comme nom :
 
-`<input type="search" aria-labelledby="this">
-<button id="this">Rechercher dans le site</button>`
-
+<pre><code class="html">
+&lt;input type="search" aria-labelledby="this"&gt;
+&lt;button id="this"&gt;Rechercher dans le site&lt;/button&gt;
+</code></pre>
 Lors de la prise de focus sur le champ, le lecteur d'écran annonce "Rechercher sur le site édition".
 
 Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"](label-ledby-describedby.html).

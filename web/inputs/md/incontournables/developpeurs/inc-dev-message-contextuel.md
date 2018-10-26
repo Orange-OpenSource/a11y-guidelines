@@ -10,7 +10,7 @@
 <span data-menuitem="incontournables"></span>
 
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l'attention 
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l'attention.  
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
 
 **Description&nbsp;:**
