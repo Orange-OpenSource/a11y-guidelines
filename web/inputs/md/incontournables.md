@@ -203,10 +203,10 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 <div class="tab-pane show active" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
 <div class="row">
 <section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
-<h2>Contenu textuel</h2>
+<h2 id="test-contenu-textuel">Contenu textuel</h2>
 <article class="">
 <div class="card-header" role="tab" id="headingOne">
-	<h3><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Donner un titre aux pages</a></h3>
+	<h3 id="donner-un-titre-aux-pages"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Donner un titre aux pages</a></h3>
 </div>
 	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 	<div class="card-block">
@@ -240,7 +240,7 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 </article>
 <article class="">
 <div class="card-header" role="tab" id="headingOne">
-	<h3><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Donner des titres aux rubriques</a></h3>
+	<h3 id="donner-un-titre-aux-rubriques"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Donner des titres aux rubriques</a></h3>
 </div>
 	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 	<div class="card-block">
