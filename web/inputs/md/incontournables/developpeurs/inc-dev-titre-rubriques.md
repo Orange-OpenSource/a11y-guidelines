@@ -59,6 +59,7 @@ Des extensions à installer dans votre navigateur permettent d'extraire la liste
 - L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a>.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 

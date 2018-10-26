@@ -1,3 +1,4 @@
+.0
 <!doctype html>
 <html lang="fr">
 <head>
@@ -101,6 +102,7 @@
             margin: -1px;
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
+            white-space: nowrap; /* added line */
             border: 0;
       }
       </code></pre>
@@ -113,11 +115,11 @@
       &lt;input class="form-control" id="complement" type="text"&gt;</strong>
       </code></pre>
       
-      <p>L’utilisation du masquage accessible permet de masquer l’élément à l’écran tout en conservant sa vocalisation par les outils d’assistance. Attention, ne pas utiliser du masquage <abbr>CSS</abbr> classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.</p>
+      <p>L’utilisation du masquage accessible permet de masquer l’élément à l’écran tout en conservant sa vocalisation par les outils d’assistance (<abbr>AT</abbr>). Attention, ne pas utiliser du masquage <abbr>CSS</abbr> classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.</p>
       <p>Consultez <a href="../masquage/index.html">l’exemple sur le masquage accessible</a> pour plus d’information.</p>
         
       <h4>Utilisation d’un attribut <code>title</code></h4>
-      <p>L’attribut <code>title</code> n’est pas utile pour l’accessibilité sauf dans ce cas précis. Il permet d’étiqueter un champ de formulaire de manière robuste. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris.</p>                  
+      <p>L’attribut <code>title</code> n’est pas réellement utile pour l’accessibilité sauf dans ce cas précis. Il permet d’étiqueter un champ de formulaire de manière robuste. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris.</p>                  
       <pre><code class="html">
       &lt;input type="text" title="Rechercher dans le catalogue"&gt;
       </code></pre>     
@@ -151,10 +153,10 @@
           <li>il s’efface à la saisie du contenu dans le champ (entraîne des difficultés en cas de déficience cognitive)&nbsp;;</li>
           <li>le <code>placeholder</code> n’est pas toujours lu par les aides techniques&nbsp;;</li>
           <li>il empêche l’utilisateur de vérifier la saisie avant de valider s’il est utilisé à la place du label&nbsp;;</li>
-          <li>il rend les corrections difficiles en cas d’erreur si pas de label affiché&nbsp;;</li>
+          <li>il rend les corrections difficiles en cas d’erreur s'il n'existe pas de label affiché&nbsp;;</li>
           <li>il rend les champs de saisie moins visibles que ceux sans <code>placeholder</code>.</li>
     </ul>
-    <p>En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l’utiliser pour ce type de besoin.</p>
+    <p>En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l’utiliser pour ce type de besoin.</p>
     <div class="form-group">                                    
         <label for="numero-serie2">Veuillez saisir le numéro de série *</label>
         <input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie2" aria-describedby="helpblock" aria-required="true" placeholder="exemple : TS-0000">
@@ -166,6 +168,23 @@
             aria-required="true" placeholder="exemple : TS-0000"&gt;
       &lt;/div&gt;
     </code></pre>
+
+    <h3>Utilisation de l'attribut <code>autocompleted</code></h3>
+    <p>Pour tout champ dont le type est listé dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>, il faut remplir l'attribut <code>autocompleted</code> du champ avec la valeur adéquate.</p>
+    <div class="form-group">                                    
+      <label for="lname">Nom de famille :</label>
+      <input id="lname" type="text" autocomplete="family-name" class="form-control">
+        <label for="cc-num">Numéro de carte de crédit :</label>
+        <input type="text" id="cc-num" autocomplete="cc-number" class="form-control">
+</div>
+  <pre><code class="html">
+    &lt;div class="form-group"&gt;                                    
+          &lt;label for="lname"&gt;Nom de famille :&lt;/label&gt;
+          &lt;input id="lname" type="text" autocomplete="family-name" class="form-control"&gt;
+          &lt;label for="cc-num"&gt;Numéro de carte de crédit :&lt;/label&gt;
+          &lt;input type="text" id="cc-num" autocomplete="cc-number" class="form-control"&gt;
+    &lt;/div&gt;
+  </code></pre>
      
      <h3>Préciser les champs obligatoires</h3>
      
@@ -178,7 +197,7 @@
      </code></pre>
      
      <h3>Préciser le type ou le format attendu</h3>
-     <p>Lorsque c’est nécessaire, préciser le type ou le format de la donnée attendu. Pour que cette information soit vocalisée automatiquement par les lecteurs d’écran, préférer simplement mettre ces informations dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code>.</p>     
+     <p>Lorsque c’est nécessaire, préciser dans le <code>label</code> du champ le type ou le format de la donnée attendu. Pour que cette information soit vocalisée automatiquement par les lecteurs d’écran, vous pouvez donc mettre ces informations dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code> pour référencer du texte hors du <code>label</code>.</p>     
      <pre><code class="html">
       &lt;div class="form-group"&gt;                                    
             &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;

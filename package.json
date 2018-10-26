@@ -17,8 +17,10 @@
     "promise": "^7.0.4"
   },
   "devDependencies": {
+    "@hint/configuration-development": "^1.1.1",
     "grunt-banner": "^0.6.0",
-    "grunt-contrib-copy": "^1.0.0"
+    "grunt-contrib-copy": "^1.0.0",
+    "hint": "^3.4.10"
   },
   "scripts": {
     "test": "echo \"No test \" && exit 0"
