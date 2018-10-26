@@ -387,7 +387,7 @@ De même pour les interactions nécessitant un changement d'orientation de l'éc
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage).
+L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l'utilisation du contenu (projection, tableau...)
 
 ## 23. Rendre accessible les pistes audio ou vidéo
 

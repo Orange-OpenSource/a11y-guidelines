@@ -4,6 +4,7 @@
         "output/markdown/index.md",
         "output/markdown/captcha.md",
         "output/markdown/label_ledby_describedby.md",
+        "output/markdown/a11y-name.md",
         "output/markdown/incontournables.md",
         "output/markdown/incontournables/concepteurs/inc-con-acces-multiples.md",
         "output/markdown/incontournables/concepteurs/inc-con-adaptatif.md",

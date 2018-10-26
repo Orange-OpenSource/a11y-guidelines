@@ -16,9 +16,9 @@
     "ncp": "^2.0.0",
     "promise": "^7.0.4"
   },
-  "devDependencies": {
+  "devDependencies": {    
     "grunt-banner": "^0.6.0",
-    "grunt-contrib-copy": "^1.0.0"
+    "grunt-contrib-copy": "^1.0.0"    
   },
   "scripts": {
     "test": "echo \"No test \" && exit 0"

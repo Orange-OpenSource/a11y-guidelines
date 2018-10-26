@@ -24,6 +24,8 @@ Chaque libellé (ou instructions) doit être inclus dans une balise `label`, ell
 Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
 L’attribut `title` positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)) dans cet ordre de préférence.
 
+L'attribut `autocompleted` doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
+
 **À vérifier&nbsp;:**
 
 S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.
@@ -40,7 +42,7 @@ Pour les champs obligatoires, ceci doit être précisé dans le `label` via une 
 
 Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.
 
-Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de saisie.
+Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur et cognitif, les dyslexiques. Cela permet d’éviter les erreurs de saisie et un gain de temps pour tous.
 
 **Exemple valide&nbsp;:**  
 ![capture d’écran d’un formulaire valide](images/formulaire.png)
@@ -55,6 +57,7 @@ Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de sa
 Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.html) pour plus d’informations.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>

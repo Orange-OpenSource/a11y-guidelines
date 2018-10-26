@@ -14,14 +14,15 @@
 
 **Description&nbsp;:**
 
-N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (`em`, `rem`, `%`)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design).
+N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (`em`, `rem`, `%`) permettant l’agrandissement du texte seul de 200%. Globalement faire une interface web adaptative (responsive web design) sauf si la présentation en deux dimensions est nécessaire pour l'usage ou l'utilisation (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d'outils...).
 
 **À vérifier&nbsp;:**
 - Ne pas utiliser le pixel (`px`) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).
 - Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.
 - Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.
 - Dans Firefox, faire Affichage>Zoom>Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  
-- Le contenu doit s'adapter à la largeur de l'écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal même lorsque la largeur de la zone d'affichage est réduite à 320 pixels CSS.  
+- Le contenu doit s'adapter à la largeur de l'écran, il doit être consultable (sauf besoin particulier: carte, tableau, diagramme...) sans scroll horizontal même pour une largeur de la zone d'affichage (<span lang="en">vewport</span>) réduite à 320 pixels CSS. 
+Note : 320 pixels CSS est équivalent à un viewport à 1280px CSS avec un zoom global (toute la page) à 400%.
 
 ![capture d’écran réglage du zoom dans Firefox](./images/zoom-200.png)
 
