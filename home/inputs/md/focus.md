@@ -49,21 +49,21 @@
         <li>Difficultés de préhension et de contrôle des mouvements.</li>
         <li>Personnes ayant des difficultés pour réaliser des combinaisons de touches</li>
         <li>Personnes dont les mains tremblent</li>
-        <li>Personnes ne pouvant pas se servir d'une main ou de ses deux main(s)</li>        
+        <li>Personnes ne pouvant pas se servir d’une main ou de ses deux mains</li>        
     </ul>
-** Solutions adaptées&nbsp;:** périphériques adaptés (souris ou clavier ergonomique, guide-doigts pour clavier, trackball, joystick, contacteur…), logiciels de dictée
+**Solutions adaptées&nbsp;:** périphériques adaptés (souris ou clavier ergonomique, guide-doigts pour clavier, trackball, joystick, contacteur…), logiciels de dictée
 </div>
 &nbsp;
 
-<h2 class="page-title">L'accessibilité numérique</h2>
+<h2 class="page-title">L’accessibilité numérique</h2>
 
 <div class="axs-picto">
-    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées et apportent du confort pour tous; quelques cas ci-dessous:      
+    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées et apportent du confort pour tous&nbsp;; quelques cas ci-dessous&nbsp;:      
     <ul>
-        <li>Les environnements bruyants tels que open space, boutiques, hall d'accueil…</li>
+        <li>Les environnements bruyants tels que open space, boutiques, hall d’accueil…</li>
         <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)</li>
         <li>Un matériel ou service inapproprié (imprimante noir et blanc, bas débit…)</li>
-        <li>Les formulaires à renseigner : la navigation au clavier permet de remplir les formulaires sans utiliser la souris et apporte un gain de temps appréciable</li>
+        <li>Les formulaires à renseigner&nbsp;: la navigation au clavier permet de remplir les formulaires sans utiliser la souris et apporte un gain de temps appréciable</li>
     </ul>
 </div>
 
