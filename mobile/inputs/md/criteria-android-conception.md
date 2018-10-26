@@ -16,10 +16,10 @@
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application [mDAN](./mdan.html) pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section concernant <span lang="en">TalkBack</span>](./screen-reader-talkback.html).
 
 ## Images
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors de la conception et pendant le développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et pendant le développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Les images sont très souvent utilisées pour transmettre de nombreuses informations. Comme le dit l’adage, une image vaut mille mots. Les non-voyants ne pouvant voir les images, il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.  
 Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.
@@ -35,7 +35,7 @@ L’alternative d’une image est renseignée via l’attribut `contentDescripti
 - les images portant de l’information restituent cette information à travers leur alternative textuelle,
 - les images décoratives n’ont pas d’alternative textuelle.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante...).
 
@@ -50,44 +50,44 @@ En décomposant l’image&nbsp;:
 
 ## Couleurs
 
-**Cible&nbsp;: ** tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)  
-**Quand&nbsp;: **  dès la phase de conception et lors du développement.
+**Cible&nbsp;:** tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)  
+**Quand&nbsp;:**  dès la phase de conception et lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Les couleurs jouent un rôle très important dans la transmission des informations. On associe certaines couleurs à des concepts ou à des sensations, mais il ne faut pas oublier qu’une partie de la population ne distingue pas correctement les couleurs.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément. 
 - Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (7:1 sur mobile, 4,5:1 pour les textes larges, à calculer avec <span lang="en">Colour Constrast Analyzer</span> par exemple).
 
-**Objectif utilisateur&nbsp;: ** 
+**Objectif utilisateur&nbsp;:** 
 
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).  
 Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure... ) d’accéder tout de même à l’information par d’autres moyens.
 
-**Outil&nbsp;: **
+**Outil&nbsp;:**
 L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
 
 L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible pour Android 6+. 
 
-**Exemple de contraste non valide&nbsp;: **  
+**Exemple de contraste non valide&nbsp;:**  
 Le texte "film | 20h40 ..." ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)   
 
-**Exemple de passage d’information par la couleur valide et non valide&nbsp;: ** 
+**Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 
 <img src="./images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide" width="300">
 
   
 ## Alternative textuelle
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** dès la conception, à la rédaction du contenu et pendant le développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Grâce à elles, un utilisateur non-voyant peut utiliser une application sans perte d’information.  
   
@@ -99,16 +99,16 @@ Certaines images sont régulièrement associées à du texte pour donner une inf
 
 L’alternative textuelle d’un élément est renseignée via l’attribut `contentDescription` (disponible pour tout élément héritant de `View`). Pour les boutons présents dans l’`ActionBar` (ou `ToolBar`), c’est l’attribut `title` qu’il faut renseigner.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les éléments de l’application qui nécessitent une alternative en possèdent bien une,
 - Les alternatives textuelles de l’application sont explicites et compréhensibles.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant… ) d’accéder aux informations véhiculées par l’application par d’autres biais.
 
-**Exemple&nbsp;: **
+**Exemple&nbsp;:**
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
 <img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
@@ -120,33 +120,33 @@ infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_
 
 ## Titre et en-tête
 
-**Cible&nbsp;: ** tout le monde  
-**Quand&nbsp;: ** dès la conception et à la rédaction du contenu.
+**Cible&nbsp;:** tout le monde  
+**Quand&nbsp;:** dès la conception et à la rédaction du contenu.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 Le titre de la page est le premier élément qui est vocalisé ou vu sur un écran mobile. Il facilite la navigation pour tout le monde&nbsp;: à tout moment, on sait où on se trouve dans l’application.  
 Une erreur commune est de mettre un titre unique pour toutes les pages d’une application (ou même pas de titre du tout).
 
-**À vérifier&nbsp;: ** 
+**À vérifier&nbsp;:** 
 
 - Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour),
 
-** Objectif utilisateur&nbsp;: **
+** Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et de se faire une idée précise du contenu de la page sans avoir à le lire.
 
-**Exemple non valide&nbsp;: **
+**Exemple non valide&nbsp;:**
 
 <img src="./images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
   
 
 ## État des éléments
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Si un élément ne restitue pas à la vocalisation son statut, sa nature ou son état, l’utilisateur de <span lang="en">TalkBack</span> est dans l’impossibilité de comprendre ce qui se passe à l’écran. Ne pas préciser qu’une zone est dépliée ou que l’on se trouve face à un système d’onglets sont des exemples très fréquents.  
   
@@ -156,15 +156,15 @@ Autre classique d’élément qui ne restitue pas par défaut son état&nbsp;: l
   
 Pour renseigner ce genre d’information, il faut utiliser l’attribut `contentDescription` (disponible pour tout élément héritant de `View`).
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Tout élément dont le statut est modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné doit restituer son état à travers une alternative textuelle.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informations des composants, leur état, leur nature afin qu’ils puissent les utiliser sans difficultés.
 
-**Exemple&nbsp;: **
+**Exemple&nbsp;:**
 
 <img src="./images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400">  
 Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du [guide développeur](./criteria-android-dev.html#alternatives-textuelles) correspondante.
@@ -172,10 +172,10 @@ Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à 
 
 ## Composant standard
 
-**Cible&nbsp;: ** tout le monde.  
-**Quand&nbsp;: ** en phase de sélection des briques logicielles et lors des développements.
+**Cible&nbsp;:** tout le monde.  
+**Quand&nbsp;:** en phase de sélection des briques logicielles et lors des développements.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 L’accessibilité est prise en compte dans les composants natifs (la plupart du temps). De plus, l’utilisation de composants standards permet à l’utilisateur de se retrouver dans une situation et un comportement habituels. La navigation dans une interface standard est donc plus confortable.  
   
@@ -183,52 +183,52 @@ Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun 
   
 Un exemple fréquent est l’utilisation d’un composant personnalisé pour le menu latéral de navigation (`NavigationDrawer`). Certains des palliatifs disponibles sur Internet ne sont absolument pas accessibles avec un lecteur d’écran. Malheureusement, cela rend de fait toute l’application non accessible.
 
-**Objectif utilisateur&nbsp;: ** 
+**Objectif utilisateur&nbsp;:** 
 
 Permet à tous les utilisateurs d’interagir plus intuitivement avec l’interface.
 
-**Objectif technique&nbsp;: **
+**Objectif technique&nbsp;:**
 
 Améliore globalement la maintenabilité. Réduit les temps de développement. 
   
 
 ## Zone de clic
 
-**Cible&nbsp;: ** pour tous et en particulier les personnes avec des déficiences motrices  
-**Quand&nbsp;: ** dès la phase de conception et lors du développement.
+**Cible&nbsp;:** pour tous et en particulier les personnes avec des déficiences motrices  
+**Quand&nbsp;:** dès la phase de conception et lors du développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Une taille insuffisante pour la zone d’action d’un composant peut empêcher certains utilisateurs de profiter pleinement de l’application. Cela peut engendrer des frustrations qui peuvent conduire à la désinstallation de l’application. Chaque élément cliquable de l’application doit donner à l’utilisateur une taille suffisante pour sa zone d’action.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Google définit pour son système une taille de zone de clic minimum de 48dp (en hauteur ET largeur, avec 8 dp de marge autour de l’élément).
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Améliorer le confort de navigation au toucher (<i lang="en">touch</i>).
 
-**Outil&nbsp;: **
+**Outil&nbsp;:**
 
 L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des zones de clic. Disponible pour Android 6+. 
 
-**Exemple valide&nbsp;: ** 
+**Exemple valide&nbsp;:** 
 
 Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.  
 <img src="./images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300">
 
-**Exemple non-valide&nbsp;: **  
+**Exemple non-valide&nbsp;:**  
 
 <img src="./images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
 
 ## Elément fantôme
 
-**Cible&nbsp;: ** les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">TalkBack</span> est capable de lire les informations d’une vue qui est placée «&nbsp;sous&nbsp;» une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.  
   
@@ -236,15 +236,15 @@ Grand classique du problème&nbsp;: les fragments. Un fragment est un composant 
   
 Consulter l’article sur l’[utilisation des fragments](https://developer.android.com/guide/components/fragments.html) pour plus d’informations.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - <span lang="en">TalkBack</span> ne doit pas vocaliser d’éléments indésirables appartenant à un autre écran que celui en cours de consultation.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre la navigation dans l’application sans avoir d’élément perturbant, non utilisable, sur la vue courante.
 
-**Exemple non-valide&nbsp;: **  
+**Exemple non-valide&nbsp;:**  
 
 Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en">TalkBack</span>. Ce dernier vocalise (la vocalisation est affichée en bas de l’écran sur la capture) un contenu se trouvant derrière la vue active.  
 <img src="./images/ghost.png" alt="exemple d’élément fantôme" width="300">
@@ -252,10 +252,10 @@ Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en
 
 ## Taille des textes
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 L’utilisateur a la possibilité d’augmenter la taille du texte via une option d’accessibilité. Afin que l’application réagisse correctement à cette option, il est nécessaire d’utiliser des tailles de texte dynamiques qui s’ajusteront en fonction des paramètres utilisateurs. Un texte trop petit sera facilement ignoré par certains utilisateurs malvoyants.  
   
@@ -265,52 +265,52 @@ Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir c
 - Utiliser une taille de police dynamique&nbsp;: le «&nbsp;sp&nbsp;». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android. 
 - Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique («&nbsp;sp&nbsp;» donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le `min-height` et le `height` des conteneurs pour obtenir un résultat correct (le `height` à `wrap_content` et le `min-height` à la hauteur voulue par défaut).
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - L’application réagit correctement à l’option grand caractère,
 - Les textes de l’application ont une taille minimum de 14sp.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs (malvoyants, en mobilité, seniors...) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.
 
-**Outil&nbsp;: **
+**Outil&nbsp;:**
 L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible pour Android 6+.
 
-**Exemple&nbsp;: **
+**Exemple&nbsp;:**
 
 <img src="./images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 
 
 
 ## Contrôle de contenu
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles et cognitives.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et cognitives.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.  
 L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel ne défile de manière automatique, etc.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les contenus interactifs peuvent être maîtrisés par l’utilisateur (présence d’un bouton pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs de rester maîtres de l’application. Permettre à l’utilisateur de lecteur d’écran d’éviter une pollution sonore qui peut nuire à sa navigation. 
 
-**Objectif technique&nbsp;: **
+**Objectif technique&nbsp;:**
 
 Améliorer le référencement naturel.
 
 
 ## Changement de contenu
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 Lorsque du contenu est modifié dynamiquement à la suite d’une action de l’utilisateur, il faut le notifier à la synthèse vocale. Sans retour vocal, l’utilisateur ne sait pas qu’une action a été déclenchée.  
 Sur une page, si du contenu est modifié dynamiquement suite à une action utilisateur, il est important que le lecteur d’écran soit notifié afin qu’il déclenche une vocalisation. Par exemple, les listes qui se rafraîchissent, ou un compteur de temps.
@@ -322,31 +322,31 @@ Il est également possible de spécifier à une vue qu’elle est une région <i
 -	`ACCESSIBILITY_LIVE_REGION_POLITE`&nbsp;: en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont «&nbsp;polies&nbsp;»&nbsp;; elles sont moins prioritaires que les vocalisations système par exemple.
 -	`ACCESSIBILITY_LIVE_REGION_ASSERTIVE`&nbsp;: en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont «&nbsp;<i lang="en">rude</i>&nbsp;»&nbsp;; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode `setAccessibilityLiveRegion` est disponible sur tout élément qui hérite de `View`.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Avec un lecteur d’écran, s’assurer que les modifications dynamiques dans les pages sont bien vocalisées.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Donner accès aux modifications des informations de l’application aux utilisateurs de lecteurs d’écran.
 
 
 ## <i lang="en">Scroll</i> horizontal
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** dès la phase de conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la phase de conception et lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Un <i lang="en">scroll</i> horizontal peut être très difficile à détecter si aucun visuel n’aide l’utilisateur à comprendre qu’il existe plusieurs pages.  
 Ne pas hésiter à afficher un élément pour indiquer un <i lang="en">scroll</i> horizontal (des «&nbsp;points&nbsp;» par exemple). Quand cela est nécessaire, ajouter également des boutons «&nbsp;suivant&nbsp;» et «&nbsp;précédent&nbsp;».
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les scrolls horizontaux sont indiqués visuellement
 - Avec le lecteur d’écran activé, un mécanisme permet de passer de page en page lorsqu’un <i lang="en">scroll</i> horizontal est présent.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Donner une indication visuelle aux utilisateurs lors de la présence de <i lang="en">scrolls</i> horizontaux. Permettre aux utilisateurs de lecteur d’écran d’utiliser les <i lang="en">scrolls</i> horizontaux.
 
@@ -365,10 +365,10 @@ Donner une indication visuelle aux utilisateurs lors de la présence de <i lang=
 
 ## Formulaire
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Lier les champs de formulaires avec leurs labels apporte une vocalisation supplémentaire qui permet à l’utilisateur de comprendre quoi remplir lorsqu’il arrive sur un champ de formulaire.  
   
@@ -376,21 +376,21 @@ Il existe 2 grandes techniques pour réaliser cette liaison&nbsp;:
  - `labelFor`&nbsp;: permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’`id` de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> `android:labelFor` ou le code `setLabelFor`.
  - `hint`&nbsp;: permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les `TextView`. Prend en paramètre l’`id` d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> `android:hint` ou le code `setHint`.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - les champs de formulaire doivent être liés à un label si celui-ci est visible, sinon un `hint` est présent
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Améliorer la navigation et la compréhension globale de la page, car les champs de formulaires décrivant le contenu attendu  facilitent leur saisie par les utilisateurs déficients visuels.
 
 
 ## Ordre de lecture
 
-**Cible&nbsp;: ** les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle. Il est donc important d’y faire attention.  
   
@@ -402,11 +402,11 @@ Il est tout à fait possible de redéfinir cet ordre de lecture avec deux attrib
 
 À noter&nbsp;: ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes `setAccessibilityTraversalAfter` et `setAccessibilityTraversalBefore`. Ces méthodes sont disponibles pour tout élément qui hérite de `View`.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - L’ordre de lecture (celui de <span lang="en">TalkBack</span>) est logique et cohérent.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteurs d’écran pour leur assurer une complète compréhension du contenu.
 
@@ -423,10 +423,10 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
 
 ## Navigation au focus
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes motrices qui utilisent un clavier pour naviguer.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes motrices qui utilisent un clavier pour naviguer.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 La navigation au focus est très utile pour les personnes qui présentent des difficultés motrices ou cognitives. Cette navigation permet de passer d’élément interactif en élément interactif (élément sur lequel on peut effectuer une action). Elle correspond à la navigation que l’on peut faire avec un clavier Bluetooth lié à un smartphone.
 
@@ -440,12 +440,12 @@ Pour gérer la navigation au focus, il faut s’assurer de 3 choses&nbsp;:
 Pour plus d’information sur la [gestion du focus sous Android](http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav).
 
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - L’ordre de navigation au focus (clavier) est logique et cohérent.
 - À la navigation au focus (clavier), il est possible de déterminer visuellement l’élément qui a le focus
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre l’utilisation de l’application avec un clavier, dock tablette ou tout autre dispositif de navigation séquentielle.
 
