@@ -712,6 +712,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     }
 </code></pre>
  - Ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques.
+ - Penser à adapter le [contraste des couleurs](./criteria-ios-conception.html#couleurs) à la taille de texte modifiée si nécessaire.
 ### Liens
 - [<span lang="en">Dynamic Type <abbr>API</abbr></span>](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)

@@ -58,12 +58,19 @@ En décomposant l’image&nbsp;:
 
 **Description&nbsp;: **  
 
-Les couleurs jouent un rôle très important dans la transmission des informations. On associe certaines couleurs à des concepts ou à des sensations, mais il ne faut pas oublier qu’une partie de la population ne distingue pas correctement les couleurs.
+Les couleurs jouent un rôle très important dans la transmission des informations.
+</br>On associe certaines couleurs à des concepts ou à des sensations, mais il ne faut pas oublier qu’une partie de la population ne distingue pas correctement les couleurs.
+</br></br>La décision de mettre certaines polices en gras va favoriser un contraste plus faible pour des tailles basses de police.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_2.png" />
+</br></br>Ne pas mettre des polices en gras va demander un contraste des couleurs plus fort que dans le cas précédent.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
+</br></br> Avec l'apparition du [Dynamic Type](./criteria-ios-dev.html#taille-des-textes) permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n'est pas nécessairement figé et doit s'adapter au grossissement souhaité.
+</br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" />
 
 **À vérifier&nbsp;: **
 
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément. 
-- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (7:1 sur mobile, 4,5:1 pour les textes larges, à calculer avec <span lang="en">Colour Contrast Analyzer</span> par exemple).
+- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> par exemple)*.
 
 **Objectif utilisateur&nbsp;: ** 
 

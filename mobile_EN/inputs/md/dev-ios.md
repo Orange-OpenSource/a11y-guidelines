@@ -704,6 +704,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
     }
 </code></pre>
  - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
+ - Don't forget to adapt the [color contrast](./criteria-ios.html#colours) to the text size.
 ### Links
 - [Dynamic Type <abbr>API</abbr>](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)

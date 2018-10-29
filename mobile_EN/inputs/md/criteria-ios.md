@@ -58,12 +58,19 @@ By decomposing the image:
 
 **Description: **
 
-Colours have a very important role in the transmission of information. Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.
+Colours have a very important role in the transmission of information.
+</br>Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.
+</br></br>The bold font type will allow a weaker contrast for the lowest font sizes.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_2.png" />
+</br></br>The normal font type will require a higher contrast than the previous case.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
+</br></br> With [Dynamic Type](./dev-ios.html#text-size) whose purpose is to increase the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
+</br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" />
 
 **Checklist: **
 
 - Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.
-- The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool).
+- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool)*.
 
 **Users’ goal: ** 
 
