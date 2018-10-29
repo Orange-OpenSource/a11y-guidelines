@@ -115,7 +115,8 @@ It is possible via an accessibility attribute to hide elements from accessibilit
   
 - **isAccessibilityElement**&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).
 - **accessibilityElementsHidden**&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.
-- **accessibilityViewIsModal**&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popup views for example.
+- **accessibilityViewIsModal**&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>.
+</br>A [theoretical explanation](./dev-ios-wwdc-18230.html#accessibilityViewIsModal) and a [practical example](./dev-ios-wwdc-18230.html#DemoModalView) are provided in a video detailed in the WWDC part.
   
 The `accessibilityElement` attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.
 ### Example
@@ -229,7 +230,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 ### Description
 On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the `UIKit` framework.
 </br>The most useful method is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
-</br></br>Many other methods are available in the links hereafter.
+</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a [WWDC video](./dev-ios-wwdc-18230.html).
 ### Exemple
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);

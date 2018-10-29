@@ -125,8 +125,8 @@ Il est possible de masquer des éléments aux outils d’accessibilité grâce a
 - **isAccessibilityElement**&nbsp;: booléen qui permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité (de <span lang="en">VoiceOver</span> ou autre).
 - **accessibilityElementsHidden**&nbsp;: booléen qui permet d’indiquer que les éléments fils de l’élément cible sont visibles ou non de l’<abbr>API</abbr> d’accessibilité.
 - **accessibilityViewIsModal**&nbsp;: booléen qui permet de rendre visible ou non les éléments frères de l’élément cible à l’<abbr>API</abbr> d’accessibilité.
-</br>Très utile pour rendre accessible des <i lang="en">popup custom view</i> par exemple.  
-  
+</br>Une [explication théorique](./criteria-ios-wwdc-18230.html#accessibilityViewIsModal) et une [application pratique](./criteria-ios-wwdc-18230.html#DemoModalView) de cette propriété sont fournies par une vidéo détaillée dans la partie WWDC de ce site.
+
 L’attribut `accessibilityElement` est disponible via l’<i lang="en">interface builder</i> de Xcode mais est également utilisable directement via le code.
 </br>Les deux autres attributs sont utilisables uniquement via le code.
 ### Exemple
@@ -238,7 +238,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;?
 </br>Plusieurs fonctions du <span lang="en">framework</span> `UIKit` permettent de connaître les statuts de ces options d'accessibilité.
  </br>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (**UIAccessibilityIsVoiceOverRunning**).
- </br></br>D'autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après.
+ </br></br>D'autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après et une présentation très visuelle de certaines d'entre elles est faite lors d'une vidéo [WWDC 2018](./criteria-ios-wwdc-18230.html).
 ### Exemple
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
