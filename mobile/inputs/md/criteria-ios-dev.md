@@ -345,6 +345,11 @@ Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas d
 - **accessibilityFrame**&nbsp;: permet de définir cette zone via un rectangle (`CGRect`).
 </br>Par défaut pour un élément dérivant de `UIView`, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.
 - **accessibilityPath**&nbsp;: équivalent à `AccessibilityFrame` mais permet de définir la zone via des courbes de Bézier.
+<a name="AccessibilityActivationPoint"></a>
+- **accessibilityActivationPoint**&nbsp;: définit un point de contact au sein de la `frame` dont l'action résultante sera activée par une sélection classique d'élément via un double tap.
+</br> Par défaut, ce point se trouve au centre de la `frame` mais on peut le définir n'importe à l'intérieur de cette dernière, l'idée étant de pouvoir activer un élement facilement lors d'un [regroupement par exemple](#ActivationPointExemple).
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
+</br> En conservant la valeur par défaut de ce point, on peut aisément se retrouver dans une situation où on active involontairement l'élément situé au milieu de la `frame` uniquement en activant le regroupement créé.
 ### Exemple
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
 <pre><code class="objective-c">
@@ -446,14 +451,12 @@ float heightVal;
 
 ## Grouper des éléments
 ### Description
-On peut envisager de grouper des éléments pour vocaliser l'ensemble formé en une seule fois et associer au groupe ainsi créé une action dédiée par exemple.
-</br>Dans ce cas, on va créer une vue qui va englober les éléments impactés puis implémenter une action qui va indiquer l'action à réaliser en cas d'activation de la zone par l'utilisateur.
+On peut envisager de grouper des éléments pour vocaliser en une seule fois l'ensemble formé et associer au groupe ainsi créé une action dédiée par exemple.
 </br>Dès lors, les éléments encapsulés ne doivent plus être considérés comme accessibles car seul leur conteneur doit être perçu comme tel.
-</br></br>Une autre possibilité de groupement d'éléments pourrait utiliser l’attribut **shouldGroupAccessibilityChildren**, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
-</br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).
-### Exemple
+</br></br>
+### Exemple 1
 Nous avons un 'label' et un 'switch control' que nous souhaitons regrouper et traiter d'un seul bloc.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
+</br>Dans ce cas, on va créer une vue qui va englober les éléments impactés puis implémenter une action qui va indiquer l'action à réaliser en cas d'activation de la zone par l'utilisateur.</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 </br>Création de l'élément accessible qui va regrouper les éléments souhaités :
 <pre><code class="objective-c">
 #import "MyViewController.h"
@@ -587,6 +590,67 @@ int indexSwitch = 1;
     }
 }
 </code></pre>
+
+<a name="ActivationPointExemple"></a>
+### Exemple 2
+Nous avons un 'label', un 'switch control' et un bouton que nous souhaitons regrouper en un seul bloc dont l'activation changera automatiquement l'état du 'switch control' sans avoir à définir une action comme précédemment.
+</br>L'idée la plus simple consisterait à placer le 'switch control' au milieu de la nouvelle `frame` créée de façon à avoir son [accessibilityActivationPoint](#AccessibilityActivationPoint) directement dessus.
+</br>Cela n'étant malheureusement pas toujours possible, il va donc falloir créer un élément accessible qui regroupera tous les objets impactés puis définir son **accessibilityActivationPoint** sur le 'switch control'.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" />
+<pre><code class="objective-c">
+@interface ActivationPointViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation ActivationPointViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    
+    CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
+    CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
+    
+    elt.accessibilityLabel = @"regroupement d'éléments";
+    elt.accessibilityHint = @"tapez deux fois pour modifier le switch";
+    elt.accessibilityFrameInContainerSpace = a11yEltFrame;
+    elt.accessibilityActivationPoint = [_mySwitch center];
+    
+    self.view.accessibilityElements = @[elt];
+}
+@end
+</code></pre><pre><code class="swift">
+    class ActivationPointViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
+
+        elt.accessibilityLabel = "regroupement d'éléments"
+        elt.accessibilityHint = "tapez deux fois pour modifier le switch"
+        elt.accessibilityFrameInContainerSpace = a11yEltFrame
+        elt.accessibilityActivationPoint = mySwitch.center
+
+        self.view.accessibilityElements = [elt]
+    }
+}
+</code></pre>
+
+Une autre possibilité de groupement d'éléments pourrait utiliser l’attribut **shouldGroupAccessibilityChildren**, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
+</br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).
 ### Liens
 - [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)

@@ -339,6 +339,13 @@ In the case of dynamically modified element or component not inheriting from `UI
 - **accessibilityFrame**&nbsp;: sets the area via a rectangle (`CGRect`).
 </br>Usually, for an element inheriting from `UIView`, this area is the «&nbsp;visible&nbsp;» part of the view.
 - **accessibilityPath**&nbsp;: equivalent to `AccessibilityFrame` but sets the area via Bezier curves.
+<a name="AccessibilityActivationPoint"></a>
+- **accessibilityActivationPoint**&nbsp;: defines a contact point inside the `frame` whose action will be fired by a double-tap element activation.
+</br>The default value is the midpoint of the `frame` but it can be redefine anywhere inside.
+</br>A classical use case could be an easy activation inside a [regroupment of elements](#ActivationPointExemple) for instance.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
+</br>By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.
+
 ### Example
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
 <pre><code class="objective-c">
@@ -440,13 +447,11 @@ float heightVal;
 
 ## Grouping elements
 ### Description
-Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.
-</br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
-</br></br>Another grouping elements case could use the **shouldGroupAccessibilityChildren** attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
-</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
-### Example
+Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.</br></br>
+### Example 1
 We wish to obtain a 'label' and a 'switch control' as one unique block behaving like a `switch control`.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
+</br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 </br>Create your wrapper as an accessible element :
 <pre><code class="objective-c">
 #import "MyViewController.h"
@@ -581,6 +586,68 @@ int indexSwitch = 1;
     }
 }
 </code></pre>
+
+<a name="ActivationPointExemple"></a>
+### Example 2
+We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.
+</br>The easiest way would be to place the switch control in the middle of the created frame in order to locate its [accessibilityActivationPoint](#AccessibilityActivationPoint) directly on it.
+</br>Unfortunately, that's not always possible.
+</br></br>A new accessible element must then be created to gather all the desired objects and its **accessibilityActivationPoint** has to be defined on the switch control.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" />
+<pre><code class="objective-c">
+@interface ActivationPointViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation ActivationPointViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    
+    CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
+    CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
+    
+    elt.accessibilityLabel = @"regrouping elements";
+    elt.accessibilityHint = @"double tap to change the switch control status";
+    elt.accessibilityFrameInContainerSpace = a11yEltFrame;
+    elt.accessibilityActivationPoint = [_mySwitch center];
+    
+    self.view.accessibilityElements = @[elt];
+}
+@end
+</code></pre><pre><code class="swift">
+    class ActivationPointViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
+
+        elt.accessibilityLabel = "regrouping elements"
+        elt.accessibilityHint = "double tap to change the switch control status"
+        elt.accessibilityFrameInContainerSpace = a11yEltFrame
+        elt.accessibilityActivationPoint = mySwitch.center
+
+        self.view.accessibilityElements = [elt]
+    }
+}
+</code></pre>
+
+Another grouping elements case could use the **shouldGroupAccessibilityChildren** attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
+</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
 ### Links
 - [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
