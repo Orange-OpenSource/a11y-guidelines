@@ -33,13 +33,13 @@ Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments a
 
 Il faut savoir que `aria-label` doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour `aria-labelledby` et `aria-describedby`, la valeur de cet attribut référence l'`id` d'un élément de la page dont le contenu sera utilisé comme nom accessible de l'élément portant l'attribut <abbr>Aria</abbr>.
 
-**Important&nbsp;: **l'`aria-labelledby` peut admettre plusieurs valeurs séparer par un espace et peut s'auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> `::before` ou `::after`. On peut également référence un contenu masqué par <abbr>CSS</abbr>&nbsp;: `visibility:hidden;` ou `display:none;`. Cependant, les bonnes pratiques demandent que si l'interface est telle qu'il n'est pas possible d'avoir une étiquette textuelle visible à l'écran, il est préférable d'utiliser `aria-label` plutôt que `aria-labelledby`. 
-
 Lorsqu'on utilise `aria-label` ou `aria-labelledby` sur un élément, le contenu ou l'intitulé de cet élément n'est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour `aria-label` le contenu de cet attribut, pour `aria-labelledby` le contenu de l'élément référencé). Donc, seul, le nom accessible doit donner l'ensemble des informations nécessaires à l'<abbr>AT</abbr> et donc à l'utilisateur.
 
-Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à `aria-labelledby` lors du calcul de la propriété de nom accessible. 
+**Important&nbsp;: **l'`aria-labelledby` peut admettre plusieurs valeurs séparées par un espace et peut s'auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> `::before` ou `::after`. On peut également référencer un contenu masqué visuellement par <abbr>CSS</abbr>&nbsp;: `visibility:hidden;` ou `display:none;`. Cependant, les bonnes pratiques demandent que si l'interface est telle qu'il n'est pas possible d'avoir une étiquette textuelle visible à l'écran, il est préférable d'utiliser `aria-label` plutôt que `aria-labelledby`. 
 
-Quant à lui, `aria-describedby` va rajouter au nom accessible de l'élément, une description accessible, plus longue ou complète, logiquement, que le nom accessible. 
+Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité (et donc sera le seul contenu restitué) à `aria-labelledby` lors du calcul de la propriété de nom accessible. 
+
+Quant à lui, `aria-describedby` va rajouter au nom accessible de l'élément, une description accessible, plus longue ou plus complète, logiquement, que le nom accessible. 
 
 ## Exemples
 
