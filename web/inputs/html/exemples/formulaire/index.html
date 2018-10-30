@@ -247,9 +247,30 @@
      <pre><code class="html">
       &lt;input type="text" name="telephone" <span class="important">aria-invalid="true"</span>&gt;
      </code></pre>
-          
-     <h4>Avertir l’utilisateur en cas d’erreur de saisie</h4>
-     <p>Si des erreurs de saisie empêchent la validation du formulaire, il faut en avertir l’utilisateur. Bien souvent des messages apparaissent à l’écran, mais par défaut ils ne sont pas vocalisés au lecteur d’écran. Une des solutions consiste à déplacer automatiquement le focus dans le premier champ en erreur. Ceci aura pour effet de faire vocaliser le ou les libellés du champ de saisie en question.</p>
+      <h4>Annoncer que le formulaire est incomplet ou qu'il existe des erreurs</h4>
+      <p>Pour remonter globalement les erreurs, l'impossibilité de valider un formulaire car des champs obligatoires ne ont pas remplis ou tout autre retour général à faire sur un formulaire, la solution à privilégier est un message de statut, d'état ou contextuel.</p>
+      <p>Ce type de message permet, même aux utilisateurs de technologies d'assistance (<abbr>AT</abbr>) d'être notifié du message lors de la soumission du formulaire. Pour ces message de statut, le focus doit ,être mis sur le titre du message (s'il existe sinon, sur la première erreur de la liste), et chaque erreur doit avoir un lien vers le champ en erreur. De plus, pour que le message soit annoncé aux utilisateur d'<abbr>AT<abbr> sans que le focus soit dessus, on utilise le rôle <abbr>ARIA</abbr> <code>alert</code></p
+            >
+      <pre><code class="html">
+            &lt;div role="alert"&gt;
+                  &lt;h2&gt;Deux erreurs dans le formulaire&lt;/h2&gt;
+                  &lt;ul&gt;
+                        &lt;li&gt;
+                              &lt;a href="#nom" id="nom_error"&gt;
+                                    Le Nom de famille est un champ obligatoire, merci de le remplir.
+                              &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                              &lt;a href="#date" id="date_error"&gt;
+                                    Le champ Date de naissance doit respecter le format JJ/MM/AAAA, par exemple 13/07/2008.
+                              &lt;/a&gt;
+                        &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;           
+           </code></pre>
+
+     <h4>Avertir l’utilisateur au niveau du champ en cas d’erreur de saisie</h4>
+     <p>Si des erreurs de saisie empêchent la validation du formulaire, il faut en avertir l’utilisateur. Bien souvent des messages apparaissent à l’écran, mais par défaut ils ne sont pas vocalisés au lecteur d’écran. Une des solutions consiste à déplacer automatiquement le focus dans le premier champ en erreur. Ceci aura pour effet de faire vocaliser le ou les libellés ou étiquettes du champ de saisie en question.</p>
      <p>Dans cet exemple de formulaire accessible, les messages d’erreurs sont déclarés comme des <code>label</code> et sont associés aux champs de saisie. Ainsi lorsque le focus arrive dans un champ, le lecteur d’écran vocalise le libellé du champ puis le message d’erreur associé.</p>
      <p>Ce mécanisme est pris en charge directement par le plugin jQuery <a href="http://jqueryvalidation.org/" lang="en" hreflang="en">validate</a>.</p>     
      <pre><code class="html">
