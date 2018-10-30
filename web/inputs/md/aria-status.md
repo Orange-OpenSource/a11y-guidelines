@@ -8,7 +8,7 @@
 });</script>
   
 ## Message de statut et accessibilité
-Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que pour les informations importantes pour l'utilisateur qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>) soient  perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.
+Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que pour les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.
 
 ## Quelques exemple de messages d'état, de statut ou contextuels
 
@@ -42,7 +42,7 @@ Après qu'un utilisateur a soumis un formulaire, du texte est ajouté au formula
     Votre formulaire a été soumis avec succès
 </div>`
 
-Lorsqu'un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique "XX erreurs dans le formulaire". Le lecteur d'écran annonce le message "Formulaire non envoyé car XX erreurs de validation" (ceci ne dispense pas de donner les détails de l'erreur pour chaque champ incorrectement rempli). L'information d'erreur dans le formulaire est importante et urgente, immediate, donc on utilise  le rôle "alertdialog".
+Lorsqu'un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique "XX erreurs dans le formulaire". Le lecteur d'écran annonce le message "Formulaire non envoyé car XX erreurs de validation" (ceci ne dispense pas de donner les détails de l'erreur pour chaque champ incorrectement rempli). L'information d'erreur dans le formulaire est importante et urgente, immédiate, donc on utilise  le rôle "alertdialog".
 
 `<div role="alertdialog" aria-labelledby="errors">
    <p id="errors"> Formulaire non envoyé car 2 erreurs de validation </p>
@@ -54,7 +54,7 @@ Une fois qu'un utilisateur, dans une application de gestion documentaire en lign
     Le document YYY est bien enregistré dans le répertoire XXX
 </p>`
 
-Dans une application de mailing en ligne, l'utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l'adresse e-mail du destinataire est affichée à l'écran à la suite de celle déjà choisies. Le lecteur d'écran devra annoncer l'ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l'écran pour certains utilisateurs d'<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d'écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un chat ou chatbot), on utilise, ici, le rôle "log".
+Dans une application de mailing en ligne, l'utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l'adresse e-mail du destinataire est affichée à l'écran à la suite de celle déjà choisies pour ce message. Le lecteur d'écran devra annoncer l'ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l'écran pour certains utilisateurs d'<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d'écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle "log".
 
 <div role="log">
   <ol>
@@ -63,7 +63,7 @@ Dans une application de mailing en ligne, l'utilisateur choisi dans une liste de
   </ol>
 </div>
 
-Parfois, on veut fournir des messages que pour les lecteur d'écran et donc sans avoir besoin de les afficher visuellement. Dans ce cas aussi il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d'écran.
+Parfois, on veut fournir des messages que pour les lecteurs d'écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d'écran sans les afficher à l'écran.
 
 ## Les messages de statut qui n'en sont pas !
 
