@@ -25,7 +25,7 @@ Cependant, ils ne fonctionnent bien qu'avec certains éléments :
 - les éléments possédant un rôle de landmark explicite, donc, avec un attribut `role` ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: `header`, `footer`, `main`, `nav`, `aside` et `section`) 
 - les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d'<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>.
 
-Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couple <abbr>AT</abr>/navigateur, donc ne pas l'utiliser comme seul moyen de passer une information nécessaire.
+Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couples <abbr>AT</abr>/navigateur, donc ne pas l'utiliser comme seul moyen de passer une information nécessaire.
 
 ## Faut-il l’utiliser et comment&nbsp;?
 	
@@ -33,11 +33,13 @@ Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments a
 
 Il faut savoir que `aria-label` doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour `aria-labelledby` et `aria-describedby`, la valeur de cet attribut référence l'`id` d'un élément de la page dont le contenu sera utilisé comme nom accessible de l'élément portant l'attribut <abbr>Aria</abbr>.
 
+**Important&nbsp;: **l'`aria-labelledby` peut admettre plusieurs valeurs séparer par un espace et peut s'auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> `::before` ou `::after`. On peut également référence un contenu masqué par <abbr>CSS</abbr>&nbsp;: `visibility:hidden;` ou `display:none;`. Cependant, les bonnes pratiques demandent que si l'interface est telle qu'il n'est pas possible d'avoir une étiquette textuelle visible à l'écran, il est préférable d'utiliser `aria-label` plutôt que `aria-labelledby`. 
+
 Lorsqu'on utilise `aria-label` ou `aria-labelledby` sur un élément, le contenu ou l'intitulé de cet élément n'est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour `aria-label` le contenu de cet attribut, pour `aria-labelledby` le contenu de l'élément référencé). Donc, seul, le nom accessible doit donner l'ensemble des informations nécessaires à l'<abbr>AT</abbr> et donc à l'utilisateur.
 
-Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à `aria-labelledby` lors du calcul de la propriété de nom accessible.
+Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à `aria-labelledby` lors du calcul de la propriété de nom accessible. 
 
-Quant à lui, `aria-describedby` va rajouter au nom accessible de l'élément, une description accessible, en plus. 
+Quant à lui, `aria-describedby` va rajouter au nom accessible de l'élément, une description accessible, plus longue ou complète, logiquement, que le nom accessible. 
 
 ## Exemples
 
@@ -56,7 +58,13 @@ Sortie pour un lecteur d'écran : "Code de la page HTML"
 &lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;h3&gt;
 &lt;button aria-label="accéder au code HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
 </code></pre>
-Sortie pour un lecteur d'écran : "accéder au code HTML code de la page de connexion"
+Sortie pour un lecteur d'écran : "accéder au code HTML code de la page de formulaire de connexion"
+
+<pre><code class="html">
+&lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;h3&gt;
+&lt;button id="code" aria-describedby="code titre"&gt;Accéder au code HTML&lt;/buttton&gt;
+</code></pre>
+Sortie pour un lecteur d'écran : "Accéder au code HTML code de la page de formulaire de connexion"
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
