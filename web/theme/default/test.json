@@ -1,0 +1,46 @@
+data = [{
+	"themes": "Donner un titre aux pages",
+	"title": "Donner un titre aux pages",
+	"type": ["Test manuel inspecteur de code", "Wave toolbar"],
+	"tests": ["Lancer l'inspecteur de code du navigateur", "Examiner le titre de page <code><title>[title]</title></code>"],
+	"verifier": ["Vérifier que le titre de page est renseigné", "Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page"],
+	"resultat": ["Chaque page possède un titre unique et descriptif"],
+	"exception": "",
+	"niveau": "1"
+}, {
+	"themes": "Donner des titres aux rubriques",
+	"title": "Donner des titres aux rubriques",
+	"type": ["Wave toolbar"],
+	"tests": ["Lancer Wave > Outline", "Examiner la hiérarchisation de titre"],
+	"verifier": ["Vérifier que les titres sont pertinents et non vides", "Vérifier que les titres s'enchainent de façon logique", "Vérifier l'absence de sauts dans la hiérarchie des titres"],
+	"resultat": ["Tous les contenus, traités visuellement comme des titres, possèdent une sémantique de titre (balises <code><h1></code> à <code><h6></code>)", "Les titres de niveaux sont structurés de manière logique"],
+	"exception": "Ne pas tenir compte des titres masqués (visibility:hidden ou display:none) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaitre, il faut refaire les observations sur la nouvelle structuration du titrage. ",
+	"niveau": "3"
+}, {
+	"themes": "Respecter la sémantique HTML",
+	"title": "Respecter la sémantique HTML",
+	"type": ["Test manuel inspecteur de code"],
+	"tests": ["Désactiver les styles de pages Sous Firefox > Affichage > Style de la page > Aucun style", "Lancer l'inspecteur de code du navigateur", "Examiner les contenus"],
+	"verifier": ["Vérifier que les sémantiques HTML appropriées sont utilisées pour le balisage des contenus, notamment :  liste (cf détail étape suivante) citation (présence de <code><blockquote></code> ou <code><q></code> lorsque nécessaire) lien (<code><a></code>), pour tout changement de contexte via chargement d'une nouvelle URL bouton (<code><button></code>, <code><input type='button'></code>), pour tout déclenchement d'action,  validation ou sélection"],
+	"resultat": ["Tous les contenus, traités visuellement comme des listes, possèdent une sémantique liste HTML (<code>OL</code> pour des listes ordonnées, <code>UL</code> pour des listes non ordonnées)", "Toutes les citations possèdent une sémantique de liste citation HTML", "Tous les éléments interactifs entraînant un changement de contexte via un chargement d'URL, possède une sémantique de lien HTML (<code><a></code>)", "Tous les éléments interactifs permettant le déclanchement d'une action, une validation ou une sélection, possèdent une sémantique de bouton HTML (<code><button></code>, <code><input type='button'></code>)"],
+	"exception": "",
+	"niveau": "2"
+}, {
+	"themes": "Respecter la sémantique HTML",
+	"title": "Respecter la sémantique HTML - Liste",
+	"type": ["Test manuel inspecteur de code"],
+	"tests": ["Désactiver les styles de pages, Sous Firefox > Affichage > Style de la page > Aucun style", "Lancer l'inspecteur de code du navigateur", "Examiner les listes"],
+	"verifier": ["Vérifier que la page utilise des listes HTML", "Vérifier l'absence de liste d'un seul élément", "Vérifier l'absence de liste vide"],
+	"resultat": ["Existence de listes d'énumération pertinentes"],
+	"exception": "",
+	"niveau": "1"
+}, {
+	"themes": "Respecter la sémantique HTML",
+	"title": "Respecter la sémantique HTML - Validation HTML",
+	"type": ["W3C checker"],
+	"tests": ["Valider la page dans le W3C checker"],
+	"verifier": ["A minima vérifier : les éléments ont des balises de début et de fin, les éléments sont imbriqués conformément à leurs spécifications, les éléments ne contiennent pas d’attributs dupliqués, chaque id est unique"],
+	"resultat": ["Tous les éléments présentes des balises de débuts et de fin", "Tous les éléments sont imbriqués conformément à leur spécification", "Tous les éléments ne contiennent pas d'attributs dupliqués", "Absence d'attributs ID dupliqué"],
+	"exception": "",
+	"niveau": "1"
+}]
