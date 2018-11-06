@@ -1,4 +1,4 @@
-data = [{
+[{
 	"themes": "Donner un titre aux pages",
 	"title": "Donner un titre aux pages",
 	"type": ["Test manuel inspecteur de code", "Wave toolbar"],

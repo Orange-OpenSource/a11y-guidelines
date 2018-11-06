@@ -27,9 +27,11 @@
     }
 });</script>
 
-<script type="text/javascript" src="test.json"></script>
-<script>$(document).ready(function () {
-function encode(str){
+
+<script>
+$(document).ready(function () {
+
+	function encode(str){
 
 		str=str.replace(/[\x26\x0A\<>'"^]/gi, function(r){return"&#"+r.charCodeAt(0)+";"});
 		str=str.replace(/\&#60;code\&#62;([\s\S]*?)\&#60;\/code\&#62;/g, '<code>$1</code>'); 
@@ -37,7 +39,7 @@ function encode(str){
 		return str;
 	}
 	
-function delDoublon(arrCond, inputId){
+	function delDoublon(arrCond, inputId){
 		for (let condition of arrCond) {
 			if (condition.name == inputId) {
 				let arrCondIndex = arrCond.indexOf(condition);
@@ -47,11 +49,16 @@ function delDoublon(arrCond, inputId){
 	
 		return arrCond;
 	}
+	
 
 	
+fetch('test.json').then(response => {
+  return response.json();
+}).then(data => {
+
 	let refTests = data;
 
-	let app = new function() {
+	let app = new function(data) {
 	  // Récupération des données
 	  this.refTests = refTests;
 
@@ -199,18 +206,18 @@ function delDoublon(arrCond, inputId){
 					if (indice == 1) {
 						
 						//on réinitialise les conditions
-						conditions = [];
+						//conditions = [];
 
 						//on ajoute le premier critère
 						if ((arrNiveau.length===1)){
-							conditions.unshift(niveau = function(item) { 
+							conditions.unshift(function(item) { 
 								return item.niveau === arrNiveau[0]; 	
 							});	
 							//on nomme la fonction, pour les boutons radio on utilise input.name
 							Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
 
 						}
-						if ((arrType.length===1 && input.checked && input.name==="types")){
+						if ((input.checked && input.name==="types")){
 							conditions.unshift(function(item) {
 								return item.type.indexOf(arrType[0]) !== -1;
 							});
@@ -238,7 +245,7 @@ function delDoublon(arrCond, inputId){
 							
 							//on récupere la dernière valeur ajoutée
 							let i = arrType.length - 1;
-							valeurFiltre = arrType[i];
+							let valeurFiltre = arrType[i];
 							
 							conditions.unshift(function(item) {
 								return item.type.indexOf(valeurFiltre) !== -1;
@@ -273,11 +280,19 @@ function delDoublon(arrCond, inputId){
     };
 
 }
-		
-// Affichage de tous les tests
-app.FetchAll(refTests);
-// Filtrage
-app.FilterByType();
+ 
+	// Affichage de tous les tests
+	app.FetchAll(refTests);
+	// Filtrage
+	app.FilterByType();
+  
+}).catch(err => {
+  // Do something for an error here
+   let elrefTests = document.getElementById('refTests');
+   elrefTests.innerHTML = '<div class="alert alert-warning">Erreur chargement ressource JSON</div>';
+});
+	
+
 });
 </script>
 
