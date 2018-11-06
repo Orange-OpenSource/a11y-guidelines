@@ -56,12 +56,12 @@ Avant toute chose, commencez par mettre à jour <span lang="en">TalkBack</span>&
   <li class="clearfix">    
     <img src="./images/gesture7.png" alt="" width="80">  
     <h3><span lang="en">Slide</span> vers le haut en utilisant un doigt</h3>
-    <p>Changer de mode de lecture&nbsp;: « pages », « par défaut (éléments) », « caractères », « mots », « lignes » et « paragraphes ».</p>              
+    <p>Changer de mode de lecture&nbsp;: « par défaut (éléments) », « caractères », « mots », « lignes », « paragraphes », « en-têtes », « liens » et « commandes ».</p>         
   </li>
   <li class="clearfix">    
     <img src="./images/gesture8.png" alt="" width="80">
     <h3><span lang="en">Slide</span> vers le bas en utilisant un doigt</h3>
-    <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
+    <p>Changer de mode de lecture comme le geste précédent mais dans le sens inverse&nbsp;: « par défaut (éléments) », « commandes », « liens », « en-têtes », « paragraphes », « lignes », « mots » et « caractères ».</p>
   </li>
 </ul>  
 
