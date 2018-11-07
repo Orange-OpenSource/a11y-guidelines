@@ -67,6 +67,8 @@
 #refTests h2{margin:1rem 0;}
 #refTests h3{font-size: 1rem; margin:0.2rem 0;}
 #refTests .card-header{position: relative; background-color: #fff; border-bottom: 1px solid #ccc; padding: 0 0;}
+#filter h3{margin:0.2rem 0;}
+#filter ul{padding-left:1rem;}
 
 .accordion .card-header a, .accordion .card-header button {
     position: relative;
@@ -76,6 +78,7 @@
     line-height: 1.125rem;
     text-align: left;
     border: 0;
+	font-weight:normal;
 }
 .accordion .card-header a::after, .accordion .card-header button::after {
     position: absolute;

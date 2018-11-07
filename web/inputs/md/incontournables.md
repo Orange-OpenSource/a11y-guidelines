@@ -50,8 +50,6 @@ $(document).ready(function () {
 		return arrCond;
 	}
 	
-
-	
 fetch('test.json').then(response => {
   return response.json();
 }).then(data => {
@@ -106,7 +104,8 @@ fetch('test.json').then(response => {
 			htmlrefTests += '</div>';
 			htmlrefTests += '</div>';
 		}		
-		htmlrefTests += '</div><div class="card-footer text-muted"> ' + data[i].niveau + ' ';
+		htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>' + data[i].profils + ' ';
+		htmlrefTests += '<br /> <b>Outils : </b>';
 		for (let j in data[i].type) {
 		  htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + data[i].type[j] + ' ';
 		}
@@ -127,8 +126,8 @@ fetch('test.json').then(response => {
 			  let types   = [];
 
 			  // Selection de l'élément
-			  let elNiveaux = document.getElementById('niveaux');
-			  let niveaux   = [];
+			  let elProfils = document.getElementById('profils');
+			  let profils   = [];
 			   
 			  // Chaque ligne (test)
 			  for (let i in refTests) {
@@ -138,27 +137,30 @@ fetch('test.json').then(response => {
 				  types.push(refTests[i].type[j]);
 				}
 				
-				// Chaque "niveau" dans chaque ligne (test)
-				  niveaux.push(refTests[i].niveau);
+				// Chaque "profil" dans chaque ligne (test)
+				for (let j in refTests[i].profils) {
+				  profils.push(refTests[i].profils[j]);
+				}
+				
 				
 			  }
 
 			  let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
 			  let htmlTypes = '';
 
-			  let uniqueNiveaux = niveaux.filter( (value, index, self) => self.indexOf(value) === index );
-			  let htmlNiveaux = '';
+			  let uniqueProfils = profils.filter( (value, index, self) => self.indexOf(value) === index );
+			  let htmlProfils = '';
 			  
 			  for (let i in uniqueTypes) {
 				htmlTypes += '<li><input type="checkbox" id="type' + i + '" name="types" value="' + uniqueTypes[i] + '"> <label for="type' + i + '">' + uniqueTypes[i] + '</label></li>';
 			  }
 
-			  for (let i in uniqueNiveaux) {
-				htmlNiveaux += '<li><input type="radio" id="' + uniqueNiveaux[i] + '" name="niveau" value="' + uniqueNiveaux[i] + '"> <label for="' + uniqueNiveaux[i] + '">' + uniqueNiveaux[i] + '</label></li>';
+			  for (let i in uniqueProfils) {
+				htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '" '+((uniqueProfils[i] == 'Expert Accessibilité') ? " checked" : " ")+'> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
 			  }
 
 			  elTypes.innerHTML = htmlTypes;
-			  elNiveaux.innerHTML = htmlNiveaux;
+			  elProfils.innerHTML = htmlProfils;
 		};
 		
 		
@@ -171,7 +173,7 @@ fetch('test.json').then(response => {
 
 		  let checkboxes = document.querySelectorAll('input');
 		  let arrType    = [];	
-		  let arrNiveau  = [];
+		  let arrProfil  = [];
 		  let conditions = [];
 		let self       = this;
 
@@ -180,15 +182,16 @@ fetch('test.json').then(response => {
 				 
 			input.addEventListener('click', function() {
 
-				if ((input.checked && input.name==="niveau")){
-						arrNiveau = [];
-						arrNiveau.push(input.value);		
+				if ((input.checked && input.name==="profil")){
+						arrProfil = [];
+						arrProfil.push(input.value);		
 				}
 						
 				if (input.name==="types"){
 
 					if (input.checked){
 						arrType.push(input.value);
+						
 					} else  {
 							//on supprime tous les critères non cochés
 							let removeItem = arrType.filter( (e) => e !== input.value );
@@ -199,7 +202,7 @@ fetch('test.json').then(response => {
 					}
 				}
 
-				let indice = arrType.length + arrNiveau.length;
+				let indice = arrType.length + arrProfil.length;
 					
 				if (indice > 0) {	
 
@@ -209,9 +212,14 @@ fetch('test.json').then(response => {
 						//conditions = [];
 
 						//on ajoute le premier critère
-						if ((arrNiveau.length===1)){
+						if ((arrProfil.length===1)){
+						
+							//on supprime les doublons, nécessaire pour les boutons radio
+							delDoublon(conditions, input.name);
+						
 							conditions.unshift(function(item) { 
-								return item.niveau === arrNiveau[0]; 	
+								//return item.profils === arrProfil[0];
+								return item.profils.indexOf(arrProfil[0]) !== -1;								
 							});	
 							//on nomme la fonction, pour les boutons radio on utilise input.name
 							Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
@@ -228,13 +236,13 @@ fetch('test.json').then(response => {
 					} else {	
 						
 						//on ajoute le nouveau critère
-						if ((input.checked && input.name==="niveau")){
+						if ((input.checked && input.name==="profil")){
 
 							//on supprime les doublons, nécessaire pour les boutons radio
 							delDoublon(conditions, input.name);
 					
 							conditions.unshift(function(item) {
-								return item.niveau === arrNiveau[0]; 
+								return item.profils.indexOf(arrProfil[0]) !== -1;	
 							});
 							
 							//on nomme la fonction, pour les boutons radio on utilise input.name
@@ -246,7 +254,7 @@ fetch('test.json').then(response => {
 							//on récupere la dernière valeur ajoutée
 							let i = arrType.length - 1;
 							let valeurFiltre = arrType[i];
-							
+						
 							conditions.unshift(function(item) {
 								return item.type.indexOf(valeurFiltre) !== -1;
 							});
@@ -256,7 +264,6 @@ fetch('test.json').then(response => {
 
 						}		
 					}
-				
 
 					//on applique tous les filtres stockés dans conditions
 					 filteredTest = self.refTests.filter(function(d) {
@@ -542,10 +549,12 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 	</div>
 </article>
 </section>
-<aside class="col-md-4">
+<aside id="filter" class="col-md-4">
 <h2>Filtres</h2>
+<h3>Outils</h3>
 <ul id="types" class="list-unstyled"></ul>
-<ul id="niveaux" class="list-unstyled"></ul>
+<h3>Profils</h3>
+<ul id="profils" class="list-unstyled"></ul>
 </aside>
 </div>
 </div>
