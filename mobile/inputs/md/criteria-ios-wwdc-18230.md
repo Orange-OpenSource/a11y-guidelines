@@ -35,7 +35,6 @@ Cette présentation visualisable sur le **site développeur officiel d'<span lan
     - [Rendu final de l'application avec VoiceOver optimisé](#DemoExceptionalVoiceOverExperience) (35:38)
 
 Le dernier thème développe un exemple d'application particulièrement intéressant pour :
-### Change everything
 - Les développeurs qui souhaitent trouver des réponses détaillées aux problèmes d'implémentation avec VoiceOver.
 - Celles et ceux qui souhaitent découvrir comment une application doit interagir avec VoiceOver pour que le parcours utilisateur soit optimal (voir '[Rendu final de l'application avec VoiceOVer optimisé](#DemoExceptionalVoiceOverExperience)').
 

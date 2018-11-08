@@ -208,7 +208,7 @@ Améliore globalement la maintenabilité. Réduit les temps de développement.
 
 ## Zone de clic
 
-**Cible&nbsp;: ** pour tous et en particulier les personnes avec des déficiences motrices  
+**Cible&nbsp;: ** pour tous et en particulier les personnes avec des déficiences motrices.  
 **Quand&nbsp;: ** dès la phase de conception et lors du développement.
 
 **Description&nbsp;: **  
@@ -416,6 +416,27 @@ Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> 
 **Objectif utilisateur&nbsp;: **
 
 Assurer une compréhension des textes de l’application. 
+
+## Orientation de l'écran
+**Cible&nbsp;: ** pour tous et en particulier les personnes avec des déficiences visuelles et/ou motrices.  
+**Quand&nbsp;: ** lors de la conception et lors du développement.
+
+**Description&nbsp;: **
+L'accès au contenu d'une application ne doit absolument pas dépendre de l'orientation de l'écran, c'est pourquoi il est très fortement recommandé de mettre en place un **passage sans contrainte entre les modes portrait et paysage** dès le début du projet.
+</br>Bien évidemment, ceci n'est valable que si des contraintes fonctionnelles ne viennent pas à l'encontre d'un de ces deux modes (`serious game` par exemple).
+</br>L'idéal est de pouvoir aussi déployer l'application sur des écrans de type iPad de façon à favoriser la lecture et la gestuelle pour l'utilisateur.
+
+**À vérifier&nbsp;: **
+
+- Le cahier des charges `design` parfaitement détaillé et comprenant l'ensemble des écrans à implémenter selon leur orientation.
+- La définition très précise de la façon dont les transitions entre les modes doivent être réalisées.
+- La parfaite adaptation du contenu aux modes portrait et paysage par le biais d'une batterie de tests graphiques sur tous les mobiles compatibles avec la version iOS déployée (très important pour le grossissement de texte).
+- Le paramétrage approprié dans l'éditeur de code.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" />
+
+**Objectif utilisateur&nbsp;: **
+
+Assurer une meilleure lisibilité du contenu tout en permettant aux personnes déficientes motrices qui utilisent leur terminal en mode paysage de pouvoir utiliser l'application sans contrainte.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

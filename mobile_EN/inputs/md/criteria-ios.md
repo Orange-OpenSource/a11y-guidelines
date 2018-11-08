@@ -208,7 +208,7 @@ Improve overall maintainability. Reduce development time.
 
 ## Touch target
 
-** Target: ** everyone, especially people with motor impairments  
+** Target: ** everyone, especially people with motor impairments.  
 ** When: ** as of design and during development.
 
 **Description: **  
@@ -418,6 +418,29 @@ To change VoiceOver language pronunciation of a word or a text, use the `accessi
 **Users’ goal: **
 
 Ensure the understanding of the application text.
+
+## Screen orientation
+**Target&nbsp;: ** everyone, especially people with visual and/or motor impairments.  
+**When&nbsp;: ** as of design and during development.
+
+**Description&nbsp;: **
+
+The screen orientation mustn't impact the access of an application content.
+</br>It's highly recommended to :
+- **Implement both the portrait and the landscape modes** to be easily toggled by the user if it doesn't go against some functional constraints of the application itself (`serious game` for instance).
+- Provide for iPad screen sizes in order to facilitate reading and gestures.
+
+**Checklist&nbsp;: **
+
+- Perfectly detailed design guideline including all the screens to be implemented with their possible orientation constraints.
+- Very accurate definition of the way the transitions between portrait and landscape modes should occur.
+- Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the `Dynamic Type`).
+- Appropriate settings in the integrated development environment.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" />
+
+**Users’ goal&nbsp;: **
+
+Improve a better legibility of the content.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
