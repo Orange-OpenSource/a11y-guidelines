@@ -4,16 +4,16 @@
     setBreadcrumb([{"label":"Présentation"}]);
 });</script>
 
-*** L’accessibilité, une nécessité pour certains, un avantage pour tous&nbsp;! ***
+***L’accessibilité, une nécessité pour certains, un avantage pour tous&nbsp;!***
 
 ## Définition de l’accessibilité mobile
-** C’est une application utilisable par tous **
+**C’est une application utilisable par tous**
 
 - personnes valides&nbsp;;
 - seniors&nbsp;;
 - personnes en situation de handicap (temporaire ou permanent)&nbsp;;
 
-** et dans tous les contextes **
+**et dans tous les contextes**
 
 - avec tous types de matériel&nbsp;: navigateurs mobiles, Android, iOS, tablette&nbsp;;
 - dans un contexte dégradé&nbsp;: mauvaise luminosité, etc.&nbsp;;

@@ -58,7 +58,7 @@ Un titrage de page cohérent et pertinent&nbsp;:
 ```
 
 ## 3. Assurer un contraste suffisant entre texte et fond
-**Cible&nbsp;:** tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.   
+**Cible&nbsp;:** tout le monde et en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.   
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -72,7 +72,7 @@ Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suff
 
 Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors avoir un contraste de couleur de 3:1.
 
-![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](images/icones.png)
+![capture d’écran présentant des icônes et des graphiques dont le contraste n’est suffisant](images/icones.png)
 
 **À vérifier&nbsp;: **
 - Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.
@@ -87,7 +87,7 @@ Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elle
 L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
  
 ## 4. Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information
-**Cible&nbsp;:** tout le monde, en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.  
+**Cible&nbsp;:** tout le monde et en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -141,7 +141,7 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 ![capture d’écran présentant l’affichage du focus par défaut](images/focus.png)
 ![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](images/focus2.png)
   
-## 7. Agrandissement de texte et adaptation à la taille d'affichage
+## 7. Agrandissement de texte et adaptation à la taille d’affichage
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.  
 **Quand&nbsp;:** lors de la conception graphique et principalement lors du développement.
@@ -149,7 +149,7 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 **Description&nbsp;:**  
 La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). À ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).
 
-De plus, il faut s'assurer de faire du contenu web adaptatif (responsive web design) donc prévoir les différents affichages selon des largeurs type d'écran (points de rupture) en amont du développement. 
+De plus, il faut s’assurer de faire du contenu web adaptatif (responsive web design) donc prévoir les différents affichages selon des largeurs type d’écran (points de rupture) en amont du développement. 
 
 Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.
 
@@ -166,20 +166,20 @@ Avec zoom du texte à 200%.
 Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.  
 ![capture d’écran avec zoom à 200% et texte tronqué](images/zoom-ko.png)  
 
-## 8. Permettre d'aérer le texte
+## 8. Permettre d’aérer le texte
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et dyslexiques.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et dyslexiques.  
 **Quand&nbsp;:** lors de la conception et du développement.
 
-Même si c'est pendant la phase de développement que l'on va s'assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l'espacement des paragraphes et du texte. Il est couramment admis qu'une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d'obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
+Même si c’est pendant la phase de développement que l’on va s’assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l’espacement des paragraphes et du texte. Il est couramment admis qu’une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d’obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
 
 **Description&nbsp;:**  
-Si l'utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
+Si l’utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):
 
 - La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.
-- L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.
-- L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.
-- L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.
+- L’espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.
+- L’espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.
+- L’espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.
 
 Pour info les critères cités précédemment reviennent à appliquer les styles CSS suivants au niveau de code : 
 <pre><code class="css">
@@ -217,7 +217,7 @@ Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directeme
 
 **Description&nbsp;:**  
 Les libellés des liens et des boutons doivent être suffisamment explicites.
-Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technologies d'assistance).
+Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technologies d’assistance).
 
 **Exemple valide&nbsp;:**  
 «&nbsp;découvrez nos offres&nbsp;»
@@ -227,7 +227,7 @@ Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir q
 «&nbsp;en savoir plus&nbsp;»
 
 ## 11. Permettre la navigation au clavier
-**Cible&nbsp;:** tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception du service et lors du développement.
 
 **Description&nbsp;:**  
@@ -245,7 +245,7 @@ Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» perme
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-Chaque champ de formulaire doit être accompagné d’un libellé (ou d'instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l'utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). 
+Chaque champ de formulaire doit être accompagné d’un libellé (ou d’instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l’utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). 
 
 Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.
 
@@ -328,7 +328,7 @@ Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure b
 
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
 
-## 16. Situer explicitement la page dans le site et fournir plusieurs moyens d'y accéder
+## 16. Situer explicitement la page dans le site et fournir plusieurs moyens d’y accéder
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.
 
@@ -348,15 +348,15 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 
 ## 17. Éviter les captcha
 
-**Cible&nbsp;:** tous le monde en particulier, les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde en particulier, les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
 Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: 
 - Double authentification&nbsp;;
 - Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur&nbsp;;
-- Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne&nbsp;;
-- Un contrôle permettant de s'assurer qu'une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.
+- Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne&nbsp;;
+- Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.
 
 Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;:
 - un captcha  audio&nbsp;+ visuel,
@@ -365,7 +365,7 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 
 ## 18. Définir des zones sensibles de taille suffisante
 
-**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -374,24 +374,25 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 
 ## 21. Proposer une alternative aux gestuelles complexes
 
-**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
 Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...).
+De même pour les interactions nécessitant un changement d’orientation de l’écran (basculement, rotation, secouement…).
 
-## 22. Donner accès au contenu quelle que soit l'orientation de l'écran
+## 22. Orientation de l’écran
 
-**Cible&nbsp;:** tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.
+
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l'utilisation du contenu (projection, tableau...)
+L’accès au contenu ne doit pas dépendre de l’orientation de l’écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l’utilisation du contenu (projection, tableau…)
 
 ## 23. Rendre accessible les pistes audio ou vidéo
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:** 
@@ -403,9 +404,9 @@ Pour être accessibles, les contenus multimédias doivent&nbsp;:
 4.	choisir un lecteur média accessible
 5.	proscrire le démarrage automatique de la vidéo au chargement de la page
 6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
-7. par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
+7. par ailleurs, pour tout son émis de plus de 3 secondes, l’utilisateur doit avoir la possibilité soit de l’arrêter ou de le mettre en pause soit d’en contrôler son volume indépendamment du volume général du système.
 
-Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
+Pour plus d’infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
 
 **Objectif utilisateur&nbsp;:**
 

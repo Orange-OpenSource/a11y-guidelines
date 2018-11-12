@@ -19,10 +19,10 @@ Ce guide a pour objectif de présenter les différents critères d’accessibili
 À noter&nbsp;: les quelques exemples de code dans cette section seront présentés en Swift.
 
 ## Images
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors de la conception et pendant le développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et pendant le développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Les images sont très souvent utilisées pour transmettre de nombreuses informations. Comme le dit l’adage, une image vaut mille mots. Les non-voyants ne pouvant voir les images, il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.  
 Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.    
@@ -33,16 +33,16 @@ Les icônes sont, a contrario, largement utilisées en tant que boutons pour des
   
 L’alternative d’une image est renseignée via l’attribut `accessibilityLabel` (via le protocole `UIAccessibility` implémenté par tout élément standard dérivant de `UIView`).
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - les images portant de l’information restituent cette information à travers leur alternative textuelle,
 - les images décoratives n’ont pas d’alternative textuelle.
 
-**Objectif utilisateur&nbsp;: ** 
+**Objectif utilisateur&nbsp;:** 
 
 Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).
 
-**Exemples&nbsp;: **      
+**Exemples&nbsp;:**      
 
 <img src="./images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">  
   
@@ -53,10 +53,10 @@ En décomposant l’image&nbsp;:
   
 ## Couleurs  
 
-**Cible&nbsp;: ** tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)  
-**Quand&nbsp;: **  dès la phase de conception et lors du développement.
+**Cible&nbsp;:** tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)  
+**Quand&nbsp;:**  dès la phase de conception et lors du développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Les couleurs jouent un rôle très important dans la transmission des informations.
 </br>On associe certaines couleurs à des concepts ou à des sensations, mais il ne faut pas oublier qu’une partie de la population ne distingue pas correctement les couleurs.
@@ -64,38 +64,38 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_2.png" />
 </br></br>Ne pas mettre des polices en gras va demander un contraste des couleurs plus fort que dans le cas précédent.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
-</br></br> Avec l'apparition du [Dynamic Type](./criteria-ios-dev.html#taille-des-textes) permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n'est pas nécessairement figé et doit s'adapter au grossissement souhaité.
+</br></br> Avec l’apparition du [Dynamic Type](./criteria-ios-dev.html#taille-des-textes) permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
 </br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" />
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément. 
 - Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> par exemple)*.
 
-**Objectif utilisateur&nbsp;: ** 
+**Objectif utilisateur&nbsp;:** 
 
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).  
 Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure…), d’accéder tout de même à l’information par d’autres moyens.
 
-**Outil&nbsp;: **
+**Outil&nbsp;:**
 L’application [<span lang="en">Colour Contrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).  
 
-**Exemple de contraste non valide&nbsp;: **  
+**Exemple de contraste non valide&nbsp;:**  
 Le texte «&nbsp;film | 20h40 …&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)   
 
-**Exemple de passage d’information par la couleur valide et non valide&nbsp;: ** 
+**Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 
 <img src="./images/couleur_ios.png" alt="exemple de passage d’information par la couleur valide et non valide" width="300">
 
   
 ## Alternative textuelle
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** dès la conception, à la rédaction du contenu et pendant le développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Grâce à elles, un utilisateur non voyant peut utiliser une application sans perte d’information.  
   
@@ -109,16 +109,16 @@ L’alternative textuelle d’un élément est renseignée via les attributs `ac
 L’ordre de vocalisation est toujours le suivant : `label`, `value`, `trait` et `hint`. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  
 Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](./criteria-ios-dev.html#alternatives-textuelles).
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les éléments de l’application qui nécessitent une alternative en possède bien une,
 - Les alternatives textuelles de l’application sont explicites et compréhensibles.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant…) d’accéder aux informations véhiculées par l’application par d’autres biais.
 
-**Exemple&nbsp;: **      
+**Exemple&nbsp;:**      
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
 <img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
@@ -128,10 +128,10 @@ cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône po
 
 ## Titre et en-tête
 
-**Cible&nbsp;: ** tout le monde  
-**Quand&nbsp;: ** dès la conception et à la rédaction du contenu.
+**Cible&nbsp;:** tout le monde  
+**Quand&nbsp;:** dès la conception et à la rédaction du contenu.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 Le titre de la page est le premier élément qui est vocalisé ou vu sur un écran mobile. Il facilite la navigation pour tout le monde&nbsp;: à tout moment, on sait où on se trouve dans l’application.  
 Une erreur commune est de mettre un titre unique pour toutes les pages d’une application (ou même pas de titre du tout).
@@ -139,26 +139,26 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d’une a
 Les en-tête iOS permettent des structurer les pages en apportant une information supplémentaire. Cette information est utile à l’<abbr>API</abbr> d’accessibilité car <span lang="en">VoiceOver</span> est capable de naviguer d’en-tête en en-tête (molette de <span lang="en">VoiceOver</span>, mode en-tête). Cela permet de se déplacer plus rapidement dans la page.  
 Pour définir un élément en tant qu’en-tête, il faut positionner son attribut `accessibilityTraits` à la valeur `accessibilityTraitHeader`.
 
-**À vérifier&nbsp;: ** 
+**À vérifier&nbsp;:** 
 
 - Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour),
 - Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l’<abbr>API</abbr> d’accessibilité comme tels.
 
-** Objectif utilisateur&nbsp;: **
+** Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et se faire une idée précise du contenu de la page sans avoir à le lire. Permettre une navigation plus aisée.
 
-**Exemple non valide&nbsp;: **      
+**Exemple non valide&nbsp;:**      
 
 <img src="./images/header_ios.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
   
 
 ## État des éléments
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Si un élément ne restitue pas à la vocalisation son statut, sa nature ou son état, l’utilisateur de <span lang="en">VoiceOver</span> est dans l’impossibilité de comprendre ce qui se passe à l’écran. Ne pas préciser qu’une zone est dépliée ou que l’on se trouve face à un système d’onglets sont des exemples très fréquents.  
   
@@ -168,15 +168,15 @@ Autres éléments classiques qui ne restituent pas par défaut leur état&nbsp;:
   
 Pour renseigner ce genre d’information, il faut utiliser les attributs `accessibilityLabel` et `accessibilityTrait`.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Tout élément dont le statut est modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné doit restituer son état à travers une alternative textuelle.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informations des composants, leur état, leur nature afin qu’ils puissent les utiliser sans difficultés.
 
-**Exemple&nbsp;: **      
+**Exemple&nbsp;:**      
 
 <img src="./images/expandable_list.png" alt="exemple de liste dépliable qui nécessite une alternative textuelle" width="250" class="pull-left">
 <pre><code class="swift">if(accessibleIsFold) {
@@ -188,72 +188,72 @@ Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informati
 
 ## Composant standard
 
-**Cible&nbsp;: ** tout le monde.  
-**Quand&nbsp;: ** en phase de sélection des briques logicielles et lors des développements.
+**Cible&nbsp;:** tout le monde.  
+**Quand&nbsp;:** en phase de sélection des briques logicielles et lors des développements.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 L’accessibilité est prise en compte dans les composants natifs (la plupart du temps). De plus, l’utilisation de composants standards permet à l’utilisateur de se retrouver dans une situation et un comportement habituels. La navigation dans une interface standard est donc plus confortable.  
   
 Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun composant standard ne permet de répondre au besoin, créer un composant dédié basé sur un composant standard en veillant à conserver la cohérence de navigation et l’accessibilité.  
 
-**Objectif utilisateur&nbsp;: ** 
+**Objectif utilisateur&nbsp;:** 
 
 Permet à tous les utilisateurs d’interagir plus intuitivement avec l’interface.
 
-**Objectif technique&nbsp;: **
+**Objectif technique&nbsp;:**
 
 Améliore globalement la maintenabilité. Réduit les temps de développement. 
   
 
 ## Zone de clic
 
-**Cible&nbsp;: ** pour tous et en particulier les personnes avec des déficiences motrices.  
-**Quand&nbsp;: ** dès la phase de conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences motrices.  
+**Quand&nbsp;:** dès la phase de conception et lors du développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Une taille insuffisante pour la zone d’action d’un composant peut empêcher certains utilisateurs de profiter pleinement de l’application. Cela peut engendrer des frustrations qui peuvent conduire à la désinstallation de l’application. Chaque élément cliquable de l’application doit donner à l’utilisateur une taille suffisante pour sa zone d’action.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Apple définit pour son système une taille de zone de clic minimum de 44pt (en hauteur ET largeur) ; [lien vers les recommandations Apple](https://developer.apple.com/ios/human-interface-guidelines/visual-design/layout/)
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Améliorer le confort de navigation au toucher (<i lang="en">touch</i>).
 
-**Exemple valide&nbsp;: ** 
+**Exemple valide&nbsp;:** 
 
 Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.  
 <img src="./images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300">
 
-**Exemple non-valide&nbsp;: **  
+**Exemple non-valide&nbsp;:**  
 
 <img src="./images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
 
 ## Elément fantôme
 
-**Cible&nbsp;: ** les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **  
+**Description&nbsp;:**  
 
 Bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">VoiceOver</span> est capable de lire les informations d’une vue qui est placée «&nbsp;sous&nbsp;» une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.  
   
 Un exemple fréquent d’élément fantôme survient lors de la création de composant personnalisé tel que des «&nbsp;<span lang="en">alert dialog</span>&nbsp;» (notification utilisateur). Notons toutefois que ce genre de composant personnalisé est tout à fait susceptible d’être accessible. Nous vous invitons à lire la section correspondante dans la [partie développeur](./criteria-ios-dev.html#masquer-des-l-ments-l-accessibilit-).
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - <span lang="en">VoiceOver</span> ne doit pas vocaliser d’éléments indésirables appartenant à un autre écran que celui en cours de consultation.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre la navigation dans l’application sans avoir d’élément perturbant, non utilisable, sur la vue courante.
 
 
-**Exemple non-valide&nbsp;: **  
+**Exemple non-valide&nbsp;:**  
 
 Dans l’exemple ci-dessous, l’alerte personnalisée présente ce problème de vue fantôme. En effet, avec <span lang="en">VoiceOver</span> activé, il est possible de «&nbsp;lire&nbsp;» les éléments situés en dessous, comme nous le montre le focus de <span lang="en">VoiceOver</span> (en noir sur l’image)  
 <img src="./images/ghost_ios.png" alt="exemple d’élément fantôme" width="300">
@@ -261,33 +261,33 @@ Dans l’exemple ci-dessous, l’alerte personnalisée présente ce problème de
 
 ## Contrôle de contenu
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles et cognitives.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et cognitives.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.  
 L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel défile de manière automatique, etc.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les contenus interactifs peuvent être maîtrisés par l’utilisateur (bouton accessible pour sortir du mode plein-écran par exemple).
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Permettre aux utilisateurs de rester maître de l’application. Permettre à l’utilisateur de lecteur d’écran d’éviter une pollution sonore qui peut nuire à sa navigation. 
 
-**Objectif technique&nbsp;: **
+**Objectif technique&nbsp;:**
 
 Améliorer le référencement naturel.
 
 
 ## Changement de contenu
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: ** 
+**Description&nbsp;:** 
 
 Lorsque du contenu est modifié dynamiquement à la suite d’une action de l’utilisateur, il faut le notifier à la synthèse vocale. Sans retour vocal, l’utilisateur ne sait pas qu’une action a été déclenchée.  
 Sur une page, si du contenu est modifié dynamiquement suite à une action utilisateur, il est important que le lecteur d’écran soit notifié afin qu’il déclenche une vocalisation. Par exemple, les listes qui se rafraîchissent, ou un compteur de temps.
@@ -301,31 +301,31 @@ Il existe plusieurs notifications de modification, mais les deux plus utiles son
 
 Pour plus d’information technique sur ces méthodes, nous vous invitons à regarder la section correspondante dans le [guide développeur pour iOS](./criteria-ios-dev.html#informer-d-une-modification-sur-la-page).
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Avec un lecteur d’écran, s’assurer que les modifications dynamiques dans les pages sont bien vocalisées.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Donner accès aux modifications des informations de l’application aux utilisateurs de lecteur d’écran.
 
 
 ## <i lang="en">Scroll</i> horizontal
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** dès la phase de conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la phase de conception et lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Un <i lang="en">scroll</i> horizontal peut être très difficile à détecter si aucun visuel n’aide l’utilisateur à comprendre qu’il existe plusieurs pages.  
 Ne pas hésiter à afficher un élément pour indiquer un <i lang="en">scroll</i> horizontal (les "points" d’un `UIPageControl`). Quand cela est nécessaire, ajouter également des boutons «&nbsp;suivant&nbsp;» et «&nbsp;précédent&nbsp;».
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les <i lang="en">scrolls</i> horizontaux sont indiqués visuellement
 - Avec le lecteur d’écran activé, un mécanisme permet de passer de page en page lorsqu’un <i lang="en">scroll</i> horizontal est présent.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Donner une indication visuelle aux utilisateurs lors de la présence de <i lang="en">scrolls</i> horizontaux. Permettre aux utilisateurs de lecteur d’écran d’utiliser les <i lang="en">scrolls</i> horizontaux.
 
@@ -344,30 +344,30 @@ Donner une indication visuelle aux utilisateurs lors de la présence de <i lang=
 
 ## Formulaire
 
-**Cible&nbsp;: ** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 Lier les champs de formulaires avec leurs labels apporte une vocalisation supplémentaire qui permet à l’utilisateur de comprendre quoi remplir lorsqu’il arrive sur un champ de formulaire.  
   
 Sous iOS, on apporte une information supplémentaire sur les champs de formulaire via son alternative textuelle, soit l’attribut `accessibilityLabel`.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - les champs de formulaire doivent restituer leurs labels
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Améliorer la navigation en améliorant la compréhension globale de la page, les champs de formulaires décrivant le contenu attendu.
 
 
 ## Ordre de lecture
 
-**Cible&nbsp;: ** les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle. Il est donc important d’y faire attention.  
   
@@ -375,11 +375,11 @@ Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieu
 
 Redéfinir l’ordre de lecture dans <span lang="en">VoiceOver</span> s’effectue en respectant le protocole [`UIAccessibilityContainer`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/). L’idée est d’avoir un tableau des éléments de la vue qui définit l’ordre de lecture des éléments. Il est bien souvent nécessaire d’utiliser l’attribut `shouldGroupAccessibilityElement` afin d’avoir un ordre précis, mais pour une partie seulement de la vue (le reste étant l’ordre naturel de lecture).  
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - L’ordre de lecture (celui de <span lang="en">VoiceOver</span>) est logique et cohérent.
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d’écran  pour leur assurer une complète compréhension du contenu.
 
@@ -400,43 +400,43 @@ remoteView.accessibilityElements?.append(fourButton)
 
 ## Langue
 
-**Cible&nbsp;: ** les personnes déficientes visuelles.  
-**Quand&nbsp;: ** lors du développement.
+**Cible&nbsp;:** les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;: **
+**Description&nbsp;:**
 
 La vocalisation donnée par <span lang="en">VoiceOver</span> s’effectue, par défaut, dans la langue du système du mobile. Il arrive parfois que certain mots/textes d’une application soient dans une langue différente. Afin que la vocalisation soit audible, il faut déclarer ces textes dans la langue correspondante.  
 
 Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> pour un mot ou un texte, il existe l’attribut `accessibilityLanguage`. Disponible via le protocole `UIAccessibility`. 
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
 - Les mots/textes dans une langue différente de celle du reste de l’application sont bien vocalisés dans leur langue
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
 Assurer une compréhension des textes de l’application. 
 
-## Orientation de l'écran
-**Cible&nbsp;: ** pour tous et en particulier les personnes avec des déficiences visuelles et/ou motrices.  
-**Quand&nbsp;: ** lors de la conception et lors du développement.
+## Orientation de l’écran
+**Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles et/ou motrices.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;: **
-L'accès au contenu d'une application ne doit absolument pas dépendre de l'orientation de l'écran, c'est pourquoi il est très fortement recommandé de mettre en place un **passage sans contrainte entre les modes portrait et paysage** dès le début du projet.
-</br>Bien évidemment, ceci n'est valable que si des contraintes fonctionnelles ne viennent pas à l'encontre d'un de ces deux modes (`serious game` par exemple).
-</br>L'idéal est de pouvoir aussi déployer l'application sur des écrans de type iPad de façon à favoriser la lecture et la gestuelle pour l'utilisateur.
+**Description&nbsp;:**
+L’accès au contenu d’une application ne doit absolument pas dépendre de l’orientation de l’écran, c’est pourquoi il est très fortement recommandé de mettre en place un **passage sans contrainte entre les modes portrait et paysage** dès le début du projet.
+</br>Bien évidemment, ceci n’est valable que si des contraintes fonctionnelles ne viennent pas à l’encontre d’un de ces deux modes (projection, tableau… par exemple).
+</br>L’idéal est de pouvoir aussi déployer l’application sur des écrans de type iPad de façon à favoriser la lecture et la gestuelle pour l’utilisateur.
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 
-- Le cahier des charges `design` parfaitement détaillé et comprenant l'ensemble des écrans à implémenter selon leur orientation.
+- Le cahier des charges `design` parfaitement détaillé et comprenant l’ensemble des écrans à implémenter selon leur orientation.
 - La définition très précise de la façon dont les transitions entre les modes doivent être réalisées.
-- La parfaite adaptation du contenu aux modes portrait et paysage par le biais d'une batterie de tests graphiques sur tous les mobiles compatibles avec la version iOS déployée (très important pour le grossissement de texte).
-- Le paramétrage approprié dans l'éditeur de code.
+- La parfaite adaptation du contenu aux modes portrait et paysage par le biais d’une batterie de tests graphiques sur tous les mobiles compatibles avec la version iOS déployée (très important pour le grossissement de texte).
+- Le paramétrage approprié dans l’éditeur de code.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" />
 
-**Objectif utilisateur&nbsp;: **
+**Objectif utilisateur&nbsp;:**
 
-Assurer une meilleure lisibilité du contenu tout en permettant aux personnes déficientes motrices qui utilisent leur terminal en mode paysage de pouvoir utiliser l'application sans contrainte.
+Assurer une meilleure lisibilité du contenu tout en permettant aux personnes déficientes motrices qui utilisent leur terminal en mode paysage de pouvoir utiliser l’application sans contrainte.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
