@@ -37,7 +37,7 @@ L’alternative d’une image est renseignée via l’attribut `contentDescripti
 
 **Objectif utilisateur&nbsp;:**
 
-Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante...).
+Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).
 
 **Exemples&nbsp;:**
 
@@ -65,7 +65,7 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 **Objectif utilisateur&nbsp;:** 
 
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).  
-Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure... ) d’accéder tout de même à l’information par d’autres moyens.
+Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure… ) d’accéder tout de même à l’information par d’autres moyens.
 
 **Outil&nbsp;:**
 L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
@@ -73,7 +73,7 @@ L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.pa
 L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible pour Android 6+. 
 
 **Exemple de contraste non valide&nbsp;:**  
-Le texte "film | 20h40 ..." ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
+Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)   
 
@@ -91,7 +91,7 @@ Le texte "film | 20h40 ..." ne présente pas un contraste suffisant. Celui-ci ne
 
 Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Grâce à elles, un utilisateur non-voyant peut utiliser une application sans perte d’information.  
   
-Tout comme pour les images, il est important de renseigner une alternative textuelle lorsque l’information n’est pas disponible pour les personnes malvoyantes/non-voyantes. C’est le cas des composants fournissant de l’information par la couleur, la forme, la position, le son... Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d’enrichir la vocalisation native d’un élément, y compris celle d’un simple texte.  
+Tout comme pour les images, il est important de renseigner une alternative textuelle lorsque l’information n’est pas disponible pour les personnes malvoyantes/non-voyantes. C’est le cas des composants fournissant de l’information par la couleur, la forme, la position, le son… Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d’enrichir la vocalisation native d’un élément, y compris celle d’un simple texte.  
   
 La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restituent les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. À noter que <span lang="en">TalkBack</span> sait reconnaître quelques abréviations courantes. Par exemple, «&nbsp;etc.&nbsp;» et «&nbsp;Dr.&nbsp;» sont bien vocalisées «&nbsp;et cetera&nbsp;» et «&nbsp;Docteur&nbsp;».  
   
@@ -272,7 +272,7 @@ Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir c
 
 **Objectif utilisateur&nbsp;:**
 
-Permettre aux utilisateurs (malvoyants, en mobilité, seniors...) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.
+Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.
 
 **Outil&nbsp;:**
 L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible pour Android 6+.
@@ -418,7 +418,7 @@ Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());
-[...]</code></pre>
+[…]</code></pre>
 
 
 ## Navigation au focus
@@ -448,6 +448,22 @@ Pour plus d’information sur la [gestion du focus sous Android](http://develope
 **Objectif utilisateur&nbsp;:**
 
 Permettre l’utilisation de l’application avec un clavier, dock tablette ou tout autre dispositif de navigation séquentielle.
+
+## Orientation de l’écran
+**Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.
+
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**
+L’accès au contenu d’une application ne doit pas dépendre de l’orientation de l’écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l’utilisation du contenu (projection, tableau…).
+
+**À vérifier&nbsp;:**
+- L’utilisation de composants graphiques standard qui supportent les deux modes (fragments…), ou définir un `design` spécifique à chaque orientation.
+- Que l’application n’est pas verrouillée dans un mode (portrait ou paysage).
+
+**Objectif utilisateur&nbsp;:**
+- Assurer une meilleure lisibilité du contenu pour les personnes qui utilisent le grossissement de caractères et passent du portrait au paysage en fonction de leur besoin.
+- Assurer une meilleure lisibilité du contenu pour les écrans fixés sur support (lit d’hôpital, chaise roulante…).
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

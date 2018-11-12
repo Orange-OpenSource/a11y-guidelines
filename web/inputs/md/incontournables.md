@@ -50,14 +50,14 @@ Deux versions sont disponibles&nbsp;
 
 ## Contenu textuel
 
-S'assurer que les contenus textuels soient structurés avec la sémantique appropriée
+S’assurer que les contenus textuels soient structurés avec la sémantique appropriée
 
 - [Donner un titre aux pages](inc-con-titre-pages.html)
 - [Donner des titres aux rubriques](inc-con-titre-rubriques.html)
 
 ## Contenu non-textuel
 
-S'assurer, qu'une alternative aux contenus non-textuels soit proposée à l'utilisateur
+S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur
 
 - [Définir des équivalents textuels](inc-con-equivalent-textuel.html)
 - [Rendre accessible les pistes audio ou vidéo](inc-con-audio-video.html)
@@ -65,55 +65,55 @@ S'assurer, qu'une alternative aux contenus non-textuels soit proposée à l'util
 
 ## Couleurs et contrastes
 
-S'assurer que les couleurs utilisés ne posent pas de problème à l'utilisateur
+S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur
 
 - [Assurer un contraste suffisant entre texte et fond](inc-con-contrastes.html)
 - [Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information](inc-con-information-sensorielle.html)
 
 ## Navigation générale
 
-S'assurer que l'utilisateur navigue facilement dans une page et plus globalement dans un site
+S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site
 
 - [Libellé des liens et des boutons](inc-con-libelles.html)
 - [Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres](inc-con-nouvelles-fenetres.html)
 - [Fournir des liens d’évitement](inc-con-liens-evitement.html)
 - [Permettre le contrôle des animations](inc-con-controle-animations.html)
-- [Situer explicitement la page dans le site et fournir plusieurs moyens d'y accéder](inc-con-acces-multiples.html)
+- [Situer explicitement la page dans le site et fournir plusieurs moyens d’y accéder](inc-con-acces-multiples.html)
 
 ## Navigation clavier
 
-S'assurer que l'utilisateur puisse naviguer uniquement à l'aide du clavier
+S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier
 
 - [Permettre la navigation au clavier](inc-con-navigation-clavier.html)
 - [Assurer la visibilité du focus](inc-con-visibilite-focus.html)
 
 ## Mise en page
 
-S'assurer que la mise en page soit adaptée à l'utilisateur.
+S’assurer que la mise en page soit adaptée à l’utilisateur.
 
-- [Agrandissement de texte et adaptation à la taille d'affichage](inc-con-adaptatif.html)
-- [Permettre d'aérer le texte](inc-con-aerer-texte.html)
+- [Agrandissement de texte et adaptation à la taille d’affichage](inc-con-adaptatif.html)
+- [Permettre d’aérer le texte](inc-con-aerer-texte.html)
 - [Identifier et conserver la cohérence des regroupements et des différentes régions de la page](inc-con-coherence-navigation.html)
 - [Définir des zones sensibles de taille suffisante](inc-con-zones-sensibles.html)
 
 ## Formulaires
 
-S'assurer que l'utilisateur puisse efficacement compléter les formulaires
+S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 
 - [Rendre utilisables les formulaires](inc-con-formulaires.html)
 
 ## Tactile et interactions
 
-S'assurer que l'utilisateur garde le contrôle sur les interactions, en particulier tactiles
+S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles
 
 - [Proposer une alternative aux gestuelles complexes](inc-con-alternative-gestures.html)
-- [Donner accès au contenu quelle que soit l'orientation de l'écran](inc-con-orientation-ecran.html)
+- [Donner accès au contenu quelle que soit l’orientation de l’écran](inc-con-orientation-ecran.html)
 
 </div>
 <div class="tab-pane" id="incontournables-developpeurs" role="tabpanel" aria-labelledby="incontournables-developpeurs-tab">
 <h2 id="dev-contenu-textuel">Contenu textuel</h2>
 
-S'assurer que les contenus textuels soient structurés avec la sémantique appropriée
+S’assurer que les contenus textuels soient structurés avec la sémantique appropriée
 <ul>
     <li>[Donner un titre aux pages](inc-dev-titre-pages.html)</li>
     <li>[Donner des titres aux rubriques](inc-dev-titre-rubriques.html)</li>
@@ -124,7 +124,7 @@ S'assurer que les contenus textuels soient structurés avec la sémantique appro
 
 <h2 id="dev-contenu-non-textuel">Contenu non-textuel</h2>
 
-S'assurer, qu'une alternative aux contenus non-textuels soit proposée à l'utilisateur
+S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur
 <ul>
     <li>[Fournir un équivalent textuel pour les images et les cadres](inc-dev-equivalent-textuel.html)</li>
     <li>[Rendre accessible les pistes audio ou vidéo](inc-dev-audio-video.html)</li>
@@ -133,7 +133,7 @@ S'assurer, qu'une alternative aux contenus non-textuels soit proposée à l'util
 
 <h2 id="dev-couleurs-et-contrastes">Couleurs et contrastes</h2>
 
-S'assurer que les couleurs utilisés ne posent pas de problème à l'utilisateur
+S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur
 <ul>
     <li>[Assurer un contraste suffisant entre texte et fond](inc-dev-contrastes.html)</li>
     <li>[Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information](inc-dev-information-sensorielle.html)</li>
@@ -141,20 +141,20 @@ S'assurer que les couleurs utilisés ne posent pas de problème à l'utilisateur
 
 <h2 id="dev-navigation-generale">Navigation générale</h2>
 
-S'assurer que l'utilisateur navigue facilement dans une page et plus globalement dans un site
+S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site
 <ul>
     <li>[Rendre les intitulés des liens et des boutons compréhensibles hors contexte](inc-dev-intitules-hors-contexte.html)</li>
     <li>[Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre](inc-dev-nouvelle-fenetre.html)</li>
     <li>[Fournir des liens d’évitement](inc-dev-liens-evitement.html)</li>
     <li>[S’assurer que l’utilisateur garde le contrôle lors des interactions](inc-dev-controle-interactions.html)</li>
     <li>[Fournir des accès multiples et une localisation](inc-dev-acces-multiples.html)</li>
-    <li>[Permettre de connaître le résultat d'une interaction utilisateur à l'aide de messages contextuels](inc-dev-message-contextuel.html)</li>
+    <li>[Permettre de connaître le résultat d’une interaction utilisateur à l’aide de messages contextuels](inc-dev-message-contextuel.html)</li>
     <li>[Permettre le contrôle des animations](inc-dev-controle-animations.html)</li>
 </ul>
 
 <h2 id="dev-navigation-clavier">Navigation clavier</h2>
 
-S'assurer que l'utilisateur puisse naviguer uniquement à l'aide du clavier
+S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier
 <ul>
     <li>[Permettre d’utiliser les principales fonctionnalités de l’application au clavier](inc-dev-utilisation-clavier.html)</li>
     <li>[Rendre le parcours du focus séquentiel et logique sans piège clavier](inc-dev-parcours-focus.html)</li>
@@ -163,17 +163,17 @@ S'assurer que l'utilisateur puisse naviguer uniquement à l'aide du clavier
 
 <h2 id="dev-mise-en-page">Mise en page</h2>
 
-S'assurer que la mise en page soit adaptée à l'utilisateur.
+S’assurer que la mise en page soit adaptée à l’utilisateur.
 <ul>
     <li>[Utiliser des tailles relatives et faire du web adaptatif](inc-dev-adaptatif.html)</li>
-    <li>[Permettre d'aérer le texte](inc-dev-aerer-texte.html)</li>
+    <li>[Permettre d’aérer le texte](inc-dev-aerer-texte.html)</li>
     <li>[Identifier et conserver la cohérence des regroupements et des différentes régions de la page](inc-dev-coherence-navigation.html)</li>
     <li>[Définir des zones sensibles de taille suffisante](inc-dev-taille-zones.html)</li>
 </ul>
 
 <h2 id="dev-formulaires">Formulaires</h2>
 
-S'assurer que l'utilisateur puisse efficacement compléter les formulaires
+S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 <ul>
     <li>[Associer une étiquette pertinente à chaque champ de formulaire](inc-dev-etiquette-formulaires.html)</li>
     <li>[Détecter, identifier les erreurs et suggérer des corrections](inc-dev-identifier-erreurs.html)</li>
@@ -181,12 +181,12 @@ S'assurer que l'utilisateur puisse efficacement compléter les formulaires
 
 <h2 id="dev-tactile-et-interactions">Tactile et interactions</h2>
 
-S'assurer que l'utilisateur garde le contrôle sur les interactions, en particulier tactiles
+S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles
 <ul>
-    <li>[Autoriser l'utilisation du zoom](inc-dev-autoriser-zoom.html)</li>
-    <li>[Permettre d'annuler le déclenchement des interactions gestuelles](inc-dev-annuler-gestuelle.html)</li>
+    <li>[Autoriser l’utilisation du zoom](inc-dev-autoriser-zoom.html)</li>
+    <li>[Permettre d’annuler le déclenchement des interactions gestuelles](inc-dev-annuler-gestuelle.html)</li>
     <li>[Proposer une alternative aux gestuelles complexes](inc-dev-alternative-gestures.html)</li>
-    <li>[Donner accès au contenu quelle que soit l'orientation de l'écran](inc-dev-orientation-ecran.html)</li>
+    <li>[Donner accès au contenu quelle que soit l’orientation de l’écran](inc-dev-orientation-ecran.html)</li>
 </ul>
 
 <h2 id="dev-aides-techniques">Aides techniques</h2>
