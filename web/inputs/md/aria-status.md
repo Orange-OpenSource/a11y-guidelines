@@ -3,7 +3,7 @@
 <script>$(document).ready(function () {
     setBreadcrumb([
             {"label":"Articles techniques", "url":"techniques.html"},
-            {"label":"Utiliser <abbr>ARIA</abbr>  les messages d'état"}
+            {"label":"Utiliser <abbr>ARIA</abbr> pour les messages d'état"}
         ]);
 });</script>
   
