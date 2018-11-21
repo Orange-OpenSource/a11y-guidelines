@@ -50,7 +50,7 @@
 </div>
 
 ### Motor and dexterity impairments
-<div class="axs-picto physique">
+<div class="axs-picto dexterity">
     <ul>
         <li>People with limited or no use of their hands</li> 
         <li>People with uncontrollable tremors</li>

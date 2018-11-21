@@ -59,7 +59,9 @@ h3+.axs-picto {
 .axs-picto.physique::before {
     content: url(../images/accessibility_mobility.png);
 }
-
+.axs-picto.dexterity::before {
+    content: url(../images/accessibility_dexterity.png);
+}
 
 @media screen and (max-width: 479px) {
     h1 a {

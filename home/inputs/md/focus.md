@@ -44,7 +44,7 @@
 </div>
 
 ### Le handicap moteur et de préhension
-<div class="axs-picto physique">
+<div class="axs-picto dexterity">
     <ul>
         <li>Difficultés de préhension et de contrôle des mouvements.</li>
         <li>Personnes ayant des difficultés pour réaliser des combinaisons de touches</li>
