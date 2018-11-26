@@ -466,11 +466,18 @@ Icons are, conversely, widely used as buttons for various features. So they need
 <h2 id="colours">Colours</h2>
 <p><strong> Target: </strong> everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)<br><strong> When: </strong> as of the design phase and during development.</p>
 <p><strong>Description: </strong></p>
-<p>Colours have a very important role in the transmission of information. Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.</p>
+<p>Colours have a very important role in the transmission of information.
+</br>Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.
+</br></br>The bold font type will allow a weaker contrast for the lowest font sizes.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_2.png" />
+</br></br>The normal font type will require a higher contrast than the previous case.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
+</br></br> With <a href="./dev-ios.html#text-size">Dynamic Type</a> whose purpose is to increase the font size according to the user settings, the contrast isn&#39;t necessary fixed and must be adapted to the text size.
+</br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" /></p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.</li>
-<li>The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool).</li>
+<li>The contrast between the colour of the background and the text must be appropriate <em>(can be measured with the Colour Contrast Analyser tool)</em>.</li>
 </ul>
 <p><strong>Users’ goal: </strong> </p>
 <p>Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).
@@ -550,7 +557,7 @@ To set an item as a header, set the <code>accessibilityTraits</code> attribute o
 <p><strong> Technical Objective: </strong></p>
 <p>Improve overall maintainability. Reduce development time.</p>
 <h2 id="touch-target">Touch target</h2>
-<p><strong> Target: </strong> everyone, especially people with motor impairments<br><strong> When: </strong> as of design and during development.</p>
+<p><strong> Target: </strong> everyone, especially people with motor impairments.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong>  </p>
 <p>If a touch target of a component is too small, it can prevent some users from enjoying the application. This can lead to frustration that can result in uninstalling it. Each clickable element must have a large enough touch target.</p>
 <p><strong>Checklist: </strong></p>
@@ -679,6 +686,25 @@ remoteView.accessibilityElements?.append(fourButton)
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Ensure the understanding of the application text.</p>
+<h2 id="screen-orientation">Screen orientation</h2>
+<p><strong>Target&nbsp;: </strong> everyone, especially people with visual and/or motor impairments.<br><strong>When&nbsp;: </strong> as of design and during development.</p>
+<p><strong>Description&nbsp;: </strong></p>
+<p>The screen orientation mustn&#39;t impact the access of an application content.
+</br>It&#39;s highly recommended to :</p>
+<ul>
+<li><strong>Implement both the portrait and the landscape modes</strong> to be easily toggled by the user if it doesn&#39;t go against some functional constraints of the application itself (<code>serious game</code> for instance).</li>
+<li>Provide for iPad screen sizes in order to facilitate reading and gestures.</li>
+</ul>
+<p><strong>Checklist&nbsp;: </strong></p>
+<ul>
+<li>Perfectly detailed design guideline including all the screens to be implemented with their possible orientation constraints.</li>
+<li>Very accurate definition of the way the transitions between portrait and landscape modes should occur.</li>
+<li>Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the <code>Dynamic Type</code>).</li>
+<li>Appropriate settings in the integrated development environment.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" /></li>
+</ul>
+<p><strong>Users’ goal&nbsp;: </strong></p>
+<p>Improve a better legibility of the content.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -1078,7 +1104,8 @@ func customTraits() {
 <ul>
 <li><strong>isAccessibilityElement</strong>&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
 <li><strong>accessibilityElementsHidden</strong>&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
-<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popup views for example.</li>
+<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>.
+</br>A <a href="./dev-ios-wwdc-18230.html#accessibilityViewIsModal">theoretical explanation</a> and a <a href="./dev-ios-wwdc-18230.html#DemoModalView">practical example</a> are provided in a video detailed in the WWDC part.</li>
 </ul>
 <p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.</p>
 <h3 id="example">Example</h3>
@@ -1191,7 +1218,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 <h3 id="description">Description</h3>
 <p>On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the <code>UIKit</code> framework.
 </br>The most useful method is <strong>UIAccessibilityIsVoiceOverRunning</strong> which allows to know whether VoiceOver is activated.
-</br></br>Many other methods are available in the links hereafter.</p>
+</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a <a href="./dev-ios-wwdc-18230.html">WWDC video</a>.</p>
 <h3 id="exemple">Exemple</h3>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -1302,7 +1329,13 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 <ul>
 <li><strong>accessibilityFrame</strong>&nbsp;: sets the area via a rectangle (<code>CGRect</code>).
 </br>Usually, for an element inheriting from <code>UIView</code>, this area is the «&nbsp;visible&nbsp;» part of the view.</li>
-<li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.</li>
+<li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.
+<a name="AccessibilityActivationPoint"></a></li>
+<li><strong>accessibilityActivationPoint</strong>&nbsp;: defines a contact point inside the <code>frame</code> whose action will be fired by a double-tap element activation.
+</br>The default value is the midpoint of the <code>frame</code> but it can be redefine anywhere inside.
+</br>A classical use case could be an easy activation inside a <a href="#ActivationPointExemple">regroupment of elements</a> for instance.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
+</br>By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.</li>
 </ul>
 <h3 id="example">Example</h3>
 <p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
@@ -1406,13 +1439,11 @@ float heightVal;
 </ul>
 <h2 id="grouping-elements">Grouping elements</h2>
 <h3 id="description">Description</h3>
-<p>Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.
-</br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
-</br></br>Another grouping elements case could use the <strong>shouldGroupAccessibilityChildren</strong> attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
-</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).</p>
-<h3 id="example">Example</h3>
+<p>Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.</br></br></p>
+<h3 id="example-1">Example 1</h3>
 <p>We wish to obtain a &#39;label&#39; and a &#39;switch control&#39; as one unique block behaving like a <code>switch control</code>.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
+</br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 </br>Create your wrapper as an accessible element :</p>
 <pre><code class="objective-c">
 #import "MyViewController.h"
@@ -1547,6 +1578,68 @@ int indexSwitch = 1;
     }
 }
 </code></pre>
+
+<p><a name="ActivationPointExemple"></a></p>
+<h3 id="example-2">Example 2</h3>
+<p>We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.
+</br>The easiest way would be to place the switch control in the middle of the created frame in order to locate its <a href="#AccessibilityActivationPoint">accessibilityActivationPoint</a> directly on it.
+</br>Unfortunately, that&#39;s not always possible.
+</br></br>A new accessible element must then be created to gather all the desired objects and its <strong>accessibilityActivationPoint</strong> has to be defined on the switch control.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" /></p>
+<pre><code class="objective-c">
+@interface ActivationPointViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation ActivationPointViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+
+    CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
+    CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
+
+    elt.accessibilityLabel = @"regrouping elements";
+    elt.accessibilityHint = @"double tap to change the switch control status";
+    elt.accessibilityFrameInContainerSpace = a11yEltFrame;
+    elt.accessibilityActivationPoint = [_mySwitch center];
+
+    self.view.accessibilityElements = @[elt];
+}
+@end
+</code></pre><pre><code class="swift">
+    class ActivationPointViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
+
+        elt.accessibilityLabel = "regrouping elements"
+        elt.accessibilityHint = "double tap to change the switch control status"
+        elt.accessibilityFrameInContainerSpace = a11yEltFrame
+        elt.accessibilityActivationPoint = mySwitch.center
+
+        self.view.accessibilityElements = [elt]
+    }
+}
+</code></pre>
+
+<p>Another grouping elements case could use the <strong>shouldGroupAccessibilityChildren</strong> attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
+</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).</p>
 <h3 id="links">Links</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
@@ -1670,6 +1763,7 @@ int indexSwitch = 1;
  }
 </code></pre></li>
 <li>Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.</li>
+<li>Don&#39;t forget to adapt the <a href="./criteria-ios.html#colours">color contrast</a> to the text size.</li>
 </ul>
 <h3 id="links">Links</h3>
 <ul>
@@ -2519,14 +2613,22 @@ class ViewController: UIViewController {
 <p>This section regroups <a href="https://developer.apple.com/videos/">presentations at the WWDC</a> dealing with accessibility.
 </br>Each one of them is detailed with time references to their different contents.
 </br></br>Most of the illustrations are parts of Apple presentations and are available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.
-</br>The summary of each video can be reached on clicking the title or the image presentation.</p>
+</br>The summary of each video can be reached on clicking the title or the image presentation.
+</br></br></p>
+<h2 id="-2018-deliver-an-exceptional-accessibility-experience-dev-ios-wwdc-18230-html-"><a href="./dev-ios-wwdc-18230.html">2018 - Deliver an exceptional accessibility experience</a></h2>
+<p>This presentation is a detailed explanation of functionalities for visual impaired people leading to a very good user experience.
+</br>A demo application will highlight these functionalities purposes so as to understand the rationale behind their implementation.
+</br><a href="./dev-ios-wwdc-18230.html"><img style="max-width: 700px; height: auto;" alt="Access to deliver an exceptional accessibility experience." src="./images/iOSdev/wwdc18-230.png" />
+</br></br></p>
 <h2 id="-2017-what-s-new-in-accessibility-dev-ios-wwdc-17215-html-"><a href="./dev-ios-wwdc-17215.html">2017 - What&#39;s New in Accessibility</a></h2>
 <p>Introduction of new iOS 11 accessibility features merging the user and the developer sides.
-</br><a href="./dev-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="Access to what's new in accessibility." src="./images/iOSdev/wwdc17-215.png" /></p>
+</br><a href="./dev-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="Access to what's new in accessibility." src="./images/iOSdev/wwdc17-215.png" />
+</br></br></p>
 <h2 id="-2017-building-apps-with-dynamic-type-dev-ios-wwdc-17245-html-"><a href="./dev-ios-wwdc-17245.html">2017 - Building Apps with Dynamic Type</a></h2>
 <p><code>Dynamic Type</code> highlights the iOS capacity to adapt the text size according to the user settings.
 </br>This video contains a theoretical approach to understand all the <code>Dynamic Type</code> possibilities as well as a practical part dealing with the developer side to avoid common pitfalls.
-</br><a href="./dev-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Access to building apps with dynamic type." src="./images/iOSdev/wwdc17-245.png" /></p>
+</br><a href="./dev-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Access to building apps with dynamic type." src="./images/iOSdev/wwdc17-245.png" />
+</br></br></p>
 <h2 id="-2016-auditing-your-apps-for-accessibility-dev-ios-wwdc-16407-html-"><a href="./dev-ios-wwdc-16407.html">2016 - Auditing Your Apps for Accessibility</a></h2>
 <p>This presentation is a detailed explanation of the <code>Accessibility Inspector</code> Xcode tool with a programatic VoiceOver introduction at the begining.
 </br><a href="./dev-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Access to auditing your apps for accessibility" src="./images/iOSdev/wwdc16-407.png" /></p>
@@ -2799,6 +2901,149 @@ can&#39;t initially read it.</p>
 <li><strong>How can I check enlargement with accessibility inspector</strong> ?
 <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=2096">(34:56)</a></li>
 </ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="wwdc-2018-deliver-an-exceptional-accessibility-experience">WWDC 2018 : Deliver an exceptional accessibility experience</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
+                   {"label":"iOS WWDC", "url": "./dev-ios-wwdc.html"},
+                   {"label":"2018 - Deliver an exceptional accessibility experience"}
+    ]);
+    addSubMenu([
+        {"label":"Android guide","url":"dev-android.html"}, 
+        {"label":"iOS guide","url":"dev-mobile.html"},
+        {"label":"iOS WWDC","url":"dev-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="dev-mobile"></span></p>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2018/230/">session 230</a>) aims at highlighting the essential elements that will provide an optimal user experience for visual impaired people.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230.png" />
+</br></br>Various contents and their video timelapse are indicated hereunder :</p>
+<ul>
+<li><a href="#TransparencyAndBlurring">Transparency and blurring</a> (03:07)</li>
+<li><a href="#Contrast">Contrast</a> (04:38)</li>
+<li><a href="#Sizing">Sizing</a> (07:04)</li>
+<li><a href="#Motion">Motion</a> (08:48)</li>
+<li><a href="#UIAccessibilityElement">UIAccessibilityElement</a> (21:03)</li>
+<li><a href="#AdjustableValues">Adjustable values</a> (21:44)</li>
+<li><a href="#CustomActions">Custom actions</a> (23:49)</li>
+<li><a href="#accessibilityViewIsModal">Accessibility modal view</a> (25:02)</li>
+<li><a href="#Notifications">Notifications</a> (25:13)</li>
+<li><a href="#Demo">Demo</a><ul>
+<li><a href="#DemoSetCarousel">How to render a carousel perfectly VoiceOver understandable ?</a> (25:53)</li>
+<li><a href="#DemoUpdateData">How to synchronize the selected carousel element with the displayed data ?</a> (30:53)</li>
+<li><a href="#DemoCustomActions">How to gather actions with an elements regroupment ?</a> (33:05)</li>
+<li><a href="#DemoModalView">How to avoid selections behind a &#39;Modal View&#39; ?</a> (34:32)</li>
+<li><a href="#DemoExceptionalVoiceOverExperience">Final rendering with an optimized VoiceOver implementation.</a> (35:38)</li>
+</ul>
+</li>
+</ul>
+<p>The latest content points out an amazing application for :</p>
+<ul>
+<li>The developers interested in finding out detailed explanations about many VoiceOver implementations.</li>
+<li>Those who are willing to figure out how a mobile application should interact with VoiceOver to obtain an optimal user experience (see &#39;<a href="#DemoExceptionalVoiceOverExperience">Final rendering with an optimized VoiceOver implementation</a>&#39;).</li>
+</ul>
+<p>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.
+</br></br>
+<a name="TransparencyAndBlurring"></a></p>
+<h3 id="-transparency-and-blurring-03-07-https-developer-apple-com-videos-play-wwdc2018-230-time-187-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=187">Transparency and blurring (03:07)</a></h3>
+<p>Since iOS 8, classes such as <code>UIBlurEffect</code> and <code>UIVisualEffectView</code> perfectly handle the blurring effect of an image.
+</br>However, this could give rise to sighting difficulties for some people having visual problems.
+</br>In this case, there&#39;s a possibility for the user to drastically weaken these effects by changing his settings.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
+</br>The result is a darker background that may become completely uniform under certain circumstances.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_2.png" />
+</br>The <code>isReduceTransparencyEnabled</code> property enables the developed application to be adapted to the user preference.
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_3.png" /></p>
+<p><a name="Contrast"></a></p>
+<h3 id="-contrast-04-38-https-developer-apple-com-videos-play-wwdc2018-230-time-278-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=278">Contrast (04:38)</a></h3>
+<p>The contrast between the foreground and the background colors is very important and depends a lot on the font type properties that are detailed in the <a href="./criteria-ios.html#colours">iOS guide section</a> of this site.
+</br>To improve the reading experience, it&#39;s natively possible to increase the colors contrast thanks to the settings.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
+</br>The <code>isDarkerSystemColorsEnabled</code> property enables the developed application to be adapted to the user preference.
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_2.png" /></p>
+<p><a name="Sizing"></a></p>
+<h3 id="-sizing-07-04-https-developer-apple-com-videos-play-wwdc2018-230-time-424-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=424">Sizing (07:04)</a></h3>
+<p>The individual presented elements about the <code>Dynamic Type</code> are widely explained in the <a href="./dev-ios.html#text-size">iOS developement section</a> and refer to <a href="./dev-ios-wwdc-17245.html">another presentation</a> detailed in the WWDC part of this site.
+</br>Display a bold font type may improve the visual rendering enough without disproportionately increase the font size.
+</br>Once more, this functionality can be activated in the mobile settings.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
+</br>The <code>isBoldTextEnabled</code> property enables the developed application to be adapted to the user preference.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_2.png" /></p>
+<p><a name="Motion"></a></p>
+<h3 id="-motion-08-48-https-developer-apple-com-videos-play-wwdc2018-230-time-528-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=528">Motion (08:48)</a></h3>
+<p>Any animations may give rise to problems of balance even of nausea to certain people.
+</br>The user accessibility settings allow to strongly decrease the effects of all kind of native animations.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
+</br>The <code>isReduceMotionEnabled</code> property enables the developed application to be adapted to the user preference.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_2.png" /></p>
+<p><a name="UIAccessibilityElement"></a></p>
+<h3 id="-uiaccessibilityelement-21-03-https-developer-apple-com-videos-play-wwdc2018-230-time-1263-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1263">UIAccessibilityElement (21:03)</a></h3>
+<p>The implementation and the purpose of this element are explained and introduced inside the demo application.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-UIAccessibilityElement.png" /></p>
+<p><a name="AdjustableValues"></a></p>
+<h3 id="-adjustable-values-21-44-https-developer-apple-com-videos-play-wwdc2018-230-time-1304-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1304">Adjustable values (21:44)</a></h3>
+<p>This functionality that is implemented thanks to a specific trait is specifically introduced in this presentation so as to <strong>ease the element selection</strong> inside a <code>CollectionView</code>.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-AdjustableValues.png" />
+</br>A different outline of this functionality is developed in <a href="./dev-ios-wwdc-17215.html#AdjustableValues">another presentation</a> detailed in the WWDC part of this site.
+</br></br>
+<a name="CustomActions"></a></p>
+<h3 id="-custom-actions-23-49-https-developer-apple-com-videos-play-wwdc2018-230-time-1429-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1429">Custom actions (23:49)</a></h3>
+<p>On a single selection, it&#39;s possible to <strong>gather many actions</strong> that are initially trigerred by distinct graphic elements.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-CustomActions.png" />
+</br>All the explanations are also exposed in <a href="./dev-ios-wwdc-17215.html#CustomActions">another presentation</a> detailed in the WWDC part of this site.
+</br></br>
+<a name="accessibilityViewIsModal"></a></p>
+<h3 id="-accessibility-modal-view-25-02-https-developer-apple-com-videos-play-wwdc2018-230-time-1502-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1502">Accessibility modal view (25:02)</a></h3>
+<p>When a view is only presented as being at the top of the view hierarchy, VoiceOver doesn&#39;t know natively that the <strong>background elements mustn&#39;t be analyzed</strong>.
+</br>The solution deals with the <code>accessibilityViewIsModal</code> value so as to avoid VoiceOVer to check other elements than those in the foreground.
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-ModalView.png" /></p>
+<p><a name="Notifications"></a></p>
+<h3 id="-notifications-25-13-https-developer-apple-com-videos-play-wwdc2018-230-time-1513-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1513">Notifications (25:13)</a></h3>
+<p>Reminder to <strong>notify the users about modifications</strong> on the screen.
+</br><img style="max-width: 800px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Notifications.png" />
+</br>More detailed explanations are available in the <a href="./dev-ios.html#notify-a-content-change">developer part</a> of this site.
+</br></br>
+<a name="Demo"></a></p>
+<h3 id="demo">Demo</h3>
+<p>During this presentation, some solutions for VoiceOver implementation pitfalls are suggested thanks to a simple application.
+</br>First of all, the <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=938">application introduction</a> and the <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1022">non optimized VoiceOver rendering</a> must be watched in order to understand the rationale behind the proposed solutions.
+</br></br>
+<a name="DemoSetCarousel"></a></p>
+<h5 id="-how-to-render-a-carousel-perfectly-voiceover-understandable-25-53-https-developer-apple-com-videos-play-wwdc2018-230-time-1553-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1553">How to render a carousel perfectly VoiceOver understandable ? (25:53)</a></h5>
+<ul>
+<li>Create an accessible element to define the carousel. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1571">(26:11)</a></li>
+<li>Implementations of the <code>label</code> and <code>value</code> properties. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1603">(26:43)</a></li>
+<li>Definition of <code>adjustableTrait</code> with its <code>increment</code> and <code>decrement</code> methods. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1618">(26:58)</a></li>
+<li>Creation of a scrolling function. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1634">(27:14)</a></li>
+<li>Add the carousel element as an accessible element. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1718">(28:38)</a></li>
+<li>Updating of the displayed data in conjunction with the user selection. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1791">(29:51)</a></li>
+<li>Screen updating notification when a carousel element selection occurs. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1814">(30:14)</a>
+</br></br>
+<a name="DemoUpdateData"></a></li>
+</ul>
+<h5 id="-how-to-synchronize-the-selected-carousel-element-with-the-displayed-data-30-53-https-developer-apple-com-videos-play-wwdc2018-230-time-1853-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1853">How to synchronize the selected carousel element with the displayed data ? (30:53)</a></h5>
+<ul>
+<li>Gather elements to significatively improve the selection. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1874">(31:14)</a></li>
+<li>Synchronization of the regrouped elements with the selected carousel element. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1966">(32:46)</a>
+</br></br>
+<a name="DemoCustomActions"></a></li>
+</ul>
+<h5 id="-how-to-gather-actions-with-an-elements-regroupment-33-05-https-developer-apple-com-videos-play-wwdc2018-230-time-1985-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1985">How to gather actions with an elements regroupment ? (33:05)</a></h5>
+<p></br>
+<a name="DemoModalView"></a></p>
+<h5 id="how-to-avoid-selections-behind-a-modal-view-">How to avoid selections behind a &#39;Modal View&#39; ?</h5>
+<ul>
+<li>Override <code>accessibilityViewIsModal</code>. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2073">(34:33)</a></li>
+<li>Notify the user of a new presented screen. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2100">(35:00)</a>
+</br></br>
+<a name="DemoExceptionalVoiceOverExperience"></a></li>
+</ul>
+<h5 id="-final-rendering-with-an-optimized-voiceover-implementation-35-38-https-developer-apple-com-videos-play-wwdc2018-230-time-2138-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2138">Final rendering with an optimized VoiceOver implementation. (35:38)</a></h5>
+<p></br>
+The presented code of this video and many explanations of its implementation are available on the <a href="https://developer.apple.com/documentation/uikit/accessibility/delivering_an_exceptional_accessibility_experience">Apple developer site</a>.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

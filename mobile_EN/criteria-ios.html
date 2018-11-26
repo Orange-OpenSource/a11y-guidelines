@@ -152,11 +152,18 @@ Icons are, conversely, widely used as buttons for various features. So they need
 <h2 id="colours">Colours</h2>
 <p><strong> Target: </strong> everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)<br><strong> When: </strong> as of the design phase and during development.</p>
 <p><strong>Description: </strong></p>
-<p>Colours have a very important role in the transmission of information. Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.</p>
+<p>Colours have a very important role in the transmission of information.
+</br>Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.
+</br></br>The bold font type will allow a weaker contrast for the lowest font sizes.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_2.png" />
+</br></br>The normal font type will require a higher contrast than the previous case.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
+</br></br> With <a href="./dev-ios.html#text-size">Dynamic Type</a> whose purpose is to increase the font size according to the user settings, the contrast isn&#39;t necessary fixed and must be adapted to the text size.
+</br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" /></p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.</li>
-<li>The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool).</li>
+<li>The contrast between the colour of the background and the text must be appropriate <em>(can be measured with the Colour Contrast Analyser tool)</em>.</li>
 </ul>
 <p><strong>Users’ goal: </strong> </p>
 <p>Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).
@@ -236,7 +243,7 @@ To set an item as a header, set the <code>accessibilityTraits</code> attribute o
 <p><strong> Technical Objective: </strong></p>
 <p>Improve overall maintainability. Reduce development time.</p>
 <h2 id="touch-target">Touch target</h2>
-<p><strong> Target: </strong> everyone, especially people with motor impairments<br><strong> When: </strong> as of design and during development.</p>
+<p><strong> Target: </strong> everyone, especially people with motor impairments.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong>  </p>
 <p>If a touch target of a component is too small, it can prevent some users from enjoying the application. This can lead to frustration that can result in uninstalling it. Each clickable element must have a large enough touch target.</p>
 <p><strong>Checklist: </strong></p>
@@ -365,6 +372,25 @@ remoteView.accessibilityElements?.append(fourButton)
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Ensure the understanding of the application text.</p>
+<h2 id="screen-orientation">Screen orientation</h2>
+<p><strong>Target&nbsp;: </strong> everyone, especially people with visual and/or motor impairments.<br><strong>When&nbsp;: </strong> as of design and during development.</p>
+<p><strong>Description&nbsp;: </strong></p>
+<p>The screen orientation mustn&#39;t impact the access of an application content.
+</br>It&#39;s highly recommended to :</p>
+<ul>
+<li><strong>Implement both the portrait and the landscape modes</strong> to be easily toggled by the user if it doesn&#39;t go against some functional constraints of the application itself (<code>serious game</code> for instance).</li>
+<li>Provide for iPad screen sizes in order to facilitate reading and gestures.</li>
+</ul>
+<p><strong>Checklist&nbsp;: </strong></p>
+<ul>
+<li>Perfectly detailed design guideline including all the screens to be implemented with their possible orientation constraints.</li>
+<li>Very accurate definition of the way the transitions between portrait and landscape modes should occur.</li>
+<li>Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the <code>Dynamic Type</code>).</li>
+<li>Appropriate settings in the integrated development environment.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" /></li>
+</ul>
+<p><strong>Users’ goal&nbsp;: </strong></p>
+<p>Improve a better legibility of the content.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

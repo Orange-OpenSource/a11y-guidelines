@@ -204,9 +204,9 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 
 <h2 id="introduction">Introduction</h2>
 <h3 id="nom-et-description-accessible">Nom et description accessible</h3>
-<p>Un nom accessible est l&#39;information qui permet à l&#39;aide technique (<abbr>AT</abbr>), par exemple, un lecteur d&#39;écran ou une loupe logicielle, d&#39;identifier l&#39;élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l&#39;intitulé ou le contenu d&#39;un élément, un attribut (par exemple, un attribut <code>alt</code> pour une image) ou par un élément associé (par exemple, une balise <code>label</code> pour un champ <code>input</code>).</p>
+<p>Un nom accessible (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>) est l&#39;information qui permet à l&#39;aide technique (<abbr>AT</abbr>), par exemple, un lecteur d&#39;écran ou une loupe logicielle, d&#39;identifier l&#39;élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l&#39;intitulé ou le contenu d&#39;un élément, un attribut (par exemple, un attribut <code>alt</code> pour une image) ou par un élément associé (par exemple, une balise <code>label</code> pour un champ <code>input</code>).</p>
 <p>Une description accessible est une information plus étendue qui est utilisée par l&#39;<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n&#39;est pas suffisant.</p>
-<p>Le nom accessible comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d&#39;image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>...)</p>
+<p>Le  comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d&#39;image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>...)</p>
 <h3 id="les-attributs-abbr-aria-abbr-nbsp-aria-label-aria-labelledby-et-aria-describedby-">Les attributs <abbr>ARIA</abbr>&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h3>
 <p>Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code>. Ils permettent de rajouter de l&#39;information à un élément <abbr>HTML</abbr>&nbsp;:</p>
 <ul>
@@ -220,13 +220,14 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <li>les éléments possédant un rôle de landmark explicite, donc, avec un attribut <code>role</code> ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: <code>header</code>, <code>footer</code>, <code>main</code>, <code>nav</code>, <code>aside</code> et <code>section</code>) </li>
 <li>les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d&#39;<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>.</li>
 </ul>
-<p>Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couple <abbr>AT</abr>/navigateur, donc ne pas l&#39;utiliser comme seul moyen de passer une information nécessaire.</p>
+<p>Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couples <abbr>AT</abr>/navigateur, donc ne pas l&#39;utiliser comme seul moyen de passer une information nécessaire.</p>
 <h2 id="faut-il-l-utiliser-et-comment-nbsp-">Faut-il l’utiliser et comment&nbsp;?</h2>
 <p>Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.</p>
 <p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence l&#39;<code>id</code> d&#39;un élément de la page dont le contenu sera utilisé comme nom accessible de l&#39;élément portant l&#39;attribut <abbr>Aria</abbr>.</p>
 <p>Lorsqu&#39;on utilise <code>aria-label</code> ou <code>aria-labelledby</code> sur un élément, le contenu ou l&#39;intitulé de cet élément n&#39;est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour <code>aria-label</code> le contenu de cet attribut, pour <code>aria-labelledby</code> le contenu de l&#39;élément référencé). Donc, seul, le nom accessible doit donner l&#39;ensemble des informations nécessaires à l&#39;<abbr>AT</abbr> et donc à l&#39;utilisateur.</p>
-<p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité à <code>aria-labelledby</code> lors du calcul de la propriété de nom accessible.</p>
-<p>Quant à lui, <code>aria-describedby</code> va rajouter au nom accessible de l&#39;élément, une description accessible, en plus. </p>
+<p><strong>Important&nbsp;: </strong>l&#39;<code>aria-labelledby</code> peut admettre plusieurs valeurs séparées par un espace et peut s&#39;auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> <code>::before</code> ou <code>::after</code>. On peut également référencer un contenu masqué visuellement par <abbr>CSS</abbr>&nbsp;: <code>visibility:hidden;</code> ou <code>display:none;</code>. Cependant, les bonnes pratiques demandent que si l&#39;interface est telle qu&#39;il n&#39;est pas possible d&#39;avoir une étiquette textuelle visible à l&#39;écran, il est préférable d&#39;utiliser <code>aria-label</code> plutôt que <code>aria-labelledby</code>. </p>
+<p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité (et donc sera le seul contenu restitué) à <code>aria-labelledby</code> lors du calcul de la propriété de nom accessible. </p>
+<p>Quant à lui, <code>aria-describedby</code> va rajouter au nom accessible de l&#39;élément, une description accessible, plus longue ou plus complète, logiquement, que le nom accessible. </p>
 <h2 id="exemples">Exemples</h2>
 <p><pre><code class="html">
 &lt;button aria-label=&quot;accéder au code Hypertext markup language&quot;&gt;html&lt;/button&gt;
@@ -241,9 +242,134 @@ Sortie pour un lecteur d&#39;écran : &quot;Code de la page HTML&quot;</p>
 &lt;h3 id=&quot;titre&quot;&gt;Code de la page de formulaire de connexion&lt;h3&gt;
 &lt;button aria-label=&quot;accéder au code HTML&quot; aria-describedby=&quot;titre&quot;&gt;html&lt;/buttton&gt;
 </code></pre>
-Sortie pour un lecteur d&#39;écran : &quot;accéder au code HTML code de la page de connexion&quot;</p>
+Sortie pour un lecteur d&#39;écran : &quot;accéder au code HTML code de la page de formulaire de connexion&quot;</p>
+<p><pre><code class="html">
+&lt;h3 id=&quot;titre&quot;&gt;Code de la page de formulaire de connexion&lt;h3&gt;
+&lt;button id=&quot;code&quot; aria-describedby=&quot;code titre&quot;&gt;Accéder au code HTML&lt;/buttton&gt;
+</code></pre>
+Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la page de formulaire de connexion&quot;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="utiliser-abbr-aria-abbr-les-messages-d-tat-de-statut-ou-contextuel">Utiliser <abbr>ARIA</abbr>  les messages d&#39;état, de statut ou contextuel</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+            {"label":"Articles techniques", "url":"techniques.html"},
+            {"label":"Utiliser <abbr>ARIA</abbr> pour les messages d'état"}
+        ]);
+});</script>
+
+<h2 id="message-de-statut-et-accessibilit-">Message de statut et accessibilité</h2>
+<p>Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que pour les informations importantes pour l&#39;utilisateur, qui n&#39;induisent pas de changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
+<h2 id="quelques-exemple-de-messages-d-tat-de-statut-ou-contextuels">Quelques exemple de messages d&#39;état, de statut ou contextuels</h2>
+<p>Lorsqu&#39;un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; est en haut de ce nouveau contenu. Un lecteur d&#39;écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l&#39;information fournie à l&#39;utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle &quot;alert&quot;. </p>
+<p><code>&lt;h2 role=&quot;alert&quot;&gt;
+    5 résultats ont été trouvés
+&lt;/h2&gt;</code></p>
+<p>Lorsqu&#39;un utilisateur après avoir choisi un article, appuie sur un bouton &quot;Ajouter au panier&quot;, une mention textuelle &quot;1 élément ajouté, 4 articles dans le panier&quot; apparaît temporairement près de l&#39;icône du panier. Un lecteur d&#39;écran devra annoncer &quot;un article ajouté au panier, le panier contient actuellement 4 articles&quot;. Ici, l&#39;information à pousser à l&#39;utilisateur est moins cruciale que précédemment donc on utilisera le rôle &quot;status&quot;.</p>
+<p><code>&lt;p role=&quot;status&quot;&gt;
+    un article ajouté au panier, le panier contient actuellement 4 articles
+&lt;/p&gt;</code></p>
+<p>Une fois qu&#39;un utilisateur a activé un processus d&#39;application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge... apparaît à l&#39;écran. Le lecteur d&#39;écran annonce &quot;Application occupée, chargement en cours&quot;.</p>
+<p><code>&lt;div role=&quot;alert&quot;&gt;
+    Application occupée, chargement en cours
+&lt;/div&gt;</code></p>
+<p>Une application affiche une barre de progression pour indiquer l&#39;état d&#39;une mise à jour d&#39;un élément de contenu. Le lecteur d&#39;écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;...</p>
+<p><code>&lt;div role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+20 % mis à jour
+&lt;/div&gt;</code></p>
+<p>Après qu&#39;un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant qui se lit comme suit&nbsp;: &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d&#39;écran annonce le même message.</p>
+<p><code>&lt;div role=&quot;alert&quot;&gt;
+    Votre formulaire a été soumis avec succès
+&lt;/div&gt;</code></p>
+<p>Lorsqu&#39;un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique &quot;XX erreurs dans le formulaire&quot;. Le lecteur d&#39;écran annonce le message &quot;Formulaire non envoyé car XX erreurs de validation&quot; (ceci ne dispense pas de donner les détails de l&#39;erreur pour chaque champ incorrectement rempli). L&#39;information d&#39;erreur dans le formulaire est importante et urgente, immédiate, donc on utilise  le rôle &quot;alertdialog&quot;.</p>
+<p><code>&lt;div role=&quot;alertdialog&quot; aria-labelledby=&quot;errors&quot;&gt;
+   &lt;p id=&quot;errors&quot;&gt; Formulaire non envoyé car 2 erreurs de validation &lt;/p&gt;
+&lt;/div&gt;</code></p>
+<p>Une fois qu&#39;un utilisateur, dans une application de gestion documentaire en ligne, a inséré un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message &quot;Le document YYY est bien enregistré dans le répertoire XXX&quot;, qui est également lu par un lecteur d&#39;écran.</p>
+<p><code>&lt;p role=&quot;status&quot;&gt;
+    Le document YYY est bien enregistré dans le répertoire XXX
+&lt;/p&gt;</code></p>
+<p>Dans une application de mailing en ligne, l&#39;utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l&#39;adresse e-mail du destinataire est affichée à l&#39;écran à la suite de celle déjà choisies pour ce message. Le lecteur d&#39;écran devra annoncer l&#39;ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l&#39;écran pour certains utilisateurs d&#39;<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d&#39;écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle &quot;log&quot;.</p>
+<div role="log">
+  <ol>
+    <li>XX@YY.ZZ a été rajouté</li>
+    <li>XX@YY.ZZ a été retiré</li>
+  </ol>
+</div>
+
+<p>Parfois, on veut fournir des messages que pour les lecteurs d&#39;écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d&#39;écran sans les afficher à l&#39;écran.</p>
+<h2 id="les-messages-de-statut-qui-n-en-sont-pas-">Les messages de statut qui n&#39;en sont pas !</h2>
+<p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d&#39;<abbr>AT</abbr>, ce n&#39;est pas un message de statut&nbsp;:</p>
+<ul>
+<li>une modale qui demande une action utilisateur, sur laquelle le focus est donc mis</li>
+<li>lors de l&#39;apparition/disparition de contenu suite une interaction utilisateur qui est annoncé aussi aux <abbr>AT</abbr> (par exemple, on annonce au lecteur d&#39;écran &quot;ouvert/fermé&quot; pour un menu, un accordéon)</li>
+<li>pour une système de panneaux, dont l&#39;onglet sélectionné est annoncé aux <abbr>AT</abbr>  </li>
+</ul>
+<p>&nbsp;</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="le-nom-accessible-en-abbr-html-abbr-">Le nom accessible en <abbr>HTML</abbr></h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+            {"label":"Articles techniques", "url":"techniques.html"},
+            {"label":"Le nom accessible"}
+        ]);
+});</script>
+
+<h2 id="introduction">Introduction</h2>
+<p>Le nom (<span lang="en">name</span>) du composant d&#39;interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c&#39;est globalement ce nom qui va être exposé à la technologie d&#39;assistance <abbr>AT</abbr> via l&#39;<abbr>API</abbr> d&#39;accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation 1.1</a>.
+En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n&#39;ont qu&#39;un but de présentation, ex. : balises <code>div</code> et <code>span</code> n&#39;en ont pas l&#39;utilité) ont besoin d&#39;un nom (accessible) pour être correctement identifiés par l&#39;<abbr>AT</abbr>.</p>
+<p>Le nom accessible est issu du contenu d&#39;une balise, d&#39;attributs de cette balise ou d&#39;un élément qui lui est associé.</p>
+<h2 id="en-pratique-comment-a-marche-">En pratique, comment ça marche ?</h2>
+<p>Le nom accessible est, par exemple, annoncé par un lecteur d&#39;écran à la prise de focus sur cet élément mais le rôle de l&#39;élément est aussi ajouté (lien, graphique, bouton...).</p>
+<h3 id="acc-der-au-nom-accessible-via-le-navigateur">Accéder au nom accessible via le navigateur</h3>
+<p>Pour accéder au nom (accessible), le plus simple est d&#39;utiliser les outils des navigateurs.</p>
+<p>Dans Chrome, il faut, dans les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>), inspecter un élément (onglet &quot;Elements&quot;) et ouvrir le panneau &quot;Accessibility&quot; à la place de celui de &quot;Style&quot; (généralement à droite). On accède à l&#39;&quot;Accessibility tree&quot; et dans &quot;Computed properties&quot; au &quot;Name&quot;, le nom accessible de l&#39;élément inspecté.</p>
+<p><img src="./images/chrome_name.png" alt="Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert"></p>
+<p>Dans FireFox, il faut, dans les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l&#39;onglet &quot;Accessibilité&quot; (à afficher les &quot;Options&quot; des dev tools), inspecter un élément. On accède au &quot;Name&quot;, le nom accessible de l&#39;élément inspecté.</p>
+<p><img src="./images/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l&#39;onglet Accessibilité ouvert"></p>
+<h3 id="contenu-d-une-balise">Contenu d&#39;une balise</h3>
+<p><code>&lt;a href=&quot;canard.html&quot;&gt;canards en plastique&lt;/a&gt;</code></p>
+<p>Ici, le nom du lien est le contenu (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d&#39;écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
+<p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé, ne sera pas accessible, bien sûr !</p>
+<p>Également, on peut additionner les éléments pour donner un nom.</p>
+<p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot; le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code> </p>
+<p> Ce bouton aura lui un nom accessible qui est le contenu du bouton : l&#39;intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l&#39;image : &quot;canards en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
+<h3 id="-l-ment-associ-">Élément associé</h3>
+<p>Par ailleurs, pour les éléments de formulaire, le nom accessible est le <code>label</code> lorsqu’il est programmatiquement associé à l&#39;élément via l&#39;attribut <code>for</code> référençant l&#39;<code>id</code> du champ.</p>
+<pre><code class="html">
+&lt;label for="search"&lt;Rechercher&gt;/label&gt;
+&lt;input id="search" type="text"&gt;
+</code></pre>
+
+<p>Avec ce code, le lecteur d&#39;écran dira : &quot;Rechercher édition&quot;.</p>
+<h3 id="avec-abbr-aria-abbr-aussi-">Avec <abbr>ARIA</abbr> aussi !</h3>
+<p><abbr>ARIA</abbr> va pouvoir nous aider pour donner un nom à un élément <abbr>HTML</abbr>, en utilisant <code>aria-label</code> et <code>aria-labelledby</code>.</p>
+<pre><code class="html">
+&lt;button class="navbar-toggler" type="button" aria-label="Ouverture menu navigation" ... &gt;
+&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+
+<p>Ce bouton de menu hamburger a donc un nom : &quot;Ouverture menu navigation&quot;. 
+Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer un autre élément de la page comme nom :</p>
+<p><pre><code class="html">
+&lt;input type=&quot;search&quot; aria-labelledby=&quot;this&quot;&gt;
+&lt;button id=&quot;this&quot;&gt;Rechercher dans le site&lt;/button&gt;
+</code></pre>
+Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Rechercher sur le site édition&quot;.</p>
+<p>Plus de détails sur <a href="label-ledby-describedby.html">&quot;Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&quot;</a>.</p>
+<h2 id="webographie">Webographie</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span></li>
+<li><a href="http://simplyaccessible.com/article/accessible-name/" lang="en" hreflang="en">Demystifying accessible name</a> par Joe Watkins</li>
+<li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson</li>
+</ul>
+<p>&nbsp;</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="liste-des-crit-res-wcag-par-th-me">Liste des critères WCAG par thème</h1>
 <script>$(document).ready(function () {
@@ -291,63 +417,63 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 </li>
 </ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab"></p>
 <h2 id="contenu-textuel">Contenu textuel</h2>
-<p>S&#39;assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
+<p>S’assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
 <ul>
 <li><a href="inc-con-titre-pages.html">Donner un titre aux pages</a></li>
 <li><a href="inc-con-titre-rubriques.html">Donner des titres aux rubriques</a></li>
 </ul>
 <h2 id="contenu-non-textuel">Contenu non-textuel</h2>
-<p>S&#39;assurer, qu&#39;une alternative aux contenus non-textuels soit proposée à l&#39;utilisateur</p>
+<p>S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur</p>
 <ul>
 <li><a href="inc-con-equivalent-textuel.html">Définir des équivalents textuels</a></li>
 <li><a href="inc-con-audio-video.html">Rendre accessible les pistes audio ou vidéo</a></li>
 <li><a href="inc-con-captcha.html">Éviter les captcha</a></li>
 </ul>
 <h2 id="couleurs-et-contrastes">Couleurs et contrastes</h2>
-<p>S&#39;assurer que les couleurs utilisés ne posent pas de problème à l&#39;utilisateur</p>
+<p>S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur</p>
 <ul>
 <li><a href="inc-con-contrastes.html">Assurer un contraste suffisant entre texte et fond</a></li>
 <li><a href="inc-con-information-sensorielle.html">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</a></li>
 </ul>
 <h2 id="navigation-g-n-rale">Navigation générale</h2>
-<p>S&#39;assurer que l&#39;utilisateur navigue facilement dans une page et plus globalement dans un site</p>
+<p>S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site</p>
 <ul>
 <li><a href="inc-con-libelles.html">Libellé des liens et des boutons</a></li>
 <li><a href="inc-con-nouvelles-fenetres.html">Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</a></li>
 <li><a href="inc-con-liens-evitement.html">Fournir des liens d’évitement</a></li>
 <li><a href="inc-con-controle-animations.html">Permettre le contrôle des animations</a></li>
-<li><a href="inc-con-acces-multiples.html">Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</a></li>
+<li><a href="inc-con-acces-multiples.html">Situer explicitement la page dans le site et fournir plusieurs moyens d’y accéder</a></li>
 </ul>
 <h2 id="navigation-clavier">Navigation clavier</h2>
-<p>S&#39;assurer que l&#39;utilisateur puisse naviguer uniquement à l&#39;aide du clavier</p>
+<p>S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier</p>
 <ul>
 <li><a href="inc-con-navigation-clavier.html">Permettre la navigation au clavier</a></li>
 <li><a href="inc-con-visibilite-focus.html">Assurer la visibilité du focus</a></li>
 </ul>
 <h2 id="mise-en-page">Mise en page</h2>
-<p>S&#39;assurer que la mise en page soit adaptée à l&#39;utilisateur.</p>
+<p>S’assurer que la mise en page soit adaptée à l’utilisateur.</p>
 <ul>
-<li><a href="inc-con-adaptatif.html">Agrandissement de texte et adaptation à la taille d&#39;affichage</a></li>
-<li><a href="inc-con-aerer-texte.html">Permettre d&#39;aérer le texte</a></li>
+<li><a href="inc-con-adaptatif.html">Agrandissement de texte et adaptation à la taille d’affichage</a></li>
+<li><a href="inc-con-aerer-texte.html">Permettre d’aérer le texte</a></li>
 <li><a href="inc-con-coherence-navigation.html">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</a></li>
 <li><a href="inc-con-zones-sensibles.html">Définir des zones sensibles de taille suffisante</a></li>
 </ul>
 <h2 id="formulaires">Formulaires</h2>
-<p>S&#39;assurer que l&#39;utilisateur puisse efficacement compléter les formulaires</p>
+<p>S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
 <ul>
 <li><a href="inc-con-formulaires.html">Rendre utilisables les formulaires</a></li>
 </ul>
 <h2 id="tactile-et-interactions">Tactile et interactions</h2>
-<p>S&#39;assurer que l&#39;utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
+<p>S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
 <ul>
 <li><a href="inc-con-alternative-gestures.html">Proposer une alternative aux gestuelles complexes</a></li>
-<li><a href="inc-con-orientation-ecran.html">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</a></li>
+<li><a href="inc-con-orientation-ecran.html">Donner accès au contenu quelle que soit l’orientation de l’écran</a></li>
 </ul>
 <p></div></p>
 <div class="tab-pane" id="incontournables-developpeurs" role="tabpanel" aria-labelledby="incontournables-developpeurs-tab">
 <h2 id="dev-contenu-textuel">Contenu textuel</h2>
 
-S&#39;assurer que les contenus textuels soient structurés avec la sémantique appropriée
+S’assurer que les contenus textuels soient structurés avec la sémantique appropriée
 <ul>
     <li><a href="inc-dev-titre-pages.html">Donner un titre aux pages</a></li>
     <li><a href="inc-dev-titre-rubriques.html">Donner des titres aux rubriques</a></li>
@@ -358,7 +484,7 @@ S&#39;assurer que les contenus textuels soient structurés avec la sémantique a
 
 <h2 id="dev-contenu-non-textuel">Contenu non-textuel</h2>
 
-S&#39;assurer, qu&#39;une alternative aux contenus non-textuels soit proposée à l&#39;utilisateur
+S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur
 <ul>
     <li><a href="inc-dev-equivalent-textuel.html">Fournir un équivalent textuel pour les images et les cadres</a></li>
     <li><a href="inc-dev-audio-video.html">Rendre accessible les pistes audio ou vidéo</a></li>
@@ -367,7 +493,7 @@ S&#39;assurer, qu&#39;une alternative aux contenus non-textuels soit proposée �
 
 <h2 id="dev-couleurs-et-contrastes">Couleurs et contrastes</h2>
 
-S&#39;assurer que les couleurs utilisés ne posent pas de problème à l&#39;utilisateur
+S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur
 <ul>
     <li><a href="inc-dev-contrastes.html">Assurer un contraste suffisant entre texte et fond</a></li>
     <li><a href="inc-dev-information-sensorielle.html">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</a></li>
@@ -375,20 +501,20 @@ S&#39;assurer que les couleurs utilisés ne posent pas de problème à l&#39;uti
 
 <h2 id="dev-navigation-generale">Navigation générale</h2>
 
-S&#39;assurer que l&#39;utilisateur navigue facilement dans une page et plus globalement dans un site
+S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site
 <ul>
     <li><a href="inc-dev-intitules-hors-contexte.html">Rendre les intitulés des liens et des boutons compréhensibles hors contexte</a></li>
     <li><a href="inc-dev-nouvelle-fenetre.html">Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</a></li>
     <li><a href="inc-dev-liens-evitement.html">Fournir des liens d’évitement</a></li>
     <li><a href="inc-dev-controle-interactions.html">S’assurer que l’utilisateur garde le contrôle lors des interactions</a></li>
     <li><a href="inc-dev-acces-multiples.html">Fournir des accès multiples et une localisation</a></li>
-    <li><a href="inc-dev-message-contextuel.html">Permettre de connaître le résultat d&#39;une interaction utilisateur à l&#39;aide de messages contextuels</a></li>
+    <li><a href="inc-dev-message-contextuel.html">Permettre de connaître le résultat d’une interaction utilisateur à l’aide de messages contextuels</a></li>
     <li><a href="inc-dev-controle-animations.html">Permettre le contrôle des animations</a></li>
 </ul>
 
 <h2 id="dev-navigation-clavier">Navigation clavier</h2>
 
-S&#39;assurer que l&#39;utilisateur puisse naviguer uniquement à l&#39;aide du clavier
+S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier
 <ul>
     <li><a href="inc-dev-utilisation-clavier.html">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</a></li>
     <li><a href="inc-dev-parcours-focus.html">Rendre le parcours du focus séquentiel et logique sans piège clavier</a></li>
@@ -397,17 +523,17 @@ S&#39;assurer que l&#39;utilisateur puisse naviguer uniquement à l&#39;aide du 
 
 <h2 id="dev-mise-en-page">Mise en page</h2>
 
-S&#39;assurer que la mise en page soit adaptée à l&#39;utilisateur.
+S’assurer que la mise en page soit adaptée à l’utilisateur.
 <ul>
     <li><a href="inc-dev-adaptatif.html">Utiliser des tailles relatives et faire du web adaptatif</a></li>
-    <li><a href="inc-dev-aerer-texte.html">Permettre d&#39;aérer le texte</a></li>
+    <li><a href="inc-dev-aerer-texte.html">Permettre d’aérer le texte</a></li>
     <li><a href="inc-dev-coherence-navigation.html">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</a></li>
     <li><a href="inc-dev-taille-zones.html">Définir des zones sensibles de taille suffisante</a></li>
 </ul>
 
 <h2 id="dev-formulaires">Formulaires</h2>
 
-S&#39;assurer que l&#39;utilisateur puisse efficacement compléter les formulaires
+S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 <ul>
     <li><a href="inc-dev-etiquette-formulaires.html">Associer une étiquette pertinente à chaque champ de formulaire</a></li>
     <li><a href="inc-dev-identifier-erreurs.html">Détecter, identifier les erreurs et suggérer des corrections</a></li>
@@ -415,12 +541,12 @@ S&#39;assurer que l&#39;utilisateur puisse efficacement compléter les formulair
 
 <h2 id="dev-tactile-et-interactions">Tactile et interactions</h2>
 
-S&#39;assurer que l&#39;utilisateur garde le contrôle sur les interactions, en particulier tactiles
+S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles
 <ul>
-    <li><a href="inc-dev-autoriser-zoom.html">Autoriser l&#39;utilisation du zoom</a></li>
-    <li><a href="inc-dev-annuler-gestuelle.html">Permettre d&#39;annuler le déclenchement des interactions gestuelles</a></li>
+    <li><a href="inc-dev-autoriser-zoom.html">Autoriser l’utilisation du zoom</a></li>
+    <li><a href="inc-dev-annuler-gestuelle.html">Permettre d’annuler le déclenchement des interactions gestuelles</a></li>
     <li><a href="inc-dev-alternative-gestures.html">Proposer une alternative aux gestuelles complexes</a></li>
-    <li><a href="inc-dev-orientation-ecran.html">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</a></li>
+    <li><a href="inc-dev-orientation-ecran.html">Donner accès au contenu quelle que soit l’orientation de l’écran</a></li>
 </ul>
 
 <h2 id="dev-aides-techniques">Aides techniques</h2>
@@ -804,17 +930,17 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h1>
+<h1 id="orientation-de-l-cran">Orientation de l’écran</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
-        {"label":"Donner accès au contenu quelle que soit l'orientation de l'écran"}
+        {"label":"Donner accès au contenu quelle que soit l’orientation de l’écran"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage). Sauf usage essentiel au fonctionnement de l’application (ex : <span lang="en">serious game</span>).</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>L’accès au contenu ne doit pas dépendre de l’orientation de l’écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l’utilisation du contenu (projection, tableau…).</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a></li>
@@ -950,14 +1076,15 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design).</p>
+<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>) permettant l’agrandissement du texte seul de 200%. Globalement faire une interface web adaptative (responsive web design) sauf si la présentation en deux dimensions est nécessaire pour l&#39;usage ou l&#39;utilisation (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d&#39;outils...).</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Ne pas utiliser le pixel (<code>px</code>) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).</li>
 <li>Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.</li>
 <li>Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.</li>
 <li>Dans Firefox, faire Affichage&gt;Zoom&gt;Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  </li>
-<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal même lorsque la largeur de la zone d&#39;affichage est réduite à 320 pixels CSS.  </li>
+<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable (sauf besoin particulier: carte, tableau, diagramme...) sans scroll horizontal même pour une largeur de la zone d&#39;affichage (<span lang="en">vewport</span>) réduite à 320 pixels CSS. 
+Note : 320 pixels CSS est équivalent à un viewport à 1280px CSS avec un zoom global (toute la page) à 400%.</li>
 </ul>
 <p><img src="./images/zoom-200.png" alt="capture d’écran réglage du zoom dans Firefox"></p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
@@ -1001,7 +1128,8 @@ Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter 
   }
 </code></pre>
 
-<p><strong>Bookmarklet:</strong><br>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
+<p><strong>Bookmarklet:</strong><br>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : 
+<a href="javascript:(function(){document.querySelector(%27body%27).classList.add(%27text-spacing%27);%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27.text-spacing%20*%20{%20line-height:%201.5%20!important;%20letter-spacing:%200.12em%20!important;%20word-spacing:%200.16em%20!important;%20}%20.text-spacing%20p{%20margin-bottom:%202em%20!important;%20}%20%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput[0].appendChild(style);%20})();">Espacement du texte</a> créée par Steve Faulkner.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le confort de lecture.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
@@ -1020,10 +1148,11 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...), une alternative doit exister.</p>
-<p><strong>Gestuelles complexes</strong>: tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel, de troubles cognitifs ou d&#39;apprentissage et en mobilité. Les utilisateurs qui ne peuvent pas (avec précision) effectuer des gestes complexes avec un pointeur. Les utilisateurs novices qui ignorent souvent la prise en charge de gestes de pointeur complexes. 
+<strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>...), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).
+De même, pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...), une alternative doit exister.</p>
+<p><strong>Gestuelles complexes</strong>: tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
@@ -1040,11 +1169,18 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel, de troubles cognitifs ou d&#39;apprentissage et en mobilité. Les utilisateurs qui ne peuvent pas (avec précision) effectuer des gestes complexes avec un pointeur. Les utilisateurs novices qui ignorent souvent la prise en charge de gestes de pointeur complexes. 
+<strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong>  </p>
+<ul>
+<li>Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>...), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).</li>
+<li>De même, pour les interactions nécessitant un changement d&#39;orientation de l&#39;appareil ou un mouvement de l&#39;utilisateur (basculement, rotation, secouement...),  cette fonctionnalité peut être désactivée et doit avoir une alternative dans l&#39;interface.</li>
+</ul>
+<p><strong>Gestuelles complexes</strong>: tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -1214,17 +1350,17 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.</li>
-<li>Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère, si :<ul>
-<li>le composant graphique est un logo</li>
+<li>Les composants graphiques d’interface utilisateur et les états de l&#39;interface (focus, hover...) doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère :<ul>
+<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés  représentant une mesure, cartes de chaleur...)</li>
 <li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li>
-<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou de sa fonction</li>
+<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou de sa fonction ou </li>
 </ul>
 </li>
-<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 <li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
+<li>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.</li>
+<li>Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.</li>
+<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
-<p>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.
-Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).</p>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
@@ -1268,34 +1404,36 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention, les utilisateurs qui augmentent la taille du pointeur souris, avec des mouvements peu précis et ceux qui utilisent la commande vocales.  </p>
+<p><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <ul>
 <li>Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </li>
 <li>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.</li>
-<li>Si des raccourcis clavier reposant sur une seule touche sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
-<li>L&#39;utilisateur doit avoir le contrôle des contenus s&#39;ouvrant au survol ou à la prise de focus.</li>
+<li>Si des raccourcis clavier reposant sur un seul caractère (lettre, y compris les lettres majuscules et minuscules, ponctuation, nombre ou symbole) sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
+<li>Laisser le contrôle à l&#39;utilisateur des contenus s&#39;ouvrant au survol ou à la prise de focus (<span lang="en">tooltip</span>, infobulle).</li>
 </ul>
 <p><strong>À vérifier&nbsp;:</strong>  </p>
 <ol>
 <li><p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
 <ul>
 <li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
-<li><strong>modification</strong>: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
+<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
 <li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
 </ul>
 </li>
-<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
-<ul>
-<li><strong>Masquer ce nouveau contenu</strong> sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
-<li><strong>Déplacer le pointeur de la souris</strong> sur ce nouveau contenu sans que celui-ci disparaisse.</li>
-</ul>
+<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
+Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir, <strong>à la fois</strong> :</p>
+</li>
+<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus ; par exemple, avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
+<li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
+<li><p>Accéder au contenu supplémentaire jusqu&#39;à ce que le survol ou le focus soit retiré du déclencheur, que l&#39;utilisateur le fasse disparaître ou les informations ne soient plus valides (pas de temporisation).</p>
 </li>
 <li><p>Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.</p>
 </li>
 </ol>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
+donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
 <p><strong>Exemple&nbsp;:</strong> un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
@@ -1367,6 +1505,7 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <p>Chaque libellé (ou instructions) doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
 L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) dans cet ordre de préférence.</p>
+<p>L&#39;attribut <code>autocompleted</code> doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <p>S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.</p>
 <p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.</p>
@@ -1375,7 +1514,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <p>Pour les champs obligatoires, ceci doit être précisé dans le <code>label</code> via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.</p>
-<p>Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de saisie.</p>
+<p>Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur et cognitif, les dyslexiques. Cela permet d’éviter les erreurs de saisie et un gain de temps pour tous.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide">
 <img src="images/v_label.jpg" alt="capture d’écran d’un formulaire label proche du champ"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label">
@@ -1384,6 +1523,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <p>Consulter <a href="./exemples/formulaire/index.html">l’exemple de formulaire accessible</a> pour plus d’informations.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a></li>
@@ -1462,7 +1602,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
 <p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplétif, au choix, via :</p>
@@ -1470,6 +1610,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
 <li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
 </ul>
+<p>De plus, le texte de l&#39;étiquette affichée (valeur textuelle ou texte d&#39;image visible à l&#39;écran) pour un composant d&#39;interface (lien, bouton...) doit être présent (en premier, si possible) dans le  de ce composant (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>.</p>
 <p>Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
 <p><strong>Solutions&nbsp;:</strong>  </p>
@@ -1496,6 +1637,7 @@ S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l’action du bouton.</p>
 <p>Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
+<p>Permettre de conserver une cohérence entre le texte visible d&#39;une étiquette et son nom accessible qui lui est restitué aux <abbr>AT</abbr></p>
 <p><strong>Objectif technique&nbsp;:</strong>
 Expliciter les liens et les boutons permet d’améliorer le référencement naturel.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».</p>
@@ -1503,6 +1645,7 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#label-in-name"> 2.5.3 Label in Name</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -1566,20 +1709,21 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l&#39;attention 
-<strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l&#39;attention.<br><strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
 <p><strong>Description&nbsp;:</strong>
-Fournir à l&#39;utilisateur des messages d&#39;état qui lui donnent un retour sur l&#39;action qu&#39;il vient d&#39;effectuer dans son parcours.</p>
+Fournir à l&#39;utilisateur de technologie d&#39;assistance (<abbr>AT</abbr>) des messages d&#39;état qui lui donnent un retour sur l&#39;action qu&#39;il vient d&#39;effectuer dans son parcours sans recevoir le focus.</p>
 <p><strong>À vérifier&nbsp;:</strong>
-   Les messages contextuels doivent être perçus par toute personne utilisant une synthèse vocale sans prise de focus sur le message.</p>
-<p>   Un message d&#39;état ou message contextuel peut être&nbsp;:</p>
+Les informations importantes pour l&#39;utilisateur mais sans changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, sans prise de focus, pas de modification du contenu ou du <span lang="en">viewport<span>) doivent être perçues via des propriétés et roles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
+<p>Un message de statut, d&#39;état ou message contextuel peut être&nbsp;:</p>
 <ul>
-<li>un message qui donne à l&#39;utilisateur une information sur le résultat d&#39;une interaction (ex: Votre demande a bien été pris en compte)</li>
+<li>un message qui donne à l&#39;utilisateur une information sur le résultat ou la réussite d&#39;une action (ex: Votre demande a bien été pris en compte)</li>
 <li>un message d&#39;attente qui indique que l&#39;action déclenchée est en cours d&#39;exécution et qui indique un temps d&#39;attente approximatif</li>
-<li>un message qui donne une information sur un changement de contexte</li>
+<li>un message d&#39;erreur suite à une interaction utilisateur</li>
+<li>un message qui donne une information sans un changement de contexte</li>
 </ul>
+<p>En <abbr>HTML</abbr>, les rôles spécifiques <abbr>ARIA</abbr> de type <code>alert</code>, <code>status</code>, <code>dialog</code>, <code>progressbar</code>, etc. sont les moyens de rendre accessible ces messages de statut (pour aller plus loin <a href="./aria-status.html">Utiliser ARIA pour les messages d&#39;état, de statut ou contextuel&quot;</a>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-    Pour tous les utilisateurs, avoir un feedback sur les actions essentielles qu&#39;il effectue.</p>
+Pour tous les utilisateurs d&#39;<abbr>AT</abbr>, avoir un feedback sur les actions essentielles qu&#39;il effectue.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a></li>
@@ -1893,6 +2037,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 </ul>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong></p>
 <ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
@@ -2086,6 +2231,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 </ul>
 <h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
@@ -2098,17 +2244,17 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.</li>
-<li>Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère, si :<ul>
-<li>le composant graphique est un logo</li>
+<li>Les composants graphiques d’interface utilisateur et les états de l&#39;interface (focus, hover...) doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère :<ul>
+<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés  représentant une mesure (cartes de chaleur)...)</li>
 <li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li>
-<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou de sa fonction</li>
+<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou de sa fonction ou </li>
 </ul>
 </li>
-<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 <li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
+<li>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.</li>
+<li>Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.</li>
+<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
-<p>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.
-Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).</p>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
@@ -2222,6 +2368,7 @@ Préciser également la langue d’un contenu exprimé dans une langue autre que
 <p>Chaque libellé (ou instructions) doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
 L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) dans cet ordre de préférence.</p>
+<p>L&#39;attribut <code>autocompleted</code> doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <p>S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.</p>
 <p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.</p>
@@ -2230,15 +2377,16 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <p>Pour les champs obligatoires, ceci doit être précisé dans le <code>label</code> via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.</p>
-<p>Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de saisie.</p>
+<p>Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur et cognitif, les dyslexiques. Cela permet d’éviter les erreurs de saisie et un gain de temps pour tous.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide">
 <img src="images/v_label.jpg" alt="capture d’écran d’un formulaire label proche du champ"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label">
 <img src="images/nv_label.jpg" alt="capture d’écran d’un formulaire label loin du champ"></p>
 <p><strong>Exemple de formulaire accessible&nbsp;:</strong></p>
 <p>Consulter <a href="./exemples/formulaire/index.html">l’exemple de formulaire accessible</a> pour plus d’informations.</p>
-<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong> </p>
 <ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a></li>
@@ -2349,14 +2497,15 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 <h2 id="14-utiliser-des-tailles-relatives-et-faire-du-web-adaptatif">14. Utiliser des tailles relatives et faire du web adaptatif</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design).</p>
+<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design) sauf si la présentation en 2 dimension est nécessaire pour l&#39;usage ou l&#39;utilisation  (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d&#39;outils...).</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Ne pas utiliser le pixel (<code>px</code>) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).</li>
 <li>Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.</li>
 <li>Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.</li>
 <li>Dans Firefox, faire Affichage&gt;Zoom&gt;Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  </li>
-<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal même lorsque la largeur de la zone d&#39;affichage est réduite à 320 pixels CSS.  </li>
+<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal pour une largeur de la zone d&#39;affichage (<span lang="en">vewport</span>) est réduite à 320 pixels CSS. 
+Note : on peut faire le contraire, viewport à 1280px CSS et on agrandit global (toute la page) à 400%.</li>
 </ul>
 <p><img src="./images/zoom-200.png" alt="capture d’écran réglage du zoom dans Firefox"></p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
@@ -2389,7 +2538,8 @@ Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter 
   }
 </code></pre>
 
-<p>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
+<p>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : 
+<a href="javascript:(function(){document.querySelector(%27body%27).classList.add(%27text-spacing%27);%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27.text-spacing%20*%20{%20line-height:%201.5%20!important;%20letter-spacing:%200.12em%20!important;%20word-spacing:%200.16em%20!important;%20}%20.text-spacing%20p{%20margin-bottom:%202em%20!important;%20}%20%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput[0].appendChild(style);%20})();">Espacement du texte</a> crée par Steve Faulkner.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le confort de lecture.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
@@ -2397,7 +2547,7 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>
 </ul>
 <h2 id="16-rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">16. Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
 <p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplétif, au choix, via :</p>
@@ -2405,10 +2555,11 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
 <li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
 </ul>
+<p>De plus, le texte de l&#39;étiquette affichée (valeur textuelle ou texte d&#39;image visible à l&#39;écran) pour un composant d&#39;interface doit être présent (en premier, si possible) dans le nom accessible de ce composant (pour aller plus loin <a href="./a11y-name.html">Le nom accessible en HTML</a>).</p>
 <p>Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
 <p><strong>Solutions&nbsp;:</strong>  </p>
-<p>Ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.</p>
+<p>Ajouter un <code>span</code> en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance. </p>
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
 &lt;a href="…" title="Valider le paiement en une seule fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
@@ -2431,7 +2582,7 @@ S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:</p>
 <li>un lien doit permettre de changer d’<abbr>URL</abbr>, de page, de télécharger un fichier, de faire apparaître/disparaître du contenu, d’aller à un ancre.</li>
 <li>un bouton doit permettre de soumettre/réinitialiser un formulaire, d’ouvrir une fenêtre modale, de faire apparaître un sous-menu, de piloter un media, de déclencher une action via <abbr>JS</abbr>.</li>
 </ul>
-<p>S’assurer que les liens et les boutons isolés du contenu donnent une bonne information sur l’action déclenchée ou sa destination.</p>
+<p>S’assurer que les liens et les boutons, une fois isolés du contenu, donnent une bonne information sur l’action déclenchée ou sa destination.</p>
 <p>Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l’action du bouton.</p>
@@ -2579,19 +2730,36 @@ En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un 
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.</p>
 <h2 id="25-s-assurer-que-l-utilisateur-garde-le-contr-le-lors-des-interactions">25. S’assurer que l’utilisateur garde le contrôle lors des interactions</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong>
-Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </p>
-<p>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action et doit être en mesure de rallonger un temps imparti pour effectuer une action.</p>
-<p><strong>À vérifier&nbsp;:</strong>
-Si des raccourcis clavier sont disponibles, s&#39;assurer qu&#39;il soit possible de désactiver, modifier ces raccourcis et qu&#39;ils sont activables que lorsque le composant a le focus.</p>
-<p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention, les utilisateurs qui augmentent la taille du pointeur souris, avec des mouvements peu précis et ceux qui utilisent la commande vocales.  </p>
+<p><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong></p>
 <ul>
-<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche <kbd>échap.</kbd>).</li>
-<li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
+<li>Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </li>
+<li>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.</li>
+<li>Si des raccourcis clavier reposant sur un seul caractère (lettre, y compris les lettres majuscules et minuscules, ponctuation, nombre ou symbole) sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
+<li>Laisser le contrôle à l&#39;utilisateur des contenus s&#39;ouvrant au survol ou à la prise de focus (<span lang="en">tooltip</span>, infobulle).</li>
 </ul>
+<p><strong>À vérifier&nbsp;:</strong>  </p>
+<ol>
+<li><p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
+<ul>
+<li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
+<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
+<li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
+</ul>
+</li>
+<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
+Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir, <strong>à la fois</strong> :</p>
+</li>
+<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus ; par exemple, avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
+<li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
+<li><p>Accéder au contenu supplémentaire jusqu&#39;à ce que le survol ou le focus soit retiré du déclencheur, que l&#39;utilisateur le fasse disparaître ou les informations ne soient plus valides (pas de temporisation).</p>
+</li>
+<li><p>Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.</p>
+</li>
+</ol>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
+donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
@@ -2663,23 +2831,38 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
 <h2 id="31-permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">31. Permettre d&#39;annuler le déclenchement des interactions gestuelles</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle, l&#39;action est déclenchée uniquement à la fin de l&#39;interaction de plus l&#39;action n&#39;est pas déclenchée si l&#39;élément déclencheur perd le focus.</p>
+<p><strong>Cible&nbsp;:</strong> Facilite l&#39;annulation pour tous les utilisateurs en cas d&#39;erreur sur la cible.
+Aide les personnes ayant des déficiences visuelles, des limitations cognitives et des déficiences motrices.
+Les personnes incapables de détecter les changements de contexte sont moins susceptibles d&#39;être désorientées lors de la navigation sur un site.
+<strong>Quand&nbsp;:</strong> lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle mono-point, au moins une condition est vraie :</p>
+<ul>
+<li>l&#39;événement descendant du pointeur (<span lang="en">MouseDown</span>) n&#39;est pas utilisé pour effectuer une partie de la fonction</li>
+<li>Pouvoir abandonner ou annuler, la fonction est terminée sur l&#39;événement montant (<span lang="en">MouseDown</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li>
+<li>Pouvoir sur l&#39;événement montant inverser tout résultat de l&#39;événement descendant précédent</li>
+<li>Terminer la fonction sur l&#39;événement est essentiel. Note : les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles. </li>
+</ul>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a></li>
 </ul>
 <h2 id="32-proposer-une-alternative-aux-gestuelles-complexes">32. Proposer une alternative aux gestuelles complexes</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...), une alternative oit exister.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel, de troubles cognitifs ou d&#39;apprentissage et en mobilité. Les utilisateurs qui ne peuvent pas (avec précision) effectuer des gestes complexes avec un pointeur. Les utilisateurs novices qui ignorent souvent la prise en charge de gestes de pointeur complexes. 
+<strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong>  </p>
+<ul>
+<li>Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>...), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).</li>
+<li>De même, pour les interactions nécessitant un changement d&#39;orientation de l&#39;appareil ou un mouvement de l&#39;utilisateur (basculement, rotation, secouement...),  cette fonctionnalité peut être désactivée et doit avoir une alternative dans l&#39;interface.</li>
+</ul>
+<p><strong>Gestuelles complexes</strong>: tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a></li>
 </ul>
 <h2 id="33-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">33. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l&#39;utilisation du contenu (projection, tableau...).</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a></li>
@@ -2688,17 +2871,19 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l&#39;attention 
 <strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
 <p><strong>Description&nbsp;:</strong>
-Fournir à l&#39;utilisateur des messages d&#39;état qui lui donnent un retour sur l&#39;action qu&#39;il vient d&#39;effectuer dans son parcours.</p>
+Fournir à l&#39;utilisateur de technologie d&#39;assistance (<abbr>AT</abbr>) des messages d&#39;état qui lui donnent un retour sur l&#39;action qu&#39;il vient d&#39;effectuer dans son parcours sans recevoir le focus.</p>
 <p><strong>À vérifier&nbsp;:</strong>
-   Les messages contextuels doivent être perçus par toute personne utilisant une synthèse vocale sans prise de focus sur le message.</p>
-<p>   Un message d&#39;état ou message contextuel peut être&nbsp;:</p>
+Les informations importantes pour l&#39;utilisateur mais sans changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, sans prise de focus, pas de modification du contenu ou du <span lang="en">viewport<span>) doivent être perçues via des propriétés et roles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
+<p>Un message de statut, d&#39;état ou message contextuel peut être&nbsp;:</p>
 <ul>
-<li>un message qui donne à l&#39;utilisateur une information sur le résultat d&#39;une interaction (ex: Votre demande a bien été pris en compte)</li>
+<li>un message qui donne à l&#39;utilisateur une information sur le résultat ou la réussite d&#39;une action (ex: Votre demande a bien été pris en compte)</li>
 <li>un message d&#39;attente qui indique que l&#39;action déclenchée est en cours d&#39;exécution et qui indique un temps d&#39;attente approximatif</li>
-<li>un message qui donne une information sur un changement de contexte</li>
+<li>un message d&#39;erreur suite à une interaction utilisateur</li>
+<li>un message qui donne une information sans un changement de contexte</li>
 </ul>
+<p>En <abbr>HTML</abbr>, les rôles spécifiques <abbr>ARIA</abbr> de type <code>alert</code>, <code>status</code>, <code>dialog</code>, <code>progressbar</code>, etc. sont les moyens de rendre accessible ces messages de statut (pour aller plus loin <a href="./aria-status.html">Utiliser ARIA pour les messages d&#39;état, de statut ou contextuel&quot;</a>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-    Pour tous les utilisateurs, avoir un feedback sur les actions essentielles qu&#39;il effectue.</p>
+Pour tous les utilisateurs d&#39;<abbr>AT</abbr>, avoir un feedback sur les actions essentielles qu&#39;il effectue.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a></li>
@@ -2747,13 +2932,13 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
     (Titre 2) La fibre arrive&amp;nbsp;!
         (Titre 3) Êtes-vous éligible&amp;nbsp;?
 </code></pre><h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
 <p>Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors avoir un contraste de couleur de 3:1.</p>
-<p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
+<p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n’est suffisant"></p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
 <li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.</li>
@@ -2768,7 +2953,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 </ul>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
 <h2 id="4-ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">4. Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle…) comme la seule façon de véhiculer de l’information, d’indiquer une action, de solliciter une réponse ou de distinguer un élément. L’information fournie par un changement de couleur ou une information sensorielle doit être complétée par une information textuelle (alternative) ou/et structuration sémantique.</p>
 <p><strong>Exemple valide&nbsp;:</strong>  </p>
 <p><img src="images/couleur-ok.png" alt="illustration utilisant des icônes de couleurs avec des formes différenciées pour transmettre l’information"></p>
@@ -2800,23 +2985,23 @@ Veiller à fournir un niveau de contraste suffisant (cf. <a href="methodes-outil
 <p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
 <img src="images/focus2.png" alt="capture d’écran présentant un comportement personnalisé pour l’affichage du focus"></p>
-<h2 id="7-agrandissement-de-texte-et-adaptation-la-taille-d-affichage">7. Agrandissement de texte et adaptation à la taille d&#39;affichage</h2>
+<h2 id="7-agrandissement-de-texte-et-adaptation-la-taille-d-affichage">7. Agrandissement de texte et adaptation à la taille d’affichage</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors de la conception graphique et principalement lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les réglages du navigateur). À ce niveau de zoom, la présentation de la page peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).</p>
-<p>De plus, il faut s&#39;assurer de faire du contenu web adaptatif (responsive web design) donc prévoir les différents affichages selon des largeurs type d&#39;écran (points de rupture) en amont du développement. </p>
+<p>De plus, il faut s’assurer de faire du contenu web adaptatif (responsive web design) donc prévoir les différents affichages selon des largeurs type d’écran (points de rupture) en amont du développement. </p>
 <p>Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.</p>
 <p><strong>Exemple&nbsp;:</strong><br>La capture ci-dessous montre une page avec un zoom à 100%.<br><img src="images/zoom.png" alt="capture d’écran avec zoom à 100%">    </p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Avec zoom du texte à 200%.<br><img src="images/zoom-ok.png" alt="capture d’écran avec zoom à 200% et texte lisible">    </p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d’écran avec zoom à 200% et texte tronqué">  </p>
-<h2 id="8-permettre-d-a-rer-le-texte">8. Permettre d&#39;aérer le texte</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles et dyslexiques.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
-<p>Même si c&#39;est pendant la phase de développement que l&#39;on va s&#39;assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l&#39;espacement des paragraphes et du texte. Il est couramment admis qu&#39;une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d&#39;obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.</p>
-<p><strong>Description&nbsp;:</strong><br>Si l&#39;utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
+<h2 id="8-permettre-d-a-rer-le-texte">8. Permettre d’aérer le texte</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles et dyslexiques.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
+<p>Même si c’est pendant la phase de développement que l’on va s’assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l’espacement des paragraphes et du texte. Il est couramment admis qu’une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d’obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.</p>
+<p><strong>Description&nbsp;:</strong><br>Si l’utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
 <ul>
 <li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.</li>
-<li>L&#39;espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.</li>
-<li>L&#39;espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.</li>
-<li>L&#39;espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.</li>
+<li>L’espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.</li>
+<li>L’espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.</li>
+<li>L’espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères.</li>
 </ul>
 <p>Pour info les critères cités précédemment reviennent à appliquer les styles CSS suivants au niveau de code : </p>
 <pre><code class="css">
@@ -2841,17 +3026,17 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 <h2 id="10-libell-des-liens-et-des-boutons">10. Libellé des liens et des boutons</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors de la conception graphique.</p>
 <p><strong>Description&nbsp;:</strong><br>Les libellés des liens et des boutons doivent être suffisamment explicites.
-Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technologies d&#39;assistance).</p>
+Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir quand même un libellé explicite qui sera utilisé par la synthèse vocale (et les autres technologies d’assistance).</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>«&nbsp;découvrez nos offres&nbsp;»</p>
 <p><strong>Exemples non-valides&nbsp;:</strong><br>«&nbsp;cliquez ici&nbsp;»<br>«&nbsp;en savoir plus&nbsp;»</p>
 <h2 id="11-permettre-la-navigation-au-clavier">11. Permettre la navigation au clavier</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception du service et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Toutes les fonctionnalités doivent être utilisables à l’aide du clavier uniquement. Le focus doit pouvoir être déplacé sur tous les éléments cliquables (à l’aide de la touche <kbd>Tab</kbd>).<br>Par ailleurs si des fonctionnalités sont spécifiques pour la souris (glisser-déposer, menu apparaissant au clic droit…), faire en sorte que celles-ci soient également disponibles via un autre moyen ailleurs dans l’interface (bouton, icône, menu…). </p>
 <p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
 <p><strong>Exemple&nbsp;:</strong><br>Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» permet d’accéder à un menu pour vider la corbeille, cette option doit être également disponible via un bouton «&nbsp;Vider la corbeille&nbsp;» ailleurs dans l’interface ou depuis un menu déroulant accessible au clavier.</p>
 <h2 id="12-rendre-utilisables-les-formulaires">12. Rendre utilisables les formulaires</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé (ou d&#39;instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l&#39;utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). </p>
+<p><strong>Description&nbsp;:</strong><br>Chaque champ de formulaire doit être accompagné d’un libellé (ou d’instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l’utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile). </p>
 <p>Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label"></p>
@@ -2896,7 +3081,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <p><strong>Exemple non-valide&nbsp;:</strong>  </p>
 <p><img src="images/groupement2.jpg" alt="capture d’écran du site fnac.com">  </p>
 <p>Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.</p>
-<h2 id="16-situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-d-y-acc-der">16. Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</h2>
+<h2 id="16-situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-d-y-acc-der">16. Situer explicitement la page dans le site et fournir plusieurs moyens d’y accéder</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
 <p><strong>Quand&nbsp;:</strong> lors de la conception.</p>
 <p><strong>Description&nbsp;:</strong>
@@ -2908,13 +3093,13 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 <p><strong>Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
 <h2 id="17-viter-les-captcha">17. Éviter les captcha</h2>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
 <ul>
 <li>Double authentification&nbsp;;</li>
 <li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur&nbsp;;</li>
-<li>Mise à disposition d&#39;un support téléphonique afin de s&#39;assurer que le client est une vraie personne&nbsp;;</li>
-<li>Un contrôle permettant de s&#39;assurer qu&#39;une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
+<li>Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne&nbsp;;</li>
+<li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
 <p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;:</p>
 <ul>
@@ -2923,18 +3108,19 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <li>…</li>
 </ul>
 <h2 id="18-d-finir-des-zones-sensibles-de-taille-suffisante">18. Définir des zones sensibles de taille suffisante</h2>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
 Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
 <h2 id="21-proposer-une-alternative-aux-gestuelles-complexes">21. Proposer une alternative aux gestuelles complexes</h2>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
-<h2 id="22-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">22. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
+De même pour les interactions nécessitant un changement d’orientation de l’écran (basculement, rotation, secouement…).</p>
+<h2 id="22-orientation-de-l-cran">22. Orientation de l’écran</h2>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.</p>
+<p><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>L’accès au contenu ne doit pas dépendre de l’orientation de l’écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l’utilisation du contenu (projection, tableau…)</p>
 <h2 id="23-rendre-accessible-les-pistes-audio-ou-vid-o">23. Rendre accessible les pistes audio ou vidéo</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong> </p>
 <p>Pour être accessibles, les contenus multimédias doivent&nbsp;: </p>
 <ol>
@@ -2944,9 +3130,9 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <li>choisir un lecteur média accessible</li>
 <li>proscrire le démarrage automatique de la vidéo au chargement de la page</li>
 <li>proscrire les vidéos qui présentent plus de 3 flashs à la seconde </li>
-<li>par ailleurs, pour tout son émis de plus de 3 secondes, l&#39;utilisateur doit avoir la possibilité soit de l&#39;arrêter ou de le mettre en pause soit d&#39;en contrôler son volume indépendamment du volume général du système.</li>
+<li>par ailleurs, pour tout son émis de plus de 3 secondes, l’utilisateur doit avoir la possibilité soit de l’arrêter ou de le mettre en pause soit d’en contrôler son volume indépendamment du volume général du système.</li>
 </ol>
-<p>Pour plus d&#39;infos consulter <a href="../others/video-audio.html">les recommandations accessibilité pour les contenus vidéos, animations et audios Orange</a>.</p>
+<p>Pour plus d’infos consulter <a href="../others/video-audio.html">les recommandations accessibilité pour les contenus vidéos, animations et audios Orange</a>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.</p>
 <p><strong>Objectif technique&nbsp;:</strong></p>

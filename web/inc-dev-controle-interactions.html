@@ -119,34 +119,36 @@
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention, les utilisateurs qui augmentent la taille du pointeur souris, avec des mouvements peu précis et ceux qui utilisent la commande vocales.  </p>
+<p><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <ul>
 <li>Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </li>
 <li>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.</li>
-<li>Si des raccourcis clavier reposant sur une seule touche sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
-<li>L&#39;utilisateur doit avoir le contrôle des contenus s&#39;ouvrant au survol ou à la prise de focus.</li>
+<li>Si des raccourcis clavier reposant sur un seul caractère (lettre, y compris les lettres majuscules et minuscules, ponctuation, nombre ou symbole) sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
+<li>Laisser le contrôle à l&#39;utilisateur des contenus s&#39;ouvrant au survol ou à la prise de focus (<span lang="en">tooltip</span>, infobulle).</li>
 </ul>
 <p><strong>À vérifier&nbsp;:</strong>  </p>
 <ol>
 <li><p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
 <ul>
 <li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
-<li><strong>modification</strong>: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
+<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
 <li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
 </ul>
 </li>
-<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
-<ul>
-<li><strong>Masquer ce nouveau contenu</strong> sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
-<li><strong>Déplacer le pointeur de la souris</strong> sur ce nouveau contenu sans que celui-ci disparaisse.</li>
-</ul>
+<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
+Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir, <strong>à la fois</strong> :</p>
+</li>
+<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus ; par exemple, avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
+<li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
+<li><p>Accéder au contenu supplémentaire jusqu&#39;à ce que le survol ou le focus soit retiré du déclencheur, que l&#39;utilisateur le fasse disparaître ou les informations ne soient plus valides (pas de temporisation).</p>
 </li>
 <li><p>Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.</p>
 </li>
 </ol>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
+donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
 <p><strong>Exemple&nbsp;:</strong> un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>

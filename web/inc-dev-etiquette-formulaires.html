@@ -126,6 +126,7 @@
 <p>Chaque libellé (ou instructions) doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
 L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) dans cet ordre de préférence.</p>
+<p>L&#39;attribut <code>autocompleted</code> doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <p>S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.</p>
 <p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.</p>
@@ -134,7 +135,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <p>Pour les champs obligatoires, ceci doit être précisé dans le <code>label</code> via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur de synthèse vocale mais aussi de loupe logicielle car il ne sait pas quelles valeurs entrer dans les champs. Pour les utilisateurs de mobiles et les déficients moteurs, cela permet d’activer ou de cliquer plus facilement sur les éléments de formulaire.</p>
-<p>Pour les champs avec auto-complétion, cela permet d’éviter les erreurs de saisie.</p>
+<p>Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur et cognitif, les dyslexiques. Cela permet d’éviter les erreurs de saisie et un gain de temps pour tous.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br><img src="images/formulaire.png" alt="capture d’écran d’un formulaire valide">
 <img src="images/v_label.jpg" alt="capture d’écran d’un formulaire label proche du champ"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br><img src="images/formulaire2.png" alt="capture d’écran d’un formulaire auquel il manque un label">
@@ -143,6 +144,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <p>Consulter <a href="./exemples/formulaire/index.html">l’exemple de formulaire accessible</a> pour plus d’informations.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a></li>

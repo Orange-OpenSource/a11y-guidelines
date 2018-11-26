@@ -237,7 +237,7 @@ func customTraits() {
 <li><strong>isAccessibilityElement</strong>&nbsp;: booléen qui permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité (de <span lang="en">VoiceOver</span> ou autre).</li>
 <li><strong>accessibilityElementsHidden</strong>&nbsp;: booléen qui permet d’indiquer que les éléments fils de l’élément cible sont visibles ou non de l’<abbr>API</abbr> d’accessibilité.</li>
 <li><strong>accessibilityViewIsModal</strong>&nbsp;: booléen qui permet de rendre visible ou non les éléments frères de l’élément cible à l’<abbr>API</abbr> d’accessibilité.
-</br>Très utile pour rendre accessible des <i lang="en">popup custom view</i> par exemple.  </li>
+</br>Une <a href="./criteria-ios-wwdc-18230.html#accessibilityViewIsModal">explication théorique</a> et une <a href="./criteria-ios-wwdc-18230.html#DemoModalView">application pratique</a> de cette propriété sont fournies par une vidéo détaillée dans la partie WWDC de ce site.</li>
 </ul>
 <p>L’attribut <code>accessibilityElement</code> est disponible via l’<i lang="en">interface builder</i> de Xcode mais est également utilisable directement via le code.
 </br>Les deux autres attributs sont utilisables uniquement via le code.</p>
@@ -351,7 +351,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 <p>Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;?
 </br>Plusieurs fonctions du <span lang="en">framework</span> <code>UIKit</code> permettent de connaître les statuts de ces options d&#39;accessibilité.
  </br>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (<strong>UIAccessibilityIsVoiceOverRunning</strong>).
- </br></br>D&#39;autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après.</p>
+ </br></br>D&#39;autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après et une présentation très visuelle de certaines d&#39;entre elles est faite lors d&#39;une vidéo <a href="./criteria-ios-wwdc-18230.html">WWDC 2018</a>.</p>
 <h3 id="exemple">Exemple</h3>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -461,7 +461,12 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 <ul>
 <li><strong>accessibilityFrame</strong>&nbsp;: permet de définir cette zone via un rectangle (<code>CGRect</code>).
 </br>Par défaut pour un élément dérivant de <code>UIView</code>, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.</li>
-<li><strong>accessibilityPath</strong>&nbsp;: équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.</li>
+<li><strong>accessibilityPath</strong>&nbsp;: équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.
+<a name="AccessibilityActivationPoint"></a></li>
+<li><strong>accessibilityActivationPoint</strong>&nbsp;: définit un point de contact au sein de la <code>frame</code> dont l&#39;action résultante sera activée par une sélection classique d&#39;élément via un double tap.
+</br> Par défaut, ce point se trouve au centre de la <code>frame</code> mais on peut le définir n&#39;importe à l&#39;intérieur de cette dernière, l&#39;idée étant de pouvoir activer un élement facilement lors d&#39;un <a href="#ActivationPointExemple">regroupement par exemple</a>.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
+</br> En conservant la valeur par défaut de ce point, on peut aisément se retrouver dans une situation où on active involontairement l&#39;élément situé au milieu de la <code>frame</code> uniquement en activant le regroupement créé.</li>
 </ul>
 <h3 id="exemple">Exemple</h3>
 <p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
@@ -565,14 +570,12 @@ float heightVal;
 </ul>
 <h2 id="grouper-des-l-ments">Grouper des éléments</h2>
 <h3 id="description">Description</h3>
-<p>On peut envisager de grouper des éléments pour vocaliser l&#39;ensemble formé en une seule fois et associer au groupe ainsi créé une action dédiée par exemple.
-</br>Dans ce cas, on va créer une vue qui va englober les éléments impactés puis implémenter une action qui va indiquer l&#39;action à réaliser en cas d&#39;activation de la zone par l&#39;utilisateur.
+<p>On peut envisager de grouper des éléments pour vocaliser en une seule fois l&#39;ensemble formé et associer au groupe ainsi créé une action dédiée par exemple.
 </br>Dès lors, les éléments encapsulés ne doivent plus être considérés comme accessibles car seul leur conteneur doit être perçu comme tel.
-</br></br>Une autre possibilité de groupement d&#39;éléments pourrait utiliser l’attribut <strong>shouldGroupAccessibilityChildren</strong>, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
-</br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
-<h3 id="exemple">Exemple</h3>
+</br></br></p>
+<h3 id="exemple-1">Exemple 1</h3>
 <p>Nous avons un &#39;label&#39; et un &#39;switch control&#39; que nous souhaitons regrouper et traiter d&#39;un seul bloc.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
+</br>Dans ce cas, on va créer une vue qui va englober les éléments impactés puis implémenter une action qui va indiquer l&#39;action à réaliser en cas d&#39;activation de la zone par l&#39;utilisateur.</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 </br>Création de l&#39;élément accessible qui va regrouper les éléments souhaités :</p>
 <pre><code class="objective-c">
 #import "MyViewController.h"
@@ -706,6 +709,67 @@ int indexSwitch = 1;
     }
 }
 </code></pre>
+
+<p><a name="ActivationPointExemple"></a></p>
+<h3 id="exemple-2">Exemple 2</h3>
+<p>Nous avons un &#39;label&#39;, un &#39;switch control&#39; et un bouton que nous souhaitons regrouper en un seul bloc dont l&#39;activation changera automatiquement l&#39;état du &#39;switch control&#39; sans avoir à définir une action comme précédemment.
+</br>L&#39;idée la plus simple consisterait à placer le &#39;switch control&#39; au milieu de la nouvelle <code>frame</code> créée de façon à avoir son <a href="#AccessibilityActivationPoint">accessibilityActivationPoint</a> directement dessus.
+</br>Cela n&#39;étant malheureusement pas toujours possible, il va donc falloir créer un élément accessible qui regroupera tous les objets impactés puis définir son <strong>accessibilityActivationPoint</strong> sur le &#39;switch control&#39;.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" /></p>
+<pre><code class="objective-c">
+@interface ActivationPointViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation ActivationPointViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+
+    CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
+    CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
+
+    elt.accessibilityLabel = @"regroupement d'éléments";
+    elt.accessibilityHint = @"tapez deux fois pour modifier le switch";
+    elt.accessibilityFrameInContainerSpace = a11yEltFrame;
+    elt.accessibilityActivationPoint = [_mySwitch center];
+
+    self.view.accessibilityElements = @[elt];
+}
+@end
+</code></pre><pre><code class="swift">
+    class ActivationPointViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
+
+        elt.accessibilityLabel = "regroupement d'éléments"
+        elt.accessibilityHint = "tapez deux fois pour modifier le switch"
+        elt.accessibilityFrameInContainerSpace = a11yEltFrame
+        elt.accessibilityActivationPoint = mySwitch.center
+
+        self.view.accessibilityElements = [elt]
+    }
+}
+</code></pre>
+
+<p>Une autre possibilité de groupement d&#39;éléments pourrait utiliser l’attribut <strong>shouldGroupAccessibilityChildren</strong>, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
+</br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
 <h3 id="liens">Liens</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
@@ -832,6 +896,7 @@ int indexSwitch = 1;
  }
 </code></pre></li>
 <li>Ne pas oublier d&#39;adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l&#39;utilisation de valeurs dynamiques.</li>
+<li>Penser à adapter le <a href="./criteria-ios-conception.html#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</li>
 </ul>
 <h3 id="liens">Liens</h3>
 <ul>

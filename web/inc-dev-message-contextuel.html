@@ -119,20 +119,21 @@
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l&#39;attention 
-<strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et des troubles de l&#39;attention.<br><strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
 <p><strong>Description&nbsp;:</strong>
-Fournir à l&#39;utilisateur des messages d&#39;état qui lui donnent un retour sur l&#39;action qu&#39;il vient d&#39;effectuer dans son parcours.</p>
+Fournir à l&#39;utilisateur de technologie d&#39;assistance (<abbr>AT</abbr>) des messages d&#39;état qui lui donnent un retour sur l&#39;action qu&#39;il vient d&#39;effectuer dans son parcours sans recevoir le focus.</p>
 <p><strong>À vérifier&nbsp;:</strong>
-   Les messages contextuels doivent être perçus par toute personne utilisant une synthèse vocale sans prise de focus sur le message.</p>
-<p>   Un message d&#39;état ou message contextuel peut être&nbsp;:</p>
+Les informations importantes pour l&#39;utilisateur mais sans changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, sans prise de focus, pas de modification du contenu ou du <span lang="en">viewport<span>) doivent être perçues via des propriétés et roles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
+<p>Un message de statut, d&#39;état ou message contextuel peut être&nbsp;:</p>
 <ul>
-<li>un message qui donne à l&#39;utilisateur une information sur le résultat d&#39;une interaction (ex: Votre demande a bien été pris en compte)</li>
+<li>un message qui donne à l&#39;utilisateur une information sur le résultat ou la réussite d&#39;une action (ex: Votre demande a bien été pris en compte)</li>
 <li>un message d&#39;attente qui indique que l&#39;action déclenchée est en cours d&#39;exécution et qui indique un temps d&#39;attente approximatif</li>
-<li>un message qui donne une information sur un changement de contexte</li>
+<li>un message d&#39;erreur suite à une interaction utilisateur</li>
+<li>un message qui donne une information sans un changement de contexte</li>
 </ul>
+<p>En <abbr>HTML</abbr>, les rôles spécifiques <abbr>ARIA</abbr> de type <code>alert</code>, <code>status</code>, <code>dialog</code>, <code>progressbar</code>, etc. sont les moyens de rendre accessible ces messages de statut (pour aller plus loin <a href="./aria-status.html">Utiliser ARIA pour les messages d&#39;état, de statut ou contextuel&quot;</a>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-    Pour tous les utilisateurs, avoir un feedback sur les actions essentielles qu&#39;il effectue.</p>
+Pour tous les utilisateurs d&#39;<abbr>AT</abbr>, avoir un feedback sur les actions essentielles qu&#39;il effectue.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a></li>

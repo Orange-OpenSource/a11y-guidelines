@@ -119,7 +119,7 @@
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
 <p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplétif, au choix, via :</p>
@@ -127,6 +127,7 @@
 <li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
 <li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
 </ul>
+<p>De plus, le texte de l&#39;étiquette affichée (valeur textuelle ou texte d&#39;image visible à l&#39;écran) pour un composant d&#39;interface (lien, bouton...) doit être présent (en premier, si possible) dans le  de ce composant (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>.</p>
 <p>Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
 <p><strong>Solutions&nbsp;:</strong>  </p>
@@ -153,6 +154,7 @@ S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l’action du bouton.</p>
 <p>Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
+<p>Permettre de conserver une cohérence entre le texte visible d&#39;une étiquette et son nom accessible qui lui est restitué aux <abbr>AT</abbr></p>
 <p><strong>Objectif technique&nbsp;:</strong>
 Expliciter les liens et les boutons permet d’améliorer le référencement naturel.</p>
 <p><strong>Exemple valide&nbsp;:</strong><br>Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbsp;: «&nbsp;commander votre téléphone&nbsp;».</p>
@@ -160,6 +162,7 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#label-in-name"> 2.5.3 Label in Name</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

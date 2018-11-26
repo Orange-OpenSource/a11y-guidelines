@@ -224,7 +224,8 @@ func customTraits() {
 <ul>
 <li><strong>isAccessibilityElement</strong>&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
 <li><strong>accessibilityElementsHidden</strong>&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
-<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>. Very useful for making accessible custom popup views for example.</li>
+<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>.
+</br>A <a href="./dev-ios-wwdc-18230.html#accessibilityViewIsModal">theoretical explanation</a> and a <a href="./dev-ios-wwdc-18230.html#DemoModalView">practical example</a> are provided in a video detailed in the WWDC part.</li>
 </ul>
 <p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.</p>
 <h3 id="example">Example</h3>
@@ -337,7 +338,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 <h3 id="description">Description</h3>
 <p>On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the <code>UIKit</code> framework.
 </br>The most useful method is <strong>UIAccessibilityIsVoiceOverRunning</strong> which allows to know whether VoiceOver is activated.
-</br></br>Many other methods are available in the links hereafter.</p>
+</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a <a href="./dev-ios-wwdc-18230.html">WWDC video</a>.</p>
 <h3 id="exemple">Exemple</h3>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -448,7 +449,13 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 <ul>
 <li><strong>accessibilityFrame</strong>&nbsp;: sets the area via a rectangle (<code>CGRect</code>).
 </br>Usually, for an element inheriting from <code>UIView</code>, this area is the «&nbsp;visible&nbsp;» part of the view.</li>
-<li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.</li>
+<li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.
+<a name="AccessibilityActivationPoint"></a></li>
+<li><strong>accessibilityActivationPoint</strong>&nbsp;: defines a contact point inside the <code>frame</code> whose action will be fired by a double-tap element activation.
+</br>The default value is the midpoint of the <code>frame</code> but it can be redefine anywhere inside.
+</br>A classical use case could be an easy activation inside a <a href="#ActivationPointExemple">regroupment of elements</a> for instance.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
+</br>By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.</li>
 </ul>
 <h3 id="example">Example</h3>
 <p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
@@ -552,13 +559,11 @@ float heightVal;
 </ul>
 <h2 id="grouping-elements">Grouping elements</h2>
 <h3 id="description">Description</h3>
-<p>Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.
-</br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
-</br></br>Another grouping elements case could use the <strong>shouldGroupAccessibilityChildren</strong> attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
-</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).</p>
-<h3 id="example">Example</h3>
+<p>Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.</br></br></p>
+<h3 id="example-1">Example 1</h3>
 <p>We wish to obtain a &#39;label&#39; and a &#39;switch control&#39; as one unique block behaving like a <code>switch control</code>.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements.png" />
+</br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 </br>Create your wrapper as an accessible element :</p>
 <pre><code class="objective-c">
 #import "MyViewController.h"
@@ -693,6 +698,68 @@ int indexSwitch = 1;
     }
 }
 </code></pre>
+
+<p><a name="ActivationPointExemple"></a></p>
+<h3 id="example-2">Example 2</h3>
+<p>We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.
+</br>The easiest way would be to place the switch control in the middle of the created frame in order to locate its <a href="#AccessibilityActivationPoint">accessibilityActivationPoint</a> directly on it.
+</br>Unfortunately, that&#39;s not always possible.
+</br></br>A new accessible element must then be created to gather all the desired objects and its <strong>accessibilityActivationPoint</strong> has to be defined on the switch control.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" /></p>
+<pre><code class="objective-c">
+@interface ActivationPointViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@property (weak, nonatomic) IBOutlet UILabel * myLabel;
+@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+@end
+
+
+@implementation ActivationPointViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+
+    CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
+    CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
+
+    elt.accessibilityLabel = @"regrouping elements";
+    elt.accessibilityHint = @"double tap to change the switch control status";
+    elt.accessibilityFrameInContainerSpace = a11yEltFrame;
+    elt.accessibilityActivationPoint = [_mySwitch center];
+
+    self.view.accessibilityElements = @[elt];
+}
+@end
+</code></pre><pre><code class="swift">
+    class ActivationPointViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var mySwitch: UISwitch!
+
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
+
+        elt.accessibilityLabel = "regrouping elements"
+        elt.accessibilityHint = "double tap to change the switch control status"
+        elt.accessibilityFrameInContainerSpace = a11yEltFrame
+        elt.accessibilityActivationPoint = mySwitch.center
+
+        self.view.accessibilityElements = [elt]
+    }
+}
+</code></pre>
+
+<p>Another grouping elements case could use the <strong>shouldGroupAccessibilityChildren</strong> attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
+</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).</p>
 <h3 id="links">Links</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
@@ -816,6 +883,7 @@ int indexSwitch = 1;
  }
 </code></pre></li>
 <li>Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.</li>
+<li>Don&#39;t forget to adapt the <a href="./criteria-ios.html#colours">color contrast</a> to the text size.</li>
 </ul>
 <h3 id="links">Links</h3>
 <ul>

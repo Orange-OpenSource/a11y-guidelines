@@ -121,14 +121,15 @@
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design).</p>
+<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>) permettant l’agrandissement du texte seul de 200%. Globalement faire une interface web adaptative (responsive web design) sauf si la présentation en deux dimensions est nécessaire pour l&#39;usage ou l&#39;utilisation (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d&#39;outils...).</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Ne pas utiliser le pixel (<code>px</code>) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).</li>
 <li>Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.</li>
 <li>Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.</li>
 <li>Dans Firefox, faire Affichage&gt;Zoom&gt;Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  </li>
-<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal même lorsque la largeur de la zone d&#39;affichage est réduite à 320 pixels CSS.  </li>
+<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable (sauf besoin particulier: carte, tableau, diagramme...) sans scroll horizontal même pour une largeur de la zone d&#39;affichage (<span lang="en">vewport</span>) réduite à 320 pixels CSS. 
+Note : 320 pixels CSS est équivalent à un viewport à 1280px CSS avec un zoom global (toute la page) à 400%.</li>
 </ul>
 <p><img src="./images/zoom-200.png" alt="capture d’écran réglage du zoom dans Firefox"></p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
