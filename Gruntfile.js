@@ -1,4 +1,8 @@
 module.exports = function(grunt) {
+    grunt.config('baseUrl', (function(){      
+      return grunt.option('baseUrl') || '';
+  })());
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -72,7 +76,7 @@ module.exports = function(grunt) {
               manifest: 'home/manifest.json',
               dest: 'home/output/html',
               theme: 'home/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },
           home_EN: {
@@ -81,7 +85,7 @@ module.exports = function(grunt) {
               manifest: 'home_EN/manifest.json',
               dest: 'home_EN/output/html',
               theme: 'home_EN/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },          
           web: {
@@ -90,7 +94,7 @@ module.exports = function(grunt) {
               manifest: 'web/manifest.json',
               dest: 'web/output/html',
               theme: 'web/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },
           web_EN: {
@@ -99,7 +103,7 @@ module.exports = function(grunt) {
               manifest: 'web_EN/manifest.json',
               dest: 'web_EN/output/html',
               theme: 'web_EN/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },
           mobile: {
@@ -108,7 +112,7 @@ module.exports = function(grunt) {
               manifest: 'mobile/manifest.json',
               dest: 'mobile/output/html',
               theme: 'mobile/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },
           mobile_EN: {
@@ -117,7 +121,7 @@ module.exports = function(grunt) {
               manifest: 'mobile_EN/manifest.json',
               dest: 'mobile_EN/output/html',
               theme: 'mobile_EN/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },
           others: {
@@ -126,7 +130,7 @@ module.exports = function(grunt) {
               manifest: 'others/manifest.json',
               dest: 'others/output/html',
               theme: 'others/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           },
           others_EN: {
@@ -135,7 +139,7 @@ module.exports = function(grunt) {
               manifest: 'others_EN/manifest.json',
               dest: 'others_EN/output/html',
               theme: 'others_EN/theme/default',
-              baseUrl: ''
+              baseUrl: grunt.config('baseUrl')
             }
           }
         },         
