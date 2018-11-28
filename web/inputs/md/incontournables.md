@@ -275,10 +275,10 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 </section>
 <aside id="filter" class="col-md-4">
 <h2>Filtres</h2>
-<h3>Outils</h3>
-<ul id="types" class="list-unstyled"></ul>
 <h3>Profils</h3>
 <ul id="profils" class="list-unstyled"></ul>
+<h3>Outils</h3>
+<ul id="types" class="list-unstyled"></ul>
 </aside>
 </div>
 </div>

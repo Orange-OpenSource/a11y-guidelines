@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
-	function encode(str){
+	// function encode(str){
 
-		str=str.replace(/[\x26\x0A\<>'"^]/gi, function(r){return"&#"+r.charCodeAt(0)+";"});
-		str=str.replace(/\&#60;code\&#62;([\s\S]*?)\&#60;\/code\&#62;/g, '<code>$1</code>'); 
+		// str=str.replace(/[\x26\x0A\<>'"^]/gi, function(r){return"&#"+r.charCodeAt(0)+";"});
+		// str=str.replace(/\&#60;code\&#62;([\s\S]*?)\&#60;\/code\&#62;/g, '<code>$1</code>'); 
 
-		return str;
-	}
+		// return str;
+	// }
 	
 	function delDoublon(arrCond, inputId){
 		for (let condition of arrCond) {
@@ -48,22 +48,19 @@ fetch('json/tests-web.json').then(response => {
 		htmlrefTests += '<div class="card-block"><div class="row">';
 		htmlrefTests += '<div class="col-lg-6"><h4>Procédures</h4><ol>';
 		for (let j in data[i].tests) {
-			dataEncode = encode(data[i].tests[j]);
-			htmlrefTests += '<li>' + dataEncode + '</li> ';
+			htmlrefTests += '<li>' + data[i].tests[j] + '</li> ';
 		}
 		htmlrefTests += '</ol></div>';
 		htmlrefTests += '<div class="col-lg-6"><h4>A vérifier</h4><ol>';
 		for (let j in data[i].verifier) {
-			dataEncode= encode(data[i].verifier[j]);
-			htmlrefTests += '<li>' +  dataEncode + '</li> ';
+			htmlrefTests += '<li>' +  data[i].verifier[j] + '</li> ';
 		}
 		htmlrefTests += '</ol></div>';
 		htmlrefTests += '</div>';
 		htmlrefTests += '<div class="row">';
 		htmlrefTests += '<div class="col-lg-12"><h4>Résultats</h4><ol>';
 		for (let j in data[i].resultat) {
-			dataEncode = encode(data[i].resultat[j]);
-			htmlrefTests += '<li>' + dataEncode + '</li> ';
+			htmlrefTests += '<li>' + data[i].resultat[j] + '</li> ';
 		}
 		htmlrefTests += '</ol></div>';
 		htmlrefTests += '</div>';

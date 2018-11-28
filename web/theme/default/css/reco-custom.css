@@ -63,6 +63,7 @@
 }
 
 /* Custom css pour onglet TESTEURS */
+#refTests {border-right: solid #ccc 1px;}
 #refTests h2::before, #refTests h3::before, #refTests h4::before, #refTests h5::before, #refTests h6::before {content:none;}
 #refTests h2{margin:1rem 0;}
 #refTests h3{font-size: 1rem; margin:0.2rem 0;}
