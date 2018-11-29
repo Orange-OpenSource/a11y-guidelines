@@ -33,53 +33,42 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 
 ## Gestes de bases
 <ul class="list-gesture">
- <li class="clearfix">
-    <img src="./images/gesture1.png" alt="" width="80">    
-    <h3>Se déplacer avec un doigt sur l’écran</h3>
-    <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
-  </li>
-  <li class="clearfix">  
-    <img src="./images/gesture2.png" alt="" width="80">
-    <h3>Double-cliquer n’importe où sur l’écran</h3>
-    <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
-  </li>
-<li class="clearfix">
-      <img src="./images/gesture9_1.png" alt="" width="80">
-      <img src="./images/gesture9_2.png" alt="" width="80">  
-      <h3><span lang="en">Slide</span> vers le haut ou le bas en utilisant trois doigts</h3>
-    <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un <span lang="en">slide</span> vertical.</p></br></br>
-  </li>
   <li class="clearfix">
-      <img src="./images/gesture10_1.png" alt="" width="80">
-      <img src="./images/gesture10_2.png" alt="" width="80">  
-      <h3><span lang="en">Slide</span> vers la gauche ou la droite  en utilisant trois doigts</h3>
-      <p>Changer de page ou d’écran quand c’est possible. Correspond à un <span lang="en">slide</span> horizontal.</p>
-  </li>
+      <img src="./images/gesture1.png" alt="" width="200">    
+      <h3>Se déplacer avec un doigt sur l’écran</h3>
+      <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
+  </li></br></br>
+  <li class="clearfix">
+      <img src="./images/gesture2.png" alt="" width="150">    
+      <h3>Double-cliquer n’importe où sur l’écran</h3>
+      <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
+  </li></br></br>
+    <li class="clearfix">
+      <img src="./images/gesture9_1.png" alt="" width="170">
+      <img src="./images/gesture9_2.png" alt="" width="170">  
+      <h3>Balayer vers le haut ou le bas en utilisant trois doigts</h3>
+      <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un balayage vertical.</p></br></br>
+  </li></br>
+  <li class="clearfix">
+      <img src="./images/gesture10_1.png" alt="" width="200">
+      <img src="./images/gesture10_2.png" alt="" width="220">  
+      <h3>Balayer vers la gauche ou la droite en utilisant trois doigts</h3>
+      <p>Changer de page ou d’écran quand c’est possible. Correspond à un balayage horizontal.</p>
+  </li></br>
   <li class="clearfix">    
-      <img src="./images/gesture5.png" alt="" width="80">  
-      <h3><span lang="en">Slide</span> vers la droite en utilisant un doigt</h3>
-      <p>Déplacer le focus <span lang="en">VoiceOver</span> sur le prochain élément.</p>
-  </li>
-  <li class="clearfix">
-      <img src="./images/gesture6.png" alt="" width="80">  
-      <h3><span lang="en">Slide</span> vers la gauche en utilisant un doigt</h3>
-      <p>Déplacer le focus <span lang="en">VoiceOver</span> sur l’élément précédent.</p>
-  </li>
+      <img src="./images/gesture5.png" alt="" width="200">
+      <img src="./images/gesture6.png" alt="" width="210">
+      <h3>Balayer vers la gauche (resp. droite) en utilisant un doigt</h3>
+      <p>Déplacer le focus <span lang="en">VoiceOver</span> sur le prochain (resp. précédent) élément.</p>
+  </li></br>
   <li class="clearfix">   
-      <img src="./images/gesture7.png" alt="" width="80">    
-      <h3><span lang="en">Slide</span> vers le haut en utilisant un doigt</h3>
-      <p>Permet d’augmenter la valeur d’un élément ajustable.</p>
+      <img src="./images/gesture7.png" alt="" width="200">    
+      <img src="./images/gesture8.png" alt="" width="220"> 
+      <h3>Balayer vers le haut (resp. bas) en utilisant un doigt</h3>
+      <p>Permet d’augmenter (resp. diminuer) la valeur d’un élément ajustable.</p>
   </li>
-  <li class="clearfix">
-      <img src="./images/gesture8.png" alt="" width="80">    
-      <h3><span lang="en">Slide</span> vers le bas en utilisant un doigt</h3>
-      <p>Permet de diminuer la valeur d’un élément ajustable.</p>
-  </li>
-</ul>  
-
-<span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span>
-
-Pour plus d’informations sur <span lang="en">VoiceOver</span> et une description détaillée des fonctionnalités qu’il propose, nous vous invitons à lire la [documentation officielle d’Apple sur <span lang="en">VoiceOver</span>](https://help.apple.com/iphone/9/#/iph3e2e415f).  
+</ul>
+ 
 
 ## iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" />
 L'arrivée sur le marché de ce terminal avec iOS11 a quelque peu bouleversé la gestuelle classique dont on avait l'habitude à cause de l'absence de bouton principal.
