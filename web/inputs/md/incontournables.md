@@ -14,6 +14,12 @@
             "onExpand": function () {
                 $("#incontournables-developpeurs-tab").tab("show");
             }
+        },
+        {
+            "label":"Testeurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-testeurs h2", "className": "menuitem-test",
+            "onExpand": function () {
+                $("#incontournables-testeurs-tab").tab("show");
+            }
         }
     ]);
     $("#incontournables-concepteurs-tab").on("click", function() {
@@ -21,6 +27,9 @@
     })
     $("#incontournables-developpeurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-development"));
+    })
+	$("#incontournables-testeurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-test"));
     })
     if (window.location.hash == "#dev") {
         $("#incontournables-developpeurs-tab").trigger("click");
@@ -200,78 +209,11 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 </ul>
 
 </div>
-<div class="tab-pane show active" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
+<div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
 <div class="row">
 <section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
 <h2 id="test-contenu-textuel">Contenu textuel</h2>
-<article class="">
-<div class="card-header" role="tab" id="headingOne">
-	<h3 id="donner-un-titre-aux-pages"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Donner un titre aux pages</a></h3>
-</div>
-	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-	<div class="card-block">
-				<div class="row">
-						<div class="col-lg-6">
-							<h4>Procédures</h4>
-							<ol>
-								<li>Lancer l'inspecteur de code du navigateur</li>
-								<li>Examiner le titre de page <code>&lt;title&gt;[title]&lt;/title&gt;</code></li>
-							</ol>
-						</div>
-						<div class="col-lg-6">
-							<h4>A vérifier</h4>
-							<ol>
-								<li>Vérifier que le titre de page est renseigné</li>
-								<li>Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page</li>
-							</ol>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<h4>Résultats</h4>
-							<ol>
-								<li>Chaque page possède un titre unique et descriptif</li>
-							</ol>
-						</div>
-					</div>
-					<div class="card-footer text-muted"> AA <i class="fa fa-tag" aria-hidden="true"></i>Test manuel - inspecteur de code</div> 
-				</div>
-	</div>
-</article>
-<article class="">
-<div class="card-header" role="tab" id="headingOne">
-	<h3 id="donner-un-titre-aux-rubriques"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Donner des titres aux rubriques</a></h3>
-</div>
-	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-	<div class="card-block">
-				<div class="row">
-						<div class="col-lg-6">
-							<h4>Procédures</h4>
-							<ol>
-								<li>Lancer l'inspecteur de code du navigateur</li>
-								<li>Examiner le titre de page <code>&lt;title&gt;[title]&lt;/title&gt;</code></li>
-							</ol>
-						</div>
-						<div class="col-lg-6">
-							<h4>A vérifier</h4>
-							<ol>
-								<li>Vérifier que le titre de page est renseigné</li>
-								<li>Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page</li>
-							</ol>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<h4>Résultats</h4>
-							<ol>
-								<li>Chaque page possède un titre unique et descriptif</li>
-							</ol>
-						</div>
-					</div>
-					<div class="card-footer text-muted"> AA <i class="fa fa-tag" aria-hidden="true"></i>Test manuel - inspecteur de code</div> 
-				</div>
-	</div>
-</article>
+<h2 id="test-contenu-non-textuel">Contenu non-textuel</h2>
 </section>
 <aside id="filter" class="col-md-4">
 <h2>Filtres</h2>

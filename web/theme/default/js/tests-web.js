@@ -7,6 +7,13 @@ $(document).ready(function () {
 
 		// return str;
 	// }
+
+	function formatHeading(str){
+		str = str.toLowerCase();
+		str = str.replace(" ","-");
+	
+		return str;
+	}
 	
 	function delDoublon(arrCond, inputId){
 		for (let condition of arrCond) {
@@ -40,7 +47,7 @@ fetch('json/tests-web.json').then(response => {
 	  for (let i in data) {
 		if(headingTheme!=data[i].themes){
 			headingTheme=data[i].themes;
-			htmlrefTests +='<h2>'+data[i].themes+'</h2>';
+			htmlrefTests +='<h2 id="test-'+formatHeading(data[i].themes)+'">'+data[i].themes+'</h2>';
 		}
 		htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">' + data[i].title + '</a></h3>';
 		
@@ -80,7 +87,7 @@ fetch('json/tests-web.json').then(response => {
 	  }
 
 		  // Affichage de l'ensemble des lignes en HTML
-		  elrefTests.innerHTML = htmlrefTests;
+		  data.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">Aucun résultat ne correspond à votre sélection</div>' : elrefTests.innerHTML = htmlrefTests;
 
 		};
 		
@@ -112,6 +119,7 @@ fetch('json/tests-web.json').then(response => {
 			  }
 
 			  let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
+			  uniqueTypes.sort();
 			  let htmlTypes = '';
 
 			  let uniqueProfils = profils.filter( (value, index, self) => self.indexOf(value) === index );
@@ -129,8 +137,7 @@ fetch('json/tests-web.json').then(response => {
 			  elProfils.innerHTML = htmlProfils;
 		};
 		
-		
-		
+
 		// Retourne les tests filtrés
 		this.FilterByType = function() {
 		

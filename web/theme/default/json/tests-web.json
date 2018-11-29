@@ -3,7 +3,7 @@
     "themes": "Contenu textuel",
     "title": "Donner un titre aux pages",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
@@ -19,7 +19,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -42,13 +42,13 @@
     ],
     "exception": "Ne pas tenir compte des titres masqués (visibility:hidden ou display:none) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaitre, il faut refaire les observations sur la nouvelle structuration du titrage.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
     "title": "Respecter la sémantique HTML",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Désactiver les styles de pages : Sous Firefox > Affichage > Style de la page > Aucun style",
@@ -72,7 +72,7 @@
     "themes": "Contenu textuel",
     "title": "Respecter la sémantique HTML / liste",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
 		"Désactiver les styles de pages : Sous Firefox > Affichage > Style de la page > Aucun style",
@@ -117,7 +117,7 @@
     "themes": "Contenu textuel",
     "title": "Indiquer la langue principale et les changements de langue / langue principale",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
@@ -133,13 +133,13 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
     "title": "Indiquer la langue principale et les changements de langue / changement de langue",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
@@ -159,7 +159,7 @@
     "themes": "Contenu textuel",
     "title": "Structurer les tableaux de données",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
@@ -214,7 +214,7 @@
     "themes": "Contenu non-textuel",
     "title": "Fournir un équivalent textuel pour les images et les cadres / background",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
 		"Désactiver les styles de pages<br/>Sous Firefox > Affichage > Style de la page > Aucun style"
@@ -233,7 +233,7 @@
     "themes": "Contenu non-textuel",
     "title": "Fournir un équivalent textuel pour les images et les cadres / alternatives aux images",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
@@ -256,13 +256,13 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
     "title": "Fournir un équivalent textuel pour les images et les cadres / alternatives aux cadres",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
@@ -295,7 +295,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -314,7 +314,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -335,7 +335,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -354,7 +354,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -362,12 +362,20 @@
     "type": [
       "Test manuel"
     ],
-    "tests": "",
-    "verifier": "",
-    "resultat": "",
+    "tests": [
+      "Examiner le captcha"
+    ],
+    "verifier": 
+	[
+      "Vérifier que pour tout captcha uniquement visuel ou sonore, un alternative ci-dessous est proposée en complément : <ul><li>captcha audio + visuel</li><li>des tests logiques (question dont la réponse est évidente, test mathématique simple…)</li><li>Il existe une autre solution d’accès à la fonctionnalité sécurisée par le CAPTCHA</li></ul>"
+    ]
+	,
+    "resultat": [
+      "La page propose une combinaison ci-dessous : <ul><li>captcha audio + visuel</li><li>captcha audio ou visuel + des tests logiques (question dont la réponse est évidente, test mathématique simple…)</li></ul>"
+    ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -386,7 +394,7 @@
     ],
     "exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -403,9 +411,9 @@
     "resultat": [
       "Présence de textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs suffisamment contrastés"
     ],
-    "exception": "Sont exclus du périmètre  : <br/>- les logos<br/>- si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique<br/>- si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction<br/>- les composants inactifs",
+    "exception": "Sont exclus du périmètre  : <ul><li>les logos</li><li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li>si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -425,7 +433,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -444,13 +452,13 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
     "title": "Rendre les intitulés des liens et des boutons compréhensibles hors contexte / libellés identiques",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
@@ -465,13 +473,13 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
     "title": "Rendre les intitulés des liens et des boutons compréhensibles hors contexte / libellés",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
@@ -493,7 +501,7 @@
     "themes": "Navigation générale",
     "title": "Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
@@ -509,7 +517,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -528,7 +536,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -585,14 +593,14 @@
       "Identifier si l'utilisateur doit compléter un formulaire ou réaliser des actions dans un temps limités."
     ],
     "verifier": [
-		"Vérifier que l'une des actions ci-dessous est possible : <br/>1.1 désactiver le timeout<br/>1.2 augmenter la limite de temps"
+		"Vérifier que l'une des actions ci-dessous est possible : <ul><li>1.1 désactiver le timeout</li><li>augmenter la limite de temps</li><ul>"
 	],
     "resultat": [
       "L'utilisateur peut désactiver, ou augmenter la durée du timeout"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -603,7 +611,7 @@
     "tests": [
       "Identifier si des raccourcis reposant sur une seule touche sont proposés par l'application"
     ],
-    "verifier": ["Vérifier que les raccourcis clavier reposant sur une seule touche répondent à une des conditions ci-dessous : <br/>1.1 les raccourcis peuvent être désactivés par l'utilisateur<br/>1.2 les raccourcis peuvent être modifiés, avec la possibilité d'ajouter 1 ou plusieurs caractères à la combinaison<br/>1.3 les raccourcis ne sont actif qu'à la prise de focus sur l'élément"
+    "verifier": ["Vérifier que les raccourcis clavier reposant sur une seule touche répondent à une des conditions ci-dessous : <ul><li>les raccourcis peuvent être désactivés par l'utilisateur</li><li>les raccourcis peuvent être modifiés, avec la possibilité d'ajouter 1 ou plusieurs caractères à la combinaison</li><li>les raccourcis ne sont actif qu'à la prise de focus sur l'élément</li></ul>"
 	],
     "resultat": [
       "Les raccourcis reposant sur une seule touche peuvent être désactivés ou reprogrammés"
@@ -623,14 +631,14 @@
       "Identifier les éléments de navigation et de recherche"
     ],
     "verifier": [
-		"Vérifier qu'au moins 2 des mécanismes listés ci-dessous sont présents sur la page, pour permettre à un utilisateur de se situer au sein d'une arborescence de contenu : <br/>- fournir un menu de navigation principal, présentant la position courante de l'utilisateur<br/>- fournir une table des matières<br/>- fournir un sitemap<br/>- fournir un mécanisme de recherche<br/>- fournir une liste de lien permettant de naviguer à travers tout le site"
+		"Vérifier qu'au moins 2 des mécanismes listés ci-dessous sont présents sur la page, pour permettre à un utilisateur de se situer au sein d'une arborescence de contenu : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur</li><li>fournir une table des matières</li><li>fournir un sitemap</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site</li></ul>"
 	],
     "resultat": [
-		"2 des mécanismes ci-dessous sont présents sur la page: <br/>- fournir un menu de navigation principal, présentant la position courante de l'utilisateur (attention l'information ne doit reposer uniquement sur la couleur)<br/>- fournir un fil d'ariane<br/>- fournir un sitemap,  table des matières<br/>- fournir un mécanisme de recherche<br/>- fournir une liste de lien permettant de naviguer à travers tout le site (en pied de page)"
+		"2 des mécanismes ci-dessous sont présents sur la page : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur (attention l'information ne doit reposer uniquement sur la couleur)</li><li>fournir un fil d'ariane</li><li>fournir un sitemap,  table des matières</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site (en pied de page)</li></ul>"
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -650,7 +658,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -692,7 +700,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -712,7 +720,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -732,7 +740,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -751,7 +759,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur",  "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -773,7 +781,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -793,7 +801,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -812,7 +820,7 @@
     ],
     "exception": "Certains contenus tels des cartes, tableaux de données, jeux, etc…, peuvent nécessiter un scroll à 2 dimensions.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -827,7 +835,7 @@
       "Activer le bookmarklet"
     ],
     "verifier": [
-		"Les espacements sont ajustés selon les critères  : <br/><br/>-  La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.<br/>- L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères.<br/> - L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères.<br/>- L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères",
+		"Les espacements sont ajustés selon les critères : <ul><li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères</li><li>L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères</li><li>L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères</li><li>L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères</li></ul>",
 		"Absence de contenus tronqués ou surperposés"
 	],
     "resultat": [
@@ -835,7 +843,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -857,13 +865,13 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
     "title": "Identifier et conserver la cohérence des regroupements et des différentes régions de la page / landmarks",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Parcourir la page",
@@ -884,7 +892,7 @@
     "themes": "Mise en page",
     "title": "Définir des zones sensibles de taille suffisante",
     "type": [
-      "Test manuel- Inspecteur de code"
+      "Test manuel - Inspecteur de code"
     ],
     "tests": [
       "Parcourir la page  ",
@@ -896,9 +904,9 @@
     "resultat": [
       "Tous les éléments interactifs ont des dimensions qui dépassent 44px par 44px"
     ],
-    "exception": "-  Ancre  / lien interne à la page<br/>- Lien à l'intérieur d'un paragraphe<br/>- Lien à l'intérieur d'une phrase<br/>- Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase.<br/>- Un icone cliquable à l'intérieur d'une phrase ou d'un paragraphe",
+    "exception": "<ul><li>Ancre / lien interne à la page</li><li>Lien à l'intérieur d'un paragraphe</li><li>Lien à l'intérieur d'une phrase</li><li>Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase</li><li>Un icone cliquable à l'intérieur d'une phrase ou d'un paragraphe</li></ul>",
     "raccourcis": "",
-    "profils": ["Expert Accessibilité"]
+    "profils": ["Concepteur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -910,14 +918,14 @@
       "Lancer aXe"
     ],
     "verifier": [
-		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés.<br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <br/><br/>1.1. Présence d'un élément <code><label></code> correctement lié à son champ<br/>1.2. Présence des attributs <code>title</code> et <code>aria-label</code><br/>1.3. Présence de l'attribut <code>aria-label</code><br/>1.4. Présence de l'attribut <code>title</code>"
+		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés.<br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code><label></code> correctement lié à son champ</li><li>Présence des attributs <code>title</code> et <code>aria-label</code></li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
 	],
     "resultat": [
 		"Présence d'une balise <code>label</code> pour tout champ de formulaire"
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -937,7 +945,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -950,14 +958,14 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que le texte des labels indique le format de données lorsque nécessaire.<br/><br/>Une des solutions ci-dessous est implémentée : <br/>1.1. le format est indiquée directement dans le label<br/>1.2. le format est relié au champs via un attribut <code>aria-describedby</code>"
+		"Vérifier que le texte des labels indique le format de données lorsque nécessaire.<br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>le format est indiquée directement dans le label</li><li>le format est relié au champs via un attribut <code>aria-describedby</code></li></ul>"
 	],
     "resultat": [
       "Présence de formats de saisie"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -970,14 +978,14 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que les champs obligatoires sont identifiables visuellement et programmatiquement  :<br/><br/>1. l'identification visuelle du champ obligatoire ne repose pas uniquement sur la couleur<br/><br/>2. Une des technique ci-dessous est implémentée pour transmettre l'information programmatiquement :<br/><br/>2.1. l'information visuelle est intégrée dans le label. Une alternative texte est disponible pour transmettre l'information.<br/>2.2. présence d'un attribut required<br/>2.3. présence d'un attribut <code>aria-required</code>"
+		"Vérifier que les champs obligatoires sont identifiables visuellement et programmatiquement : <ul><li>l'identification visuelle du champ obligatoire ne repose pas uniquement sur la couleur</li><li>Une des technique ci-dessous est implémentée pour transmettre l'information programmatiquement : <ul><li>l'information visuelle est intégrée dans le label. Une alternative texte est disponible pour transmettre l'information</li><li>présence d'un attribut required</li><li>présence d'un attribut <code>aria-required</code></li></ul></li></ul>"
 	],
     "resultat": [
       "Les champs obligatoire sont identifiables visuellement et programmatiquement"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -990,14 +998,14 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que les champs de même nature sont groupés.<br/><br/>Une des solutions ci-dessous est implémentée : <br/><br/>1. présence d'un fieldset<br/>2. présence d'un attribut role='group' (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs"
+		"Vérifier que les champs de même nature sont groupés.<br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>présence d'un fieldset</li><li>présence d'un attribut role='group' (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs</li></ul>"
 	],
     "resultat": [
       "Les champs de même nature sont groupés"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", "Expert Accessibilité"]
+    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1019,7 +1027,7 @@
     ],
     "exception": [],
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1047,19 +1055,29 @@
   {
     "themes": "Tactile et interactions",
     "title": "Autoriser l'utilisation du zoom",
-    "type": "",
-    "tests": "",
-    "verifier": "",
-    "resultat": "",
+    "type": [
+      "Test manuel - Inspecteur de code",
+	  "aXe"
+    ],
+    "tests": [
+      "Examiner les meta <code>name='viewport'</code> du <code>header</code> de la page",
+	  "Ou utiliser axe (conseillé pour les profils qualifieurs)"
+    ],
+    "verifier": [
+      "Vérifier que pour la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code> n’est pas présent</li><li>Et  le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
+    ],
+    "resultat": [
+      "La page ne contient pas dans la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code></li><li>Et  le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
+    ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Tactile et interactions",
     "title": "Permettre d'annuler le déclenchement des interactions gestuelles",
     "type": [
-      "Test manuelbasé sur le mobile"
+      "Test manuel - Basé sur le mobile"
     ],
     "tests": [
       "Parcourir les éléments interactifs (hyperliens, bouton, input, composants UI), avec la souris"
@@ -1078,7 +1096,7 @@
     "themes": "Tactile et interactions",
     "title": "Permettre d'annuler le déclenchement des interactions gestuelles",
     "type": [
-      "Test manuelbasé sur le mobile"
+      "Test manuel - Basé sur le mobile"
     ],
     "tests": [
       "Parcourir les éléments interactifs  (hyperliens, bouton, input, composants UI) avec le clavier"
@@ -1097,7 +1115,7 @@
     "themes": "Tactile et interactions",
     "title": "Permettre d'annuler le déclenchement des interactions gestuelles",
     "type": [
-      "Test manuelbasé sur le mobile"
+      "Test manuel - Basé sur le mobile"
     ],
     "tests": [
 		"Identifier tout les éléments activables par mono-point (hyperliens, bouton, input, composants UI)",
@@ -1119,7 +1137,7 @@
     "themes": "Tactile et interactions",
     "title": "Proposer une alternative aux gestuelles complexes",
     "type": [
-      "Test manuelbasé sur le mobile"
+      "Test manuel - Basé sur le mobile"
     ],
     "tests": [
       "Parcourir l'application",
@@ -1133,13 +1151,13 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Tactile et interactions",
     "title": "Donner accès au contenu quelle que soit l'orientation de l'écran",
     "type": [
-      "Test manuelbasé sur le mobile"
+      "Test manuel - Basé sur le mobile"
     ],
     "tests": [
       "Consulter le contenu en orientation portrait",
@@ -1151,7 +1169,7 @@
     "resultat": "",
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist de base", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Aides techniques",
@@ -1165,7 +1183,7 @@
     "verifier": [
 		"Vérifier que toutes les fonctionnalités sont disponibles de puis un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables depuis un lecteur d'écran</li></ul>"
 	],
-    "resultat": "",
+    "resultat": "Les principales fonctionnalités sont utilisables depuis un lecteur d'écran.",
     "exception": "",
     "raccourcis": "",
     "profils": ["Expert Accessibilité"]
