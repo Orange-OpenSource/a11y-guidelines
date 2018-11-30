@@ -65,16 +65,20 @@
 /* Custom css pour onglet TESTEURS */
 #refTests {border-right: solid #ccc 1px; position: static;}
 #refTests h3::before, #refTests h4::before, #refTests h5::before, #refTests h6::before {content:none;}
-#refTests h2{margin: 2rem 0 1rem 0;}
-#refTests h2:first-child{margin:2rem 0;}
+#refTests h2{margin:4rem 0 2rem 0;}
+#refTests h2:first-child{margin:2rem 0 2rem 0;}
+
 #refTests h3{font-size: 1rem; margin:0.2rem 0;}
 #refTests .card-header{position: relative; background-color: #fff; border-bottom: 1px solid #ccc; padding: 0 0;}
 #refTests ol {list-style-type: decimal;}
 #refTests ul, #refTests ol {padding-left: 1rem;}
 #refTests ol ul{padding-top: 1rem;}
 
+
+
 #filter h3{margin:0.2rem 0;}
 #filter ul{padding-left:1rem;}
+#filter .disabled {color: #666;}
 
 .accordion .card-header a, .accordion .card-header button {
     position: relative;

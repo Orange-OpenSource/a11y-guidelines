@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+	//appel asynchrone
+	var oReq = new XMLHttpRequest();
+
+	oReq.addEventListener("load", reqListener);
+	oReq.addEventListener("error", reqError);
+	oReq.open('get', 'json/tests-web.json', true);
+	
+	oReq.send();
+
+
 	// function encode(str){
 
 		// str=str.replace(/[\x26\x0A\<>'"^]/gi, function(r){return"&#"+r.charCodeAt(0)+";"});
@@ -8,28 +18,36 @@ $(document).ready(function () {
 		// return str;
 	// }
 
+	
 	function formatHeading(str){
 		str = str.toLowerCase();
-		str = str.replace(" ","-");
+		str = str.replace(/é|è|ê/g,"e");
+		str = str.replace(/ /g,"-");
 	
 		return str;
 	}
 	
 	function delDoublon(arrCond, inputId){
-		for (let condition of arrCond) {
+		for (var i = 0; i < arrCond.length; i++) {
+		//for (let condition of arrCond) {
+			let condition = arrCond[i];
 			if (condition.name == inputId) {
 				let arrCondIndex = arrCond.indexOf(condition);
 				arrCond.splice(arrCondIndex , 1);	
 			}
 		}
-	
 		return arrCond;
 	}
 	
-fetch('json/tests-web.json').then(response => {
-  return response.json();
-}).then(data => {
 
+function reqError(err) {
+   let elrefTests = document.getElementById('refTests');
+   elrefTests.innerHTML = '<div class="alert alert-warning">Erreur chargement ressource JSON</div>';
+}
+	
+function reqListener() {
+	
+	var data = JSON.parse(this.responseText);
 	let refTests = data;
 
 	let app = new function() {
@@ -118,17 +136,31 @@ fetch('json/tests-web.json').then(response => {
 				
 			  }
 
-			  let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
-			  uniqueTypes.sort();
+			  //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
+			  let uniqueTypes = types.filter(function(value, index, self) {
+				return self.indexOf(value) === index;
+				});
+			  
+			  uniqueTypes.sort(function (a, b) {
+				return a.toLowerCase().localeCompare(b.toLowerCase());
+			  });
+			  
 			  let htmlTypes = '';
 
-			  let uniqueProfils = profils.filter( (value, index, self) => self.indexOf(value) === index );
-			  let htmlProfils = '';
-			  
 			  for (let i in uniqueTypes) {
 				htmlTypes += '<li><input type="checkbox" id="type' + i + '" name="types" value="' + uniqueTypes[i] + '"> <label for="type' + i + '">' + uniqueTypes[i] + '</label></li>';
 			  }
 
+			 //let uniqueProfils = profils.filter( (value, index, self) => self.indexOf(value) === index );
+			  let uniqueProfils = profils.filter(function(value, index, self) {
+				return self.indexOf(value) === index;
+				});
+				
+			  let htmlProfils = '';
+			  
+			  //temporaire, pour profil Concepteur
+			  htmlProfils += '<li><input type="radio" id="profilcptr" name="profil" value="" disabled> <label for="profilcptr" class="disabled" >Concepteur (à venir)</label></li>';
+			
 			  for (let i in uniqueProfils) {
 				htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '" '+((uniqueProfils[i] == 'Expert Accessibilité') ? " checked" : " ")+'> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
 			  }
@@ -151,109 +183,115 @@ fetch('json/tests-web.json').then(response => {
 		let self       = this;
 
 
-		  for (let input of checkboxes) {
+		  //for (let input of checkboxes) {
+			for (var i = 0; i < checkboxes.length; i++) {
+				
+				let input = checkboxes[i];
 				 
-			input.addEventListener('click', function() {
+				input.addEventListener('click', function() {
 
-				if ((input.checked && input.name==="profil")){
-						arrProfil = [];
-						arrProfil.push(input.value);		
-				}
-						
-				if (input.name==="types"){
-
-					if (input.checked){
-						arrType.push(input.value);
-						
-					} else  {
-							//on supprime tous les critères non cochés
-							let removeItem = arrType.filter( (e) => e !== input.value );
-							arrType = removeItem;
-					
-							//on supprime également la condition dans le tableau des conditions
-							delDoublon(conditions, input.id);	
+					if ((input.checked && input.name==="profil")){
+							arrProfil = [];
+							arrProfil.push(input.value);		
 					}
-				}
-
-				let indice = arrType.length + arrProfil.length;
-					
-				if (indice > 0) {	
-
-					if (indice == 1) {
-						
-						//on réinitialise les conditions
-						//conditions = [];
-
-						//on ajoute le premier critère
-						if ((arrProfil.length===1)){
-						
-							//on supprime les doublons, nécessaire pour les boutons radio
-							delDoublon(conditions, input.name);
-						
-							conditions.unshift(function(item) { 
-								//return item.profils === arrProfil[0];
-								return item.profils.indexOf(arrProfil[0]) !== -1;								
-							});	
-							//on nomme la fonction, pour les boutons radio on utilise input.name
-							Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
-
-						}
-						if ((input.checked && input.name==="types")){
-							conditions.unshift(function(item) {
-								return item.type.indexOf(arrType[0]) !== -1;
-							});
-							//on nomme la fonction, pour les checkboxes on utilise input.id
-							Object.defineProperty(conditions[0], 'name', {value: input.id, writable: false});	
-						}
-									
-					} else {	
-						
-						//on ajoute le nouveau critère
-						if ((input.checked && input.name==="profil")){
-
-							//on supprime les doublons, nécessaire pour les boutons radio
-							delDoublon(conditions, input.name);
-					
-							conditions.unshift(function(item) {
-								return item.profils.indexOf(arrProfil[0]) !== -1;	
-							});
 							
-							//on nomme la fonction, pour les boutons radio on utilise input.name
-							Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
+					if (input.name==="types"){
 
-						}
-						if ((input.checked && input.name==="types")){
+						if (input.checked){
+							arrType.push(input.value);
 							
-							//on récupere la dernière valeur ajoutée
-							let i = arrType.length - 1;
-							let valeurFiltre = arrType[i];
+						} else  {
+								//on supprime tous les critères non cochés
+								//let removeItem = arrType.filter( (e) => e !== input.value );
+								let removeItem = arrType.filter(function(e) {
+									e !== input.value;
+								});
+								arrType = removeItem;
 						
-							conditions.unshift(function(item) {
-								return item.type.indexOf(valeurFiltre) !== -1;
-							});
-							
-							//on nomme la fonction, pour les checkboxes on utilise input.id
-							Object.defineProperty(conditions[0], 'name', {value: input.id, writable: false});
-
-						}		
+								//on supprime également la condition dans le tableau des conditions
+								delDoublon(conditions, input.id);	
+						}
 					}
 
-					//on applique tous les filtres stockés dans conditions
-					 filteredTest = self.refTests.filter(function(d) {
-						return conditions.every(function(c) {
-							return c(d);
-						});
-					});		
-
-					//on met à jour la page				
-					app.FetchAll(filteredTest);
+					let indice = arrType.length + arrProfil.length;
 						
-			 } else {
-				//aucun critère de sélectionné, on réinitialise la page
-				app.FetchAll(refTests);
-			 }
+					if (indice > 0) {	
 
-			});
+						if (indice == 1) {
+							
+							//on réinitialise les conditions
+							//conditions = [];
+
+							//on ajoute le premier critère
+							if ((arrProfil.length===1)){
+							
+								//on supprime les doublons, nécessaire pour les boutons radio
+								delDoublon(conditions, input.name);
+							
+								conditions.unshift(function(item) { 
+									//return item.profils === arrProfil[0];
+									return item.profils.indexOf(arrProfil[0]) !== -1;								
+								});	
+								//on nomme la fonction, pour les boutons radio on utilise input.name
+								Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
+
+							}
+							if ((input.checked && input.name==="types")){
+								conditions.unshift(function(item) {
+									return item.type.indexOf(arrType[0]) !== -1;
+								});
+								//on nomme la fonction, pour les checkboxes on utilise input.id
+								Object.defineProperty(conditions[0], 'name', {value: input.id, writable: false});	
+							}
+										
+						} else {	
+							
+							//on ajoute le nouveau critère
+							if ((input.checked && input.name==="profil")){
+
+								//on supprime les doublons, nécessaire pour les boutons radio
+								delDoublon(conditions, input.name);
+						
+								conditions.unshift(function(item) {
+									return item.profils.indexOf(arrProfil[0]) !== -1;	
+								});
+								
+								//on nomme la fonction, pour les boutons radio on utilise input.name
+								Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
+
+							}
+							if ((input.checked && input.name==="types")){
+								
+								//on récupere la dernière valeur ajoutée
+								let i = arrType.length - 1;
+								let valeurFiltre = arrType[i];
+							
+								conditions.unshift(function(item) {
+									return item.type.indexOf(valeurFiltre) !== -1;
+								});
+								
+								//on nomme la fonction, pour les checkboxes on utilise input.id
+								Object.defineProperty(conditions[0], 'name', {value: input.id, writable: false});
+
+							}		
+						}
+
+						//on applique tous les filtres stockés dans conditions
+						 filteredTest = self.refTests.filter(function(d) {
+							return conditions.every(function(c) {
+								return c(d);
+							});
+						});		
+
+						//on met à jour la page				
+						app.FetchAll(filteredTest);
+							
+				 } else {
+					//aucun critère de sélectionné, on réinitialise la page
+					app.FetchAll(refTests);
+				 }
+
+				});
 
       }
 
@@ -266,11 +304,7 @@ fetch('json/tests-web.json').then(response => {
 	// Filtrage
 	app.FilterByType();
   
-}).catch(err => {
-  // Do something for an error here
-   let elrefTests = document.getElementById('refTests');
-   elrefTests.innerHTML = '<div class="alert alert-warning">Erreur chargement ressource JSON</div>';
-});
+}
 	
 
 });

@@ -19,7 +19,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -42,7 +42,7 @@
     ],
     "exception": "Ne pas tenir compte des titres masqués (visibility:hidden ou display:none) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaitre, il faut refaire les observations sur la nouvelle structuration du titrage.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -256,7 +256,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -295,7 +295,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -314,7 +314,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -335,7 +335,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -354,7 +354,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -375,7 +375,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -394,7 +394,7 @@
     ],
     "exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -413,7 +413,7 @@
     ],
     "exception": "Sont exclus du périmètre  : <ul><li>les logos</li><li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li>si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -433,7 +433,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -452,7 +452,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -473,7 +473,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -517,7 +517,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -536,7 +536,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -638,7 +638,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -658,7 +658,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -700,7 +700,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -759,7 +759,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur",  "Développeur", "Expert Accessibilité"]
+    "profils": [ "Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -781,7 +781,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -801,7 +801,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -820,7 +820,7 @@
     ],
     "exception": "Certains contenus tels des cartes, tableaux de données, jeux, etc…, peuvent nécessiter un scroll à 2 dimensions.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -865,7 +865,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -906,7 +906,7 @@
     ],
     "exception": "<ul><li>Ancre / lien interne à la page</li><li>Lien à l'intérieur d'un paragraphe</li><li>Lien à l'intérieur d'une phrase</li><li>Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase</li><li>Un icone cliquable à l'intérieur d'une phrase ou d'un paragraphe</li></ul>",
     "raccourcis": "",
-    "profils": ["Concepteur", "Expert Accessibilité"]
+    "profils": ["Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -925,7 +925,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -945,7 +945,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -965,7 +965,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -985,7 +985,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1005,11 +1005,11 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
-    "title": "Détecter, identifier les erreurs et suggérer des corrections / pertinance des messages",
+    "title": "Détecter, identifier les erreurs et suggérer des corrections / pertinence des messages",
     "type": [
       "Test manuel"
     ],
@@ -1027,7 +1027,7 @@
     ],
     "exception": [],
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1151,7 +1151,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Tactile et interactions",
@@ -1169,7 +1169,7 @@
     "resultat": "",
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Concepteur", "Développeur", "Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Aides techniques",
