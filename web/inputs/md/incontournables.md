@@ -4,15 +4,21 @@
     setBreadcrumb([{"label":"Critères WCAG par thème"}]);
     addSubMenu([
         {
-            "label":"Concepteurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
+            "label":"Conception", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
             "onExpand": function () {
                 $("#incontournables-concepteurs-tab").tab("show");
             }
         },
         {
-            "label":"Développeurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
+            "label":"Développement", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
             "onExpand": function () {
                 $("#incontournables-developpeurs-tab").tab("show");
+            }
+        },
+        {
+            "label":"Tests", "url":"", "expanded":false, "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
+            "onExpand": function () {
+                $("#incontournables-testeurs-tab").tab("show");
             }
         }
     ]);
@@ -21,6 +27,9 @@
     })
     $("#incontournables-developpeurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-development"));
+    })
+	$("#incontournables-testeurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-test"));
     })
     if (window.location.hash == "#dev") {
         $("#incontournables-developpeurs-tab").trigger("click");
@@ -35,16 +44,20 @@ La mise en œuvre de ce socle ne permet pas d’obtenir à coup sûr un site acc
 Le respect de la charte Orange appelée la Brand (<span lang="en">Design for digital platforms Guideline</span>), disponible sur [le site de la marque Orange](http://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
-Deux versions sont disponibles&nbsp;
-- **La version concepteurs** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
-- **La version développeurs** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
+Trois versions sont disponibles&nbsp;
+- **La version conception** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
+- **La version développement** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
+- **La version tests** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc.
 
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item">
-<a class="nav-link active" id="incontournables-concepteurs-tab" data-toggle="tab" href="#incontournables-concepteurs" role="tab" aria-controls="incontournables-concepteurs" aria-selected="true">Concepteurs</a>
+<a class="nav-link active" id="incontournables-concepteurs-tab" data-toggle="tab" href="#incontournables-concepteurs" role="tab" aria-controls="incontournables-concepteurs" aria-selected="true">Conception</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développeurs</a>
+<a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développement</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="incontournables-testeurs-tab" data-toggle="tab" href="#incontournables-testeurs" role="tab" aria-controls="incontournables-testeurs" aria-selected="false">Tests</a>
 </li>
 </ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab">
 
@@ -196,6 +209,28 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
     <li>[S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran](inc-dev-lecteur-ecran.html)</li>
 </ul>
 
+</div>
+<div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
+<div class="row">
+<section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+<h2 id="test-contenu-textuel">Contenu textuel</h2>
+<h2 id="test-contenu-non-textuel">Contenu non-textuel</h2>
+<h2 id="test-couleurs-et-contrastes">Couleurs et contrastes</h2>
+<h2 id="test-navigation-generale">Navigation générale</h2>
+<h2 id="test-navigation-clavier">Navigation clavier</h2>
+<h2 id="test-mise-en-page">Mise en page</h2>
+<h2 id="test-formulaires">Formulaires</h2>
+<h2 id="test-tactile-et-interactions">Tactile et interactions</h2>
+<h2 id="test-aides-techniques">Aides techniques</h2>
+</section>
+<aside id="filter" class="col-md-4">
+<h2>Filtres</h2>
+<h3>Profils</h3>
+<ul id="profils" class="list-unstyled"></ul>
+<h3>Outils</h3>
+<ul id="types" class="list-unstyled"></ul>
+</aside>
+</div>
 </div>
 </div>
 
