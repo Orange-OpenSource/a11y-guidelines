@@ -8,26 +8,26 @@
     
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
       <!-- Copyright © 2016 Orange SA. All rights reserved -->
-      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
-      <link rel="stylesheet" href="../boosted/css/boosted.css">
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
       <link rel="stylesheet" href="/css/dark.min.css">
 
       <!-- Styles perso -->
-      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="/css/reco.css">
       <link rel="stylesheet" href="./css/reco-custom.css">
 
-      <script src="./js/jquery.min.js"></script>
-      <script src="./js/jquery.validate.min.js"></script>
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
       <script src="./js/lunr.min.js"></script>
       <script src="./js/lunr.stemmer.support.js"></script>
       <script src="./js/lunr.fr.min.js"></script>      
 
       <!-- Favicons -->
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
       <link rel="icon" href="/images/favicon.ico">            
 </head>
 <body>
@@ -42,7 +42,7 @@
               <span class="icon-menu"></span>
           </button>
 
-              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
                   <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
@@ -334,55 +334,132 @@ Cocher la case « Balises de structure de document pour l&#39;accessibilité ».
 
 <style>h3 {font-size: 1rem;}</style>
 
-<h2 id="introduction">Introduction</h2>
-<p>Des documents Word accessibles sont la garantie que les documents peuvent être lus par tous les utilisateurs. Créer des documents Word accessibles demande de respecter les recommandations suivantes. Cela permet également de produire des documents <abbr>PDF</abbr> accessibles grâce à la fonctionnalité d’export <abbr>PDF</abbr> intégrée à Word. </p>
-<h2 id="recommandations">Recommandations</h2>
-<p>Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.</p>
-<h3 id="1-utiliser-les-styles-nbsp-titre-nbsp-pour-les-titres-et-sous-titres">1. Utiliser les styles «&nbsp;Titre&nbsp;» pour les titres et sous-titres</h3>
-<p>Les titres et sous-titres doivent utiliser les styles «&nbsp;Titre&nbsp;» (Titre 1, Titre 2, etc.) pour structurer le contenu du document et permettre d’y accéder directement.</p>
-<h3 id="2-utiliser-le-style-nbsp-normal-nbsp-pour-les-textes">2. Utiliser le style «&nbsp;Normal&nbsp;» pour les textes</h3>
-<p>Le style «&nbsp;Normal&nbsp;» doit être attribué à tous les textes des paragraphes (style par défaut).</p>
-<h3 id="3-utiliser-des-styles-d-di-s-pour-mettre-en-vidence-certains-contenus">3. Utiliser des styles dédiés pour mettre en évidence certains contenus</h3>
-<p>Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.</p>
-<h3 id="4-ne-pas-ins-rer-de-lignes-vides">4. Ne pas insérer de lignes vides</h3>
-<p>Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option Espacement qui permet de définir l’espace avant et après un paragraphe. 
-Les sauts de page doivent être créés à l’aide des «&nbsp;Sauts&nbsp;» (Insertion&nbsp;&gt; Saut de page, page vierge).</p>
-<h3 id="5-utiliser-les-listes-puces">5. Utiliser les listes à puces</h3>
-<p>Les listes doivent être réalisées en utilisant l’option «&nbsp;Liste à puces&nbsp;» ou «&nbsp;Liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.</p>
-<h3 id="6-utiliser-les-notes-de-bas-de-page">6. Utiliser les notes de bas de page</h3>
-<p>Les options «&nbsp;Notes de bas de page&nbsp;» et «&nbsp;Notes de fin&nbsp;» permettent d’insérer des notes dans votre document.</p>
-<h3 id="7-num-roter-vos-pages">7. Numéroter vos pages</h3>
-<p>L’option «&nbsp;Numéro de page&nbsp;» permet de se repérer dans le document.</p>
-<h3 id="8-utiliser-la-mise-en-page-nbsp-colonnes-nbsp-pour-distribuer-le-texte">8. Utiliser la mise en page «&nbsp;Colonnes&nbsp;»  pour distribuer le texte</h3>
-<p>L’option «&nbsp;Colonnes&nbsp;» de l’onglet Mise en page (et non des tableaux) doit être utilisée pour créer une mise en page sous forme de colonnes.</p>
-<h3 id="9-d-finir-le-point-d-ancrage-des-objets-ins-r-s">9. Définir le point d’ancrage des objets insérés</h3>
-<p>Lors de l’insertion d’objets (image, forme, SmartArt, etc.), il est nécessaire de définir un point d’ancrage&nbsp;: dans les options d’habillage du texte, choisir l’option «&nbsp;Aligné sur le texte&nbsp;» ou «&nbsp;Haut et bas&nbsp;».</p>
-<h3 id="10-viter-les-zones-de-texte">10. Éviter les zones de texte</h3>
-<p>Celles-ci ne sont pas toujours correctement restituées. Les textes peuvent être mis en valeur en ajoutant des bordures à un paragraphe.</p>
-<h3 id="11-s-assurer-que-la-couleur-n-est-pas-le-seul-moyen-utilis-pour-communiquer-l-information">11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information</h3>
-<p>Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…</p>
-<h3 id="12-assurer-un-contraste-suffisant">12. Assurer un contraste suffisant</h3>
-<p>Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&nbsp;:</p>
+<p>Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance. </p>
+<h2 id="langue">Langue</h2>
+<p>Définir la langue principale du document dans le menu : <strong>Fichier &gt; Options &gt; Langue</strong>.</p>
+<p>Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis <strong>Révision &gt; Langue &gt; Définir la langue de vérification</strong>. </p>
+<p><img alt="" src="./images/word_langue_fr.png" class="img-fluid" /> </p>
+<p>Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter. </p>
+<h2 id="attributs-du-fichier">Attributs du fichier</h2>
+<p>Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu <strong>Fichier &gt; Informations</strong>.</p>
+<p>Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.</p>
+<p><img alt="" src="./images/word_attributs_fr.png" class="img-fluid" /> </p>
+<h2 id="titres">Titres</h2>
+<p>Utiliser les styles « Titre » et « Sous-titre » du menu <strong>Accueil</strong> (Titre 1, Titre 2, etc.). </p>
+<p>Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné. </p>
+<p>Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.</p>
+<h2 id="table-des-mati-res">Table des matières</h2>
+<p>Insérer une table des matières via le menu <strong>Références &gt; Table des matières</strong>. </p>
+<p>Cela permet aux utilisateurs de trouver des informations plus aisément dans le document. </p>
+<h2 id="r-daction-des-contenus">Rédaction des contenus</h2>
+<p>Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.</p>
+<p>Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu <strong>Insertion &gt; Symbole</strong> ou les raccourcis clavier ci-dessous.</p>
+<p><img alt="" src="./images/word_table_caracteres_fr.png" class="img-fluid" /> </p>
+<p>Liste des raccourcis clavier :</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lettre</th>
+      <th scope="col">raccourci Windows</th>
+      <th scope="col">raccourci Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">À</th>
+      <td>Alt Gr + ` (touche 7) puis A majuscule</td>
+      <td>Maj lock puis à</td>
+    </tr>
+    <tr>
+      <th scope="row">Ç</th>
+      <td>alt + 128</td>
+      <td>Option + ç</td>
+    </tr>
+    <tr>
+      <th scope="row">È</th>
+      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
+      <td>Maj lock puis è</td>
+    </tr>
+    <tr>
+      <th scope="row">É</th>
+      <td>alt + 144</td>
+      <td>Maj lock puis é</td>
+    </tr>
+    <tr>
+      <th scope="row">Ê</th>
+      <td>^ puis E majuscule </td>
+      <td>^ puis E majuscule</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="mise-en-forme-des-contenus">Mise en forme des contenus</h2>
+<p>Utiliser les styles prédéfinis pour la mise en forme des contenus : le style « Normal » doit être attribué à tous les textes des paragraphes (style par défaut), le style « citation » pour les citations, etc.</p>
+<p>Utiliser une police de caractères sans empattement (extensions qui terminent les extrémités des caractères) comme Arial ou Helvetica, en corps 12 pixels minimum et un espacement entre les caractères normal ou élargi.</p>
+<p>Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majuscule ; limiter l’utilisation de l’italique.</p>
+<p>Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.</p>
+<p><img alt="" src="./images/word_mise_en_forme_fr.png" class="img-fluid" /> </p>
+<p>Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran. </p>
+<p>Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="./images/word_tab_fr.png" />) pour mettre en forme le contenu. </p>
+<p>Utiliser les fonctions Retrait, Espacement : </p>
 <ul>
-<li>4.5:1 pour du texte de taille normale.</li>
-<li>3:1 pour du texte de grande taille.</li>
+<li>Menu <strong>Mise en page &gt; Paragraphe &gt; Retrait</strong> ou <strong>Espacement</strong> ou <strong>Clic droit : « Paragraphe… »</strong></li>
 </ul>
-<p>Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.</p>
-<h3 id="13-d-finir-la-langue">13. Définir la Langue</h3>
-<p>La langue doit être définie dans le menu&nbsp;: Fichier&nbsp;&gt; Options&nbsp;&gt; Langue.<br>Les mots ou groupes de mots qui sont dans une langue étrangère doivent être précisés (menu&nbsp;: Révision&nbsp;&gt; Langue&nbsp;&gt; Définir la langue de vérification).</p>
-<h3 id="14-renseigner-un-texte-de-remplacement-sur-les-images">14. Renseigner un texte de remplacement sur les images</h3>
-<p>Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image&nbsp;&gt; Texte de remplacement&nbsp;&gt; champ Description).<br>Si l’image est purement décorative, le champ Description du texte de remplacement doit être laissé vide.</p>
-<h3 id="15-faire-des-tableaux-simples">15. Faire des tableaux simples</h3>
-<p>Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. </p>
-<h3 id="16-utiliser-le-v-rificateur-int-gr-">16. Utiliser le vérificateur intégré</h3>
-<p>Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier&nbsp;&gt; Vérifier la présence de problèmes&nbsp;&gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d’une grande aide&nbsp;; cependant il ne dispense pas de vérifier et d’appliquer à la main l’ensemble des recommandations ci-dessus. </p>
-<h3 id="17-exporter-le-document-au-format-abbr-pdf-abbr-">17. Exporter le document au format <abbr>PDF</abbr></h3>
-<p>Pour exporter en <abbr>PDF</abbr> il suffit d’aller dans le menu&nbsp;: Fichier&nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier <abbr>PDF</abbr>.<br>À vérifier la première fois&nbsp;: dans les options d’export, la case à cocher «&nbsp;Balises de structure de document pour l’accessibilité&nbsp;» doit être cochée.</p>
-<p>À noter qu’avec Word pour Office 2010, les documents <abbr>PDF</abbr> générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.</p>
-<h3 id="18-ins-rer-une-table-des-mati-res">18. Insérer une table des matières</h3>
-<p>Pour tout document long (&gt;2 pages), penser à insérer une table des matière générée automatiquement, dans le menu&nbsp;: Références&nbsp;&gt; Table des matières.
-Cela permet à tous de se repérer plus facilement et d&#39;aller rapidement au contenu que l&#39;on souhaite lire.</p>
-<p>À noter qu&#39;il faut mettre à jour cette table des matières dès qu&#39;on change la structure du contenu, donc préférer générer la table des matières en fin de rédaction du contenu.</p>
+<p><img alt="" src="./images/word_retrait_fr.png" class="img-fluid" /> </p>
+<p>Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») : </p>
+<p><img alt="" src="./images/word_tab1_fr.png" class="img-fluid" /> 
+<img alt="" src="./images/word_tab2_fr.png" class="img-fluid" /> </p>
+<p>Utiliser l’option « Colonnes » de l’onglet <strong>Mise en page</strong> pour créer une mise en page sous forme de colonnes, et non les tableaux.</p>
+<p>Utiliser le saut de page via le menu <strong>Insertion &gt; Saut de page</strong> pour passer à la page suivante. </p>
+<p>Numéroter les pages (menu <strong>Insertion &gt; Numéro de page</strong>) pour permettre aux utilisateurs de se repérer dans le document.</p>
+<h2 id="couleurs-et-contrastes">Couleurs et contrastes</h2>
+<p>Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.</p>
+<p>Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> qui vous permettra de vérifier très simplement la qualité de vos contrastes.</p>
+<p>S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.</p>
+<p><img alt="" src="./images/word_contrastes1_fr.png" class="img-fluid" /> 
+<strong>Exemple incorrect</strong> : l&#39;information est transmise uniquement par la couleur. </p>
+<p><img alt="" src="./images/word_contrastes2_fr.png" class="img-fluid" /> 
+<strong>Exemple correct</strong> : l&#39;information est transmise par la forme et la couleur</p>
+<h2 id="listes-puces-ou-num-rot-es">Listes à puces ou numérotées</h2>
+<p>Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.</p>
+<p><img alt="" src="./images/word_liste_fr.png" class="img-fluid" /> </p>
+<h2 id="images">Images</h2>
+<p>Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image. </p>
+<ul>
+<li><strong>Pour les images porteuses d’informations</strong> : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : <strong>clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »</strong>.</li>
+<li><strong>Pour les images décoratives/illustratives</strong> : laisser le champ description vide.</li>
+<li><strong>Pour les images informatives complexes</strong> : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien. </li>
+<li><strong>Pour les images « lien »</strong> : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien.</li>
+<li><strong>Pour les graphiques ou schémas</strong> : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu <strong>Insertion &gt; Smart Art</strong>). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (<strong>Format de l’objet</strong> ou <strong>de l’image &gt; Texte de remplacement &gt; Description</strong>).</li>
+</ul>
+<p><img alt="" src="./images/word_remplacement_fr.png" class="img-fluid" /> </p>
+<p>Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un <strong>clic droit sur l’image &gt; renvoyer à la ligne automatiquement</strong> ou le menu <strong>Outils Image &gt; Organiser</strong>), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.  </p>
+<h2 id="contenus-audio-et-vid-o">Contenus audio et vidéo</h2>
+<p><a href="./video-audio.html">Nos préconisations sur les contenus audio et vidéo</a></p>
+<h2 id="liens">Liens</h2>
+<p>Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.</p>
+<p>En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel. </p>
+<p>Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre : </p>
+<ul>
+<li>menu <strong>Insertion &gt; Lien hypertexte &gt; Info-bulle</strong> : ajouter « nouvelle fenêtre » dans le libellé </li>
+</ul>
+<p>Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier. </p>
+<p><img alt="" src="./images/word_lien_fr.png" class="img-fluid" /> </p>
+<h2 id="tableaux-de-donn-es">Tableaux de données</h2>
+<p>Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. </p>
+<p>Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie. </p>
+<p>Ajouter une description s&#39;il s&#39;agit d&#39;un tableau complexe, <strong>clic droit : Format de la forme &gt; Texte de remplacement &gt; Description</strong>.</p>
+<p>Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme. </p>
+<h2 id="v-rification-finale">Vérification finale</h2>
+<p>Enfin, utiliser le vérificateur d’accessibilité intégré (menu : <strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong>). </p>
+<p><img alt="" src="./images/word_verification_fr.png" class="img-fluid" /> </p>
+<p>Ce vérificateur permet de détecter les principales erreurs et propose des solutions. </p>
+<h2 id="convertir-en-fichier-pdf">Convertir en fichier PDF</h2>
+<p>Pour transformer votre document en <abbr>PDF</abbr>, aller dans le menu : <strong>Fichier &gt; Enregistrer sous</strong> puis de sélectionner le type de fichier <strong>PDF</strong>. </p>
+<p>La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.</p>
+<p>À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.</p>
+<p><img alt="" src="./images/word_pdf_fr.png" class="img-fluid" /> </p>
+<p>Pour vérifier l’accessibilité d’un document PDF : <a href="https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">télécharger PDF Accessiblity Checker (PAC 3)</a>.</p>
 <h2 id="ressources-externes">Ressources externes</h2>
 <ul>
 <li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
@@ -616,8 +693,8 @@ Pour les titres <code>hx</code>, on ajoute en plus la propriété <abbr>CSS</abb
     <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
 </body>
 </html>

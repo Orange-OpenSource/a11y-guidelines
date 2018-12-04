@@ -189,147 +189,105 @@ documentTitles["word.html#creer-des-documents-word-accessibles"] = "Créer des d
 index.add({
     url: "word.html#creer-des-documents-word-accessibles",
     title: "Créer des documents Word accessibles",    
-    body: "# Créer des documents Word accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Word accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+    body: "# Créer des documents Word accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Word accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance.   "
 });
 
-documentTitles["word.html#introduction"] = "Introduction";
+documentTitles["word.html#langue"] = "Langue";
 index.add({
-    url: "word.html#introduction",
-    title: "Introduction",    
-    body: "## Introduction Des documents Word accessibles sont la garantie que les documents peuvent être lus par tous les utilisateurs. Créer des documents Word accessibles demande de respecter les recommandations suivantes. Cela permet également de produire des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles grâce à la fonctionnalité d’export &lt;abbr&gt;PDF&lt;/abbr&gt; intégrée à Word.   "
+    url: "word.html#langue",
+    title: "Langue",    
+    body: "## Langue  Définir la langue principale du document dans le menu : **Fichier &gt; Options &gt; Langue**.  Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis **Révision &gt; Langue &gt; Définir la langue de vérification**.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_langue_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter.   "
 });
 
-documentTitles["word.html#recommandations"] = "Recommandations";
+documentTitles["word.html#attributs-du-fichier"] = "Attributs du fichier";
 index.add({
-    url: "word.html#recommandations",
-    title: "Recommandations",    
-    body: "## Recommandations  Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;.  "
+    url: "word.html#attributs-du-fichier",
+    title: "Attributs du fichier",    
+    body: "## Attributs du fichier  Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu **Fichier &gt; Informations**.  Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_attributs_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
 });
 
-documentTitles["word.html#1-utiliser-les-styles-nbsptitrenbsp-pour-les-titres-et-sous-titres"] = "1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres";
+documentTitles["word.html#titres"] = "Titres";
 index.add({
-    url: "word.html#1-utiliser-les-styles-nbsptitrenbsp-pour-les-titres-et-sous-titres",
-    title: "1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres",    
-    body: "### 1. Utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» pour les titres et sous-titres Les titres et sous-titres doivent utiliser les styles «&amp;nbsp;Titre&amp;nbsp;» (Titre 1, Titre 2, etc.) pour structurer le contenu du document et permettre d’y accéder directement.  "
+    url: "word.html#titres",
+    title: "Titres",    
+    body: "## Titres   Utiliser les styles « Titre » et « Sous-titre » du menu **Accueil** (Titre 1, Titre 2, etc.).   Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné.   Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.  "
 });
 
-documentTitles["word.html#2-utiliser-le-style-nbspnormalnbsp-pour-les-textes"] = "2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes";
+documentTitles["word.html#table-des-matieres"] = "Table des matières";
 index.add({
-    url: "word.html#2-utiliser-le-style-nbspnormalnbsp-pour-les-textes",
-    title: "2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes",    
-    body: "### 2. Utiliser le style «&amp;nbsp;Normal&amp;nbsp;» pour les textes Le style «&amp;nbsp;Normal&amp;nbsp;» doit être attribué à tous les textes des paragraphes (style par défaut).  "
+    url: "word.html#table-des-matieres",
+    title: "Table des matières",    
+    body: "## Table des matières  Insérer une table des matières via le menu **Références &gt; Table des matières**.   Cela permet aux utilisateurs de trouver des informations plus aisément dans le document.   "
 });
 
-documentTitles["word.html#3-utiliser-des-styles-dedies-pour-mettre-en-evidence-certains-contenus"] = "3. Utiliser des styles dédiés pour mettre en évidence certains contenus";
+documentTitles["word.html#redaction-des-contenus"] = "Rédaction des contenus";
 index.add({
-    url: "word.html#3-utiliser-des-styles-dedies-pour-mettre-en-evidence-certains-contenus",
-    title: "3. Utiliser des styles dédiés pour mettre en évidence certains contenus",    
-    body: "### 3. Utiliser des styles dédiés pour mettre en évidence certains contenus Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.  "
+    url: "word.html#redaction-des-contenus",
+    title: "Rédaction des contenus",    
+    body: "## Rédaction des contenus  Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.  Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion &gt; Symbole** ou les raccourcis clavier ci-dessous.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_table_caracteres_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Liste des raccourcis clavier :  &lt;table class=\&quot;table table-striped\&quot;&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th scope=\&quot;col\&quot;&gt;Lettre&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Windows&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Mac&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;À&lt;/th&gt;       &lt;td&gt;Alt Gr + \` (touche 7) puis A majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis à&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ç&lt;/th&gt;       &lt;td&gt;alt + 128&lt;/td&gt;       &lt;td&gt;Option + ç&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;È&lt;/th&gt;       &lt;td&gt;Alt Gr + ` (touche 7) puis E majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis è&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;É&lt;/th&gt;       &lt;td&gt;alt + 144&lt;/td&gt;       &lt;td&gt;Maj lock puis é&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ê&lt;/th&gt;       &lt;td&gt;^ puis E majuscule &lt;/td&gt;       &lt;td&gt;^ puis E majuscule&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  "
 });
 
-documentTitles["word.html#4-ne-pas-inserer-de-lignes-vides"] = "4. Ne pas insérer de lignes vides";
+documentTitles["word.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
 index.add({
-    url: "word.html#4-ne-pas-inserer-de-lignes-vides",
-    title: "4. Ne pas insérer de lignes vides",    
-    body: "### 4. Ne pas insérer de lignes vides Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option Espacement qui permet de définir l’espace avant et après un paragraphe.  Les sauts de page doivent être créés à l’aide des «&amp;nbsp;Sauts&amp;nbsp;» (Insertion&amp;nbsp;&gt; Saut de page, page vierge).  "
+    url: "word.html#mise-en-forme-des-contenus",
+    title: "Mise en forme des contenus",    
+    body: "## Mise en forme des contenus  Utiliser les styles prédéfinis pour la mise en forme des contenus : le style « Normal » doit être attribué à tous les textes des paragraphes (style par défaut), le style « citation » pour les citations, etc.  Utiliser une police de caractères sans empattement (extensions qui terminent les extrémités des caractères) comme Arial ou Helvetica, en corps 12 pixels minimum et un espacement entre les caractères normal ou élargi.  Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majuscule ; limiter l’utilisation de l’italique.  Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_mise_en_forme_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran.   Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab_fr.png\&quot; /&gt;) pour mettre en forme le contenu.   Utiliser les fonctions Retrait, Espacement :  - Menu **Mise en page &gt; Paragraphe &gt; Retrait** ou **Espacement** ou **Clic droit : « Paragraphe… »**  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_retrait_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») :   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab1_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab2_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Utiliser l’option « Colonnes » de l’onglet **Mise en page** pour créer une mise en page sous forme de colonnes, et non les tableaux.  Utiliser le saut de page via le menu **Insertion &gt; Saut de page** pour passer à la page suivante.   Numéroter les pages (menu **Insertion &gt; Numéro de page**) pour permettre aux utilisateurs de se repérer dans le document.  "
 });
 
-documentTitles["word.html#5-utiliser-les-listes-a-puces"] = "5. Utiliser les listes à puces";
+documentTitles["word.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
 index.add({
-    url: "word.html#5-utiliser-les-listes-a-puces",
-    title: "5. Utiliser les listes à puces",    
-    body: "### 5. Utiliser les listes à puces Les listes doivent être réalisées en utilisant l’option «&amp;nbsp;Liste à puces&amp;nbsp;» ou «&amp;nbsp;Liste numérotée&amp;nbsp;» et non en utilisant des tirets dans le texte.  "
+    url: "word.html#couleurs-et-contrastes",
+    title: "Couleurs et contrastes",    
+    body: "## Couleurs et contrastes  Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.  Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt; qui vous permettra de vérifier très simplement la qualité de vos contrastes.  S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_contrastes1_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  **Exemple incorrect** : l'information est transmise uniquement par la couleur.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_contrastes2_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  **Exemple correct** : l'information est transmise par la forme et la couleur  "
 });
 
-documentTitles["word.html#6-utiliser-les-notes-de-bas-de-page"] = "6. Utiliser les notes de bas de page";
+documentTitles["word.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
 index.add({
-    url: "word.html#6-utiliser-les-notes-de-bas-de-page",
-    title: "6. Utiliser les notes de bas de page",    
-    body: "### 6. Utiliser les notes de bas de page Les options «&amp;nbsp;Notes de bas de page&amp;nbsp;» et «&amp;nbsp;Notes de fin&amp;nbsp;» permettent d’insérer des notes dans votre document.  "
+    url: "word.html#listes-a-puces-ou-numerotees",
+    title: "Listes à puces ou numérotées",    
+    body: "## Listes à puces ou numérotées  Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_liste_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
 });
 
-documentTitles["word.html#7-numeroter-vos-pages"] = "7. Numéroter vos pages";
+documentTitles["word.html#images"] = "Images";
 index.add({
-    url: "word.html#7-numeroter-vos-pages",
-    title: "7. Numéroter vos pages",    
-    body: "### 7. Numéroter vos pages L’option «&amp;nbsp;Numéro de page&amp;nbsp;» permet de se repérer dans le document.  "
+    url: "word.html#images",
+    title: "Images",    
+    body: "## Images  Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image.   - **Pour les images porteuses d’informations** : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : **clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »**. - **Pour les images décoratives/illustratives** : laisser le champ description vide. - **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien.  - **Pour les images « lien »** : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien. - **Pour les graphiques ou schémas** : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu **Insertion &gt; Smart Art**). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (**Format de l’objet** ou **de l’image &gt; Texte de remplacement &gt; Description**).  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_remplacement_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un **clic droit sur l’image &gt; renvoyer à la ligne automatiquement** ou le menu **Outils Image &gt; Organiser**), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.    "
 });
 
-documentTitles["word.html#8-utiliser-la-mise-en-page-nbspcolonnesnbsp-pour-distribuer-le-texte"] = "8. Utiliser la mise en page «&amp;nbsp;Colonnes&amp;nbsp;»  pour distribuer le texte";
+documentTitles["word.html#contenus-audio-et-video"] = "Contenus audio et vidéo";
 index.add({
-    url: "word.html#8-utiliser-la-mise-en-page-nbspcolonnesnbsp-pour-distribuer-le-texte",
-    title: "8. Utiliser la mise en page «&amp;nbsp;Colonnes&amp;nbsp;»  pour distribuer le texte",    
-    body: "### 8. Utiliser la mise en page «&amp;nbsp;Colonnes&amp;nbsp;»  pour distribuer le texte L’option «&amp;nbsp;Colonnes&amp;nbsp;» de l’onglet Mise en page (et non des tableaux) doit être utilisée pour créer une mise en page sous forme de colonnes.  "
+    url: "word.html#contenus-audio-et-video",
+    title: "Contenus audio et vidéo",    
+    body: "## Contenus audio et vidéo   [Nos préconisations sur les contenus audio et vidéo](./video-audio.html)  "
 });
 
-documentTitles["word.html#9-definir-le-point-dancrage-des-objets-inseres"] = "9. Définir le point d’ancrage des objets insérés";
+documentTitles["word.html#liens"] = "Liens";
 index.add({
-    url: "word.html#9-definir-le-point-dancrage-des-objets-inseres",
-    title: "9. Définir le point d’ancrage des objets insérés",    
-    body: "### 9. Définir le point d’ancrage des objets insérés Lors de l’insertion d’objets (image, forme, SmartArt, etc.), il est nécessaire de définir un point d’ancrage&amp;nbsp;: dans les options d’habillage du texte, choisir l’option «&amp;nbsp;Aligné sur le texte&amp;nbsp;» ou «&amp;nbsp;Haut et bas&amp;nbsp;».  "
+    url: "word.html#liens",
+    title: "Liens",    
+    body: "## Liens  Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.  En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel.   Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre :  - menu **Insertion &gt; Lien hypertexte &gt; Info-bulle** : ajouter « nouvelle fenêtre » dans le libellé   Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_lien_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
 });
 
-documentTitles["word.html#10-eviter-les-zones-de-texte"] = "10. Éviter les zones de texte";
+documentTitles["word.html#tableaux-de-donnees"] = "Tableaux de données";
 index.add({
-    url: "word.html#10-eviter-les-zones-de-texte",
-    title: "10. Éviter les zones de texte",    
-    body: "### 10. Éviter les zones de texte Celles-ci ne sont pas toujours correctement restituées. Les textes peuvent être mis en valeur en ajoutant des bordures à un paragraphe.  "
+    url: "word.html#tableaux-de-donnees",
+    title: "Tableaux de données",    
+    body: "## Tableaux de données  Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.   Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie.   Ajouter une description s'il s'agit d'un tableau complexe, **clic droit : Format de la forme &gt; Texte de remplacement &gt; Description**.  Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme.   "
 });
 
-documentTitles["word.html#11-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation"] = "11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information";
+documentTitles["word.html#verification-finale"] = "Vérification finale";
 index.add({
-    url: "word.html#11-sassurer-que-la-couleur-nest-pas-le-seul-moyen-utilise-pour-communiquer-linformation",
-    title: "11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information",    
-    body: "### 11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…  "
+    url: "word.html#verification-finale",
+    title: "Vérification finale",    
+    body: "## Vérification finale  Enfin, utiliser le vérificateur d’accessibilité intégré (menu : **Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité**).   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_verification_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ce vérificateur permet de détecter les principales erreurs et propose des solutions.   "
 });
 
-documentTitles["word.html#12-assurer-un-contraste-suffisant"] = "12. Assurer un contraste suffisant";
+documentTitles["word.html#convertir-en-fichier-pdf"] = "Convertir en fichier PDF";
 index.add({
-    url: "word.html#12-assurer-un-contraste-suffisant",
-    title: "12. Assurer un contraste suffisant",    
-    body: "### 12. Assurer un contraste suffisant Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&amp;nbsp;: - 4.5:1 pour du texte de taille normale. - 3:1 pour du texte de grande taille.  Le contraste peut être vérifié à l’aide de l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
-});
-
-documentTitles["word.html#13-definir-la-langue"] = "13. Définir la Langue";
-index.add({
-    url: "word.html#13-definir-la-langue",
-    title: "13. Définir la Langue",    
-    body: "### 13. Définir la Langue La langue doit être définie dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Options&amp;nbsp;&gt; Langue.   Les mots ou groupes de mots qui sont dans une langue étrangère doivent être précisés (menu&amp;nbsp;: Révision&amp;nbsp;&gt; Langue&amp;nbsp;&gt; Définir la langue de vérification).  "
-});
-
-documentTitles["word.html#14-renseigner-un-texte-de-remplacement-sur-les-images"] = "14. Renseigner un texte de remplacement sur les images";
-index.add({
-    url: "word.html#14-renseigner-un-texte-de-remplacement-sur-les-images",
-    title: "14. Renseigner un texte de remplacement sur les images",    
-    body: "### 14. Renseigner un texte de remplacement sur les images Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image&amp;nbsp;&gt; Texte de remplacement&amp;nbsp;&gt; champ Description).    Si l’image est purement décorative, le champ Description du texte de remplacement doit être laissé vide.  "
-});
-
-documentTitles["word.html#15-faire-des-tableaux-simples"] = "15. Faire des tableaux simples";
-index.add({
-    url: "word.html#15-faire-des-tableaux-simples",
-    title: "15. Faire des tableaux simples",    
-    body: "### 15. Faire des tableaux simples Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&amp;nbsp;; ne pas laisser de cellules vides.   "
-});
-
-documentTitles["word.html#16-utiliser-le-verificateur-integre"] = "16. Utiliser le vérificateur intégré";
-index.add({
-    url: "word.html#16-utiliser-le-verificateur-integre",
-    title: "16. Utiliser le vérificateur intégré",    
-    body: "### 16. Utiliser le vérificateur intégré Word intègre un vérificateur d’accessibilité (menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Vérifier la présence de problèmes&amp;nbsp;&gt; Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d’une grande aide&amp;nbsp;; cependant il ne dispense pas de vérifier et d’appliquer à la main l’ensemble des recommandations ci-dessus.   "
-});
-
-documentTitles["word.html#17-exporter-le-document-au-format-abbrpdfabbr"] = "17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt;";
-index.add({
-    url: "word.html#17-exporter-le-document-au-format-abbrpdfabbr",
-    title: "17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 17. Exporter le document au format &lt;abbr&gt;PDF&lt;/abbr&gt; Pour exporter en &lt;abbr&gt;PDF&lt;/abbr&gt; il suffit d’aller dans le menu&amp;nbsp;: Fichier&amp;nbsp;&gt; Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;.   À vérifier la première fois&amp;nbsp;: dans les options d’export, la case à cocher «&amp;nbsp;Balises de structure de document pour l’accessibilité&amp;nbsp;» doit être cochée.  À noter qu’avec Word pour Office 2010, les documents &lt;abbr&gt;PDF&lt;/abbr&gt; générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.   "
-});
-
-documentTitles["word.html#18-inserer-une-table-des-matieres"] = "18. Insérer une table des matières";
-index.add({
-    url: "word.html#18-inserer-une-table-des-matieres",
-    title: "18. Insérer une table des matières",    
-    body: "### 18. Insérer une table des matières  Pour tout document long (&gt;2 pages), penser à insérer une table des matière générée automatiquement, dans le menu&amp;nbsp;: Références&amp;nbsp;&gt; Table des matières. Cela permet à tous de se repérer plus facilement et d'aller rapidement au contenu que l'on souhaite lire.  À noter qu'il faut mettre à jour cette table des matières dès qu'on change la structure du contenu, donc préférer générer la table des matières en fin de rédaction du contenu.  "
+    url: "word.html#convertir-en-fichier-pdf",
+    title: "Convertir en fichier PDF",    
+    body: "## Convertir en fichier PDF  Pour transformer votre document en &lt;abbr&gt;PDF&lt;/abbr&gt;, aller dans le menu : **Fichier &gt; Enregistrer sous** puis de sélectionner le type de fichier **PDF**.   La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.  À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_pdf_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Pour vérifier l’accessibilité d’un document PDF : [télécharger PDF Accessiblity Checker (PAC 3)](https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).  "
 });
 
 documentTitles["word.html#ressources-externes"] = "Ressources externes";

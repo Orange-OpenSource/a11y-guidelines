@@ -8,27 +8,28 @@
     
 
       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
       <!-- Copyright © 2016 Orange SA. All rights reserved -->
-      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
-      <link rel="stylesheet" href="../boosted/css/boosted.css">
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
 
       <!-- Style pour la mise en forme des exemples de code -->
       <link rel="stylesheet" href="/css/dark.min.css">
 
       <!-- Styles perso -->
-      <link rel="stylesheet" href="../css/reco.css">
-      <link rel="stylesheet" href="./css/reco-custom.css">
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="/web/css/reco-custom.css">
 
-      <script src="./js/jquery.min.js"></script>
-      <script src="./js/jquery.validate.min.js"></script>
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
       <script src="./js/lunr.min.js"></script>
       <script src="./js/lunr.stemmer.support.js"></script>
       <script src="./js/lunr.fr.min.js"></script>      
-
+      <script src="./js/tests-web.js"></script>
+	  
       <!-- Favicons -->
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="icon" href="/images/favicon.ico">            
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">
 </head>
 <body>
     <div class="skip-links sr-only">
@@ -376,15 +377,21 @@ Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Re
     setBreadcrumb([{"label":"Critères WCAG par thème"}]);
     addSubMenu([
         {
-            "label":"Concepteurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
+            "label":"Conception", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
             "onExpand": function () {
                 $("#incontournables-concepteurs-tab").tab("show");
             }
         },
         {
-            "label":"Développeurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
+            "label":"Développement", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
             "onExpand": function () {
                 $("#incontournables-developpeurs-tab").tab("show");
+            }
+        },
+        {
+            "label":"Tests", "url":"", "expanded":false, "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
+            "onExpand": function () {
+                $("#incontournables-testeurs-tab").tab("show");
             }
         }
     ]);
@@ -393,6 +400,9 @@ Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Re
     })
     $("#incontournables-developpeurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-development"));
+    })
+    $("#incontournables-testeurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-test"));
     })
     if (window.location.hash == "#dev") {
         $("#incontournables-developpeurs-tab").trigger("click");
@@ -403,17 +413,21 @@ Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Re
 <p>Ce socle de critères destiné aux sites et applications web Orange permet d’éviter les principales erreurs d’accessibilité. Il s’agit d’un sous-ensemble des exigences d’accessibilité.<br>La mise en œuvre de ce socle ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.</p>
 <p>Le respect de la charte Orange appelée la Brand (<span lang="en">Design for digital platforms Guideline</span>), disponible sur <a href="http://design.orange.com/">le site de la marque Orange</a> est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.</p>
-<p>Deux versions sont disponibles&nbsp;</p>
+<p>Trois versions sont disponibles&nbsp;</p>
 <ul>
-<li><strong>La version concepteurs</strong> n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.</li>
-<li><strong>La version développeurs</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
+<li><strong>La version conception</strong> n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.</li>
+<li><strong>La version développement</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
+<li><strong>La version tests</strong> présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc.</li>
 </ul>
 <p><ul class="nav nav-tabs" role="tablist"></p>
 <p><li class="nav-item">
-<a class="nav-link active" id="incontournables-concepteurs-tab" data-toggle="tab" href="#incontournables-concepteurs" role="tab" aria-controls="incontournables-concepteurs" aria-selected="true">Concepteurs</a>
+<a class="nav-link active" id="incontournables-concepteurs-tab" data-toggle="tab" href="#incontournables-concepteurs" role="tab" aria-controls="incontournables-concepteurs" aria-selected="true">Conception</a>
 </li></p>
 <p><li class="nav-item">
-<a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développeurs</a>
+<a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développement</a>
+</li></p>
+<p><li class="nav-item">
+<a class="nav-link" id="incontournables-testeurs-tab" data-toggle="tab" href="#incontournables-testeurs" role="tab" aria-controls="incontournables-testeurs" aria-selected="false">Tests</a>
 </li>
 </ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab"></p>
 <h2 id="contenu-textuel">Contenu textuel</h2>
@@ -556,6 +570,28 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
     <li><a href="inc-dev-lecteur-ecran.html">S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</a></li>
 </ul>
 
+</div>
+<div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
+<div class="row">
+<section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+<h2 id="test-contenu-textuel">Contenu textuel</h2>
+<h2 id="test-contenu-non-textuel">Contenu non-textuel</h2>
+<h2 id="test-couleurs-et-contrastes">Couleurs et contrastes</h2>
+<h2 id="test-navigation-generale">Navigation générale</h2>
+<h2 id="test-navigation-clavier">Navigation clavier</h2>
+<h2 id="test-mise-en-page">Mise en page</h2>
+<h2 id="test-formulaires">Formulaires</h2>
+<h2 id="test-tactile-et-interactions">Tactile et interactions</h2>
+<h2 id="test-aides-techniques">Aides techniques</h2>
+</section>
+<aside id="filter" class="col-md-4">
+<a name="filtres"></a><h2>Filtres</h2>
+<a name="profils"></a><h3>Profils</h3>
+<ul id="profils" class="list-unstyled"></ul>
+<a name="outils"></a><h3>Outils</h3>
+<ul id="types" class="list-unstyled"></ul>
+</aside>
+</div>
 </div>
 </div>
 
@@ -3179,30 +3215,61 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
     setBreadcrumb([{"label":"Outils de test"}]);
 });</script>
 
-<p>Orange évalue l’accessibilité d’une application ou d’un site à l’aide de trois méthodes complémentaires :</p>
+<h2 id="introduction">Introduction</h2>
+<p>Cette partie décrit une méthode d’évaluation à destination des acteurs projet pour tester la conformité d’un contenu Web et Web mobile aux critères d’accessibilité des Web Content Accessibility Guidelines (WCAG) version 2.1 niveau AA.</p>
+<p>La description détaillée des tests se trouvent dans les critères <abbr>WCAG</abbr> par thème, partie « testeurs ». </p>
+<p>Les tests d’accessibilité doivent être effectués tout au long du cycle de vie des projets :</p>
 <ul>
-<li><strong>Évaluation technique :</strong> inspecter le code et le contraste des couleurs pour mesurer la conformité des pages Web aux règles <abbr>WCAG</abbr> 2.1 niveau AA.</li>
-<li><strong>Évaluation fonctionnelle :</strong> tester le comportement de l’interface avec différentes <abbr>aides techniques</abbr> pour vérifier que les contenus évalués sont exempts de points bloquants.</li>
-<li><strong>Évaluation utilisateur :</strong> faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur. </li>
+<li>au démarrage du projet, lors du choix du Framework, du logiciel ou progiciel… </li>
+<li>dès la phase de conception sur les maquettes ou les prototypes</li>
+<li>lors des développements et des tests  </li>
+<li>en production, pour les sites de contenu</li>
 </ul>
-<h2 id="-valuation-technique">Évaluation technique</h2>
-<p>Une partie des tests peut-être réalisée automatiquement par des outils, mais la majorité nécessite un contrôle manuel. Les tests automatisés sont à réaliser par les acteurs projet, les tests manuels essentiellement par les experts accessibilité.</p>
-<p>Exemple d&#39;outils : </p>
+<h2 id="m-thode-g-n-rale">Méthode générale</h2>
+<p>La démarche comprend 2 types de tests :</p>
 <ul>
-<li><a href="./methodes-outils-extensions.html">Outils de tests automatique sur la page en cours de consultation</a>&nbsp;: extension navigateur.</li>
-<li><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>&nbsp;: présentation de l&#39;outil <span lang="en">Colour Contrast Analyser</span>.</li>
+<li>Des <strong>tests techniques</strong> qui consistent à inspecter le code et le contraste des couleurs.</li>
+<li>Des <strong>tests fonctionnels</strong> qui permettent de tester le comportement de l’interface avec différentes <abbr>aides techniques</abbr> pour vérifier que les contenus évalués sont exempts de points bloquants.</li>
 </ul>
-<h2 id="-valuation-fonctionnelle">Évaluation fonctionnelle</h2>
-<p>Ces tests sont réalisés généralement par les experts accessibilité, ils peuvent également être menés par des acteurs projet.</p>
-<p>Quelques exemples de tests :</p>
+<p>En fonction de votre profil, vous pouvez réaliser les tests techniques, les tests fonctionnels ou les deux, sachant que les deux sont nécessaires pour tester l’accessibilité d’un site Web dans sa globalité. </p>
+<h2 id="m-thode-pour-tester-le-web">Méthode pour tester le Web</h2>
+<h3 id="-valuation-technique">Évaluation technique</h3>
+<p>Une partie des tests peut-être réalisée automatiquement par des outils, mais la majorité nécessite un contrôle manuel.</p>
+<p>Ces tests peuvent être réalisés par tout acteur du projet ( concepteur, développeur, testeur, rédacteur…).</p>
+<p><strong>Démarche :</strong></p>
 <ul>
-<li><a href="./methodes-outils-clavier.html">Navigation au clavier</a>&nbsp;: liste des principaux raccourcis pour naviguer au clavier dans une page web.</li>
-<li><a href="./methodes-outils-zoom.html">Agrandissement de la taille du texte</a>&nbsp;: un guide sur la gestion du zoom.</li>
-<li><a href="./methodes-outils-lecteur-ecran.html">Navigation à l’aide d’un lecteur d’écran</a>&nbsp;: les principaux lecteurs d’écrans utilisés.</li>
+<li><a href="./methodes-outils-extensions.html">Réaliser des tests automatiques</a> avec les extensions navigateur aXe ou Wave :<ul>
+<li>aXe repère des erreurs et valide la qualité du code</li>
+<li>Wave repère également les erreurs d’accessibilité et précise les contrôles manuels à effectuer (cohérence du code langue avec la langue utilisée dans la page…) </li>
 </ul>
-<h2 id="-valuation-par-des-utilisateurs-en-situation-de-handicap">Évaluation par des utilisateurs en situation de handicap</h2>
-<p>Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les  tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées.  </p>
-<p>Ces tests sont conduits par des experts accessibilité.</p>
+</li>
+<li><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>via l&#39;outil <span lang="en">Colour Contrast Analyser</span>.</li>
+<li><a href="./inc-con-aerer-texte.html">Vérifier le bon espacement du texte</a> via un outil pour garantir la lisibilité du texte</li>
+<li>Tous les autres tests doivent être passés via une revue de code manuelle<ul>
+<li>exemple : tous les critères de pertinence ( alternative textuelle cohérente avec le contenu d’une image…) </li>
+</ul>
+</li>
+</ul>
+<h3 id="-valuation-fonctionnelle">Évaluation fonctionnelle</h3>
+<p>Ces tests peuvent être facilement réalisés par tout acteur projet. Seuls les lecteurs d’écran nécessitent un temps d’apprentissage. </p>
+<p><strong>Démarche :</strong></p>
+<ul>
+<li><a href="./methodes-outils-clavier.html">Tester la navigation au clavier</a> en utilisant les principaux raccourcis clavier pour naviguer au clavier dans une page web.</li>
+<li><a href="./methodes-outils-zoom.html">Evaluer l’agrandissement de la taille du texte</a> via la gestion du zoom navigateur.</li>
+<li><a href="./methodes-outils-lecteur-ecran.html">Tester la navigation et la vocalisation</a> à l’aide d’un lecteur d’écran.</li>
+</ul>
+<h2 id="m-thode-pour-tester-le-web-mobile">Méthode pour tester le Web mobile</h2>
+<h3 id="-valuation-technique">Évaluation technique</h3>
+<p>Les tests à réaliser pour le web mobile sont identiques à ceux réalisés pour le web. Une partie des tests peut être réalisée à partir d’un ordinateur via les outils de développements présents dans les navigateurs :</p>
+<ul>
+<li>le module Vue adaptative sur Firefox </li>
+<li>Device Toolbar sur Chrome</li>
+</ul>
+<h3 id="-valuation-fonctionnelle">Évaluation fonctionnelle</h3>
+<p>Ces tests doivent être réalisés avec des smartphones sur iOS et Android.</p>
+<ul>
+<li><a href="/mobile/screen-reader.html">Tester la navigation et la vocalisation</a> à l’aide d’un lecteur d’écran </li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -3590,8 +3657,8 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>    
 </body>
 </html>
