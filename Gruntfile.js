@@ -142,7 +142,7 @@ module.exports = function(grunt) {
               baseUrl: grunt.config('baseUrl')
             }
           }
-        },         
+        },
         watch: {
           home: {
             files: ['home/theme/**/*', 'home/inputs/**/*', 'home_EN/theme/**/*', 'home_EN/inputs/**/*'],
@@ -225,17 +225,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-insert');
             
-    grunt.registerTask('build-home', ['clean:home', 'createMarkdown:home', 'bfdocs:home', 'dist:home']);    
+    grunt.registerTask('build-home', ['clean:home', 'createMarkdown:home', 'bfdocs:home', 'dist:home']);
     grunt.registerTask('build-home_EN', ['clean:home_EN', 'createMarkdown:home_EN', 'bfdocs:home_EN', 'dist:home_EN']);
 
     grunt.registerTask('build-web', ['clean:web', 'createMarkdown:web', 'bfdocs:web', 'dist:web']);
     grunt.registerTask('build-web_EN', ['clean:web_EN', 'createMarkdown:web_EN', 'bfdocs:web_EN', 'dist:web_EN']);
 
-    grunt.registerTask('build-mobile', ['clean:mobile', 'createMarkdown:mobile', 'bfdocs:mobile', 'dist:mobile']);    
+    grunt.registerTask('build-mobile', ['clean:mobile', 'createMarkdown:mobile', 'bfdocs:mobile', 'dist:mobile']);
     grunt.registerTask('build-mobile_EN', ['clean:mobile_EN', 'createMarkdown:mobile_EN', 'bfdocs:mobile_EN', 'dist:mobile_EN']);
 
-    grunt.registerTask('build-others', ['clean:others', 'createMarkdown:others', 'bfdocs:others', 'dist:others']);    
-    grunt.registerTask('build-others_EN', ['clean:others_EN', 'createMarkdown:others_EN', 'bfdocs:others_EN', 'dist:others_EN']);    
+    grunt.registerTask('build-others', ['clean:others', 'createMarkdown:others', 'bfdocs:others', 'dist:others']);
+    grunt.registerTask('build-others_EN', ['clean:others_EN', 'createMarkdown:others_EN', 'bfdocs:others_EN', 'dist:others_EN']);
 
     grunt.registerTask('build-all', ['clean:all', 'copy','build-home', 'build-home_EN', 'build-others', 'build-others_EN', 'build-web', 'build-web_EN', 'build-mobile', 'build-mobile_EN']);
 
