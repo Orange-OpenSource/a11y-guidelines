@@ -1147,7 +1147,7 @@
       "Vérifier que pour tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant des trajectoires, pour réaliser une action, une alternative nécessitant un seul pointeur (un seul doigt) et sans tranjectoire est disponible"
     ],
     "resultat": [
-      "Pour une action de zoom sur une carte au pincement de doigt, une alternative sous forme de <button> [+] et [-] est proposée"
+      "Pour une action de zoom sur une carte au pincement de doigt, une alternative sous forme de <code>&lt;button&gt;</code> [+] et [-] est proposée"
     ],
     "exception": "",
     "raccourcis": "",
@@ -1183,7 +1183,9 @@
     "verifier": [
 		"Vérifier que toutes les fonctionnalités sont disponibles de puis un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables depuis un lecteur d'écran</li></ul>"
 	],
-    "resultat": "Les principales fonctionnalités sont utilisables depuis un lecteur d'écran.",
+    "resultat": [
+		"Les principales fonctionnalités sont utilisables depuis un lecteur d'écran"
+	],
     "exception": "",
     "raccourcis": "",
     "profils": ["Expert Accessibilité"]

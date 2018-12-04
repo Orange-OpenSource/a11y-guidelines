@@ -5,81 +5,199 @@
 
 <style>h3 {font-size: 1rem;}</style>
 
-## Introduction
-Des documents Word accessibles sont la garantie que les documents peuvent être lus par tous les utilisateurs. Créer des documents Word accessibles demande de respecter les recommandations suivantes. Cela permet également de produire des documents <abbr>PDF</abbr> accessibles grâce à la fonctionnalité d’export <abbr>PDF</abbr> intégrée à Word. 
+Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance. 
 
-## Recommandations
+## Langue
 
-Vous trouverez ci-dessous un résumé des recommandations à respecter. Pour plus de détails, n’hésitez pas à consulter <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>.
+Définir la langue principale du document dans le menu : **Fichier > Options > Langue**.
 
-### 1. Utiliser les styles «&nbsp;Titre&nbsp;» pour les titres et sous-titres
-Les titres et sous-titres doivent utiliser les styles «&nbsp;Titre&nbsp;» (Titre 1, Titre 2, etc.) pour structurer le contenu du document et permettre d’y accéder directement.
+Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis **Révision > Langue > Définir la langue de vérification**. 
 
-### 2. Utiliser le style «&nbsp;Normal&nbsp;» pour les textes
-Le style «&nbsp;Normal&nbsp;» doit être attribué à tous les textes des paragraphes (style par défaut).
+<img alt="" src="./images/word_langue_fr.png" class="img-fluid" /> 
 
-### 3. Utiliser des styles dédiés pour mettre en évidence certains contenus
-Utiliser les styles prédéfinis pour mettre en évidence certains contenus (citations, légendes, etc.) plutôt qu’utiliser les outils de formatage de caractères.
+Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter. 
 
-### 4. Ne pas insérer de lignes vides
-Les espacements entre lignes doivent être crées à l’aide des options du groupe Paragraphe, option Espacement qui permet de définir l’espace avant et après un paragraphe. 
-Les sauts de page doivent être créés à l’aide des «&nbsp;Sauts&nbsp;» (Insertion&nbsp;> Saut de page, page vierge).
+## Attributs du fichier
 
-### 5. Utiliser les listes à puces
-Les listes doivent être réalisées en utilisant l’option «&nbsp;Liste à puces&nbsp;» ou «&nbsp;Liste numérotée&nbsp;» et non en utilisant des tirets dans le texte.
+Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu **Fichier > Informations**.
 
-### 6. Utiliser les notes de bas de page
-Les options «&nbsp;Notes de bas de page&nbsp;» et «&nbsp;Notes de fin&nbsp;» permettent d’insérer des notes dans votre document.
+Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.
 
-### 7. Numéroter vos pages
-L’option «&nbsp;Numéro de page&nbsp;» permet de se repérer dans le document.
+<img alt="" src="./images/word_attributs_fr.png" class="img-fluid" /> 
 
-### 8. Utiliser la mise en page «&nbsp;Colonnes&nbsp;»  pour distribuer le texte
-L’option «&nbsp;Colonnes&nbsp;» de l’onglet Mise en page (et non des tableaux) doit être utilisée pour créer une mise en page sous forme de colonnes.
+## Titres 
 
-### 9. Définir le point d’ancrage des objets insérés
-Lors de l’insertion d’objets (image, forme, SmartArt, etc.), il est nécessaire de définir un point d’ancrage&nbsp;: dans les options d’habillage du texte, choisir l’option «&nbsp;Aligné sur le texte&nbsp;» ou «&nbsp;Haut et bas&nbsp;».
+Utiliser les styles « Titre » et « Sous-titre » du menu **Accueil** (Titre 1, Titre 2, etc.). 
 
-### 10. Éviter les zones de texte
-Celles-ci ne sont pas toujours correctement restituées. Les textes peuvent être mis en valeur en ajoutant des bordures à un paragraphe.
+Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné. 
 
-### 11. S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information
-Une information donnée par une couleur doit aussi être donnée par un autre moyen comme la forme, la position, la taille…
+Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.
 
-### 12. Assurer un contraste suffisant
-Le niveau de contraste entre la couleur du texte et celle de l’arrière-plan doit être suffisant&nbsp;:
-- 4.5:1 pour du texte de taille normale.
-- 3:1 pour du texte de grande taille.
+## Table des matières
 
-Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.
+Insérer une table des matières via le menu **Références > Table des matières**. 
 
-### 13. Définir la Langue
-La langue doit être définie dans le menu&nbsp;: Fichier&nbsp;> Options&nbsp;> Langue.  
-Les mots ou groupes de mots qui sont dans une langue étrangère doivent être précisés (menu&nbsp;: Révision&nbsp;> Langue&nbsp;> Définir la langue de vérification).
+Cela permet aux utilisateurs de trouver des informations plus aisément dans le document. 
 
-### 14. Renseigner un texte de remplacement sur les images
-Si l’image apporte de l’information, il faut lui associer un texte de remplacement décrivant le contenu (clic droit, Format de l’image&nbsp;> Texte de remplacement&nbsp;> champ Description).   
-Si l’image est purement décorative, le champ Description du texte de remplacement doit être laissé vide.
+## Rédaction des contenus
 
-### 15. Faire des tableaux simples
-Les tableaux de données doivent rester simples. Éviter de fusionner des cellules, d’insérer des images (elles ne seront pas lues comme des éléments du tableau mais comme des éléments indépendants qui seront lus avant ou après le tableau – selon l’ordre de lecture prévu)&nbsp;; ne pas laisser de cellules vides. 
+Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.
 
-### 16. Utiliser le vérificateur intégré
-Word intègre un vérificateur d’accessibilité (menu&nbsp;: Fichier&nbsp;> Vérifier la présence de problèmes&nbsp;> Vérifier l’accessibilité). Celui-ci liste les contenus susceptibles de poser des difficultés et les erreurs automatiquement détectées. Cet outil est à utiliser car il est d’une grande aide&nbsp;; cependant il ne dispense pas de vérifier et d’appliquer à la main l’ensemble des recommandations ci-dessus. 
+Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion > Symbole** ou les raccourcis clavier ci-dessous.
 
-### 17. Exporter le document au format <abbr>PDF</abbr>
-Pour exporter en <abbr>PDF</abbr> il suffit d’aller dans le menu&nbsp;: Fichier&nbsp;> Enregistrer sous. Choisissez un nom et sélectionnez le type de fichier <abbr>PDF</abbr>.  
-À vérifier la première fois&nbsp;: dans les options d’export, la case à cocher «&nbsp;Balises de structure de document pour l’accessibilité&nbsp;» doit être cochée.
+<img alt="" src="./images/word_table_caracteres_fr.png" class="img-fluid" /> 
 
-À noter qu’avec Word pour Office 2010, les documents <abbr>PDF</abbr> générés peuvent souffrir de problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
+Liste des raccourcis clavier :
 
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lettre</th>
+      <th scope="col">raccourci Windows</th>
+      <th scope="col">raccourci Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">À</th>
+      <td>Alt Gr + \` (touche 7) puis A majuscule</td>
+      <td>Maj lock puis à</td>
+    </tr>
+    <tr>
+      <th scope="row">Ç</th>
+      <td>alt + 128</td>
+      <td>Option + ç</td>
+    </tr>
+    <tr>
+      <th scope="row">È</th>
+      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
+      <td>Maj lock puis è</td>
+    </tr>
+    <tr>
+      <th scope="row">É</th>
+      <td>alt + 144</td>
+      <td>Maj lock puis é</td>
+    </tr>
+    <tr>
+      <th scope="row">Ê</th>
+      <td>^ puis E majuscule </td>
+      <td>^ puis E majuscule</td>
+    </tr>
+  </tbody>
+</table>
 
-### 18. Insérer une table des matières
+## Mise en forme des contenus
 
-Pour tout document long (>2 pages), penser à insérer une table des matière générée automatiquement, dans le menu&nbsp;: Références&nbsp;> Table des matières.
-Cela permet à tous de se repérer plus facilement et d'aller rapidement au contenu que l'on souhaite lire.
+Utiliser les styles prédéfinis pour la mise en forme des contenus : le style « Normal » doit être attribué à tous les textes des paragraphes (style par défaut), le style « citation » pour les citations, etc.
 
-À noter qu'il faut mettre à jour cette table des matières dès qu'on change la structure du contenu, donc préférer générer la table des matières en fin de rédaction du contenu.
+Utiliser une police de caractères sans empattement (extensions qui terminent les extrémités des caractères) comme Arial ou Helvetica, en corps 12 pixels minimum et un espacement entre les caractères normal ou élargi.
+
+Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majuscule ; limiter l’utilisation de l’italique.
+
+Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.
+
+<img alt="" src="./images/word_mise_en_forme_fr.png" class="img-fluid" /> 
+
+Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran. 
+
+Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="./images/word_tab_fr.png" />) pour mettre en forme le contenu. 
+
+Utiliser les fonctions Retrait, Espacement : 
+- Menu **Mise en page > Paragraphe > Retrait** ou **Espacement** ou **Clic droit : « Paragraphe… »**
+
+<img alt="" src="./images/word_retrait_fr.png" class="img-fluid" /> 
+
+Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») : 
+
+<img alt="" src="./images/word_tab1_fr.png" class="img-fluid" /> 
+<img alt="" src="./images/word_tab2_fr.png" class="img-fluid" /> 
+
+Utiliser l’option « Colonnes » de l’onglet **Mise en page** pour créer une mise en page sous forme de colonnes, et non les tableaux.
+
+Utiliser le saut de page via le menu **Insertion > Saut de page** pour passer à la page suivante. 
+
+Numéroter les pages (menu **Insertion > Numéro de page**) pour permettre aux utilisateurs de se repérer dans le document.
+
+## Couleurs et contrastes
+
+Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.
+
+Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> qui vous permettra de vérifier très simplement la qualité de vos contrastes.
+
+S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.
+
+<img alt="" src="./images/word_contrastes1_fr.png" class="img-fluid" /> 
+**Exemple incorrect** : l'information est transmise uniquement par la couleur. 
+
+<img alt="" src="./images/word_contrastes2_fr.png" class="img-fluid" /> 
+**Exemple correct** : l'information est transmise par la forme et la couleur
+
+## Listes à puces ou numérotées
+
+Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.
+
+<img alt="" src="./images/word_liste_fr.png" class="img-fluid" /> 
+
+## Images
+
+Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image. 
+
+- **Pour les images porteuses d’informations** : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : **clic droit > Format de l’image > Texte de remplacement > champ « Description »**.
+- **Pour les images décoratives/illustratives** : laisser le champ description vide.
+- **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien. 
+- **Pour les images « lien »** : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien.
+- **Pour les graphiques ou schémas** : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu **Insertion > Smart Art**). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (**Format de l’objet** ou **de l’image > Texte de remplacement > Description**).
+
+<img alt="" src="./images/word_remplacement_fr.png" class="img-fluid" /> 
+
+Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un **clic droit sur l’image > renvoyer à la ligne automatiquement** ou le menu **Outils Image > Organiser**), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.  
+
+## Contenus audio et vidéo 
+
+[Nos préconisations sur les contenus audio et vidéo](./video-audio.html)
+
+## Liens
+
+Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.
+
+En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel. 
+
+Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre : 
+- menu **Insertion > Lien hypertexte > Info-bulle** : ajouter « nouvelle fenêtre » dans le libellé 
+
+Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier. 
+
+<img alt="" src="./images/word_lien_fr.png" class="img-fluid" /> 
+
+## Tableaux de données
+
+Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. 
+
+Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie. 
+
+Ajouter une description s'il s'agit d'un tableau complexe, **clic droit : Format de la forme > Texte de remplacement > Description**.
+
+Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme. 
+
+## Vérification finale
+
+Enfin, utiliser le vérificateur d’accessibilité intégré (menu : **Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité**). 
+
+<img alt="" src="./images/word_verification_fr.png" class="img-fluid" /> 
+
+Ce vérificateur permet de détecter les principales erreurs et propose des solutions. 
+
+## Convertir en fichier PDF
+
+Pour transformer votre document en <abbr>PDF</abbr>, aller dans le menu : **Fichier > Enregistrer sous** puis de sélectionner le type de fichier **PDF**. 
+
+La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.
+
+À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
+
+<img alt="" src="./images/word_pdf_fr.png" class="img-fluid" /> 
+
+Pour vérifier l’accessibilité d’un document PDF : [télécharger PDF Accessiblity Checker (PAC 3)](https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
 
 ## Ressources externes
 
