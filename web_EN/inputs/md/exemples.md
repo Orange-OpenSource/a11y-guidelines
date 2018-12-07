@@ -1,6 +1,6 @@
-# Componant examples
+# Component examples
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Componant examples"}]);
+    setBreadcrumb([{"label":"Component examples"}]);
 });</script>
 
 <style>
