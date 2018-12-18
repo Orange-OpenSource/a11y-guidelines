@@ -7,7 +7,7 @@
     ]);
     addSubMenu([
         {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"screen-reader-voiceover.html", "expanded": true}
+        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html", "expanded": true}
     ]);
 });</script>
 
@@ -72,7 +72,7 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 
 ## iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" />
 L'arrivée sur le marché de ce terminal avec iOS11 a quelque peu bouleversé la gestuelle classique dont on avait l'habitude à cause de l'absence de bouton principal.
-</br>Ces [nouveaux gestes de base](./screen-reader-voiceover-iphonex.html) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous.
+</br>Ces [nouveaux gestes de base](./lecteur-ecran-voiceover-iphonex.html) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous.
 - [Revenir à l'écran d'accueil.](#BackHome)
 - [Accéder au multitâche.](#Multitask)
 - [Accéder au centre de contrôle.](#ControlCenter)

@@ -4,7 +4,7 @@
     setBreadcrumb([{"label":"Lecteur d’écran"}]);
     addSubMenu([
         {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
+        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}
     ]);                
 });</script>
 
@@ -25,7 +25,7 @@ Deux versions sont disponibles&nbsp;:
 </div>
 <div class="mobileImg col-xs-12 col-md-6 col-lg-4">
     <h2 class="sr-only">Voiceover</h2>          
-    <a href="./screen-reader-voiceover.html" class="btn btn-info">
+    <a href="./lecteur-ecran-voiceover.html" class="btn btn-info">
         ![](./images/iphone.png)
         <div>Guide d’utilisation de <span lang="en">VoiceOver</span></div>
     </a>
