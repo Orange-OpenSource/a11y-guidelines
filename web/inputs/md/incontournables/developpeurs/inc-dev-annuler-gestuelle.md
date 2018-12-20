@@ -1,4 +1,4 @@
-# Permettre d'annuler le déclenchement des interactions gestuelles
+# Permettre d'annuler le déclenchement des interactions
 
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -19,8 +19,8 @@ Les personnes incapables de détecter les changements de contexte sont moins sus
 
 **Description&nbsp;:**  
 Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
-- l'événement descendant du pointeur (<span lang="en">MouseDown</span>) n'est pas utilisé pour effectuer une partie de la fonction
-- Pouvoir abandonner ou annuler, la fonction est terminée sur l'événement montant (<span lang="en">MouseDown</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée
+- l'événement "descendant" du pointeur (ex: <span lang="en">MouseDown</span>) n'est pas utilisé pour effectuer une partie de la fonction
+- Pouvoir abandonner ou annuler, la fonction est terminée sur l'événement "montant" (ex: <span lang="en">MouseUp</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée
 - Pouvoir sur l'événement montant inverser tout résultat de l'événement descendant précédent
 - Terminer la fonction sur l'événement est essentiel. Note : les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles. 
 

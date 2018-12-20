@@ -197,7 +197,7 @@ S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles
 <ul>
     <li>[Autoriser l’utilisation du zoom](inc-dev-autoriser-zoom.html)</li>
-    <li>[Permettre d’annuler le déclenchement des interactions gestuelles](inc-dev-annuler-gestuelle.html)</li>
+    <li>[Permettre d’annuler le déclenchement des interactions](inc-dev-annuler-gestuelle.html)</li>
     <li>[Proposer une alternative aux gestuelles complexes](inc-dev-alternative-gestures.html)</li>
     <li>[Donner accès au contenu quelle que soit l’orientation de l’écran](inc-dev-orientation-ecran.html)</li>
 </ul>
