@@ -22,11 +22,6 @@ Just like in a Word document, it is possible to use the table of contents only i
 - There should be no break in the heading hierarchy (we cannot jump from a `h2` heading to a `h4` heading).
 - You can use several `h1` headings per page (Don’t exceed two in most cases).
 
-**Goal: **
-- For all users: improve the structure of the page and its contents.
-- For search engines: improve <abbr>SEO</abbr>.
-- For users that are visually impaired, cognitively impaired or having reading difficulties: easy navigation and access to content.
-
 **Do:**  
 Page with consistent and relevant headings:
 
