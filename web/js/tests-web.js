@@ -182,38 +182,47 @@ function reqListener() {
 		  let conditions = [];
 		let self       = this;
 
+		
+		//init array conditions avec valeur Expert Accessibilité
+		arrProfil.push("Expert Accessibilité");		
+		conditions.unshift(function(item) { 
+			return item.profils.indexOf(arrProfil[0]) !== -1;								
+		});	
+		//on nomme la fonction, pour les boutons radio on utilise this.name
+		Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});	
+		
 
-		  //for (let input of checkboxes) {
 			for (var i = 0; i < checkboxes.length; i++) {
 				
 				let input = checkboxes[i];
-				 
+
 				input.addEventListener('click', function() {
 
-					if ((input.checked && input.name==="profil")){
+					if ((this.checked && this.name==="profil")){
 							arrProfil = [];
 							arrProfil.push(input.value);		
 					}
 							
-					if (input.name==="types"){
+					if (this.name==="types"){
 
 						if (input.checked){
-							arrType.push(input.value);
+							arrType.push(this.value);
 							
 						} else  {
 								//on supprime tous les critères non cochés
-								//let removeItem = arrType.filter( (e) => e !== input.value );
 								let removeItem = arrType.filter(function(e) {
-									e !== input.value;
+									e !== this.value;
 								});
 								arrType = removeItem;
 						
 								//on supprime également la condition dans le tableau des conditions
-								delDoublon(conditions, input.id);	
+								delDoublon(conditions, this.id);	
 						}
 					}
 
 					let indice = arrType.length + arrProfil.length;
+						
+						console.log(indice);
 						
 					if (indice > 0) {	
 
@@ -226,41 +235,41 @@ function reqListener() {
 							if ((arrProfil.length===1)){
 							
 								//on supprime les doublons, nécessaire pour les boutons radio
-								delDoublon(conditions, input.name);
+								delDoublon(conditions, this.name);
 							
 								conditions.unshift(function(item) { 
 									//return item.profils === arrProfil[0];
 									return item.profils.indexOf(arrProfil[0]) !== -1;								
 								});	
-								//on nomme la fonction, pour les boutons radio on utilise input.name
-								Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
+								//on nomme la fonction, pour les boutons radio on utilise this.name
+								Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});	
 
 							}
-							if ((input.checked && input.name==="types")){
+							if ((this.checked && this.name==="types")){
 								conditions.unshift(function(item) {
 									return item.type.indexOf(arrType[0]) !== -1;
 								});
-								//on nomme la fonction, pour les checkboxes on utilise input.id
-								Object.defineProperty(conditions[0], 'name', {value: input.id, writable: false});	
+								//on nomme la fonction, pour les checkboxes on utilise this.id
+								Object.defineProperty(conditions[0], 'name', {value: this.id, writable: false});	
 							}
 										
 						} else {	
 							
 							//on ajoute le nouveau critère
-							if ((input.checked && input.name==="profil")){
+							if ((this.checked && this.name==="profil")){
 
 								//on supprime les doublons, nécessaire pour les boutons radio
-								delDoublon(conditions, input.name);
+								delDoublon(conditions, this.name);
 						
 								conditions.unshift(function(item) {
 									return item.profils.indexOf(arrProfil[0]) !== -1;	
 								});
 								
-								//on nomme la fonction, pour les boutons radio on utilise input.name
-								Object.defineProperty(conditions[0], 'name', {value: input.name, writable: false});	
+								//on nomme la fonction, pour les boutons radio on utilise this.name
+								Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});	
 
 							}
-							if ((input.checked && input.name==="types")){
+							if ((this.checked && this.name==="types")){
 								
 								//on récupere la dernière valeur ajoutée
 								let i = arrType.length - 1;
@@ -270,12 +279,14 @@ function reqListener() {
 									return item.type.indexOf(valeurFiltre) !== -1;
 								});
 								
-								//on nomme la fonction, pour les checkboxes on utilise input.id
-								Object.defineProperty(conditions[0], 'name', {value: input.id, writable: false});
+								//on nomme la fonction, pour les checkboxes on utilise this.id
+								Object.defineProperty(conditions[0], 'name', {value: this.id, writable: false});
 
 							}		
 						}
 
+						console.table(conditions);
+						
 						//on applique tous les filtres stockés dans conditions
 						 filteredTest = self.refTests.filter(function(d) {
 							return conditions.every(function(c) {
@@ -288,6 +299,7 @@ function reqListener() {
 							
 				 } else {
 					//aucun critère de sélectionné, on réinitialise la page
+					
 					app.FetchAll(refTests);
 				 }
 
