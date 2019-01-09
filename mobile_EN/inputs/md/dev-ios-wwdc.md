@@ -36,9 +36,13 @@ Introduction of new iOS 11 accessibility features merging the user and the devel
 </br><a href="./dev-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Access to building apps with dynamic type." src="./images/iOSdev/wwdc17-245.png" />
 </br></br>
 
+## [2016 - What's New in Accessibility](./dev-ios-wwdc-16202.html)
+Introduction of new iOS, MacOS, tvOS and WatchOS accessibility features merging the user and the developer sides.
+</br><a href="./dev-ios-wwdc-16202.html"><img style="max-width: 700px; height: auto;" alt="Access to what's new in accessibility" src="./images/iOSdev/wwdc16-202.png" />
+    
 ## [2016 - Auditing Your Apps for Accessibility](./dev-ios-wwdc-16407.html)
 This presentation is a detailed explanation of the `Accessibility Inspector` Xcode tool with a programatic VoiceOver introduction at the begining.
-</br><a href="./dev-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Access to auditing your apps for accessibility" src="./images/iOSdev/wwdc16-407.png" />
+</br><a href="./dev-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Access to auditing your apps for accessibility." src="./images/iOSdev/wwdc16-407.png" />
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

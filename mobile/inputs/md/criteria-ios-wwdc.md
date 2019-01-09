@@ -32,7 +32,11 @@ Présentation des nouvelles fonctionnalités d'accessibilité iOS 11 en associan
 Permettre à l'utilisateur de déterminer la taille de texte nécessaire à son confort visuel et adapter son application à cette modification sont des éléments essentiels que le `Dynamic Type` met en avant.
 </br>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le `Dynamic Type` ainsi qu'une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.
 </br><a href="./criteria-ios-wwdc-17245.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'application du dynalic type." src="./images/iOSdev/wwdc17-245.png" />
- 
+
+## [2016 - Les nouveautés en accessibilité](./criteria-ios-wwdc-16202.html)
+Présentation des nouvelles fonctionnalités d'accessibilité iOS, MacOS, tvOS et WatchOS en associant la pratique de l'utilisateur à la conception du développeur.
+</br><a href="./criteria-ios-wwdc-16202.html"><img style="max-width: 700px; height: auto;" alt="Accès aux nouveautés en accessibilité 2016." src="./images/iOSdev/wwdc16-202.png" />
+    
 ## [2016 - Audit d'une app en accessibilité](./criteria-ios-wwdc-16407.html)
 Après un rappel sur le fonctionnement de <span lang="en">VoiceOver</span> au niveau programmatique, cette présentation va détailler les différentes fonctionnalités proposées par l'outil <span lang="en">Accessibility Inspector</span> de Xcode en s'appuyant sur un exemple très simple pour une mise en situation concrète.
 </br><a href="./criteria-ios-wwdc-16407.html"><img style="max-width: 700px; height: auto;" alt="Accès à l'audit d'une app en accessibilité" src="./images/iOSdev/wwdc16-407.png" />
