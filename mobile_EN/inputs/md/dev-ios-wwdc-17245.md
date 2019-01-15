@@ -28,7 +28,7 @@ This video available on the **official Apple website** ([session 245](https://de
 - [PreferredContentSizeCategory](#PreferredContentSizeCategory) (15:23)
 - [Table view cells](#TableViewCells) (16:38)
 - [Images](#Images) (20:13)
-- [Exemple](#Demo) (24:32)
+- [Example](#Demo) (24:32)
 
 Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.
 
@@ -52,7 +52,7 @@ When a web view is used, the CSS may contain information about the text style to
 
 <a name="WrapToMultipleLines"></a>
 ### [Wrap to multiple lines (10:14)](https://developer.apple.com/videos/play/wwdc2017/245/?time=614)
-When a `label` may be troncatured after adjustement, it's recommended to write `0` number of lines in the Attribute Inspector part of the Interface Builder that will be understood as no limit.
+When a `label` may be troncatured after adjustment, it's recommended to write `0` number of lines in the Attribute Inspector part of the Interface Builder that will be understood as no limit.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245-WrapToMultipleLines.png" />
 
 <a name="AutoLayoutSystemSpacingConstraints"></a>
@@ -94,11 +94,11 @@ Standard table view cells content is automatically adjusted thanks to the [cell-
 
 <a name="Images"></a>
 ### [Images (20:13)](https://developer.apple.com/videos/play/wwdc2017/245/?time=1213)
-`Dynamic Type` allows image size adjustement for both views and tab bars as well.
+`Dynamic Type` allows image size adjustment for both views and tab bars as well.
 </br>All the detailed explanations for this implementation can be found in the [development part](./dev-ios.html#graphical-elements-size).
 
 <a name="Demo"></a>
-### [Exemple (24:32)](https://developer.apple.com/videos/play/wwdc2017/245/?time=1472)
+### [Example (24:32)](https://developer.apple.com/videos/play/wwdc2017/245/?time=1472)
 During this presentation, some solutions for `Dynamic Type` pitfalls are suggested thanks to a simple application ([take a look at it](https://developer.apple.com/videos/play/wwdc2017/245/?time=1506) before reading what's next) :
 - **Why doesn't my implemented `Dynamic Type` work** ?
 [(26:19)](https://developer.apple.com/videos/play/wwdc2017/245/?time=1579) (hint = `adjustsFontForContentSizeCategory` (code) or `Automatically Adjusts Font` (Attribute Inspector) + `scaledFont` if custom font is used)
