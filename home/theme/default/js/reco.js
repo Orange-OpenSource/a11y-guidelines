@@ -293,7 +293,7 @@ var Glossary = { // collection of all terms to be defined
     "fr":"modèle d’objet document"
   },
   "EASE":{
-    "base":"<span lang='en'>e-Accessibility Services for Everyone</span>",
+    "base":"<span lang='en'>e-Accessibility Solutions for Everyone</span>",
     "fr":"service d’accessibilité numérique chez Orange"
   },
   "EULA":{

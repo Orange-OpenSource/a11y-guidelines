@@ -6,7 +6,7 @@
 
 ## Qui sommes-nous&nbsp;?
 
-<abbr>EASE</abbr>, «&nbsp;<i lang="en">E-Accessibility for Everyone</i>&nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
+<abbr>EASE</abbr>, «&nbsp;<i lang="en">E-Accessibility Solutions for Everyone</i>&nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.
 
 <h2 class="page-title">Qu’est ce que l’accessibilité numérique&nbsp;?</h2>
 
