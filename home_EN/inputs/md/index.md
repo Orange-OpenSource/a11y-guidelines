@@ -1,4 +1,4 @@
-# Orange accessibility guidelines
+# Orange digital accessibility guidelines
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Presentation"}]);
 });</script>

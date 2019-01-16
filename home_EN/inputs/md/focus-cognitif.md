@@ -1,4 +1,4 @@
-# Orange accessibility guidelines
+# Orange digital accessibility guidelines
 <h2 class="page-title">Cognitive disability</h2>
 
 <script>$(document).ready(function () {

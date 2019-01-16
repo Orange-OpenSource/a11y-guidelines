@@ -1,4 +1,4 @@
-# Orange accessibility guidelines <h2 class="page-title">Your opinion matters…</h2>
+# Orange digital accessibility guidelines <h2 class="page-title">Your opinion matters…</h2>
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Contact"}]);

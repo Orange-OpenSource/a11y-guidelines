@@ -1,4 +1,4 @@
-# Orange accessibility guidelines
+# Orange digital accessibility guidelines
 <h2 class="page-title">Types of Disabilities</h2>
 
 <script>$(document).ready(function () {

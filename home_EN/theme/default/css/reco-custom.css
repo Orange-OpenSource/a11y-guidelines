@@ -10,10 +10,11 @@
   background-position: right;  
   min-height: 140px;
   padding-left: 2rem;
+  margin: 0;
 }
 
 h1 a {
-  max-width: 24rem;
+  max-width: 34rem;
   display: inline-block;
   margin: 1.9rem 1.9rem 1.9rem 0;
   line-height: 2.4rem;

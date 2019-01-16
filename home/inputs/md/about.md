@@ -1,4 +1,4 @@
-# Recommandations accessibilité Orange
+# Recommandations accessibilité numérique Orange
 <h2 class="page-title">À propos</h2>
 
 <script>$(document).ready(function () {
