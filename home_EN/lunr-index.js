@@ -8,11 +8,11 @@ var documentTitles = {};
 
 
 
-documentTitles["about.html#orange-accessibility-guidelines-h2-classpage-titleabouth2"] = "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt;";
+documentTitles["about.html#orange-digital-accessibility-guidelines-h2-classpage-titleabouth2"] = "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt;";
 index.add({
-    url: "about.html#orange-accessibility-guidelines-h2-classpage-titleabouth2",
-    title: "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt;",    
-    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  "
+    url: "about.html#orange-digital-accessibility-guidelines-h2-classpage-titleabouth2",
+    title: "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt;",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;About&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;About\&quot;}]); });&lt;/script&gt;  Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).    The Orange logo and some images or screenshots are property of Orange:  Copyright (C) 2016 Orange SA All rights reserved   [List of the concerned files](/NOTICE.txt)  "
 });
 
 documentTitles["about.html#cookie-management"] = "Cookie management";
@@ -24,20 +24,20 @@ index.add({
 
 
 
-documentTitles["contact.html#orange-accessibility-guidelines-h2-classpage-titleyour-opinion-mattersh2"] = "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;";
+documentTitles["contact.html#orange-digital-accessibility-guidelines-h2-classpage-titleyour-opinion-mattersh2"] = "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;";
 index.add({
-    url: "contact.html#orange-accessibility-guidelines-h2-classpage-titleyour-opinion-mattersh2",
-    title: "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;",    
-    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Have a bug or a feature request?    Please first check [the issues](https://github.com/Orange-OpenSource/a11y-guidelines/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).  &amp;nbsp;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "contact.html#orange-digital-accessibility-guidelines-h2-classpage-titleyour-opinion-mattersh2",
+    title: "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Your opinion matters…&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Have a bug or a feature request?    Please first check [the issues](https://github.com/Orange-OpenSource/a11y-guidelines/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).  &amp;nbsp;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["focus.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["focus.html#orange-digital-accessibility-guidelines"] = "Orange digital accessibility guidelines";
 index.add({
-    url: "focus.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Types of Disabilities&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Disability situations\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  "
+    url: "focus.html#orange-digital-accessibility-guidelines",
+    title: "Orange digital accessibility guidelines",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Types of Disabilities&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Disability situations\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  "
 });
 
 documentTitles["focus.html#hearing-impairments"] = "Hearing impairments";
@@ -70,11 +70,11 @@ index.add({
 
 
 
-documentTitles["focus-cognitif.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["focus-cognitif.html#orange-digital-accessibility-guidelines"] = "Orange digital accessibility guidelines";
 index.add({
-    url: "focus-cognitif.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Cognitive disability&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Disability situations\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  **Cognitive disability** is the consequence of cognitive dysfunctions: difficulties with memory, problems coping with change, language, receptive identification and gestures. Cognitive disability **does not imply intellectual deficiency**, but difficulties to muster capacities.  This should not be mistaken for mental or psychological handicap:  - **Mental handicap**, which results from an intellectual disability: a limited capacity to learn and an intellectual development significantly lower than average that is reflected in some difficulty thinking, conceptualizing, communicating, making decisions, etc. - **Psychological handicap**, which results from invalidating psychological trouble. Like cognitive handicap, psychological handicap does not imply intellectual deficiency. It is characterized by alternating mental states of calm and tension, and by difficulties to acquire or express psychosocial abilities, with attention deficits and difficulties to elaborate and follow a plan of action. It can be translated in anguish, cognitive crises (problems with memorization, attention, organization, anticipation, adaptation to a context) and in difficulties to relate to people and in communication.  "
+    url: "focus-cognitif.html#orange-digital-accessibility-guidelines",
+    title: "Orange digital accessibility guidelines",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Cognitive disability&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Disability situations\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  **Cognitive disability** is the consequence of cognitive dysfunctions: difficulties with memory, problems coping with change, language, receptive identification and gestures. Cognitive disability **does not imply intellectual deficiency**, but difficulties to muster capacities.  This should not be mistaken for mental or psychological handicap:  - **Mental handicap**, which results from an intellectual disability: a limited capacity to learn and an intellectual development significantly lower than average that is reflected in some difficulty thinking, conceptualizing, communicating, making decisions, etc. - **Psychological handicap**, which results from invalidating psychological trouble. Like cognitive handicap, psychological handicap does not imply intellectual deficiency. It is characterized by alternating mental states of calm and tension, and by difficulties to acquire or express psychosocial abilities, with attention deficits and difficulties to elaborate and follow a plan of action. It can be translated in anguish, cognitive crises (problems with memorization, attention, organization, anticipation, adaptation to a context) and in difficulties to relate to people and in communication.  "
 });
 
 documentTitles["focus-cognitif.html#learning-disabilities-dysorders"] = "Learning disabilities (“Dys”orders)";
@@ -93,11 +93,11 @@ index.add({
 
 
 
-documentTitles["focus-seniors.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["focus-seniors.html#orange-digital-accessibility-guidelines"] = "Orange digital accessibility guidelines";
 index.add({
-    url: "focus-seniors.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Older people&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Disability situations\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  "
+    url: "focus-seniors.html#orange-digital-accessibility-guidelines",
+    title: "Orange digital accessibility guidelines",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Older people&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Disability situations\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Cognitive disability\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Older people\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  "
 });
 
 documentTitles["focus-seniors.html#summary"] = "Summary";
@@ -151,11 +151,27 @@ index.add({
 
 
 
-documentTitles["organisation.html#orange-accessibility-guidelines-h2-classpage-titlesite-organizationh2"] = "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt;";
+documentTitles["test.html#orange-digital-accessibility-guidelines"] = "Orange digital accessibility guidelines";
 index.add({
-    url: "organisation.html#orange-accessibility-guidelines-h2-classpage-titlesite-organizationh2",
-    title: "Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt;",    
-    body: "# Orange accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organization\&quot;}]); });&lt;/script&gt;  This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.   These different topics are available through the navigation menu located in the header.  Each section contains: - Recommendations for the targeted platform - Resources to learn and test yourself - Technical examples  "
+    url: "test.html#orange-digital-accessibility-guidelines",
+    title: "Orange digital accessibility guidelines",    
+    body: "# Orange digital accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Test methods\&quot;}]); });&lt;/script&gt;  "
+});
+
+documentTitles["test.html#how-to-test-digital-accessibilitynbsp"] = "How to test digital accessibility&amp;nbsp;?";
+index.add({
+    url: "test.html#how-to-test-digital-accessibilitynbsp",
+    title: "How to test digital accessibility&amp;nbsp;?",    
+    body: "## How to test digital accessibility&amp;nbsp;?  Orange evaluates the accessibility of an application, a site or any other digital resource using three complementary methods&amp;nbsp;: - ** Technical evaluation **&amp;nbsp;: inspect the code and color contrast to measure WCAG compliance for the Web and best practices for other technology platforms. Part of the tests can be done automatically by tools but the majority requires manual control.  - ** Functional evaluation **&amp;nbsp;: test the interface behavior with different assistive devices to verify that the evaluated content is free of blocking points. The tests are essentially performed for 3 behaviors: the use of a screen reader, a software magnifier and keyboard navigation.  - ** User evaluation **&amp;nbsp;: the application is tested by disabled users in order to check the accessibility level from their point of view. These tests consist of making some target users whose position (or mobile ...) is equipped with a particular technical help (digital screen magnifier, screen reader, keyboard only, Braille display) the main tasks of the application. They make it possible to identify the problems of use and to validate the criticality of the anomalies encountered. These tests are conducted by accessibility experts.  For more details&amp;nbsp;: - [Methods and tools specific to the Web](/web_EN/methodes-outils.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["organisation.html#orange-digital-accessibility-guidelines-h2-classpage-titlesite-organizationh2"] = "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt;";
+index.add({
+    url: "organisation.html#orange-digital-accessibility-guidelines-h2-classpage-titlesite-organizationh2",
+    title: "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt;",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Site organization&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organization\&quot;}]); });&lt;/script&gt;  This site is divided into several headings. Each one presents Orange accessibility recommendations for a type of platform.   These different topics are available through the navigation menu located in the header.  Each section contains: - Recommendations for the targeted platform - Resources to learn and test yourself - Technical examples  "
 });
 
 documentTitles["organisation.html#headings-list"] = "Headings list";
@@ -188,11 +204,11 @@ index.add({
 
 
 
-documentTitles["index.html#orange-accessibility-guidelines"] = "Orange accessibility guidelines";
+documentTitles["index.html#orange-digital-accessibility-guidelines"] = "Orange digital accessibility guidelines";
 index.add({
-    url: "index.html#orange-accessibility-guidelines",
-    title: "Orange accessibility guidelines",    
-    body: "# Orange accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  &lt;h2 class=\&quot;page-title\&quot;&gt;What is digital accessibility?&lt;/h2&gt;  Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones.   It is not a question of increasing the number of information outlets, but of respecting functional, graphical, technical and editorial rules that will enable everyone to access information no matter what tools they use.  "
+    url: "index.html#orange-digital-accessibility-guidelines",
+    title: "Orange digital accessibility guidelines",    
+    body: "# Orange digital accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Presentation\&quot;}]); });&lt;/script&gt;  &lt;h2 class=\&quot;page-title\&quot;&gt;What is digital accessibility?&lt;/h2&gt;  Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones.   It is not a question of increasing the number of information outlets, but of respecting functional, graphical, technical and editorial rules that will enable everyone to access information no matter what tools they use.  "
 });
 
 documentTitles["index.html#who-is-concerned-by-digital-accessibility"] = "Who is concerned by digital accessibility?";

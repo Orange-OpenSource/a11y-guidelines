@@ -98,7 +98,7 @@ documentTitles["captcha.html#second-analysis-captcha-and-security"] = "Second an
 index.add({
     url: "captcha.html#second-analysis-captcha-and-security",
     title: "Second analysis: CAPTCHA and security",    
-    body: "## Second analysis: CAPTCHA and security  In [a 2014 article by Google](https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html), we read that artificial intelligence get a 99.8% score when solving “even the most difficult variant of distorted text” – thus getting a better score than a real user! Services can guess which font was used in an image, or whether the image contains an object (a cat, a car, a hat, etc.) Considering this (users bouncing from the site in frustration and uncertain security), we come back to our first recommendation: **do not use a CAPTCHA**.  "
+    body: "## Second analysis: CAPTCHA and security  In [a 2014 article by Google](https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html), we read that artificial intelligence get a 99.8% score when solving “even the most difficult variant of distorted text” – thus getting a better score than a real user! Services can guess which font was used in an image, or whether the image contains an object (a cat, a car, a hat, etc.). Same conclusion in this more recent article &lt;a href=\&quot;https://medium.com/mlmemoirs/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694\&quot;&gt;Breaking CAPTCHA Using Machine Learning in 0.05 Seconds&lt;/a&gt;. Considering this (users bouncing from the site in frustration and uncertain security), we come back to our first recommendation: **do not use a CAPTCHA**.  "
 });
 
 documentTitles["captcha.html#recommended-solutions"] = "Recommended solutions";

@@ -9,50 +9,43 @@ var documentTitles = {};
 
 
 
-documentTitles["contact.html#recommandations-accessibilite-orange-h2-classpage-titlevotre-avis-compteh2"] = "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt;";
+documentTitles["contact.html#recommandations-accessibilite-numerique-orange-h2-classpage-titlevotre-avis-compteh2"] = "Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt;";
 index.add({
-    url: "contact.html#recommandations-accessibilite-orange-h2-classpage-titlevotre-avis-compteh2",
-    title: "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt;",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?    Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "contact.html#recommandations-accessibilite-numerique-orange-h2-classpage-titlevotre-avis-compteh2",
+    title: "Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt;",    
+    body: "# Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Votre avis compte&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?    Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["index.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["index.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
 index.add({
-    url: "index.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
+    url: "index.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
 });
 
 documentTitles["index.html#qui-sommes-nousnbsp"] = "Qui sommes-nous&amp;nbsp;?";
 index.add({
     url: "index.html#qui-sommes-nousnbsp",
     title: "Qui sommes-nous&amp;nbsp;?",    
-    body: "## Qui sommes-nous&amp;nbsp;?  &lt;abbr&gt;EASE&lt;/abbr&gt;, «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;E-Accessibility for Everyone&lt;/i&gt;&amp;nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.  &lt;h2 class=\&quot;page-title\&quot;&gt;Qu’est ce que l’accessibilité numérique&amp;nbsp;?&lt;/h2&gt;  &lt;blockquote&gt;     &lt;p&gt;La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel.&lt;/p&gt;     &lt;footer&gt;         Tim Berners-Lee, directeur du &lt;abbr title=\&quot;World Wide Web Consortium\&quot;&gt;W3C&lt;/abbr&gt; et inventeur du World Wide Web.     &lt;/footer&gt; &lt;/blockquote&gt;  L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.  Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.  "
+    body: "## Qui sommes-nous&amp;nbsp;?  &lt;abbr&gt;EASE&lt;/abbr&gt;, «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;E-Accessibility Solutions for Everyone&lt;/i&gt;&amp;nbsp;», un centre de compétences d’Orange, constitué d’une douzaine de personnes, dédié à l’accessibilité du contenu numérique (éditorial, applications Web et mobiles). Nous accompagnons les projets, proposons des formations, publions des recommandations et réalisons des outils destinés aux projets.  &lt;h2 class=\&quot;page-title\&quot;&gt;Qu’est ce que l’accessibilité numérique&amp;nbsp;?&lt;/h2&gt;  &lt;blockquote&gt;     &lt;p&gt;La puissance du Web réside dans son universalité. L’accès pour tous indépendamment du handicap est un aspect essentiel.&lt;/p&gt;     &lt;footer&gt;         Tim Berners-Lee, directeur du &lt;abbr title=\&quot;World Wide Web Consortium\&quot;&gt;W3C&lt;/abbr&gt; et inventeur du World Wide Web.     &lt;/footer&gt; &lt;/blockquote&gt;  L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différentes technologies comme le Web, les vidéos et les documents Word et PDF, mais également la télévision numérique ou les téléphones mobiles.  Il ne s’agit pas de démultiplier les supports de l’information, mais de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information quels que soient leurs outils de consultation.  "
 });
 
 documentTitles["index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp"] = "Qui est concerné par l’accessibilité numérique&amp;nbsp;?";
 index.add({
     url: "index.html#qui-est-concerne-par-laccessibilite-numeriquenbsp",
     title: "Qui est concerné par l’accessibilité numérique&amp;nbsp;?",    
-    body: "## Qui est concerné par l’accessibilité numérique&amp;nbsp;?  Les situations de handicap identifiées ne sont pas seulement celles que l’on voit.    Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.  &amp;nbsp; &lt;div class=\&quot;sr-only\&quot;&gt;     Les citations suivantes en sont l’illustration&amp;nbsp;:     &lt;ul&gt;         &lt;li&gt;Les sous-titres me sont utiles car ma langue maternelle n’est pas le français.&lt;/li&gt;         &lt;li&gt;C’est utile de ne pas être obligé d’imprimer en couleur pour comprendre cette carte.&lt;/li&gt;         &lt;li&gt;Après avoir travaillé toute la journée derrière un écran, j’ai plus de difficultés à lire certains textes trop petits.&lt;/li&gt;     &lt;/ul&gt; &lt;/div&gt;    &lt;img src=\&quot;./images/chat.png\&quot; alt=\&quot;\&quot; class=\&quot;img-fluid\&quot;&gt;  "
-});
-
-documentTitles["index.html#comment-tester-laccessibilite-numeriquenbsp"] = "Comment tester l’accessibilité numérique&amp;nbsp;?";
-index.add({
-    url: "index.html#comment-tester-laccessibilite-numeriquenbsp",
-    title: "Comment tester l’accessibilité numérique&amp;nbsp;?",    
-    body: "## Comment tester l’accessibilité numérique&amp;nbsp;?  Orange évalue l’accessibilité d’une application, d’un site ou de toute autre ressource numérique à l’aide de trois méthodes complémentaires&amp;nbsp;: - **Évaluation technique**&amp;nbsp;: inspecter le code et le contraste des couleurs pour mesurer la conformité au standard WCAG pour le Web et aux bonnes pratiques pour les autres plateformes technologiques. Une partie des tests peut être réalisée automatiquement par des outils mais la majorité nécessite un contrôle manuel. - **Évaluation fonctionnelle**&amp;nbsp;: tester le comportement de l’interface avec différentes [aides techniques](/outils.html) pour vérifier que les contenus évalués sont exempts de points bloquants. Les tests sont essentiellement réalisés pour 3 comportements : l’utilisation d’un lecteur d’écran, d’une loupe logicielle et la navigation au clavier. - **Évaluation utilisateur**&amp;nbsp;: faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur. Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées. Ces tests sont conduits par des experts accessibilité.  Pour plus de détails&amp;nbsp;: - [Méthodes et outils propres au Web](/web/methodes-outils.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Qui est concerné par l’accessibilité numérique&amp;nbsp;?  Les situations de handicap identifiées ne sont pas seulement celles que l’on voit.    Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.  &amp;nbsp; &lt;div class=\&quot;sr-only\&quot;&gt;     Les citations suivantes en sont l’illustration&amp;nbsp;:     &lt;ul&gt;         &lt;li&gt;Les sous-titres me sont utiles car ma langue maternelle n’est pas le français.&lt;/li&gt;         &lt;li&gt;C’est utile de ne pas être obligé d’imprimer en couleur pour comprendre cette carte.&lt;/li&gt;         &lt;li&gt;Après avoir travaillé toute la journée derrière un écran, j’ai plus de difficultés à lire certains textes trop petits.&lt;/li&gt;     &lt;/ul&gt; &lt;/div&gt;    &lt;img src=\&quot;./images/chat.png\&quot; alt=\&quot;\&quot; class=\&quot;img-fluid\&quot;&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["focus.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["focus.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
 index.add({
-    url: "focus.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Les situations de handicap&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  "
+    url: "focus.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Les situations de handicap&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  "
 });
 
 documentTitles["focus.html#le-handicap-auditif"] = "Le handicap auditif";
@@ -85,11 +78,11 @@ index.add({
 
 
 
-documentTitles["focus-cognitif.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["focus-cognitif.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
 index.add({
-    url: "focus-cognitif.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Le handicap cognitif&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  **Le handicap cognitif** est la conséquence de dysfonctionnements des fonctions cognitives : troubles de l’attention, de la mémoire, de l’adaptation au changement, du langage, des identifications perceptives (gnosies) et des gestes (praxies). Le handicap cognitif n’implique **pas de déficience intellectuelle** mais des difficultés à mobiliser ses capacités. À ne pas confondre avec le handicap mental et le handicap psychique : - Le handicap mental, qui est la conséquence d’une déficience intellectuelle, considérée comme une capacité plus limitée d’apprentissage et un développement intellectuel significativement inférieur à la moyenne et se traduit par des difficultés plus ou moins importantes de réflexion, de conceptualisation, de communication, de décision, etc. - Le handicap psychique qui est la conséquence de troubles psychiques invalidants. Comme le handicap cognitif, le handicap psychique n’implique pas de déficience intellectuelle. Il est caractérisé par une alternance d’états psychiques calmes ou tendus et par des difficultés à acquérir ou à exprimer des habiletés psychosociales, avec des déficits d’attention et des difficultés à élaborer et suivre un plan d’action. Il peut donc notamment se traduire par des angoisses, des troubles cognitifs (mémorisation, attention, capacités d’organisation, d’anticipation, adaptation au contexte de la situation) et des difficultés dans la relation à autrui et la communication.  "
+    url: "focus-cognitif.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Le handicap cognitif&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  **Le handicap cognitif** est la conséquence de dysfonctionnements des fonctions cognitives : troubles de l’attention, de la mémoire, de l’adaptation au changement, du langage, des identifications perceptives (gnosies) et des gestes (praxies). Le handicap cognitif n’implique **pas de déficience intellectuelle** mais des difficultés à mobiliser ses capacités. À ne pas confondre avec le handicap mental et le handicap psychique : - Le handicap mental, qui est la conséquence d’une déficience intellectuelle, considérée comme une capacité plus limitée d’apprentissage et un développement intellectuel significativement inférieur à la moyenne et se traduit par des difficultés plus ou moins importantes de réflexion, de conceptualisation, de communication, de décision, etc. - Le handicap psychique qui est la conséquence de troubles psychiques invalidants. Comme le handicap cognitif, le handicap psychique n’implique pas de déficience intellectuelle. Il est caractérisé par une alternance d’états psychiques calmes ou tendus et par des difficultés à acquérir ou à exprimer des habiletés psychosociales, avec des déficits d’attention et des difficultés à élaborer et suivre un plan d’action. Il peut donc notamment se traduire par des angoisses, des troubles cognitifs (mémorisation, attention, capacités d’organisation, d’anticipation, adaptation au contexte de la situation) et des difficultés dans la relation à autrui et la communication.  "
 });
 
 documentTitles["focus-cognitif.html#les-troubles-dys"] = "Les troubles DYS";
@@ -108,11 +101,11 @@ index.add({
 
 
 
-documentTitles["focus-seniors.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["focus-seniors.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
 index.add({
-    url: "focus-seniors.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Les séniors&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  "
+    url: "focus-seniors.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Les séniors&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les situations de handicap\&quot;, \&quot;url\&quot;: \&quot;./focus.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Le handicap cognitif\&quot;,\&quot;url\&quot;:\&quot;focus-cognitif.html\&quot;},         {\&quot;label\&quot;:\&quot;Les séniors\&quot;,\&quot;url\&quot;:\&quot;focus-seniors.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;focus\&quot;&gt;&lt;/span&gt;  "
 });
 
 documentTitles["focus-seniors.html#problematique"] = "Problématique";
@@ -166,11 +159,27 @@ index.add({
 
 
 
-documentTitles["organisation.html#recommandations-accessibilite-orange-h2-classpage-titleorganisation-du-siteh2"] = "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;";
+documentTitles["test.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
 index.add({
-    url: "organisation.html#recommandations-accessibilite-orange-h2-classpage-titleorganisation-du-siteh2",
-    title: "Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.   Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.  Chaque rubrique contient&amp;nbsp;: - Des recommandations en fonction de la plateforme visée, - Des ressources pour apprendre et tester soi-même, - Des exemples techniques.  "
+    url: "test.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les méthodes de test\&quot;}]); });&lt;/script&gt;  "
+});
+
+documentTitles["test.html#comment-tester-laccessibilite-numeriquenbsp"] = "Comment tester l’accessibilité numérique&amp;nbsp;?";
+index.add({
+    url: "test.html#comment-tester-laccessibilite-numeriquenbsp",
+    title: "Comment tester l’accessibilité numérique&amp;nbsp;?",    
+    body: "## Comment tester l’accessibilité numérique&amp;nbsp;?  Orange évalue l’accessibilité d’une application, d’un site ou de toute autre ressource numérique à l’aide de trois méthodes complémentaires&amp;nbsp;: - **L'évaluation technique**&amp;nbsp;: inspecter le code et le contraste des couleurs pour mesurer la conformité au standard WCAG pour le Web et aux bonnes pratiques pour les autres plateformes technologiques. Une partie des tests peut être réalisée automatiquement par des outils mais la majorité nécessite un contrôle manuel.  - **L'évaluation fonctionnelle**&amp;nbsp;: tester le comportement de l’interface avec différentes [aides techniques](/outils.html) pour vérifier que les contenus évalués sont exempts de points bloquants. Les tests sont essentiellement réalisés pour 3 comportements : l’utilisation d’un lecteur d’écran, d’une loupe logicielle et la navigation au clavier.  - **L'évaluation utilisateur**&amp;nbsp;: faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur. Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées. Ces tests sont conduits par des experts accessibilité.  Pour plus de détails&amp;nbsp;: - [Méthodes et outils propres au Web](/web/methodes-outils.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["organisation.html#recommandations-accessibilite-numerique-orange-h2-classpage-titleorganisation-du-siteh2"] = "Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;";
+index.add({
+    url: "organisation.html#recommandations-accessibilite-numerique-orange-h2-classpage-titleorganisation-du-siteh2",
+    title: "Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt;",    
+    body: "# Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;Organisation du site&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Organisation du site\&quot;}]); });&lt;/script&gt;  Ce site est découpé en plusieurs rubriques. Chacune présente les recommandations accessibilité Orange pour un type de plateforme.   Ces différentes rubriques sont disponibles via le menu de navigation situé dans l’en-tête.  Chaque rubrique contient&amp;nbsp;: - Des recommandations en fonction de la plateforme visée, - Des ressources pour apprendre et tester soi-même, - Des exemples techniques.  "
 });
 
 documentTitles["organisation.html#liste-des-rubriques"] = "Liste des rubriques";
@@ -210,11 +219,18 @@ index.add({
 
 
 
+documentTitles["outils.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
+index.add({
+    url: "outils.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange  "
+});
+
 documentTitles["outils.html#les-solutions-dassistances-ou-aides-techniques"] = "Les solutions d'assistances ou aides techniques";
 index.add({
     url: "outils.html#les-solutions-dassistances-ou-aides-techniques",
     title: "Les solutions d'assistances ou aides techniques",    
-    body: "# Les solutions d'assistances ou aides techniques  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les solutions d'assistance\&quot;}]); });&lt;/script&gt;  L’accès aux &lt;abbr&gt;TICS&lt;/abbr&gt; &lt;i&gt;Technologies de l'Information et de la Communication&lt;/i&gt; telles que sites Web, applications mobile, contenus bureautiques ou multimédias….) est rendu possible aux personnes en situation de handicap grâce à des technologies  d’assistance. Ces technologies comprennent :  * des aides logicielles, comme les synthèses vocales ou les loupes numériques, * des aides matérielles : souris adaptées, claviers à grosses touches, micros, trackballs, plage Braille, etc.  Ces aides ne fonctionnent que si les applications ou contenus ont été créés en suivant les règles d’accessibilité de conception et de développement. On dira ainsi qu’un site est accessible s’il est compatible avec les aides techniques (synthèses vocales, systèmes de modifications de la taille des polices ou des couleurs, etc.) et avec la navigation au clavier.  "
+    body: "## Les solutions d'assistances ou aides techniques  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Les solutions d'assistance\&quot;}]); });&lt;/script&gt;  L’accès aux &lt;abbr&gt;TICS&lt;/abbr&gt; &lt;i&gt;Technologies de l'Information et de la Communication&lt;/i&gt; telles que sites Web, applications mobile, contenus bureautiques ou multimédias….) est rendu possible aux personnes en situation de handicap grâce à des technologies  d’assistance. Ces technologies comprennent :  * des aides logicielles, comme les synthèses vocales ou les loupes numériques, * des aides matérielles : souris adaptées, claviers à grosses touches, micros, trackballs, plage Braille, etc.  Ces aides ne fonctionnent que si les applications ou contenus ont été créés en suivant les règles d’accessibilité de conception et de développement. On dira ainsi qu’un site est accessible s’il est compatible avec les aides techniques (synthèses vocales, systèmes de modifications de la taille des polices ou des couleurs, etc.) et avec la navigation au clavier.  "
 });
 
 documentTitles["outils.html#quelques-exemples-et-definitions"] = "Quelques exemples et définitions";
@@ -289,11 +305,11 @@ index.add({
 
 
 
-documentTitles["about.html#recommandations-accessibilite-orange"] = "Recommandations accessibilité Orange";
+documentTitles["about.html#recommandations-accessibilite-numerique-orange"] = "Recommandations accessibilité numérique Orange";
 index.add({
-    url: "about.html#recommandations-accessibilite-orange",
-    title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures d’écran sont la propriété d’Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  "
+    url: "about.html#recommandations-accessibilite-numerique-orange",
+    title: "Recommandations accessibilité numérique Orange",    
+    body: "# Recommandations accessibilité numérique Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures d’écran sont la propriété d’Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  "
 });
 
 documentTitles["about.html#gestion-des-cookies"] = "Gestion des cookies";
