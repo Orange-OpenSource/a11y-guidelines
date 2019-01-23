@@ -21,13 +21,9 @@ Vous trouverez les recommandations Microsoft Word, ainsi que la procédure pour 
 
 Vous trouverez les recommandations Adobe inDesign sur la notice <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign">Créer des documents <abbr>PDF</abbr> accessibles avec Adobe Indesign</a> de AcceDe <abbr>PDF</abbr>.
 
-Ce document est issu de la phase 1 d’AcceDe <abbr>PDF</abbr> (2011), par Atalan en partenariat avec 9 entreprises&nbsp;: Spie, Air Liquide, Société Générale, <abbr>BNP</abbr> Paribas, Areva, <abbr>LVMH</abbr>, Capgemini, Thales et <abbr>SNCF</abbr>, en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.
-
 ### Avec Adobe Acrobat Pro
 
 Vous trouverez les recommandations Adobe Acrobat Pro sur la notice <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat">Créer des documents <abbr>PDF</abbr> accessibles avec Adobe Acrobat Pro</a> de AcceDe <abbr>PDF</abbr>. 
-
-Ce document est issu de la phase 2 d’AcceDe <abbr>PDF</abbr> (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&nbsp;: La Poste, Siemens, Spie, Thales, Atos, <abbr>BNP</abbr> Paribas, Devoteam, Manpower et <abbr>EDF</abbr> en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.
 
 ## Tester l’accessibilité d’un document <abbr>PDF</abbr>
 
