@@ -264,7 +264,7 @@ documentTitles["outils.html#speech-recognition"] = "Speech recognition";
 index.add({
     url: "outils.html#speech-recognition",
     title: "Speech recognition",    
-    body: "### Speech recognition **Speech recognition** is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.    Equivalent term: voice recognition Examples: Dragon dictation software, voice assistants of smartphones. &lt;figure&gt;     &lt;img src=\&quot;../images/vocale.jpg\&quot; alt=\&quot;Person on the phone\&quot; class=\&quot;img-fluid\&quot;&gt;     &lt;figcaption&gt;Photo: Alex Washburn / Wired / Creative Commons License&lt;/figcaption&gt; &lt;/figure&gt;  "
+    body: "### Speech recognition **Speech recognition** is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.    Equivalent term: voice recognition.   Examples: Dragon dictation software, voice assistants of smartphones. &lt;figure&gt;     &lt;img src=\&quot;../images/vocale.jpg\&quot; alt=\&quot;Person on the phone\&quot; class=\&quot;img-fluid\&quot;&gt;     &lt;figcaption&gt;Photo: Alex Washburn / Wired / Creative Commons License&lt;/figcaption&gt; &lt;/figure&gt;  "
 });
 
 documentTitles["outils.html#transcript"] = "Transcript";
