@@ -38,7 +38,7 @@ document.addEventListener(’keydown’, function() {
 **À vérifier&nbsp;:**
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété `outline` (qui permet de visualiser le focus) est désactivée (`outline: none;`), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.
 
- Par défaut le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n'est pas suffisant pour être bien visible, nous préconisons au moins `2px` pour la propriété `outline` et un contraste de 3:1 par rapport à la couleur de fond. 
+ Par défaut, le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n'est pas suffisant pour être bien visible, nous préconisons au moins `2px` pour la propriété `outline` et un contraste de 3:1 par rapport à la couleur de fond. 
  
  De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l'élément peut être la même que le focus et donc, masquer celui-ci. 
 
