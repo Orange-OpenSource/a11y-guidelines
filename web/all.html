@@ -1353,6 +1353,7 @@ Préciser également la langue d’un contenu exprimé dans une langue autre que
 Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier&nbsp;:</strong> </p>
 <ul>
+<li>S&#39;assurer que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte.</li>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
 <li>S’assurer que les composants et les regroupements qui ont la même fonction sont identifiés (visuellement et sémantiquement) de la même façon.</li>
 <li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
@@ -1391,21 +1392,23 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
-<li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.</li>
-<li>Les composants graphiques d’interface utilisateur et les états de l&#39;interface (focus, hover...) doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère :<ul>
-<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés  représentant une mesure, cartes de chaleur...)</li>
-<li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li>
-<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou de sa fonction ou </li>
+<li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :<ul>
+<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
+<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
-<li>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.</li>
-<li>Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.</li>
-<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
+<li>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:<ul>
+<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
+<li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
+<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
+<li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
+</ul>
+</li>
+<li><strong>Attention &nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).</p>
-<p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
+<p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows). <a href="http://a11y-guidelines.orange.com/web/methodes-outils-contrastes.html">Comment utiliser Colour Contrast Analyser</a>, quelques explications. </p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a></li>
@@ -1467,7 +1470,8 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
 Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir, <strong>à la fois</strong> :</p>
 </li>
-<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus ; par exemple, avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
+<li><p>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus ; par exemple, avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</p>
+</li>
 <li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
 <li><p>Accéder au contenu supplémentaire jusqu&#39;à ce que le survol ou le focus soit retiré du déclencheur, que l&#39;utilisateur le fasse disparaître ou les informations ne soient plus valides (pas de temporisation).</p>
 </li>
@@ -1635,24 +1639,29 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h1>
+<h1 id="rendre-les-intitul-s-des-liens-et-des-boutons-accessibles">Rendre les intitulés des liens et des boutons accessibles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
-        {"label":"Rendre les intitulés des liens et des boutons compréhensibles hors contexte"}
+        {"label":"Rendre les intitulés des liens et des boutons accessibles"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
-<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplétif, au choix, via :</p>
+<p>Il faut satisfaire à ces deux impératifs pour qu&#39;un lien ou un bouton soit accessible :</p>
+<ul>
+<li><p>Tout d&#39;abord, rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres. 
+S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplémentaire, au choix, via :</p>
 <ul>
 <li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
 <li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
 </ul>
-<p>De plus, le texte de l&#39;étiquette affichée (valeur textuelle ou texte d&#39;image visible à l&#39;écran) pour un composant d&#39;interface (lien, bouton...) doit être présent (en premier, si possible) dans le  de ce composant (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>.</p>
+</li>
+<li><p>De plus, le texte de l&#39;étiquette affichée (l&#39;intitulé textuel ou texte de l&#39;image visible à l&#39;écran) pour tout composant d&#39;interface (lien, bouton...) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>.</p>
+</li>
+</ul>
 <p>Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
 <p><strong>Solutions&nbsp;:</strong>  </p>
@@ -2133,7 +2142,7 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d’attention et en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>.</p>
-<p>Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).</p>
+<p>Veiller à fournir un niveau de contraste suffisant de 3:1 pour que celui-ci soit visible par tous (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).</p>
 <p>Lorsqu’un effet est visible sur un élément au survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
 <p>Il est possible, avec du code Javascript, de n’afficher l’<code>outline</code> que lors d’une navigation au clavier (c’est à dire de ne pas afficher l’<code>outline</code> lors d’un clic souris, qui active également l’état <code>:focus</code>)&nbsp;:</p>
 <pre><code class="javascript">
@@ -2150,6 +2159,8 @@ document.addEventListener(’keydown’, function() {
 <p><a href="https://codepen.io/paipai/pen/jwLyzK">Démonstration de la visibilité du focus à la navigation clavier uniquement</a></p>
 <p><strong>À vérifier&nbsp;:</strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
+<p> Par défaut le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n&#39;est pas suffisant pour être bien visible, nous préconisons au moins <code>2px</code> pour la propriété <code>outline</code> et un contraste de 3:1 par rapport à la couleur de fond. </p>
+<p> De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l&#39;élément peut être la même que le focus et donc, masquer celui-ci. </p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).</p>
 <p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
@@ -2592,7 +2603,7 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
-<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplétif, au choix, via :</p>
+<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplémentaire, au choix, via :</p>
 <ul>
 <li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
 <li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
@@ -3245,11 +3256,11 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
 <p><strong>Démarche :</strong></p>
 <ul>
 <li><a href="./methodes-outils-extensions.html">Réaliser des tests automatiques</a> avec les extensions navigateur aXe ou Wave :<ul>
-<li>aXe repère des erreurs et valide la qualité du code</li>
+<li>aXe repère des erreurs automatiques et valide la qualité du code</li>
 <li>Wave repère également les erreurs d’accessibilité et précise les contrôles manuels à effectuer (cohérence du code langue avec la langue utilisée dans la page…) </li>
 </ul>
 </li>
-<li><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a>via l&#39;outil <span lang="en">Colour Contrast Analyser</span>.</li>
+<li><a href="./methodes-outils-contrastes.html">Mesurer le niveau de contraste des couleurs</a> via l&#39;outil <span lang="en">Colour Contrast Analyser</span>.</li>
 <li><a href="./inc-con-aerer-texte.html">Vérifier le bon espacement du texte</a> via un outil pour garantir la lisibilité du texte</li>
 <li>Tous les autres tests doivent être passés via une revue de code manuelle<ul>
 <li>exemple : tous les critères de pertinence ( alternative textuelle cohérente avec le contenu d’une image…) </li>
@@ -3261,7 +3272,7 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
 <p><strong>Démarche :</strong></p>
 <ul>
 <li><a href="./methodes-outils-clavier.html">Tester la navigation au clavier</a> en utilisant les principaux raccourcis clavier pour naviguer au clavier dans une page web.</li>
-<li><a href="./methodes-outils-zoom.html">Evaluer l’agrandissement de la taille du texte</a> via la gestion du zoom navigateur.</li>
+<li><a href="./methodes-outils-zoom.html">Évaluer l’agrandissement de la taille du texte</a> via la gestion du zoom navigateur.</li>
 <li><a href="./methodes-outils-lecteur-ecran.html">Tester la navigation et la vocalisation</a> à l’aide d’un lecteur d’écran.</li>
 </ul>
 <h2 id="m-thode-pour-tester-le-web-mobile">Méthode pour tester le Web mobile</h2>
@@ -3571,9 +3582,8 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <dt><a href="exemples/dynFocus/index.html">Les régions vivantes (<i lang="en">live regions</i>), contenu dynamique, gestion du focus et <abbr>ARIA</abbr></a></dt>
     <dd>Gestion des zones qui se mettent à jour dynamiquement dans vos pages.</dd>
     <dd>Les messages d&#39;état, de statut ou contextuel.</dd>
-    <dt>Utiliser les attributs <abbr>ARIA</abbr> qui permettent la mise en place de messages d&#39;état</a></dt>
-    <dd>Gestion des notifications qui se mettent à jour dynamiquement dans vos pages.</dd>
-</dl>
+    <dt><a href="aria-status.html">Utiliser les attributs <abbr>ARIA</abbr> qui permettent la mise en place de messages d&#39;état</a></dt></p>
+<p></dl>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>

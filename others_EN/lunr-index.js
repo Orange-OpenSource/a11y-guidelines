@@ -125,14 +125,14 @@ documentTitles["pdf.html#with-adobe-indesign"] = "With Adobe InDesign";
 index.add({
     url: "pdf.html#with-adobe-indesign",
     title: "With Adobe InDesign",    
-    body: "### With Adobe InDesign  You will find Adobe InDesign recommendations (in French) at &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot; lang=\&quot;fr\&quot; hreflang=\&quot;fr\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; by the AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; initiative.  This document was produced by AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; phase 1 (2011), driven by Atalan together with 9 enterprises: Spie, Air Liquide, Société Générale, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Areva, &lt;abbr&gt;LVMH&lt;/abbr&gt;, Capgemini, Thales et &lt;abbr&gt;SNCF&lt;/abbr&gt;, who relied on a review team made up of numerous professionals and organisations involved in digital accessibility.  "
+    body: "### With Adobe InDesign  You will find Adobe InDesign recommendations (in French) at &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot; lang=\&quot;fr\&quot; hreflang=\&quot;fr\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; by the AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; initiative.  "
 });
 
 documentTitles["pdf.html#with-adobe-acrobat-pro"] = "With Adobe Acrobat Pro";
 index.add({
     url: "pdf.html#with-adobe-acrobat-pro",
     title: "With Adobe Acrobat Pro",    
-    body: "### With Adobe Acrobat Pro  You will find Adobe Acrobat Pro recommendations at &lt;a href=\&quot;http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf\&quot;&gt;Making &lt;abbr&gt;PDF&lt;/abbr&gt; documents accessible with Adobe Acrobat Pro&lt;/a&gt; by the AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; initiative.  This document was produced by AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; phase 2 (2015), driven by Atalan together with Orange and 9 other enterprises: La Poste, Siemens, Spie, Thales, Atos, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Devoteam, Manpower and &lt;abbr&gt;EDF&lt;/abbr&gt;, who relied on a review team made up of numerous professionals and organisations involved in digital accessibility.  "
+    body: "### With Adobe Acrobat Pro  You will find Adobe Acrobat Pro recommendations at &lt;a href=\&quot;http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf\&quot;&gt;Making &lt;abbr&gt;PDF&lt;/abbr&gt; documents accessible with Adobe Acrobat Pro&lt;/a&gt; by the AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; initiative.  "
 });
 
 documentTitles["pdf.html#testing-the-accessibility-of-a-abbrpdfabbr-document"] = "Testing the accessibility of a &lt;abbr&gt;PDF&lt;/abbr&gt; document";

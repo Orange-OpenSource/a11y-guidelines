@@ -331,14 +331,14 @@ documentTitles["pdf.html#avec-adobe-indesign"] = "Avec Adobe InDesign";
 index.add({
     url: "pdf.html#avec-adobe-indesign",
     title: "Avec Adobe InDesign",    
-    body: "### Avec Adobe InDesign  Vous trouverez les recommandations Adobe inDesign sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.  Ce document est issu de la phase 1 d’AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; (2011), par Atalan en partenariat avec 9 entreprises&amp;nbsp;: Spie, Air Liquide, Société Générale, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Areva, &lt;abbr&gt;LVMH&lt;/abbr&gt;, Capgemini, Thales et &lt;abbr&gt;SNCF&lt;/abbr&gt;, en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
+    body: "### Avec Adobe InDesign  Vous trouverez les recommandations Adobe inDesign sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.  "
 });
 
 documentTitles["pdf.html#avec-adobe-acrobat-pro"] = "Avec Adobe Acrobat Pro";
 index.add({
     url: "pdf.html#avec-adobe-acrobat-pro",
     title: "Avec Adobe Acrobat Pro",    
-    body: "### Avec Adobe Acrobat Pro  Vous trouverez les recommandations Adobe Acrobat Pro sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Acrobat Pro&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.   Ce document est issu de la phase 2 d’AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt; (2015). Sous la coordination d’Atalan, Orange fut partenaire de cette phase 2, aux côtés de 9 autres grandes entreprises&amp;nbsp;: La Poste, Siemens, Spie, Thales, Atos, &lt;abbr&gt;BNP&lt;/abbr&gt; Paribas, Devoteam, Manpower et &lt;abbr&gt;EDF&lt;/abbr&gt; en s’appuyant sur un comité de relecture constitué de nombreux professionnels et d’associations impliqués dans l’accessibilité numérique.  "
+    body: "### Avec Adobe Acrobat Pro  Vous trouverez les recommandations Adobe Acrobat Pro sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Acrobat Pro&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.   "
 });
 
 documentTitles["pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr"] = "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;";

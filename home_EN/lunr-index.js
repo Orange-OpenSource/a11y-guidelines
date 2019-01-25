@@ -155,14 +155,14 @@ documentTitles["test.html#orange-digital-accessibility-guidelines"] = "Orange di
 index.add({
     url: "test.html#orange-digital-accessibility-guidelines",
     title: "Orange digital accessibility guidelines",    
-    body: "# Orange digital accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Test methods\&quot;}]); });&lt;/script&gt;  "
+    body: "# Orange digital accessibility guidelines &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Testing methods\&quot;}]); });&lt;/script&gt;  "
 });
 
 documentTitles["test.html#how-to-test-digital-accessibilitynbsp"] = "How to test digital accessibility&amp;nbsp;?";
 index.add({
     url: "test.html#how-to-test-digital-accessibilitynbsp",
     title: "How to test digital accessibility&amp;nbsp;?",    
-    body: "## How to test digital accessibility&amp;nbsp;?  Orange evaluates the accessibility of an application, a site or any other digital resource using three complementary methods&amp;nbsp;: - ** Technical evaluation **&amp;nbsp;: inspect the code and color contrast to measure WCAG compliance for the Web and best practices for other technology platforms. Part of the tests can be done automatically by tools but the majority requires manual control.  - ** Functional evaluation **&amp;nbsp;: test the interface behavior with different assistive devices to verify that the evaluated content is free of blocking points. The tests are essentially performed for 3 behaviors: the use of a screen reader, a software magnifier and keyboard navigation.  - ** User evaluation **&amp;nbsp;: the application is tested by disabled users in order to check the accessibility level from their point of view. These tests consist of making some target users whose position (or mobile ...) is equipped with a particular technical help (digital screen magnifier, screen reader, keyboard only, Braille display) the main tasks of the application. They make it possible to identify the problems of use and to validate the criticality of the anomalies encountered. These tests are conducted by accessibility experts.  For more details&amp;nbsp;: - [Methods and tools specific to the Web](/web_EN/methodes-outils.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## How to test digital accessibility&amp;nbsp;?  Orange evaluates the accessibility of mobile applications, web sites or any other digital services using three complementary methods&amp;nbsp;: - **Technical evaluation** (compliance with standards)   These tests consist in checking the source code and color contrast to measure compliance with WCAG for Web pages and with best practices for other technology platforms. Tests can be partly performed automatically by tools but the majority requires manual control.  - **Functional evaluation** (compatibility with [assistive technologies](./outils.html))   These tests aim at checking the interfaces behavior with keyboard-only navigation and with assistive technologies to make sure the service works with them. Assistive technologies include at least screen reader and software magnifier.  - **User evaluation** (usability focused on accessibility barriers)   User evaluation refers to having digital services tested by users with disabilities. Users are asked to perform a series of tasks, usually the main scenarios of the service. The objective is to check the usability of the service from an accessibility point of view and to validate with users how critical are the remaining issues. These tests are  managed by accessibility experts.    For more details&amp;nbsp;: - [Methods and tools specific to the Web](/web_EN/methodes-outils.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -200,6 +200,92 @@ index.add({
     url: "organisation.html#mobile-abbr-titleto-be-donetbdabbr",
     title: "Mobile (&lt;abbr title=\&quot;to be done\&quot;&gt;TBD&lt;/abbr&gt;)",    
     body: "#### Mobile (&lt;abbr title=\&quot;to be done\&quot;&gt;TBD&lt;/abbr&gt;) Here you will find the Orange accessibility recommendations for mobile.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["outils.html#orange-digital-accessibility-guidelines-h2-classpage-titleassistive-technologiesh2"] = "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Assistive technologies&lt;/h2&gt;";
+index.add({
+    url: "outils.html#orange-digital-accessibility-guidelines-h2-classpage-titleassistive-technologiesh2",
+    title: "Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Assistive technologies&lt;/h2&gt;",    
+    body: "# Orange digital accessibility guidelines &lt;h2 class=\&quot;page-title\&quot;&gt;Assistive technologies&lt;/h2&gt; &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Assistive technologies\&quot;}]); });&lt;/script&gt;  People with disabilities can use assistive technologies to access the web whatever the device. These technologies include: - Software solutions, such as screen reader or digital screen magnifiers, - Equipment : ergonomic mice, keyboards with large keys, microphones, trackballs, Braille display, etc.  Digital services are accessible when they work with assistive technologies. It is important to highlight these technologies work only when web sites, mobile applications and digital content are created according to design and development accessibility rules (see dedicated tabs of this website for more information).  "
+});
+
+documentTitles["outils.html#some-examples-and-definitions"] = "Some examples and definitions";
+index.add({
+    url: "outils.html#some-examples-and-definitions",
+    title: "Some examples and definitions",    
+    body: "## Some examples and definitions "
+});
+
+documentTitles["outils.html#screen-reader"] = "Screen reader";
+index.add({
+    url: "outils.html#screen-reader",
+    title: "Screen reader",    
+    body: "### Screen reader  A **screen reader** is a software application that allows blind or visually impaired people to read the information displayed on the screen with a speech synthesizer or braille display.   Examples: Jaws and NVDA on Windows PC, TalkBack on Android devices, VoiceOver on Apple mobile devices or Mac computers.  &lt;img src=\&quot;../images/audio.jpg\&quot; alt=\&quot;\&quot; class=\&quot;img-fluid\&quot;&gt;  "
+});
+
+documentTitles["outils.html#braille-display"] = "Braille display";
+index.add({
+    url: "outils.html#braille-display",
+    title: "Braille display",    
+    body: "### Braille display A **Braille display** allows reading digital information using fingers. It can be connected to a computer or any other device.  The Braille display get the text currently highlighted on the screen and then the screen reader translates the text in Braille and the device displays it on its Braille cells. Each cell has metal or nylon pins to create Braille dots. Braille displays are refreshable.  &lt;figure&gt;     &lt;img src=\&quot;../images/plage-braille.jpg\&quot; alt=\&quot;Braille display\&quot; class=\&quot;img-fluid\&quot;&gt;     &lt;figcaption&gt;Picture: Braille display, Karola Riegler, 2009, License CC BY ND&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
+documentTitles["outils.html#screen-magnifier"] = "Screen magnifier";
+index.add({
+    url: "outils.html#screen-magnifier",
+    title: "Screen magnifier",    
+    body: "### Screen magnifier  A **screen magnifier** is a software application that increases the size of texts and graphics on device screen. Screen magnifiers can also provide features to customize color contrasts, brightness, cursor…   Some screen readers offer option to read aloud captured text or all screen.   Example: ZoomText.  &lt;figure&gt;     &lt;img src=\&quot;../images/loupe.jpg\&quot; alt=\&quot;computer screen with Windows magnifier at 400% magnification\&quot; class=\&quot;img-fluid\&quot;&gt;     &lt;figcaption&gt;Picture: computer screen with Windows magnifier at 400% magnification.&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
+documentTitles["outils.html#keyboard-keyguard"] = "Keyboard keyguard";
+index.add({
+    url: "outils.html#keyboard-keyguard",
+    title: "Keyboard keyguard",    
+    body: "### Keyboard keyguard  A **keyguard** is an overlay made of plastic and perforated with holes for keys on the keyboard. It is placed on top of the keyboard. It helps prevent the user from unintentionally pressing multiple keys.  &lt;figure&gt;     &lt;img src=\&quot;../images/guidedoigt.jpg\&quot; alt=\&quot;keyboard with a keyguard\&quot; class=\&quot;img-fluid\&quot;&gt;     &lt;figcaption&gt;Picture: keyguard copyplastic.com&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
+documentTitles["outils.html#pointing-devices"] = "Pointing devices";
+index.add({
+    url: "outils.html#pointing-devices",
+    title: "Pointing devices",    
+    body: "### Pointing devices  Pointing devices are any device used to control the movement of a cursor on a computer screen (or tablet or mobile). For people who lack the coordination to use a standard mouse or keyboard, there are many alternatives: - **Joysticks** (or joystick mouse) consist of a stick that pivots on a base. They allow controlling the cursor by shifting the stick.  - **Trackballs** are equipped with a ball that moves the cursor by rolling it. - **Switches** or contactors are buttons that have two states – on and off -. Switches have different activation methods according to the body part that can be controlled: eyes, mouth, head, foot, voice etc.    Most of these pointing devices rely on keyboard-only navigation features to perform mouse/pointer functions.     "
+});
+
+documentTitles["outils.html#keyboard-only-navigation"] = "Keyboard-only navigation";
+index.add({
+    url: "outils.html#keyboard-only-navigation",
+    title: "Keyboard-only navigation",    
+    body: "### Keyboard-only navigation **Keyboard navigation** refers to using keys instead of a mouse to move from item to item on the screen. The movement must be in a meaningful order, order specified by the operating system or the application. The focus (the place where the cursor is located) must be visible.  Typical keys used for keyboard navigation are the Tab key and Shift+Tab to move between controls, as well as arrow keys to move up, down, and sideways between items. Keyboard navigation is essential for some assistive technologies and requires compliance with design and development accessibility criteria.  &lt;img src=\&quot;../images/clavier.jpg\&quot; alt=\&quot;\&quot; class=\&quot;img-fluid\&quot;&gt;  "
+});
+
+documentTitles["outils.html#speech-recognition"] = "Speech recognition";
+index.add({
+    url: "outils.html#speech-recognition",
+    title: "Speech recognition",    
+    body: "### Speech recognition **Speech recognition** is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.    Equivalent term: voice recognition Examples: Dragon dictation software, voice assistants of smartphones. &lt;figure&gt;     &lt;img src=\&quot;../images/vocale.jpg\&quot; alt=\&quot;Person on the phone\&quot; class=\&quot;img-fluid\&quot;&gt;     &lt;figcaption&gt;Photo: Alex Washburn / Wired / Creative Commons License&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
+documentTitles["outils.html#transcript"] = "Transcript";
+index.add({
+    url: "outils.html#transcript",
+    title: "Transcript",    
+    body: "### Transcript A **transcript** is the text version of video or audio recordings. The transcript is presented in a digital document (Word, PDF, HTML...).  "
+});
+
+documentTitles["outils.html#closed-captions"] = "Closed captions";
+index.add({
+    url: "outils.html#closed-captions",
+    title: "Closed captions",    
+    body: "### Closed captions **Closed captions** are audio transcribed into text and reflect both spoken words and non-verbal sounds. The text is synchronized within the video to match the audio. Closed captions are usually located on the bottom of a video screen as an overlay.  &lt;img src=\&quot;../images/soustitres.jpg\&quot; alt=\&quot;Screenshot of a video with closed captions\&quot; class=\&quot;img-fluid\&quot;&gt;      "
+});
+
+documentTitles["outils.html#audio-description"] = "Audio description";
+index.add({
+    url: "outils.html#audio-description",
+    title: "Audio description",    
+    body: "### Audio description **Audio description** is a narration added to the soundtrack to describe important visual details that cannot be understood from the main soundtrack alone.  Audio description is a means to inform individuals about visual content essential for comprehension.  Audio description of video provides information about actions, characters…    Equivalent terms: video description, descriptive narration.   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
