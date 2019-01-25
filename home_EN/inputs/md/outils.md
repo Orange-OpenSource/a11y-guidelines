@@ -64,7 +64,7 @@ Keyboard navigation is essential for some assistive technologies and requires co
 ### Speech recognition
 **Speech recognition** is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.  
 
-Equivalent term: voice recognition
+Equivalent term: voice recognition.  
 Examples: Dragon dictation software, voice assistants of smartphones.
 <figure>
     <img src="../images/vocale.jpg" alt="Person on the phone" class="img-fluid">
