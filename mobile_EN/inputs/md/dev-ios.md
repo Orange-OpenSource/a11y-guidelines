@@ -298,7 +298,7 @@ With `nil`, the first accessible element in the page is focused.
 //The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
 @IBAction func clic(_ sender: UIButton) {
         
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, mySecondLabel)
+    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
 }
 </code></pre>
 ### Links

@@ -1,5 +1,5 @@
 {
-    "title": "Recommandations accessibilité Orange",
+    "title": "Recommandations accessibilité numérique Orange",
     "files": [
         "output/markdown/contact.md",
         "output/markdown/about.md",  
@@ -10,16 +10,17 @@
         "output/markdown/criteria-android.md",
         "output/markdown/criteria-ios.md",
         "output/markdown/criteria-ios-wwdc.md",
+        "output/markdown/criteria-ios-wwdc-16202.md",
         "output/markdown/criteria-ios-wwdc-16407.md",
         "output/markdown/criteria-ios-wwdc-17215.md",
         "output/markdown/criteria-ios-wwdc-17245.md",
         "output/markdown/criteria-ios-wwdc-18230.md",
-        "output/markdown/index.md",                                
+        "output/markdown/index.md",
+        "output/markdown/lecteur-ecran-voiceover.md",
+        "output/markdown/lecteur-ecran-voiceover-iphonex.md",
         "output/markdown/mdan.md",
         "output/markdown/screen-reader.md",
         "output/markdown/screen-reader-talkback.md",
-        "output/markdown/screen-reader-voiceover.md",
-        "output/markdown/screen-reader-voiceover-iphonex.md",
         "output/markdown/links.md"        
     ],
     "maxTocLevel":"1"

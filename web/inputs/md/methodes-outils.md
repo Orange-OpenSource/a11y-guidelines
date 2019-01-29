@@ -8,7 +8,8 @@
 
 Cette partie décrit une méthode d’évaluation à destination des acteurs projet pour tester la conformité d’un contenu Web et Web mobile aux critères d’accessibilité des Web Content Accessibility Guidelines (WCAG) version 2.1 niveau AA.
 
-La description détaillée des tests se trouvent dans les critères <abbr>WCAG</abbr> par thème, partie « testeurs ». 
+
+Pour utiliser cette méthode, voici la [description détaillée des tests d'accessibilité](http://a11y-guidelines.orange.com/web/incontournables.html#incontournables-testeurs) à utiliser, en fonction de différents profils&nbsp;: qualifieurs, développeurs, concepteurs et experts. 
 
 Les tests d’accessibilité doivent être effectués tout au long du cycle de vie des projets :
 - au démarrage du projet, lors du choix du Framework, du logiciel ou progiciel… 
@@ -34,9 +35,9 @@ Ces tests peuvent être réalisés par tout acteur du projet ( concepteur, déve
 
 **Démarche :**
 - [Réaliser des tests automatiques](./methodes-outils-extensions.html) avec les extensions navigateur aXe ou Wave :
-    - aXe repère des erreurs et valide la qualité du code
+    - aXe repère des erreurs automatiques et valide la qualité du code
     - Wave repère également les erreurs d’accessibilité et précise les contrôles manuels à effectuer (cohérence du code langue avec la langue utilisée dans la page…) 
-- [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html)via l'outil <span lang="en">Colour Contrast Analyser</span>.
+- [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) via l'outil <span lang="en">Colour Contrast Analyser</span>.
 - [Vérifier le bon espacement du texte](./inc-con-aerer-texte.html) via un outil pour garantir la lisibilité du texte
 - Tous les autres tests doivent être passés via une revue de code manuelle
     - exemple : tous les critères de pertinence ( alternative textuelle cohérente avec le contenu d’une image…) 
@@ -47,7 +48,7 @@ Ces tests peuvent être facilement réalisés par tout acteur projet. Seuls les 
 
 **Démarche :**
 - [Tester la navigation au clavier](./methodes-outils-clavier.html) en utilisant les principaux raccourcis clavier pour naviguer au clavier dans une page web.
-- [Evaluer l’agrandissement de la taille du texte](./methodes-outils-zoom.html) via la gestion du zoom navigateur.
+- [Évaluer l’agrandissement de la taille du texte](./methodes-outils-zoom.html) via la gestion du zoom navigateur.
 - [Tester la navigation et la vocalisation](./methodes-outils-lecteur-ecran.html) à l’aide d’un lecteur d’écran.
 
 ## Méthode pour tester le Web mobile 

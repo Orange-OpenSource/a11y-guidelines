@@ -1,4 +1,4 @@
-# Orange accessibility guidelines <h2 class="page-title">Site organization</h2>
+# Orange digital accessibility guidelines <h2 class="page-title">Site organization</h2>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Organization"}]);
 });</script>

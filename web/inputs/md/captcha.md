@@ -36,7 +36,7 @@ Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arri
 
 ## Deuxième constat : Le CAPTCHA et la sécurité
 
-Dans [un article de Google publié en 2014](https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html), on apprend qu’une intelligence artificielle obtient un score de 99,8% pour résoudre des CAPTCHAs visuels parmi les plus difficiles, soit un meilleur score que celui obtenu par un « vrai » utilisateur ! Des services sont en effet capables de déterminer la police de caractères utilisée dans une image ou bien de deviner si l’image contient un objet (un chat, une voiture, un chapeau, etc.).
+Dans [un article de Google publié en 2014](https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html), on apprend qu’une intelligence artificielle obtient un score de 99,8% pour résoudre des CAPTCHAs visuels parmi les plus difficiles, soit un meilleur score que celui obtenu par un « vrai » utilisateur ! Même chose dans un autre article de 2018 (<a href="https://medium.com/mlmemoirs/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694" lang="en">Breaking CAPTCHA Using Machine Learning in 0.05 Seconds</a>). Des services sont en effet capables de déterminer la police de caractères utilisée dans une image ou bien de deviner si l’image contient un objet (un chat, une voiture, un chapeau, etc.).
 
 Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revient à notre première recommandation qui est de **ne pas utiliser de CAPTCHA**.
 

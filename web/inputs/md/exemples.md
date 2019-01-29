@@ -45,6 +45,9 @@
     <dd>Exemple d'explorateur de fichier accessible.</dd>
     <dt><a href="exemples/dynFocus/index.html">Les régions vivantes (<i lang="en">live regions</i>), contenu dynamique, gestion du focus et <abbr>ARIA</abbr></a></dt>
     <dd>Gestion des zones qui se mettent à jour dynamiquement dans vos pages.</dd>
+    <dd>Les messages d'état, de statut ou contextuel.</dd>
+    <dt><a href="aria-status.html">Utiliser les attributs <abbr>ARIA</abbr> qui permettent la mise en place de messages d'état</a></dt>
+    
 </dl>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

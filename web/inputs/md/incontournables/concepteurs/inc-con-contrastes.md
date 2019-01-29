@@ -26,13 +26,16 @@ Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elle
 ![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](images/icones.png)
 
 **À vérifier&nbsp;: **
-- Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.
-- Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… Il n’est pas tenu d’appliquer ce critère, si :
-  -	le composant graphique est un logo
-  -	si un texte comme un label apporte la même information que l’icône
-  -	si la modification du taux de contraste de l’image nuit au réalisme de celle-ci
-- Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
-- Les liens doivent être facilement identifiables par rapport au reste du texte.
+- S'assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :
+  - De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
+  - De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
+- S'assurer que Les objets graphiques porteurs d'information, les composants d’interface utilisateur et les états de l'interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:
+
+  -	si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)
+  -	si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.
+  -	si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou d'identifier la fonction 
+  - si un composant d'interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d'information.
+- **Attention&nbsp;:** pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
 
 **Outil&nbsp;:**  
 L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  

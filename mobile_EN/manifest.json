@@ -1,5 +1,5 @@
 {
-    "title": "Orange accessibility guidelines",
+    "title": "Orange digital accessibility guidelines",
     "files": [
         "output/markdown/about.md",
         "output/markdown/contact.md",
@@ -9,6 +9,7 @@
         "output/markdown/dev-android.md", 
         "output/markdown/dev-ios.md",
         "output/markdown/dev-ios-wwdc.md",
+        "output/markdown/dev-ios-wwdc-16202.md",
         "output/markdown/dev-ios-wwdc-16407.md",
         "output/markdown/dev-ios-wwdc-17215.md",
         "output/markdown/dev-ios-wwdc-17245.md",

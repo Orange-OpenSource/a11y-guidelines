@@ -293,7 +293,7 @@ var Glossary = { // collection of all terms to be defined
     "fr":"modèle d’objet document"
   },
   "EASE":{
-    "base":"<span lang='en'>e-Accessibility Services for Everyone</span>",
+    "base":"<span lang='en'>e-Accessibility Solutions for Everyone</span>",
     "fr":"service d’accessibilité numérique chez Orange"
   },
   "EULA":{
@@ -338,6 +338,11 @@ var Glossary = { // collection of all terms to be defined
   "JS":{
     "base":"Javascript",
     },
+  "KOTLIN":{
+    "base":"<span lang='en'>Kotlin langage</span>",
+    "en":"Kotlin is the second langage used for programming on Android devices",
+    "fr":"Kotlin est le second langage utilisé pour programmer sur les mobiles Android"
+  },
   "MIT":{
     "base":"<span lang='en'>Massachussetts Institute of Technology</span>",
     "fr":"institut de technologie du Massachussetts"

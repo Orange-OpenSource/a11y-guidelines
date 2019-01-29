@@ -21,13 +21,9 @@ You will find Microsoft Word recommendations as well as the <abbr>PDF</abbr> exp
 
 You will find Adobe InDesign recommendations (in French) at <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign" lang="fr" hreflang="fr">Créer des documents <abbr>PDF</abbr> accessibles avec Adobe Indesign</a> by the AcceDe <abbr>PDF</abbr> initiative.
 
-This document was produced by AcceDe <abbr>PDF</abbr> phase 1 (2011), driven by Atalan together with 9 enterprises: Spie, Air Liquide, Société Générale, <abbr>BNP</abbr> Paribas, Areva, <abbr>LVMH</abbr>, Capgemini, Thales et <abbr>SNCF</abbr>, who relied on a review team made up of numerous professionals and organisations involved in digital accessibility.
-
 ### With Adobe Acrobat Pro
 
 You will find Adobe Acrobat Pro recommendations at <a href="http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf">Making <abbr>PDF</abbr> documents accessible with Adobe Acrobat Pro</a> by the AcceDe <abbr>PDF</abbr> initiative.
-
-This document was produced by AcceDe <abbr>PDF</abbr> phase 2 (2015), driven by Atalan together with Orange and 9 other enterprises: La Poste, Siemens, Spie, Thales, Atos, <abbr>BNP</abbr> Paribas, Devoteam, Manpower and <abbr>EDF</abbr>, who relied on a review team made up of numerous professionals and organisations involved in digital accessibility.
 
 ## Testing the accessibility of a <abbr>PDF</abbr> document
 

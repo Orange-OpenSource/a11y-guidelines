@@ -422,7 +422,7 @@ Assurer une compréhension des textes de l’application.
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**
-L’accès au contenu d’une application ne doit absolument pas dépendre de l’orientation de l’écran, c’est pourquoi il est très fortement recommandé de mettre en place un **passage sans contrainte entre les modes portrait et paysage** dès le début du projet.
+L’accès au contenu d’une application ne doit absolument pas dépendre de l’orientation de l’écran, c’est pourquoi il est très fortement recommandé de mettre en place un **passage sans contraintes entre les modes portrait et paysage** dès le début du projet.
 </br>Bien évidemment, ceci n’est valable que si des contraintes fonctionnelles ne viennent pas à l’encontre d’un de ces deux modes (projection, tableau… par exemple).
 </br>L’idéal est de pouvoir aussi déployer l’application sur des écrans de type iPad de façon à favoriser la lecture et la gestuelle pour l’utilisateur.
 

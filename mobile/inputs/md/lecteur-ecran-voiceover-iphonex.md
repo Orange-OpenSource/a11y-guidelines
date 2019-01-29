@@ -3,12 +3,12 @@
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"lecteur d’écran", "url": "./screen-reader.html"}, 
-        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}, 
+        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}, 
         {"label":"Rappels sur les gestes de base avec un iPhone X"}
     ]);
     addSubMenu([
         {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
+        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}
     ]);
 });</script>
 

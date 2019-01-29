@@ -1,7 +1,7 @@
 {
   "name": "a11y-guidelines",
   "version": "1.0.0",
-  "description": "Recommandations accessibilité Orange",
+  "description": "Recommandations accessibilité numérique Orange",
   "repository": "https://github.com/Orange-OpenSource/a11y-guidelines",
   "main": "index.js",
   "dependencies": {

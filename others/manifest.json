@@ -1,12 +1,12 @@
 {
-    "title": "Recommandations accessibilité Orange",
+    "title": "Recommandations accessibilité numérique Orange",
     "files": [
         "output/markdown/about.md",
         "output/markdown/contact.md",        
         "output/markdown/index.md",
         "output/markdown/powerpoint.md",
         "output/markdown/word.md",
-        "output/markdown/pdf.md",
+        "output/markdown/PDF.md",
         "output/markdown/pushmail.md",
         "output/markdown/editorial.md",
         "output/markdown/video_audio.md"

@@ -306,7 +306,7 @@ Lors d’un changement de contenu sur une page, il est possible de notifier l’
 //Le premier élément accessible de la page est sélectioné et vocalisé avec un son spécifique.
 @IBAction func clic(_ sender: UIButton) {
         
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, mySecondLabel)
+    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
 }
 </code></pre>
 ### Liens

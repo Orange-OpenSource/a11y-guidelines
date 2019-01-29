@@ -1,4 +1,4 @@
-# Orange accessibility guidelines
+# Orange digital accessibility guidelines
 <h2 class="page-title">Older people</h2>
 
 <script>$(document).ready(function () {
