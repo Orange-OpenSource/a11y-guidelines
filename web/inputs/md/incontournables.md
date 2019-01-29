@@ -47,7 +47,7 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 Trois versions sont disponibles&nbsp;
 - **La version conception** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
 - **La version développement** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
-- **La version tests** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc.
+- **La version tests** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. Pour tirer le meilleur partie de ces tests, il faut utiliser [une méthode de tests d'accessibilité et des outils](http://a11y-guidelines.orange.com/web/methodes-outils.html)
 
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item">
@@ -156,7 +156,7 @@ S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisa
 
 S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site
 <ul>
-    <li>[Rendre les intitulés des liens et des boutons compréhensibles hors contexte](inc-dev-intitules-hors-contexte.html)</li>
+    <li>[Rendre les intitulés des liens et des boutons accessibles](inc-dev-intitules-hors-contexte.html)</li>
     <li>[Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre](inc-dev-nouvelle-fenetre.html)</li>
     <li>[Fournir des liens d’évitement](inc-dev-liens-evitement.html)</li>
     <li>[S’assurer que l’utilisateur garde le contrôle lors des interactions](inc-dev-controle-interactions.html)</li>
