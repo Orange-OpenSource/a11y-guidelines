@@ -113,15 +113,16 @@ Les images suivantes sont porteuses d’information pour les utilisateurs. Elles
 
 **À vérifier&nbsp;:**
 
-- Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.
-- Les composants graphiques d’interface utilisateur et les états de l'interface (focus, hover...) doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère :
-  -	si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés  représentant une mesure (cartes de chaleur)...)
-  -	si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique
-  -	si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction ou 
-- Les liens doivent être facilement identifiables par rapport au reste du texte.
-- Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.
-- Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.
-- Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
+- S'assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :
+  - De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
+  - De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
+- S'assurer que Les objets graphiques porteurs d'information, les composants d’interface utilisateur et les états de l'interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:
+
+  -	si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure (cartes de chaleur…)
+  -	si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.
+  -	si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou d'identifier la fonction 
+  - si un composant d'interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d'information.
+- **Attention &nbsp;:** pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
 
 **Objectif utilisateur&nbsp;:**
 
@@ -342,7 +343,7 @@ Les erreurs sont automatiquement détectées, l’utilisateur est averti par la 
 
 Les libellés des messages d’erreur doivent être explicites.
 
-Pour les pages Web qui entraînent des actions importantes (engagement juridique, transaction financière, modification ou effacement de données importantes, réponse à un test ou examen...), l'action doit être réversible ou passer par une étape de confirmation permettant de vérifier ou rectifier la saisie en cas d'erreur.
+Pour les pages Web qui entraînent des actions importantes (engagement juridique, transaction financière, modification ou effacement de données importantes, réponse à un test ou examen…), l'action doit être réversible ou passer par une étape de confirmation permettant de vérifier ou rectifier la saisie en cas d'erreur.
 
 **À vérifier&nbsp;:**
 
@@ -486,14 +487,14 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 
 **Description&nbsp;:**
 
-N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (`em`, `rem`, `%`)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design) sauf si la présentation en 2 dimension est nécessaire pour l'usage ou l'utilisation  (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d'outils...).
+N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (`em`, `rem`, `%`)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design) sauf si la présentation en 2 dimension est nécessaire pour l'usage ou l'utilisation  (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d'outils…).
 
 **À vérifier&nbsp;:**
 - Ne pas utiliser le pixel (`px`) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).
 - Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.
 - Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.
 - Dans Firefox, faire Affichage>Zoom>Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  
-- Le contenu doit s'adapter à la largeur de l'écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal pour une largeur de la zone d'affichage (<span lang="en">vewport</span>) est réduite à 320 pixels CSS. 
+- Le contenu doit s'adapter à la largeur de l'écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme…), sans scroll horizontal pour une largeur de la zone d'affichage (<span lang="en">vewport</span>) est réduite à 320 pixels CSS. 
 Note : on peut faire le contraire, viewport à 1280px CSS et on agrandit global (toute la page) à 400%.
 
 ![capture d’écran réglage du zoom dans Firefox](./images/zoom-200.png)
@@ -542,20 +543,20 @@ Permettre aux personnes déficientes visuelles et cognitives d'améliorer le con
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
 
-## 16. Rendre les intitulés des liens et des boutons compréhensibles hors contexte
+## 16. Rendre les intitulés des liens et des boutons accessibles
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
 
-Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  
-
+Il faut satisfaire à ces deux impératifs pour qu'un lien ou un bouton soit accessible :
+- Tout d'abord, rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres. 
 S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l'intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, mais également compléter l'intitulé par un contenu supplémentaire, au choix, via :
-- un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
-- en utilisant un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).
+    - un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
+    - en utilisant un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).
 
-De plus, le texte de l'étiquette affichée (valeur textuelle ou texte d'image visible à l'écran) pour un composant d'interface doit être présent (en premier, si possible) dans le nom accessible de ce composant (pour aller plus loin [Le nom accessible en HTML](./a11y-name.html)).
+- De plus, le texte de l'étiquette affichée (l'intitulé textuel ou texte de l'image visible à l'écran) pour tout composant d'interface (lien, bouton…) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, [Le nom accessible en HTML](./a11y-name.html).
 
 Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
 
@@ -728,6 +729,10 @@ document.addEventListener(’keydown’, function() {
 **À vérifier&nbsp;:**
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété `outline` (qui permet de visualiser le focus) est désactivée (`outline: none;`), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.
 
+ Par défaut, le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n'est pas suffisant pour être bien visible, nous préconisons au moins `2px` pour la propriété `outline` et un contraste de 3:1 par rapport à la couleur de fond. 
+ 
+ De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l'élément peut être la même que le focus et donc, masquer celui-ci. 
+
 **Objectif utilisateur&nbsp;:**
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).
 
@@ -856,7 +861,7 @@ Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la 
 - Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne
 - Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.
 
-Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...
+Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique…
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
@@ -868,6 +873,7 @@ Si aucune autre alternative n’est possible, il est indispensable de prévoir u
 Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.
 
 **À vérifier&nbsp;:** 
+- S'assurer que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte.
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
 - S’assurer que les composants et les regroupements qui ont la même fonction sont identifiés (visuellement et sémantiquement) de la même façon.
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.
@@ -956,8 +962,8 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-- Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>...), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).
-- De même, pour les interactions nécessitant un changement d'orientation de l'appareil ou un mouvement de l'utilisateur (basculement, rotation, secouement...),  cette fonctionnalité peut être désactivée et doit avoir une alternative dans l'interface.
+- Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>…), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).
+- De même, pour les interactions nécessitant un changement d'orientation de l'appareil ou un mouvement de l'utilisateur (basculement, rotation, secouement…),  cette fonctionnalité peut être désactivée et doit avoir une alternative dans l'interface.
 
 **Gestuelles complexes**: tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.  
 **Gestuelle simplifiée**: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.
@@ -972,7 +978,7 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
-L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l'utilisation du contenu (projection, tableau...).
+L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l'utilisation du contenu (projection, tableau…).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>

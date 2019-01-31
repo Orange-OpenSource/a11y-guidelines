@@ -75,13 +75,16 @@ Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elle
 ![capture d’écran présentant des icônes et des graphiques dont le contraste n’est suffisant](images/icones.png)
 
 **À vérifier&nbsp;: **
-- Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.
-- Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… Il n’est pas tenu d’appliquer ce critère, si :
-  -	le composant graphique est un logo
-  -	si un texte comme un label apporte la même information que l’icône
-  -	si la modification du taux de contraste de l’image nuit au réalisme de celle-ci
-- Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
-- Les liens doivent être facilement identifiables par rapport au reste du texte.
+- S'assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :
+  - De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
+  - De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
+- S'assurer que Les objets graphiques porteurs d'information, les composants d’interface utilisateur et les états de l'interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:
+
+  -	si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)
+  -	si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.
+  -	si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou d'identifier la fonction 
+  - si un composant d'interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d'information.
+- **Attention&nbsp;:** pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.
 
 **Outil&nbsp;:**  
 L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
@@ -129,8 +132,10 @@ Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception 
 **Quand&nbsp;:** lors de la conception graphique et lors du développement.
 
 **Description&nbsp;:**  
-La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour être rendu plus visible mais ne doit pas être supprimé. 
-Veiller à fournir un niveau de contraste suffisant (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.
+La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Globalement, ce comportement peut être modifié (nous préconisons au moins `2px` pour ce cadre pointillé) ou remplacé (inversion de couleur, modification de la couleur de fond/texte…) pour être rendu plus visible mais ne doit pas être supprimé. 
+Veiller à fournir un niveau de contraste suffisant de 3:1 par rapport à la couleur de fond pour rendre visible le focus (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)).
+De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l'élément peut être la même que le focus et donc, masquer celui-ci. 
+Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.
 
 L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.
     
@@ -312,6 +317,7 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 
 **À vérifier&nbsp;:** 
 
+- S'assurer que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte.
 - S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.
 - S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés…).
 - S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.

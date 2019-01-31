@@ -15,7 +15,7 @@
 
 ## 1. Set a title for each page  
 
-**Target: **everyone and especially people with visual disabilities.  
+**Target: **everyone and especially people with visual impairments.  
 **When: **as of conception and during development.
 
 **Description:**  
@@ -35,7 +35,7 @@ Allow users to identify the topic of a page, find and get a clear idea of the co
 **Don’t:** 
 `<title>Home</title>`
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
+**Reference <abbr>WCAG</abbr>:**
 - <a href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page Titled</a>
 
 ## 2. Give a title to headings
@@ -84,19 +84,21 @@ Page with a break in the heading hierarchy h2 → h4:
 </code></pre>
 
 **Tool :** 
-[HeadingsMaps](https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309) extension, available for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) and [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), extract and display page titles for the current page.
-   
- 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+Extensions to install in your browser to extract the list of titles:
+- <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309">HeadingsMaps</a>.
+- <a href="https://chrispederick.com/work/web-developer/">Web developer</a>.
+
+**Reference <abbr>WCAG</abbr>:**
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>
 
 ## 3. Provide enough contrast between text and background
 
-**Target: **everyone, especially the mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.   
+**Target: **everyone, especially mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.   
 **When: **as of design and during development.
 
 **Description: ** 
-The contrast between the text and its background should be high enough.
+The contrast between the text and its background, even for graphic objects as long as they provide information, should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablets users in a very bright environment.
 
 **Don’t: ** 
@@ -106,16 +108,14 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 
 **Checklist: **
 
-- The contrast between the colour of the background and the text must be 4.5:1 minimum and also for text on an image carrying information.
-- GUI components must have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics ... We do not have to apply this criterion, if:
-   - the GUI component is a logo
+- Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:
+   - 4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.
+   - 3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.
+- Make sure thaht GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:
+   - if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)
    - if a text, like a label, a data table, brings the same information as the icon or the graphic
-   - if the contrast ratio of the image doesn't prevent the understanding of the content or the function of the image
-- For applications used primarily in mobile web or in mobility, the contrast level of the main elements must be 7:1 in order to ensure a good readability for all.
-- Links should be easily identifiable from to the rest of the text.
-
-Any GUI component receiving focus must also be readable when taking focus.
-Inactive graphic elements on the page such as buttons are an exception to the rule because they could be ignored by the user.
+   - if the contrast ratio of the image doesn't prevent the understanding of the content or the function
+- **Important: ** for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all.
 
 **Users’ goal: **
 
@@ -124,7 +124,7 @@ Ease of reading for all users, especially the visually impaired, or people in a 
 **Tool: ** 
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
+**Reference <abbr>WCAG</abbr>:**
 - <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non-text Contrast</a>
 
@@ -156,7 +156,7 @@ This example is not valid because the information is conveyed only by colour.
 
 Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments …) to access the same information by other means.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
+**Reference <abbr>WCAG</abbr>:**
 - <a href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory Characteristics</a>
 - <a href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color</a>
 
@@ -166,7 +166,7 @@ Allow users not distinguishing colours or sensory information (colour blind, vis
 **When: **as of design and during content writing.
 
 **Description: **
-Use HTML elements as they should, for that they have been made (code validation and compliance with specifications) and respect their semantics to be sure to be fully interpreted by assistive technologies. 
+Use HTML elements as they should, for that they have been made (code validation and compliance with specifications) and respect their semantics to be sure they'll be fully interpreted by assistive technologies. 
 
 **Checklist: **
 Pages, if required, must contain semantically relevant lists. 
@@ -193,13 +193,13 @@ In the <abbr>HTML</abbr> code, ensure, when you validate, that, at least:
 - Each <abbr>ID</abbr> is unique
 
 
-**Objectif utilisateur&nbsp;: **  
+**Users' goal: **  
 Allows all users to anticipate how to use and possible behaviors for a given interface element.
 
-**Objectif technique&nbsp;: **  
+**Technical goal: **  
 Forces the coherent structuring of the content by the creator of the site.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
+**Reference <abbr>WCAG</abbr>:**
 - <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
 - <a href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
@@ -232,7 +232,7 @@ Allow users, via their User Agent or technical assistance (e.g. their browser) t
 
 Improves maintainability.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
+**Reference <abbr>WCAG</abbr>:**
 - <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
 
@@ -266,7 +266,7 @@ Enable search engines to identify the language of a page to improve the natural 
 **Example of language change: ** 
 `découvrir Orange <span lang="en">live</span> TV`
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a>
 - <a href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a>
 
@@ -290,7 +290,7 @@ The `title` attribute set on a form element can also be used like a label. You c
 
 For any form element, the label should be visually close to the field it identifies.
 
-Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters & nbsp ;; beyond that, align all the labels on the right.
+Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters; beyond that, align all the labels on the right.
 
 If relevant, the fields have an `autocompleted` attribute so that the user can use a list of pre-recorded or auto-complete proposals.
 
@@ -306,18 +306,18 @@ For fields with auto-completion, this avoids users input errors.
 **Do: **  
 ![screenshot of a valid form](images/formulaire.png)
   
-&nbsp;
+
 
 **Don’t: **  
 ![screenshot of a form with a missing label](images/formulaire2.png)
 
-&nbsp;  
+  
 
 **Example of an accessible form: **
   
 See [the example of an accessible form](./exemples/formulaire/index.html) for more details.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>
 - <a href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a>
 - <a href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
@@ -333,7 +333,7 @@ The errors are automatically detected, the user is warned by a page title change
 
 Finally, the wording of the error messages should be explicit.
 
-For web pages that involve important actions (legal commitment, financial transaction, modification or deletion of important data, response to a test or examination ...), the action must be reversible or go through a confirmation step to verify or correct the entry in case of error.
+For web pages that involve important actions (legal commitment, financial transaction, modification or deletion of important data, response to a test or examination …), the action must be reversible or go through a confirmation step to verify or correct the entry in case of error.
 
 **Checklist: **
 
@@ -349,12 +349,12 @@ Guide users when errors happen to improve the understanding and help them correc
 **Don’t: **  
 ![screenshot of a form displaying irrelevant error messages](images/formulaire-ko.png)
 
-&nbsp;  
+  
 **Example of an accessible form: **
   
 See [the accessible form example](./exemples/formulaire/index.html) for more details.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error Identification</a>
 - <a href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error Suggestion</a>
 - <a href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>
@@ -367,7 +367,7 @@ See [the accessible form example](./exemples/formulaire/index.html) for more det
 **Description: **
 
 All `img` tags should have an `alt` attribute with a relevant description: 
-- For clickable images: specify the function&nbsp;/ link target in the `alt` attribute,
+- For clickable images: specify the function/ link target in the `alt` attribute,
 - For images carrying information: add an `alt` attribute describing the information contained in the image
 - For images containing text: add an `alt` attribute containing at least the text from the image,
 - For decorative images: add an empty `alt` attribute,
@@ -407,7 +407,7 @@ In this case setting the `alt` attribute to something other than empty would pro
 **Tools: **
 The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> extension (ability to display text alternatives for all images). 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
 ## 12. Provide accessible audio or video tracks
@@ -436,7 +436,7 @@ Provide access to visual and hearing information for people who cannot access it
 
 Allow audio and video referencing.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
 - <a href="https://www.w3.org/TR/WCAG21/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
 - <a href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
@@ -482,7 +482,7 @@ Giving a summary and title for data tables allows everyone to know quickly its p
 
 Improve natural referencing.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## 14. Use relative size to allow changing text size and responsive design
@@ -500,7 +500,7 @@ Use relative length units for font size (`em`, `rem`, `%`) and for containers ha
 - Form fields must also have relative sizes to enlarge properly.
 - Try to make the container adaptive so they can increase in size when the text is zoomed in.
 - In Firefox, go to View>Zoom and activate Zoom text only, set the zoom to 200%. Verify that there is no loss of information (disappearance or overlapping text).
-- Content must respond to screen size changes, adjusting its contents without horizontal scroll even when screen width is reduced to 320 CSS pixels, unless special needs (map, table, diagram... ).
+- Content must respond to screen size changes, adjusting its contents without horizontal scroll even when screen width is reduced to 320 CSS pixels, unless special needs (map, table, diagram… ).
 
 ![screenshot Zoom settings In Firefox](./images/zoom-200.png)
 
@@ -511,7 +511,7 @@ Allow users (visually impaired, using a device outdoors, elderly people…) to i
 **Example:** 
 See the example [handling zoom, increasing the text size](./exemples/zoom/index.html) for more details.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
 - <a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
 
@@ -546,21 +546,23 @@ To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a
 **Users’ goal: **
 Improve reading comfort for people with cognitive and visual disabilities.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
 
-## 16. Link and button labels must be understandable out of context
+## 16. Text of links and buttons must be accessible
 
 **Target: **everyone, especially people with visual impairments, cognitive limitations (dyslexic) or attention difficulties.  
 **When: **as of design and during development.
 
 **Description: **
 
-Make the link and button labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  
+Both of these requirements must be met before a link or button can be accessible:
+- First, make text of links and buttons understandable out of context, especially for the visually impaired. When navigating with a screen reader, it is possible to access the list of links on the page to navigate quickly. If your page contains more than one "more info" links, it will be impossible to tell them apart from each other.
+If it is not possible to make a link or a button more explicit by the heading, for lack of space, but the current text is sufficient in its context, one must use ** a `title` attribute ** to display a tooltip, with all the necessary information, on mouse over, but also to complete the text with additional content, at choice, use:
+    - a piece of text hidden by <a href="./examples/masking/index.html"> accessible masking </a> via CSS
+    - an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you](./label-ledby-describedby.html)) .
 
-If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, **a `title`**attribute must use to display a tooltip, containing all the necessary information, at the mouse rollover, but also to complete the title with additional content with, at choice:
-- a piece of text hidden by <a href="./examples/masking/index.html"> accessible display </a> via CSS
-- by using an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you](./ label-ledby-describedby.html)).
+- In addition, the text of the label displayed (the text or the text of the image, visible on the screen) for any interface component (link, button …) must be present (first, if possible) in the (accessible) name of the component (to go further, [The accessible name in HTML](./a11y-name.html).
 
 For example, in the image below, the two “next” links are not explicit enough for a person with visual impairments. However, when one sees the screen, the positioning makes obvious the function of each button.
 
@@ -584,18 +586,17 @@ Another solution is to use an `aria-label` or `aria-labelledby` attribute to cla
 **Checklist: **
 Make sure that the semantics <abbr>HTML</abbr> are respected:
 - a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear contents, to go to an anchor.
-- a button must allow to submit / reset a form, to open a modal window, to make appear a sub-menu, to control a media, to trigger an action via <abbr>JS </abbr>.
+- a button must allow to submit / reset a form, to open a modal window, to make appear a sub-menu, to control a media, to trigger an action via <abbr>JS</abbr>.
 
 Ensure that links, out of context, give good information about the triggered action or destination.
 
-A page must not contain multiple links with the same label but pointing to different destinations&nbsp;/ actions.
+A page must not contain multiple links with the same label but pointing to different destinations/ actions.
 
 **Users’ goal: **
 
 Allow users who don’t have access to the visual context to know the destination of the link. 
 
-Particularly important for users navigating 
-through a list of links extracted from the page (screen readers) or software magnifying glass users who see only a fraction of the page.
+Particularly important for users navigating through a list of links extracted from the page (screen readers) or software magnifying glass users who see only a fraction of the page.
 
 **Technical goal: **
 
@@ -607,7 +608,7 @@ Associate a link labelled “click here” with a hidden label: “order you mob
 **Don’t:**     
 “Click here” or “Read more…” links without clarification.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a>
 
 ## 17. Warn the user when opening a new window
@@ -621,7 +622,7 @@ Notify the user of any new window opening by mentioning it in the text of the li
 If it is not possible, use the `title` attribute with the whole information needed (e.g. "buy the Nokia  7510 (new window)") and add, at choice: 
 - the use of an icon (image with an `alt` indicating the opening of a new window or just "(new window)").
 - a hidden piece of text in <a href="./examples/masking/index.html"> accessible display </a> via CSS.
-- an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you] (./ label-ledby-describedby.html)).
+- an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
 
 **Example: ** 
   
@@ -630,7 +631,7 @@ Example of an icon that indicates the opening of a new window.
 
 **Checklist: **
 
-For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off the screen via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">accessible hidden content</a>).
+For any link opening a new window or a new tab, a mention like “(new window)” is shown in the link label, or a “(new window)” mention is positioned off screen via <abbr>CSS</abbr> (<a href="./exemples/masquage/index.html">accessible hidden content</a>).
 
 **Users’ goal: **
 
@@ -639,7 +640,7 @@ Avoid the unexpected opening of a window, because this can disturb, disrupt, or 
 **Do:**     
 For any external link and opening a new window, the label could be: “Go to the orange.com site (new window)”, for a picture-link the `alt` attribute could be: “consult the <abbr>EULA</abbr> (new window)”.    
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
 
 ## 18. Allow the use of the main features of the application with the keyboard
@@ -653,7 +654,7 @@ Implement event handlers that don’t rely on mouse events only, therefore allow
 
 **Checklist: **
 
-- All the important actions performed with the mouse can also be done with the keyboard, even if you have to provide a specific alternative for the complex interactions (drag'n'drop, gestures with several fingers on mobile ...) while avoiding countless strikes.
+- All the important actions performed with the mouse can also be done with the keyboard, even if you have to provide a specific alternative for the complex interactions (drag'n'drop, gestures with several fingers on mobile …) while avoiding countless strikes.
 - Make maximum use of the basic <abbr>HTML</abbr> interactive components (fields, links, buttons), these being natively accessible to the keyboard. Otherwise, ensure that the custom components are keyboard operable in a conventional manner.
 - All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag & drop, mobile touch gestures…).
 
@@ -670,7 +671,7 @@ Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor
 **Don’t:**     
 A functionality only available through drag & drop and without any keyboard equivalent.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
 
 ## 19. The focus order must be sequential and logical without keyboard trap
@@ -690,7 +691,7 @@ Example (numbered bullets indicate how focus moves in the page) :
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 20 below.
 - Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
 - For maintainability, avoid using the `tabindex` attribute with values higher than 0.
-- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see [Manage Focus for Dynamic Content](./examples/dynFocus/index.html)
+- Even when there is appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see [Manage Focus for Dynamic Content](./examples/dynFocus/index.html)
 
 **Users’ goal: **
 
@@ -699,7 +700,7 @@ Allowing logical navigation without “trapping” the keyboard in the pages of 
 **Don’t:**     
 A page containing a video player where the focus can enter inside the player, but cannot get out (keyboard trap).        
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
+**Reference <abbr>WCAG</abbr>:**
 - [1.3.2 Meaningful Sequence](https://www.w3.org/TR/WCAG21/#meaningful-sequence)
 - [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap)
 - [2.4.3 Focus Order](https://www.w3.org/TR/WCAG21/#focus-order)
@@ -714,7 +715,7 @@ A page containing a video player where the focus can enter inside the player, bu
 
 Do not hide the focus and if necessary make it visible enough (e.g. by modifying the `outline` <abbr>CSS</abbr> property) on all elements likely to receive it (links, buttons, form elements). You can also accentuate the visibility of the focus so that it is easily identifiable.
 
-Make sure to provide a sufficient level of contrast so that it is visible to all (see [measure the level of contrast of colors](methods-tools-contrasts.html)).
+Make sure to provide a 3:1 level of contrast so that it is visible enough (see [measure the level of contrast of colors](methods-tools-contrasts.html)).
 
 When an effect is visible on an element during mouse-over (e.g. `:hover` <abbr>CSS</abbr> property), this effect must also be displayed when capturing the focus (`:focus`).
 
@@ -736,23 +737,27 @@ document.addEventListener(’keydown’, function() {
 
 **Checklist: **
 
-In many front-end frameworks or <abbr>CSS</abbr> resets, the `outline` property (to visualize the focus) is disabled (`outline: none;`), don’t forget to redefine it and check that the focus is visible on all focusable elements.
+In many frameworks front or in reset <abbr> CSS </abbr>, the `outline` property (which allows you to view the focus) is disabled (` outline: none; `), remember to redefine it and check that the focus is visible on all elements that receive it.
+
+  By default, the focus is visible via the <abbr> CSS </abbr> <code class="css"> outline: 1px </code> property. This is not enough to be visible, we recommend at least `2px` for the` outline` property and a contrast of 3:1 compared to the background color.
+ 
+  In addition, it is necessary to check the visibility of the focus on all the focusable elements, in particular, because the background color of the element can be the same as the focus and thus, hide it.
 
 **Users’ goal: **
 
 Allow focus visibility on all elements, especially for keyboard users (visually impaired, motor disabled or those with attention or memory difficulties and using devices outdoors).
 
 **Do:** 
-Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;» link, clearly visible.
+Focus set on the «Apple iPhone 5s argent» link, clearly visible.
   
 ![screenshot showing a link whose focus is clearly visible](./images/focus-ok.png)  
  
 **Don’t:** 
-Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
+Focus set on the «Apple iPhone 5s argent».
     
 ![screenshot showing a link whose focus is not visible enough](./images/focus-ko.png)   
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
 
 ## 21. Provide skip links
@@ -777,7 +782,7 @@ To make them appear, move the focus on the top of the page by clicking on your b
 
 ![screenshot of the site orange.com](images/skiplink.png)   
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#bypass-blocks">2.4.1 Bypass Blocks</a>
 
 
@@ -798,7 +803,7 @@ Therefore, it is necessary to pause the animation when loading the page or to gi
 A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.  
 It is also possible to add a “pause” button directly in the interface.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
 - <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
 
@@ -821,7 +826,7 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value)
 
 ## 25. Ensure the user keeps control during interactions
@@ -845,13 +850,13 @@ Allow the screen reader users to access the main features of the application, bu
  - Hide this new content without the need to move the pointer or focus; eg with the <kbd>esc.</kbd> key (useful especially for screen magnifier users).
  - Move the mouse pointer on this new content without it disappearing.
 
-3. If actions are to be performed in a timely manner, verify that the user can extend or remove this restriction.
+3. If actions are to be performed in a timed manner, verify that the user can extend or remove this restriction.
 
 **User Objective: ** give all users control of the context changes related to their action and give them the necessary time to perform an action.
 
 **Example: ** a form must have a send button. It should not be sent automatically after the user input.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
 - <a href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
 - <a href="https://www.w3.org/TR/WCAG21/#on-focus">3.2.1 On Focus</a>
@@ -863,16 +868,16 @@ Allow the screen reader users to access the main features of the application, bu
 **When: **during design and development.
 
 **Description: **
-Captchas are often the source of difficulties for users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user & nbsp ;:
+Captchas are often the source of difficulties for users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user:
 
 - Double authentication
 - Hidden form field to leave blank (honeypot technique), not visible to the user
 - Providing phone support to ensure that the customer is a real person
 - A check to ensure that the same <abbr>IP</abbr>/User agent combination does not attempt to submit the form more than N times per second.
 
-If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple ...) + classic visual captcha ...
+If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple …) + classic visual captcha …
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
 ## 27. Identify and maintain consistency of groupings and different regions of the page
@@ -882,9 +887,10 @@ If no other alternative is possible, it is essential to provide an alternative f
 Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.
 
 **Checklist: **
+- Ensure that links in the body of the text are easily identifiable visually by means other than color (underlined, bold ...) compared to the rest of the text.
 - Make sure that the navigation mechanisms are always located at the same place in a set of pages.
 - Ensure that the components and groupings that have the same function are identified (visually and semantically) in the same way.
-- Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast ...) or that there is a way to visually distinguish the groups (sub-menu, drop-down list ...) as well as the different regions of the page.
+- Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast …) or that there is a way to visually distinguish the groups (sub-menu, drop-down list …) as well as the different regions of the page.
 
 **User Objective: **  
 Allow users to identify and locate interface elements in all pages.
@@ -895,16 +901,16 @@ Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently cont
 
 **Don't: **  
 ![screenshot of the fnac.com website](./images/groupement2.jpg)  
-It is very difficult to associate the themes ("par region", "par genre", ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
+It is very difficult to associate the themes ("par region", "par genre", …) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
 
 **Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **  
-To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) and there, the support is much better & nbsp ;!
+To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not complete, it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) and there, the support is much better!
 
 All about <a href="./examples/landmarks/index.html">the landmarks <abbr>ARIA</abbr> in our examples</a>.
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a>
 - <a href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a>
 
@@ -916,7 +922,7 @@ Setting up this type of semantics allows visually impaired people to identify an
 Give the user several ways to locate and access specific content, locate the web page being viewed in a set of pages. When the page is a step in a process where the pages follow one after the other, providing a way to locate can be ignored.
 
 **Checklist: **  
-Make sure that several systems allow you to locate and access a page or content in the site & nbsp ;: a search tool on the entire site, a site map, a global navigation menu, a breadcrumb trail...
+Make sure that several systems allow you to locate and access a page or content in the site: a search tool on the entire site, a site map, a global navigation menu, a breadcrumb trail…
 
 **User Objective: **  
 Allow all users to find their way in order to access more easily all the content of the site.
@@ -927,7 +933,7 @@ The site offers, at the same time, a complete and precise main navigation and a 
 **Don't: **  
 An application provides a parcel navigation menu and no other way for the user to navigate the pages or locate where the current page is in the tree.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#multiple-ways">2.4.5 Multiple Ways</a>
 - <a href="https://www.w3.org/TR/WCAG21/#location">2.4.8 Location</a>
 
@@ -956,7 +962,7 @@ The site must not prohibit or limit the use of the zoom (especially on mobiles).
 **Description: **  
 During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
 ## 32. Offer an alternative to complex gestures
@@ -966,12 +972,12 @@ During gesture interaction, the action is triggered only at the end of the inter
 
 **Description: **  
 For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
-Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...), an alternative must exist.
+Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking …), an alternative must exist.
 
 **Complex gesture:** any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.  
 **Simplified gesture:** an alternative requiring a single pointer (one finger) without path-based gesture.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
 
 ## 33. Give access to the content regardless of the orientation of the screen
@@ -982,7 +988,7 @@ Similarly for interactions requiring a change of orientation of the screen (tilt
 **Description: **  
 Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
 
 ## 34. Allow to know the result of a user interaction with status messages
@@ -991,20 +997,23 @@ Access to the content must not depend on the orientation of the screen (portrait
 **When: ** during conception to content writing and development.
 
 **Description: **  
-Provide the user with status messages that give him feedback on the action he has just completed.
+Provide the assistive technology user (<abbr>AT</abbr>) with status messages that give him feedback on the action he has just completed without receiving focus.
 
 **Checklist: **  
-   Contextual messages must be perceived by anyone using a <abbr>AT</abbr> (speech synthesis) without taking focus on the message.
+Important information for the user but without change of context (no opening of a new window, no focus, no modification of the content or viewport) must be perceived via properties and roles (<abbr>ARIA</abbr>) by anyone using <abbr>AT</abbr> without the focus on the message.
    
-   A status message or pop-up message can be & nbsp ;:
-- a message that gives the user information on the result of an interaction (ex: Your request has been taken into account)
+A status or pop-up message can be:
+- a message that gives the user information on the result or the success of an action (ex: Your request has been taken into account)
 - a waiting message that indicates that the triggered action is running and indicates an approximate wait time
-- a message that gives information on a change of context
+- an error message following a user interaction
+- a message that gives information without a change of context
+
+In <abbr>HTML</abbr>, the specific <abbr>ARIA</abbr> roles of type `alert`,` status`, `dialog`,` progressbar`, and so on. are ways to make these status messages accessible (to go further [Use ARIA for status, status, or context messages](./aria-status.html).
 
 **User Objective: **  
     For all users, have feedback on the essential actions it performs.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

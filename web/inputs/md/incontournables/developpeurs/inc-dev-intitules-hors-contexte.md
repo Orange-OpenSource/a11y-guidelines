@@ -54,7 +54,7 @@ Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le 
 **Objectif utilisateur&nbsp;:**
 Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l’action du bouton.
  
-Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. 
+Notamment important pour les utilisateurs navigant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. 
 
 Permettre de conserver une cohérence entre le texte visible d'une étiquette et son nom accessible qui lui est restitué aux <abbr>AT</abbr>
 
