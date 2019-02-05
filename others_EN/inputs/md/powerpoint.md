@@ -7,110 +7,152 @@
 
 ## Introduction
 
-To produce accessible PowerPoint documents, one has to follow recommendations. Fortunately, PowerPoint comes equipped with a tool to check accessibility.
-It pinpoints the main issues and suggests solutions to remedy them.
+Producing accessible PowerPoint presentations requires following different rules. They are summarized below (and detailed guides are available on the [WebAIM website](https://webaim.org/techniques/powerpoint/)).
 
-This being said, even after correcting said issues, we realised that some elements (SmartArt, tables, …) were not always correctly vocalised by screen readers.
-This is why, when your presentation is done, we recommend to export it in PDF before broadcasting the document: the Export option in PowerPoint gives better results with assistive technologies; also it removes animations, which are often a problem for people with vision problems.
+In order to help you, PowerPoint includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions. 
 
-## Recommendations
+## Slide Layouts
 
-Below you will find a summary of recommendations that provide better accessibility with PowerPoint.
-For more information, please refer to the guides provided on <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">the <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr> website (in French)</a>.
+Defining slide layouts is the first action to do in order to create an accessible presentation, it will ensure information have the correct reading order.
+Use the Slide Master view: select the <code>View</code> tab > <code>Slide Master</code> to create or modify slides layouts. 
 
-Our tests were done using Office 2010 with Jaws 17 and <abbr>NVDA</abbr> 2017-1. The below recommendations are the result of these tests.
+<img class="center" src="./images/screen1.png" alt="Screenshot of view tab"/>
 
-### 1. Use slide masks
+Use the Master Layout submenu to add titles or footers.
 
-Presentations must be created using slide masks (menu: Display&nbsp;> Slide masks). Then use checkboxes “Title”, “Footers”, and the menu “Insert reserved space”.
+<img class="center" src="./images/screen2.png" alt="Screenshot of slide master tab"/>
 
-### 2. Check the reading order of elements
+Create as many layouts as types of slides needed.
+Avoid adding text boxes or images directly into the presentation via the <code>Insert</code> menu but use the <code>Slide Master</code> view.  
+Note: if you edit the slide layout after you have created the slides, you must reapply the new model.
 
-The reading order must be checked through the Selection pane (menu Home&nbsp;> Organise&nbsp;> Selection pane). Be careful: the last element in the list is the first read by screen readers: the reading order must thus be from bottom to top in your slide masks.
+## Presentation properties
 
-### 3. Give a unique title to each slide
+### Language
 
-Each slide must have a unique title. This must be added in the zone titled “Click to add a title”.
+The main language must be defined in the tab <code>File > Options > Language</code>.
+Every punctual change of language must be identified by selecting the text and: tab <code>Review > Language > Set proofing language</code>.
 
-### 4. Provide replacement text for images
+### Other properties
+Title, author and tags fields have to be completed in tab <code>File > Info > Properties</code>.
 
-If the image conveys information, you must provide a replacement text describing its content (right click, Image format&nbsp;> Replacement text&nbsp;> Description field).
-If the image is strictly for decoration, the Description field must be left empty.
+<img class="center" src="./images/screen3.png" alt="Screenshot of file properties"/>
 
+This information is accessible by everyone in Windows Explorer and are readable by the screen readers. 
 
-### 5. Make simple tables
+## Use unique slide titles
+Give every slide a unique and descriptive title, it allows screen reader users to clearly understand which slide they are on.
 
-Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.
+## Wording
+Avoid abbreviations and acronyms; explain them at the first occurrence.
+If necessary, keep accentuation on capital letters (example: É or Ç): use the <code>Insert tab > Symbol</code>.
 
-### 6. Use SmartArt rather than assembling text and shapes
+## Formatting / layout
+Use familiar sans serif fonts (such as Arial or Calibri), in a larger font size (18pt or larger).
+Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.
+Avoid justifying the text; prefer left alignment.
+In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… > Indents and Spacing</code>.
 
-SmartArt enables you to integrate images and text that will be vocalised in the proper order. All SmartArt clips are not correct yet, be careful.
+<img class="center" src="./images/screen4.png" alt="Screenshot of paragraph dialog"/>
 
-### 7. Add a replacement text to graphics
+## Colors and contrasts
 
-The content of graphics must be described in the Replacement text for the graphic (Object format&nbsp;> Replacement text&nbsp;> Description).
+### Use sufficient contrast for text and background colors
 
-### 8. Ensure colour is not the only means to convey information
+The presentation of text should have a contrast ratio of at least 4.5:1.
+Here are some examples on a white background:
+- Foreground black : very good contrast, ratio = 21:1 
+- Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1
+- Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1
 
-Information given through colour must also be conveyed via another means like shape, position, size…
+If you choose to not use the Orange Group colors guidelines, you can download the [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) tool; it will be useful for checking your contrasts.
 
-### 9. Ensure a sufficient contrast
+### Ensure that color is not the only means of conveying information
+For people who can not see the colors or the shades of colors, it is important to convey the information differently.
 
-Contrast between the colour of text and of its background must be sufficient:
-- 4.5:1 for normal-size text;
-- 3:1 for bigger text.
+<img class="center" src="./images/color1.png" alt="Bad example, color is used to convey the information"/>  
+<img class="center" src="./images/color2.png" alt="Good example, the shape is used to convey the information"/>
 
-Contrast can be verified with the <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.
+Appropriate colors and contrast are necessary for people to see your presentations and understand their meaning. 
 
-### 10. Define language
+## Bulleted Lists or Numbered Lists
+Always use the appropriate and native functions in order to create lists.
 
-Language must be defined through the menu: File&nbsp;> Options&nbsp;> Language.
-Words or grops of words in another language must be explicitly described as such (menu: Revision&nbsp;> Language&nbsp;> Define the verification language).
+<img class="center" src="./images/screen5.png" alt="Screenshot of lists options"/>
 
-### 11. Use the automated Accessibility checker
+## Pictures and other Images
 
-PowerPoint provides an Accessibility checker (menu File&nbsp;> Check for problems&nbsp;> Check accessibility). It lists all contents prone to be hard to deal with.
+Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides.
+In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner.
+Right-click on an image and select <code>Format Picture</code> or <code>Format Shape > Alt Text</code>.
 
-### 12. Exporting the presentation to <abbr>PDF</abbr>
+<img class="center" src="./images/screen6.png" alt="Screenshot of format picture dialog"/>
 
-To export to <abbr>PDF</abbr> you only need to go to File&nbsp;> Save as. Choose a name and select <abbr>PDF</abbr> as file type.
-The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.
+Type the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).
+If the picture is only decorative, leave the Description text box blank.
+Alternative text helps people who can’t see the screen to understand what’s important in images and other visuals.
+Do not use text in images to convey important information.  
 
-## External resources
+Note: If a picture or a chart is too complex to describe with alt text, you will need to provide a text description elsewhere. You can add the full description to the Notes section of the slide for example. In this case, put a very short description in the alt text, endings with the words: “full text description in the Notes section of this slide”.
 
-- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in French)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.
-- <a href="https://webaim.org/techniques/powerpoint/" hreflang="en">PowerPoint accessibility, WebAIM</a>.
+For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).
+Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.
 
-## Results of our tests
+## Tables
 
-We tested the behaviour of <abbr>NVDA</abbr> (version 2017.1) and Jaws (version 17) under Windows with a <abbr>PDF</abbr> file generated with PowerPoint 2010.
+Use a simple table structure, and specify column header information.
 
-### Tables
+Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.
 
-Tables were vocalised correctly with Jaws and <abbr>NVDA</abbr>.
+If a table is too complex, you will need to provide an additional description: Right-click <code>Format Shape > Alt Text</code>.
 
-### Tables with replacement text
+## Audio or video file
+For audio and video content, in addition to alt text, include closed captioning for people who are deaf or have limited hearing.  
 
-<abbr>NVDA</abbr>: tables were still vocalised, replacement texts were ignored.
-Jaws: tables were not vocalised any more, replacement texts were ignored.
+Video content must have synchronized captions and also needs a rich description of the visual components.
+Closed captions typically also describe audio attributes such as music or sound effects that occur off-screen.
+Subtitles typically contain a transcription (or translation) of the dialogue.  
 
+Audio content must have a transcript.  
 
-### SmartArt
+Avoid automatic launching or slide transitions.  
 
-Same behaviour for Jaws and <abbr>NVDA</abbr>: SmartArt texts were vocalised (not always in the proper order though).
+Avoid content that blinks or flashes more than three times a second.
 
-### SmartArt with replacement texts
+## Set the reading order
+The order in which the screen readers read the slide contents can be modified in the Selection pane.  
+On the <code>Home</code> tab, in the <code>Drawing group</code>, select <code>Arrange > Selection</code> Pane.
+The elements of your slide are read in the reverse order listed in this pane.
 
-<abbr>NVDA</abbr>: expected behaviour, replacement texts were read instead of the SmartArt.
-Jaws: SmartArt were not vocalised any more, replacement texts were ignored.
+<img class="center" src="./images/screen7.png" alt="Screenshot of selection pane"/>
 
-### Graphics
+## Accessibility Checker
+At least, run Accessibility Checker to make sure your content is accessible.  
 
-Jaws and <abbr>NVDA</abbr> had the same behaviour: figures in graphics were vocalised.
+In <code>File tab > Check for Issues</code>.
 
-### Graphics with replacement texts
+<img class="center" src="./images/screen8.png" alt="Screenshot of accessibility checker menu"/>
 
-Jaws and <abbr>NVDA</abbr> behaved as expected: replacement texts were vocalised instead of the graphics.
+## Convert to PDF
+
+Save you presentation as <abbr>PDF</abbr>: <code>File tab > Save As</code> and save as type PDF.
+Check the « Document structure tags for accessibility » option.
+
+<img class="center" src="./images/screen9.png" alt="Screenshot of PDF options dialog"/>
+
+<abbr>PDF</abbr> is often a better format to present PowerPoint presentations electronically.  
+
+Note:  If your presentation have more than 50 slides, it is better to advise your readers to change the following setting in Adobe:
+<code>Edit > Preferences > Reading > Screen Reader Options > Page vs Document: "Read the entire document"</code>
+
+<img class="center" src="./images/screen10.png" alt="Screenshot of screen reader options"/>
+
+To check <abbr>PDF</abbr> document accessibility: download [PDF Accessibility Checker (PAC 3)](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
+
+## For more detailed information
+- [PowerPoint Accessibility, WebAIM](https://webaim.org/techniques/powerpoint/)
+- [Microsoft Accessibility Support website](https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25)
+- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" lang="fr">(FR) Créer des documents bureautiques accessibles, DINISIC</a>.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
