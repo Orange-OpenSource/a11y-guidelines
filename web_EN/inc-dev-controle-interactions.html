@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Orange digital accessibility guidelines</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="/web/css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Presentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Themed WCAG index</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Requirements and resources</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
+                        <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Component examples</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Technical articles</a></li>
+                        <li><a class="page-about" href="about.html">About / Contact</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>                                    
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">You are here : </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web_EN/index.html">Website</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="ensure-the-user-keeps-control-during-interactions">Ensure the user keeps control during interactions</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
+        {"label":"Ensure the user keeps control during interactions"}
+    ]);
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p><strong>Target: </strong>Everyone, especially those who are visually impaired, cognitive or with attention deficit.<br><strong>When: </strong>early in the design phase and during development.</p>
+<p><strong>Description: </strong>  </p>
+<ul>
+<li>Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.</li>
+<li>Do not impose on the user a time limit to perform an action. This must be able to extend a time limit if appropriate.</li>
+<li>If keyboard shortcuts based on a single key is available, it is necessary to take some measures to avoid possible conflicts with assistive technology.</li>
+<li>The user must have control on the contents opening on hover or focus.</li>
+</ul>
+<p><strong>Checklist:</strong>  </p>
+<ol>
+<li><p>Regarding shortcuts, make sure that at least one of the following statements is true:</p>
+<ul>
+<li><strong>turn off</strong>: the shortcut can be turned off.</li>
+<li><strong>modification</strong>: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).</li>
+<li><strong>focus activation</strong>: the keyboard shortcut for a user interface component is only active when that component has focus.</li>
+</ul>
+</li>
+<li><p>If content appears on mouse over or focus (eg tooltip), the user must be able to:</p>
+<ul>
+<li>Hide this new content without the need to move the pointer or focus; eg with the <kbd>esc.</kbd> key (useful especially for screen magnifier users).</li>
+<li>Move the mouse pointer on this new content without it disappearing.</li>
+</ul>
+</li>
+<li><p>If actions are to be performed in a timely manner, verify that the user can extend or remove this restriction.</p>
+</li>
+</ol>
+<p><strong>User Objective: </strong> give all users control of the context changes related to their action and give them the necessary time to perform an action.</p>
+<p><strong>Example: </strong> a form must have a send button. It should not be sent automatically after the user input.</p>
+<p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#on-focus">3.2.1 On Focus</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#character-key-shortcuts">2.1.4 Character key shortcuts</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

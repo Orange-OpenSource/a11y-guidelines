@@ -218,154 +218,133 @@ documentTitles["powerpoint.html#introduction"] = "Introduction";
 index.add({
     url: "powerpoint.html#introduction",
     title: "Introduction",    
-    body: "## Introduction  To produce accessible PowerPoint documents, one has to follow recommendations. Fortunately, PowerPoint comes equipped with a tool to check accessibility. It pinpoints the main issues and suggests solutions to remedy them.  This being said, even after correcting said issues, we realised that some elements (SmartArt, tables, …) were not always correctly vocalised by screen readers. This is why, when your presentation is done, we recommend to export it in PDF before broadcasting the document: the Export option in PowerPoint gives better results with assistive technologies; also it removes animations, which are often a problem for people with vision problems.  "
+    body: "## Introduction  Producing accessible PowerPoint presentations requires following different rules. They are summarized below (and detailed guides are available on the [WebAIM website](https://webaim.org/techniques/powerpoint/)).  In order to help you, PowerPoint includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions.   "
 });
 
-documentTitles["powerpoint.html#recommendations"] = "Recommendations";
+documentTitles["powerpoint.html#slide-layouts"] = "Slide Layouts";
 index.add({
-    url: "powerpoint.html#recommendations",
-    title: "Recommendations",    
-    body: "## Recommendations  Below you will find a summary of recommendations that provide better accessibility with PowerPoint. For more information, please refer to the guides provided on &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;the &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt; website (in French)&lt;/a&gt;.  Our tests were done using Office 2010 with Jaws 17 and &lt;abbr&gt;NVDA&lt;/abbr&gt; 2017-1. The below recommendations are the result of these tests.  "
+    url: "powerpoint.html#slide-layouts",
+    title: "Slide Layouts",    
+    body: "## Slide Layouts  Defining slide layouts is the first action to do in order to create an accessible presentation, it will ensure information have the correct reading order. Use the Slide Master view: select the &lt;code&gt;View&lt;/code&gt; tab &gt; &lt;code&gt;Slide Master&lt;/code&gt; to create or modify slides layouts.   &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen1.png\&quot; alt=\&quot;Screenshot of view tab\&quot;/&gt;  Use the Master Layout submenu to add titles or footers.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen2.png\&quot; alt=\&quot;Screenshot of slide master tab\&quot;/&gt;  Create as many layouts as types of slides needed. Avoid adding text boxes or images directly into the presentation via the &lt;code&gt;Insert&lt;/code&gt; menu but use the &lt;code&gt;Slide Master&lt;/code&gt; view.   Note: if you edit the slide layout after you have created the slides, you must reapply the new model.  "
 });
 
-documentTitles["powerpoint.html#1-use-slide-masks"] = "1. Use slide masks";
+documentTitles["powerpoint.html#presentation-properties"] = "Presentation properties";
 index.add({
-    url: "powerpoint.html#1-use-slide-masks",
-    title: "1. Use slide masks",    
-    body: "### 1. Use slide masks  Presentations must be created using slide masks (menu: Display&amp;nbsp;&gt; Slide masks). Then use checkboxes “Title”, “Footers”, and the menu “Insert reserved space”.  "
+    url: "powerpoint.html#presentation-properties",
+    title: "Presentation properties",    
+    body: "## Presentation properties  "
 });
 
-documentTitles["powerpoint.html#2-check-the-reading-order-of-elements"] = "2. Check the reading order of elements";
+documentTitles["powerpoint.html#language"] = "Language";
 index.add({
-    url: "powerpoint.html#2-check-the-reading-order-of-elements",
-    title: "2. Check the reading order of elements",    
-    body: "### 2. Check the reading order of elements  The reading order must be checked through the Selection pane (menu Home&amp;nbsp;&gt; Organise&amp;nbsp;&gt; Selection pane). Be careful: the last element in the list is the first read by screen readers: the reading order must thus be from bottom to top in your slide masks.  "
+    url: "powerpoint.html#language",
+    title: "Language",    
+    body: "### Language  The main language must be defined in the tab &lt;code&gt;File &gt; Options &gt; Language&lt;/code&gt;. Every punctual change of language must be identified by selecting the text and: tab &lt;code&gt;Review &gt; Language &gt; Set proofing language&lt;/code&gt;.  "
 });
 
-documentTitles["powerpoint.html#3-give-a-unique-title-to-each-slide"] = "3. Give a unique title to each slide";
+documentTitles["powerpoint.html#other-properties"] = "Other properties";
 index.add({
-    url: "powerpoint.html#3-give-a-unique-title-to-each-slide",
-    title: "3. Give a unique title to each slide",    
-    body: "### 3. Give a unique title to each slide  Each slide must have a unique title. This must be added in the zone titled “Click to add a title”.  "
+    url: "powerpoint.html#other-properties",
+    title: "Other properties",    
+    body: "### Other properties Title, author and tags fields have to be completed in tab &lt;code&gt;File &gt; Info &gt; Properties&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen3.png\&quot; alt=\&quot;Screenshot of file properties\&quot;/&gt;  This information is accessible by everyone in Windows Explorer and are readable by the screen readers.   "
 });
 
-documentTitles["powerpoint.html#4-provide-replacement-text-for-images"] = "4. Provide replacement text for images";
+documentTitles["powerpoint.html#use-unique-slide-titles"] = "Use unique slide titles";
 index.add({
-    url: "powerpoint.html#4-provide-replacement-text-for-images",
-    title: "4. Provide replacement text for images",    
-    body: "### 4. Provide replacement text for images  If the image conveys information, you must provide a replacement text describing its content (right click, Image format&amp;nbsp;&gt; Replacement text&amp;nbsp;&gt; Description field). If the image is strictly for decoration, the Description field must be left empty.   "
+    url: "powerpoint.html#use-unique-slide-titles",
+    title: "Use unique slide titles",    
+    body: "## Use unique slide titles Give every slide a unique and descriptive title, it allows screen reader users to clearly understand which slide they are on.  "
 });
 
-documentTitles["powerpoint.html#5-make-simple-tables"] = "5. Make simple tables";
+documentTitles["powerpoint.html#wording"] = "Wording";
 index.add({
-    url: "powerpoint.html#5-make-simple-tables",
-    title: "5. Make simple tables",    
-    body: "### 5. Make simple tables  Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.  "
+    url: "powerpoint.html#wording",
+    title: "Wording",    
+    body: "## Wording Avoid abbreviations and acronyms; explain them at the first occurrence. If necessary, keep accentuation on capital letters (example: É or Ç): use the &lt;code&gt;Insert tab &gt; Symbol&lt;/code&gt;.  "
 });
 
-documentTitles["powerpoint.html#6-use-smartart-rather-than-assembling-text-and-shapes"] = "6. Use SmartArt rather than assembling text and shapes";
+documentTitles["powerpoint.html#formatting-layout"] = "Formatting / layout";
 index.add({
-    url: "powerpoint.html#6-use-smartart-rather-than-assembling-text-and-shapes",
-    title: "6. Use SmartArt rather than assembling text and shapes",    
-    body: "### 6. Use SmartArt rather than assembling text and shapes  SmartArt enables you to integrate images and text that will be vocalised in the proper order. All SmartArt clips are not correct yet, be careful.  "
+    url: "powerpoint.html#formatting-layout",
+    title: "Formatting / layout",    
+    body: "## Formatting / layout Use familiar sans serif fonts (such as Arial or Calibri), in a larger font size (18pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines. Avoid justifying the text; prefer left alignment. In order to add white space between sentences and paragraphs, use option: &lt;code&gt;right click&lt;/code&gt; on the text and select &lt;code&gt;Paragraph… &gt; Indents and Spacing&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen4.png\&quot; alt=\&quot;Screenshot of paragraph dialog\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#7-add-a-replacement-text-to-graphics"] = "7. Add a replacement text to graphics";
+documentTitles["powerpoint.html#colors-and-contrasts"] = "Colors and contrasts";
 index.add({
-    url: "powerpoint.html#7-add-a-replacement-text-to-graphics",
-    title: "7. Add a replacement text to graphics",    
-    body: "### 7. Add a replacement text to graphics  The content of graphics must be described in the Replacement text for the graphic (Object format&amp;nbsp;&gt; Replacement text&amp;nbsp;&gt; Description).  "
+    url: "powerpoint.html#colors-and-contrasts",
+    title: "Colors and contrasts",    
+    body: "## Colors and contrasts  "
 });
 
-documentTitles["powerpoint.html#8-ensure-colour-is-not-the-only-means-to-convey-information"] = "8. Ensure colour is not the only means to convey information";
+documentTitles["powerpoint.html#use-sufficient-contrast-for-text-and-background-colors"] = "Use sufficient contrast for text and background colors";
 index.add({
-    url: "powerpoint.html#8-ensure-colour-is-not-the-only-means-to-convey-information",
-    title: "8. Ensure colour is not the only means to convey information",    
-    body: "### 8. Ensure colour is not the only means to convey information  Information given through colour must also be conveyed via another means like shape, position, size…  "
+    url: "powerpoint.html#use-sufficient-contrast-for-text-and-background-colors",
+    title: "Use sufficient contrast for text and background colors",    
+    body: "### Use sufficient contrast for text and background colors  The presentation of text should have a contrast ratio of at least 4.5:1. Here are some examples on a white background: - Foreground black : very good contrast, ratio = 21:1  - Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1 - Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1  If you choose to not use the Orange Group colors guidelines, you can download the [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) tool; it will be useful for checking your contrasts.  "
 });
 
-documentTitles["powerpoint.html#9-ensure-a-sufficient-contrast"] = "9. Ensure a sufficient contrast";
+documentTitles["powerpoint.html#ensure-that-color-is-not-the-only-means-of-conveying-information"] = "Ensure that color is not the only means of conveying information";
 index.add({
-    url: "powerpoint.html#9-ensure-a-sufficient-contrast",
-    title: "9. Ensure a sufficient contrast",    
-    body: "### 9. Ensure a sufficient contrast  Contrast between the colour of text and of its background must be sufficient: - 4.5:1 for normal-size text; - 3:1 for bigger text.  Contrast can be verified with the &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
+    url: "powerpoint.html#ensure-that-color-is-not-the-only-means-of-conveying-information",
+    title: "Ensure that color is not the only means of conveying information",    
+    body: "### Ensure that color is not the only means of conveying information For people who can not see the colors or the shades of colors, it is important to convey the information differently.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/color1.png\&quot; alt=\&quot;Bad example, color is used to convey the information\&quot;/&gt;   &lt;img class=\&quot;center\&quot; src=\&quot;./images/color2.png\&quot; alt=\&quot;Good example, the shape is used to convey the information\&quot;/&gt;  Appropriate colors and contrast are necessary for people to see your presentations and understand their meaning.   "
 });
 
-documentTitles["powerpoint.html#10-define-language"] = "10. Define language";
+documentTitles["powerpoint.html#bulleted-lists-or-numbered-lists"] = "Bulleted Lists or Numbered Lists";
 index.add({
-    url: "powerpoint.html#10-define-language",
-    title: "10. Define language",    
-    body: "### 10. Define language  Language must be defined through the menu: File&amp;nbsp;&gt; Options&amp;nbsp;&gt; Language. Words or grops of words in another language must be explicitly described as such (menu: Revision&amp;nbsp;&gt; Language&amp;nbsp;&gt; Define the verification language).  "
+    url: "powerpoint.html#bulleted-lists-or-numbered-lists",
+    title: "Bulleted Lists or Numbered Lists",    
+    body: "## Bulleted Lists or Numbered Lists Always use the appropriate and native functions in order to create lists.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen5.png\&quot; alt=\&quot;Screenshot of lists options\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#11-use-the-automated-accessibility-checker"] = "11. Use the automated Accessibility checker";
+documentTitles["powerpoint.html#pictures-and-other-images"] = "Pictures and other Images";
 index.add({
-    url: "powerpoint.html#11-use-the-automated-accessibility-checker",
-    title: "11. Use the automated Accessibility checker",    
-    body: "### 11. Use the automated Accessibility checker  PowerPoint provides an Accessibility checker (menu File&amp;nbsp;&gt; Check for problems&amp;nbsp;&gt; Check accessibility). It lists all contents prone to be hard to deal with.  "
-});
-
-documentTitles["powerpoint.html#12-exporting-the-presentation-to-abbrpdfabbr"] = "12. Exporting the presentation to &lt;abbr&gt;PDF&lt;/abbr&gt;";
-index.add({
-    url: "powerpoint.html#12-exporting-the-presentation-to-abbrpdfabbr",
-    title: "12. Exporting the presentation to &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 12. Exporting the presentation to &lt;abbr&gt;PDF&lt;/abbr&gt;  To export to &lt;abbr&gt;PDF&lt;/abbr&gt; you only need to go to File&amp;nbsp;&gt; Save as. Choose a name and select &lt;abbr&gt;PDF&lt;/abbr&gt; as file type. The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.  "
-});
-
-documentTitles["powerpoint.html#external-resources"] = "External resources";
-index.add({
-    url: "powerpoint.html#external-resources",
-    title: "External resources",    
-    body: "## External resources  - &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;Creating accessible office documents (in French)&lt;/a&gt;, &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt;. - &lt;a href=\&quot;https://webaim.org/techniques/powerpoint/\&quot; hreflang=\&quot;en\&quot;&gt;PowerPoint accessibility, WebAIM&lt;/a&gt;.  "
-});
-
-documentTitles["powerpoint.html#results-of-our-tests"] = "Results of our tests";
-index.add({
-    url: "powerpoint.html#results-of-our-tests",
-    title: "Results of our tests",    
-    body: "## Results of our tests  We tested the behaviour of &lt;abbr&gt;NVDA&lt;/abbr&gt; (version 2017.1) and Jaws (version 17) under Windows with a &lt;abbr&gt;PDF&lt;/abbr&gt; file generated with PowerPoint 2010.  "
+    url: "powerpoint.html#pictures-and-other-images",
+    title: "Pictures and other Images",    
+    body: "## Pictures and other Images  Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides. In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner. Right-click on an image and select &lt;code&gt;Format Picture&lt;/code&gt; or &lt;code&gt;Format Shape &gt; Alt Text&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen6.png\&quot; alt=\&quot;Screenshot of format picture dialog\&quot;/&gt;  Type the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies). If the picture is only decorative, leave the Description text box blank. Alternative text helps people who can’t see the screen to understand what’s important in images and other visuals. Do not use text in images to convey important information.    Note: If a picture or a chart is too complex to describe with alt text, you will need to provide a text description elsewhere. You can add the full description to the Notes section of the slide for example. In this case, put a very short description in the alt text, endings with the words: “full text description in the Notes section of this slide”.  For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language). Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.  "
 });
 
 documentTitles["powerpoint.html#tables"] = "Tables";
 index.add({
     url: "powerpoint.html#tables",
     title: "Tables",    
-    body: "### Tables  Tables were vocalised correctly with Jaws and &lt;abbr&gt;NVDA&lt;/abbr&gt;.  "
+    body: "## Tables  Use a simple table structure, and specify column header information.  Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.  If a table is too complex, you will need to provide an additional description: Right-click &lt;code&gt;Format Shape &gt; Alt Text&lt;/code&gt;.  "
 });
 
-documentTitles["powerpoint.html#tables-with-replacement-text"] = "Tables with replacement text";
+documentTitles["powerpoint.html#audio-or-video-file"] = "Audio or video file";
 index.add({
-    url: "powerpoint.html#tables-with-replacement-text",
-    title: "Tables with replacement text",    
-    body: "### Tables with replacement text  &lt;abbr&gt;NVDA&lt;/abbr&gt;: tables were still vocalised, replacement texts were ignored. Jaws: tables were not vocalised any more, replacement texts were ignored.   "
+    url: "powerpoint.html#audio-or-video-file",
+    title: "Audio or video file",    
+    body: "## Audio or video file For audio and video content, in addition to alt text, include closed captioning for people who are deaf or have limited hearing.    Video content must have synchronized captions and also needs a rich description of the visual components. Closed captions typically also describe audio attributes such as music or sound effects that occur off-screen. Subtitles typically contain a transcription (or translation) of the dialogue.    Audio content must have a transcript.    Avoid automatic launching or slide transitions.    Avoid content that blinks or flashes more than three times a second.  "
 });
 
-documentTitles["powerpoint.html#smartart"] = "SmartArt";
+documentTitles["powerpoint.html#set-the-reading-order"] = "Set the reading order";
 index.add({
-    url: "powerpoint.html#smartart",
-    title: "SmartArt",    
-    body: "### SmartArt  Same behaviour for Jaws and &lt;abbr&gt;NVDA&lt;/abbr&gt;: SmartArt texts were vocalised (not always in the proper order though).  "
+    url: "powerpoint.html#set-the-reading-order",
+    title: "Set the reading order",    
+    body: "## Set the reading order The order in which the screen readers read the slide contents can be modified in the Selection pane.   On the &lt;code&gt;Home&lt;/code&gt; tab, in the &lt;code&gt;Drawing group&lt;/code&gt;, select &lt;code&gt;Arrange &gt; Selection&lt;/code&gt; Pane. The elements of your slide are read in the reverse order listed in this pane.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen7.png\&quot; alt=\&quot;Screenshot of selection pane\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#smartart-with-replacement-texts"] = "SmartArt with replacement texts";
+documentTitles["powerpoint.html#accessibility-checker"] = "Accessibility Checker";
 index.add({
-    url: "powerpoint.html#smartart-with-replacement-texts",
-    title: "SmartArt with replacement texts",    
-    body: "### SmartArt with replacement texts  &lt;abbr&gt;NVDA&lt;/abbr&gt;: expected behaviour, replacement texts were read instead of the SmartArt. Jaws: SmartArt were not vocalised any more, replacement texts were ignored.  "
+    url: "powerpoint.html#accessibility-checker",
+    title: "Accessibility Checker",    
+    body: "## Accessibility Checker At least, run Accessibility Checker to make sure your content is accessible.    In &lt;code&gt;File tab &gt; Check for Issues&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen8.png\&quot; alt=\&quot;Screenshot of accessibility checker menu\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#graphics"] = "Graphics";
+documentTitles["powerpoint.html#convert-to-pdf"] = "Convert to PDF";
 index.add({
-    url: "powerpoint.html#graphics",
-    title: "Graphics",    
-    body: "### Graphics  Jaws and &lt;abbr&gt;NVDA&lt;/abbr&gt; had the same behaviour: figures in graphics were vocalised.  "
+    url: "powerpoint.html#convert-to-pdf",
+    title: "Convert to PDF",    
+    body: "## Convert to PDF  Save you presentation as &lt;abbr&gt;PDF&lt;/abbr&gt;: &lt;code&gt;File tab &gt; Save As&lt;/code&gt; and save as type PDF. Check the « Document structure tags for accessibility » option.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen9.png\&quot; alt=\&quot;Screenshot of PDF options dialog\&quot;/&gt;  &lt;abbr&gt;PDF&lt;/abbr&gt; is often a better format to present PowerPoint presentations electronically.    Note:  If your presentation have more than 50 slides, it is better to advise your readers to change the following setting in Adobe: &lt;code&gt;Edit &gt; Preferences &gt; Reading &gt; Screen Reader Options &gt; Page vs Document: \&quot;Read the entire document\&quot;&lt;/code&gt;  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen10.png\&quot; alt=\&quot;Screenshot of screen reader options\&quot;/&gt;  To check &lt;abbr&gt;PDF&lt;/abbr&gt; document accessibility: download [PDF Accessibility Checker (PAC 3)](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).  "
 });
 
-documentTitles["powerpoint.html#graphics-with-replacement-texts"] = "Graphics with replacement texts";
+documentTitles["powerpoint.html#for-more-detailed-information"] = "For more detailed information";
 index.add({
-    url: "powerpoint.html#graphics-with-replacement-texts",
-    title: "Graphics with replacement texts",    
-    body: "### Graphics with replacement texts  Jaws and &lt;abbr&gt;NVDA&lt;/abbr&gt; behaved as expected: replacement texts were vocalised instead of the graphics.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "powerpoint.html#for-more-detailed-information",
+    title: "For more detailed information",    
+    body: "## For more detailed information - [PowerPoint Accessibility, WebAIM](https://webaim.org/techniques/powerpoint/) - [Microsoft Accessibility Support website](https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25) - &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; lang=\&quot;fr\&quot;&gt;(FR) Créer des documents bureautiques accessibles, DINISIC&lt;/a&gt;.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

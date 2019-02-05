@@ -417,7 +417,7 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <ul>
 <li><strong>La version conception</strong> n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.</li>
 <li><strong>La version développement</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
-<li><strong>La version tests</strong> présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc.</li>
+<li><strong>La version tests</strong> présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. Pour tirer le meilleur partie de ces tests, il faut utiliser <a href="http://a11y-guidelines.orange.com/web/methodes-outils.html">une méthode de tests d&#39;accessibilité et des outils</a></li>
 </ul>
 <p><ul class="nav nav-tabs" role="tablist"></p>
 <p><li class="nav-item">
@@ -517,7 +517,7 @@ S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisa
 
 S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site
 <ul>
-    <li><a href="inc-dev-intitules-hors-contexte.html">Rendre les intitulés des liens et des boutons compréhensibles hors contexte</a></li>
+    <li><a href="inc-dev-intitules-hors-contexte.html">Rendre les intitulés des liens et des boutons accessibles</a></li>
     <li><a href="inc-dev-nouvelle-fenetre.html">Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</a></li>
     <li><a href="inc-dev-liens-evitement.html">Fournir des liens d’évitement</a></li>
     <li><a href="inc-dev-controle-interactions.html">S’assurer que l’utilisateur garde le contrôle lors des interactions</a></li>
@@ -760,6 +760,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <p><strong>Description&nbsp;:</strong><br>Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier&nbsp;:</strong> </p>
 <ul>
+<li>S&#39;assurer que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte.</li>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
 <li>S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés…).</li>
 <li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
@@ -791,15 +792,20 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
-<li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.</li>
-<li>Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… Il n’est pas tenu d’appliquer ce critère, si :<ul>
-<li>le composant graphique est un logo</li>
-<li>si un texte comme un label apporte la même information que l’icône</li>
-<li>si la modification du taux de contraste de l’image nuit au réalisme de celle-ci</li>
+<li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :<ul>
+<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
+<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
-<li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<ul>
+<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
+<li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
+<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
+<li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
+</ul>
+</li>
+<li><strong>Attention&nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
@@ -1045,8 +1051,10 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception graphique et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour être rendu plus visible mais ne doit pas être supprimé. 
-Veiller à fournir un niveau de contraste suffisant (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.</p>
+<p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Globalement, ce comportement peut être modifié (nous préconisons au moins <code>2px</code> pour ce cadre pointillé) ou remplacé (inversion de couleur, modification de la couleur de fond/texte...) pour être rendu plus visible mais ne doit pas être supprimé. 
+Veiller à fournir un niveau de contraste suffisant de 3:1 par rapport à la couleur de fond pour rendre visible le focus (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).
+De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l&#39;élément peut être la même que le focus et donc, masquer celui-ci. 
+Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.</p>
 <p>L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.</p>
 <p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
@@ -1397,9 +1405,10 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:<ul>
-<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
-<li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<ul>
+<li>si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
+<li>si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.</li>
 <li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
 <li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
 </ul>
@@ -1687,7 +1696,7 @@ S’assurer que la sémantique <abbr>HTML</abbr> soit respectée&nbsp;:</p>
 <p>Une page ne doit pas avoir plusieurs liens ou boutons dont l’intitulé est le même, mais pointant sur des destinations/actions différentes.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à un utilisateur n’ayant pas accès au contexte visuel de connaître la destination du lien ou l’action du bouton.</p>
-<p>Notamment important pour les utilisateurs naviguant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
+<p>Notamment important pour les utilisateurs navigant grâce à une liste de liens extraite de la page (lecteurs d’écran) ou les utilisateurs de loupe logicielle qui ne voient qu’une fraction de la page. </p>
 <p>Permettre de conserver une cohérence entre le texte visible d&#39;une étiquette et son nom accessible qui lui est restitué aux <abbr>AT</abbr></p>
 <p><strong>Objectif technique&nbsp;:</strong>
 Expliciter les liens et les boutons permet d’améliorer le référencement naturel.</p>
@@ -2159,7 +2168,7 @@ document.addEventListener(’keydown’, function() {
 <p><a href="https://codepen.io/paipai/pen/jwLyzK">Démonstration de la visibilité du focus à la navigation clavier uniquement</a></p>
 <p><strong>À vérifier&nbsp;:</strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
-<p> Par défaut le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n&#39;est pas suffisant pour être bien visible, nous préconisons au moins <code>2px</code> pour la propriété <code>outline</code> et un contraste de 3:1 par rapport à la couleur de fond. </p>
+<p> Par défaut, le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n&#39;est pas suffisant pour être bien visible, nous préconisons au moins <code>2px</code> pour la propriété <code>outline</code> et un contraste de 3:1 par rapport à la couleur de fond. </p>
 <p> De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l&#39;élément peut être la même que le focus et donc, masquer celui-ci. </p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).</p>
@@ -2296,17 +2305,20 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
-<li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum et ceci également pour du texte sous forme d’image porteur d’information.</li>
-<li>Les composants graphiques d’interface utilisateur et les états de l&#39;interface (focus, hover...) doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère :<ul>
-<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés  représentant une mesure (cartes de chaleur)...)</li>
-<li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li>
-<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou de sa fonction ou </li>
+<li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :<ul>
+<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
+<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
-<li>Tout composant graphique focusable doit aussi être lisible lors de la prise de focus.</li>
-<li>Les éléments graphiques inactifs de la page tels que des boutons font exception à la règle car  ils peuvent être ignorés par l’utilisateur.</li>
-<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<ul>
+<li>si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure (cartes de chaleur…)</li>
+<li>si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.</li>
+<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
+<li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
+</ul>
+</li>
+<li><strong>Attention &nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).</p>
@@ -2449,7 +2461,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <p><strong>Description&nbsp;:</strong> </p>
 <p>Les erreurs sont automatiquement détectées, l’utilisateur est averti par la modification du titre de la page, l’élément de formulaire en erreur est identifié et l’erreur est décrite à l’utilisateur sous forme de texte. Si besoin, une correction est suggérée.</p>
 <p>Les libellés des messages d’erreur doivent être explicites.</p>
-<p>Pour les pages Web qui entraînent des actions importantes (engagement juridique, transaction financière, modification ou effacement de données importantes, réponse à un test ou examen...), l&#39;action doit être réversible ou passer par une étape de confirmation permettant de vérifier ou rectifier la saisie en cas d&#39;erreur.</p>
+<p>Pour les pages Web qui entraînent des actions importantes (engagement juridique, transaction financière, modification ou effacement de données importantes, réponse à un test ou examen…), l&#39;action doit être réversible ou passer par une étape de confirmation permettant de vérifier ou rectifier la saisie en cas d&#39;erreur.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <p>L’identification du champ en erreur ainsi qu’une éventuelle suggestion de correction peuvent être ajoutées dynamiquement à la balise <code>label</code>, en priorité, mais aussi à l’attribut <code>title</code> ou les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) selon le contexte et les besoins.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
@@ -2550,14 +2562,14 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 <h2 id="14-utiliser-des-tailles-relatives-et-faire-du-web-adaptatif">14. Utiliser des tailles relatives et faire du web adaptatif</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, en mobilité et seniors.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design) sauf si la présentation en 2 dimension est nécessaire pour l&#39;usage ou l&#39;utilisation  (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d&#39;outils...).</p>
+<p>N’utiliser pour les tailles de police et pour les éléments conteneurs que des tailles relatives (<code>em</code>, <code>rem</code>, <code>%</code>)  permettant l’agrandissement du texte seul de 200% et globalement faire une interface web adaptative (responsive web design) sauf si la présentation en 2 dimension est nécessaire pour l&#39;usage ou l&#39;utilisation  (images, cartes, diagrammes, vidéos, jeux, présentations, tableaux de données et barre d&#39;outils…).</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Ne pas utiliser le pixel (<code>px</code>) pour des tailles qui doivent pouvoir s’agrandir si l’on ne zoome que les textes (Internet Explorer ne le permet pas).</li>
 <li>Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.</li>
 <li>Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.</li>
 <li>Dans Firefox, faire Affichage&gt;Zoom&gt;Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).  </li>
-<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme...), sans scroll horizontal pour une largeur de la zone d&#39;affichage (<span lang="en">vewport</span>) est réduite à 320 pixels CSS. 
+<li>Le contenu doit s&#39;adapter à la largeur de l&#39;écran, il doit être consultable, sauf besoin particulier (carte, tableau, diagramme…), sans scroll horizontal pour une largeur de la zone d&#39;affichage (<span lang="en">vewport</span>) est réduite à 320 pixels CSS. 
 Note : on peut faire le contraire, viewport à 1280px CSS et on agrandit global (toute la page) à 400%.</li>
 </ul>
 <p><img src="./images/zoom-200.png" alt="capture d’écran réglage du zoom dans Firefox"></p>
@@ -2599,16 +2611,21 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>
 </ul>
-<h2 id="16-rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">16. Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h2>
+<h2 id="16-rendre-les-intitul-s-des-liens-et-des-boutons-accessibles">16. Rendre les intitulés des liens et des boutons accessibles</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou ayant un déficit d’attention et les utilisateurs de commande vocale.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>Rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres.  </p>
-<p>S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplémentaire, au choix, via :</p>
+<p>Il faut satisfaire à ces deux impératifs pour qu&#39;un lien ou un bouton soit accessible :</p>
+<ul>
+<li><p>Tout d&#39;abord, rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres. 
+S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&#39;intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser <strong>un attribut <code>title</code></strong> pour faire apparaître une info-bulle, reprenant l&#39;ensemble de l&#39;information nécessaire, au survol avec la souris, mais également compléter l&#39;intitulé par un contenu supplémentaire, au choix, via :</p>
 <ul>
 <li>un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS </li>
 <li>en utilisant un attribut <code>aria-label</code> ou <code>aria-labelledby</code> reprenant l&#39;intégralité du contenu du <code>title</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
 </ul>
-<p>De plus, le texte de l&#39;étiquette affichée (valeur textuelle ou texte d&#39;image visible à l&#39;écran) pour un composant d&#39;interface doit être présent (en premier, si possible) dans le nom accessible de ce composant (pour aller plus loin <a href="./a11y-name.html">Le nom accessible en HTML</a>).</p>
+</li>
+<li><p>De plus, le texte de l&#39;étiquette affichée (l&#39;intitulé textuel ou texte de l&#39;image visible à l&#39;écran) pour tout composant d&#39;interface (lien, bouton…) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>.</p>
+</li>
+</ul>
 <p>Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.</p>
 <p><img src="./images/liens-valider.png" alt="capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité"></p>
 <p><strong>Solutions&nbsp;:</strong>  </p>
@@ -2737,6 +2754,8 @@ document.addEventListener(’keydown’, function() {
 <p><a href="https://codepen.io/paipai/pen/jwLyzK">Démonstration de la visibilité du focus à la navigation clavier uniquement</a></p>
 <p><strong>À vérifier&nbsp;:</strong>
 Dans beaucoup de <i lang="en">frameworks</i> <span lang="en">front</span> ou dans les <i lang="en">reset</i> <abbr>CSS</abbr>, la propriété <code>outline</code> (qui permet de visualiser le focus) est désactivée (<code>outline: none;</code>), penser à la redéfinir et vérifier que le focus est visible sur tous les éléments le recevant.</p>
+<p> Par défaut, le focus est visible via la propriété <abbr>CSS</abbr> <code class="css">outline: 1px</code>. Ceci n&#39;est pas suffisant pour être bien visible, nous préconisons au moins <code>2px</code> pour la propriété <code>outline</code> et un contraste de 3:1 par rapport à la couleur de fond. </p>
+<p> De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l&#39;élément peut être la même que le focus et donc, masquer celui-ci. </p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre la visibilité du focus sur tous les éléments actifs, notamment pour les utilisateurs de clavier (déficients visuels, moteurs ou ceux ayant des déficiences d’attention et de mémorisation ou en mobilité).</p>
 <p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
@@ -2831,7 +2850,7 @@ donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des
 <li>Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne</li>
 <li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
-<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...</p>
+<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique…</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
@@ -2842,6 +2861,7 @@ donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des
 Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier&nbsp;:</strong> </p>
 <ul>
+<li>S&#39;assurer que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte.</li>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
 <li>S’assurer que les composants et les regroupements qui ont la même fonction sont identifiés (visuellement et sémantiquement) de la même façon.</li>
 <li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
@@ -2904,8 +2924,8 @@ Les personnes incapables de détecter les changements de contexte sont moins sus
 <strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong>  </p>
 <ul>
-<li>Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>...), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).</li>
-<li>De même, pour les interactions nécessitant un changement d&#39;orientation de l&#39;appareil ou un mouvement de l&#39;utilisateur (basculement, rotation, secouement...),  cette fonctionnalité peut être désactivée et doit avoir une alternative dans l&#39;interface.</li>
+<li>Pour chaque interaction gestuelle complexe ou basée sur une trajectoire (<span lang="en">swipe, drag, pinch</span>…), une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée) sauf si cette gestuelle ou cette trajectoire est essentielle (ex. : signature).</li>
+<li>De même, pour les interactions nécessitant un changement d&#39;orientation de l&#39;appareil ou un mouvement de l&#39;utilisateur (basculement, rotation, secouement…),  cette fonctionnalité peut être désactivée et doit avoir une alternative dans l&#39;interface.</li>
 </ul>
 <p><strong>Gestuelles complexes</strong>: tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
@@ -2915,7 +2935,7 @@ Les personnes incapables de détecter les changements de contexte sont moins sus
 </ul>
 <h2 id="33-donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">33. Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l&#39;utilisation du contenu (projection, tableau...).</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l&#39;utilisation du contenu (projection, tableau…).</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a></li>
@@ -2994,15 +3014,20 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n’est suffisant"></p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
-<li>Le contraste entre la couleur du fond et celle du texte doit être 4.5:1 minimum, et ceci également pour du texte sous forme d’image porteuse d’information.</li>
-<li>Les composants graphiques d’interface utilisateur doivent avoir un contraste de 3:1. Sont concernés, entre autres : les boutons, les boutons radios les cases à cocher, les listes de sélection,  les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… Il n’est pas tenu d’appliquer ce critère, si :<ul>
-<li>le composant graphique est un logo</li>
-<li>si un texte comme un label apporte la même information que l’icône</li>
-<li>si la modification du taux de contraste de l’image nuit au réalisme de celle-ci</li>
+<li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :<ul>
+<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
+<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li>Pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
-<li>Les liens doivent être facilement identifiables par rapport au reste du texte.</li>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<ul>
+<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
+<li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
+<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
+<li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
+</ul>
+</li>
+<li><strong>Attention&nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
 <h2 id="4-ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">4. Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</h2>
@@ -3032,8 +3057,10 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/player.png" alt="capture d’écran d’un lecteur vidéo contenant plusieurs boutons">   </p>
 <h2 id="6-assurer-la-visibilit-du-focus">6. Assurer la visibilité du focus</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles, motrices, cognitives et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception graphique et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Ce comportement peut être remplacé pour être rendu plus visible mais ne doit pas être supprimé. 
-Veiller à fournir un niveau de contraste suffisant (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>). Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.</p>
+<p><strong>Description&nbsp;:</strong><br>La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Globalement, ce comportement peut être modifié (nous préconisons au moins <code>2px</code> pour ce cadre pointillé) ou remplacé (inversion de couleur, modification de la couleur de fond/texte…) pour être rendu plus visible mais ne doit pas être supprimé. 
+Veiller à fournir un niveau de contraste suffisant de 3:1 par rapport à la couleur de fond pour rendre visible le focus (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).
+De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l&#39;élément peut être la même que le focus et donc, masquer celui-ci. 
+Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.</p>
 <p>L’effet visible à la prise du focus doit être étudié dès la conception graphique au même titre que l’effet visible au survol du pointeur de la souris.</p>
 <p><strong>Exemples valides&nbsp;:</strong><br>Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».<br>La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.<br><img src="images/focus.png" alt="capture d’écran présentant l’affichage du focus par défaut">
@@ -3124,6 +3151,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <p><strong>Description&nbsp;:</strong><br>Fournir des moyens d’identifier et de distinguer visuellement les différentes parties de la page et assurer la cohérence de ces régions ou regroupements dans toutes les pages.</p>
 <p><strong>À vérifier&nbsp;:</strong> </p>
 <ul>
+<li>S&#39;assurer que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte.</li>
 <li>S’assurer que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page.</li>
 <li>S’assurer que les composants et les regroupements qui ont la même fonction, sont identifiés (visuellement) de la même façon et, dans la mesure du possible, respecter l’apparence classique de ces éléments pour ne pas perturber l’utilisateur habitué à un aspect spécifique de ceux-ci (par exemple, les liens sont généralement soulignés…).</li>
 <li>S’assurer que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page.</li>
@@ -3234,7 +3262,7 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
 
 <h2 id="introduction">Introduction</h2>
 <p>Cette partie décrit une méthode d’évaluation à destination des acteurs projet pour tester la conformité d’un contenu Web et Web mobile aux critères d’accessibilité des Web Content Accessibility Guidelines (WCAG) version 2.1 niveau AA.</p>
-<p>La description détaillée des tests se trouvent dans les critères <abbr>WCAG</abbr> par thème, partie « testeurs ». </p>
+<p>Pour utiliser cette méthode, voici la <a href="http://a11y-guidelines.orange.com/web/incontournables.html#incontournables-testeurs">description détaillée des tests d&#39;accessibilité</a> à utiliser, en fonction de différents profils&nbsp;: qualifieurs, développeurs, concepteurs et experts. </p>
 <p>Les tests d’accessibilité doivent être effectués tout au long du cycle de vie des projets :</p>
 <ul>
 <li>au démarrage du projet, lors du choix du Framework, du logiciel ou progiciel… </li>

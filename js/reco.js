@@ -343,6 +343,11 @@ var Glossary = { // collection of all terms to be defined
   "JS":{
     "base":"Javascript",
     },
+  "KOTLIN":{
+    "base":"<span lang='en'>Kotlin langage</span>",
+    "en":"Kotlin is the second langage used for programming on Android devices",
+    "fr":"Kotlin est le second langage utilisé pour programmer sur les mobiles Android"
+  },
   "MIT":{
     "base":"<span lang='en'>Massachussetts Institute of Technology</span>",
     "fr":"institut de technologie du Massachussetts"
