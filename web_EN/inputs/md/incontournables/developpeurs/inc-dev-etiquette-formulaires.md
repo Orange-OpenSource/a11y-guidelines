@@ -1,9 +1,9 @@
-# Associate a relevant label to form fields
+# Make form fields accessible
 
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
-        {"label":"Associate a relevant label to form fields"}
+        {"label":"Make form fields accessible"}
     ]);
 });</script>
 
@@ -22,6 +22,7 @@ Each label must be set in a `label` tag, which is associated to the form field w
 
 In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
 The `title` attribute set on a form element can also be used like a label. You can also use the `aria-label` and `aria-labelledby` attributes (see [ARIA attributes that can save you](./label-ledby-describedby.html)), preferably in this order.
+The `autocompleted` attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
 
 **Checklist: **
 

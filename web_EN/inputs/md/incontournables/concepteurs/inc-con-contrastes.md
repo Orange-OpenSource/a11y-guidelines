@@ -22,9 +22,16 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 
 **Checklist: **
 
-- The contrast between the colour of the background and the text must be 4.5:1 minimum and also for text on an image carrying information.
-- For applications used primarily in mobile web or in mobility, the contrast level of the main elements must be 7:1 in order to ensure a good readability for all.
-- Links should be easily identifiable from to the rest of the text.
+
+- Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:
+   - 4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.
+   - 3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.
+- Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:
+   - if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)
+   - if a text, like a label, a data table, brings the same information as the icon or the graphic
+   - if the contrast ratio of the image doesn't prevent the understanding of the content or the function
+- **Important: ** for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all.
+
 
 **Tool: **  
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  

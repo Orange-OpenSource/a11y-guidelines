@@ -13,7 +13,7 @@
 **When: ** when designing the service and during graphic design.
 
 **Description:**  
-The wording of the links ad buttons should be explicit enough.
+The links texts and buttons texts should be explicit enough.
 In exceptional cases when it is technically impossible, provide a explicit label that can be read only by screen reader (and other assistive technologies).
 
 **Do:**  

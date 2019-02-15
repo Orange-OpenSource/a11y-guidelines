@@ -19,6 +19,7 @@
 
 **Description:**  
 Give each page a title that is specific to it and which reflects its content or function  (`<title>` tag).  
+
 The page title is the first element read by a screen reader, it must help to formally identify the page where you are.
 
 **Checklist: **
@@ -76,9 +77,14 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 
 **Checklist: **
 
-- The contrast between the colour of the background and the text must be 4.5:1 minimum and also for text on an image carrying information.
-- For applications used primarily in mobile web or in mobility, the contrast level of the main elements must be 7:1 in order to ensure a good readability for all.
-- Links should be easily identifiable from to the rest of the text.
+- Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:
+   - 4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.
+   - 3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.
+- Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:
+   - if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)
+   - if a text, like a label, a data table, brings the same information as the icon or the graphic
+   - if the contrast ratio of the image doesn't prevent the understanding of the content or the function
+- **Important: ** for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all.
 
 **Tool: **  
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  
@@ -125,9 +131,12 @@ In the screenshot below, the design phase should provide  text alternatives for 
 **When: ** as of graphic design and during development.
 
 **Description:**  
-The position of the keyboard focus must be visible at all times. When a clickable element receives the focus (link, button…), this must be visible to the user. By default, the browser sets a dotted or a coloured box around the element. This behavior can be replaced by a custom effect (improving the contrast, for example) but must not be deleted. Users who navigate using the keyboard (<kbd>TAB</kbd>) need to know the position of the focus.    
+The position of the keyboard focus must be visible to all users. By default, the browser surrounds the item with dotted lines or a colored box. This behavior can be modified (we recommend at least `2px` for this dotted box) or replaced (color inversion, changing the background color / text ...) to be made more visible but must not be deleted.
+Be sure to provide a sufficient 3: 1 contrast ratio with the background color to make the focus visible (see [Measure Color Contrast Level](methodes-outils-contrastes.html)).
+Moreover, it is necessary to check the visibility of the focus on all the focusable elements, in particular, because the background color of the element can be the same as the focus and thus, hide it.
+Users navigating using the keyboard (TAB key) need to know the focus position at all times.
 
-The focus indicator as well as the hover indicator (when the mouse is over an element) should be carefully considered since the graphic design.
+The visible effect when taking focus should be planned from the graphic design phase, as well as the visible effect when hovering.
 
     
 **Do: **  
@@ -143,8 +152,11 @@ In the second capture, the dotted lines have been removed, replaced by a coloure
 **When: ** as of graphic design and mainly during development.
 
 **Description:**  
-The text size should be able to be doubled (set the zoom to 200% in the browser settings). At this zoom level, the page layout can be altered, but the information must be readable (text or bunk not truncated).
-Although this must be taken into account during the development phase, we can identify, even still in the graphic design phase, areas of the screen that should or should not grow together with the text size. Moreover, some design choices may or may not facilitate the implementation of this criterion during development, so it is important to think about it from the start.
+The text size should be able to be doubled (set the zoom, text only, to 200% in the browser settings). At this zoom level, the page layout can be altered, but the information must be readable (text or bunk not truncated).
+
+In addition, we must ensure to make responsive web design, so provide different displays in screen type widths (break points) before the development phase.
+
+Moreover, some design choices may or may not facilitate the implementation of this criterion during development, so it is important to think about it from the start.
 
     
 **Example: **    
@@ -166,7 +178,7 @@ Zoom set to 200%. In this case the height of the text container did not resized 
 **Target: ** Everyone, especially people with visual and dyslexic disabilities.  
 **When: ** as of graphic design and during development.
 
-Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and text. It is generally accepted that a line height (line-height) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href = " https://www.invisionapp.com/blog/line-spacing/ "lang =" en "> Why you should go big with line spacing </a>.
+Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and text. It is generally accepted that a line height (line-height) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href="https://www.invisionapp.com/blog/line-spacing/"> Why you should go big with line spacing </a>.
 
 **Description: **  
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
@@ -177,7 +189,7 @@ If the user applies the following settings, the text must remain legible (no tru
 - The spacing between words must be able to be adjusted to 0.16 times minimum the size of the font.
 
 For information, the criteria mentioned above is like applying the following CSS styles at the code level:
-<pre><code class = "css">
+<pre><code class="css">
   * {
       line-height: 1.5! important;
       letter-spacing: .12em! important;
@@ -197,7 +209,7 @@ To make the test easier, you can use the following bookmarklet that will apply t
 **When: ** when designing the service and during graphic design.
 
 **Description:**  
-All moving, refreshed or flashing content must provide a way to be stopped, paused or hidden by the user.
+All moving, refreshed or flashing content must provide a way to be stopped, paused or hidden by the user, i^f this animation last more than 5 seconds.
 Also, avoid as much as possible flashing content and sudden brightness changes (see [The logo of the Olympics causes seizures](http://news.bbc.co.uk/2/hi/uk_news/england/london/6724245.stm)).
 
 **Example: **  
@@ -211,7 +223,7 @@ It is also possible to add a “pause” button directly in the interface.
 **When: ** when designing the service and during graphic design.
 
 **Description:**  
-The wording of the links ad buttons should be explicit enough.
+The links texts and buttons texts should be explicit enough.
 In exceptional cases when it is technically impossible, provide a explicit label that can be read only by screen reader (and other assistive technologies).
 
 **Do:**  
@@ -226,7 +238,8 @@ In exceptional cases when it is technically impossible, provide a explicit label
 **When: ** when designing the service and during development.
 
 **Description:**  
-All features must be accessible using the keyboard. Pressing the keyboard <kbd>Tab</kbd> key, the browser passes the focus between clickable elements.  
+All features must be accessible using the keyboard only. Pressing the keyboard <kbd>Tab</kbd> key, the browser must passes the focus on each clickable elements. 
+
 Moreover, if the features are mouse-specific (drag and drop, right click menu…), ensure that these are also available through other means elsewhere in the interface (button, icon, menu…).
 
 See [how to navigate with a keyboard](./methodes-outils-clavier.html) in a web browser.
@@ -268,7 +281,7 @@ Lastly, the wording of the error messages should be explicit.
 **When: ** as of design and in the development.
 
 **Description:**  
-Avoid as much as possible the actions that open a new window (or tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
+Avoid as much as possible the actions that open a new window (or a new tab) of the browser. If a link triggers the opening of a new window, you must ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
 
 Also avoid the systematic use of dialogues to display information in the pages (presentation of service…).
 They must be reserved for important information that requires immediate attention and remain small.
@@ -290,7 +303,7 @@ In the example below the use of a dialogue is not justified. Using a standard we
 **When: ** as of the design phase and in the development.
 
 **Description:**  
-Provide skip links such as “Skip to content” on each page. It facilitates navigation for people using the keyboard, using a device outdoors or with a screen reader. In **very specific** cases, the links can be hidden on the screen and appear only when keyboard navigation is detected.
+Provide skip links such as “Skip to content” on each page. It facilitates navigation for people using the keyboard, using a device outdoors or with a screen reader. In **very specific cases**, the links can be hidden on the screen and appear only when keyboard navigation is detected.
 
 **Example: **  
 Skip links (“Skip to navigation”, “Skip to content”) are available on this site.

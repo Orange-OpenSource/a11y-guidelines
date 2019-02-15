@@ -176,7 +176,7 @@ Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et dyslexiques.  
 **Quand&nbsp;:** lors de la conception et du développement.
 
-Même si c’est pendant la phase de développement que l’on va s’assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l’espacement des paragraphes et du texte. Il est couramment admis qu’une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d’obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.
+Même si c’est pendant la phase de développement que l’on va s’assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l’espacement des paragraphes et du texte. Il est couramment admis qu’une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d’obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you should go big with line spacing</a>.
 
 **Description&nbsp;:**  
 Si l’utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):

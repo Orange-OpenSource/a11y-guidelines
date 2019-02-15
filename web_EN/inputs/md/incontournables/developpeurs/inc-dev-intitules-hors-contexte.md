@@ -1,9 +1,9 @@
-# Link and button labels must be understandable out of context
+# Text of links and buttons must be accessible
 
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
-        {"label":"Link and button labels must be understandable out of context"}
+        {"label":"Text of links and buttons must be accessible"}
     ]);
 });</script>
 
@@ -35,13 +35,13 @@ In this case, add an <a href="./exemples/masquage/index.html">accessible hidden 
 Another solution is to use an `aria-label` or `aria-labelledby` attribute to clarify the link label (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
 
 <pre><code class="html">
-&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;next&lt;/a&gt;
-&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;next&lt;/a&gt;
+&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;confirm&lt;/a&gt;
+&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;confirm&lt;/a&gt;
 </code></pre>
 
 **Checklist: **
 Make sure that the semantics <abbr>HTML</abbr> are respected:
-- a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear contents, to go to an anchor.
+- a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear content, to go to an anchor.
 - a button must allow to submit / reset a form, to open a modal window, to make appear a sub-menu, to control a media, to trigger an action via <abbr>JS </abbr>.
 
 Ensure that links, out of context, give good information about the triggered action or destination.

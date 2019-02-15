@@ -1,9 +1,9 @@
-# Associer une étiquette pertinente à chaque champ de formulaire
+# Rendre accessible les champs de formulaire
 
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
-        {"label":"Associer une étiquette pertinente à chaque champ de formulaire"}
+        {"label":"Rendre accessible les champs de formulaire"}
     ]);
 });</script>
 

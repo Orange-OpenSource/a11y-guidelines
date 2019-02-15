@@ -23,8 +23,8 @@
 
 1. Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes est vraie:
  - **désactivation**: le raccourci peut être désactivé.
- - **modification**: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).
- - **activation au focus**: le raccourci est actif uniquement à la prise du focus de l'élément concerné. 
+ - **modification**: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches successives pour déclencher le raccourci).
+ - **activation au focus**: le raccourci est actif uniquement à la prise du focus sur l'élément concerné. 
 
 2. Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
 Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir, **à la fois** :

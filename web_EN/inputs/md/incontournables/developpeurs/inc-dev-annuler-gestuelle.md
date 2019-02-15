@@ -14,7 +14,11 @@
 **When: ** during development.
 
 **Description: **  
-During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.
+During a single-point gesture interaction, at least one condition is true:
+- the down event of the pointer (MouseDown) is not used to perform part of the function
+- Abort or cancel, the function is terminated on the up event (MouseUp) and a mechanism is available to abort the function before the end or to cancel the function when finished
+- Ability on the up event to reverse any result of the previous down event
+- Finish the function on the event is essential. Note: Functions that emulate a keyboard or numeric keypad are considered as essential.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>

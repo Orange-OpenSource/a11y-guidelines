@@ -12,9 +12,12 @@
 **When: ** as of graphic design and during development.
 
 **Description:**  
-The position of the keyboard focus must be visible at all times. When a clickable element receives the focus (link, button…), this must be visible to the user. By default, the browser sets a dotted or a coloured box around the element. This behavior can be replaced by a custom effect (improving the contrast, for example) but must not be deleted. Users who navigate using the keyboard (<kbd>TAB</kbd>) need to know the position of the focus.    
+The position of the keyboard focus must be visible to all users. By default, the browser surrounds the item with dotted lines or a colored box. This behavior can be modified (we recommend at least `2px` for this dotted box) or replaced (color inversion, changing the background color / text ...) to be made more visible but must not be deleted.
+Be sure to provide a sufficient 3: 1 contrast ratio with the background color to make the focus visible (see [Measure Color Contrast Level](methodes-outils-contrastes.html)).
+Moreover, it is necessary to check the visibility of the focus on all the focusable elements, in particular, because the background color of the element can be the same as the focus and thus, hide it.
+Users navigating using the keyboard (TAB key) need to know the focus position at all times.
 
-The focus indicator as well as the hover indicator (when the mouse is over an element) should be carefully considered since the graphic design.
+The visible effect when taking focus should be planned from the graphic design phase, as well as the visible effect when hovering.
 
     
 **Do: **  

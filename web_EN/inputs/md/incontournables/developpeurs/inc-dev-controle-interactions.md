@@ -22,7 +22,7 @@
 **Checklist:**  
 1. Regarding shortcuts, make sure that at least one of the following statements is true:
  - **turn off**: the shortcut can be turned off.
- - **modification**: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).
+ - **modification**: a mechanism is available to remap the shortcut to use one or more successive non-printable keyboard characters (e.g. Ctrl, Alt, etc).
  - **focus activation**: the keyboard shortcut for a user interface component is only active when that component has focus.
 
 2. If content appears on mouse over or focus (eg tooltip), the user must be able to:

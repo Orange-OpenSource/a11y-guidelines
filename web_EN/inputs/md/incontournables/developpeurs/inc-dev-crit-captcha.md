@@ -19,7 +19,9 @@ Captchas are often the source of difficulties for users. If the implementation o
 - Providing phone support to ensure that the customer is a real person
 - A check to ensure that the same <abbr>IP</abbr>/User agent combination does not attempt to submit the form more than N times per second.
 
-If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple ...) + classic visual captcha ...
+If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple ...) + classic visual captcha…
+
+More details on [Captchas](./captcha.html).
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>

@@ -12,7 +12,8 @@
 **When: ** when designing the service and during development.
 
 **Description:**  
-All features must be accessible using the keyboard. Pressing the keyboard <kbd>Tab</kbd> key, the browser passes the focus between clickable elements.  
+All features must be accessible using the keyboard only. Pressing the keyboard <kbd>Tab</kbd> key, the browser must passes the focus on each clickable elements. 
+
 Moreover, if the features are mouse-specific (drag and drop, right click menu…), ensure that these are also available through other means elsewhere in the interface (button, icon, menu…).
 
 See [how to navigate with a keyboard](./methodes-outils-clavier.html) in a web browser.

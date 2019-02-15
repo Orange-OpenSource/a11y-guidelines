@@ -213,7 +213,8 @@ Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
 
-**Outil&nbsp;: **[validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)
+**Outil&nbsp;: **
+[validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)
 
 ## 6. Séparer le contenu de l’interactivité et de la présentation
 
@@ -278,7 +279,7 @@ Permettre aux moteurs de recherche d’identifier la langue d’une page pour am
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a>
 
-## 9. Associer une étiquette pertinente à chaque champ de formulaire
+## 9. Rendre accessible les champs de formulaire
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).  
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -428,11 +429,11 @@ L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">We
 
 Pour être accessibles, les contenus multimédias doivent&nbsp;: 
 1. proposer une transcription intégrale
-2.	proposer des sous-titres (vidéo uniquement) 
-3.	proposer une audiodescription (vidéo uniquement)
-4.	choisir un lecteur média accessible
-5.	proscrire le démarrage automatique de la vidéo au chargement de la page
-6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
+2. proposer des sous-titres (vidéo uniquement) 
+3. proposer une audiodescription (vidéo uniquement)
+4. choisir un lecteur média accessible
+5. proscrire le démarrage automatique de la vidéo au chargement de la page
+6. proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
 7. par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
 
 Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../others/video-audio.html).
@@ -580,7 +581,7 @@ Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labell
 
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
-&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider la paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider le paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 **À vérifier&nbsp;:**
@@ -704,7 +705,6 @@ Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
-
 Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> `outline`.
 
 Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. [mesurer le niveau de contraste des couleurs](methodes-outils-contrastes.html)).
@@ -825,8 +825,8 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 
 1. Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes est vraie:
  - **désactivation**: le raccourci peut être désactivé.
- - **modification**: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).
- - **activation au focus**: le raccourci est actif uniquement à la prise du focus de l'élément concerné. 
+ - **modification**: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches successives pour déclencher le raccourci).
+ - **activation au focus**: le raccourci est actif uniquement à la prise du focus sur l'élément concerné. 
 
 2. Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
 Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir, **à la fois** :
@@ -862,6 +862,8 @@ Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la 
 - Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.
 
 Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique…
+
+Plus de détails sur [les Captchas](./captcha.html).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
@@ -949,7 +951,7 @@ Les personnes incapables de détecter les changements de contexte sont moins sus
 **Description&nbsp;:**  
 Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 - l'événement descendant du pointeur (<span lang="en">MouseDown</span>) n'est pas utilisé pour effectuer une partie de la fonction
-- Pouvoir abandonner ou annuler, la fonction est terminée sur l'événement montant (<span lang="en">MouseDown</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée
+- Pouvoir abandonner ou annuler, la fonction est terminée sur l'événement montant (<span lang="en">MouseUp</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée
 - Pouvoir sur l'événement montant inverser tout résultat de l'événement descendant précédent
 - Terminer la fonction sur l'événement est essentiel. Note : les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles. 
 

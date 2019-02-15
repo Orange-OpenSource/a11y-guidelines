@@ -188,7 +188,7 @@ S’assurer que la mise en page soit adaptée à l’utilisateur.
 
 S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 <ul>
-    <li>[Associer une étiquette pertinente à chaque champ de formulaire](inc-dev-etiquette-formulaires.html)</li>
+    <li>[Rendre accessible les champs de formulaire](inc-dev-etiquette-formulaires.html)</li>
     <li>[Détecter, identifier les erreurs et suggérer des corrections](inc-dev-identifier-erreurs.html)</li>
 </ul>
 

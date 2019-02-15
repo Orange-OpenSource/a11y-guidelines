@@ -13,7 +13,7 @@
 **Target: ** Everyone, especially people with visual and dyslexic disabilities.  
 **When: ** as of graphic design and during development.
 
-Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and text. It is generally accepted that a line height (line-height) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href = " https://www.invisionapp.com/blog/line-spacing/ "lang =" en "> Why you should go big with line spacing </a>.
+Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and text. It is generally accepted that a line height (line-height) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href="https://www.invisionapp.com/blog/line-spacing/"> Why you should go big with line spacing </a>.
 
 **Description: **  
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
@@ -24,7 +24,7 @@ If the user applies the following settings, the text must remain legible (no tru
 - The spacing between words must be able to be adjusted to 0.16 times minimum the size of the font.
 
 For information, the criteria mentioned above is like applying the following CSS styles at the code level:
-<pre><code class = "css">
+<pre><code class="css">
   * {
       line-height: 1.5! important;
       letter-spacing: .12em! important;

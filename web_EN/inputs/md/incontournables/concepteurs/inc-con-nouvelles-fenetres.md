@@ -13,7 +13,7 @@
 **When: ** as of design and in the development.
 
 **Description:**  
-Avoid as much as possible the actions that open a new window (or tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
+Avoid as much as possible the actions that open a new window (or a new tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
 
 Also avoid the systematic use of dialogues to display information in the pages (presentation of service…).
 They must be reserved for important information that requires immediate attention and remain small.

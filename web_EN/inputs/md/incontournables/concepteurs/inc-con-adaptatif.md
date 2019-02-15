@@ -13,29 +13,25 @@
 **When: **during development.
 
 **Description: **
+The text size should be able to be doubled (set the zoom, text only, to 200% in the browser settings). At this zoom level, the page layout can be altered, but the information must be readable (text or bunk not truncated).
 
-Use relative length units for font size (`em`, `rem`, `%`) and for containers handling text size enlargement up to 200% and design your pages to be responsive.
+In addition, we must ensure to make responsive web design, so provide different displays in screen type widths (break points) before the development phase.
 
-**Checklist: **
+Moreover, some design choices may or may not facilitate the implementation of this criterion during development, so it is important to think about it from the start.
+**Example: **    
+The screenshot below shows a page with the zoom set to 100%.  
+![screenshot showing a page zoomed to 100%](images/zoom.png)    
+  
+&nbsp;  
+**Do: **  
+Zoom set to 200%.  
+![screenshot with 200% zoom and readable text](images/zoom-ok.png)    
+  
+&nbsp;  
+**Don’t: **  
+Zoom set to 200%. In this case the height of the text container did not resized according to text size.  
+![screenshot with 200% zoom and truncated text](images/zoom-ko.png)  
 
-- Do not use pixel (`px`) for size that must adapt if we increase the text size (impossible with Internet Explorer).
-- Form fields must also have relative sizes to enlarge properly.
-- Try to make the container adaptive so they can increase in size when the text is zoomed in.
-- In Firefox, go to View>Zoom and activate Zoom text only, set the zoom to 200%. Verify that there is no loss of information (disappearance or overlapping text).
-- Content must respond to screen size changes, adjusting its contents without horizontal scroll even when screen width is reduced to 320 CSS pixels, unless special needs (map, table, diagram... ).
-
-![screenshot Zoom settings In Firefox](./images/zoom-200.png)
-
-**Users’ goal: **
-
-Allow users (visually impaired, using a device outdoors, elderly people…) to increase the font size and enlargement of the page so they can access easily the information.
-
-**Example:** 
-See the example [handling zoom, increasing the text size](./exemples/zoom/index.html) for more details.
-
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
-- <a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

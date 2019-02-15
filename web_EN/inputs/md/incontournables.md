@@ -175,7 +175,7 @@ Make sure the layout is suitable for the user
 
 Ensure that the user can effectively complete the forms
 <ul>
-    <li>[Associate a relevant label to form fields](inc-dev-etiquette-formulaires.html)</li>
+    <li>[Make form fields accessible](inc-dev-etiquette-formulaires.html)</li>
     <li>[Detect, identify errors and suggest corrections](inc-dev-identifier-erreurs.html)</li>
 </ul>
 

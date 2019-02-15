@@ -14,8 +14,8 @@
 **When: **during design and development.
 
 **Description: **  
-For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
-Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...), an alternative must exist.
+- For each complex gesture interaction or path-based interaction (<span lang = "en"> swipe, drag, pinch </ span> ...), an alternative must be available (for example a non-gestural or simplified alternative) unless this gesture or this trajectory is essential (eg signature).
+- In the same way, for the interactions requiring a change of orientation of the apparatus or a movement of the user (tilting, rotation, shaking ...), this functionality can be deactivated and must have an alternative in the interface.
 
 **Complex gesture:** any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.  
 **Simplified gesture:** an alternative requiring a single pointer (one finger) without path-based gesture.
