@@ -549,7 +549,7 @@ S’assurer que la mise en page soit adaptée à l’utilisateur.
 
 S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 <ul>
-    <li><a href="inc-dev-etiquette-formulaires.html">Associer une étiquette pertinente à chaque champ de formulaire</a></li>
+    <li><a href="inc-dev-etiquette-formulaires.html">Rendre accessible les champs de formulaire</a></li>
     <li><a href="inc-dev-identifier-erreurs.html">Détecter, identifier les erreurs et suggérer des corrections</a></li>
 </ul>
 
@@ -1307,6 +1307,7 @@ Les personnes incapables de détecter les changements de contexte sont moins sus
 <li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
 <p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...</p>
+<p>Plus de détails sur <a href="./captcha.html">les Captchas</a>.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
@@ -1472,8 +1473,8 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li><p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
 <ul>
 <li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
-<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
-<li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
+<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches successives pour déclencher le raccourci).</li>
+<li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus sur l&#39;élément concerné. </li>
 </ul>
 </li>
 <li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
@@ -1544,11 +1545,11 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="associer-une-tiquette-pertinente-chaque-champ-de-formulaire">Associer une étiquette pertinente à chaque champ de formulaire</h1>
+<h1 id="rendre-accessible-les-champs-de-formulaire">Rendre accessible les champs de formulaire</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
-        {"label":"Associer une étiquette pertinente à chaque champ de formulaire"}
+        {"label":"Rendre accessible les champs de formulaire"}
     ]);
 });</script>
 
@@ -1683,7 +1684,7 @@ S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&
 <p>Une autre solution consiste à utiliser un attribut <code>aria-label</code> ou <code>aria-labelledby</code> pour préciser l’intitulé (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).  </p>
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
-&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider la paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider le paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 <p><strong>À vérifier&nbsp;:</strong>
@@ -2381,7 +2382,8 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a></li>
 </ul>
-<p><strong>Outil&nbsp;: </strong><a href="https://validator.w3.org/">validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr></a></p>
+<p><strong>Outil&nbsp;: </strong>
+<a href="https://validator.w3.org/">validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr></a></p>
 <h2 id="6-s-parer-le-contenu-de-l-interactivit-et-de-la-pr-sentation">6. Séparer le contenu de l’interactivité et de la présentation</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, avec des difficultés pour lire ou avec un déficit d’attention.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
@@ -2425,7 +2427,7 @@ Préciser également la langue d’un contenu exprimé dans une langue autre que
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a></li>
 </ul>
-<h2 id="9-associer-une-tiquette-pertinente-chaque-champ-de-formulaire">9. Associer une étiquette pertinente à chaque champ de formulaire</h2>
+<h2 id="9-rendre-accessible-les-champs-de-formulaire">9. Rendre accessible les champs de formulaire</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong>  </p>
 <p>Chaque champ de formulaire doit être accompagné d’un libellé ou d&#39;instructions permettant d’identifier le rôle du champ, le type de donnée et le format attendu. </p>
@@ -2643,7 +2645,7 @@ S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l&
 
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
-&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider la paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…" title="Valider le paiement en une seule fois" aria-label="Valider le paiement en une seule fois"&gt;valider&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 <p><strong>À vérifier&nbsp;:</strong>
@@ -2735,8 +2737,8 @@ Permettre la navigation logique sans piège au clavier dans les pages de l’app
 </ul>
 <h2 id="20-rendre-visible-le-focus-en-toute-circonstance">20. Rendre visible le focus en toute circonstance</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, motrices, cognitives, ayant un déficit d’attention et en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong></p>
-<p>Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>.</p>
+<p><strong>Description&nbsp;:</strong>
+Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> <code>outline</code>.</p>
 <p>Veiller à fournir un niveau de contraste suffisant pour que celui-ci soit visible par tous (cf. <a href="methodes-outils-contrastes.html">mesurer le niveau de contraste des couleurs</a>).</p>
 <p>Lorsqu’un effet est visible sur un élément au survol de la souris (<code>:hover</code> en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (<code>:focus</code>).</p>
 <p>Il est possible, avec du code Javascript, de n’afficher l’<code>outline</code> que lors d’une navigation au clavier (c’est à dire de ne pas afficher l’<code>outline</code> lors d’un clic souris, qui active également l’état <code>:focus</code>)&nbsp;:</p>
@@ -2816,8 +2818,8 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 <li><p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
 <ul>
 <li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
-<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
-<li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
+<li><strong>modification</strong>: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches successives pour déclencher le raccourci).</li>
+<li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus sur l&#39;élément concerné. </li>
 </ul>
 </li>
 <li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
@@ -2851,6 +2853,7 @@ donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des
 <li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
 </ul>
 <p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique…</p>
+<p>Plus de détails sur <a href="./captcha.html">les Captchas</a>.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
@@ -2911,7 +2914,7 @@ Les personnes incapables de détecter les changements de contexte sont moins sus
 <p><strong>Description&nbsp;:</strong><br>Lors d&#39;une interaction gestuelle mono-point, au moins une condition est vraie :</p>
 <ul>
 <li>l&#39;événement descendant du pointeur (<span lang="en">MouseDown</span>) n&#39;est pas utilisé pour effectuer une partie de la fonction</li>
-<li>Pouvoir abandonner ou annuler, la fonction est terminée sur l&#39;événement montant (<span lang="en">MouseDown</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li>
+<li>Pouvoir abandonner ou annuler, la fonction est terminée sur l&#39;événement montant (<span lang="en">MouseUp</span>) et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li>
 <li>Pouvoir sur l&#39;événement montant inverser tout résultat de l&#39;événement descendant précédent</li>
 <li>Terminer la fonction sur l&#39;événement est essentiel. Note : les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles. </li>
 </ul>
@@ -3075,7 +3078,7 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.<br><img src="images/zoom-ko.png" alt="capture d’écran avec zoom à 200% et texte tronqué">  </p>
 <h2 id="8-permettre-d-a-rer-le-texte">8. Permettre d’aérer le texte</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles et dyslexiques.<br><strong>Quand&nbsp;:</strong> lors de la conception et du développement.</p>
-<p>Même si c’est pendant la phase de développement que l’on va s’assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l’espacement des paragraphes et du texte. Il est couramment admis qu’une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d’obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you shoud go big with line spacing</a>.</p>
+<p>Même si c’est pendant la phase de développement que l’on va s’assurer de la validité de ce critère, il est intéressant dès la phase de conception de réfléchir à la hauteur des lignes et à l’espacement des paragraphes et du texte. Il est couramment admis qu’une hauteur de ligne (<span lang="en">line-height</span>) de 1.5 permet d’obtenir une bonne lisibilité du texte, exemple article en anglais intitulé : <a href="https://www.invisionapp.com/blog/line-spacing/" lang="en">Why you should go big with line spacing</a>.</p>
 <p><strong>Description&nbsp;:</strong><br>Si l’utilisateur applique les réglages suivants, le texte doit rester lisible (pas de contenu tronqué, superposé):</p>
 <ul>
 <li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères.</li>

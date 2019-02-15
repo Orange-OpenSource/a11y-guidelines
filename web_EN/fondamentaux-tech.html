@@ -199,7 +199,7 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 <li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>Make sure thaht GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
+<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
 <li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
 <li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
 <li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
@@ -219,7 +219,7 @@ The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Co
 <h2 id="4-do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information">4. Do not use colour or sensory characteristics as the unique source of information</h2>
 <p><strong>Target: </strong>everyone, especially the colour-blind and more generally people with visual impairments, cognitive limitations, hearing impairments and elderly people.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong> 
-Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization …) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.</p>
+Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization …) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or/and semantic structuring.</p>
 <p><strong>Example:</strong><br>For a pie chart, where each part is coloured differently, you could add different pattern fills to identify them without colour.</p>
 <p><strong>Do: </strong><br><img src="images/couleur-ok.png" alt="illustration using coloured icons to convey information"></p>
 <p><strong>Don’t: </strong><br><img src="images/couleur-ko.png" alt="illustration using coloured icons to convey information">  </p>
@@ -299,7 +299,7 @@ Add semantics to the <abbr>HTML</abbr> content using the following tags:</p>
 <p>Specify the primary language of the document with the attribute <code>lang</code> in the <code>html</code> tag.
 Also specify the language of a content in a language other than the primary one, using the <code>lang</code> attribute in the <abbr>HTML</abbr> element containing the foreign language text.  </p>
 <p><strong>Checklist: </strong></p>
-<p>For words or phrases in foreign language used as generic terms (déjà vu, chef d&#39;œuvre …) or proper names, do not indicate a change of language.</p>
+<p>For words or phrases in foreign language used as generic terms (déjà vu, chef d&#39;œuvre…) or proper names, do not indicate a change of language.</p>
 <p><strong>Users’ goal: </strong></p>
 <p>This attribute allows you to specify the language to the speech synthesis.</p>
 <p><strong>Technical goal: </strong></p>
@@ -316,14 +316,15 @@ Also specify the language of a content in a language other than the primary one,
 <li><a href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a></li>
 <li><a href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a></li>
 </ul>
-<h2 id="9-associate-a-relevant-label-to-form-fields">9. Associate a relevant label to form fields</h2>
+<h2 id="9-make-form-fields-accessible">9. Make form fields accessible</h2>
 <p><strong>Target: </strong>everyone and especially people with visual impairments, cognitive limitations, experiencing attention difficulties and mobile and tablet users.<br><strong>When: </strong>during design and development.</p>
 <p><strong>Description: </strong> </p>
 <p>Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. </p>
 <p>This label should be visually close to the field so we can easily mentally link them (especially for people using zoom or software magnifier or even mobile users).</p>
 <p>Each label must be set in a <code>label</code> tag, which is associated to the form field with a<code>for</code> attribute, using the <code>id</code> attribute of the form element.</p>
 <p>In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
-The <code>title</code> attribute set on a form element can also be used like a label. You can also use the <code>aria-label</code> and <code>aria-labelledby</code> attributes (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>), preferably in this order.</p>
+The <code>title</code> attribute set on a form element can also be used like a label. You can also use the <code>aria-label</code> and <code>aria-labelledby</code> attributes (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>), preferably in this order.
+The <code>autocompleted</code> attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>Checklist: </strong></p>
 <p>For any form element, the label should be visually close to the field it identifies.</p>
 <p>Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters; beyond that, align all the labels on the right.</p>
@@ -348,7 +349,7 @@ For fields with auto-completion, this avoids users input errors.</p>
 <p><strong>Description: </strong></p>
 <p>The errors are automatically detected, the user is warned by a page title change, the error of the form field is clearly identified and the error is described with words to the user. If necessary, a correction is suggested.</p>
 <p>Finally, the wording of the error messages should be explicit.</p>
-<p>For web pages that involve important actions (legal commitment, financial transaction, modification or deletion of important data, response to a test or examination …), the action must be reversible or go through a confirmation step to verify or correct the entry in case of error.</p>
+<p>For web pages that involve important actions (legal commitment, financial transaction, modification or deletion of important data, response to a test or examination…), the action must be reversible or go through a confirmation step to verify or correct the entry in case of error.</p>
 <p><strong>Checklist: </strong></p>
 <p>Identifying the invalid field, as well as displaying a suggestion of correction can be dynamically added to the <code>label</code> tag, but also to the <code>title</code> tag or <code>aria-label</code> and <code>aria-labelledby</code> tags (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>) depending on the needs.</p>
 <p><strong>Users’ goal: </strong></p>
@@ -392,7 +393,7 @@ In the example below, the right pictogram doesn’t have to be vocalized as the 
 <p><img src="./images/service-24.png" alt="example with empty alternative">  </p>
 <p><code>&lt;h3&gt;guaranteed 24h service&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code> </p>
 <p><strong>Tools: </strong>
-The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> extension (ability to display text alternatives for all images). </p>
+The <a href="https://chrispederick.com/work/web-developer/">Web developer</a> extension (ability to display text alternatives for all images). </p>
 <p><strong>Reference <abbr>WCAG</abbr>:</strong>  </p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
@@ -538,14 +539,14 @@ If it is not possible to make a link or a button more explicit by the heading, f
 
 <p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>).</p>
 <pre><code class="html">
-&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;next&lt;/a&gt;
-&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;next&lt;/a&gt;
+&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;confirm&lt;/a&gt;
+&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;confirm&lt;/a&gt;
 </code></pre>
 
 <p><strong>Checklist: </strong>
 Make sure that the semantics <abbr>HTML</abbr> are respected:</p>
 <ul>
-<li>a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear contents, to go to an anchor.</li>
+<li>a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear content, to go to an anchor.</li>
 <li>a button must allow to submit / reset a form, to open a modal window, to make appear a sub-menu, to control a media, to trigger an action via <abbr>JS</abbr>.</li>
 </ul>
 <p>Ensure that links, out of context, give good information about the triggered action or destination.</p>
@@ -630,7 +631,7 @@ If it is not possible, use the <code>title</code> attribute with the whole infor
 <h2 id="20-make-the-focus-visible-at-all-times">20. Make the focus visible at all times</h2>
 <p><strong>Target: </strong>everyone and especially people with visual impairments, cognitive limitations, motor disabled, having attention difficulties or using a device outdoors.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong></p>
-<p>Do not hide the focus and if necessary make it visible enough (e.g. by modifying the <code>outline</code> <abbr>CSS</abbr> property) on all elements likely to receive it (links, buttons, form elements). You can also accentuate the visibility of the focus so that it is easily identifiable.</p>
+<p>Do not hide the focus and if necessary make it visible enough (e.g. by modifying the <code>outline</code> <abbr>CSS</abbr> property) on all elements likely to receive it (links, buttons, form elements). You can also enhance the visibility of the focus so that it is easily identifiable.</p>
 <p>Make sure to provide a 3:1 level of contrast so that it is visible enough (see <a href="methods-tools-contrasts.html">measure the level of contrast of colors</a>).</p>
 <p>When an effect is visible on an element during mouse-over (e.g. <code>:hover</code> <abbr>CSS</abbr> property), this effect must also be displayed when capturing the focus (<code>:focus</code>).</p>
 <p>It is possible, with Javascript code, to display the <code>outline</code> only during a keyboard navigation (ie not to display the <code>outline</code> when clicking a mouse, which also activates the <code>: focus</code> state: </p>
@@ -665,7 +666,7 @@ Focus set on the «Apple iPhone 5s argent».</p>
 <h2 id="21-provide-skip-links">21. Provide skip links</h2>
 <p><strong>Target: </strong>useful for mobile and tablet users, people with visual impairments, motor disabilities or using a device outdoors.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong></p>
-<p>Provide skip links allowing to access directly the main page areas (navigation, content, bottom of the page, search…) with internal links pointing to anchors. (<code>&lt;a&gt;</code> tags or any <abbr>HTML</abbr> element with an <code>id</code> attribute). In <strong>very specific</strong> cases, the links can be hidden on the screen and appear only when keyboard navigation is detected.</p>
+<p>Provide skip links allowing to access directly the main page areas (navigation, content, bottom of the page, search…) with internal links pointing to anchors. (<code>&lt;a&gt;</code> tags or any <abbr>HTML</abbr> element with an <code>id</code> attribute). In <strong>very specific cases</strong>, the links can be hidden on the screen and appear only when keyboard navigation is detected.</p>
 <p><strong>Checklist: </strong>
 When a skip link is activated, make sure the focus is correctly set (not only scrolled to the right position).</p>
 <p><strong>Users’ goal: </strong></p>
@@ -717,7 +718,7 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 <li><p>Regarding shortcuts, make sure that at least one of the following statements is true:</p>
 <ul>
 <li><strong>turn off</strong>: the shortcut can be turned off.</li>
-<li><strong>modification</strong>: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).</li>
+<li><strong>modification</strong>: a mechanism is available to remap the shortcut to use one or more successive non-printable keyboard characters (e.g. Ctrl, Alt, etc).</li>
 <li><strong>focus activation</strong>: the keyboard shortcut for a user interface component is only active when that component has focus.</li>
 </ul>
 </li>
@@ -746,12 +747,13 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 Captchas are often the source of difficulties for users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user:</p>
 <ul>
 <li>Double authentication</li>
-<li>Hidden form field to leave blank (honeypot technique), not visible to the user</li>
+<li>Hidden form field to leave blank (honeypot technic), not visible to the user</li>
 <li>Providing phone support to ensure that the customer is a real person</li>
-<li>A check to ensure that the same <abbr>IP</abbr>/User agent combination does not attempt to submit the form more than N times per second.</li>
+<li>A check to ensure that the same <abbr>IP</abbr>/User agent combination does not attempt to submit the form more than X times per second.</li>
 </ul>
-<p>If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple …) + classic visual captcha …</p>
-<p><strong>Reference <abbr>WCAG</abbr>:</strong>  </p>
+<p>If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple …) + classic visual captcha…</p>
+<p>More details on <a href="./captcha.html">Captchas</a>.</p>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong> </p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
 </ul>
@@ -798,15 +800,24 @@ In addition, the sensitive areas must be sufficiently spaced from each other (ab
 <p><strong>Description: </strong><br>The site must not prohibit or limit the use of the zoom (especially on mobiles).</p>
 <h2 id="31-allow-to-cancel-the-triggering-of-gestural-interactions">31. Allow to cancel the triggering of gestural interactions</h2>
 <p><strong>Target: </strong> Everyone, especially people with motor or visual disabilities and mobility.<br><strong>When: </strong> during development.</p>
-<p><strong>Description: </strong><br>During gesture interaction, the action is triggered only at the end of the interaction, and the action is not triggered if the trigger element loses focus.</p>
+<p><strong>Description: </strong><br>During a single-point gesture interaction, at least one condition is true:</p>
+<ul>
+<li>the down event of the pointer (MouseDown) is not used to perform part of the function</li>
+<li>Abort or cancel, the function is terminated on the up event (MouseUp) and a mechanism is available to abort the function before the end or to cancel the function when finished</li>
+<li>Ability on the up event to reverse any result of the previous down event</li>
+<li>Finish the function on the event is essential. Note: Functions that emulate a keyboard or numeric keypad are considered as essential.</li>
+</ul>
 <p><strong>Reference <abbr>WCAG</abbr>:</strong>  </p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a></li>
 </ul>
 <h2 id="32-offer-an-alternative-to-complex-gestures">32. Offer an alternative to complex gestures</h2>
 <p><strong>Target: </strong>Everyone, especially people with motor or visual disabilities and mobility.<br><strong>When: </strong>during design and development.</p>
-<p><strong>Description: </strong><br>For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
-Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking …), an alternative must exist.</p>
+<p><strong>Description: </strong>  </p>
+<ul>
+<li>For each complex gesture interaction or path-based interaction (<span lang = "en"> swipe, drag, pinch &lt;/ span&gt; ...), an alternative must be available (for example a non-gestural or simplified alternative) unless this gesture or this trajectory is essential (eg signature).</li>
+<li>In the same way, for the interactions requiring a change of orientation of the apparatus or a movement of the user (tilting, rotation, shaking ...), this functionality can be deactivated and must have an alternative in the interface.</li>
+</ul>
 <p><strong>Complex gesture:</strong> any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.<br><strong>Simplified gesture:</strong> an alternative requiring a single pointer (one finger) without path-based gesture.</p>
 <p><strong>Reference <abbr>WCAG</abbr>:</strong>  </p>
 <ul>

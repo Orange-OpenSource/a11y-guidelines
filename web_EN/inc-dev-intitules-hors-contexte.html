@@ -107,11 +107,11 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="link-and-button-labels-must-be-understandable-out-of-context">Link and button labels must be understandable out of context</h1>
+          <h1 id="text-of-links-and-buttons-must-be-accessible">Text of links and buttons must be accessible</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
-        {"label":"Link and button labels must be understandable out of context"}
+        {"label":"Text of links and buttons must be accessible"}
     ]);
 });</script>
 
@@ -135,14 +135,14 @@
 
 <p>Another solution is to use an <code>aria-label</code> or <code>aria-labelledby</code> attribute to clarify the link label (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>).</p>
 <pre><code class="html">
-&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;next&lt;/a&gt;
-&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;next&lt;/a&gt;
+&lt;a title="confirm to pay in installments" aria-label="confirm to pay in installments" href="…"&gt;confirm&lt;/a&gt;
+&lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;confirm&lt;/a&gt;
 </code></pre>
 
 <p><strong>Checklist: </strong>
 Make sure that the semantics <abbr>HTML</abbr> are respected:</p>
 <ul>
-<li>a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear contents, to go to an anchor.</li>
+<li>a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear content, to go to an anchor.</li>
 <li>a button must allow to submit / reset a form, to open a modal window, to make appear a sub-menu, to control a media, to trigger an action via <abbr>JS </abbr>.</li>
 </ul>
 <p>Ensure that links, out of context, give good information about the triggered action or destination.</p>

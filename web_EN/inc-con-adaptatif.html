@@ -117,26 +117,13 @@
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Target: </strong>everyone and especially people with visual impairments, using a device outdoors and elderly people.<br><strong>When: </strong>during development.</p>
-<p><strong>Description: </strong></p>
-<p>Use relative length units for font size (<code>em</code>, <code>rem</code>, <code>%</code>) and for containers handling text size enlargement up to 200% and design your pages to be responsive.</p>
-<p><strong>Checklist: </strong></p>
-<ul>
-<li>Do not use pixel (<code>px</code>) for size that must adapt if we increase the text size (impossible with Internet Explorer).</li>
-<li>Form fields must also have relative sizes to enlarge properly.</li>
-<li>Try to make the container adaptive so they can increase in size when the text is zoomed in.</li>
-<li>In Firefox, go to View&gt;Zoom and activate Zoom text only, set the zoom to 200%. Verify that there is no loss of information (disappearance or overlapping text).</li>
-<li>Content must respond to screen size changes, adjusting its contents without horizontal scroll even when screen width is reduced to 320 CSS pixels, unless special needs (map, table, diagram... ).</li>
-</ul>
-<p><img src="./images/zoom-200.png" alt="screenshot Zoom settings In Firefox"></p>
-<p><strong>Users’ goal: </strong></p>
-<p>Allow users (visually impaired, using a device outdoors, elderly people…) to increase the font size and enlargement of the page so they can access easily the information.</p>
-<p><strong>Example:</strong> 
-See the example <a href="./exemples/zoom/index.html">handling zoom, increasing the text size</a> for more details.</p>
-<p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
-<ul>
-<li><a href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a></li>
-<li><a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a></li>
-</ul>
+<p><strong>Description: </strong>
+The text size should be able to be doubled (set the zoom, text only, to 200% in the browser settings). At this zoom level, the page layout can be altered, but the information must be readable (text or bunk not truncated).</p>
+<p>In addition, we must ensure to make responsive web design, so provide different displays in screen type widths (break points) before the development phase.</p>
+<p>Moreover, some design choices may or may not facilitate the implementation of this criterion during development, so it is important to think about it from the start.
+<strong>Example: </strong><br>The screenshot below shows a page with the zoom set to 100%.<br><img src="images/zoom.png" alt="screenshot showing a page zoomed to 100%">    </p>
+<p>&nbsp;<br><strong>Do: </strong><br>Zoom set to 200%.<br><img src="images/zoom-ok.png" alt="screenshot with 200% zoom and readable text">    </p>
+<p>&nbsp;<br><strong>Don’t: </strong><br>Zoom set to 200%. In this case the height of the text container did not resized according to text size.<br><img src="images/zoom-ko.png" alt="screenshot with 200% zoom and truncated text">  </p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

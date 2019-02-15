@@ -107,11 +107,11 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="associate-a-relevant-label-to-form-fields">Associate a relevant label to form fields</h1>
+          <h1 id="make-form-fields-accessible">Make form fields accessible</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
-        {"label":"Associate a relevant label to form fields"}
+        {"label":"Make form fields accessible"}
     ]);
 });</script>
 
@@ -122,7 +122,8 @@
 <p>This label should be visually close to the field so we can easily mentally link them (especially for people using zoom or software magnifier or even mobile users).</p>
 <p>Each label must be set in a <code>label</code> tag, which is associated to the form field with a<code>for</code> attribute, using the <code>id</code> attribute of the form element.</p>
 <p>In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
-The <code>title</code> attribute set on a form element can also be used like a label. You can also use the <code>aria-label</code> and <code>aria-labelledby</code> attributes (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>), preferably in this order.</p>
+The <code>title</code> attribute set on a form element can also be used like a label. You can also use the <code>aria-label</code> and <code>aria-labelledby</code> attributes (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>), preferably in this order.
+The <code>autocompleted</code> attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>Checklist: </strong></p>
 <p>For any form element, the label should be visually close to the field it identifies.</p>
 <p>Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters &amp; nbsp ;; beyond that, align all the labels on the right.</p>

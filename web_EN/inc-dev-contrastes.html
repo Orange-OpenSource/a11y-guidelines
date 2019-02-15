@@ -125,18 +125,19 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 <p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
 <p><strong>Checklist: </strong></p>
 <ul>
-<li>The contrast between the colour of the background and the text must be 4.5:1 minimum and also for text on an image carrying information.</li>
-<li>GUI components must have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics ... We do not have to apply this criterion, if:<ul>
-<li>the GUI component is a logo</li>
-<li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
-<li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function of the image</li>
+<li>Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:<ul>
+<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>For applications used primarily in mobile web or in mobility, the contrast level of the main elements must be 7:1 in order to ensure a good readability for all.</li>
-<li>Links should be easily identifiable from to the rest of the text.</li>
+<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
+<li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
+<li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
+<li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
 </ul>
-<p>Any GUI component receiving focus must also be readable when taking focus.
-Inactive graphic elements on the page such as buttons are an exception to the rule because they could be ignored by the user.</p>
+</li>
+<li><strong>Important: </strong> for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all.</li>
+</ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).</p>
 <p><strong>Tool: </strong> 
