@@ -14,7 +14,9 @@
 
 <span data-menuitem="dev-mobile"></span>
 
-This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options. Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`official documentation from Apple`](https://developer.apple.com/documentation/uikit/accessibility). Code snippets are also available to show you how to implement it (Swift 4, Objective C).
+This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options.
+</br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`official documentation from Apple`](https://developer.apple.com/documentation/uikit/accessibility).
+</br>Code snippets are also available to show you how to implement it (Swift 4.2, Objective C).
 
 ## Text alternatives
 ### Description 
@@ -90,20 +92,56 @@ There are many available traits. The more commonly used are:
     
     //Added header.  
     defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
-
-    //Many traits possible combination.  
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected;
 }
 </code></pre><pre><code class="swift">
 func customTraits() {
     //Specified UIPageControl with the ’ajustable’ trait.
-    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable
+    pageControl.accessibilityTraits = .adjustable
     
     //Added header.  
-    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader
+    defaultHeaderViewCell.accessibilityTraits = .header
+}
+</code></pre>
+### Basic operations
+This attribute is actually a `bitmask` in which each element has its own value.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
+</br>It's then possible to add and remove some `traits` after having checked their existence in the bitmask for instance.
 
-    //Many traits possible combination.  
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected
+<pre><code class="objective-c">
+- (void)changeTraits {
+
+    //Dedicated trait set with no other option.
+    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+    
+    //Added traits to the existing ones.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
+    
+    //Remove a trait.
+    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
+    
+    //Check out the bitmask trait existence.
+    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
+        // Do the job if '.header' is one of the traits...
+    }
+}
+</code></pre><pre><code class="swift">
+func changeTraits() {
+        
+    //Dedicated trait set with no other option.
+    onePageButton.accessibilityTraits = [.button, .link]
+        
+    //Added traits to the existing ones.
+    pageControl.accessibilityTraits.insert(.header) //Only one trait.
+    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
+        
+    //Remove a trait.
+    onePageButton.accessibilityTraits.remove(.link)
+        
+    //Check out the bitmask trait existence.
+    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
+        // Do the job if '.header' is one of the traits...
+    }
 }
 </code></pre>
 ### Link
@@ -128,24 +166,24 @@ A red square will be drawn and contain two other squares (blue and yellow) in or
     [super viewDidAppear:animated];
     
     //Creation of an element inside which 2 other children elements will be inserted.
-    CGRect parentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
-    UIView * myParentView = [[UIView alloc]initWithFrame:parentViewRect];
-    myParentView.backgroundColor = [UIColor redColor];
+    CGRect redParentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
+    UIView * myRedParentView = [[UIView alloc]initWithFrame:redParentViewRect];
+    myRedParentView.backgroundColor = [UIColor redColor];
     
-    [UIApplication.sharedApplication.keyWindow addSubview:myParentView];
+    [self.view addSubview:myRedParentView];
     
     //The target element musn't be accessible so as to be considered as a container to its children elements.
     //If this attribute is 'YES', the target element will be the only one accessible element.
-    myParentView.isAccessibilityElement = NO;
+    myRedParentView.isAccessibilityElement = NO;
     
     //The elements contained in the target element won't be accessible even if they're defined as such.
     //If this attribute is 'NO' and the previous one is 'NO', only the children elements will be accessible.
-    myParentView.accessibilityElementsHidden = NO;
+    myRedParentView.accessibilityElementsHidden = NO;
     
     [self createViewWithColor:[UIColor yellowColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
     [self createViewWithColor:[UIColor blueColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
 }
 
 - (void)createViewWithColor:(UIColor*)color
@@ -166,25 +204,25 @@ override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         //Creation of an element inside which 2 other children elements will be inserted.
-        let parentViewRect = CGRect.init(x: 100.0,
-                                         y: 100.0,
-                                         width: 40.0,
-                                         height: 40.0)
+        let redParentViewRect = CGRect.init(x: 100.0,
+                                            y: 100.0,
+                                            width: 40.0,
+                                            height: 40.0)
         let myParentView = UIView.init(frame: parentViewRect)
-        myParentView.backgroundColor = .red
+        myRedParentView.backgroundColor = .red
         
-        UIApplication.shared.keyWindow?.addSubview(myParentView)
+        self.view.addSubview(myRedParentView)
         
         //The target element musn't be accessible so as to be considered as a container to its children elements.
         //If this attribute is 'true', the target element will be the only one accessible element.
-        myParentView.isAccessibilityElement = true
+        myRedParentView.isAccessibilityElement = true
         
         //The elements contained in the target element won't be accessible even if they're defined as such.
         //If this attribute is 'false' and the previous one is 'false', only the children elements will be accessible.
-        myParentView.accessibilityElementsHidden = false
+        myRedParentView.accessibilityElementsHidden = false
         
-        self.createViewWithColor(.yellow, inside: myParentView)
-        self.createViewWithColor(.blue, inside: myParentView)
+        self.createViewWithColor(.yellow, inside: myRedParentView)
+        self.createViewWithColor(.blue, inside: myRedParentView)
     }
     
     func createViewWithColor(_ color:UIColor, inside parentView:UIView) {
@@ -218,9 +256,11 @@ To trigger a vocalization, just call the **UIAccessibilityPostNotification** met
 Note: the vocalization is done in the system’s language.
 ### Example
 <pre><code class="objective-c">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"This is a VoiceOver message.");
+UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
+                                @"This is a VoiceOver message.");
 </code></pre><pre><code class="swift">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This is a VoiceOver message.")
+UIAccessibility.post(notification: .announcement,
+                     argument: "This is a VoiceOver message.")
 </code></pre>
 ### Links
 - [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
@@ -230,7 +270,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 ### Description
 On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the `UIKit` framework.
 </br>The most useful method is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
-</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a [WWDC video](./dev-ios-wwdc-18230.html).
+</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a WWDC 2018 video *(Deliver en exceptional accessibility experience)* whose content is perfectly detailed in the [iOS WWDC section](./dev-ios-wwdc-18230.html) of this site.
 ### Exemple
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -238,8 +278,8 @@ On iOS, it is possible to check the accessibility options state. Is VoiceOver ac
     
     NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
 </code></pre><pre><code class="swift">
-    let isVoiceOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0)
-    let isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0)
+    let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
+    let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
         
     print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
 </code></pre>
@@ -275,7 +315,7 @@ With `nil`, the first accessible element in the page is focused.
 </br>This notification comes along with a vocalization including a sound like announcing a new page.
 ### Example
 <pre><code class="objective-c">
-//The element'myLabel' is focused and vocalized with its new value.
+//The element 'myLabel' is focused and vocalized with its new value.
 - (IBAction)tapHere:(UIButton *)sender {
     
     myLabel.accessibilityLabel = @"This is a new label.";
@@ -288,17 +328,19 @@ With `nil`, the first accessible element in the page is focused.
     UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
 }
 </code></pre><pre><code class="swift">
-//The element'myLabel' is focused and vocalized with its new value.
+//The element 'myLabel' is focused and vocalized with its new value.
 @IBAction func tapHere(_ sender: UIButton) {
         
     myLabel.accessibilityLabel = "This is a new label."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
     
 //The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
 @IBAction func clic(_ sender: UIButton) {
         
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
+    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                         argument: nil)
 }
 </code></pre>
 ### Links
@@ -326,7 +368,8 @@ To change the vocalization language of VoiceOver for a word or a sentence, one c
         
     myLabel.accessibilityLanguage = "fr"
     myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 </code></pre>
 ### Link   
@@ -338,7 +381,7 @@ In the case of dynamically modified element or component not inheriting from `UI
 
 - **accessibilityFrame**&nbsp;: sets the area via a rectangle (`CGRect`).
 </br>Usually, for an element inheriting from `UIView`, this area is the «&nbsp;visible&nbsp;» part of the view.
-- **accessibilityPath**&nbsp;: equivalent to `AccessibilityFrame` but sets the area via Bezier curves.
+- **accessibilityPath**&nbsp;: equivalent to `accessibilityFrame` but sets the area via Bezier curves.
 <a name="AccessibilityActivationPoint"></a>
 - **accessibilityActivationPoint**&nbsp;: defines a contact point inside the `frame` whose action will be fired by a double-tap element activation.
 </br>The default value is the midpoint of the `frame` but it can be redefine anywhere inside.
@@ -417,7 +460,8 @@ float heightVal;
                                                  width: widthVal + 100.0,
                                                  height: heightVal + 100.0)
         
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                             argument: myLabel)
     }
     
     //Seconde façon d'augmenter la zone de focus (Bézier).
@@ -437,7 +481,8 @@ float heightVal;
         
         myLabel.accessibilityPath = bezierPath
         
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                             argument: myLabel)
     }
 </code></pre>
 ### Links

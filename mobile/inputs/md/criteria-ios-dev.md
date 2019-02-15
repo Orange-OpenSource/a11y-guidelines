@@ -14,11 +14,11 @@
 
 <span data-menuitem="criteria-ios"></span>
 
-Ce guide a pour objectif de présenter les différentes options du <abbr>SDK</abbr> d’accessibilité sous iOS 11 en associant&nbsp;:
+Ce guide a pour objectif de présenter les différentes options du <abbr>SDK</abbr> d’accessibilité sous iOS 12 en associant&nbsp;:
 - Des explications détaillées concernant les attributs et méthodes d'accessibilité.
-- Des exemples de code en Swift 4 et en Objective C.
+- Des exemples de code en Swift 4.2 et en Objective C.
 
-</br>... et des liens vers la [`documentation officielle d'Apple`](https://developer.apple.com/documentation/uikit/accessibility).
+... et des liens vers la [`documentation officielle d'Apple`](https://developer.apple.com/documentation/uikit/accessibility).
 
 ## Alternatives textuelles
 ### Description
@@ -91,7 +91,7 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
 - **accessibilityTraitLink**&nbsp;: utile pour définir un label en tant que «&nbsp;lien&nbsp;».
 - **accessibilityTraitHeader**&nbsp;: permet de définir un élément comme un en-tête (voir la section <a href="criteria-ios-conception.html#titre-et-en-t-te">«&nbsp;titre et en-tête&nbsp;»</a>).
 - **accessibilityTraitAdjustable**&nbsp;: permet de définir un élément comme un élément «&nbsp;ajustable&nbsp;», c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un <a href="https://help.apple.com/iphone/9/#/iph3e2e2281">geste spécifique</a> de <span lang="en">VoiceOver</span>.
-### Exemple
+
 <pre><code class="objective-c">
 - (void)customTraits() {
     //Spécification d'un UIPageControl avec le trait ’ajustable’.
@@ -99,20 +99,56 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
     
     //Ajout d'un en-tête.  
     defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
-
-    //Combinaison possible de plusieurs traits.  
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected;
 }
 </code></pre><pre><code class="swift">
 func customTraits() {
     //Spécification d'un UIPageControl avec le trait ’ajustable’.
-    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable
+    pageControl.accessibilityTraits = .adjustable
     
     //Ajout d'un en-tête. 
-    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader
+    defaultHeaderViewCell.accessibilityTraits = .header
+}
+</code></pre>
+### Opérations élémentaires
+Cet attribut est en réalité un `bitmask` pour lequel chaque élément pris individuellement peut prendre une valeur spécifique.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
+</br>Il est donc possible d'ajouter et d'enlever plusieurs `traits` présents pour caractériser un élement après avoir vérifié leur existence par exemple.
 
-    //Combinaison possible de plusieurs traits. 
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected
+<pre><code class="objective-c">
+- (void)changeTraits {
+
+    //Création d'un jeu de traits qui efface le contenu précédent du bitmask.
+    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+    
+    //Ajouts de traits au contenu existant du bitmask.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
+    
+    //Suppression d'un trait.
+    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
+    
+    //Vérification de l'existence d'un trait au sein du bitmask.
+    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
+        // Tâches à réaliser si le trait '.header' est présent...
+    }
+}
+</code></pre><pre><code class="swift">
+func changeTraits() {
+        
+    //Création d'un jeu de traits qui efface le contenu précédent du bitmask.
+    onePageButton.accessibilityTraits = [.button, .link]
+        
+    //Ajouts de traits au contenu existant du bitmask.
+    pageControl.accessibilityTraits.insert(.header) //Only one trait.
+    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
+        
+    //Suppression d'un trait.
+    onePageButton.accessibilityTraits.remove(.link)
+        
+    //Vérification de l'existence d'un trait au sein du bitmask.
+    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
+        // Tâches à réaliser si le trait '.header' est présent...
+    }
 }
 </code></pre>
 ### Lien
@@ -137,24 +173,24 @@ L'idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et 
     [super viewDidAppear:animated];
     
     //Création d'un élément père dans lequel 2 autres éléments fils vont être insérés.
-    CGRect parentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
-    UIView * myParentView = [[UIView alloc]initWithFrame:parentViewRect];
-    myParentView.backgroundColor = [UIColor redColor];
+    CGRect redParentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
+    UIView * myRedParentView = [[UIView alloc]initWithFrame:redParentViewRect];
+    myRedParentView.backgroundColor = [UIColor redColor];
     
-    [UIApplication.sharedApplication.keyWindow addSubview:myParentView];
+    [self.view addSubview:myRedParentView];
     
     //L'élément père ne doit pas être accessible pour servir de conteneur à ses enfants.
     //Si la valeur est à 'YES', seul cet élément sera accessible sans ses enfants.
-    myParentView.isAccessibilityElement = NO;
+    myRedParentView.isAccessibilityElement = NO;
     
     //Indication du conteneur que ses enfants peuvent ne pas être accessibles même s'ils sont définis comme tels.
-    //Si cette valeur est à 'NO' et la précedénte à 'NO', seuls ces élements seront accessibles.
-    myParentView.accessibilityElementsHidden = NO;
+    //Si cette valeur est à 'NO' et la précédente à 'NO', seuls ces élements seront accessibles.
+    myRedParentView.accessibilityElementsHidden = NO;
     
     [self createViewWithColor:[UIColor yellowColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
     [self createViewWithColor:[UIColor blueColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
 }
 
 - (void)createViewWithColor:(UIColor*)color
@@ -175,25 +211,25 @@ override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         //Création d'un élément père dans lequel 2 autres éléments fils vont être insérés.
-        let parentViewRect = CGRect.init(x: 100.0,
-                                         y: 100.0,
-                                         width: 40.0,
-                                         height: 40.0)
-        let myParentView = UIView.init(frame: parentViewRect)
-        myParentView.backgroundColor = .red
+        let redParentViewRect = CGRect.init(x: 100.0,
+                                            y: 100.0,
+                                            width: 40.0,
+                                            height: 40.0)
+        let myRedParentView = UIView.init(frame: redParentViewRect)
+        myRedParentView.backgroundColor = .red
         
-        UIApplication.shared.keyWindow?.addSubview(myParentView)
+        self.view.addSubview(myRedParentView)
         
         //L'élément père ne doit pas être accessible pour servir de conteneur à ses enfants.
         //Si la valeur est à 'true', seul cet élément sera accessible sans ses enfants.
-        myParentView.isAccessibilityElement = false
+        myRedParentView.isAccessibilityElement = false
         
         //Indication du conteneur que ses enfants peuvent ne pas être accessibles même s'ils sont définis comme tels.
-        //Si cette valeur est à 'false' et la précedénte à 'false', seuls ces élements seront accessibles.
-        myParentView.accessibilityElementsHidden = false
+        //Si cette valeur est à 'false' et la précédente à 'false', seuls ces élements seront accessibles.
+        myRedParentView.accessibilityElementsHidden = false
         
-        self.createViewWithColor(.yellow, inside: myParentView)
-        self.createViewWithColor(.blue, inside: myParentView)
+        self.createViewWithColor(.yellow, inside: myRedParentView)
+        self.createViewWithColor(.blue, inside: myRedParentView)
     }
     
     func createViewWithColor(_ color:UIColor, inside parentView:UIView) {
@@ -224,9 +260,11 @@ Il est très facile de déclencher des vocalisations avec <span lang="en">VoiceO
 </br></br>Pour déclencher une vocalisation qui se fera dans la langue du système, il faut envoyer une notification à l’<abbr>API</abbr> d’accessibilité via la méthode **UIAccessibilityPostNotification** avec en paramètres la notification permettant de déclencher une vocalisation **UIAccessibilityAnnouncementNotification** et la chaîne de caractères à vocaliser.
 ### Exemple
 <pre><code class="objective-c">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"Message pour la vocalisation.");
+UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
+                                @"Message pour la vocalisation.");
 </code></pre><pre><code class="swift">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Message pour la vocalisation.")
+UIAccessibility.post(notification: .announcement,
+                     argument: "Message pour la vocalisation.")
 </code></pre>
 ### Liens
 - [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
@@ -238,7 +276,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;?
 </br>Plusieurs fonctions du <span lang="en">framework</span> `UIKit` permettent de connaître les statuts de ces options d'accessibilité.
  </br>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (**UIAccessibilityIsVoiceOverRunning**).
- </br></br>D'autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après et une présentation très visuelle de certaines d'entre elles est faite lors d'une vidéo [WWDC 2018](./criteria-ios-wwdc-18230.html).
+ </br></br>D'autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après et une présentation très visuelle de certaines d'entre elles est faite lors d'une vidéo WWDC 2018 *(Fournir une expérience exceptionnelle en accessibilité)* dont le contenu est parfaitement détaillée [sur ce site](./criteria-ios-wwdc-18230.html).
 ### Exemple
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -246,8 +284,8 @@ Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mod
     
     NSLog(@"VoiceOver vaut %d et SwitchControl vaut %d.", isVoiveOverRunning, isSwitchControlRunning);
 </code></pre><pre><code class="swift">
-    let isVoiceOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0)
-    let isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0)
+    let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
+    let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
         
     print("VoiceOver vaut \(isVoiceOverRunning) et SwichControl vaut \(isSwitchControlRunning).")
 </code></pre>
@@ -297,16 +335,18 @@ Lors d’un changement de contenu sur une page, il est possible de notifier l’
 }
 </code></pre><pre><code class="swift">
 //L'élément 'myLabel' est sélectionné et vocalisé avec sa nouvelle valeur.
-@IBAction func clicHere(_ sender: UIButton) {
+@IBAction func tapHere(_ sender: UIButton) {
         
     myLabel.accessibilityLabel = "Ceci est un nouveau label."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
     
 //Le premier élément accessible de la page est sélectioné et vocalisé avec un son spécifique.
 @IBAction func clic(_ sender: UIButton) {
         
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
+    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                         argument: nil)
 }
 </code></pre>
 ### Liens
@@ -332,7 +372,8 @@ Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> 
         
     myLabel.accessibilityLanguage = "en"
     myLabel.accessibilityLabel = "This is a new label. Thank you."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 </code></pre>
 ### Lien
@@ -344,7 +385,7 @@ Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas d
 
 - **accessibilityFrame**&nbsp;: permet de définir cette zone via un rectangle (`CGRect`).
 </br>Par défaut pour un élément dérivant de `UIView`, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.
-- **accessibilityPath**&nbsp;: équivalent à `AccessibilityFrame` mais permet de définir la zone via des courbes de Bézier.
+- **accessibilityPath**&nbsp;: équivalent à `accessibilityFrame` mais permet de définir la zone via des courbes de Bézier.
 <a name="AccessibilityActivationPoint"></a>
 - **accessibilityActivationPoint**&nbsp;: définit un point de contact au sein de la `frame` dont l'action résultante sera activée par une sélection classique d'élément via un double tap.
 </br> Par défaut, ce point se trouve au centre de la `frame` mais on peut le définir n'importe à l'intérieur de cette dernière, l'idée étant de pouvoir activer un élement facilement lors d'un [regroupement par exemple](#ActivationPointExemple).
@@ -421,7 +462,8 @@ float heightVal;
                                                  width: widthVal + 100.0,
                                                  height: heightVal + 100.0)
         
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                             argument: myLabel)
     }
     
     //Seconde façon d'augmenter la zone de focus (Bézier).
@@ -441,7 +483,8 @@ float heightVal;
         
         myLabel.accessibilityPath = bezierPath
         
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                             argument: myLabel)
     }
 </code></pre>
 ### Liens
