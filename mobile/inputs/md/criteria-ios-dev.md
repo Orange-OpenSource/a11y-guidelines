@@ -560,13 +560,11 @@ int indexSwitch = 1;
     
     wrapView.accessibilityElements = @[label, aSwitch];
     
-    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+    NSString * switchValue = (aSwitch.isOn) ? @"activé" : @"désactivé";
     
     wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                                   @"the switch control is",
-                                   switchValue.description];
-    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@"le contrôle est %@", switchValue.description];
+    wrapView.accessibilityHint = @"tapez deux fois pour changer sa valeur";
     
     return wrapView;
 }
@@ -578,11 +576,9 @@ int indexSwitch = 1;
     UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
     [theSwitch setOn:!(theSwitch.isOn)];
     
-    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+    NSString * switchValue = (theSwitch.isOn) ? @"activé" : @"désactivé";
     
-    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                               @"the switch control is",
-                               switchValue.description];
+    self.accessibilityLabel = [NSString stringWithFormat:@"le contrôle est %@", switchValue.description];
     return YES;
 }
 @end
@@ -614,7 +610,7 @@ int indexSwitch = 1;
         let switchValue = (aSwitch.isOn) ? "activé" : "désactivé"
         
         self.isAccessibilityElement = true
-        self.accessibilityLabel = "le contrôle est" + switchValue.description
+        self.accessibilityLabel = "le contrôle est " + switchValue.description
         self.accessibilityHint = "tapez deux fois pour changer sa valeur."
     }
     
@@ -642,20 +638,26 @@ Nous avons un 'label', un 'switch control' et un bouton que nous souhaitons regr
 </br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" />
 <pre><code class="objective-c">
 @interface ActivationPointViewController ()
-
+    
 @property (weak, nonatomic) IBOutlet UIButton * myButton;
 @property (weak, nonatomic) IBOutlet UILabel * myLabel;
 @property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
-
+    
 @end
 
 
 @implementation ActivationPointViewController
+    
+UIAccessibilityElement * elt;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    [_mySwitch addTarget:self
+                  action:@selector(configChanged:)
+        forControlEvents:UIControlEventValueChanged];
+    
+    elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
     
     CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
     CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
@@ -667,27 +669,53 @@ Nous avons un 'label', un 'switch control' et un bouton que nous souhaitons regr
     
     self.view.accessibilityElements = @[elt];
 }
+  
+    
+- (void)configChanged:(UISwitch *)sender {
+ 
+    NSString * switchValue = _mySwitch.on ? @"activé" : @"désactivé";
+    elt.accessibilityLabel = [NSString stringWithFormat:@"le contrôle est %@", switchValue.description];
+}
 @end
 </code></pre><pre><code class="swift">
     class ActivationPointViewController: UIViewController {
-
+    
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var mySwitch: UISwitch!
+    
+    var elt: UIAccessibilityElement?
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        mySwitch.addTarget(self,
+                           action: #selector(configChanged),
+                           for: .valueChanged)
+        
+        elt = UIAccessibilityElement(accessibilityContainer: self.view)
         let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
-
-        elt.accessibilityLabel = "regroupement d'éléments"
-        elt.accessibilityHint = "tapez deux fois pour modifier le switch"
-        elt.accessibilityFrameInContainerSpace = a11yEltFrame
-        elt.accessibilityActivationPoint = mySwitch.center
-
-        self.view.accessibilityElements = [elt]
+        
+        if let elt = elt {
+            
+            elt.accessibilityLabel = "regroupement d'éléments"
+            elt.accessibilityHint = "tapez deux fois pour modifier le switch"
+            elt.accessibilityFrameInContainerSpace = a11yEltFrame
+            elt.accessibilityActivationPoint = mySwitch.center
+            
+            self.view.accessibilityElements = [elt]
+        }
+    }
+    
+    
+    @objc func configChanged(sender: UISwitch){
+        
+        if let configGroup = elt {
+            
+            let switchValue = (mySwitch?.isOn)! ? "activé" : "désactivé"
+            configGroup.accessibilityLabel = "le contrôle est " + switchValue.description
+        }
     }
 }
 </code></pre>

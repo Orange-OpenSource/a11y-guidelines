@@ -561,9 +561,7 @@ int indexSwitch = 1;
     NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
     
     wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                                   @"the switch control is",
-                                   switchValue.description];
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
     wrapView.accessibilityHint = @"tap twice to change the switch control status.";
     
     return wrapView;
@@ -578,9 +576,7 @@ int indexSwitch = 1;
     
     NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
     
-    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                               @"the switch control is",
-                               switchValue.description];
+    self.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
     return YES;
 }
 @end
@@ -612,7 +608,7 @@ int indexSwitch = 1;
         let switchValue = (aSwitch.isOn) ? "on" : "off"
         
         self.isAccessibilityElement = true
-        self.accessibilityLabel = "the switch control is" + switchValue.description
+        self.accessibilityLabel = "the switch control is " + switchValue.description
         self.accessibilityHint = "tap twice to change the switch control status."
     }
     
@@ -625,7 +621,7 @@ int indexSwitch = 1;
         
         let switchValue = (theSwitch?.isOn)! ? "on" : "off"
         
-        self.accessibilityLabel = "the switch control is" + switchValue.description
+        self.accessibilityLabel = "the switch control is " + switchValue.description
         
         return true
     }
@@ -651,10 +647,16 @@ We have a button, a label and a switch control to be regrouped in a single block
 
 @implementation ActivationPointViewController
 
+UIAccessibilityElement * elt;
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    [_mySwitch addTarget:self
+                  action:@selector(configChanged:)
+        forControlEvents:UIControlEventValueChanged];
+    
+    elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
     
     CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
     CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
@@ -666,27 +668,53 @@ We have a button, a label and a switch control to be regrouped in a single block
     
     self.view.accessibilityElements = @[elt];
 }
+  
+    
+- (void)configChanged:(UISwitch *)sender {
+ 
+    NSString * switchValue = _mySwitch.on ? @"on" : @"off";
+    elt.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
+}
 @end
 </code></pre><pre><code class="swift">
     class ActivationPointViewController: UIViewController {
-
+    
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var mySwitch: UISwitch!
+    
+    var elt: UIAccessibilityElement?
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        mySwitch.addTarget(self,
+                           action: #selector(configChanged),
+                           for: .valueChanged)
+        
+        elt = UIAccessibilityElement(accessibilityContainer: self.view)
         let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
-
-        elt.accessibilityLabel = "regrouping elements"
-        elt.accessibilityHint = "double tap to change the switch control status"
-        elt.accessibilityFrameInContainerSpace = a11yEltFrame
-        elt.accessibilityActivationPoint = mySwitch.center
-
-        self.view.accessibilityElements = [elt]
+        
+        if let elt = elt {
+            
+            elt.accessibilityLabel = "regrouping elements"
+            elt.accessibilityHint = "double tap to change the switch control status"
+            elt.accessibilityFrameInContainerSpace = a11yEltFrame
+            elt.accessibilityActivationPoint = mySwitch.center
+            
+            self.view.accessibilityElements = [elt]
+        }
+    }
+    
+    
+    @objc func configChanged(sender: UISwitch){
+        
+        if let configGroup = elt {
+            
+            let switchValue = (mySwitch?.isOn)! ? "on" : "off"
+            configGroup.accessibilityLabel = "the switch control is " + switchValue.description
+        }
     }
 }
 </code></pre>
