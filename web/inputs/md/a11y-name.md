@@ -39,9 +39,9 @@ Donc, un élément de ce type `<button type=”submit”></button>` sans intitul
 
 Également, on peut additionner les éléments pour donner un nom.
 
-`<button type=”submit”>Acheter <img alt=" le canard en plastique" src="canard.jpg"></button>` 
+`<button type=”submit”>Acheter <img alt="le canard en plastique" src="canard.jpg"></button>` 
  
- Ce bouton aura lui un nom accessible qui est le contenu du bouton : l'intitulé textuel, "Acheter " plus le `alt` de l'image : "canards en plastique" donc "Acheter le canard en plastique".
+ Ce bouton aura lui un nom accessible qui est le contenu du bouton : l'intitulé textuel, "Acheter " plus le `alt` de l'image : "le canard en plastique" donc "Acheter le canard en plastique".
 
 ### Élément associé
 

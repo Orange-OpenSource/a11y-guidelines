@@ -8,7 +8,7 @@
 });</script>
   
 ## Message de statut et accessibilité
-Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que pour les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.
+Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.
 
 ## Quelques exemple de messages d'état, de statut ou contextuels
 
@@ -24,19 +24,19 @@ Lorsqu'un utilisateur après avoir choisi un article, appuie sur un bouton "Ajou
     un article ajouté au panier, le panier contient actuellement 4 articles
 </p>`
 
-Une fois qu'un utilisateur a activé un processus d'application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge... apparaît à l'écran. Le lecteur d'écran annonce "Application occupée, chargement en cours".
+Une fois qu'un utilisateur a activé un processus d'application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge… apparaît à l'écran. Le lecteur d'écran annonce "Application occupée, chargement en cours".
 
 `<div role="alert">
     Application occupée, chargement en cours
 </div>`
 
-Une application affiche une barre de progression pour indiquer l'état d'une mise à jour d'un élément de contenu. Le lecteur d'écran fournit des annonces intermittentes des progrès : "10% mis à jour", puis "20% mis à jour"...
+Une application affiche une barre de progression pour indiquer l'état d'une mise à jour d'un élément de contenu. Le lecteur d'écran fournit des annonces intermittentes des progrès : "10% mis à jour", puis "20% mis à jour"…
 
 `<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-20 % mis à jour
+20% mis à jour
 </div>`
 
-Après qu'un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant qui se lit comme suit&nbsp;: "Votre formulaire a été soumis avec succès". Le lecteur d'écran annonce le même message.
+Après qu'un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant comme suit&nbsp;: "Votre formulaire a été soumis avec succès". Le lecteur d'écran annonce le même message.
 
 `<div role="alert">
     Votre formulaire a été soumis avec succès
@@ -56,12 +56,12 @@ Une fois qu'un utilisateur, dans une application de gestion documentaire en lign
 
 Dans une application de mailing en ligne, l'utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l'adresse e-mail du destinataire est affichée à l'écran à la suite de celle déjà choisies pour ce message. Le lecteur d'écran devra annoncer l'ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l'écran pour certains utilisateurs d'<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d'écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle "log".
 
-<div role="log">
+`<div role="log">
   <ol>
     <li>XX@YY.ZZ a été rajouté</li>
     <li>XX@YY.ZZ a été retiré</li>
   </ol>
-</div>
+</div>`
 
 Parfois, on veut fournir des messages que pour les lecteurs d'écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d'écran sans les afficher à l'écran.
 
