@@ -753,7 +753,7 @@ Dans cet exemple, on appelle une méthode spécifique au moment où le statut de
     
     NSArray * checkStatus = @[@"NOK", @"OK"];
     
-    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
+    NSLog(@"SWITCH CONTROL est %@ et VOICE OVER est %@",
           checkStatus[UIAccessibilityIsSwitchControlRunning()],
           checkStatus[UIAccessibilityIsVoiceOverRunning()]);
 }
@@ -763,19 +763,19 @@ Dans cet exemple, on appelle une méthode spécifique au moment où le statut de
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilitySwitchControlStatusDidChange,
+                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
                                                object: nil)
-                                               
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilityVoiceOverStatusDidChange,
+                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
                                                object: nil)
     }
     
     @objc private func methodToBeCalled(notification: Notification) {
 
-        let switchControlStatus = (UIAccessibilityIsSwitchControlRunning() ? "OK" : "NOK")
-        let voiceOverStatus = (UIAccessibilityIsVoiceOverRunning() ? "OK" : "NOK")
+        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
+        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
         
         print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
     }
@@ -787,14 +787,16 @@ Tous les événements sont disponibles sur la <a href="https://developer.apple.c
 ### Description
 Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'une application à l’aide du paramétrage du téléphone.
 </br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
-</br>Quelques points sont néanmoins essentiels pour la bonne utilisation de l'<abbr>API</abbr> mise à disposition&nbsp;:
+</br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:
+ - **Utiliser impérativement les styles de texte** proposés selon la version d'iOS avec laquelle l'application est développée.
+ </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" />
  - Utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l'utilisation d'autres polices est devenue nettement plus aisée depuis l'arrivée de `UIFontMetrics` avec iOS11.
  <pre><code class="objective-c">
     __weak IBOutlet UILabel * fontHeadline;
     __weak IBOutlet UILabel * fontFootNote;
     
-    //Utilisation de la font native pour le titre principal d'un page.
-    UIFont * myFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    //Utilisation de la font native.
+    fontFootNote.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     
     //Définition de la font pour le titre principal d'une page.
     UIFont * fontHead = [UIFont fontWithName:@"Chalkduster" size:30.0];
@@ -804,8 +806,8 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     @IBOutlet weak var fontHeadline: UILabel!
     @IBOutlet weak var fontFootNote: UILabel!
     
-    //Utilisation de la police native par défaut pour le titre principal d'une page.
-    let myFont = UIFont.preferredFont(forTextStyle: .headline)
+    //Utilisation de la police native.
+    fontFootNote.font = .preferredFont(forTextStyle: .headline)
         
     //Définition personnalisée de la police pour le titre principal d'une page.
     let fontHead = UIFont(name: "Chalkduster", size: 30.0)
@@ -834,7 +836,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     //Écoute de la notification annonçant le changement de taille de la police.
     NotificationCenter.default.addObserver(self,
                                            selector:#selector(methodToBeCalled(notification:)),
-                                           name: .UIContentSizeCategoryDidChange,
+                                           name: UIContentSizeCategory.didChangeNotification,
                                            object: nil)
     
     //Modification automatique de la taille de la police sans utiliser la notification.
@@ -849,7 +851,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
  - Ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques.
  - Penser à adapter le [contraste des couleurs](./criteria-ios-conception.html#couleurs) à la taille de texte modifiée si nécessaire.
 ### Liens
-- [<span lang="en">Dynamic Type <abbr>API</abbr></span>](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)
+- [<span lang="en">Dynamic Type</span> et styles de texte](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
 
@@ -1243,15 +1245,14 @@ De plus, il n'y a aucune indication de changement de la valeur en temps réel.
 NS_ASSUME_NONNULL_BEGIN
 @class StepperWrapper;
 
-@protocol AdjustableForAccessibilityDelegate <NSObject>
-
+@protocol AdjustableForAccessibilityDelegate &lt;NSObject&gt;
 - (void)adjustableDecrementForView:(StepperWrapper *)view;
 - (void)adjustableIncrementForView:(StepperWrapper *)view;
 @end
 
 
 @interface StepperWrapper : UIStackView
-@property(nonatomic,weak) id<AdjustableForAccessibilityDelegate> delegate;
+@property(nonatomic,weak) id &lt;AdjustableForAccessibilityDelegate&gt; delegate;
 @end
 NS_ASSUME_NONNULL_END
     
@@ -1271,11 +1272,15 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)accessibilityDecrement {
-    [_delegate adjustableDecrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableDecrementForView:)]) {
+        [_delegate adjustableDecrementForView:self];
+    }
 }
 
 - (void)accessibilityIncrement {
-    [_delegate adjustableIncrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableIncrementForView:)]) {
+        [_delegate adjustableIncrementForView:self];
+    }
 }
 @end
 NS_ASSUME_NONNULL_END
@@ -1298,7 +1303,7 @@ class StepperWrapper: UIStackView {
         super.init(coder: coder)
         
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitAdjustable
+        accessibilityTraits = .adjustable
     }
     
     override func accessibilityDecrement() {
@@ -1315,23 +1320,19 @@ class StepperWrapper: UIStackView {
 
 <pre><code class="objective-c">
 NS_ASSUME_NONNULL_BEGIN
-@interface ViewController () <AdjustableForAccessibilityDelegate>
-
-@property (weak, nonatomic) IBOutlet UIStepper * stepperNoAccess;
-@property (weak, nonatomic) IBOutlet UILabel * stepperValueNoAccess;
-
+@interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
 @property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
 @property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
 @property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
 @end
 
 
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
+@implementation ContinuousAdjustableValues
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     _stepperStackViewAccess.delegate = self;
-    _stepperStackViewAccess.accessibilityLabel = @"Compteur pour adapter la valeur";
+    _stepperStackViewAccess.accessibilityLabel = @"augmenter ou diminuer la valeur";
     _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
 }
 
@@ -1352,7 +1353,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
+class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
     
     @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
     @IBOutlet weak var stepperAccess: UIStepper!
@@ -1363,7 +1364,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
         super.viewDidLoad()
         
         stepperStackViewAccess.delegate = self
-        stepperStackViewAccess.accessibilityLabel = "Compteur pour adapter la valeur"
+        stepperStackViewAccess.accessibilityLabel = "augmenter ou diminuer la valeur"
         stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
     }
     

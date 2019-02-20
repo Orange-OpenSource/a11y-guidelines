@@ -727,9 +727,13 @@ Another grouping elements case could use the **shouldGroupAccessibilityChildren*
 
 ## Accessibility events
 ### Description
-iOS sends several accessibility events to the applications. They are sent when accessibility options are changed. For example, if VoiceOver is deactivated, the running applications will receive the `UIAccessibilityVoiceOverStatusDidChange` event. This is very useful when used simultaneously with `UIAccessibilityIsVoiceOverRunning`.
+iOS sends several accessibility events to the applications. They are sent when accessibility options are changed.
+</br>For example, if VoiceOver is deactivated, the running applications will receive the `UIAccessibilityVoiceOverStatusDidChange` event.
+</br>This is very useful when used simultaneously with `UIAccessibilityIsVoiceOverRunning`.
 
-Let's say the application behaves differently when VoiceOver is turned on. This is detected by the `UIAccessibilityIsVoiceOverRunning` method. What happens if VoiceOver is disabled? This is when the system events can be used. By listening to these events, it is possible to dynamically change how the application behaves.
+Let's say the application behaves differently when VoiceOver is turned on.
+</br>What happens if VoiceOver is disabled ? This is exactly when the system events can be used.
+</br>By listening to these events, it is possible to dynamically change how the application behaves.
 ### Example
 In this example, a method is fired when VoiceOver or Switch Control status has changed.
 <pre><code class="objective-c">
@@ -761,19 +765,19 @@ In this example, a method is fired when VoiceOver or Switch Control status has c
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilitySwitchControlStatusDidChange,
+                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
                                                object: nil)
-                                               
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilityVoiceOverStatusDidChange,
+                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
                                                object: nil)
     }
     
     @objc private func methodToBeCalled(notification: Notification) {
 
-        let switchControlStatus = (UIAccessibilityIsSwitchControlRunning() ? "OK" : "NOK")
-        let voiceOverStatus = (UIAccessibilityIsVoiceOverRunning() ? "OK" : "NOK")
+        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
+        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
         
         print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
     }
@@ -786,15 +790,17 @@ All accessibility events are available on the <a href="https://developer.apple.c
 Since iOS7, it is possible to make the text size dynamic according to the phone settings.
 </br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:
+ - **Use the text styles** available with the application iOS version.
+ </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" />
  - Choose the system font to facilitate your programing even if the use of other fonts is well assisted by the `UIFontMetrics` new class (iOS11).
  <pre><code class="objective-c">
     __weak IBOutlet UILabel * fontHeadline;
     __weak IBOutlet UILabel * fontFootNote;
     
-    //Use of the default native font for a header.
-    UIFont * myFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    //Use of the default native font.
+    fontFootNote.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     
-    //Personal font definition for a header.
+    //Customed font definition for a header.
     UIFont * fontHead = [UIFont fontWithName:@"Chalkduster" size:30.0];
     UIFontMetrics * fontHeadMetrics = [[UIFontMetrics alloc]initForTextStyle:UIFontTextStyleHeadline];
     fontHeadline.font = [fontHeadMetrics scaledFontForFont:fontHead];
@@ -803,9 +809,9 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
     @IBOutlet weak var fontFootNote: UILabel!
     
     //Use of the default native font for a header.
-    let myFont = UIFont.preferredFont(forTextStyle: .headline)
+    fontFootNote.font = .preferredFont(forTextStyle: .headline)
         
-    //Personal font definition for a header.
+    //Customed font definition for a header.
     let fontHead = UIFont(name: "Chalkduster", size: 30.0)
     let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
@@ -831,7 +837,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
     //Listens to the notification dealing with the font size changing from the mobile settings.
     NotificationCenter.default.addObserver(self,
                                            selector:#selector(methodToBeCalled(notification:)),
-                                           name: .UIContentSizeCategoryDidChange,
+                                           name: UIContentSizeCategory.didChangeNotification,
                                            object: nil)
     
     //Automatic changing of the font size without listening to the previous notification.
@@ -846,7 +852,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
  - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
  - Don't forget to adapt the [color contrast](./criteria-ios.html#colours) to the text size.
 ### Links
-- [Dynamic Type <abbr>API</abbr>](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)
+- [Dynamic Type & Text Styles](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
 
@@ -873,12 +879,14 @@ An application with a tab bar, whose second bar item displays the Orange logo (a
 
 ## Reading order
 ### Description
-Redefining the VoiceOver reading order is done using the **UIAccessibilityContainer** protocol. The idea is to have a table of elements that defines the reading order of the elements. It is often very useful to use the **shouldGroupAccessibilityElement** attribute so we have a precise order but for a part of the view only (the rest of the view will be read using the native order provided by VoiceOver).
+Redefining the VoiceOver reading order is done using the **UIAccessibilityContainer** protocol.
+</br>The idea is to have a table of elements that defines the reading order of the elements.
+</br>It is often very useful to use the **shouldGroupAccessibilityElement** attribute so we have a precise order but only for a part of the view *(the rest of it will be read using the native order provided by VoiceOver)*.
 ### Example
 The best way to illustrate this feature is the keyboard whose keys order isn't necessary the appropriate one.
 </br>Here's the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
 </br><span aria-hidden="true">Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :</span>
-</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
+</br><img alt="display of the blue and grey views" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -1233,14 +1241,14 @@ Moreover, there is no real time notification dealing with the value changing.
 NS_ASSUME_NONNULL_BEGIN
 @class StepperWrapper;
 
-@protocol AdjustableForAccessibilityDelegate <NSObject>
+@protocol AdjustableForAccessibilityDelegate &lt;NSObject&gt;
 - (void)adjustableDecrementForView:(StepperWrapper *)view;
 - (void)adjustableIncrementForView:(StepperWrapper *)view;
 @end
 
 
 @interface StepperWrapper : UIStackView
-@property(nonatomic,weak) id<AdjustableForAccessibilityDelegate> delegate;
+@property(nonatomic,weak) id &lt;AdjustableForAccessibilityDelegate&gt; delegate;
 @end
 NS_ASSUME_NONNULL_END
     
@@ -1260,14 +1268,16 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)accessibilityDecrement {
-    [_delegate adjustableDecrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableDecrementForView:)]) {
+        [_delegate adjustableDecrementForView:self];
+    }
 }
 
 - (void)accessibilityIncrement {
-    [_delegate adjustableIncrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableIncrementForView:)]) {
+        [_delegate adjustableIncrementForView:self];
+    }
 }
-@end
-NS_ASSUME_NONNULL_END
 </code></pre><pre><code class="swift">
 protocol AdjustableForAccessibilityDelegate: class {
     func adjustableDecrementFor(_ view: StepperWrapper)
@@ -1287,7 +1297,7 @@ class StepperWrapper: UIStackView {
         super.init(coder: coder)
         
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitAdjustable
+        accessibilityTraits = .adjustable
     }
     
     override func accessibilityDecrement() {
@@ -1304,23 +1314,19 @@ class StepperWrapper: UIStackView {
 
 <pre><code class="objective-c">
 NS_ASSUME_NONNULL_BEGIN
-@interface ViewController () <AdjustableForAccessibilityDelegate>
-
-@property (weak, nonatomic) IBOutlet UIStepper * stepperNoAccess;
-@property (weak, nonatomic) IBOutlet UILabel * stepperValueNoAccess;
-
+@interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
 @property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
 @property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
 @property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
 @end
 
 
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
+@implementation ContinuousAdjustableValues
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     _stepperStackViewAccess.delegate = self;
-    _stepperStackViewAccess.accessibilityLabel = @"Increase or decrease the value";
+    _stepperStackViewAccess.accessibilityLabel = @"increase or decrease the value";
     _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
 }
 
@@ -1341,7 +1347,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
+class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
     
     @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
     @IBOutlet weak var stepperAccess: UIStepper!
@@ -1352,7 +1358,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
         super.viewDidLoad()
         
         stepperStackViewAccess.delegate = self
-        stepperStackViewAccess.accessibilityLabel = "Increase or decrease the value"
+        stepperStackViewAccess.accessibilityLabel = "increase or decrease the value"
         stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
     }
     
