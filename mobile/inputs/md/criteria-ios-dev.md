@@ -1397,14 +1397,12 @@ Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fon
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" />
 
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomActions ()
 @property (weak, nonatomic) IBOutlet UILabel * persoElt;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomActions
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -1439,7 +1437,7 @@ Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fon
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
+class CustomActions: UIViewController {
     
     @IBOutlet weak var persoElt: UILabel!
     
@@ -1482,7 +1480,7 @@ class ViewController: UIViewController {
 }
 </code></pre>
 
-</br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible utilisé :
+</br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné :
 </br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" />
 
 ### Liens
@@ -1491,12 +1489,12 @@ class ViewController: UIViewController {
 
 ## Focus d'un élément
 ### Description
-Le protocole informel **UIAccessibilityFocus** fournit des éléments de programmation efficaces de façon à pouvoir être informé d'une sélection passé, active ou à venir d'un élément accessible :
+Le protocole informel **UIAccessibilityFocus** fournit des éléments de programmation efficaces de façon à pouvoir être informé d'une sélection passée, active ou à venir d'un élément accessible :
 - **accessibilityElementDidBecomeFocused** : méthode appelée dès que l'élément accessible est sélectionné.
 - **accessibilityElementDidLoseFocus** : méthode appelée dès que l'élément accessible perd le focus.
 - **accessibilityElementIsFocused** : valeur booléenne qui permet de savoir si un élément accessible est sélectionné.
 
-Attention, ces méthodes ne sont pas appelées au sein d'un contrôleur de vue si un de ses élements accessibles est sélectionné mais uniquemnet si elles sont implémentées sur l'élément accessible lui-même.
+Attention, ces **méthodes** ne sont pas appelées au sein d'un contrôleur de vue si un de ses élements accessibles est sélectionné mais uniquemnet si elles sont **implémentées sur l'élément accessible lui-même**.
 </br>Cette erreur à laquelle on ne pense pas de prime abord provient du caractère informel du protocole **UIAccessibilityFocus** dont les éléments peuvent subir un <span lang="en">override</span> sur tout objet héritant de NSObject même s'il n'est pas accessible... comme un contrôleur de vue par exemple.
 </br></br>L'exemple de code ci-dessous permet de suivre le focus d'un élément accessible identifié par son `accessibleIdentifier`.
 <pre><code class="objective-c">
@@ -1566,16 +1564,14 @@ Depuis iOS10, il est possible d'ajouter une action spécifique au rotor de <span
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
 </br></br>Le code fourni ci-dessous permet de compter et d'afficher le nombre de balayages haut et bas *(finalité inutile avec le rotor mais qui permet de mettre en avant sa création programmatique)*.
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomRotor ()
 @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
 @property (weak, nonatomic) IBOutlet UILabel * upLabel;
 @property (weak, nonatomic) IBOutlet UILabel * downLabel;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomRotor
 
 static NSInteger flicksUp;
 static NSInteger flicksDown;
@@ -1618,8 +1614,8 @@ static NSInteger flicksDown;
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
-    
+class CustomRotor: UIViewController {
+
     @IBOutlet weak var rotorTitle: UILabel!
     
     static var flicksUp = 0
@@ -1642,15 +1638,15 @@ class ViewController: UIViewController {
         return  UIAccessibilityCustomRotor.init(name: name,
                                                 itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
                                                     
-                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotor.Direction.next) {
                                                         
-                                                        ViewController.flicksDown += 1
-                                                        self.downLabel.text = String(ViewController.flicksDown)
+                                                        CustomRotor.flicksDown += 1
+                                                        self.downLabel.text = String(CustomRotor.flicksDown)
                                                         
                                                     } else {
                                                         
-                                                        ViewController.flicksUp += 1
-                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                        CustomRotor.flicksUp += 1
+                                                        self.upLabel.text = String(CustomRotor.flicksUp)
                                                     }
                                                     
                                                     return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,

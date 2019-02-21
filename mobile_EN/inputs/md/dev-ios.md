@@ -1386,19 +1386,17 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
 </br>A convincing example is the iOS native mail that may suggest some actions as follows :
 </br><img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
-</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the next accessible element instead of suggesting actions as above.
+</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the previous accessible element instead of suggesting actions as above.
 </br></br>A solution may consist of **associating the selected element with an array of actions** that will be automatically introduced to the user.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" />
 
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomActions ()
 @property (weak, nonatomic) IBOutlet UILabel * persoElt;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomActions
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -1433,7 +1431,7 @@ Some basic gestures may become a real headache to be perfectly understood by Voi
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
+class CustomActions: UIViewController {
     
     @IBOutlet weak var persoElt: UILabel!
     
@@ -1491,7 +1489,7 @@ The **UIAccessibilityFocus** informal protocol provides programming elements to 
 - **accessibilityElementIsFocused** : boolean value indicating the accessible element selection.
 
 Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
-</br>However, if they are implemented in the accessible element itself, you won't be disappointed.
+</br>However, if they are **implemented in the accessible element itself**, you won't be disappointed.
 </br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it's not accessible... like a view controller for instance.
 </br></br>The example below enables to follow the focus of an accessible element identified by its `accessibleIdentifier`.
 <pre><code class="objective-c">
@@ -1561,16 +1559,14 @@ Since iOS10, adding a new rotor option is possible thanks to the **UIAccessibili
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
 </br></br>To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomRotor ()
 @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
 @property (weak, nonatomic) IBOutlet UILabel * upLabel;
 @property (weak, nonatomic) IBOutlet UILabel * downLabel;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomRotor
 
 static NSInteger flicksUp;
 static NSInteger flicksDown;
@@ -1613,8 +1609,8 @@ static NSInteger flicksDown;
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
-    
+class CustomRotor: UIViewController {
+
     @IBOutlet weak var rotorTitle: UILabel!
     
     static var flicksUp = 0
@@ -1637,15 +1633,15 @@ class ViewController: UIViewController {
         return  UIAccessibilityCustomRotor.init(name: name,
                                                 itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
                                                     
-                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotor.Direction.next) {
                                                         
-                                                        ViewController.flicksDown += 1
-                                                        self.downLabel.text = String(ViewController.flicksDown)
+                                                        CustomRotor.flicksDown += 1
+                                                        self.downLabel.text = String(CustomRotor.flicksDown)
                                                         
                                                     } else {
                                                         
-                                                        ViewController.flicksUp += 1
-                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                        CustomRotor.flicksUp += 1
+                                                        self.upLabel.text = String(CustomRotor.flicksUp)
                                                     }
                                                     
                                                     return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
@@ -1659,7 +1655,7 @@ class ViewController: UIViewController {
 </br><img alt="changed display with a rotor option" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
 </br>The use of a custom rotor is definitely not a natural part of a mobile application, that's why its **functioning** and **purpose** must be **fully explained** to assist the user experience.
 </br></br>The main difference between a rotor option and a custom action or an adjustable element relies on the fact that it can be activated whatever the selected element.
-</br>However, if this selected element is adjustable or holds any custom actions, **its actions will prevail over those of the rotor**.
+</br>However, if the selected element is adjustable or holds any custom actions, **its actions will prevail over those of the rotor**.
 </br></br>Such a feature must be implemented with **caution** and according to **specific needs** whose only purpose should be to **improve and facilitate the user experience**.
 ### Links
 - [`UIAccessibilityCustomRotor`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor)
