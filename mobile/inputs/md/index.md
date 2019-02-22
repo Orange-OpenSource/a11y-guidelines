@@ -9,14 +9,14 @@
 ## Définition de l’accessibilité mobile
 **C’est une application utilisable par tous**
 
-- personnes valides&nbsp;;
-- seniors&nbsp;;
-- personnes en situation de handicap (temporaire ou permanent)&nbsp;;
+- personnes valides.
+- seniors.
+- personnes en situation de handicap (temporaire ou permanent).
 
 **et dans tous les contextes**
 
-- avec tous types de matériel&nbsp;: navigateurs mobiles, Android, iOS, tablette&nbsp;;
-- dans un contexte dégradé&nbsp;: mauvaise luminosité, etc.&nbsp;;
+- avec tous types de matériel&nbsp;: navigateurs mobiles, Android, iOS, tablette.
+- dans un contexte dégradé&nbsp;: mauvaise luminosité, etc...
 - avec des logiciels spécifiques de compensation du handicap.
 
 ## Organisation de ce site

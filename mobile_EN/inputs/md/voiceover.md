@@ -67,7 +67,7 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
   </li>
 </ul>
 </br>
-## iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" />
+## iPhoneX
 The lack of the home button on the main screen for this device has modified the usual gestures.
 </br>These [new common gestures](./screen-reader-voiceover-iphonex.html) have induced new VoiceOver behavior for some actions :
 - [Go to Home Screen.](#BackHome)
@@ -92,14 +92,14 @@ The lack of the home button on the main screen for this device has modified the 
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_notification_center.png" />
 </br></br></br>
 ## Tips & Tricks
-Hereunder are unusual features that may be useful to a VoiceOver user on any device :
+Hereunder are unusual features that may be useful to a VoiceOver user on **any type of device** :
 - [Read elements from the top.](#ReadAllElementsFromTop)
 - [Read elements from the selection.](#ReadAllElementsFromSelection)
 - [Start/pause the elements vocalization.](#ToggleAutomaticReading)
 - [Locate the selected element.](#LocateSelectedElement)
 - [Toggle Speech.](#ToggleSpeech)
-- [Open Control Center.](#ControlCenter)
-- [See Notifications.](#NotificationCenter)
+- [Open Control Center.](#ControlCenterBis)
+- [See Notifications.](#NotificationCenterBis)
 - [Activate the selected element.](#ElementActivation)
 - [Go back to the previous page.](#Scrub)
 - [Use the item chooser list.](#ItemChooserList)
@@ -130,12 +130,12 @@ Hereunder are unusual features that may be useful to a VoiceOver user on any dev
 </br>If the `zoom` functionality is activated in the settings, a **triple-tap** will be mandatory to obtain the same result.
 </br><img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex_vo_en_stop_resume_speech.png" />
 
-<a name="ControlCenter"></a>
+<a name="ControlCenterBis"></a>
 </br>First of all, **an element of the status bar must be selected**.
 </br>Gesture: **flick up with 3 fingers** anywhere on the screen.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_control_center_bis.png" />
 
-<a name="NotificationCenter"></a>
+<a name="NotificationCenterBis"></a>
 </br>First of all, **an element of the status bar must be selected**.
 </br>Gesture: **flick down with 3 fingers** anywhere on the screen.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_notification_center_bis.png" />

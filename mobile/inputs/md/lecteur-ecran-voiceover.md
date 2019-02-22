@@ -68,10 +68,8 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
       <p>Permet d’augmenter (resp. diminuer) la valeur d’un élément ajustable.</p>
   </li>
 </ul>
- 
-
-## iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" />
-L'arrivée sur le marché de ce terminal avec iOS11 a quelque peu bouleversé la gestuelle classique dont on avait l'habitude à cause de l'absence de bouton principal.
+## iPhoneX
+L'arrivée sur le marché de ce terminal sous iOS11 avec l'absence de bouton principal a quelque peu bouleversé la gestuelle classique dont on avait l'habitude.
 </br>Ces [nouveaux gestes de base](./lecteur-ecran-voiceover-iphonex.html) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous.
 - [Revenir à l'écran d'accueil.](#BackHome)
 - [Accéder au multitâche.](#Multitask)
@@ -93,23 +91,23 @@ L'arrivée sur le marché de ce terminal avec iOS11 a quelque peu bouleversé la
 <a name="NotificationCenter"></a>
 </br>Mouvement: **balayage avec 1 doigt** à partir du haut de l'écran jusqu'à sentir l'émission d'une **double vibration** (environ à la **moitié de l'écran**).
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_notification_center.png" />
-
+</br></br>
 ## Trucs & Astuces
-Cette partie contient des manipulations qui ne sont pas forcément toutes très connues mais qui peuvent s'avérer très utiles sur tout type de terminal :
+Cette partie contient des manipulations qui ne sont pas forcément toutes très connues mais qui peuvent s'avérer très utiles sur **tout type de terminal** :
 - [Lire tous les éléments à partir du haut de la page.](#ReadAllElementsFromTop)
 - [Lire tous les éléments à partir de la sélection.](#ReadAllElementsFromSelection)
 - [Arrêter/redémarrer la lecture automatique des éléments.](#ToggleAutomaticReading)
 - [Localiser l'élément sélectionné.](#LocateSelectedElement)
 - [Arrêter/redémarrer l'énonciation VoiceOver.](#ToggleSpeech)
-- [Accéder au centre de contrôle.](#ControlCenter)
-- [Accéder au centre de notifications.](#NotificationCenter)
+- [Accéder au centre de contrôle.](#ControlCenterBis)
+- [Accéder au centre de notifications.](#NotificationCenterBis)
 - [Activer un élément sélectionné.](#ElementActivation)
 - [Revenir à la page précédente.](#Scrub)
 - [Trouver un élément avec le sélecteur d'éléments.](#ItemChooserList)
 - [Sélectionner le premier élément d'une page.](#PageFirstElement)
 - [Sélectionner le dernier élément d'une page.](#PageLastElement)
 - [Activer/désactiver l'écran "rideau".](#CurtainScreen)
-- [Changer l'énonciation d'un élément.](#CustomLabel)
+- [Changer la vocalisation d'un élément.](#CustomLabel)
 - [Lancer une recherche](#SpotlightSearch)
 
 <a name="ReadAllElementsFromTop"></a>
@@ -133,12 +131,12 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 </br>Si la fonctionnalité `zoom` est activée dans les réglages, il faudra réaliser un **triple tap** pour obtenir le résultat souhaité.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_stop_resume_speech.png" />
 
-<a name="ControlCenter"></a>
+<a name="ControlCenterBis"></a>
 </br>Il faut au préalable **sélectionner un élément de la barre d'état** en haut de l'écran.
 </br>Mouvement: **balayage avec 3 doigts** du bas vers le haut n'importe où sur l'écran.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_fr_control_center_bis.png" />
 
-<a name="NotificationCenter"></a>
+<a name="NotificationCenterBis"></a>
 </br>Il faut au préalable **sélectionner un élément de la barre d'état** en haut de l'écran.
 </br>Mouvement: **balayage avec 3 doigts** du haut vers le bas n'importe où sur l'écran.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_fr_notification_center_bis.png" />
