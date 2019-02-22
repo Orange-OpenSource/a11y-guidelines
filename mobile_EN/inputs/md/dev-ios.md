@@ -856,6 +856,72 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
 
+## Truncation hyphen
+### Description
+The `Dynamic Type` feature introduced in the previous section may come along with a word truncation according to the magnifying defined in the settings.
+</br>Unfortunately, the iOS system doesn't handle natively this point that can be implemented only by programing to get an appreciated visual depiction.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/Troncature.png" />
+</br>The rationale behind is the use of a `NSMutableAttributedString` with a `NSMutableParagraphStyle` type property as exposed hereunder :
+<pre><code class="objective-c">
+@interface TruncationHyphen () {
+    __weak IBOutlet UILabel * myLabel;
+}
+@end
+
+
+@implementation TruncationHyphen
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSString * myString = @"floccinaucinihilipilification";
+    NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
+    
+    paraph.alignment = NSTextAlignmentJustified;
+    paraph.hyphenationFactor = 1.0;
+    
+    UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
+    UIFont * myTextFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle1] scaledFontForFont:myFont];
+    
+    NSDictionary * attributesDictionary = @{NSFontAttributeName:myTextFont};
+    NSMutableAttributedString * myText = [[NSMutableAttributedString alloc]initWithString:myString 
+                                                                               attributes:attributesDictionary];
+    
+    [myText addAttribute:NSParagraphStyleAttributeName
+                   value:paraph
+                   range:NSMakeRange(0, 1)];
+    
+    myLabel.attributedText = myText;
+}
+@end
+</code></pre><pre><code class="swift">
+class TruncationHyphen: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let myString = "floccinaucinihilipilification"
+        
+        let paraph = NSMutableParagraphStyle()
+        paraph.alignment = .justified
+        paraph.hyphenationFactor = 1.0
+        
+        let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
+        
+        let myText = NSMutableAttributedString(string:myString,
+                                               attributes: [.font: myTextFont])
+        
+        myText.addAttribute(.paragraphStyle,
+                            value: paraph,
+                            range: NSMakeRange(0,1))
+
+        myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
 ## Graphical elements size
 ### Description
 Exactly like text, images and tab/tool bar items have a scalable size thanks to accessibility settings but **only since iOS11 with Xcode 9**.

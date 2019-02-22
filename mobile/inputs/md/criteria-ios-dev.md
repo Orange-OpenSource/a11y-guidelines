@@ -855,6 +855,72 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
 
+## Trait d'union de troncature
+### Description
+L'utilisation du `Dynamic Type` exposé dans le paragraphe précédent s'accompagne indéniablement de la troncature de mots en fonction du grossissement de texte choisi par l'utilisateur.
+</br>Malheureusement, cela n'est pas pris en compte nativement par le système et seule une intervention au niveau programmatique permet d'obtenir ce rendu visuel particulièrement apprécié.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/Troncature.png" />
+</br>L'idée est de spécifier l'utilisation d'un `NSMutableAttributedString` auquel on ajoute une propriété de type  `NSMutableParagraphStyle` comme indiqué par l'exemple ci-dessous :
+<pre><code class="objective-c">
+@interface TruncationHyphen () {
+    __weak IBOutlet UILabel * myLabel;
+}
+@end
+
+
+@implementation TruncationHyphen
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSString * myString = @"anticonstitutionnellement";
+    NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
+    
+    paraph.alignment = NSTextAlignmentJustified;
+    paraph.hyphenationFactor = 1.0;
+    
+    UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
+    UIFont * myTextFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle1] scaledFontForFont:myFont];
+    
+    NSDictionary * attributesDictionary = @{NSFontAttributeName:myTextFont};
+    NSMutableAttributedString * myText = [[NSMutableAttributedString alloc]initWithString:myString 
+                                                                               attributes:attributesDictionary];
+    
+    [myText addAttribute:NSParagraphStyleAttributeName
+                   value:paraph
+                   range:NSMakeRange(0, 1)];
+    
+    myLabel.attributedText = myText;
+}
+@end
+</code></pre><pre><code class="swift">
+class TruncationHyphen: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let myString = "anticonstitutionnellement"
+        
+        let paraph = NSMutableParagraphStyle()
+        paraph.alignment = .justified
+        paraph.hyphenationFactor = 1.0
+        
+        let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
+        
+        let myText = NSMutableAttributedString(string:myString,
+                                               attributes: [.font: myTextFont])
+        
+        myText.addAttribute(.paragraphStyle,
+                            value: paraph,
+                            range: NSMakeRange(0,1))
+
+        myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
 ## Taille des éléments graphiques
 ### Description
 Tout comme la taille des textes est adaptable selon les réglages d'accessibilité (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d'une barre de tabulation ou d'outils l'est aussi mais **uniquement depuis iOS11 avec Xcode 9**.
