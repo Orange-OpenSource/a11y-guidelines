@@ -57,7 +57,7 @@ Un titrage de page cohérent et pertinent&nbsp;:
 		(Titre 3) Êtes-vous éligible&nbsp;?
 ```
 
-## 3. Assurer un contraste suffisant entre prem les couleurs de premier plan et de fond
+## 3. Assurer un contraste suffisant entre les couleurs de premier plan et de fond
 **Cible&nbsp;:** tout le monde et en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.   
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
