@@ -147,7 +147,7 @@ func changeTraits() {
 ### Link
 - [`accessibilityTraits`](https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits)
 
-## Hide elements from accessibility
+## Hide elements
 ### Description
 It is possible via an accessibility attribute to hide elements from accessibility tools (e.g. VoiceOver). By extension, it is possible to force some elements to be visible to accessibility tools.
   
@@ -266,12 +266,13 @@ UIAccessibility.post(notification: .announcement,
 - [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
 - [`UIAccessibilityAnnouncementNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification)
 
-## Check accessibility options state
-### Description
-On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the `UIKit` framework.
+## Accessibility options
+### States
+On iOS, it is possible to check the accessibility options state. 
+</br>Is VoiceOver activated? Is the audio-mono mode activated? Several methods that are part of the `UIKit` framework can help you to check with that.
 </br>The most useful method is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
-</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a WWDC 2018 video *(Deliver en exceptional accessibility experience)* whose content is perfectly detailed in the [iOS WWDC section](./dev-ios-wwdc-18230.html) of this site.
-### Exemple
+</br></br>Some other methods are deeply explained in a WWDC 2018 video *(Deliver en exceptional accessibility experience)* whose content is perfectly detailed in the [iOS WWDC section](./dev-ios-wwdc-18230.html) of this site.</br></br>
+### Example
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
@@ -283,22 +284,66 @@ On iOS, it is possible to check the accessibility options state. Is VoiceOver ac
         
     print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
 </code></pre>
+### Events
+iOS sends many accessibility events when accessibility options have changed.
+</br>For example, if VoiceOver is deactivated, the running applications will receive the `UIAccessibilityVoiceOverStatusDidChangeNotification` event.
+</br>This is very useful when used simultaneously with `UIAccessibilityIsVoiceOverRunning`.
+
+Let's say the application behaves differently when VoiceOver is turned on.
+</br>What happens if VoiceOver is disabled ? This is exactly the use case when the system events can be used.
+</br>By listening to these events, it is possible to dynamically change how the application behaves.</br></br>
+### Example
+In this example, a method is fired when VoiceOver or Switch Control status has changed.
+<pre><code class="objective-c">
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
+                                               object:nil];
+}
+
+- (void)methodToBeCalled:(NSNotification *)notification {
+    
+    NSArray * checkStatus = @[@"NOK", @"OK"];
+    
+    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
+          checkStatus[UIAccessibilityIsSwitchControlRunning()],
+          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
+}
+</code></pre><pre><code class="swift">
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
+                                               object: nil)
+    }
+    
+    @objc private func methodToBeCalled(notification: Notification) {
+
+        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
+        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
+        
+        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
+    }
+</code></pre>
 ### Links
-- [`UIAccessibilityDarkerSystemColorsEnabled`](https://developer.apple.com/documentation/uikit/1615087-uiaccessibilitydarkersystemcolor)
-- [`UIAccessibilityIsAssistiveTouchRunning`](https://developer.apple.com/documentation/uikit/1648479-uiaccessibilityisassistivetouchr)
-- [`UIAccessibilityIsBoldTextEnabled`](https://developer.apple.com/documentation/uikit/1615156-uiaccessibilityisboldtextenabled)
-- [`UIAccessibilityIsClosedCaptioningEnabled`](https://developer.apple.com/documentation/uikit/1615112-uiaccessibilityisclosedcaptionin)
-- [`UIAccessibilityIsGrayscaleEnabled`](https://developer.apple.com/documentation/uikit/1615189-uiaccessibilityisgrayscaleenable)
-- [`UIAccessibilityIsGuidedAccessEnabled`](https://developer.apple.com/documentation/uikit/1615173-uiaccessibilityisguidedaccessena)
-- [`UIAccessibilityIsInvertColorsEnabled`](https://developer.apple.com/documentation/uikit/1615167-uiaccessibilityisinvertcolorsena)
-- [`UIAccessibilityIsMonoAudioEnabled`](https://developer.apple.com/documentation/uikit/1615123-uiaccessibilityismonoaudioenable)
-- [`UIAccessibilityIsReduceMotionEnabled`](https://developer.apple.com/documentation/uikit/1615133-uiaccessibilityisreducemotionena)
-- [`UIAccessibilityIsReduceTransparencyEnabled`](https://developer.apple.com/documentation/uikit/1615074-uiaccessibilityisreducetranspare)
-- [`UIAccessibilityIsShakeToUndoEnabled`](https://developer.apple.com/documentation/uikit/1615103-uiaccessibilityisshaketoundoenab)
-- [`UIAccessibilityIsSpeakScreenEnabled`](https://developer.apple.com/documentation/uikit/1615109-uiaccessibilityisspeakscreenenab)
-- [`UIAccessibilityIsSpeakSelectionEnabled`](https://developer.apple.com/documentation/uikit/1615154-uiaccessibilityisspeakselectione)
-- [`UIAccessibilityIsSwitchControlRunning`](https://developer.apple.com/documentation/uikit/1615131-uiaccessibilityisswitchcontrolru)
-- [`UIAccessibilityIsVoiceOverRunning`](https://developer.apple.com/documentation/uikit/1615187-uiaccessibilityisvoiceoverrunnin)
+All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
+</br></br>
 
 ## Notify a content change
 ### Description
@@ -724,66 +769,6 @@ Another grouping elements case could use the **shouldGroupAccessibilityChildren*
 ### Links
 - [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
-
-## Accessibility events
-### Description
-iOS sends several accessibility events to the applications. They are sent when accessibility options are changed.
-</br>For example, if VoiceOver is deactivated, the running applications will receive the `UIAccessibilityVoiceOverStatusDidChange` event.
-</br>This is very useful when used simultaneously with `UIAccessibilityIsVoiceOverRunning`.
-
-Let's say the application behaves differently when VoiceOver is turned on.
-</br>What happens if VoiceOver is disabled ? This is exactly when the system events can be used.
-</br>By listening to these events, it is possible to dynamically change how the application behaves.
-### Example
-In this example, a method is fired when VoiceOver or Switch Control status has changed.
-<pre><code class="objective-c">
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
-                                               object:nil];
-}
-
-- (void)methodToBeCalled:(NSNotification *)notification {
-    
-    NSArray * checkStatus = @[@"NOK", @"OK"];
-    
-    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
-          checkStatus[UIAccessibilityIsSwitchControlRunning()],
-          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
-}
-</code></pre><pre><code class="swift">
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
-                                               object: nil)
-    }
-    
-    @objc private func methodToBeCalled(notification: Notification) {
-
-        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
-        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
-        
-        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
-    }
-</code></pre>
-### Link
-All accessibility events are available on the <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">official documentation from Apple</a>.
 
 ## Text size
 ### Description
