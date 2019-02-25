@@ -93,13 +93,13 @@ Des extensions à installer dans votre navigateur permettent d'extraire la liste
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>
 
-## 3. Assurer un contraste suffisant entre texte et fond
+## 3. Assurer un contraste suffisant entre les couleurs de premier plan et de fond
 
 **Cible&nbsp;:** tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.   
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**  
-Le niveau de contraste entre le texte et l’arrière-plan même pour des éléments graphiques porteurs de sens doit être suffisamment élevé.
+Le niveau de contraste entre le premier plan et l’arrière-plan même pour des éléments graphiques non-textuels porteurs de sens doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
 
 **Exemple non valide&nbsp;:**  
@@ -116,7 +116,7 @@ Les images suivantes sont porteuses d’information pour les utilisateurs. Elles
 - S'assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :
   - De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
   - De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.
-- S'assurer que Les objets graphiques porteurs d'information, les composants d’interface utilisateur et les états de l'interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:
+- S'assurer que Les objets graphiques non-textuels porteurs d'information, les composants d’interface utilisateur et les états de l'interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:
 
   -	si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure (cartes de chaleur…)
   -	si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.

@@ -17,9 +17,15 @@ Some extensions allow you to perform automated tests on the current page.
 &nbsp;
 
 ## WAVE Toolbar
-[WAVE Toolbar](http://wave.webaim.org/extension/) is a toolbar extension for Chrome. It allows to perform several tests on the current page just like aXe. Unlike aXe, which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A [bookmarklet (or favelet) for WAVE](http://wave.webaim.org/help) is also available.
+[WAVE Toolbar](http://wave.webaim.org/extension/) is a toolbar extension for Chrome. It allows to perform several tests on the current page just like aXe (nearly the same auto tests as aXe). Unlike aXe, which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A [bookmarklet (or favelet) for WAVE](http://wave.webaim.org/help) is also available.
 
 ![screenshot of the WAVE Toolbar extension](images/wave.png)
+
+
+Wave toolbar provides a large number of automatic tests but also a number of semi-manual tests that require human validation, called alerts. Whether alerts or errors, we can examine the  <abbr>DOM</abbr> node that generated this feedback and access more detailed information on the accessibility criteria concerned and how to fix it.
+
+This extension also allows a direct visualization of the hierarchy of the titles of the page (via a tab in the sidebar), a display of the page with and without <abbr> CSS </ abbr> and a visualization of contrast issues via icons located in the page.
+
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
