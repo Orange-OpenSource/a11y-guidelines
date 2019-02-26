@@ -768,12 +768,10 @@ Une autre possibilité de groupement d'éléments pourrait utiliser l’attribut
 - [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
 
-
-
 ## Taille des textes
 ### Description
-Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'une application à l’aide du paramétrage du téléphone.
-</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'une application à l’aide des réglages du terminal.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:
  - **Utiliser impérativement les styles de texte** proposés selon la version d'iOS avec laquelle l'application est développée.
  </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" />
