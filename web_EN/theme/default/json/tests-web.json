@@ -1,0 +1,1214 @@
+[
+  {
+    "themes": "Textual content",
+    "title": "Set a title for each page",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Examine the page title (<code>&lt;TITLE&gt;[title]/TITLE&gt;</code>)",
+      "or read the title from the browser tab"
+    ],
+    "check": [
+      "Check that the page title is filled in",
+      "Verify that the page title is unique, it must allow the user to understand the context of the page"
+    ],
+    "result": [
+		"Each page has a unique and descriptive title, <br/>from the most precise to the most general. <br/>example :  [page content summary - site name]"
+	],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Give a title to headings",
+    "type": [
+      "Wave toolbar"
+    ],
+    "tests": [
+      "Launch Wave > Outline",
+      "Examine the headings hierarchy"
+    ],
+    "check": [
+      "Check that the headings are relevant and not empty",
+      "Check that the headings follow each other in a logical sequence",
+      "Check for skips in the heading hierarchy"
+    ],
+    "result": [
+      "All content, visually treated as headings, has a heading semantics (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags)",
+      "The level headings are structured in a logical way"
+    ],
+    "exception": "Do not take into account hidden headings (visibility:hidden or display:none) via CSS directives. If one of these masked titles is likely to appear, observations on the new structure of the titration must be made again.",
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Use HTML semantics",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Disable page styles: Under Firefox > View > Page style > No style",
+      "Run the code inspector of the browser"
+      "Examine the content"
+    ],
+    "check": [
+		"Check that appropriate HTML semantics are used to markup content, including: <ul><li>list (see details next step)</li><li>quote (presence of <code>&lt;blockquote>&lt;</code> or <code>&lt;q&gt;</code> when necessary)</li><li>link (<code>&lt;a&gt;</code>), for any change of context via loading a new URL</li><li>li>button (<code>&lt;button>&lt;button>, <code>&lt;input type='button'&gt;</code>), for any triggering of an action, validation or selection</li></ul>"
+		],
+    "result": [
+		"All content, visually treated as lists, has a semantic HTML list (&lt;ol&gt; for ordered lists, &lt;ul&gt; for non-ordered lists)",
+		"All quotes have HTML quotation list semantics",
+		"All interactive elements that cause a context change via URL loading, have HTML link semantics (<code>&lt;a&lt;</code>)",
+		"All interactive elements allowing the triggering of an action, validation or selection, have HTML button semantics (<code>&lt;button>&lt;button>, <code>&lt;input type='button'&gt;</code>)"
+		],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Use HTML semantics / list semantics",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+		"Disable page styles: Under Firefox > View > Page style > No style",
+		"Run the code inspector of the browser"
+		"Examine the lists"
+	],
+    "check": [
+      "Check that the page uses HTML lists",
+      "Check for the absence of a list of a single item",
+      "Check for the absence of an empty list"
+    ],
+    "result": [
+      "Existence of relevant enumeration lists"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Use HTML semantics / HTML validation",
+    "type": [
+      "W3C validator"
+    ],
+    "tests": [
+      "Validate the page in the W3C validator"
+    ],
+    "check": [
+		"At least check: <ul><li> elements have start and end tags,</li><li>> elements are nested according to their specifications,</li><li>> elements do not contain duplicate attributes,</li><li>each id is unique</li></ul>"
+		],
+    "result": [
+      "All the elements present in the beginning and end tags",
+      "All elements are nested according to their specification."
+      "No element contain duplicated attributes."
+      "No duplicated ID attributes"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Declaring the main language and language changes / main language",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Examine the element <code>&lt;HTML&lt;</code>"
+    ],
+    "check": [
+      "Check for the presence of a lang attribute",
+      "The value of the lang attribute must match the main language of the document"
+    ],
+    "result": [
+      "A language attribute is present in the <code>&lt;HTML&gt;</code> element of the page",
+      "The value of the lang attribute matches to the main language of the document"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Declaring the main language and language changes / main language",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Examine foreign language terms"
+    ],
+    "check": [
+      "Check that a language attribute is present for the foreign language words and expressions"
+    ],
+    "result": [
+		"The lang attribute must be present in the element encapsulating the text. <br/>ex : <code>&lt;q lang='en'en'&gt;[...]&lt;/q&gt;</code>"
+	],
+    "Exception": "For words or expressions in a foreign language that have passed into common use (Google, newsletter...) or proper names, do not indicate a change of language.",
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Structure data tables",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Locate the <code>TABLE</code> by searching on the term <code>TABLE</code>",
+      "Examine the <code>TABLE</code>"
+    ],
+    "check": [
+		"Check that the tables are not used for layout purposes",
+		"<strong>For data tables: </strong><br/> Check that the data tables have a non-empty caption element, or a level title placed just before the table",
+		"<strong>Single entry table:</strong><br/> Check for the presence of headers ( <code>TH</code>) for simple tables",
+		"<strong>Table with 2 entries: </strong><br/> For each <code>TH</code> check the presence of an attribute <code>scope='col'</code> for column headers, <br/> and the presence of a <code>scope='row'</code> for row headers",
+		"<strong>Complex tables:</strong><br/> Check for the presence of <code>TH</code> headers or attributes <code>id</code> and <code>headers</code>",
+		"Check the presence of a summary explaining the structure of the table. <br/>HTML5: presence of a summary, if necessary in accessible masking or <code>display:none</code>.<br/>The summary is linked to the table via a <code>aria-describedby</code><br/> Previous version: summary present in an attribute <code>summary</code>"
+	],
+    "result": [
+		"Tables are used only for data presentation",
+		"The tables have a legend (caption or level title placed just before)",
+		"Simple tables have <code>TH</code> headers",
+		"Double entry tables have <code>TH</code> headers as well as <code>scope='col'</code> and <code>scope='row'</code> attributes",
+		"Complex tables have headers (TH + scope attributes) or complex headers based on the use of attributes <code>ID</code> and <code>HEADERS</code>",
+		"Complex tables have a relevant summary"
+	],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Define text alternatives for images and frames / images",
+    "type": [
+      "aXe"
+    ],
+    "tests": [
+      "Launch aXe"
+    ],
+    "check": [
+      "Check that all images have an attribute <code>ALT</code>",
+      "Check that all <code>iframe</code> and <code>frame</code> contain a non-empty <code>TITLE</code> attribute"
+    ],
+    "result": [
+      "No error due to the absence of <code>ALT</code> attribute",
+      "No error due to the absence of <code>TITLE</code> attribute on <code>frame</code> and <code>iframe</code>"
+    ],
+    "exception": [
+      "Presence of an attribute <code>ALT</code> for all images",
+      "Presence of an attribute <code>TITLE</code> for all <code>frame</code> and <code>iframe</code>"
+    ],
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Set a text alternatives for images and frames / background",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+		"Disable page styles<br/>Firefox > Display > Page style > No style"
+	],
+    "check": [
+      "Check that there is no loss of information due to the absence of integrated background images (CSS)"
+    ],
+    "result": [
+      "No information-carrying images inserted in CSS"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Set a text alternatives for images and frames / alternatives for images",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+		"Run the code inspector of the browser"
+		"Examine the images"
+	],
+    "check": [
+      "Manually check that the value of the <code>ALT</code> attributes is relevant:",
+      "<strong>Image link: </strong><br/> check that the <code>ALT</code> attribute of each link image is relevant to its link function",
+      "<strong>Information-carrying image:</strong><br/> check that the <code>ALT</code> attribute of each image is relevant to the role of the image in the page",
+      "<strong>Image containing text: </strong><br/> check that the <code>ALT</code> attribute includes at least the text of the image",
+      "<strong>Decorative image:</strong><br/> check that the <code>ALT</code> attribute is empty",
+      "<strong>Complex image whose content of the <code>ALT</code> would be too long (schematics, graphs...) </strong><br/> Check that for any image description too long to be put in an attribute <code>ALT</code>, the description of the image in html text form is either present in the page or a link points to an html page containing the description, and this, near the image to be described"
+    ],
+    "result": [
+      "<strong>Image link:</strong> the target of the link is specified in the <code>ALT</code>",
+      "<strong>Image carrier of information:</strong> the <code>ALT</code> attribute contains the information conveyed by the image",
+      "<strong>Image containing text:</strong> the <code>ALT</code> attribute contains text conveyed by the image",
+      "<strong>Decorative image:</strong> the <code>ALT</code> attribute is empty",
+      "<strong>Complex image: </strong> a description of the image is available in the form of a text, either directly in the page or accessible via a link near the image"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Set a text alternatives for images and frames / alternatives for frames",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+		"Run the code inspector of the browser"
+		"Examine the frames"
+	],
+    "check": [
+      "Verify that the value of the <code>TITLE</code> attributes describes the content or function of <code>iframe</code> or <code>frame</code>"
+    ],
+    "result": [
+      "All frames have a relevant <code>TITLE</code >attribute"
+    ],
+    "exception":"."
+    "shortcuts": "Technical iframes: http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Provide accessible audio or video tracks",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Examine the audio and video content of the page"
+    ],
+    "check": [
+		"Verify that for any audio or video track, a complete transcript<br/>(text containing all visual and auditory information)<br/>in html text form is either present in the page,<br/>or through a link (near the element) to a html page containing this transcript"
+	],
+    "result": [
+      "Presence of a complete transcript in the same page or in another page via a link"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Provide accessible audio or video tracks / auto-play",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Examine the audio and video content of the page"
+    ],
+    "check": [
+      "Make sure no audio or video tracks is automatically played when the page is launched."
+    ],
+    "result": [
+      "Audio and video tracks do not start automatically when the page is loaded."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Provide accessible audio or video tracks / accessible control mechanisms",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Examine the audio and video content of the page"
+    ],
+    "check": [
+      "Check for each audio or video track that there is a control mechanism (pause, play)",
+      "Manually check that it is possible to stop/resume playback of an audio or video track with a mouse",
+      "Manually check that it is possible to stop/resume playback of an audio or video track with a keyboard"
+    ],
+    "result": [
+		"A control mechanism for the audio or video track is present. <br/>This mechanism allows the media to be played or paused, regardless of the technical aid used."
+	],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Provide accessible audio or video tracks / flashes",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Examine the audio and video content of the page"
+    ],
+    "check": [
+      "Make sure that any video does not show rapid flash (more than 3 flashes per second)"
+    ],
+    "result": [
+      "No rapid flash"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Non-text content",
+    "Title": "Avoid captchas",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Examine the captcha"
+    ],
+    "check": 
+	[
+      "Verify that for any visual-only or sound-only captcha, at least one of the alternatives below is given: <ul><li>audio + visual captcha </li><li> logical tests (question whose answer is obvious, simple mathematical test...)</li><li>There is another solution to access the functionality secured by CAPTCHA</li></ul>"
+    ]
+	,
+    "result": [
+      "The page proposes at least one of the solutions below: <ul><li>captcha audio + visual</li><li><li>captcha audio or visual + logical tests (question with obvious answer, simple mathematical test...)</li></ul>"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Colors and contrasts",
+    "title": "Provide enough contrast between text and background / texts",
+    "type": [
+      "aXe"
+    ],
+    "tests": [
+      "Launch aXe"
+    ],
+    "check": [
+      "Check that the contrast is sufficient to understand the information conveyed by all interactive components, texts"
+    ],
+    "result": [
+      "Presence of sufficiently contrasting elements"
+    ],
+    "Exception": "Exception on the color pair #F16E00 / #FFFFFFFF, for interfaces implementing the latest version of the Orange brand.",
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Colors and contrasts",
+    "title": "Provide enough contrast between text and background / images and components",
+    "type": [
+      "Color Contrast Analyser"
+    ],
+    "tests": [
+      "Launch Color Contrast Analyser"
+    ],
+    "check": [
+      "Verify that text images, graphics, icons, and interactive components have sufficient contrast to transmit information."
+    ],
+    "result": [
+      "Presence of text in the form of images, graphic objects, icons, and interactive components with sufficient contrast"
+    ],
+    "Exception": "Are excluded from the scope: <ul><li> logos</li><li> if a text, such as a label, a data table, provides the same information as the icon or graphic</li><li> if the lack of contrast of the image does not prevent the understanding of the content or its function</li><li> inactive components</li></ul>",
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Colors and contrasts",
+    "title": "Do not use colour or sensory characteristics as the unique source of information / color",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Identify elements using color"
+    ],
+    "check": [
+		"Check that color is not the only way to convey information: <br/>at least one other visual means is available to obtain the same information"
+	],
+    "result": [
+      "Information conveyed by colour can also be obtained by means of an explicit text",
+      "The information conveyed by colour is complemented by other visual information (example: icons use different colours, but also different shapes)"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Colors and contrasts",
+    "title": "Do not use colour or sensory characteristics as the unique source of information / other sensory information",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Identify elements using sensory information (e.g. position, size, sound) to convey information"
+    ],
+    "check": [
+      "Verify that the information conveyed by sensory information can also be obtained by a text, or an explicit message"
+    ],
+    "result": [
+      "A text, or an explicit message is present to convey the information"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Link and button labels must be understandable out of context / identical labels",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+		"Run the code inspector of the browser"
+		"Locate links, buttons and all navigation items",
+		"Inspect the text wording of these items, <br/>If the test cannot be validated in step 3, inspect the <code>ARIA-LABEL</code> and <code>TITLE</code> attributes"
+	],
+    "check": [
+      "Check that there are no identical labels pointing to different destinations"
+    ],
+    "result": [
+      "Links, buttons and navigation items with identical wording, point to the same target, or do the same action."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Link and button labels must be understandable out of context / labels",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Locate links, buttons and all navigation items",
+      "Inspect the text wording of these items",
+      "If the test cannot be validated as early as step 3, inspect the <code>ARIA-LABEL</code> and <code>TITLE</code> attributes""
+    ],
+    "check": [
+      "Verify that it is possible to determine the action or destination of a link or button, only from its text label"
+    ],
+    "result": [
+      "Links, buttons and navigation items are understandable out of context"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Warn the user when opening a new window",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Locate links, buttons and all navigation items",
+      "Inspect the text wording of these items",
+      "If the test cannot be validated as early as step 3, inspect the <code>ARIA-LABEL</code> and <code>TITLE</code> attributes"
+    ],
+    "check": [
+      "Make sure that users are informed when a new window is opened in the text label of the link"
+    ],
+    "result": [
+		"Presence of a mention specifying the opening of a new window<br/>In general, the title of the link followed by the mention 'new window'. <br/>Example: google (new window)"
+	],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Provide skip links",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+		"Disable page styles<br/>under Firefox > Display > Page style > No style"
+	],
+    "check": [
+      "Check for the presence of skip links (usually the first links on the page)"
+    ],
+    "result": [
+      "Presence of avoidance links"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Ensure that the user keeps control during interactions - On Focus / On Input",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Follow an user path within the page (via mouse navigation, then keyboard navigation)"
+    ],
+    "check": [
+		"When using forms, or any interactive component, check that there is no change of context (modification of all or almost all of the page content, automatic shift of focus, opening of a new window): <br/>1.1. when an element receives focus<br/>1.2. when entering data<br/>1.3. when activating a form element other than a button"
+	],
+    "result": [
+      "Forms are not automatically submitted when an element is focused",
+      "The content of the page is not automatically modified (either dynamically or after reloading) as soon as an element takes a focus",
+      "Forms are not submitted automatically upon data entry, or the activation of an input other than a button",
+      "A new page is not opened as soon as an element is focused"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Ensuring that the user keeps control during interactions - Content on Hover or Focus",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Identify additional content displayed when you focus or hover the mouse (e.g. tooltip)"
+    ],
+    "check": [
+      "Verify that the user can move the pointer from the triggering element to the additional content, without it closing",
+      "Verify that a mechanism is in place to remove the additional content without having to move the pointer or focus",
+      "Check that the content that appeared remains visible as long as the user does not interact with the trigger element and the content remains valid"
+    ],
+    "result": [
+      "The additional content remains displayed when moving the pointer from the trigger element to the new content",
+      "The additional content can be removed without the need to move the pointer or focus (e. g. with the escape key)",
+      "The additional content is persistent until the focus or hover on the triggering element is removed, until the user removes it or until the content is no longer valid."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Ensure that the user keeps control during interactions - Time Adjustable",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Identify whether the user should complete a form or perform actions within a limited time frame."
+    ],
+    "check": [
+		"Verify that one of the following actions is possible: <ul><li><li>disable the timeout</li><li>increase the time limit</li><ul>"
+	],
+    "result": [
+      "The user can disable, or increase the timeout duration"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Ensure that the user keeps control during interactions - Character key shortcut",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Identify if one-touch shortcuts are available in the application"
+    ],
+    "check": [
+		"Check that keyboard shortcuts based on a single key meet one of the following conditions: <ul><li>shortcuts can be disabled by the user</li><li>shortcuts can be modified, with the possibility of adding 1 or more characters to the combination</li><li>shortcuts are only active when focusing on the element</li></ul>"
+	],
+    "result": [
+      "One-touch shortcuts can be disabled or reprogrammed."
+    ],
+    "Exception": "User components (e. g. menu) are not concerned, offering a shortcut only when the focus is on the component.",
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Provide multiple access and a location",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Browse the page",
+      "Identify navigation and search elements"
+    ],
+    "check": [
+		"Verify that at least 2 of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu, presenting the current position of the user</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>>"
+	],
+    "result": [
+		"2 of the following mechanisms are present on the page: <ul><li>provide a main navigation menu, presenting the current position of the user (be careful, the information must not be based on color only)</li><li>provide a breadcrumb trail</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li><</ul>"
+	],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Provide multiple access and location / location",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Browse the page",
+      "Identify navigation and search elements"
+    ],
+    "check": [
+      "Verify that the user's current position within a content is visually and codewise given"
+    ],
+    "result": [
+      "A visual indication is present to identify the active content (be careful, the information must not be based on color only)"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Allow to know the result of a user interaction using contextual messages",
+    "type": [
+      "Screen reader"
+    ],
+    "tests": [
+      "Launch a screen reader."
+      "Follow an user path",
+      "Trigger alert messages (message on interaction results, waiting message, message related to a change of context)",
+      "Run the code inspector of the browser"
+    ],
+    "check": [
+		"Verify that a mechanism based on roles (status, alert, alertdialog...) and/or <code>aria-live</code> dynamic regions is implemented. <br/>Example : http://a11y-guidelines.orange.com/web/aria-status.html"
+	],
+    "result": [
+      "Messages are automatically vocalized."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Common navigation",
+    "title": "Allowing control of animations",
+    "type": "Manual test"],
+    "tests": [
+      "Browse the page",
+      "Identify any content in motion, automatically updated, flashing or scrolling, and for more than 5 seconds"
+    ],
+    "check": [
+      "Check for each of these contents that a mechanism is present to allow the user to pause/start the animation",
+      "Check that this mechanism is accessible with mouse and keyboard",
+      "Check that no element of the page contains a fast flash of light (more than 3 repetitions per second)"
+    ],
+    "result": [
+		"The user can pause / restart the animations. <br/>The animations do not contain flash."
+	],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Allow to use the main features of the application with the keyboard",
+    "type": [
+      "Keyboard navigation"
+    ],
+    "tests": [
+      "Scroll through the page using the keyboard using the 'tab' key"
+    ],
+    "check": [
+      "Check that you get a result equivalent to a mouse navigation for the main features of the page"
+    ],
+    "result": [
+      "All interactive elements can be reached from a keyboard navigation",
+      "All interactive elements are usable with keyboard interactions"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Make the focus path sequential and logical without keyboard trap",
+    "type": [
+      "Keyboard navigation"
+    ],
+    "tests": [
+		"Disable page styles<br/>under Firefox > Display > Page style > No style",
+		"Scroll through the page using the keyboard using the 'tab' key"
+	],
+    "check": [
+      "Checking the order of focus of the elements (buttons, links, form fields) is consistent with the order resulting from the visual aspect"
+    ],
+    "result": [
+      "The keyboard path through the page is logical."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Make the focus visible at all times / outline",
+    "type": [
+      "Keyboard navigation"
+    ],
+    "tests": [
+      "Scroll through the page using the keyboard using the 'tab' key"
+    ],
+    "check": [
+      "Verify that the focus received by the different elements (buttons, links, form fields) is visible"
+    ],
+    "result": [
+      "The focus indicator is visible."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": [ "Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Make the focus visible at all times / contrast",
+    "type": [
+      "Keyboard navigation"
+    ],
+    "tests": [
+      "Run the code inspector of the browser"
+      "Scroll through the page with the keyboard using the 'tab' key",
+      "Identify the color of the focus and the background color."
+      "Test with the Color Contrast Analyzer"
+    ],
+    "check": [
+      "Check that the level of contrast between the color of the focus indicator and the background is sufficient."
+    ],
+    "result": [
+      "The contrast level is sufficient 3:1"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Use relative sizes and responsive design",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Browser > Display > Text only zoom",
+      "Zoom to 200%"
+    ],
+    "check": [
+      "Check that there are no truncated / hidden texts or features"
+    ],
+    "result": [
+      "Absence of content and functionality, truncated or hidden"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Use relative sizes and responsive design / Reflow",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Sizing the viewport to 320 px CSS wide"
+    ],
+    "check": [
+      "Check that no scroll bars appear horizontally"
+    ],
+    "result": [
+      "Pages designed for vertical scroll (i. e. with horizontal text), do not show a horizontal scrollbar when a display width is set to 320px CSS"
+    ],
+    "Exception": "Some content such as maps, data tables, games, etc., may require a 2-dimensional scroll."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Allow text spacing",
+    "type": [
+      "Bookmarklet"
+    ],
+    "tests": [
+      "Go to our guidelines site: http://a11y-guidelines.orange.com/web_EN/inc-dev-aerer-texte.html",
+      "Add the bookmarklet to your favorites",
+      "Consult the page",
+      "Enable bookmarklet"
+    ],
+    "check": [
+		"Spaces are adjusted according to the criteria: <ul><li> The height of the lines must be adjustable to at least 1.5 times the font size</li><li>>The space between two paragraphs must be adjustable to at least 2 times the font size</li><li>The spacing between the letters must be adjustable to 0.12 times minimum font size</li><li><li>The spacing between words must be adjustable to at least 0.16 times the font size</li></ul>",
+		"Absence of truncated or overlayed content"
+	],
+    "result": [
+		"The spacing has been adjusted according to the criteria. <br/>The texts are not truncated or overlaid."
+	],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Identify and keep the consistency of the groupings and the different regions of the page",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Browse the page",
+      "Identify the groups and main regions of the page"
+    ],
+    "check": [
+      "Check that the navigation mechanisms are always located in the same place in a page set",
+      "Verify that components and groupings that have the same function are identified (visually and semantically) in the same way",
+      "Check that the areas of the page are clearly marked out (borders, nets, sufficient contrast...) or that there is a way to visually distinguish the groups (submenu, drop-down list...) as well as the different regions of the page"
+    ],
+    "result": [
+      "The different regions are clearly identifiable visually."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Identify and keep the consistency of the groupings and the different regions of the page / links",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Browse the page",
+      "Identify the links in the body of the text"
+    ],
+    "check": [
+      "Check that the links in the body of the text are easily visually identifiable by a means other than colour (underlined, bold...) in relation to the rest of the text",
+    ],
+    "result": [
+      "Links are visually identifiable from the text by a means other than colour"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Identify and keep the consistency of the groupings and the different regions of the page / landmarks",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Browse the page",
+      "Identify the groupings and main regions of the page",
+      "Run the code inspector of the browser"
+    ],
+    "check": [
+      "Verify that each region has semantics through HTML5 structure tags"
+    ],
+    "result": [
+      "The different regions are clearly identifiable codewise"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Define sensitive areas of sufficient size",
+    "type": [
+      "Manual test - Code inspector"
+    ],
+    "tests": [
+      "Browse the page",
+      "Identify interactive elements"
+    ],
+    "check": [
+      "Check that the size of these elements exceeds 44px by 44px"
+    ],
+    "result": [
+      "All interactive elements have dimensions that exceed 44px by 44px"
+    ],
+    "Exception": "<ul><li>Anchor / internal link to the page</li><li>>Link within a paragraph</li><li>Link within a sentence</li><li>Link within a footnote (at the end of a paragraph or sentence</li><li>A clickable icon within a sentence or paragraph</li></ul>",
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Associate a relevant label to each form field - Label",
+    "type": [
+      "aXe"
+    ],
+    "tests": [
+      "Launch aXe"
+    ],
+    "check": [
+		"Check for errors relating to unlabelled form elements.<br/><br/>One of the following solutions must be implemented, in order of preference: <ul><li>Presence of an <code>&lt;label&gt;</code> element correctly linked to its field</li><li>Presence of <code>title</code> and <code>aria-label</code> attributes</li><li>Presence of the <code>aria-label</code> attribute</li><li>Presence of the <code>title</code> attribute</li></ul>"
+	],
+    "result": [
+		"Presence of a <code>label</code> tag for every form field"
+	],
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Associate a relevant label to each form field - Relevance of labels",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Manual test."
+      "Browse forms"
+    ],
+    "check": [
+      "Check that the text of the labels (<code>label</code> element, or <code>aria-label</code> attribute, or <code>title</code> attribute) is relevant"
+    ],
+    "result": [
+      "Presence of relevant content in <code>label</code> tag for every form field"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Associate a relevant label to each form field - Data formats",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Manual test."
+      "Browse forms"
+    ],
+    "check": [
+		"Check that the label text indicates the data format when necessary. <br/><br/> One of the following solutions must be implemented: <ul><li>the format is indicated directly in the label</li><li>the format is linked to the field via an <code>aria-describedby</code> attribute</li></li>ul>"
+	],
+    "result": [
+      "Presence of input formats"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Associate a relevant label to each form field - Mandatory field",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Manual test."
+      "Browse forms"
+    ],
+    "check": [
+		"Verify that the mandatory fields are visually and codewise identifiable: <ul><li>the visual identification of the mandatory field is not based only on the color</li><li>One of the following techniques is implemented to convey the information codewise: <ul><li>the visual information is integrated into the label. An alternative text is available to convey the information</li><li>>presence of a required attribute</li><li><li>presence of an <code>aria-required</code> attribute</li></ul></li></li></ul>"
+	],
+    "result": [
+      "Mandatory fields are visually and codewise identifiable."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Associate a relevant label to each form field - Group",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Manual test."
+      "Browse forms"
+    ],
+    "check": [
+		"Verify that fields of the same nature are grouped. <br/><br/>>One of the following solutions must be implemented: <ul><li>>presence of a fieldset</li><li>presence of a role='group' attribute (or radiogroup for radio buttons) on the parent element encapsulating the fields</li></ul>"
+	],
+    "result": [
+      "Fields of the same nature are grouped together."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Detect, identify errors and suggest corrections / relevance of messages",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Manual test."
+      "Browse forms",
+	  "Fill in forms with incorrect data",
+      "Submit forms"
+    ],
+    "check": [
+     "Check that error messages are present, and relevant"
+    ],
+    "result": [
+      "Errors are detected, and relevant"
+    ],
+    "exception": [],
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Forms",
+    "title": "Detect, identify errors and suggest corrections / identify errors",
+    "type": [
+      "Manual test"
+    ],
+    "tests": [
+      "Manual test."
+      "Browse forms",
+	  "Fill in forms with incorrect data",
+      "Submit forms"
+    ],
+    "check": [
+      "Check that one of the following solutions is implemented: <ul><li>The error message is present before the form.<br/>The message lists the fields with errors.<br/>The focus is given to the element containing the error message.<br/>Anchors allow the user to position themselves on error fields</li><li>Error messages are added to field labels.</li><li>>Error messages are not put into the labels, but a mechanism is present in order to link fields and errors codewise: see <code>aria-describedby</code></li></ul>"	  
+    ],
+    "result": [
+		"Errors are detected."
+		"An accessible mechanism is present to identify errors"
+	],
+    "exception": [],
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Touch and interactions",
+    "title": "Allow zooming",
+    "type": [
+      "Manual test - Code inspector",
+	  "aXe"
+    ],
+    "tests": [
+      "Examine the <code>name='viewport'</code> meta of the <code>header</code> of the page",
+	  "Or use axis (recommended for qualifying profiles)"
+    ],
+    "check": [
+      "Check that for the <code>&lt;meta name=the viewport'&gt;</code> <ul><li>The <code>user-scalable='no'</code> parameter is not present</li><li>And the maximum-scale parameter is not less than 2</li></ul>"
+    ],
+    "result": [
+      "The page does not contain in the <code>&lt;meta name='viewport' &gt;</code> <ul><li>The <code>user-scalable='no'</code> parameter</li><li>And the maximum-scale parameter is not less than 2</li></ul>"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Touch and interactions",
+    "title": "Allow to cancel the triggering of gestural interactions",
+    "type": [
+      "Manual test - Mobile-based"
+    ],
+    "tests": [
+      "Browse interactive elements (hyperlinks, button, input, UI components), with the mouse"
+    ],
+    "check": [
+      "Check that no events are triggered at the click down"
+    ],
+    "result": [
+      "No event is triggered until the mouse click is released."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Touch and interactions",
+    "title": "Allow to cancel the triggering of gestural interactions",
+    "type": [
+      "Manual test - Mobile-based"
+    ],
+    "tests": [
+      "Browse interactive elements (hyperlinks, button, input, UI components) with the keyboard"
+    ],
+    "check": [
+      "Check that no events are triggered when the focus is lost."
+    ],
+    "result": [
+      "No event is triggered when the interactive element loses focus."
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Touch and interactions",
+    "title": "Allow to cancel the triggering of gestural interactions",
+    "type": [
+      "Manual test - Mobile-based"
+    ],
+    "tests": [
+		"Identify all elements that can be activated by a single point (hyperlinks, button, input, UI components)",
+		"Check that at least one condition is true: <ul><li>No Down event<br/>The pointer event is not used to perform any part of the function</li><li><li>Drop or Cancel<br/>The completion of the function is on the Up, and a mechanism is available to drop the function before the end or to cancel the function once completed</li><li>>Reverse on Up<br/>The Up event reverses any result of the previous Down event</li>"
+	],
+    "check": [
+      "If an action must be absolutely triggered on the down event, then check that there is a mechanism to cancel the action."
+    ],
+    "result": [
+      "A modal box appears asking for confirmation of the action"
+    ],
+    "exception": [
+      "The function on the Down event is essential, functions that emulate a keyboard or keypad are considered essential."
+    ],
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  },
+  {
+    "themes": "Touch and interactions",
+    "title": "Offer an alternative to complex gestures",
+    "type": [
+      "Manual test - Mobile-based"
+    ],
+    "tests": [
+      "Browse the application",
+      "Identify multi-pointers interactions (requiring several fingers)"
+    ],
+    "check": [
+      "Check that for any multi-pointers requiring multiple fingers and/or trajectories to perform an action, an alternative requiring a single pointer (a single finger) and no trajectory is available"
+    ],
+    "result": [
+      "For a zoom action on a map when pinched, an alternative in the form of <code>&lt;button&gt;</code>[+] and[-] is proposed"
+    ],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
+  },
+  {
+    "themes": "Touch and interactions",
+    "title": "Give access to content regardless of screen orientation",
+    "type": [
+      "Manual test - Mobile-based"
+    ],
+    "tests": [
+      "View content in portrait orientation",
+      "View content in landscape orientation"
+    ],
+    "check": [
+      "Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"
+    ],
+    "result":"",
+    "exception":"."
+    "shortcuts":"",
+    "Profiles": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
+  },
+  {
+    "Topics": "Technical assistance",
+    "title": "Make sure the main features can be used with screen readers",
+    "type": [
+      "Screen reader"
+    ],
+    "tests": [
+      "Browse the application"
+    ],
+    "check": [
+		"Check that all features are available from a screen reader: <ul><li>Content is correctly vocalized</li><li>Features are usable from a screen reader</li></ul>"
+	],
+    "result": [
+		"The main features can be used from a screen reader"
+	],
+    "exception":"."
+    "shortcuts":"",
+    "profiles": "Expert Accessibility"]
+  }
+]
