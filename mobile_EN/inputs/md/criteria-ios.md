@@ -423,9 +423,7 @@ Ensure the understanding of the application text.
 **Target&nbsp;: ** everyone, especially people with visual and/or motor impairments.  
 **When&nbsp;: ** as of design and during development.
 
-**Description&nbsp;: **
-
-The screen orientation mustn't impact the access of an application content.
+**Description&nbsp;: ** the screen orientation mustn't impact the access of an application content.
 </br>It's highly recommended to :
 - **Implement both the portrait and the landscape modes** to be easily toggled by the user if it doesn't go against some functional constraints of the application itself (`serious game` for instance).
 - Provide for iPad screen sizes in order to facilitate reading and gestures.
@@ -436,11 +434,86 @@ The screen orientation mustn't impact the access of an application content.
 - Very accurate definition of the way the transitions between portrait and landscape modes should occur.
 - Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the `Dynamic Type`).
 - Appropriate settings in the integrated development environment.
-</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" />
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/orientation.png" />
 
-**Users’ goal&nbsp;: **
+**Users’ goal&nbsp;: ** improve a better legibility of the content.</br></br>
 
-Improve a better legibility of the content.
+## Accessibility options
+**Target&nbsp;:** everyone.  
+**When&nbsp;:** as of design and during development.
+
+**Description&nbsp;:** the accessibility options located in the mobile settings are all about to improve the experience of an impaired user who can be significantly helped by these options.
+
+It's then primordial :
+- To **understand perfectly** each one of these options that can have an impact during the conception or the implementation periods of an application.
+- To ** test** each appropriate option so as to be sure that its purpose is completely taken into account inside the application.
+
+The full list of these options including their purpose and their coding name is defined hereunder :
+1. [Increase Contrast](#optionA11Y_contraste)
+2. [AssistiveTouch](#optionA11Y_assistiveTouch)
+3. [Bold Text](#optionA11Y_bold)
+4. [Subtitles & Captioning](#optionA11Y_closedCaption)
+5. [Greyscale](#optionA11Y_grayScale)
+6. [Guided Access](#optionA11Y_guidedAccess)
+7. [Invert Colours](#optionA11Y_inverserLesCouleurs)
+8. [Mono Audio](#optionA11Y_audioEnMono)
+9. [Reduce Motion](#optionA11Y_limiteVisuel)
+10. [Reduce Transparency](#optionA11Y_reductionTransparence)
+11. [Shake to Undo](#optionA11Y_secouerPourAnnuler)
+12. [Speak Screen](#optionA11Y_lecturePage)
+13. [Speak Selection](#optionA11Y_speakSelection)
+14. [Switch Control](#optionA11Y_switchontrol)
+15. [VoiceOver](#optionA11Y_voiceOver)
+
+<a name="optionA11Y_contraste"></a>
+- **Increase Contrast** *(UIAccessibilityDarkerSystemColorsEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Contrast).
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Increase Contrast." src="./images/optionA11Y_contraste.png" />
+<a name="optionA11Y_assistiveTouch"></a>
+- **AssistiveTouch** *(UIAccessibilityIsAssistiveTouchRunning)* : displays the homonymous menu in foreground, whatever the runnning application.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - AssistiveTouch" src="./images/optionA11Y_assistiveTouch.png" />
+<a name="optionA11Y_bold"></a>
+- **Bold Text** *(UIAccessibilityIsBoldTextEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Sizing).
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Bold Text" src="./images/optionA11Y_bold.png" />
+<a name="optionA11Y_closedCaption"></a>
+- **Subtitles & Captioning** *(UIAccessibilityIsClosedCaptioningEnabled)* : displays closed captioning or subtitles when available in the `appTV` or `Videos` app.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Subtitles & Captioning" src="./images/optionA11Y_closedCaptions.png" />
+<a name="optionA11Y_grayScale"></a>
+- **Greyscale** *(UIAccessibilityIsGrayscaleEnabled)* : makes the display more readable for color blind people.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Display Accomodations - Colour Filters - Colour Filters" src="./images/optionA11Y_grayScale.png" />
+<a name="optionA11Y_guidedAccess"></a>
+- **Guided Access** *(UIAccessibilityIsGuidedAccessEnabled)* : restricts use of a single application.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Guided Access" src="./images/optionA11Y_guidedAccess.png" />
+<a name="optionA11Y_inverserLesCouleurs"></a>
+- **Invert Colours** *(UIAccessibilityIsInvertColorsEnabled)* : reduces glare and eye strain thanks to a very helpful mode for visual impaired people.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - " src="./images/optionA11Y_inverserLesCouleurs.png" />
+<a name="optionA11Y_audioEnMono"></a>
+- **Mono Audio** *(UIAccessibilityIsMonoAudioEnabled)* : allows a complete hearing understanding with headset on without missing a word or a sound for people who are hard of hearing or deaf in one ear.
+</br><img style="max-width: 590px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Mono Audio" src="./images/optionA11Y_audioEnMono.png" />
+<a name="optionA11Y_limiteVisuel"></a>
+- **Reduce Motion** *(UIAccessibilityIsReduceMotionEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Motion).
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Reduce Motion" src="./images/optionA11Y_limiteVisuel.png" />
+<a name="optionA11Y_reductionTransparence"></a>
+- **Reduce Transparency** *(UIAccessibilityIsReduceTransparencyEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#TransparencyAndBlurring).
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Reduce Transparency" src="./images/optionA11Y_reductionTransparence.png" />
+<a name="optionA11Y_secouerPourAnnuler"></a>
+- **Shake to Undo** *(UIAccessibilityIsShakeToUndoEnabled)* : displays a menu to undo an action, preventing from holding backspace and watching all the letters disappear one by one for instance.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Shake to Undo" src="./images/optionA11Y_secouerPourAnnuler.png" />
+<a name="optionA11Y_lecturePage"></a>
+- **Speak Screen** *(UIAccessibilityIsSpeakScreenEnabled)* : launches the vocalization of the screen content.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Speak Screen" src="./images/optionA11Y_lecturePage.png" />
+<a name="optionA11Y_speakSelection"></a>
+- **Speak Selection** *(UIAccessibilityIsSpeakSelectionEnabled)* : displays a menu that suggests to speak the selection that fired it.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Speak Selection" src="./images/optionA11Y_speakSelection.png" />
+<a name="optionA11Y_switchontrol"></a>
+- **Switch Control** *(UIAccessibilityIsSwitchControlRunning)* : activates the feature in `point scanning mode` or in `item scanning mode`.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Switch Control" src="./images/optionA11Y_switchontrol.png" />
+<a name="optionA11Y_voiceOver"></a>
+- **VoiceOver** *(UIAccessibilityIsVoiceOverRunning)* : launches the screen reader.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - VoiceOver" src="./images/optionA11Y_voiceOver.png" />
+
+</br>Once activated, if the accessibility option has no result in the application running, it's **highly recommended** to keep oneself posted of the impacted options states so as to provide the best experience to the user.
+</br>The full list of the accessibility options with their dedicated notification is located in the [developer part](./dev-ios.html#accessibility-options) of this site.
+</br></br>It may be particularly interesting to keep track of these options (de)activations with kind of indicators in order to have a better understanding of the users habits and to implement improvements accordingly.</br></br>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

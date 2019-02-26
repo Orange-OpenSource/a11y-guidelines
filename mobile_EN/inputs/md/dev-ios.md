@@ -341,6 +341,8 @@ In this example, a method is fired when VoiceOver or Switch Control status has c
     }
 </code></pre>
 ### Links
+- [Accessibility options](./criteria-ios.html#accessibility-options) *(iOS conception)*
+
 All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br>
