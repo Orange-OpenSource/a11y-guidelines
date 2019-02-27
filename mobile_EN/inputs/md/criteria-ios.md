@@ -121,10 +121,7 @@ Provide access to application information to screen reader users.
 ** Example: **
 
 Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge makes us understand that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
-<img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left">
-<pre><code class="swift">cell.mailImageView.accessibilityLabel = cell.badgeLabel.text! + " " + "exemple_textualAlternative_textImage_accessibilityLabel".localized //We add the complete alternative
-cell.badgeLabel.isAccessibilityElemement = false //The text is hidden to avoid information redundancy </code></pre>
-   
+</br><img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left">
 
 ## Title and header
 
@@ -179,11 +176,6 @@ Allow screen reader users to access components’ information, their status, the
 ** Example: **
 
 <img src="./images/expandable_list.png" alt="example of an expandable list that needs text alternative" width="250" class="pull-left">
-<pre><code class="swift">if(accessibleIsFold) {
-   accordionHeaderView.accessibilityHint = "example_elementState_foldArea_open_accessibilityHint".localized //"Click here to open the view"
-}else{
-  accordionHeaderView.accessibilityHint = "example_elementState_foldArea_close_accessibilityHint".localized //"Click here to close the view"
-}</code></pre>
   
 
 ## Standard components
@@ -388,16 +380,8 @@ Ensure logic order and coherent reading to screen reader users.
 
 ** Example: **
 In this example, the default playback order depends completely on the implementation and on the order of element declaration. In this case: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. A more consistent reading order is `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-`.
+</br><img src="./images/order.png" alt="Example of reading order" width="300">
 
-<img src="./images/order.png" alt="Example of reading order" width="300">
-<pre><code>remoteView.isAccessibilityElement = false
-remoteView.shouldGroupAccessibilityChildren = true
-remoteView.accessibilityElements = []
-remoteView.accessibilityElements?.append(oneButton)
-remoteView.accessibilityElements?.append(twoButton)
-remoteView.accessibilityElements?.append(threeButton)
-remoteView.accessibilityElements?.append(fourButton)
-[…]</code></pre>
 
 
 ## Language

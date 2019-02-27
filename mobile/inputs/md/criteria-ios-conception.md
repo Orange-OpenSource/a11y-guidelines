@@ -121,9 +121,7 @@ Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visu
 **Exemple&nbsp;:**      
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
-<img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
-<pre><code class="swift">cell.mailImageView.accessibilityLabel = cell.badgeLabel.text! + " " + "exemple_textualAlternative_textImage_accessibilityLabel".localized //On ajoute l’alternative complète
-cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône pour éviter une redondance d’information</code></pre>
+</br><img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
    
 
 ## Titre et en-tête
@@ -179,11 +177,6 @@ Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informati
 **Exemple&nbsp;:**      
 
 <img src="./images/expandable_list.png" alt="exemple de liste dépliable qui nécessite une alternative textuelle" width="250" class="pull-left">
-<pre><code class="swift">if(accessibleIsFold) {
-   accordionHeaderView.accessibilityHint = "example_elementState_foldArea_open_accessibilityHint".localized //"Cliquer pour ouvrir la section"
-}else{
-  accordionHeaderView.accessibilityHint = "example_elementState_foldArea_close_accessibilityHint".localized //"Cliquer pour fermer la section"
-}</code></pre>
   
 
 ## Composant standard
@@ -386,16 +379,8 @@ Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d�
 
 **Exemple&nbsp;:**      
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
+</br><img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
 
-<img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
-<pre><code>remoteView.isAccessibilityElement = false
-remoteView.shouldGroupAccessibilityChildren = true
-remoteView.accessibilityElements = []
-remoteView.accessibilityElements?.append(oneButton)
-remoteView.accessibilityElements?.append(twoButton)
-remoteView.accessibilityElements?.append(threeButton)
-remoteView.accessibilityElements?.append(fourButton)
-[…]</code></pre>
 
 
 ## Langue
