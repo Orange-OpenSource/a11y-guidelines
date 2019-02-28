@@ -1,18 +1,19 @@
 # WWDC 2016 : Les nouveautés en accessibilité
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
                    {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
                    {"label":"2016 - Les nouveautés en accessibilité"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
         {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);
 });</script>
 
-<span data-menuitem="criteria-ios-wwdc"></span>
+<span data-menuitem="criteria-ios"></span>
 
 Cette présentation visualisable sur le **site développeur officiel d'Apple** ([session 202](https://developer.apple.com/videos/play/wwdc2016/202/)) a pour buts de mettre en avant les principales nouveautés en terme d'accessibilité et de rappeler quelques fondamentaux avec une importance notable pour <span lang="en">VoiceOver</span>.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202.png" />

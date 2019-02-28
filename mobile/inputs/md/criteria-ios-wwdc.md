@@ -1,13 +1,13 @@
 # WWDC : World Wide Developers Conference
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
         {"label":"WWDC"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
         {"label":"WWDC","url":"criteria-ios-wwdc.html", "expanded": true}
     ]);
 });</script>
@@ -17,7 +17,7 @@
 Cette partie regroupe des [présentations faites à la WWDC](https://developer.apple.com/videos/) et liées à l'accessibilité.
 </br>Chacune de ces présentations est détaillée et comprend une description de chaque thème qui fait référence à une indication temporelle au sein de la vidéo.
 </br></br>La plupart des illustrations proviennent des supports de présentations fournies par Apple et sont disponibles dans la partie `Resources` de l'onglet `Overview` propre à chaque vidéo.
-</br>L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation.
+</br>**L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation**.
 
 ## [2018 - Fournir une expérience exceptionnelle en accessibilité](./criteria-ios-wwdc-18230.html)
 Présentation de toutes les fonctionnalités qui vont permettre de créer une application accessible répondant parfaitement aux attentes des utilisateurs.

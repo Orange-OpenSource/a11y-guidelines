@@ -11,7 +11,7 @@
 
 - personnes valides.
 - seniors.
-- personnes en situation de handicap (temporaire ou permanent).
+- personnes en situation de handicap *(temporaire ou permanent)*.
 
 **et dans tous les contextes**
 
@@ -20,19 +20,27 @@
 - avec des logiciels spécifiques de compensation du handicap.
 
 ## Organisation de ce site
+### Android
+... à remplir.
 
-### Critères mobiles
-Liste des différents critères d’accessibilité à respecter pour obtenir une application mobile (Android ou iOS) accessible. Un bon moyen de prendre connaissance des critères à respecter pour s’engager vers une démarche de mise en accessibilité. 
-
-### Guide pour les développeurs
-Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible sur mobile, sous Android ou iOS.
-
-### mDAN
-Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile. Vous y trouverez également des liens pour télécharger l’application (Android et iOS).
-
-### Lecteur d’écran
-Un guide simple pour utiliser les lecteurs d’écran d’iOS et d’Android, respectivement <span lang="en">VoiceOver</span> et <span lang="en">TalkBack</span>.
-
+### iOS
+#### 1. Critères de conception
+Liste des différents critères à respecter pour obtenir une application mobile accessible.
+</br>Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité. 
+</br></br>
+#### 2. Guide pour les développeurs
+Section à destination des développeurs.
+</br>Tout ce qu’il faut savoir pour coder accessible sur mobile.
+</br></br>
+#### 3. VoiceOver
+Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser VoiceOver, outil incontournable dans une démarche d'accessibilité mobile.
+</br></br>
+#### 4. WWDC
+Section qui détaille des présentations Apple faites au `World Wide Developers Conference` ayant un impact fort dans la démarche d'accessibilité mobile.
+</br></br>
+### Démonstrateur mDAN
+Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile.
+</br></br>
 ### Liens utiles
 Quelques liens utiles qui pourront compléter les explications de ce site.
 

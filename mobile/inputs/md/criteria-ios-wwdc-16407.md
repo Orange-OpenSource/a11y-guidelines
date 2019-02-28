@@ -1,18 +1,19 @@
 # WWDC 2016 : Audit d'une app en accessibilité
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
                    {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
                    {"label":"2016 - Audit d'une app en accessibilité"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
         {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);
 });</script>
 
-<span data-menuitem="criteria-ios-wwdc"></span>
+<span data-menuitem="criteria-ios"></span>
 
 Cette présentation visualisable sur le **site développeur officiel d'Apple** ([session 407](https://developer.apple.com/videos/play/wwdc2016/407/)) a pour but d'expliquer l'outil de développement <span lang="en">Accessibility Inspector</span> et comment l'utiliser par le biais d'une application d'exemple très simple.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc16-logo.png" />

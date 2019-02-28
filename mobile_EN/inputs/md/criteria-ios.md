@@ -1,22 +1,20 @@
-# iOS accessibility guide
+# iOS design criteria
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Mobile criteria", "url": "./criteria-mobile.html"},
-        {"label":"iOS accessibility guide"}
-	]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"Design criteria"}]);
     addSubMenu([
-        {"label":"Android guide","url":"criteria-android.html"}, 
-        {"label":"iOS guide","url":"criteria-mobile.html", "expanded": true}
-    ]);
-    
+        {"label":"Design criteria","url":"criteria-ios.html", "expanded": true}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="criteria-mobile"></span>
+<span data-menuitem="mobile-ios"></span>
 
-This guide aims to present the different accessibility criteria for getting an accessible iOS application. Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule. The criteria are explained through code snippets and real cases examples. We invite you to install the [mDAN](./mdan.html) application for working examples of VoiceOver, the screen reader for iOS, and other assistive tools. For more information on the tool (how to activate it, how to use it…) please refer to the [VoiceOver section](./voiceover.html).
-
-Note: code snippets are written in Swift.
+This guide aims to present the different accessibility criteria for getting an accessible iOS application.
+</br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.
 
 ## Images
 **Target: ** everyone, especially people with visual impairments.  

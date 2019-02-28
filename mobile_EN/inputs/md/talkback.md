@@ -1,14 +1,16 @@
 # Talkback user guide
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Screen reader", "url":"./screen-reader.html"}, {"label":"Talkback user guide"}]);
+    setBreadcrumb([{"label":"Android", "url": "./mobile-android.html"},
+                   {"label":"TalkBack"}]);
     addSubMenu([
-        {"label":"Android guide","url":"talkback.html", "expanded": true}, 
-        {"label":"iOS guide","url":"voiceover.html"}
-    ]);                
+        {"label":"Design criteria","url":"criteria-android.html"}, 
+        {"label":"Developers guide","url":"dev-android.html"},
+        {"label":"TalkBack","url":"talkback.html"}
+    ]);    
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="mobile-android"></span>
 
 TalkBack is a built-in screen reader for Android that reads aloud the items that appear on the device screen. It is free and it vocalizes all visible elements in the page specially for blind or partially sighted, dyslexic or illiterate users. A tool like TalkBack is called either screen reader or speech synthesizer, even if a screen reader is actually a software associated with voice synthesis.
 

@@ -1,18 +1,19 @@
 # WWDC 2018 : Fournir une expérience exceptionnelle en accessibilité
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
                    {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
                    {"label":"2018 - Fournir une expérience exceptionnelle en accessibilité"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
         {"label":"WWDC","url":"criteria-ios-wwdc.html"}
     ]);
 });</script>
 
-<span data-menuitem="criteria-ios-wwdc"></span>
+<span data-menuitem="criteria-ios"></span>
 
 Cette présentation visualisable sur le **site développeur officiel d'<span lang="en">Apple</span>** ([session 230](https://developer.apple.com/videos/play/wwdc2018/230/)) a pour but de mettre en avant les éléments essentiels qui permettent à une application de fournir une expérience utilisateur optimale en accessibilité visuelle.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230.png" />

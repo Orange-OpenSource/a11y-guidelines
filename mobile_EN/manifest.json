@@ -18,6 +18,8 @@
         "output/markdown/index.md",
         "output/markdown/links.md",
         "output/markdown/mdan.md",
+        "output/markdown/mobile-android.md",
+        "output/markdown/mobile-ios.md",
         "output/markdown/screen-reader.md",
         "output/markdown/screen-reader-voiceover-iphonex.md",
         "output/markdown/talkback.md",

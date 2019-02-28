@@ -1,17 +1,18 @@
 # Guide d’utilisation de <span lang="en">VoiceOver</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([
-        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
-        {"label":"Guide d’utilisation de <span lang=\"en\">VoiceOver</span>"}
-    ]);
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+        {"label":"VoiceOver"}
+	]);
     addSubMenu([
-        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html", "expanded": true}
-    ]);
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html", "expanded": true},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);	
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="criteria-ios"></span>
 
 <span lang="en">VoiceOver</span> est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone.
 </br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. 

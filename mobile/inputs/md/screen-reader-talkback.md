@@ -1,17 +1,17 @@
 # Guide d’utilisation de <span lang="en">TalkBack</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([
-        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
-        {"label":"Guide d’utilisation de <span lang=\"en\">TalkBack</span>"}
-    ]);
+    setBreadcrumb([{"label":"Android", "url": "./criteria-android.html"},
+        {"label":"TalkBack"}
+	]);
     addSubMenu([
-        {"label":"Sous Android","url":"screen-reader-talkback.html", "expanded": true}, 
-        {"label":"Sous iOS","url":"screen-reader-voiceover.html"}
-    ]);
+        {"label":"Critères de conception","url":"criteria-android-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-android-dev.html"},
+        {"label":"TalkBack","url":"screen-reader-talkback.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="criteria-android"></span>
 
 <span lang="en">TalkBack</span> est un lecteur d’écran intégré à Android qui décrit à haute voix les éléments qui apparaissent sur l’écran du téléphone. Il est gratuit et permet à un utilisateur non- ou malvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. Un outil comme <span lang="en">TalkBack</span> est appelé indifféremment lecteur d’écran ou synthèse vocale, même si un lecteur d’écran est en fait un logiciel associé à une synthèse vocale.
 
