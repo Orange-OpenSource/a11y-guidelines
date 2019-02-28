@@ -61,3 +61,46 @@
 .examples-list a:hover img {
   opacity: 1;
 }
+
+
+/* Custom css pour onglet TESTEURS */
+#refTests {border-right: solid #ccc 1px; position: static;}
+#refTests h3::before, #refTests h4::before, #refTests h5::before, #refTests h6::before {content:none;}
+#refTests h2{margin:4rem 0 2rem 0;}
+#refTests h2:first-child{margin:2rem 0 2rem 0;}
+
+#refTests h3{font-size: 1rem; margin:0.2rem 0;}
+#refTests .card-header{position: relative; background-color: #fff; border-bottom: 1px solid #ccc; padding: 0 0;}
+#refTests ol {list-style-type: decimal;}
+#refTests ul, #refTests ol {padding-left: 1rem;}
+#refTests ol ul{padding-top: 1rem;}
+
+
+
+#filter h3{margin:0.2rem 0;}
+#filter ul{padding-left:1rem;}
+#filter .disabled {color: #666;}
+
+.accordion .card-header a, .accordion .card-header button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0.6rem 2.125rem 0.6rem 0;
+    line-height: 1.125rem;
+    text-align: left;
+    border: 0;
+	font-weight:normal;
+}
+.accordion .card-header a::after, .accordion .card-header button::after {
+    position: absolute;
+    top: 1.1125rem;
+    right: .625rem;
+    width: .875rem;
+    height: .4375rem;
+    content: "";
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+}
+.accordion .card-header a[aria-expanded="true"]::after, .accordion .card-header button[aria-expanded="true"]::after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

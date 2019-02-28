@@ -14,13 +14,22 @@
             "onExpand": function () {
                 $("#incontournables-developpeurs-tab").tab("show");
             }
+        },
+        {
+            "label":"Tests", "url":"", "expanded":false, "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
+            "onExpand": function () {
+                $("#incontournables-testeurs-tab").tab("show");
+            }
         }
-    ]);
+	]);
     $("#incontournables-concepteurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-conception"));
     })
     $("#incontournables-developpeurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-development"));
+    })
+	$("#incontournables-testeurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-test"));
     })
     if (window.location.hash == "#dev") {
         $("#incontournables-developpeurs-tab").trigger("click");
@@ -35,9 +44,10 @@ Its implementation does not give you the guarantee to be 100% accessible, but is
 Following the Orange guidelines (<cite>Design for digital platforms Guidelines</cite>), available on the [Orange brand site](http://design.orange.com/) is a prerequisite to the use of this base criteria. 
 Some elements already present in the Orange Brand (such as the use of colours, text alignment...) have not been included in this list of criteria.
 
-Two versions are available:
+Three versions are available:
 - **The design version** does not mention the code, it is aimed at product designers, designers, project managers, etc.
 - **The development version** mentions the code and is aimed at developers, technical managers, validation teams, testers, etc.
+- **The test version** presents the procedures to follow in order to validate the compliance of each recommendation. It is intended for designers, developers, qualifiers, etc.
 
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item">
@@ -45,6 +55,9 @@ Two versions are available:
 </li>
 <li class="nav-item">
 <a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Development</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="incontournables-testeurs-tab" data-toggle="tab" href="#incontournables-testeurs" role="tab" aria-controls="incontournables-testeurs" aria-selected="false">Tests</a>
 </li>
 </ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab">
 
@@ -196,6 +209,28 @@ Allow the screen reader user access to the main features of the application, but
     <li>[Make sure the main features can be used with screen readers](inc-dev-lecteur-ecran.html)</li>
 </ul>
 
+</div>
+<div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
+<div class="row">
+<section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+<h2 id="test-contenu-textuel">Textual content</h2>
+<h2 id="test-contenu-non-textuel">Non-text content</h2>
+<h2 id="test-couleurs-et-contrastes">Colors and contrasts</h2>
+<h2 id="test-navigation-generale">Common Navigation</h2>
+<h2 id="test-navigation-clavier">Keyboard navigation</h2>
+<h2 id="test-mise-en-page">Layout</h2>
+<h2 id="test-formulaires">Forms</h2>
+<h2 id="test-tactile-et-interactions">Touch and interactions</h2>
+<h2 id="test-aides-techniques">Assistive technology</h2>
+</section>
+<aside id="filter" class="col-md-4">
+<h2>Filters</h2>
+<h3>Profiles</h3>
+<ul id="profils" class="list-unstyled"></ul>
+<h3>Tools</h3>
+<ul id="types" class="list-unstyled"></ul>
+</aside>
+</div>
 </div>
 </div>
 
