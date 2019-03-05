@@ -184,10 +184,10 @@ Extensions to install in your browser to extract the list of titles:</p>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 </ul>
-<h2 id="3-provide-enough-contrast-between-text-and-background">3. Provide enough contrast between text and background</h2>
+<h2 id="3-provide-enough-contrast-between-front-and-background-colors">3. Provide enough contrast between front and background colors</h2>
 <p><strong>Target: </strong>everyone, especially mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong> 
-The contrast between the text and its background, even for graphic objects as long as they provide information, should be high enough.
+The contrast between the text and its background, even for non-text graphic objects as long as they provide information, should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablets users in a very bright environment.</p>
 <p><strong>Don’t: </strong> 
 The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  </p>
@@ -195,12 +195,13 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:<ul>
-<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
-<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>4.5:1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>3:1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
-<li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … 
+We do not have to apply this criterion, if:<ul>
+<li>if the graphic components cannot be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
 <li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
 <li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
 </ul>

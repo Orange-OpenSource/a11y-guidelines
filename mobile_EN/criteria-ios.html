@@ -52,8 +52,7 @@
                       <li><a class="page-index" href="index.html">Presentation</a></li>
                       <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
                       <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
-                      <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
+                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
                       <li><a class="page-contact" href="contact.html">Contact</a></li>
                       <li><a class="page-about" href="about.html">About</a></li>                        
@@ -191,11 +190,7 @@ The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Co
 <p>Provide access to application information to screen reader users.</p>
 <p><strong> Example: </strong></p>
 <p>Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge makes us understand that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
-<img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left"></p>
-<pre><code class="swift">cell.mailImageView.accessibilityLabel = cell.badgeLabel.text! + " " + "exemple_textualAlternative_textImage_accessibilityLabel".localized //We add the complete alternative
-cell.badgeLabel.isAccessibilityElemement = false //The text is hidden to avoid information redundancy </code></pre>
-
-
+</br><img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left"></p>
 <h2 id="title-and-header">Title and header</h2>
 <p><strong> Target: </strong> everyone<br><strong> When: </strong> as of design and during content writing.</p>
 <p><strong>Description: </strong> </p>
@@ -226,13 +221,6 @@ To set an item as a header, set the <code>accessibilityTraits</code> attribute o
 <p>Allow screen reader users to access components’ information, their status, their nature so they can use them without any difficulties.</p>
 <p><strong> Example: </strong></p>
 <p><img src="./images/expandable_list.png" alt="example of an expandable list that needs text alternative" width="250" class="pull-left"></p>
-<pre><code class="swift">if(accessibleIsFold) {
-   accordionHeaderView.accessibilityHint = "example_elementState_foldArea_open_accessibilityHint".localized //"Click here to open the view"
-}else{
-  accordionHeaderView.accessibilityHint = "example_elementState_foldArea_close_accessibilityHint".localized //"Click here to close the view"
-}</code></pre>
-
-
 <h2 id="standard-components">Standard components</h2>
 <p><strong> Target: </strong> everyone.<br><strong> When: </strong> when choosing the libraries and during development.</p>
 <p><strong>Description: </strong></p>
@@ -349,18 +337,8 @@ Do not hesitate to display a view to indicate a horizontal scroll (dots on <code
 <p><strong>Users’ goal: </strong></p>
 <p>Ensure logic order and coherent reading to screen reader users.</p>
 <p><strong> Example: </strong>
-In this example, the default playback order depends completely on the implementation and on the order of element declaration. In this case: <code>vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0</code>. A more consistent reading order is <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-</code>.</p>
-<p><img src="./images/order.png" alt="Example of reading order" width="300"></p>
-<pre><code>remoteView.isAccessibilityElement = false
-remoteView.shouldGroupAccessibilityChildren = true
-remoteView.accessibilityElements = []
-remoteView.accessibilityElements?.append(oneButton)
-remoteView.accessibilityElements?.append(twoButton)
-remoteView.accessibilityElements?.append(threeButton)
-remoteView.accessibilityElements?.append(fourButton)
-[…]</code></pre>
-
-
+In this example, the default playback order depends completely on the implementation and on the order of element declaration. In this case: <code>vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0</code>. A more consistent reading order is <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-</code>.
+</br><img src="./images/order.png" alt="Example of reading order" width="300"></p>
 <h2 id="language">Language</h2>
 <p><strong>Target : </strong> people with visual impairments.<br><strong>When: </strong> during development.</p>
 <p><strong>Description: </strong></p>
@@ -374,8 +352,7 @@ remoteView.accessibilityElements?.append(fourButton)
 <p>Ensure the understanding of the application text.</p>
 <h2 id="screen-orientation">Screen orientation</h2>
 <p><strong>Target&nbsp;: </strong> everyone, especially people with visual and/or motor impairments.<br><strong>When&nbsp;: </strong> as of design and during development.</p>
-<p><strong>Description&nbsp;: </strong></p>
-<p>The screen orientation mustn&#39;t impact the access of an application content.
+<p><strong>Description&nbsp;: </strong> the screen orientation mustn&#39;t impact the access of an application content.
 </br>It&#39;s highly recommended to :</p>
 <ul>
 <li><strong>Implement both the portrait and the landscape modes</strong> to be easily toggled by the user if it doesn&#39;t go against some functional constraints of the application itself (<code>serious game</code> for instance).</li>
@@ -387,10 +364,85 @@ remoteView.accessibilityElements?.append(fourButton)
 <li>Very accurate definition of the way the transitions between portrait and landscape modes should occur.</li>
 <li>Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the <code>Dynamic Type</code>).</li>
 <li>Appropriate settings in the integrated development environment.
-</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" /></li>
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/orientation.png" /></li>
 </ul>
-<p><strong>Users’ goal&nbsp;: </strong></p>
-<p>Improve a better legibility of the content.</p>
+<p><strong>Users’ goal&nbsp;: </strong> improve a better legibility of the content.</br></br></p>
+<h2 id="accessibility-options">Accessibility options</h2>
+<p><strong>Target&nbsp;:</strong> everyone.<br><strong>When&nbsp;:</strong> as of design and during development.</p>
+<p><strong>Description&nbsp;:</strong> the accessibility options located in the mobile settings are all about to improve the experience of an impaired user who can be significantly helped by these options.</p>
+<p>It&#39;s then primordial :</p>
+<ul>
+<li>To <strong>understand perfectly</strong> each one of these options that can have an impact during the conception or the implementation periods of an application.</li>
+<li>To <strong> test</strong> each appropriate option so as to be sure that its purpose is completely taken into account inside the application.</li>
+</ul>
+<p>The full list of these options including their purpose and their coding name is defined hereunder :</p>
+<ol>
+<li><a href="#optionA11Y_contraste">Increase Contrast</a></li>
+<li><a href="#optionA11Y_assistiveTouch">AssistiveTouch</a></li>
+<li><a href="#optionA11Y_bold">Bold Text</a></li>
+<li><a href="#optionA11Y_closedCaption">Subtitles &amp; Captioning</a></li>
+<li><a href="#optionA11Y_grayScale">Greyscale</a></li>
+<li><a href="#optionA11Y_guidedAccess">Guided Access</a></li>
+<li><a href="#optionA11Y_inverserLesCouleurs">Invert Colours</a></li>
+<li><a href="#optionA11Y_audioEnMono">Mono Audio</a></li>
+<li><a href="#optionA11Y_limiteVisuel">Reduce Motion</a></li>
+<li><a href="#optionA11Y_reductionTransparence">Reduce Transparency</a></li>
+<li><a href="#optionA11Y_secouerPourAnnuler">Shake to Undo</a></li>
+<li><a href="#optionA11Y_lecturePage">Speak Screen</a></li>
+<li><a href="#optionA11Y_speakSelection">Speak Selection</a></li>
+<li><a href="#optionA11Y_switchontrol">Switch Control</a></li>
+<li><a href="#optionA11Y_voiceOver">VoiceOver</a></li>
+</ol>
+<p><a name="optionA11Y_contraste"></a></p>
+<ul>
+<li><strong>Increase Contrast</strong> <em>(UIAccessibilityDarkerSystemColorsEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#Contrast">WWDC 2018 video</a>.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Increase Contrast." src="./images/optionA11Y_contraste.png" />
+<a name="optionA11Y_assistiveTouch"></a></li>
+<li><strong>AssistiveTouch</strong> <em>(UIAccessibilityIsAssistiveTouchRunning)</em> : displays the homonymous menu in foreground, whatever the runnning application.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - AssistiveTouch" src="./images/optionA11Y_assistiveTouch.png" />
+<a name="optionA11Y_bold"></a></li>
+<li><strong>Bold Text</strong> <em>(UIAccessibilityIsBoldTextEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#Sizing">WWDC 2018 video</a>.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Bold Text" src="./images/optionA11Y_bold.png" />
+<a name="optionA11Y_closedCaption"></a></li>
+<li><strong>Subtitles &amp; Captioning</strong> <em>(UIAccessibilityIsClosedCaptioningEnabled)</em> : displays closed captioning or subtitles when available in the <code>appTV</code> or <code>Videos</code> app.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Subtitles & Captioning" src="./images/optionA11Y_closedCaptions.png" />
+<a name="optionA11Y_grayScale"></a></li>
+<li><strong>Greyscale</strong> <em>(UIAccessibilityIsGrayscaleEnabled)</em> : makes the display more readable for color blind people.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Display Accomodations - Colour Filters - Colour Filters" src="./images/optionA11Y_grayScale.png" />
+<a name="optionA11Y_guidedAccess"></a></li>
+<li><strong>Guided Access</strong> <em>(UIAccessibilityIsGuidedAccessEnabled)</em> : restricts use of a single application.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Guided Access" src="./images/optionA11Y_guidedAccess.png" />
+<a name="optionA11Y_inverserLesCouleurs"></a></li>
+<li><strong>Invert Colours</strong> <em>(UIAccessibilityIsInvertColorsEnabled)</em> : reduces glare and eye strain thanks to a very helpful mode for visual impaired people.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - " src="./images/optionA11Y_inverserLesCouleurs.png" />
+<a name="optionA11Y_audioEnMono"></a></li>
+<li><strong>Mono Audio</strong> <em>(UIAccessibilityIsMonoAudioEnabled)</em> : allows a complete hearing understanding with headset on without missing a word or a sound for people who are hard of hearing or deaf in one ear.
+</br><img style="max-width: 590px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Mono Audio" src="./images/optionA11Y_audioEnMono.png" />
+<a name="optionA11Y_limiteVisuel"></a></li>
+<li><strong>Reduce Motion</strong> <em>(UIAccessibilityIsReduceMotionEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#Motion">WWDC 2018 video</a>.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Reduce Motion" src="./images/optionA11Y_limiteVisuel.png" />
+<a name="optionA11Y_reductionTransparence"></a></li>
+<li><strong>Reduce Transparency</strong> <em>(UIAccessibilityIsReduceTransparencyEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#TransparencyAndBlurring">WWDC 2018 video</a>.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Reduce Transparency" src="./images/optionA11Y_reductionTransparence.png" />
+<a name="optionA11Y_secouerPourAnnuler"></a></li>
+<li><strong>Shake to Undo</strong> <em>(UIAccessibilityIsShakeToUndoEnabled)</em> : displays a menu to undo an action, preventing from holding backspace and watching all the letters disappear one by one for instance.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Shake to Undo" src="./images/optionA11Y_secouerPourAnnuler.png" />
+<a name="optionA11Y_lecturePage"></a></li>
+<li><strong>Speak Screen</strong> <em>(UIAccessibilityIsSpeakScreenEnabled)</em> : launches the vocalization of the screen content.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Speak Screen" src="./images/optionA11Y_lecturePage.png" />
+<a name="optionA11Y_speakSelection"></a></li>
+<li><strong>Speak Selection</strong> <em>(UIAccessibilityIsSpeakSelectionEnabled)</em> : displays a menu that suggests to speak the selection that fired it.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Speak Selection" src="./images/optionA11Y_speakSelection.png" />
+<a name="optionA11Y_switchontrol"></a></li>
+<li><strong>Switch Control</strong> <em>(UIAccessibilityIsSwitchControlRunning)</em> : activates the feature in <code>point scanning mode</code> or in <code>item scanning mode</code>.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Switch Control" src="./images/optionA11Y_switchontrol.png" />
+<a name="optionA11Y_voiceOver"></a></li>
+<li><strong>VoiceOver</strong> <em>(UIAccessibilityIsVoiceOverRunning)</em> : launches the screen reader.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - VoiceOver" src="./images/optionA11Y_voiceOver.png" /></li>
+</ul>
+<p></br>Once activated, if the accessibility option has no result in the application running, it&#39;s <strong>highly recommended</strong> to keep oneself posted of the impacted options states so as to provide the best experience to the user.
+</br>The full list of the accessibility options with their dedicated notification is located in the <a href="./dev-ios.html#accessibility-options">developer part</a> of this site.
+</br></br>It may be particularly interesting to keep track of these options (de)activations with kind of indicators in order to have a better understanding of the users habits and to implement improvements accordingly.</br></br></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

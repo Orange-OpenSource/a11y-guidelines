@@ -136,8 +136,8 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 <p>Ici, le nom du lien est le contenu (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d&#39;écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
 <p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé, ne sera pas accessible, bien sûr !</p>
 <p>Également, on peut additionner les éléments pour donner un nom.</p>
-<p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot; le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code> </p>
-<p> Ce bouton aura lui un nom accessible qui est le contenu du bouton : l&#39;intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l&#39;image : &quot;canards en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
+<p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot;le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code> </p>
+<p> Ce bouton aura lui un nom accessible qui est le contenu du bouton : l&#39;intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l&#39;image : &quot;le canard en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
 <h3 id="-l-ment-associ-">Élément associé</h3>
 <p>Par ailleurs, pour les éléments de formulaire, le nom accessible est le <code>label</code> lorsqu’il est programmatiquement associé à l&#39;élément via l&#39;attribut <code>for</code> référençant l&#39;<code>id</code> du champ.</p>
 <pre><code class="html">

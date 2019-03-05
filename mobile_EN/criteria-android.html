@@ -52,8 +52,7 @@
                       <li><a class="page-index" href="index.html">Presentation</a></li>
                       <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
                       <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
-                      <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
+                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
                       <li><a class="page-contact" href="contact.html">Contact</a></li>
                       <li><a class="page-about" href="about.html">About</a></li>                        
@@ -123,8 +122,9 @@
 
 <p><span data-menuitem="criteria-mobile"></span></p>
 <p>This guide aims to present the different accessibility criteria for getting an accessible Android application. Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule. The criteria are explained through code snippets and real case examples. We invite you to install the <a href="./mdan.html">mDAN</a> application for working examples of Talkback, the screen reader for Android, and other assistive tools. For more information on the tool (how to activate it, how to use it…) please refer to the <a href="./talkback.html">Talkback section</a>.</p>
+<p>For the web, the level of accessibility to achieve to any HTML interface by the Orange group is the respect of the criteria of level AA of the Web Content Accessibility Guidelines (WCAG) 2.1, without blocking point following a test of user of technical help for the main scenarios for using the features of the site or application. For native mobile applications, a transposition of these criteria and compliance with the recommendations of the Android platform in terms of accessibility is requested, see these recommendations. The purpose is to explain these recommendations without replacing it.</p>
 <h2 id="images">Images</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong>When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>Images are often used to convey a lot of information. As the saying goes, a picture is worth a thousand words. The blind cannot see the images, it is important that they get an alternative that gives all the information carried by the image.
 In the case of an image containing text, this text will be the alternative. In the case of an image that provides information as a graph, a drawing or something else, the alternative will contain all necessary information conveyed by the image.</p>
@@ -138,7 +138,7 @@ Icons are, conversely, widely used as buttons for various features. So they need
 <li>Decorative images have no alternative text.</li>
 </ul>
 <p><strong>Users’ goal: </strong></p>
-<p>Access the information included in images for users who cannot access it. Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth...).</p>
+<p>Access the information included in images for users who cannot access it. Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth…).</p>
 <p><strong> Examples: </strong></p>
 <p><img src="./images/image_ex.png" alt="complete example of decorative picture and informative icon" width="400">  </p>
 <p>By decomposing the image:  </p>
@@ -148,32 +148,33 @@ Icons are, conversely, widely used as buttons for various features. So they need
 <li><img src="./images/settings.png" alt="example of informative icon: “edition”" width="48"> <code>imageView.setContentDescription(&quot;edit the image name&quot;)</code></li>
 </ul>
 <h2 id="colors">Colors</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)<br><strong> When: </strong> from the design phase and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>Colours have a very important role in the transmission of information. Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.</li>
-<li>The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool).</li>
+<li>The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool). Due to mobile constraints (screen, brightness,…) level AAA is required.</li>
 </ul>
 <p><strong>Users’ goal: </strong> </p>
 <p>Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).
-Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments...) to access the same information by other means.</p>
+Allow users not distinguishing colours (colour blind, visually impaired, mobile users in bright environment…) to access the same information by other means.</p>
 <p><strong> Tools: </strong>
 The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> application can quickly measure colour contrast levels (free for Windows and Mac).  </p>
-<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the colour contrast. Available for Android 6+. </p>
+<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the colour contrast. Available on Android 6 and further. </p>
 <p><strong> Example of invalid contrast </strong><br>The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.  </p>
 <p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
 <p><strong> Example of information conveyed through valid and invalid colour: </strong> </p>
-<p><img src="./images/couleur.png" alt="example of information conveyed through valid and invalid colour" width="300"></p>
+<p><img src="./images/couleur.png" alt="example of information conveyed through valid and invalid colour. In one case the color and the form of the object carries the information with a legend, in the other case only the color carries the information." width="300"></p>
 <h2 id="alternative-text">Alternative text</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> from design, content writing and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> as of design, during content writing and development.</p>
 <p><strong>Description: </strong></p>
 <p>Text alternatives are at the core of mobile accessibility. Thanks to them, a visually impaired user can use an application without loss of information.</p>
 <p>As for the images, it is important to add a text alternative when information is not available for the visually impaired/blind. This is the case of components that provide information by colour, shape, position, sound… On mobile, all components can have a text alternative, it is possible to enrich the native vocalization of an element, including a simple text.</p>
-<p>Space on mobile is reduced, we often use abbreviations for text. However, this raises an issue for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that Talkback can recognize some common abbreviations. For example, “etc.” and “Dr.” are vocalized “etcetera” and “doctor”.</p>
+<p>Space on mobile is reduced, we often use abbreviations for text. However, this raises issues for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that Talkback can recognize some common abbreviations. For example, “etc.” and “Dr.” are vocalized “etcetera” and “doctor”.</p>
 <p>Some images are frequently associated with text to give information. This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”. In this case, the solution is to set a text alternative on the text that gives all the necessary information. For example: “3 unread messages”. One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.</p>
-<p>The text alternative of an element is set via the <code>contentDescription</code> attribute (available to any child of <code>View</code>). For the buttons in the <code>ActionBar</code> (or <code>ToolBar</code>) the <code>title</code> attribute must be set.</p>
+<p>The text alternative of an element is set via the <code>contentDescription</code> attribute (available to any child of <code>View</code>). For the buttons in the <code>ActionBar</code> (or <code>ToolBar</code>) the <code>title</code> attribute must be set.
+The text or its alternative is vocalized automatically with information on the type of component (button, check box ...), its possible state (checked off, selected), if it is usable (disabled). For more technical information on these attributes, we recommend that you read the <a href=".dev-android.html#text-alternative">text alternatives section in the developer guide</a>.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>The elements that require alternative must have one.</li>
@@ -184,10 +185,16 @@ The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Co
 <p><strong> Example: </strong></p>
 <p>Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge means that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
 <img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left"></p>
-<pre><code class="java">containerView.setContentDescription("3 unread mails button"); //We add a complete alternative (dynamically built before) on the container
+<pre><code class="java">containerView.setContentDescription("3 unread mails, button"); //We add a complete alternative (dynamically built before) on the container
 containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //The container is a View, not visible by the default accessibility API. We make it visible.
 mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //We hide the button icon to avoid information redundancy
-badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //The text is hidden to avoid information redundancy</code></pre>
+badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //The text is hidden to avoid information redundancy
+</code></pre><pre>
+<code class="kotlin">containerView.contentDescription = "3 unread mails, button" //We add a complete alternative (dynamically built before) on the container
+containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES //The container is a View, not visible by the default accessibility API. We make it visible.
+mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information
+infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //The text is hidden to avoid information redundancy
+</code></pre>
 
 
 <h2 id="title-and-header">Title and header</h2>
@@ -222,7 +229,6 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 <p><strong>Description: </strong></p>
 <p>Accessibility is taken into account in native components (most of the time). Additionally, the use of standard components allows the user to be in a situation or behaviour that they are already used to. Navigation through a standard interface is more comfortable.</p>
 <p>Use native components as much as possible and change their appearance. If no standard component corresponds to the need, create a dedicated component based on a standard component while keeping the navigation and accessibility consistency.</p>
-<p>A common example is the use of a custom component for the side navigation menu (<code>NavigationDrawer</code>). Some of the available libraries are not accessible with a screen reader. Unfortunately, this makes the application inaccessible.</p>
 <p><strong>Users’ goal: </strong></p>
 <p>Improve user navigation.</p>
 <p><strong> Technical Objective: </strong></p>
@@ -237,7 +243,7 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Improve user experience.</p>
-<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the touch target size. Available for Android 6+. </p>
+<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the touch target size. Available on Android 6 and further. </p>
 <p><strong> Valid example: </strong></p>
 <p>In the examples below, the black box corresponds to the size of the interactive area.<br><img src="./images/clic_ok.png" alt="interactive component example with a fairly large touch target" width="300"></p>
 <p><strong> Invalid example: </strong></p>
@@ -264,7 +270,7 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 <p>The application must implement dynamic text sizes, ensure good responsiveness of the display areas to text enlargement (containers that fit the size of their content). You should also ensure a minimum size for text (14sp).</p>
 <p>In order for the “Huge font size” option to properly interact with the application, several points are to be respected during the development:</p>
 <ul>
-<li>Use dynamic font size: the “sp”. This unit, specific to Android, allows to have a font size proportional to the pixel density of the display. It is highly recommended to use it for text, if only for a uniform design on all types of Android device.</li>
+<li>Use dynamic font size: the “sp”. This unit, specific to Android, allows to have a font size proportional to the pixel density of the display. It is highly recommended to use it for text, at least to get a uniform design on all types of Android device.</li>
 <li>Manage content overflows: A common mistake is to use a dynamic text size (“sp”) but not to pay attention to the container size. If the text gets bigger, the container must adapt so there is no overflow. One can perfectly play with the <code>min-height</code> and <code>height</code> attributes for correct result (the <code>height</code> set to <code>wrap_content</code> and <code>min-height</code> set to the default desired height).</li>
 </ul>
 <p><strong>Checklist: </strong></p>
@@ -272,13 +278,13 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 <li>The application correctly responds to the Huge font size option.</li>
 <li>Minimum text size must be 14sp.</li>
 </ul>
-<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including text size. Available for Android 6+. </p>
+<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including text size. Available on Android 6 and further. </p>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow users (visually impaired, mobility, elderly people…) to increase the text size for easier access to information.</p>
 <p><strong> Example: </strong></p>
 <p><img src="./images/text.png" alt="example using dynamic font size" width="300"></p>
 <h2 id="content-control">Content Control</h2>
-<p><strong>Target: </strong> everyone, especially people with visual and cognitive deficiencies.<br><strong> When: </strong> when design and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual and cognitive deficiencies.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
 The user must control the content at all times. This is especially true with interactive content. So avoid video players launching directly in full screen mode, or videos starting automatically without user action, or a carousel scrolling automatically etc.</p>
@@ -291,10 +297,10 @@ The user must control the content at all times. This is especially true with int
 <p><strong> Technical goal: </strong></p>
 <p>Improve natural indexation.</p>
 <h2 id="changing-content">Changing content</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>When content is dynamically modified after a user action, the screen reader must be notified. Without any voice feedback, the user does not know that the content has changed.<br>If the content has changed dynamically after a user action, it is important that the screen reader is notified so that it triggers a vocalization. E.g. refreshing a list or a timer.</p>
-<p>A simple vocalization can be enough to warn the user. It is very easy to trigger vocalizations with Talkback. Warning: we are talking about the vocalization when Talkback is enabled and not <abbr>TTS</abbr> (Text To Speech), the latter can operate whether Talkback is on or not. Just call the <code>announceForAccessibility</code> method with the parameter <code>id</code> of the string to vocalize. Note: the <code>announceForAccessibility</code> method is available on any item that inherits from<code>View</code> and is vocalized in the default system language.</p>
+<p>A simple vocalization can be enough to warn the user. It is very easy to trigger vocalizations with Talkback. Warning: we are talking about the vocalization when Talkback is enabled and not <abbr>TTS</abbr> (Text To Speech), the latter can operate whether Talkback is on or not. Just call the <code>announceForAccessibility</code> method with the parameter <code>id</code> of the string to vocalize. Note: the <code>announceForAccessibility</code> method is available on any item that inherits from <code>View</code> and is vocalized in the default system language.</p>
 <p>It is also possible to specify that a view is a live region, that is to say that its content is subject to change dynamically and should in this case notify the Accessibility API. This will result in generating vocalizations with Talkback for example. A typical use case: on a form, if the user makes a mistake and an error message appears, the view containing the message must be defined as a live region. You must use the <code>setAccessibilityLiveRegion</code> method that takes a mode parameter for the live region. There are 3 modes:</p>
 <ul>
 <li><code>ACCESSIBILITY_LIVE_REGION_NONE</code>: this view is not a live region. This is the default for most views.</li>
@@ -323,17 +329,17 @@ Do not hesitate to display an element to indicate a horizontal scroll (dots for 
 <div class="col-sm-6 col-xs-12">
 <strong> Valid example: </strong>
 
-<img src="./images/scroll_h1.png" alt="Example with accessible horizontal scroll" width="300">
+<img src="./images/scroll_h1.png" alt="Example with accessible horizontal scroll, arrows meaning that a scroll is available and dots for the number of pages and witch one is displayed." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 <strong> Invalid example: </strong>
 
-<img src="./images/scroll_h2.png" alt="example of invalid horizontal scroll" width="300">
+<img src="./images/scroll_h2.png" alt="example of invalid horizontal scroll, no information available about the scroll." width="300">
 </div>
 </div>
 
 <h2 id="form">Form</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> from design and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>Binding the form fields with their labels provides an additional vocalization allowing the user to understand what happens when filling out a form field.</p>
 <p>There are 2 major techniques to achieve this:</p>
@@ -371,7 +377,14 @@ In this example, the default playback order depends completely on the implementa
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 channelupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channelup).getId());
-[...]</code></pre>
+[…]</code></pre><pre>
+<code class="kotlin">
+volupButton.accessibilityTraversalAfter = remote0.id
+voldownButton.accessibilityTraversalAfter = volup.id
+chaineplusButton.accessibilityTraversalAfter = voldown.id
+chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
+[…]
+</code></pre>
 
 
 <h2 id="focus-based-navigation">Focus-based navigation</h2>
@@ -384,7 +397,7 @@ channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channe
 <li>Manage the focus order: through the <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code> options, you can specify what view should take the focus when using the down, up, right and left arrows.</li>
 <li>Managing the focus display: interactive elements must have the <code>state_focused</code> defined and must be easily distinguishable when having the focus.</li>
 </ul>
-<p>Note: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft,</code>focusable` and other focus management options are available either in the <abbr>xml</abbr> or programmatically.</p>
+<p>Note: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> and other focus management options are available either in the <abbr>xml</abbr> or programmatically.</p>
 <p>For more information on the <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">focus management on Android</a>.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
@@ -393,6 +406,21 @@ channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channe
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow keyboard/dock tablet/sequential navigation device users to access the application.  </p>
+<h2 id="screen-orientation">Screen orientation</h2>
+<p><strong>Target: </strong> everyone, especially people with visual or motor impairments. 
+<strong> When: </strong> as of design and during development.</p>
+<p><strong>Description: </strong>
+Access to the content of an application must not depend on the orientation of the screen (portrait and landscape), unless a particular orientation is essential for understanding or using the content (projection, table…).</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Usage of standard graphic components that support both modes (fragments …), or define a <code>design</code> specific to each orientation.</li>
+<li>The application is not locked in a mode (portrait or landscape).</li>
+</ul>
+<p><strong>Users’ goal: </strong></p>
+<ul>
+<li>Ensure better readability of content for people who use magnification and move from portrait to landscape according to their need.</li>
+<li>Ensure a better readability of the content for the devices fixed on support (hospital bed, wheelchair…).</li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

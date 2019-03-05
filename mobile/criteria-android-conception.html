@@ -55,7 +55,7 @@
                         <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
                         <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
                         <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
-                        <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d’écran</a></li>
+                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
                         <li><a class="page-links" href="links.html">Liens utiles</a></li>
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
                         <li><a class="page-about" href="about.html">À propos</a></li>                        
@@ -125,7 +125,7 @@
 
 <p><span data-menuitem="criteria-android"></span></p>
 <p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application <a href="./mdan.html">mDAN</a> pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la <a href="./screen-reader-talkback.html">section concernant <span lang="en">TalkBack</span></a>.</p>
-<p>Pour le web, Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé, voir ces <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommandations</a>. L’objet de ces pages étant d’en faire un « digest » sans s’y substituer.</p>
+<p>Pour le web, le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé, voir ces <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommandations</a>. L’objet de ces pages étant d’en faire un « digest » sans s’y substituer.</p>
 <h2 id="images">Images</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde (sur réseau à faible bande passante…) et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et pendant le développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
@@ -160,7 +160,7 @@
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).<br>Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure… ) d’accéder tout de même à l’information par d’autres moyens.</p>
 <p><strong>Outil&nbsp;:</strong>
 L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/"><span lang="en">Colour Constrast Analyzer</span></a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
-<p>L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible pour Android 6+. </p>
+<p>L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible à partir d’Android 6.</p>
 <p><strong>Exemple de contraste non valide&nbsp;:</strong><br>Le texte &quot;film | 20h40 …&quot; ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant">   </p>
 <p><strong>Exemple de passage d’information par la couleur valide et non valide&nbsp;:</strong> </p>
@@ -180,7 +180,7 @@ Le texte ou son alternative est vocalisé automatiquement avec des informations 
 <li>Les alternatives textuelles de l’application sont explicites et compréhensibles.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
-<p>Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant… ) d’accéder aux informations véhiculées par l’application par d’autres biais.</p>
+<p>Permettre aux utilisateurs du lecteur d’écran d’accéder à toutes les informations véhiculées par l’application.</p>
 <p><strong>Exemple&nbsp;:</strong></p>
 <p>Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.<br><img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left"></p>
 <pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
@@ -242,7 +242,7 @@ infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_N
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Améliorer le confort de navigation au toucher (<i lang="en">touch</i>).</p>
 <p><strong>Outil&nbsp;:</strong></p>
-<p>L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des zones de clic. Disponible pour Android 6+. </p>
+<p>L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des zones de clic. Disponible à partir d’Android 6. </p>
 <p><strong>Exemple valide&nbsp;:</strong> </p>
 <p>Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.<br><img src="./images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong>  </p>
@@ -279,7 +279,7 @@ infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_N
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.</p>
 <p><strong>Outil&nbsp;:</strong>
-L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible pour Android 6+.</p>
+L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible à partir d’Android 6.</p>
 <p><strong>Exemple&nbsp;:</strong></p>
 <p><img src="./images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> </p>
 <h2 id="contr-le-de-contenu">Contrôle de contenu</h2>
@@ -295,7 +295,7 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <p><strong>Objectif technique&nbsp;:</strong></p>
 <p>Améliorer le référencement naturel.</p>
 <h2 id="changement-de-contenu">Changement de contenu</h2>
-<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong> </p>
 <p>Lorsque du contenu est modifié dynamiquement à la suite d’une action de l’utilisateur, il faut le notifier à la synthèse vocale. Sans retour vocal, l’utilisateur ne sait pas qu’une action a été déclenchée.<br>Sur une page, si du contenu est modifié dynamiquement suite à une action utilisateur, il est important que le lecteur d’écran soit notifié afin qu’il déclenche une vocalisation. Par exemple, les listes qui se rafraîchissent, ou un compteur de temps.</p>
 <p>Une simple vocalisation peut suffire à avertir l’utilisateur. Il est très facile de déclencher des vocalisations avec <span lang="en">TalkBack</span>. Attention : nous parlons de la vocalisation si <span lang="en">TalkBack</span> est activé et non pas de <abbr>TTS</abbr> (Text To Speech) qui peut fonctionner indépendamment du statut de <span lang="en">TalkBack</span>. Il suffit de faire appel à la méthode <code>announceForAccessibility</code> en lui passant en paramètre l’<code>id</code> de la chaîne de caractère à vocaliser. À noter&nbsp;: la méthode <code>announceForAccessibility</code> est disponible sur tout élément qui hérite de <code>View</code> et se fait dans la langue du système.</p>
@@ -326,12 +326,12 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <div class="col-sm-6 col-xs-12">
 <strong>Exemple valide&nbsp;:</strong>
 
-<img src="./images/scroll_h1.png" alt="exemple de scroll horizontal accessible" width="300">
+<img src="./images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 <strong>Exemple non-valide&nbsp;:</strong>
 
-<img src="./images/scroll_h2.png" alt="exemple de scroll horizontal non accessible" width="300">
+<img src="./images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 </div>
 </div>
 
@@ -373,13 +373,14 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());
-[…]</code></pre><pre>
+[…]</code></pre>
+<pre><code class="kotlin">
 volupButton.accessibilityTraversalAfter = remote0.id
 voldownButton.accessibilityTraversalAfter = volup.id
 chaineplusButton.accessibilityTraversalAfter = voldown.id
 chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 […]
-<code class="kotlin"></code></pre>
+</code></pre>
 
 
 <h2 id="navigation-au-focus">Navigation au focus</h2>

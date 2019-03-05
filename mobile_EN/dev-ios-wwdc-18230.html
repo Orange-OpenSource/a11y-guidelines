@@ -52,8 +52,7 @@
                       <li><a class="page-index" href="index.html">Presentation</a></li>
                       <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
                       <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
-                      <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
+                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
                       <li><a class="page-contact" href="contact.html">Contact</a></li>
                       <li><a class="page-about" href="about.html">About</a></li>                        
@@ -155,33 +154,33 @@
 <a name="TransparencyAndBlurring"></a></p>
 <h3 id="-transparency-and-blurring-03-07-https-developer-apple-com-videos-play-wwdc2018-230-time-187-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=187">Transparency and blurring (03:07)</a></h3>
 <p>Since iOS 8, classes such as <code>UIBlurEffect</code> and <code>UIVisualEffectView</code> perfectly handle the blurring effect of an image.
-</br>However, this could give rise to sighting difficulties for some people having visual problems.
-</br>In this case, there&#39;s a possibility for the user to drastically weaken these effects by changing his settings.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
+</br>However, this could give rise to sighting difficulties for some people having visual impairments.
+</br>In this case, there&#39;s a possibility for the user to drastically weaken these effects by activating the appropriate <a href="./criteria-ios.html#accessibility-options">accessibility option</a> in his settings.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
 </br>The result is a darker background that may become completely uniform under certain circumstances.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_2.png" />
-</br>The <code>isReduceTransparencyEnabled</code> property enables the developed application to be adapted to the user preference.
+</br>The <code>isReduceTransparencyEnabled</code> property value is available in the programing language as well.
 </br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_3.png" /></p>
 <p><a name="Contrast"></a></p>
 <h3 id="-contrast-04-38-https-developer-apple-com-videos-play-wwdc2018-230-time-278-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=278">Contrast (04:38)</a></h3>
 <p>The contrast between the foreground and the background colors is very important and depends a lot on the font type properties that are detailed in the <a href="./criteria-ios.html#colours">iOS guide section</a> of this site.
-</br>To improve the reading experience, it&#39;s natively possible to increase the colors contrast thanks to the settings.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
-</br>The <code>isDarkerSystemColorsEnabled</code> property enables the developed application to be adapted to the user preference.
+</br>To improve the reading experience, it&#39;s natively possible to increase the colors contrast by activating the appropriate <a href="./criteria-ios.html#accessibility-options">accessibility option</a> in the settings.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
+</br>The <code>isDarkerSystemColorsEnabled</code> property enables the developed application to be informed of its value.
 </br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_2.png" /></p>
 <p><a name="Sizing"></a></p>
 <h3 id="-sizing-07-04-https-developer-apple-com-videos-play-wwdc2018-230-time-424-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=424">Sizing (07:04)</a></h3>
 <p>The individual presented elements about the <code>Dynamic Type</code> are widely explained in the <a href="./dev-ios.html#text-size">iOS developement section</a> and refer to <a href="./dev-ios-wwdc-17245.html">another presentation</a> detailed in the WWDC part of this site.
 </br>Display a bold font type may improve the visual rendering enough without disproportionately increase the font size.
-</br>Once more, this functionality can be activated in the mobile settings.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
-</br>The <code>isBoldTextEnabled</code> property enables the developed application to be adapted to the user preference.
+</br>Once more, this <a href="./criteria-ios.html#accessibility-options">accessibility option</a> can be activated in the mobile settings.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
+</br>The <code>isBoldTextEnabled</code> property enables the developed application to be informed of its value.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_2.png" /></p>
 <p><a name="Motion"></a></p>
 <h3 id="-motion-08-48-https-developer-apple-com-videos-play-wwdc2018-230-time-528-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=528">Motion (08:48)</a></h3>
 <p>Any animations may give rise to problems of balance even of nausea to certain people.
-</br>The user accessibility settings allow to strongly decrease the effects of all kind of native animations.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
+</br>The user settings allow to strongly decrease the effects of all kind of native animations by activating the appropriate <a href="./criteria-ios.html#accessibility-options">accessibility option</a>.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
 </br>The <code>isReduceMotionEnabled</code> property enables the developed application to be adapted to the user preference.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_2.png" /></p>
 <p><a name="UIAccessibilityElement"></a></p>

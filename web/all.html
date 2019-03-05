@@ -261,7 +261,7 @@ Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la pag
 });</script>
 
 <h2 id="message-de-statut-et-accessibilit-">Message de statut et accessibilité</h2>
-<p>Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que pour les informations importantes pour l&#39;utilisateur, qui n&#39;induisent pas de changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
+<p>Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que les informations importantes pour l&#39;utilisateur, qui n&#39;induisent pas de changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
 <h2 id="quelques-exemple-de-messages-d-tat-de-statut-ou-contextuels">Quelques exemple de messages d&#39;état, de statut ou contextuels</h2>
 <p>Lorsqu&#39;un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; est en haut de ce nouveau contenu. Un lecteur d&#39;écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l&#39;information fournie à l&#39;utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle &quot;alert&quot;. </p>
 <p><code>&lt;h2 role=&quot;alert&quot;&gt;
@@ -271,15 +271,15 @@ Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la pag
 <p><code>&lt;p role=&quot;status&quot;&gt;
     un article ajouté au panier, le panier contient actuellement 4 articles
 &lt;/p&gt;</code></p>
-<p>Une fois qu&#39;un utilisateur a activé un processus d&#39;application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge... apparaît à l&#39;écran. Le lecteur d&#39;écran annonce &quot;Application occupée, chargement en cours&quot;.</p>
+<p>Une fois qu&#39;un utilisateur a activé un processus d&#39;application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge… apparaît à l&#39;écran. Le lecteur d&#39;écran annonce &quot;Application occupée, chargement en cours&quot;.</p>
 <p><code>&lt;div role=&quot;alert&quot;&gt;
     Application occupée, chargement en cours
 &lt;/div&gt;</code></p>
-<p>Une application affiche une barre de progression pour indiquer l&#39;état d&#39;une mise à jour d&#39;un élément de contenu. Le lecteur d&#39;écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;...</p>
+<p>Une application affiche une barre de progression pour indiquer l&#39;état d&#39;une mise à jour d&#39;un élément de contenu. Le lecteur d&#39;écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;…</p>
 <p><code>&lt;div role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-20 % mis à jour
+20% mis à jour
 &lt;/div&gt;</code></p>
-<p>Après qu&#39;un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant qui se lit comme suit&nbsp;: &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d&#39;écran annonce le même message.</p>
+<p>Après qu&#39;un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant comme suit&nbsp;: &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d&#39;écran annonce le même message.</p>
 <p><code>&lt;div role=&quot;alert&quot;&gt;
     Votre formulaire a été soumis avec succès
 &lt;/div&gt;</code></p>
@@ -292,13 +292,12 @@ Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la pag
     Le document YYY est bien enregistré dans le répertoire XXX
 &lt;/p&gt;</code></p>
 <p>Dans une application de mailing en ligne, l&#39;utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l&#39;adresse e-mail du destinataire est affichée à l&#39;écran à la suite de celle déjà choisies pour ce message. Le lecteur d&#39;écran devra annoncer l&#39;ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l&#39;écran pour certains utilisateurs d&#39;<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d&#39;écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle &quot;log&quot;.</p>
-<div role="log">
-  <ol>
-    <li>XX@YY.ZZ a été rajouté</li>
-    <li>XX@YY.ZZ a été retiré</li>
-  </ol>
-</div>
-
+<p><code>&lt;div role=&quot;log&quot;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;XX@YY.ZZ a été rajouté&lt;/li&gt;
+    &lt;li&gt;XX@YY.ZZ a été retiré&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</code></p>
 <p>Parfois, on veut fournir des messages que pour les lecteurs d&#39;écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d&#39;écran sans les afficher à l&#39;écran.</p>
 <h2 id="les-messages-de-statut-qui-n-en-sont-pas-">Les messages de statut qui n&#39;en sont pas !</h2>
 <p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d&#39;<abbr>AT</abbr>, ce n&#39;est pas un message de statut&nbsp;:</p>
@@ -336,8 +335,8 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 <p>Ici, le nom du lien est le contenu (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d&#39;écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
 <p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé, ne sera pas accessible, bien sûr !</p>
 <p>Également, on peut additionner les éléments pour donner un nom.</p>
-<p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot; le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code> </p>
-<p> Ce bouton aura lui un nom accessible qui est le contenu du bouton : l&#39;intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l&#39;image : &quot;canards en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
+<p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot;le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code> </p>
+<p> Ce bouton aura lui un nom accessible qui est le contenu du bouton : l&#39;intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l&#39;image : &quot;le canard en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
 <h3 id="-l-ment-associ-">Élément associé</h3>
 <p>Par ailleurs, pour les éléments de formulaire, le nom accessible est le <code>label</code> lorsqu’il est programmatiquement associé à l&#39;élément via l&#39;attribut <code>for</code> référençant l&#39;<code>id</code> du champ.</p>
 <pre><code class="html">
@@ -774,17 +773,17 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="assurer-un-contraste-suffisant-entre-texte-et-fond">Assurer un contraste suffisant entre texte et fond</h1>
+<h1 id="assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">Assurer un contraste suffisant entre les couleurs de premier plan et de fond</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
-        {"label":"Assurer un contraste suffisant entre texte et fond"}
+        {"label":"Assurer un contraste suffisant entre les couleurs de premier plan et de fond"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
+<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte ou un composant graphique et l’arrière-plan doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
@@ -797,7 +796,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
 <ul>
 <li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
 <li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
@@ -1383,17 +1382,17 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="assurer-un-contraste-suffisant-entre-texte-et-fond">Assurer un contraste suffisant entre texte et fond</h1>
+<h1 id="assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">Assurer un contraste suffisant entre les couleurs de premier plan et de fond</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
-        {"label":"Assurer un contraste suffisant entre texte et fond"}
+        {"label":"Assurer un contraste suffisant entre les couleurs de premier plan et de fond"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan même pour des éléments graphiques porteurs de sens doit être suffisamment élevé.
+<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le premier plan et l’arrière-plan, même pour des éléments graphiques non-textuels porteurs de sens, doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non valide&nbsp;:</strong><br>Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
@@ -1406,7 +1405,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
 <ul>
 <li>si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
 <li>si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.</li>
@@ -1477,8 +1476,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus sur l&#39;élément concerné. </li>
 </ul>
 </li>
-<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :
-Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir, <strong>à la fois</strong> :</p>
+<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir <strong>à la fois</strong> :</p>
 </li>
 <li><p>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus ; par exemple, avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</p>
 </li>
@@ -2296,9 +2294,9 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 </ul>
-<h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
+<h2 id="3-assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">3. Assurer un contraste suffisant entre les couleurs de premier plan et de fond</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan même pour des éléments graphiques porteurs de sens doit être suffisamment élevé.
+<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le premier plan et l’arrière-plan, même pour des éléments graphiques non-textuels porteurs de sens, doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non valide&nbsp;:</strong><br>Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
@@ -2311,7 +2309,8 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<li><p>S&#39;assurer que les objets graphiques non-textuels porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les graphiques… 
+On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
 <ul>
 <li>si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure (cartes de chaleur…)</li>
 <li>si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.</li>
@@ -3007,9 +3006,9 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
     (Titre 2) Les actualités
     (Titre 2) La fibre arrive&amp;nbsp;!
         (Titre 3) Êtes-vous éligible&amp;nbsp;?
-</code></pre><h2 id="3-assurer-un-contraste-suffisant-entre-texte-et-fond">3. Assurer un contraste suffisant entre texte et fond</h2>
+</code></pre><h2 id="3-assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">3. Assurer un contraste suffisant entre les couleurs de premier plan et de fond</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les utilisateurs sur mobile et tablette, les personnes malvoyantes, éprouvant des difficultés de lecture ou avec un déficit d’attention et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte et l’arrière-plan doit être suffisamment élevé.
+<p><strong>Description&nbsp;:</strong><br>Le niveau de contraste entre le texte ou un composant graphique et l’arrière-plan doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.</p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
@@ -3022,7 +3021,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
 </ul>
 </li>
-<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
 <ul>
 <li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
 <li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
@@ -3531,8 +3530,10 @@ Pour désactiver ce mode de navigation, faites un clic droit sur l’icône de <
 <p><img src="images/aXe.png" alt="capture d’écran de l’extension axe">
 &nbsp;</p>
 <h2 id="-span-lang-en-wave-toolbar-span-"><span lang="en">Wave toolbar</span></h2>
-<p><a href="http://wave.webaim.org/extension/"><span lang="en">Wave toolbar</span></a> est une barre d’extension pour Chrome. Tout comme aXe, elle permet d’effectuer une série de tests d’accessibilité sur la page en cours. A la différence de ce dernier qui affiche les erreurs dans un onglet de l’inspecteur web, ici les erreurs sont affichées directement dans la page. Il existe un <a href="http://wave.webaim.org/help">bookmarklet (ou favlet) pour <span lang="en">Wave</span></a>.</p>
-<p><img src="images/wave.png" alt="capture d’écran de l’extension wave toolbar"></p>
+<p><a href="http://wave.webaim.org/extension/"><span lang="en">Wave toolbar</span></a> est une barre d’extension pour Chrome. Tout comme aXe, elle permet d’effectuer une série de tests d’accessibilité sur la page en cours (proche des tests automatique de aXe). À la différence de ce dernier qui affiche les erreurs dans un onglet de l’inspecteur web, ici les erreurs sont affichées directement dans la page. Il existe un <a href="http://wave.webaim.org/help">bookmarklet (ou favlet) pour <span lang="en">Wave</span></a>.</p>
+<p><img src="images/wave.png" alt="capture d’écran de l’extension wave toolbar">
+<span lang="en">Wave toolbar</span> assure un grand nombre de tests automatiques mais aussi un certains nombre de tests semi-manuels qui demandent validation humaine,  appelés alertes ou <span lang="en">alert</span>. Que ce soit les alertes ou les erreurs, on peut examiner le noeud <abbr>DOM</abbr> qui à généré cette remontée et accéder à une information plus détaillée sur le critère d&#39;accessibilité non respecté et comment y remédier.</p>
+<p>Cette extension permet, également, de visualiser directement la hiérarchie des titres de la page (via un onglet dans la barre latérale), afficher la page avec et sans <abbr>CSS</abbr> et visualiser les problèmes de contraste via des icônes situés dans la page.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

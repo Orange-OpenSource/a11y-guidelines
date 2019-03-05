@@ -52,8 +52,7 @@
                       <li><a class="page-index" href="index.html">Presentation</a></li>
                       <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
                       <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                                                        
-                      <li><a class="page-screen-reader" href="screen-reader.html">Screen reader</a></li>
+                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
                       <li><a class="page-links" href="links.html">Useful links</a></li>
                       <li><a class="page-contact" href="contact.html">Contact</a></li>
                       <li><a class="page-about" href="about.html">About</a></li>                        
@@ -150,8 +149,9 @@
 
 <p><span data-menuitem="criteria-mobile"></span></p>
 <p>This guide aims to present the different accessibility criteria for getting an accessible Android application. Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule. The criteria are explained through code snippets and real case examples. We invite you to install the <a href="./mdan.html">mDAN</a> application for working examples of Talkback, the screen reader for Android, and other assistive tools. For more information on the tool (how to activate it, how to use it…) please refer to the <a href="./talkback.html">Talkback section</a>.</p>
+<p>For the web, the level of accessibility to achieve to any HTML interface by the Orange group is the respect of the criteria of level AA of the Web Content Accessibility Guidelines (WCAG) 2.1, without blocking point following a test of user of technical help for the main scenarios for using the features of the site or application. For native mobile applications, a transposition of these criteria and compliance with the recommendations of the Android platform in terms of accessibility is requested, see these recommendations. The purpose is to explain these recommendations without replacing it.</p>
 <h2 id="images">Images</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong>When: </strong> from design and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong>When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>Images are often used to convey a lot of information. As the saying goes, a picture is worth a thousand words. The blind cannot see the images, it is important that they get an alternative that gives all the information carried by the image.
 In the case of an image containing text, this text will be the alternative. In the case of an image that provides information as a graph, a drawing or something else, the alternative will contain all necessary information conveyed by the image.</p>
@@ -165,7 +165,7 @@ Icons are, conversely, widely used as buttons for various features. So they need
 <li>Decorative images have no alternative text.</li>
 </ul>
 <p><strong>Users’ goal: </strong></p>
-<p>Access the information included in images for users who cannot access it. Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth...).</p>
+<p>Access the information included in images for users who cannot access it. Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth…).</p>
 <p><strong> Examples: </strong></p>
 <p><img src="./images/image_ex.png" alt="complete example of decorative picture and informative icon" width="400">  </p>
 <p>By decomposing the image:  </p>
@@ -175,32 +175,33 @@ Icons are, conversely, widely used as buttons for various features. So they need
 <li><img src="./images/settings.png" alt="example of informative icon: “edition”" width="48"> <code>imageView.setContentDescription(&quot;edit the image name&quot;)</code></li>
 </ul>
 <h2 id="colors">Colors</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)<br><strong> When: </strong> from the design phase and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>Colours have a very important role in the transmission of information. Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.</li>
-<li>The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool).</li>
+<li>The contrast between the colour of the background and the text must be at least 7:1 and 4.5:1 for large font (can be measured with the Colour Contrast Analyser tool). Due to mobile constraints (screen, brightness,…) level AAA is required.</li>
 </ul>
 <p><strong>Users’ goal: </strong> </p>
 <p>Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).
-Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments...) to access the same information by other means.</p>
+Allow users not distinguishing colours (colour blind, visually impaired, mobile users in bright environment…) to access the same information by other means.</p>
 <p><strong> Tools: </strong>
 The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> application can quickly measure colour contrast levels (free for Windows and Mac).  </p>
-<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the colour contrast. Available for Android 6+. </p>
+<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the colour contrast. Available on Android 6 and further. </p>
 <p><strong> Example of invalid contrast </strong><br>The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.  </p>
 <p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
 <p><strong> Example of information conveyed through valid and invalid colour: </strong> </p>
-<p><img src="./images/couleur.png" alt="example of information conveyed through valid and invalid colour" width="300"></p>
+<p><img src="./images/couleur.png" alt="example of information conveyed through valid and invalid colour. In one case the color and the form of the object carries the information with a legend, in the other case only the color carries the information." width="300"></p>
 <h2 id="alternative-text">Alternative text</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> from design, content writing and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> as of design, during content writing and development.</p>
 <p><strong>Description: </strong></p>
 <p>Text alternatives are at the core of mobile accessibility. Thanks to them, a visually impaired user can use an application without loss of information.</p>
 <p>As for the images, it is important to add a text alternative when information is not available for the visually impaired/blind. This is the case of components that provide information by colour, shape, position, sound… On mobile, all components can have a text alternative, it is possible to enrich the native vocalization of an element, including a simple text.</p>
-<p>Space on mobile is reduced, we often use abbreviations for text. However, this raises an issue for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that Talkback can recognize some common abbreviations. For example, “etc.” and “Dr.” are vocalized “etcetera” and “doctor”.</p>
+<p>Space on mobile is reduced, we often use abbreviations for text. However, this raises issues for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that Talkback can recognize some common abbreviations. For example, “etc.” and “Dr.” are vocalized “etcetera” and “doctor”.</p>
 <p>Some images are frequently associated with text to give information. This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”. In this case, the solution is to set a text alternative on the text that gives all the necessary information. For example: “3 unread messages”. One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.</p>
-<p>The text alternative of an element is set via the <code>contentDescription</code> attribute (available to any child of <code>View</code>). For the buttons in the <code>ActionBar</code> (or <code>ToolBar</code>) the <code>title</code> attribute must be set.</p>
+<p>The text alternative of an element is set via the <code>contentDescription</code> attribute (available to any child of <code>View</code>). For the buttons in the <code>ActionBar</code> (or <code>ToolBar</code>) the <code>title</code> attribute must be set.
+The text or its alternative is vocalized automatically with information on the type of component (button, check box ...), its possible state (checked off, selected), if it is usable (disabled). For more technical information on these attributes, we recommend that you read the <a href=".dev-android.html#text-alternative">text alternatives section in the developer guide</a>.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>The elements that require alternative must have one.</li>
@@ -211,10 +212,16 @@ The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Co
 <p><strong> Example: </strong></p>
 <p>Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge means that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
 <img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left"></p>
-<pre><code class="java">containerView.setContentDescription("3 unread mails button"); //We add a complete alternative (dynamically built before) on the container
+<pre><code class="java">containerView.setContentDescription("3 unread mails, button"); //We add a complete alternative (dynamically built before) on the container
 containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //The container is a View, not visible by the default accessibility API. We make it visible.
 mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //We hide the button icon to avoid information redundancy
-badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //The text is hidden to avoid information redundancy</code></pre>
+badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //The text is hidden to avoid information redundancy
+</code></pre><pre>
+<code class="kotlin">containerView.contentDescription = "3 unread mails, button" //We add a complete alternative (dynamically built before) on the container
+containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES //The container is a View, not visible by the default accessibility API. We make it visible.
+mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information
+infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //The text is hidden to avoid information redundancy
+</code></pre>
 
 
 <h2 id="title-and-header">Title and header</h2>
@@ -249,7 +256,6 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 <p><strong>Description: </strong></p>
 <p>Accessibility is taken into account in native components (most of the time). Additionally, the use of standard components allows the user to be in a situation or behaviour that they are already used to. Navigation through a standard interface is more comfortable.</p>
 <p>Use native components as much as possible and change their appearance. If no standard component corresponds to the need, create a dedicated component based on a standard component while keeping the navigation and accessibility consistency.</p>
-<p>A common example is the use of a custom component for the side navigation menu (<code>NavigationDrawer</code>). Some of the available libraries are not accessible with a screen reader. Unfortunately, this makes the application inaccessible.</p>
 <p><strong>Users’ goal: </strong></p>
 <p>Improve user navigation.</p>
 <p><strong> Technical Objective: </strong></p>
@@ -264,7 +270,7 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Improve user experience.</p>
-<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the touch target size. Available for Android 6+. </p>
+<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including the touch target size. Available on Android 6 and further. </p>
 <p><strong> Valid example: </strong></p>
 <p>In the examples below, the black box corresponds to the size of the interactive area.<br><img src="./images/clic_ok.png" alt="interactive component example with a fairly large touch target" width="300"></p>
 <p><strong> Invalid example: </strong></p>
@@ -291,7 +297,7 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 <p>The application must implement dynamic text sizes, ensure good responsiveness of the display areas to text enlargement (containers that fit the size of their content). You should also ensure a minimum size for text (14sp).</p>
 <p>In order for the “Huge font size” option to properly interact with the application, several points are to be respected during the development:</p>
 <ul>
-<li>Use dynamic font size: the “sp”. This unit, specific to Android, allows to have a font size proportional to the pixel density of the display. It is highly recommended to use it for text, if only for a uniform design on all types of Android device.</li>
+<li>Use dynamic font size: the “sp”. This unit, specific to Android, allows to have a font size proportional to the pixel density of the display. It is highly recommended to use it for text, at least to get a uniform design on all types of Android device.</li>
 <li>Manage content overflows: A common mistake is to use a dynamic text size (“sp”) but not to pay attention to the container size. If the text gets bigger, the container must adapt so there is no overflow. One can perfectly play with the <code>min-height</code> and <code>height</code> attributes for correct result (the <code>height</code> set to <code>wrap_content</code> and <code>min-height</code> set to the default desired height).</li>
 </ul>
 <p><strong>Checklist: </strong></p>
@@ -299,13 +305,13 @@ badgeTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
 <li>The application correctly responds to the Huge font size option.</li>
 <li>Minimum text size must be 14sp.</li>
 </ul>
-<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including text size. Available for Android 6+. </p>
+<p><strong>Tools:</strong><br>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner application</a> allows you to test quickly and simply the accessibility of your apps on some criteria including text size. Available on Android 6 and further. </p>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow users (visually impaired, mobility, elderly people…) to increase the text size for easier access to information.</p>
 <p><strong> Example: </strong></p>
 <p><img src="./images/text.png" alt="example using dynamic font size" width="300"></p>
 <h2 id="content-control">Content Control</h2>
-<p><strong>Target: </strong> everyone, especially people with visual and cognitive deficiencies.<br><strong> When: </strong> when design and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual and cognitive deficiencies.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
 The user must control the content at all times. This is especially true with interactive content. So avoid video players launching directly in full screen mode, or videos starting automatically without user action, or a carousel scrolling automatically etc.</p>
@@ -318,10 +324,10 @@ The user must control the content at all times. This is especially true with int
 <p><strong> Technical goal: </strong></p>
 <p>Improve natural indexation.</p>
 <h2 id="changing-content">Changing content</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>When content is dynamically modified after a user action, the screen reader must be notified. Without any voice feedback, the user does not know that the content has changed.<br>If the content has changed dynamically after a user action, it is important that the screen reader is notified so that it triggers a vocalization. E.g. refreshing a list or a timer.</p>
-<p>A simple vocalization can be enough to warn the user. It is very easy to trigger vocalizations with Talkback. Warning: we are talking about the vocalization when Talkback is enabled and not <abbr>TTS</abbr> (Text To Speech), the latter can operate whether Talkback is on or not. Just call the <code>announceForAccessibility</code> method with the parameter <code>id</code> of the string to vocalize. Note: the <code>announceForAccessibility</code> method is available on any item that inherits from<code>View</code> and is vocalized in the default system language.</p>
+<p>A simple vocalization can be enough to warn the user. It is very easy to trigger vocalizations with Talkback. Warning: we are talking about the vocalization when Talkback is enabled and not <abbr>TTS</abbr> (Text To Speech), the latter can operate whether Talkback is on or not. Just call the <code>announceForAccessibility</code> method with the parameter <code>id</code> of the string to vocalize. Note: the <code>announceForAccessibility</code> method is available on any item that inherits from <code>View</code> and is vocalized in the default system language.</p>
 <p>It is also possible to specify that a view is a live region, that is to say that its content is subject to change dynamically and should in this case notify the Accessibility API. This will result in generating vocalizations with Talkback for example. A typical use case: on a form, if the user makes a mistake and an error message appears, the view containing the message must be defined as a live region. You must use the <code>setAccessibilityLiveRegion</code> method that takes a mode parameter for the live region. There are 3 modes:</p>
 <ul>
 <li><code>ACCESSIBILITY_LIVE_REGION_NONE</code>: this view is not a live region. This is the default for most views.</li>
@@ -350,17 +356,17 @@ Do not hesitate to display an element to indicate a horizontal scroll (dots for 
 <div class="col-sm-6 col-xs-12">
 <strong> Valid example: </strong>
 
-<img src="./images/scroll_h1.png" alt="Example with accessible horizontal scroll" width="300">
+<img src="./images/scroll_h1.png" alt="Example with accessible horizontal scroll, arrows meaning that a scroll is available and dots for the number of pages and witch one is displayed." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 <strong> Invalid example: </strong>
 
-<img src="./images/scroll_h2.png" alt="example of invalid horizontal scroll" width="300">
+<img src="./images/scroll_h2.png" alt="example of invalid horizontal scroll, no information available about the scroll." width="300">
 </div>
 </div>
 
 <h2 id="form">Form</h2>
-<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> from design and during development.</p>
+<p><strong>Target: </strong> everyone, especially people with visual impairments.<br><strong> When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong></p>
 <p>Binding the form fields with their labels provides an additional vocalization allowing the user to understand what happens when filling out a form field.</p>
 <p>There are 2 major techniques to achieve this:</p>
@@ -398,7 +404,14 @@ In this example, the default playback order depends completely on the implementa
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 channelupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channelup).getId());
-[...]</code></pre>
+[…]</code></pre><pre>
+<code class="kotlin">
+volupButton.accessibilityTraversalAfter = remote0.id
+voldownButton.accessibilityTraversalAfter = volup.id
+chaineplusButton.accessibilityTraversalAfter = voldown.id
+chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
+[…]
+</code></pre>
 
 
 <h2 id="focus-based-navigation">Focus-based navigation</h2>
@@ -411,7 +424,7 @@ channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channe
 <li>Manage the focus order: through the <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code> options, you can specify what view should take the focus when using the down, up, right and left arrows.</li>
 <li>Managing the focus display: interactive elements must have the <code>state_focused</code> defined and must be easily distinguishable when having the focus.</li>
 </ul>
-<p>Note: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft,</code>focusable` and other focus management options are available either in the <abbr>xml</abbr> or programmatically.</p>
+<p>Note: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> and other focus management options are available either in the <abbr>xml</abbr> or programmatically.</p>
 <p>For more information on the <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">focus management on Android</a>.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
@@ -420,6 +433,21 @@ channeldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channe
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow keyboard/dock tablet/sequential navigation device users to access the application.  </p>
+<h2 id="screen-orientation">Screen orientation</h2>
+<p><strong>Target: </strong> everyone, especially people with visual or motor impairments. 
+<strong> When: </strong> as of design and during development.</p>
+<p><strong>Description: </strong>
+Access to the content of an application must not depend on the orientation of the screen (portrait and landscape), unless a particular orientation is essential for understanding or using the content (projection, table…).</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Usage of standard graphic components that support both modes (fragments …), or define a <code>design</code> specific to each orientation.</li>
+<li>The application is not locked in a mode (portrait or landscape).</li>
+</ul>
+<p><strong>Users’ goal: </strong></p>
+<ul>
+<li>Ensure better readability of content for people who use magnification and move from portrait to landscape according to their need.</li>
+<li>Ensure a better readability of the content for the devices fixed on support (hospital bed, wheelchair…).</li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -505,11 +533,7 @@ The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Co
 <p>Provide access to application information to screen reader users.</p>
 <p><strong> Example: </strong></p>
 <p>Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge makes us understand that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
-<img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left"></p>
-<pre><code class="swift">cell.mailImageView.accessibilityLabel = cell.badgeLabel.text! + " " + "exemple_textualAlternative_textImage_accessibilityLabel".localized //We add the complete alternative
-cell.badgeLabel.isAccessibilityElemement = false //The text is hidden to avoid information redundancy </code></pre>
-
-
+</br><img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left"></p>
 <h2 id="title-and-header">Title and header</h2>
 <p><strong> Target: </strong> everyone<br><strong> When: </strong> as of design and during content writing.</p>
 <p><strong>Description: </strong> </p>
@@ -540,13 +564,6 @@ To set an item as a header, set the <code>accessibilityTraits</code> attribute o
 <p>Allow screen reader users to access components’ information, their status, their nature so they can use them without any difficulties.</p>
 <p><strong> Example: </strong></p>
 <p><img src="./images/expandable_list.png" alt="example of an expandable list that needs text alternative" width="250" class="pull-left"></p>
-<pre><code class="swift">if(accessibleIsFold) {
-   accordionHeaderView.accessibilityHint = "example_elementState_foldArea_open_accessibilityHint".localized //"Click here to open the view"
-}else{
-  accordionHeaderView.accessibilityHint = "example_elementState_foldArea_close_accessibilityHint".localized //"Click here to close the view"
-}</code></pre>
-
-
 <h2 id="standard-components">Standard components</h2>
 <p><strong> Target: </strong> everyone.<br><strong> When: </strong> when choosing the libraries and during development.</p>
 <p><strong>Description: </strong></p>
@@ -663,18 +680,8 @@ Do not hesitate to display a view to indicate a horizontal scroll (dots on <code
 <p><strong>Users’ goal: </strong></p>
 <p>Ensure logic order and coherent reading to screen reader users.</p>
 <p><strong> Example: </strong>
-In this example, the default playback order depends completely on the implementation and on the order of element declaration. In this case: <code>vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0</code>. A more consistent reading order is <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-</code>.</p>
-<p><img src="./images/order.png" alt="Example of reading order" width="300"></p>
-<pre><code>remoteView.isAccessibilityElement = false
-remoteView.shouldGroupAccessibilityChildren = true
-remoteView.accessibilityElements = []
-remoteView.accessibilityElements?.append(oneButton)
-remoteView.accessibilityElements?.append(twoButton)
-remoteView.accessibilityElements?.append(threeButton)
-remoteView.accessibilityElements?.append(fourButton)
-[…]</code></pre>
-
-
+In this example, the default playback order depends completely on the implementation and on the order of element declaration. In this case: <code>vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0</code>. A more consistent reading order is <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-</code>.
+</br><img src="./images/order.png" alt="Example of reading order" width="300"></p>
 <h2 id="language">Language</h2>
 <p><strong>Target : </strong> people with visual impairments.<br><strong>When: </strong> during development.</p>
 <p><strong>Description: </strong></p>
@@ -688,8 +695,7 @@ remoteView.accessibilityElements?.append(fourButton)
 <p>Ensure the understanding of the application text.</p>
 <h2 id="screen-orientation">Screen orientation</h2>
 <p><strong>Target&nbsp;: </strong> everyone, especially people with visual and/or motor impairments.<br><strong>When&nbsp;: </strong> as of design and during development.</p>
-<p><strong>Description&nbsp;: </strong></p>
-<p>The screen orientation mustn&#39;t impact the access of an application content.
+<p><strong>Description&nbsp;: </strong> the screen orientation mustn&#39;t impact the access of an application content.
 </br>It&#39;s highly recommended to :</p>
 <ul>
 <li><strong>Implement both the portrait and the landscape modes</strong> to be easily toggled by the user if it doesn&#39;t go against some functional constraints of the application itself (<code>serious game</code> for instance).</li>
@@ -701,10 +707,85 @@ remoteView.accessibilityElements?.append(fourButton)
 <li>Very accurate definition of the way the transitions between portrait and landscape modes should occur.</li>
 <li>Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the <code>Dynamic Type</code>).</li>
 <li>Appropriate settings in the integrated development environment.
-</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" /></li>
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/orientation.png" /></li>
 </ul>
-<p><strong>Users’ goal&nbsp;: </strong></p>
-<p>Improve a better legibility of the content.</p>
+<p><strong>Users’ goal&nbsp;: </strong> improve a better legibility of the content.</br></br></p>
+<h2 id="accessibility-options">Accessibility options</h2>
+<p><strong>Target&nbsp;:</strong> everyone.<br><strong>When&nbsp;:</strong> as of design and during development.</p>
+<p><strong>Description&nbsp;:</strong> the accessibility options located in the mobile settings are all about to improve the experience of an impaired user who can be significantly helped by these options.</p>
+<p>It&#39;s then primordial :</p>
+<ul>
+<li>To <strong>understand perfectly</strong> each one of these options that can have an impact during the conception or the implementation periods of an application.</li>
+<li>To <strong> test</strong> each appropriate option so as to be sure that its purpose is completely taken into account inside the application.</li>
+</ul>
+<p>The full list of these options including their purpose and their coding name is defined hereunder :</p>
+<ol>
+<li><a href="#optionA11Y_contraste">Increase Contrast</a></li>
+<li><a href="#optionA11Y_assistiveTouch">AssistiveTouch</a></li>
+<li><a href="#optionA11Y_bold">Bold Text</a></li>
+<li><a href="#optionA11Y_closedCaption">Subtitles &amp; Captioning</a></li>
+<li><a href="#optionA11Y_grayScale">Greyscale</a></li>
+<li><a href="#optionA11Y_guidedAccess">Guided Access</a></li>
+<li><a href="#optionA11Y_inverserLesCouleurs">Invert Colours</a></li>
+<li><a href="#optionA11Y_audioEnMono">Mono Audio</a></li>
+<li><a href="#optionA11Y_limiteVisuel">Reduce Motion</a></li>
+<li><a href="#optionA11Y_reductionTransparence">Reduce Transparency</a></li>
+<li><a href="#optionA11Y_secouerPourAnnuler">Shake to Undo</a></li>
+<li><a href="#optionA11Y_lecturePage">Speak Screen</a></li>
+<li><a href="#optionA11Y_speakSelection">Speak Selection</a></li>
+<li><a href="#optionA11Y_switchontrol">Switch Control</a></li>
+<li><a href="#optionA11Y_voiceOver">VoiceOver</a></li>
+</ol>
+<p><a name="optionA11Y_contraste"></a></p>
+<ul>
+<li><strong>Increase Contrast</strong> <em>(UIAccessibilityDarkerSystemColorsEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#Contrast">WWDC 2018 video</a>.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Increase Contrast." src="./images/optionA11Y_contraste.png" />
+<a name="optionA11Y_assistiveTouch"></a></li>
+<li><strong>AssistiveTouch</strong> <em>(UIAccessibilityIsAssistiveTouchRunning)</em> : displays the homonymous menu in foreground, whatever the runnning application.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - AssistiveTouch" src="./images/optionA11Y_assistiveTouch.png" />
+<a name="optionA11Y_bold"></a></li>
+<li><strong>Bold Text</strong> <em>(UIAccessibilityIsBoldTextEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#Sizing">WWDC 2018 video</a>.
+</br><img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Bold Text" src="./images/optionA11Y_bold.png" />
+<a name="optionA11Y_closedCaption"></a></li>
+<li><strong>Subtitles &amp; Captioning</strong> <em>(UIAccessibilityIsClosedCaptioningEnabled)</em> : displays closed captioning or subtitles when available in the <code>appTV</code> or <code>Videos</code> app.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Subtitles & Captioning" src="./images/optionA11Y_closedCaptions.png" />
+<a name="optionA11Y_grayScale"></a></li>
+<li><strong>Greyscale</strong> <em>(UIAccessibilityIsGrayscaleEnabled)</em> : makes the display more readable for color blind people.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Display Accomodations - Colour Filters - Colour Filters" src="./images/optionA11Y_grayScale.png" />
+<a name="optionA11Y_guidedAccess"></a></li>
+<li><strong>Guided Access</strong> <em>(UIAccessibilityIsGuidedAccessEnabled)</em> : restricts use of a single application.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Guided Access" src="./images/optionA11Y_guidedAccess.png" />
+<a name="optionA11Y_inverserLesCouleurs"></a></li>
+<li><strong>Invert Colours</strong> <em>(UIAccessibilityIsInvertColorsEnabled)</em> : reduces glare and eye strain thanks to a very helpful mode for visual impaired people.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - " src="./images/optionA11Y_inverserLesCouleurs.png" />
+<a name="optionA11Y_audioEnMono"></a></li>
+<li><strong>Mono Audio</strong> <em>(UIAccessibilityIsMonoAudioEnabled)</em> : allows a complete hearing understanding with headset on without missing a word or a sound for people who are hard of hearing or deaf in one ear.
+</br><img style="max-width: 590px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Mono Audio" src="./images/optionA11Y_audioEnMono.png" />
+<a name="optionA11Y_limiteVisuel"></a></li>
+<li><strong>Reduce Motion</strong> <em>(UIAccessibilityIsReduceMotionEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#Motion">WWDC 2018 video</a>.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Reduce Motion" src="./images/optionA11Y_limiteVisuel.png" />
+<a name="optionA11Y_reductionTransparence"></a></li>
+<li><strong>Reduce Transparency</strong> <em>(UIAccessibilityIsReduceTransparencyEnabled)</em> : see the <a href="./dev-ios-wwdc-18230.html#TransparencyAndBlurring">WWDC 2018 video</a>.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Reduce Transparency" src="./images/optionA11Y_reductionTransparence.png" />
+<a name="optionA11Y_secouerPourAnnuler"></a></li>
+<li><strong>Shake to Undo</strong> <em>(UIAccessibilityIsShakeToUndoEnabled)</em> : displays a menu to undo an action, preventing from holding backspace and watching all the letters disappear one by one for instance.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Shake to Undo" src="./images/optionA11Y_secouerPourAnnuler.png" />
+<a name="optionA11Y_lecturePage"></a></li>
+<li><strong>Speak Screen</strong> <em>(UIAccessibilityIsSpeakScreenEnabled)</em> : launches the vocalization of the screen content.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Speak Screen" src="./images/optionA11Y_lecturePage.png" />
+<a name="optionA11Y_speakSelection"></a></li>
+<li><strong>Speak Selection</strong> <em>(UIAccessibilityIsSpeakSelectionEnabled)</em> : displays a menu that suggests to speak the selection that fired it.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Speak Selection" src="./images/optionA11Y_speakSelection.png" />
+<a name="optionA11Y_switchontrol"></a></li>
+<li><strong>Switch Control</strong> <em>(UIAccessibilityIsSwitchControlRunning)</em> : activates the feature in <code>point scanning mode</code> or in <code>item scanning mode</code>.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Switch Control" src="./images/optionA11Y_switchontrol.png" />
+<a name="optionA11Y_voiceOver"></a></li>
+<li><strong>VoiceOver</strong> <em>(UIAccessibilityIsVoiceOverRunning)</em> : launches the screen reader.
+</br><img style="max-width: 950px; height: auto;" alt="Access illustration via Settings - General - Accessibility - VoiceOver" src="./images/optionA11Y_voiceOver.png" /></li>
+</ul>
+<p></br>Once activated, if the accessibility option has no result in the application running, it&#39;s <strong>highly recommended</strong> to keep oneself posted of the impacted options states so as to provide the best experience to the user.
+</br>The full list of the accessibility options with their dedicated notification is located in the <a href="./dev-ios.html#accessibility-options">developer part</a> of this site.
+</br></br>It may be particularly interesting to keep track of these options (de)activations with kind of indicators in order to have a better understanding of the users habits and to implement improvements accordingly.</br></br></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -759,41 +840,115 @@ Some elements already present in the Orange Brand (such as the use of colours) h
 <p><span data-menuitem="dev-mobile"></span></p>
 <p>This guide aims to present the various accessibility options available on the Android <abbr>SDK</abbr>. Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the official Google documentation. Code snippets are also available to show you how to implement it.  </p>
 <h2 id="text-alternative">Text alternative</h2>
-<p><strong>Description: </strong>  </p>
+<h3 id="description-">Description:</h3>
 <p>On Android, the vocalization of an element is made through an attribute named <code>contentDescription</code>. This attribute, which accepts a single string parameter (and therefore localizable), completely redefines the text to be read by an accessibility service like TalkBack. This allows a component to be more explicit than the text displayed on the screen. For example, in the case of a button whose title is “OK”, the <code>contentDescription</code> attribute can indicate that the button is used to confirm an action.</p>
 <p>The <code>contentDescription</code> attribute must also be used on custom elements to indicate their nature. For example, a clickable <code>LinearLayout</code> must have a <code>contentDescription</code> like “button_name, button” (it should also be focusable to be properly accessible, see the corresponding section). </p>
 <p>Note that the <code>contentDescription</code> is available in any element that inherits from <code>View</code>. It is therefore possible to set a <code>contentDescription</code> on a <code>TextView</code> for example, as shown in the “accessibility guide - text alternative - abbreviations, dates and times” section.</p>
-<p><strong>Examples: </strong>   </p>
-<p>Simple example (localized):<br><code>myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></p>
-<p>Example indicating the state and nature of a <code>TabHost</code> (not localized):  </p>
-<pre><code>private class TabHostListener implements TabHost.OnTabChangeListener {
-    [...]
-    public void onTabChanged(String tabId) {setContentDescription(mTabHost, mTabsLabel);}
-}
+<h3 id="examples-">Examples:</h3>
+<p>Simple example (localized):</p>
+<pre><code class="xml">&lt;TextView
+…
+android:id="@+id/myTextviewId"
+android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
+&#47;&gt;</code></pre><pre>
+<code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);
+myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
 
-private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
-    int tab = mTabHost.getCurrentTab();
-    int tabCount = mTabHost.getTabWidget().getTabCount();
-
-    for (int tabNumber = 0; tabNumber < tabCount; tabNumber++) {
-        CharSequence contentDescription = mTabsLabel[tabNumber];
-
-        contentDescription = contentDescription + ", tab " + (tabNumber + 1) + " on " + tabCount;
-        if (tabNumber == tab) {
-            contentDescription = contentDescription + ", selected";
+<p>Example of a <code>Tab</code>:<br>The example has tabs above and below a <code>ViewPager</code> in one case in<code>TabLayout</code> and in the other in <code>BottomNavigationView</code>. The tabs are no longer coded in <code>TabHost</code> component.
+It is necessary to indicate the state and the nature of the tabs (not internationalized):</p>
+<pre><code class="xml">//In the layout of the activity
+&lt;android.support.constraint.ConstraintLayout
+   …&gt;
+    &lt;android.support.v4.view.ViewPager
+    android:id="@+id/viewpager"
+        …
+        &gt;
+    &lt;android.support.design.widget.TabLayout
+            android:id="@+id/tabtoolbar_pager"
+            …
+    &lt;/android.support.v4.view.ViewPager&gt;
+    &lt;android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        […]
+        app:menu="@menu/navigation" /&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+&nbsp;
+&nbsp;
+//In the file strings.xml
+&lt;string name="cd_tab_title_param"&gt;%1$s, tab %2$s on %3$s&lt;/string&gt;
+</code></pre><pre>
+<code class="java">
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mTabLayout = (TabLayout) findViewById(R.id.tabtoolbar_pager);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mTabLayout.addOnLayoutChangeListener(mTabLayoutListener);
+        mTabLayout.setupWithViewPager(mViewPager);
+        mAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mAdapter);
+//At creation, initialize the contentDescription
+        updateTabContentDescription(0);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            […]
+            public void onPageSelected(int position) {
+                updateTabContentDescription(position);
+            }
+        });
+//The BottomNavigationView is not necessarily at the bottom of the view, its position is defined in the layout.
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        […]
         }
-        mTabHost.getTabWidget().getChildAt(tabNumber).setContentDescription(contentDescription);
+    private void updateTabContentDescription(int position) {
+        for (int i = 0; i &lt; mAdapter.getCount(); i++) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(i);
+            String cd_param_string = getString(R.string.cd_tab_title_param,
+                    mAdapter.getPageTitle(i), // title, first parameter see xml
+                    i + 1,                    // tab number, second parameter
+                    mAdapter.getCount());     // total number of tabs, third parameter
+            if (tab != null) {
+                tab.setContentDescription(cd_param_string);
+            }         
+//For Tablayout and BottomNavigationView, information “selected” is already vocalized.
+//Either, for example: “selected, `tab title 1`, tab 1 of 5”
+//or “`tab title 3`, tab 3 of 5”. Then “Double-tap to activate”.
+// Setting the upper bound automatically will prevent a vocalization like:
+//“selected, `tab title 4`, tab 4 of 3.", where the upper bound is inconsistent.
+// For the `TabHost` implementation, it would be necessary to specify the "selected" state of the tab.
+        }
     }
-}</code></pre>
+</code></pre><pre>
+<code class="kotlin">
+    private fun updateTabContentDescription(position: Int) {
+        for (i in 0 until mAdapter!!.count) {
+            val tab = mTabLayout!!.getTabAt(i)
+            val cd_param_string = getString(R.string.cd_tab_title_param,
+                    mAdapter!!.getPageTitle(i), // titre en paramètre 1 voir le xml
+                    i + 1,                      // le numéro de l’onglet actuel, paramètre 2
+                    mAdapter!!.count)           // le nombre d’onglets automatique, paramètre 3
+            if (tab != null) {
+                tab.contentDescription = cd_param_string
+//For Tablayout and BottomNavigationView, information “selected” is already vocalized.
+//Either, for example: “selected, `tab title 1`, tab 1 of 5”
+//or “`tab title 3`, tab 3 of 5”. Then “Double-tap to activate”.
+// Setting the upper bound automatically will prevent with a vocalization like:
+//“selected, `tab title 4`, tab 4 of 3.", where the upper bound is inconsistent.
+// For the `TabHost` implementation, it would be necessary to specify the "selected" state of the tab.
+            }
+        }
+    }
+</code></pre>
 
 <p><strong>Link: </strong></p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#attr_android:contentDescription"><code>contentDescription</code></a></li>
 </ul>
 <h2 id="hiding-elements-from-accessibility">Hiding elements from accessibility</h2>
-<p><strong>Description: </strong>  </p>
+<h3 id="description-">Description:</h3>
 <p>It is possible via an accessibility attribute to hide elements from accessibility tools (e.g. TalkBack). By extension, it is possible to force some elements to be visible to accessibility tools.
-<code>ImportantForAccessibility</code>: depending on the value of the attribute, it indicates whetheran element is visible or not to the Accessibility API.</p>
+<code>ImportantForAccessibility</code>: depending on the value of the attribute, it indicates whether an element is visible or not to the Accessibility API.</p>
 <ul>
 <li><code>Auto</code> (0): this is the default, it is the system that decides. For example, a <code>Button</code> will have its default value set to 1 (<i>yes</i>) whereas a <code>LinearLayout</code> will default to 2 (<i>no</i>).</li>
 <li><code>Yes</code> (1): the view is important for accessibility. For example, it can receive the TalkBack focus.</li>
@@ -801,40 +956,63 @@ private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
 <li><code>NoHideDescendants</code> (4): the view is not important for accessibility, nor are its children views. This will hide all the items in a view to accessibility at once. Very useful on custom elements.</li>
 </ul>
 <p>Note: the “<code>importantForAccessibility</code>” attribute is available to any element that inherits from <code>View</code>.</p>
-<p><strong>Examples: </strong></p>
-<p>From <abbr>xml</abbr>: 
-<code>android:importantForAccessibility=&quot;no&quot;</code></p>
-<p>Programmatically:
-<code>myView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);</code></p>
-<p><strong>Link: </strong>     </p>
+<h3 id="examples-">Examples:</h3>
+<pre><code class="xml">&lt;TextView
+[…]
+android:id="@+id/myTextviewId1"
+android:importantForAccessibility="4"
+&#47;&gt;
+&lt;TextView
+[…]
+android:id="@+id/myTextviewId2"
+android:importantForAccessibility="noHideDescendants"
+&#47;&gt;</code></pre><pre>
+<code class="java">myTextView1 = (TextView) findViewById(R.id.myTextviewId1);
+myTextView2 = (TextView) findViewById(R.id.myTextviewId2);
+myTextView1.setImportantForAccessibility(4); // JELLY_BEAN
+myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = "4" // JELLY_BEAN
+myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT
+</code></pre>
+
+<h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setImportantForAccessibility%28int%29"><code>importantForAccessibility</code></a></li>
 </ul>
 <h2 id="trigger-a-vocalization">Trigger a vocalization</h2>
-<p><strong>Description: </strong>  </p>
+<h3 id="description-">Description:</h3>
 <p>It is very easy to trigger vocalizations with TalkBack. Triggering a vocalization is very useful for dynamic content, just like a <code>LiveRegion</code> (see corresponding section). To trigger a vocalization, just call the <code>announceForAccessibility</code> method with the <code>id</code> parameter of the string to vocalize.</p>
 <p>Note: the <code>announceForAccessibility</code> method is available on any item that inherits from <code>View</code> and is made in the system’s language.</p>
 <p>Warning: we are talking about TalkBack vocalization and not <abbr>TTS</abbr> (Text To Speech) that can operate whether TalkBack is on or off.</p>
-<p><strong> Example: </strong></p>
+<h3 id="example-">Example:</h3>
 <p>It is common to check the Android version before triggering TalkBack vocalization. This is because <code>announceForAccessibility</code> has been introduced in Jelly Bean.</p>
-<pre><code>if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-    getView().announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
-}</code></pre>
+<pre>
+<code class="java">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
+    }
+</code></pre><pre>
+<code class="kotlin">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce))
+    }
+</code></pre>
 
-<p><strong>Link: </strong></p>
+<h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#announceForAccessibility%28java.lang.CharSequence%29"><code>announceForAccessibility</code></a></li>
 </ul>
 <h2 id="check-if-talkback-is-on">Check if Talkback is on</h2>
-<p><strong>Description: </strong> </p>
+<h3 id="description-">Description:</h3>
 <p>On Android, it is possible to know whether the Accessibility API is enabled, thus whether TalkBack is enabled.</p>
-<p><strong>Usage: </strong> </p>
-<pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
-boolean isAccessibilityEnabled = am.isEnabled();</code></pre>
+<h3 id="usage-">Usage:</h3>
+<pre><code class="java">AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
+boolean isAccessibilityEnabled = am.isEnabled();
+</code></pre><pre>
+<code class="kotlin">val am = context.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
+val isAccessibilityEnabled = am.isEnabled
+</code></pre>
 
 
 <h2 id="live-region-dynamic-content-">Live region (dynamic content)</h2>
-<p><strong>Description  </strong></p>
+<h3 id="description-">Description:</h3>
 <p>You can specify to a view that it is a “live” region, it means that its content is subject to change dynamically and should in this case notify the Accessibility <abbr>API</abbr>. This will generate TalkBack vocalizations. A typical use case: on a form, if the user makes a mistake and an error message appears, the view containing the error message must be defined as a “live” region.</p>
 <p>We must use the <code>setAccessibilityLiveRegion</code> method that takes a mode parameter for the live region. There are 3 modes:</p>
 <ul>
@@ -843,116 +1021,109 @@ boolean isAccessibilityEnabled = am.isEnabled();</code></pre>
 <li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code>: when a change occurs, vocalizations are triggered on the changes. These vocalizations are “assertive”; they have the highest priority and are immediately vocalized. </li>
 </ul>
 <p>Note the <code>setAccessibilityLiveRegion</code> method is available on any class that inherits from <code>View</code>.</p>
-<p><strong>Example: </strong></p>
-<pre><code>&lt;TextView
+<h3 id="example-">Example:</h3>
+<pre><code class="xml">&lt;TextView
    […]
    android:accessibilityLiveRegion="polite" /&gt;</code></pre>
 
-<p><strong>Link: </strong></p>
+<h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityLiveRegion%28int%29"><code>setAccessibilityLiveRegion</code></a></li>
 </ul>
 <h2 id="reading-order-talkback-">Reading order (TalkBack)</h2>
-<p><strong>Description: </strong>  </p>
+<h3 id="description-">Description:</h3>
 <p>By default, the reading order of voice synthesis depends on: the “logical” reading (in France), from left to right and top to bottom, and the <abbr>xml</abbr> order (order of elements declaration). It is quite possible to redefine the reading order with two attributes:  </p>
 <ul>
 <li><code>AccessibilityTraversalAfter</code>: sets the <code>id</code> of a view after which this one is visited in accessibility traversal. A screen-reader must visit the content of the other view before the content of this one.</li>
 <li><code>AccessibilityTraversalBefore</code>: sets the <code>id</code> of a view before which this one is visited in accessibility traversal. A screen-reader must visit the content of this view before the content of the one it precedes.</li>
 </ul>
 <p>Note: These attributes can be used directly in the <abbr>xml</abbr> but also in the code via the <code>setAccessibilityTraversalBefore</code> and <code>setAccessibilityTraversalAfter</code> methods. These methods are available for any element that inherits from <code>View</code>.</p>
-<p><strong>Example: </strong> </p>
-<pre><code>volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+<h3 id="example-">Example:</h3>
+<pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
-channelplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
-channelminusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.channelplus).getId());</code></pre>
+chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
+chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre><pre>
+<code class="kotlin">volupButton.accessibilityTraversalAfter = remote0Button.id
+voldownButton.accessibilityTraversalAfte = volupButton.id
+chaineplusButton.accessibilityTraversalAfter = voldownButton.id
+chainemoinsButton.accessibilityTraversalAfter = chaineplusButton.id</code></pre>
 
-<p><strong>Link: </strong>      </p>
+<h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalAfter%28int%29"><code>setAccessibilityTraversalAfter</code></a></li>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalBefore%28int%29"><code>setAccessibilityTraversalBefore</code></a></li>
 </ul>
+<h2 id="manage-the-reading-of-headers-talkback-">Manage the reading of headers (TalkBack)</h2>
+<p>Android <i>Pie</i> introduces an additional level of reading of the <code>accessibilityHeading</code> feature that allows you to browse the page on these titles instead of all the elements of the page.</p>
+<h3 id="description-nbsp-">Description&nbsp;:</h3>
+<p>The screen reader can read only the headers defined in a page (see the TalkBack User Guide, the “Slide Up Using a Finger” gesture). These headers allow the reader to browse the large sections of the page to see if the information sought is there, without having to listen to everything.</p>
+<h4 id="example-nbsp-">Example&nbsp;:</h4>
+<pre><code class="xml">&lt;TextView
+[…]
+android:id="@+id/myTextLevel1viewId"
+android:accessibilityHeading="true"
+&#47;&gt;</code></pre>
+
+<h4 id="link-">Link:</h4>
+<ul>
+<li><a href="https://developer.android.com/reference/android/R.attr#accessibilityHeading"><code>accessibilityHeading</code></a></li>
+</ul>
 <h2 id="form">Form</h2>
-<p><strong>Description: </strong>  </p>
+<h3 id="description-">Description:</h3>
 <p>It is very important to bind the form fields with their labels. There are 2 major techniques to achieve this:</p>
 <ul>
 <li><code>LabelFor</code>: allow to specify a label to a view. This method takes the <code>id</code> of the view that it is associated with. This method can be used on almost any type of form field. We can also use the <abbr>xml</abbr> <code>android:labelFor</code> or programmatically <code>setLabelFor</code>.</li>
 <li><code>Hint</code>: add an example text when the text field is empty. This method only works for <code>TextView</code>. Supports setting the <code>id</code> to a string. Can be used in the <abbr>xml</abbr> <code>android:hint</code> or programmatically <code>setHint</code>.</li>
 </ul>
-<p><strong>Examples: </strong></p>
+<h3 id="examples-">Examples:</h3>
 <p><code>LabelFor</code> in <abbr>XML</abbr>: </p>
-<pre><code>&lt;TextView
+<pre><code class="xml">&lt;TextView
     [...]
   android:labelFor="@+id/imageView11"
   android:importantForAccessibility="no" /&gt;</code></pre>
 
 <p>Note: It is very common, once the label is bound to its field, to hide the label from the accessibility service. This is because this one does not need to be vocalized by the Accessibility <abbr>API</abbr> anymore as it’s already associated with the form field (and will be vocalized by TalkBack for example).</p>
 <p><code>Hint</code> in <abbr>xml</abbr>:</p>
-<pre><code>&lt;EditText
+<pre><code class="xml">&lt;EditText
   [...]
    android:hint="@string/criteria_form_ex1_placeholder" /&gt;</code></pre>
 
-<p><strong>Links: </strong></p>
+<h3 id="links-">Links:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setLabelFor%28int%29"><code>setLabelFor</code></a></li>
 <li><a href="https://developer.android.com/reference/android/widget/TextView.html#setHint%28java.lang.CharSequence%29"><code>setHint</code></a></li>
 </ul>
 <h2 id="text-size">Text size</h2>
-<p><strong>Description: </strong>  </p>
+<h3 id="description-">Description:</h3>
 <p>To make it possible for the “Huge font size” option to properly interact with the application, several points are to be respected during the development:</p>
 <ul>
 <li>Use dynamic font size: the “sp”. This unit, specific to Android, allows to have a font size proportional to the pixel density of the display. It is highly recommended to use it for text, if only for a uniform design on all types of Android devices.</li>
 <li>Manage content overflows: A common mistake is to use a dynamic text size (“sp”) but not to pay attention to the container size. If the text gets bigger, the container must adapt so there is no overflow. One can perfectly play with the <code>min-height</code> and <code>height</code> attributes for correct results (the <code>height</code> set to <code>wrap_content</code> and <code>min-height</code> set to the default desired height).</li>
 </ul>
-<p><strong>Link: </strong></p>
+<h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://www.google.com/design/spec/style/typography.html#typography-styles">typography</a></li>
 </ul>
 <h2 id="accessibility-events-custom-views">Accessibility events &amp; custom views</h2>
-<p><strong>Description: </strong> </p>
+<h3 id="description-">Description:</h3>
 <p>On Android there are several events available for accessibility. You can manipulate them just like any event. They can enhance custom views that are not accessible enough. Using accessible events is not common on applications that are not intended to be used by disabled people, because other options are in most cases sufficient. Yet one must know they exist and they let you redefine the vocalization of a component.  </p>
 <p>For more information, please refer to the following links:</p>
-<p><strong>Example: </strong></p>
-<p>In this example, accessibility events are intercepted. Depending on their type (text has been changed in the view or the component has the TalkBack focus), we construct a vocalization to TalkBack.</p>
-<pre><code>@Override
-@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
-
-  boolean result = super.dispatchPopulateAccessibilityEvent(event);
-
-  // Detect what type of accessibility event is being passed in.
-  int eventType = event.getEventType();
-
-  // Common case: The user has interacted with our view in some way. State may or may not have been changed. Read out the current status of the view.
-  if (eventType == AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED) {
-    event.getText().clear();
-    event.getText().add("Possible reward: " + getBankValue() + ".");
-    result = true;
-  }
-
-  // When a user first focuses on our view, we'll also read out some simple instructions to make it clear that this is an interactive element.
-  if (eventType == AccessibilityEvent.TYPE_VIEW_ACCESSIBILITY_FOCUSED) {
-    event.getText().add("Click here to play again.");
-    result = true;
-  }
-
-  return result;
-}</code></pre>
-
-<p><strong>Links: </strong></p>
+<h3 id="links-">Links:</h3>
 <ul>
 <li><a href="http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html"><code>AccessibilityEvents</code></a></li>
 <li><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#custom-views">Creating a custom view</a></li>
+<li><a href="https://github.com/Pascale22/A11yEventApp">Accessibility Event Skeleton sample</a> in <abbr>Kotlin</abbr></li>
 </ul>
 <h2 id="webview">WebView</h2>
-<p><strong>Description: </strong> </p>
+<h4 id="description-">Description:</h4>
 <p><code>WebView</code>s are a special thing on Android. First, if you want a page to be accessible, its <abbr>HTML</abbr> content must be accessible as well, it must follow the international standards: the <abbr>WCAG</abbr>2. To know the requirements and learn techniques for developing an accessible Web, please visit the following section in our site: <a href="../web/index.html">accessibility recommendations for the Web</a>.</p>
-<p>Second, on Android you must ensure that the <code>WebView</code> allows JavaScript <code>mWebView.getSettings().setJavaScriptEnabled(true);</code>
-In these conditions, the page displayed through the <code>WebView</code> properly responds to the Accessibility <abbr>API</abbr>. </p>
+<p>Second, on Android you must ensure that the <code>WebView</code> allows JavaScript <code>mWebView.getSettings().setJavaScriptEnabled(true);</code></p>
+<p>In these conditions, the page displayed through the <code>WebView</code> properly responds to the Accessibility <abbr>API</abbr>. </p>
 <h2 id="list-vocalization">List vocalization</h2>
-<p><strong>Description: </strong> </p>
+<h4 id="description-">Description:</h4>
 <p>Sometimes lists are not vocalized correctly: the speech synthesis is trying to vocalize the whole list at once (only the items displayed on the screen). This is especially the case when using the <code>RecyclerView</code>. To overcome this problem, there is a simple fix. Just set the <code>focusable</code> attribute to <code>true</code> for each item in the list. This has the effect of forcing the speech synthesis (TalkBack) to read the items one by one.</p>
 <h2 id="navigating-via-the-focus-keyboard-">Navigating via the focus (keyboard)</h2>
-<p><strong>Description: </strong></p>
+<h4 id="description-">Description:</h4>
 <p>To handle focus-based navigation, make sure to:</p>
 <ul>
 <li>Allow interactive elements to receive the focus: focus-based navigation only concerns interactive elements. If, for example, your application has clickable custom views, it must be ensured that these views are focusable setting the <code>focusable</code> attribute to <code>true</code>.</li>
@@ -961,28 +1132,29 @@ In these conditions, the page displayed through the <code>WebView</code> properl
 </ul>
 <p>Most of the time, only the two first points must be taken care of. Android is able to determine very precisely the positions of the elements between them and therefore to provide a logical and coherent reading order for the keyboard.</p>
 <p>Note: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> and other focus management options are available either in the <abbr>xml</abbr> or programmatically.</p>
-<p><strong>Example: </strong></p>
-<p><code>Tabhost</code> selector handling the <code>state_focused</code>:</p>
-<pre><code>&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+<p>Note: Android Pie (9, <abbr>API</abbr> 28) introduces a screen reader-specific focus to avoid edge effects between the screen reader focus (<code>screenReaderFocusable</code>) and the keyboard focus (<code>focusable</code>). Keyboard navigation is not sensitive to <code>screenReaderFocusable</code>.</p>
+<h4 id="example-">Example:</h4>
+<p>Selector handling the <code>state_focused</code>:</p>
+<pre><code class="xml">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
     &lt;!-- Non focused states --&gt;
     &lt;item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_unselected_tab_selector" /&gt;
     &lt;item android:state_focused="false" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/tab_selected_tab_selector" /&gt;
-
+&nbsp;
     &lt;!-- Focused states --&gt;
     &lt;item android:state_focused="true" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_unselected_focused_tab_selector" /&gt;
     &lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/tab_selected_focused_tab_selector" /&gt;
-
+&nbsp;
     &lt;!-- Pressed --&gt;
     &lt;!-- Non focused states --&gt;
     &lt;item android:state_focused="false" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_unselected_pressed_tab_selector" /&gt;
     &lt;item android:state_focused="false" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_selected_pressed_tab_selector" /&gt;
-
+&nbsp;
     &lt;!-- Focused states --&gt;
     &lt;item android:state_focused="true" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_unselected_pressed_tab_selector" /&gt;
     &lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_selected_pressed_tab_selector" /&gt;
 &lt;/selector&gt;</code></pre>
 
-<p><strong>Link: </strong></p>
+<h4 id="link-">Link:</h4>
 <ul>
 <li><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">Focus-based navigation</a></li>
 </ul>
@@ -1003,7 +1175,9 @@ In these conditions, the page displayed through the <code>WebView</code> properl
 });</script>
 
 <p><span data-menuitem="dev-mobile"></span></p>
-<p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options. Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>official documentation from Apple</code></a>. Code snippets are also available to show you how to implement it (Swift 4, Objective C).</p>
+<p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options.
+</br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>official documentation from Apple</code></a>.
+</br>Code snippets are also available to show you how to implement it (Swift 4.2, Objective C).</p>
 <h2 id="text-alternatives">Text alternatives</h2>
 <h3 id="description">Description</h3>
 <p>On iOS, the vocalization of an element is done through four attributes: <code>label</code>, <code>hint</code>, <code>value</code> and <code>trait</code>.
@@ -1078,27 +1252,62 @@ class ChangeTextView: UIViewController {
 
     //Added header.  
     defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
-
-    //Many traits possible combination.  
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected;
 }
 </code></pre><pre><code class="swift">
 func customTraits() {
     //Specified UIPageControl with the ’ajustable’ trait.
-    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable
+    pageControl.accessibilityTraits = .adjustable
 
     //Added header.  
-    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader
+    defaultHeaderViewCell.accessibilityTraits = .header
+}
+</code></pre>
+<h3 id="basic-operations">Basic operations</h3>
+<p>This attribute is actually a <code>bitmask</code> in which each element has its own value.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
+</br>It&#39;s then possible to add and remove some <code>traits</code> after having checked their existence in the bitmask for instance.</p>
+<pre><code class="objective-c">
+- (void)changeTraits {
 
-    //Many traits possible combination.  
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected
+    //Dedicated trait set with no other option.
+    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+
+    //Added traits to the existing ones.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
+
+    //Remove a trait.
+    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
+
+    //Check out the bitmask trait existence.
+    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
+        // Do the job if '.header' is one of the traits...
+    }
+}
+</code></pre><pre><code class="swift">
+func changeTraits() {
+
+    //Dedicated trait set with no other option.
+    onePageButton.accessibilityTraits = [.button, .link]
+
+    //Added traits to the existing ones.
+    pageControl.accessibilityTraits.insert(.header) //Only one trait.
+    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
+
+    //Remove a trait.
+    onePageButton.accessibilityTraits.remove(.link)
+
+    //Check out the bitmask trait existence.
+    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
+        // Do the job if '.header' is one of the traits...
+    }
 }
 </code></pre>
 <h3 id="link">Link</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits"><code>accessibilityTraits</code></a></li>
 </ul>
-<h2 id="hide-elements-from-accessibility">Hide elements from accessibility</h2>
+<h2 id="hide-elements">Hide elements</h2>
 <h3 id="description">Description</h3>
 <p>It is possible via an accessibility attribute to hide elements from accessibility tools (e.g. VoiceOver). By extension, it is possible to force some elements to be visible to accessibility tools.</p>
 <ul>
@@ -1116,24 +1325,24 @@ func customTraits() {
     [super viewDidAppear:animated];
 
     //Creation of an element inside which 2 other children elements will be inserted.
-    CGRect parentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
-    UIView * myParentView = [[UIView alloc]initWithFrame:parentViewRect];
-    myParentView.backgroundColor = [UIColor redColor];
+    CGRect redParentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
+    UIView * myRedParentView = [[UIView alloc]initWithFrame:redParentViewRect];
+    myRedParentView.backgroundColor = [UIColor redColor];
 
-    [UIApplication.sharedApplication.keyWindow addSubview:myParentView];
+    [self.view addSubview:myRedParentView];
 
     //The target element musn't be accessible so as to be considered as a container to its children elements.
     //If this attribute is 'YES', the target element will be the only one accessible element.
-    myParentView.isAccessibilityElement = NO;
+    myRedParentView.isAccessibilityElement = NO;
 
     //The elements contained in the target element won't be accessible even if they're defined as such.
     //If this attribute is 'NO' and the previous one is 'NO', only the children elements will be accessible.
-    myParentView.accessibilityElementsHidden = NO;
+    myRedParentView.accessibilityElementsHidden = NO;
 
     [self createViewWithColor:[UIColor yellowColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
     [self createViewWithColor:[UIColor blueColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
 }
 
 - (void)createViewWithColor:(UIColor*)color
@@ -1154,25 +1363,25 @@ override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         //Creation of an element inside which 2 other children elements will be inserted.
-        let parentViewRect = CGRect.init(x: 100.0,
-                                         y: 100.0,
-                                         width: 40.0,
-                                         height: 40.0)
+        let redParentViewRect = CGRect.init(x: 100.0,
+                                            y: 100.0,
+                                            width: 40.0,
+                                            height: 40.0)
         let myParentView = UIView.init(frame: parentViewRect)
-        myParentView.backgroundColor = .red
+        myRedParentView.backgroundColor = .red
 
-        UIApplication.shared.keyWindow?.addSubview(myParentView)
+        self.view.addSubview(myRedParentView)
 
         //The target element musn't be accessible so as to be considered as a container to its children elements.
         //If this attribute is 'true', the target element will be the only one accessible element.
-        myParentView.isAccessibilityElement = true
+        myRedParentView.isAccessibilityElement = true
 
         //The elements contained in the target element won't be accessible even if they're defined as such.
         //If this attribute is 'false' and the previous one is 'false', only the children elements will be accessible.
-        myParentView.accessibilityElementsHidden = false
+        myRedParentView.accessibilityElementsHidden = false
 
-        self.createViewWithColor(.yellow, inside: myParentView)
-        self.createViewWithColor(.blue, inside: myParentView)
+        self.createViewWithColor(.yellow, inside: myRedParentView)
+        self.createViewWithColor(.blue, inside: myRedParentView)
     }
 
     func createViewWithColor(_ color:UIColor, inside parentView:UIView) {
@@ -1205,50 +1414,97 @@ override func viewDidAppear(_ animated: Bool) {
 <p>Note: the vocalization is done in the system’s language.</p>
 <h3 id="example">Example</h3>
 <pre><code class="objective-c">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"This is a VoiceOver message.");
+UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
+                                @"This is a VoiceOver message.");
 </code></pre><pre><code class="swift">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This is a VoiceOver message.")
+UIAccessibility.post(notification: .announcement,
+                     argument: "This is a VoiceOver message.")
 </code></pre>
 <h3 id="links">Links</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification"><code>UIAccessibilityPostNotification</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification"><code>UIAccessibilityAnnouncementNotification</code></a></li>
 </ul>
-<h2 id="check-accessibility-options-state">Check accessibility options state</h2>
-<h3 id="description">Description</h3>
-<p>On iOS, it is possible to check the accessibility options state. Is VoiceOver activated? Is the audio-mono mode activated? Several methods can help you to check with that. They are part of the <code>UIKit</code> framework.
+<h2 id="accessibility-options">Accessibility options</h2>
+<h3 id="states">States</h3>
+<p>On iOS, it is possible to check the accessibility options state. 
+</br>Is VoiceOver activated? Is the audio-mono mode activated? Several methods that are part of the <code>UIKit</code> framework can help you to check with that.
 </br>The most useful method is <strong>UIAccessibilityIsVoiceOverRunning</strong> which allows to know whether VoiceOver is activated.
-</br></br>Many other methods are available in the links hereafter and some of them are deeply explained in a <a href="./dev-ios-wwdc-18230.html">WWDC video</a>.</p>
-<h3 id="exemple">Exemple</h3>
+</br></br>Some other methods are deeply explained in a WWDC 2018 video <em>(Deliver en exceptional accessibility experience)</em> whose content is perfectly detailed in the <a href="./dev-ios-wwdc-18230.html">iOS WWDC section</a> of this site.</br></br></p>
+<h3 id="example">Example</h3>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
 
     NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
 </code></pre><pre><code class="swift">
-    let isVoiceOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0)
-    let isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0)
+    let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
+    let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
 
     print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
 </code></pre>
+<h3 id="events">Events</h3>
+<p>iOS sends many accessibility events when accessibility options have changed.
+</br>For example, if VoiceOver is deactivated, the running applications will receive the <code>UIAccessibilityVoiceOverStatusDidChangeNotification</code> event.
+</br>This is very useful when used simultaneously with <code>UIAccessibilityIsVoiceOverRunning</code>.</p>
+<p>Let&#39;s say the application behaves differently when VoiceOver is turned on.
+</br>What happens if VoiceOver is disabled ? This is exactly the use case when the system events can be used.
+</br>By listening to these events, it is possible to dynamically change how the application behaves.</br></br></p>
+<h3 id="example">Example</h3>
+<p>In this example, a method is fired when VoiceOver or Switch Control status has changed.</p>
+<pre><code class="objective-c">
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
+                                               object:nil];
+}
+
+- (void)methodToBeCalled:(NSNotification *)notification {
+
+    NSArray * checkStatus = @[@"NOK", @"OK"];
+
+    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
+          checkStatus[UIAccessibilityIsSwitchControlRunning()],
+          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
+}
+</code></pre><pre><code class="swift">
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
+                                               object: nil)
+    }
+
+    @objc private func methodToBeCalled(notification: Notification) {
+
+        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
+        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
+
+        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
+    }
+</code></pre>
 <h3 id="links">Links</h3>
 <ul>
-<li><a href="https://developer.apple.com/documentation/uikit/1615087-uiaccessibilitydarkersystemcolor"><code>UIAccessibilityDarkerSystemColorsEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1648479-uiaccessibilityisassistivetouchr"><code>UIAccessibilityIsAssistiveTouchRunning</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615156-uiaccessibilityisboldtextenabled"><code>UIAccessibilityIsBoldTextEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615112-uiaccessibilityisclosedcaptionin"><code>UIAccessibilityIsClosedCaptioningEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615189-uiaccessibilityisgrayscaleenable"><code>UIAccessibilityIsGrayscaleEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615173-uiaccessibilityisguidedaccessena"><code>UIAccessibilityIsGuidedAccessEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615167-uiaccessibilityisinvertcolorsena"><code>UIAccessibilityIsInvertColorsEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615123-uiaccessibilityismonoaudioenable"><code>UIAccessibilityIsMonoAudioEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615133-uiaccessibilityisreducemotionena"><code>UIAccessibilityIsReduceMotionEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615074-uiaccessibilityisreducetranspare"><code>UIAccessibilityIsReduceTransparencyEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615103-uiaccessibilityisshaketoundoenab"><code>UIAccessibilityIsShakeToUndoEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615109-uiaccessibilityisspeakscreenenab"><code>UIAccessibilityIsSpeakScreenEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615154-uiaccessibilityisspeakselectione"><code>UIAccessibilityIsSpeakSelectionEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615131-uiaccessibilityisswitchcontrolru"><code>UIAccessibilityIsSwitchControlRunning</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615187-uiaccessibilityisvoiceoverrunnin"><code>UIAccessibilityIsVoiceOverRunning</code></a></li>
+<li><a href="./criteria-ios.html#accessibility-options">Accessibility options</a> <em>(iOS conception)</em></li>
 </ul>
+<p>All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
+</br></br></p>
 <h2 id="notify-a-content-change">Notify a content change</h2>
 <h3 id="description">Description</h3>
 <p>When there is a content change in the current page, it is possible to notify the accessibility <abbr>API</abbr> using several types of notifications. To do that, we must send the change notification to the accessibility <abbr>API</abbr> using the following method: <code>UIAccessibilityPostNotification</code>.  </p>
@@ -1264,7 +1520,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 </ul>
 <h3 id="example">Example</h3>
 <pre><code class="objective-c">
-//The element'myLabel' is focused and vocalized with its new value.
+//The element 'myLabel' is focused and vocalized with its new value.
 - (IBAction)tapHere:(UIButton *)sender {
 
     myLabel.accessibilityLabel = @"This is a new label.";
@@ -1277,17 +1533,19 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
     UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
 }
 </code></pre><pre><code class="swift">
-//The element'myLabel' is focused and vocalized with its new value.
+//The element 'myLabel' is focused and vocalized with its new value.
 @IBAction func tapHere(_ sender: UIButton) {
 
     myLabel.accessibilityLabel = "This is a new label."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 
 //The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
 @IBAction func clic(_ sender: UIButton) {
 
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
+    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                         argument: nil)
 }
 </code></pre>
 <h3 id="links">Links</h3>
@@ -1316,7 +1574,8 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 
     myLabel.accessibilityLanguage = "fr"
     myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 </code></pre>
 <h3 id="link">Link</h3>
@@ -1329,7 +1588,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "This i
 <ul>
 <li><strong>accessibilityFrame</strong>&nbsp;: sets the area via a rectangle (<code>CGRect</code>).
 </br>Usually, for an element inheriting from <code>UIView</code>, this area is the «&nbsp;visible&nbsp;» part of the view.</li>
-<li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>AccessibilityFrame</code> but sets the area via Bezier curves.
+<li><strong>accessibilityPath</strong>&nbsp;: equivalent to <code>accessibilityFrame</code> but sets the area via Bezier curves.
 <a name="AccessibilityActivationPoint"></a></li>
 <li><strong>accessibilityActivationPoint</strong>&nbsp;: defines a contact point inside the <code>frame</code> whose action will be fired by a double-tap element activation.
 </br>The default value is the midpoint of the <code>frame</code> but it can be redefine anywhere inside.
@@ -1408,7 +1667,8 @@ float heightVal;
                                                  width: widthVal + 100.0,
                                                  height: heightVal + 100.0)
 
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                             argument: myLabel)
     }
 
     //Seconde façon d'augmenter la zone de focus (Bézier).
@@ -1428,7 +1688,8 @@ float heightVal;
 
         myLabel.accessibilityPath = bezierPath
 
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                             argument: myLabel)
     }
 </code></pre>
 <h3 id="links">Links</h3>
@@ -1508,9 +1769,7 @@ int indexSwitch = 1;
     NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
 
     wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                                   @"the switch control is",
-                                   switchValue.description];
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
     wrapView.accessibilityHint = @"tap twice to change the switch control status.";
 
     return wrapView;
@@ -1525,9 +1784,7 @@ int indexSwitch = 1;
 
     NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
 
-    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                               @"the switch control is",
-                               switchValue.description];
+    self.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
     return YES;
 }
 @end
@@ -1559,7 +1816,7 @@ int indexSwitch = 1;
         let switchValue = (aSwitch.isOn) ? "on" : "off"
 
         self.isAccessibilityElement = true
-        self.accessibilityLabel = "the switch control is" + switchValue.description
+        self.accessibilityLabel = "the switch control is " + switchValue.description
         self.accessibilityHint = "tap twice to change the switch control status."
     }
 
@@ -1572,7 +1829,7 @@ int indexSwitch = 1;
 
         let switchValue = (theSwitch?.isOn)! ? "on" : "off"
 
-        self.accessibilityLabel = "the switch control is" + switchValue.description
+        self.accessibilityLabel = "the switch control is " + switchValue.description
 
         return true
     }
@@ -1598,10 +1855,16 @@ int indexSwitch = 1;
 
 @implementation ActivationPointViewController
 
+UIAccessibilityElement * elt;
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    [_mySwitch addTarget:self
+                  action:@selector(configChanged:)
+        forControlEvents:UIControlEventValueChanged];
+
+    elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
 
     CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
     CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
@@ -1613,6 +1876,13 @@ int indexSwitch = 1;
 
     self.view.accessibilityElements = @[elt];
 }
+
+
+- (void)configChanged:(UISwitch *)sender {
+
+    NSString * switchValue = _mySwitch.on ? @"on" : @"off";
+    elt.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
+}
 @end
 </code></pre><pre><code class="swift">
     class ActivationPointViewController: UIViewController {
@@ -1621,19 +1891,38 @@ int indexSwitch = 1;
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var mySwitch: UISwitch!
 
+    var elt: UIAccessibilityElement?
+
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        mySwitch.addTarget(self,
+                           action: #selector(configChanged),
+                           for: .valueChanged)
+
+        elt = UIAccessibilityElement(accessibilityContainer: self.view)
         let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
 
-        elt.accessibilityLabel = "regrouping elements"
-        elt.accessibilityHint = "double tap to change the switch control status"
-        elt.accessibilityFrameInContainerSpace = a11yEltFrame
-        elt.accessibilityActivationPoint = mySwitch.center
+        if let elt = elt {
 
-        self.view.accessibilityElements = [elt]
+            elt.accessibilityLabel = "regrouping elements"
+            elt.accessibilityHint = "double tap to change the switch control status"
+            elt.accessibilityFrameInContainerSpace = a11yEltFrame
+            elt.accessibilityActivationPoint = mySwitch.center
+
+            self.view.accessibilityElements = [elt]
+        }
+    }
+
+
+    @objc func configChanged(sender: UISwitch){
+
+        if let configGroup = elt {
+
+            let switchValue = (mySwitch?.isOn)! ? "on" : "off"
+            configGroup.accessibilityLabel = "the switch control is " + switchValue.description
+        }
     }
 }
 </code></pre>
@@ -1645,75 +1934,23 @@ int indexSwitch = 1;
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
-<h2 id="accessibility-events">Accessibility events</h2>
-<h3 id="description">Description</h3>
-<p>iOS sends several accessibility events to the applications. They are sent when accessibility options are changed. For example, if VoiceOver is deactivated, the running applications will receive the <code>UIAccessibilityVoiceOverStatusDidChange</code> event. This is very useful when used simultaneously with <code>UIAccessibilityIsVoiceOverRunning</code>.</p>
-<p>Let&#39;s say the application behaves differently when VoiceOver is turned on. This is detected by the <code>UIAccessibilityIsVoiceOverRunning</code> method. What happens if VoiceOver is disabled? This is when the system events can be used. By listening to these events, it is possible to dynamically change how the application behaves.</p>
-<h3 id="example">Example</h3>
-<p>In this example, a method is fired when VoiceOver or Switch Control status has changed.</p>
-<pre><code class="objective-c">
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
-                                               object:nil];
-}
-
-- (void)methodToBeCalled:(NSNotification *)notification {
-
-    NSArray * checkStatus = @[@"NOK", @"OK"];
-
-    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
-          checkStatus[UIAccessibilityIsSwitchControlRunning()],
-          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
-}
-</code></pre><pre><code class="swift">
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilitySwitchControlStatusDidChange,
-                                               object: nil)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilityVoiceOverStatusDidChange,
-                                               object: nil)
-    }
-
-    @objc private func methodToBeCalled(notification: Notification) {
-
-        let switchControlStatus = (UIAccessibilityIsSwitchControlRunning() ? "OK" : "NOK")
-        let voiceOverStatus = (UIAccessibilityIsVoiceOverRunning() ? "OK" : "NOK")
-
-        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
-    }
-</code></pre>
-<h3 id="link">Link</h3>
-<p>All accessibility events are available on the <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">official documentation from Apple</a>.</p>
 <h2 id="text-size">Text size</h2>
 <h3 id="description">Description</h3>
 <p>Since iOS7, it is possible to make the text size dynamic according to the phone settings.
-</br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img alt="larger accessibility sizes option screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:</p>
 <ul>
+<li><strong>Use the text styles</strong> available with the application iOS version.
+</br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" /></li>
 <li><p>Choose the system font to facilitate your programing even if the use of other fonts is well assisted by the <code>UIFontMetrics</code> new class (iOS11).</p>
 <pre><code class="objective-c">
  __weak IBOutlet UILabel * fontHeadline;
  __weak IBOutlet UILabel * fontFootNote;
 
- //Use of the default native font for a header.
- UIFont * myFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+ //Use of the default native font.
+ fontFootNote.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 
- //Personal font definition for a header.
+ //Customed font definition for a header.
  UIFont * fontHead = [UIFont fontWithName:@"Chalkduster" size:30.0];
  UIFontMetrics * fontHeadMetrics = [[UIFontMetrics alloc]initForTextStyle:UIFontTextStyleHeadline];
  fontHeadline.font = [fontHeadMetrics scaledFontForFont:fontHead];
@@ -1722,9 +1959,9 @@ int indexSwitch = 1;
  @IBOutlet weak var fontFootNote: UILabel!
 
  //Use of the default native font for a header.
- let myFont = UIFont.preferredFont(forTextStyle: .headline)
+ fontFootNote.font = .preferredFont(forTextStyle: .headline)
 
- //Personal font definition for a header.
+ //Customed font definition for a header.
  let fontHead = UIFont(name: "Chalkduster", size: 30.0)
  let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
  fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
@@ -1750,7 +1987,7 @@ int indexSwitch = 1;
  //Listens to the notification dealing with the font size changing from the mobile settings.
  NotificationCenter.default.addObserver(self,
                                         selector:#selector(methodToBeCalled(notification:)),
-                                        name: .UIContentSizeCategoryDidChange,
+                                        name: UIContentSizeCategory.didChangeNotification,
                                         object: nil)
 
  //Automatic changing of the font size without listening to the previous notification.
@@ -1767,10 +2004,76 @@ int indexSwitch = 1;
 </ul>
 <h3 id="links">Links</h3>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65">Dynamic Type <abbr>API</abbr></a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">Dynamic Type &amp; Text Styles</a></li>
 <li><a href="https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange"><code>UIContentSizeCategoryDidChange</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc"><code>adjustsFontForContentSizeCategory</code></a></li>
 </ul>
+<h2 id="truncation-hyphen">Truncation hyphen</h2>
+<h3 id="description">Description</h3>
+<p>The <code>Dynamic Type</code> feature introduced in the previous section may come along with a word truncation according to the magnifying defined in the settings.
+</br>Unfortunately, the iOS system doesn&#39;t handle natively this point that can be implemented only by programing to get an appreciated visual depiction.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/Troncature.png" />
+</br>The rationale behind is the use of a <code>NSMutableAttributedString</code> with a <code>NSMutableParagraphStyle</code> type property as exposed hereunder :</p>
+<pre><code class="objective-c">
+@interface TruncationHyphen () {
+    __weak IBOutlet UILabel * myLabel;
+}
+@end
+
+
+@implementation TruncationHyphen
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSString * myString = @"floccinaucinihilipilification";
+    NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
+
+    paraph.alignment = NSTextAlignmentJustified;
+    paraph.hyphenationFactor = 1.0;
+
+    UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
+    UIFont * myTextFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle1] scaledFontForFont:myFont];
+
+    NSDictionary * attributesDictionary = @{NSFontAttributeName:myTextFont};
+    NSMutableAttributedString * myText = [[NSMutableAttributedString alloc]initWithString:myString 
+                                                                               attributes:attributesDictionary];
+
+    [myText addAttribute:NSParagraphStyleAttributeName
+                   value:paraph
+                   range:NSMakeRange(0, 1)];
+
+    myLabel.attributedText = myText;
+}
+@end
+</code></pre><pre><code class="swift">
+class TruncationHyphen: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let myString = "floccinaucinihilipilification"
+
+        let paraph = NSMutableParagraphStyle()
+        paraph.alignment = .justified
+        paraph.hyphenationFactor = 1.0
+
+        let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
+
+        let myText = NSMutableAttributedString(string:myString,
+                                               attributes: [.font: myTextFont])
+
+        myText.addAttribute(.paragraphStyle,
+                            value: paraph,
+                            range: NSMakeRange(0,1))
+
+        myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
 <h2 id="graphical-elements-size">Graphical elements size</h2>
 <h3 id="description">Description</h3>
 <p>Exactly like text, images and tab/tool bar items have a scalable size thanks to accessibility settings but <strong>only since iOS11 with Xcode 9</strong>.
@@ -1797,12 +2100,14 @@ int indexSwitch = 1;
 </ul>
 <h2 id="reading-order">Reading order</h2>
 <h3 id="description">Description</h3>
-<p>Redefining the VoiceOver reading order is done using the <strong>UIAccessibilityContainer</strong> protocol. The idea is to have a table of elements that defines the reading order of the elements. It is often very useful to use the <strong>shouldGroupAccessibilityElement</strong> attribute so we have a precise order but for a part of the view only (the rest of the view will be read using the native order provided by VoiceOver).</p>
+<p>Redefining the VoiceOver reading order is done using the <strong>UIAccessibilityContainer</strong> protocol.
+</br>The idea is to have a table of elements that defines the reading order of the elements.
+</br>It is often very useful to use the <strong>shouldGroupAccessibilityElement</strong> attribute so we have a precise order but only for a part of the view <em>(the rest of it will be read using the native order provided by VoiceOver)</em>.</p>
 <h3 id="example">Example</h3>
 <p>The best way to illustrate this feature is the keyboard whose keys order isn&#39;t necessary the appropriate one.
 </br>Here&#39;s the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
 </br><span aria-hidden="true">Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :</span>
-</br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
+</br><img alt="display of the blue and grey views" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -2162,14 +2467,14 @@ class ViewController: UIViewController {
 NS_ASSUME_NONNULL_BEGIN
 @class StepperWrapper;
 
-@protocol AdjustableForAccessibilityDelegate <NSObject>
+@protocol AdjustableForAccessibilityDelegate &lt;NSObject&gt;
 - (void)adjustableDecrementForView:(StepperWrapper *)view;
 - (void)adjustableIncrementForView:(StepperWrapper *)view;
 @end
 
 
 @interface StepperWrapper : UIStackView
-@property(nonatomic,weak) id<AdjustableForAccessibilityDelegate> delegate;
+@property(nonatomic,weak) id &lt;AdjustableForAccessibilityDelegate&gt; delegate;
 @end
 NS_ASSUME_NONNULL_END
 
@@ -2189,14 +2494,16 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)accessibilityDecrement {
-    [_delegate adjustableDecrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableDecrementForView:)]) {
+        [_delegate adjustableDecrementForView:self];
+    }
 }
 
 - (void)accessibilityIncrement {
-    [_delegate adjustableIncrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableIncrementForView:)]) {
+        [_delegate adjustableIncrementForView:self];
+    }
 }
-@end
-NS_ASSUME_NONNULL_END
 </code></pre><pre><code class="swift">
 protocol AdjustableForAccessibilityDelegate: class {
     func adjustableDecrementFor(_ view: StepperWrapper)
@@ -2216,7 +2523,7 @@ class StepperWrapper: UIStackView {
         super.init(coder: coder)
 
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitAdjustable
+        accessibilityTraits = .adjustable
     }
 
     override func accessibilityDecrement() {
@@ -2234,23 +2541,19 @@ class StepperWrapper: UIStackView {
 </ul>
 <pre><code class="objective-c">
 NS_ASSUME_NONNULL_BEGIN
-@interface ViewController () <AdjustableForAccessibilityDelegate>
-
-@property (weak, nonatomic) IBOutlet UIStepper * stepperNoAccess;
-@property (weak, nonatomic) IBOutlet UILabel * stepperValueNoAccess;
-
+@interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
 @property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
 @property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
 @property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
 @end
 
 
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
+@implementation ContinuousAdjustableValues
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
     _stepperStackViewAccess.delegate = self;
-    _stepperStackViewAccess.accessibilityLabel = @"Increase or decrease the value";
+    _stepperStackViewAccess.accessibilityLabel = @"increase or decrease the value";
     _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
 }
 
@@ -2271,7 +2574,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
+class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
 
     @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
     @IBOutlet weak var stepperAccess: UIStepper!
@@ -2282,7 +2585,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
         super.viewDidLoad()
 
         stepperStackViewAccess.delegate = self
-        stepperStackViewAccess.accessibilityLabel = "Increase or decrease the value"
+        stepperStackViewAccess.accessibilityLabel = "increase or decrease the value"
         stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
     }
 
@@ -2311,18 +2614,16 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 <p>Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
 </br>A convincing example is the iOS native mail that may suggest some actions as follows :
 </br><img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
-</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the next accessible element instead of suggesting actions as above.
+</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the previous accessible element instead of suggesting actions as above.
 </br></br>A solution may consist of <strong>associating the selected element with an array of actions</strong> that will be automatically introduced to the user.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomActions ()
 @property (weak, nonatomic) IBOutlet UILabel * persoElt;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomActions
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -2357,7 +2658,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
+class CustomActions: UIViewController {
 
     @IBOutlet weak var persoElt: UILabel!
 
@@ -2416,7 +2717,7 @@ class ViewController: UIViewController {
 <li><strong>accessibilityElementIsFocused</strong> : boolean value indicating the accessible element selection.</li>
 </ul>
 <p>Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
-</br>However, if they are implemented in the accessible element itself, you won&#39;t be disappointed.
+</br>However, if they are <strong>implemented in the accessible element itself</strong>, you won&#39;t be disappointed.
 </br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it&#39;s not accessible... like a view controller for instance.
 </br></br>The example below enables to follow the focus of an accessible element identified by its <code>accessibleIdentifier</code>.</p>
 <pre><code class="objective-c">
@@ -2488,16 +2789,14 @@ extension UIView {
 <p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
 </br></br>To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.</p>
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomRotor ()
 @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
 @property (weak, nonatomic) IBOutlet UILabel * upLabel;
 @property (weak, nonatomic) IBOutlet UILabel * downLabel;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomRotor
 
 static NSInteger flicksUp;
 static NSInteger flicksDown;
@@ -2540,7 +2839,7 @@ static NSInteger flicksDown;
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
+class CustomRotor: UIViewController {
 
     @IBOutlet weak var rotorTitle: UILabel!
 
@@ -2564,15 +2863,15 @@ class ViewController: UIViewController {
         return  UIAccessibilityCustomRotor.init(name: name,
                                                 itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
 
-                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotor.Direction.next) {
 
-                                                        ViewController.flicksDown += 1
-                                                        self.downLabel.text = String(ViewController.flicksDown)
+                                                        CustomRotor.flicksDown += 1
+                                                        self.downLabel.text = String(CustomRotor.flicksDown)
 
                                                     } else {
 
-                                                        ViewController.flicksUp += 1
-                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                        CustomRotor.flicksUp += 1
+                                                        self.upLabel.text = String(CustomRotor.flicksUp)
                                                     }
 
                                                     return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
@@ -2586,7 +2885,7 @@ class ViewController: UIViewController {
 </br><img alt="changed display with a rotor option" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
 </br>The use of a custom rotor is definitely not a natural part of a mobile application, that&#39;s why its <strong>functioning</strong> and <strong>purpose</strong> must be <strong>fully explained</strong> to assist the user experience.
 </br></br>The main difference between a rotor option and a custom action or an adjustable element relies on the fact that it can be activated whatever the selected element.
-</br>However, if this selected element is adjustable or holds any custom actions, <strong>its actions will prevail over those of the rotor</strong>.
+</br>However, if the selected element is adjustable or holds any custom actions, <strong>its actions will prevail over those of the rotor</strong>.
 </br></br>Such a feature must be implemented with <strong>caution</strong> and according to <strong>specific needs</strong> whose only purpose should be to <strong>improve and facilitate the user experience</strong>.</p>
 <h3 id="links">Links</h3>
 <ul>
@@ -3063,33 +3362,33 @@ can&#39;t initially read it.</p>
 <a name="TransparencyAndBlurring"></a></p>
 <h3 id="-transparency-and-blurring-03-07-https-developer-apple-com-videos-play-wwdc2018-230-time-187-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=187">Transparency and blurring (03:07)</a></h3>
 <p>Since iOS 8, classes such as <code>UIBlurEffect</code> and <code>UIVisualEffectView</code> perfectly handle the blurring effect of an image.
-</br>However, this could give rise to sighting difficulties for some people having visual problems.
-</br>In this case, there&#39;s a possibility for the user to drastically weaken these effects by changing his settings.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
+</br>However, this could give rise to sighting difficulties for some people having visual impairments.
+</br>In this case, there&#39;s a possibility for the user to drastically weaken these effects by activating the appropriate <a href="./criteria-ios.html#accessibility-options">accessibility option</a> in his settings.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
 </br>The result is a darker background that may become completely uniform under certain circumstances.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_2.png" />
-</br>The <code>isReduceTransparencyEnabled</code> property enables the developed application to be adapted to the user preference.
+</br>The <code>isReduceTransparencyEnabled</code> property value is available in the programing language as well.
 </br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_3.png" /></p>
 <p><a name="Contrast"></a></p>
 <h3 id="-contrast-04-38-https-developer-apple-com-videos-play-wwdc2018-230-time-278-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=278">Contrast (04:38)</a></h3>
 <p>The contrast between the foreground and the background colors is very important and depends a lot on the font type properties that are detailed in the <a href="./criteria-ios.html#colours">iOS guide section</a> of this site.
-</br>To improve the reading experience, it&#39;s natively possible to increase the colors contrast thanks to the settings.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
-</br>The <code>isDarkerSystemColorsEnabled</code> property enables the developed application to be adapted to the user preference.
+</br>To improve the reading experience, it&#39;s natively possible to increase the colors contrast by activating the appropriate <a href="./criteria-ios.html#accessibility-options">accessibility option</a> in the settings.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
+</br>The <code>isDarkerSystemColorsEnabled</code> property enables the developed application to be informed of its value.
 </br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_2.png" /></p>
 <p><a name="Sizing"></a></p>
 <h3 id="-sizing-07-04-https-developer-apple-com-videos-play-wwdc2018-230-time-424-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=424">Sizing (07:04)</a></h3>
 <p>The individual presented elements about the <code>Dynamic Type</code> are widely explained in the <a href="./dev-ios.html#text-size">iOS developement section</a> and refer to <a href="./dev-ios-wwdc-17245.html">another presentation</a> detailed in the WWDC part of this site.
 </br>Display a bold font type may improve the visual rendering enough without disproportionately increase the font size.
-</br>Once more, this functionality can be activated in the mobile settings.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
-</br>The <code>isBoldTextEnabled</code> property enables the developed application to be adapted to the user preference.
+</br>Once more, this <a href="./criteria-ios.html#accessibility-options">accessibility option</a> can be activated in the mobile settings.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
+</br>The <code>isBoldTextEnabled</code> property enables the developed application to be informed of its value.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_2.png" /></p>
 <p><a name="Motion"></a></p>
 <h3 id="-motion-08-48-https-developer-apple-com-videos-play-wwdc2018-230-time-528-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=528">Motion (08:48)</a></h3>
 <p>Any animations may give rise to problems of balance even of nausea to certain people.
-</br>The user accessibility settings allow to strongly decrease the effects of all kind of native animations.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
+</br>The user settings allow to strongly decrease the effects of all kind of native animations by activating the appropriate <a href="./criteria-ios.html#accessibility-options">accessibility option</a>.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
 </br>The <code>isReduceMotionEnabled</code> property enables the developed application to be adapted to the user preference.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_2.png" /></p>
 <p><a name="UIAccessibilityElement"></a></p>
@@ -3496,7 +3795,7 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
   </li>
 </ul>
 </br></p>
-<h2 id="iphonex-img-style-max-width-400px-height-auto-alt-src-images-iphonex-jpg-">iPhoneX <img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex.jpg" /></h2>
+<h2 id="iphonex">iPhoneX</h2>
 <p>The lack of the home button on the main screen for this device has modified the usual gestures.
 </br>These <a href="./screen-reader-voiceover-iphonex.html">new common gestures</a> have induced new VoiceOver behavior for some actions :</p>
 <ul>
@@ -3519,15 +3818,15 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_notification_center.png" />
 </br></br></br></p>
 <h2 id="tips-tricks">Tips &amp; Tricks</h2>
-<p>Hereunder are unusual features that may be useful to a VoiceOver user on any device :</p>
+<p>Hereunder are unusual features that may be useful to a VoiceOver user on <strong>any type of device</strong> :</p>
 <ul>
 <li><a href="#ReadAllElementsFromTop">Read elements from the top.</a></li>
 <li><a href="#ReadAllElementsFromSelection">Read elements from the selection.</a></li>
 <li><a href="#ToggleAutomaticReading">Start/pause the elements vocalization.</a></li>
 <li><a href="#LocateSelectedElement">Locate the selected element.</a></li>
 <li><a href="#ToggleSpeech">Toggle Speech.</a></li>
-<li><a href="#ControlCenter">Open Control Center.</a></li>
-<li><a href="#NotificationCenter">See Notifications.</a></li>
+<li><a href="#ControlCenterBis">Open Control Center.</a></li>
+<li><a href="#NotificationCenterBis">See Notifications.</a></li>
 <li><a href="#ElementActivation">Activate the selected element.</a></li>
 <li><a href="#Scrub">Go back to the previous page.</a></li>
 <li><a href="#ItemChooserList">Use the item chooser list.</a></li>
@@ -3553,11 +3852,11 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 </br>Gesture : <strong>double-tap with 3 fingers</strong> anywhere on the screen.
 </br>If the <code>zoom</code> functionality is activated in the settings, a <strong>triple-tap</strong> will be mandatory to obtain the same result.
 </br><img style="max-width: 400px; height: auto;" alt="" src="./images/iphonex_vo_en_stop_resume_speech.png" /></p>
-<p><a name="ControlCenter"></a>
+<p><a name="ControlCenterBis"></a>
 </br>First of all, <strong>an element of the status bar must be selected</strong>.
 </br>Gesture: <strong>flick up with 3 fingers</strong> anywhere on the screen.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_vo_en_control_center_bis.png" /></p>
-<p><a name="NotificationCenter"></a>
+<p><a name="NotificationCenterBis"></a>
 </br>First of all, <strong>an element of the status bar must be selected</strong>.
 </br>Gesture: <strong>flick down with 3 fingers</strong> anywhere on the screen.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iphonex_vo_en_notification_center_bis.png" /></p>

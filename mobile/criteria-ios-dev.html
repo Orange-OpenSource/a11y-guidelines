@@ -55,7 +55,7 @@
                         <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
                         <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
                         <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
-                        <li><a class="page-screen-reader" href="screen-reader.html">Lecteur d’écran</a></li>
+                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
                         <li><a class="page-links" href="links.html">Liens utiles</a></li>
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
                         <li><a class="page-about" href="about.html">À propos</a></li>                        
@@ -125,12 +125,12 @@
 });</script>
 
 <p><span data-menuitem="criteria-ios"></span></p>
-<p>Ce guide a pour objectif de présenter les différentes options du <abbr>SDK</abbr> d’accessibilité sous iOS 11 en associant&nbsp;:</p>
+<p>Ce guide a pour objectif de présenter les différentes options du <abbr>SDK</abbr> d’accessibilité sous iOS 12 en associant&nbsp;:</p>
 <ul>
 <li>Des explications détaillées concernant les attributs et méthodes d&#39;accessibilité.</li>
-<li>Des exemples de code en Swift 4 et en Objective C.</li>
+<li>Des exemples de code en Swift 4.2 et en Objective C.</li>
 </ul>
-<p></br>... et des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle d&#39;Apple</code></a>.</p>
+<p>... et des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle d&#39;Apple</code></a>.</p>
 <h2 id="alternatives-textuelles">Alternatives textuelles</h2>
 <h3 id="description">Description</h3>
 <p>Sous iOS, la vocalisation d’un élément s’effectue à travers 4 attributs&nbsp;: <code>label</code>, <code>hint</code>, <code>value</code> et <code>trait</code>.<br>L’ordre de vocalisation est toujours le même (<code>label</code>, <code>value</code>, <code>trait</code> et <code>hint</code>), il ne peut pas être changé et la vocalisation est réalisée en une seule fois à l’arrivée sur l’élément.  </p>
@@ -202,7 +202,6 @@ class ChangeTextView: UIViewController {
 <li><strong>accessibilityTraitHeader</strong>&nbsp;: permet de définir un élément comme un en-tête (voir la section <a href="criteria-ios-conception.html#titre-et-en-t-te">«&nbsp;titre et en-tête&nbsp;»</a>).</li>
 <li><strong>accessibilityTraitAdjustable</strong>&nbsp;: permet de définir un élément comme un élément «&nbsp;ajustable&nbsp;», c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un <a href="https://help.apple.com/iphone/9/#/iph3e2e2281">geste spécifique</a> de <span lang="en">VoiceOver</span>.</li>
 </ul>
-<h3 id="exemple">Exemple</h3>
 <pre><code class="objective-c">
 - (void)customTraits() {
     //Spécification d'un UIPageControl avec le trait ’ajustable’.
@@ -210,27 +209,62 @@ class ChangeTextView: UIViewController {
 
     //Ajout d'un en-tête.  
     defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
-
-    //Combinaison possible de plusieurs traits.  
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected;
 }
 </code></pre><pre><code class="swift">
 func customTraits() {
     //Spécification d'un UIPageControl avec le trait ’ajustable’.
-    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable
+    pageControl.accessibilityTraits = .adjustable
 
     //Ajout d'un en-tête. 
-    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader
+    defaultHeaderViewCell.accessibilityTraits = .header
+}
+</code></pre>
+<h3 id="op-rations-l-mentaires">Opérations élémentaires</h3>
+<p>Cet attribut est en réalité un <code>bitmask</code> pour lequel chaque élément pris individuellement peut prendre une valeur spécifique.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
+</br>Il est donc possible d&#39;ajouter et d&#39;enlever plusieurs <code>traits</code> présents pour caractériser un élement après avoir vérifié leur existence par exemple.</p>
+<pre><code class="objective-c">
+- (void)changeTraits {
 
-    //Combinaison possible de plusieurs traits. 
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton + UIAccessibilityTraitSelected
+    //Création d'un jeu de traits qui efface le contenu précédent du bitmask.
+    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+
+    //Ajouts de traits au contenu existant du bitmask.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
+
+    //Suppression d'un trait.
+    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
+
+    //Vérification de l'existence d'un trait au sein du bitmask.
+    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
+        // Tâches à réaliser si le trait '.header' est présent...
+    }
+}
+</code></pre><pre><code class="swift">
+func changeTraits() {
+
+    //Création d'un jeu de traits qui efface le contenu précédent du bitmask.
+    onePageButton.accessibilityTraits = [.button, .link]
+
+    //Ajouts de traits au contenu existant du bitmask.
+    pageControl.accessibilityTraits.insert(.header) //Only one trait.
+    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
+
+    //Suppression d'un trait.
+    onePageButton.accessibilityTraits.remove(.link)
+
+    //Vérification de l'existence d'un trait au sein du bitmask.
+    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
+        // Tâches à réaliser si le trait '.header' est présent...
+    }
 }
 </code></pre>
 <h3 id="lien">Lien</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits"><code>accessibilityTraits</code></a></li>
 </ul>
-<h2 id="masquer-des-l-ments-l-accessibilit-">Masquer des éléments à l’accessibilité</h2>
+<h2 id="masquer-des-l-ments">Masquer des éléments</h2>
 <h3 id="description">Description</h3>
 <p>Il est possible de masquer des éléments aux outils d’accessibilité grâce aux attributs d’accessibilité mais aussi de forcer certains éléments à être visibles pour les outils d’accessibilité uniquement.  </p>
 <ul>
@@ -249,24 +283,24 @@ func customTraits() {
     [super viewDidAppear:animated];
 
     //Création d'un élément père dans lequel 2 autres éléments fils vont être insérés.
-    CGRect parentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
-    UIView * myParentView = [[UIView alloc]initWithFrame:parentViewRect];
-    myParentView.backgroundColor = [UIColor redColor];
+    CGRect redParentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
+    UIView * myRedParentView = [[UIView alloc]initWithFrame:redParentViewRect];
+    myRedParentView.backgroundColor = [UIColor redColor];
 
-    [UIApplication.sharedApplication.keyWindow addSubview:myParentView];
+    [self.view addSubview:myRedParentView];
 
     //L'élément père ne doit pas être accessible pour servir de conteneur à ses enfants.
     //Si la valeur est à 'YES', seul cet élément sera accessible sans ses enfants.
-    myParentView.isAccessibilityElement = NO;
+    myRedParentView.isAccessibilityElement = NO;
 
     //Indication du conteneur que ses enfants peuvent ne pas être accessibles même s'ils sont définis comme tels.
-    //Si cette valeur est à 'NO' et la précedénte à 'NO', seuls ces élements seront accessibles.
-    myParentView.accessibilityElementsHidden = NO;
+    //Si cette valeur est à 'NO' et la précédente à 'NO', seuls ces élements seront accessibles.
+    myRedParentView.accessibilityElementsHidden = NO;
 
     [self createViewWithColor:[UIColor yellowColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
     [self createViewWithColor:[UIColor blueColor] 
-                       inside:myParentView];
+                       inside:myRedParentView];
 }
 
 - (void)createViewWithColor:(UIColor*)color
@@ -287,25 +321,25 @@ override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         //Création d'un élément père dans lequel 2 autres éléments fils vont être insérés.
-        let parentViewRect = CGRect.init(x: 100.0,
-                                         y: 100.0,
-                                         width: 40.0,
-                                         height: 40.0)
-        let myParentView = UIView.init(frame: parentViewRect)
-        myParentView.backgroundColor = .red
+        let redParentViewRect = CGRect.init(x: 100.0,
+                                            y: 100.0,
+                                            width: 40.0,
+                                            height: 40.0)
+        let myRedParentView = UIView.init(frame: redParentViewRect)
+        myRedParentView.backgroundColor = .red
 
-        UIApplication.shared.keyWindow?.addSubview(myParentView)
+        self.view.addSubview(myRedParentView)
 
         //L'élément père ne doit pas être accessible pour servir de conteneur à ses enfants.
         //Si la valeur est à 'true', seul cet élément sera accessible sans ses enfants.
-        myParentView.isAccessibilityElement = false
+        myRedParentView.isAccessibilityElement = false
 
         //Indication du conteneur que ses enfants peuvent ne pas être accessibles même s'ils sont définis comme tels.
-        //Si cette valeur est à 'false' et la précedénte à 'false', seuls ces élements seront accessibles.
-        myParentView.accessibilityElementsHidden = false
+        //Si cette valeur est à 'false' et la précédente à 'false', seuls ces élements seront accessibles.
+        myRedParentView.accessibilityElementsHidden = false
 
-        self.createViewWithColor(.yellow, inside: myParentView)
-        self.createViewWithColor(.blue, inside: myParentView)
+        self.createViewWithColor(.yellow, inside: myRedParentView)
+        self.createViewWithColor(.blue, inside: myRedParentView)
     }
 
     func createViewWithColor(_ color:UIColor, inside parentView:UIView) {
@@ -337,21 +371,23 @@ override func viewDidAppear(_ animated: Bool) {
 </br></br>Pour déclencher une vocalisation qui se fera dans la langue du système, il faut envoyer une notification à l’<abbr>API</abbr> d’accessibilité via la méthode <strong>UIAccessibilityPostNotification</strong> avec en paramètres la notification permettant de déclencher une vocalisation <strong>UIAccessibilityAnnouncementNotification</strong> et la chaîne de caractères à vocaliser.</p>
 <h3 id="exemple">Exemple</h3>
 <pre><code class="objective-c">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"Message pour la vocalisation.");
+UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
+                                @"Message pour la vocalisation.");
 </code></pre><pre><code class="swift">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Message pour la vocalisation.")
+UIAccessibility.post(notification: .announcement,
+                     argument: "Message pour la vocalisation.")
 </code></pre>
 <h3 id="liens">Liens</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification"><code>UIAccessibilityPostNotification</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification"><code>UIAccessibilityAnnouncementNotification</code></a></li>
 </ul>
-<h2 id="conna-tre-l-tat-des-options-d-accessibilit-">Connaître l’état des options d’accessibilité</h2>
-<h3 id="description">Description</h3>
+<h2 id="options-d-accessibilit-">Options d’accessibilité</h2>
+<h3 id="-tats">États</h3>
 <p>Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;?
-</br>Plusieurs fonctions du <span lang="en">framework</span> <code>UIKit</code> permettent de connaître les statuts de ces options d&#39;accessibilité.
+</br>Plusieurs fonctions du <span lang="en">framework</span> <code>UIKit</code> permettent de connaître le statut de ces options d&#39;accessibilité.
  </br>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (<strong>UIAccessibilityIsVoiceOverRunning</strong>).
- </br></br>D&#39;autres fonctions, peut-être moins utiles à première vue, sont fournies dans les liens ci-après et une présentation très visuelle de certaines d&#39;entre elles est faite lors d&#39;une vidéo <a href="./criteria-ios-wwdc-18230.html">WWDC 2018</a>.</p>
+ </br></br>Une présentation très visuelle de certaines fonctions, peut-être moins utiles à première vue, est faite lors d&#39;une vidéo WWDC 2018 <em>(Fournir une expérience exceptionnelle en accessibilité)</em> dont le contenu est parfaitement détaillé <a href="./criteria-ios-wwdc-18230.html">sur ce site</a>.</br></br></p>
 <h3 id="exemple">Exemple</h3>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -359,29 +395,71 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 
     NSLog(@"VoiceOver vaut %d et SwitchControl vaut %d.", isVoiveOverRunning, isSwitchControlRunning);
 </code></pre><pre><code class="swift">
-    let isVoiceOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0)
-    let isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0)
+    let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
+    let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
 
     print("VoiceOver vaut \(isVoiceOverRunning) et SwichControl vaut \(isSwitchControlRunning).")
 </code></pre>
+<h3 id="-v-nements">Événements</h3>
+<p>Le système iOS envoie un certain nombre d’événements d’accessibilité à destination des applications lors de la modification des options d’accessibilité.
+</br>Par exemple, si <span lang="en">VoiceOver</span> est désactivé durant l’utilisation de l’application, celle-ci recevra l’événement <strong>UIAccessibilityVoiceOverStatusDidChangeNotification</strong>, ce qui peut être très utile couplé à la fonction <strong>UIAccessibilityIsVoiceOverRunning</strong> grâce à laquelle on peut exécuter un traitement particulier quand <span lang="en">VoiceOver</span> est activé.
+</br>Mais que se passe-t-il si <span lang="en">VoiceOver</span> est désactivé alors que ce traitement a déjà eu lieu&nbsp;?
+</br></br>C’est là que les événements système peuvent être utilisés et, en restant à leur écoute, il est possible d’appliquer des traitements spécifiques de manière dynamique.</br></br></p>
+<h3 id="exemple">Exemple</h3>
+<p>Dans cet exemple, on appelle une méthode spécifique au moment où le statut de VoiceOver ou du Switch Control change.</p>
+<pre><code class="objective-c">
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
+                                               object:nil];
+}
+
+- (void)methodToBeCalled:(NSNotification *)notification {
+
+    NSArray * checkStatus = @[@"NOK", @"OK"];
+
+    NSLog(@"SWITCH CONTROL est %@ et VOICE OVER est %@",
+          checkStatus[UIAccessibilityIsSwitchControlRunning()],
+          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
+}
+</code></pre><pre><code class="swift">
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
+                                               object: nil)
+    }
+
+    @objc private func methodToBeCalled(notification: Notification) {
+
+        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
+        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
+
+        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
+    }
+</code></pre>
 <h3 id="liens">Liens</h3>
 <ul>
-<li><a href="https://developer.apple.com/documentation/uikit/1615087-uiaccessibilitydarkersystemcolor"><code>UIAccessibilityDarkerSystemColorsEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1648479-uiaccessibilityisassistivetouchr"><code>UIAccessibilityIsAssistiveTouchRunning</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615156-uiaccessibilityisboldtextenabled"><code>UIAccessibilityIsBoldTextEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615112-uiaccessibilityisclosedcaptionin"><code>UIAccessibilityIsClosedCaptioningEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615189-uiaccessibilityisgrayscaleenable"><code>UIAccessibilityIsGrayscaleEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615173-uiaccessibilityisguidedaccessena"><code>UIAccessibilityIsGuidedAccessEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615167-uiaccessibilityisinvertcolorsena"><code>UIAccessibilityIsInvertColorsEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615123-uiaccessibilityismonoaudioenable"><code>UIAccessibilityIsMonoAudioEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615133-uiaccessibilityisreducemotionena"><code>UIAccessibilityIsReduceMotionEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615074-uiaccessibilityisreducetranspare"><code>UIAccessibilityIsReduceTransparencyEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615103-uiaccessibilityisshaketoundoenab"><code>UIAccessibilityIsShakeToUndoEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615109-uiaccessibilityisspeakscreenenab"><code>UIAccessibilityIsSpeakScreenEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615154-uiaccessibilityisspeakselectione"><code>UIAccessibilityIsSpeakSelectionEnabled</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615131-uiaccessibilityisswitchcontrolru"><code>UIAccessibilityIsSwitchControlRunning</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/1615187-uiaccessibilityisvoiceoverrunnin"><code>UIAccessibilityIsVoiceOverRunning</code></a></li>
+<li><a href="./criteria-ios-conception.html#options-d-accessibilit-">Options d&#39;accessibilité</a> <em>(conception iOS)</em></li>
 </ul>
+<p>Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">événements</a> et les <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options d&#39;accessibilité</a> sont disponibles sur la documentation officielle d&#39;Apple.
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
+</br></br></p>
 <h2 id="informer-d-une-modification-sur-la-page">Informer d’une modification sur la page</h2>
 <h3 id="description">Description</h3>
 <p>Lors d’un changement de contenu sur une page, il est possible de notifier l’<abbr>API</abbr> d’accessibilité de ce changement à travers différentes notifications.
@@ -412,16 +490,18 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 }
 </code></pre><pre><code class="swift">
 //L'élément 'myLabel' est sélectionné et vocalisé avec sa nouvelle valeur.
-@IBAction func clicHere(_ sender: UIButton) {
+@IBAction func tapHere(_ sender: UIButton) {
 
     myLabel.accessibilityLabel = "Ceci est un nouveau label."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 
 //Le premier élément accessible de la page est sélectioné et vocalisé avec un son spécifique.
 @IBAction func clic(_ sender: UIButton) {
 
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
+    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                         argument: nil)
 }
 </code></pre>
 <h3 id="liens">Liens</h3>
@@ -448,7 +528,8 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 
     myLabel.accessibilityLanguage = "en"
     myLabel.accessibilityLabel = "This is a new label. Thank you."
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 </code></pre>
 <h3 id="lien">Lien</h3>
@@ -461,7 +542,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Messag
 <ul>
 <li><strong>accessibilityFrame</strong>&nbsp;: permet de définir cette zone via un rectangle (<code>CGRect</code>).
 </br>Par défaut pour un élément dérivant de <code>UIView</code>, cette zone est la partie «&nbsp;visible&nbsp;» de la vue.</li>
-<li><strong>accessibilityPath</strong>&nbsp;: équivalent à <code>AccessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.
+<li><strong>accessibilityPath</strong>&nbsp;: équivalent à <code>accessibilityFrame</code> mais permet de définir la zone via des courbes de Bézier.
 <a name="AccessibilityActivationPoint"></a></li>
 <li><strong>accessibilityActivationPoint</strong>&nbsp;: définit un point de contact au sein de la <code>frame</code> dont l&#39;action résultante sera activée par une sélection classique d&#39;élément via un double tap.
 </br> Par défaut, ce point se trouve au centre de la <code>frame</code> mais on peut le définir n&#39;importe à l&#39;intérieur de cette dernière, l&#39;idée étant de pouvoir activer un élement facilement lors d&#39;un <a href="#ActivationPointExemple">regroupement par exemple</a>.
@@ -539,7 +620,8 @@ float heightVal;
                                                  width: widthVal + 100.0,
                                                  height: heightVal + 100.0)
 
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                             argument: myLabel)
     }
 
     //Seconde façon d'augmenter la zone de focus (Bézier).
@@ -559,7 +641,8 @@ float heightVal;
 
         myLabel.accessibilityPath = bezierPath
 
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, myLabel)
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                             argument: myLabel)
     }
 </code></pre>
 <h3 id="liens">Liens</h3>
@@ -636,13 +719,11 @@ int indexSwitch = 1;
 
     wrapView.accessibilityElements = @[label, aSwitch];
 
-    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+    NSString * switchValue = (aSwitch.isOn) ? @"activé" : @"désactivé";
 
     wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                                   @"the switch control is",
-                                   switchValue.description];
-    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+    wrapView.accessibilityLabel = [NSString stringWithFormat:@"le contrôle est %@", switchValue.description];
+    wrapView.accessibilityHint = @"tapez deux fois pour changer sa valeur";
 
     return wrapView;
 }
@@ -654,11 +735,9 @@ int indexSwitch = 1;
     UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
     [theSwitch setOn:!(theSwitch.isOn)];
 
-    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+    NSString * switchValue = (theSwitch.isOn) ? @"activé" : @"désactivé";
 
-    self.accessibilityLabel = [NSString stringWithFormat:@" %@ %@",
-                               @"the switch control is",
-                               switchValue.description];
+    self.accessibilityLabel = [NSString stringWithFormat:@"le contrôle est %@", switchValue.description];
     return YES;
 }
 @end
@@ -690,7 +769,7 @@ int indexSwitch = 1;
         let switchValue = (aSwitch.isOn) ? "activé" : "désactivé"
 
         self.isAccessibilityElement = true
-        self.accessibilityLabel = "le contrôle est" + switchValue.description
+        self.accessibilityLabel = "le contrôle est " + switchValue.description
         self.accessibilityHint = "tapez deux fois pour changer sa valeur."
     }
 
@@ -728,10 +807,16 @@ int indexSwitch = 1;
 
 @implementation ActivationPointViewController
 
+UIAccessibilityElement * elt;
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    UIAccessibilityElement * elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    [_mySwitch addTarget:self
+                  action:@selector(configChanged:)
+        forControlEvents:UIControlEventValueChanged];
+
+    elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
 
     CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
     CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
@@ -743,6 +828,13 @@ int indexSwitch = 1;
 
     self.view.accessibilityElements = @[elt];
 }
+
+
+- (void)configChanged:(UISwitch *)sender {
+
+    NSString * switchValue = _mySwitch.on ? @"activé" : @"désactivé";
+    elt.accessibilityLabel = [NSString stringWithFormat:@"le contrôle est %@", switchValue.description];
+}
 @end
 </code></pre><pre><code class="swift">
     class ActivationPointViewController: UIViewController {
@@ -751,19 +843,38 @@ int indexSwitch = 1;
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var mySwitch: UISwitch!
 
+    var elt: UIAccessibilityElement?
+
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        mySwitch.addTarget(self,
+                           action: #selector(configChanged),
+                           for: .valueChanged)
+
+        elt = UIAccessibilityElement(accessibilityContainer: self.view)
         let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
 
-        elt.accessibilityLabel = "regroupement d'éléments"
-        elt.accessibilityHint = "tapez deux fois pour modifier le switch"
-        elt.accessibilityFrameInContainerSpace = a11yEltFrame
-        elt.accessibilityActivationPoint = mySwitch.center
+        if let elt = elt {
 
-        self.view.accessibilityElements = [elt]
+            elt.accessibilityLabel = "regroupement d'éléments"
+            elt.accessibilityHint = "tapez deux fois pour modifier le switch"
+            elt.accessibilityFrameInContainerSpace = a11yEltFrame
+            elt.accessibilityActivationPoint = mySwitch.center
+
+            self.view.accessibilityElements = [elt]
+        }
+    }
+
+
+    @objc func configChanged(sender: UISwitch){
+
+        if let configGroup = elt {
+
+            let switchValue = (mySwitch?.isOn)! ? "activé" : "désactivé"
+            configGroup.accessibilityLabel = "le contrôle est " + switchValue.description
+        }
     }
 }
 </code></pre>
@@ -775,75 +886,21 @@ int indexSwitch = 1;
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></li>
 </ul>
-<h2 id="-v-nements-d-accessibilit-">Événements d’accessibilité</h2>
-<h3 id="description">Description</h3>
-<p>Le système iOS envoie un certain nombre d’événements d’accessibilité à destination des applications lors de la modification des options d’accessibilité.
-</br>Par exemple, si <span lang="en">VoiceOver</span> est désactivé durant l’utilisation de l’application, celle-ci recevra l’événement <strong>UIAccessibilityVoiceOverStatusDidChange</strong>, ce qui peut être très utile couplé à la fonction <strong>UIAccessibilityIsVoiceOverRunning</strong> grâce à laquelle on peut exécuter un traitement particulier quand <span lang="en">VoiceOver</span> est activé.
-</br>Mais que se passe-t-il si <span lang="en">VoiceOver</span> est désactivé alors que ce traitement a déjà eu lieu&nbsp;?
-</br></br>C’est là que les événements système peuvent être utilisés et, en restant à leur écoute, il est possible d’appliquer des traitements spécifiques de manière dynamique.</p>
-<h3 id="exemple">Exemple</h3>
-<p>Dans cet exemple, on appelle une méthode spécifique au moment où le statut de VoiceOver ou du Switch Control change.</p>
-<pre><code class="objective-c">
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
-                                               object:nil];
-}
-
-- (void)methodToBeCalled:(NSNotification *)notification {
-
-    NSArray * checkStatus = @[@"NOK", @"OK"];
-
-    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
-          checkStatus[UIAccessibilityIsSwitchControlRunning()],
-          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
-}
-</code></pre><pre><code class="swift">
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilitySwitchControlStatusDidChange,
-                                               object: nil)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: .UIAccessibilityVoiceOverStatusDidChange,
-                                               object: nil)
-    }
-
-    @objc private func methodToBeCalled(notification: Notification) {
-
-        let switchControlStatus = (UIAccessibilityIsSwitchControlRunning() ? "OK" : "NOK")
-        let voiceOverStatus = (UIAccessibilityIsVoiceOverRunning() ? "OK" : "NOK")
-
-        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
-    }
-</code></pre>
-<h3 id="lien">Lien</h3>
-<p>Tous les événements sont disponibles sur la <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">documentation officielle d&#39;Apple</a>.</p>
 <h2 id="taille-des-textes">Taille des textes</h2>
 <h3 id="description">Description</h3>
-<p>Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide du paramétrage du téléphone.
-</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
-</br>Quelques points sont néanmoins essentiels pour la bonne utilisation de l&#39;<abbr>API</abbr> mise à disposition&nbsp;:</p>
+<p>Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide des réglages du terminal.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:</p>
 <ul>
+<li><strong>Utiliser impérativement les styles de texte</strong> proposés selon la version d&#39;iOS avec laquelle l&#39;application est développée.
+</br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" /></li>
 <li><p>Utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l&#39;utilisation d&#39;autres polices est devenue nettement plus aisée depuis l&#39;arrivée de <code>UIFontMetrics</code> avec iOS11.</p>
 <pre><code class="objective-c">
  __weak IBOutlet UILabel * fontHeadline;
  __weak IBOutlet UILabel * fontFootNote;
 
- //Utilisation de la font native pour le titre principal d'un page.
- UIFont * myFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+ //Utilisation de la font native.
+ fontFootNote.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 
  //Définition de la font pour le titre principal d'une page.
  UIFont * fontHead = [UIFont fontWithName:@"Chalkduster" size:30.0];
@@ -853,8 +910,8 @@ int indexSwitch = 1;
  @IBOutlet weak var fontHeadline: UILabel!
  @IBOutlet weak var fontFootNote: UILabel!
 
- //Utilisation de la police native par défaut pour le titre principal d'une page.
- let myFont = UIFont.preferredFont(forTextStyle: .headline)
+ //Utilisation de la police native.
+ fontFootNote.font = .preferredFont(forTextStyle: .headline)
 
  //Définition personnalisée de la police pour le titre principal d'une page.
  let fontHead = UIFont(name: "Chalkduster", size: 30.0)
@@ -883,7 +940,7 @@ int indexSwitch = 1;
  //Écoute de la notification annonçant le changement de taille de la police.
  NotificationCenter.default.addObserver(self,
                                         selector:#selector(methodToBeCalled(notification:)),
-                                        name: .UIContentSizeCategoryDidChange,
+                                        name: UIContentSizeCategory.didChangeNotification,
                                         object: nil)
 
  //Modification automatique de la taille de la police sans utiliser la notification.
@@ -900,10 +957,76 @@ int indexSwitch = 1;
 </ul>
 <h3 id="liens">Liens</h3>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65"><span lang="en">Dynamic Type <abbr>API</abbr></span></a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/"><span lang="en">Dynamic Type</span> et styles de texte</a></li>
 <li><a href="https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange"><code>UIContentSizeCategoryDidChange</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc"><code>adjustsFontForContentSizeCategory</code></a></li>
 </ul>
+<h2 id="trait-d-union-de-troncature">Trait d&#39;union de troncature</h2>
+<h3 id="description">Description</h3>
+<p>L&#39;utilisation du <code>Dynamic Type</code> exposé dans le paragraphe précédent s&#39;accompagne indéniablement de la troncature de mots en fonction du grossissement de texte choisi par l&#39;utilisateur.
+</br>Malheureusement, cela n&#39;est pas pris en compte nativement par le système et seule une intervention au niveau programmatique permet d&#39;obtenir ce rendu visuel particulièrement apprécié.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/Troncature.png" />
+</br>L&#39;idée est de spécifier l&#39;utilisation d&#39;un <code>NSMutableAttributedString</code> auquel on ajoute une propriété de type  <code>NSMutableParagraphStyle</code> comme indiqué par l&#39;exemple ci-dessous :</p>
+<pre><code class="objective-c">
+@interface TruncationHyphen () {
+    __weak IBOutlet UILabel * myLabel;
+}
+@end
+
+
+@implementation TruncationHyphen
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSString * myString = @"anticonstitutionnellement";
+    NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
+
+    paraph.alignment = NSTextAlignmentJustified;
+    paraph.hyphenationFactor = 1.0;
+
+    UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
+    UIFont * myTextFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle1] scaledFontForFont:myFont];
+
+    NSDictionary * attributesDictionary = @{NSFontAttributeName:myTextFont};
+    NSMutableAttributedString * myText = [[NSMutableAttributedString alloc]initWithString:myString 
+                                                                               attributes:attributesDictionary];
+
+    [myText addAttribute:NSParagraphStyleAttributeName
+                   value:paraph
+                   range:NSMakeRange(0, 1)];
+
+    myLabel.attributedText = myText;
+}
+@end
+</code></pre><pre><code class="swift">
+class TruncationHyphen: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let myString = "anticonstitutionnellement"
+
+        let paraph = NSMutableParagraphStyle()
+        paraph.alignment = .justified
+        paraph.hyphenationFactor = 1.0
+
+        let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
+
+        let myText = NSMutableAttributedString(string:myString,
+                                               attributes: [.font: myTextFont])
+
+        myText.addAttribute(.paragraphStyle,
+                            value: paraph,
+                            range: NSMakeRange(0,1))
+
+        myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
 <h2 id="taille-des-l-ments-graphiques">Taille des éléments graphiques</h2>
 <h3 id="description">Description</h3>
 <p>Tout comme la taille des textes est adaptable selon les réglages d&#39;accessibilité (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d&#39;une barre de tabulation ou d&#39;outils l&#39;est aussi mais <strong>uniquement depuis iOS11 avec Xcode 9</strong>.
@@ -1303,15 +1426,14 @@ class ViewController: UIViewController {
 NS_ASSUME_NONNULL_BEGIN
 @class StepperWrapper;
 
-@protocol AdjustableForAccessibilityDelegate <NSObject>
-
+@protocol AdjustableForAccessibilityDelegate &lt;NSObject&gt;
 - (void)adjustableDecrementForView:(StepperWrapper *)view;
 - (void)adjustableIncrementForView:(StepperWrapper *)view;
 @end
 
 
 @interface StepperWrapper : UIStackView
-@property(nonatomic,weak) id<AdjustableForAccessibilityDelegate> delegate;
+@property(nonatomic,weak) id &lt;AdjustableForAccessibilityDelegate&gt; delegate;
 @end
 NS_ASSUME_NONNULL_END
 
@@ -1331,11 +1453,15 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)accessibilityDecrement {
-    [_delegate adjustableDecrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableDecrementForView:)]) {
+        [_delegate adjustableDecrementForView:self];
+    }
 }
 
 - (void)accessibilityIncrement {
-    [_delegate adjustableIncrementForView:self];
+    if ([_delegate respondsToSelector:@selector(adjustableIncrementForView:)]) {
+        [_delegate adjustableIncrementForView:self];
+    }
 }
 @end
 NS_ASSUME_NONNULL_END
@@ -1358,7 +1484,7 @@ class StepperWrapper: UIStackView {
         super.init(coder: coder)
 
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitAdjustable
+        accessibilityTraits = .adjustable
     }
 
     override func accessibilityDecrement() {
@@ -1376,23 +1502,19 @@ class StepperWrapper: UIStackView {
 </ul>
 <pre><code class="objective-c">
 NS_ASSUME_NONNULL_BEGIN
-@interface ViewController () <AdjustableForAccessibilityDelegate>
-
-@property (weak, nonatomic) IBOutlet UIStepper * stepperNoAccess;
-@property (weak, nonatomic) IBOutlet UILabel * stepperValueNoAccess;
-
+@interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
 @property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
 @property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
 @property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
 @end
 
 
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
+@implementation ContinuousAdjustableValues
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
     _stepperStackViewAccess.delegate = self;
-    _stepperStackViewAccess.accessibilityLabel = @"Compteur pour adapter la valeur";
+    _stepperStackViewAccess.accessibilityLabel = @"augmenter ou diminuer la valeur";
     _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
 }
 
@@ -1413,7 +1535,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 NS_ASSUME_NONNULL_END
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
+class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
 
     @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
     @IBOutlet weak var stepperAccess: UIStepper!
@@ -1424,7 +1546,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
         super.viewDidLoad()
 
         stepperStackViewAccess.delegate = self
-        stepperStackViewAccess.accessibilityLabel = "Compteur pour adapter la valeur"
+        stepperStackViewAccess.accessibilityLabel = "augmenter ou diminuer la valeur"
         stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
     }
 
@@ -1457,14 +1579,12 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 </br></br>Une solution consiste à <strong>associer à l&#39;élément sélectionné un tableau d&#39;actions</strong> dont le système se chargera d&#39;indiquer automatiquement la présence en informant vocalement l&#39;utilisateur de leur disponibilité.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomActions ()
 @property (weak, nonatomic) IBOutlet UILabel * persoElt;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomActions
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -1499,7 +1619,7 @@ class ViewController: UIViewController, AdjustableForAccessibilityDelegate {
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
+class CustomActions: UIViewController {
 
     @IBOutlet weak var persoElt: UILabel!
 
@@ -1542,7 +1662,7 @@ class ViewController: UIViewController {
 }
 </code></pre>
 
-<p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant par balayages successifs sur l&#39;élément accessible utilisé :
+<p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant par balayages successifs sur l&#39;élément accessible sélectionné :
 </br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" /></p>
 <h3 id="liens">Liens</h3>
 <ul>
@@ -1551,13 +1671,13 @@ class ViewController: UIViewController {
 </ul>
 <h2 id="focus-d-un-l-ment">Focus d&#39;un élément</h2>
 <h3 id="description">Description</h3>
-<p>Le protocole informel <strong>UIAccessibilityFocus</strong> fournit des éléments de programmation efficaces de façon à pouvoir être informé d&#39;une sélection passé, active ou à venir d&#39;un élément accessible :</p>
+<p>Le protocole informel <strong>UIAccessibilityFocus</strong> fournit des éléments de programmation efficaces de façon à pouvoir être informé d&#39;une sélection passée, active ou à venir d&#39;un élément accessible :</p>
 <ul>
 <li><strong>accessibilityElementDidBecomeFocused</strong> : méthode appelée dès que l&#39;élément accessible est sélectionné.</li>
 <li><strong>accessibilityElementDidLoseFocus</strong> : méthode appelée dès que l&#39;élément accessible perd le focus.</li>
 <li><strong>accessibilityElementIsFocused</strong> : valeur booléenne qui permet de savoir si un élément accessible est sélectionné.</li>
 </ul>
-<p>Attention, ces méthodes ne sont pas appelées au sein d&#39;un contrôleur de vue si un de ses élements accessibles est sélectionné mais uniquemnet si elles sont implémentées sur l&#39;élément accessible lui-même.
+<p>Attention, ces <strong>méthodes</strong> ne sont pas appelées au sein d&#39;un contrôleur de vue si un de ses élements accessibles est sélectionné mais uniquemnet si elles sont <strong>implémentées sur l&#39;élément accessible lui-même</strong>.
 </br>Cette erreur à laquelle on ne pense pas de prime abord provient du caractère informel du protocole <strong>UIAccessibilityFocus</strong> dont les éléments peuvent subir un <span lang="en">override</span> sur tout objet héritant de NSObject même s&#39;il n&#39;est pas accessible... comme un contrôleur de vue par exemple.
 </br></br>L&#39;exemple de code ci-dessous permet de suivre le focus d&#39;un élément accessible identifié par son <code>accessibleIdentifier</code>.</p>
 <pre><code class="objective-c">
@@ -1629,16 +1749,14 @@ extension UIView {
 <p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
 </br></br>Le code fourni ci-dessous permet de compter et d&#39;afficher le nombre de balayages haut et bas <em>(finalité inutile avec le rotor mais qui permet de mettre en avant sa création programmatique)</em>.</p>
 <pre><code class="objective-c">
-@interface ViewController ()
-
+@interface CustomRotor ()
 @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
 @property (weak, nonatomic) IBOutlet UILabel * upLabel;
 @property (weak, nonatomic) IBOutlet UILabel * downLabel;
-
 @end
 
 
-@implementation ViewController
+@implementation CustomRotor
 
 static NSInteger flicksUp;
 static NSInteger flicksDown;
@@ -1681,7 +1799,7 @@ static NSInteger flicksDown;
 }
 @end
 </code></pre><pre><code class="swift">
-class ViewController: UIViewController {
+class CustomRotor: UIViewController {
 
     @IBOutlet weak var rotorTitle: UILabel!
 
@@ -1705,15 +1823,15 @@ class ViewController: UIViewController {
         return  UIAccessibilityCustomRotor.init(name: name,
                                                 itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
 
-                                                    if (predicate.searchDirection == UIAccessibilityCustomRotorDirection.next) {
+                                                    if (predicate.searchDirection == UIAccessibilityCustomRotor.Direction.next) {
 
-                                                        ViewController.flicksDown += 1
-                                                        self.downLabel.text = String(ViewController.flicksDown)
+                                                        CustomRotor.flicksDown += 1
+                                                        self.downLabel.text = String(CustomRotor.flicksDown)
 
                                                     } else {
 
-                                                        ViewController.flicksUp += 1
-                                                        self.upLabel.text = String(ViewController.flicksUp)
+                                                        CustomRotor.flicksUp += 1
+                                                        self.upLabel.text = String(CustomRotor.flicksUp)
                                                     }
 
                                                     return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,

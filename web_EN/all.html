@@ -564,17 +564,17 @@ Similarly for interactions requiring a change of orientation of the screen (tilt
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="make-sure-there-is-enough-contrast-between-text-and-background">Make sure there is enough contrast between text and background</h1>
+<h1 id="make-sure-there-is-enough-contrast-between-font-and-background-colors">Make sure there is enough contrast between font and background colors</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Themed WCAG index - Design", "url": "./incontournables.html"},
-        {"label":"Make sure there is enough contrast between text and background"}
+        {"label":"Make sure there is enough contrast between front and background colors"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span>
 <strong>Target: </strong> everyone, especially mobile and tablet users, people with visual impairments, reading or attention difficulties and elderly people.<br><strong>When: </strong> as of design and during development.</p>
-<p><strong>Description:</strong><br>The contrast between the text and the background should be high enough.
+<p><strong>Description:</strong><br>The contrast between the text or the graphic component and the background should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablet users in a very bright environment.</p>
 <p><strong>Don’t: </strong><br>The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  </p>
 <p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
@@ -585,7 +585,7 @@ Insufficient contrast level will have detrimental impact on users with visual di
 <li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … We do not have to apply this criterion, if:<ul>
 <li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
 <li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
 <li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
@@ -1168,18 +1168,18 @@ Provide ways to identify and visually distinguish the different parts of the pag
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="provide-enough-contrast-between-text-and-background">Provide enough contrast between text and background</h1>
+<h1 id="provide-enough-contrast-between-front-and-background-colors">Provide enough contrast between front and background colors</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
-        {"label":"Provide enough contrast between text and background"}
+        {"label":"Provide enough contrast between front and background colors"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Target: </strong>everyone, especially the mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong> 
-The contrast between the text and its background should be high enough.
+The contrast between the text and its background, even for non-text graphic objects as long as they provide information, should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablets users in a very bright environment.</p>
 <p><strong>Don’t: </strong> 
 The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  </p>
@@ -1191,7 +1191,8 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 <li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … 
+We do not have to apply this criterion, if:<ul>
 <li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
 <li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
 <li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
@@ -2058,10 +2059,10 @@ Extensions to install in your browser to extract the list of titles:</p>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a></li>
 </ul>
-<h2 id="3-provide-enough-contrast-between-text-and-background">3. Provide enough contrast between text and background</h2>
+<h2 id="3-provide-enough-contrast-between-front-and-background-colors">3. Provide enough contrast between front and background colors</h2>
 <p><strong>Target: </strong>everyone, especially mobile and tablet users, people with visual impairments, experiencing reading or attention difficulties and elderly people.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong> 
-The contrast between the text and its background, even for graphic objects as long as they provide information, should be high enough.
+The contrast between the text and its background, even for non-text graphic objects as long as they provide information, should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablets users in a very bright environment.</p>
 <p><strong>Don’t: </strong> 
 The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  </p>
@@ -2069,12 +2070,13 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:<ul>
-<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
-<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>4.5:1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>3:1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
-<li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … 
+We do not have to apply this criterion, if:<ul>
+<li>if the graphic components cannot be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
 <li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
 <li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
 </ul>
@@ -2770,20 +2772,21 @@ Just like in a Word document, it is possible to use the table of contents only i
 (Heading 2) News
 (Heading 2) Fibre broadband is coming!
 (Heading 3) Check eligibility
-</code></pre><h2 id="3-make-sure-there-is-enough-contrast-between-text-and-background">3. Make sure there is enough contrast between text and background</h2>
+</code></pre><h2 id="3-make-sure-there-is-enough-contrast-between-front-and-background-colors">3. Make sure there is enough contrast between front and background colors</h2>
 <p><strong>Target: </strong> everyone, especially mobile and tablet users, people with visual impairments, reading or attention difficulties and elderly people.<br><strong>When: </strong> as of design and during development.</p>
-<p><strong>Description:</strong><br>The contrast between the text and the background should be high enough.
+<p><strong>Description:</strong><br>The contrast between the text or the graphic component and the background should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablet users in a very bright environment.</p>
 <p><strong>Don’t: </strong><br>The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  </p>
 <p><img src="images/contraste.png" alt="screenshot showing text with poor contrast"></p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:<ul>
-<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
-<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>4.5:1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>3:1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
 </ul>
 </li>
-<li>Make sure that GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, progress bars, graphics … We do not have to apply this criterion, if:<ul>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … 
+We do not have to apply this criterion, if:<ul>
 <li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
 <li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
 <li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
@@ -3300,8 +3303,10 @@ But here are the main shortcuts:</p>
 <p><img src="images/aXe.png" alt="screenshot of the aXe extension">
 &nbsp;</p>
 <h2 id="wave-toolbar">WAVE Toolbar</h2>
-<p><a href="http://wave.webaim.org/extension/">WAVE Toolbar</a> is a toolbar extension for Chrome. It allows to perform several tests on the current page just like aXe. Unlike aXe, which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A <a href="http://wave.webaim.org/help">bookmarklet (or favelet) for WAVE</a> is also available.</p>
+<p><a href="http://wave.webaim.org/extension/">WAVE Toolbar</a> is a toolbar extension for Chrome. It allows to perform several tests on the current page just like aXe (nearly the same auto tests as aXe). Unlike aXe, which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A <a href="http://wave.webaim.org/help">bookmarklet (or favelet) for WAVE</a> is also available.</p>
 <p><img src="images/wave.png" alt="screenshot of the WAVE Toolbar extension"></p>
+<p>Wave toolbar provides a large number of automatic tests but also a number of semi-manual tests that require human validation, called alerts. Whether alerts or errors, we can examine the  <abbr>DOM</abbr> node that generated this feedback and access more detailed information on the accessibility criteria concerned and how to fix it.</p>
+<p>This extension also allows a direct visualization of the hierarchy of the titles of the page (via a tab in the sidebar), a display of the page with and without <abbr> CSS &lt;/ abbr&gt; and a visualization of contrast issues via icons located in the page.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
