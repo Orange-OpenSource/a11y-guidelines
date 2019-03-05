@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Test: filter by brand</title>
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: "Arial";
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    select, ul {
+        font-family: "Arial";
+        font-size: 1rem;
+        border: .2rem solid #000;        
+        display: block;                
+        margin: 1rem 0 2rem 0;
+        width: 30rem;
+        height: 15rem;
+    }
+
+    ul {        
+        list-style: none;        
+        padding: .25rem;        
+        height: auto;
+        min-height: 2rem;
+        width: 100%;        
+    }
+
+    li {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;                
+        margin: .25rem;
+    }
+
+    li button {
+        font-size: 1rem;
+        background: transparent;
+        color: #fff;
+        font-weight: bold;
+        font-family: "Arial";
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        padding: 0.25rem;
+    }
+
+    li button:after {
+        content: "x";    
+        margin: .25rem .25rem .25rem .75rem;
+        padding-left: .4rem;    
+        border-left: .15rem solid #fff;
+    }
+
+    li button:focus, li button:hover {
+        background-color: #f16e00;
+        color: #000;        
+    }
+
+    option {
+        padding: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-bottom: .1rem solid #eee;
+    }
+
+    option:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    option:hover,
+    option:focus,
+    option:active,
+    option:checked {
+        background: #000;
+        color: #fff;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+  </style>
+  
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+ <script>     
+  $(document).ready(function() {
+	$(function () {	
+        $("#brand-list").on("click", function () {
+            var text = $("#brand-list :selected").text()
+            $("#brand-list :selected").remove();
+            addItem(text);
+        });
+
+        $("#brand-list").on("keydown", function (e) {
+            switch (e.keyCode) {                
+                case 13: //enter
+                    if ($("#brand-list :selected").length > 1) {
+                        addItems($("#brand-list :selected"));
+                    } else {
+                        addItem($("#brand-list :selected").detach().text());
+                    }
+                break;
+            }
+        });
+
+        $("#selection-list").on("click", "button", function () {
+            removeItem($(this));
+        });
+
+        $("#addBrands").on("click", function (e) {
+            addItems($("#brand-list :selected"));
+        });
+	})
+  });
+
+  function addItem(item, noSpeak) {
+      if (!item) {
+          return;
+      }
+
+      var link = $("<button>").attr("aria-label", "remove " + item + " from the list.").text(item);
+      $("<li>").html('<span class="sr-only">' + item + '</span>').append(link).appendTo("#selection-list");
+      if (!noSpeak) {
+        speak(item + " added to the selection, " + $("#selection-list li").length + " elements selected");
+      }
+  }
+
+  function addItems(items) {      
+      var itemText, itemsText="";
+      items.each(function (i, item) {
+        itemText = $(item).detach().text();
+        addItem(itemText, true);
+        itemsText += itemText;
+      });
+      speak(itemsText + " added to the selection, " + $("#selection-list li").length + " elements selected");
+  }
+
+  function removeItem(item) {         
+      $("<option>").text(item.text()).appendTo("#brand-list");
+      item.parent().remove();
+      speak(item.text() + " removed from the selection, " + $("#selection-list li").length + " elements selected.");
+  }
+
+  function speak(text, priority) {
+      var el = document.createElement("div");
+      var id = "speak-" + Date.now();
+      el.setAttribute("id", id);
+      el.setAttribute("aria-live", priority || "polite");            
+      el.classList.add("sr-only");
+      document.body.appendChild(el);
+      
+      window.setTimeout(function () {
+        document.getElementById(id).innerHTML = text;      
+      }, 100);
+      
+      window.setTimeout(function () {
+          document.body.removeChild(document.getElementById(id));
+      }, 1000);
+  }
+ </script>
+
+</head>
+
+<body>
+
+  <h1>Filter by brand</h1>
+  <label for="brand-list">Select brands:</label>
+  <select id="brand-list" multiple="multiple">
+    <option>Alcatel</option>
+    <option>Apple</option>
+    <option>Doro</option>
+    <option>Huawei</option>
+    <option>HTC</option>
+    <option>Orange</option>
+    <option>Google</option>
+    <option>LG</option>
+    <option>Microsoft</option>
+    <option>Motorola</option>
+    <option>Samsung</option>
+    <option>Sony</option>
+    <option>Wiko</option>
+  </select>
+
+  <button id="addBrands" class="sr-only">Add brands</button>
+
+  <h2 id="selection-list-label">List of selected brands:</h2>
+  <ul id="selection-list"></ul>
+
+</body>
+
+</html>
+  

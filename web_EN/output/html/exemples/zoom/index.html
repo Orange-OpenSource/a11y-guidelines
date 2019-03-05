@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handling Zoom, enlarging text size - Orange web accessibility guidelines</title>
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Handling Zoom, enlarging text size</h1>
+
+      <h2>Introduction</h2>
+      <p>
+            Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…). One of the accessibility requirements is being able to enlarge the text up to 200% without loss of information. At this zoom level, the presentation may be altered, but the text must remain readable (no text must be truncated or superposed).
+      </p>
+          
+      <h2>Default zoom level</h2>
+      <p>
+            All current browsers offer the possibility to zoom the page. This option enlarges the entire page (text, images, the spacing between the different areas of the page…).
+            Although this option is appropriate for occasional users, the drawback is that it adds horizontal scrollbars that make reading difficult.           
+      </p>
+            
+      <h3>Identifying the problem</h3>
+      <p>Example of a page with a zoom set to 100%</p>
+      <div class="zoom normal">
+            The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.             
+      </div>
+      <br>
+      <p>The following example simulates the browser default zoom. The entire page is enlarged, two scrollbars appear (horizontal and vertical). The text is difficult to read.</p>
+      
+      <div class="zoom">
+            <div>
+                  The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.             
+            </div>
+      </div>
+      <br>
+      <p>In the last example, we simulate enlarging only the text size. In this case, the width of the page remains unchanged, visually it adds only a vertical scrollbar. Reading the text is much simpler.</p>      
+      <div class="zoom">            
+            The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.             
+      </div>
+            
+      <h2>Zoom text only</h2>
+      <p>
+           Fortunately, some browsers allow enlarging only the text size. This is the case for Firefox (available from the View menu &gt; Zoom &gt; Zoom text only).
+      </p>
+      <img alt="screenshot of the text zoom option in Firefox" src="../../images/zoom-firefox.png">                  
+      <br><br>
+      <p>When this option is enabled with a 200% zoom (in Firefox press <kbd>Ctrl +</kbd> four times), your page may not be displayed correctly. It is often because non-relative length units (<code>px</code>, <code>pt</code>) are used.</p>
+     <h2>Relative length units</h2>     
+  <p>   Using relative length units such as <code>%</code>, <code>em</code>, or <code>rem</code> on the text size, but also on containers size (<code>div</code> height and width) allows to minimize the problems. Indeed, a container with adaptive size can enlarge without hiding or truncating the text inside it.</p>
+      
+      <h3>Invalid example</h3>
+      
+      <p> This example uses pixel as a size unit on the elements.</p>             
+      
+      <a href="exemple1.html" class="btn btn-secondary">Open example 1</a>
+      
+      <h3>Valid example</h3>
+      <p> There are several ways to fix the problem, for example by using a relative size unit on the elements’ height.</p>
+      
+      <p>E.g., you can replace:<br>
+      <code>height: 450px;</code><br><br>
+      
+      With a variable length unit depending on the size of characters:<br>
+      <code>height: 45rem;</code><br><br>                  
+            
+      Or more easily, keeping the pixels, but specifying a minimum height:<br> 
+      <code>min-height: 450px;</code></p>
+      
+      <p><a href="exemple2.html" class="btn btn-secondary">Open example 2</a></p>
+      
+      <h2>Conclusion</h2>
+      
+      <p>It is essential to test your pages with the zoom set to 200% and “Zoom Text Only” option enabled. This is the only way to check if your pages are readable. Although corrections can be minor, they can totally change the way information is perceived by some users.</p>
+      
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

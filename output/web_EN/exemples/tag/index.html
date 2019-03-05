@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creating accessible “tags” 1/2 — Orange Web acessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Creating accessible “tags” 1/2</h1>
+
+      <h2>Preamble</h2>
+      <p>In this example we will create accessible “tags” — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
+      
+      <h2>Final design</h2>
+      <p>Here is an example of the expected design:</p>
+      <img src="tag.png" alt="Screenshot of several tags in a web page">
+
+      <h2><abbr>HTML</abbr> structure</h2>
+      <p>As tags do not wander on their own, we will create an <abbr>HTML</abbr> list. Thus a user browsing with a screen reader will directly hear the number of tags on display. “List of X elements…”.
+      </p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+            &lt;li>Alcatel&lt;/li&gt;
+            &lt;li>Doro&lt;/li&gt;
+            &lt;li>Apple&lt;/li&gt;
+            &lt;li>LG&lt;/li&gt;
+            &lt;li>Sony&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 1</h3>
+        <a target="_blank" title="Open example 1" href="exemple1.html"><img src="exemple1.png" alt=" Open example 1 (new window)"></a>
+      </div>
+
+      <h2>Removing a tag</h2>
+      <p>One must be able to remove a tag. We will add a “Remove” button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain “Remove” button is not sufficient. We will add the tag name in the button’s label to disambiguate, i.e. “Remove Sony from the list”.</p>
+      <p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>tab</kbd> key). A button can indeed be focused naturally.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;Alcatel&lt;button&gt;Remove Alcatel from the list&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;Doro&lt;button&gt;Remove Doro from the list&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;Apple&lt;button&gt;Remove Apple from the list&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;LG&lt;button&gt;Remove LG from the list&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;Sony&lt;button&gt;Remove Sony from the list&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 2</h3>
+        <p><a target="_blank" title="Open example 2" href="exemple2.html"><img src="exemple2.png" alt="Open example 2 (new window)"></a></p>
+      </div>
+      
+      <p>And <i lang="fr">voilà!</i> Simple and accessible tags. OK, it’s not very beautiful so far.</p>
+
+      <h2>Let’s decorate</h2>
+      <p>Now that our tags are accessible, we can decorate them. The ideal solution would be to make them look like the first illustration at the beginning of this article. We have several solutions.</p>
+
+      <p>For example, we can start by replacing the button’s text by an “X” or a cross-shaped icon.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;Alcatel&lt;button&gt;X&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 3</h3>
+        <p><a target="_blank" title="Open example 3" href="exemple3.html"><img src="exemple3.png" alt="Open example 3 (new window)"></a></p>
+      </div>
+
+      <p>But wait, we’ve just lost screen reader users. The buttons are now vocalized as “X”. We can fix this for example with the <code>aria-label</code> attribute.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;Alcatel&lt;button aria-label="Remove Alcatel from the list"&gt;X&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+      
+      <p>We’ll add some <abbr>CSS</abbr> to hide the button background and borders.</p>
+      
+      <pre><code class="css">
+      button {
+          background-color: transparent;
+          border: none;
+          color: #fff;
+          font-weight: bold;
+      }
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 4</h3>
+        <p><a target="_blank" title="Open example 4" href="exemple4.html"><img src="exemple4.png" alt="Open example 4 (new window)"></a></p>
+      </div>
+
+      <h2>Optimisation</h2>
+
+      <p>It works but it’s not perfect. You have to aim precisely to remove a tag, because the cross-shaped button is not that big. It’s not very nice to use and may really be a problem for people with a trembling hand or who have difficulties using a mouse.</p>
+
+      <p>Since we know that removing is the only possible action, we could extend the clickable zone to the whole tag. Hence, even if you slightly miss the target, the remove action will be taken into account.</p>
+          
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;&lt;button aria-label="Remove Alcatel from the list"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <p>We add the cross via <abbr>CSS</abbr>:</p>
+
+      <pre><code class="css">
+        li button:after {
+          content: "x";    
+          margin: .25rem .25rem .25rem .75rem;
+          padding-left: .4rem;    
+          border-left: .15rem solid #fff;
+        }
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 5</h3>
+        <p><a target="_blank" title="Open example 5" href="exemple5.html"><img src="exemple5.png" alt="Open example 5 (new window)"></a></p>
+      </div>
+
+      <p>It’s better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment “Remove XXX from the list.” To correct this, we add a <code>span</code> containing the tag’s label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>sr-only</code>). The text will only be read by screen readers.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Remove Alcatel from the list"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+      <p>With a screen reader, we now hear each tag’s label, then a button to remove it.</p>
+
+      <div class="exemple">
+        <h3>Example 6</h3>
+        <p><a target="_blank" title="Open example 6" href="exemple6.html"><img src="exemple6.png" alt="Open example 6 (new window)"></a></p>
+      </div>
+
+      <p>We still have one last problem: if we navigate the page with a keyboard (moving the focus with the <kbd>tab</kbd> key), we don’t know on which button the focus is.</p>
+
+      <p>We add a bit of <abbr>CSS</abbr> to give emphasis to the focus. We also take the opportunity to do the same for hover.</p>
+
+      <pre><code class="css">
+        button:hover, button:focus {
+          background-color: #f16e00;
+          color: #000;
+        }
+      </code></pre>
+
+      <div class="exemple">
+        <h3>Example 7</h3>
+        <p><a target="_blank" title="Open example 7" href="exemple7.html"><img src="exemple7.png" alt="Open example 7 (new window)"></a></p>
+      </div>
+
+      <h2>Optimisation (again)</h2>
+      <p>Our tags are accessible. Yet when we remove one tag with the keyboard, the focus stays on the vanished tag; so we don’t know where the focus is. This can be easily fixed with a bit of Javascript. We can focus the previous element, for example:</p>
+
+      <pre><code class="javascript">    
+        $("button").on("click", function () {
+            <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+            $(this).parent().remove();
+        });
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 8</h3>
+        <p><a target="_blank" title="Open example 8" href="exemple8.html"><img src="exemple8.png" alt="Open example 8 (new window)"></a></p>
+      </div>
+
+      <p>When a tag is removed, we see it disappears from the screen. But if we want a screen reader user to be sure that the tag was removed, we’ll have to vocalise a confirmation message to the user.</p>
+      <p>To manage this, we can use our <a href="../speak/index.html">Javascript srSpeak function</a>, which uses ARIA to make the screen reader speak.</p>
+
+      <pre><code class="javascript">    
+        $("button").on("click", function () {
+            <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+            $(this).parent().remove();
+            srSpeak($(this).text() + "removed");
+        });
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Example 9</h3>
+        <p><a target="_blank" title="Open example 9" href="exemple9.html"><img src="exemple9.png" alt="Open example 9 (new window)"></a></p>
+      </div>
+
+      <p>This time, our “tags” are genuinely accessible to the mouse, to the keyboard and to the screen reader.</p>
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

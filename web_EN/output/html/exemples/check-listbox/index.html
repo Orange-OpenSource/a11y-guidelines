@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listbox with checkboxes - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>ARIA listbox with checkboxes</h1>
+
+      <h2>Introduction</h2>
+      <p>In this example, we start from <a href="../listbox/index.html">the listbox example</a> and we add checkboxes. We will get a component that will allow us to select an item from a list of items, just like a conventional listbox, but that allows us to check some items. We often find it in webmails.</p>
+        
+      <h2>Caution</h2>
+      <p>Although improvements are being made with each new version, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
+  
+      <h2>Implementation</h2>
+      
+      <h3>HTML code</h3>
+      <p>We take the same listbox from the listbox example and we add the ability to check&nbsp;/ uncheck the items. For this we use the <code>aria-checked</code> attribute.</p>
+      
+      <pre><code class="html">
+        &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;
+            &lt;li tabindex="-1" role="option" aria-checked="false"&gt;Important information about your account&lt;/li&gt;
+            ...
+        &lt;/ul&gt;
+      </code></pre>
+      
+      <p>To symbolize that the item is checked, it could be very simple to do it via <abbr>CSS</abbr>, displaying a pictogram just before the items having the attribute <code>aria-checked="true"</code>.<p>
+      <p>In this example, we will insert real check boxes inside each item. These will not be vocalized by the screen reader because we added the <code>role="option"</code> attribute (for the screen reader, it will be considered as an item no matter what you put inside it).</p>
+ 
+      <pre><code class="html">
+        &lt;ul role="listbox" tabindex="0" aria-label="email list"&gt;            
+            &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
+                &lt;input tabindex="-1" type="checkbox"&gt;Important information about your account
+            &lt;/li&gt;
+            ...
+        &lt;/ul&gt;
+      </code></pre>
+      
+      <p>Do not forget to add the <code>tabindex="-1"</code> attribute to ensure that the checkboxes do not get the focus</p>
+      <p>If we want fancier checkboxes, we can use those from <a href="http://boosted.orange.com/">the Boosted library</a>.<br>  
+      In this case, we must also add the <code>label</code> tag.</p>
+      <pre><code class="html">
+        &lt;ul role="listbox" tabindex="0" aria-label="email list"&gt;            
+            &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
+                &lt;input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
+                Important information about your account
+            &lt;/li&gt;
+            ...
+        &lt;/ul&gt;
+      </code></pre>
+      
+      <p>Note that the <code>label</code> tag is left blank here intentionally. Indeed, in this component, we do not want the checkbox to be selected if you click on the item label.</p>
+      
+      <h3>Interactions</h3>
+      <p>To manage the interaction with the mouse, simply change the value of the <code>aria-checked</code> attribute when a checkbox is clicked.</p>
+      
+      <pre><code class="javascript">
+       $("[type=checkbox]").on("click", function () {
+           if ($(this).prop("checked")) {
+               $(this).parent().attr("aria-checked", "true");
+           } else {
+               $(this).parent().attr("aria-checked", "false");
+           }
+       });
+       </code></pre>
+       
+      <p>Now you must only manage the interaction with the keyboard. An item must be checked or unchecked by using the space bar. We insert this behaviour right after the code that manages the arrow keys (see <a href="../listbox/index.html">the listbox example</a>).</p>         
+      <pre><code class="javascript">
+        $("[role=listbox]").on("keydown", function (e) {            
+        var currentItem = $(this).find("[aria-selected=true]");          
+        switch (e.keyCode) {
+            case 38:  // Up arrow
+                if (currentItem.prev().length) {
+                    currentItem.attr("aria-selected", "false");                    
+                    currentItem.prev().attr("aria-selected", "true").focus();
+                }                    
+                e.preventDefault();
+                break;
+            case 40: // Down arrow
+                if (currentItem.next().length) {
+                    currentItem.attr("aria-selected", "false");
+                    currentItem.next().attr("aria-selected", "true").focus();
+                }
+                e.preventDefault();
+                break;                
+<div class="important">            case 32: // Space                                                                                              
+                if (currentItem.attr("aria-checked") === "true") {
+                    currentItem.attr("aria-checked", "false");
+                    currentItem.find("input[type=checkbox]").prop("checked", false);
+                } else {                      
+                    currentItem.attr("aria-checked", "true");
+                    currentItem.find("input[type=checkbox]").prop("checked", true);
+                }
+                e.preventDefault();
+            break;</div>                     
+        }
+    });   
+    </code></pre>
+                   
+      <h2>Example</h2>
+                        
+      <h3 id="email-list">Email list</h3>
+              
+      <div class="row">              
+        <ul role="listbox" tabindex="0" class="col-md-8" aria-labelledby="email-list">
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"><label for="check1"></label>
+                Important information about your account
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check2" class="o-checkbox" type="checkbox"><label for="check2"></label>
+                Sending message test
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check3" class="o-checkbox" type="checkbox"><label for="check3"></label>
+                Photos of the weekend at the sea
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check4" class="o-checkbox" type="checkbox"><label for="check4"></label>
+                Re: Your order N°3642
+            </li>          
+        </ul>                
+      </div>   
+    
+      <h3>Testing</h3>
+    
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Mouse support:</strong> you can select an item by clicking on the text. You can check or uncheck an option by clicking the checkboxes.</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Keyboard support:</strong> you can select an item using the arrow up or down keys. You can check or uncheck an option using the spacebar.</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Screen reader support:</strong>  same keyboard shortcuts (up, down and space bar). For each item, the screen reader gives us the information whether it is selected / checked or not.</p>
+            
+     
+     <h2>Webmail example</h2>
+     <p>Here is a static prototype that implements the listbox component of this example and the <a href="../check-listbox/index.html">listbox example</a>.</p>
+     <a class="btn btn-secondary" href="../webmail/index.html">Open the webmail</a>
+       
+     <h2>Links</h2>
+     More information on <abbr>ARIA</abbr> and listbox:
+     <ul>
+        <li><a href="http://w3c.github.io/aria-practices/#Listbox">WAI-ARIA Authoring Practices 1.1</a></li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles">The roles model</a></li>
+     </ul>
+     
+    </main>
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Test: adding a recipient</title>
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: "Arial";
+    }
+
+    label {
+        font-weight: bold;       
+        display: block; 
+        margin-top: 1rem;
+    }
+
+    h2 {
+        font-size: inherit;
+        display: inline;
+    }
+
+    .field {
+        border: .2rem solid #000;
+    }
+
+    .focus {        
+        background: #eee;
+    }
+
+    input[type=submit] {
+        border: .2rem solid #000;
+        background-color: #fff;        
+        font-weight: bold;
+        font-family: "Arial";
+        margin: 1rem 0;
+        padding: .25rem;        
+        font-size: 1rem;
+        width: auto;
+    }
+
+    input[type=submit]:hover, input[type=submit]:focus {
+        background-color: #000;
+        color: #fff;                
+    }
+
+    input {        
+        background-color: transparent;
+        display: inline-block;
+        width: 40rem;
+        min-height: 2rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        padding: .25rem;
+        font-size: 1rem;
+        font-family: "Arial";
+        border: 0;
+        margin: 0;
+    }
+
+    textarea {
+        border: .2rem solid #000;
+        width: 100%;
+        min-height: 15rem;
+        font-family: "Arial";
+        padding: .25rem;        
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    ul {
+        font-family: "Arial";
+        font-size: 1rem;
+        display: inline;
+        margin: 1rem 0 2rem 0;                
+        list-style: none;
+        padding: 0;
+        height: auto;
+        min-height: 2rem;
+        width: auto;
+    }
+
+    li {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;                
+        margin: .25rem;
+    }
+
+    li button {
+        font-size: 1rem;
+        background: transparent;
+        color: #fff;
+        font-weight: bold;
+        font-family: "Arial";
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        padding: 0.25rem;
+    }
+
+    li button:after {
+        content: "x";    
+        margin: .25rem .25rem .25rem .75rem;
+        padding-left: .4rem;    
+        border-left: .15rem solid #fff;
+    }
+
+    li button:focus, li button:hover {
+        background-color: #f16e00;
+        color: #000;        
+    }
+  </style>
+  
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+ <script>     
+  $(document).ready(function() {
+    $("#to").on("blur", function () {
+        addItem($(this).val());
+        $(this).val("");
+    });
+
+	$("#to").on("keypress", function (e) {        
+        
+        if (e.which === 44) {       // virgule
+            addItem($(this).val());
+            $(this).val("");
+            e.preventDefault();
+        } else if (e.which === 8) {  // backspace
+            if ($("#to").val() === "") {
+                removeItem($("#selection-list li:last").remove());
+            }
+        } else if (e.which === 13) {
+            e.preventDefault();
+        }
+    });
+
+    $("#to").on("focus", function (e) {        
+        $(this).parent().addClass("focus");
+    });
+
+    $("#to").on("blur", function (e) {        
+        $(this).parent().removeClass("focus");
+    });
+
+    $("#selection-list").on("click", "button", function () {
+        removeItem($(this).parent());
+        $("#to").focus();
+    });
+
+  });
+
+ function removeItem(item) {
+      item.remove();
+      speak(item.find("button").text() + " remove from recipients, " + $("#selection-list li").length + " recipients selected");
+ }
+
+ function addItem(text) {
+      if (!text) {
+          return;
+      }
+
+      var link = $("<button>").attr("aria-label", "remove " + text + " from the list.").text(text);
+      $("<li>").html('<span class="sr-only">' + text + '</span>').append(link).appendTo("#selection-list");
+      speak(text + " added to recipients, " + $("#selection-list li").length + " recipients selected");
+  }
+
+  function speak(text, priority) {
+      var el = document.createElement("div");
+      var id = "speak-" + Date.now();
+      el.setAttribute("id", id);
+      el.setAttribute("aria-live", priority || "polite");            
+      el.classList.add("sr-only");
+      document.body.appendChild(el);
+      
+      window.setTimeout(function () {
+        document.getElementById(id).innerHTML = text;      
+      }, 100);
+      
+      window.setTimeout(function () {
+          document.body.removeChild(document.getElementById(id));
+      }, 1000);
+  }
+
+ </script>
+
+</head>
+
+<body>
+
+    <h1>Test: adding a recipient</h1>
+    <form>
+        <label for="to"><h2>Recipients list</h2> (please input names and first names separated by commas):</label>
+        <div class="field">                
+            <ul id="selection-list" aria-labelledby="selection-list-label"></ul>            
+            <input id="to">
+        </div>
+
+        <label for="message">Message: </label>
+        <textarea id="message"></textarea>
+        <input type="submit" value="Envoyer">
+    </form>
+  
+
+</body>
+
+</html>
+  

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listbox - Orange web accessibility guidelines</title>
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1><abbr title="Accessible Rich Internet Applications">ARIA</abbr> lists (listbox)</h1>
+
+      <h2>Introduction</h2>
+      <p><abbr>ARIA</abbr> provides a large number of components that can be used in rich interfaces (tab, accordion, slider, listbox...). In this example, we will look into the listbox component.</p>
+      <p>A listbox is a component that allows the user to select one or more items from a list.</p>
+      <p>The items of a listbox are static, a listbox is not intended to receive interactive items (such as links, buttons…), however it can contain images unlike the <code>select</code>.</li>              
+      <p>More info: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices</a>.</p>
+      
+      <h2>Caution</h2>
+      <p>Although improvements are being made with each new version, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
+       
+      <h2>Implemention</h2>
+      
+      <h3><abbr title="Hypertext Markup Language">HTML</abbr> code</h3>
+      <p>To create a listbox, just apply the role <code>listbox</code> to a parent container. Then apply the <code>option</code> role to the list items. We must make it focusable for users who navigate using the keyboard (adding the <code>tabindex="0"</code> attribute) or adding the <code>aria-label</code> or <code>aria-labelledby</code> label for people using a screen reader. Finally, we will also add the <code>tabindex="-1"</code> attribute to the options so that they can receive the focus using javascript.</p>
+      
+      <pre><code class="html">
+    &lt;ul role="listbox" tabindex="0" aria-label="folder list"&gt;
+        &lt;li tabindex="-1" role="option"&gt;Inbox (4) &lt;span class="sr-only"&gt;unread messages&lt;/span&gt;&lt;/li&gt;
+        &lt;li tabindex="-1" role="option"&gt;Sent&lt;/li&gt;
+        &lt;li tabindex="-1" role="option"&gt;Draft&lt;/li&gt;
+        &lt;li tabindex="-1" role="option"&gt;Trash&lt;/li&gt;          
+    &lt;/ul&gt;
+      </code></pre>
+      
+      <p>Note that the <code>ul</code> and <code>li</code> tags could be replaced by simple <code>div</code> tags.</p>
+      
+      <h3>Interactions</h3>
+      <p>To stick with the pattern of the <abbr>ARIA</abbr> listbox (<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices</a>), we must handle some interactions using JavaScript.</p>
+      <p>When taking the focus, if no item is selected, it should automatically select the first item.
+      If an item is already selected when the listbox receives the focus, it must move the focus to it.</p>            
+      
+      <pre><code class="javascript">
+       $("[role=listbox]").on("focus", function () {
+           // If no selected element, select the first by default
+           if (!$(this).find("[aria-selected=true]").length) {               
+                $(this).find("[role=option]:first").attr("aria-selected", "true").focus();
+           } else {
+               $(this).find("[aria-selected=true]").focus();
+           }
+        });
+      </code></pre>
+      
+      <p>We will then handle the keyboard interaction:</p>
+      <ul>
+          <li><kbd>Up</kbd> arrow to select the previous item</li>
+          <li><kbd>Down</kbd> arrow to select the next item</li>
+      </ul>
+      
+      <pre><code class="javascript">
+    $("[role=listbox]").on("keydown", function (e) {            
+        var currentItem = $(this).find("[aria-selected=true]");          
+        switch (e.keyCode) {
+            case 38:  // Up arrow
+                if (currentItem.prev().length) {
+                    currentItem.attr("aria-selected", "false");                    
+                    currentItem.prev().attr("aria-selected", "true").focus();
+                }                    
+                e.preventDefault();
+                break;
+            case 40: // Down arrow
+                if (currentItem.next().length) {
+                    currentItem.attr("aria-selected", "false");
+                    currentItem.next().attr("aria-selected", "true").focus();
+                }
+                e.preventDefault();
+                break;
+        }
+    });
+      </code></pre>
+          
+      <p>Finally, we have to handle the mouse. When clicked, it sets the attribute <code>aria-selected</code>.</p>
+      <pre><code class="javascript">
+    $("[role=option]").on("mousedown", function (e) {
+        $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
+        $(this).attr("aria-selected", "true");
+        e.preventDefault();
+    });
+      </code></pre>
+      
+      <p>We customize the mouse pointer when the mouse is over an item.<p>
+      
+      <pre><code class="css">
+    [role=option] {
+        cursor: pointer;
+    }
+      </code></pre>            
+          
+      <h2>Example</h2>
+      
+      <p>Here is an example implementing the code above.</p>
+                  
+      <h3 id="mail-folder">List of mail folders</h3>
+              
+      <div class="row">
+        <ul role="listbox" tabindex="0" class="col-md-4" aria-labelledby="mail-folder">
+            <li tabindex="-1" role="option">Inbox (24) <span class="sr-only">unread messages</span></li>
+            <li tabindex="-1" role="option">Sent</li>
+            <li tabindex="-1" role="option">Draft</li>
+            <li tabindex="-1" role="option">Trash</li>          
+        </ul>              
+      </div>
+                   
+      <h3>Testing</h3>
+      
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Mouse support: </strong> you can select an item from the list using the mouse.</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Screen reader support: </strong>with <abbr>NVDA</abbr>, it is possible to scroll through the items in the list, it is also possible to know the item being selected.</p>
+      <p><strong><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> <kbd>Tab</kbd> key support:</strong> you can access the list, then the <kbd>up</kbd> and <kbd>down</kbd> arrow keys move the selection. However, the <kbd>Shift+Tab</kbd> keys should move the focus toward the top of the page, instead, it is blocked inside the list.</p>      
+      
+      <h2>Fixing keyboard navigation</h2>
+      <p>When the focus is positioned on a list item, the <kbd>Shift+Tab</kbd> key combination brings up the focus to the first focusable element, in this case it is the <code>listbox</code> element. But as soon as the <code>listbox</code> receives the focus, it automatically moves the focus on the selected item.</p>   
+      <p>To correct the problem, simply make listbox unfocusable once one of the list item has got the focus.</p>
+      
+      <pre><code class="javascript">
+       $("[role=option]").on("focus", function (e) {
+           $(this).parent().attr("tabindex", "-1");
+       });
+       
+       $("[role=option]").on("blur", function (e) {
+           $(this).parent().attr("tabindex", "0");
+       });
+      </code></pre>
+          
+      <h2>working example</h2>
+                        
+      <h3 id="mail-folder2">List of email folders</h3>
+              
+      <div class="row">              
+        <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-4" aria-labelledby="mail-folder2">
+            <li tabindex="-1" role="option">Inbox (24) <span class="sr-only">unread messages</span></li>
+            <li tabindex="-1" role="option">Sent</li>
+            <li tabindex="-1" role="option">Drafts</li>
+            <li tabindex="-1" role="option">Trash</li>          
+        </ul>                
+      </div>   
+    
+      <h3>Testing</h3>
+    
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Mouse support: </strong> OK</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Screen reader support: </strong> OK</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Keyboard support:</strong> OK</p>      
+           
+     <h2>Webmail example</h2>
+     <p>Here is a static prototype that implements the listbox component of this example and the example with a <a href="../check-listbox/index.html">listbox with checkboxes </a>.</p>
+     <a class="btn btn-secondary" href="../webmail/index.html">Open the webmail</a>
+       
+     <h2>Links</h2>
+     More information on <abbr>ARIA</abbr> and listbox:
+     <ul>
+        <li><a href="http://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a></li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles">The listbox role model</a></li>
+     </ul>
+     
+    </main>
+        
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

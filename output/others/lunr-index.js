@@ -1,0 +1,588 @@
+
+var index = lunr(function () {
+    this.use(lunr.fr);
+    this.field('body');
+    this.ref('url');
+});
+
+var documentTitles = {};
+
+
+
+documentTitles["about.html#a-propos"] = "À propos";
+index.add({
+    url: "about.html#a-propos",
+    title: "À propos",    
+    body: "# À propos     &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    Copyright (C) 2016 Orange SA All rights reserved   [Liste des fichiers concernés](/NOTICE.txt)  "
+});
+
+documentTitles["about.html#gestion-des-cookies"] = "Gestion des cookies";
+index.add({
+    url: "about.html#gestion-des-cookies",
+    title: "Gestion des cookies",    
+    body: "## Gestion des cookies  Vous pouvez modifier à tous moments vos préférences directement depuis le &lt;a role=\&quot;button\&quot; href=\&quot;javascript:tarteaucitron.userInterface.openPanel();\&quot;&gt;panneau de gestion des cookies&lt;/a&gt;.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["contact.html#votre-avis-compte"] = "Votre avis compte";
+index.add({
+    url: "contact.html#votre-avis-compte",
+    title: "Votre avis compte",    
+    body: "# Votre avis compte    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Contact\&quot;}]); });&lt;/script&gt;  Vous avez une remarque, une suggestion à apporter&amp;nbsp;?  Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant [la liste des «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;issues&lt;/i&gt;&amp;nbsp;»](https://github.com/Orange-OpenSource/a11y-guidelines/issues) sur notre compte github.   Si vous ne trouvez rien concernant votre remarque, [adressez-nous votre commentaire](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new) via github.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["index.html#recommandations-accessibilite-orange-pour-leditorial"] = "Recommandations accessibilité Orange pour l’éditorial";
+index.add({
+    url: "index.html#recommandations-accessibilite-orange-pour-leditorial",
+    title: "Recommandations accessibilité Orange pour l’éditorial",    
+    body: "# Recommandations accessibilité Orange pour l’éditorial  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Présentation\&quot;}]); });&lt;/script&gt;  "
+});
+
+documentTitles["index.html#recommandations-editoriales-generales"] = "Recommandations éditoriales générales";
+index.add({
+    url: "index.html#recommandations-editoriales-generales",
+    title: "Recommandations éditoriales générales",    
+    body: "## Recommandations éditoriales générales Les recommandations générales décrivent les recommandations à respecter quel que soit le type de contenu (web, email, document Word, etc.). &lt;ul role=\&quot;presentation\&quot;&gt; &lt;li&gt;&lt;a href=\&quot;./editorial.html\&quot;&gt;Accéder aux recommandations éditoriales générales&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  "
+});
+
+documentTitles["index.html#recommandations-specifiques-par-type-de-contenu"] = "Recommandations spécifiques par type de contenu";
+index.add({
+    url: "index.html#recommandations-specifiques-par-type-de-contenu",
+    title: "Recommandations spécifiques par type de contenu",    
+    body: "## Recommandations spécifiques par type de contenu Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  - [Fournir des contenus vidéos ou audios](./video-audio.html)&amp;nbsp;: section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["powerpoint.html#creer-des-documents-powerpoint-accessibles"] = "Créer des documents PowerPoint accessibles";
+index.add({
+    url: "powerpoint.html#creer-des-documents-powerpoint-accessibles",
+    title: "Créer des documents PowerPoint accessibles",    
+    body: "# Créer des documents PowerPoint accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;PowerPoint accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}&lt;/style&gt;  Produire un document PowerPoint accessible nécessite de respecter différentes recommandations. Elles sont synthétisées ci-après (guides détaillés consultables sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;). Pour vous aider PowerPoint intègre un outil permettant de vérifier l’accessibilité d’une présentation. Cet outil identifie les principales erreurs et propose des solutions. N’hésitez pas à vous y référer.   "
+});
+
+documentTitles["powerpoint.html#masques-de-diapositive"] = "Masques de diapositive";
+index.add({
+    url: "powerpoint.html#masques-de-diapositive",
+    title: "Masques de diapositive",    
+    body: "## Masques de diapositive Définir des masques de diapositives est la première chose à faire  et une condition sine qua none pour créer une présentation homogène et accessible. - Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet `Affichage`, sélectionner `Masque des diapositives`). - Utiliser les sous-menus `Mise en pages du masque` et `Insérer un espace réservé`. - Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu `Insertion`. - Créer autant de masques que de types de diapositives nécessaires. &lt;img alt=\&quot;Captures d'écran relatives à la création d'un masque de diapositive dans poweroint\&quot; title=\&quot;Captures d'écran relatives à la création d'un masque de diapositive dans poweroint\&quot; src=\&quot;./images/masques.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Remarque : Si vous modifiez le masque des diapositives ou les mises en pages après avoir créé les différentes diapositives, vous devrez réappliquer les mises en page modifiées aux diapositives existantes de votre présentation en mode Normal.  "
+});
+
+documentTitles["powerpoint.html#attributs-de-la-presentation"] = "Attributs de la présentation";
+index.add({
+    url: "powerpoint.html#attributs-de-la-presentation",
+    title: "Attributs de la présentation",    
+    body: "## Attributs de la présentation  "
+});
+
+documentTitles["powerpoint.html#1-la-langue"] = "1. La langue";
+index.add({
+    url: "powerpoint.html#1-la-langue",
+    title: "1. La langue",    
+    body: "### 1. La langue Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votre présentation :   - La langue principale doit être définie dans le menu : `Fichier &gt; Options &gt; Langue`. - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision &gt; Langue &gt; Définir la langue de vérification`.  "
+});
+
+documentTitles["powerpoint.html#2-les-autres-proprietes"] = "2.	Les autres propriétés";
+index.add({
+    url: "powerpoint.html#2-les-autres-proprietes",
+    title: "2.	Les autres propriétés",    
+    body: "### 2.	Les autres propriétés Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier &gt; Informations`.    &lt;img alt=\&quot;Capture d'écran, propriétés d'un document poweroint\&quot; title=\&quot;Capture d'écran, propriétés d'un document poweroint\&quot; src=\&quot;./images/attributs.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.  &lt;img alt=\&quot;Capture d'écran, propriétés d'un document poweroint dans l'explorateur Windows\&quot; title=\&quot;Capture d'écran, propriétés d'un document poweroint dans l'explorateur Windows\&quot; src=\&quot;./images/attributs2.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
+});
+
+documentTitles["powerpoint.html#titre-des-diapositives"] = "Titre des diapositives";
+index.add({
+    url: "powerpoint.html#titre-des-diapositives",
+    title: "Titre des diapositives",    
+    body: "## Titre des diapositives  Pour éviter toute confusion entre des diapositives, notamment si l’utilisateur parcourt une présentation à l’aide d’un lecteur d’écran :   donner un titre spécifique à chaque diapositive, à insérer dans la zone : « Cliquer pour ajouter un titre ».  "
+});
+
+documentTitles["powerpoint.html#redaction-des-contenus"] = "Rédaction des contenus";
+index.add({
+    url: "powerpoint.html#redaction-des-contenus",
+    title: "Rédaction des contenus",    
+    body: "## Rédaction des contenus  Limiter les abréviations et acronymes, et expliciter à la première occurrence ceux qui ne font pas partie du langage courant.  Conserver l’accentuation sur les majuscules (exemple : É  ou Ç) pour qu’elles puissent être lues correctement par un lecteur d’écran ; pour ce faire :  utiliser le menu `Insertion &gt; Symbole` ou les raccourcis clavier ci-dessous. &lt;table class=\&quot;table table-striped\&quot;&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th scope=\&quot;col\&quot;&gt;Lettre&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Windows&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Mac&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;À&lt;/th&gt;       &lt;td&gt;Alt Gr + \` (touche 7) puis A majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis à&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ç&lt;/th&gt;       &lt;td&gt;alt + 128&lt;/td&gt;       &lt;td&gt;Option + ç&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;È&lt;/th&gt;       &lt;td&gt;Alt Gr + ` (touche 7) puis E majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis è&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;É&lt;/th&gt;       &lt;td&gt;alt + 144&lt;/td&gt;       &lt;td&gt;Maj lock puis é&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ê&lt;/th&gt;       &lt;td&gt;^ puis E majuscule &lt;/td&gt;       &lt;td&gt;^ puis E majuscule&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  "
+});
+
+documentTitles["powerpoint.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
+index.add({
+    url: "powerpoint.html#mise-en-forme-des-contenus",
+    title: "Mise en forme des contenus",    
+    body: "## Mise en forme des contenus Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial et Helvetica) en corps 12 pixels minimum.  Commencer les phrases par une majuscule et ne pas abuser des phrases entièrement écrites en majuscules. Eviter de justifier le texte et privilégier l’alignement à gauche. Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit &gt; Paragraphe &gt; Retrait et Espacement`.  &lt;img alt=\&quot;Capture d'écran, fenêtre paragraphe, retrait et espacement dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre paragraphe, retrait et espacement dans powerpoint\&quot; src=\&quot;./images/paragraphe.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
+});
+
+documentTitles["powerpoint.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
+index.add({
+    url: "powerpoint.html#couleurs-et-contrastes",
+    title: "Couleurs et contrastes",    
+    body: "## Couleurs et contrastes  1.	Assurer un contraste suffisant entre la couleur du texte et celle du fond :  - 4.5:1 pour du texte de taille normale (12pts ou 16px).  - 3:1 pour du texte de grande taille (150% minimum de la taille normale ou 120% si gras). Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil &lt;a href=\&quot;https://developer.paciellogroup.com/resources/contrastanalyser/\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyser&lt;/a&gt; qui vous permettra de vérifier très simplement la qualité de vos contrastes. 2.	S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen suppléant la couleur pour véhiculer l’information.  &lt;figure&gt;   &lt;img src=\&quot;./images/color-ko.png\&quot; alt=\&quot;Exemple d'image transmettant de l'information via des puces de couleur (rouge, vert...) pour indiquer l'état d'un élément\&quot; /&gt;   &lt;figcaption&gt;**Exemple incorrect** : l'information est transmise uniquement par la couleur.&lt;/figcaption&gt; &lt;/figure&gt;    &amp;nbsp;  &lt;figure&gt;   &lt;img src=\&quot;./images/color-ok.png\&quot; alt=\&quot;Dans cet exemple, les puces ont été remplacées par des icones de forme différente (croix rouge, coche verte ...)\&quot; /&gt;   &lt;figcaption&gt;**Exemple correct** : l'information est transmise par la forme et la couleur.&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
+documentTitles["powerpoint.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
+index.add({
+    url: "powerpoint.html#listes-a-puces-ou-numerotees",
+    title: "Listes à puces ou numérotées",    
+    body: "## Listes à puces ou numérotées   Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.  &lt;img alt=\&quot;Capture d'écran, option listes à puces dans powerpoint\&quot; title=\&quot;Capture d'écran, option listes à puces dans powerpoint\&quot; src=\&quot;./images/puce.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
+});
+
+documentTitles["powerpoint.html#images"] = "Images";
+index.add({
+    url: "powerpoint.html#images",
+    title: "Images",    
+    body: "## Images Un document peut tout à fait contenir des images et être accessible à une personne non-voyante. Il faut simplement que l’information portée par l’image soit retranscrite textuellement.  - **Pour les images porteuses d’informations** : associer un texte de remplacement décrivant le contenu informatif via un `clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »`. - **Pour les images décoratives/illustratives** : laisser le champ `description` vide. - **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)   &lt;img alt=\&quot;Capture d'écran, de la fenêtre permettant de saisir un texte de remplacement sur une image dans powerpoint\&quot; title=\&quot;Capture d'écran, de la fenêtre permettant de saisir un texte de remplacement sur une image dans powerpoint\&quot; src=\&quot;./images/remplacement.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion &gt; SmartArt`).   Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`Format de l’objet ou de l’image &gt; Texte de remplacement &gt; Description`).   "
+});
+
+documentTitles["powerpoint.html#liens"] = "Liens";
+index.add({
+    url: "powerpoint.html#liens",
+    title: "Liens",    
+    body: "## Liens Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel  et doit donc se suffire à lui-même.  Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).  Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé). &lt;img alt=\&quot;Capture d'écran, fenêtre modifier le lien hypertexte dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre modifier le lien hypertexte dans powerpoint\&quot; src=\&quot;./images/lien.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.  "
+});
+
+documentTitles["powerpoint.html#tableaux-de-donnees"] = "Tableaux de données";
+index.add({
+    url: "powerpoint.html#tableaux-de-donnees",
+    title: "Tableaux de données",    
+    body: "## Tableaux de données Les tableaux sont des composants par définition difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie et les structurer le plus simplement possible. Ne pas utiliser les tableaux à des fins de mise en forme. Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. Ajouter une description s'il s'agit d'un tableau complexe, clic droit : `Format de la forme &gt; Texte de remplacement &gt; Description`  "
+});
+
+documentTitles["powerpoint.html#contenus-audio-ou-video"] = "Contenus audio ou vidéo";
+index.add({
+    url: "powerpoint.html#contenus-audio-ou-video",
+    title: "Contenus audio ou vidéo",    
+    body: "## Contenus audio ou vidéo La communication audiovisuelle est aujourd’hui très fréquente en entreprise. Mais parce que certaines personnes peuvent ne pas voir ou ne pas entendre il est primordial de suppléer l’information transmise dans une modalité par une autre. Fournir une transcription intégrale des contenus audio (solution nécessaire et suffisante). Empêcher toute lecture automatique de contenu vidéo ou audio (menu `Animations` : démarrer au clic).  &lt;img alt=\&quot;Capture d'écran, menu animation dans powerpoint\&quot; title=\&quot;Capture d'écran, menu animation dans powerpoint\&quot; src=\&quot;./images/video.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Tout contenu vidéo doit respecter ces prérequis : - Fournir des sous-titres pour restituer l’ensemble des informations véhiculées par la bande son. - Fournir une audiodescription si la vidéo présente des informations accessibles seulement via les images. - Utiliser des vidéos sans flashs rapides (pas plus de 3 clignotements par seconde).  "
+});
+
+documentTitles["powerpoint.html#ordre-de-lecture-des-elements"] = "Ordre de lecture des éléments";
+index.add({
+    url: "powerpoint.html#ordre-de-lecture-des-elements",
+    title: "Ordre de lecture des éléments",    
+    body: "## Ordre de lecture des éléments L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection (menu `Accueil &gt; Organiser &gt; Volet de sélection`).   **Attention** : l’ordre doit être décroissant car c’est le dernier élément de la liste qui est lu en premier par le lecteur.  &lt;img alt=\&quot;Capture d'écran, du volet de sélection dans powerpoint\&quot; title=\&quot;Capture d'écran, du volet de sélection dans powerpoint\&quot; src=\&quot;./images/volet.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Il est important de vérifier cet ordre directement dans les masques des diapositives.  "
+});
+
+documentTitles["powerpoint.html#verificateur-daccessibilite-integre"] = "Vérificateur d’accessibilité intégré";
+index.add({
+    url: "powerpoint.html#verificateur-daccessibilite-integre",
+    title: "Vérificateur d’accessibilité intégré",    
+    body: "## Vérificateur d’accessibilité intégré Il est important de contrôler l’accessibilité de la présentation à l'aide du vérificateur d’accessibilité (menu : `Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité`). &lt;img alt=\&quot;Capture d'écran, du vérificateur d'accessibilité dans powerpoint\&quot; title=\&quot;Capture d'écran, du vérificateur d'accessibilité dans powerpoint\&quot; src=\&quot;./images/verificateur.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
+});
+
+documentTitles["powerpoint.html#convertir-une-presentation-powerpoint-en-fichier-pdf"] = "Convertir une présentation PowerPoint en fichier PDF";
+index.add({
+    url: "powerpoint.html#convertir-une-presentation-powerpoint-en-fichier-pdf",
+    title: "Convertir une présentation PowerPoint en fichier PDF",    
+    body: "## Convertir une présentation PowerPoint en fichier PDF  Enregistrer la présentation en &lt;abbr&gt;PDF&lt;/abbr&gt; : `Fichier &gt; Enregistrer sous` et de sélectionner le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;. Cocher la case « Balises de structure de document pour l'accessibilité ».  &lt;img alt=\&quot;Capture d'écran, fenêtre d'export en PDF dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre d'export en PDF dans powerpoint\&quot; src=\&quot;./images/export.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe : `Édition &gt; Préférences &gt; Lecture &gt; Option de lecteur d’écran` : « Lire l’intégralité du document »  &lt;img alt=\&quot;Capture d'écran de la fenêtre des préférences dans Adobe reader\&quot; title=\&quot;Capture d'écran de la fenêtre des préférences dans Adobe reader\&quot; src=\&quot;./images/adobe.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Et pour vérifier l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt; : télécharger &lt;a href=\&quot;https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot; lang=\&quot;en\&quot;&gt;PDF Accessiblity Checker (PAC 3)&lt;/a&gt;.  "
+});
+
+documentTitles["powerpoint.html#ressources"] = "Ressources";
+index.add({
+    url: "powerpoint.html#ressources",
+    title: "Ressources",    
+    body: "## Ressources  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;https://webaim.org/techniques/powerpoint/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité PowerPoint, WebAIM&lt;/a&gt; (anglais).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["word.html#creer-des-documents-word-accessibles"] = "Créer des documents Word accessibles";
+index.add({
+    url: "word.html#creer-des-documents-word-accessibles",
+    title: "Créer des documents Word accessibles",    
+    body: "# Créer des documents Word accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Word accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance.   "
+});
+
+documentTitles["word.html#langue"] = "Langue";
+index.add({
+    url: "word.html#langue",
+    title: "Langue",    
+    body: "## Langue  Définir la langue principale du document dans le menu : **Fichier &gt; Options &gt; Langue**.  Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis **Révision &gt; Langue &gt; Définir la langue de vérification**.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_langue_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter.   "
+});
+
+documentTitles["word.html#attributs-du-fichier"] = "Attributs du fichier";
+index.add({
+    url: "word.html#attributs-du-fichier",
+    title: "Attributs du fichier",    
+    body: "## Attributs du fichier  Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu **Fichier &gt; Informations**.  Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_attributs_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
+});
+
+documentTitles["word.html#titres"] = "Titres";
+index.add({
+    url: "word.html#titres",
+    title: "Titres",    
+    body: "## Titres   Utiliser les styles « Titre » et « Sous-titre » du menu **Accueil** (Titre 1, Titre 2, etc.).   Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné.   Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.  "
+});
+
+documentTitles["word.html#table-des-matieres"] = "Table des matières";
+index.add({
+    url: "word.html#table-des-matieres",
+    title: "Table des matières",    
+    body: "## Table des matières  Insérer une table des matières via le menu **Références &gt; Table des matières**.   Cela permet aux utilisateurs de trouver des informations plus aisément dans le document.   "
+});
+
+documentTitles["word.html#redaction-des-contenus"] = "Rédaction des contenus";
+index.add({
+    url: "word.html#redaction-des-contenus",
+    title: "Rédaction des contenus",    
+    body: "## Rédaction des contenus  Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.  Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion &gt; Symbole** ou les raccourcis clavier ci-dessous.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_table_caracteres_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Liste des raccourcis clavier :  &lt;table class=\&quot;table table-striped\&quot;&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th scope=\&quot;col\&quot;&gt;Lettre&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Windows&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Mac&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;À&lt;/th&gt;       &lt;td&gt;Alt Gr + \` (touche 7) puis A majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis à&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ç&lt;/th&gt;       &lt;td&gt;alt + 128&lt;/td&gt;       &lt;td&gt;Option + ç&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;È&lt;/th&gt;       &lt;td&gt;Alt Gr + ` (touche 7) puis E majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis è&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;É&lt;/th&gt;       &lt;td&gt;alt + 144&lt;/td&gt;       &lt;td&gt;Maj lock puis é&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ê&lt;/th&gt;       &lt;td&gt;^ puis E majuscule &lt;/td&gt;       &lt;td&gt;^ puis E majuscule&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  "
+});
+
+documentTitles["word.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
+index.add({
+    url: "word.html#mise-en-forme-des-contenus",
+    title: "Mise en forme des contenus",    
+    body: "## Mise en forme des contenus  Utiliser les styles prédéfinis pour la mise en forme des contenus : le style « Normal » doit être attribué à tous les textes des paragraphes (style par défaut), le style « citation » pour les citations, etc.  Utiliser une police de caractères sans empattement (extensions qui terminent les extrémités des caractères) comme Arial ou Helvetica, en corps 12 pixels minimum et un espacement entre les caractères normal ou élargi.  Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majuscule ; limiter l’utilisation de l’italique.  Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_mise_en_forme_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran.   Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab_fr.png\&quot; /&gt;) pour mettre en forme le contenu.   Utiliser les fonctions Retrait, Espacement :  - Menu **Mise en page &gt; Paragraphe &gt; Retrait** ou **Espacement** ou **Clic droit : « Paragraphe… »**  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_retrait_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») :   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab1_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab2_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Utiliser l’option « Colonnes » de l’onglet **Mise en page** pour créer une mise en page sous forme de colonnes, et non les tableaux.  Utiliser le saut de page via le menu **Insertion &gt; Saut de page** pour passer à la page suivante.   Numéroter les pages (menu **Insertion &gt; Numéro de page**) pour permettre aux utilisateurs de se repérer dans le document.  "
+});
+
+documentTitles["word.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
+index.add({
+    url: "word.html#couleurs-et-contrastes",
+    title: "Couleurs et contrastes",    
+    body: "## Couleurs et contrastes  Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.  Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt; qui vous permettra de vérifier très simplement la qualité de vos contrastes.  S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_contrastes1_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  **Exemple incorrect** : l'information est transmise uniquement par la couleur.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_contrastes2_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  **Exemple correct** : l'information est transmise par la forme et la couleur  "
+});
+
+documentTitles["word.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
+index.add({
+    url: "word.html#listes-a-puces-ou-numerotees",
+    title: "Listes à puces ou numérotées",    
+    body: "## Listes à puces ou numérotées  Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_liste_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
+});
+
+documentTitles["word.html#images"] = "Images";
+index.add({
+    url: "word.html#images",
+    title: "Images",    
+    body: "## Images  Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image.   - **Pour les images porteuses d’informations** : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : **clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »**. - **Pour les images décoratives/illustratives** : laisser le champ description vide. - **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien.  - **Pour les images « lien »** : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien. - **Pour les graphiques ou schémas** : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu **Insertion &gt; Smart Art**). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (**Format de l’objet** ou **de l’image &gt; Texte de remplacement &gt; Description**).  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_remplacement_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un **clic droit sur l’image &gt; renvoyer à la ligne automatiquement** ou le menu **Outils Image &gt; Organiser**), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.    "
+});
+
+documentTitles["word.html#contenus-audio-et-video"] = "Contenus audio et vidéo";
+index.add({
+    url: "word.html#contenus-audio-et-video",
+    title: "Contenus audio et vidéo",    
+    body: "## Contenus audio et vidéo   [Nos préconisations sur les contenus audio et vidéo](./video-audio.html)  "
+});
+
+documentTitles["word.html#liens"] = "Liens";
+index.add({
+    url: "word.html#liens",
+    title: "Liens",    
+    body: "## Liens  Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.  En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel.   Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre :  - menu **Insertion &gt; Lien hypertexte &gt; Info-bulle** : ajouter « nouvelle fenêtre » dans le libellé   Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_lien_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
+});
+
+documentTitles["word.html#tableaux-de-donnees"] = "Tableaux de données";
+index.add({
+    url: "word.html#tableaux-de-donnees",
+    title: "Tableaux de données",    
+    body: "## Tableaux de données  Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.   Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie.   Ajouter une description s'il s'agit d'un tableau complexe, **clic droit : Format de la forme &gt; Texte de remplacement &gt; Description**.  Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme.   "
+});
+
+documentTitles["word.html#verification-finale"] = "Vérification finale";
+index.add({
+    url: "word.html#verification-finale",
+    title: "Vérification finale",    
+    body: "## Vérification finale  Enfin, utiliser le vérificateur d’accessibilité intégré (menu : **Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité**).   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_verification_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ce vérificateur permet de détecter les principales erreurs et propose des solutions.   "
+});
+
+documentTitles["word.html#convertir-en-fichier-pdf"] = "Convertir en fichier PDF";
+index.add({
+    url: "word.html#convertir-en-fichier-pdf",
+    title: "Convertir en fichier PDF",    
+    body: "## Convertir en fichier PDF  Pour transformer votre document en &lt;abbr&gt;PDF&lt;/abbr&gt;, aller dans le menu : **Fichier &gt; Enregistrer sous** puis de sélectionner le type de fichier **PDF**.   La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.  À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_pdf_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Pour vérifier l’accessibilité d’un document PDF : [télécharger PDF Accessiblity Checker (PAC 3)](https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).  "
+});
+
+documentTitles["word.html#ressources-externes"] = "Ressources externes";
+index.add({
+    url: "word.html#ressources-externes",
+    title: "Ressources externes",    
+    body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;http://webaim.org/techniques/word/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité Word, WebAIM&lt;/a&gt; (anglais).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["pdf.html#creer-des-documents-abbrpdfabbr-accessibles"] = "Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles";
+index.add({
+    url: "pdf.html#creer-des-documents-abbrpdfabbr-accessibles",
+    title: "Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles",    
+    body: "# Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Recommandations PDF\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+});
+
+documentTitles["pdf.html#introduction"] = "Introduction";
+index.add({
+    url: "pdf.html#introduction",
+    title: "Introduction",    
+    body: "## Introduction  Produire des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles nécessite de suivre des recommandations afin de s’assurer qu’ils soient structurés via un balisage approprié, pour les rendre ainsi compréhensibles et utilisables par tous (y compris les utilisateurs ceux utilisant des outils d’assistance).  Nous vous présenterons des guides ayant pour objectifs de vous fournir les informations nécessaires afin de créer manuellement des &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles à partir des logiciels principaux d’édition, puis nous vous énumérerons les critères incontournables à respecter pour s’assurer qu’un document &lt;abbr&gt;PDF&lt;/abbr&gt; soit accessible.  "
+});
+
+documentTitles["pdf.html#guides-pour-creer-des-documents-abbrpdfabbr-accessibles"] = "Guides pour créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles";
+index.add({
+    url: "pdf.html#guides-pour-creer-des-documents-abbrpdfabbr-accessibles",
+    title: "Guides pour créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles",    
+    body: "## Guides pour créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles  "
+});
+
+documentTitles["pdf.html#avec-microsoft-word"] = "Avec Microsoft Word";
+index.add({
+    url: "pdf.html#avec-microsoft-word",
+    title: "Avec Microsoft Word",    
+    body: "### Avec Microsoft Word  Vous trouverez les recommandations Microsoft Word, ainsi que la procédure pour exporter le document en &lt;abbr&gt;PDF&lt;/abbr&gt;, sur la &lt;a href=\&quot;/others/word.html\&quot;&gt;rubrique Microsoft Word des recommandations accessibilité Orange&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#avec-adobe-indesign"] = "Avec Adobe InDesign";
+index.add({
+    url: "pdf.html#avec-adobe-indesign",
+    title: "Avec Adobe InDesign",    
+    body: "### Avec Adobe InDesign  Vous trouverez les recommandations Adobe inDesign sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Indesign&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.  "
+});
+
+documentTitles["pdf.html#avec-adobe-acrobat-pro"] = "Avec Adobe Acrobat Pro";
+index.add({
+    url: "pdf.html#avec-adobe-acrobat-pro",
+    title: "Avec Adobe Acrobat Pro",    
+    body: "### Avec Adobe Acrobat Pro  Vous trouverez les recommandations Adobe Acrobat Pro sur la notice &lt;a href=\&quot;http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#acrobat\&quot;&gt;Créer des documents &lt;abbr&gt;PDF&lt;/abbr&gt; accessibles avec Adobe Acrobat Pro&lt;/a&gt; de AcceDe &lt;abbr&gt;PDF&lt;/abbr&gt;.   "
+});
+
+documentTitles["pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr"] = "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;";
+index.add({
+    url: "pdf.html#tester-laccessibilite-dun-document-abbrpdfabbr",
+    title: "Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;",    
+    body: "## Tester l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt;  Installer &lt;a href=\&quot;http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;&lt;abbr&gt;PDF&lt;/abbr&gt; Accessibility Checker (&lt;abbr&gt;PAC&lt;/abbr&gt;)&lt;/a&gt;.   Ce logiciel permet entre autres l’exécution des tests automatiques sur un document &lt;abbr&gt;PDF&lt;/abbr&gt; et la détection des problèmes d’accessibilité, &lt;figure&gt; &lt;img class=\&quot;center\&quot; src=\&quot;/others/images/pac1.png\&quot; alt=\&quot;copie d’écran des résultats des tests automatiques dans PAC\&quot;/&gt; &lt;figcaption&gt;Capture d'écran de l'outil.&lt;/figcaption&gt; &lt;/figure&gt;  "
+});
+
+documentTitles["pdf.html#criteres-incontournables"] = "Critères incontournables";
+index.add({
+    url: "pdf.html#criteres-incontournables",
+    title: "Critères incontournables",    
+    body: "## Critères incontournables  Ce sont les principaux critères à respecter pour qu’un document &lt;abbr&gt;PDF&lt;/abbr&gt; soit accessible, indépendamment de la procédure utilisée pour le créer. Les critères incontournables seront utiles aux personnes créant des documents &lt;abbr&gt;PDF&lt;/abbr&gt; sans utiliser les logiciels d’éditions (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro), par exemple les développeurs dont les applications génèrent des documents &lt;abbr&gt;PDF&lt;/abbr&gt;.  "
+});
+
+documentTitles["pdf.html#structure-du-document"] = "Structure du document";
+index.add({
+    url: "pdf.html#structure-du-document",
+    title: "Structure du document",    
+    body: "### Structure du document  Le document doit contenir a minima un titre de document et une langue par défaut (les changements de langues seront indiqués dans le document).  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF16.html\&quot; title=\&quot;Technique PDF16 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF16 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF16&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF17.html\&quot; title=\&quot;Technique PDF17 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF17 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF17&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF18.html\&quot; title=\&quot;Technique PDF18 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF18 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF18&lt;/abbr&gt;&lt;/a&gt;.  Le document est structuré à l’aide de titres, par l’usage approprié de «&amp;nbsp;tags&amp;nbsp;» (balises) titres. De plus, les documents longs proposeront des signets afin de faciliter la navigation.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF2.html\&quot; title=\&quot;Technique PDF2 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF2 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF2&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF9.html\&quot; title=\&quot;Technique PDF9 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF9 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF9&lt;/abbr&gt;&lt;/a&gt;.  L’usage d’en-têtes et de pieds de page doit permettre à l’utilisateur de se situer dans le document.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF14.html\&quot; title=\&quot;Technique PDF14 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF14 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF14&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#navigation-clavier-et-ordre-de-lecture"] = "Navigation clavier et ordre de lecture";
+index.add({
+    url: "pdf.html#navigation-clavier-et-ordre-de-lecture",
+    title: "Navigation clavier et ordre de lecture",    
+    body: "### Navigation clavier et ordre de lecture  L’ordre de lecture restitué par un outil d’assistance, ainsi que l’ordre de la navigation clavier (par tabulation) reflètent la structure du document. Il ne doit pas y avoir de piège clavier (la navigation au clavier doit être possible dans l’ensemble du document sans blocage).  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF3.html\&quot; title=\&quot;Technique PDF3 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF3 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF3&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/G21.html\&quot; title=\&quot;Technique G21 des WCAG 2.0\&quot; aria-label=\&quot;Technique G21 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;G21&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#images"] = "Images";
+index.add({
+    url: "pdf.html#images",
+    title: "Images",    
+    body: "### Images  Les images comportant une information ont une alternative textuelle appropriée. Les documents scannés sont convertis correctement en texte par reconnaissance optique des caractères (&lt;abbr&gt;OCR&lt;/abbr&gt;). Les images décoratives sont cachées.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF1.html\&quot; title=\&quot;Technique PDF1 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF1 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF1&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF4.html\&quot; title=\&quot;Technique PDF4 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF4 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF4&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF7.html\&quot; title=\&quot;Technique PDF7 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF7 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF7&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#tableaux"] = "Tableaux";
+index.add({
+    url: "pdf.html#tableaux",
+    title: "Tableaux",    
+    body: "### Tableaux  Un tableau de données doit être structuré par un «&amp;nbsp;tag&amp;nbsp;» (balise) `table` contenant au moins une ligne. Les en-têtes de tableaux sont utilisées de manière appropriée. Toutes les lignes contiennent le même nombre de cellules. Les cellules fusionnées indiquent de manière appropriée une fusion par ligne ou colonne (attribut `rowSpan` ou `colSpan`).   Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF6.html\&quot; title=\&quot;Technique PDF6 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF6 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF6&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#liens"] = "Liens";
+index.add({
+    url: "pdf.html#liens",
+    title: "Liens",    
+    body: "### Liens  Les intitulés de liens sont explicites, ou les liens possèdent une alternative explicite.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF11.html\&quot; title=\&quot;Technique PDF11 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF11 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF11&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF13.html\&quot; title=\&quot;Technique PDF13 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF13 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF13&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#listes"] = "Listes";
+index.add({
+    url: "pdf.html#listes",
+    title: "Listes",    
+    body: "### Listes  Les listes utilisent les «&amp;nbsp;tags&amp;nbsp;» (balises) appropriés (tag liste `L`,  tag item de liste `LI`, tag label de l’item de liste `Lbl` - par exemple le numéro de l’item, tag contenu de l’item de liste `LBody`).  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF21.html\&quot; title=\&quot;Technique PDF21 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF21 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF21&lt;/abbr&gt;&lt;/a&gt;, section 14.8.4.3.3 de la &lt;a href=\&quot;http://www.adobe.com/devnet/pdf/pdf_reference.html\&quot;&gt;spécification &lt;abbr&gt;PDF&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#formulaires"] = "Formulaires";
+index.add({
+    url: "pdf.html#formulaires",
+    title: "Formulaires",    
+    body: "### Formulaires  Les champs de formulaire ont un nom, un rôle, une valeur, et un état (si approprié). Visuellement, les labels sont correctement positionnés en relation avec le champ. Les champs obligatoires et les formats attendus sont indiqués. Les champs sont accessibles et modifiables au clavier. Les formulaires pouvant être soumis possèdent un bouton de soumission.  Voir &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF5.html\&quot; title=\&quot;Technique PDF5 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF5 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF5&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF10.html\&quot; title=\&quot;Technique PDF10 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF10 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF10&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF12.html\&quot; title=\&quot;Technique PDF12 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF12 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF12&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF15.html\&quot; title=\&quot;Technique PDF15 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF15 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF15&lt;/abbr&gt;&lt;/a&gt;, &lt;a hreflang=\&quot;en\&quot; href=\&quot;https://www.w3.org/TR/WCAG20-TECHS/PDF22.html\&quot; title=\&quot;Technique PDF22 des WCAG 2.0\&quot; aria-label=\&quot;Technique PDF22 des WCAG 2.0\&quot;&gt;&lt;abbr&gt;PDF22&lt;/abbr&gt;&lt;/a&gt;.  "
+});
+
+documentTitles["pdf.html#couleurs"] = "Couleurs";
+index.add({
+    url: "pdf.html#couleurs",
+    title: "Couleurs",    
+    body: "### Couleurs  Les couleurs ne sont pas le seul moyen utilisé pour communiquer l’information.  Le contraste entre le texte et l’arrière-plan est suffisant&amp;nbsp;:  -	4.5:1 pour du texte de taille normale. -	3:1 pour du texte de grande taille. "
+});
+
+
+
+documentTitles["pushmail.html#recommandations-accessibilite-span-langenpushmailspan-orange"] = "Recommandations accessibilité &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; Orange";
+index.add({
+    url: "pushmail.html#recommandations-accessibilite-span-langenpushmailspan-orange",
+    title: "Recommandations accessibilité &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; Orange",    
+    body: "# Recommandations accessibilité &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; Orange    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Pushmails\&quot;}]); });&lt;/script&gt;   "
+});
+
+documentTitles["pushmail.html#introductionnbsp-laccessibilite-des-emails"] = "Introduction&amp;nbsp;: l’accessibilité des emails";
+index.add({
+    url: "pushmail.html#introductionnbsp-laccessibilite-des-emails",
+    title: "Introduction&amp;nbsp;: l’accessibilité des emails",    
+    body: "## Introduction&amp;nbsp;: l’accessibilité des emails Les emails au format texte et sans image, comme souvent les emails entre salariés, sont accessibles.  Le problème de non accessibilité est plutôt le fait des &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt; et des newsletters. Ces emails, à la mise en forme élaborée (liens, mise en page complexe, illustrations, schémas), permettent la diffusion d’informations à de nombreux destinataires et sont un outil essentiel de la communication d’entreprise.  "
+});
+
+documentTitles["pushmail.html#des-solutions-alternatives"] = "Des solutions alternatives";
+index.add({
+    url: "pushmail.html#des-solutions-alternatives",
+    title: "Des solutions alternatives",    
+    body: "### Des solutions alternatives Si la mise en page du &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; est complexe, notamment si celle-ci implique d’utiliser des tableaux, créer le &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; avec la méthode choisie et ajouter en pièce jointe un fichier Word ou un fichier texte accessible contenant le même niveau d’information sous forme textuelle.  "
+});
+
+documentTitles["pushmail.html#methodes-de-creation-des-span-langenpushmailspan"] = "Méthodes de création des &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt;";
+index.add({
+    url: "pushmail.html#methodes-de-creation-des-span-langenpushmailspan",
+    title: "Méthodes de création des &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt;",    
+    body: "## Méthodes de création des &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; En interne Orange, nous utilisons principalement trois méthodes pour composer les &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt;&amp;nbsp;:  - Création du &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; via Word. - Utilisation d'un outil dédié comme «&amp;nbsp;Mes Pushmails&amp;nbsp;». - Composition directe ou indirecte (via des &lt;i lang=\&quot;en\&quot;&gt;frameworks&lt;/i&gt;) en &lt;abbr&gt;HTML&lt;/abbr&gt;.  Quelle que soit la méthode choisie, il faut au préalable respecter les [recommandations générales](./editorial.html) pour tout document rédactionnel.  "
+});
+
+documentTitles["pushmail.html#creation-a-partir-dun-document-word"] = "Création à partir d’un document Word";
+index.add({
+    url: "pushmail.html#creation-a-partir-dun-document-word",
+    title: "Création à partir d’un document Word",    
+    body: "### Création à partir d’un document Word  Créer un document Word accessible en suivant les [recommandations Word](./word.html). Puis utiliser l’option «&amp;nbsp;Envoyer au destinataire du message&amp;nbsp;» (option à ajouter la première fois via Fichier&amp;nbsp;&gt; Option&amp;nbsp;&gt; Barre d’outils accès rapide&amp;nbsp;&gt; Envoyer au destinataire du message).   "
+});
+
+documentTitles["pushmail.html#creation-a-partir-dabbrhtmlabbr-ou-dun-outil-dedie"] = "Création à partir d’&lt;abbr&gt;HTML&lt;/abbr&gt; ou d'un outil dédié";
+index.add({
+    url: "pushmail.html#creation-a-partir-dabbrhtmlabbr-ou-dun-outil-dedie",
+    title: "Création à partir d’&lt;abbr&gt;HTML&lt;/abbr&gt; ou d'un outil dédié",    
+    body: "### Création à partir d’&lt;abbr&gt;HTML&lt;/abbr&gt; ou d'un outil dédié Créer des pages &lt;abbr&gt;HTML&lt;/abbr&gt; accessibles en suivant [les recommandations Web](../web/index.html), si besoin et les recommandations spécifiques ci dessous.   Á noter&amp;nbsp;: en interne à Orange, l’outil «&amp;nbsp;Mes Pushmails&amp;nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](./editorial.html) pour du contenu éditorial.  "
+});
+
+documentTitles["pushmail.html#regle-specifique-span-langenpushmailspan-abbrhtmlabbr"] = "Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; &lt;abbr&gt;HTML&lt;/abbr&gt;";
+index.add({
+    url: "pushmail.html#regle-specifique-span-langenpushmailspan-abbrhtmlabbr",
+    title: "Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; &lt;abbr&gt;HTML&lt;/abbr&gt;",    
+    body: "## Règle spécifique &lt;span lang=\&quot;en\&quot;&gt;pushmail&lt;/span&gt; &lt;abbr&gt;HTML&lt;/abbr&gt;  "
+});
+
+documentTitles["pushmail.html#fournir-des-marges-homogenes"] = "Fournir des marges homogènes";
+index.add({
+    url: "pushmail.html#fournir-des-marges-homogenes",
+    title: "Fournir des marges homogènes",    
+    body: "### Fournir des marges homogènes Pour s'assurer que la présentation soit identique quel que soit le client de messagerie utilisé (Outlook, Thunderbird, webmail ...), les balises sémantiques `hx`, `p` et les listes `ul`, `ol` doivent avoir une marge nulle fixée en &lt;abbr&gt;CSS&lt;/abbr&gt; (`style=\&quot;margin:0\&quot;`). Pour les titres `hx`, on ajoute en plus la propriété &lt;abbr&gt;CSS&lt;/abbr&gt; spécifique `mso-line-height-rule:exactly` pour que dans Outlook la hauteur de ligne soit fixe et cohérente.  &lt;pre&gt;&lt;code class=\&quot;html\&quot;&gt; &lt;h1 style=\&quot;margin:0; mso-line-height-rule:exactly;\&quot;&gt;Titre&lt;/h1&gt;   &lt;p style=\&quot;margin:0;\&quot;&gt;Paragraphe&lt;/p&gt; &lt;/code&gt;&lt;/pre&gt;  "
+});
+
+documentTitles["pushmail.html#rendre-accessibles-les-tableaux"] = "Rendre accessibles les tableaux";
+index.add({
+    url: "pushmail.html#rendre-accessibles-les-tableaux",
+    title: "Rendre accessibles les tableaux",    
+    body: "### Rendre accessibles les tableaux Mettre un attribut &lt;code&gt;role=\&quot;presentation\&quot;&lt;/code&gt; dans la balise `table` d'un tableau de présentation pour que la sémantique du tableau soit ignorée par les aides techniques.    "
+});
+
+documentTitles["pushmail.html#liens-utiles"] = "Liens utiles";
+index.add({
+    url: "pushmail.html#liens-utiles",
+    title: "Liens utiles",    
+    body: "## Liens utiles - &lt;a href=\&quot;http://www.accessible-email.org/\&quot; hreflang=\&quot;en\&quot;&gt;Outil pour valider l'accessibilité du code &lt;abbr&gt;HTML&lt;/abbr&gt; de ses &lt;span lang=\&quot;en\&quot;&gt;pushmails&lt;/span&gt;&lt;/a&gt; (en anglais) - Article en anglais sur le site de Microsoft&amp;nbsp;: &lt;a lang=\&quot;en\&quot; href=\&quot;https://support.office.com/en-us/article/Make-your-Outlook-email-accessible-71ce71f4-7b15-4b7a-a2e3-cf91721bbacb\&quot; hreflang=\&quot;en\&quot;&gt;Make your Outlook email accessible – Microsoft Office Support&lt;/a&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["editorial.html#recommandations-editoriales-generales"] = "Recommandations éditoriales générales";
+index.add({
+    url: "editorial.html#recommandations-editoriales-generales",
+    title: "Recommandations éditoriales générales",    
+    body: "# Recommandations éditoriales générales &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Recommandations éditoriales générales\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+});
+
+documentTitles["editorial.html#introduction"] = "Introduction";
+index.add({
+    url: "editorial.html#introduction",
+    title: "Introduction",    
+    body: "## Introduction Cette section propose des recommandations générales à respecter pour garantir l’accessibilité de vos contenus quel que soit le support utilisé (email, Web, Word, etc.).  "
+});
+
+documentTitles["editorial.html#verifier-les-couleurs"] = "Vérifier les couleurs";
+index.add({
+    url: "editorial.html#verifier-les-couleurs",
+    title: "Vérifier les couleurs",    
+    body: "## Vérifier les couleurs  - S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. - Assurer un niveau de contraste suffisant entre la couleur du texte et celle de l’arrière-plan.    Le contraste peut être vérifié à l’aide de l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;&amp;nbsp;:  - 4.5:1 pour du texte de taille normale.  - 3:1 pour du texte de grande taille.  "
+});
+
+documentTitles["editorial.html#faciliter-la-lecture"] = "Faciliter la lecture";
+index.add({
+    url: "editorial.html#faciliter-la-lecture",
+    title: "Faciliter la lecture",    
+    body: "## Faciliter la lecture  -	Aligner le texte à gauche, mais ne pas le justifier. -	Utiliser une police de caractères facilement lisible en corps 12 pixels minimum. -	Mettre en place une ponctuation simple. -	Ne pas mettre d’italique, ni de phrase en majuscule, mais une majuscule en début de phrase. -	Éviter les fonds texturés (images). -	Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&amp;nbsp;Paragraphe&amp;nbsp;&amp;gt; Espacement&amp;nbsp;» ou «&amp;nbsp;Retrait&amp;nbsp;» dans Word, par exemple). -	Éviter les tableaux de mise en page ou de données. -	Éviter le contenu image porteur d’information&amp;nbsp;: graphes, schémas, diagrammes… -	Mettre en place un indicateur de fin de document (par exemple, une image indiquant «&amp;nbsp;fin de mail&amp;nbsp;», un texte blanc sur fond blanc «&amp;nbsp;fin de document&amp;nbsp;»). -	Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple&amp;nbsp;: sujet, verbe, complément. Une idée par phrase, des mots simples. -	Expliquer les mots compliqués. -	Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction). -	Utiliser les caractères typographiques du Français&amp;nbsp;: tiret - , cadratin — , «&amp;nbsp;guillemets français&amp;nbsp;». -	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&amp;nbsp;Insertion&amp;nbsp;&amp;gt; Symbole&amp;nbsp;&amp;gt; Texte normal&amp;nbsp;»).  -	Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.  "
+});
+
+documentTitles["editorial.html#fournir-une-mise-en-page-des-tableaux-accessibles"] = "Fournir une mise en page des tableaux accessibles";
+index.add({
+    url: "editorial.html#fournir-une-mise-en-page-des-tableaux-accessibles",
+    title: "Fournir une mise en page des tableaux accessibles",    
+    body: "## Fournir une mise en page des tableaux accessibles  Simplifier les tableaux sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une mise en page en tableau.  À vérifier&amp;nbsp;:   - Globalement, ne pas utiliser de mise en page complexe de tableau (fusion de cellules d’un tableau, multicolonnage…). - Éviter d’imbriquer les tableaux de mise en page (grand maximum, 2 niveaux d’imbrication), mais aussi&amp;nbsp;: - Ne pas fusionner les cellules d’un tableau, mais utiliser plusieurs tableaux plus simples. - Ne pas conserver de cellules vides. - Ne pas ajouter d’images de fond. - Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas). - Éviter les tableaux de données, mais aussi les graphiques ou les schémas complexes.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["video-audio.html#recommandations-accessibilite-des-contenus-videos-animations-et-audios-orange"] = "Recommandations accessibilité des contenus vidéos, animations et audios Orange";
+index.add({
+    url: "video-audio.html#recommandations-accessibilite-des-contenus-videos-animations-et-audios-orange",
+    title: "Recommandations accessibilité des contenus vidéos, animations et audios Orange",    
+    body: "# Recommandations accessibilité des contenus vidéos, animations et audios Orange    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Vidéo audio\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+});
+
+documentTitles["video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-animations-et-audios"] = "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos, animations et audios";
+index.add({
+    url: "video-audio.html#introductionnbsp-laccessibilite-des-contenus-videos-animations-et-audios",
+    title: "Introduction&amp;nbsp;: l’accessibilité des contenus vidéos, animations et audios",    
+    body: "## Introduction&amp;nbsp;: l’accessibilité des contenus vidéos, animations et audios Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent&amp;nbsp;: - que ces vidéos, animations et audios eux-même soient accessibles - mais également, que l'interface qui permet la diffusion de ces fichiers soit accessible.  "
+});
+
+documentTitles["video-audio.html#rendre-les-videos-animations-ou-audios-accessibles"] = "Rendre les vidéos, animations ou audios accessibles";
+index.add({
+    url: "video-audio.html#rendre-les-videos-animations-ou-audios-accessibles",
+    title: "Rendre les vidéos, animations ou audios accessibles",    
+    body: "## Rendre les vidéos, animations ou audios accessibles  Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :  - Une transcription intégrale, seule nécessité pour un fichier audio. - Des sous-titres. - Une audiodescription, si besoin.  "
+});
+
+documentTitles["video-audio.html#transcription-integrale"] = "Transcription intégrale";
+index.add({
+    url: "video-audio.html#transcription-integrale",
+    title: "Transcription intégrale",    
+    body: "### Transcription intégrale La transcription doit restituer textuellement l’ensemble des informations véhiculées par le contenu (paroles, messages affichés à l’écran, graphes, animations ...). La transcription peut être agrémentée d’images, si besoin.  **La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.**  Cette transcription doit, par ordre de préférence, être&amp;nbsp;: 1. accessible directement à travers le lecteur audio/vidéo, lui-même. 1. directement présente dans la page ou le document à proximité immédiate (l'élément qui suit directement, en fait) de la vidéo ou audio. 1. accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.  Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.  "
+});
+
+documentTitles["video-audio.html#sous-titres"] = "Sous-titres";
+index.add({
+    url: "video-audio.html#sous-titres",
+    title: "Sous-titres",    
+    body: "### Sous-titres Les sous-titres doivent restituer l’ensemble des contenus (tout son porteur d'information : voix, coup de feu, ...) véhiculés par la bande son de la vidéo. Ils doivent être au format texte et synchronisés avec le son de la vidéo.  Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais doivent être associées à cette dernière grâce à un fichier texte indépendant (souvent un fichier .xml ou .srt).  "
+});
+
+documentTitles["video-audio.html#audiodescription"] = "Audiodescription";
+index.add({
+    url: "video-audio.html#audiodescription",
+    title: "Audiodescription",    
+    body: "### Audiodescription  L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsqu'une vidéo est juste une interview, sans autre information visuelle.  Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).  De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).  "
+});
+
+documentTitles["video-audio.html#lors-de-la-lecture"] = "Lors de la lecture";
+index.add({
+    url: "video-audio.html#lors-de-la-lecture",
+    title: "Lors de la lecture",    
+    body: "### Lors de la lecture  Lors de la lecture du fichier embarqué dans la page web, vérifier : - Ne pas lancer automatiquement, au chargement de la page, la vidéo, l'animation ou l'audio mais laisser la main à l'utilisateur. - Pour une vidéo ou une animation, celle-ci doit être exempte de tout élément qui flashe plus de trois fois par seconde ou ce flash doit se situer sous &lt;a href=\&quot;https://www.w3.org/Translations/WCAG20-fr/#general-thresholddef\&quot;&gt;le seuil de flash générique et le seuil de flash rouge&lt;/a&gt;.  "
+});
+
+documentTitles["video-audio.html#le-lecteur-audio-ou-video"] = "Le lecteur audio ou vidéo";
+index.add({
+    url: "video-audio.html#le-lecteur-audio-ou-video",
+    title: "Le lecteur audio ou vidéo",    
+    body: "## Le lecteur audio ou vidéo  Le lecteur vidéo utilisé doit&amp;nbsp;: - Prendre en charge au moins deux éléments&amp;nbsp;: sous-titres et audiodescription. - Permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...). - Permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.  "
+});
+
+documentTitles["video-audio.html#liens-utiles"] = "Liens utiles";
+index.add({
+    url: "video-audio.html#liens-utiles",
+    title: "Liens utiles",    
+    body: "## Liens utiles -  Article en anglais sur le site de SitePoint&amp;nbsp;:  &lt;a href=\&quot;https://www.sitepoint.com/accessible-video/\&quot; hreflang=\&quot;en\&quot;&gt;8 Steps to Creating Accessible Video&lt;/a&gt; (en anglais) - Notice  d’accessibilité éditoriale AccedeWeb&amp;nbsp;: &lt;a href=\&quot;https://www.accede-web.com/notices/editoriale/8-contenus-riches-multimedias/\&quot;&gt;Utiliser correctement les contenus riches et multimédias&lt;/a&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+

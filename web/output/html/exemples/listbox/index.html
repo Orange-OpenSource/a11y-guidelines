@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les listbox - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les listes <abbr>ARIA</abbr> (<i lang="en">listbox</i>)</h1>
+
+      <h2>Introduction</h2>
+      <p><abbr>ARIA</abbr> met à disposition un grand nombre de composants qui peuvent servir dans les interfaces riches (onglet, accordéon, potentiomètre (<i lang="en">slider</i>)…). Dans cet exemple, nous allons nous intéresser à l’utilisation des <i lang="en">listbox</i>.</p>
+      <p>Une <i lang="en">listbox</i> est un composant qui permet à l’utilisateur de sélectionner un ou plusieurs éléments à partir d’une liste de choix.</p>
+      <p>Les éléments d’une <i lang="en">listbox</i> sont statiques, une <i lang="en">listbox</i> n’est pas destinée à recevoir des éléments interactifs (tels que des liens, des boutons…), en revanche celle-ci peut contenir des images à l’inverse d’un <code>select</code>.</li>              
+      <p>Plus d’infos&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices</a>.</p>
+      
+      <h2>Mise en garde</h2>
+      <p>Bien que des progrès soient réalisés à chaque nouvelle version, le support de l’<abbr>ARIA</abbr> est encore partiel pour l’ensemble des lecteurs d’écran. Son utilisation doit être conditionnée par des tests de compatibilité sur l’environnement cible (couple navigateur/lecteur d’écran).</p>
+       
+      <h2>Mise en place</h2>
+      
+      <h3>Code <abbr>HTML</abbr></h3>
+      <p>Pour créer une <i lang="en">listbox</i>, il suffit d’appliquer le rôle <code>listbox</code> à un conteneur parent. Puis d’appliquer le rôle <code>option</code> aux différentes options de la liste. On n’oubliera pas de rendre cette liste focusable pour les utilisateurs qui naviguent à l’aide du clavier (ajout d’un attribut <code>tabindex="0"</code>) ni d’ajouter un label (<code>aria-label</code> ou <code>aria-labelledby</code>) pour les personnes qui utilisent un lecteur d’écran. Enfin, on ajoutera également un attribut <code>tabindex="-1"</code> aux options pour qu’elles puissent recevoir le focus via Javascript.</p>
+      
+      <pre><code class="html">
+    &lt;ul role="listbox" tabindex="0" aria-label="liste des dossiers"&gt;
+        &lt;li tabindex="-1" role="option"&gt;Boite de réception (4) &lt;span class="sr-only"&gt;messages non lus&lt;/span&gt;&lt;/li&gt;
+        &lt;li tabindex="-1" role="option"&gt;Eléments envoyés&lt;/li&gt;
+        &lt;li tabindex="-1" role="option"&gt;Brouillons&lt;/li&gt;
+        &lt;li tabindex="-1" role="option"&gt;Corbeille&lt;/li&gt;          
+    &lt;/ul&gt;
+      </code></pre>
+      
+      <p>À noter que les balises <code>ul</code> et <code>li</code> pourraient être remplacées par de simples balises <code>div</code>.</p>
+      
+      <h3>Interactions</h3>
+      <p>Pour coller avec le pattern <abbr>ARIA</abbr> de la <i lang="en">listbox</i> (<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">WAI-<abbr>ARIA</abbr> Authoring Practices</a>), on va gérer quelques interactions à l’aide de code Javascript.</p>
+      <p>Lors de la prise du focus, si aucun élément n’est sélectionné, on doit automatiquement sélectionner la première option.
+      Si un élément est déjà sélectionné lorsque la <i lang="en">listbox</i> reçoit le focus, on doit déplacer le focus sur celui-ci.</p>            
+      
+      <pre><code class="js">
+       $("[role=listbox]").on("focus", function () {
+           // If no selected element, select the first by default
+           if (!$(this).find("[aria-selected=true]").length) {               
+                $(this).find("[role=option]:first").attr("aria-selected", "true").focus();
+           } else {
+               $(this).find("[aria-selected=true]").focus();
+           }
+        });
+      </code></pre>
+      
+      <p>On va ensuite gérer l’interaction clavier&nbsp;:</p>
+      <ul>
+          <li>Flèche haut pour sélectionner l’élément précédent</li>
+          <li>Flèche bas pour sélectionner l’élément suivant</li>
+      </ul>
+      
+      <pre><code class="javascript">
+    $("[role=listbox]").on("keydown", function (e) {            
+        var currentItem = $(this).find("[aria-selected=true]");          
+        switch (e.keyCode) {
+            case 38:  // Up arrow
+                if (currentItem.prev().length) {
+                    currentItem.attr("aria-selected", "false");                    
+                    currentItem.prev().attr("aria-selected", "true").focus();
+                }                    
+                e.preventDefault();
+                break;
+            case 40: // Down arrow
+                if (currentItem.next().length) {
+                    currentItem.attr("aria-selected", "false");
+                    currentItem.next().attr("aria-selected", "true").focus();
+                }
+                e.preventDefault();
+                break;
+        }
+    });
+      </code></pre>
+          
+      <p>Enfin, il nous reste à gérer la souris. Lorsqu’une option est sélectionnée, on modifie son attribut <code>aria-selected</code>.</p>
+      <pre><code class="javascript">
+    $("[role=option]").on("mousedown", function (e) {
+        $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
+        $(this).attr("aria-selected", "true");
+        e.preventDefault();
+    });
+      </code></pre>
+      
+      <p>On ajoute un peu de cosmétique en modifiant le pointeur de la souris au survol des options.<p>
+      
+      <pre><code class="css">
+    [role=option] {
+        cursor: pointer;
+    }
+      </code></pre>            
+          
+      <h2>Exemple</h2>
+      
+      <p>Voici un exemple de liste implémentée à partir du code ci-dessus.</p>
+                  
+      <h3 id="mail-folder">Liste des dossiers courrier</h3>
+              
+      <div class="row">
+        <ul role="listbox" tabindex="0" class="col-md-4" aria-labelledby="mail-folder">
+            <li tabindex="-1" role="option">Boite de réception (24) <span class="sr-only">messages non lus</span></li>
+            <li tabindex="-1" role="option">Eléments envoyés</li>
+            <li tabindex="-1" role="option">Brouillons</li>
+            <li tabindex="-1" role="option">Corbeille</li>          
+        </ul>              
+      </div>
+                   
+      <h3>Place aux tests</h3>
+      
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation de la souris&nbsp;: </strong> on peut sélectionner un élément de la liste à l’aide de la souris.</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation au lecteur d’écran&nbsp;: </strong>avec <abbr>NVDA</abbr>, il est possible de parcourir les différents éléments de la liste, il est également possible de connaître l’élément en cours de sélection.</p>
+      <p><strong><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Utilisation au clavier&nbsp;: </strong> à l’aide de la touche <kbd>Tab</kbd>, il est possible d’accéder à la liste, ensuite les flèches haut et bas permettent de déplacer la sélection. Par contre, les touches <kbd>Maj+Tab</kbd> devraient permettre de faire remonter le focus dans la page, or celui-ci est bloqué à l’intérieur de la liste.</p>      
+      
+      <h2>Correction de la navigation au clavier</h2>
+      <p>Lorsque le focus est positionné sur un élément de la liste, la combinaison de touches <kbd>Maj+Tab</kbd> fait remonter le focus sur le premier élément focusable qui dans ce cas est l’élément <code>listbox</code>. Or, dès que la <i lang="en">listbox</i> reçoit le focus, on déplace automatiquement le focus sur l’élément sélectionné.</p>   
+      <p>Pour corriger le problème, il suffit de rendre la <i lang="en">listbox</i> non focusable une fois que le focus est situé sur une des options.</p>
+      
+      <pre><code class="javascript">
+       $("[role=option]").on("focus", function (e) {
+           $(this).parent().attr("tabindex", "-1");
+       });
+       
+       $("[role=option]").on("blur", function (e) {
+           $(this).parent().attr("tabindex", "0");
+       });
+      </code></pre>
+          
+      <h2>Exemple fonctionnel</h2>
+                        
+      <h3 id="mail-folder2">Liste des dossiers courrier</h3>
+              
+      <div class="row">              
+        <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-4" aria-labelledby="mail-folder2">
+            <li tabindex="-1" role="option">Boite de réception (24) <span class="sr-only">messages non lus</span></li>
+            <li tabindex="-1" role="option">Eléments envoyés</li>
+            <li tabindex="-1" role="option">Brouillons</li>
+            <li tabindex="-1" role="option">Corbeille</li>          
+        </ul>                
+      </div>   
+    
+      <h3>Place aux tests</h3>
+    
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation de la souris&nbsp;:</strong> OK</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation au lecteur d’écran&nbsp;:</strong> OK</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation au clavier&nbsp;:</strong> OK</p>      
+           
+     <h2>Exemple webmail</h2>
+     <p>Voici une maquette statique qui met en œuvre le composant <i lang="en">listbox</i> de cet exemple et celui de l’exemple sur les <a href="../check-listbox/index.html"><i lang="en">listbox</i> avec cases à cocher</a>.</p>
+     <a class="btn btn-secondary" href="../webmail/index.html">Ouvrir le webmail</a>
+       
+     <h2>Liens</h2>
+     Plus d’infos sur <abbr>ARIA</abbr> et les <i lang="en">listbox</i>&nbsp;:
+     <ul>
+        <li><a href="http://w3c.github.io/aria-practices/#Listbox" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices 1.1</a></li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles" hreflang="en" lang="en">The roles model</a></li>
+     </ul>
+     
+    </main>
+        
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

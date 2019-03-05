@@ -1,0 +1,67 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+body {
+  border-top: 15px solid #000;
+  line-height: 1.5;
+}
+
+pre code .important {
+  border: 1px solid #f00;
+}
+
+#back-button {
+    padding-left: 1rem;
+    margin: 1rem 0 0 1rem;
+    width: 10rem;
+    text-align: left;
+}
+
+h1:first-child {
+    margin-top: 0;
+}
+
+h2, h3 {
+  margin-top: 1rem;
+}
+
+.highlight-code {    
+    background-color:rgba(255,255,128,0.5) !important;  
+    z-index: 1000;  
+}
+
+a { 
+  text-decoration: underline;
+}
+
+/* Source code */
+pre code {
+  border: .2rem solid #eee;
+}
+.source-nav {
+  margin: 0 !important;
+  padding: 1rem 0 0 0rem !important
+}
+.source-nav li {
+  list-style-type: none !important;
+  display: inline;
+}
+.source-nav li button {
+  font-weight: bold;
+  color: #fff !important;
+  background-color: #777;  
+  text-decoration: none !important;
+  padding: .5rem 1rem;    
+  border: none;
+}
+.source-nav li.active button {
+  color: #fff !important;
+  background-color: #f16e00;  
+}
+.source-nav li button:hover {
+  background-color: #888;
+}
+.source-nav li.active button:hover {
+  background-color: #f16e00;
+}

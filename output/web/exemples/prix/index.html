@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vocalisation des prix - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+        <h1>Affichage et vocalisation des prix</h1>
+
+        <h2>Préambule</h2>
+        <p>
+            L'affichage des prix peut parfois poser des problèmes aux personnes malvoyantes qui utilisent un lecteur d'écran. C'est d'autant plus vrai lorsqu'on souhaite une mise en pages particulière ou afficher des promotions (prix barré).
+        </p>
+        
+        <h2>Exemples présentant des problèmes de vocalisation</h2>
+        
+        <h3>Exemple 1</h3>
+
+        <p>A l'aide d'un lecteur d'écran, l'exemple suivant est vocalisé comme trois éléments distincts :</p>
+        <ul>
+          <li>"à partir de 120"</li>
+          <li>"90 euros"</li>
+          <li>"barre oblique mois"</li>
+        </ul>
+
+        <p>On ne sait pas si le prix est de 120€ ou 90€, alors que le vrai prix est 120,90€.</p>
+
+        <p class="example">
+            à partir de 
+            <span class="price">
+                120<sup>,90€</sup><sub>/mois</sub>
+            </span>
+        </p>
+
+        <strong>Code de l'exemple</strong>
+        
+        <pre><code class="html">
+    à partir de
+    &lt;span class="price"&gt;
+        120&lt;sup&gt;,90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+    &lt;/span&gt;
+        </code></pre>
+
+        <h3>Exemple 2</h3>
+
+        <p>L'exemple suivant est vocalisé :</p>
+        <ul>
+            <li>téléphones Orange</li>
+            <li>à partir de 1 euro astérisque 129 euros</li>
+            <li>astérisque voir condition</li>
+        </ul>
+        <p>L'utilisateur n'est pas informé que le prix 129,90 euros est barré.</p>
+        <div class="example2">
+            <img src="./images/phone.png" alt="téléphones Orange">
+            <p>
+                <strong>à partir de </strong><span class="price">1€*</span>
+                <span class="line-through">129,90€</span><br>
+                *voir conditions
+            </p>
+        </div>           
+
+        <br>
+        <strong>Code de l'exemple</strong>
+
+<pre><code class="html">
+&lt;div class="example2"&gt;
+    &lt;img src="./images/phone.png" alt="téléphones Orange"&gt;
+    &lt;p&gt;
+        &lt;strong&gt;à partir de &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
+        &lt;span class="line-through"&gt;129,90€&lt;/span&gt;&lt;br&gt;
+        *voir conditions
+    &lt;/p&gt;    
+&lt;/div&gt;
+        </code></pre>        
+
+        <h2>Solution pour corriger la vocalisation</h2>
+
+        <p>Pour corriger ces problèmes le plus simple est de faire ignorer le prix affiché à l'écran et ajouter un texte en masquage accessible contenant le prix à vocaliser.</p>
+        <p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>sr-only</code> si vous utiliser le framework <a href="http://boosted.orange.com">boosted</a>).</p>
+
+        <p class="example" aria-hidden="true">
+        à partir de 
+        <span class="price">
+            120<sup>,90€</sup><sub>/mois</sub>
+        </span>
+        <p>
+        <span class="sr-only">à partir de 120,90€ par mois</span>
+        <p>Elément vocalisé "à partir de 120 euros 90 par mois"</p>
+        <pre><code class="html">
+    &lt;p class="example" aria-hidden="true"&gt;
+    à partir de 
+    &lt;span class="price"&gt;
+        120&lt;sup&gt;,90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+    &lt;/span&gt;
+    &lt;p&gt;
+    &lt;span class="sr-only"&gt;à partir de 120,90€ par mois&lt;/span&gt;
+        </code></pre>
+
+        <div class="example2">
+            <img src="./images/phone.png" alt="téléphones Orange">
+            <p aria-hidden="true">
+                <strong>à partir de </strong><span class="price">1€*</span>
+                <span class="line-through">129,90€</span><br>
+                *voir conditions
+            </p>
+            <span class="sr-only">à partir de 1€ au lieu de 129,90€ voir conditions</span>
+        </div>          
+        
+        <p>Élément vocalisé :</p>
+        <ul>
+            <li>téléphones Orange</li>
+            <li>à partir de 1 euro au lieu de 129 euros 90 voir conditions</li>            
+        </ul>
+
+        <pre><code class="html">
+&lt;div class="example2"&gt;
+    &lt;img src="./images/phone.png" alt="téléphones Orange"&gt;
+    &lt;p aria-hidden="true"&gt;
+        &lt;strong&gt;à partir de &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
+        &lt;span class="line-through"&gt;129,90€&lt;/span&gt;&lt;br&gt;
+        *voir conditions
+    &lt;/p&gt;
+    &lt;span class="sr-only"&gt;à partir de 1€ au lieu de 129,90€ voir conditions&lt;/span&gt;
+&lt;/div&gt;
+        </code></pre>
+        &nbsp;&nbsp;
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

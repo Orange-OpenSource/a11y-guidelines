@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Exemple masquage accessible et aria-hidden - recommandations accessibilité web Orange</title>
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Masquer des éléments de manière accessible</h1>
+
+      <h2>Introduction</h2>
+      <p>Parfois il est nécessaire de masquer des éléments dans une page web. La méthode classique est d’utiliser du <abbr>CSS</abbr> (<code>display:none;</code> et <code>visibility:hidden;</code>). Ces deux propriétés permettent de masquer des éléments non seulement à l’écran, mais aussi pour les utilisateurs qui utilisent un lecteur d’écran. Ces éléments ne seront donc ni visibles, ni vocalisés par les synthèses vocales.</p>
+      <p>Dans certains cas, il peut être utile de masquer des éléments à l’écran, mais faire en sorte qu’ils soient quand même vocalisés par les lecteurs d’écran. Pour cela, on utilisera une classe <abbr>CSS</abbr> de «&nbsp;masquage accessible&nbsp;».</p>
+      <p>Enfin, il reste un cas utile&nbsp;: afficher des éléments à l’écran, mais faire en sorte qu’ils ne soient pas vocalisés. Dans ce cas, on utilisera un attribut <abbr>ARIA</abbr> (<code>aria-hidden</code>).</p>
+      
+      <h2>Le masquage accessible</h2>
+      <p>Masquer un élément de manière accessible permet de faire disparaître un élément à l’écran, tout en le conservant pour les utilisateurs de lecteurs d’écran. Techniquement, la solution consiste à appliquer une classe <abbr>CSS</abbr> sur l’élément qui ne doit pas être visible.</p>
+      <p>Il existe plusieurs solutions pour réaliser ce type de classe <abbr>CSS</abbr>&nbsp;:</p>
+          <ul>
+            <li>Donner une taille nulle à l’élément.</li>
+            <li>Positionner l’élément en dehors de l’écran (<code>left: -1000px; top: -1000px;</code>).</li>
+            <li>Utiliser les propriétés <code>text-indent</code> ou <code>clip</code>.</li>
+            <li>…</li>
+          </ul>
+      <p>L’idéal étant de mixer les solutions pour garantir le bon fonctionnement sur l’ensemble des navigateurs.</p>
+      
+      
+      <p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez utiliser la classe <abbr>CSS</abbr> <code>sr-only</code> (screen reader only) dont voici le code&nbsp;:</p>
+      <pre><code class="css">
+      .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap; /* added line */
+            border: 0;
+      }
+      </code></pre>
+      <p>Si vous n’avez aucune classe de masquage accessible, le plus simple est de copier-coller le code ci-dessus.</p>
+
+      <h3>Mise en œuvre</h3>
+      <p>La classe de masquage accessible peut s’employer dans beaucoup de cas. Par exemple, pour expliciter le libellé d’un lien&nbsp;:</p>
+      
+      <pre><code class="html">
+      &lt;a href="…"&gt;En savoir plus&lt;span <span class="important">class="sr-only"</span>&gt; sur nos offres mobiles&lt;/span&gt;&lt;/a&gt;
+      </code></pre>
+      
+      <strong>Exemple&nbsp;: </strong>
+      <p><a href="#">En savoir plus<span class="sr-only"> sur nos offres mobiles</span></a></p>
+      
+      <p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien comme ceci:
+      <pre><code class="html">
+      &lt;a href="…" aria-label="En savoir plus sur nos offres mobiles">En savoir plus&lt;/a&gt;
+      </code></pre>
+      <p>La solution utilisant la classe de masquage accessible offre néanmoins un avantage par rapport à la solution <code>aria-label</code>. Si les <abbr>CSS</abbr> sont désactivées (pour les remplacer par des <abbr>CSS</abbr> personnalisées adaptées à une certaine pathologie, par exemple), les textes en masquage accessible apparaîtront automatiquement à l’écran.</p>
+       
+      <h2>L’attribut <code>aria-hidden</code></h2>
+      <p>Cet attribut permet de masquer un élément (ou un groupe d’éléments) pour les lecteurs d’écran. Celui-ci n’a en revanche aucun effet sur l’affichage à l’écran.</p>
+      
+      <h3>Mise en œuvre</h3>
+      <p>Pour masquer un élément aux lecteurs d’écran (ainsi que les éléments enfants), il suffit d’ajouter un attribut <code>aria-hidden="true"</code>.<p>
+      
+      <p><strong>Exemple&nbsp;: </strong><br>
+      La capture d’écran suivante montre un lecteur vidéo contenant un certain nombre de boutons (chaîne précédente, chaîne suivante, pause…). Ce lecteur est entouré par deux boutons permettant également d’accéder aux chaînes précédentes et suivantes.</p>
+      <p>Visuellement cela ne pose pas de problème. Par contre, lorsqu’on écoute la page avec un lecteur d’écran, on peut trouver curieux d’entendre un bouton vocalisé «&nbsp;Animaux&nbsp;» au début de la page, puis à la fin de la page un bouton vocalisé «&nbsp;Chasse et pêche&nbsp;».</p>                           
+      
+      <p><img src="../../images/exemples/masquage/player.png" alt="capture d’écran présentant un lecteur vidéo"></p>
+      
+      <p>Pour éviter de perturber l’utilisateur inutilement, le plus simple est de masquer ces deux boutons (pour les lecteurs d’écran) à l’aide d’un attribut <code>aria-hidden</code>.
+      
+      <pre><code class="html">      
+      &lt;div class="icon icon-arrow-left2" <span class="important">aria-hidden="true"</span>&gt;
+            &lt;div class="nextPreviousChannelName OrangeMedium" &gt;Animaux&lt;/div&gt;
+      &lt;/div&gt;
+      </code></pre>
+      
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

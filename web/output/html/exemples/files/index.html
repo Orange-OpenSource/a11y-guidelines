@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explorateur de fichier - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Explorateur de fichier</h1>
+
+      <h2>Introduction</h2>
+      <p>L’explorateur de fichier est un composant disponible sur tous les systèmes d’exploitation. Lorsque celui-ci est présent dans une page web, il doit se comporter comme attendu par l’utilisateur.</p>
+      
+      <h2>Mode de navigation</h2>
+
+      <p>À la souris, chaque fichier peut être ouvert via un double clic. Les touches <kbd>Control</kbd> et <kbd>Shift</kbd> permettent d’effectuer une sélection multiple.</p>
+      <p>En navigant au clavier, les flèches permettent de déplacer la sélection. La touche <kbd>Entrée</kbd> permet d’ouvrir un fichier. Les touches <kbd>Control+Barre Espace</kbd> ou <kbd>Shift</kbd>+flèches du clavier permettent de sélectionner plusieurs fichiers.</p>
+      <p>Au lecteur d’écran, la navigation est identique à celle du clavier, chaque fichier est correctement vocalisé (nom, taille, type…), de plus l’état sélectionné/non sélectionné est également indiqué.</p>
+
+      <a href="./step1/index.html" class="btn btn-secondary">Ouvrir l’exemple</a>
+      
+      <h2> Mise en place de la structure </h2>
+      <p>Au niveau de la structure, nous utilisons des balises <code>div</code>. Pour que celles-ci soient vocalisées correctement nous avons ajouté quelques attributs et rôles ARIA.</p>
+      <p>Le rôle <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox" hreflang="en" lang="en">listbox</a> pour indiquer au lecteur d’écran qu’il s’agit d’une liste d’éléments. L’attribut <code>aria-multiselectable</code> pour indiquer qu’il s’agit d’une liste à sélection multiple. Chaque élément de liste doit posséder un rôle <a href="https://www.w3.org/TR/wai-aria-1.1/#option" hreflang="en" lang="en">option</a>.
+      <p>Pour que chaque fichier soit correctement vocalisé, on ajoute un attribut <code>aria-label</code> sur chaque élément de la liste. Enfin, pour que chaque fichier soit focusable, on ajoute un attribut <code>tabindex="0"</code>.</p>
+      
+      <h3>Exemple de code</h3>
+      
+      <pre><code class="html">
+      &lt;div role="listbox" aria-multiselectable="true" aria-label="liste des fichiers, vue mosaïque"&gt;
+        &lt;div tabindex="0" role="option" aria-label="test 001.avi, video, 18.9MB"&gt;… &lt;/div&gt;
+        …
+      &lt;/div&gt;
+      </code></pre>
+        
+      <h2>Visibilité du focus</h2>
+      <p>La position du focus doit être visible à tout moment. Un effet est appliqué à la vignette qui a le focus. Cet effet reste visible même sur les fichiers sélectionnés.</p>
+      
+      <h2>Gestion du clavier</h2>
+      <p>Pour que les utilisateurs puissent correctement naviguer dans la liste, les éléments suivants du clavier doit être géré via Javascript&nbsp;:
+        <ul>
+          <li>Les flèches pour se déplacer dans la liste.</li>
+          <li>Les touches <kbd>Ctrl</kbd>, <kbd>Shift</kbd> et la barre espace pour sélectionner plusieurs fichiers.</li>
+          <li>Les touches <kbd>Ctrl+a</kbd> pour sélectionner tous les éléments.</li>
+          <li>La touche <kbd>Entrée</kbd> pour lancer l’ouverture d’un fichier.</li>
+        </ul>
+      </p>
+      
+    </main>
+        
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

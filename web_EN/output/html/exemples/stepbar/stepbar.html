@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible stepbar - Orange web accessibility guidelines</title>
+
+    <!-- Boosted -->
+      <!-- To use the old orange brand, just remove the 2015 postfix-->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="./boosted/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/bootstrap-orange-themeIE82015.css" />
+        <link rel="stylesheet" href="./bossted/css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/bootstrap-orange-theme2015.css" />
+        <link rel="stylesheet" href="../../../boosted/css/boosted2015.css">
+    <!--<![endif]-->
+
+      <!-- Examples code styling -->
+      <link rel="stylesheet" href="../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Stepbar or multi-step process</h1>
+
+      <h2>Introduction</h2>
+      <p>In this example we will see how to improve the vocalization of a “stepbar” component.</p>
+      <p>To achieve this we will use the <a href="http://boosted.orange.com/components/#dropdowns">stepbar</a> component available in the <a href="http://boosted.orange.com/">Boosted</a> library. Some styles have been modified to fit onto a single line.</p>
+
+      <h2>Non accessible example</h2>
+     <p> Here is the final appearance of the stepbar.
+     </p>
+      
+      <div class="row">
+      <ul class="o-wizard-step-bar" data-steps="5">
+          <li class="visited">
+            <div class="arrow" aria-hidden="true"></div>                                
+            <div>1 <span class="hidden-xs hidden-sm">Identification</span></div>              
+          </li>
+          <li class="visited">
+              <div class="arrow" aria-hidden="true"></div>
+              <div>2 <span class="hidden-xs hidden-sm">Shipping address</span></div>
+          </li>
+          <li class="on">
+              <div class="arrow" aria-hidden="true"></div>              
+              <div>3 <span class="hidden-xs hidden-sm">Delivery options</span></div>
+          </li>
+          <li class="next">
+              <div class="arrow" aria-hidden="true"></div>
+              <div>4 <span class="hidden-xs hidden-sm">Payment</span></div>
+          </li>
+          <li class="next">
+              <div class="arrow" aria-hidden="true"></div>
+              <div>5 <span class="hidden-xs hidden-sm">Confirmation</span></div>
+          </li>
+      </ul>
+      </div>
+      
+      <h3>Non accessible example code</h3>
+
+      <!-- Example code -->
+      <pre><code class="html">
+      &lt;ul class="o-wizard-step-bar" data-steps="5"&gt;
+          &lt;li class="visited"&gt;
+            &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;                                
+            &lt;div&gt;1 &lt;span class="hidden-xs hidden-sm"&gt;Identification&lt;/div&gt;              
+          &lt;/li&gt;
+          &lt;li class="visited"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;
+              &lt;div&gt;2 &lt;span class="hidden-xs hidden-sm"&gt;Shipping address&lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="on"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;              
+              &lt;div&gt;3 &lt;span class="hidden-xs hidden-sm"&gt;Delivery options&lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="next"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;
+              &lt;div&gt;4 &lt;span class="hidden-xs hidden-sm"&gt;Payment&lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="next"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;
+              &lt;div&gt;5 &lt;span class="hidden-xs hidden-sm"&gt;Confirmation&lt;/div&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+      </code></pre>
+
+      <h2>Testing the non-accessible example</h2>
+            
+      <h3>Keyboard navigation</h3>
+      For the stepbar we decided that the items shouldn't be clickable. So there is nothing to do.
+
+      <h3>Screen reader navigation</h3>
+      <p>At this stage, the vocalization of the stepbar is unsatisfactory.</p>
+      <p>If you listen to the component using a screen reader, a list of 5 items is read. Each item is properly vocalized; however, we have no indication of the current step.</p>       
+
+      <h2>Vocalization support</h2>
+      <p>To improve the vocalization of this component it is necessary to think about the information that seems relevant to the user.<br>
+      <p>Visually, when we see this stepbar we have access to the following information:</p>
+      <ul>
+            <li><b>The name of the current step,</b></li>
+            <li><b>the number of total steps,</b></li>
+            <li><b>the number of remaining steps,</b></li>
+            <li>the name of each step.</li>
+      </ul>
+      
+      <p>Ideally we should have the same level of information with as without a screen reader. That being said, it can be tedious to have too much information to listen to. Therefore, we will focus on the bold information listed above (the three first items in our list).</p>
+      
+      <p><b>Possible example of vocalization:</b> “Delivery options, step 3 of 5.”</p>
+      
+      <p>Technically, there are several ways to achieve this. We could try to hide inactive items from the screen reader and modify the vocalization of the selected item. However, given that this component changes according to the width of the screen (responsive design), the easiest way is to completely hide this component from the screen reader with the <code>aria-hidden="true"</code> attribute. Finally, add an <a href="../masquage/index.html">accessible hiding</a> <code>span</code> containing the text to vocalize.</p>
+
+      <p>Accessible hiding allows to hide a text, but ensures that it is correctly vocalized by the screen reader. It is done through a simple <abbr>CSS</abbr> class. In the <a href="http://boosted.orange.com/css/#helper-classes-screen-readers">Boosted</a> and <a href="http://getbootstrap.com/css/#helper-classes-screen-readers">Bootstrap</a> libraries there is an accessible hiding class named <code>sr-only</code>.</p>
+      <p>See <a href="../masquage/index.html">the accessible hiding example</a> for more information.</p> 
+      
+      <h2>Accessible example</h2>
+      
+      <span class="sr-only">Delivery options, step 3 of 5</span>
+      <div class="row">
+      <ul class="o-wizard-step-bar" data-steps="5" aria-hidden="true">
+          <li class="visited">
+            <div class="arrow" aria-hidden="true"></div>                                
+            <div>1 <span class="hidden-xs hidden-sm">Identification</span></div>              
+          </li>
+          <li class="visited">
+              <div class="arrow" aria-hidden="true"></div>
+              <div>2 <span class="hidden-xs hidden-sm">Shipping address</span></div>
+          </li>
+          <li class="on">
+              <div class="arrow" aria-hidden="true"></div>              
+              <div>3 <span class="hidden-xs hidden-sm">Delivery options</span></div>
+          </li>
+          <li class="next">
+              <div class="arrow" aria-hidden="true"></div>
+              <div>4 <span class="hidden-xs hidden-sm">Payment</span></div>
+          </li>
+          <li class="next">
+              <div class="arrow" aria-hidden="true"></div>
+              <div>5 <span class="hidden-xs hidden-sm">Confirmation</span></div>
+          </li>
+      </ul>
+      </div>
+      
+      <p>This new example now vocalizes: “Delivery options, step 3 of 5”.</p>
+      
+      <h3>Accessible example code</h3>
+      <!-- Accessible example code -->
+      <pre><code class="html">
+      &lt;span class="sr-only"&gt;Delivery options, step 3 of 5&lt;/span&gt;
+      &lt;ul class="o-wizard-step-bar" data-steps="5" aria-hidden="true"&gt;
+          &lt;li class="visited"&gt;
+            &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;                                
+            &lt;div&gt;1 &lt;span class="hidden-xs hidden-sm"&gt;Identification&lt;/div&gt;              
+          &lt;/li&gt;
+          &lt;li class="visited"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;
+              &lt;div&gt;2 &lt;span class="hidden-xs hidden-sm"&gt;Shipping address&lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="on"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;              
+              &lt;div&gt;3 &lt;span class="hidden-xs hidden-sm"&gt;Delivery options&lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="next"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;
+              &lt;div&gt;4 &lt;span class="hidden-xs hidden-sm"&gt;Payment&lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="next"&gt;
+              &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;
+              &lt;div&gt;5 &lt;span class="hidden-xs hidden-sm"&gt;Confirmation&lt;/div&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+      </code></pre>
+      
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

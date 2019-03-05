@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemple, faire parler le lecteur d'écran - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Faire parler le lecteur d'écran à l'aide d'<abbr>ARIA</abbr></h1>
+
+      <h2>Préambule</h2>
+      <p>Dans certains cas, il peut être intéressant de vouloir faire parler le lecteur d'écran, pour confirmer une action utilisateur par exemple. Dans cet exemple, nous allons voir comment ceci peut être réalisé simplement à l'aide de l'attribut <code>aria-live</code>.</p>
+
+      <h2>Principe de fonctionnement</h2>
+      <p>L'attribut <code>aria-live</code> positionné sur un élément permet d'indiquer au lecteur d'écran que cet élément doit être vocalisé automatiquement lorsque son contenu est modifié.
+      Les valeurs possibles sont&nbsp;: </p>
+        <ul>
+          <li><code>aria-live="off"</code>&nbsp;: valeur par défaut, l'utilisateur n'est pas averti lorsque l'élément est mis à jour.</li>
+          <li><code>aria-live="polite"</code>&nbsp;: le lecteur d'écran vocalise de manière polie lorsque l'élément est mis à jour. C'est-à-dire que si le lecteur d'écran était déjà en train de lire du texte, celui-ci n'est pas interrompu.</li>
+          <li><code>aria-live="assertive"</code>&nbsp;: le lecteur d'écran est interrompu dans sa lecture et avertit l'utilisateur de la mise à jour le plus tôt possible.</li>
+        </ul>
+
+
+      <h2>Et en Javascript&nbsp;?</h2>
+      <p>Cette première solution permet dans bien des cas de rendre son application accessible. Il existe tout de même quelques cas où il serait pratique de pouvoir faire parler le lecteur d'écran directement à l'aide d'une fonction Javascript (exemple&nbsp;: <code>speak('Article supprimé du panier')</code>). Malheureusement ceci n'est pas disponible nativement.<p>
+      <p>Heureusement, on peut rapidement réaliser une petite fonction Javascript qui utilisera un élément <code>aria-live</code> sous le capot pour réaliser cette fonctionnalité.</p>
+
+      <p>À l'appel de la fonction <code>speak</code>, on ajoute une <code>div</code> à la fin de la page. On lui affecte un attribut <code>aria-live</code> et on insère le message à vocaliser dans la <code>div</code>. Pour ne pas que ce message soit visible dans la page, on peut ajouter également une classe de masquage accessible sur cette <code>div</code>, ainsi celle-ci sera vocalisée mais ne sera pas visible à l'écran.</p>
+
+      <h2>Détail du code</h2>
+
+      <pre><code class="javascript">
+        /* srSpeak(text, priority)
+          text&nbsp;: le message à vocaliser
+          priority (facultatif)&nbsp;: "polite" (par défaut) ou "assertive" */          
+
+        function srSpeak(text, priority) {
+            var el = document.createElement("div");
+            var id = "speak-" + Date.now();
+            el.setAttribute("id", id);
+            el.setAttribute("aria-live", priority || "polite");            
+            el.classList.add("sr-only");
+            document.body.appendChild(el);
+            
+            window.setTimeout(function () {
+              document.getElementById(id).innerHTML = text;      
+            }, 100);
+            
+            window.setTimeout(function () {
+                document.body.removeChild(document.getElementById(id));
+            }, 1000);
+        }
+      </code></pre>
+
+      <p>Rappel&nbsp;: pour que les messages vocalisés ne soient pas visibles à l'écran vous devez avoir <a href="../masquage/index.html">une classe de masquage accessible</a> (<code>sr-only</code>) dans vos <abbr>CSS</abbr>.</p>
+      <h2>Exemple</h2>
+
+      <p>Vous pouvez tester cette fonction grâce au formulaire ci-dessous (à tester avec un lecteur d'écran, sinon on n’entend rien).</p>
+      <div class="form-group">
+        <label for="message">Message à vocaliser</label>
+        <input type="text" id="message" class="form-control">        
+      </div>
+      <button id="btnSpeak" class="btn btn-secondary">Test</button>
+
+      <p>&nbsp;</p>      
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

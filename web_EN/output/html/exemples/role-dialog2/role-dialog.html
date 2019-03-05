@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogs 2/2 - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Dialogs 2/2</h1>
+
+      <h2>Introduction</h2>
+      <p>Here is another dialog example that, instead of displaying a message, will ask the user to select a folder among a list.</p>
+      
+      <h2>Example</h2>
+      <p>Here is the final result of this example.</p>
+
+      <button id="openButton" class="btn btn-secondary">Open the final example</button>
+
+      <!-- Final dialog -->
+      <div id="dialog" role="dialog" aria-labelledby="dialogTitle">
+        <span tabindex="0" class="dialog-start"></span>
+        <div class="dialogContainer">
+          <button class="closeButton" aria-label="close" title="Close">X</button>
+          <div id="dialogTitle">Move files to:</div>
+          <div class="dialogContent">
+            <p id="list-label">My files</p>
+            <div role="listbox" tabindex="0" class="defaultFocus" aria-labelledby="list-label">            
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">My added files</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Misc</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Summer music</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Travel photos</span></div>  
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Spain</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Mountain bike</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Folder 1</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Folder 2</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Folder 3</span></div>
+            </div>
+
+            <button id="newfolder" class="btn btn-secondary">Create a folder</button>
+          </div>
+          <div class="btnbar">
+            <button class="btn btn-secondary">Cancel</button>
+            <button class="btn btn-secondary">Move</button>
+          </div>
+        </div>
+        <span tabindex="0" class="dialog-stop"></span>
+      </div>
+
+      <h2>Implementation</h2>
+
+      <p>Not many changes from the <a href="../role-dialog/role-dialog.html">first dialog example</a>, but in this case we use a list. Make sure to use a relevant labelling using the attribute <code>aria-labelledby</code>.</p>
+
+      <pre><code class="html">
+          &lt;p id="list-label"&gt;My files&lt;/p&gt;
+          &lt;div role="listbox" tabindex="0" class="defaultFocus" aria-labelledby="list-label"&gt;
+            ...            
+      </code></pre>
+
+    </main>
+    
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

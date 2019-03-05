@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestion de la navigation clavier avec ARIA - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Gérer la navigation clavier avec <abbr>ARIA</abbr> et les <i lang="en">Design Patterns</i></h1>
+
+      <h2>Introduction</h2>
+      <p>La gestion des interactions clavier est un des piliers de la recommandation <abbr>ARIA</abbr> (Accessible Rich Internet Application) du <abbr>W3C</abbr>/<abbr>WAI</abbr>. 
+	  Le but est de standardiser la navigation clavier dans les composants d’interface d’une page.<br />
+	  Globalement, la navigation clavier entre les composants d’interface (widget) se fait «&nbsp;classiquement&nbsp;» 
+	  en tabulant. En revanche, à l’intérieur d’un widget, la navigation clavier va être gérée finement 
+	  en respectant les <i lang="en">design patterns</i> qui sont partie intégrante de la recommandation <abbr>ARIA</abbr>.</p>
+
+	  <h2><i lang="en">Design patterns</i></h2>
+
+	  <h3>TabIndex</h3>
+	  <p>En <abbr>HTML5</abbr>, <abbr>ARIA</abbr> étend l’attribut <code>tabindex</code> à tous les éléments visibles et autorise l’utilisation&nbsp;:</p>
+	<ul>
+	<li>d’une valeur négative (<code>-1</code>) pour les éléments ne devant pas être accessibles à la navigation au 
+	 clavier (pas de prise de focus), mais pouvant recevoir le focus par programmation. </li>
+	<li>d’une valeur à <code>0</code>, il permet à l’élément de recevoir le focus comme tout élément nativement focusable.</li>
+	</ul>
+	<h3><i lang="en">Design Patterns</i></h3>
+	<p>En <abbr>ARIA</abbr>, tout part d’un besoin d’homogénéiser les interactions clavier en demandant que la navigation clavier soit identique à une application <i lang="en">desktop</i> (client lourd). 
+	Il faut donc pour chaque widget implémenter l’interaction clavier selon son type (accordéon, barre de navigation, 
+	d’outils, potentiomètre…) en se reportant aux <i lang="en">design patterns</i> (https://www.w3.org/TR/wai-aria-practices/#aria_ex). 
+	En plus de la navigation clavier à implémenter les <i lang="en">design patterns</i> donnent aussi la manière de mettre en œuvre les propriétés et 
+	 états <abbr>ARIA</abbr> pour rendre accessible son <i lang="en">widget</i> toujours en fonction de son type.</p>
+	 <h3>Tests utilisateurs</h3>
+	 <p>Pour valider l’utilisabilité pour les personnes en situation de handicap et la robustesse en fonction des agents utilisateurs (aides techniques et navigateurs), il faut faire tester par des utilisateurs de lecteurs d’écran, à minima (c’est la population la plus impactée par des problèmes d’implémentation des <i lang="en">design patterns</i>).</p>
+   <p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs/aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p> 
+     
+ <p>    Ces tests utilisateurs vont vous permettre de valider que votre widget est ergonomique donc utilisable pour ce type d’utilisateurs et par extension pour l’ensemble des utilisateurs bénéficiant de l’accessibilité (pour rappel, 15% de la population totale).</p>
+
+     
+    </main>
+
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

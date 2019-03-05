@@ -1,0 +1,73 @@
+/* ---- custom mobile section */
+.mobileImg .btn-info {
+  min-height: 6.5rem;
+  white-space: normal;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.mobileImg a div {
+  margin-top : 5px;
+  font-size: 1.6rem;
+}
+
+#content {
+  text-align : justify;
+}
+
+#content img{
+  margin: 5px;
+}
+
+.sideToSide strong {
+  display: block;
+}
+
+#sidebar>ul {
+  -webkit-transition: margin-top .5s ease;
+       -o-transition: margin-top .5s ease;
+          transition: margin-top .5s ease;
+}
+
+.screenreaderContent h3{
+	margin-top: 10px;
+}
+
+.screenreaderContent {
+	border-top : .1rem solid #ddd;
+  background: #fff;
+}
+
+.list-gesture {
+  list-style: none;  
+}
+
+.list-gesture img { 
+  float: left;
+  margin-right: 1rem !important;
+}
+
+.list-gesture h3, .list-gesture p {
+    margin-left: 12rem;
+}
+
+.image-gesture>p {
+  float: right;
+}
+
+.licence {
+	color: #666;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 479px) {
+
+  .list-gesture h3 {
+    clear: left;
+  }
+
+  .list-gesture h3, .list-gesture p {
+    margin-left: 0;
+  }
+}

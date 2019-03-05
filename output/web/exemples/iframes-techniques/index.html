@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Exemple iframe technique - recommandations accessibilité web Orange</title>
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Masquer les <code>iframe</code> techniques de manière accessible</h1>
+
+      <h2>Introduction</h2>
+      <p>On entend par <code>iframe</code> technique une <code>iframe</code> qui a un rôle purement technique et qui n'est pas visible aux utilisateurs. Par exemple, une <code>iframe</code> qui execute un script pour pouvoir enregistrer les actions de l'utilisateur sur la page.</p>
+      <p>Or, les référentiels d'accessibilité nous demandent d'indiquer dans l'attribut <code>title</code> le contenu qui sera présent dans l'<code>iframe</code>, information qui sera accessible aux outils d'assistance (un lecteur d'écran vocalisera l'attribut <code>title</code> d'une <code>iframe</code>).</p>
+      
+      <h2>Cacher l'<code>iframe</code> à tous les utilisateurs</h2>
+      <p>La solution pour cacher l'<code>iframe</code>, y compris aux utilisateurs d'outils d'assistance, est d'ajouter un attribut <code>aria-hidden='true'</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront toujours executés.</p>
+      <p>Par ailleurs, on rajouter un attribut <code>tabindex</code> pour interdire au focus de se déplacer dans l'<code>iframe</code>. Ainsi les utilisateurs qui naviguent à l'aide du clavier, n'iront pas se perdre à l'intérieur de cette dernière.</p>
+      <pre><code class="html">
+      &lt;iframe title="contenu technique" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
+      </code></pre>
+      
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

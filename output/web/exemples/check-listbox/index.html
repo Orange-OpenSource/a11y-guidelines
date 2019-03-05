@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les listbox avec cases à cocher - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les listes <abbr>ARIA</abbr> (<i lang="en">listbox</i>) avec cases à cocher</h1>
+
+      <h2>Introduction</h2>
+      <p>Dans cet exemple, nous repartons de <a href="../listbox/index.html">l’exemple sur les <i lang="en">listbox</i></a> auquel nous ajoutons des cases à cocher. Nous obtiendrons un composant qui nous permettra de sélectionner un élément parmi une liste de choix, comme une <i lang="en">listbox</i> classique, mais qui permettra également de cocher certains éléments. Un composant qu’on pourrait typiquement trouver dans un webmail.</p>
+        
+      <h2>Mise en garde</h2>
+      <p>Bien que des progrès soient réalisés à chaque nouvelle version, le support d’<abbr>ARIA</abbr> est encore partiel pour l’ensemble des lecteurs d’écran. Son utilisation doit être conditionnée par des tests de compatibilité sur l’environnement cible (couple navigateur/lecteur d’écran).</p>
+  
+      <h2>Mise en place</h2>
+      
+      <h3>Code <abbr>HTML</abbr></h3>
+      <p>Le code reprend celui de l’exemple sur les <i lang="en">listbox</i> auquel nous ajoutons l’information concernant l’état coché / non coché. Pour cela nous utilisons l’attribut <code>aria-checked</code>.</p>
+      
+      <pre><code class="html">
+        &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;
+            &lt;li tabindex="-1" role="option" aria-checked="false"&gt;Informations importantes concernant votre compte&lt;/li&gt;
+            …
+        &lt;/ul&gt;
+      </code></pre>
+      
+      <p>Pour afficher à l’écran l’état «&nbsp;coché&nbsp;» de l’élément, on pourrait très bien le faire via <abbr>CSS</abbr>, en affichant un pictogramme juste avant les éléments ayant un attribut <code>aria-checked="true"</code>.<p>
+      <p>Dans cet exemple, nous allons insérer de vraies cases à cocher à l’intérieur des options. Celles-ci ne seront pas vocalisées par le lecteur d’écran grâce à la présence du <code>role="option"</code> (pour le lecteur d’écran, ce sera une option et peu importe ce qu’on met à l’intérieur).</p>
+ 
+      <pre><code class="html">
+        &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;            
+            &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
+                &lt;input tabindex="-1" type="checkbox"&gt;Informations importantes concernant votre compte
+            &lt;/li&gt;
+            …
+        &lt;/ul&gt;
+      </code></pre>
+      
+      <p>Ne pas oublier d’ajouter un attribut <code>tabindex="-1"</code> pour empêcher le focus sur les cases à cocher.</p>
+      <p>Si nous voulons des cases à cocher un peu plus jolies, on peut utiliser celles de <a href="http://boosted.orange.com/">la librairie Boosted</a> par exemple.<br>  
+      Dans ce cas, il faut ajouter également une balise <code>label</code>.</p>
+      <pre><code class="html">
+        &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;            
+            &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
+                &lt;input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
+                Informations importantes concernant votre compte
+            &lt;/li&gt;
+            …
+        &lt;/ul&gt;
+      </code></pre>
+      
+      <p>À noter que la balise <code>label</code> reste vide ici. En effet dans ce composant, on ne souhaite pas que la case à cocher soit sélectionnée si on clique sur le texte affiché dans la liste.</p>
+      
+      <h3>Interactions</h3>
+      <p>Pour gérer l’interaction à la souris, il suffit de modifier la valeur de l’attribut <code>aria-checked</code> lorsqu’une case à cocher est cliquée.</p>
+      
+      <pre><code class="js">
+       $("[type=checkbox]").on("click", function () {
+           if ($(this).prop("checked")) {
+               $(this).parent().attr("aria-checked", "true");
+           } else {
+               $(this).parent().attr("aria-checked", "false");
+           }
+       });
+       </code></pre>
+       
+      <p>Il ne reste plus qu’à gérer l’interaction au clavier. Un élément doit pouvoir être coché ou décoché à l’aide de la barre espace. On insère ce comportement à la suite du code qui gère déjà les flèches du clavier (cf. <a href="../listbox/index.html">exemple sur les <i lang="en">listbox</i></a>).</p>         
+      <pre><code class="js">
+        $("[role=listbox]").on("keydown", function (e) {            
+        var currentItem = $(this).find("[aria-selected=true]");          
+        switch (e.keyCode) {
+            case 38:  // Up arrow
+                if (currentItem.prev().length) {
+                    currentItem.attr("aria-selected", "false");                    
+                    currentItem.prev().attr("aria-selected", "true").focus();
+                }                    
+                e.preventDefault();
+                break;
+            case 40: // Down arrow
+                if (currentItem.next().length) {
+                    currentItem.attr("aria-selected", "false");
+                    currentItem.next().attr("aria-selected", "true").focus();
+                }
+                e.preventDefault();
+                break;                
+<div class="important">            case 32: // Space 
+                if (currentItem.attr("aria-checked") === "true") {
+                    currentItem.attr("aria-checked", "false");
+                    currentItem.find("input[type=checkbox]").prop("checked", false);
+                } else {                      
+                    currentItem.attr("aria-checked", "true");
+                    currentItem.find("input[type=checkbox]").prop("checked", true);
+                }
+                e.preventDefault();
+            break;</div>                     
+        }
+    });   
+    </code></pre>
+                   
+      <h2>Exemple</h2>
+                        
+      <h3 id="email-list">Liste des emails</h3>
+              
+      <div class="row">              
+        <ul role="listbox" tabindex="0" class="col-md-8" aria-labelledby="email-list">
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"><label for="check1"></label>
+                Informations importantes concernant votre compte
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check2" class="o-checkbox" type="checkbox"><label for="check2"></label>
+                Test envoi d’e-mail
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check3" class="o-checkbox" type="checkbox"><label for="check3"></label>
+                Photos du week-end à la mer
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check4" class="o-checkbox" type="checkbox"><label for="check4"></label>
+                Re: Votre commande N°3642
+            </li>          
+        </ul>                
+      </div>   
+    
+      <h3>Place aux tests</h3>
+    
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation à la souris&nbsp;:</strong> on peut sélectionner une option en cliquant sur le texte. On peut cocher ou décocher une option en cliquant sur les cases à cocher.</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation au clavier&nbsp;:</strong> on peut sélectionner une option à l’aide des flèches du clavier haut ou bas. On peut cocher ou décocher une option à l’aide de la barre espace.</p>
+      <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation avec un lecteur d’écran&nbsp;:</strong> mêmes raccourcis clavier (haut, bas et barre espace). Pour chaque élément, le lecteur d’écran nous donne l’information si celui-ci est sélectionné et s’il est coché ou non.</p>
+            
+     
+     <h2>Exemple webmail</h2>
+     <p>Voici une maquette statique qui met en œuvre le composant <i lang="en">listbox</i> de cet exemple et celui de l’exemple sur les <a href="../listbox/index.html"><i lang="en">listbox</i> classiques</a>.</p>
+     <a class="btn btn-secondary" href="../webmail/index.html">Ouvrir le webmail</a>
+          
+     <h2>Liens</h2>
+    <p>Plus d’infos sur <abbr>ARIA</abbr> et les <i lang="en">listbox</i>&nbsp;:</p>
+     <ul lang="en">
+        <li><a hreflang="en" href="http://w3c.github.io/aria/practices/aria-practices.html#Listbox"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices 1.1</a></li>
+        <li><a hreflang="en" href="https://www.w3.org/TR/wai-aria-1.1/#roles">The roles model</a></li>
+     </ul>
+     
+    </main>
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

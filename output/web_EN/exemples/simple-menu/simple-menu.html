@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dropdown menu - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Dropdown menu</h1>
+
+      <h2>Introduction</h2>
+      <p>In this example we will use the <a href="http://boosted.orange.com/components/#dropdowns">drop-down menu</a> available in the <a href="http://boosted.orange.com/">Boosted</a> library. This library based on Bootstrap allows you to quickly create <abbr title="User Interface">UI</abbr> components branded with the Orange colours.</p>
+
+      <h2>Final example</h2>
+      <p>This is how the drop-down looks with our library.</p>
+
+      <!-- Final menu -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+          My account
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">My cart</a></li>
+          <li><a class="dropdown-item" href="#">My orders</a></li>
+          <li><a class="dropdown-item" href="#">My details</a></li>
+          <li role="separator" class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Log out</a></li>
+        </ul>
+      </div>
+
+      <h2>Code example</h2>
+
+      <!-- Example 1 code -->
+      <pre><code class="html">
+      &lt;div class="dropdown"&gt;
+        &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"&gt;
+          My account
+          &lt;span class="caret"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;ul class="dropdown-menu"&gt;
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My cart&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My orders&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My details&lt;/a&gt;&lt;/li&gt;
+          &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Log out&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <h2>Testing</h2>
+      <p>For this menu to be accessible, it must be usable with a mouse, keyboard and screen reader.</p>
+
+      <h3>Keyboard navigation</h3>
+       <dl>
+         <dt>Move the focus to “My Account” using the <kbd>Tab</kbd> key and press the <kbd>Enter</kbd> key.</dt>
+         <dd>The menu opens.</dd>
+         <dt>Use the <kbd>up</kbd> / <kbd>down</kbd> arrows.</dt>
+         <dd>These allow you to navigate the different menu items.</dd>
+         <dt>Press <kbd>Escape</kbd>.</dt>
+         <dd>The menu closes. On closing, the focus is automatically repositioned onto the button that opened the menu.</dd>
+         <dt></dt>
+      </dl>
+
+      <h3>Screen reader navigation</h3>
+       <dl>
+         <dt>Position the cursor on “My Account”.</dt>
+         <dd>The screen reader says there is a drop-down menu, and vocalizes the drop-down state (open or closed).</dd>
+         <dt>Press the <kbd>Enter</kbd> key.</dt>
+         <dd>The menu opens, the first item is selected. This element is automatically vocalized by the screen reader.</dd>
+         <dt>Use the <kbd>up</kbd> / <kbd>down</kbd> arrows.</dt>
+         <dd>These allow you to navigate to the different menu items.</dd>
+         <dt>Select a menu item using the <kbd>Enter</kbd> key.</dt>
+         <dd>The menu closes. As the focus is repositioned automatically, the screen reader again vocalizes the menu button, and its state.</dd>
+       </dl>
+
+       <h2><abbr>ARIA</abbr> attributes</h2>
+       <p>If you do not already use an accessible drop-down component, you will need to add some <abbr>ARIA</abbr> attributes in order to be correctly vocalized by the screen reader.</p>
+       On the opening button:
+       <ul>
+         <li>The <code>aria-haspopup="true"</code> attribute allows the screen reader to vocalize that it is a drop-down menu.</li>
+         <li>The <code>aria-expanded</code> attribute with a <code>true</code>/<code>false</code> value, allows to vocalize menu states (open or closed).
+      </ul>
+
+      Example:
+      <pre><code class="html">
+        &lt;button aria-haspopup="true" aria-expanded="false"&gt;My account&lt;/button&gt;
+      </code></pre>
+
+      On the menu list items:
+      <ul>
+        <li>A <code>role="menu"</code> attribute on the <code>ul</code> list tag.</li>
+        <li>A <code>role="menuitem"</code> attribute on <code>a</code> tags.</li>
+      </ul>
+
+      Example:
+      <pre><code class="html">
+        &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+        &lt;ul role="menu"&gt;
+          &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My cart&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My orders&lt;/li&gt;
+        &lt;/ul&gt;
+      </code></pre>
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

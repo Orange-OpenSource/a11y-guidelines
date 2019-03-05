@@ -1,0 +1,140 @@
+Third part software used by a11y-guidelines:
+
+- dark.min.css and highlight.min.js is released under the BSD License. See LICENSE file for details (https://github.com/isagalaev/highlight.js/blob/master/LICENSE).
+
+- Jquery.min.js /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */ 
+
+- jquery.validate.min.js /*! jQuery Validation Plugin - v1.13.1 - 10/14/2014
+ * http://jqueryvalidation.org/
+ * Copyright (c) 2014 Jorn Zaefferer; Licensed MIT */
+
+- lunr.min.js /**
+ * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 0.4.0
+ * Copyright (C) 2013 Oliver Nightingale
+ * MIT Licensed
+ * @license
+ */
+
+- beautiful-docs Copyright (c) 2013 Tomas Aparicio
+
+Released under MIT license
+
+- Orange boosted with Bootstrap The MIT License (MIT) 
+
+Copyright (c) 2016 Orange
+
+
+Parts list under Orange SA Copyright
+Copyright (C) 2016 Orange SA All rights reserved
+
+The following parts are proprietary information of Orange.
+You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software
+or displayed on this website and owned by Orange SA and its subsidiaries,
+in whole or part of, in any medium, except as required for reasonable and customary use in describing the origin of the software
+and reproducing the content of the NOTICE and DOCUMENTATION files.
+Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
+
+home/inputs/images/accessibility.png
+home/inputs/images/accessibility_cognition.png
+home/inputs/images/accessibility_dexterity.png
+home/inputs/images/accessibility_hearing.png
+home/inputs/images/accessibility_mobility.png
+home/inputs/images/accessibility_speech.png
+home/inputs/images/accessibility_vision.png
+home/inputs/images/chat.png
+home/inputs/images/device_fixed-line_phone.png
+home_EN/inputs/images/accessibility.png
+home_EN/inputs/images/accessibility_cognition.png
+home_EN/inputs/images/accessibility_dexterity.png
+home_EN/inputs/images/accessibility_hearing.png
+home_EN/inputs/images/accessibility_mobility.png
+home_EN/inputs/images/accessibility_speech.png
+home_EN/inputs/images/accessibility_vision.png
+home_EN/inputs/images/chat.png
+home_EN/inputs/images/device_fixed-line_phone.png
+web/inputs/images/exemples/masquage/player.png
+web/inputs/images/exemples/zoom/audio.jpg
+web/inputs/images/exemples/zoom/auto.jpg
+web/inputs/images/exemples/zoom/charge-et-stockage.jpg
+web/inputs/images/exemples/zoom/protection.jpg
+web/inputs/images/carrousel.png
+web/inputs/images/cca.png
+web/inputs/images/contraste.png
+web/inputs/images/dialog.png
+web/inputs/images/focus.png
+web/inputs/images/focus2.png
+web/inputs/images/liens-valider.png
+web/inputs/images/perso1.png
+web/inputs/images/perso2.png
+web/inputs/images/perso3.png
+web/inputs/images/perso4.png
+web/inputs/images/player.png
+web/inputs/images/rechercher.png
+web/inputs/images/service-24.png
+web/inputs/images/skiplink.png
+web/inputs/images/zoom.png
+web/inputs/images/zoom-ko.png
+web/inputs/images/zoom-ok.png
+web_EN/inputs/images/exemples/masquage/player.png
+web_EN/inputs/images/exemples/zoom/audio.jpg
+web_EN/inputs/images/exemples/zoom/auto.jpg
+web_EN/inputs/images/exemples/zoom/charge-et-stockage.jpg
+web_EN/inputs/images/exemples/zoom/protection.jpg
+web_EN/inputs/images/carrousel.png
+web_EN/inputs/images/cca.png
+web_EN/inputs/images/contraste.png
+web_EN/inputs/images/dialog.png
+web_EN/inputs/images/focus.png
+web_EN/inputs/images/focus2.png
+web_EN/inputs/images/liens-valider.png
+web_EN/inputs/images/perso1.png
+web_EN/inputs/images/perso2.png
+web_EN/inputs/images/perso3.png
+web_EN/inputs/images/perso4.png
+web_EN/inputs/images/player.png
+web_EN/inputs/images/rechercher.png
+web_EN/inputs/images/service-24.png
+web_EN/inputs/images/skiplink.png
+web_EN/inputs/images/zoom.png
+web_EN/inputs/images/zoom-ko.png
+web_EN/inputs/images/zoom-ok.png
+mobile/inputs/images/alt.png
+mobile/inputs/images/couleur.png
+mobile/inputs/images/couleur_ios.png
+mobile/inputs/images/custom_alert_axs.png
+mobile/inputs/images/ghost.png
+mobile/inputs/images/ghost_ios.png
+mobile/inputs/images/header.png
+mobile/inputs/images/header_ios.png
+mobile/inputs/images/image_ex.png
+mobile/inputs/images/montagnard.png
+mobile/inputs/images/order.png
+mobile/inputs/images/scroll_h1.png
+mobile/inputs/images/scroll_h2.png
+mobile/inputs/images/scroll_ios_h1.png
+mobile/inputs/images/scroll_ios_h2.png
+mobile/inputs/images/tabs.png
+mobile/inputs/images/text.png
+mobile/inputs/images/zoom.png
+mobile/inputs/images/zoom-ko.png
+mobile/inputs/images/zoom-ok.png
+mobile_EN/inputs/images/alt.png
+mobile_EN/inputs/images/couleur.png
+mobile_EN/inputs/images/couleur_ios.png
+mobile_EN/inputs/images/custom_alert_axs.png
+mobile_EN/inputs/images/ghost.png
+mobile_EN/inputs/images/ghost_ios.png
+mobile_EN/inputs/images/header.png
+mobile_EN/inputs/images/header_ios.png
+mobile_EN/inputs/images/image_ex.png
+mobile_EN/inputs/images/montagnard.png
+mobile_EN/inputs/images/order.png
+mobile_EN/inputs/images/scroll_h1.png
+mobile_EN/inputs/images/scroll_h2.png
+mobile_EN/inputs/images/scroll_ios_h1.png
+mobile_EN/inputs/images/scroll_ios_h2.png
+mobile_EN/inputs/images/tabs.png
+mobile_EN/inputs/images/text.png
+mobile_EN/inputs/images/zoom.png
+mobile_EN/inputs/images/zoom-ko.png
+mobile_EN/inputs/images/zoom-ok.png

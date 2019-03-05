@@ -1,0 +1,48 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+[role=dialog], .dialog {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1050;    
+  text-align: center;
+  display: none;
+  background-color : rgba(255,255,255,0.6);
+}
+
+.dialogContainer {  
+  width: 35rem;
+  height: 15rem;
+  border: 2px solid #000;
+  text-align: center;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+}
+
+[role=dialog] button,
+.dialog button{
+  width: 12rem;
+}
+
+[role=dialog] .closeButton,
+.dialog .closeButton {
+  float: right;
+  background: none;
+  border: medium none;
+  margin: 0px;
+  padding: 0px;
+  width: 3rem;
+}
+
+[role=dialog] .closeButton:focus,
+.dialog .closeButton:focus,
+[role=dialog] .closeButton:hover,
+.dialog .closeButton:hover {
+  color: #fff;
+  background: #000;
+} 

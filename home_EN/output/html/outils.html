@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Orange digital accessibility guidelines</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Home</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Presentation</a></li>
+                        <li><a class="page-focus" href="focus.html">Types of disabilities</a></li>  
+                        <li><a class="page-outils" href="outils.html">Assistive technologies</a></li>
+                        <li><a class="page-test" href="test.html">Testing methods</a></li>                        
+                        <li><a class="page-organisation" href="organisation.html">Site organization</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">About</a></li>
+                      </ul>
+                  </li>                                    
+                  <li class="nav-item"><a class="nav-link" href="../web_EN/index.html">Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="../index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="../index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>    
+
+    <nav>
+      <span class="sr-only">You are here : </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/home_EN/index.html">Home</a></li>        
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="orange-digital-accessibility-guidelines-h2-class-page-title-assistive-technologies-h2-">Orange digital accessibility guidelines <h2 class="page-title">Assistive technologies</h2></h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Assistive technologies"}]);
+});</script>
+
+<p>People with disabilities can use assistive technologies to access the web whatever the device. These technologies include:</p>
+<ul>
+<li>Software solutions, such as screen reader or digital screen magnifiers,</li>
+<li>Equipment : ergonomic mice, keyboards with large keys, microphones, trackballs, Braille display, etc.</li>
+</ul>
+<p>Digital services are accessible when they work with assistive technologies. It is important to highlight these technologies work only when web sites, mobile applications and digital content are created according to design and development accessibility rules (see dedicated tabs of this website for more information).</p>
+<h2 id="some-examples-and-definitions">Some examples and definitions</h2>
+<h3 id="screen-reader">Screen reader</h3>
+<p>A <strong>screen reader</strong> is a software application that allows blind or visually impaired people to read the information displayed on the screen with a speech synthesizer or braille display.<br>Examples: Jaws and NVDA on Windows PC, TalkBack on Android devices, VoiceOver on Apple mobile devices or Mac computers.</p>
+<p><img src="../images/audio.jpg" alt="" class="img-fluid"></p>
+<h3 id="braille-display">Braille display</h3>
+<p>A <strong>Braille display</strong> allows reading digital information using fingers. It can be connected to a computer or any other device.  The Braille display get the text currently highlighted on the screen and then the screen reader translates the text in Braille and the device displays it on its Braille cells. Each cell has metal or nylon pins to create Braille dots. Braille displays are refreshable.</p>
+<figure>
+    <img src="../images/plage-braille.jpg" alt="Braille display" class="img-fluid">
+    <figcaption>Picture: Braille display, Karola Riegler, 2009, License CC BY ND</figcaption>
+</figure>
+
+<h3 id="screen-magnifier">Screen magnifier</h3>
+<p>A <strong>screen magnifier</strong> is a software application that increases the size of texts and graphics on device screen. Screen magnifiers can also provide features to customize color contrasts, brightness, cursor…<br>Some screen readers offer option to read aloud captured text or all screen.<br>Example: ZoomText.</p>
+<figure>
+    <img src="../images/loupe.jpg" alt="computer screen with Windows magnifier at 400% magnification" class="img-fluid">
+    <figcaption>Picture: computer screen with Windows magnifier at 400% magnification.</figcaption>
+</figure>
+
+<h3 id="keyboard-keyguard">Keyboard keyguard</h3>
+<p>A <strong>keyguard</strong> is an overlay made of plastic and perforated with holes for keys on the keyboard. It is placed on top of the keyboard. It helps prevent the user from unintentionally pressing multiple keys.</p>
+<figure>
+    <img src="../images/guidedoigt.jpg" alt="keyboard with a keyguard" class="img-fluid">
+    <figcaption>Picture: keyguard copyplastic.com</figcaption>
+</figure>
+
+<h3 id="pointing-devices">Pointing devices</h3>
+<p>Pointing devices are any device used to control the movement of a cursor on a computer screen (or tablet or mobile). For people who lack the coordination to use a standard mouse or keyboard, there are many alternatives:</p>
+<ul>
+<li><strong>Joysticks</strong> (or joystick mouse) consist of a stick that pivots on a base. They allow controlling the cursor by shifting the stick. </li>
+<li><strong>Trackballs</strong> are equipped with a ball that moves the cursor by rolling it.</li>
+<li><strong>Switches</strong> or contactors are buttons that have two states – on and off -. Switches have different activation methods according to the body part that can be controlled: eyes, mouth, head, foot, voice etc.  </li>
+</ul>
+<p>Most of these pointing devices rely on keyboard-only navigation features to perform mouse/pointer functions.   </p>
+<h3 id="keyboard-only-navigation">Keyboard-only navigation</h3>
+<p><strong>Keyboard navigation</strong> refers to using keys instead of a mouse to move from item to item on the screen. The movement must be in a meaningful order, order specified by the operating system or the application. The focus (the place where the cursor is located) must be visible. 
+Typical keys used for keyboard navigation are the Tab key and Shift+Tab to move between controls, as well as arrow keys to move up, down, and sideways between items.
+Keyboard navigation is essential for some assistive technologies and requires compliance with design and development accessibility criteria.</p>
+<p><img src="../images/clavier.jpg" alt="" class="img-fluid"></p>
+<h3 id="speech-recognition">Speech recognition</h3>
+<p><strong>Speech recognition</strong> is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.  </p>
+<p>Equivalent term: voice recognition.<br>Examples: Dragon dictation software, voice assistants of smartphones.</p>
+<figure>
+    <img src="../images/vocale.jpg" alt="Person on the phone" class="img-fluid">
+    <figcaption>Photo: Alex Washburn / Wired / Creative Commons License</figcaption>
+</figure>
+
+<h3 id="transcript">Transcript</h3>
+<p>A <strong>transcript</strong> is the text version of video or audio recordings. The transcript is presented in a digital document (Word, PDF, HTML...).</p>
+<h3 id="closed-captions">Closed captions</h3>
+<p><strong>Closed captions</strong> are audio transcribed into text and reflect both spoken words and non-verbal sounds. The text is synchronized within the video to match the audio. Closed captions are usually located on the bottom of a video screen as an overlay.</p>
+<p><img src="../images/soustitres.jpg" alt="Screenshot of a video with closed captions" class="img-fluid">    </p>
+<h3 id="audio-description">Audio description</h3>
+<p><strong>Audio description</strong> is a narration added to the soundtrack to describe important visual details that cannot be understood from the main soundtrack alone.  Audio description is a means to inform individuals about visual content essential for comprehension.  Audio description of video provides information about actions, characters…  </p>
+<p>Equivalent terms: video description, descriptive narration.</p>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les boîtes de dialogue 1/2 - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les boîtes de dialogue 1/2</h1>
+
+      <h2>Préambule</h2>
+      <p>Les boîtes de dialogue font partie des composants que l’on retrouve régulièrement sur un site web. Malheureusement il n’existe pas de composant natif HTML permettant de créer ce type d’objet. Elles doivent donc être créées de toute pièce lors du développement, phase qui introduit souvent des problèmes d’accessibilité si on n’y prête pas attention.</p>
+      <p>Les boîtes de dialogue présentent souvent de cruelles difficultés, jusqu’à une complète inaccessibilité pour les utilisateurs qui naviguent à l’aide du clavier (touche <kbd>Tab</kbd>), ou celles qui naviguent à l’aide d’un lecteur d’écran (personnes malvoyantes ou non-voyantes). Cet exemple liste pas à pas les différentes étapes nécessaires pour créer une boîte de dialogue accessible.</p>
+      <p><strong>Rappel ergonomie&nbsp;:</strong> il faut éviter l’emploi des boîtes de dialogue, fenêtres modales et autres popins, en particulier pour afficher de l’information, car leur utilisabilité et lisibilité sont <em>problématiques pour tous les utilisateurs</em>. Ne réserver leur emploi qu’à une petite quantité d’information avec un appel à action (validation d’une action, confirmation d’effacement de données…).</p>
+      <p>Si vous ne souhaitez pas créer ce composant de toute pièce, vous pouvez également utiliser <a href="http://boosted.orange.com/javascript/#modals">le composant «&nbsp;modal&nbsp;»</a> de la librairie <a href="http://boosted.orange.com/">Boosted</a> qui présente le double avantage d’être accessible et d’être déjà aux couleurs de la charte Orange.</p>
+      <h2>Exemple final</h2>
+      <p>Voici le rendu final de la boîte de dialogue dont nous allons expliquer la création pas à pas dans cet exemple.</p>
+
+      <p><button id="final-openButton" class="btn btn-secondary">Ouvrir l’exemple final</button></p>
+
+      <!-- Final dialog -->
+      <div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description">
+        <span tabindex="0" class="dialog-start"></span>
+        <div class="dialogContainer">
+          <button class="closeButton" aria-label="Fermer" title="Fermer">X</button>
+          <h1 id="final-dialogTitle">Avertissement</h1>
+          <p id="final-description">Je suis une boîte de dialogue modale. Je suis accessible à la souris, au clavier et au lecteur d’écran.</p>
+          <button class="btn btn-secondary defaultFocus">J’ai compris</button>
+          <button class="btn btn-secondary">Annuler</button>
+        </div>
+        <span tabindex="0" class="dialog-stop"></span>
+      </div>
+
+      <h2>Étape 1&nbsp;: définition du squelette</h2>
+
+      <p>Nous créons ici le squelette de notre boîte de dialogue à l’aide d’une balise <code>&lt;div&gt;</code>. Nous lui ajoutons&nbsp;:</p>
+        <ul>
+          <li>Un bouton «&nbsp;x&nbsp;» qui permettra de fermer la boîte de dialogue.</li>
+          <li>Un titre.</li>
+          <li>Un message.</li>
+          <li>Deux boutons permettant à l’utilisateur d’interagir.</li>
+        </ul>      
+
+      <!-- Dialog 1 -->
+      <div id="step1-dialog" class="dialog">
+        <div class="dialogContainer">
+          <button class="closeButton">X</button>
+          <h1>Avertissement</h1>
+          <p>Je suis une boîte de dialogue modale. Je suis accessible à la souris, au clavier et au lecteur d’écran.</p>
+          <button class="btn btn-secondary">J’ai compris</button>
+          <button class="btn btn-secondary">Annuler</button>
+        </div>
+      </div>
+
+      <!-- Code de l’exemple 1 -->
+      <pre><code class="html">
+      &lt;div class="dialog"&gt;
+        &lt;div class="dialogContainer"&gt;
+          &lt;button&gt;X&lt;/button&gt;
+          &lt;h1&gt;Avertissement&lt;/h1&gt;
+          &lt;p&gt;Je suis une boîte de dialogue modale. Je suis accessible à la souris, au clavier et au lecteur d’écran.&lt;/p&gt;
+          &lt;button&gt;J’ai compris&lt;/button&gt;
+          &lt;button&gt;Annuler&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <p><button id="step1-openButton" class="btn btn-secondary">Ouvrir l’exemple étape 1</button></p>
+
+      <h3>Place aux tests</h3>
+      <ul>
+        <li><strong>Navigation au clavier&nbsp;:</strong> déplacer le focus sur le bouton «&nbsp;Ouvrir l’exemple étape 1&nbsp;» à l’aide de la touche <kbd>Tab</kbd> et valider avec la touche <kbd>Entrée</kbd>. La boîte de dialogue s’affiche, par contre on ne sait plus où est le focus. Si on appuie à nouveau sur la touche <kbd>Tab</kbd> pour tenter de fermer la boîte de dialogue, on se rend compte que le focus se déplace dans la page en arrière-plan et non dans la boîte de dialogue. Enfin la touche <kbd>Échap</kbd> n’a aucun effet.</li>
+        <li><strong>Navigation au lecteur d’écran&nbsp;:</strong> se positionner sur le bouton «&nbsp;Ouvrir l’exemple 1&nbsp;» à l’aide du lecteur d’écran puis valider avec la touche <kbd>Entrée</kbd>. La boîte de dialogue s’affiche mais au lecteur d’écran on n’entend rien. C’est comme si le bouton n’avait aucun effet, on peut continuer à naviguer normalement.</li>
+      </ul>
+
+      <h2>Étape 2&nbsp;: gérer la navigation au clavier</h2>
+
+      <p>Pour que l’on puisse naviguer correctement à l’aide du clavier&nbsp;:</p>
+      <ul>
+        <li>Le focus doit être positionné dans la boîte de dialogue lors de son ouverture et repositionné lors de sa fermeture.</li>
+        <li>Le focus ne doit pas pouvoir sortir de la boîte de dialogue lors de la navigation à l’aide de la touche <kbd>Tab</kbd>.</li>
+        <li>La touche <kbd>Échap</kbd> permet de fermer la boîte de dialogue.</li>
+      </ul>
+
+      <p>Dans ce nouvel exemple, on mémorise l’emplacement du focus à l’ouverture&nbsp;:</p>
+      <pre><code class="javascript">
+       // Sauvegarde le focus pour le repositionner à la fermeture
+       $(’#step2-dialog’).attr(’data-focusBack’, ’step2-openButton’);
+
+       // Place le focus sur l’élément par défaut
+       $(’#step2-dialog .defaultFocus’).focus();
+      </code></pre>
+
+      <p>On repositionne le focus lors de la fermeture&nbsp;:</p>
+      <pre><code class="javascript">
+        // Repositionne le focus à la fermeture de la dialogue
+        $(’#’+$(’#step2-dialog’).attr(’data-focusBack’)).focus();
+      </code></pre>
+
+      <p>On empêche le focus de sortir de la boîte de dialogue. Lorsque celui-ci arrive sur le dernier élément on le repositionne sur le premier et inversement. Il existe plusieurs solutions pour créer ce comportement. Dans cet exemple, on ajoute deux balises <code>span</code> vides au début et à la fin de la dialogue. Celles-ci sont rendues focusables à l’aide d’un attribut <code>tabindex="0"</code>. Lorsque la première balise <code>span</code> reçoit le focus, on déplace celui-ci sur le dernier élément de la boîte de dialogue. Lorsque le dernier <code>span</code> reçoit le focus, on déplace celui-ci en haut de la boîte de dialogue.</p>
+      <p>Les balises <code>span</code> vides offrent l’avantage de ne pas être vocalisées par les lecteurs d’écran.</p>
+
+      <pre><code class="javascript">
+       $(’.dialog-start’).on(’focus’, function () {
+          $(this).parent().find(’button:last’).focus();
+       });
+
+       $(’.dialog-stop’).on(’focus’, function () {
+          $(this).parent().find(’button:first’).focus();
+       });
+      </code></pre>
+
+      <!-- Dialog 2 -->
+      <div id="step2-dialog" class="dialog">
+        <span tabindex="0" class="dialog-start"></span>
+        <div class="dialogContainer">
+          <button class="closeButton">X</button>
+          <h1 id="final-dialogTitle2">Avertissement</h1>
+          <p id="final-description2">Je suis une boîte de dialogue modale. Je suis accessible à la souris, au clavier et au lecteur d’écran.</p>
+          <button class="btn btn-secondary defaultFocus">J’ai compris</button>
+          <button class="btn btn-secondary">Annuler</button>
+        </div>
+        <span tabindex="0" class="dialog-stop"></span>
+      </div>
+
+      <p>Enfin on écoute l’événement <code>onKeyDown</code> pour fermer la dialogue lorsque la touche <kbd>Échap</kbd> est pressée.</p>
+      <p>Voici le code HTML à jour de la boîte de dialogue&nbsp;:</p>
+      <pre><code class="html">
+      &lt;div id="step2-dialog" class="dialog"&gt;
+        &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
+        &lt;div class="dialogContainer"&gt;
+          &lt;button&gt;X&lt;/button&gt;
+          &lt;h1&gt;Avertissement&lt;/h1&gt;
+          &lt;p&gt;Je suis une boîte de dialogue modale. Je suis accessible à la souris, au clavier et au lecteur d’écran.&lt;/p&gt;
+          &lt;button class="defaultFocus"&gt;J’ai compris&lt;/button&gt;
+          &lt;button&gt;Annuler&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <p><button id="step2-openButton" class="btn btn-secondary">Ouvrir l’exemple étape 2</button></p>
+
+      <h3>Place aux tests</h3>
+      <ul>
+        <li><strong>Navigation au clavier&nbsp;:</strong> il n’y a plus de problème, le focus est correctement déplacé à l’ouverture et à la fermeture&nbsp;; de plus le focus ne peut plus sortir de la boîte de dialogue lors de la navigation à l’aide de la touche <kbd>Tab</kbd>. Enfin la touche <kbd>Échap</kbd> permet la fermeture de la boîte de dialogue.</li>
+        <li><strong>Navigation au lecteur d’écran&nbsp;:</strong> à l’ouverture de la boîte de dialogue on entend «&nbsp;J’ai compris bouton&nbsp;». Le fait de déplacer le focus sur le bouton par défaut permet de faire vocaliser automatiquement celui-ci par le lecteur d’écran. Par contre l’utilisateur n’a pas connaissance ni du titre, ni du message affiché dans la boîte de dialogue.</li>
+      </ul>
+
+      <h2>Étape 3&nbsp;: gérer la navigation au lecteur d’écran</h2>
+
+      <p>Pour que l’on puisse naviguer correctement à l’aide d’un lecteur d’écran&nbsp;:</p>
+      <ul>
+        <li>Celui-ci doit indiquer à l’utilisateur qu’une boîte de dialogue vient de s’ouvrir (ajout d’un rôle ARIA <code>dialog</code> ).</li>
+        <li>Le titre de la boîte de dialogue ainsi que le message affiché doivent être vocalisés à l’utilisateur (ajout des attributs <code>aria-labelledby</code> et <code>aria-describedby</code>).</li>
+        <li>Le bouton par défaut doit également être vocalisé, ceci a déjà été réalisé à l’étape précédente (le fait de déplacer le focus sur le bouton à l’ouverture de la boîte permet de faire vocaliser celui-ci par le lecteur d’écran).</li>
+      </ul>
+
+      <p>L’attribut <code>aria-labelledby</code> permet d’indiquer l’<code>id</code> de l’élément contenant le titre de la boîte de dialogue. Celui-ci sera vocalisé automatiquement par le lecteur d’écran. L’attribut <code>aria-describedby</code> permet d’indiquer l’<code>id</code> de l’élément contenant la description. Cette description sera vocalisée automatiquement après le titre de la boîte de dialogue. Enfin l’attribut <code>aria-label</code> sur le bouton de fermeture «&nbsp;X&nbsp;» permet de spécifier un libellé à vocaliser (sinon par défaut celui-ci sera vocalisé&nbsp;: «&nbsp;x&nbsp;»).</p>
+
+      <pre><code class="html">
+      &lt;div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description"&gt;
+        &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
+        &lt;div class="dialogContainer"&gt;
+          &lt;button aria-label="fermer" title="Fermer"&gt;X&lt;/button&gt;
+          &lt;h1 id="final-dialogTitle"&gt;Avertissement&lt;/h1&gt;
+          &lt;p id="final-description"&gt;Je suis une boîte de dialogue modale. Je suis accessible à la souris, au clavier et au lecteur d’écran.&lt;/p&gt;
+          &lt;button class="defaultFocus"&gt;J’ai compris&lt;/button&gt;
+          &lt;button&gt;Annuler&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <p><button id="final-openButton2" class="btn btn-secondary">Ouvrir l’exemple final</button></p>
+
+      <h3>Place aux tests</h3>
+      <ul>
+        <li><strong>Navigation au lecteur d’écran&nbsp;:</strong> le lecteur d’écran indique correctement qu’une boîte de dialogue vient de s’ouvrir. Il annonce le titre ainsi que la description. Enfin il indique que le focus est positionné sur le bouton «&nbsp;J’ai compris&nbsp;».</li>
+      </ul>
+
+      <h3>Note sur la navigation à l’aide du lecteur d’écran</h3>
+      <p>Dans une page web, la navigation au lecteur d’écran s’effectue principalement à l’aide des touches <kbd>Flèche haut</kbd> et <kbd>Flèche bas</kbd>. Ce mode de navigation est appelé «&nbsp;mode document&nbsp;». On peut également utiliser la touche <kbd>Tab</kbd> mais dans ce cas seuls les éléments focusables seront vocalisés.</p>
+      
+      <p>Dans les applications natives, la navigation s’effectue principalement à l’aide de la touche <kbd>Tab</kbd>. Ce mode de navigation est appelé «&nbsp;mode application&nbsp;». L’utilisation du rôle ARIA <code>dialog</code>, passe le lecteur d’écran dans le «&nbsp;mode application&nbsp;», c’est à dire que la navigation avec les flèches n’est plus disponible lorsqu’une boîte de dialogue est affichée. Dans ce cas il faut utiliser la touche <kbd>Tab</kbd> pour naviguer entre les différents boutons de la dialogue.</p>
+      
+      <p><strong>À noter</strong> qu’il est également possible de forcer l’utilisation du mode «&nbsp;application&nbsp;» ou «&nbsp;document&nbsp;» à l’aide de l’attribut <code>role</code>. Cependant les utilisateurs n’étant pas habitués à ces changements de modes de navigation il est pour le moment <strong>déconseillé de les utiliser</strong>, sauf cas exceptionnels&nbsp;:</p>
+      <pre><code class="html">
+      &lt;div role="application"&gt;…&lt;/div&gt;
+      &lt;div role="document"&gt;…&lt;/div&gt;
+      </code></pre>
+
+      <br><br><br>
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestion de l’agrandissement des caractères - recommandations accessibilité web Orange</title>
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Gestion de l’agrandissement des caractères</h1>
+
+      <h2>Préambule</h2>
+      <p>
+            L’agrandissement de la taille des caractères est utilisé par beaucoup d’utilisateurs (les personnes senior, les personnes malvoyantes, les personnes qui devraient porter une paire de lunettes mais qui n’en portent pas…). Les recommandations d’accessibilité préconisent la possibilité d’agrandir la taille du texte et seulement du texte par deux (200%) sans perte d’information. À ce niveau de zoom, la présentation peut être altérée, mais le texte doit rester lisible (pas de texte tronqué ni superposé).
+      </p>
+          
+      <h2>Zoom par défaut du navigateur</h2>
+      <p>
+            Tous les navigateurs récents offrent désormais la possibilité de zoomer la page. Cette option permet d’agrandir la totalité de la page (les textes, les images, l’espacement entre les différentes zones de la page…). 
+            Cette option, bien que satisfaisante pour les utilisateurs occasionnels, a l’inconvénient de faire apparaître une barre de défilement horizontal qui rend la lecture de la page difficile.            
+      </p>
+            
+      <h3>Mise en évidence du problème</h3>
+      <p>Exemple de page avec un niveau de zoom à 100%</p>
+      <div class="zoom normal">
+            La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.            
+      </div>
+      <br>
+      <p>Ce premier exemple simule le zoom par défaut du navigateur. La totalité de la page s’agrandit, deux barres de défilement apparaissent (horizontal et vertical). Le texte est difficile à lire.</p>
+      
+      <div class="zoom">
+            <div>
+                  La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.            
+            </div>
+      </div>
+      <br>
+      <p>Dans ce deuxième exemple, on simule uniquement l’agrandissement de la taille du texte. Ici, la largeur de la page reste inchangée, cela entraîne uniquement l’apparition d’un ascenseur vertical. La lecture du texte est beaucoup plus simple.</p>      
+      <div class="zoom">            
+            La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.            
+      </div>
+            
+      <h2>Zoom de la taille du texte uniquement</h2>
+      <p>
+            Heureusement certains navigateurs permettent d’agrandir uniquement la taille du texte. C’est le cas de Firefox par exemple (option disponible dans le menu Affichage&nbsp;&gt; Zoom&nbsp;&gt; Zoom texte seulement).
+      </p>
+      <p><img alt="capture d’écran de l’option Zoom texte seulement dans Firefox" src="../../images/zoom-firefox.png"></p>
+
+      <p>Lorsque cette option est activée, il se peut que votre page ne s’affiche pas correctement avec un zoom à 200% (dans Firefox faire quatre fois <kbd>Ctrl+</kbd>). Bien souvent, il s’agit d’un problème lié à l’utilisation d’unités non-relatives telles que les pixels ou les points (<code>px</code>, <code>pt</code>).</p>
+     <h2>Les unités relatives</h2>     
+  <p>   L’utilisation d’unités relatives pour le texte telles que les <code>%</code>, les <code>em</code>, ou les <code>rem</code>, mais également dans le dimensionnement des zones de l’écran (taille des <code>div</code>) permet de résoudre les problèmes. En effet, si le texte peut être zoomé alors les <i lang="en">containers</i> doivent aussi suivre l’augmentation de la taille pour ne pas tronquer ou faire se chevaucher le texte.</p>
+      
+      <h3>Exemple non-valide</h3>
+      
+      <p> Cet exemple utilise des pixels pour dimensionner la hauteur des éléments.</p>             
+      
+      <p><a href="exemple1.html" class="btn btn-secondary">Ouvrir l’exemple 1</a></p>
+      
+      <h3>Exemple valide</h3>
+      <p> Il y a plusieurs façons de corriger le problème, par exemple en utilisant une unité relative pour dimensionner la hauteur des éléments.</p>
+      
+      <p>On pourrait par exemple remplacer&nbsp;:<br>
+      <code>height: 450px;</code><br>
+      par une hauteur variable en fonction de la taille des caractères&nbsp;:<br>
+      <code>height: 45rem;</code></p>
+            
+      <p>Ou encore plus simplement, en gardant les pixels, mais en précisant qu’il s’agit d’une hauteur minimale&nbsp;:<br> 
+      <code>min-height: 450px;</code></p>
+      
+      <p><a href="exemple2.html" class="btn btn-secondary">Ouvrir l’exemple 2</a></p>
+      
+      <h2>Conclusion</h2>
+      
+      <p>Il est indispensable de tester vos pages avec le zoom à 200% et l’option «&nbsp;Zoom texte seulement&nbsp;» activée. C’est la seule façon de vérifier si vos pages restent lisibles. Bien qu’il s’agisse de corrections mineures à apporter, celles-ci peuvent changer totalement la façon dont l’information sera perçue par certains utilisateurs.</p>
+      
+      <br><br><br>
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

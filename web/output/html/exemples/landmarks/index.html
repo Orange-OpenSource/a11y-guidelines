@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Régions (landmarks) ARIA - recommandations accessibilité web Orange</title>
+
+<!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les régions ou <i lang="en">landmarks</i> <abbr>ARIA</abbr></h1>
+
+      <h2>Préambule</h2>
+      <p>Dans cet exemple, nous allons voir comment améliorer la navigation dans la page en ajoutant de la sémantique au contenu permettant de repérer plus facilement les grandes régions de la page.</p>
+      <h2>Théorie</h2>
+      <p> <abbr>HTML5</abbr> introduit de nouvelles balises, notamment des balises sémantiques (<code>main</code>, <code>aside</code>, <code>footer</code> et <code>header</code>, ...).</p>
+      <p>Ces balises doivent être utilisées seules sans les rôles <abbr>ARIA</abbr> correspondants car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
+    
+      Pour une page en <abbr>HTML5</abbr>&nbsp;:
+      
+      <pre><code class="html">
+      &lt;head&gt;
+        …
+        &lt;title&gt;Titre de la page&lt;/title&gt;
+        …
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;h1&gt;…&lt;/h1&gt;
+          &lt;nav&gt;…navigation…&lt;/nav&gt;
+          &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
+          …
+        &lt;/header&gt;
+        &lt;main&gt;
+           &lt;nav aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
+           &lt;section&gt;
+             &lt;header&gt;
+               &lt;h1&gt;Actualités&lt;/h1&gt; 
+               &lt;p&gt; 21 juin 2018 - Fête de la musique&lt;/p&gt;
+             &lt;/header&gt;
+             &lt;p&gt;contenu de la section&lt;/p&gt;
+             &lt;footer&gt;
+               &lt;p&gt;contenu du pied de section&nbsp;: copyright…&lt;/p&gt;
+               …
+             &lt;/footer&gt;
+          &lt;/section&gt;
+          &lt;article&gt;
+          […]
+          &lt;/article&gt;
+
+          […]
+
+        &lt;/main&gt;
+        &lt;aside&gt;
+          &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
+          […]
+        &lt;/aside&gt;
+        &lt;footer&gt;
+          &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
+          […]
+        &lt;/footer&gt;
+      &lt;/body&gt;
+      </code></pre>
+         
+      Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:
+      
+      <pre><code class="html">
+    &lt;head&gt;
+        …
+      &lt;title&gt;Titre de la page&lt;/title&gt;
+        …
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div role="banner"&gt;
+          &lt;h1&gt;…&lt;/h1&gt;
+          &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
+          &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
+          …
+        &lt;/div&gt;
+      &lt;div role="main"&gt;
+      &lt;div role="navigation" aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
+        &lt;div role="region"&gt;
+          &lt;div role="header"&gt;
+            &lt;h1&gt;Actualités&lt;/h1&gt; 
+            &lt;p&gt; 21 juin 2018 - Fête de la musique&lt;/p&gt;
+          &lt;/header&gt;
+          &lt;p&gt;contenu de la région&lt;/p&gt;
+          &lt;div role="contentinfo"&gt;
+            &lt;p&gt;contenu du pied de région&nbsp;: copyright…&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div role="article"&gt;
+        […]
+        &lt;/div&gt;
+
+      […]
+
+      &lt;/div&gt;
+      &lt;div role="complementary"&gt;
+        &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
+          […]
+        &lt;/div&gt;
+      &lt;div role="contentinfo"&gt;
+        &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
+          […]
+      &lt;/div&gt;
+    &lt;/body&gt;
+      </code></pre>
+
+
+      <h3>Usages</h3>
+      <ul>
+        <li>Il ne peut y avoir qu’une seule balise <code>main</code> ou donc un seul <code>role=main</code> par page afin d’identifier le contenu principal d’une page.</li>
+        <li>La balise <code>section</code> ou <code>role=region</code> permet de thématiquement regrouper du contenu, par exemple, des chapitres d'un livre, les grandes parties d'une page d'accueil...</li>
+        <li>La balise <code>article</code> ou <code>role=article</code> est une portion autonome de la page, en général, réutilisable, par exemple, un article de blog, d'un journal, un commentaire d'un blog...</li>
+        <li>Le <code>role=navigation</code> ou la balise <code>nav</code> permet d’identifier les principales navigations internes au site. Les bonnes pratiques demandent que l’on utilise 3 balises ou rôles <code>nav</code>ou navigation maximum par page.</li>
+        <li>La balise <code>footer</code> ou le <code>role=contentinfo</code> permettent d’identifier le pied de page. Il doit être unique dans la page, sauf lorsqu'il est présent dans des balises <code>section</code>, <code>role=region</code> ou <code>article</code>, <code>role=article</code>.</li>
+        <li>Le couple balise <code>header</code>, <code>role=header</code> identifie l’en-tête de la page. Lui aussi doit être unique, sauf lorsqu'il est présent dans des balises <code>section</code>, <code>role=region</code> ou <code>article</code>, <code>role=article</code>.</li>
+        <li>Pour identifier le formulaire de recherche dans le site, on utilisera seul le <code>role=search</code> <abbr>ARIA</abbr>.</li>
+        <li>Si besoin, le contenu annexe au contenu principal de la page (information complémentaire, publicité…) doit être identifié en utilisant la balise <code>aside</code> ou le <code>role=complementary</code>.</li>
+      </ul>
+<p>Toutes ces landmarks/régions peuvent s'appuyer sur les attributs <abbr>ARIA</abbr> que sont <code>aria-label</code>, <code>aria-labelledby</code>` et <code>aria-describedby</code> afin de leur fournir un nom accessible plus pertinent. 
+  
+  Plus de détails sur <a href="../../label-ledby-describedby.html">"Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"</a>.</p>
+      <h3><i lang="en">Landmarks</i>, utilisateurs et aides techniques</h3>
+      <p>Les balises <abbr>HTML5</abbr> définissant les grandes régions de la page ont un support suffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). On doit donc les utiliser pour structurer sa page sans leur adjoindre des rôles <i lang="en">Landmarks</i>.</p>
+      <p>Mettre en place ces <i lang="en">landmarks</i> <abbr>ARIA</abbr> est une bonne pratique, car elle peut améliorer la navigation de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

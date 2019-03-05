@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Créer des tags accessibles 1/2 - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Créer des «&nbsp;tags&nbsp;» accessibles 1/2</h1>
+
+      <h2>Préambule</h2>
+      <p>Dans cet exemple, nous allons voir comment réaliser des «&nbsp;tags&nbsp;» accessibles. Vous savez, ces boutons que nous utilisons pour taguer du contenu, pour afficher une liste de destinataires...</p>
+      
+      <h2>Rendu final</h2>
+      <p>Voici un exemple de rendu graphique&nbsp;:</p>
+      <img src="tag.png" alt="capture d’écran de plusieurs tag dans une page web">
+
+      <h2>Structure HTML</h2>
+      <p>Comme les tags ne se promènent jamais seuls, nous allons créer une liste HTML. Ainsi, un utilisateur qui navigue à l’aide d’un lecteur d’écran entendra directement le nombre de tags affichés: «&nbsp;Liste de x éléments…&nbsp;».
+      </p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+            &lt;li>Alcatel&lt;/li&gt;
+            &lt;li>Doro&lt;/li&gt;
+            &lt;li>Apple&lt;/li&gt;
+            &lt;li>LG&lt;/li&gt;
+            &lt;li>Sony&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 1</h3>
+        <a target="_blank" title="Ouvrir l’exemple 1" href="exemple1.html"><img src="exemple1.png" alt="ouvrir l’exemple 1 (nouvelle fenêtre)"></a>
+      </div>
+
+      <h2>Suppression d’un tag</h2>
+      <p>Un tag doit pouvoir être supprimé. Nous allons ajouter un bouton «&nbsp;Supprimer&nbsp;» sur chaque élément de notre liste. Pour les utilisateurs qui ne voient pas l’écran et qui naviguent à l’aide d’un lecteur d’écran, un simple bouton «&nbsp;Supprimer&nbsp;» n’est pas suffisant. Nous allons ajouter le nom du tag dans l’intitulé du bouton pour ôter toute ambiguïté. Exemple&nbsp;: «&nbsp;Retirer Sony de la liste&nbsp;».</p>
+      <p>L’utilisation d’un vrai bouton, rend cette fonctionnalité accessible au lecteur d’écran, mais également aux personnes qui ne peuvent pas utiliser une souris et qui naviguent à l’aide du clavier en déplaçant le focus (touche <kbd>Tab</kbd>). En effet, un bouton est focusable nativement.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;Alcatel&lt;button&gt;Retirer Alcatel de la liste&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;Doro&lt;button&gt;Retirer Doro de la liste&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;Apple&lt;button&gt;Retirer Apple de la liste&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;LG&lt;button&gt;Retirer LG de la liste&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;Sony&lt;button&gt;Retirer Sony de la liste&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 2</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 2" href="exemple2.html"><img src="exemple2.png" alt="ouvrir l’exemple 2 (nouvelle fenêtre)"></a></p>
+      </div>
+      
+      <p>Et voilà&nbsp;! des tags simples et accessibles. Bon OK, ce n’est pas très beau.</p>
+
+      <h2>Un peu de déco</h2>
+      <p>Maintenant que nous avons des tags accessibles, on peut passer à la déco. L’idéal serait de faire ressembler nos tags à la première illustration proposée au début de cet article. Plusieurs solutions sont possibles.</p>
+
+      <p>On peut par exemple commencer par remplacer l’intitulé du bouton par un «&nbsp;X&nbsp;» ou un icône en forme de croix.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;Alcatel&lt;button&gt;X&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 3</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 3" href="exemple3.html"><img src="exemple3.png" alt="ouvrir l’exemple 3 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <p>Par contre, là, on vient de perdre les utilisateurs qui naviguent au lecteur d’écran, car les boutons seront désormais vocalisés «&nbsp;X&nbsp;». On peut corriger cela par exemple à l’aide d’un attribut <code>aria-label</code>.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;Alcatel&lt;button aria-label="Retirer Alcatel de la liste"&gt;X&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+      
+      <p>On ajoute un peu de CSS pour faire disparaître le fond et les contours des boutons.</p>
+      
+      <pre><code class="css">
+      button {
+          background-color: transparent;
+          border: none;
+          color: #fff;
+          font-weight: bold;
+      }
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 4</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 4" href="exemple4.html"><img src="exemple4.png" alt="ouvrir l’exemple 4 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <h2>Optimisation</h2>
+
+      <p>Cela fonctionne, mais ce n’est pas parfait. Il faut bien viser pour supprimer un tag, car le bouton en forme de croix n’est pas très grand. Ce n’est pas agréable à utiliser et cela risque d’être réellement problématique pour les personnes qui tremblent ou qui ont des difficultés avec la souris.</p>
+
+      <p>Sachant que le bouton Supprimer est la seule action disponible, on pourrait étendre la zone de clic à la totalité du tag. Ainsi même si on clique un peu à côté de la croix, l’action de suppression sera prise en compte.</p>
+          
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+
+      <p>On ajoute la croix avec du CSS&nbsp;:</p>
+
+      <pre><code class="css">
+        li button:after {
+          content: "x";    
+          margin: .25rem .25rem .25rem .75rem;
+          padding-left: .4rem;    
+          border-left: .15rem solid #fff;
+        }
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 5</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 5" href="exemple5.html"><img src="exemple5.png" alt="ouvrir l’exemple 5 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <p>C’est mieux. Visuellement on voit bien deux choses dans chaque tag, son libellé et un bouton de suppression. Au lecteur d’écran par contre, pour le moment, on n’entend qu’un seul bouton «&nbsp;Retirer xxx de la liste&nbsp;». Pour corriger cela, on ajoute un <code>span</code> contenant l’intitulé du tag. Pour éviter que celui-ci n’apparaisse à l’écran (cela ferait doublon), on lui ajoute une classe de masquage accessible (<code>sr-only</code>). Ainsi, ce texte ne sera visible que par les lecteurs d’écran.</p>
+
+      <pre><code class="html">
+        &lt;ul&gt;
+          &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre></code>
+      <p>Ainsi au lecteur d’écran, pour chaque tag, on entend son libellé, puis un bouton pour le supprimer.</p>
+
+      <div class="exemple">
+        <h3>Exemple 6</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 6" href="exemple6.html"><img src="exemple6.png" alt="ouvrir l’exemple 6 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <p>Il reste un dernier problème à résoudre&nbsp;: si on essaie de naviguer à l’aide du clavier (en déplaçant le focus à l’aide de la touche <kbd>Tab</kbd>), on ne sait pas sur quel bouton est le focus.</p>
+
+      <p>On ajoute un peu de CSS pour mettre le focus en évidence, on en profite pour en faire de même au survol de la souris.</p>
+
+      <pre><code class="css">
+        button:hover, button:focus {
+          background-color: #f16e00;
+          color: #000;
+        }
+      </code></pre>
+
+      <div class="exemple">
+        <h3>Exemple 7</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 7" href="exemple7.html"><img src="exemple7.png" alt="ouvrir l’exemple 7 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <h2>Optimisation (bis)</h2>
+      <p>Nous avons des tags accessibles, par contre lorsqu’on supprime un tag à l’aide du clavier, le focus reste positionné sur le tag qui disparaît. La position du focus n’est donc plus visible après suppression. Cela se corrige facilement avec un peu de Javascript. Il suffit de repositionner le focus sur l’élément précédent par exemple&nbsp;:</p>
+
+      <pre><code class="javascript">    
+        $("button").on("click", function () {
+            <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+            $(this).parent().remove();
+        });
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 8</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 8" href="exemple8.html"><img src="exemple8.png" alt="ouvrir l’exemple 8 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <p>Lorsqu’un tag est supprimé, nous le voyons disparaître à l’écran. Par contre pour qu’un utilisateur navigant au lecteur d’écran soit également certain que celui-ci a été supprimé, l’idéal, c’est de faire vocaliser un message de confirmation à l’utilisateur.</p>
+      <p>Pour cela nous pouvons utiliser par exemple notre <a href="../speak/index.html">fonction Javascript srSpeak</a> qui utilise de l’ARIA pour faire parler le lecteur d’écran.</p>
+
+      <pre><code class="javascript">    
+        $("button").on("click", function () {
+            <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+            $(this).parent().remove();
+            srSpeak($(this).text() + "supprimé");
+        });
+      </pre></code>
+
+      <div class="exemple">
+        <h3>Exemple 9</h3>
+        <p><a target="_blank" title="ouvrir l’exemple 9" href="exemple9.html"><img src="exemple9.png" alt="ouvrir l’exemple 9 (nouvelle fenêtre)"></a></p>
+      </div>
+
+      <p>Cette fois, nous avons bien des «&nbsp;tags&nbsp;» accessibles à la souris, au clavier et au lecteur d’écran.</p>
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

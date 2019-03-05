@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogs 1/2 - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Dialogs 1/2</h1>
+
+      <h2>Introduction</h2>
+      <p>Dialogs are part of the core UI components on a website. Unfortunately, there is no native <abbr title="Hypertext Markup Language">HTML</abbr> component to create this kind of object. These dialogs must be created from scratch during development. It often adds accessibility issues if we do not pay attention.</p>
+      <p>Difficulties associated with dialogs are most of the time impossible to overcome, specifically for those navigating with the keyboard (<kbd>Tab</kbd>), or using a screen reader (visually impaired or blind). This example will show you step-by-step how to create an accessible dialog.</p>
+      <p><strong>Usability reminder: </strong> avoid using dialogs, windows and other modal popups, especially for displaying information, their usability and readability are <em>issues for all users</em>. Only use them with few information and particularly to confirm actions (validating an action, confirming erasing data…).</p>
+      <p>If you do not want to create the component from scratch, you can also use <a href="http://boosted.orange.com/javascript/#modals">the “modal” component</a> of the <a href="http://boosted.orange.com/">Boosted</a> library which has the double advantage of being accessible and being already branded with the Orange colours.</p>
+      <h2>Final example</h2>
+      Here is the final rendering of the dialog, we will show you how to create it step-by-step.
+      <br><br>
+      <button id="final-openButton" class="btn btn-secondary">Open the final example</button>
+
+      <!-- Final dialog -->
+      <div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description">
+        <span tabindex="0" class="dialog-start"></span>
+        <div class="dialogContainer">
+          <button class="closeButton" aria-label="close" title="Close">X</button>
+          <h1 id="final-dialogTitle">Warning</h1>
+          <p id="final-description">I am a modal dialog. I am accessible to mouse, keyboard and screen reader users.<p>
+          <button class="btn btn-secondary defaultFocus">OK</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+        <span tabindex="0" class="dialog-stop"></span>
+      </div>
+
+      <h2>Step 1: defining the layout</h2>
+
+      <p>Here we create the design of our dialog with a <code>&lt;div&gt;</code> tag. We add:</p>
+        <ul>
+          <li>A “x” button that will close the dialog.</li>
+          <li>A title.</li>
+          <li>A message.</li>
+          <li>Two action buttons.</li>
+        </ul>      
+
+      <!-- Dialog 1 -->
+      <div id="step1-dialog" class="dialog">
+        <div class="dialogContainer">
+          <button class="closeButton">X</button>
+          <h1>Warning</h1>
+          <p>I am a modal dialog. I am accessible to mouse, keyboard and screen reader users.</p>
+          <button class="btn btn-secondary">OK</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Example 1 code -->
+      <pre><code class="html">
+      &lt;div class="dialog"&gt;
+        &lt;div class="dialogContainer"&gt;
+          &lt;button&gt;X&lt;/button&gt;
+          &lt;h1&gt;Warning&lt;/h1&gt;
+          &lt;p&gt;I am a modal dialog. I am accessible to mouse, keyboard and screen reader users.&lt;/p&gt;
+          &lt;button&gt;OK&lt;/button&gt;
+          &lt;button&gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <button id="step1-openButton" class="btn btn-secondary">Open the first step example</button>
+
+      <h3>Testing</h3>
+      <ul>
+        <li><strong>Keyboard navigation:</strong> move the focus on the “Open the first step example” button using the <kbd>Tab</kbd> key and press the <kbd>Enter</kbd> key. The dialog should appear, although the focus is lost. If you press again the <kbd>Tab</kbd> key to close the dialog, you should notice that the focus moves behind the dialog and not inside the dialog. Finally, the <kbd>Escape</kbd> key has no effect.</li>
+        <li><strong>Screen reader navigation:</strong> move to the “Open the first step example” button with the screen reader and press the <kbd>Enter</kbd> key. The dialog should appear, but the screen reader does not detect the new dialog. As if the button had no effect, you can continue to browse normally.</li>
+      </ul>
+
+      <h2>Step 2: handling keyboard navigation</h2>
+
+      <p>To navigate properly with the keyboard:
+      <ul>
+        <li>The focus must be put into the dialog when opening and re-set when closing.</li>
+        <li>The focus should not get out of the dialog when browsing using the <kbd>Tab</kbd> key.</li>
+        <li>The <kbd>Escape</kbd> button closes the dialog.</li>
+      </ul>
+
+      <p>In this new example, we save the location of the focus at the opening:</p>
+      <pre><code class="javascript">
+       // Save the focus position that will be used when closing
+       $('#step2-dialog').attr('data-focusBack', 'step2-openButton');
+
+       // Set the focus on the default item
+       $('#step2-dialog .defaultFocus').focus();
+      </code></pre>
+
+      <p>It resets the focus when closing:</p>
+      <pre><code class="javascript">
+        // Resets the focus when closing the dialog
+        $('#'+$('#step2-dialog').attr('data-focusBack')).focus();
+      </code></pre>
+
+      <p>We also have to prevent the focus from going out of the dialog. When the focus is set on the last element it should go back to the first element and vice versa. There are several solutions to create this behaviour. In this example, two empty <code>span</code> tags are added at the beginning and at the end of the dialog. These are made ​​focusable using the <code>tabindex="0"</code> attribute. When the first <code>span</code> tag receives the focus, it is moved to the last element of the dialog. When the last <code>span</code> receives the focus, it is moved to the first element of the dialog.</p>
+      <p>Empty <code>span</code> tags have the advantage of not being vocalized by screen readers.</p>
+
+      <pre><code class="javascript">
+       $('.dialog-start').on('focus', function () {
+          $(this).parent().find('button:last').focus();
+       });
+
+       $('.dialog-stop').on('focus', function () {
+          $(this).parent().find('button:first').focus();
+       });
+      </code></pre>
+
+      <!-- Dialog 2 -->
+      <div id="step2-dialog" class="dialog">
+        <span tabindex="0" class="dialog-start"></span>
+        <div class="dialogContainer">
+          <button class="closeButton">X</button>
+          <h1 id="final-dialogTitle2">Warning</h1>
+          <p id="final-description2">I am a modal dialog. I am accessible to mouse, keyboard and screen reader users.</p>
+          <button class="btn btn-secondary defaultFocus">OK</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+        <span tabindex="0" class="dialog-stop"></span>
+      </div>
+
+      Finally, we listen to the <code>onKeyDown</code> event to close the dialog when the <kbd>Escape</kbd> key is pressed.<br>
+      Here is the updated <abbr>HTML</abbr> code for the dialog:
+      <pre><code class="html">
+      &lt;div id="step2-dialog" class="dialog"&gt;
+        &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
+        &lt;div class="dialogContainer"&gt;
+          &lt;button&gt;X&lt;/button&gt;
+          &lt;h1&gt;Warning&lt;/h1&gt;
+          &lt;p&gt;I am a modal dialog. I am accessible to mouse, keyboard and screen reader users.&lt;/p&gt;
+          &lt;button class="defaultFocus"&gt;OK&lt;/button&gt;
+          &lt;button&gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <button id="step2-openButton" class="btn btn-secondary">Open second step example</button>
+
+      <h3>Testing</h3>
+      <ul>
+        <li><strong>Keyboard navigation:</strong> there is no problem, the focus moves correctly when opening and closing the dialog. In addition, the focus cannot get out of the dialog when browsing with the <kbd>Tab</kbd> key. Finally, the <kbd>Escape</kbd> key allows closing the dialog.</li>
+        <li><strong>Screen reader navigation:</strong> when opening the dialog, we can hear “OK button”. Moving the focus to the default button automatically vocalizes it but it does not read the title nor the message of the dialog.</li>
+      </ul>
+
+      <h2>Step 3: handling screen reader navigation</h2>
+
+      <p>To navigate properly with a screen reader:
+      <ul>
+        <li>You should indicate explicitly to the user that a dialog has been opened (adding an <abbr title="Accessible Rich Internet Application">ARIA</abbr> role <code>dialog</code>).</li>
+        <li>The dialog title and the message must be vocalized to the user (adding <code>aria-labelledby</code> and <code>aria-describedby</code> attributes).</li>
+        <li>The default button should also be vocalized; this has already been done in the previous step (setting the focus automatically on the button when opening the dialog allows to vocalize the button by the screen reader).</li>
+      </ul>
+
+      <p>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of the element containing the title of the dialog. This will be spoken automatically by the screen reader. The <code>aria-describedby</code> attribute is used to specify the <code>id</code> of the element containing the description. This description will automatically be vocalized after the title of the dialog. Finally, the <code>aria-label</code> attribute on the close button (“X”) specifies a label to be vocalized (otherwise “X” will be read).</p>
+
+      <pre><code class="html">
+      &lt;div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description"&gt;
+        &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
+        &lt;div class="dialogContainer"&gt;
+          &lt;button aria-label="close" title="Close"&gt;X&lt;/button&gt;
+          &lt;h1 id="final-dialogTitle"&gt;Warning&lt;/h1&gt;
+          &lt;p id="final-description"&gt;I am a modal dialog. I am accessible to mouse, keyboard and screen reader users.&lt;/p&gt;
+          &lt;button class="defaultFocus"&gt;OK&lt;/button&gt;
+          &lt;button&gt;Cancel&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <button id="final-openButton2" class="btn btn-secondary">Open the final step example</button>
+
+      <h3>Testing</h3>
+      <ul>
+        <li><strong>Screen reader navigation:</strong> the screen reader should indicate that a dialog was opened. He vocalizes the title and the description. Finally, it indicates that the focus is set on the “OK” button.</li>
+      </ul>
+
+      <h3>Note on navigating using a screen reader</h3>
+      <p>In a web page, when navigating with a screen reader the user mainly uses the <kbd>Up</kbd> arrow and the <kbd>Down</kbd> arrow. This navigation mode is called “document mode”. One can also use the <kbd>Tab</kbd> key but in this case only focusable elements will be vocalized.</p>
+      
+      <p>In native applications, navigation is mainly using the <kbd>Tab</kbd> key. This navigation mode is called “application mode.” Using the <abbr>ARIA</abbr> dialog role, the screen reader goes into the “application mode”, <abbr>i.e.</abbr> the navigation with the mouse is no longer available when a dialog is displayed. In this case you must use the <kbd>Tab</kbd> key to navigate between the buttons of the dialog.</p>
+      
+      <p><strong>Note</strong> that it is also possible to force the use of the “application” or “document” mode with the attribute <code>role</code>, however users are not used to these navigation mode changes and it is currently  <strong>not recommended to do it</strong>, except in exceptional cases:</p>
+      <pre><code class="html">
+      &lt;div role="application"&gt;…&lt;/div&gt;
+      &lt;div role="document"&gt;…&lt;/div&gt;
+      </code></pre>
+
+      <br><br><br>
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les listbox et la navigation au clavier - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <script src="wgxpath.install.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les <i lang="en">listbox</i> et la navigation au clavier</h1>
+
+      <h2>Introduction</h2>
+      <p>Pour cet article, nous repartons de <a href="../check-listbox/index.html">l’exemple sur les <i lang="en">listbox</i> avec cases à cocher</a>. L’objectif est d’améliorer la navigation au clavier afin de se rapprocher des spécifications <i lang="en">design patterns</i> du <abbr>W3C</abbr>/<abbr>WAI</abbr>.</p>      
+
+      <h2>Les patterns <abbr>ARIA</abbr></h2>
+      <p>Le <abbr>W3C</abbr> maintient en ligne des spécifications qui décrivent comment doivent se comporter les composants <abbr>ARIA</abbr>&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices 1.1</a>.</p>
+      <p>La <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox" hreflang="en">spécification concernant les <i lang="en">listbox</i></a> nous apprend que&nbsp;:</p>
+      <ul>
+          <li>La liste doit être focusable (tabindex="0").</li>
+          <li>Les flèches haut/bas doivent pouvoir servir à choisir l’élément sélectionné.</li>
+          <li>On doit pouvoir sélectionner un élément en tapant rapidement ses premiers caractères (ex.&nbsp;: si on appuie sur les touches <kbd>p</kbd> et <kbd>h</kbd>, la sélection doit se déplacer sur "<strong>Ph</strong>otos").</li>
+          <li>Les touches <kbd>Shift + F10</kbd> doivent permettre d’ouvrir le menu contextuel de l’élément focusé si un menu contextuel est disponible.</li>
+          <li>Dans le cas d’une liste à sélection multiple, le raccourci <kbd>Ctrl+a</kbd> doit permettre de sélectionner tous les éléments.</li>
+          <li>Les touches <kbd>Début</kbd> et <kbd>Fin</kbd> doivent permettre de sélectionner les éléments depuis le début ou la fin de la liste.</li>
+      </ul>
+
+    <h2>Exemple</h2>
+      <div class="row">
+        <ul role="listbox" tabindex="0" class="col-md-8">
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"><label for="check1"></label>
+                <span>Informations importantes concernant votre compte</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check2" class="o-checkbox" type="checkbox"><label for="check2"></label>
+                <span>test envoi d’e-mail</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check3" class="o-checkbox" type="checkbox"><label for="check3"></label>
+                <span>Photos du week-end à la mer</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check4" class="o-checkbox" type="checkbox"><label for="check4"></label>
+                <span>Re: Votre commande N°3642</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check5" class="o-checkbox" type="checkbox"><label for="check5"></label>
+                <span>Re: Ce midi, c’est la dernière&nbsp;!</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check6" class="o-checkbox" type="checkbox"><label for="check6"></label>
+                <span>Jazz à Vienne #36, c’est parti&nbsp;!</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check7" class="o-checkbox" type="checkbox"><label for="check7"></label>
+                <span>Commande de vin</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check8" class="o-checkbox" type="checkbox"><label for="check8"></label>
+                <span>CDS 2016</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check9" class="o-checkbox" type="checkbox"><label for="check9"></label>
+                <span>Les offres CE</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check10" class="o-checkbox" type="checkbox"><label for="check10"></label>
+                <span>Re: Relecture</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check11" class="o-checkbox" type="checkbox"><label for="check11"></label>
+                <span>Vous avez plus d’amis que vous le pensez</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check12" class="o-checkbox" type="checkbox"><label for="check12"></label>
+                <span>10 for today</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check13" class="o-checkbox" type="checkbox"><label for="check13"></label>
+                <span>Notification&nbsp;: rdv ce soir</span>
+            </li>            
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check14" class="o-checkbox" type="checkbox"><label for="check14"></label>
+                <span>Plus de 20.000 articles soldés&nbsp;!</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check15" class="o-checkbox" type="checkbox"><label for="check15"></label>
+                <span>7 stories you shouldn’t miss</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check16" class="o-checkbox" type="checkbox"><label for="check16"></label>
+                <span>Attention plus que 2 jours</span>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check17" class="o-checkbox" type="checkbox"><label for="check17"></label>
+                <span>Votre commande n°04565</span>
+            </li>                                    
+        </ul>
+      </div>
+
+      <h2>Implémentation</h2>
+      <p>La fonctionnalité permettant de sélectionner automatiquement l’élément dont l’utilisateur tape les premières lettres n’est pas forcément simple à implémenter. Voici un exemple qui utilise <code>XPath</code>.</p>
+      <p>La première chose à faire est d’écouter le clavier lorsque le focus est positionné sur la liste. En fonction de la touche pressée, on effectue une action (déplacement de l’élément sélectionné, sélection d’un élément…).</p>
+
+      <pre><code class="javascript">
+    …
+    // On keydown
+    $("[role=listbox]").on("keydown", function (e) {            
+        var currentItem = $(this).find("[aria-selected=true]");                      
+        switch (e.keyCode) {
+            case 9: // TAB
+                break;
+            case 36: // home                    
+                …
+                e.preventDefault();
+                break;                                                            
+            case 35: // end
+                …
+                e.preventDefault();
+                break;                     
+            case 38:  // Up arrow
+                …
+                e.preventDefault();
+                break;
+            …
+      </code></pre>
+
+      <p>Pour les autres touches qui ne servent pas à effectuer une action sur la liste, c’est à dire les lettres et les chiffres, on les mémorise pour former une chaîne de caractère. Lorsque l’utilisateur ne tape pas de touche pendant quelques millisecondes (500 dans notre exemple), on recherche si un élément de liste commence par la chaîne tapée et on sélectionne cet élément de liste.</p>
+
+      <pre><code class="javascript">
+    …
+    case 65: // Ctrl + A
+        if (e.ctrlKey) {
+            …
+        }               
+    default:  // Search item starts with  
+        // Cancel current timer                                                                  
+        clearTimeout(timer);
+
+        // Create search string
+        searchString += e.key;
+        var self = this;
+
+        // Set a timer to search item after 500ms
+        timer = setTimeout(function(){
+            // Search item
+            var xpath = "li/span[starts-with(translate(text(), ’ABCDEFGHIJKLMNOPQRSTUVWXYZ’, ’abcdefghijklmnopqrstuvwxyz’), ’" + searchString + "’)]";
+            var matchingElement = document.evaluate(xpath, self, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            // Reset search string
+            searchString = "";
+
+            // If an item is found…
+            if (matchingElement) {                            
+                currentItem.attr("aria-selected", "false");
+                $(matchingElement).parent().attr("aria-selected", "true").focus().addClass("active");
+            }                        
+        }, 500);           
+
+        e.preventDefault();          
+      </code></pre>
+
+      <p>Pour rechercher l’élément dans la liste, nous utilisons la requête <code>XPath</code> suivante&nbsp;: <code>/li/span[starts-with(text(), "la chaine à rechercher")]</code>.
+      De plus, pour s’affranchir de la casse des caractères, nous utilisons la fonction <code>translate</code>.</p>
+
+      <p>Enfin pour la compatibilité avec Internet Explorer, nous utilisons le <a href="https://github.com/google/wicked-good-xpath">polyfill Xpath de Google</a> qu’il suffit d’inclure dans la page et de charger à l’aide de la ligne de code <code>wgxpath.install();</code> au chargement de la page.
+
+    </main>
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

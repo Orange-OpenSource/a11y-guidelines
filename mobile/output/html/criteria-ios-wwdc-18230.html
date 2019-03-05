@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité numérique Orange</title>
+        
+      
+       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web/index.html">Web</a>
+                  </li>
+                  <li class="nav-item active mobile">
+                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
+                        <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
+                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
+                        <li><a class="page-links" href="links.html">Liens utiles</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>                        
+                    </ul>                                        
+                  </li>   
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+    
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="wwdc-2018-fournir-une-exp-rience-exceptionnelle-en-accessibilit-">WWDC 2018 : Fournir une expérience exceptionnelle en accessibilité</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2018 - Fournir une expérience exceptionnelle en accessibilité"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;<span lang="en">Apple</span></strong> (<a href="https://developer.apple.com/videos/play/wwdc2018/230/">session 230</a>) a pour but de mettre en avant les éléments essentiels qui permettent à une application de fournir une expérience utilisateur optimale en accessibilité visuelle.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><a href="#TransparencyAndBlurring">Floutage et transparence</a> (03:07)</li>
+<li><a href="#Contrast">Contraste</a> (04:38)</li>
+<li><a href="#Sizing">Grossissement</a> (07:04)</li>
+<li><a href="#Motion">Mouvement</a> (08:48)</li>
+<li><a href="#UIAccessibilityElement">UIAccessibilityElement</a> (21:03)</li>
+<li><a href="#AdjustableValues">Les valeurs continûment ajustables</a> (21:44)</li>
+<li><a href="#CustomActions">Les actions personnalisées</a> (23:49)</li>
+<li><a href="#accessibilityViewIsModal">Élément au premier plan</a> (25:02)</li>
+<li><a href="#Notifications">Notifications</a> (25:13)</li>
+<li><a href="#Demo">Exemple</a><ul>
+<li><a href="#DemoSetCarousel">Comment rendre un carrousel parfaitement interprétable par VoiceOver ?</a> (25:53)</li>
+<li><a href="#DemoUpdateData">Comment synchroniser la mise à jour de données avec l&#39;élément du carrousel sélectioné ?</a> (30:53)</li>
+<li><a href="#DemoCustomActions">Comment associer des actions à un regroupement d&#39;éléments ?</a> (33:05)</li>
+<li><a href="#DemoModalView">Comment éviter la sélection d&#39;éléments derrière une &#39;Modal View&#39; ?</a> (34:32)</li>
+<li><a href="#DemoExceptionalVoiceOverExperience">Rendu final de l&#39;application avec VoiceOver optimisé</a> (35:38)</li>
+</ul>
+</li>
+</ul>
+<p>Le dernier thème développe un exemple d&#39;application particulièrement intéressant pour :</p>
+<ul>
+<li>Les développeurs qui souhaitent trouver des réponses détaillées aux problèmes d&#39;implémentation avec VoiceOver.</li>
+<li>Celles et ceux qui souhaitent découvrir comment une application doit interagir avec VoiceOver pour que le parcours utilisateur soit optimal (voir &#39;<a href="#DemoExceptionalVoiceOverExperience">Rendu final de l&#39;application avec VoiceOVer optimisé</a>&#39;).</li>
+</ul>
+<p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.
+</br></br>
+<a name="TransparencyAndBlurring"></a></p>
+<h3 id="-floutage-et-transparence-03-07-https-developer-apple-com-videos-play-wwdc2018-230-time-187-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=187">Floutage et transparence (03:07)</a></h3>
+<p>Depuis iOS 8, des classes telles que <code>UIBlurEffect</code> et <code>UIVisualEffectView</code> permettent de gérer parfaitement l&#39;effet de flou d&#39;une image.
+</br>Cependant, cela peut entraîner des difficultés occulaires pour les personnes ayant des problèmes visuels.
+</br>L&#39;utilisateur peut alors atténuer très fortement ces effets néfastes en activant l&#39;<a href="./criteria-ios-conception.html#options-d-accessibilit-">option d&#39;accessibilité</a> appropriée dans ses réglages.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
+</br>Le résultat conduit à un fond d&#39;écran beaucoup plus sombre voire uni dans certains cas.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_2.png" />
+</br>Côté développement, il est possible de connaître la valeur de la propriété <code>isReduceTransparencyEnabled</code>.
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_3.png" /></p>
+<p><a name="Contrast"></a></p>
+<h3 id="-contraste-04-38-https-developer-apple-com-videos-play-wwdc2018-230-time-278-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=278">Contraste (04:38)</a></h3>
+<p>Le contraste {couleur du contenu exposé / couleur du fond d&#39;écran} est très important et repose beaucoup sur les propriétés de la police affichée détaillées dans la <a href="./criteria-ios-conception.html#couleurs">partie conception de ce site</a>.
+</br>Il est possible d&#39;augmenter nativement le contraste des couleurs en activant l&#39;<a href="./criteria-ios-conception.html#options-d-accessibilit-">option d&#39;accessibilité</a> appropriée dans les réglages du terminal, pouvant ainsi favoriser un confort de lecture.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
+</br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de <code>isDarkerSystemColorsEnabled</code>.
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_2.png" /></p>
+<p><a name="Sizing"></a></p>
+<h3 id="-grossissement-07-04-https-developer-apple-com-videos-play-wwdc2018-230-time-424-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=424">Grossissement (07:04)</a></h3>
+<p>Les quelques points concernant le <code>Dynamic Type</code> sont largement expliqués dans la <a href="./criteria-ios-dev.html#taille-des-textes">section développement iOS</a> et font référence à une <a href="./criteria-ios-wwdc-17245.html">autre présentation</a> parfaitement détaillée dans la partie WWDC de ce site.
+</br>Le simple fait de passer une police en gras peut nettement améliorer le rendu visuel pour certains utilisateurs sans avoir à en grossir démesurément la taille.
+</br>Ici encore, les réglages du terminal permettent d&#39;activer cette <a href="./criteria-ios-conception.html#options-d-accessibilit-">option d&#39;accessibilité</a>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
+</br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de <code>isBoldTextEnabled</code>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_2.png" /></p>
+<p><a name="Motion"></a></p>
+<h3 id="-mouvement-08-48-https-developer-apple-com-videos-play-wwdc2018-230-time-528-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=528">Mouvement (08:48)</a></h3>
+<p>Certaines animations peuvent entraîner des problèmes d&#39;équilibre voire de nausées à certaines personnes.
+</br>Les réglages utilisateurs permettent de réduire fortement tout type d&#39;animations natives en activant l&#39;<a href="./criteria-ios-conception.html#options-d-accessibilit-">option d&#39;accessibilité</a> appropriée.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
+</br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de <code>isReduceMotionEnabled</code> et permet d&#39;adapter les effets de l&#39;application aux souhaits de l&#39;utilisateur s&#39;ils ne sont pas automatiquement pris en compte.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_2.png" /></p>
+<p><a name="UIAccessibilityElement"></a></p>
+<h3 id="-uiaccessibilityelement-21-03-https-developer-apple-com-videos-play-wwdc2018-230-time-1263-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1263">UIAccessibilityElement (21:03)</a></h3>
+<p>L&#39;intérêt de cet élément ainsi que son implémentation sont expliqués et mis en situation au sein de l&#39;application de démonstration.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-UIAccessibilityElement.png" /></p>
+<p><a name="AdjustableValues"></a></p>
+<h3 id="-les-valeurs-contin-ment-ajustables-21-44-https-developer-apple-com-videos-play-wwdc2018-230-time-1304-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1304">Les valeurs continûment ajustables (21:44)</a></h3>
+<p>Cette fonctionnalité implémentable par définition de <code>trait</code> spécifique est présentée ici de façon à <strong>fluidifier la sélection d&#39;éléments</strong> dans une <code>CollectionView</code>.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-AdjustableValues.png" />
+</br>Un aperçu différent de cette utilisation a déjà été développé dans une <a href="./criteria-ios-wwdc-17215.html#AdjustableValues">autre vidéo détaillée</a> de la partie WWDC de ce site.
+</br></br>
+<a name="CustomActions"></a></p>
+<h3 id="-les-actions-personnalis-es-23-49-https-developer-apple-com-videos-play-wwdc2018-230-time-1429-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1429">Les actions personnalisées (23:49)</a></h3>
+<p>Sur une unique sélection, il est possible de <strong>regrouper un ensemble d&#39;actions</strong> proposées sur différents éléments graphiques.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-CustomActions.png" />
+</br>Les explications fournies ici sont aussi développées dans une <a href="./criteria-ios-wwdc-17215.html#CustomActions">autre vidéo détaillée</a> de la partie WWDC de ce site.
+</br></br>
+<a name="accessibilityViewIsModal"></a></p>
+<h3 id="-l-ment-au-premier-plan-25-02-https-developer-apple-com-videos-play-wwdc2018-230-time-1502-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1502">Élément au premier plan (25:02)</a></h3>
+<p>Lorsqu&#39;une vue est simplement présentée comme étant &quot;en haut&quot; de la hiérarchie des vues, VoiceOver ne sait pas nativement qu&#39;<strong>il ne faut pas traiter les éléments présents en fond d&#39;écran</strong>.
+</br>La solution consiste à modifier <code>accessibilityViewIsModal</code> de façon à ce que VoiceOver n&#39;analyse que les éléments de la vue mise en avant.
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-ModalView.png" /></p>
+<p><a name="Notifications"></a></p>
+<h3 id="-notifications-25-13-https-developer-apple-com-videos-play-wwdc2018-230-time-1513-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1513">Notifications (25:13)</a></h3>
+<p>Petit rappel pour <strong>notifier les utilisateurs de modifications</strong> sur l&#39;écran.
+</br><img style="max-width: 800px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Notifications.png" />
+</br>Des explications plus détaillées sur ce point sont fournies dans la <a href="./criteria-ios-dev.html#informer-d-une-modification-sur-la-page">partie développeur de ce site</a>.
+</br></br>
+<a name="Demo"></a></p>
+<h3 id="exemple">Exemple</h3>
+<p>Un exemple d&#39;application est proposé pour répondre aux questions que se posent les développeurs face aux éventuels problèmes rencontrés dans la mise en oeuvre de l&#39;accessibilité avec VoiceOver.
+</br>La <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=938">présentation de l&#39;exemple</a> ainsi que le <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1022">rendu VoiceOver non optimisé</a> sont absolument à visionner afin de mieux comprendre la logique des solutions apportées par tous les éléments exposés précédemment.</br></br>
+<a name="DemoSetCarousel"></a></p>
+<h5 id="-comment-rendre-un-carrousel-parfaitement-interpr-table-par-voiceover-25-53-https-developer-apple-com-videos-play-wwdc2018-230-time-1553-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1553">Comment rendre un carrousel parfaitement interprétable par VoiceOver ? (25:53)</a></h5>
+<ul>
+<li>Création d&#39;un élement accessible pour définir le carrousel. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1571">(26:11)</a></li>
+<li>Implémentations des propriétés <code>label</code> et <code>value</code>. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1603">(26:43)</a></li>
+<li>Spécification de <code>adjustableTrait</code> avec définitions de <code>increment</code> et <code>decrement</code>. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1618">(26:58)</a></li>
+<li>Création d&#39;une fonction de défilement. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1634">(27:14)</a></li>
+<li>Ajouter l&#39;élément du carrousel en tant qu&#39;élément sélectionnable par VoiceOver. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1718">(28:38)</a></li>
+<li>Mise à jour de l&#39;élément affiché en fonction de la sélection. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1791">(29:51)</a></li>
+<li>Notification de mise à jour d&#39;écran dès qu&#39;un nouvel élément du carrousel est sélectionné. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1814">(30:14)</a>
+</br></br>
+<a name="DemoUpdateData"></a></li>
+</ul>
+<h5 id="-comment-synchroniser-la-mise-jour-de-donn-es-avec-l-l-ment-du-carrousel-s-lection-30-53-https-developer-apple-com-videos-play-wwdc2018-230-time-1853-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1853">Comment synchroniser la mise à jour de données avec l&#39;élément du carrousel sélectioné ? (30:53)</a></h5>
+<ul>
+<li>Grouper des données pour améliorer significativement la sélection d&#39;éléments. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1874">(31:14)</a></li>
+<li>Synchronisation des données regroupées avec l&#39;élément du carrousel sélectionné. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1966">(32:46)</a>
+</br></br>
+<a name="DemoCustomActions"></a></li>
+</ul>
+<h5 id="-comment-associer-des-actions-un-regroupement-d-l-ments-33-05-https-developer-apple-com-videos-play-wwdc2018-230-time-1985-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1985">Comment associer des actions à un regroupement d&#39;éléments ? (33:05)</a></h5>
+<p></br>
+<a name="DemoModalView"></a></p>
+<h5 id="comment-viter-la-s-lection-d-l-ments-derri-re-une-modal-view-">Comment éviter la sélection d&#39;éléments derrière une &#39;Modal View&#39; ?</h5>
+<ul>
+<li>Modifier <code>accessibilityViewIsModal</code> en <code>override</code>. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2073">(34:33)</a></li>
+<li>Penser à notifier l&#39;utilisateur de l&#39;apparition d&#39;un nouvel écran. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2100">(35:00)</a>
+</br></br>
+<a name="DemoExceptionalVoiceOverExperience"></a></li>
+</ul>
+<h5 id="-rendu-final-de-l-application-avec-voiceover-optimis-35-38-https-developer-apple-com-videos-play-wwdc2018-230-time-2138-"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2138">Rendu final de l&#39;application avec VoiceOver optimisé. (35:38)</a></h5>
+<p></br>
+Le code présenté lors de cette vidéo ainsi que des explications sur son implémentation sont accessibles sur le <a href="https://developer.apple.com/documentation/uikit/accessibility/delivering_an_exceptional_accessibility_experience">site développeur d&#39;<span lang="en">Apple</span></a>.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

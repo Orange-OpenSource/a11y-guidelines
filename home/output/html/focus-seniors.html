@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité numérique Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="/css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">      
+
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Accueil</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-focus" href="focus.html">Les situations de handicap</a></li>
+                        <li><a class="page-outils" href="outils.html">Les solutions d'assistance</a></li>
+                        <li><a class="page-test" href="test.html">Les méthodes de test</a></li>
+                        <li><a class="page-organisation" href="organisation.html">Organisation du site</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                      </ul>
+                  </li>                                    
+                  <li class="nav-item"><a class="nav-link" href="./web/index.html">Web</a></li>
+                  <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item"><a href="./others/index.html" class="nav-link">Contenu éditorial</a></li>                  
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="recommandations-accessibilit-num-rique-orange">Recommandations accessibilité numérique Orange</h1>
+<h2 class="page-title">Les séniors</h2>
+
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les situations de handicap", "url": "./focus.html"},
+        {"label":"Les séniors"}]);
+    addSubMenu([
+        {"label":"Le handicap cognitif","url":"focus-cognitif.html"},
+        {"label":"Les séniors","url":"focus-seniors.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="focus"></span></p>
+<h3 id="probl-matique">Problématique</h3>
+<p>Un sénior est une personne plus ou moins âgée faisant partie d’une catégorie de personnes dont la définition varie selon le contexte : travail, santé, etc. D’un point de vue de la santé,  l’Organisation Mondiale de la Santé considère comme personne âgée une personne de plus de 60 ans. Elle estime qu’entre 2000 et 2050, cette population doublera au niveau mondial de 11% à 22%. Selon l’INSERM, le déclin des capacités cognitives commence dès 45 ans. </p>
+<p>Les déficiences qui peuvent être liées à l’âge ont un impact sur l’utilisation des technologies numériques.</p>
+<h3 id="obstacles-rencontr-s">Obstacles rencontrés</h3>
+<p>Les obstacles rencontrés par les séniors présentant des déficiences liées à l’âge peuvent-être multiples :</p>
+<ul>
+<li>Le déclin de la <strong>vision</strong>, comme la réduction de la sensibilité aux contrastes, de la perception des couleurs, de la capacité à se concentrer sur des objets proches, rend difficile la lecture d’une ressource numérique.</li>
+<li>Le déclin des <strong>capacités motrices</strong>, comme la diminution de la dextérité, du contrôle moteur fin, rend difficile l’usage de la souris et le clic sur des éléments petits.</li>
+<li>Le déclin de l’<strong>audition</strong>, comme la capacité à percevoir les sons les plus aigus, à séparer les sons, rend difficile l’écoute de documents audio (particulièrement dans un environnement bruyant).</li>
+<li>Le déclin des <strong>capacités cognitives</strong>, comme la mémoire à court terme, la concentration, rend difficile la navigation et l’exécution de tâches.</li>
+</ul>
+<h3 id="exemple-de-solutions">Exemple de solutions</h3>
+<h4 id="d-clin-de-la-vision">Déclin de la vision</h4>
+<ul>
+<li>L’utilisateur peut paramétrer la taille de tous les contenus textuels de l’application</li>
+<li>Les contrastes de couleurs sont élevés </li>
+<li>Les vidéos ont une audiodescription ou une transcription textuelle</li>
+<li>Les images ont une alternative textuelle</li>
+</ul>
+<h4 id="d-clin-des-capacit-s-motrices">Déclin des capacités motrices</h4>
+<ul>
+<li>La navigation clavier permet d’accéder à toutes les fonctionnalités sans piège clavier</li>
+<li>Le focus est bien visible</li>
+<li>Les zones cliquables sont suffisamment grandes (largeur et hauteur d’au moins 48 px)</li>
+</ul>
+<h4 id="d-clin-de-l-audition">Déclin de l’audition</h4>
+<ul>
+<li>Les vidéos ont des sous titres ou une transcription textuelle</li>
+</ul>
+<h4 id="d-clin-des-capacit-s-cognitives">Déclin des capacités cognitives</h4>
+<ul>
+<li>Les écrans suivent toutes la même logique d’organisation des contenus et de la navigation</li>
+<li>Les composants d’interfaces (liens, boutons, etc.) sont facilement identifiables</li>
+<li>Il est possible de mettre en pause ou arrêter les éléments en mouvement et les sons</li>
+<li>L’utilisateur n’est pas limité en temps pour effectuer une action</li>
+<li>Les labels des champs de formulaire sont explicitement libellés, une aide à la saisie est proposée si besoin, les erreurs de saisies sont identifiées et expliquées</li>
+<li>Une aide utilisateur est disponible</li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="./boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>    
+
+</body>
+</html>

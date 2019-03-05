@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité numérique Orange</title>
+        
+      
+       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web/index.html">Web</a>
+                  </li>
+                  <li class="nav-item active mobile">
+                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
+                        <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
+                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
+                        <li><a class="page-links" href="links.html">Liens utiles</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>                        
+                    </ul>                                        
+                  </li>   
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+    
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="wwdc-2017-les-nouveaut-s-en-accessibilit-">WWDC 2017 : les nouveautés en accessibilité</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2017 - Les nouveautés en accessibilité"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/215/">session 215</a>) a pour but de mettre en avant les principales nouveautés iOS 11 en terme d&#39;accessibilité avec une importance notable pour <span lang="en">VoiceOver</span>.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
+<img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><a href="#ImageTextDetection">Détection de texte dans une image</a> (07:07)</li>
+<li><a href="#ImprovedPhotoDescription">Amélioration de la description d&#39;une photo</a> (08:01)</li>
+<li><a href="#TypeToSIRI">Ecrire des infos pour SIRI</a> (11:37)</li>
+<li><a href="#AccessibilityInspector">Accessibility Inspector : cas pratique</a> (15:35)</li>
+<li><a href="#UIAccessibilityProtocol">Découvrir le protocole UIAccessibility</a> (21:14)</li>
+<li><a href="#AttributedProperties">Attributed Accessibility Properties</a> (26:07)</li>
+<li><a href="#AccessibilityContainer">Accessibility Container Type</a> (27:20)</li>
+<li><a href="#CustomActions">Les actions personnalisées</a> (35:43)</li>
+<li><a href="#DefaultActivation">Action par défaut</a> (37:38)</li>
+<li><a href="#AdjustableValues">Les valeurs continûment ajustables</a> (38:22)</li>
+<li><a href="#PassThrough">Sélection en défilement continu</a> (39:40)</li>
+<li><a href="#CustomScrolling">Défilement personnalisé</a> (41:02)</li>
+<li><a href="#DragAndDrop">Drag &amp; Drop</a> (42:54)</li>
+</ul>
+<p></br>Au cours de cette présentation, de nombreuses solutions sont proposées par le biais d&#39;une application d&#39;exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span> (regarder l&#39;<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">application d&#39;exemple</a> avant de lire la suite) :</p>
+<ul>
+<li>Rendre un élément (in)accessible <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a></li>
+<li>Remplir des propriétés <code>label</code> et <code>value</code> <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a>.</li>
+<li>Rassembler plusieurs éléments pour n&#39;en former qu&#39;un seul <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a>.</li>
+</ul>
+<p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.</p>
+<p><a name="ImageTextDetection"></a></p>
+<h3 id="-d-tection-de-texte-dans-une-image-07-07-https-developer-apple-com-videos-play-wwdc2017-215-time-427-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=427">Détection de texte dans une image (07:07)</a></h3>
+<p>Il est désormais possible de <strong>déterminer si du texte est incrusté dans une image</strong>.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-ImageTextDetection.png" />
+</br>Cette détection très basique est obtenue en réalisant un <strong>tap avec 3 doigts</strong>.
+</br>Elle permet ainsi de vocaliser cette inscription à une personne qui ne peut initialement pas la détecter.</p>
+<p><a name="ImprovedPhotoDescription"></a></p>
+<h3 id="-am-lioration-de-la-description-d-une-photo-08-01-https-developer-apple-com-videos-play-wwdc2017-215-time-481-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=481">Amélioration de la description d&#39;une photo (08:01)</a></h3>
+<p>La <strong>vocalisation de la description d&#39;une photo</strong> est une nouvelle fonctionnalité de Voice Over et est obtenue par un simple <span lang="en">tap</span> à l&#39;aide de 3 doigts.
+</br><img style="max-width: 1000px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-ImprovedPhotoDescription.png" />
+</br>Une détection très simple du contexte, des visages et de leurs expressions est donc exposée à l&#39;utilisateur pour qui ce type d&#39;informations devient plus que jamais un lien fort avec son environnement.</p>
+<p><a name="TypeToSIRI"></a></p>
+<h3 id="-ecrire-des-infos-pour-siri-11-37-https-developer-apple-com-videos-play-wwdc2017-215-time-697-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=697">Ecrire des infos pour SIRI (11:37)</a></h3>
+<p>Nouveauté très utile pour les <strong>personnes ne pouvant pas utiliser SIRI vocalement</strong> ou désirant simplement <strong>effectuer des requêtes de façon discrète</strong>.
+</br>Pour utiliser cette fonctionnalité, il faut se rendre dans la partie <code>Accessibilité</code> des <code>Réglages</code> pour rendre l&#39;activation effective.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-TypeToSiri.png" /></p>
+<p><a name="AccessibilityInspector"></a></p>
+<h3 id="-accessibility-inspector-cas-pratique-15-35-https-developer-apple-com-videos-play-wwdc2017-215-time-935-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=935">Accessibility Inspector : cas pratique (15:35)</a></h3>
+<p>Dans cette partie, l&#39;outil <span lang="en">Accessibility Inspector</span> de Xcode est utilisé pour une démonstration d&#39;audit accessibilité d&#39;une application.
+</br>Des exemples sont fournis sans expliquer fondamentalement les notions propres à l&#39;outil qui sont détaillées dans la session <a href="https://developer.apple.com/videos/play/wwdc2016/407/">407</a> (2016).</p>
+<p><a name="UIAccessibilityProtocol"></a></p>
+<h3 id="-d-couvrir-le-protocole-uiaccessibility-21-14-https-developer-apple-com-videos-play-wwdc2017-215-time-1274-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">Découvrir le protocole UIAccessibility (21:14)</a></h3>
+<p>Petit rappel sur les fondements du protocole informel <code>UIAccessibility</code> qui vont être utilisés dans la suite de la présentation.
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /></p>
+<p><a name="AttributedProperties"></a></p>
+<h3 id="-attributed-accessibility-properties-26-07-https-developer-apple-com-videos-play-wwdc2017-215-time-1567-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1567">Attributed Accessibility Properties (26:07)</a></h3>
+<p>iOS 11 permet de transformer les propriétés d&#39;accessibilité <code>label</code>, <code>value</code> et <code>hint</code> de base en <code>NSAttributedString</code> de façon à pouvoir <strong>agir sur la façon dont ils vont être vocalisés</strong>.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-AttributedStrings.png" />
+</br>Parmi les exemples fournis, on trouve la possibilité de vocaliser en langue étrangère un élément accessible bien particulier.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-AttributedStringsExample.png" />
+</br>L&#39;ensemble des clés utilisables se trouve sur la <a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibility/speech_attributes_for_attributed_strings">documentation officielle Apple</a>.</p>
+<p><a name="AccessibilityContainer"></a></p>
+<h3 id="-accessibility-container-type-27-20-https-developer-apple-com-videos-play-wwdc2017-215-time-1640-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1640">Accessibility Container Type (27:20)</a></h3>
+<p>Une définition de <strong>conteneur typé</strong> au niveau accessibilité est disponible en <strong>iOS 11</strong>.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-ContainerType.png" />
+</br>La notion de conteneur existait déjà mais rien ne permettait à <span lang="en">VoiceOver</span> de savoir ce qu&#39;était réellement ce conteneur.
+</br>Ce nouveau typage va donc permettre à <span lang="en">VoiceOver</span> de faciliter et de mieux appréhender la façon dont l&#39;utilisateur va pouvoir naviguer au sein de ce conteneur.</p>
+<p><a name="CustomActions"></a></p>
+<h3 id="-les-actions-personnalis-es-35-43-https-developer-apple-com-videos-play-wwdc2017-215-time-2143-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2143">Les actions personnalisées (35:43)</a></h3>
+<p>Il est possible de définir sur une vue un ensemble constitué de <code>accessibilityCustomAction</code> de façon à lui <strong>attribuer différentes actions possibles</strong>.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomActions.png" />
+</br>Dès que cette vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet de déterminer l&#39;action de son choix.
+</br>La mise en place programmatique de ce type de fonctionnement est présentée dans la partie <a href="./criteria-ios-dev.html#actions-personnalis-es">développement</a>.</p>
+<p><a name="DefaultActivation"></a></p>
+<h3 id="-action-par-d-faut-37-38-https-developer-apple-com-videos-play-wwdc2017-215-time-2258-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2258">Action par défaut (37:38)</a></h3>
+<p>Afin de limiter ou de rendre plus faciles les manipulations à réaliser par les utilsateurs de <span lang="en">VoiceOver</span>, il est possible de déclencher des actions appropriées dès qu&#39;un élément est activé par un double tap.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-DefaultAction.png" /></p>
+<p><a name="AdjustableValues"></a></p>
+<h3 id="-les-valeurs-contin-ment-ajustables-38-22-https-developer-apple-com-videos-play-wwdc2017-215-time-2302-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2302">Les valeurs continûment ajustables (38:22)</a></h3>
+<p>La <strong>modification de valeur</strong> pour des éléments tels que le <code>slider</code> ou le <code>picker</code> peut se faire de façon <strong>très fluide</strong> grâce à l&#39;implémentation de deux fonctions :
+</br><img style="max-width: 470px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-AdjustableValues.png" />
+</br>Dès que la vue est sélectionnée avec <span lang="en">VoiceOver</span>, un <strong>swipe vertical avec un doigt</strong> permet d&#39;augmenter (vers le haut) ou de diminuer (vers le bas) la valeur.
+</br>La mise en place programmatique de ce type de fonctionnement est présentée dans la partie <a href="./criteria-ios-dev.html#valeurs-contin-ment-ajustables">développement</a>.</p>
+<p><a name="PassThrough"></a></p>
+<h3 id="-s-lection-en-d-filement-continu-39-40-https-developer-apple-com-videos-play-wwdc2017-215-time-2380-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2380">Sélection en défilement continu (39:40)</a></h3>
+<p>L&#39;application d&#39;une <strong>double pression d&#39;un doigt accompagnée d&#39;un maintien à l&#39;issue</strong> sur un défilement panoramique permet de déclencher la fonctionnalité <span lang="en">pass-through</span> de <span lang="en">VoiceOver</span>.
+</br><img style="max-width: 400px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-PassThrough_1.png" />
+</br>Cette fonctionnalité permet d&#39;obtenir une sélection beaucoup plus précise de la valeur remontée.
+</br>Il est donc possible de préciser à <span lang="en">VoiceOver</span> le focus de l&#39;élément sélectionné grâce à l&#39;attribut <a href="./criteria-ios-dev.html#modifier-la-zone-de-focus-de-span-lang-en-voiceover-span-">accessibilityActivationPoint</a> de façon à indiquer finement à l&#39;utilisateur où il se trouve au niveau du panoramique.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-PassThrough_2.png" /></p>
+<p><a name="CustomScrolling"></a></p>
+<h3 id="-d-filement-personnalis-41-02-https-developer-apple-com-videos-play-wwdc2017-215-time-2462-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2462">Défilement personnalisé (41:02)</a></h3>
+<p>Le défilement classique de pages proposé par <span lang="en">VoiceOver</span> se fait avec un <span lang="en">swipe</span> à l&#39;aide de 3 doigts.
+</br>Il est toutefois possible de personnaliser le résultat obtenu grâce à la méthode <code>accessibilityScroll</code> présente dans le protocole <code>UIAccessibilityAction</code>.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-CustomScrolling.png" /></p>
+<p><a name="DragAndDrop"></a></p>
+<h3 id="-drag-drop-42-54-https-developer-apple-com-videos-play-wwdc2017-215-time-2574-"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2574">Drag &amp; Drop (42:54)</a></h3>
+<p>Nouveauté iOS11, le <span lang="en">drag-and-drop</span> présenté en accessibilité ne décrit pas la nouvelle API mais rappelle les 2 principes primordiaux autour desquels s&#39;appuie son fonctionnement : les <span lang="en">drag sources</span> et les <span lang="en">drop points</span>.
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215-DragAndDrop.png" />
+</br>Leur utilisation est ensuite succinctement proposée par le biais d&#39;un <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2729">exemple</a>.</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

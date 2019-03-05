@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible hiding and aria-hidden example - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Accessible hiding</h1>
+
+      <h2>Introduction</h2>
+      <p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>). These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by speech synthesis.</p>
+      <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
+      <p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
+      
+      <h2>Accessible hiding</h2>
+      <p>Accessible hiding allows an element to disappear from the screen, while being accessible to screen reader users. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
+      <p>There are several solutions for this type of <abbr>CSS</abbr> class:</p>
+          <ul>
+            <li>Setting the element’s size to 0.</li>
+            <li>Positioning the element off the screen (<code>left: -1000px; top: -1000px;</code>).</li>
+            <li>Using <code>text-indent</code> or <code>clip</code> properties.</li>
+            <li>…</li>
+          </ul>
+      <p>Ideally, it is best to combine all the solutions to make sure it is working properly in all browsers.</p>
+      
+      
+      <p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>sr-only</code> <abbr>CSS</abbr> class (“screen reader only”) which is defined as follows:</p>
+      <pre><code class="css">
+      .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap; /* added line */
+            border: 0;
+      }
+      </code></pre>
+      <p>If you haven’t got an accessible hiding class yet, the easiest way is to copy and paste the code above.</p>
+
+      <h3>Implementation</h3>
+      <p>Accessible hiding class can be used in many cases. For example, to clarify a link label:</p>
+      
+      <pre><code class="html">
+      &lt;a href="…"&gt;Learn more&lt;span <span class="important">class="sr-only"</span>&gt; about our mobile plans&lt;/span&gt;&lt;/a&gt;
+      </code></pre>
+      
+      <strong>Example: </strong>
+      <p><a href="#">Learn more<span class="sr-only"> about our mobile plans</span></a></p>
+      
+      <p>We would have obtained the same result using the <code>aria-label</code> attribute on the link:
+      <pre><code class="html">
+      &lt;a href="…" aria-label="Learn more about our mobile plans">Learn more&lt;/a&gt;
+      </code></pre>
+      <p>The accessible hiding class solution still offers an advantage compared to the <code>aria-label</code> solution. If the <abbr>CSS</abbr> is disabled (replaced with a custom <abbr>CSS</abbr> adapted to a certain disability, for example), the hidden accessibly text will be displayed.</p>
+       
+      <h2><code>aria-hidden</code> attribute</h2>
+      <p>This attribute will hide an element (or group of elements) to screen readers. It has however no effect on the display.</p>
+      
+      <h3>Implementation</h3>
+      <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute.<p>
+      
+      <strong>Example: </strong>
+      <p>The following screenshot shows a video player with a number of buttons (previous channel, next channel, pause…). This player is surrounded by two buttons also providing access to previous and next channels.</p>
+      <p>Visually this is not a problem. Although, when listening to the page with a screen reader, one can find it curious to hear an “Animals” button vocalized at the beginning of the page, and a “Hunting and Fishing” button vocalized at the end of page.</p>                           
+      
+      <img src="../../images/exemples/masquage/player.png" alt="screenshot showing a video player">
+      
+      <br><br>
+      
+      <p>To avoid disturbing the user unnecessarily, the easiest way is to hide these buttons (for screen readers) with the <code>aria-hidden</code> attribute.
+      
+      <pre><code class="html">      
+      &lt;div class="icon icon-arrow-left2" <span class="important">aria-hidden="true"</span>&gt;
+            &lt;div class="nextPreviousChannelName OrangeMedium" &gt;Animals&lt;/div&gt;
+      &lt;/div&gt;
+      </code></pre>
+      
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

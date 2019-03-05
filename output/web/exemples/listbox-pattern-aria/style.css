@@ -1,0 +1,57 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+[role=listbox] {
+    border: .2rem solid #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold; 
+    margin-left: 1rem;
+    height: 20rem;
+    overflow: auto;
+}
+
+[role=option] {
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: .1rem solid #ddd;
+    outline: none;
+}
+
+[role=option] label {
+    top: -1rem;        
+    border: 0!important;
+}
+
+[role=option]:last-child {
+    border-bottom: 0;
+}
+
+[role=option][aria-selected=true] {
+    background: #000;
+    color: #fff;
+}
+
+[role=option].active  {
+    background: #f16e00;
+    color: #000;    
+}
+
+[role=option].active .o-checkbox[type="checkbox"]:checked + label::before {
+    border-color: #e15e00 !important;    
+}
+
+[role=option].active .o-checkbox[type="checkbox"]:checked + label::after {
+    background: transparent !important;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::before, .o-checkbox[type="checkbox"]:checked + label::before {
+    top: .5rem;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::after, .o-checkbox[type="checkbox"]:checked + label::after {
+    top: .5rem;
+}
+

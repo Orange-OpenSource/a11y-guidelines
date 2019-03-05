@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>File explorer example - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../../boosted/css/boosted.css">
+
+      <script src="webcomponents.min.js"></script>
+      <script src="../../../js/jquery.min.js"></script>
+      <script src="script.js"></script>      
+      <link rel="stylesheet" href="style.css">
+            
+      <link rel="import" href="./components/file.html">       
+</head>
+<body>
+  <main class="container-fluid" role="main">
+  <h1>File explorer example</h1>
+    
+  <div class="row">      
+    <label class="control-label">Display mode: </label>
+            
+    <input id="mode-mosaique" type="radio" class="o-radio" name="mode" value="mosaique" checked="checked">
+    <label for="mode-mosaique">Grid</label>        
+    <input id="mode-liste" type="radio" class="o-radio" name="mode" value="liste">
+    <label for="mode-liste">List</label>    
+  </div>
+  
+  <div class="row list-head" aria-hidden="true">
+    <span>Name</span>
+    <span>Size</span>
+  </div>
+    
+  <div class="row list clearfix" role="listbox" aria-label="file list, use the arrow keys to move through the grid view" aria-multiselectable="true" tabindex="0">
+      <ease-file name="picture 201.png" size="1.4MB" thumbnail="./images/1.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="intro.mp3" size="7.1MB" thumbnail="./images/2.jpg" type="audio" class="clearfix"></ease-file>              
+      <ease-file name="picture 203.png" size="1.3MB" thumbnail="./images/3.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="test 001.avi"   size="18.9MB" thumbnail="./images/4.jpg" type="video" class="clearfix"></ease-file>
+      <ease-file name="picture 204.png" size="1.3MB" thumbnail="./images/5.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 205.png" size="1.3MB" thumbnail="./images/6.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="zapping.avi"   size="7.2MB" thumbnail="./images/7.jpg" type="video" class="clearfix"></ease-file>
+      <ease-file name="picture 206.png" size="1.4MB" thumbnail="./images/8.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 207.png" size="1.3MB" thumbnail="./images/9.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 208.png" size="1.3MB" thumbnail="./images/10.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 209.png" size="1.3MB" thumbnail="./images/11.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 210.png" size="1.3MB" thumbnail="./images/12.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 211.png" size="1.1MB" thumbnail="./images/13.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 212.png" size="1.3MB" thumbnail="./images/14.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 213.png" size="1.3MB" thumbnail="./images/15.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 214.png" size="1.3MB" thumbnail="./images/16.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 215.png" size="1.3MB" thumbnail="./images/17.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 216.png" size="1.3MB" thumbnail="./images/18.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="audio 002.mp3" size="4.4MB" thumbnail="./images/19.jpg" type="audio" class="clearfix"></ease-file>
+      <ease-file name="picture 218.png" size="1.3MB" thumbnail="./images/20.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 202.png" size="1.3MB" thumbnail="./images/21.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 202.png" size="1.3MB" thumbnail="./images/22.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 202.png" size="1.3MB" thumbnail="./images/23.jpg" type="image" class="clearfix"></ease-file>
+      <ease-file name="picture 202.png" size="1.3MB" thumbnail="./images/24.jpg" type="image" class="clearfix"></ease-file>
+  </div>
+    
+  </main>
+  <script src="../../../../boosted/js/boosted.min.js"></script>
+</body>
+</html>

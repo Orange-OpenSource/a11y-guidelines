@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité numérique Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="/css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">      
+
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Accueil</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-focus" href="focus.html">Les situations de handicap</a></li>
+                        <li><a class="page-outils" href="outils.html">Les solutions d'assistance</a></li>
+                        <li><a class="page-test" href="test.html">Les méthodes de test</a></li>
+                        <li><a class="page-organisation" href="organisation.html">Organisation du site</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                      </ul>
+                  </li>                                    
+                  <li class="nav-item"><a class="nav-link" href="./web/index.html">Web</a></li>
+                  <li class="nav-item mobile"><a href="./mobile/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item"><a href="./others/index.html" class="nav-link">Contenu éditorial</a></li>                  
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-label="version française" aria-disabled="true">fr</a><a aria-label="english version" lang="en" href="./home_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="recommandations-accessibilit-num-rique-orange">Recommandations accessibilité numérique Orange</h1>
+<h2 id="les-solutions-d-assistances-ou-aides-techniques">Les solutions d&#39;assistances ou aides techniques</h2>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les solutions d'assistance"}]);
+});</script>
+
+<p>L’accès aux <abbr>TICS</abbr> <i>Technologies de l&#39;Information et de la Communication</i> telles que sites Web, applications mobile, contenus bureautiques ou multimédias….) est rendu possible aux personnes en situation de handicap grâce à des technologies  d’assistance. Ces technologies comprennent :</p>
+<ul>
+<li>des aides logicielles, comme les synthèses vocales ou les loupes numériques,</li>
+<li>des aides matérielles : souris adaptées, claviers à grosses touches, micros, trackballs, plage Braille, etc.</li>
+</ul>
+<p>Ces aides ne fonctionnent que si les applications ou contenus ont été créés en suivant les règles d’accessibilité de conception et de développement. On dira ainsi qu’un site est accessible s’il est compatible avec les aides techniques (synthèses vocales, systèmes de modifications de la taille des polices ou des couleurs, etc.) et avec la navigation au clavier.</p>
+<h2 id="quelques-exemples-et-d-finitions">Quelques exemples et définitions</h2>
+<h3 id="la-synth-se-vocale">La synthèse vocale</h3>
+<p>La <strong>synthèse vocale</strong> est une voix qui lit les textes et images affichés à l’écran.  </p>
+<p>Autre terme utilisé : lecteur d’écran (note : le lecteur d’écran est un logiciel qui récupère le texte présent sur l’écran. Le texte est ensuite  restitué vocalement ou en Braille).<br>Exemples : Jaws et NVDA sur PC Windows, TalkBack sur mobile Android, VoiceOver sur mobile Apple ou Mac.</p>
+<p><img src="./images/audio.jpg" alt="" class="img-fluid"></p>
+<h3 id="la-plage-braille">La plage braille</h3>
+<p>La <strong>plage Braille</strong> permet de lire du bout des doigts la transcription en braille du contenu de l’écran ou de rentrer de l&#39;information en braille dans l&#39;ordinateur. </p>
+<figure>
+    <img src="./images/plage-braille.jpg" alt="photo d'une plage braille" class="img-fluid">
+    <figcaption>Photo : terminal braille, de Karola Riegler, 2009, Licence CC BY ND</figcaption>
+</figure>
+
+<h3 id="la-loupe-num-rique">La loupe numérique</h3>
+<p>La <strong>loupe numérique</strong> est un logiciel qui permet un agrandissement total ou partiel de l’écran ; elle donne la possibilité de régler les contrastes, la luminosité, les couleurs du fond de page et du texte, la taille et la couleur du pointeur (curseur), la mise en valeur des menus et lignes, ou même de vocaliser du texte.  </p>
+<p>Autres termes utilisés : logiciel de zoom, logiciel de grossissement de caractères.<br>Exemples : le logiciel ZoomText, le logiciel loupe de windows.</p>
+<figure>
+    <img src="./images/loupe.jpg" alt="photo d'un ecran d'ordinateur avec zoom à 400%" class="img-fluid">
+    <figcaption>Exemple d&#39;utilisation de la loupe windows avec réglage du grossissement à 400%.</figcaption>
+</figure>
+
+<h3 id="le-guide-doigts">Le guide-doigts</h3>
+<p>Le <strong>guide-doigts</strong> est une plaque posée sur le clavier qui permet de faciliter l’accès aux touches et d’éviter les frappes parasites ou la pression simultanée sur plusieurs touches.</p>
+<figure>
+    <img src="./images/guidedoigt.jpg" alt="photo d'un clavier équipé d'un guide doigt" class="img-fluid">
+    <figcaption>Photo : guide doigt copyplastic.com</figcaption>
+</figure>
+
+<h3 id="les-p-riph-riques-tactiles-de-pointage">Les périphériques tactiles de pointage</h3>
+<p>Les <strong>périphériques tactiles de pointage</strong> permettent de remplacer des souris ou des claviers standards et d’interagir avec des mouvements réduits des mains et des doigts, ou avec d’autres parties du corps.</p>
+<ul>
+<li>Les <strong>joysticks</strong> (ou souris-joystick) sont équipés d’un manche qui permet de contrôler le mouvement du pointeur à l’écran dans différentes directions. </li>
+<li>Les <strong>trackballs</strong> ou souris à boule sont équipés d&#39;une grosse boule qui permet de déplacer le pointeur en faisant simplement rouler la boule.</li>
+<li>Les <strong>contacteurs</strong> sont des périphériques qui jouent la fonction de sélection (clic, double clic) de la souris conventionnelle. Il existe une grande variété de contacteurs : au doigt, à la bouche ou à la tête, au pied, etc.</li>
+</ul>
+<p>Autres termes utilisés : interrupteur, switch, souris à bouche, etc.<br>La plupart de ces périphériques tactiles fonctionnent avec le système de « navigation au clavier » et sont configurés pour la personne qui l’utilise.</p>
+<h3 id="la-navigation-au-clavier">La navigation au clavier</h3>
+<p>La <strong>navigation au clavier</strong> permet à un utilisateur de parcourir le contenu et d’utiliser les fonctionnalités des sites Web ou applications mobiles uniquement grâce au clavier ou à la gestuelle mobile. Le curseur est contrôlé à l&#39;aide de quelques touches. La navigation au sein d’une page se fait d’item en item à l’aide de la touche de tabulation principalement. Et la manipulation de ces items se fait à l’aide des touches directionnelles (flèche gauche, flèche droite…), de la touche espace et de la touche de validation. Au fur et à mesure des actions, le focus (l’endroit où est positionné le curseur) doit être visible pour permettre à l’utilisateur de se situer.
+La  navigation au clavier est indispensable pour certains périphériques et demande de respecter des règles de développement précises. </p>
+<p><img src="./images/clavier.jpg" alt="" class="img-fluid"></p>
+<h3 id="la-reconnaissance-vocale">La reconnaissance vocale</h3>
+<p>La <strong>reconnaissance vocale</strong> permet d&#39;analyser la voix humaine captée au moyen d&#39;un microphone pour la transcrire sous la forme d&#39;un texte.  </p>
+<p>Exemples : le logiciel de dictée Dragon, les assistants vocaux de nos smartphones.</p>
+<figure>
+    <img src="./images/vocale.jpg" alt="photo d'une personne parlant devant son téléphone" class="img-fluid">
+    <figcaption>Photo : Alex Washburn / Wired / Licence Creative Commons</figcaption>
+</figure>
+
+<h3 id="la-transcription">La transcription</h3>
+<p>La <strong>transcription</strong> est une version textuelle d’enregistrements vidéo ou audio. La transcription est présentée dans un document numérique (Word, PDF….).</p>
+<h3 id="les-sous-titres">Les sous-titres</h3>
+<p>Les <strong>sous-titres</strong> sont une version textuelle synchronisée du contenu audio d’un enregistrement multimédia et s’affichent sur l’écran.  </p>
+<p>Autres termes utilisés : sous-titres transcrits, « <span lang="en">Closed Captions</span> » (CC). L’anglais fait une distinction entre le texte transcrit (« <span lang="en">Closed Captions</span> ») destiné en premier aux malentendants et le texte traduit d’une langue à une autre (« <span lang="en">subtitles </span>»). Cette distinction n’existe pas en français qui parle simplement de sous-titres.  </p>
+<p><img src="./images/soustitres.jpg" alt="capture d'écran d'une vidéo affichant des sous-titres" class="img-fluid">    </p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="./boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>    
+
+</body>
+</html>

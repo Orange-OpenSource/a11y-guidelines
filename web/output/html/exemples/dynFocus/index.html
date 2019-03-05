@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestion dynamique du focus - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Gérer le focus pour du contenu dynamiquement généré</h1>
+
+      <h2>Introduction</h2>
+      <p>La gestion du focus dans des applications riches est complexe. Plusieurs cas se présentent&nbsp;: </p>
+	  <ul>
+	  <li>Apparition/disparition de contenu généré par une action utilisateur avec rechargement de page</li>
+	  <li>Apparition/disparition de contenu dynamique généré par une action utilisateur sans rechargement de page</li>
+	  <li>Cas particulier&nbsp;: les <code>iframes</code> dynamiques </li>
+	  </ul>
+	  
+	  <h2>Contenu généré par une action utilisateur avec rechargement de page</h2>
+	  <p>Ce cas, où l’on recharge la page pour modifier une partie du contenu de cette page, est à éviter car, même si c’est une action utilisateur, il y a perte de contexte et dans tous les cas un chargement asynchrone aurait été bien plus efficace. </p>
+	  <h3>Apparition de contenu</h3>
+	  <p>Donc, s’il n’y a aucun moyen de faire du chargement asynchrone, il faut pour le moins&nbsp;:</p>
+	  <ol>
+	  <li>Prévenir, si besoin, l’utilisateur de ce rechargement de page avec un message de type «&nbsp;Chargement en cours, veuillez patientez&nbsp;» sur lequel on met le focus, si il y a perte de contexte.</li>
+	  <li>Au rechargement, mettre le focus, sur le contenu généré ou, lors d’une disparition, sur l’élément déclenchant (s’il existe toujours après rechargement) ou positionner le focus juste avant la partie qui a été enlevée.</li>
+	  <li> S’assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</li>
+	  </ol>
+	  
+	  <h2>Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</h2>
+	  <p>C’est le cas le plus fréquent : la page n’est pas rechargée, seul le DOM est modifié par addition ou suppression de contenu lors d’une action utilisateur (par exemple, affichage des résultats d’un moteur de recherche, apparition d’une popin…).</p>
+	  <h3>Addition de contenu</h3>
+	  <ol>
+	  <li>Prévenir, si besoin, l’utilisateur de l’apparition de contenu (par exemple, pour un sous-menu à déplier, on peut ajouter un texte «&nbsp;déplier&nbsp;» et mettre une propriété <code>aria-haspopup</code>). Si ce contenu est susceptible de disparaître (popin, par exemple), garder en mémoire l’élément déclenchant l’apparition pour y remettre le focus lors de la disparition.</li>
+	  <li>Le nouveau contenu doit apparaître dans le code source juste après l’élément déclenchant (exemple&nbsp;: menu dépliant),</li>
+		<li>Le focus doit être déplacé sur un des premiers éléments du nouveau contenu qui est apparu (le container, un titre, un lien, un bouton…).</li>
+	</ol>
+	<h3>Disparition de contenu</h3>
+		<ol>
+		<li>Prévenir si besoin l’utilisateur avant qu’il ne déclenche cette disparition,
+		<li>Le focus doit être redonné à l’élément déclenchant ou, si c’est impossible, positionner le focus juste avant le contenu qui a disparu. Par exemple, à la fermeture d’une boîte de dialogue, le focus doit être repositionné sur l’élément qui a déclenché l’ouverture (bouton, lien, …).</li>	  
+	  </ol>
+	  <p>
+		<strong>Dans tous les cas, s’assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</strong>
+	</p>
+	<h3>Avertir l'utilisateur de la modification du contenu</h3>
+
+	<p>C'est le principal problème posé à tout utilisateur, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention ou sur des petits écrans. </p>
+	<p>L'utilisateur doit pouvoir repérer l’apparition ou la disparition de contenu et d’interagir avec ceux-ci, si besoin. <br />Il faut donc prévenir l’utilisateur, et pour cela, il existe plusieurs solutions en cas de modification de contenu&nbsp;:</p>
+	<ul><li>En fournissant à l'utilisateur un texte informatif,</li>
+	<li>En gérant le déplacement du focus,</li>
+	<li>En utilisant de l’<abbr>ARIA</abbr>.</li></ul>
+					
+	<p>Voir [l’exemple de menu déroulant](./simple-menu/simple-menu.html) pour la mise en pratique de l’attribut <code>aria-haspopup</code>.</p>	
+
+<h3>Cas de l'attribut <code>Tabindex</code></h3>
+	<p>Il faut, autant que possible, ne pas redéfinir l'ordre de lecture en utilisant des attributs <code>tabindex</code> (avec des valeurs positives).</p>
+  <p>
+En pratique, l’attribut <code>tabindex</code> ne devrait être utilisé qu’avec deux valeurs&nbsp;:</p>
+<ul>
+<li><code>tabindex="-1"</code>&nbsp;: pour interdire à un élément de recevoir le focus via la touche <kbd>TAB</kbd> et l’autoriser à recevoir le focus via Javascript.</li>
+<li><code>tabindex="0"</code>&nbsp;: pour rendre un élément focusable via la touche <kbd>TAB</kbd> et via Javascript.</li>
+</ul>	  
+ <h2>Cas particulier d’une modification dynamique d’une <code>iframe</code></h2>
+ <p>Lorsqu’une <code>iframe</code> est mise à jour dynamiquement par une action utilisateur, il faut&nbsp;:</p>
+	  <ul>
+	  <li>Informer l’utilisateur de cette mise à jour et mettre à jour l’attribut <code>title</code> pour informer l’utilisateur de cette mise à jour. </li>
+	  <li> Si besoin (l’utilisateur doit avoir accès à l’<code>iframe</code> modifié immédiatement après l’action ayant abouti à la mise à jour), il faut mettre le focus sur la balise <code>iframe</code>.</li>
+	  <li> S’assurer que le parcours du focus reste logique et séquentiel dans la page comme à l’intérieur de l’<code>iframe</code>.</li>
+	  </ul>
+ </main>
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

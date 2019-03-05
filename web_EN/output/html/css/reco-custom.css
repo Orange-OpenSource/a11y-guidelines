@@ -1,0 +1,63 @@
+/* Section dépliable dans les critères */
+.linkSection {
+  outline: none !important;
+}
+
+.linkSection.AAA,
+.linkSection.AAA + .criteriaList {
+  display: none;
+}
+
+.criteriaList {
+  margin-left: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.criteriaList code {
+  background-color: #ddd;
+}
+
+/* Liste des chapitres sur la page index.html */
+.chaptersList {
+  font-size: 2rem;
+  font-weight: bold;
+  list-style: none;
+}
+
+.perso {
+    text-align: center;    
+}
+
+.perso .btn-info {
+    width: 100%;
+    white-space: normal;
+    min-height: 6.5rem;
+}
+
+.perso .btn-info:hover, .perso .btn-info:focus {
+  background: #666;
+  color: #fff;
+} 
+
+.perso div {
+    font-size: 1.2rem;
+}
+
+.examples-list {
+  list-style: none;
+}
+
+.examples-list img {
+  border: .1rem solid #888;
+  opacity: .75;
+  margin: 1rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.examples-list a:focus img,
+.examples-list a:hover img {
+  opacity: 1;
+}

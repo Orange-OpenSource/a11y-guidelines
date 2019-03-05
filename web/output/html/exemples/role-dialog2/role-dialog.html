@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les boîtes de dialogue 2/2 - recommandations accessibilité web Orange</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+    <!-- Copyright © 2016 Orange SA. All rights reserved -->
+    <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+    <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+    <!-- Style pour la mise en forme des exemples de code -->
+    <link rel="stylesheet" href="../../../css/dark.min.css">
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+
+    <script src="../../../exemples/main-script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../../../exemples/main-style.css">
+    <link rel="stylesheet" href="style.css">     
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les boîtes de dialogue 2/2</h1>
+
+      <h2>Présentation</h2>
+      <p>Voici un autre exemple de boite de dialogue qui cette fois, au lieu d’afficher un message à l’utilisateur, lui demande de sélectionner un dossier parmi une liste.</p>
+      
+      <h2>Exemple</h2>
+      <p>Voici le rendu final de cet exemple.</p>
+
+      <p><button id="openButton" class="btn btn-secondary">Ouvrir l’exemple final</button></p>
+
+      <!-- Final dialog -->
+      <div id="dialog" role="dialog" aria-labelledby="dialogTitle">
+        <span tabindex="0" class="dialog-start"></span>
+        <div class="dialogContainer">
+          <button class="closeButton" aria-label="Fermer" title="Fermer">X</button>
+          <div id="dialogTitle">Déplacer les éléments vers&nbsp;:</div>
+          <div class="dialogContent">
+            <p id="list-label">Mes fichiers</p>
+            <div role="listbox" tabindex="0" class="defaultFocus" aria-labelledby="list-label">            
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Mes fichiers ajoutés</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Divers</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Musique festivals</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Photos vacances</span></div>  
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Voyages Espagne</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">VTT</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Dossier 1</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Dossier 2</span></div>
+              <div tabindex="-1" role="option"><span class="glyphicon icon-folder_document"></span><span class="option-label">Dossier 3</span></div>
+            </div>
+
+            <button id="newfolder" class="btn btn-secondary">Créer un dossier</button>
+          </div>
+          <div class="btnbar">
+            <button class="btn btn-secondary">Annuler</button>
+            <button class="btn btn-secondary">Valider</button>
+          </div>
+        </div>
+        <span tabindex="0" class="dialog-stop"></span>
+      </div>
+
+      <h2>Réalisation</h2>
+
+      <p>Pas beaucoup de modifications par rapport au <a href="../role-dialog/role-dialog.html">premier exemple sur les boîtes de dialogue</a>, si ce n’est l’utilisation d’une listbox. Dans cas il suffit de bien veiller à étiqueter celle-ci en utilisant un attribut <code>aria-labelledby</code>.</p>
+
+      <pre><code class="html">
+          &lt;p id="list-label"&gt;Mes fichiers&lt;/p&gt;
+          &lt;div role="listbox" tabindex="0" class="defaultFocus" aria-labelledby="list-label"&gt;
+            ...            
+      </code></pre>
+
+    </main>
+    
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

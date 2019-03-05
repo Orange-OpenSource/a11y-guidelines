@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité numérique Orange</title>
+        
+      
+       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web/index.html">Web</a>
+                  </li>
+                  <li class="nav-item active mobile">
+                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
+                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
+                        <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
+                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
+                        <li><a class="page-links" href="links.html">Liens utiles</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>                        
+                    </ul>                                        
+                  </li>   
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+    
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="wwdc-2016-les-nouveaut-s-en-accessibilit-">WWDC 2016 : Les nouveautés en accessibilité</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2016 - Les nouveautés en accessibilité"}
+    ]);
+    addSubMenu([
+        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2016/202/">session 202</a>) a pour buts de mettre en avant les principales nouveautés en terme d&#39;accessibilité et de rappeler quelques fondamentaux avec une importance notable pour <span lang="en">VoiceOver</span>.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><p><strong>Fonctionnalités</strong></p>
+<ul>
+<li><a href="#SwitchControl">MOTEUR - Switch Control</a> (02:29)</li>
+<li><a href="#DwellControl">MOTEUR - Dwell Control</a> (03:36)</li>
+<li><a href="#DisplayAdjustments">VUE - Adaptation des couleurs</a> (04:15)</li>
+<li><a href="#TapticTime">VUE - Taptic time</a> (04:53)</li>
+<li><a href="#Magnifier">VUE - Loupe</a> (05:17)</li>
+<li><a href="#SoftwareTTY">OUÏE - TTY</a> (06:51)</li>
+<li><a href="#EnhancedTypingFeedback">APPRENTISSAGE - Retour audio d&#39;écriture</a> (07:51)</li>
+</ul>
+</li>
+<li><p><strong>Programmation</strong></p>
+<ul>
+<li><a href="#UIAccessibilityProtocol">Découvrir le protocole UIAccessibility</a> (14:19)</li>
+<li><a href="#accessibilityElements">accessibilityElements</a> (18:00)</li>
+<li><a href="#accessibilityFrameInContainerSpace">accessibilityFrameInContainerSpace</a> (19:02)</li>
+<li><a href="#accessibilityCustomRotors">accessibilityCustomRotors</a> (24:19)</li>
+<li><a href="#tvOS">tvOS header elements</a> (31:20)</li>
+</ul>
+</li>
+<li><p><strong>Exemple</strong> : au cours de cette présentation, de nombreuses solutions sont proposées par le biais d&#39;une application d&#39;exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span>. Il est vivement conseillé de regarder l&#39;<a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=698">application d&#39;exemple sans améliorations</a> avant de consulter les solutions. Une fois tous les problèmes soulevés par ces questions solutionnés, l&#39;accessibilité VoiceOver de l&#39;application s&#39;améliore nettement pour aboutir à la <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1753">démonstration</a> réalisée en séance.</p>
+<ul>
+<li>Rendre une <code>table view cell</code> activable <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1198">(19:58)</a>.</li>
+<li>Mettre un <code>label</code> dynamique sur un bouton <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1221">(20:21)</a>.</li>
+<li>Rendre accessibles des éléments <code>CALayer</code> utilisés pour créer un graphe par exemple <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1245">(20:45)</a>.</li>
+<li>Comprendre la problématique de navigation sur un plan avec VoiceOver <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1413">(23:33)</a>.</li>
+<li>Effectuer une recherche concernant les éléments d&#39;une <code>table view</code> <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1537">(25:37)</a> et d&#39;un plan <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1665">(27:45)</a> avec le <code>rotor</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Par la suite, le fait de cliquer sur un titre permet d&#39;ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.
+</br></br>
+<a name="SwitchControl"></a></p>
+<h3 id="-moteur-switch-control-02-29-https-developer-apple-com-videos-play-wwdc2016-202-time-149-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=149">MOTEUR - Switch Control (02:29)</a></h3>
+<p>Après un petit rappel sur l&#39;utilisation iOS de cette fonctionnalité, un focus particulier est mis sur son <strong>introduction avec tvOS</strong>.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-SwitchControl.png" />
+</br></br>
+<a name="DwellControl"></a></p>
+<h3 id="-moteur-dwell-control-03-36-https-developer-apple-com-videos-play-wwdc2016-202-time-216-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=216">MOTEUR - Dwell Control (03:36)</a></h3>
+<p>Des appareils spécifiques connectés à l&#39;ordinateur permettent de l&#39;utiliser sans avoir à manipuler la souris en associant le mouvement de cette dernière à celui des yeux.
+</br>Lorsque le curseur se stabilise, un timer est lancé à l&#39;expiration duquel une action dédiée est déclenchée <em>(nouveauté MacOS)</em>. 
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-DwellControl.png" />
+<a name="DisplayAdjustments"></a></p>
+<h3 id="-vue-adaptation-des-couleurs-04-15-https-developer-apple-com-videos-play-wwdc2016-202-time-255-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=255">VUE - Adaptation des couleurs (04:15)</a></h3>
+<p>Toutes les facilités déjà présentes sur iOS et MacOS pour aider au maximum les personnes ayant des problèmes de reconnaissance de couleurs ou une forte sensibilité à la lumière sont désormais aussi <strong>disponibles sur tvOS</strong>.
+</br></br></br>
+<a name="TapticTime"></a></p>
+<h3 id="-vue-taptic-time-04-53-https-developer-apple-com-videos-play-wwdc2016-202-time-293-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=293">VUE - Taptic time (04:53)</a></h3>
+<p><strong>WatchOS 3</strong> introduit cette fonctionnalité qui permet via VoiceOver de mettre en oeuvre toute une <strong>série de taps</strong> spécifiques <strong>pour donner l&#39;heure</strong> d&#39;une façon très silencieuse et discrète.
+</br></br></br>
+<a name="Magnifier"></a></p>
+<h3 id="-vue-loupe-05-17-https-developer-apple-com-videos-play-wwdc2016-202-time-317-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=317">VUE - Loupe (05:17)</a></h3>
+<p>Cette <strong>nouveauté iOS 10</strong> permet d&#39;utiliser son appareil mobile comme une loupe en associant des fonctionnalités d&#39;accessibilité <em>(stabilisateur d&#39;écran, filtres de couleurs...)</em> mises en situation par une <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=344">démonstration</a> au sein de cette présentation.
+</br></br></br>
+<a name="SoftwareTTY"></a></p>
+<h3 id="-ou-e-tty-06-51-https-developer-apple-com-videos-play-wwdc2016-202-time-411-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=411">OUÏE - TTY (06:51)</a></h3>
+<p>L&#39;utilisation du <strong>TTY</strong> <em>(Typewriter)</em> qui permet de faire passer du texte sur une ligne téléphonique grâce des appareils dédiés est désormais possible sur iOS.
+</br>Cette <strong>nouveauté iOS 10</strong> sous forme d&#39;<strong>implémentation software</strong> permet donc de réaliser ce type de conversation directement sur son appareil mobile sans avoir à ajouter quelque complément matériel que ce soit. 
+</br></br></br>
+<a name="EnhancedTypingFeedback"></a></p>
+<h3 id="-apprentissage-retour-audio-d-criture-07-51-https-developer-apple-com-videos-play-wwdc2016-202-time-471-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=471">APPRENTISSAGE - Retour audio d&#39;écriture (07:51)</a></h3>
+<p>Outre les améliorations réalisées sur <code>Énoncer la sélection</code> et <code>Énoncer le contenu de l&#39;écran</code> dans la partie <code>Accessibilité - Parole</code> des réglages, un retour audio sur ce qui est tapé à l&#39;écran par l&#39;utilisateur a aussi été implémenté.
+</br>Cette <strong>nouveauté iOS 10</strong> permet à des personnes dyslexiques par exemple de vérifier directement leurs écrits qu&#39;une <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=496">démonstration</a> au sein de cette présentation met en évidence.
+</br></br>
+<a name="UIAccessibilityProtocol"></a></p>
+<h3 id="-d-couvrir-le-protocole-uiaccessibility-14-19-https-developer-apple-com-videos-play-wwdc2016-202-time-859-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=859">Découvrir le protocole UIAccessibility (14:19)</a></h3>
+<p>Petit rappel sur les fondements du protocole informel <code>UIAccessibility</code> qui va être utilisé dans la suite de la présentation.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-UIAccessibilityProtocol.png" />
+</br></br>
+<a name="accessibilityElements"></a></p>
+<h3 id="-accessibilityelements-18-00-https-developer-apple-com-videos-play-wwdc2016-202-time-1080-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1080">accessibilityElements (18:00)</a></h3>
+<p>Rappel sur l&#39;intérêt de créer ce type d&#39;objets et le contexte au sein duquel ils évoluent.
+</br><img style="max-width: 575px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-accessibilityElements.png" />
+</br></br>
+<a name="accessibilityFrameInContainerSpace"></a></p>
+<h3 id="-accessibilityframeincontainerspace-19-02-https-developer-apple-com-videos-play-wwdc2016-202-time-1142-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1142">accessibilityFrameInContainerSpace (19:02)</a></h3>
+<p><strong>Nouveauté iOS 10</strong> qui permet la gestion automatique des coordonnées d&#39;un élément accessible dans son <code>container</code>.
+</br><img style="max-width: 575px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-accessibilityFrameInContainerSpace.png" />
+</br></br>
+<a name="accessibilityCustomRotors"></a></p>
+<h3 id="-accessibilitycustomrotors-24-19-https-developer-apple-com-videos-play-wwdc2016-202-time-1459-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1459">accessibilityCustomRotors (24:19)</a></h3>
+<p><strong>Nouveauté iOS 10</strong> qui permet d&#39;ajouter des éléments personnalisés sur le <code>rotor</code> natif d&#39;un terminal.
+</br><img style="max-width: 775px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-accessibilityCustomRotors.png" />
+</br>La mise en place programmatique de ce type de fonctionnement est aussi présentée dans la partie <a href="./criteria-ios-dev.html#rotor-personnalis-">développement</a>.
+</br></br>
+<a name="tvOS"></a></p>
+<h3 id="-tvos-header-elements-31-20-https-developer-apple-com-videos-play-wwdc2016-202-time-1880-"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1880">tvOS header elements (31:20)</a></h3>
+<p>Rappel sur l&#39;implémentation des éléments cités en objet ainsi que sur leur intérêt avec une navigation VoiceOver au sein de l&#39;univers tvOS.
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-tvOS_1.png" />
+</br><img style="max-width: 450px; height: auto;" alt="" src="./images/iOSdev/wwdc16-202-tvOS_2.png" />
+</br></br>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

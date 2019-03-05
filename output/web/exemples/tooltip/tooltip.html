@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les info-bulles - recommandations accessibilité web Orange</title>
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Les info-bulles (<i lang="en">tooltips</i>)</h1>
+
+      <h2>Préambule</h2>
+      <p>
+            Les info-bulles font partie des composants que l’on retrouve classiquement sur les sites web. 
+            Le langage <abbr>HTML</abbr> a prévu la possibilité d’afficher des info-bulles via l’attribut <code>title</code>. Cela dit, cette solution n’est malheureusement pas très esthétique puisqu’il est impossible de modifier son apparence.
+            La solution consiste donc bien souvent à créer des info-bulles à partir d’éléments <abbr>HTML</abbr> classiques (<code>span</code>, <code>div</code>…) dont l’apparence pourra être adaptée aux besoins à l’aide de <abbr>CSS</abbr>.
+            Cependant pour que ces info-bulles soient accessibles pour les utilisateurs qui n’utilisent pas de souris, certaines précautions doivent être prises.            
+      </p>
+          
+      <h2>La solution simple</h2>
+      <p>
+            La solution la plus simple pour afficher des info-bulles consiste à utiliser un composant Javascript déjà accessible. C’est le cas des <a href="http://boosted.orange.com/javascript/#tooltips">info-bulles de la librairie Boosted</a>.                                           
+      </p>
+      
+      <h3>Exemple</h3>
+      
+      <p>            
+            <div class="row">
+                  <div class="col-md-6">
+                        <form>
+                              <div class="form-group">
+                                    <label for="numero-serie">Veuillez saisir le numéro de série <span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="inscrit au dos de l’appareil"></span></label>
+                                    <input type="text" class="form-control" id="numero-serie">
+                              </div>                              
+                              <button type="submit" class="btn btn-default">Envoyer</button>
+                        </form>
+                  </div>
+            </div>      
+      </p>
+
+      <h2>Code de l’exemple</h3>
+      <pre><code class="html">
+            &lt;form&gt;
+                  &lt;div class="form-group"&gt;
+                        &lt;label for="numero-serie"&gt;
+                              Veuillez saisir le numéro de série
+                              &lt;span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="inscrit au dos de l’appareil"&gt;&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;input type="email" class="form-control" id="numero-serie"&gt;
+                  &lt;/div&gt;                              
+                  &lt;button type="submit" class="btn btn-default"&gt;Envoyer&lt;/button&gt;
+            &lt;/form&gt;
+      </code></pre>      
+      
+      <h2>Place aux tests</h3>
+      <dl>
+         <dt>Déplacer le focus sur l’icône «&nbsp;i&nbsp;» à l’aide de la touche <kbd>Tab</kbd>.</dt>
+         <dd>L’info-bulle apparaît.</dd>
+         <dt>Naviguer dans l’exemple à l’aide d’un lecteur d’écran.</dt>
+         <dd>Le texte de l’info-bulle est correctement vocalisé.</dd>         
+      </dl>
+      
+      <p><strong>À noter&nbsp;: </strong>l’attribut <code>tabindex</code> est nécessaire lorsque l’info-bulle est utilisée comme ici sur un élément non focusable (<code>span</code>). Sans cet attribut, l’info-bulle ne serait pas accessible au clavier.</p>
+
+    </main>
+
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

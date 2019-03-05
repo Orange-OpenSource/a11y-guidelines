@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Orange digital accessibility guidelines</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="/web/css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Presentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Themed WCAG index</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Requirements and resources</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
+                        <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Component examples</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Technical articles</a></li>
+                        <li><a class="page-about" href="about.html">About / Contact</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>                                    
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">You are here : </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web_EN/index.html">Website</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="make-the-focus-visible-at-all-times">Make the focus visible at all times</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
+        {"label":"Make the focus visible at all times"}
+    ]);
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p><strong>Target: </strong>everyone and especially people with visual impairments, cognitive limitations, motor disabled, having attention difficulties or using a device outdoors.<br><strong>When: </strong>as of design and during development.</p>
+<p><strong>Description: </strong></p>
+<p>Do not hide the focus and if necessary make it visible enough (e.g. by modifying the <code>outline</code> <abbr>CSS</abbr> property) on all elements likely to receive it (links, buttons, form elements). You can also accentuate the visibility of the focus so that it is easily identifiable.</p>
+<p>Make sure to provide a sufficient level of contrast so that it is visible to all (see <a href="methods-tools-contrasts.html">measure the level of contrast of colors</a>).</p>
+<p>When an effect is visible on an element during mouse-over (e.g. <code>:hover</code> <abbr>CSS</abbr> property), this effect must also be displayed when capturing the focus (<code>:focus</code>).</p>
+<p>It is possible, with Javascript code, to display the <code>outline</code> only during a keyboard navigation (ie not to display the <code>outline</code> when clicking a mouse, which also activates the <code>: focus</code> state: </p>
+<pre><code class="javascript">
+var head = document.head || document.getElementsByTagName(’head’)[0];
+var axsStyles = head.appendChild(document.createElement(’style’));
+document.addEventListener(’mousedown’, function() {
+    axsStyles.innerHTML = ’* {outline:none !important}’;
+});
+document.addEventListener(’keydown’, function() {
+    axsStyles.innerHTML = ’’;
+});
+</code></pre>
+
+<p><a href="https://codepen.io/paipai/pen/jwLyzK"> Demonstration of visibility of focus on keyboard navigation only </a></p>
+<p><strong>Checklist: </strong></p>
+<p>In many front-end frameworks or <abbr>CSS</abbr> resets, the <code>outline</code> property (to visualize the focus) is disabled (<code>outline: none;</code>), don’t forget to redefine it and check that the focus is visible on all focusable elements.</p>
+<p><strong>Users’ goal: </strong></p>
+<p>Allow focus visibility on all elements, especially for keyboard users (visually impaired, motor disabled or those with attention or memory difficulties and using devices outdoors).</p>
+<p><strong>Do:</strong> 
+Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;» link, clearly visible.</p>
+<p><img src="./images/focus-ok.png" alt="screenshot showing a link whose focus is clearly visible">  </p>
+<p><strong>Don’t:</strong> 
+Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».</p>
+<p><img src="./images/focus-ko.png" alt="screenshot showing a link whose focus is not visible enough">   </p>
+<p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic focus - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="../../../css/dark.min.css">
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+
+      <script src="../../../exemples/main-script.js"></script>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="../../../exemples/main-style.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main role="main" class="container">
+      <h1>Manage the focus for dynamically generated content</h1>
+
+      <h2>Introduction</h2>
+      <p>Handling focus in rich applications can be complex. It can raise some issues on the following cases:</p>
+	  <ul>
+	  <li>Adding / removing generated content triggered by a user action with page reloading</li>
+	  <li>Adding / removing dynamic content triggered by a user action without page reloading</li>
+	  <li>Special case: dynamic <code>iframes</code></li>
+	  </ul>
+	  
+	  <h2>Content triggered by a user action with page reloading</h2>
+	  <p>This case where we reload the whole page just to modify part of this page should be avoided even if it was triggered by the user, as there is a loss of context and a partial asynchronous update would be more suitable.<br />
+	  If there is no way to do asynchronous loading, you must at least:</p>
+	  <ol>
+	  <li>Warn, if needed, the user with a message like “Loading, please wait” and set the focus on it if there is loss of context.</li>
+	  <li>When reloading, put the focus on the generated content or when the content is removed put the focus on the triggering element (if it still exists after reload) or just set the focus right before the removed content.</li>
+	  <li> Ensure that the focus moves in a logical and sequential order when hiding or showing content.</li>
+	  </ol>
+	  
+	  <h2>Dynamic content triggered by a user action without page reloading (asynchronous)</h2>
+	  <p>It is the most common case: the page is not reloaded, only the <abbr>DOM</abbr> is modified by adding or removing content on a user action (for example, displaying the search results, displaying a dialogue popin...).</p>
+	  <h3>Addition of content</h3>
+		<ol>
+		<li>If necessary, warn the user of the appearance of content (for example, for a submenu to unfold, we can add a text " unfold" and put a property <code>aria-haspopup</code>). If this content is likely to disappear (popin, for example), keep in mind the element triggering the appearance to restore focus when the disappearance. </li>
+		<li>The new content must appear in the source code just after the triggering element (example: drop-down menu), </li>
+		<li>The focus must be moved to one of the first elements of the new content that appeared (the container, a title, a link, a button ...). </li>
+		</ol>
+	<h3> Disappearance of content </ h3>
+	<ol>
+		<li>Notify the user, if necessary, before he triggers this disappearance,</li>
+		<li>The focus must be returned to the triggering element or, if it is impossible, set the focus just before the content that has disappeared. For example, when closing a dialog box, the focus must be repositioned on the element that triggered the opening (button, link, ...). </li>
+	</ol>
+	<p>
+		<strong> In all cases, ensure that the focus path has remained logical and sequential after the appearance / disappearance of content. </strong> 
+		</p>
+	<h3>Notify the user of the content changes </h3>
+
+	<p> This is the main problem for any user, especially those who are visually, cognitively or with attention deficit disorder or small screens.</p>
+	<p> The user must be able to spot the appearance or disappearance of content and interact with it, if necessary. <br />We must therefore warn the user, and there are several solutions in case of content modifications: </p>
+	<ul> 
+		<li>By providing the user with informative text, </li>
+		<li>>By managing the focus path, </li>
+		<li>By using <abbr>ARIA</abbr>. </li>
+	</ul>			
+	<p> See [the sample drop-down menu] (./ simple-menu / simple-menu.html) for putting the <code>aria-haspopup</code> attribute into practice. </p>
+	<h3>Case of the <code>Tabindex</code> attribute</h3>
+	<p>As much as possible, do not redefine the reading order by using <code>tabindex</code> attributes (with positive values).</p>
+	<p>In practice, the <code> tabindex </ code> attribute should only be used with two values: </p>
+	<ul>
+		<li> <code>tabindex = "- 1"</code>: to prevent an element from receiving focus via the <kbd>TAB</kbd> key and allow it to receive focus via Javascript . </li>
+		<li><code>tabindex = "0"</code>: to make a focusable element via the <kbd>TAB </kbd> key and via Javascript. </li>
+	</ul>
+
+   <h2>Special case: dynamic <code>iframes</code></h2>
+	  <p>When an <code>iframe</code> is updated dynamically by a user action, you must:</p>
+	  <ul>
+	  <li>Inform the user of this update and update the <code>title</code> attribute to inform the user of this update. </li>
+	  <li> If necessary (the user must have access to the modified <code>iframe</code>  immediately after the action that triggered the update), you must put the focus on the <code>iframe</code> tag.</li>
+	  <li> Ensure that the focus moves in a logical and sequential order inside the page and the <code>iframe</code>.</li>
+	  </ul>
+    </main>
+
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
