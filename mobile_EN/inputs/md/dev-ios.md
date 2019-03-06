@@ -341,6 +341,8 @@ In this example, a method is fired when VoiceOver or Switch Control status has c
     }
 </code></pre>
 ### Links
+- [Accessibility options](./criteria-ios.html#accessibility-options) *(iOS conception)*
+
 All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br>
@@ -773,7 +775,7 @@ Another grouping elements case could use the **shouldGroupAccessibilityChildren*
 ## Text size
 ### Description
 Since iOS7, it is possible to make the text size dynamic according to the phone settings.
-</br><img alt="larger accessibility sizes option screenshot" style="max-width: 600px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</br><img alt="larger accessibility sizes option screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:
  - **Use the text styles** available with the application iOS version.
  </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" />

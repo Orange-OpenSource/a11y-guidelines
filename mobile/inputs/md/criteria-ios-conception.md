@@ -121,9 +121,7 @@ Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visu
 **Exemple&nbsp;:**      
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
-<img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
-<pre><code class="swift">cell.mailImageView.accessibilityLabel = cell.badgeLabel.text! + " " + "exemple_textualAlternative_textImage_accessibilityLabel".localized //On ajoute l’alternative complète
-cell.badgeLabel.isAccessibilityElemement = false //On masque le bouton-icône pour éviter une redondance d’information</code></pre>
+</br><img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
    
 
 ## Titre et en-tête
@@ -179,11 +177,6 @@ Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informati
 **Exemple&nbsp;:**      
 
 <img src="./images/expandable_list.png" alt="exemple de liste dépliable qui nécessite une alternative textuelle" width="250" class="pull-left">
-<pre><code class="swift">if(accessibleIsFold) {
-   accordionHeaderView.accessibilityHint = "example_elementState_foldArea_open_accessibilityHint".localized //"Cliquer pour ouvrir la section"
-}else{
-  accordionHeaderView.accessibilityHint = "example_elementState_foldArea_close_accessibilityHint".localized //"Cliquer pour fermer la section"
-}</code></pre>
   
 
 ## Composant standard
@@ -386,16 +379,8 @@ Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d�
 
 **Exemple&nbsp;:**      
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
+</br><img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
 
-<img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
-<pre><code>remoteView.isAccessibilityElement = false
-remoteView.shouldGroupAccessibilityChildren = true
-remoteView.accessibilityElements = []
-remoteView.accessibilityElements?.append(oneButton)
-remoteView.accessibilityElements?.append(twoButton)
-remoteView.accessibilityElements?.append(threeButton)
-remoteView.accessibilityElements?.append(fourButton)
-[…]</code></pre>
 
 
 ## Langue
@@ -422,7 +407,7 @@ Assurer une compréhension des textes de l’application.
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**
-L’accès au contenu d’une application ne doit absolument pas dépendre de l’orientation de l’écran, c’est pourquoi il est très fortement recommandé de mettre en place un **passage sans contraintes entre les modes portrait et paysage** dès le début du projet.
+l’accès au contenu d’une application ne doit absolument pas dépendre de l’orientation de l’écran, c’est pourquoi il est très fortement recommandé de mettre en place un **passage sans contraintes entre les modes portrait et paysage** dès le début du projet.
 </br>Bien évidemment, ceci n’est valable que si des contraintes fonctionnelles ne viennent pas à l’encontre d’un de ces deux modes (projection, tableau… par exemple).
 </br>L’idéal est de pouvoir aussi déployer l’application sur des écrans de type iPad de façon à favoriser la lecture et la gestuelle pour l’utilisateur.
 
@@ -432,11 +417,88 @@ L’accès au contenu d’une application ne doit absolument pas dépendre de l�
 - La définition très précise de la façon dont les transitions entre les modes doivent être réalisées.
 - La parfaite adaptation du contenu aux modes portrait et paysage par le biais d’une batterie de tests graphiques sur tous les mobiles compatibles avec la version iOS déployée (très important pour le grossissement de texte).
 - Le paramétrage approprié dans l’éditeur de code.
-</br><img style="max-width: 600px; height: auto;" alt="" src="./images/orientation.png" />
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/orientation.png" />
 
 **Objectif utilisateur&nbsp;:**
 
-Assurer une meilleure lisibilité du contenu tout en permettant aux personnes déficientes motrices qui utilisent leur terminal en mode paysage de pouvoir utiliser l’application sans contrainte.
+Assurer une meilleure lisibilité du contenu tout en permettant aux personnes déficientes motrices qui utilisent leur terminal en mode paysage de pouvoir utiliser l’application sans contrainte.</br></br>
+
+## Options d'accessibilité
+**Cible&nbsp;:** tout le monde.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:** les options d'accessibilité présentes dans les réglages du terminal sont toutes susceptibles d'améliorer de façon conséquente le parcours d'un utilisateur souffrant d'un trouble que l'option peut fortement aider à surmonter.
+
+Il est donc primordial de :
+- **Comprendre** comment chacune de ces options peut impacter la conception et la réalisation d'une application.
+- **Tester** chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.
+
+La liste exhaustive de ces options est fournie ci-dessous en détaillant leur action et leur correspondance programmatique une fois sélectionnées :
+1. [Augmenter le contraste](#optionA11Y_contraste).
+2. [Activer l'AssistiveTouch](#optionA11Y_assistiveTouch).
+3. [Mettre le texte en gras](#optionA11Y_bold).
+4. [Afficher les sous-titres](#optionA11Y_closedCaption).
+5. [Modifier les couleurs en échelle de gris](#optionA11Y_grayScale).
+6. [Activer l'Accès Guidé](#optionA11Y_guidedAccess).
+7. [Inverser les couleurs](#optionA11Y_inverserLesCouleurs).
+8. [Passer l'audio en mono](#optionA11Y_audioEnMono).
+9. [Limiter les animations visuelles](#optionA11Y_limiteVisuel).
+10. [Réduire le floutage et la transparence](#optionA11Y_reductionTransparence).
+11. [Secouer pour annuler](#optionA11Y_secouerPourAnnuler).
+12. [Énoncer le contenu de l'écran](#optionA11Y_lecturePage).
+13. [Énoncer la sélection](#optionA11Y_speakSelection).
+14. [Activer le Contrôle de Sélection](#optionA11Y_switchontrol).
+15. [Activer VoiceOver](#optionA11Y_voiceOver).
+
+<a name="optionA11Y_contraste"></a>
+- **Augmenter le contraste** *(UIAccessibilityDarkerSystemColorsEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Contrast).
+</br><img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Augmenter le contraste." src="./images/optionA11Y_contraste.png" />
+<a name="optionA11Y_assistiveTouch"></a>
+- **Activer l'AssistiveTouch** *(UIAccessibilityIsAssistiveTouchRunning)* : affiche le menu homonyme au premier plan quelle que soit l'application lancée.
+</br><img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - AssistiveTouch" src="./images/optionA11Y_assistiveTouch.png" />
+<a name="optionA11Y_bold"></a>
+- **Mettre le texte en gras** *(UIAccessibilityIsBoldTextEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Sizing).
+</br><img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Texte en gras" src="./images/optionA11Y_bold.png" />
+<a name="optionA11Y_closedCaption"></a>
+- **Afficher les sous-titres** *(UIAccessibilityIsClosedCaptioningEnabled)* : permet l'affichage de sous-titres codés (SC) ou pour sourds/malentendants selon leur disponibilité au visionnage dans l'`appTV` ou dans `Vidéos`.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Sous-titres codés et SM" src="./images/optionA11Y_closedCaptions.png" />
+<a name="optionA11Y_grayScale"></a>
+- **Modifier les couleurs en échelle de gris** *(UIAccessibilityIsGrayscaleEnabled)* : permet aux personnes ne distinguant pas les couleurs de pouvoir cerner sans problèmes les écrans particulièrement bigarrés.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Filtres de couleur" src="./images/optionA11Y_grayScale.png" />
+<a name="optionA11Y_guidedAccess"></a>
+- **Activer l'Accès Guidé** *(UIAccessibilityIsGuidedAccessEnabled)* : limite l'utilisation du terminal à une seule et unique application.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Accès guidé" src="./images/optionA11Y_guidedAccess.png" />
+<a name="optionA11Y_inverserLesCouleurs"></a>
+- **Inverser les couleurs** *(UIAccessibilityIsInvertColorsEnabled)* : limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue occulaires en passant le terminal en `mode sombre`.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Inverser les couleurs" src="./images/optionA11Y_inverserLesCouleurs.png" />
+<a name="optionA11Y_audioEnMono"></a>
+- **Passer l'audio en mono** *(UIAccessibilityIsMonoAudioEnabled)* : aide les personnes malentendantes ou sourdes d'une oreille par exemple.
+</br><img style="max-width: 590px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Audio mono" src="./images/optionA11Y_audioEnMono.png" />
+<a name="optionA11Y_limiteVisuel"></a>
+- **Limiter les animations visuelles** *(UIAccessibilityIsReduceMotionEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Motion).
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire les animations" src="./images/optionA11Y_limiteVisuel.png" />
+<a name="optionA11Y_reductionTransparence"></a>
+- **Réduire le floutage et la transparence** *(UIAccessibilityIsReduceTransparencyEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#TransparencyAndBlurring).
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire la transparence" src="./images/optionA11Y_reductionTransparence.png" />
+<a name="optionA11Y_secouerPourAnnuler"></a>
+- **Secouer pour annuler** *(UIAccessibilityIsShakeToUndoEnabled)* : affichage d'un menu par secousse du terminal qui permet de rétablir une action supprimée ou encore d'éviter de rester appuyé sur la touche d'effacement pour regarder les lettres s'effacer l'une après l'autre.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Secouer pour annuler" src="./images/optionA11Y_secouerPourAnnuler.png" />
+<a name="optionA11Y_lecturePage"></a>
+- **Énoncer le contenu de l'écran** *(UIAccessibilityIsSpeakScreenEnabled)* : permet l'accès au player natif pour lire automatiquement une page web par exemple.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer le contenu de l'écran" src="./images/optionA11Y_lecturePage.png" />
+<a name="optionA11Y_speakSelection"></a>
+- **Énoncer la sélection** *(UIAccessibilityIsSpeakSelectionEnabled)* : donne accès à l'affichage d'un menu qui propose d'énoncer la sélection qui a déclenché son apparition.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer la sélection" src="./images/optionA11Y_speakSelection.png" />
+<a name="optionA11Y_switchontrol"></a>
+- **Activer le Contrôle de Sélection** *(UIAccessibilityIsSwitchControlRunning)* : active la fonctionnalité en `mode point` ou en `mode élément`.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Contrôle de sélection" src="./images/optionA11Y_switchontrol.png" />
+<a name="optionA11Y_voiceOver"></a>
+- **Activer VoiceOver** *(UIAccessibilityIsVoiceOverRunning)* : active le lecteur d'écran.
+</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - VoiceOver" src="./images/optionA11Y_voiceOver.png" />
+
+</br>Une fois l'option activée, si l'action désirée n'est pas effective au sein de l'application, il est **très fortement recommandé** d'agir en conséquence en se tenant informé de l'état de l'option impactée pour fournir à l'utilisateur l'expérience à laquelle il s'attend.
+</br>La liste complète des options d'accessibilité avec leur notification dédiée est présente dans la [partie développement](./criteria-ios-dev.html#options-d-accessibilit-).
+</br></br>Il peut être aussi particulièrement intéressant de suivre les (dés)activations de ces options sous forme d'indicateurs afin de mieux connaître les utilisateurs d'une application et d'affiner subséquemment sa mise en oeuvre.</br></br>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

@@ -15,7 +15,7 @@
 
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application [mDAN](./mdan.html) pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section concernant <span lang="en">TalkBack</span>](./screen-reader-talkback.html).
 
-Pour le web, Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé, voir ces [recommandations](https://developer.android.com/guide/topics/ui/accessibility/). L’objet de ces pages étant d’en faire un « digest » sans s’y substituer.
+Pour le web, le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé, voir ces [recommandations](https://developer.android.com/guide/topics/ui/accessibility/). L’objet de ces pages étant d’en faire un « digest » sans s’y substituer.
 
 
 ## Images
@@ -73,7 +73,7 @@ Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficie
 **Outil&nbsp;:**
 L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
 
-L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible pour Android 6+. 
+L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible à partir d’Android 6.
 
 **Exemple de contraste non valide&nbsp;:**  
 Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
@@ -110,7 +110,7 @@ Le texte ou son alternative est vocalisé automatiquement avec des informations 
 
 **Objectif utilisateur&nbsp;:**
 
-Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant… ) d’accéder aux informations véhiculées par l’application par d’autres biais.
+Permettre aux utilisateurs du lecteur d’écran d’accéder à toutes les informations véhiculées par l’application.
 
 **Exemple&nbsp;:**
 
@@ -219,7 +219,7 @@ Améliorer le confort de navigation au toucher (<i lang="en">touch</i>).
 
 **Outil&nbsp;:**
 
-L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des zones de clic. Disponible pour Android 6+. 
+L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des zones de clic. Disponible à partir d’Android 6. 
 
 **Exemple valide&nbsp;:** 
 
@@ -283,7 +283,7 @@ Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir c
 Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.
 
 **Outil&nbsp;:**
-L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible pour Android 6+.
+L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible à partir d’Android 6.
 
 **Exemple&nbsp;:**
 
@@ -316,7 +316,7 @@ Améliorer le référencement naturel.
 ## Changement de contenu
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;:** lors du développement.
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:** 
 
@@ -362,12 +362,12 @@ Donner une indication visuelle aux utilisateurs lors de la présence de <i lang=
 <div class="col-sm-6 col-xs-12">
 **Exemple valide&nbsp;:**
 
-<img src="./images/scroll_h1.png" alt="exemple de scroll horizontal accessible" width="300">
+<img src="./images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 **Exemple non-valide&nbsp;:**
 
-<img src="./images/scroll_h2.png" alt="exemple de scroll horizontal non accessible" width="300">
+<img src="./images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 </div>
 </div>
 
@@ -426,13 +426,14 @@ Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());
-[…]</code></pre><pre>
+[…]</code></pre>
+<pre><code class="kotlin">
 volupButton.accessibilityTraversalAfter = remote0.id
 voldownButton.accessibilityTraversalAfter = volup.id
 chaineplusButton.accessibilityTraversalAfter = voldown.id
 chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 […]
-<code class="kotlin"></code></pre>
+</code></pre>
 
 
 ## Navigation au focus

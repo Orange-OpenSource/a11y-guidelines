@@ -44,18 +44,18 @@ Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de prés
 ### [Floutage et transparence (03:07)](https://developer.apple.com/videos/play/wwdc2018/230/?time=187)
 Depuis iOS 8, des classes telles que `UIBlurEffect` et `UIVisualEffectView` permettent de gérer parfaitement l'effet de flou d'une image.
 </br>Cependant, cela peut entraîner des difficultés occulaires pour les personnes ayant des problèmes visuels.
-</br>L'utilisateur peut alors atténuer très fortement les effets de cette fonctionnalité en le spécifiant dans ses réglages.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
+</br>L'utilisateur peut alors atténuer très fortement ces effets néfastes en activant l'[option d'accessibilité](./criteria-ios-conception.html#options-d-accessibilit-) appropriée dans ses réglages.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_1.png" />
 </br>Le résultat conduit à un fond d'écran beaucoup plus sombre voire uni dans certains cas.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_2.png" />
-</br>Côté développement, on adapte le fond d'écran selon la valeur de la propriété `isReduceTransparencyEnabled`.
+</br>Côté développement, il est possible de connaître la valeur de la propriété `isReduceTransparencyEnabled`.
 </br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-TransparencyAndBlurring_3.png" />
 
 <a name="Contrast"></a>
 ### [Contraste (04:38)](https://developer.apple.com/videos/play/wwdc2018/230/?time=278)
 Le contraste {couleur du contenu exposé / couleur du fond d'écran} est très important et repose beaucoup sur les propriétés de la police affichée détaillées dans la [partie conception de ce site](./criteria-ios-conception.html#couleurs).
-</br>Il est possible d'augmenter nativement le contraste des couleurs par le biais des réglages, pouvant ainsi favoriser un confort de lecture.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
+</br>Il est possible d'augmenter nativement le contraste des couleurs en activant l'[option d'accessibilité](./criteria-ios-conception.html#options-d-accessibilit-) appropriée dans les réglages du terminal, pouvant ainsi favoriser un confort de lecture.
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_1.png" />
 </br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de `isDarkerSystemColorsEnabled`.
 </br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Contrast_2.png" />
 
@@ -63,17 +63,17 @@ Le contraste {couleur du contenu exposé / couleur du fond d'écran} est très i
 ### [Grossissement (07:04)](https://developer.apple.com/videos/play/wwdc2018/230/?time=424)
 Les quelques points concernant le `Dynamic Type` sont largement expliqués dans la [section développement iOS](./criteria-ios-dev.html#taille-des-textes) et font référence à une [autre présentation](./criteria-ios-wwdc-17245.html) parfaitement détaillée dans la partie WWDC de ce site.
 </br>Le simple fait de passer une police en gras peut nettement améliorer le rendu visuel pour certains utilisateurs sans avoir à en grossir démesurément la taille.
-</br>Ici encore, les réglages du terminal permettent d'activer cette fonctionnalité.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
+</br>Ici encore, les réglages du terminal permettent d'activer cette [option d'accessibilité](./criteria-ios-conception.html#options-d-accessibilit-).
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_1.png" />
 </br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de `isBoldTextEnabled`.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Sizing_2.png" />
 
 <a name="Motion"></a>
 ### [Mouvement (08:48)](https://developer.apple.com/videos/play/wwdc2018/230/?time=528)
 Certaines animations peuvent entraîner des problèmes d'équilibre voire de nausées à certaines personnes.
-</br>Les réglages utilisateurs en accessibilité permettent de réduire fortement tout type d'animations natives.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
-</br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de `isReduceMotionEnabled` et permet d'adapter les effets de l'application aux souhaits de l'utilisateur.
+</br>Les réglages utilisateurs permettent de réduire fortement tout type d'animations natives en activant l'[option d'accessibilité](./criteria-ios-conception.html#options-d-accessibilit-) appropriée.
+</br><img style="max-width: 950px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_1.png" />
+</br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de `isReduceMotionEnabled` et permet d'adapter les effets de l'application aux souhaits de l'utilisateur s'ils ne sont pas automatiquement pris en compte.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230-Motion_2.png" />
 
 <a name="UIAccessibilityElement"></a>
