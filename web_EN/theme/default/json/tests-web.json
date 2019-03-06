@@ -7,7 +7,7 @@
     ],
     "tests": [
       "Run the code inspector of the browser",
-      "Inspect the page title (<code>&lt;TITLE&gt;[title]/title&gt;</code>)",
+      "Inspect the page title (<code>&lt;title&gt;[title]/title&gt;</code>)",
       "or read the title from the browser tab"
     ],
     "check": [
@@ -40,7 +40,7 @@
       "All content, visually treated as headings, has a heading semantics (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags)",
       "The level headings are structured in a logical way"
     ],
-    "exception": "Do not take into account hidden headings (visibility:hidden or display:none) via CSS directives. If one of these masked titles is likely to appear, observations on the new structure of the titration must be made again.",
+    "exception": "Do not take into account hidden headings (<code>visibility:hidden</code> or <code>display:none</code>) via CSS directives. If one of these masked titles is likely to appear, observations on the new structure of the titration must be made again.",
     "shortcuts":"",
     "profiles": ["Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
   },
@@ -107,7 +107,7 @@
       "All the elements present in the beginning and end tags",
       "All elements are nested according to their specification",
       "No element contain duplicated attributes",
-      "No duplicated ID attributes"
+      "No duplicated <code>id</code> attributes"
     ],
     "exception":"",
     "shortcuts":"",
@@ -125,7 +125,7 @@
     ],
     "check": [
       "Check for the presence of a lang attribute",
-      "The value of the lang attribute must match the main language of the document"
+      "The value of the <code>lang</code> attribute must match the main language of the document"
     ],
     "result": [
       "A language attribute is present in the <code>&lt;html&gt;</code> element of the page",
@@ -163,23 +163,23 @@
     ],
     "tests": [
       "Run the code inspector of the browser",
-      "Locate the <code>TABLE</code> by searching on the term <code>TABLE</code>",
-      "Inspect the <code>TABLE</code>"
+      "Locate the <code>table</code> by searching on the term <code>table</code>",
+      "Inspect the <code>table</code>"
     ],
     "check": [
 		"Check that the tables are not used for layout purposes",
-		"<strong>For data tables: </strong><br/> Check that the data tables have a non-empty caption element, or a heading placed just before the table",
-		"<strong>Single entry table:</strong><br/> Check for the presence of headers (<code>TH</code>) for simple tables",
-		"<strong>Table with 2 entries: </strong><br/> For each <code>TH</code> check the presence of an attribute <code>scope='col'</code> for column headers, <br/> and the presence of a <code>scope='row'</code> for row headers",
-		"<strong>Complex tables:</strong><br/> Check for the presence of <code>TH</code> headers or attributes <code>id</code> and <code>headers</code>",
-		"Check the presence of a summary explaining the structure of the table. <br/>HTML5: presence of a summary, if necessary in accessible masking or <code>display:none</code>.<br/>The summary is linked to the table via a <code>aria-describedby</code><br/> Previous version: summary present in an attribute <code>summary</code>"
+		"<strong>For data tables: </strong> <br/>Check that the data tables have a non-empty caption element, or a heading placed just before the table",
+		"<strong>Single entry table:</strong> <br/> Check for the presence of headers (<code>th</code>) for simple tables",
+		"<strong>Table with 2 entries: </strong> <br/> For each <code>th</code> check the presence of an attribute <code>scope='col'</code> for column headers, <br/> and the presence of a <code>scope='row'</code> for row headers",
+		"<strong>Complex tables:</strong> <br/> Check for the presence of <code>th</code> headers or attributes <code>id</code> and <code>headers</code>",
+		"Check the presence of a summary explaining the structure of the table. <br/>HTML5: presence of a summary, if necessary in accessible masking or <code>display:none</code>.<br/>The summary is linked to the table via a <code>aria-describedby</code> <br/> Previous version: summary present in an attribute <code>summary</code>"
 	],
     "result": [
 		"Tables are used only for data presentation",
 		"The tables have a legend (caption or heading placed just before)",
-		"Simple tables have <code>TH</code> headers",
-		"Double entry tables have <code>TH</code> headers as well as <code>scope='col'</code> and <code>scope='row'</code> attributes",
-		"Complex tables have headers (TH + scope attributes) or complex headers based on the use of attributes <code>ID</code> and <code>HEADERS</code>",
+		"Simple tables have <code>th</code> headers",
+		"Double entry tables have <code>th</code> headers as well as <code>scope='col'</code> and <code>scope='row'</code> attributes",
+		"Complex tables have headers (th + scope attributes) or complex headers based on the use of attributes <code>ID</code> and <code>headers</code>",
 		"Complex tables have a relevant summary"
 	],
     "exception":"",
@@ -196,16 +196,16 @@
       "Launch aXe"
     ],
     "check": [
-      "Check that all images have an attribute <code>ALT</code>",
-      "Check that all <code>iframe</code> and <code>frame</code> contain a non-empty <code>TITLE</code> attribute"
+      "Check that all images have an attribute <code>alt</code>",
+      "Check that all <code>iframe</code> and <code>frame</code> contain a non-empty <code>title</code> attribute"
     ],
     "result": [
-      "No error due to the absence of <code>ALT</code> attribute",
-      "No error due to the absence of <code>TITLE</code> attribute on <code>frame</code> and <code>iframe</code>"
+      "No error due to the absence of <code>alt</code> attribute",
+      "No error due to the absence of <code>title</code> attribute on <code>frame</code> and <code>iframe</code>"
     ],
     "exception": [
-      "Presence of an attribute <code>ALT</code> for all images",
-      "Presence of an attribute <code>TITLE</code> for all <code>frame</code> and <code>iframe</code>"
+      "Presence of an attribute <code>alt</code> for all images",
+      "Presence of an attribute <code>title</code> for all <code>frame</code> and <code>iframe</code>"
     ],
     "shortcuts":"",
     "profiles": ["Qualifier - advanced checklist", "Developer", "Expert Accessibility"]
@@ -217,7 +217,7 @@
       "Manual test - Code inspector"
     ],
     "tests": [
-		"Disable page styles<br/>Firefox > Display > Page style > No style"
+		"Disable page styles <br/>Firefox > Display > Page style > No style"
 	],
     "check": [
       "Check that there is no loss of information due to the absence of integrated background images (CSS)"
@@ -240,18 +240,18 @@
 		"Inspect the images"
 	],
     "check": [
-      "Manually check that the value of the <code>ALT</code> attributes is relevant:",
-      "<strong>Image link: </strong><br/> check that the <code>ALT</code> attribute content of each link image is relevant to its destination",
-      "<strong>Information-carrying image:</strong><br/> check that the <code>ALT</code> attribute content of each image is relevant to the role of the image in the page",
-      "<strong>Image containing text: </strong><br/> check that the <code>ALT</code> attribute content includes at least the text of the image",
-      "<strong>Decorative image:</strong><br/> check that the <code>ALT</code> attribute content is empty",
-      "<strong>Complex image whose content of the <code>ALT</code> would be too long (schematics, graphs...) </strong><br/> Check that for any image description too long to be put in an attribute <code>ALT</code>, the description of the image in html text form is either present in the page or a link points to an html page containing the description, and this, near the image to be described"
+      "Manually check that the value of the <code>alt</code> attributes is relevant:",
+      "<strong>Image link: </strong> <br/> check that the <code>alt</code> attribute content of each link image is relevant to its destination",
+      "<strong>Information-carrying image:</strong> <br/>check that the <code>alt</code> attribute content of each image is relevant to the role of the image in the page",
+      "<strong>Image containing text: </strong> <br/> check that the <code>alt</code> attribute content includes at least the text of the image",
+      "<strong>Decorative image:</strong> <br/> check that the <code>alt</code> attribute content is empty",
+      "<strong>Complex image whose content of the <code>alt</code> would be too long (schematics, graphs...) </strong> <br/> Check that for any image description too long to be put in an attribute <code>alt</code>, the description of the image in html text form is either present in the page or a link points to an html page containing the description, and this, near the image to be described"
     ],
     "result": [
-      "<strong>Image link:</strong> the target of the link is specified in the <code>ALT</code>",
-      "<strong>Image carrier of information:</strong> the <code>ALT</code> attribute contains the information conveyed by the image",
-      "<strong>Image containing text:</strong> the <code>ALT</code> attribute contains text conveyed by the image",
-      "<strong>Decorative image:</strong> the <code>ALT</code> attribute is empty",
+      "<strong>Image link:</strong> the target of the link is specified in the <code>alt</code>",
+      "<strong>Image carrier of information:</strong> the <code>alt</code> attribute contains the information conveyed by the image",
+      "<strong>Image containing text:</strong> the <code>alt</code> attribute contains text conveyed by the image",
+      "<strong>Decorative image:</strong> the <code>alt</code> attribute is empty",
       "<strong>Complex image: </strong> a description of the image is available in the form of a text, either directly in the page or accessible via a link near the image"
     ],
     "exception":"",
@@ -269,10 +269,10 @@
 		"Inspect the frames"
 	],
     "check": [
-      "Verify that the value of the <code>TITLE</code> attributes describes the content or function of <code>iframe</code> or <code>frame</code>"
+      "Verify that the value of the <code>title</code> attributes describes the content or function of <code>iframe</code> or <code>frame</code>"
     ],
     "result": [
-      "All frames have a relevant <code>TITLE</code >attribute"
+      "All frames have a relevant <code>title</code >attribute"
     ],
     "exception":"",
     "shortcuts": "Technical iframes: http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
@@ -288,7 +288,7 @@
       "Inspect the audio and video content of the page"
     ],
     "check": [
-		"Verify that for any audio or video track, a complete transcript<br/>(text containing all visual and auditory information)<br/>in html text form is either present in the page,<br/>or through a link (near the element) to a html page containing this transcript"
+		"Verify that for any audio or video track, a complete transcript <br/>(text containing all visual and auditory information) <br/>in html text form is either present in the page, <br/>or through a link (near the element) to a html page containing this transcript"
 	],
     "result": [
       "Presence of a complete transcript in the same page or in another page via a link"
@@ -463,7 +463,7 @@
     "tests": [
 		"Run the code inspector of the browser",
 		"Locate links, buttons and all navigation items",
-		"Inspect the text wording of these items, <br/>If the test cannot be validated in step 3, inspect the <code>ARIA-LABEL</code> and <code>TITLE</code> attributes"
+		"Inspect the text wording of these items, <br/>If the test cannot be validated in step 3, inspect the <code>aria-label</code> and <code>title</code> attributes"
 	],
     "check": [
       "Check that there are no identical labels pointing to different destinations"
@@ -485,7 +485,7 @@
       "Run the code inspector of the browser",
       "Locate links, buttons and all navigation items",
       "Inspect the text wording of these items",
-      "If the test cannot be validated as early as step 3, inspect the <code>ARIA-LABEL</code> and <code>TITLE</code> attributes"
+      "If the test cannot be validated as early as step 3, inspect the <code>aria-label</code> and <code>title</code> attributes"
     ],
     "check": [
       "Verify that it is possible to determine the action or destination of a link or button, only from its text label"
@@ -507,13 +507,13 @@
       "Run the code inspector of the browser",
       "Locate links, buttons and all navigation items",
       "Inspect the text wording of these items",
-      "If the test cannot be validated as early as step 3, inspect the <code>ARIA-LABEL</code> and <code>TITLE</code> attributes"
+      "If the test cannot be validated as early as step 3, inspect the <code>aria-label</code> and <code>title</code> attributes"
     ],
     "check": [
       "Make sure that users are informed when a new window is opened"
     ],
     "result": [
-		"Presence of a mention specifying the opening of a new window<br/>In general, the text of the link followed by the mention 'new window', if not, the title and aria-label attributes must specify the mention 'new window'. <br/>Example: google (new window)"
+		"Presence of a mention specifying the opening of a new window <br/>In general, the text of the link followed by the mention 'new window', if not, the title and aria-label attributes must specify the mention 'new window'. <br/>Example: google (new window)"
 	],
     "exception":"",
     "shortcuts":"",
@@ -526,7 +526,7 @@
       "Manual test"
     ],
     "tests": [
-		"Disable page styles<br/>under Firefox > Display > Page style > No style"
+		"Disable page styles <br/> Firefox > Display > Page style > No style"
 	],
     "check": [
       "Check for the presence of skip links (usually the first links on the page)"
@@ -548,7 +548,7 @@
       "Follow an user story within the page (via mouse navigation, then keyboard navigation)"
     ],
     "check": [
-		"When using forms, or any interactive component, check that there is no change of context (modification of all or almost all of the page content, automatic focus movement, opening of a new window): <br/>1.1. when an element receives focus<br/>1.2. when entering data<br/>1.3. when activating a form element other than a button"
+		"When using forms, or any interactive component, check that there is no change of context (modification of all or almost all of the page content, automatic focus movement, opening of a new window): <ul><li>when an element receives focus</li><li>when entering data</li><li>when activating a form element other than a button</li></ul>"
 	],
     "result": [
       "Forms are not automatically submitted when an element is focused",
@@ -674,7 +674,7 @@
       "Run the code inspector of the browser"
     ],
     "check": [
-		"Verify that a mechanism based on roles (status, alert, alertdialog...) and/or <code>aria-live</code> dynamic regions is implemented. <br/>Example : http://a11y-guidelines.orange.com/web/aria-status.html"
+		"Verify that a mechanism based on roles (status, alert, alertdialog...) and/or <code>aria-live</code> dynamic regions is implemented. <br/>Example: <a href='aria-status.html'>Aria and status messages</a>"
 	],
     "result": [
       "Messages are automatically vocalized."
@@ -941,7 +941,7 @@
       "Launch aXe"
     ],
     "check": [
-		"Check for errors for unlabelled form elements.<br/><br/>One of the following solutions must be implemented, in order of preference: <ul><li>Presence of an <code>&lt;label&gt;</code> element accessible hiding or not, correctly linked to its field</li><li>Presence of the <code>aria-label</code> attribute</li><li>Presence of the <code>title</code> attribute</li></ul>"
+		"Check for errors for unlabelled form elements. <br/><br/>One of the following solutions must be implemented, in order of preference: <ul><li>Presence of an <code>&lt;label&gt;</code> element accessible hiding or not, correctly linked to its field</li><li>Presence of the <code>aria-label</code> attribute</li><li>Presence of the <code>title</code> attribute</li></ul>"
 	],
     "result": [
 		"Presence of, preferably, a <code>label</code> tag or equivalent for every form field"
@@ -1142,7 +1142,7 @@
     ],
     "tests": [
 		"Identify all elements that can be activated by a single point (hyperlinks, button, input, UI components)",
-		"Check that at least one condition is true: <ul><li>No Down event<br/>The down event of the pointer is not used to perform the function</li><li><li>Drop or Cancel<br/>The completion of the function is on the Up, and a mechanism is available to drop the function before the end or to cancel the function once completed</li><li>>Reverse on Up <br/>The Up event reverses any result of the previous Down event</li>"
+		"Check that at least one condition is true: <ul><li>No Down event <br/>The down event of the pointer is not used to perform the function</li><li><li>Drop or Cancel <br/>The completion of the function is on the Up, and a mechanism is available to drop the function before the end or to cancel the function once completed</li><li>>Reverse on Up <br/>The Up event reverses any result of the previous Down event</li>"
 	],
     "check": [
       "If an action must be absolutely triggered on the down event, then check that there is a mechanism to cancel the action."

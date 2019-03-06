@@ -7,7 +7,7 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Examiner le titre de page (<code>&lt;TITLE&gt;[title]&lt;/title&gt;</code>)",
+      "Examiner le titre de page (<code>&lt;title&gt;[title]&lt;/title&gt;</code>)",
       "ou Lire le titre présent dans l'onglet du navigateur"
     ],
     "verifier": [
@@ -15,7 +15,7 @@
       "Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page"
     ],
     "resultat": [
-		"Chaque page possède un titre unique et descriptif, <br/>globalement du plus précis vers le plus général.<br/>exemple :  [résumé du contenu de la page - nom du site]"
+		"Chaque page possède un titre unique et descriptif, <br/>globalement du plus précis vers le plus général. <br/>Exemple :  [résumé du contenu de la page - nom du site]"
 	],
     "exception": "",
     "raccourcis": "",
@@ -33,14 +33,14 @@
     ],
     "verifier": [
       "Vérifier que les titres sont pertinents et non vides",
-      "Vérifier que les titres s'enchainent de façon logique",
+      "Vérifier que les titres s'enchaînent de façon logique",
       "Vérifier l'absence de sauts dans la hiérarchie des titres"
     ],
     "resultat": [
       "Tous les contenus, traités visuellement comme des titres, possèdent une sémantique de titre (balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>)",
       " Les titres de niveaux sont structurés de manière logique"
     ],
-    "exception": "Ne pas tenir compte des titres masqués (visibility:hidden ou display:none) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaitre, il faut refaire les observations sur la nouvelle structuration du titrage.",
+    "exception": "Ne pas tenir compte des titres masqués (<code>visibility:hidden</code> ou <code>display:none</code>) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaître, il faut refaire les observations sur la nouvelle structuration du titrage.",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
@@ -59,7 +59,7 @@
 		"Vérifier que les sémantiques HTML appropriées sont utilisées pour le balisage des contenus, notamment : <ul><li>liste (cf détail étape suivante)</li><li>citation (présence de <code>&lt;blockquote&gt;</code> ou <code>&lt;q&gt;</code> lorsque nécessaire)</li><li>lien (<code>&lt;a&gt;</code>), pour tout changement de contexte via chargement d'une nouvelle URL</li><li>bouton (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), pour tout déclenchement d'action,  validation ou sélection</li></ul>"
 		],
     "resultat": [
-		"Tous les contenus, traités visuellement comme des listes, possèdent une sémantique liste HTML (&lt;ol&gt; pour des listes ordonnées, &lt;ul&gt; pour des listes non ordonnées)",
+		"Tous les contenus, traités visuellement comme des listes, possèdent une sémantique liste HTML (<code>&lt;ol&gt;</code> pour des listes ordonnées, <code>&lt;ul&gt;</code> pour des listes non ordonnées)",
 		"Toutes les citations possèdent une sémantique de liste citation HTML",
 		"Tous les éléments interactifs entraînant un changement de contexte via un chargement d'URL, possède une sémantique de lien HTML (<code>&lt;a&gt;</code>)",
 		"Tous les éléments interactifs permettant le déclenchement d'une action, une validation ou une sélection, possèdent une sémantique de bouton HTML (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>)"
@@ -107,7 +107,7 @@
       "Tous les éléments présentes des balises de débuts et de fin",
       "Tous les éléments sont imbriqués conformément à leur spécification",
       "Tous les éléments ne contiennent pas d'attributs dupliqués",
-      "Absence d'attributs ID dupliqué"
+      "Absence d'attributs <code>id</code> dupliqué"
     ],
     "exception": "",
     "raccourcis": "",
@@ -121,14 +121,14 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Examiner l'élément <code>&lt;HTML&gt;</code>"
+      "Examiner l'élément <code>&lt;html&gt;</code>"
     ],
     "verifier": [
       "Vérifier la présence d'un attribut lang",
-      "La valeur de l'attribut lang doit correspondre à la langue principale du document"
+      "La valeur de l'attribut <code>lang</code> doit correspondre à la langue principale du document"
     ],
     "resultat": [
-      "Un attribut lang est présent dans l'élément  <code>&lt;HTML&gt;</code> de la page",
+      "Un attribut lang est présent dans l'élément  <code>&lt;html&gt;</code> de la page",
       "La valeur de l'attribut lang correspond à la langue principale du document"
     ],
     "exception": "",
@@ -149,7 +149,7 @@
       "Vérifier qu'un attribut lang est renseigné pour le mots et expressions en langue étrangère"
     ],
     "resultat": [
-		"L'attribut lang doit être présent dans l'élément encapsulant le texte.<br/>ex : <code>&lt;q lang='en'&gt;[…]&lt;/q&gt;</code>"
+		"L'attribut lang doit être présent dans l'élément encapsulant le texte. <br/>Exemple : <code>&lt;q lang='en'&gt;[…]&lt;/q&gt;</code>"
 	],
     "exception": "Pour les mots ou les expressions en langue étrangère passés dans l’usage courant (Google, newsletter…) ou les noms propres, ne pas indiquer de changement de langue.",
     "raccourcis": "",
@@ -163,23 +163,23 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Localiser les <code>TABLE</code> en effectuant une recherche sur le terme <code>TABLE</code>",
-      "Examiner les <code>TABLE</code>"
+      "Localiser les <code>table</code> en effectuant une recherche sur le terme <code>TABLE</code>",
+      "Examiner les <code>table</code>"
     ],
     "verifier": [
 		"Vérifier que les tableaux ne sont pas utiliser à des fins de mise en page",
-		"<strong>Pour les tableaux de données :</strong><br/> Vérifier que les tableaux de données possèdent un élément caption non vide, ou un titre de niveaux placé juste avant le tableau",
-		"<strong>Tableau à 1 entrée :</strong><br/> Vérifier la présence d'entêtes ( <code>TH</code>) pour la tableaux simples",
-		"<strong>Tableau à 2 entrées :</strong><br/> Pour chaque <code>TH</code> vérifier la présence d'un attribut  <code>scope='col'</code> pour les entêtes de colonnes,<br/>et la présence d'un <code>scope='row'</code> pour les entête de lignes",
-		"<strong>Tableaux complexes :</strong><br/> Vérifier la présence d'entêtes <code>TH</code> ou  d'attributs <code>id</code> et <code>headers</code>",
-		"Vérifier la présence d'un résumé explicitant la strucutre du tableau.<br/>HTML5 : présence d'un résumé, si nécessaire en masquage accessible ou <code>display:none</code>.<br/>Le résumé est lié au tableau via un <code>aria-describedby</code><br/>Version antérieure : résumé présent dans un attribut <code>summary</code>"
+		"<strong>Pour les tableaux de données :</strong> <br/>Vérifier que les tableaux de données possèdent un élément caption non vide, ou un titre de niveaux placé juste avant le tableau",
+		"<strong>Tableau à 1 entrée :</strong> <br/> Vérifier la présence d'entêtes ( <code>th</code>) pour la tableaux simples",
+		"<strong>Tableau à 2 entrées :</strong> <br/> Pour chaque <code>th</code> vérifier la présence d'un attribut  <code>scope='col'</code> pour les entêtes de colonnes, <br/>et la présence d'un <code>scope='row'</code> pour les entête de lignes",
+		"<strong>Tableaux complexes :</strong> <br/> Vérifier la présence d'entêtes <code>th</code> ou  d'attributs <code>id</code> et <code>headers</code>",
+		"Vérifier la présence d'un résumé explicitant la structure du tableau. <br/>HTML5 : présence d'un résumé, si nécessaire en masquage accessible ou <code>display:none</code>. <br/>Le résumé est lié au tableau via un <code>aria-describedby</code> <br/>Version antérieure : résumé présent dans un attribut <code>summary</code>"
 	],
     "resultat": [
 		"Les tableaux sont utilisées uniquement pour la présentation de données",
 		"Les tableaux possèdent une légende (caption ou titre de niveaux placé juste avant)",
-		"Les tableaux simples possèdent des entêtes  <code>TH</code>",
-		"Les tableaux à double entrée possède des entêtes <code>TH</code> ainsi que des attributs <code>scope='col'</code> et <code>scope='row'</code>",
-		"Les tableaux complexes possèdent des entêtes (TH + attributs scope) ou des entêtes complexes basées sur l'utilisation d'attribut <code>ID</code> et <code>HEADERS</code>",
+		"Les tableaux simples possèdent des entêtes  <code>th</code>",
+		"Les tableaux à double entrée possède des entêtes <code>th</code> ainsi que des attributs <code>scope='col'</code> et <code>scope='row'</code>",
+		"Les tableaux complexes possèdent des entêtes (TH + attributs scope) ou des entêtes complexes basées sur l'utilisation d'attribut <code>id</code> et <code>headers</code>",
 		"Les tableaux complexes possèdent un résumé  pertinent"
 	],
     "exception": "",
@@ -196,16 +196,16 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que toutes les images possèdent un attribut <code>ALT</code>",
-      "Vérifier que toutes les <code>iframe</code> et <code>frame</code> contiennent un attribut <code>TITLE</code> non-vide"
+      "Vérifier que toutes les images possèdent un attribut <code>alt</code>",
+      "Vérifier que toutes les <code>iframe</code> et <code>frame</code> contiennent un attribut <code>title</code> non-vide"
     ],
     "resultat": [
-      "Aucune erreur relative à l'absence d'attribut <code>ALT</code>",
-      "Aucune erreur relative à l'absence d'attribut <code>TITLE</code> sur <code>frame</code>  et <code>iframe</code> "
+      "Aucune erreur relative à l'absence d'attribut <code>alt</code>",
+      "Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code>  et <code>iframe</code> "
     ],
     "exception": [
-      "Présence d'un attribut <code>ALT</code> pour toutes les images",
-      "Présence d'un attribut <code>TITLE</code> pour toutes les <code>frame</code>  et <code>iframe</code> "
+      "Présence d'un attribut <code>alt</code> pour toutes les images",
+      "Présence d'un attribut <code>title</code> pour toutes les <code>frame</code>  et <code>iframe</code> "
     ],
     "raccourcis": "",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
@@ -217,7 +217,7 @@
       "Test manuel - Inspecteur de code"
     ],
     "tests": [
-		"Désactiver les styles de pages<br/>Sous Firefox > Affichage > Style de la page > Aucun style"
+		"Désactiver les styles de pages <br/>Sous Firefox > Affichage > Style de la page > Aucun style"
 	],
     "verifier": [
       "Vérifier qu'il n'a pas de perte d'information lié à l'absence des images intégrées en background (CSS)"
@@ -240,19 +240,19 @@
 		"Examiner les images"
 	],
     "verifier": [
-      "Vérifier manuellement que la valeur des attributs <code>ALT</code> est pertinente :",
-      "<strong>Image lien :</strong><br/> vérifier que le contenu de l'attribut <code>ALT</code> de chaque image-lien est pertinent par rapport à sa fonction de lien",
-      "<strong>Image porteuse d'information :</strong><br/> vérifier que l'attribut <code>ALT</code> de chaque image est pertinent par rapport au rôle de l'image dans la page",
-      "<strong>Image contenant du texte :</strong><br/> vérifier que l'attribut <code>ALT</code> reprend au moins le texte de l’image",
-      "<strong>Image décorative :</strong><br/> vérifier que l'attribut <code>ALT</code> est vide",
-      "<strong>Image complexe dont le contenu du <code>ALT</code> serait trop long (schémas, graphes…) :</strong><br/> Vérifier que pour toute description  d'image trop longue pour être mise dans un attribut <code>ALT</code>, la description de l'image sous forme de texte html est, soit présente dans la page, soit, un lien pointe vers une page html contenant la description, et ceci, à proximité de l'image à décrire"
+      "Vérifier manuellement que la valeur des attributs <code>alt</code> est pertinente :",
+      "<strong>Image lien :</strong> <br/> vérifier que le contenu de l'attribut <code>alt</code> de chaque image-lien est pertinent par rapport à sa fonction de lien",
+      "<strong>Image porteuse d'information :</strong> <br/> vérifier que l'attribut <code>alt</code> de chaque image est pertinent par rapport au rôle de l'image dans la page",
+      "<strong>Image contenant du texte :</strong> <br/> vérifier que l'attribut <code>alt</code> reprend au moins le texte de l’image",
+      "<strong>Image décorative :</strong> <br/> vérifier que l'attribut <code>alt</code> est vide",
+      "<strong>Image complexe dont le contenu du <code>alt</code> serait trop long (schémas, graphes…) :</strong> <br/> Vérifier que pour toute description  d'image trop longue pour être mise dans un attribut <code>alt</code>, la description de l'image sous forme de texte html est, soit présente dans la page, soit, un lien pointe vers une page html contenant la description, et ceci, à proximité de l'image à décrire"
     ],
     "resultat": [
-      "<strong>Image lien :</strong> la cible du lien est précisée dans le  <code>ALT</code>",
-      "<strong>Image porteuse d'information :</strong> l'attribut  <code>ALT</code>contient l'information convoyée par l'image",
-      "<strong>Image contenant du texte :</strong> l'attribut  <code>ALT</code> contient le texte convoyé par l'image",
-      "<strong>Image décorative :</strong> l'attribut <code>ALT</code> est vide",
-      "<strong>Image comlpexe :</strong> une description de l'image sous forme de texte est disponible, soit directement dans la page, soit accessible via un lien présent à proximité de l'image"
+      "<strong>Image lien :</strong> la cible du lien est précisée dans le  <code>alt</code>",
+      "<strong>Image porteuse d'information :</strong> l'attribut  <code>alt</code>contient l'information convoyée par l'image",
+      "<strong>Image contenant du texte :</strong> l'attribut  <code>alt</code> contient le texte convoyé par l'image",
+      "<strong>Image décorative :</strong> l'attribut <code>alt</code> est vide",
+      "<strong>Image complexe :</strong> une description de l'image sous forme de texte est disponible, soit directement dans la page, soit accessible via un lien présent à proximité de l'image"
     ],
     "exception": "",
     "raccourcis": "",
@@ -269,10 +269,10 @@
 		"Examiner les cadres"
 	],
     "verifier": [
-      "Vérifier que la valeur des attributs <code>TITLE</code> décrit la contenu ou la fonction de <code>iframe</code> ou  <code>frame</code>"
+      "Vérifier que la valeur des attributs <code>title</code> décrit la contenu ou la fonction de <code>iframe</code> ou  <code>frame</code>"
     ],
     "resultat": [
-      "Tous les cadres possèdent un attribut <code>TITLE</code> pertinent"
+      "Tous les cadres possèdent un attribut <code>title</code> pertinent"
     ],
     "exception": "",
     "raccourcis": "Les iframes techniques : http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
@@ -288,7 +288,7 @@
       "Examiner les contenus audio et vidéos de la page"
     ],
     "verifier": [
-		"Vérifier que pour toute piste audio ou vidéo, un transcrit complet<br/>(texte contenant l'ensemble des informations visuelles et auditives)<br/>sous forme de texte html est, soit présent dans la page,<br/>soit, un lien pointe vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire"
+		"Vérifier que pour toute piste audio ou vidéo, un transcrit complet <br/>(texte contenant l'ensemble des informations visuelles et auditives) <br/>sous forme de texte html est, soit présent dans la page, <br/>soit, un lien pointe vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire"
 	],
     "resultat": [
       "Présence d'un transcrit complet dans la même page ou dans une  autre via un lien"
@@ -331,7 +331,7 @@
       "Vérifier manuellement, qu'il est possible de stopper/reprendre la lecture d'une piste audio ou vidéo, depuis une navigation clavier"
     ],
     "resultat": [
-		"Un mécanisme de contrôle de la piste audio ou vidéo est présent.<br/>Ce mécanisme permet la lecture ou la mise en pause du média, quelque-soit l'aide technique utilisée"
+		"Un mécanisme de contrôle de la piste audio ou vidéo est présent. <br/>Ce mécanisme permet la lecture ou la mise en pause du média, quelque-soit l'aide technique utilisée"
 	],
     "exception": "",
     "raccourcis": "",
@@ -445,7 +445,7 @@
       "Identifier les éléments utilisant une l’information sensorielle (ex : position, taille, son) pour transmettre de l'information"
     ],
     "verifier": [
-      "Vérifier que l'information transmise par une infomation sensorielle peut également être obtenue par un texte, ou un message explicite"
+      "Vérifier que l'information transmise par une information sensorielle peut également être obtenue par un texte, ou un message explicite"
     ],
     "resultat": [
       "Un texte, ou un message explicite est présent pour transmettre l'information"
@@ -463,7 +463,7 @@
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
 		"Localiser les liens, boutons et tout items de navigation",
-		"Inspecter le libellé texte de ces items,<br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>ARIA-LABEL</code> et <code>TITLE</code>"
+		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>arai-label</code> et <code>title</code>"
 	],
     "verifier": [
       "Vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes"
@@ -485,7 +485,7 @@
       "Lancer l'inspecteur de code du navigateur",
       "Localiser les liens, boutons et tout items de navigation",
       "Inspecter le libellé texte de ces items",
-      "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>ARIA-LABEL</code> et <code>TITLE</code>"
+      "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
     ],
     "verifier": [
       "Vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton, uniquement à partir de son libellé texte"
@@ -507,13 +507,13 @@
       "Lancer l'inspecteur de code du navigateur",
       "Localiser les liens, boutons et tout items de navigation",
       "Inspecter le libellé texte de ces items",
-      "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>ARIA-LABEL</code> et <code>TITLE</code>"
+      "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
     ],
     "verifier": [
       "Vérifier que l'ouverture d'une nouvelle fenêtre est mentionnée aux utilisateurs"
     ],
     "resultat": [
-		"Présence d'une mention précisant l'ouverture d'une nouvelle fenêtre <br/>En général, l'intitulé du lien suivi de la mention 'nouvelle fenêtre', sinon, l'attribut title et aria-label doivent contenir la mention 'nouvelle fenêtre'.<br/>Exemple :  google (nouvelle fenêtre)"
+		"Présence d'une mention précisant l'ouverture d'une nouvelle fenêtre <br/>En général, l'intitulé du lien suivi de la mention 'nouvelle fenêtre', sinon, l'attribut <code>title</code> et <code>aria-label</code> doivent contenir la mention 'nouvelle fenêtre'. <br/>Exemple :  google (nouvelle fenêtre)"
 	],
     "exception": "",
     "raccourcis": "",
@@ -526,7 +526,7 @@
       "Test manuel"
     ],
     "tests": [
-		"Désactiver les styles de pages<br/>sous Firefox > Affichage > Style de la page > Aucun style"
+		"Désactiver les styles de pages <br/>sous Firefox > Affichage > Style de la page > Aucun style"
 	],
     "verifier": [
       "Vérifier la présence de lien d'évitement (en général, premiers liens présents dans la page)"
@@ -548,7 +548,7 @@
       "Reproduire un parcours au sein de la page (via une navigation souris, puis une navigation clavier) "
     ],
     "verifier": [
-		"Lors de l'utilisation de formulaires, ou de tout composant interactif, vérifier l'absence de changement de contexte (modification de la totalité ou de la quasi totalité du contenu de la page, déplacement automatique du focus, ouverture d'une nouvelle fenêtre) :<br/>1.1. lors de la prise de focus d'un élément<br/>1.2. lors de la saisie de données<br/>1.3. lors de l'activation d'un élément de formulaire autre qu'un bouton"
+		"Lors de l'utilisation de formulaires, ou de tout composant interactif, vérifier l'absence de changement de contexte (modification de la totalité ou de la quasi totalité du contenu de la page, déplacement automatique du focus, ouverture d'une nouvelle fenêtre) :<ul><li>lors de la prise de focus d'un élément</li><li>lors de la saisie de données</li><li>lors de l'activation d'un élément de formulaire autre qu'un bouton</li></ul>"
 	],
     "resultat": [
       "Les formulaires ne sont pas  soumis automatiquement lors de la prise de focus d'un élément",
@@ -673,7 +673,7 @@
       "Lancer l'inspecteur de code"
     ],
     "verifier": [
-		"Vérifier qu'un mécanisme reposant ’appuyant sur les roles ou les régions dynamiques <code>aria-live</code> est implémenté.<br/>Exemple : ajouter lien vers exemple du site des recos"
+		"Vérifier qu'un mécanisme reposant sur les roles ou les régions dynamiques <code>aria-live</code> est implémenté. <br/>Exemple :  <a href='aria-status.html'>Aria et les messages de status</a>"
 	],
     "resultat": [
       "Les messages sont vocalisés automatiquement."
@@ -839,7 +839,7 @@
 		"Absence de contenus tronqués ou superposés"
 	],
     "resultat": [
-		"Les espacement se sont ajustés selon les critères.<br/>Les textes ne sont pas tronqués ou superposés"
+		"Les espacement se sont ajustés selon les critères. <br/>Les textes ne sont pas tronqués ou superposés"
 	],
     "exception": "",
     "raccourcis": "",
@@ -918,7 +918,7 @@
       "Lancer aXe"
     ],
     "verifier": [
-		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés.<br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
+		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
 	],
     "resultat": [
 		"Présence, de préférence, d'une balise <code>label</code> ou l'équivalent pour tout champ de formulaire"
@@ -1119,7 +1119,7 @@
     ],
     "tests": [
 		"Identifier tous les éléments activables par mono-point (hyperliens, bouton, input, composants UI)",
-		"Vérifier qu'au moins une condition est vraie : <ul><li>Pas d'événement Down <br/>L'événement Down du pointeur n'est utilisé pour exécuter la fonction</li><li>Abandonner ou Annuler<br/>L'achèvement de la fonction est sur le Up, et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li><li>Inverser sur Up <br/>L'événement Up inverse tout résultat de l'événement Down précédent</li></ul>"
+		"Vérifier qu'au moins une condition est vraie : <ul><li>Pas d'événement Down <br/>L'événement Down du pointeur n'est utilisé pour exécuter la fonction</li><li>Abandonner ou Annuler <br/>L'achèvement de la fonction est sur le Up, et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li><li>Inverser sur Up <br/>L'événement Up inverse tout résultat de l'événement Down précédent</li></ul>"
 	],
     "verifier": [
       "Si une action doit être absolument déclenchée sur l'événement Down, vérifier alors qu'il existe un mécanisme pour annuler l'action"
