@@ -107,6 +107,17 @@ Note: If a picture or a chart is too complex to describe with alt text, you will
 For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).
 Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.
 
+## Hyperlinks
+Select the text to which you want to add the hyperlink, and then right-click.
+The text you selected displays in the “Text to display” box. This is the hyperlink text.
+If necessary, add a ScreenTip by clicking on the ScreenTip button.  
+
+<img class="center" src="./images/screen11.png" alt="Insert hyperlink dialog box screenshot"/>
+
+For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).  
+Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand. 
+
+
 ## Tables
 
 Use a simple table structure, and specify column header information.
