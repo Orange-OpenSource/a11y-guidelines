@@ -7,7 +7,7 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Examiner le titre de page (<code>&lt;TITLE&gt;[title]&lt;/TITLE&gt;</code>)",
+      "Examiner le titre de page (<code>&lt;TITLE&gt;[title]&lt;/title&gt;</code>)",
       "ou Lire le titre présent dans l'onglet du navigateur"
     ],
     "verifier": [
@@ -19,7 +19,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -38,11 +38,11 @@
     ],
     "resultat": [
       "Tous les contenus, traités visuellement comme des titres, possèdent une sémantique de titre (balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>)",
-      " Les titres de niveaux sont structurés de manière logique, sans saut de niveau de titre"
+      " Les titres de niveaux sont structurés de manière logique"
     ],
-    "exception": "Ne pas tenir compte des titres masqués (visibility:hidden ou display:none) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaître, il faut refaire les observations sur la nouvelle structuration du titrage.",
+    "exception": "Ne pas tenir compte des titres masqués (visibility:hidden ou display:none) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaitre, il faut refaire les observations sur la nouvelle structuration du titrage.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -66,7 +66,7 @@
 		],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -89,7 +89,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -111,7 +111,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -133,7 +133,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -153,7 +153,7 @@
 	],
     "exception": "Pour les mots ou les expressions en langue étrangère passés dans l’usage courant (Google, newsletter…) ou les noms propres, ne pas indiquer de changement de langue.",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu textuel",
@@ -184,7 +184,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -208,7 +208,7 @@
       "Présence d'un attribut <code>TITLE</code> pour toutes les <code>frame</code>  et <code>iframe</code> "
     ],
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -227,7 +227,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -241,7 +241,7 @@
 	],
     "verifier": [
       "Vérifier manuellement que la valeur des attributs <code>ALT</code> est pertinente :",
-      "<strong>Image lien :</strong><br/> vérifier que l'attribut <code>ALT</code> de chaque image-lien est pertinent par rapport à sa fonction de lien",
+      "<strong>Image lien :</strong><br/> vérifier que le contenu de l'attribut <code>ALT</code> de chaque image-lien est pertinent par rapport à sa fonction de lien",
       "<strong>Image porteuse d'information :</strong><br/> vérifier que l'attribut <code>ALT</code> de chaque image est pertinent par rapport au rôle de l'image dans la page",
       "<strong>Image contenant du texte :</strong><br/> vérifier que l'attribut <code>ALT</code> reprend au moins le texte de l’image",
       "<strong>Image décorative :</strong><br/> vérifier que l'attribut <code>ALT</code> est vide",
@@ -256,7 +256,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -276,7 +276,7 @@
     ],
     "exception": "",
     "raccourcis": "Les iframes techniques : http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -295,7 +295,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -314,7 +314,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -335,7 +335,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
@@ -354,11 +354,11 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Contenu non-textuel",
-    "title": "Éviter les captchas",
+    "title": "Eviter les captchas",
     "type": [
       "Test manuel"
     ],
@@ -375,7 +375,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -387,15 +387,14 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que le contraste soit suffisant pour comprendre l'information portée par tous les composants interactifs, les textes",
-      "Rappel : contraste de 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras et de 3:1 minimum pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras"
+      "Vérifier que le contraste soit suffisant pour comprendre  l'information portée par tous les composants interactifs, les textes"
     ],
     "resultat": [
-      "Présence d'éléments de texte suffisamment contrastés"
+      "Présence d'éléments suffisamment contrastés"
     ],
     "exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -407,15 +406,14 @@
       "Lancer le Color Contrast Analyser"
     ],
     "verifier": [
-      "Vérifier que les textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs ont un contraste suffisant pour transmettre l'information",
-      "Pour les textes sous forme d'image, le contraste doit être de 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras et de 3:1 minimum pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras"
+      "Vérifier que les textes sous forme d'images, les graphiques, les icônes, et les composants interactifs ont un contraste suffisant pour transmettre l'information"
     ],
     "resultat": [
-      "Présence de textes sous forme d'images, d'objets graphiques, d'icônes, et de composants interactifs suffisamment contrastés"
+      "Présence de textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs suffisamment contrastés"
     ],
     "exception": "Sont exclus du périmètre  : <ul><li>les logos</li><li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li>si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -435,7 +433,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Couleurs et contrastes",
@@ -447,18 +445,18 @@
       "Identifier les éléments utilisant une l’information sensorielle (ex : position, taille, son) pour transmettre de l'information"
     ],
     "verifier": [
-      "Vérifier que l'information transmise par une information sensorielle peut également être obtenue par un texte, ou un message explicite"
+      "Vérifier que l'information transmise par une infomation sensorielle peut également être obtenue par un texte, ou un message explicite"
     ],
     "resultat": [
       "Un texte, ou un message explicite est présent pour transmettre l'information"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
-    "title": "Rendre les intitulés des liens et des boutons accessibles / libellés identiques",
+    "title": "Rendre les intitulés des liens et des boutons compréhensibles hors contexte / libellés identiques",
     "type": [
       "Test manuel - Inspecteur de code"
     ],
@@ -475,11 +473,11 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
-    "title": "Rendre les intitulés des liens et des boutons accessibles / libellés",
+    "title": "Rendre les intitulés des liens et des boutons compréhensibles hors contexte / libellés",
     "type": [
       "Test manuel - Inspecteur de code"
     ],
@@ -497,32 +495,8 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
-  
-  {
-    "themes": "Navigation générale",
-    "title": "Rendre les intitulés des liens et des boutons accessibles / Noms",
-    "type": [
-      "Test manuel - Inspecteur de code"
-    ],
-    "tests": [
-      "Lancer l'inspecteur de code du navigateur",
-      "Localiser les liens, boutons et tout items de navigation",
-      "Comparer le libellé texte ou le texte contenu dans l'image de ces items et le [Le nom accessible en HTML](http://a11y-guidelines.orange.com/web/a11y-name.html)"
-      
-    ],
-    "verifier": [
-      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, [Le nom accessible en HTML](http://a11y-guidelines.orange.com/web/a11y-name.html)"
-    ],
-    "resultat": [
-      "Les liens, boutons et items de navigation ont pour tout composant d'interface, le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant"
-    ],
-    "exception": "",
-    "raccourcis": "",
-    "profils": ["Expert Accessibilité"]
-  },
-
   {
     "themes": "Navigation générale",
     "title": "Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre",
@@ -536,14 +510,14 @@
       "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>ARIA-LABEL</code> et <code>TITLE</code>"
     ],
     "verifier": [
-      "Vérifier que l'ouverture d'une nouvelle fenêtre est mentionné aux utilisateur dans le libellé texte du lien"
+      "Vérifier que l'ouverture d'une nouvelle fenêtre est mentionnée aux utilisateurs"
     ],
     "resultat": [
-		"Présence d'une mention précisant l'ouverture d'une nouvelle fenêtre<br/>En général, l'intitulé du lien suivi de la mention 'nouvelle fenêtre'.<br/>Exemple :  google (nouvelle fenêtre)"
+		"Présence d'une mention précisant l'ouverture d'une nouvelle fenêtre <br/>En général, l'intitulé du lien suivi de la mention 'nouvelle fenêtre', sinon, l'attribut title et aria-label doivent contenir la mention 'nouvelle fenêtre'.<br/>Exemple :  google (nouvelle fenêtre)"
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -558,11 +532,11 @@
       "Vérifier la présence de lien d'évitement (en général, premiers liens présents dans la page)"
     ],
     "resultat": [
-      "Présence de liens d'évitement"
+      "Présence de liens d'évitement permettant d'accéder aux principales parties de la page"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -574,11 +548,11 @@
       "Reproduire un parcours au sein de la page (via une navigation souris, puis une navigation clavier) "
     ],
     "verifier": [
-		"Lors de l'utilisation de formulaires, ou de tout composant interactif, vérifier l'absence de changement de contexte (modification de la totalité ou de la quasi totalité du contenu de la page, déplacement automatique du focus, ouverture d'une nouvelle fenêtre ) :<br/>1.1. lors de la prise de focus d'un élément<br/>1.2. lors de la saisie de données<br/>1.3. lors de l'activation d'un élément de formulaire autre qu'un bouton"
+		"Lors de l'utilisation de formulaires, ou de tout composant interactif, vérifier l'absence de changement de contexte (modification de la totalité ou de la quasi totalité du contenu de la page, déplacement automatique du focus, ouverture d'une nouvelle fenêtre) :<br/>1.1. lors de la prise de focus d'un élément<br/>1.2. lors de la saisie de données<br/>1.3. lors de l'activation d'un élément de formulaire autre qu'un bouton"
 	],
     "resultat": [
       "Les formulaires ne sont pas  soumis automatiquement lors de la prise de focus d'un élément",
-      " Le contenu de la page n'est pas modifiée automatiquement (que ce soit dynamiquement ou après rechargement) dès la prise de focus par un élément",
+      "Le contenu de la page n'est pas modifié automatiquement (que ce soit dynamiquement ou après rechargement) dès la prise de focus par un élément",
       "Les formulaires ne sont pas soumis automatiquement dès la saisie de données, ou l'activation d'un input autre qu'un bouton",
       "Une nouvelle page n'est pas ouverte dès la prise de focus d'un élément"
     ],
@@ -602,7 +576,7 @@
     ],
     "resultat": [
       "le contenu additionnel reste affiché lors du déplacement du pointeur, de l'élément déclencheur vers le nouveau contenu",
-      "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche échap.)",
+      "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche <kbd>échap.</kbd>)",
       "Le contenu additionnel  est persistant jusqu'à la suppression du focus ou du survol sur l'élément déclenchant, que l'utilisateur le fasse disparaître ou que ce contenu n'est plus valide"
     ],
     "exception": "",
@@ -626,7 +600,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -635,16 +609,16 @@
       "Test manuel"
     ],
     "tests": [
-      "Identifier si des raccourcis reposant sur une seule touche sont proposés par l'application"
+      "Identifier si des raccourcis utilisant sur un caractère imprimable sont proposés par l'application"
     ],
-    "verifier": ["Vérifier que les raccourcis clavier reposant sur une seule touche répondent à une des conditions ci-dessous : <ul><li>les raccourcis peuvent être désactivés par l'utilisateur</li><li>les raccourcis peuvent être modifiés, avec la possibilité d'ajouter 1 ou plusieurs caractères à la combinaison</li><li>les raccourcis ne sont actif qu'à la prise de focus sur l'élément</li></ul>"
+    "verifier": ["Vérifier que les raccourcis clavier utilisant un caractère imprimable répondent à une des conditions ci-dessous : <ul><li>les raccourcis peuvent être désactivés par l'utilisateur</li><li>les raccourcis peuvent être modifiés, avec la possibilité d'ajouter 1 ou plusieurs caractères non-imprimables (Ctrl, Alt, etc.) à la combinaison</li><li>les raccourcis ne sont actifs qu'à la prise de focus sur l'élément</li></ul>"
 	],
     "resultat": [
-      "Les raccourcis reposant sur une seule touche peuvent être désactivés ou reprogrammés"
+      "Les raccourcis reposant sur une ou plusieurs touches peuvent être désactivés ou reprogrammés"
     ],
-    "exception": "Ne sont pas concernés, les composants utilisateurs (ex : menu), proposant un raccourcis uniquement lorsque le focus est positionné sur le composant.",
+    "exception": "Ne sont pas concernés, les composants utilisateurs (ex : menu) proposant un raccourcis uniquement lorsque le focus est positionné sur le composant, les 'accesskey' et les raccourcis clavier utilisant une touche de modification.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -657,14 +631,14 @@
       "Identifier les éléments de navigation et de recherche"
     ],
     "verifier": [
-		"Vérifier qu'au moins 2 des mécanismes listés ci-dessous sont présents sur la page, pour permettre à un utilisateur de se situer au sein d'une arborescence de contenu : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur</li><li>fournir une table des matières</li><li>fournir un sitemap</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site</li></ul>"
+		"Vérifier qu'au moins 2 des mécanismes listés ci-dessous sont présents sur la page, pour permettre à un utilisateur de se situer au sein d'un site : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur</li><li>fournir une table des matières</li><li>fournir un sitemap</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site</li></ul>"
 	],
     "resultat": [
 		"2 des mécanismes ci-dessous sont présents sur la page : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur (attention l'information ne doit reposer uniquement sur la couleur)</li><li>fournir un fil d'ariane</li><li>fournir un sitemap,  table des matières</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site (en pied de page)</li></ul>"
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -680,11 +654,11 @@
       "Vérifier que la position courante de l'utilisateur au sein d'un contenu est matérialisée visuellement et programmatiquement"
     ],
     "resultat": [
-      "Une indication visuelle est présente afin d'identifier le contenu actif  (attention l'information ne doit reposer uniquement sur la couleur)"
+      "Une indication pas seulement visuelle est présente afin d'identifier le contenu actif  (attention l'information ne doit reposer uniquement sur la couleur)"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation générale",
@@ -695,14 +669,14 @@
     "tests": [
       "Lancer un lecteur d'écran",
       "Réaliser un parcours",
-      "Déclencher des messages d'alertes (message sur résultats d'interaction, message d'attente, un message qui fourni une information sans un changement de contexte)",
+      "Déclencher des messages d'alertes (message sur résultats d'interaction, message d'attente, message lié à un changement de contexte)",
       "Lancer l'inspecteur de code"
     ],
     "verifier": [
-    "Vérifier qu'un mécanisme reposant sur les roles (status, alert, alertdialog...) et/ou les régions dynamiques <code>aria-live</code> est implémenté.<br/> [Plus de détails sur ARIA et les messages contextuels](http://a11y-guidelines.orange.com/web/aria-status.html)"
+		"Vérifier qu'un mécanisme reposant ’appuyant sur les roles ou les régions dynamiques <code>aria-live</code> est implémenté.<br/>Exemple : ajouter lien vers exemple du site des recos"
 	],
     "resultat": [
-      "Les messages sont vocalisés à l'<abbr>AT</abbr> automatiquement sans prise de focus."
+      "Les messages sont vocalisés automatiquement."
     ],
     "exception": "",
     "raccourcis": "",
@@ -714,7 +688,7 @@
     "type": ["Test manuel"],
     "tests": [
       "Parcourir la page",
-      "Identifier  tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement, et durant plus de 5 secondes"
+      "Identifier  tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement et durant plus de 5 secondes"
     ],
     "verifier": [
       "Vérifier pour chacun, qu'un mécanisme est présent pour permettre à l'utilisateur de le mettre en pause/lancer l'animation",
@@ -722,11 +696,11 @@
       "Vérifier qu'aucun élément de la page ne contient de flash lumineux rapide (plus de 3 répétitions par seconde)"
     ],
     "resultat": [
-		"L'utilisateur peut mettre pause / relancer les animations.<br/>Les animations ne contiennent pas de flash."
+		"L'utilisateur peut mettre pause/relancer les animations ou les flashs. <br/>Les animations ne contiennent pas de flash."
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -735,7 +709,7 @@
       "Navigation clavier"
     ],
     "tests": [
-      "Parcourir la page au clavier à l'aide de la touche 'tabulation'"
+      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>'"
     ],
     "verifier": [
       "Vérifier que l'on obtient un résultat équivalent à la navigation au moyen de la souris pour les fonctionnalités principales de la page"
@@ -746,7 +720,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -755,18 +729,18 @@
       "Navigation clavier"
     ],
     "tests": [
-		"Désactiver les styles de pages<br/>sous Firefox > Affichage > Style de la page > Aucun style",
-		"Parcourir la page au clavier à l'aide de la touche 'tabulation'"
+		"Désactiver les styles de pages <br/>sous Firefox > Affichage > Style de la page > Aucun style",
+		"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
 	],
     "verifier": [
-      "Vérifier l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est conforme à l'ordre découlant de l'aspect visuel"
+      "Vérifier l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est conforme à l'ordre cohérent et logique de lecture (souvent équivalent à l'ordre visuel)"
     ],
     "resultat": [
       "Le parcours clavier à travers la page est logique"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -775,17 +749,17 @@
       "Navigation clavier"
     ],
     "tests": [
-      "Parcourir la page au clavier à l'aide de la touche 'tabulation'"
+      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>'"
     ],
     "verifier": [
-      "Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est matérialisée visuellement (outline à 2px au moins) et possède un contraste suffisant (3:1)"
+      "Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est suffisamment  visible"
     ],
     "resultat": [
-      "La prise de focus est bien visible"
+      "La prise de focus est visible (taille suffisante >1px)"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": [ "Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": [ "Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Navigation clavier",
@@ -795,7 +769,7 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code",
-      "Parcourir la page au clavier à l'aide de la touche 'tabulation'",
+      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>'",
       "Identifier la couleur du focus et la couleur de fond",
       "Tester avec le Color Contrast Analyzer"
     ],
@@ -807,7 +781,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -827,7 +801,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -846,7 +820,7 @@
     ],
     "exception": "Certains contenus tels des cartes, tableaux de données, jeux, etc…, peuvent nécessiter un scroll à 2 dimensions.",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -869,7 +843,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -884,33 +858,14 @@
     "verifier": [
       "Vérifier que les mécanismes de navigation sont toujours situés au même endroit dans un ensemble de page",
       "Vérifier que les composants et les regroupements qui ont la même fonction sont identifiés (visuellement et sémantiquement) de la même façon",
-      "Vérifier  que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page"
+      "Vérifier que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page"
     ],
     "resultat": [
       "Les différentes régions sont clairement identifiables visuellement"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
-  },{
-    "themes": "Mise en page",
-    "title": "Identifier et conserver la cohérence des regroupements et des différentes régions de la page/visibilité des liens",
-    "type": [
-      "Test manuel"
-    ],
-    "tests": [
-      "Parcourir la page",
-      "Identifier les lien dans le corps du texte"
-    ],
-    "verifier": [
-      "Vérifier que les liens dans le corps du texte sont facilement identifiables visuellement par un autre moyen que la couleur (souligné, gras…) par rapport au reste du texte"
-    ],
-    "resultat": [
-      "Les liens sont visuellement identifiables du texte par un autre moyen que la couleur"
-    ],
-    "exception": "Les liens qui ne sont pas dans du contenu texte (navigation, pied de page...)",
-    "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -949,7 +904,7 @@
     "resultat": [
       "Tous les éléments interactifs ont des dimensions qui dépassent 44px par 44px"
     ],
-    "exception": "<ul><li>Ancre / lien interne à la page</li><li>Lien à l'intérieur d'un paragraphe</li><li>Lien à l'intérieur d'une phrase</li><li>Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase</li><li>Un icone cliquable à l'intérieur d'une phrase ou d'un paragraphe</li></ul>",
+    "exception": "<ul><li>Ancre / lien interne à la page</li><li>Lien à l'intérieur d'un paragraphe</li><li>Lien à l'intérieur d'une phrase</li><li>Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase</li><li>Un icône cliquable à l'intérieur d'une phrase ou d'un paragraphe</li></ul>",
     "raccourcis": "",
     "profils": ["Expert Accessibilité"]
   },
@@ -963,14 +918,14 @@
       "Lancer aXe"
     ],
     "verifier": [
-		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés.<br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code><label></code> correctement lié à son champ</li><li>Présence des attributs <code>title</code> et <code>aria-label</code></li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
+		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés.<br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
 	],
     "resultat": [
-		"Présence d'une balise <code>label</code> pour tout champ de formulaire"
+		"Présence, de préférence, d'une balise <code>label</code> ou l'équivalent pour tout champ de formulaire"
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -983,14 +938,14 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-      "Vérifier que le texte des labels  (élément <code>label</code>, ou <code>aria-label</code>, ou <code>title</code>) est pertinent"
+      "Vérifier que le texte des labels (élément <code>label</code>, ou <code>aria-label</code>, ou <code>title</code>) est pertinent"
     ],
     "resultat": [
-      "Présence d'intitulés d'une balise <code>label</code> pertinents pour tout champ de formulaire"
+      "Présence d'intitulés d'une balise <code>label</code> ou l'équivalent pertinents pour tout champ de formulaire"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1003,14 +958,14 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que le texte des labels indique le format de données lorsque nécessaire.<br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>le format est indiquée directement dans le label</li><li>le format est relié au champs via un attribut <code>aria-describedby</code></li></ul>"
+		"Vérifier que le texte des labels indique le format de données lorsque nécessaire."
 	],
     "resultat": [
-      "Présence de formats de saisie"
+      "Présence de texte précisent le formats de saisie"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1030,7 +985,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1043,14 +998,14 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que les champs de même nature sont groupés.<br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>présence d'un fieldset</li><li>présence d'un attribut role='group' (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs</li></ul>"
+		"Vérifier que les champs de même nature sont groupés. <br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>présence d'une balise <code>fieldset</code></li><li>présence d'un attribut role='group' (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs</li></ul>"
 	],
     "resultat": [
       "Les champs de même nature sont groupés"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Développeur", " Expert Accessibilité"]
+    "profils": ["Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1068,11 +1023,11 @@
      "Vérifier que des messages d'erreurs sont présents, et pertinents"
     ],
     "resultat": [
-      "Les erreurs sont détectées, et pertinentes"
+      "Les erreurs sont détectées et les messages pertinents"
     ],
     "exception": [],
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Formulaires",
@@ -1087,7 +1042,7 @@
       "Soumettre les formulaires"
     ],
     "verifier": [
-      "Vérifier qu'une des solutions ci-dessous est implémentée : <ul><li>Le message d'erreur est présent avant le formulaire.<br/>Le message liste les champs en erreur.<br/>Le focus est positionné sur le message d'erreur.<br/>Des ancres permettent à l'utilisateur de se positionner sur les champs en erreurs</li><li>Les messages d'erreurs sont ajoutés dans les labels des champs.</li><li>Les messages d'erreurs ne sont pas intégrés dans les labels, mais un mécanisme est présent afin de lier les champs et les erreurs de manière programmatique : voir <code>aria-describedby</code></li></ul>"	  
+      "Vérifier qu'une des solutions ci-dessous est implémentée : <ul><li>Le message d'erreur est présent avant le formulaire. <br/>Le message liste les champs en erreur. <br/>Le focus est positionné sur le message d'erreur. <br/>Des ancres permettent à l'utilisateur de se positionner sur les champs en erreurs</li><li>Les messages d'erreurs sont ajoutés dans les labels des champs.</li><li>Les messages d'erreurs ne sont pas intégrés dans les labels, mais un mécanisme est présent afin de lier les champs et les erreurs de manière programmatique : voir <code>aria-describedby</code></li></ul>"	  
     ],
     "resultat": [
 		"Les erreurs sont détectées",
@@ -1116,7 +1071,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Tactile et interactions",
@@ -1150,7 +1105,7 @@
       "Vérifier qu'aucun évènement n'est déclenché à la perte de focus"
     ],
     "resultat": [
-      "Aucun évènement n'est déclenché lorsque l'élément interactif perd le focus"
+      "Aucun évènement n'est déclenché lorsque l'élément interactif perd le focus (onblur)"
     ],
     "exception": "",
     "raccourcis": "",
@@ -1163,11 +1118,11 @@
       "Test manuel - Basé sur le mobile"
     ],
     "tests": [
-		"Identifier tout les éléments activables par mono-point (hyperliens, bouton, input, composants UI)",
-		"Vérifier qu'au moins une condition est vraie : <ul><li>Pas d'événement Down<br/>L'événement descendant du pointeur n'est utilisé pour exécuter aucune partie de la fonction</li><li>Abandonner ou Annuler<br/>L'achèvement de la fonction est sur le Up, et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li><li>Inverser sur Up<br/>L'événement Up inverse tout résultat de l'événement Down précédent</li></ul>"
+		"Identifier tous les éléments activables par mono-point (hyperliens, bouton, input, composants UI)",
+		"Vérifier qu'au moins une condition est vraie : <ul><li>Pas d'événement Down <br/>L'événement Down du pointeur n'est utilisé pour exécuter la fonction</li><li>Abandonner ou Annuler<br/>L'achèvement de la fonction est sur le Up, et un mécanisme est disponible pour abandonner la fonction avant la fin ou pour annuler la fonction une fois terminée</li><li>Inverser sur Up <br/>L'événement Up inverse tout résultat de l'événement Down précédent</li></ul>"
 	],
     "verifier": [
-      "Si une action doit être absolument déclenchée sur le down event, vérifier alors qu'il existe un mécanisme pour annuler l'action"
+      "Si une action doit être absolument déclenchée sur l'événement Down, vérifier alors qu'il existe un mécanisme pour annuler l'action"
     ],
     "resultat": [
       "Un boîte modale apparaît demandant la confirmation de l'action"
@@ -1186,17 +1141,17 @@
     ],
     "tests": [
       "Parcourir l'application",
-      "Identifier les interactions multipointeurs (nécessitant plusieurs doigts)"
+      "Identifier les interactions multi-points (nécessitant plusieurs doigts)"
     ],
     "verifier": [
-      "Vérifier que pour tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant des trajectoires, pour réaliser une action, une alternative nécessitant un seul pointeur (un seul doigt) et sans tranjectoire est disponible"
+      "Vérifier que pour tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant des trajectoires gestuelles, pour réaliser une action, une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire gestuelle est disponible"
     ],
     "resultat": [
-      "Pour une action de zoom sur une carte au pincement de doigt, une alternative sous forme de <code>&lt;button&gt;</code> [+] et [-] est proposée"
+      "Pour tout geste multi-points (nécessitant plusieurs doigts), et/ou nécessitant des trajectoires gestuelles, pour réaliser une action, une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire gestuelle est disponible. <br/>Pour une action de zoom sur une carte au pincement de doigt, une alternative sous forme de <code>&lt;button&gt;</code> [+] et [-] est proposée"
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Tactile et interactions",
@@ -1214,7 +1169,7 @@
     "resultat": "",
     "exception": "",
     "raccourcis": "",
-    "profils": ["Qualifieur - checklist initiale", " Qualifieur - checklist avancée", " Développeur", " Expert Accessibilité"]
+    "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Aides techniques",
@@ -1226,7 +1181,7 @@
       "Parcourir l'application"
     ],
     "verifier": [
-		"Vérifier que toutes les fonctionnalités sont disponibles de puis un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables depuis un lecteur d'écran</li></ul>"
+		"Vérifier que toutes les fonctionnalités sont disponibles avec un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables</li></ul>"
 	],
     "resultat": [
 		"Les principales fonctionnalités sont utilisables depuis un lecteur d'écran"

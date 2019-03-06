@@ -826,7 +826,7 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 
 1. Concernant les raccourcis, s'assurer qu'au moins une des affirmations suivantes est vraie:
  - **désactivation**: le raccourci peut être désactivé.
- - **modification**: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches successives pour déclencher le raccourci).
+ - **modification**: le raccourci peut être modifié (possibilité de choisir une seule ou plusieurs touches successives pour déclencher le raccourci), avec la possibilité d'ajouter 1 ou plusieurs caractères non-imprimables (Ctrl, Alt, etc.) à la combinaison.
  - **activation au focus**: le raccourci est actif uniquement à la prise du focus sur l'élément concerné. 
 
 2. Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l'utilisateur doit pouvoir :
