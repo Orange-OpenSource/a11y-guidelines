@@ -1,17 +1,17 @@
-# Comment tester l'accessibilité d'un document PowerPoint
+# Comment tester l'accessibilité d'un documents Word
 <script>$(document).ready(function () {
-    setBreadcrumb([
-      {"label":"Microsoft PowerPoint", "url":"powerpoint.html"},
+    setBreadcrumb([      
+      {"label":"Microsoft Word","url":"word.html"},
       {"label":"Comment tester mon document"}
-	  ]);
-    addSubMenu([
-        {"label":"Créer un document accessible","url":"powerpoint-create.html"}, 
-        {"label":"Comment tester mon document","url":"powerpoint-test.html", "expanded": true}
     ]);
-    
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"word-create.html"}, 
+      {"label":"Comment tester mon document","url":"word-test.html", "expanded":true}
+    ]);
 });</script>
 
-<span data-menuitem="powerpoint"></span>
+
+<span data-menuitem="word"></span>
 
 <style>code {font-weight: bold;}</style>
 
@@ -20,7 +20,7 @@ Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibi
 **Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité**
 
 <img alt="capture d'écran du vérificateur d'accessibilité" src="./images/word_verification_fr.png" class="img-fluid" />  
-**Important :** pour que cette option fonctionne correctement, enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format ".pptx". Au moment de l’enregistrement, la case « compatibilité avec les versions précédentes » doit être décochée.
+**Important :** pour que cette option fonctionne correctement, enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format ".docx". Au moment de l’enregistrement, la case « compatibilité avec les versions précédentes » doit être décochée.
 
 ## Vérifications des contrastes de couleurs 
 Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes. 
@@ -35,8 +35,9 @@ Ces tests permettent de naviguer dans la même configuration que les personnes m
 
 ## Autres tests manuels
 Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint :
-- [Grille d'évaluation PowerPoint](./grille_eval_AXS_PPT_V2.xlsx) (16 Ko)
 - [Grille d'évaluation Word](./grille_eval_AXS_WORD_V1.xlsx) (16 Ko)
+- [Grille d'évaluation PowerPoint](./grille_eval_AXS_PPT_V2.xlsx) (16 Ko)
+
 
 
 

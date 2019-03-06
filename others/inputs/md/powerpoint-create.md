@@ -1,6 +1,9 @@
 # Créer des documents PowerPoint accessibles
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"PowerPoint accessible"}]);
+    setBreadcrumb([
+      {"label":"PowerPoint accessible", "url":"powerpoint.html"},
+      {"label":"Créer un document accessible"},
+      ]);
     addSubMenu([
       {"label":"Créer un document accessible","url":"powerpoint-create.html", "expanded": true}, 
       {"label":"Comment tester mon document","url":"powerpoint-test.html"}
