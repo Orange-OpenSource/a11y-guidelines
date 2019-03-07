@@ -275,7 +275,7 @@
       "Tous les cadres possèdent un attribut <code>title</code> pertinent"
     ],
     "exception": "",
-    "raccourcis": "Les iframes techniques : http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
+    "raccourcis": "<a href='http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html'>Les iframes techniques</a>",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
@@ -288,10 +288,14 @@
       "Examiner les contenus audio et vidéos de la page"
     ],
     "verifier": [
-		"Vérifier que pour toute piste audio ou vidéo, un transcrit complet <br/>(texte contenant l'ensemble des informations visuelles et auditives) <br/>sous forme de texte html est, soit présent dans la page, <br/>soit, un lien pointe vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire"
+		"Vérifier que pour toute piste audio ou vidéo, un transcrit complet <br/>(texte contenant l'ensemble des informations visuelles et auditives) <br/>sous forme de texte html est, soit présent dans la page, <br/>soit, un lien pointe vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire",
+		"Vérifier que pour toute vidéo, des sous-titres sont disponibles",
+		"Vérifier qu’une audio-description, est disponible pour les vidéos présentant des informations sous forme visuelle"														  
 	],
     "resultat": [
-      "Présence d'un transcrit complet dans la même page ou dans une  autre via un lien"
+      "Présence d'un transcrit complet dans la même page ou dans une  autre via un lien",
+	  "Des sous-titres sous formats texte sont présents pour toutes vidéos et restituent l’ensemble des informations de la bande son",
+      "Une audio-description est présente en complément de la bande audio. <br/>Celle-ci présente sous format texte, les informations sont accessibles uniquement par l’image."																																												
     ],
     "exception": "",
     "raccourcis": "",
@@ -379,7 +383,7 @@
   },
   {
     "themes": "Couleurs et contrastes",
-    "title": "Assurer un contraste suffisant entre texte et fond / textes",
+    "title": "Assurer un contraste suffisant entre texte et fond",
     "type": [
       "aXe"
     ],
@@ -499,6 +503,29 @@
   },
   {
     "themes": "Navigation générale",
+	"title": "Rendre les intitulés des liens et des boutons accessibles / noms",
+    "type": [
+      "Test manuel - Inspecteur de code"
+    ],
+    "tests": [
+      "Lancer l'inspecteur de code du navigateur",
+      "Localiser les liens, boutons et tout items de navigation",
+      "Comparer le libellé texte ou le texte contenu dans l'image de ces items et <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible en HTML</a>"
+      
+    ],
+    "verifier": [
+      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>Le nom accessible en HTML</a>"
+    ],
+    "resultat": [
+      "Les liens, boutons et items de navigation ont pour tout composant d'interface, le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Expert Accessibilité"]
+  },
+
+  {
+    "themes": "Navigation générale",		 																				
     "title": "Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre",
     "type": [
       "Test manuel - Inspecteur de code"
@@ -829,7 +856,7 @@
       "Bookmarklet"
     ],
     "tests": [
-      "Se rendre sur notre site de recommandation : http://a11y.forge.orange-labs.fr/web/aerer-texte.html",
+      "Se rendre sur <a href='http://a11y.forge.orange-labs.fr/web/aerer-texte.html'>notre site de recommandation</a>",
       "Ajouter le bookmarklet à vos favoris",
       "Consulter la page",
       "Activer le bookmarklet"
@@ -866,6 +893,25 @@
     "exception": "",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
+							 
+																																	 
+			 
+				   
+	  
+			  
+						  
+												  
+	  
+				 
+																																													  
+	  
+				 
+																							
+	  
+																								 
+					 
+																															  
+	
   },
   {
     "themes": "Mise en page",
