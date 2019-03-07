@@ -10,10 +10,11 @@
     ]);
 });</script>
 
-<style>h3 {font-size: 1rem;}</style>
+<style>code {font-weight: bold;}h2{padding-top: 1.5rem;}</style>
 <span data-menuitem="powerpoint"></span>
 
 ## Automated tests
+
 ### Office Accessibility Verification Tool
 
 Start your tests with the Office Accessibility Verification Tool: 

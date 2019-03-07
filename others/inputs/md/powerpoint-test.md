@@ -13,14 +13,14 @@
 
 <span data-menuitem="powerpoint"></span>
 
-<style>code {font-weight: bold;}</style>
+<style>code {font-weight: bold;}h2{padding-top: 1.5rem;}</style>
 
 ## Tests automatiques
 Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.  
 **Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité**
 
 <img alt="capture d'écran du vérificateur d'accessibilité" src="./images/word_verification_fr.png" class="img-fluid" />  
-**Important :** pour que cette option fonctionne correctement, enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format ".pptx". Au moment de l’enregistrement, la case « compatibilité avec les versions précédentes » doit être décochée.
+**Important :** si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format ".pptx" avec la case « compatibilité avec les versions précédentes » décochée. 
 
 ## Vérifications des contrastes de couleurs 
 Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes. 
