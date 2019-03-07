@@ -56,13 +56,13 @@
       "Inspect the content"
     ],
     "verifier": [
-		"Check that appropriate HTML semantics are used to markup content, including: <ul><li>list (see details next step)</li><li>quote (presence of <code>&lt;blockquote&gt;</code> or <code>&lt;q&gt;</code> when necessary)</li><li>link (<code>&lt;a&gt;</code>), for any change of context via loading a new URL</li><li>li>button (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), for any triggering of an action, validation or selection</li></ul>"
+		"Check that appropriate HTML semantics are used to markup content, including: <ul><li>list (see details next step)</li><li>quote (presence of <code>&lt;blockquote&gt;</code> or <code>&lt;q&gt;</code> when necessary)</li><li>link (<code>&lt;a&gt;</code>), for any change of context via loading a new URL</li><li>button (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), for any triggering of an action, validation or selection</li></ul>"
 		],
     "resultat": [
-		"All content, visually treated as lists, has a semantic HTML list (&lt;ol&gt; for ordered lists, &lt;ul&gt; for non-ordered lists)",
+		"All content, visually treated as lists, has a semantic HTML list (<code>&lt;ol&gt;</code> for ordered lists, <code>&lt;ul&gt;</code> for non-ordered lists)",
 		"All quotes have HTML quotation list semantics",
-		"All interactive elements that cause a context change via URL loading, have HTML link semantics (<code>&lt;a&lt;</code>)",
-		"All interactive elements allowing the triggering of an action, validation or selection, have HTML button semantics (<code>&lt;button>&gt;</code>, <code>&lt;input type='button'&gt;</code>)"
+		"All interactive elements that cause a context change via URL loading, have HTML link semantics (<code>&lt;a&gt</code>)",
+		"All interactive elements allowing the triggering of an action, validation or selection, have HTML button semantics (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>)"
 		],
     "exception":"",
     "raccourcis":"",
@@ -179,7 +179,7 @@
 		"The tables have a legend (caption or heading placed just before)",
 		"Simple tables have <code>th</code> headers",
 		"Double entry tables have <code>th</code> headers as well as <code>scope='col'</code> and <code>scope='row'</code> attributes",
-		"Complex tables have headers (th + scope attributes) or complex headers based on the use of attributes <code>id</code> and <code>headers</code>",
+		"Complex tables have headers (<code>th</code> + scope attributes) or complex headers based on the use of attributes <code>id</code> and <code>headers</code>",
 		"Complex tables have a relevant summary"
 	],
     "exception":"",
@@ -375,7 +375,7 @@
     ]
 	,
     "resultat": [
-      "The page proposes at least one of the solutions below: <ul><li>captcha audio + visual</li><li><li>captcha audio or visual + logical tests (question with obvious answer, simple mathematical test...)</li></ul>"
+      "The page proposes at least one of the solutions below: <ul><li>captcha audio + visual</li><li>captcha audio or visual + logical tests (question with obvious answer, simple mathematical test...)</li></ul>"
     ],
     "exception":"",
     "raccourcis":"",
@@ -597,7 +597,7 @@
       "Identify whether the user should complete a form or perform actions within a limited time frame."
     ],
     "verifier": [
-		"Verify that one of the following actions is possible: <ul><li><li>disable the timeout</li><li>increase the time limit</li><ul>"
+		"Verify that one of the following actions is possible: <ul><li>disable the timeout</li><li>increase the time limit</li><ul>"
 	],
     "resultat": [
       "The user can disable, or increase the timeout duration"
@@ -636,10 +636,10 @@
       "Identify navigation and search elements"
     ],
     "verifier": [
-		"Verify that at least 2 of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu, presenting the current position of the user</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>>"
+		"Verify that at least 2 of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu, presenting the current position of the user</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>"
 	],
     "resultat": [
-		"2 of the following mechanisms are present on the page: <ul><li>provide a main navigation menu, presenting the current position of the user (be careful, the information must not be based on color only)</li><li>provide a breadcrumb trail</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li><</ul>"
+		"2 of the following mechanisms are present on the page: <ul><li>provide a main navigation menu, presenting the current position of the user (be careful, the information must not be based on color only)</li><li>provide a breadcrumb trail</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li></ul>"
 	],
     "exception":"",
     "raccourcis":"",
@@ -834,13 +834,13 @@
       "Bookmarklet"
     ],
     "tests": [
-      "Go to our guidelines site: http://a11y-guidelines.orange.com/web_EN/inc-dev-aerer-texte.html",
+      "Go to our <a href='http://a11y-guidelines.orange.com/web_EN/inc-dev-aerer-texte.html'>guidelines site</a>",
       "Add the bookmarklet to your favorites",
       "Consult the page",
       "Activate the bookmarklet"
     ],
     "verifier": [
-		"Spaces are adjusted according to the criteria: <ul><li> The height of the lines must be adjustable to at least 1.5 times the font size</li><li>>The space between two paragraphs must be adjustable to at least 2 times the font size</li><li>The spacing between the letters must be adjustable to 0.12 times minimum font size</li><li><li>The spacing between words must be adjustable to at least 0.16 times the font size</li></ul>",
+		"Spaces are adjusted according to the criteria: <ul><li> The height of the lines must be adjustable to at least 1.5 times the font size</li><li>The space between two paragraphs must be adjustable to at least 2 times the font size</li><li>The spacing between the letters must be adjustable to 0.12 times minimum font size</li><li><li>The spacing between words must be adjustable to at least 0.16 times the font size</li></ul>",
 		"Absence of truncated or superimposed content"
 	],
     "resultat": [
@@ -929,7 +929,7 @@
     "resultat": [
       "All interactive elements have dimensions that exceed 44px by 44px"
     ],
-    "exception": "<ul><li>Anchor / internal link to the page</li><li>>Link within a paragraph</li><li>Link within a sentence</li><li>Link within a footnote (at the end of a paragraph or sentence</li><li>A clickable icon within a sentence or paragraph</li></ul>",
+    "exception": "<ul><li>Anchor / internal link to the page</li><li>Link within a paragraph</li><li>Link within a sentence</li><li>Link within a footnote (at the end of a paragraph or sentence</li><li>A clickable icon within a sentence or paragraph</li></ul>",
     "raccourcis":"",
     "profils": ["Accessibility Expert"]
   },
@@ -1003,7 +1003,7 @@
       "Browse forms"
     ],
     "verifier": [
-		"Verify that the mandatory fields are visually and programmatically identifiable: <ul><li>the visual identification of the mandatory field is not based only on the color</li><li>One of the following techniques is implemented to convey the information programmatically: <ul><li>the visual information is integrated into the label. An alternative text is available to convey the information</li><li>>presence of a required attribute</li><li><li>presence of an <code>aria-required</code> attribute</li></ul></li></li></ul>"
+		"Verify that the mandatory fields are visually and programmatically identifiable: <ul><li>the visual identification of the mandatory field is not based only on the color</li><li>One of the following techniques is implemented to convey the information programmatically: <ul><li>the visual information is integrated into the label. An alternative text is available to convey the information</li><li>presence of a required attribute</li><li>presence of an <code>aria-required</code> attribute</li></ul></li></li></ul>"
 	],
     "resultat": [
       "Mandatory fields are visually and programmatically identifiable."
@@ -1023,7 +1023,7 @@
       "Browse forms"
     ],
     "verifier": [
-		"Verify that fields of the same nature are grouped. <br/><br/>>One of the following solutions must be implemented: <ul><li>>presence of a fieldset</li><li>presence of a role='group' attribute (or radiogroup for radio buttons) on the parent element encapsulating the fields</li></ul>"
+		"Verify that fields of the same nature are grouped. <br/><br/>One of the following solutions must be implemented: <ul><li>presence of a fieldset</li><li>presence of a <code>role='group'</code> attribute (or radiogroup for radio buttons) on the parent element encapsulating the fields</li></ul>"
 	],
     "resultat": [
       "Fields of the same nature are grouped together."
@@ -1067,7 +1067,7 @@
       "Submit forms"
     ],
     "verifier": [
-      "Check that one of the following solutions is implemented: <ul><li>The error message is present before the form.<br/>The message lists the fields with errors.<br/>The focus is given to the element containing the error message.<br/>Anchors allow the user to position themselves on error fields</li><li>Error messages are added to field labels.</li><li>>Error messages are not put into the labels, but a mechanism is present in order to link fields and errors programmatically: see <code>aria-describedby</code></li></ul>"	  
+      "Check that one of the following solutions is implemented: <ul><li>The error message is present before the form.<br/>The message lists the fields with errors.<br/>The focus is given to the element containing the error message.<br/>Anchors allow the user to position themselves on error fields</li><li>Error messages are added to field labels.</li><li>Error messages are not put into the labels, but a mechanism is present in order to link fields and errors programmatically: see <code>aria-describedby</code></li></ul>"	  
     ],
     "resultat": [
 		"Errors are detected",
@@ -1144,7 +1144,7 @@
     ],
     "tests": [
 		"Identify all elements that can be activated by a single point (hyperlinks, button, input, UI components)",
-		"Check that at least one condition is true: <ul><li>No Down event <br/>The down event of the pointer is not used to perform the function</li><li><li>Drop or Cancel <br/>The completion of the function is on the Up, and a mechanism is available to drop the function before the end or to cancel the function once completed</li><li>>Reverse on Up <br/>The Up event reverses any result of the previous Down event</li>"
+		"Check that at least one condition is true: <ul><li>No Down event <br/>The down event of the pointer is not used to perform the function</li><li>Drop or Cancel <br/>The completion of the function is on the Up, and a mechanism is available to drop the function before the end or to cancel the function once completed</li><li>Reverse on Up <br/>The Up event reverses any result of the previous Down event</li>"
 	],
     "verifier": [
       "If an action must be absolutely triggered on the down event, then check that there is a mechanism to cancel the action."

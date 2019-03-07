@@ -736,7 +736,7 @@
       "Navigation clavier"
     ],
     "tests": [
-      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>'"
+      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
     ],
     "verifier": [
       "Vérifier que l'on obtient un résultat équivalent à la navigation au moyen de la souris pour les fonctionnalités principales de la page"
@@ -776,7 +776,7 @@
       "Navigation clavier"
     ],
     "tests": [
-      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>'"
+      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
     ],
     "verifier": [
       "Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est suffisamment  visible"
@@ -796,7 +796,7 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code",
-      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>'",
+      "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>",
       "Identifier la couleur du focus et la couleur de fond",
       "Tester avec le Color Contrast Analyzer"
     ],
