@@ -12,11 +12,11 @@ Les recommandations générales décrivent les recommandations à respecter quel
 
 ## Recommandations spécifiques par type de contenu
 Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&nbsp;:
-- [Rédiger des documents Word accessibles](./word.html)&nbsp;: section consacrée à la rédaction de documents Word accessibles.
+- [Documents Word](./word.html)&nbsp;: section consacrée à la création de documents Word accessibles.
 
-- [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.
+- [Documents PowerPoint](./powerpoint.html)&nbsp;: section consacrée à la création de présentations PowerPoint accessibles.
 
-- [Rédiger des documents PDF](./pdf.html)&nbsp;: section consacrée à la rédaction de documents PDF accessibles.
+- [Documents PDF](./pdf.html)&nbsp;: section consacrée à la rédaction de documents PDF accessibles.
 
 - [Rédiger des emails accessibles](./pushmail.html)&nbsp;: section consacrée à la rédaction de «&nbsp;<i lang="en">pushmail</i>&nbsp;» accessibles.
 
