@@ -18,7 +18,7 @@
 Notify the user of any new window opening by mentioning it in the text of the link.
 If it is not possible, use the `title` attribute with the whole information needed (e.g. "buy the Nokia  7510 (new window)") and add, at choice: 
 - the use of an icon (image with an `alt` indicating the opening of a new window or just "(new window)").
-- a hidden piece of text in <a href="./examples/masking/index.html"> accessible display </a> via CSS.
+- a hidden piece of text in <a href="./exemples/masquage/index.html"> accessible display </a> via CSS.
 - an attribute `aria-label` or` aria-labelledby` containing all the contents of `title` (see [ARIA attributes that can save you] (./ label-ledby-describedby.html)).
 
 **Example: ** 
