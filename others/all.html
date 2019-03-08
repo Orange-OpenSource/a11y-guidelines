@@ -152,11 +152,11 @@
 <h2 id="recommandations-sp-cifiques-par-type-de-contenu">Recommandations spécifiques par type de contenu</h2>
 <p>Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&nbsp;:</p>
 <ul>
-<li><p><a href="./word.html">Rédiger des documents Word accessibles</a>&nbsp;: section consacrée à la rédaction de documents Word accessibles.</p>
+<li><p><a href="./word.html">Documents Word</a>&nbsp;: section consacrée à la création de documents Word accessibles.</p>
 </li>
-<li><p><a href="./powerpoint.html">Rédiger des documents PowerPoint accessibles</a>&nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.</p>
+<li><p><a href="./powerpoint.html">Documents PowerPoint</a>&nbsp;: section consacrée à la création de présentations PowerPoint accessibles.</p>
 </li>
-<li><p><a href="./pdf.html">Rédiger des documents PDF</a>&nbsp;: section consacrée à la rédaction de documents PDF accessibles.</p>
+<li><p><a href="./pdf.html">Documents PDF</a>&nbsp;: section consacrée à la rédaction de documents PDF accessibles.</p>
 </li>
 <li><p><a href="./pushmail.html">Rédiger des emails accessibles</a>&nbsp;: section consacrée à la rédaction de «&nbsp;<i lang="en">pushmail</i>&nbsp;» accessibles.</p>
 </li>
@@ -168,13 +168,40 @@
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
 
-<h1 id="cr-er-des-documents-powerpoint-accessibles">Créer des documents PowerPoint accessibles</h1>
+<h1 id="accessibilit-des-documents-powerpoint">Accessibilité des documents PowerPoint</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"PowerPoint accessible"}]);
+    setBreadcrumb([{"label":"Microsoft Powerpoint"}]);
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"powerpoint-create.html"}, 
+      {"label":"Comment tester mon document","url":"powerpoint-test.html"}
+    ]);
 });</script>
 
 <style>code {font-weight: bold;}</style>
 
+<p>Cette section contient des recommandations pour :</p>
+<ul>
+<li><a href="./powerpoint-create.html">Créer un document PowerPoint accessible</a></li>
+<li><a href="./powerpoint-test.html">Tester l&#39;accessibilité d&#39;un document PowerPoint</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="cr-er-des-documents-powerpoint-accessibles">Créer des documents PowerPoint accessibles</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+      {"label":"PowerPoint accessible", "url":"powerpoint.html"},
+      {"label":"Créer un document accessible"},
+      ]);
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"powerpoint-create.html", "expanded": true}, 
+      {"label":"Comment tester mon document","url":"powerpoint-test.html"}
+    ]);
+});</script>
+
+<style>code {font-weight: bold;}</style>
+
+<p><span data-menuitem="powerpoint"></span></p>
 <p>Produire un document PowerPoint accessible nécessite de respecter différentes recommandations. Elles sont synthétisées ci-après (guides détaillés consultables sur <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">le site de la <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr></a>).
 Pour vous aider PowerPoint intègre un outil permettant de vérifier l’accessibilité d’une présentation. Cet outil identifie les principales erreurs et propose des solutions. N’hésitez pas à vous y référer. </p>
 <h2 id="masques-de-diapositive">Masques de diapositive</h2>
@@ -327,11 +354,73 @@ Cocher la case « Balises de structure de document pour l&#39;accessibilité ».
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="cr-er-des-documents-word-accessibles">Créer des documents Word accessibles</h1>
+<h1 id="comment-tester-l-accessibilit-d-un-document-powerpoint">Comment tester l&#39;accessibilité d&#39;un document PowerPoint</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Word accessible"}]);
+    setBreadcrumb([
+      {"label":"Microsoft PowerPoint", "url":"powerpoint.html"},
+      {"label":"Comment tester mon document"}
+      ]);
+    addSubMenu([
+        {"label":"Créer un document accessible","url":"powerpoint-create.html"}, 
+        {"label":"Comment tester mon document","url":"powerpoint-test.html", "expanded": true}
+    ]);
+
 });</script>
 
+<p><span data-menuitem="powerpoint"></span></p>
+<style>code {font-weight: bold;}h2{padding-top: 1.5rem;}</style>
+
+<h2 id="tests-automatiques">Tests automatiques</h2>
+<p>Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.<br><strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong></p>
+<p><img alt="capture d'écran du vérificateur d'accessibilité" src="./images/word_verification_fr.png" class="img-fluid" /><br><strong>Important :</strong> si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format &quot;.pptx&quot; avec la case « compatibilité avec les versions précédentes » décochée. </p>
+<h2 id="v-rifications-des-contrastes-de-couleurs">Vérifications des contrastes de couleurs</h2>
+<p>Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes. </p>
+<p><img alt="capture d'écran de l'outil colour contrast analyser" src="./images/cca.png" class="img-fluid" />  </p>
+<h2 id="tests-avec-les-synth-ses-vocales-jaws-et-nvda">Tests avec les synthèses vocales JAWS et NVDA</h2>
+<p>Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.
+Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.</p>
+<p><a href="http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html">Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018</a></p>
+<h2 id="autres-tests-manuels">Autres tests manuels</h2>
+<p>Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint :</p>
+<ul>
+<li><a href="./grille_eval_AXS_PPT_V2.xlsx">Grille d&#39;évaluation PowerPoint</a> (16 Ko)</li>
+<li><a href="./grille_eval_AXS_WORD_V1.xlsx">Grille d&#39;évaluation Word</a> (16 Ko)</li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="accessibilit-des-documents-word">Accessibilité des documents Word</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Microsoft Word"}]);
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"word-create.html"}, 
+      {"label":"Comment tester mon document","url":"word-test.html"}
+    ]);
+});</script>
+
+<style>code {font-weight: bold;}</style>
+
+<p>Cette section contient des recommandations pour :</p>
+<ul>
+<li><a href="./word-create.html">Créer un document Word accessible</a></li>
+<li><a href="./word-test.html">Tester l&#39;accessibilité d&#39;un document Word</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="cr-er-un-document-word-accessibles">Créer un document Word accessibles</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([      
+      {"label":"Microsoft Word","url":"word.html"},
+      {"label":"Créer un document accessible"}
+    ]);
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"word-create.html", "expanded":true}, 
+      {"label":"Comment tester mon document","url":"word-test.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="word"></span></p>
 <style>h3 {font-size: 1rem;}</style>
 
 <p>Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance. </p>
@@ -464,6 +553,40 @@ Cocher la case « Balises de structure de document pour l&#39;accessibilité ».
 <ul>
 <li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
 <li><a href="http://webaim.org/techniques/word/" hreflang="en">Accessibilité Word, WebAIM</a> (anglais).</li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="comment-tester-l-accessibilit-d-un-documents-word">Comment tester l&#39;accessibilité d&#39;un documents Word</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([      
+      {"label":"Microsoft Word","url":"word.html"},
+      {"label":"Comment tester mon document"}
+    ]);
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"word-create.html"}, 
+      {"label":"Comment tester mon document","url":"word-test.html", "expanded":true}
+    ]);
+});</script>
+
+
+<p><span data-menuitem="word"></span></p>
+<style>code {font-weight: bold;}h2{padding-top: 1.5rem;}</style>
+<h2 id="tests-automatiques">Tests automatiques</h2>
+<p>Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.<br><strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong></p>
+<p><img alt="capture d'écran du vérificateur d'accessibilité" src="./images/word_verification_fr.png" class="img-fluid" /><br><strong>Important :</strong> si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format &quot;.docx&quot; avec la case « compatibilité avec les versions précédentes » décochée. </p>
+<h2 id="v-rifications-des-contrastes-de-couleurs">Vérifications des contrastes de couleurs</h2>
+<p>Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes. </p>
+<p><img alt="capture d'écran de l'outil colour contrast analyser" src="./images/cca.png" class="img-fluid" />  </p>
+<h2 id="tests-avec-les-synth-ses-vocales-jaws-et-nvda">Tests avec les synthèses vocales JAWS et NVDA</h2>
+<p>Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.
+Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.</p>
+<p><a href="http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html">Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018</a></p>
+<h2 id="autres-tests-manuels">Autres tests manuels</h2>
+<p>Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint :</p>
+<ul>
+<li><a href="./grille_eval_AXS_WORD_V1.xlsx">Grille d&#39;évaluation Word</a> (16 Ko)</li>
+<li><a href="./grille_eval_AXS_PPT_V2.xlsx">Grille d&#39;évaluation PowerPoint</a> (16 Ko)</li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

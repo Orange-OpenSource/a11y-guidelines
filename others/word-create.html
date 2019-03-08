@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité numérique Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+
+              <a href="index.html" class="navbar-brand"><img src="/boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Contenu éditorial</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-editorial" href="editorial.html">Recommandations générales</a></li>
+                        <li><a class="page-word" href="word.html" lang="en">Microsoft Word</a></li>                        
+                        <li><a class="page-powerpoint" href="powerpoint.html" lang="en">Microsoft PowerPoint</a></li>                        
+                        <li><a class="page-pdf" href="pdf.html" lang="en">Documents <abbr>PDF</abbr></a></li>                         
+                        <li><a class="page-pushmail" href="pushmail.html">Email</a></li>
+                        <li><a class="page-video-audio" href="video-audio.html">Contenus vidéos ou audios</a></li>
+
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../others_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../others_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/others/index.html">Contenu éditorial</a></li>        
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="cr-er-un-document-word-accessibles">Créer un document Word accessibles</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([      
+      {"label":"Microsoft Word","url":"word.html"},
+      {"label":"Créer un document accessible"}
+    ]);
+    addSubMenu([
+      {"label":"Créer un document accessible","url":"word-create.html", "expanded":true}, 
+      {"label":"Comment tester mon document","url":"word-test.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="word"></span></p>
+<style>h3 {font-size: 1rem;}</style>
+
+<p>Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance. </p>
+<h2 id="langue">Langue</h2>
+<p>Définir la langue principale du document dans le menu : <strong>Fichier &gt; Options &gt; Langue</strong>.</p>
+<p>Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis <strong>Révision &gt; Langue &gt; Définir la langue de vérification</strong>. </p>
+<p><img alt="" src="./images/word_langue_fr.png" class="img-fluid" /> </p>
+<p>Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter. </p>
+<h2 id="attributs-du-fichier">Attributs du fichier</h2>
+<p>Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu <strong>Fichier &gt; Informations</strong>.</p>
+<p>Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.</p>
+<p><img alt="" src="./images/word_attributs_fr.png" class="img-fluid" /> </p>
+<h2 id="titres">Titres</h2>
+<p>Utiliser les styles « Titre » et « Sous-titre » du menu <strong>Accueil</strong> (Titre 1, Titre 2, etc.). </p>
+<p>Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné. </p>
+<p>Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.</p>
+<h2 id="table-des-mati-res">Table des matières</h2>
+<p>Insérer une table des matières via le menu <strong>Références &gt; Table des matières</strong>. </p>
+<p>Cela permet aux utilisateurs de trouver des informations plus aisément dans le document. </p>
+<h2 id="r-daction-des-contenus">Rédaction des contenus</h2>
+<p>Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.</p>
+<p>Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu <strong>Insertion &gt; Symbole</strong> ou les raccourcis clavier ci-dessous.</p>
+<p><img alt="" src="./images/word_table_caracteres_fr.png" class="img-fluid" /> </p>
+<p>Liste des raccourcis clavier :</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lettre</th>
+      <th scope="col">raccourci Windows</th>
+      <th scope="col">raccourci Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">À</th>
+      <td>Alt Gr + ` (touche 7) puis A majuscule</td>
+      <td>Maj lock puis à</td>
+    </tr>
+    <tr>
+      <th scope="row">Ç</th>
+      <td>alt + 128</td>
+      <td>Option + ç</td>
+    </tr>
+    <tr>
+      <th scope="row">È</th>
+      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
+      <td>Maj lock puis è</td>
+    </tr>
+    <tr>
+      <th scope="row">É</th>
+      <td>alt + 144</td>
+      <td>Maj lock puis é</td>
+    </tr>
+    <tr>
+      <th scope="row">Ê</th>
+      <td>^ puis E majuscule </td>
+      <td>^ puis E majuscule</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="mise-en-forme-des-contenus">Mise en forme des contenus</h2>
+<p>Utiliser les styles prédéfinis pour la mise en forme des contenus : le style « Normal » doit être attribué à tous les textes des paragraphes (style par défaut), le style « citation » pour les citations, etc.</p>
+<p>Utiliser une police de caractères sans empattement (extensions qui terminent les extrémités des caractères) comme Arial ou Helvetica, en corps 12 pixels minimum et un espacement entre les caractères normal ou élargi.</p>
+<p>Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majuscule ; limiter l’utilisation de l’italique.</p>
+<p>Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.</p>
+<p><img alt="" src="./images/word_mise_en_forme_fr.png" class="img-fluid" /> </p>
+<p>Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran. </p>
+<p>Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="./images/word_tab_fr.png" />) pour mettre en forme le contenu. </p>
+<p>Utiliser les fonctions Retrait, Espacement : </p>
+<ul>
+<li>Menu <strong>Mise en page &gt; Paragraphe &gt; Retrait</strong> ou <strong>Espacement</strong> ou <strong>Clic droit : « Paragraphe… »</strong></li>
+</ul>
+<p><img alt="" src="./images/word_retrait_fr.png" class="img-fluid" /> </p>
+<p>Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») : </p>
+<p><img alt="" src="./images/word_tab1_fr.png" class="img-fluid" /> 
+<img alt="" src="./images/word_tab2_fr.png" class="img-fluid" /> </p>
+<p>Utiliser l’option « Colonnes » de l’onglet <strong>Mise en page</strong> pour créer une mise en page sous forme de colonnes, et non les tableaux.</p>
+<p>Utiliser le saut de page via le menu <strong>Insertion &gt; Saut de page</strong> pour passer à la page suivante. </p>
+<p>Numéroter les pages (menu <strong>Insertion &gt; Numéro de page</strong>) pour permettre aux utilisateurs de se repérer dans le document.</p>
+<h2 id="couleurs-et-contrastes">Couleurs et contrastes</h2>
+<p>Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.</p>
+<p>Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> qui vous permettra de vérifier très simplement la qualité de vos contrastes.</p>
+<p>S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.</p>
+<p><img alt="" src="./images/word_contrastes1_fr.png" class="img-fluid" /> 
+<strong>Exemple incorrect</strong> : l&#39;information est transmise uniquement par la couleur. </p>
+<p><img alt="" src="./images/word_contrastes2_fr.png" class="img-fluid" /> 
+<strong>Exemple correct</strong> : l&#39;information est transmise par la forme et la couleur</p>
+<h2 id="listes-puces-ou-num-rot-es">Listes à puces ou numérotées</h2>
+<p>Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.</p>
+<p><img alt="" src="./images/word_liste_fr.png" class="img-fluid" /> </p>
+<h2 id="images">Images</h2>
+<p>Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image. </p>
+<ul>
+<li><strong>Pour les images porteuses d’informations</strong> : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : <strong>clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »</strong>.</li>
+<li><strong>Pour les images décoratives/illustratives</strong> : laisser le champ description vide.</li>
+<li><strong>Pour les images informatives complexes</strong> : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien. </li>
+<li><strong>Pour les images « lien »</strong> : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien.</li>
+<li><strong>Pour les graphiques ou schémas</strong> : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu <strong>Insertion &gt; Smart Art</strong>). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (<strong>Format de l’objet</strong> ou <strong>de l’image &gt; Texte de remplacement &gt; Description</strong>).</li>
+</ul>
+<p><img alt="" src="./images/word_remplacement_fr.png" class="img-fluid" /> </p>
+<p>Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un <strong>clic droit sur l’image &gt; renvoyer à la ligne automatiquement</strong> ou le menu <strong>Outils Image &gt; Organiser</strong>), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.  </p>
+<h2 id="contenus-audio-et-vid-o">Contenus audio et vidéo</h2>
+<p><a href="./video-audio.html">Nos préconisations sur les contenus audio et vidéo</a></p>
+<h2 id="liens">Liens</h2>
+<p>Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.</p>
+<p>En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel. </p>
+<p>Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre : </p>
+<ul>
+<li>menu <strong>Insertion &gt; Lien hypertexte &gt; Info-bulle</strong> : ajouter « nouvelle fenêtre » dans le libellé </li>
+</ul>
+<p>Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier. </p>
+<p><img alt="" src="./images/word_lien_fr.png" class="img-fluid" /> </p>
+<h2 id="tableaux-de-donn-es">Tableaux de données</h2>
+<p>Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. </p>
+<p>Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie. </p>
+<p>Ajouter une description s&#39;il s&#39;agit d&#39;un tableau complexe, <strong>clic droit : Format de la forme &gt; Texte de remplacement &gt; Description</strong>.</p>
+<p>Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme. </p>
+<h2 id="v-rification-finale">Vérification finale</h2>
+<p>Enfin, utiliser le vérificateur d’accessibilité intégré (menu : <strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong>). </p>
+<p><img alt="" src="./images/word_verification_fr.png" class="img-fluid" /> </p>
+<p>Ce vérificateur permet de détecter les principales erreurs et propose des solutions. </p>
+<h2 id="convertir-en-fichier-pdf">Convertir en fichier PDF</h2>
+<p>Pour transformer votre document en <abbr>PDF</abbr>, aller dans le menu : <strong>Fichier &gt; Enregistrer sous</strong> puis de sélectionner le type de fichier <strong>PDF</strong>. </p>
+<p>La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.</p>
+<p>À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.</p>
+<p><img alt="" src="./images/word_pdf_fr.png" class="img-fluid" /> </p>
+<p>Pour vérifier l’accessibilité d’un document PDF : <a href="https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">télécharger PDF Accessiblity Checker (PAC 3)</a>.</p>
+<h2 id="ressources-externes">Ressources externes</h2>
+<ul>
+<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
+<li><a href="http://webaim.org/techniques/word/" hreflang="en">Accessibilité Word, WebAIM</a> (anglais).</li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

@@ -211,140 +211,200 @@ documentTitles["powerpoint.html#creating-accessible-powerpoint-documents"] = "Cr
 index.add({
     url: "powerpoint.html#creating-accessible-powerpoint-documents",
     title: "Creating accessible PowerPoint documents",    
-    body: "# Creating accessible PowerPoint documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Accessible PowerPoint\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+    body: "# Creating accessible PowerPoint documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft PowerPoint\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-create.html\&quot;},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  This section contains recommendations for: - [Create an accessible PowerPoint document](./powerpoint-create.html) - [How to test a PowerPoint document](./powerpoint-test.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
-documentTitles["powerpoint.html#introduction"] = "Introduction";
+
+
+documentTitles["powerpoint-create.html#creating-accessible-powerpoint-documents"] = "Creating accessible PowerPoint documents";
 index.add({
-    url: "powerpoint.html#introduction",
+    url: "powerpoint-create.html#creating-accessible-powerpoint-documents",
+    title: "Creating accessible PowerPoint documents",    
+    body: "# Creating accessible PowerPoint documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft PowerPoint\&quot;, \&quot;url\&quot;: \&quot;./powerpoint.html\&quot;},         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-create.html\&quot;, \&quot;expanded\&quot;: true},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  &lt;span data-menuitem=\&quot;powerpoint\&quot;&gt;&lt;/span&gt;  "
+});
+
+documentTitles["powerpoint-create.html#introduction"] = "Introduction";
+index.add({
+    url: "powerpoint-create.html#introduction",
     title: "Introduction",    
     body: "## Introduction  Producing accessible PowerPoint presentations requires following different rules. They are summarized below (and detailed guides are available on the [WebAIM website](https://webaim.org/techniques/powerpoint/)).  In order to help you, PowerPoint includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions.   "
 });
 
-documentTitles["powerpoint.html#slide-layouts"] = "Slide Layouts";
+documentTitles["powerpoint-create.html#slide-layouts"] = "Slide Layouts";
 index.add({
-    url: "powerpoint.html#slide-layouts",
+    url: "powerpoint-create.html#slide-layouts",
     title: "Slide Layouts",    
     body: "## Slide Layouts  Defining slide layouts is the first action to do in order to create an accessible presentation, it will ensure information have the correct reading order. Use the Slide Master view: select the &lt;code&gt;View&lt;/code&gt; tab &gt; &lt;code&gt;Slide Master&lt;/code&gt; to create or modify slides layouts.   &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen1.png\&quot; alt=\&quot;Screenshot of view tab\&quot;/&gt;  Use the Master Layout submenu to add titles or footers.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen2.png\&quot; alt=\&quot;Screenshot of slide master tab\&quot;/&gt;  Create as many layouts as types of slides needed. Avoid adding text boxes or images directly into the presentation via the &lt;code&gt;Insert&lt;/code&gt; menu but use the &lt;code&gt;Slide Master&lt;/code&gt; view.   Note: if you edit the slide layout after you have created the slides, you must reapply the new model.  "
 });
 
-documentTitles["powerpoint.html#presentation-properties"] = "Presentation properties";
+documentTitles["powerpoint-create.html#presentation-properties"] = "Presentation properties";
 index.add({
-    url: "powerpoint.html#presentation-properties",
+    url: "powerpoint-create.html#presentation-properties",
     title: "Presentation properties",    
     body: "## Presentation properties  "
 });
 
-documentTitles["powerpoint.html#language"] = "Language";
+documentTitles["powerpoint-create.html#language"] = "Language";
 index.add({
-    url: "powerpoint.html#language",
+    url: "powerpoint-create.html#language",
     title: "Language",    
     body: "### Language  The main language must be defined in the tab &lt;code&gt;File &gt; Options &gt; Language&lt;/code&gt;. Every punctual change of language must be identified by selecting the text and: tab &lt;code&gt;Review &gt; Language &gt; Set proofing language&lt;/code&gt;.  "
 });
 
-documentTitles["powerpoint.html#other-properties"] = "Other properties";
+documentTitles["powerpoint-create.html#other-properties"] = "Other properties";
 index.add({
-    url: "powerpoint.html#other-properties",
+    url: "powerpoint-create.html#other-properties",
     title: "Other properties",    
     body: "### Other properties Title, author and tags fields have to be completed in tab &lt;code&gt;File &gt; Info &gt; Properties&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen3.png\&quot; alt=\&quot;Screenshot of file properties\&quot;/&gt;  This information is accessible by everyone in Windows Explorer and are readable by the screen readers.   "
 });
 
-documentTitles["powerpoint.html#use-unique-slide-titles"] = "Use unique slide titles";
+documentTitles["powerpoint-create.html#use-unique-slide-titles"] = "Use unique slide titles";
 index.add({
-    url: "powerpoint.html#use-unique-slide-titles",
+    url: "powerpoint-create.html#use-unique-slide-titles",
     title: "Use unique slide titles",    
     body: "## Use unique slide titles Give every slide a unique and descriptive title, it allows screen reader users to clearly understand which slide they are on.  "
 });
 
-documentTitles["powerpoint.html#wording"] = "Wording";
+documentTitles["powerpoint-create.html#wording"] = "Wording";
 index.add({
-    url: "powerpoint.html#wording",
+    url: "powerpoint-create.html#wording",
     title: "Wording",    
     body: "## Wording Avoid abbreviations and acronyms; explain them at the first occurrence. If necessary, keep accentuation on capital letters (example: É or Ç): use the &lt;code&gt;Insert tab &gt; Symbol&lt;/code&gt;.  "
 });
 
-documentTitles["powerpoint.html#formatting-layout"] = "Formatting / layout";
+documentTitles["powerpoint-create.html#formatting-layout"] = "Formatting / layout";
 index.add({
-    url: "powerpoint.html#formatting-layout",
+    url: "powerpoint-create.html#formatting-layout",
     title: "Formatting / layout",    
     body: "## Formatting / layout Use familiar sans serif fonts (such as Arial or Calibri), in a larger font size (18pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines. Avoid justifying the text; prefer left alignment. In order to add white space between sentences and paragraphs, use option: &lt;code&gt;right click&lt;/code&gt; on the text and select &lt;code&gt;Paragraph… &gt; Indents and Spacing&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen4.png\&quot; alt=\&quot;Screenshot of paragraph dialog\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#colors-and-contrasts"] = "Colors and contrasts";
+documentTitles["powerpoint-create.html#colors-and-contrasts"] = "Colors and contrasts";
 index.add({
-    url: "powerpoint.html#colors-and-contrasts",
+    url: "powerpoint-create.html#colors-and-contrasts",
     title: "Colors and contrasts",    
     body: "## Colors and contrasts  "
 });
 
-documentTitles["powerpoint.html#use-sufficient-contrast-for-text-and-background-colors"] = "Use sufficient contrast for text and background colors";
+documentTitles["powerpoint-create.html#use-sufficient-contrast-for-text-and-background-colors"] = "Use sufficient contrast for text and background colors";
 index.add({
-    url: "powerpoint.html#use-sufficient-contrast-for-text-and-background-colors",
+    url: "powerpoint-create.html#use-sufficient-contrast-for-text-and-background-colors",
     title: "Use sufficient contrast for text and background colors",    
     body: "### Use sufficient contrast for text and background colors  The presentation of text should have a contrast ratio of at least 4.5:1. Here are some examples on a white background: - Foreground black : very good contrast, ratio = 21:1  - Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1 - Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1  If you choose to not use the Orange Group colors guidelines, you can download the [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) tool; it will be useful for checking your contrasts.  "
 });
 
-documentTitles["powerpoint.html#ensure-that-color-is-not-the-only-means-of-conveying-information"] = "Ensure that color is not the only means of conveying information";
+documentTitles["powerpoint-create.html#ensure-that-color-is-not-the-only-means-of-conveying-information"] = "Ensure that color is not the only means of conveying information";
 index.add({
-    url: "powerpoint.html#ensure-that-color-is-not-the-only-means-of-conveying-information",
+    url: "powerpoint-create.html#ensure-that-color-is-not-the-only-means-of-conveying-information",
     title: "Ensure that color is not the only means of conveying information",    
     body: "### Ensure that color is not the only means of conveying information For people who can not see the colors or the shades of colors, it is important to convey the information differently.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/color1.png\&quot; alt=\&quot;Bad example, color is used to convey the information\&quot;/&gt;   &lt;img class=\&quot;center\&quot; src=\&quot;./images/color2.png\&quot; alt=\&quot;Good example, the shape is used to convey the information\&quot;/&gt;  Appropriate colors and contrast are necessary for people to see your presentations and understand their meaning.   "
 });
 
-documentTitles["powerpoint.html#bulleted-lists-or-numbered-lists"] = "Bulleted Lists or Numbered Lists";
+documentTitles["powerpoint-create.html#bulleted-lists-or-numbered-lists"] = "Bulleted Lists or Numbered Lists";
 index.add({
-    url: "powerpoint.html#bulleted-lists-or-numbered-lists",
+    url: "powerpoint-create.html#bulleted-lists-or-numbered-lists",
     title: "Bulleted Lists or Numbered Lists",    
     body: "## Bulleted Lists or Numbered Lists Always use the appropriate and native functions in order to create lists.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen5.png\&quot; alt=\&quot;Screenshot of lists options\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#pictures-and-other-images"] = "Pictures and other Images";
+documentTitles["powerpoint-create.html#pictures-and-other-images"] = "Pictures and other Images";
 index.add({
-    url: "powerpoint.html#pictures-and-other-images",
+    url: "powerpoint-create.html#pictures-and-other-images",
     title: "Pictures and other Images",    
     body: "## Pictures and other Images  Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides. In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner. Right-click on an image and select &lt;code&gt;Format Picture&lt;/code&gt; or &lt;code&gt;Format Shape &gt; Alt Text&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen6.png\&quot; alt=\&quot;Screenshot of format picture dialog\&quot;/&gt;  Type the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies). If the picture is only decorative, leave the Description text box blank. Alternative text helps people who can’t see the screen to understand what’s important in images and other visuals. Do not use text in images to convey important information.    Note: If a picture or a chart is too complex to describe with alt text, you will need to provide a text description elsewhere. You can add the full description to the Notes section of the slide for example. In this case, put a very short description in the alt text, endings with the words: “full text description in the Notes section of this slide”.  For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language). Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.  "
 });
 
-documentTitles["powerpoint.html#tables"] = "Tables";
+documentTitles["powerpoint-create.html#hyperlinks"] = "Hyperlinks";
 index.add({
-    url: "powerpoint.html#tables",
+    url: "powerpoint-create.html#hyperlinks",
+    title: "Hyperlinks",    
+    body: "## Hyperlinks Select the text to which you want to add the hyperlink, and then right-click. The text you selected displays in the “Text to display” box. This is the hyperlink text. If necessary, add a ScreenTip by clicking on the ScreenTip button.    &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen11.png\&quot; alt=\&quot;Insert hyperlink dialog box screenshot\&quot;/&gt;  For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).   Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.    "
+});
+
+documentTitles["powerpoint-create.html#tables"] = "Tables";
+index.add({
+    url: "powerpoint-create.html#tables",
     title: "Tables",    
     body: "## Tables  Use a simple table structure, and specify column header information.  Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.  If a table is too complex, you will need to provide an additional description: Right-click &lt;code&gt;Format Shape &gt; Alt Text&lt;/code&gt;.  "
 });
 
-documentTitles["powerpoint.html#audio-or-video-file"] = "Audio or video file";
+documentTitles["powerpoint-create.html#audio-or-video-file"] = "Audio or video file";
 index.add({
-    url: "powerpoint.html#audio-or-video-file",
+    url: "powerpoint-create.html#audio-or-video-file",
     title: "Audio or video file",    
     body: "## Audio or video file For audio and video content, in addition to alt text, include closed captioning for people who are deaf or have limited hearing.    Video content must have synchronized captions and also needs a rich description of the visual components. Closed captions typically also describe audio attributes such as music or sound effects that occur off-screen. Subtitles typically contain a transcription (or translation) of the dialogue.    Audio content must have a transcript.    Avoid automatic launching or slide transitions.    Avoid content that blinks or flashes more than three times a second.  "
 });
 
-documentTitles["powerpoint.html#set-the-reading-order"] = "Set the reading order";
+documentTitles["powerpoint-create.html#set-the-reading-order"] = "Set the reading order";
 index.add({
-    url: "powerpoint.html#set-the-reading-order",
+    url: "powerpoint-create.html#set-the-reading-order",
     title: "Set the reading order",    
     body: "## Set the reading order The order in which the screen readers read the slide contents can be modified in the Selection pane.   On the &lt;code&gt;Home&lt;/code&gt; tab, in the &lt;code&gt;Drawing group&lt;/code&gt;, select &lt;code&gt;Arrange &gt; Selection&lt;/code&gt; Pane. The elements of your slide are read in the reverse order listed in this pane.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen7.png\&quot; alt=\&quot;Screenshot of selection pane\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#accessibility-checker"] = "Accessibility Checker";
+documentTitles["powerpoint-create.html#accessibility-checker"] = "Accessibility Checker";
 index.add({
-    url: "powerpoint.html#accessibility-checker",
+    url: "powerpoint-create.html#accessibility-checker",
     title: "Accessibility Checker",    
     body: "## Accessibility Checker At least, run Accessibility Checker to make sure your content is accessible.    In &lt;code&gt;File tab &gt; Check for Issues&lt;/code&gt;.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen8.png\&quot; alt=\&quot;Screenshot of accessibility checker menu\&quot;/&gt;  "
 });
 
-documentTitles["powerpoint.html#convert-to-pdf"] = "Convert to PDF";
+documentTitles["powerpoint-create.html#convert-to-pdf"] = "Convert to PDF";
 index.add({
-    url: "powerpoint.html#convert-to-pdf",
+    url: "powerpoint-create.html#convert-to-pdf",
     title: "Convert to PDF",    
     body: "## Convert to PDF  Save you presentation as &lt;abbr&gt;PDF&lt;/abbr&gt;: &lt;code&gt;File tab &gt; Save As&lt;/code&gt; and save as type PDF. Check the « Document structure tags for accessibility » option.  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen9.png\&quot; alt=\&quot;Screenshot of PDF options dialog\&quot;/&gt;  &lt;abbr&gt;PDF&lt;/abbr&gt; is often a better format to present PowerPoint presentations electronically.    Note:  If your presentation have more than 50 slides, it is better to advise your readers to change the following setting in Adobe: &lt;code&gt;Edit &gt; Preferences &gt; Reading &gt; Screen Reader Options &gt; Page vs Document: \&quot;Read the entire document\&quot;&lt;/code&gt;  &lt;img class=\&quot;center\&quot; src=\&quot;./images/screen10.png\&quot; alt=\&quot;Screenshot of screen reader options\&quot;/&gt;  To check &lt;abbr&gt;PDF&lt;/abbr&gt; document accessibility: download [PDF Accessibility Checker (PAC 3)](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).  "
 });
 
-documentTitles["powerpoint.html#for-more-detailed-information"] = "For more detailed information";
+documentTitles["powerpoint-create.html#for-more-detailed-information"] = "For more detailed information";
 index.add({
-    url: "powerpoint.html#for-more-detailed-information",
+    url: "powerpoint-create.html#for-more-detailed-information",
     title: "For more detailed information",    
     body: "## For more detailed information - [PowerPoint Accessibility, WebAIM](https://webaim.org/techniques/powerpoint/) - [Microsoft Accessibility Support website](https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25) - &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; lang=\&quot;fr\&quot;&gt;(FR) Créer des documents bureautiques accessibles, DINISIC&lt;/a&gt;.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["powerpoint-test.html#check-accessibility-in-powerpoint-slides"] = "Check accessibility in PowerPoint slides";
+index.add({
+    url: "powerpoint-test.html#check-accessibility-in-powerpoint-slides",
+    title: "Check accessibility in PowerPoint slides",    
+    body: "# Check accessibility in PowerPoint slides  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft PowerPoint\&quot;, \&quot;url\&quot;: \&quot;./powerpoint.html\&quot;},         {\&quot;label\&quot;:\&quot;How to test my document\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-create.html\&quot;},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-test.html\&quot;, \&quot;expanded\&quot;: true}     ]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}h2{padding-top: 1.5rem;}&lt;/style&gt; &lt;span data-menuitem=\&quot;powerpoint\&quot;&gt;&lt;/span&gt;  "
+});
+
+documentTitles["powerpoint-test.html#automated-tests"] = "Automated tests";
+index.add({
+    url: "powerpoint-test.html#automated-tests",
+    title: "Automated tests",    
+    body: "## Automated tests  "
+});
+
+documentTitles["powerpoint-test.html#office-accessibility-verification-tool"] = "Office Accessibility Verification Tool";
+index.add({
+    url: "powerpoint-test.html#office-accessibility-verification-tool",
+    title: "Office Accessibility Verification Tool",    
+    body: "### Office Accessibility Verification Tool  Start your tests with the Office Accessibility Verification Tool:  **File &gt; Info &gt; Check for Issues &gt; Check Accessibility**  &lt;img alt=\&quot;Accessibility checker screenshot\&quot; src=\&quot;./images/word_verification_en.png\&quot; class=\&quot;img-fluid\&quot; /&gt;    **Important:** if you encounter some difficulties, try to save your document from within PowerPoint 2010 in \&quot;.pptx\&quot; format. The option to \&quot;Maintain compatibility with previous versions of Word\&quot; has to remains unchecked.   "
+});
+
+documentTitles["powerpoint-test.html#color-contrasts"] = "Color contrasts";
+index.add({
+    url: "powerpoint-test.html#color-contrasts",
+    title: "Color contrasts",    
+    body: "### Color contrasts [Download Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)  &lt;img alt=\&quot;colour contrast analyser screenshot\&quot; src=\&quot;./images/cca.png\&quot; class=\&quot;img-fluid\&quot; /&gt;    "
+});
+
+documentTitles["powerpoint-test.html#screen-reader-jaws-nvda"] = "Screen reader: JAWS &amp; NVDA";
+index.add({
+    url: "powerpoint-test.html#screen-reader-jaws-nvda",
+    title: "Screen reader: JAWS &amp; NVDA",    
+    body: "### Screen reader: JAWS &amp; NVDA To complete the verification, you can test with a screen reader.  It helps you to simulate the configuration as the visually impaired and blind people. [For further information to navigate with JAWS &amp; NVDA](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+});
+
+documentTitles["powerpoint-test.html#self-assessment-grids"] = "Self-Assessment Grids";
+index.add({
+    url: "powerpoint-test.html#self-assessment-grids",
+    title: "Self-Assessment Grids",    
+    body: "### Self-Assessment Grids  - &lt;a href=\&quot;AXS_assess_grid_WORD_EN.xlsx\&quot;&gt;Accessibility Assessment Grid for Word (16 ko)&lt;/a&gt; - &lt;a href=\&quot;AXS_assess_grid_PPT_EN.xlsx\&quot;&gt;Accessibility Assessment Grid for PowerPoint (16 ko)&lt;/a&gt;  These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents:  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -411,154 +471,207 @@ documentTitles["word.html#creating-accessible-word-documents"] = "Creating acces
 index.add({
     url: "word.html#creating-accessible-word-documents",
     title: "Creating accessible Word documents",    
-    body: "# Creating accessible Word documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Accessible Word\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  "
+    body: "# Creating accessible Word documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Microsoft Word\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;},         {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;}     ]);     });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  This section contains recommendations for: - [Create an accessible Word document](./word-create.html) - [How to test a Word document](./word-test.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
-documentTitles["word.html#introduction"] = "Introduction";
+
+
+documentTitles["word-create.html#creating-accessible-word-documents"] = "Creating accessible Word documents";
 index.add({
-    url: "word.html#introduction",
+    url: "word-create.html#creating-accessible-word-documents",
+    title: "Creating accessible Word documents",    
+    body: "# Creating accessible Word documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft Word\&quot;, \&quot;url\&quot;:\&quot;./word.html\&quot;},         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;, \&quot;expanded\&quot;: true},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;}     ]);  });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt; &lt;span data-menuitem=\&quot;word\&quot;&gt;&lt;/span&gt;  "
+});
+
+documentTitles["word-create.html#introduction"] = "Introduction";
+index.add({
+    url: "word-create.html#introduction",
     title: "Introduction",    
     body: "## Introduction  Accessible Word documents are needed in order to be read by all users. Creating accessible Word documents requires to respect the following recommendations. It also enables you to produce accessible &lt;abbr&gt;PDF&lt;/abbr&gt; documents through the &lt;abbr&gt;PDF&lt;/abbr&gt; export functionality inside Word.  "
 });
 
-documentTitles["word.html#recommendations"] = "Recommendations";
+documentTitles["word-create.html#recommendations"] = "Recommendations";
 index.add({
-    url: "word.html#recommendations",
+    url: "word-create.html#recommendations",
     title: "Recommendations",    
     body: "## Recommendations   You will find below a summary of the recommendations to follow. For more detail, please refer to &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;the &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt; website&lt;/a&gt; (in French).  "
 });
 
-documentTitles["word.html#1-use-heading-styles-for-headings-and-sub-headings"] = "1. Use “Heading” styles for headings and sub-headings";
+documentTitles["word-create.html#1-use-heading-styles-for-headings-and-sub-headings"] = "1. Use “Heading” styles for headings and sub-headings";
 index.add({
-    url: "word.html#1-use-heading-styles-for-headings-and-sub-headings",
+    url: "word-create.html#1-use-heading-styles-for-headings-and-sub-headings",
     title: "1. Use “Heading” styles for headings and sub-headings",    
     body: "### 1. Use “Heading” styles for headings and sub-headings  Headings and sub-headings must use the “Headings” styles (Heading 1, Heading 2, etc.) to structure the document’s content and provide easy access to them.  "
 });
 
-documentTitles["word.html#2-use-the-normal-style-for-texts"] = "2. Use the “Normal” style for texts";
+documentTitles["word-create.html#2-use-the-normal-style-for-texts"] = "2. Use the “Normal” style for texts";
 index.add({
-    url: "word.html#2-use-the-normal-style-for-texts",
+    url: "word-create.html#2-use-the-normal-style-for-texts",
     title: "2. Use the “Normal” style for texts",    
     body: "### 2. Use the “Normal” style for texts  The “Normal” style must be used for all text paragraphs (default style).  "
 });
 
-documentTitles["word.html#3-use-dedicated-styles-to-emphasize-some-contents"] = "3. Use dedicated styles to emphasize some contents.";
+documentTitles["word-create.html#3-use-dedicated-styles-to-emphasize-some-contents"] = "3. Use dedicated styles to emphasize some contents.";
 index.add({
-    url: "word.html#3-use-dedicated-styles-to-emphasize-some-contents",
+    url: "word-create.html#3-use-dedicated-styles-to-emphasize-some-contents",
     title: "3. Use dedicated styles to emphasize some contents.",    
     body: "### 3. Use dedicated styles to emphasize some contents.  Use predefined styles to emphasize some contents (e.g. quotes, legends, etc.) rather than using character formatting tools (bold etc.).  "
 });
 
-documentTitles["word.html#4-dont-insert-empty-lines"] = "4. Don’t insert empty lines";
+documentTitles["word-create.html#4-dont-insert-empty-lines"] = "4. Don’t insert empty lines";
 index.add({
-    url: "word.html#4-dont-insert-empty-lines",
+    url: "word-create.html#4-dont-insert-empty-lines",
     title: "4. Don’t insert empty lines",    
     body: "### 4. Don’t insert empty lines  Space between lines must be created through Paragraph options, where you can define the space before and after a paragraph.  Page jumps must be created via proper “Jumps” (Insert&amp;nbsp;&gt; Page jump, new page).  "
 });
 
-documentTitles["word.html#5-use-bulleted-lists"] = "5. Use bulleted lists";
+documentTitles["word-create.html#5-use-bulleted-lists"] = "5. Use bulleted lists";
 index.add({
-    url: "word.html#5-use-bulleted-lists",
+    url: "word-create.html#5-use-bulleted-lists",
     title: "5. Use bulleted lists",    
     body: "### 5. Use bulleted lists  Lists must be made using the option “Bulleted list” or “Numbered list”, and not by inserting dashes into the text.  "
 });
 
-documentTitles["word.html#6-use-footnotes"] = "6. Use footnotes";
+documentTitles["word-create.html#6-use-footnotes"] = "6. Use footnotes";
 index.add({
-    url: "word.html#6-use-footnotes",
+    url: "word-create.html#6-use-footnotes",
     title: "6. Use footnotes",    
     body: "### 6. Use footnotes  Options to insert “Footnotes” and “Endnotes” must be used to properly insert notes in your document.  "
 });
 
-documentTitles["word.html#7-number-your-pages"] = "7. Number your pages";
+documentTitles["word-create.html#7-number-your-pages"] = "7. Number your pages";
 index.add({
-    url: "word.html#7-number-your-pages",
+    url: "word-create.html#7-number-your-pages",
     title: "7. Number your pages",    
     body: "### 7. Number your pages  The “Page number” option makes it easier to get one’s bearings in a document.  "
 });
 
-documentTitles["word.html#8-use-columns-to-layout-text"] = "8. Use “Columns” to layout text";
+documentTitles["word-create.html#8-use-columns-to-layout-text"] = "8. Use “Columns” to layout text";
 index.add({
-    url: "word.html#8-use-columns-to-layout-text",
+    url: "word-create.html#8-use-columns-to-layout-text",
     title: "8. Use “Columns” to layout text",    
     body: "### 8. Use “Columns” to layout text  The “Columns” option in the Layout group must be used (instead of tables) to layout the page as proper columns.  "
 });
 
-documentTitles["word.html#9-define-the-anchor-for-objects-inserted-into-the-page"] = "9. Define the anchor for objects inserted into the page";
+documentTitles["word-create.html#9-define-the-anchor-for-objects-inserted-into-the-page"] = "9. Define the anchor for objects inserted into the page";
 index.add({
-    url: "word.html#9-define-the-anchor-for-objects-inserted-into-the-page",
+    url: "word-create.html#9-define-the-anchor-for-objects-inserted-into-the-page",
     title: "9. Define the anchor for objects inserted into the page",    
     body: "### 9. Define the anchor for objects inserted into the page  When you insert objects (image, shape, SmartArt, etc.), it is necessary to define an anchor point: in the options for page flow, choose the option “Aligned on the text” or “Top and bottom”.  "
 });
 
-documentTitles["word.html#10-avoid-text-zones"] = "10. Avoid text zones";
+documentTitles["word-create.html#10-avoid-text-zones"] = "10. Avoid text zones";
 index.add({
-    url: "word.html#10-avoid-text-zones",
+    url: "word-create.html#10-avoid-text-zones",
     title: "10. Avoid text zones",    
     body: "### 10. Avoid text zones  Floating text zones are not always properly read by screen readers. Texts can be emphasized through the use of borders around a paragraph, for instance.  "
 });
 
-documentTitles["word.html#11-ensure-colour-is-not-the-only-means-to-convey-information"] = "11. Ensure colour is not the only means to convey information";
+documentTitles["word-create.html#11-ensure-colour-is-not-the-only-means-to-convey-information"] = "11. Ensure colour is not the only means to convey information";
 index.add({
-    url: "word.html#11-ensure-colour-is-not-the-only-means-to-convey-information",
+    url: "word-create.html#11-ensure-colour-is-not-the-only-means-to-convey-information",
     title: "11. Ensure colour is not the only means to convey information",    
     body: "### 11. Ensure colour is not the only means to convey information  Information given through colour must also be conveyed via another means like shape, position, size…   "
 });
 
-documentTitles["word.html#12-ensure-a-sufficient-contrast"] = "12. Ensure a sufficient contrast";
+documentTitles["word-create.html#12-ensure-a-sufficient-contrast"] = "12. Ensure a sufficient contrast";
 index.add({
-    url: "word.html#12-ensure-a-sufficient-contrast",
+    url: "word-create.html#12-ensure-a-sufficient-contrast",
     title: "12. Ensure a sufficient contrast",    
     body: "### 12. Ensure a sufficient contrast  Contrast between the colour of text and of its background must be sufficient: - 4.5:1 for normal-size text; - 3:1 for bigger text.  Contrast can be verified with the &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
 });
 
-documentTitles["word.html#13-define-language"] = "13. Define language";
+documentTitles["word-create.html#13-define-language"] = "13. Define language";
 index.add({
-    url: "word.html#13-define-language",
+    url: "word-create.html#13-define-language",
     title: "13. Define language",    
     body: "### 13. Define language  Language must be defined through the menu: File&amp;nbsp;&gt; Options&amp;nbsp;&gt; Language. Words or groups of words in another language must be explicitly described as such (menu: Revision&amp;nbsp;&gt; Language&amp;nbsp;&gt; Define the verification language).  "
 });
 
-documentTitles["word.html#14-provide-replacement-text-for-images"] = "14. Provide replacement text for images";
+documentTitles["word-create.html#14-provide-replacement-text-for-images"] = "14. Provide replacement text for images";
 index.add({
-    url: "word.html#14-provide-replacement-text-for-images",
+    url: "word-create.html#14-provide-replacement-text-for-images",
     title: "14. Provide replacement text for images",    
     body: "### 14. Provide replacement text for images  If the image conveys information, you must provide a replacement text describing its content (right click, Image format&amp;nbsp;&gt; Replacement text&amp;nbsp;&gt; Description field). If the image is strictly for decoration, the Description field must be left empty.  "
 });
 
-documentTitles["word.html#15-make-simple-tables"] = "15. Make simple tables";
+documentTitles["word-create.html#15-make-simple-tables"] = "15. Make simple tables";
 index.add({
-    url: "word.html#15-make-simple-tables",
+    url: "word-create.html#15-make-simple-tables",
     title: "15. Make simple tables",    
     body: "### 15. Make simple tables  Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.  "
 });
 
-documentTitles["word.html#16-use-the-automated-accessibility-checker"] = "16. Use the automated Accessibility checker";
+documentTitles["word-create.html#16-use-the-automated-accessibility-checker"] = "16. Use the automated Accessibility checker";
 index.add({
-    url: "word.html#16-use-the-automated-accessibility-checker",
+    url: "word-create.html#16-use-the-automated-accessibility-checker",
     title: "16. Use the automated Accessibility checker",    
     body: "### 16. Use the automated Accessibility checker  Word provides an Accessibility checker (menu File&amp;nbsp;&gt; Check for problems&amp;nbsp;&gt; Check accessibility). It lists all contents prone to be hard to deal with and automatically detects failures. This tool must be used as it provides a huge help; however it does not prevent you from checking and applying all the recommendations provided in this page.  "
 });
 
-documentTitles["word.html#17-exporting-the-document-to-abbrpdfabbr"] = "17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;";
+documentTitles["word-create.html#17-exporting-the-document-to-abbrpdfabbr"] = "17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;";
 index.add({
-    url: "word.html#17-exporting-the-document-to-abbrpdfabbr",
+    url: "word-create.html#17-exporting-the-document-to-abbrpdfabbr",
     title: "17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;",    
     body: "### 17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;  To export to &lt;abbr&gt;PDF&lt;/abbr&gt; you only need to go to File&amp;nbsp;&gt; Save as. Choose a name and select &lt;abbr&gt;PDF&lt;/abbr&gt; as file type. The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.  Please note that in Word for Office 2010 generated &lt;abbr&gt;PDF&lt;/abbr&gt; documents can show accessibility issues, e.g. for the vocalisation of images. These issues were corrected in the following versions of Microsoft Office.  "
 });
 
-documentTitles["word.html#18-insert-an-table-of-contents"] = "18. Insert an table of contents";
+documentTitles["word-create.html#18-insert-an-table-of-contents"] = "18. Insert an table of contents";
 index.add({
-    url: "word.html#18-insert-an-table-of-contents",
+    url: "word-create.html#18-insert-an-table-of-contents",
     title: "18. Insert an table of contents",    
     body: "### 18. Insert an table of contents  For any long document (more than 2 pages), insert an automatically generated table of contents, in the menu &amp; nbsp ;: References &amp; nbsp;&gt; Table of contents. It makes easier for everyone to find their way around and quickly go to the content you want to read.  Note that you must update this table of contents as soon as you change the structure of the content, so prefer to generate the table of contents at the end of the content modifications.  "
 });
 
-documentTitles["word.html#external-resources"] = "External resources";
+documentTitles["word-create.html#external-resources"] = "External resources";
 index.add({
-    url: "word.html#external-resources",
+    url: "word-create.html#external-resources",
     title: "External resources",    
     body: "## External resources  - &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;Creating accessible office documents (in French)&lt;/a&gt;, &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt;. - &lt;a href=\&quot;http://webaim.org/techniques/word/\&quot; hreflang=\&quot;en\&quot;&gt;Word Accessibility, WebAIM&lt;/a&gt;.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["word-test.html#check-accessibility-in-word"] = "Check accessibility in Word";
+index.add({
+    url: "word-test.html#check-accessibility-in-word",
+    title: "Check accessibility in Word",    
+    body: "# Check accessibility in Word &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft Word\&quot;, \&quot;url\&quot;:\&quot;./word.html\&quot;},         {\&quot;label\&quot;:\&quot;How to test my document\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;, \&quot;expanded\&quot;: true}     ]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}h2{padding-top: 1.5rem;}&lt;/style&gt; &lt;span data-menuitem=\&quot;word\&quot;&gt;&lt;/span&gt;  "
+});
+
+documentTitles["word-test.html#automated-tests"] = "Automated tests";
+index.add({
+    url: "word-test.html#automated-tests",
+    title: "Automated tests",    
+    body: "## Automated tests "
+});
+
+documentTitles["word-test.html#office-accessibility-verification-tool"] = "Office Accessibility Verification Tool";
+index.add({
+    url: "word-test.html#office-accessibility-verification-tool",
+    title: "Office Accessibility Verification Tool",    
+    body: "### Office Accessibility Verification Tool  Start your tests with the Office Accessibility Verification Tool:  **File &gt; Info &gt; Check for Issues &gt; Check Accessibility**  &lt;img alt=\&quot;Accessibility checker screenshot\&quot; src=\&quot;./images/word_verification_en.png\&quot; class=\&quot;img-fluid\&quot; /&gt;    **Important:** if you encounter some difficulties, try to save your document from within Word 2010 in \&quot;.docx\&quot; format. The option to \&quot;Maintain compatibility with previous versions of Word\&quot; has to remains unchecked.   "
+});
+
+documentTitles["word-test.html#color-contrasts"] = "Color contrasts";
+index.add({
+    url: "word-test.html#color-contrasts",
+    title: "Color contrasts",    
+    body: "### Color contrasts [Download Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)  &lt;img alt=\&quot;colour contrast analyser screenshot\&quot; src=\&quot;./images/cca.png\&quot; class=\&quot;img-fluid\&quot; /&gt;    "
+});
+
+documentTitles["word-test.html#screen-reader-jaws-nvda"] = "Screen reader: JAWS &amp; NVDA";
+index.add({
+    url: "word-test.html#screen-reader-jaws-nvda",
+    title: "Screen reader: JAWS &amp; NVDA",    
+    body: "### Screen reader: JAWS &amp; NVDA To complete the verification, you can test with a screen reader.  It helps you to simulate the configuration as the visually impaired and blind people. [For further information to navigate with JAWS &amp; NVDA](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+});
+
+documentTitles["word-test.html#self-assessment-grids"] = "Self-Assessment Grids";
+index.add({
+    url: "word-test.html#self-assessment-grids",
+    title: "Self-Assessment Grids",    
+    body: "### Self-Assessment Grids  - &lt;a href=\&quot;AXS_assess_grid_WORD_EN.xlsx\&quot;&gt;Accessibility Assessment Grid for Word (16 ko)&lt;/a&gt; - &lt;a href=\&quot;AXS_assess_grid_PPT_EN.xlsx\&quot;&gt;Accessibility Assessment Grid for PowerPoint (16 ko)&lt;/a&gt;  These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents:  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

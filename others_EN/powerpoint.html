@@ -117,104 +117,21 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="creating-accessible-powerpoint-documents">Creating accessible PowerPoint documents</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Accessible PowerPoint"}]);
+    setBreadcrumb([
+        {"label":"Microsoft PowerPoint"}
+    ]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"powerpoint-create.html"}, 
+        {"label":"How to test my document","url":"powerpoint-test.html"}
+    ]);
 });</script>
 
 <style>h3 {font-size: 1rem;}</style>
 
-<h2 id="introduction">Introduction</h2>
-<p>Producing accessible PowerPoint presentations requires following different rules. They are summarized below (and detailed guides are available on the <a href="https://webaim.org/techniques/powerpoint/">WebAIM website</a>).</p>
-<p>In order to help you, PowerPoint includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions. </p>
-<h2 id="slide-layouts">Slide Layouts</h2>
-<p>Defining slide layouts is the first action to do in order to create an accessible presentation, it will ensure information have the correct reading order.
-Use the Slide Master view: select the <code>View</code> tab &gt; <code>Slide Master</code> to create or modify slides layouts. </p>
-<p><img class="center" src="./images/screen1.png" alt="Screenshot of view tab"/></p>
-<p>Use the Master Layout submenu to add titles or footers.</p>
-<p><img class="center" src="./images/screen2.png" alt="Screenshot of slide master tab"/></p>
-<p>Create as many layouts as types of slides needed.
-Avoid adding text boxes or images directly into the presentation via the <code>Insert</code> menu but use the <code>Slide Master</code> view.<br>Note: if you edit the slide layout after you have created the slides, you must reapply the new model.</p>
-<h2 id="presentation-properties">Presentation properties</h2>
-<h3 id="language">Language</h3>
-<p>The main language must be defined in the tab <code>File &gt; Options &gt; Language</code>.
-Every punctual change of language must be identified by selecting the text and: tab <code>Review &gt; Language &gt; Set proofing language</code>.</p>
-<h3 id="other-properties">Other properties</h3>
-<p>Title, author and tags fields have to be completed in tab <code>File &gt; Info &gt; Properties</code>.</p>
-<p><img class="center" src="./images/screen3.png" alt="Screenshot of file properties"/></p>
-<p>This information is accessible by everyone in Windows Explorer and are readable by the screen readers. </p>
-<h2 id="use-unique-slide-titles">Use unique slide titles</h2>
-<p>Give every slide a unique and descriptive title, it allows screen reader users to clearly understand which slide they are on.</p>
-<h2 id="wording">Wording</h2>
-<p>Avoid abbreviations and acronyms; explain them at the first occurrence.
-If necessary, keep accentuation on capital letters (example: É or Ç): use the <code>Insert tab &gt; Symbol</code>.</p>
-<h2 id="formatting-layout">Formatting / layout</h2>
-<p>Use familiar sans serif fonts (such as Arial or Calibri), in a larger font size (18pt or larger).
-Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.
-Avoid justifying the text; prefer left alignment.
-In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… &gt; Indents and Spacing</code>.</p>
-<p><img class="center" src="./images/screen4.png" alt="Screenshot of paragraph dialog"/></p>
-<h2 id="colors-and-contrasts">Colors and contrasts</h2>
-<h3 id="use-sufficient-contrast-for-text-and-background-colors">Use sufficient contrast for text and background colors</h3>
-<p>The presentation of text should have a contrast ratio of at least 4.5:1.
-Here are some examples on a white background:</p>
+<p>This section contains recommendations for:</p>
 <ul>
-<li>Foreground black : very good contrast, ratio = 21:1 </li>
-<li>Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1</li>
-<li>Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1</li>
-</ul>
-<p>If you choose to not use the Orange Group colors guidelines, you can download the <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> tool; it will be useful for checking your contrasts.</p>
-<h3 id="ensure-that-color-is-not-the-only-means-of-conveying-information">Ensure that color is not the only means of conveying information</h3>
-<p>For people who can not see the colors or the shades of colors, it is important to convey the information differently.</p>
-<p><img class="center" src="./images/color1.png" alt="Bad example, color is used to convey the information"/><br><img class="center" src="./images/color2.png" alt="Good example, the shape is used to convey the information"/></p>
-<p>Appropriate colors and contrast are necessary for people to see your presentations and understand their meaning. </p>
-<h2 id="bulleted-lists-or-numbered-lists">Bulleted Lists or Numbered Lists</h2>
-<p>Always use the appropriate and native functions in order to create lists.</p>
-<p><img class="center" src="./images/screen5.png" alt="Screenshot of lists options"/></p>
-<h2 id="pictures-and-other-images">Pictures and other Images</h2>
-<p>Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides.
-In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner.
-Right-click on an image and select <code>Format Picture</code> or <code>Format Shape &gt; Alt Text</code>.</p>
-<p><img class="center" src="./images/screen6.png" alt="Screenshot of format picture dialog"/></p>
-<p>Type the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).
-If the picture is only decorative, leave the Description text box blank.
-Alternative text helps people who can’t see the screen to understand what’s important in images and other visuals.
-Do not use text in images to convey important information.  </p>
-<p>Note: If a picture or a chart is too complex to describe with alt text, you will need to provide a text description elsewhere. You can add the full description to the Notes section of the slide for example. In this case, put a very short description in the alt text, endings with the words: “full text description in the Notes section of this slide”.</p>
-<p>For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).
-Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.</p>
-<h2 id="tables">Tables</h2>
-<p>Use a simple table structure, and specify column header information.</p>
-<p>Ensure that tables don&#39;t contain split cells, merged cells, nested tables, or completely blank rows or columns.</p>
-<p>If a table is too complex, you will need to provide an additional description: Right-click <code>Format Shape &gt; Alt Text</code>.</p>
-<h2 id="audio-or-video-file">Audio or video file</h2>
-<p>For audio and video content, in addition to alt text, include closed captioning for people who are deaf or have limited hearing.  </p>
-<p>Video content must have synchronized captions and also needs a rich description of the visual components.
-Closed captions typically also describe audio attributes such as music or sound effects that occur off-screen.
-Subtitles typically contain a transcription (or translation) of the dialogue.  </p>
-<p>Audio content must have a transcript.  </p>
-<p>Avoid automatic launching or slide transitions.  </p>
-<p>Avoid content that blinks or flashes more than three times a second.</p>
-<h2 id="set-the-reading-order">Set the reading order</h2>
-<p>The order in which the screen readers read the slide contents can be modified in the Selection pane.<br>On the <code>Home</code> tab, in the <code>Drawing group</code>, select <code>Arrange &gt; Selection</code> Pane.
-The elements of your slide are read in the reverse order listed in this pane.</p>
-<p><img class="center" src="./images/screen7.png" alt="Screenshot of selection pane"/></p>
-<h2 id="accessibility-checker">Accessibility Checker</h2>
-<p>At least, run Accessibility Checker to make sure your content is accessible.  </p>
-<p>In <code>File tab &gt; Check for Issues</code>.</p>
-<p><img class="center" src="./images/screen8.png" alt="Screenshot of accessibility checker menu"/></p>
-<h2 id="convert-to-pdf">Convert to PDF</h2>
-<p>Save you presentation as <abbr>PDF</abbr>: <code>File tab &gt; Save As</code> and save as type PDF.
-Check the « Document structure tags for accessibility » option.</p>
-<p><img class="center" src="./images/screen9.png" alt="Screenshot of PDF options dialog"/></p>
-<p><abbr>PDF</abbr> is often a better format to present PowerPoint presentations electronically.  </p>
-<p>Note:  If your presentation have more than 50 slides, it is better to advise your readers to change the following setting in Adobe:
-<code>Edit &gt; Preferences &gt; Reading &gt; Screen Reader Options &gt; Page vs Document: &quot;Read the entire document&quot;</code></p>
-<p><img class="center" src="./images/screen10.png" alt="Screenshot of screen reader options"/></p>
-<p>To check <abbr>PDF</abbr> document accessibility: download <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">PDF Accessibility Checker (PAC 3)</a>.</p>
-<h2 id="for-more-detailed-information">For more detailed information</h2>
-<ul>
-<li><a href="https://webaim.org/techniques/powerpoint/">PowerPoint Accessibility, WebAIM</a></li>
-<li><a href="https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25">Microsoft Accessibility Support website</a></li>
-<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" lang="fr">(FR) Créer des documents bureautiques accessibles, DINISIC</a>.</li>
+<li><a href="./powerpoint-create.html">Create an accessible PowerPoint document</a></li>
+<li><a href="./powerpoint-test.html">How to test a PowerPoint document</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

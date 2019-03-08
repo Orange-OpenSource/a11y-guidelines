@@ -117,67 +117,19 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="creating-accessible-word-documents">Creating accessible Word documents</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Accessible Word"}]);
+    setBreadcrumb([{"label":"Microsoft Word"}]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"word-create.html"},
+        {"label":"How to test my document","url":"word-test.html"}
+    ]);    
 });</script>
 
 <style>h3 {font-size: 1rem;}</style>
 
-<h2 id="introduction">Introduction</h2>
-<p>Accessible Word documents are needed in order to be read by all users. Creating accessible Word documents requires to respect the following recommendations. It also enables you to produce accessible <abbr>PDF</abbr> documents through the <abbr>PDF</abbr> export functionality inside Word.</p>
-<h2 id="recommendations">Recommendations</h2>
-<p>You will find below a summary of the recommendations to follow. For more detail, please refer to <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">the <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr> website</a> (in French).</p>
-<h3 id="1-use-heading-styles-for-headings-and-sub-headings">1. Use “Heading” styles for headings and sub-headings</h3>
-<p>Headings and sub-headings must use the “Headings” styles (Heading 1, Heading 2, etc.) to structure the document’s content and provide easy access to them.</p>
-<h3 id="2-use-the-normal-style-for-texts">2. Use the “Normal” style for texts</h3>
-<p>The “Normal” style must be used for all text paragraphs (default style).</p>
-<h3 id="3-use-dedicated-styles-to-emphasize-some-contents-">3. Use dedicated styles to emphasize some contents.</h3>
-<p>Use predefined styles to emphasize some contents (e.g. quotes, legends, etc.) rather than using character formatting tools (bold etc.).</p>
-<h3 id="4-don-t-insert-empty-lines">4. Don’t insert empty lines</h3>
-<p>Space between lines must be created through Paragraph options, where you can define the space before and after a paragraph.</p>
-<p>Page jumps must be created via proper “Jumps” (Insert&nbsp;&gt; Page jump, new page).</p>
-<h3 id="5-use-bulleted-lists">5. Use bulleted lists</h3>
-<p>Lists must be made using the option “Bulleted list” or “Numbered list”, and not by inserting dashes into the text.</p>
-<h3 id="6-use-footnotes">6. Use footnotes</h3>
-<p>Options to insert “Footnotes” and “Endnotes” must be used to properly insert notes in your document.</p>
-<h3 id="7-number-your-pages">7. Number your pages</h3>
-<p>The “Page number” option makes it easier to get one’s bearings in a document.</p>
-<h3 id="8-use-columns-to-layout-text">8. Use “Columns” to layout text</h3>
-<p>The “Columns” option in the Layout group must be used (instead of tables) to layout the page as proper columns.</p>
-<h3 id="9-define-the-anchor-for-objects-inserted-into-the-page">9. Define the anchor for objects inserted into the page</h3>
-<p>When you insert objects (image, shape, SmartArt, etc.), it is necessary to define an anchor point: in the options for page flow, choose the option “Aligned on the text” or “Top and bottom”.</p>
-<h3 id="10-avoid-text-zones">10. Avoid text zones</h3>
-<p>Floating text zones are not always properly read by screen readers. Texts can be emphasized through the use of borders around a paragraph, for instance.</p>
-<h3 id="11-ensure-colour-is-not-the-only-means-to-convey-information">11. Ensure colour is not the only means to convey information</h3>
-<p>Information given through colour must also be conveyed via another means like shape, position, size…</p>
-<h3 id="12-ensure-a-sufficient-contrast">12. Ensure a sufficient contrast</h3>
-<p>Contrast between the colour of text and of its background must be sufficient:</p>
+<p>This section contains recommendations for:</p>
 <ul>
-<li>4.5:1 for normal-size text;</li>
-<li>3:1 for bigger text.</li>
-</ul>
-<p>Contrast can be verified with the <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.</p>
-<h3 id="13-define-language">13. Define language</h3>
-<p>Language must be defined through the menu: File&nbsp;&gt; Options&nbsp;&gt; Language.
-Words or groups of words in another language must be explicitly described as such (menu: Revision&nbsp;&gt; Language&nbsp;&gt; Define the verification language).</p>
-<h3 id="14-provide-replacement-text-for-images">14. Provide replacement text for images</h3>
-<p>If the image conveys information, you must provide a replacement text describing its content (right click, Image format&nbsp;&gt; Replacement text&nbsp;&gt; Description field).
-If the image is strictly for decoration, the Description field must be left empty.</p>
-<h3 id="15-make-simple-tables">15. Make simple tables</h3>
-<p>Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.</p>
-<h3 id="16-use-the-automated-accessibility-checker">16. Use the automated Accessibility checker</h3>
-<p>Word provides an Accessibility checker (menu File&nbsp;&gt; Check for problems&nbsp;&gt; Check accessibility). It lists all contents prone to be hard to deal with and automatically detects failures. This tool must be used as it provides a huge help; however it does not prevent you from checking and applying all the recommendations provided in this page.</p>
-<h3 id="17-exporting-the-document-to-abbr-pdf-abbr-">17. Exporting the document to <abbr>PDF</abbr></h3>
-<p>To export to <abbr>PDF</abbr> you only need to go to File&nbsp;&gt; Save as. Choose a name and select <abbr>PDF</abbr> as file type.
-The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.</p>
-<p>Please note that in Word for Office 2010 generated <abbr>PDF</abbr> documents can show accessibility issues, e.g. for the vocalisation of images. These issues were corrected in the following versions of Microsoft Office.</p>
-<h3 id="18-insert-an-table-of-contents">18. Insert an table of contents</h3>
-<p>For any long document (more than 2 pages), insert an automatically generated table of contents, in the menu &amp; nbsp ;: References &amp; nbsp;&gt; Table of contents.
-It makes easier for everyone to find their way around and quickly go to the content you want to read.</p>
-<p>Note that you must update this table of contents as soon as you change the structure of the content, so prefer to generate the table of contents at the end of the content modifications.</p>
-<h2 id="external-resources">External resources</h2>
-<ul>
-<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in French)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.</li>
-<li><a href="http://webaim.org/techniques/word/" hreflang="en">Word Accessibility, WebAIM</a>.</li>
+<li><a href="./word-create.html">Create an accessible Word document</a></li>
+<li><a href="./word-test.html">How to test a Word document</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

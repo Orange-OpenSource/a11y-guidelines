@@ -52,249 +52,341 @@ documentTitles["index.html#recommandations-specifiques-par-type-de-contenu"] = "
 index.add({
     url: "index.html#recommandations-specifiques-par-type-de-contenu",
     title: "Recommandations spécifiques par type de contenu",    
-    body: "## Recommandations spécifiques par type de contenu Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Rédiger des documents Word accessibles](./word.html)&amp;nbsp;: section consacrée à la rédaction de documents Word accessibles.  - [Rédiger des documents PowerPoint accessibles](./powerpoint.html)&amp;nbsp;: section consacrée à la réalisation de présentations PowerPoint accessibles.  - [Rédiger des documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  - [Fournir des contenus vidéos ou audios](./video-audio.html)&amp;nbsp;: section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Recommandations spécifiques par type de contenu Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document&amp;nbsp;: - [Documents Word](./word.html)&amp;nbsp;: section consacrée à la création de documents Word accessibles.  - [Documents PowerPoint](./powerpoint.html)&amp;nbsp;: section consacrée à la création de présentations PowerPoint accessibles.  - [Documents PDF](./pdf.html)&amp;nbsp;: section consacrée à la rédaction de documents PDF accessibles.  - [Rédiger des emails accessibles](./pushmail.html)&amp;nbsp;: section consacrée à la rédaction de «&amp;nbsp;&lt;i lang=\&quot;en\&quot;&gt;pushmail&lt;/i&gt;&amp;nbsp;» accessibles.  - [Fournir des contenus vidéos ou audios](./video-audio.html)&amp;nbsp;: section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["powerpoint.html#creer-des-documents-powerpoint-accessibles"] = "Créer des documents PowerPoint accessibles";
+documentTitles["powerpoint.html#accessibilite-des-documents-powerpoint"] = "Accessibilité des documents PowerPoint";
 index.add({
-    url: "powerpoint.html#creer-des-documents-powerpoint-accessibles",
+    url: "powerpoint.html#accessibilite-des-documents-powerpoint",
+    title: "Accessibilité des documents PowerPoint",    
+    body: "# Accessibilité des documents PowerPoint &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Microsoft Powerpoint\&quot;}]);     addSubMenu([       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;,\&quot;url\&quot;:\&quot;powerpoint-create.html\&quot;},        {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}&lt;/style&gt;    Cette section contient des recommandations pour : - [Créer un document PowerPoint accessible](./powerpoint-create.html) - [Tester l'accessibilité d'un document PowerPoint](./powerpoint-test.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["powerpoint-create.html#creer-des-documents-powerpoint-accessibles"] = "Créer des documents PowerPoint accessibles";
+index.add({
+    url: "powerpoint-create.html#creer-des-documents-powerpoint-accessibles",
     title: "Créer des documents PowerPoint accessibles",    
-    body: "# Créer des documents PowerPoint accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;PowerPoint accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}&lt;/style&gt;  Produire un document PowerPoint accessible nécessite de respecter différentes recommandations. Elles sont synthétisées ci-après (guides détaillés consultables sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;). Pour vous aider PowerPoint intègre un outil permettant de vérifier l’accessibilité d’une présentation. Cet outil identifie les principales erreurs et propose des solutions. N’hésitez pas à vous y référer.   "
+    body: "# Créer des documents PowerPoint accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([       {\&quot;label\&quot;:\&quot;PowerPoint accessible\&quot;, \&quot;url\&quot;:\&quot;powerpoint.html\&quot;},       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;},       ]);     addSubMenu([       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;,\&quot;url\&quot;:\&quot;powerpoint-create.html\&quot;, \&quot;expanded\&quot;: true},        {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}&lt;/style&gt;  &lt;span data-menuitem=\&quot;powerpoint\&quot;&gt;&lt;/span&gt;  Produire un document PowerPoint accessible nécessite de respecter différentes recommandations. Elles sont synthétisées ci-après (guides détaillés consultables sur &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot;&gt;le site de la &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt;&lt;/a&gt;). Pour vous aider PowerPoint intègre un outil permettant de vérifier l’accessibilité d’une présentation. Cet outil identifie les principales erreurs et propose des solutions. N’hésitez pas à vous y référer.   "
 });
 
-documentTitles["powerpoint.html#masques-de-diapositive"] = "Masques de diapositive";
+documentTitles["powerpoint-create.html#masques-de-diapositive"] = "Masques de diapositive";
 index.add({
-    url: "powerpoint.html#masques-de-diapositive",
+    url: "powerpoint-create.html#masques-de-diapositive",
     title: "Masques de diapositive",    
     body: "## Masques de diapositive Définir des masques de diapositives est la première chose à faire  et une condition sine qua none pour créer une présentation homogène et accessible. - Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet `Affichage`, sélectionner `Masque des diapositives`). - Utiliser les sous-menus `Mise en pages du masque` et `Insérer un espace réservé`. - Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu `Insertion`. - Créer autant de masques que de types de diapositives nécessaires. &lt;img alt=\&quot;Captures d'écran relatives à la création d'un masque de diapositive dans poweroint\&quot; title=\&quot;Captures d'écran relatives à la création d'un masque de diapositive dans poweroint\&quot; src=\&quot;./images/masques.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Remarque : Si vous modifiez le masque des diapositives ou les mises en pages après avoir créé les différentes diapositives, vous devrez réappliquer les mises en page modifiées aux diapositives existantes de votre présentation en mode Normal.  "
 });
 
-documentTitles["powerpoint.html#attributs-de-la-presentation"] = "Attributs de la présentation";
+documentTitles["powerpoint-create.html#attributs-de-la-presentation"] = "Attributs de la présentation";
 index.add({
-    url: "powerpoint.html#attributs-de-la-presentation",
+    url: "powerpoint-create.html#attributs-de-la-presentation",
     title: "Attributs de la présentation",    
     body: "## Attributs de la présentation  "
 });
 
-documentTitles["powerpoint.html#1-la-langue"] = "1. La langue";
+documentTitles["powerpoint-create.html#1-la-langue"] = "1. La langue";
 index.add({
-    url: "powerpoint.html#1-la-langue",
+    url: "powerpoint-create.html#1-la-langue",
     title: "1. La langue",    
     body: "### 1. La langue Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votre présentation :   - La langue principale doit être définie dans le menu : `Fichier &gt; Options &gt; Langue`. - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision &gt; Langue &gt; Définir la langue de vérification`.  "
 });
 
-documentTitles["powerpoint.html#2-les-autres-proprietes"] = "2.	Les autres propriétés";
+documentTitles["powerpoint-create.html#2-les-autres-proprietes"] = "2.	Les autres propriétés";
 index.add({
-    url: "powerpoint.html#2-les-autres-proprietes",
+    url: "powerpoint-create.html#2-les-autres-proprietes",
     title: "2.	Les autres propriétés",    
     body: "### 2.	Les autres propriétés Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier &gt; Informations`.    &lt;img alt=\&quot;Capture d'écran, propriétés d'un document poweroint\&quot; title=\&quot;Capture d'écran, propriétés d'un document poweroint\&quot; src=\&quot;./images/attributs.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.  &lt;img alt=\&quot;Capture d'écran, propriétés d'un document poweroint dans l'explorateur Windows\&quot; title=\&quot;Capture d'écran, propriétés d'un document poweroint dans l'explorateur Windows\&quot; src=\&quot;./images/attributs2.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#titre-des-diapositives"] = "Titre des diapositives";
+documentTitles["powerpoint-create.html#titre-des-diapositives"] = "Titre des diapositives";
 index.add({
-    url: "powerpoint.html#titre-des-diapositives",
+    url: "powerpoint-create.html#titre-des-diapositives",
     title: "Titre des diapositives",    
     body: "## Titre des diapositives  Pour éviter toute confusion entre des diapositives, notamment si l’utilisateur parcourt une présentation à l’aide d’un lecteur d’écran :   donner un titre spécifique à chaque diapositive, à insérer dans la zone : « Cliquer pour ajouter un titre ».  "
 });
 
-documentTitles["powerpoint.html#redaction-des-contenus"] = "Rédaction des contenus";
+documentTitles["powerpoint-create.html#redaction-des-contenus"] = "Rédaction des contenus";
 index.add({
-    url: "powerpoint.html#redaction-des-contenus",
+    url: "powerpoint-create.html#redaction-des-contenus",
     title: "Rédaction des contenus",    
     body: "## Rédaction des contenus  Limiter les abréviations et acronymes, et expliciter à la première occurrence ceux qui ne font pas partie du langage courant.  Conserver l’accentuation sur les majuscules (exemple : É  ou Ç) pour qu’elles puissent être lues correctement par un lecteur d’écran ; pour ce faire :  utiliser le menu `Insertion &gt; Symbole` ou les raccourcis clavier ci-dessous. &lt;table class=\&quot;table table-striped\&quot;&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th scope=\&quot;col\&quot;&gt;Lettre&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Windows&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Mac&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;À&lt;/th&gt;       &lt;td&gt;Alt Gr + \` (touche 7) puis A majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis à&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ç&lt;/th&gt;       &lt;td&gt;alt + 128&lt;/td&gt;       &lt;td&gt;Option + ç&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;È&lt;/th&gt;       &lt;td&gt;Alt Gr + ` (touche 7) puis E majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis è&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;É&lt;/th&gt;       &lt;td&gt;alt + 144&lt;/td&gt;       &lt;td&gt;Maj lock puis é&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ê&lt;/th&gt;       &lt;td&gt;^ puis E majuscule &lt;/td&gt;       &lt;td&gt;^ puis E majuscule&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  "
 });
 
-documentTitles["powerpoint.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
+documentTitles["powerpoint-create.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
 index.add({
-    url: "powerpoint.html#mise-en-forme-des-contenus",
+    url: "powerpoint-create.html#mise-en-forme-des-contenus",
     title: "Mise en forme des contenus",    
     body: "## Mise en forme des contenus Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial et Helvetica) en corps 12 pixels minimum.  Commencer les phrases par une majuscule et ne pas abuser des phrases entièrement écrites en majuscules. Eviter de justifier le texte et privilégier l’alignement à gauche. Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit &gt; Paragraphe &gt; Retrait et Espacement`.  &lt;img alt=\&quot;Capture d'écran, fenêtre paragraphe, retrait et espacement dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre paragraphe, retrait et espacement dans powerpoint\&quot; src=\&quot;./images/paragraphe.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
+documentTitles["powerpoint-create.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
 index.add({
-    url: "powerpoint.html#couleurs-et-contrastes",
+    url: "powerpoint-create.html#couleurs-et-contrastes",
     title: "Couleurs et contrastes",    
     body: "## Couleurs et contrastes  1.	Assurer un contraste suffisant entre la couleur du texte et celle du fond :  - 4.5:1 pour du texte de taille normale (12pts ou 16px).  - 3:1 pour du texte de grande taille (150% minimum de la taille normale ou 120% si gras). Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil &lt;a href=\&quot;https://developer.paciellogroup.com/resources/contrastanalyser/\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyser&lt;/a&gt; qui vous permettra de vérifier très simplement la qualité de vos contrastes. 2.	S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen suppléant la couleur pour véhiculer l’information.  &lt;figure&gt;   &lt;img src=\&quot;./images/color-ko.png\&quot; alt=\&quot;Exemple d'image transmettant de l'information via des puces de couleur (rouge, vert...) pour indiquer l'état d'un élément\&quot; /&gt;   &lt;figcaption&gt;**Exemple incorrect** : l'information est transmise uniquement par la couleur.&lt;/figcaption&gt; &lt;/figure&gt;    &amp;nbsp;  &lt;figure&gt;   &lt;img src=\&quot;./images/color-ok.png\&quot; alt=\&quot;Dans cet exemple, les puces ont été remplacées par des icones de forme différente (croix rouge, coche verte ...)\&quot; /&gt;   &lt;figcaption&gt;**Exemple correct** : l'information est transmise par la forme et la couleur.&lt;/figcaption&gt; &lt;/figure&gt;  "
 });
 
-documentTitles["powerpoint.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
+documentTitles["powerpoint-create.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
 index.add({
-    url: "powerpoint.html#listes-a-puces-ou-numerotees",
+    url: "powerpoint-create.html#listes-a-puces-ou-numerotees",
     title: "Listes à puces ou numérotées",    
     body: "## Listes à puces ou numérotées   Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.  &lt;img alt=\&quot;Capture d'écran, option listes à puces dans powerpoint\&quot; title=\&quot;Capture d'écran, option listes à puces dans powerpoint\&quot; src=\&quot;./images/puce.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#images"] = "Images";
+documentTitles["powerpoint-create.html#images"] = "Images";
 index.add({
-    url: "powerpoint.html#images",
+    url: "powerpoint-create.html#images",
     title: "Images",    
     body: "## Images Un document peut tout à fait contenir des images et être accessible à une personne non-voyante. Il faut simplement que l’information portée par l’image soit retranscrite textuellement.  - **Pour les images porteuses d’informations** : associer un texte de remplacement décrivant le contenu informatif via un `clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »`. - **Pour les images décoratives/illustratives** : laisser le champ `description` vide. - **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)   &lt;img alt=\&quot;Capture d'écran, de la fenêtre permettant de saisir un texte de remplacement sur une image dans powerpoint\&quot; title=\&quot;Capture d'écran, de la fenêtre permettant de saisir un texte de remplacement sur une image dans powerpoint\&quot; src=\&quot;./images/remplacement.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion &gt; SmartArt`).   Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`Format de l’objet ou de l’image &gt; Texte de remplacement &gt; Description`).   "
 });
 
-documentTitles["powerpoint.html#liens"] = "Liens";
+documentTitles["powerpoint-create.html#liens"] = "Liens";
 index.add({
-    url: "powerpoint.html#liens",
+    url: "powerpoint-create.html#liens",
     title: "Liens",    
     body: "## Liens Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel  et doit donc se suffire à lui-même.  Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).  Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé). &lt;img alt=\&quot;Capture d'écran, fenêtre modifier le lien hypertexte dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre modifier le lien hypertexte dans powerpoint\&quot; src=\&quot;./images/lien.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.  "
 });
 
-documentTitles["powerpoint.html#tableaux-de-donnees"] = "Tableaux de données";
+documentTitles["powerpoint-create.html#tableaux-de-donnees"] = "Tableaux de données";
 index.add({
-    url: "powerpoint.html#tableaux-de-donnees",
+    url: "powerpoint-create.html#tableaux-de-donnees",
     title: "Tableaux de données",    
     body: "## Tableaux de données Les tableaux sont des composants par définition difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie et les structurer le plus simplement possible. Ne pas utiliser les tableaux à des fins de mise en forme. Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. Ajouter une description s'il s'agit d'un tableau complexe, clic droit : `Format de la forme &gt; Texte de remplacement &gt; Description`  "
 });
 
-documentTitles["powerpoint.html#contenus-audio-ou-video"] = "Contenus audio ou vidéo";
+documentTitles["powerpoint-create.html#contenus-audio-ou-video"] = "Contenus audio ou vidéo";
 index.add({
-    url: "powerpoint.html#contenus-audio-ou-video",
+    url: "powerpoint-create.html#contenus-audio-ou-video",
     title: "Contenus audio ou vidéo",    
     body: "## Contenus audio ou vidéo La communication audiovisuelle est aujourd’hui très fréquente en entreprise. Mais parce que certaines personnes peuvent ne pas voir ou ne pas entendre il est primordial de suppléer l’information transmise dans une modalité par une autre. Fournir une transcription intégrale des contenus audio (solution nécessaire et suffisante). Empêcher toute lecture automatique de contenu vidéo ou audio (menu `Animations` : démarrer au clic).  &lt;img alt=\&quot;Capture d'écran, menu animation dans powerpoint\&quot; title=\&quot;Capture d'écran, menu animation dans powerpoint\&quot; src=\&quot;./images/video.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Tout contenu vidéo doit respecter ces prérequis : - Fournir des sous-titres pour restituer l’ensemble des informations véhiculées par la bande son. - Fournir une audiodescription si la vidéo présente des informations accessibles seulement via les images. - Utiliser des vidéos sans flashs rapides (pas plus de 3 clignotements par seconde).  "
 });
 
-documentTitles["powerpoint.html#ordre-de-lecture-des-elements"] = "Ordre de lecture des éléments";
+documentTitles["powerpoint-create.html#ordre-de-lecture-des-elements"] = "Ordre de lecture des éléments";
 index.add({
-    url: "powerpoint.html#ordre-de-lecture-des-elements",
+    url: "powerpoint-create.html#ordre-de-lecture-des-elements",
     title: "Ordre de lecture des éléments",    
     body: "## Ordre de lecture des éléments L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection (menu `Accueil &gt; Organiser &gt; Volet de sélection`).   **Attention** : l’ordre doit être décroissant car c’est le dernier élément de la liste qui est lu en premier par le lecteur.  &lt;img alt=\&quot;Capture d'écran, du volet de sélection dans powerpoint\&quot; title=\&quot;Capture d'écran, du volet de sélection dans powerpoint\&quot; src=\&quot;./images/volet.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Il est important de vérifier cet ordre directement dans les masques des diapositives.  "
 });
 
-documentTitles["powerpoint.html#verificateur-daccessibilite-integre"] = "Vérificateur d’accessibilité intégré";
+documentTitles["powerpoint-create.html#verificateur-daccessibilite-integre"] = "Vérificateur d’accessibilité intégré";
 index.add({
-    url: "powerpoint.html#verificateur-daccessibilite-integre",
+    url: "powerpoint-create.html#verificateur-daccessibilite-integre",
     title: "Vérificateur d’accessibilité intégré",    
     body: "## Vérificateur d’accessibilité intégré Il est important de contrôler l’accessibilité de la présentation à l'aide du vérificateur d’accessibilité (menu : `Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité`). &lt;img alt=\&quot;Capture d'écran, du vérificateur d'accessibilité dans powerpoint\&quot; title=\&quot;Capture d'écran, du vérificateur d'accessibilité dans powerpoint\&quot; src=\&quot;./images/verificateur.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  "
 });
 
-documentTitles["powerpoint.html#convertir-une-presentation-powerpoint-en-fichier-pdf"] = "Convertir une présentation PowerPoint en fichier PDF";
+documentTitles["powerpoint-create.html#convertir-une-presentation-powerpoint-en-fichier-pdf"] = "Convertir une présentation PowerPoint en fichier PDF";
 index.add({
-    url: "powerpoint.html#convertir-une-presentation-powerpoint-en-fichier-pdf",
+    url: "powerpoint-create.html#convertir-une-presentation-powerpoint-en-fichier-pdf",
     title: "Convertir une présentation PowerPoint en fichier PDF",    
     body: "## Convertir une présentation PowerPoint en fichier PDF  Enregistrer la présentation en &lt;abbr&gt;PDF&lt;/abbr&gt; : `Fichier &gt; Enregistrer sous` et de sélectionner le type de fichier &lt;abbr&gt;PDF&lt;/abbr&gt;. Cocher la case « Balises de structure de document pour l'accessibilité ».  &lt;img alt=\&quot;Capture d'écran, fenêtre d'export en PDF dans powerpoint\&quot; title=\&quot;Capture d'écran, fenêtre d'export en PDF dans powerpoint\&quot; src=\&quot;./images/export.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe : `Édition &gt; Préférences &gt; Lecture &gt; Option de lecteur d’écran` : « Lire l’intégralité du document »  &lt;img alt=\&quot;Capture d'écran de la fenêtre des préférences dans Adobe reader\&quot; title=\&quot;Capture d'écran de la fenêtre des préférences dans Adobe reader\&quot; src=\&quot;./images/adobe.png\&quot; class=\&quot;img-fluid\&quot;&gt;  &amp;nbsp;  Et pour vérifier l’accessibilité d’un document &lt;abbr&gt;PDF&lt;/abbr&gt; : télécharger &lt;a href=\&quot;https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot; lang=\&quot;en\&quot;&gt;PDF Accessiblity Checker (PAC 3)&lt;/a&gt;.  "
 });
 
-documentTitles["powerpoint.html#ressources"] = "Ressources";
+documentTitles["powerpoint-create.html#ressources"] = "Ressources";
 index.add({
-    url: "powerpoint.html#ressources",
+    url: "powerpoint-create.html#ressources",
     title: "Ressources",    
     body: "## Ressources  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;https://webaim.org/techniques/powerpoint/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité PowerPoint, WebAIM&lt;/a&gt; (anglais).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
 
-documentTitles["word.html#creer-des-documents-word-accessibles"] = "Créer des documents Word accessibles";
+documentTitles["powerpoint-test.html#comment-tester-laccessibilite-dun-document-powerpoint"] = "Comment tester l'accessibilité d'un document PowerPoint";
 index.add({
-    url: "word.html#creer-des-documents-word-accessibles",
-    title: "Créer des documents Word accessibles",    
-    body: "# Créer des documents Word accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Word accessible\&quot;}]); });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance.   "
+    url: "powerpoint-test.html#comment-tester-laccessibilite-dun-document-powerpoint",
+    title: "Comment tester l'accessibilité d'un document PowerPoint",    
+    body: "# Comment tester l'accessibilité d'un document PowerPoint &lt;script&gt;$(document).ready(function () {     setBreadcrumb([       {\&quot;label\&quot;:\&quot;Microsoft PowerPoint\&quot;, \&quot;url\&quot;:\&quot;powerpoint.html\&quot;},       {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;} 	  ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;,\&quot;url\&quot;:\&quot;powerpoint-create.html\&quot;},          {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;,\&quot;url\&quot;:\&quot;powerpoint-test.html\&quot;, \&quot;expanded\&quot;: true}     ]);      });&lt;/script&gt;  &lt;span data-menuitem=\&quot;powerpoint\&quot;&gt;&lt;/span&gt;  &lt;style&gt;code {font-weight: bold;}h2{padding-top: 1.5rem;}&lt;/style&gt;  "
 });
 
-documentTitles["word.html#langue"] = "Langue";
+documentTitles["powerpoint-test.html#tests-automatiques"] = "Tests automatiques";
 index.add({
-    url: "word.html#langue",
+    url: "powerpoint-test.html#tests-automatiques",
+    title: "Tests automatiques",    
+    body: "## Tests automatiques Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.   **Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité**  &lt;img alt=\&quot;capture d'écran du vérificateur d'accessibilité\&quot; src=\&quot;./images/word_verification_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   **Important :** si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format \&quot;.pptx\&quot; avec la case « compatibilité avec les versions précédentes » décochée.   "
+});
+
+documentTitles["powerpoint-test.html#verifications-des-contrastes-de-couleurs"] = "Vérifications des contrastes de couleurs";
+index.add({
+    url: "powerpoint-test.html#verifications-des-contrastes-de-couleurs",
+    title: "Vérifications des contrastes de couleurs",    
+    body: "## Vérifications des contrastes de couleurs  Le logiciel &lt;a lang=\&quot;en\&quot; href=\&quot;https://developer.paciellogroup.com/resources/contrastanalyser/\&quot;&gt;Colour Contrast Analyser&lt;/a&gt; indique si les contrastes de couleurs utilisés sont conformes.   &lt;img alt=\&quot;capture d'écran de l'outil colour contrast analyser\&quot; src=\&quot;./images/cca.png\&quot; class=\&quot;img-fluid\&quot; /&gt;    "
+});
+
+documentTitles["powerpoint-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda"] = "Tests avec les synthèses vocales JAWS et NVDA";
+index.add({
+    url: "powerpoint-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda",
+    title: "Tests avec les synthèses vocales JAWS et NVDA",    
+    body: "## Tests avec les synthèses vocales JAWS et NVDA Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale. Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.  [Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+});
+
+documentTitles["powerpoint-test.html#autres-tests-manuels"] = "Autres tests manuels";
+index.add({
+    url: "powerpoint-test.html#autres-tests-manuels",
+    title: "Autres tests manuels",    
+    body: "## Autres tests manuels Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint : - [Grille d'évaluation PowerPoint](./grille_eval_AXS_PPT_V2.xlsx) (16 Ko) - [Grille d'évaluation Word](./grille_eval_AXS_WORD_V1.xlsx) (16 Ko)    &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["word.html#accessibilite-des-documents-word"] = "Accessibilité des documents Word";
+index.add({
+    url: "word.html#accessibilite-des-documents-word",
+    title: "Accessibilité des documents Word",    
+    body: "# Accessibilité des documents Word &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Microsoft Word\&quot;}]);     addSubMenu([       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;},        {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;style&gt;code {font-weight: bold;}&lt;/style&gt;    Cette section contient des recommandations pour : - [Créer un document Word accessible](./word-create.html) - [Tester l'accessibilité d'un document Word](./word-test.html)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["word-create.html#creer-un-document-word-accessibles"] = "Créer un document Word accessibles";
+index.add({
+    url: "word-create.html#creer-un-document-word-accessibles",
+    title: "Créer un document Word accessibles",    
+    body: "# Créer un document Word accessibles &lt;script&gt;$(document).ready(function () {     setBreadcrumb([             {\&quot;label\&quot;:\&quot;Microsoft Word\&quot;,\&quot;url\&quot;:\&quot;word.html\&quot;},       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;}     ]);     addSubMenu([       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;, \&quot;expanded\&quot;:true},        {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;word\&quot;&gt;&lt;/span&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt;  Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance.   "
+});
+
+documentTitles["word-create.html#langue"] = "Langue";
+index.add({
+    url: "word-create.html#langue",
     title: "Langue",    
     body: "## Langue  Définir la langue principale du document dans le menu : **Fichier &gt; Options &gt; Langue**.  Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis **Révision &gt; Langue &gt; Définir la langue de vérification**.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_langue_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter.   "
 });
 
-documentTitles["word.html#attributs-du-fichier"] = "Attributs du fichier";
+documentTitles["word-create.html#attributs-du-fichier"] = "Attributs du fichier";
 index.add({
-    url: "word.html#attributs-du-fichier",
+    url: "word-create.html#attributs-du-fichier",
     title: "Attributs du fichier",    
     body: "## Attributs du fichier  Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu **Fichier &gt; Informations**.  Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_attributs_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
 });
 
-documentTitles["word.html#titres"] = "Titres";
+documentTitles["word-create.html#titres"] = "Titres";
 index.add({
-    url: "word.html#titres",
+    url: "word-create.html#titres",
     title: "Titres",    
     body: "## Titres   Utiliser les styles « Titre » et « Sous-titre » du menu **Accueil** (Titre 1, Titre 2, etc.).   Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné.   Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.  "
 });
 
-documentTitles["word.html#table-des-matieres"] = "Table des matières";
+documentTitles["word-create.html#table-des-matieres"] = "Table des matières";
 index.add({
-    url: "word.html#table-des-matieres",
+    url: "word-create.html#table-des-matieres",
     title: "Table des matières",    
     body: "## Table des matières  Insérer une table des matières via le menu **Références &gt; Table des matières**.   Cela permet aux utilisateurs de trouver des informations plus aisément dans le document.   "
 });
 
-documentTitles["word.html#redaction-des-contenus"] = "Rédaction des contenus";
+documentTitles["word-create.html#redaction-des-contenus"] = "Rédaction des contenus";
 index.add({
-    url: "word.html#redaction-des-contenus",
+    url: "word-create.html#redaction-des-contenus",
     title: "Rédaction des contenus",    
     body: "## Rédaction des contenus  Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.  Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion &gt; Symbole** ou les raccourcis clavier ci-dessous.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_table_caracteres_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Liste des raccourcis clavier :  &lt;table class=\&quot;table table-striped\&quot;&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th scope=\&quot;col\&quot;&gt;Lettre&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Windows&lt;/th&gt;       &lt;th scope=\&quot;col\&quot;&gt;raccourci Mac&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;À&lt;/th&gt;       &lt;td&gt;Alt Gr + \` (touche 7) puis A majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis à&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ç&lt;/th&gt;       &lt;td&gt;alt + 128&lt;/td&gt;       &lt;td&gt;Option + ç&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;È&lt;/th&gt;       &lt;td&gt;Alt Gr + ` (touche 7) puis E majuscule&lt;/td&gt;       &lt;td&gt;Maj lock puis è&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;É&lt;/th&gt;       &lt;td&gt;alt + 144&lt;/td&gt;       &lt;td&gt;Maj lock puis é&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;th scope=\&quot;row\&quot;&gt;Ê&lt;/th&gt;       &lt;td&gt;^ puis E majuscule &lt;/td&gt;       &lt;td&gt;^ puis E majuscule&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;  "
 });
 
-documentTitles["word.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
+documentTitles["word-create.html#mise-en-forme-des-contenus"] = "Mise en forme des contenus";
 index.add({
-    url: "word.html#mise-en-forme-des-contenus",
+    url: "word-create.html#mise-en-forme-des-contenus",
     title: "Mise en forme des contenus",    
     body: "## Mise en forme des contenus  Utiliser les styles prédéfinis pour la mise en forme des contenus : le style « Normal » doit être attribué à tous les textes des paragraphes (style par défaut), le style « citation » pour les citations, etc.  Utiliser une police de caractères sans empattement (extensions qui terminent les extrémités des caractères) comme Arial ou Helvetica, en corps 12 pixels minimum et un espacement entre les caractères normal ou élargi.  Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majuscule ; limiter l’utilisation de l’italique.  Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_mise_en_forme_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran.   Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab_fr.png\&quot; /&gt;) pour mettre en forme le contenu.   Utiliser les fonctions Retrait, Espacement :  - Menu **Mise en page &gt; Paragraphe &gt; Retrait** ou **Espacement** ou **Clic droit : « Paragraphe… »**  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_retrait_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») :   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab1_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_tab2_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Utiliser l’option « Colonnes » de l’onglet **Mise en page** pour créer une mise en page sous forme de colonnes, et non les tableaux.  Utiliser le saut de page via le menu **Insertion &gt; Saut de page** pour passer à la page suivante.   Numéroter les pages (menu **Insertion &gt; Numéro de page**) pour permettre aux utilisateurs de se repérer dans le document.  "
 });
 
-documentTitles["word.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
+documentTitles["word-create.html#couleurs-et-contrastes"] = "Couleurs et contrastes";
 index.add({
-    url: "word.html#couleurs-et-contrastes",
+    url: "word-create.html#couleurs-et-contrastes",
     title: "Couleurs et contrastes",    
     body: "## Couleurs et contrastes  Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.  Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt; qui vous permettra de vérifier très simplement la qualité de vos contrastes.  S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_contrastes1_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  **Exemple incorrect** : l'information est transmise uniquement par la couleur.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_contrastes2_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;  **Exemple correct** : l'information est transmise par la forme et la couleur  "
 });
 
-documentTitles["word.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
+documentTitles["word-create.html#listes-a-puces-ou-numerotees"] = "Listes à puces ou numérotées";
 index.add({
-    url: "word.html#listes-a-puces-ou-numerotees",
+    url: "word-create.html#listes-a-puces-ou-numerotees",
     title: "Listes à puces ou numérotées",    
     body: "## Listes à puces ou numérotées  Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_liste_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
 });
 
-documentTitles["word.html#images"] = "Images";
+documentTitles["word-create.html#images"] = "Images";
 index.add({
-    url: "word.html#images",
+    url: "word-create.html#images",
     title: "Images",    
     body: "## Images  Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image.   - **Pour les images porteuses d’informations** : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : **clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »**. - **Pour les images décoratives/illustratives** : laisser le champ description vide. - **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien.  - **Pour les images « lien »** : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien. - **Pour les graphiques ou schémas** : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu **Insertion &gt; Smart Art**). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (**Format de l’objet** ou **de l’image &gt; Texte de remplacement &gt; Description**).  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_remplacement_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un **clic droit sur l’image &gt; renvoyer à la ligne automatiquement** ou le menu **Outils Image &gt; Organiser**), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.    "
 });
 
-documentTitles["word.html#contenus-audio-et-video"] = "Contenus audio et vidéo";
+documentTitles["word-create.html#contenus-audio-et-video"] = "Contenus audio et vidéo";
 index.add({
-    url: "word.html#contenus-audio-et-video",
+    url: "word-create.html#contenus-audio-et-video",
     title: "Contenus audio et vidéo",    
     body: "## Contenus audio et vidéo   [Nos préconisations sur les contenus audio et vidéo](./video-audio.html)  "
 });
 
-documentTitles["word.html#liens"] = "Liens";
+documentTitles["word-create.html#liens"] = "Liens";
 index.add({
-    url: "word.html#liens",
+    url: "word-create.html#liens",
     title: "Liens",    
     body: "## Liens  Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.  En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel.   Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre :  - menu **Insertion &gt; Lien hypertexte &gt; Info-bulle** : ajouter « nouvelle fenêtre » dans le libellé   Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_lien_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   "
 });
 
-documentTitles["word.html#tableaux-de-donnees"] = "Tableaux de données";
+documentTitles["word-create.html#tableaux-de-donnees"] = "Tableaux de données";
 index.add({
-    url: "word.html#tableaux-de-donnees",
+    url: "word-create.html#tableaux-de-donnees",
     title: "Tableaux de données",    
     body: "## Tableaux de données  Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.   Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie.   Ajouter une description s'il s'agit d'un tableau complexe, **clic droit : Format de la forme &gt; Texte de remplacement &gt; Description**.  Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme.   "
 });
 
-documentTitles["word.html#verification-finale"] = "Vérification finale";
+documentTitles["word-create.html#verification-finale"] = "Vérification finale";
 index.add({
-    url: "word.html#verification-finale",
+    url: "word-create.html#verification-finale",
     title: "Vérification finale",    
     body: "## Vérification finale  Enfin, utiliser le vérificateur d’accessibilité intégré (menu : **Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité**).   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_verification_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Ce vérificateur permet de détecter les principales erreurs et propose des solutions.   "
 });
 
-documentTitles["word.html#convertir-en-fichier-pdf"] = "Convertir en fichier PDF";
+documentTitles["word-create.html#convertir-en-fichier-pdf"] = "Convertir en fichier PDF";
 index.add({
-    url: "word.html#convertir-en-fichier-pdf",
+    url: "word-create.html#convertir-en-fichier-pdf",
     title: "Convertir en fichier PDF",    
     body: "## Convertir en fichier PDF  Pour transformer votre document en &lt;abbr&gt;PDF&lt;/abbr&gt;, aller dans le menu : **Fichier &gt; Enregistrer sous** puis de sélectionner le type de fichier **PDF**.   La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.  À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.  &lt;img alt=\&quot;\&quot; src=\&quot;./images/word_pdf_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   Pour vérifier l’accessibilité d’un document PDF : [télécharger PDF Accessiblity Checker (PAC 3)](https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).  "
 });
 
-documentTitles["word.html#ressources-externes"] = "Ressources externes";
+documentTitles["word-create.html#ressources-externes"] = "Ressources externes";
 index.add({
-    url: "word.html#ressources-externes",
+    url: "word-create.html#ressources-externes",
     title: "Ressources externes",    
     body: "## Ressources externes  - [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot;&gt;DINSIC&lt;/abbr&gt; (français). - &lt;a href=\&quot;http://webaim.org/techniques/word/\&quot; hreflang=\&quot;en\&quot;&gt;Accessibilité Word, WebAIM&lt;/a&gt; (anglais).  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["word-test.html#comment-tester-laccessibilite-dun-documents-word"] = "Comment tester l'accessibilité d'un documents Word";
+index.add({
+    url: "word-test.html#comment-tester-laccessibilite-dun-documents-word",
+    title: "Comment tester l'accessibilité d'un documents Word",    
+    body: "# Comment tester l'accessibilité d'un documents Word &lt;script&gt;$(document).ready(function () {     setBreadcrumb([             {\&quot;label\&quot;:\&quot;Microsoft Word\&quot;,\&quot;url\&quot;:\&quot;word.html\&quot;},       {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;}     ]);     addSubMenu([       {\&quot;label\&quot;:\&quot;Créer un document accessible\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;},        {\&quot;label\&quot;:\&quot;Comment tester mon document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;, \&quot;expanded\&quot;:true}     ]); });&lt;/script&gt;   &lt;span data-menuitem=\&quot;word\&quot;&gt;&lt;/span&gt;  &lt;style&gt;code {font-weight: bold;}h2{padding-top: 1.5rem;}&lt;/style&gt; "
+});
+
+documentTitles["word-test.html#tests-automatiques"] = "Tests automatiques";
+index.add({
+    url: "word-test.html#tests-automatiques",
+    title: "Tests automatiques",    
+    body: "## Tests automatiques Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.   **Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité**  &lt;img alt=\&quot;capture d'écran du vérificateur d'accessibilité\&quot; src=\&quot;./images/word_verification_fr.png\&quot; class=\&quot;img-fluid\&quot; /&gt;   **Important :** si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format \&quot;.docx\&quot; avec la case « compatibilité avec les versions précédentes » décochée.   "
+});
+
+documentTitles["word-test.html#verifications-des-contrastes-de-couleurs"] = "Vérifications des contrastes de couleurs";
+index.add({
+    url: "word-test.html#verifications-des-contrastes-de-couleurs",
+    title: "Vérifications des contrastes de couleurs",    
+    body: "## Vérifications des contrastes de couleurs  Le logiciel &lt;a lang=\&quot;en\&quot; href=\&quot;https://developer.paciellogroup.com/resources/contrastanalyser/\&quot;&gt;Colour Contrast Analyser&lt;/a&gt; indique si les contrastes de couleurs utilisés sont conformes.   &lt;img alt=\&quot;capture d'écran de l'outil colour contrast analyser\&quot; src=\&quot;./images/cca.png\&quot; class=\&quot;img-fluid\&quot; /&gt;    "
+});
+
+documentTitles["word-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda"] = "Tests avec les synthèses vocales JAWS et NVDA";
+index.add({
+    url: "word-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda",
+    title: "Tests avec les synthèses vocales JAWS et NVDA",    
+    body: "## Tests avec les synthèses vocales JAWS et NVDA Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale. Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.  [Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+});
+
+documentTitles["word-test.html#autres-tests-manuels"] = "Autres tests manuels";
+index.add({
+    url: "word-test.html#autres-tests-manuels",
+    title: "Autres tests manuels",    
+    body: "## Autres tests manuels Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint : - [Grille d'évaluation Word](./grille_eval_AXS_WORD_V1.xlsx) (16 Ko) - [Grille d'évaluation PowerPoint](./grille_eval_AXS_PPT_V2.xlsx) (16 Ko)     &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

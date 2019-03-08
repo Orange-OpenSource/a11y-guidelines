@@ -286,11 +286,40 @@
 
 <h1 id="creating-accessible-powerpoint-documents">Creating accessible PowerPoint documents</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Accessible PowerPoint"}]);
+    setBreadcrumb([
+        {"label":"Microsoft PowerPoint"}
+    ]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"powerpoint-create.html"}, 
+        {"label":"How to test my document","url":"powerpoint-test.html"}
+    ]);
 });</script>
 
 <style>h3 {font-size: 1rem;}</style>
 
+<p>This section contains recommendations for:</p>
+<ul>
+<li><a href="./powerpoint-create.html">Create an accessible PowerPoint document</a></li>
+<li><a href="./powerpoint-test.html">How to test a PowerPoint document</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="creating-accessible-powerpoint-documents">Creating accessible PowerPoint documents</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Microsoft PowerPoint", "url": "./powerpoint.html"},
+        {"label":"Create an accessible document"}
+    ]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"powerpoint-create.html", "expanded": true}, 
+        {"label":"How to test my document","url":"powerpoint-test.html"}
+    ]);
+});</script>
+
+<style>h3 {font-size: 1rem;}</style>
+
+<p><span data-menuitem="powerpoint"></span></p>
 <h2 id="introduction">Introduction</h2>
 <p>Producing accessible PowerPoint presentations requires following different rules. They are summarized below (and detailed guides are available on the <a href="https://webaim.org/techniques/powerpoint/">WebAIM website</a>).</p>
 <p>In order to help you, PowerPoint includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions. </p>
@@ -350,6 +379,12 @@ Do not use text in images to convey important information.  </p>
 <p>Note: If a picture or a chart is too complex to describe with alt text, you will need to provide a text description elsewhere. You can add the full description to the Notes section of the slide for example. In this case, put a very short description in the alt text, endings with the words: “full text description in the Notes section of this slide”.</p>
 <p>For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).
 Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.</p>
+<h2 id="hyperlinks">Hyperlinks</h2>
+<p>Select the text to which you want to add the hyperlink, and then right-click.
+The text you selected displays in the “Text to display” box. This is the hyperlink text.
+If necessary, add a ScreenTip by clicking on the ScreenTip button.  </p>
+<p><img class="center" src="./images/screen11.png" alt="Insert hyperlink dialog box screenshot"/></p>
+<p>For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).<br>Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand. </p>
 <h2 id="tables">Tables</h2>
 <p>Use a simple table structure, and specify column header information.</p>
 <p>Ensure that tables don&#39;t contain split cells, merged cells, nested tables, or completely blank rows or columns.</p>
@@ -388,6 +423,43 @@ Check the « Document structure tags for accessibility » option.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="check-accessibility-in-powerpoint-slides">Check accessibility in PowerPoint slides</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Microsoft PowerPoint", "url": "./powerpoint.html"},
+        {"label":"How to test my document"}
+    ]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"powerpoint-create.html"}, 
+        {"label":"How to test my document","url":"powerpoint-test.html", "expanded": true}
+    ]);
+});</script>
+
+<p><style>code {font-weight: bold;}h2{padding-top: 1.5rem;}</style>
+<span data-menuitem="powerpoint"></span></p>
+<h2 id="automated-tests">Automated tests</h2>
+<h3 id="office-accessibility-verification-tool">Office Accessibility Verification Tool</h3>
+<p>Start your tests with the Office Accessibility Verification Tool: 
+<strong>File &gt; Info &gt; Check for Issues &gt; Check Accessibility</strong></p>
+<p><img alt="Accessibility checker screenshot" src="./images/word_verification_en.png" class="img-fluid" />  </p>
+<p><strong>Important:</strong> if you encounter some difficulties, try to save your document from within PowerPoint 2010 in &quot;.pptx&quot; format. The option to &quot;Maintain compatibility with previous versions of Word&quot; has to remains unchecked. </p>
+<h3 id="color-contrasts">Color contrasts</h3>
+<p><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Download Colour Contrast Analyser</a></p>
+<p><img alt="colour contrast analyser screenshot" src="./images/cca.png" class="img-fluid" />  </p>
+<h3 id="screen-reader-jaws-nvda">Screen reader: JAWS &amp; NVDA</h3>
+<p>To complete the verification, you can test with a screen reader. 
+It helps you to simulate the configuration as the visually impaired and blind people.
+<a href="http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html">For further information to navigate with JAWS &amp; NVDA</a></p>
+<h3 id="self-assessment-grids">Self-Assessment Grids</h3>
+<ul>
+<li><a href="AXS_assess_grid_WORD_EN.xlsx">Accessibility Assessment Grid for Word (16 ko)</a></li>
+<li><a href="AXS_assess_grid_PPT_EN.xlsx">Accessibility Assessment Grid for PowerPoint (16 ko)</a></li>
+</ul>
+<p>These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents: 
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="videos-audios-and-animated-components">Videos, audios, and animated components</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"General recommendations for content"}]);
@@ -431,11 +503,37 @@ Check the « Document structure tags for accessibility » option.</p>
 
 <h1 id="creating-accessible-word-documents">Creating accessible Word documents</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Accessible Word"}]);
+    setBreadcrumb([{"label":"Microsoft Word"}]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"word-create.html"},
+        {"label":"How to test my document","url":"word-test.html"}
+    ]);    
 });</script>
 
 <style>h3 {font-size: 1rem;}</style>
 
+<p>This section contains recommendations for:</p>
+<ul>
+<li><a href="./word-create.html">Create an accessible Word document</a></li>
+<li><a href="./word-test.html">How to test a Word document</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="creating-accessible-word-documents">Creating accessible Word documents</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Microsoft Word", "url":"./word.html"},
+        {"label":"Create an accessible document"}
+    ]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"word-create.html", "expanded": true}, 
+        {"label":"How to test my document","url":"word-test.html"}
+    ]); 
+});</script>
+
+<p><style>h3 {font-size: 1rem;}</style>
+<span data-menuitem="word"></span></p>
 <h2 id="introduction">Introduction</h2>
 <p>Accessible Word documents are needed in order to be read by all users. Creating accessible Word documents requires to respect the following recommendations. It also enables you to produce accessible <abbr>PDF</abbr> documents through the <abbr>PDF</abbr> export functionality inside Word.</p>
 <h2 id="recommendations">Recommendations</h2>
@@ -496,6 +594,43 @@ It makes easier for everyone to find their way around and quickly go to the cont
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="check-accessibility-in-word">Check accessibility in Word</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Microsoft Word", "url":"./word.html"},
+        {"label":"How to test my document"}
+    ]);
+    addSubMenu([
+        {"label":"Create an accessible document","url":"word-create.html"}, 
+        {"label":"How to test my document","url":"word-test.html", "expanded": true}
+    ]);
+});</script>
+
+<p><style>code {font-weight: bold;}h2{padding-top: 1.5rem;}</style>
+<span data-menuitem="word"></span></p>
+<h2 id="automated-tests">Automated tests</h2>
+<h3 id="office-accessibility-verification-tool">Office Accessibility Verification Tool</h3>
+<p>Start your tests with the Office Accessibility Verification Tool: 
+<strong>File &gt; Info &gt; Check for Issues &gt; Check Accessibility</strong></p>
+<p><img alt="Accessibility checker screenshot" src="./images/word_verification_en.png" class="img-fluid" />  </p>
+<p><strong>Important:</strong> if you encounter some difficulties, try to save your document from within Word 2010 in &quot;.docx&quot; format. The option to &quot;Maintain compatibility with previous versions of Word&quot; has to remains unchecked. </p>
+<h3 id="color-contrasts">Color contrasts</h3>
+<p><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Download Colour Contrast Analyser</a></p>
+<p><img alt="colour contrast analyser screenshot" src="./images/cca.png" class="img-fluid" />  </p>
+<h3 id="screen-reader-jaws-nvda">Screen reader: JAWS &amp; NVDA</h3>
+<p>To complete the verification, you can test with a screen reader. 
+It helps you to simulate the configuration as the visually impaired and blind people.
+<a href="http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html">For further information to navigate with JAWS &amp; NVDA</a></p>
+<h3 id="self-assessment-grids">Self-Assessment Grids</h3>
+<ul>
+<li><a href="AXS_assess_grid_WORD_EN.xlsx">Accessibility Assessment Grid for Word (16 ko)</a></li>
+<li><a href="AXS_assess_grid_PPT_EN.xlsx">Accessibility Assessment Grid for PowerPoint (16 ko)</a></li>
+</ul>
+<p>These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents: 
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 
           
         </div>
