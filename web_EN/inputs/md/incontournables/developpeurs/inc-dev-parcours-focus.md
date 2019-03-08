@@ -25,7 +25,7 @@ Example (numbered bullets indicate how focus moves in the page) :
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 20 below.
 - Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
 - For maintainability, avoid using the `tabindex` attribute with values higher than 0.
-- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see [Manage Focus for Dynamic Content](./examples/dynFocus/index.html)
+- Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see [Manage Focus for Dynamic Content](./exemples/dynFocus/index.html)
 
 **Users’ goal: **
 

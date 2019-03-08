@@ -100,7 +100,7 @@ Space on mobile is reduced, we often use abbreviations for text. However, this r
 Some images are frequently associated with text to give information. This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”. In this case, the solution is to set a text alternative on the text that gives all the necessary information. For example: “3 unread messages”. One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.
 
 The text alternative of an element is set via the `contentDescription` attribute (available to any child of `View`). For the buttons in the `ActionBar` (or `ToolBar`) the `title` attribute must be set.
-The text or its alternative is vocalized automatically with information on the type of component (button, check box ...), its possible state (checked off, selected), if it is usable (disabled). For more technical information on these attributes, we recommend that you read the [text alternatives section in the developer guide](.dev-android.html#text-alternative).
+The text or its alternative is vocalized automatically with information on the type of component (button, check box ...), its possible state (checked off, selected), if it is usable (disabled). For more technical information on these attributes, we recommend that you read the [text alternatives section in the developer guide](./dev-android.html#text-alternative).
 
 **Checklist: **
 

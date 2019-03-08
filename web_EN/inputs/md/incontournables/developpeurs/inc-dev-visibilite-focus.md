@@ -16,7 +16,7 @@
 
 Do not hide the focus and if necessary make it visible enough (e.g. by modifying the `outline` <abbr>CSS</abbr> property) on all elements likely to receive it (links, buttons, form elements). You can also accentuate the visibility of the focus so that it is easily identifiable.
 
-Make sure to provide a sufficient level of contrast so that it is visible to all (see [measure the level of contrast of colors](methods-tools-contrasts.html)).
+Make sure to provide a sufficient level of contrast so that it is visible to all (see [measure the level of contrast of colors](methodes-outils-contrastes.html)).
 
 When an effect is visible on an element during mouse-over (e.g. `:hover` <abbr>CSS</abbr> property), this effect must also be displayed when capturing the focus (`:focus`).
 
