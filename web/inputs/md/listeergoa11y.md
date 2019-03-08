@@ -112,7 +112,7 @@ Pour les titres dont la taille de police est plus grande que le corps du texte, 
 
 Ceci est également valable pour du texte sous forme d'image porteur d'information. 
 
-Note : le niveau de contraste peut-être mesuré avec l'outil [Color contrast analyser](http://a11y-guidelines.orange.com/web/methodes-outils-contrastes.html).
+Note : le niveau de contraste peut-être mesuré avec l'outil [Color contrast analyser](https://a11y-guidelines.orange.com/web/methodes-outils-contrastes.html).
 
 #### Police de texte 
 Les textes doivent être en police Helvetica Neue (Brand Orange).

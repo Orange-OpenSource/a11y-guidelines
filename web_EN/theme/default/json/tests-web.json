@@ -275,7 +275,7 @@
       "All frames have a relevant <code>title</code> attribute"
     ],
     "exception":"",
-    "raccourcis": "Technical iframes: http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
+    "raccourcis": "Technical iframes: https://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
   },
   {
@@ -855,7 +855,7 @@
       "Bookmarklet"
     ],
     "tests": [
-      "Go to our guidelines site: http://a11y-guidelines.orange.com/web_EN/inc-dev-aerer-texte.html",
+      "Go to our guidelines site: https://a11y-guidelines.orange.com/web_EN/inc-dev-aerer-texte.html",
       "Add the bookmarklet to your favorites",
       "Consult the page",
       "Activate the bookmarklet"

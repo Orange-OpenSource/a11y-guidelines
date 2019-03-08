@@ -589,7 +589,7 @@ We wish to obtain a 'label' and a 'switch control' as one unique block behaving 
 </code></pre>
 
 </br>... and implement the wrapper class to define accurately the
-<a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios-wwdc-17215.html#DefaultActivation">action when a double tap occurs</a> :
+<a href="https://a11y-guidelines.orange.com/mobile_EN/dev-ios-wwdc-17215.html#DefaultActivation">action when a double tap occurs</a> :
 <pre><code class="objective-c">
 @implementation MyWrapView
 
@@ -767,7 +767,7 @@ UIAccessibilityElement * elt;
 </code></pre>
 
 Another grouping elements case could use the **shouldGroupAccessibilityChildren** attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
-</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
+</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="https://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
 ### Links
 - [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
@@ -923,7 +923,7 @@ Exactly like text, images and tab/tool bar items have a scalable size thanks to 
 </br>**WARNING : don't forget to check your layout with these new images larger sizes.**
 ### Example
 An application with a tab bar, whose second bar item displays the Orange logo (added `Aspect Fit` content mode and constraints to stretch the image view), is created to test the features exposed in the description.
-</br></br>With the `Larger Accessibility Sizes` activation in the settings (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:
+</br></br>With the `Larger Accessibility Sizes` activation in the settings (see <a href="https://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:
 - A larger Orange image size.
 - A larger version of the bar item in an overlay if you touch and hold over it.
 </br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" />

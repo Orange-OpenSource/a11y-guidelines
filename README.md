@@ -1,4 +1,4 @@
-# [a11y-guidelines](http://a11y-guidelines.orange.com)
+# [a11y-guidelines](https://a11y-guidelines.orange.com)
 
 Orange a11y-guidelines contains accessibility guidelines for web and mobile plateforms.  
 Each section contains:
@@ -6,7 +6,7 @@ Each section contains:
 - Resources to learn and test yourself
 - Technical examples
 
-To get started, check out [http://a11y-guidelines.orange.com/](http://a11y-guidelines.orange.com/).  
+To get started, check out [https://a11y-guidelines.orange.com/](https://a11y-guidelines.orange.com/).  
 
 ## Bugs and feature requests
 

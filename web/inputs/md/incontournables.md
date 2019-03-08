@@ -47,7 +47,7 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 Trois versions sont disponibles&nbsp;
 - **La version conception** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
 - **La version développement** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
-- **La version tests** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. Pour tirer le meilleur partie de ces tests, il faut utiliser [une méthode de tests d'accessibilité et des outils](http://a11y-guidelines.orange.com/web/methodes-outils.html)
+- **La version tests** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. Pour tirer le meilleur partie de ces tests, il faut utiliser [une méthode de tests d'accessibilité et des outils](https://a11y-guidelines.orange.com/web/methodes-outils.html)
 
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item">

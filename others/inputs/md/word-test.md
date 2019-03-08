@@ -30,7 +30,7 @@ Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/con
 Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.
 Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.
 
-[Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)
+[Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](https://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)
 
 ## Autres tests manuels
 Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint :
