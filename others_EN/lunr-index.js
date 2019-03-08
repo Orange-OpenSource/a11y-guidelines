@@ -397,7 +397,7 @@ documentTitles["powerpoint-test.html#screen-reader-jaws-nvda"] = "Screen reader:
 index.add({
     url: "powerpoint-test.html#screen-reader-jaws-nvda",
     title: "Screen reader: JAWS &amp; NVDA",    
-    body: "### Screen reader: JAWS &amp; NVDA To complete the verification, you can test with a screen reader.  It helps you to simulate the configuration as the visually impaired and blind people. [For further information to navigate with JAWS &amp; NVDA](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+    body: "### Screen reader: JAWS &amp; NVDA To complete the verification, you can test with a screen reader.  It helps you to simulate the configuration as the visually impaired and blind people. [For further information to navigate with JAWS &amp; NVDA](https://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
 });
 
 documentTitles["powerpoint-test.html#self-assessment-grids"] = "Self-Assessment Grids";
@@ -664,7 +664,7 @@ documentTitles["word-test.html#screen-reader-jaws-nvda"] = "Screen reader: JAWS 
 index.add({
     url: "word-test.html#screen-reader-jaws-nvda",
     title: "Screen reader: JAWS &amp; NVDA",    
-    body: "### Screen reader: JAWS &amp; NVDA To complete the verification, you can test with a screen reader.  It helps you to simulate the configuration as the visually impaired and blind people. [For further information to navigate with JAWS &amp; NVDA](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+    body: "### Screen reader: JAWS &amp; NVDA To complete the verification, you can test with a screen reader.  It helps you to simulate the configuration as the visually impaired and blind people. [For further information to navigate with JAWS &amp; NVDA](https://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
 });
 
 documentTitles["word-test.html#self-assessment-grids"] = "Self-Assessment Grids";

@@ -703,7 +703,7 @@ float heightVal;
 }
 </code></pre>
 
-<p></br>... et implémentation de la classe utilisée pour définir de façon précise l&#39;<a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-wwdc-17215.html#DefaultActivation">action à associer au double tap d&#39;activation</a> :</p>
+<p></br>... et implémentation de la classe utilisée pour définir de façon précise l&#39;<a href="https://a11y-guidelines.orange.com/mobile/criteria-ios-wwdc-17215.html#DefaultActivation">action à associer au double tap d&#39;activation</a> :</p>
 <pre><code class="objective-c">
 @implementation MyWrapView
 
@@ -880,7 +880,7 @@ UIAccessibilityElement * elt;
 </code></pre>
 
 <p>Une autre possibilité de groupement d&#39;éléments pourrait utiliser l’attribut <strong>shouldGroupAccessibilityChildren</strong>, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.
-</br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
+</br>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="https://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#ordre-de-lecture">Ordre de lecture</a>).</p>
 <h3 id="liens">Liens</h3>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
@@ -1029,7 +1029,7 @@ class TruncationHyphen: UIViewController {
 
 <h2 id="taille-des-l-ments-graphiques">Taille des éléments graphiques</h2>
 <h3 id="description">Description</h3>
-<p>Tout comme la taille des textes est adaptable selon les réglages d&#39;accessibilité (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d&#39;une barre de tabulation ou d&#39;outils l&#39;est aussi mais <strong>uniquement depuis iOS11 avec Xcode 9</strong>.
+<p>Tout comme la taille des textes est adaptable selon les réglages d&#39;accessibilité (voir <a href="https://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d&#39;une barre de tabulation ou d&#39;outils l&#39;est aussi mais <strong>uniquement depuis iOS11 avec Xcode 9</strong>.
 </br></br>En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l&#39;image à grossir au format <code>pdf</code> à la résolution x1 dans le catalogue <code>xcassets</code>.
 </br></br>2. Dans l&#39;<span lang="en">Image Set</span> qui vient d&#39;être créé, cocher la case <code>Preserve Vector Data</code> et spécifier <code>Single Scale</code> :
@@ -1041,7 +1041,7 @@ class TruncationHyphen: UIViewController {
 </br><strong>ATTENTION : s&#39;assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.</strong></p>
 <h3 id="exemple">Exemple</h3>
 <p>De façon à pouvoir tester à la fois le grossissement des images et celui d&#39;un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l&#39;image du logo Orange.
-</br></br>Après modification du grossissement de texte dans les réglages (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), on revient dans l&#39;application pour constater :</p>
+</br></br>Après modification du grossissement de texte dans les réglages (voir <a href="https://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), on revient dans l&#39;application pour constater :</p>
 <ul>
 <li>Une taille de l&#39;image Orange nettement plus conséquente.</li>
 <li>Au milieu de l&#39;écran, l&#39;affichage grossi de l&#39;onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.

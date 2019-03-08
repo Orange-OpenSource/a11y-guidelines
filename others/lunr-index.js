@@ -219,7 +219,7 @@ documentTitles["powerpoint-test.html#tests-avec-les-syntheses-vocales-jaws-et-nv
 index.add({
     url: "powerpoint-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda",
     title: "Tests avec les synthèses vocales JAWS et NVDA",    
-    body: "## Tests avec les synthèses vocales JAWS et NVDA Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale. Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.  [Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+    body: "## Tests avec les synthèses vocales JAWS et NVDA Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale. Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.  [Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](https://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
 });
 
 documentTitles["powerpoint-test.html#autres-tests-manuels"] = "Autres tests manuels";
@@ -379,7 +379,7 @@ documentTitles["word-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda"] =
 index.add({
     url: "word-test.html#tests-avec-les-syntheses-vocales-jaws-et-nvda",
     title: "Tests avec les synthèses vocales JAWS et NVDA",    
-    body: "## Tests avec les synthèses vocales JAWS et NVDA Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale. Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.  [Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](http://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
+    body: "## Tests avec les synthèses vocales JAWS et NVDA Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale. Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.  [Apprendre la navigation vocale avec JAWS 2018 et NVDA 2018](https://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)  "
 });
 
 documentTitles["word-test.html#autres-tests-manuels"] = "Autres tests manuels";

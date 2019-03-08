@@ -275,7 +275,7 @@
       "Tous les cadres possèdent un attribut <code>title</code> pertinent"
     ],
     "exception": "",
-    "raccourcis": "<a href='http://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html'>Les iframes techniques</a>",
+    "raccourcis": "<a href='https://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html'>Les iframes techniques</a>",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
@@ -510,11 +510,11 @@
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
       "Localiser les liens, boutons et tout items de navigation",
-      "Comparer le libellé texte ou le texte contenu dans l'image de ces items et <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible en HTML</a>"
+      "Comparer le libellé texte ou le texte contenu dans l'image de ces items et <a href='https://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible en HTML</a>"
       
     ],
     "verifier": [
-      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>Le nom accessible en HTML</a>"
+      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='https://a11y-guidelines.orange.com/web/a11y-name.html'>Le nom accessible en HTML</a>"
     ],
     "resultat": [
       "Les liens, boutons et items de navigation ont pour tout composant d'interface, le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant"
@@ -856,7 +856,7 @@
       "Bookmarklet"
     ],
     "tests": [
-      "Se rendre sur <a href='http://a11y.forge.orange-labs.fr/web/aerer-texte.html'>notre site de recommandation</a>",
+      "Se rendre sur <a href='https://a11y.forge.orange-labs.fr/web/aerer-texte.html'>notre site de recommandation</a>",
       "Ajouter le bookmarklet à vos favoris",
       "Consulter la page",
       "Activer le bookmarklet"
