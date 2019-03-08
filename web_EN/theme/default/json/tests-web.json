@@ -510,13 +510,13 @@
     "tests": [
       "Run the code inspector of the browser",
       "Locate links, buttons and all navigation items",
-      "////Compare the text wording or text contained in the image of these items with the <a href='?'>accessible name</a>"
+      "/////Compare the text wording or text contained in the image of these items with the <a href='?'>accessible name</a>"
     ],
     "verifier": [
-      "////Check that the text of the displayed label (the text label or the text of the image visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of this component"
+      "/////Check that the text of the displayed label (the text label or the text of the image visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of this component"
     ],
     "resultat": [
-      "////For each interface component, the text of the displayed label (the text label or image text visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of that component"
+      "/////For each interface component, the text of the displayed label (the text label or image text visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of that component"
     ],
     "exception":"",
     "raccourcis":"",
