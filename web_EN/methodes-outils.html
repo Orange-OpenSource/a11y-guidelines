@@ -48,8 +48,8 @@
                     <a class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Presentation</a></li>
-                        <li><a class="page-incontournables" href="incontournables.html">Themed WCAG index</a></li>
-                        <li><a class="page-exigences" href="exigences.html">Requirements and resources</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">WCAG criteria by project phase</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Resources</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
                         <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
                         <li><a class="page-exemples" href="exemples.html">Component examples</a></li>
@@ -108,36 +108,63 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="methods-and-testing-tools">Methods and testing tools</h1>
+          <h1 id="web-specific-methods-and-tools">Web-specific methods and tools</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Methods and testing tools"}]);
+    setBreadcrumb([{"label":"Web-specific methods and tools"}]);
 });</script>
 
-<p>When developing or redesigning sites or applications, accessibility must be evaluated early and throughout the project cycle process to identify accessibility problems early, when it is easier to address them.  </p>
-<p>Digital accessibility evaluation within Orange is performed with 3 types of testing:</p>
+<h2 id="introduction">Introduction</h2>
+<p>This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 - level AA.  </p>
+<p>The detailed description of the tests can be found in the <a href="./incontournables.html">WCAG criteria by project phase, &quot;tests&quot; section</a>.  </p>
+<p>Accessibility tests must be carried out throughout the project life cycle:</p>
 <ul>
-<li><strong>Technical evaluation</strong> consists in checking code and colors contrast in order to verify compliance against the criteria of the international standard <abbr>WCAG</abbr> 2.1 level AA.</li>
-<li><strong>Functional evaluation</strong> verifies the application works with <abbr>assistive technologies</abbr> and there are no blocking defects.</li>
-<li><strong>User evaluation</strong> evaluates the application by participants with disabilities watching for potential barriers related to accessibility when they complete tasks using their assistive technologies.</li>
+<li>at the start of the project, when choosing the framework, software, or package...</li>
+<li>at the design phase on storyboards or prototypes</li>
+<li>during development and testing</li>
+<li>in production, for content sites</li>
 </ul>
-<h2 id="technical-evaluation">Technical evaluation</h2>
-<p>There are different tools for automatic accessibility testing that help ensure that the web content meets the required standards. However most criteria require human evaluation. These tests are performed within project teams, though manual testing is mostly realized by accessibility experts.</p>
-<p>Examples of tools:</p>
+<h2 id="general-method">General method</h2>
+<p>The approach includes 2 types of tests:</p>
 <ul>
-<li><a href="./methodes-outils-extensions.html">Perform automated tests on a page</a>: browser extensions.</li>
-<li><a href="./methodes-outils-contrastes.html">Measure the colour contrast level</a>: introducing the &quot;Colour Contrast Analyser&quot; tool.</li>
+<li>Technical tests that consist of inspecting the code and colour contrast.</li>
+<li>Functional tests that evaluate the interface&#39;s performance with various <abbr>assistive technologies</abbr> to ensure that there are no blocking points in the evaluated content.  </li>
 </ul>
-<h2 id="functional-evaluation">Functional evaluation</h2>
-<p>These tests are usually performed by accessibility experts but can also be realized by projects actors trained to assistive technologies.  </p>
-<p>Examples of testing:</p>
+<p>Depending on your profile, you can perform technical tests, functional tests or both, but both are necessary to test the accessibility of a website as a whole.</p>
+<h2 id="method-for-testing-the-web">Method for testing the Web</h2>
+<h3 id="technical-evaluation">Technical evaluation</h3>
+<p>Some of the tests can be performed automatically by tools, but the majority of them require manual check. These tests can be performed by any actor in the project (designer, developer, tester, contributor...).  </p>
+<p>Approach:</p>
 <ul>
-<li><a href="./methodes-outils-clavier.html">Keyboard navigation</a>: main shorcuts to navigate web pages with keyboard alone.</li>
-<li><a href="./methodes-outils-zoom.html">Text size enlargement</a>: zoom guide.</li>
-<li><a href="./methodes-outils-lecteur-ecran.html">Navigating with screen reader</a>: screen readers commonly used.</li>
+<li><a href="./methodes-outils-extensions.html">Perform automatic tests</a> with the browser extensions aXe or Wave :<ul>
+<li>aXe automatically identifies errors and validates the quality of the code</li>
+<li>Wave also identifies accessibility errors and specifies the manual checks to do (consistency of the language code with the language used on the page...)</li>
 </ul>
-<h2 id="user-evaluation">User evaluation</h2>
-<p>These tests are performed once the technical and functional tests have confirmed a good level of accessibility. Participants will use their usual environment and assistive technologies to realize the main tasks of the product or service to be tested. Focus on accessibility issues, these tests aim at raising usage problems and assessing the critical importance of remaining problems.  </p>
-<p>These tests are managed by accessibility experts.</p>
+</li>
+<li><a href="./methodes-outils-contrastes.html">Measure the contrast level of the colours</a> with the Colour Contrast Analyser tool.</li>
+<li>Check the valid text spacing via a tool to ensure the readability of the text</li>
+<li>All other tests must be passed through a manual review of the code</li>
+<li>Example: all relevance criteria (consistency of a textual alternative with the content of an image...)</li>
+</ul>
+<h3 id="functional-evaluation">Functional evaluation</h3>
+<p>These tests can easily be performed by any project actor. Only screen readers require a learning period.
+Approach:</p>
+<ul>
+<li><a href="./methodes-outils-clavier.html">Test keyboard navigation</a> using the main keyboard shortcuts to navigate in a web page.</li>
+<li><a href="./methodes-outils-zoom.html">Check the adjustment of the text size</a> by handling the browser zoom.</li>
+<li><a href="./methodes-outils-lecteur-ecran.html">Test navigation and vocalization</a> with a screen reader.</li>
+</ul>
+<h2 id="method-for-testing-the-mobile-web">Method for testing the mobile web</h2>
+<h3 id="technical-evaluation">Technical evaluation</h3>
+<p>The tests for the mobile web are identical to those performed for the web. Some of the tests can be performed from a computer using the development tools available in web browsers:</p>
+<ul>
+<li>The Adaptive View module on Firefox</li>
+<li>Device Toolbar on Chrome</li>
+</ul>
+<h3 id="functional-evaluation">Functional evaluation</h3>
+<p>These tests must be performed with smartphones on iOS and Android.</p>
+<ul>
+<li><a href="/mobile_EN/screen-reader.html">Test navigation and vocalization with a screen reader</a></li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
