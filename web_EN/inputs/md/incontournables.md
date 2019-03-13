@@ -1,7 +1,7 @@
 # WCAG criteria by project phase
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Themed WCAG index"}]);
+    setBreadcrumb([{"label":"WCAG criteria by project phase"}]);
     addSubMenu([
         {
             "label":"Design", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
