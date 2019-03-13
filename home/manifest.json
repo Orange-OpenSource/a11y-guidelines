@@ -3,6 +3,7 @@
     "files": [        
         "output/markdown/contact.md",
         "output/markdown/index.md",       
+        "output/markdown/methode-tests-utilisateur.md",
         "output/markdown/focus.md",
         "output/markdown/focus-cognitif.md",        
         "output/markdown/focus-seniors.md",       

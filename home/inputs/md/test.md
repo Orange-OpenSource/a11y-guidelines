@@ -17,7 +17,8 @@ Les tests sont essentiellement réalisés pour 3 comportements : l’utilisation
 Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées. Ces tests sont conduits par des experts accessibilité.
 
 Pour plus de détails&nbsp;:
-- [Méthodes et outils propres au Web](/web/methodes-outils.html)
+- [Méthodes de tests d’accessibilité techniques et fonctionnels propres au Web](/web/methodes-outils.html)
+- [Méthode de test d’accessibilité avec des utilisateurs](./methode-tests-utilisateur.html)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
