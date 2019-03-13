@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Themed WCAG index - Design", "url": "./incontournables.html"},
+        {"label":"WCAG criteria by project phase - Design", "url": "./incontournables.html"},
         {"label":"Do not use colour or sensory characteristics as the unique source of information"}
     ]);
 });</script>

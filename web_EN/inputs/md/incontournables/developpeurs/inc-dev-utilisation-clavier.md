@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
+        {"label":"WCAG criteria by project phase - Developers", "url": "./incontournables.html#dev"},
         {"label":"Allow the use of the main features of the application with the keyboard"}
     ]);
 });</script>

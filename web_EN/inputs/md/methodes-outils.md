@@ -1,38 +1,55 @@
-# Methods and testing tools
+# Web-specific methods and tools
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Methods and testing tools"}]);
+    setBreadcrumb([{"label":"Web-specific methods and tools"}]);
 });</script>
 
-When developing or redesigning sites or applications, accessibility must be evaluated early and throughout the project cycle process to identify accessibility problems early, when it is easier to address them.  
+## Introduction
+This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 - level AA.  
 
-Digital accessibility evaluation within Orange is performed with 3 types of testing:
+The detailed description of the tests can be found in the <a href="./incontournables.html">WCAG criteria by project phase, "tests" section</a>.  
 
-- **Technical evaluation** consists in checking code and colors contrast in order to verify compliance against the criteria of the international standard <abbr>WCAG</abbr> 2.1 level AA.
-- **Functional evaluation** verifies the application works with <abbr>assistive technologies</abbr> and there are no blocking defects.
-- **User evaluation** evaluates the application by participants with disabilities watching for potential barriers related to accessibility when they complete tasks using their assistive technologies.
+Accessibility tests must be carried out throughout the project life cycle:
+- at the start of the project, when choosing the framework, software, or package...
+- at the design phase on storyboards or prototypes
+- during development and testing
+- in production, for content sites
 
-## Technical evaluation
-There are different tools for automatic accessibility testing that help ensure that the web content meets the required standards. However most criteria require human evaluation. These tests are performed within project teams, though manual testing is mostly realized by accessibility experts.
+## General method
+The approach includes 2 types of tests:
+- Technical tests that consist of inspecting the code and colour contrast.
+- Functional tests that evaluate the interface's performance with various <abbr>assistive technologies</abbr> to ensure that there are no blocking points in the evaluated content.  
 
-Examples of tools:
-- [Perform automated tests on a page](./methodes-outils-extensions.html): browser extensions.
-- [Measure the colour contrast level](./methodes-outils-contrastes.html): introducing the "Colour Contrast Analyser" tool.
+Depending on your profile, you can perform technical tests, functional tests or both, but both are necessary to test the accessibility of a website as a whole.
+## Method for testing the Web
+### Technical evaluation 
+Some of the tests can be performed automatically by tools, but the majority of them require manual check. These tests can be performed by any actor in the project (designer, developer, tester, contributor...).  
 
-## Functional evaluation
+Approach:
+- [Perform automatic tests](./methodes-outils-extensions.html) with the browser extensions aXe or Wave :
+    - aXe automatically identifies errors and validates the quality of the code
+    - Wave also identifies accessibility errors and specifies the manual checks to do (consistency of the language code with the language used on the page...)
+- [Measure the contrast level of the colours](./methodes-outils-contrastes.html) with the Colour Contrast Analyser tool.
+- Check the valid text spacing via a tool to ensure the readability of the text
+- All other tests must be passed through a manual review of the code
+- Example: all relevance criteria (consistency of a textual alternative with the content of an image...)
 
-These tests are usually performed by accessibility experts but can also be realized by projects actors trained to assistive technologies.  
+### Functional evaluation
+These tests can easily be performed by any project actor. Only screen readers require a learning period.
+Approach:
+- [Test keyboard navigation](./methodes-outils-clavier.html) using the main keyboard shortcuts to navigate in a web page.
+- [Check the adjustment of the text size](./methodes-outils-zoom.html) by handling the browser zoom.
+- [Test navigation and vocalization](./methodes-outils-lecteur-ecran.html) with a screen reader.
 
-Examples of testing:
-- [Keyboard navigation](./methodes-outils-clavier.html): main shorcuts to navigate web pages with keyboard alone.
-- [Text size enlargement](./methodes-outils-zoom.html): zoom guide.
-- [Navigating with screen reader](./methodes-outils-lecteur-ecran.html): screen readers commonly used.
+## Method for testing the mobile web
+### Technical evaluation
+The tests for the mobile web are identical to those performed for the web. Some of the tests can be performed from a computer using the development tools available in web browsers:
+- The Adaptive View module on Firefox
+- Device Toolbar on Chrome
 
-## User evaluation
-
-These tests are performed once the technical and functional tests have confirmed a good level of accessibility. Participants will use their usual environment and assistive technologies to realize the main tasks of the product or service to be tested. Focus on accessibility issues, these tests aim at raising usage problems and assessing the critical importance of remaining problems.  
-
-These tests are managed by accessibility experts.
+### Functional evaluation
+These tests must be performed with smartphones on iOS and Android.
+- [Test navigation and vocalization with a screen reader](/mobile_EN/screen-reader.html)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

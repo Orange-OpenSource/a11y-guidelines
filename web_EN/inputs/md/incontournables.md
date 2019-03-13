@@ -1,4 +1,4 @@
-# Themed WCAG index
+# WCAG criteria by project phase
 
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Themed WCAG index"}]);

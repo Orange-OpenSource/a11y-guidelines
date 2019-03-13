@@ -2,7 +2,7 @@
 
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Themed WCAG index - Developers", "url": "./incontournables.html#dev"},
+        {"label":"WCAG criteria by project phase - Developers", "url": "./incontournables.html#dev"},
         {"label":"Give access to the content regardless of the orientation of the screen"}
     ]);
 });</script>

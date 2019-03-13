@@ -1,6 +1,6 @@
-# Requirements and resources
+# Resources
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Requirements and resources"}]);
+    setBreadcrumb([{"label":"Resources"}]);
 });</script>
 ## WCAG
 
