@@ -108,6 +108,7 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 - [Toggle Curtain Screen.](#CurtainScreen)
 - [Set a custom label.](#CustomLabel)
 - [Use Spotlight Search.](#SpotlightSearch)
+- [Open a link in a text view.](#OpenLink)
 
 <a name="ReadAllElementsFromTop"></a>
 </br>Gesture : **flick up with 2 fingers** anywhere on the screen.
@@ -175,6 +176,12 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 <a name="SpotlightSearch"></a>
 </br>Gesture : **flick down with 3 fingers** anywhere on the screen.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_en_search.png" />
+
+<a name="OpenLink"></a>
+</br>Gesture : **double-tap and hold with 1 finger** anywhere on the screen.
+</br>First, select the 'Links' rotor item before flicking up to reach the desired link.
+</br>Then, double-tap and hold with one finger once the link is selected **until a popup shows up and an action sheet appears** to suggest the appropriate option.
+</br><img style="max-width: 1200px; height: auto;" alt="" src="./images/iphonex_en_open_link.png" />
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
