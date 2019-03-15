@@ -109,7 +109,8 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 - [Sélectionner le dernier élément d'une page.](#PageLastElement)
 - [Activer/désactiver l'écran "rideau".](#CurtainScreen)
 - [Changer la vocalisation d'un élément.](#CustomLabel)
-- [Lancer une recherche](#SpotlightSearch)
+- [Lancer une recherche.](#SpotlightSearch)
+- [Ouvrir un lien dans une vue.](#OpenLink)
 
 <a name="ReadAllElementsFromTop"></a>
 </br>Mouvement : **balayage avec 2 doigts** du bas vers le haut n'importe où sur l'écran.
@@ -177,6 +178,12 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 <a name="SpotlightSearch"></a>
 </br>Mouvement : **balayage avec 3 doigts** vers le bas n'importe où sur l'écran.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_fr_search.png" />
+
+<a name="OpenLink"></a>
+</br>Mouvement : **double tap avec 1 doigt en maintenant la pression** n'importe où sur l'écran.
+</br>Sélectionner l'option 'Liens' du rotor avant de balayer vers le haut pour atteindre le lien souhaité.
+</br>Ensuite, effectuer un double tap avec 1 doigt en maintenant la pression **jusqu'à l'apparition d'une popup au-dessus du lien** qui affichera une fenêtre d'actions en bas d'écran.
+</br><img style="max-width: 1200px; height: auto;" alt="" src="./images/iphonex_en_open_link.png" />
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

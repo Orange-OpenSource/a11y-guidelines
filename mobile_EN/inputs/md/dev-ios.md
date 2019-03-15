@@ -29,7 +29,7 @@ There are many available traits. The more commonly used are:
 - **accessibilityTraitButton**&nbsp;: adds the “button” trait, the element is seen as a button by VoiceOver.
 - **accessibilityTraitLink**&nbsp;: useful to define a label as a “link”.
 - **accessibilityTraitHeader**&nbsp;: defines an element as a header (see the <a href="criteria-ios.html#title-and-header">«&nbsp;Title and header&nbsp;»</a> section).
-- **accessibilityTraitAdjustable**&nbsp;: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see <a href="https://help.apple.com/iphone/9/#/iph3e2e2281">VoiceOver gestures documentation</a>).
+- **accessibilityTraitAdjustable**&nbsp;: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see [VoiceOver user guide](./voiceover.html)).
 ### Example
 <pre><code class="objective-c">
 - (void)customTraits() {

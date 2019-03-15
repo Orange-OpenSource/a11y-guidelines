@@ -33,7 +33,7 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
 - **accessibilityTraitButton**&nbsp;: ajoute le trait «&nbsp;bouton&nbsp;», l’élément est vu comme un bouton par <span lang="en">VoiceOver</span>.
 - **accessibilityTraitLink**&nbsp;: utile pour définir un label en tant que «&nbsp;lien&nbsp;».
 - **accessibilityTraitHeader**&nbsp;: permet de définir un élément comme un en-tête (voir la section <a href="criteria-ios-conception.html#titre-et-en-t-te">«&nbsp;titre et en-tête&nbsp;»</a>).
-- **accessibilityTraitAdjustable**&nbsp;: permet de définir un élément comme un élément «&nbsp;ajustable&nbsp;», c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un <a href="https://help.apple.com/iphone/9/#/iph3e2e2281">geste spécifique</a> de <span lang="en">VoiceOver</span>.
+- **accessibilityTraitAdjustable**&nbsp;: permet de définir un élément comme un élément «&nbsp;ajustable&nbsp;», c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un [geste spécifique](./lecteur-ecran-voiceover.html) de <span lang="en">VoiceOver</span>.
 
 <pre><code class="objective-c">
 - (void)customTraits() {
@@ -1581,7 +1581,7 @@ Dans cet exemple, on appelle une méthode spécifique au moment où le statut de
         let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
         let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
         
-        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
+        print("SWITCH CONTROL est \(switchControlStatus) et VOICE OVER est \(voiceOverStatus).")
     }
 </code></pre>
 ### Liens
