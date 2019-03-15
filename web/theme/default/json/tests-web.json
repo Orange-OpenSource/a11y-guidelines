@@ -163,7 +163,7 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Localiser les <code>table</code> en effectuant une recherche sur le terme <code>TABLE</code>",
+      "Localiser les <code>table</code> en effectuant une recherche sur le terme <code>table</code>",
       "Examiner les <code>table</code>"
     ],
     "verifier": [
@@ -179,7 +179,7 @@
 		"Les tableaux possèdent une légende (caption ou titre de niveaux placé juste avant)",
 		"Les tableaux simples possèdent des entêtes  <code>th</code>",
 		"Les tableaux à double entrée possède des entêtes <code>th</code> ainsi que des attributs <code>scope='col'</code> et <code>scope='row'</code>",
-		"Les tableaux complexes possèdent des entêtes (TH + attributs scope) ou des entêtes complexes basées sur l'utilisation d'attribut <code>id</code> et <code>headers</code>",
+		"Les tableaux complexes possèdent des entêtes (<code>th</code> + attributs <code>scope</code>) ou des entêtes complexes basées sur l'utilisation d'attribut <code>id</code> et <code>headers</code>",
 		"Les tableaux complexes possèdent un résumé  pertinent"
 	],
     "exception": "",
@@ -201,11 +201,11 @@
     ],
     "resultat": [
       "Aucune erreur relative à l'absence d'attribut <code>alt</code>",
-      "Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code>  et <code>iframe</code> "
+      "Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code> et <code>iframe</code> "
     ],
     "exception": [
       "Présence d'un attribut <code>alt</code> pour toutes les images",
-      "Présence d'un attribut <code>title</code> pour toutes les <code>frame</code>  et <code>iframe</code> "
+      "Présence d'un attribut <code>title</code> pour toutes les <code>frame</code> et <code>iframe</code> "
     ],
     "raccourcis": "",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
@@ -220,10 +220,10 @@
 		"Désactiver les styles de pages <br/>Sous Firefox > Affichage > Style de la page > Aucun style"
 	],
     "verifier": [
-      "Vérifier qu'il n'a pas de perte d'information lié à l'absence des images intégrées en background (CSS)"
+      "Vérifier qu'il n'a pas de perte d'information lié à l'absence des images intégrées en background (<abbr>CSS</abbr>)"
     ],
     "resultat": [
-      "Absence d'images insérées en CSS porteuses d'information"
+      "Absence d'images insérées en <abbr>CSS</abbr> porteuses d'information"
     ],
     "exception": "",
     "raccourcis": "",
@@ -245,7 +245,7 @@
       "<strong>Image porteuse d'information :</strong> <br/> vérifier que l'attribut <code>alt</code> de chaque image est pertinent par rapport au rôle de l'image dans la page",
       "<strong>Image contenant du texte :</strong> <br/> vérifier que l'attribut <code>alt</code> reprend au moins le texte de l’image",
       "<strong>Image décorative :</strong> <br/> vérifier que l'attribut <code>alt</code> est vide",
-      "<strong>Image complexe dont le contenu du <code>alt</code> serait trop long (schémas, graphes…) :</strong> <br/> Vérifier que pour toute description  d'image trop longue pour être mise dans un attribut <code>alt</code>, la description de l'image sous forme de texte html est, soit présente dans la page, soit, un lien pointe vers une page html contenant la description, et ceci, à proximité de l'image à décrire"
+      "<strong>Image complexe dont le contenu du <code>alt</code> serait trop long (schémas, graphes…) :</strong> <br/> Vérifier que pour toute description d'image trop longue pour être mise dans un attribut <code>alt</code>, la description de l'image sous forme de texte html est, soit présente dans la page, soit, un lien pointe vers une page html contenant la description, et ceci, à proximité de l'image à décrire"
     ],
     "resultat": [
       "<strong>Image lien :</strong> la cible du lien est précisée dans le  <code>alt</code>",
@@ -343,18 +343,18 @@
   },
   {
     "themes": "Contenu non-textuel",
-    "title": "Rendre accessible les pistes audio ou vidéo / clignotement",
+    "title": "Rendre accessible les clignotements",
     "type": [
       "Test manuel"
     ],
     "tests": [
-      "Examiner les contenus audio et vidéos de la page"
+      "Examiner les contenus de type animations et vidéos de la page qui clignotent"
     ],
     "verifier": [
-      "Vérifier que toute vidéo ne présente pas de clignotement rapide (plus de 3 flash à la seconde)"
+      "Vérifier qu'il n'y a pas de contenu présentant de clignotements rapides (plus de 3 flash à la seconde) ou les <a href='https://www.w3.org/TR/WCAG21/#dfn-general-flash-and-red-flash-thresholds' hreflang='en'>flashs sont inférieurs au seuil général ou seuil de rouge</a>."
     ],
     "resultat": [
-      "Absence de clignotement rapide"
+      "Absence de clignotement ou de flash rapide ou dépassant le seuil général ou de rouge"
     ],
     "exception": "",
     "raccourcis": "",
@@ -362,7 +362,7 @@
   },
   {
     "themes": "Contenu non-textuel",
-    "title": "Eviter les captchas",
+    "title": "Éviter les captchas",
     "type": [
       "Test manuel"
     ],
@@ -391,7 +391,7 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que le contraste soit suffisant pour comprendre  l'information portée par tous les composants interactifs, les textes"
+      "Vérifier que le contraste soit suffisant pour comprendre l'information portée par tous les composants interactifs, les textes"
     ],
     "resultat": [
       "Présence d'éléments suffisamment contrastés"
@@ -426,7 +426,7 @@
       "Test manuel"
     ],
     "tests": [
-      "Identifier les éléments utilisant de la couleur"
+      "Identifier les éléments utilisant de la couleur pour porter de l'information"
     ],
     "verifier": [
 		"Vérifier que la couleur n'est pas le seul moyen de convoyer d'information : <br/>au moins un autre moyen visuel est disponible pour obtenir la même information"
@@ -466,7 +466,7 @@
     ],
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
-		"Localiser les liens, boutons et tout items de navigation",
+		"Localiser les liens, boutons et tous les items de navigation",
 		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>arai-label</code> et <code>title</code>"
 	],
     "verifier": [
@@ -492,7 +492,7 @@
       "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
     ],
     "verifier": [
-      "Vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton, uniquement à partir de son libellé texte"
+      "Vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton, uniquement à partir de son <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'> nom accessible</a>)"
     ],
     "resultat": [
       "Les liens, boutons et items de navigation sont compréhensibles hors contextes"
@@ -510,11 +510,10 @@
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
       "Localiser les liens, boutons et tout items de navigation",
-      "Comparer le libellé texte ou le texte contenu dans l'image de ces items et <a href='https://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible en HTML</a>"
-      
+      "Comparer le libellé texte ou le texte contenu dans l'image et <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible</a> de ces items" 
     ],
     "verifier": [
-      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='https://a11y-guidelines.orange.com/web/a11y-name.html'>Le nom accessible en HTML</a>"
+      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran) est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>Le nom accessible en HTML</a>"
     ],
     "resultat": [
       "Les liens, boutons et items de navigation ont pour tout composant d'interface, le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant"
@@ -523,7 +522,6 @@
     "raccourcis": "",
     "profils": ["Expert Accessibilité"]
   },
-
   {
     "themes": "Navigation générale",		 																				
     "title": "Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre",
@@ -602,8 +600,8 @@
       "Vérifier que le contenu apparu reste visible tant que l'utilisateur n'interagit pas avec l'élément déclencheur et que le contenu reste valide"
     ],
     "resultat": [
-      "le contenu additionnel reste affiché lors du déplacement du pointeur, de l'élément déclencheur vers le nouveau contenu",
-      "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche <kbd>échap.</kbd>)",
+      "le contenu additionnel reste affiché lors du déplacement du pointeur de l'élément déclencheur vers le nouveau contenu",
+      "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple, avec la touche <kbd>échap.</kbd>)",
       "Le contenu additionnel  est persistant jusqu'à la suppression du focus ou du survol sur l'élément déclenchant, que l'utilisateur le fasse disparaître ou que ce contenu n'est plus valide"
     ],
     "exception": "",
@@ -617,10 +615,10 @@
       "Test manuel"
     ],
     "tests": [
-      "Identifier si l'utilisateur doit compléter un formulaire ou réaliser des actions dans un temps limités."
+      "Identifier si l'utilisateur doit compléter un formulaire ou réaliser des actions dans un temps limité."
     ],
     "verifier": [
-		"Vérifier que l'une des actions ci-dessous est possible : <ul><li>1.1 désactiver le timeout</li><li>augmenter la limite de temps</li><ul>"
+		"Vérifier que l'une des actions ci-dessous est possible : <ul><li>désactiver la limite de temps</li><li>augmenter la limite de temps</li><ul>"
 	],
     "resultat": [
       "L'utilisateur peut désactiver, ou augmenter la durée du timeout"
@@ -636,14 +634,15 @@
       "Test manuel"
     ],
     "tests": [
-      "Identifier si des raccourcis utilisant sur un caractère imprimable sont proposés par l'application"
+      "Identifier si des raccourcis utilisant un caractère imprimable sont proposés par l'application"
     ],
-    "verifier": ["Vérifier que les raccourcis clavier utilisant un caractère imprimable répondent à une des conditions ci-dessous : <ul><li>les raccourcis peuvent être désactivés par l'utilisateur</li><li>les raccourcis peuvent être modifiés, avec la possibilité d'ajouter 1 ou plusieurs caractères non-imprimables (Ctrl, Alt, etc.) à la combinaison</li><li>les raccourcis ne sont actifs qu'à la prise de focus sur l'élément</li></ul>"
+    "verifier": [
+      "Vérifier que les raccourcis clavier utilisant un caractère imprimable répondent à une des conditions ci-dessous : <ul><li>les raccourcis peuvent être désactivés par l'utilisateur</li><li>les raccourcis peuvent être modifiés, avec la possibilité d'ajouter un ou plusieurs caractères non-imprimables (<kbd>Ctrl</kbd>, <kbd>Alt</kbd>, etc.) à la combinaison</li><li>les raccourcis ne sont actifs qu'à la prise de focus sur l'élément</li></ul>"
 	],
     "resultat": [
-      "Les raccourcis reposant sur une ou plusieurs touches peuvent être désactivés ou reprogrammés"
+      "Les raccourcis reposant sur un caractère non-imprimable peuvent être activés qu'à la prise de focus, désactivés ou reprogrammés"
     ],
-    "exception": "Ne sont pas concernés, les composants utilisateurs (ex : menu) proposant un raccourcis uniquement lorsque le focus est positionné sur le composant, les 'accesskey' et les raccourcis clavier utilisant une touche de modification.",
+    "exception": "Ne sont pas concernés, les 'accesskey' et les raccourcis clavier utilisant une touche de modification.",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
@@ -678,10 +677,10 @@
       "Identifier les éléments de navigation et de recherche"
     ],
     "verifier": [
-      "Vérifier que la position courante de l'utilisateur au sein d'un contenu est matérialisée visuellement et programmatiquement"
+      "Vérifier que la position courante de l'utilisateur au sein d'un site est matérialisée visuellement et programmatiquement"
     ],
     "resultat": [
-      "Une indication pas seulement visuelle est présente afin d'identifier le contenu actif  (attention l'information ne doit reposer uniquement sur la couleur)"
+      "Une indication pas seulement visuelle est présente afin d'identifier la page active (attention l'information ne doit reposer uniquement sur la couleur)"
     ],
     "exception": "",
     "raccourcis": "",
@@ -700,7 +699,7 @@
       "Lancer l'inspecteur de code"
     ],
     "verifier": [
-		"Vérifier qu'un mécanisme reposant sur les roles ou les régions dynamiques <code>aria-live</code> est implémenté. <br/>Exemple :  <a href='aria-status.html'>Aria et les messages de status</a>"
+		"Vérifier qu'un mécanisme reposant sur les roles <abbr>ARIA</abbr> (status, alert, alertdialog...) ou les régions dynamiques <code>aria-live</code> est implémenté. <br/>Exemple : <a href='aria-status.html'>Aria et les messages de status</a>"
 	],
     "resultat": [
       "Les messages sont vocalisés automatiquement."
@@ -715,15 +714,14 @@
     "type": ["Test manuel"],
     "tests": [
       "Parcourir la page",
-      "Identifier  tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement et durant plus de 5 secondes"
+      "Identifier tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement, durant plus de 5 secondes et lancé automatiquement"
     ],
     "verifier": [
       "Vérifier pour chacun, qu'un mécanisme est présent pour permettre à l'utilisateur de le mettre en pause/lancer l'animation",
-      "Vérifier que ce mécanisme est accessible à la souris et à la navigation clavier",
-      "Vérifier qu'aucun élément de la page ne contient de flash lumineux rapide (plus de 3 répétitions par seconde)"
+      "Vérifier que ce mécanisme est accessible à la souris et à la navigation clavier"
     ],
     "resultat": [
-		"L'utilisateur peut mettre pause/relancer les animations ou les flashs. <br/>Les animations ne contiennent pas de flash."
+		"L'utilisateur peut mettre pause/relancer les animations, les mouvements, les mises à jour ou les clignotement."
 	],
     "exception": "",
     "raccourcis": "",
@@ -743,7 +741,7 @@
     ],
     "resultat": [
       "Tous les éléments interactifs sont atteignables depuis une navigation clavier",
-      "Tous les élements interactifs sont utilisables depuis des interactions clavier"
+      "Tous les éléments interactifs sont utilisables depuis des interactions clavier"
     ],
     "exception": "",
     "raccourcis": "",
@@ -760,10 +758,10 @@
 		"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
 	],
     "verifier": [
-      "Vérifier l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est conforme à l'ordre cohérent et logique de lecture (souvent équivalent à l'ordre visuel)"
+      "Vérifier l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est cohérent et logique (souvent équivalent à l'ordre visuel)"
     ],
     "resultat": [
-      "Le parcours clavier à travers la page est logique"
+      "Le parcours clavier à travers la page est logique et fait sens"
     ],
     "exception": "",
     "raccourcis": "",
@@ -782,7 +780,7 @@
       "Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est suffisamment  visible"
     ],
     "resultat": [
-      "La prise de focus est visible (taille suffisante >1px)"
+      "La prise de focus est visible (par exemple, pour la propriété CSS <code>outline</code> a une taille suffisante >1px)"
     ],
     "exception": "",
     "raccourcis": "",
@@ -821,10 +819,10 @@
       "Zoom à 200%"
     ],
     "verifier": [
-      "Vérifier qu'il n'y ai pas de textes ou de fonctionnalités tronqués ou masqués"
+      "Vérifier qu'il n'y ai pas de contenus ou de fonctionnalités inutilisables tronqués ou masqués"
     ],
     "resultat": [
-      "Absence de contenus et fonctionnalités, tronqués ou masqués"
+      "Absence de contenus et fonctionnalités inutilisables, tronqués ou masqués"
     ],
     "exception": "",
     "raccourcis": "",
@@ -837,7 +835,7 @@
       "Test manuel"
     ],
     "tests": [
-      "Dimensionner le viewport à 320 px CSS de large"
+      "Dimensionner le viewport à 320 px CSS de large ou utiliser un smartphone de cette taille"
     ],
     "verifier": [
       "Vérifier qu'aucune barre de défilement n'apparaît dans le sens horizontal"
@@ -863,7 +861,7 @@
     ],
     "verifier": [
 		"Les espacements sont ajustés selon les critères : <ul><li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères</li><li>L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères</li><li>L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères</li><li>L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères</li></ul>",
-		"Absence de contenus tronqués ou superposés"
+		"Absence de textes tronqués ou superposés"
 	],
     "resultat": [
 		"Les espacement se sont ajustés selon les critères. <br/>Les textes ne sont pas tronqués ou superposés"
@@ -888,30 +886,31 @@
       "Vérifier que les zones de la page sont clairement délimitées (bordures, filets, contraste suffisant…) ou qu’il y a un moyen de distinguer visuellement les groupes (sous-menu, liste déroulante…) ainsi que les différentes régions de la page"
     ],
     "resultat": [
-      "Les différentes régions sont clairement identifiables visuellement"
+      "Les différentes régions sont visuellement clairement identifiables"
     ],
     "exception": "",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
-							 
-																																	 
-			 
-				   
-	  
-			  
-						  
-												  
-	  
-				 
-																																													  
-	  
-				 
-																							
-	  
-																								 
-					 
-																															  
-	
+  },
+  {							 
+    "themes": "Mise en page",
+    "title": "Identifier et conserver la cohérence des regroupements et des différentes régions de la page / liens",
+    "type": [
+      "Test manuel"
+    ],
+    "tests": [
+      "Parcourir la page",
+      "Identifier les liens dans le corps du texte"
+    ],
+    "vérificateur": [
+      "Vérifiez que les liens dans le corps du texte sont facilement identifiables visuellement par un moyen autre que la couleur (souligné, gras ...) par rapport au reste du texte"
+    ],
+    "resultat": [
+      "Les liens sont identifiables visuellement à partir du texte par un autre moyen que la couleur"
+    ],
+    "exception":"",
+    "raccourcis":"",
+    "profils":  ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
   {
     "themes": "Mise en page",
@@ -925,7 +924,7 @@
       "Lancer l'inspecteur de code"
     ],
     "verifier": [
-      "Vérifier que chaque région possède une sémantique à travers des balises de structure HTML5"
+      "Vérifier que chaque région de la page possède une sémantique à travers des balises de structure HTML5"
     ],
     "resultat": [
       "Les différentes régions sont clairement identifiables programmatiquement"
@@ -950,7 +949,7 @@
     "resultat": [
       "Tous les éléments interactifs ont des dimensions qui dépassent 44px par 44px"
     ],
-    "exception": "<ul><li>Ancre / lien interne à la page</li><li>Lien à l'intérieur d'un paragraphe</li><li>Lien à l'intérieur d'une phrase</li><li>Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase</li><li>Un icône cliquable à l'intérieur d'une phrase ou d'un paragraphe</li></ul>",
+    "exception": "<ul><li>Ancre / lien interne à la page</li><li>Lien à l'intérieur d'un paragraphe</li><li>Lien à l'intérieur d'une phrase</li><li>Lien dans une note de pied de page (à la fin de paragraphe ou d'une phrase)</li><li>Un icône cliquable à l'intérieur d'une phrase ou d'un paragraphe</li></ul>",
     "raccourcis": "",
     "profils": ["Expert Accessibilité"]
   },
@@ -1024,7 +1023,7 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que les champs obligatoires sont identifiables visuellement et programmatiquement : <ul><li>l'identification visuelle du champ obligatoire ne repose pas uniquement sur la couleur</li><li>Une des technique ci-dessous est implémentée pour transmettre l'information programmatiquement : <ul><li>l'information visuelle est intégrée dans le label. Une alternative texte est disponible pour transmettre l'information</li><li>présence d'un attribut required</li><li>présence d'un attribut <code>aria-required</code></li></ul></li></ul>"
+		"Vérifier que les champs obligatoires sont identifiables visuellement et programmatiquement : <ul><li>l'identification visuelle du champ obligatoire ne repose pas uniquement sur la couleur</li><li>Une des techniques ci-dessous est implémentée pour transmettre l'information programmatiquement : <ul><li>l'information visuelle est intégrée dans le label. Une alternative texte est disponible pour transmettre l'information</li><li>présence d'un attribut <code>required</code></li><li>présence d'un attribut <code>aria-required</code></li></ul></li></ul>"
 	],
     "resultat": [
       "Les champs obligatoire sont identifiables visuellement et programmatiquement"
@@ -1044,7 +1043,7 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-		"Vérifier que les champs de même nature sont groupés. <br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>présence d'une balise <code>fieldset</code></li><li>présence d'un attribut role='group' (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs</li></ul>"
+		"Vérifier que les champs de même nature sont groupés. <br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>présence d'une balise <code>fieldset</code></li><li>présence d'un attribut <code>role='group'</code> (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs</li></ul>"
 	],
     "resultat": [
       "Les champs de même nature sont groupés"
@@ -1062,7 +1061,7 @@
     "tests": [
       "Test manuel",
       "Parcourir les formulaires",
-	  "Renseigner les formulaires avec des données erronées",
+	    "Renseigner les formulaires avec des données erronées",
       "Soumettre les formulaires"
     ],
     "verifier": [
@@ -1084,7 +1083,7 @@
     "tests": [
       "Test manuel",
       "Parcourir les formulaires",
-	  "Renseigner les formulaires avec des données erronées",
+	    "Renseigner les formulaires avec des données erronées",
       "Soumettre les formulaires"
     ],
     "verifier": [
@@ -1107,10 +1106,10 @@
     ],
     "tests": [
       "Examiner les meta <code>name='viewport'</code> du <code>header</code> de la page",
-	  "Ou utiliser axe (conseillé pour les profils qualifieurs)"
+	    "Ou utiliser axe (conseillé pour les profils qualifieurs)"
     ],
     "verifier": [
-      "Vérifier que pour la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code> n’est pas présent</li><li>Et  le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
+      "Vérifier que pour la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code> n’est pas présent</li><li>Et le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
     ],
     "resultat": [
       "La page ne contient pas dans la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code></li><li>Et  le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
@@ -1121,7 +1120,7 @@
   },
   {
     "themes": "Tactile et interactions",
-    "title": "Permettre d'annuler le déclenchement des interactions gestuelles",
+    "title": "Permettre d'annuler le déclenchement des interactions gestuelles 1",
     "type": [
       "Test manuel - Basé sur le mobile"
     ],
@@ -1140,7 +1139,7 @@
   },
   {
     "themes": "Tactile et interactions",
-    "title": "Permettre d'annuler le déclenchement des interactions gestuelles",
+    "title": "Permettre d'annuler le déclenchement des interactions gestuelles 2",
     "type": [
       "Test manuel - Basé sur le mobile"
     ],
@@ -1159,7 +1158,7 @@
   },
   {
     "themes": "Tactile et interactions",
-    "title": "Permettre d'annuler le déclenchement des interactions gestuelles",
+    "title": "Permettre d'annuler le déclenchement des interactions gestuelles 3",
     "type": [
       "Test manuel - Basé sur le mobile"
     ],
