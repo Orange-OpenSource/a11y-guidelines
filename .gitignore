@@ -1,6 +1,7 @@
 node_modules
 npm-debug.log
 .vscode
+package-lock.json
 output/**
 home/output/**
 home_EN/output/**
