@@ -184,7 +184,7 @@ function reqListener() {
 
 		
 		//init array conditions avec valeur Expert Accessibilité
-		arrProfil.push("Expert Accessibilité");		
+		arrProfil.push("Accessibility Expert");		
 		conditions.unshift(function(item) { 
 			return item.profils.indexOf(arrProfil[0]) !== -1;								
 		});	
