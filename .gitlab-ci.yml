@@ -1,0 +1,27 @@
+stages:
+  - report
+
+pages:
+  image: dockerproxy-iva.si.francetelecom.fr/node:10-alpine
+  stage: report
+  tags:   
+    - forge
+    
+  before_script:
+    - apk add --update --no-cache git
+    - npm prune    
+    - npm config set unsafe-perm true    
+    - npm install
+    - npm install -g grunt-cli    
+    - grunt -version    
+    - pwd
+    - ls    
+    - grunt --baseUrl=a11y-guidelines
+
+  script:
+    - env    
+    - cp -r output public
+    
+  artifacts:
+    paths:
+      - public
