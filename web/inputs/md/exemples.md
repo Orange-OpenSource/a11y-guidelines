@@ -27,6 +27,8 @@
     <dd>Créer un menu déroulant accessible.</dd>
     <dt><a href="exemples/speak/index.html">Faire parler le lecteur d'écran via Javascript</a><dt>
     <dd>Exemple de code permettant de faire parler la synthèse vocale.</dd>
+    <dt><a href="exemples/chatbot/index.html">Exemple de tchat bot accessible</a><dt>
+    <dd>Créer un tchat bot accessible.</dd>
     <dt><a href="exemples/tag/index.html">Créer des «&nbsp;tags&nbsp;» accessibles 1/2</a><dt>
     <dd>Exemple d'étiquettes accessibles (partie 1).</dd>
     <dt><a href="exemples/tag-exemples/index.html">Créer des «&nbsp;tags&nbsp;» accessibles 2/2 (exemples)</a><dt>
