@@ -3,55 +3,130 @@
 * Copyright (C) 2016  Orange SA
 * See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
 var title;
+
 $(document).ready(function() {
     title = document.title;
 
-    window.setTimeout(function() {
+    $(".skiplink").on("focus", function () {
+        $("#skip-links").removeClass("sr-only");
+        window.scrollTo(0,0);
+    });
+
+    $(".skiplink").on("blur", function () {
+        $("#skip-links").addClass("sr-only");
+    });
+
+    $("#chatbot-skiplink").on("click", function () {
+        if ($("#chatbot-window").is(":visible")) {
+            $("#chat-input").focus();
+        } else {
+            $("#chatbot-window").show();
+            $("#btnChatbot").addClass("sr-only");
+            $("#chat-input").focus();
+        }
+    });
+
+    $("#btnChatbot").on("click", function () {
         $("#chatbot-window").show();
-        push("Djingo", "Bonjour, puis-je vous aider ?");
-        $("form").on("submit", function () {
-            sendMessage();
-            return false;
-        })
-        $("#chatbot-close").on("click", function () {
-            $("#chatbot-window").hide();
-        });
-        $("#chatbot-hide").on("click", function () {
-            $("#chatbot-window").toggleClass("chatbot-hidden");
-        });
-        $("#chatbot-show").on("click", function () {
-            $("#chatbot-window").toggleClass("chatbot-hidden");
-        });
-        $("#ico-contrast").on("click", function () {
-            $("#chatbot-window").toggleClass("high-contrast");
-            if ($("#chatbot-window").hasClass("high-contrast")) {
-                $("#ico-contrast").attr("aria-checked", "true");
-            } else {
-                $("#ico-contrast").attr("aria-checked", "false");
-            }
-            
-        });
-        $("#chat-input").on("focus", function () {
-            document.title = title;
-        });
-    }, 5000);    
+        $("#btnChatbot").addClass("sr-only");
+        $("#chat-input").focus();
+    });
+
+    $("form").on("submit", function () {
+        sendMessage();
+        return false;
+    })
+    $("#chatbot-close").on("click", function () {
+        $("#chatbot-window").hide();
+        $("#btnChatbot").removeClass("sr-only");
+    });
+    $("#chatbot-hide").on("click", function () {
+        $("#chatbot-window").toggleClass("chatbot-hidden");
+        $("#chatbot-show").focus();
+    });
+    $("#chatbot-show").on("click", function () {
+        $("#chatbot-window").toggleClass("chatbot-hidden");
+        $("#chatbot-hide").focus();
+    });
+
+    $("#chat-input").on("focus", function () {
+        document.title = title;
+    });        
+    
+    push("Djingo", "Bonjour, puis-je vous aider ?", true); 
+   
+    $("#btnExemple1, #btnExemple2").on("click", function () {
+        alert("Ouverture du chatbot !");
+    });
+
+    $("#btnChoice").on("click", function () {
+        $("#chatbot-window").show();
+        $("#btnChatbot").addClass("sr-only");
+        $("#chatbot-window").removeClass("chatbot-hidden");
+        window.setTimeout(function () {
+            push("moi", "Et si on parlait accessibilité ?");        
+        },0);
+        
+        window.setTimeout(function () {
+            $("#chat-container").attr("aria-live", "off");
+            $("#poll1, #poll-web, #poll-mobile").attr("id","");
+            push("Djingo", "Excellente idée ! Vous souhaitez parler d'accessibilité web ou mobile ?", true, "poll1"); 
+            rawPush('moi', '<button id="poll-web" class="btn btn-primary btn-poll">Web</button><button id="poll-mobile" class="btn btn-primary btn-poll">Mobile</button>');            
+            window.setTimeout(function() {
+                $("#chat-container").attr("aria-live", "polite");
+            }, 0);
+            $("#poll1").focus();
+        }, 2000);       
+    });
+
+    $('body').on('click', '#poll-web', function () {                
+        window.setTimeout(function () {
+            push("moi", "Parlons d'accessibilité Web.");
+        }, 500);
+        $("#chat-input").val("").focus();
+        $(".from.invisible").remove();
+        $(".messages").last().remove();        
+    });
+
+    $('body').on('click', '#poll-mobile', function () {
+        $("#chat-input").val("").focus();
+        $(".from.invisible").remove();
+        $(".messages").last().remove();
+        window.setTimeout(function () {
+            push("moi", "Parlons d'accessibilité mobile.");
+        },500);
+    });    
+
 });
 
-function push(from, message) {    
-    var lastFrom = $("#chat-content .message").last().attr("data-from");
+function rawPush(from, message) {
+    var lastFrom = $("#chat-content .messages").last().attr("data-from");
     if (lastFrom !== from) {
-        $("#chat-content").append('<div aria-hidden="true" data-from="' + from + '" class="from">' + from + '</div>');
+        $("#chat-content").append('<span data-from="' + from + '" class="from invisible" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
     }
-    
-    if (from==="moi") {
-        playSound("Send_a_message");
-    } else {
-        playSound("Receive_a_message");
-        document.title = "Djingo dit ... " + title;
-    }
-    
+    $("#chat-content .messages").last().append('<div class="raw-message"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>');    
+    $("#chat-content").animate({scrollTop: document.getElementById("chat-content").scrollHeight }, 100);
+}
 
-    $("#chat-content").append('<div data-from="' + from + '" class="message"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>');    
+function push(from, message, silence, id) {
+    var lastFrom = $("#chat-content .messages").last().attr("data-from");
+    var id = id?' id="'+id+'" ':'';
+    if (lastFrom !== from) {
+        $("#chat-content").append('<span data-from="' + from + '" class="from" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
+    }
+
+    if (!silence) {
+        if (from==="moi") {
+            playSound("Send_a_message");
+        } else {
+            playSound("Receive_a_message");
+            if (!document.hasFocus() || document.activeElement !== document.getElementById('chat-input')) {
+                document.title = "Djingo dit ... " + title;
+            }
+        }
+    }
+
+    $("#chat-content .messages").last().append('<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>');    
     $("#chat-content").animate({scrollTop: document.getElementById("chat-content").scrollHeight }, 100);
 }
 
@@ -72,3 +147,14 @@ function sendMessage() {
 function playSound(filename){   
     document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="./sounds/' + filename + '.mp3" type="audio/mpeg" /><source src="./sounds/' + filename + '.ogg" type="audio/ogg" /><embed hidden="true" autostart="true" loop="false" src="./sounds/' + filename +'.mp3" /></audio>';
 }
+
+/* --- On supprime le focus lors de la navigation avec la souris --- */
+var head = document.head || document.getElementsByTagName('head')[0];
+var axsStyles = head.appendChild(document.createElement('style'));
+document.addEventListener('mousedown', function() {
+    axsStyles.innerHTML = '* {outline:none !important}';
+});
+document.addEventListener('keydown', function() {
+    axsStyles.innerHTML = '';
+});
+/* ---- */
