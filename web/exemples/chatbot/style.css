@@ -15,10 +15,6 @@ button.btn-poll {
     margin-left: 1rem;
 }
 
-button:focus {
-    outline: none;
-}
-
 #skip-links {
     position: absolute;
     top: .5rem;
