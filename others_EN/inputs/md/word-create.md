@@ -13,106 +13,119 @@
 <style>h3 {font-size: 1rem;}</style>
 <span data-menuitem="word"></span>
 
-## Introduction
 
-Accessible Word documents are needed in order to be read by all users. Creating accessible Word documents requires to respect the following recommendations. It also enables you to produce accessible <abbr>PDF</abbr> documents through the <abbr>PDF</abbr> export functionality inside Word.
+Designing accessible Word Documents requires following different rules.  
+They are summarized below (and detailed guides are available on the <a href="https://webaim.org/techniques/word/">WebAIM Website</a>).  
+In order to help you, Word includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions. 
 
-## Recommendations
+## Language
 
+The main language of the document must be defined in the tab `File > Options > Language`.  
+Every change of language within the document must be identified by selecting the text and: `tab Review > Language > Set proofing language`.  
 
-You will find below a summary of the recommendations to follow. For more detail, please refer to <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">the <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr> website</a> (in French).
+## Document properties
 
-### 1. Use “Heading” styles for headings and sub-headings
+Title, author and tags fields have to be completed in tab `File > Info > Properties`.
+<img alt="" src="./images/word1.png" class="img-fluid">
 
-Headings and sub-headings must use the “Headings” styles (Heading 1, Heading 2, etc.) to structure the document’s content and provide easy access to them.
+These properties are readable by everyone in Windows Explorer and by the screen readers. 
 
-### 2. Use the “Normal” style for texts
+## Headings
+Give unique and descriptive headings allow users to clearly understand in which part they are on.  
+Use a “Heading 1” for the main content heading, and then a “Heading 2” for the major section headings and a “Heading 3” etc. (in the Home panel).  
+A good heading structure is often the most important accessibility criteria in Word documents. 
+Screen reader users have the ability to navigate long Word documents by heading structure. 
 
-The “Normal” style must be used for all text paragraphs (default style).
+## Table of contents 
+Provide a table of contents for long documents using tab `References > Table of Contents`  
+It allows users to find information more easily in the document. 
 
-### 3. Use dedicated styles to emphasize some contents.
+## Wording
+Use simple language: avoid abbreviations and acronyms (explain them at the first occurrence).  
+If necessary, keep accentuation on capital letters (example: É or Ç): use the `Insert tab > Symbol`
 
-Use predefined styles to emphasize some contents (e.g. quotes, legends, etc.) rather than using character formatting tools (bold etc.).
+## Formatting / layout
+Use familiar sans serif fonts (such as Arial or Calibri), in a large font size (12pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.  
+Use predefined styles for formatting content: "normal" style must be assigned almost everywhere (default style), the "quote" style for quotes, etc.
+Avoid justifying the text; prefer left alignment.  
+<img alt="" src="./images/word2.png" class="img-fluid">
 
-### 4. Don’t insert empty lines
+Do not use carriage returns to skip rows nor successive tabs ("Tab" key on the keyboard ) for text formatting.  
+In order to add white space between sentences and paragraphs, use option: `right click` on the text and select `Paragraph… > Indents and Spacing`.  
+<img alt="" src="./images/word3.png" class="img-fluid">  
+Do not use text boxes because their content is not interpreted by screen readers.  
+Use the page break option via the `Insert Tab > “Page Break”` menu to move to the next page.  
+Number pages of your document (`Insert Tab > “Page Number”`) to allow users to navigate easily.  
+Note: the « Tabs… » options can let you adjust the Tab stop position.  
+<img alt="" src="./images/word4.png" class="img-fluid">  
 
-Space between lines must be created through Paragraph options, where you can define the space before and after a paragraph.
+## Colors and contrasts
+### Use sufficient contrast between text and background colors
+The presentation of text should have a contrast ratio of at least 4.5:1. Here are some examples on a white background:
+- Foreground black : very good contrast, ratio = 21:1 
+- Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1
+- Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1  
 
-Page jumps must be created via proper “Jumps” (Insert&nbsp;> Page jump, new page).
+If you choose to not use the Orange Group colors guidelines, you can download the <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser tool</a>; it will be useful for checking your contrasts.
 
-### 5. Use bulleted lists
+### Ensure that color is not the only way to convey content
+For people who cannot see the colors or the shades of colors, it is important to convey content differently.
+<img alt="" src="./images/word5.png" class="img-fluid">  
+<img alt="" src="./images/word6.png" class="img-fluid">
 
-Lists must be made using the option “Bulleted list” or “Numbered list”, and not by inserting dashes into the text.
+## Bulleted Lists or Numbered Lists
+Always use the appropriate and native functions to create lists: 
+- Ordered (numbered) lists are used to present a group of items (words, sentences…) that follow a sequence
+- Unordered (bulleted) lists are used for a group of items without a sequence
+<img alt="" src="./images/word7.png" class="img-fluid">
 
-### 6. Use footnotes
+## Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content
+The alternative text has to convey the content and the purpose of the image and its context in a concise and unambiguous manner.  
+Right-click on an image and select Format Picture or Format `Shape > Alt Text`.  
+Enter the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).  
+If the picture is only decorative, leave the Description text box blank.  
+Alternative text helps people who can’t see the screen to understand what’s important in pictures and other visuals.  
+Note: if you use a layout option other than "In Line With Text" (by right-clicking on the image an “Wrap Text” or the “Picture Tools” Tab), the image and text present in the description of image (Alt Text) will be ignored by some screen readers.  
 
-Options to insert “Footnotes” and “Endnotes” must be used to properly insert notes in your document.
+## Audio or video file
+For audio and video content, in addition to alt text, be sure the video or audio as well as the player are accessible.  
+<a href="https://a11y-guidelines.orange.com/others_EN/video.html">See our recommendations for audio or video files.</a>  
 
-### 7. Number your pages
+## Links 
+Specify clear and accurate link text: it must make sense as standalone information to understand the destination target.  
+Specify when links are opened in a new window:  
+`Insert tab > Hyperlink > SreenTip`  
+<img alt="" src="./images/word8.png" class="img-fluid">  
+Note: a blind person asks his screen reader to list all the links on a page. Each link text will therefore be read isolated from its visual context.
 
-The “Page number” option makes it easier to get one’s bearings in a document.
+## Data Tables
+Use a simple table structure, and specify column header information.  
+Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.  
+If a table is too complex, you will need to provide an additional description: Right-click `Table Properties > Alt Text`  
+Finally, tables should not be used for formatting purposes : use the "Columns" option on the “Page Layout” tab to create a columns layout.
 
-### 8. Use “Columns” to layout text
+## Accessibility Checker
+At least, run Accessibility Checker to make sure your content is accessible. It can detect the main errors and suggests some solutions.  
+In `File tab > Check for Issues`.
+<img alt="" src="./images/word9.png" class="img-fluid">  
 
-The “Columns” option in the Layout group must be used (instead of tables) to layout the page as proper columns.
+Important: if you encounter some difficulties, try to save your document from within Word 2010 in ".docx" (or ".pptx") format. The option to "Maintain compatibility with previous versions of Word" has to remains unchecked. 
 
-### 9. Define the anchor for objects inserted into the page
+## Converting to PDF
+If you want to save you presentation as PDF, select: `File tab > Save & Send` and create PDF document.  
+Check if the « Document structure tags for accessibility » option is selected.  
+<img alt="" src="./images/word10.png" class="img-fluid">  
+<img alt="" src="./images/word11.png" class="img-fluid">  
 
-When you insert objects (image, shape, SmartArt, etc.), it is necessary to define an anchor point: in the options for page flow, choose the option “Aligned on the text” or “Top and bottom”.
+Note: with Word 2010, generated PDF documents may have accessibility issues (especially with the images vocalization). These issues have been fixed in later versions of Microsoft Office.
 
-### 10. Avoid text zones
+## For more detailed information
 
-Floating text zones are not always properly read by screen readers. Texts can be emphasized through the use of borders around a paragraph, for instance.
-
-### 11. Ensure colour is not the only means to convey information
-
-Information given through colour must also be conveyed via another means like shape, position, size…
-
-
-### 12. Ensure a sufficient contrast
-
-Contrast between the colour of text and of its background must be sufficient:
-- 4.5:1 for normal-size text;
-- 3:1 for bigger text.
-
-Contrast can be verified with the <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a>.
-
-### 13. Define language
-
-Language must be defined through the menu: File&nbsp;> Options&nbsp;> Language.
-Words or groups of words in another language must be explicitly described as such (menu: Revision&nbsp;> Language&nbsp;> Define the verification language).
-
-### 14. Provide replacement text for images
-
-If the image conveys information, you must provide a replacement text describing its content (right click, Image format&nbsp;> Replacement text&nbsp;> Description field).
-If the image is strictly for decoration, the Description field must be left empty.
-
-### 15. Make simple tables
-
-Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.
-
-### 16. Use the automated Accessibility checker
-
-Word provides an Accessibility checker (menu File&nbsp;> Check for problems&nbsp;> Check accessibility). It lists all contents prone to be hard to deal with and automatically detects failures. This tool must be used as it provides a huge help; however it does not prevent you from checking and applying all the recommendations provided in this page.
-
-### 17. Exporting the document to <abbr>PDF</abbr>
-
-To export to <abbr>PDF</abbr> you only need to go to File&nbsp;> Save as. Choose a name and select <abbr>PDF</abbr> as file type.
-The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.
-
-Please note that in Word for Office 2010 generated <abbr>PDF</abbr> documents can show accessibility issues, e.g. for the vocalisation of images. These issues were corrected in the following versions of Microsoft Office.
-
-### 18. Insert an table of contents
-
-For any long document (more than 2 pages), insert an automatically generated table of contents, in the menu & nbsp ;: References & nbsp;> Table of contents.
-It makes easier for everyone to find their way around and quickly go to the content you want to read.
-
-Note that you must update this table of contents as soon as you change the structure of the content, so prefer to generate the table of contents at the end of the content modifications.
-
-## External resources
-
-- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">Creating accessible office documents (in French)</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.
 - <a href="http://webaim.org/techniques/word/" hreflang="en">Word Accessibility, WebAIM</a>.
+- check <a href="https://a11y-guidelines.orange.com/others_EN/pdf.html">PDF</a> document accessibility: download <a href="https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">PDF Accessibility Checker (PAC 3)</a>.
+- <a href="https://support.office.com/en-us/article/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25?ui=en-US&rs=en-US&ad=US">Microsoft Accessibility Support website</a>
+- <a lang="fr" href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">(FR) Créer des documents bureautiques accessible <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.</a> 
+
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
