@@ -480,154 +480,126 @@ documentTitles["word-create.html#creating-accessible-word-documents"] = "Creatin
 index.add({
     url: "word-create.html#creating-accessible-word-documents",
     title: "Creating accessible Word documents",    
-    body: "# Creating accessible Word documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft Word\&quot;, \&quot;url\&quot;:\&quot;./word.html\&quot;},         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;, \&quot;expanded\&quot;: true},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;}     ]);  });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt; &lt;span data-menuitem=\&quot;word\&quot;&gt;&lt;/span&gt;  "
+    body: "# Creating accessible Word documents &lt;script&gt;$(document).ready(function () {     setBreadcrumb([         {\&quot;label\&quot;:\&quot;Microsoft Word\&quot;, \&quot;url\&quot;:\&quot;./word.html\&quot;},         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;}     ]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Create an accessible document\&quot;,\&quot;url\&quot;:\&quot;word-create.html\&quot;, \&quot;expanded\&quot;: true},          {\&quot;label\&quot;:\&quot;How to test my document\&quot;,\&quot;url\&quot;:\&quot;word-test.html\&quot;}     ]);  });&lt;/script&gt;  &lt;style&gt;h3 {font-size: 1rem;}&lt;/style&gt; &lt;span data-menuitem=\&quot;word\&quot;&gt;&lt;/span&gt;   Designing accessible Word Documents requires following different rules.   They are summarized below (and detailed guides are available on the &lt;a href=\&quot;https://webaim.org/techniques/word/\&quot;&gt;WebAIM Website&lt;/a&gt;).   In order to help you, Word includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions.   "
 });
 
-documentTitles["word-create.html#introduction"] = "Introduction";
+documentTitles["word-create.html#language"] = "Language";
 index.add({
-    url: "word-create.html#introduction",
-    title: "Introduction",    
-    body: "## Introduction  Accessible Word documents are needed in order to be read by all users. Creating accessible Word documents requires to respect the following recommendations. It also enables you to produce accessible &lt;abbr&gt;PDF&lt;/abbr&gt; documents through the &lt;abbr&gt;PDF&lt;/abbr&gt; export functionality inside Word.  "
+    url: "word-create.html#language",
+    title: "Language",    
+    body: "## Language  The main language of the document must be defined in the tab `File &gt; Options &gt; Language`.   Every change of language within the document must be identified by selecting the text and: `tab Review &gt; Language &gt; Set proofing language`.    "
 });
 
-documentTitles["word-create.html#recommendations"] = "Recommendations";
+documentTitles["word-create.html#document-properties"] = "Document properties";
 index.add({
-    url: "word-create.html#recommendations",
-    title: "Recommendations",    
-    body: "## Recommendations   You will find below a summary of the recommendations to follow. For more detail, please refer to &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;the &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt; website&lt;/a&gt; (in French).  "
+    url: "word-create.html#document-properties",
+    title: "Document properties",    
+    body: "## Document properties  Title, author and tags fields have to be completed in tab `File &gt; Info &gt; Properties`. &lt;img alt=\&quot;\&quot; src=\&quot;./images/word1.png\&quot; class=\&quot;img-fluid\&quot;&gt;  These properties are readable by everyone in Windows Explorer and by the screen readers.   "
 });
 
-documentTitles["word-create.html#1-use-heading-styles-for-headings-and-sub-headings"] = "1. Use “Heading” styles for headings and sub-headings";
+documentTitles["word-create.html#headings"] = "Headings";
 index.add({
-    url: "word-create.html#1-use-heading-styles-for-headings-and-sub-headings",
-    title: "1. Use “Heading” styles for headings and sub-headings",    
-    body: "### 1. Use “Heading” styles for headings and sub-headings  Headings and sub-headings must use the “Headings” styles (Heading 1, Heading 2, etc.) to structure the document’s content and provide easy access to them.  "
+    url: "word-create.html#headings",
+    title: "Headings",    
+    body: "## Headings Give unique and descriptive headings allow users to clearly understand in which part they are on.   Use a “Heading 1” for the main content heading, and then a “Heading 2” for the major section headings and a “Heading 3” etc. (in the Home panel).   A good heading structure is often the most important accessibility criteria in Word documents.  Screen reader users have the ability to navigate long Word documents by heading structure.   "
 });
 
-documentTitles["word-create.html#2-use-the-normal-style-for-texts"] = "2. Use the “Normal” style for texts";
+documentTitles["word-create.html#table-of-contents"] = "Table of contents";
 index.add({
-    url: "word-create.html#2-use-the-normal-style-for-texts",
-    title: "2. Use the “Normal” style for texts",    
-    body: "### 2. Use the “Normal” style for texts  The “Normal” style must be used for all text paragraphs (default style).  "
+    url: "word-create.html#table-of-contents",
+    title: "Table of contents",    
+    body: "## Table of contents  Provide a table of contents for long documents using tab `References &gt; Table of Contents`   It allows users to find information more easily in the document.   "
 });
 
-documentTitles["word-create.html#3-use-dedicated-styles-to-emphasize-some-contents"] = "3. Use dedicated styles to emphasize some contents.";
+documentTitles["word-create.html#wording"] = "Wording";
 index.add({
-    url: "word-create.html#3-use-dedicated-styles-to-emphasize-some-contents",
-    title: "3. Use dedicated styles to emphasize some contents.",    
-    body: "### 3. Use dedicated styles to emphasize some contents.  Use predefined styles to emphasize some contents (e.g. quotes, legends, etc.) rather than using character formatting tools (bold etc.).  "
+    url: "word-create.html#wording",
+    title: "Wording",    
+    body: "## Wording Use simple language: avoid abbreviations and acronyms (explain them at the first occurrence).   If necessary, keep accentuation on capital letters (example: É or Ç): use the `Insert tab &gt; Symbol`  "
 });
 
-documentTitles["word-create.html#4-dont-insert-empty-lines"] = "4. Don’t insert empty lines";
+documentTitles["word-create.html#formatting-layout"] = "Formatting / layout";
 index.add({
-    url: "word-create.html#4-dont-insert-empty-lines",
-    title: "4. Don’t insert empty lines",    
-    body: "### 4. Don’t insert empty lines  Space between lines must be created through Paragraph options, where you can define the space before and after a paragraph.  Page jumps must be created via proper “Jumps” (Insert&amp;nbsp;&gt; Page jump, new page).  "
+    url: "word-create.html#formatting-layout",
+    title: "Formatting / layout",    
+    body: "## Formatting / layout Use familiar sans serif fonts (such as Arial or Calibri), in a large font size (12pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.   Use predefined styles for formatting content: \&quot;normal\&quot; style must be assigned almost everywhere (default style), the \&quot;quote\&quot; style for quotes, etc. Avoid justifying the text; prefer left alignment.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word2.png\&quot; class=\&quot;img-fluid\&quot;&gt;  Do not use carriage returns to skip rows nor successive tabs (\&quot;Tab\&quot; key on the keyboard ) for text formatting.   In order to add white space between sentences and paragraphs, use option: `right click` on the text and select `Paragraph… &gt; Indents and Spacing`.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word3.png\&quot; class=\&quot;img-fluid\&quot;&gt;   Do not use text boxes because their content is not interpreted by screen readers.   Use the page break option via the `Insert Tab &gt; “Page Break”` menu to move to the next page.   Number pages of your document (`Insert Tab &gt; “Page Number”`) to allow users to navigate easily.   Note: the « Tabs… » options can let you adjust the Tab stop position.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word4.png\&quot; class=\&quot;img-fluid\&quot;&gt;    "
 });
 
-documentTitles["word-create.html#5-use-bulleted-lists"] = "5. Use bulleted lists";
+documentTitles["word-create.html#colors-and-contrasts"] = "Colors and contrasts";
 index.add({
-    url: "word-create.html#5-use-bulleted-lists",
-    title: "5. Use bulleted lists",    
-    body: "### 5. Use bulleted lists  Lists must be made using the option “Bulleted list” or “Numbered list”, and not by inserting dashes into the text.  "
+    url: "word-create.html#colors-and-contrasts",
+    title: "Colors and contrasts",    
+    body: "## Colors and contrasts "
 });
 
-documentTitles["word-create.html#6-use-footnotes"] = "6. Use footnotes";
+documentTitles["word-create.html#use-sufficient-contrast-between-text-and-background-colors"] = "Use sufficient contrast between text and background colors";
 index.add({
-    url: "word-create.html#6-use-footnotes",
-    title: "6. Use footnotes",    
-    body: "### 6. Use footnotes  Options to insert “Footnotes” and “Endnotes” must be used to properly insert notes in your document.  "
+    url: "word-create.html#use-sufficient-contrast-between-text-and-background-colors",
+    title: "Use sufficient contrast between text and background colors",    
+    body: "### Use sufficient contrast between text and background colors The presentation of text should have a contrast ratio of at least 4.5:1. Here are some examples on a white background: - Foreground black : very good contrast, ratio = 21:1  - Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1 - Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1    If you choose to not use the Orange Group colors guidelines, you can download the &lt;a href=\&quot;https://developer.paciellogroup.com/resources/contrastanalyser/\&quot;&gt;Colour Contrast Analyser tool&lt;/a&gt;; it will be useful for checking your contrasts.  "
 });
 
-documentTitles["word-create.html#7-number-your-pages"] = "7. Number your pages";
+documentTitles["word-create.html#ensure-that-color-is-not-the-only-way-to-convey-content"] = "Ensure that color is not the only way to convey content";
 index.add({
-    url: "word-create.html#7-number-your-pages",
-    title: "7. Number your pages",    
-    body: "### 7. Number your pages  The “Page number” option makes it easier to get one’s bearings in a document.  "
+    url: "word-create.html#ensure-that-color-is-not-the-only-way-to-convey-content",
+    title: "Ensure that color is not the only way to convey content",    
+    body: "### Ensure that color is not the only way to convey content For people who cannot see the colors or the shades of colors, it is important to convey content differently. &lt;img alt=\&quot;\&quot; src=\&quot;./images/word5.png\&quot; class=\&quot;img-fluid\&quot;&gt;   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word6.png\&quot; class=\&quot;img-fluid\&quot;&gt;  "
 });
 
-documentTitles["word-create.html#8-use-columns-to-layout-text"] = "8. Use “Columns” to layout text";
+documentTitles["word-create.html#bulleted-lists-or-numbered-lists"] = "Bulleted Lists or Numbered Lists";
 index.add({
-    url: "word-create.html#8-use-columns-to-layout-text",
-    title: "8. Use “Columns” to layout text",    
-    body: "### 8. Use “Columns” to layout text  The “Columns” option in the Layout group must be used (instead of tables) to layout the page as proper columns.  "
+    url: "word-create.html#bulleted-lists-or-numbered-lists",
+    title: "Bulleted Lists or Numbered Lists",    
+    body: "## Bulleted Lists or Numbered Lists Always use the appropriate and native functions to create lists:  - Ordered (numbered) lists are used to present a group of items (words, sentences…) that follow a sequence - Unordered (bulleted) lists are used for a group of items without a sequence &lt;img alt=\&quot;\&quot; src=\&quot;./images/word7.png\&quot; class=\&quot;img-fluid\&quot;&gt;  "
 });
 
-documentTitles["word-create.html#9-define-the-anchor-for-objects-inserted-into-the-page"] = "9. Define the anchor for objects inserted into the page";
+documentTitles["word-create.html#alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content"] = "Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content";
 index.add({
-    url: "word-create.html#9-define-the-anchor-for-objects-inserted-into-the-page",
-    title: "9. Define the anchor for objects inserted into the page",    
-    body: "### 9. Define the anchor for objects inserted into the page  When you insert objects (image, shape, SmartArt, etc.), it is necessary to define an anchor point: in the options for page flow, choose the option “Aligned on the text” or “Top and bottom”.  "
+    url: "word-create.html#alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content",
+    title: "Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content",    
+    body: "## Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content The alternative text has to convey the content and the purpose of the image and its context in a concise and unambiguous manner.   Right-click on an image and select Format Picture or Format `Shape &gt; Alt Text`.   Enter the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).   If the picture is only decorative, leave the Description text box blank.   Alternative text helps people who can’t see the screen to understand what’s important in pictures and other visuals.   Note: if you use a layout option other than \&quot;In Line With Text\&quot; (by right-clicking on the image an “Wrap Text” or the “Picture Tools” Tab), the image and text present in the description of image (Alt Text) will be ignored by some screen readers.    "
 });
 
-documentTitles["word-create.html#10-avoid-text-zones"] = "10. Avoid text zones";
+documentTitles["word-create.html#audio-or-video-file"] = "Audio or video file";
 index.add({
-    url: "word-create.html#10-avoid-text-zones",
-    title: "10. Avoid text zones",    
-    body: "### 10. Avoid text zones  Floating text zones are not always properly read by screen readers. Texts can be emphasized through the use of borders around a paragraph, for instance.  "
+    url: "word-create.html#audio-or-video-file",
+    title: "Audio or video file",    
+    body: "## Audio or video file For audio and video content, in addition to alt text, be sure the video or audio as well as the player are accessible.   &lt;a href=\&quot;https://a11y-guidelines.orange.com/others_EN/video.html\&quot;&gt;See our recommendations for audio or video files.&lt;/a&gt;    "
 });
 
-documentTitles["word-create.html#11-ensure-colour-is-not-the-only-means-to-convey-information"] = "11. Ensure colour is not the only means to convey information";
+documentTitles["word-create.html#links"] = "Links";
 index.add({
-    url: "word-create.html#11-ensure-colour-is-not-the-only-means-to-convey-information",
-    title: "11. Ensure colour is not the only means to convey information",    
-    body: "### 11. Ensure colour is not the only means to convey information  Information given through colour must also be conveyed via another means like shape, position, size…   "
+    url: "word-create.html#links",
+    title: "Links",    
+    body: "## Links  Specify clear and accurate link text: it must make sense as standalone information to understand the destination target.   Specify when links are opened in a new window:   `Insert tab &gt; Hyperlink &gt; SreenTip`   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word8.png\&quot; class=\&quot;img-fluid\&quot;&gt;   Note: a blind person asks his screen reader to list all the links on a page. Each link text will therefore be read isolated from its visual context.  "
 });
 
-documentTitles["word-create.html#12-ensure-a-sufficient-contrast"] = "12. Ensure a sufficient contrast";
+documentTitles["word-create.html#data-tables"] = "Data Tables";
 index.add({
-    url: "word-create.html#12-ensure-a-sufficient-contrast",
-    title: "12. Ensure a sufficient contrast",    
-    body: "### 12. Ensure a sufficient contrast  Contrast between the colour of text and of its background must be sufficient: - 4.5:1 for normal-size text; - 3:1 for bigger text.  Contrast can be verified with the &lt;a href=\&quot;https://www.paciellogroup.com/resources/contrastanalyser/\&quot; hreflang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;Colour Contrast Analyzer&lt;/a&gt;.  "
+    url: "word-create.html#data-tables",
+    title: "Data Tables",    
+    body: "## Data Tables Use a simple table structure, and specify column header information.   Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.   If a table is too complex, you will need to provide an additional description: Right-click `Table Properties &gt; Alt Text`   Finally, tables should not be used for formatting purposes : use the \&quot;Columns\&quot; option on the “Page Layout” tab to create a columns layout.  "
 });
 
-documentTitles["word-create.html#13-define-language"] = "13. Define language";
+documentTitles["word-create.html#accessibility-checker"] = "Accessibility Checker";
 index.add({
-    url: "word-create.html#13-define-language",
-    title: "13. Define language",    
-    body: "### 13. Define language  Language must be defined through the menu: File&amp;nbsp;&gt; Options&amp;nbsp;&gt; Language. Words or groups of words in another language must be explicitly described as such (menu: Revision&amp;nbsp;&gt; Language&amp;nbsp;&gt; Define the verification language).  "
+    url: "word-create.html#accessibility-checker",
+    title: "Accessibility Checker",    
+    body: "## Accessibility Checker At least, run Accessibility Checker to make sure your content is accessible. It can detect the main errors and suggests some solutions.   In `File tab &gt; Check for Issues`. &lt;img alt=\&quot;\&quot; src=\&quot;./images/word9.png\&quot; class=\&quot;img-fluid\&quot;&gt;    Important: if you encounter some difficulties, try to save your document from within Word 2010 in \&quot;.docx\&quot; (or \&quot;.pptx\&quot;) format. The option to \&quot;Maintain compatibility with previous versions of Word\&quot; has to remains unchecked.   "
 });
 
-documentTitles["word-create.html#14-provide-replacement-text-for-images"] = "14. Provide replacement text for images";
+documentTitles["word-create.html#converting-to-pdf"] = "Converting to PDF";
 index.add({
-    url: "word-create.html#14-provide-replacement-text-for-images",
-    title: "14. Provide replacement text for images",    
-    body: "### 14. Provide replacement text for images  If the image conveys information, you must provide a replacement text describing its content (right click, Image format&amp;nbsp;&gt; Replacement text&amp;nbsp;&gt; Description field). If the image is strictly for decoration, the Description field must be left empty.  "
+    url: "word-create.html#converting-to-pdf",
+    title: "Converting to PDF",    
+    body: "## Converting to PDF If you want to save you presentation as PDF, select: `File tab &gt; Save &amp; Send` and create PDF document.   Check if the « Document structure tags for accessibility » option is selected.   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word10.png\&quot; class=\&quot;img-fluid\&quot;&gt;   &lt;img alt=\&quot;\&quot; src=\&quot;./images/word11.png\&quot; class=\&quot;img-fluid\&quot;&gt;    Note: with Word 2010, generated PDF documents may have accessibility issues (especially with the images vocalization). These issues have been fixed in later versions of Microsoft Office.  "
 });
 
-documentTitles["word-create.html#15-make-simple-tables"] = "15. Make simple tables";
+documentTitles["word-create.html#for-more-detailed-information"] = "For more detailed information";
 index.add({
-    url: "word-create.html#15-make-simple-tables",
-    title: "15. Make simple tables",    
-    body: "### 15. Make simple tables  Data tables must stay simple. Avoid blending cells together. Avoid inserting images: they will not be read as table elements but as independent elements which will be read before or after the table according to the internal document’s reading order. Leave no empty cell.  "
-});
-
-documentTitles["word-create.html#16-use-the-automated-accessibility-checker"] = "16. Use the automated Accessibility checker";
-index.add({
-    url: "word-create.html#16-use-the-automated-accessibility-checker",
-    title: "16. Use the automated Accessibility checker",    
-    body: "### 16. Use the automated Accessibility checker  Word provides an Accessibility checker (menu File&amp;nbsp;&gt; Check for problems&amp;nbsp;&gt; Check accessibility). It lists all contents prone to be hard to deal with and automatically detects failures. This tool must be used as it provides a huge help; however it does not prevent you from checking and applying all the recommendations provided in this page.  "
-});
-
-documentTitles["word-create.html#17-exporting-the-document-to-abbrpdfabbr"] = "17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;";
-index.add({
-    url: "word-create.html#17-exporting-the-document-to-abbrpdfabbr",
-    title: "17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;",    
-    body: "### 17. Exporting the document to &lt;abbr&gt;PDF&lt;/abbr&gt;  To export to &lt;abbr&gt;PDF&lt;/abbr&gt; you only need to go to File&amp;nbsp;&gt; Save as. Choose a name and select &lt;abbr&gt;PDF&lt;/abbr&gt; as file type. The first time, make sure that the “Accessibility-friendly document structure tags” checkbox in Export options is checked.  Please note that in Word for Office 2010 generated &lt;abbr&gt;PDF&lt;/abbr&gt; documents can show accessibility issues, e.g. for the vocalisation of images. These issues were corrected in the following versions of Microsoft Office.  "
-});
-
-documentTitles["word-create.html#18-insert-an-table-of-contents"] = "18. Insert an table of contents";
-index.add({
-    url: "word-create.html#18-insert-an-table-of-contents",
-    title: "18. Insert an table of contents",    
-    body: "### 18. Insert an table of contents  For any long document (more than 2 pages), insert an automatically generated table of contents, in the menu &amp; nbsp ;: References &amp; nbsp;&gt; Table of contents. It makes easier for everyone to find their way around and quickly go to the content you want to read.  Note that you must update this table of contents as soon as you change the structure of the content, so prefer to generate the table of contents at the end of the content modifications.  "
-});
-
-documentTitles["word-create.html#external-resources"] = "External resources";
-index.add({
-    url: "word-create.html#external-resources",
-    title: "External resources",    
-    body: "## External resources  - &lt;a href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;Creating accessible office documents (in French)&lt;/a&gt;, &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt;. - &lt;a href=\&quot;http://webaim.org/techniques/word/\&quot; hreflang=\&quot;en\&quot;&gt;Word Accessibility, WebAIM&lt;/a&gt;.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "word-create.html#for-more-detailed-information",
+    title: "For more detailed information",    
+    body: "## For more detailed information  - &lt;a href=\&quot;http://webaim.org/techniques/word/\&quot; hreflang=\&quot;en\&quot;&gt;Word Accessibility, WebAIM&lt;/a&gt;. - check &lt;a href=\&quot;https://a11y-guidelines.orange.com/others_EN/pdf.html\&quot;&gt;PDF&lt;/a&gt; document accessibility: download &lt;a href=\&quot;https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html\&quot;&gt;PDF Accessibility Checker (PAC 3)&lt;/a&gt;. - &lt;a href=\&quot;https://support.office.com/en-us/article/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25?ui=en-US&amp;rs=en-US&amp;ad=US\&quot;&gt;Microsoft Accessibility Support website&lt;/a&gt; - &lt;a lang=\&quot;fr\&quot; href=\&quot;https://disic.github.io/guides-documents_bureautiques_accessibles/html/\&quot; hreflang=\&quot;fr\&quot;&gt;(FR) Créer des documents bureautiques accessible &lt;abbr title=\&quot;direction interministérielle du numérique et du système d’information et de communication\&quot; lang=\&quot;fr\&quot;&gt;DINSIC&lt;/abbr&gt;.&lt;/a&gt;    &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
