@@ -7,18 +7,21 @@
             "label":"Conception", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
             "onExpand": function () {
                 $("#incontournables-concepteurs-tab").tab("show");
+                window.location.hash = '';
             }
         },
         {
             "label":"Développement", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
             "onExpand": function () {
                 $("#incontournables-developpeurs-tab").tab("show");
+                window.location.hash = 'dev';
             }
         },
         {
             "label":"Tests", "url":"", "expanded":false, "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
             "onExpand": function () {
                 $("#incontournables-testeurs-tab").tab("show");
+                window.location.hash = 'test';
             }
         }
     ]);
@@ -28,11 +31,13 @@
     $("#incontournables-developpeurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-development"));
     })
-	$("#incontournables-testeurs-tab").on("click", function() {
+    $("#incontournables-testeurs-tab").on("click", function() {
         expandCollapse($("#left-navigation .menuitem-test"));
     })
     if (window.location.hash == "#dev") {
-        $("#incontournables-developpeurs-tab").trigger("click");
+        window.setTimeout(function() {$("#incontournables-developpeurs-tab").trigger("click")}, 0);
+    } else if (window.location.hash == "#test") {
+        window.setTimeout(function() {$("#incontournables-testeurs-tab").trigger("click"); }, 0);
     }
 });</script>
 
