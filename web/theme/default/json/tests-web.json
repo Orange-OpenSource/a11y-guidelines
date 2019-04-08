@@ -46,7 +46,7 @@
   },
   {
     "themes": "Contenu textuel",
-    "title": "Respecter la sémantique HTML / citation, lien, bouton",
+    "title": "Respecter la sémantique HTML",
     "type": [
       "Test manuel - Inspecteur de code"
     ],
@@ -56,9 +56,10 @@
       "Examiner les contenus"
     ],
     "verifier": [
-		"Vérifier que les sémantiques HTML appropriées sont utilisées pour le balisage des contenus, notamment : <ul><li>citation (présence de <code>&lt;blockquote&gt;</code> ou <code>&lt;q&gt;</code> lorsque nécessaire)</li><li>lien (<code>&lt;a&gt;</code>), pour tout changement de contexte via chargement d'une nouvelle URL</li><li>bouton (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), pour tout déclenchement d'action,  validation ou sélection</li></ul>"
+		"Vérifier que les sémantiques HTML appropriées sont utilisées pour le balisage des contenus, notamment : <ul><li>liste (cf détail étape suivante)</li><li>citation (présence de <code>&lt;blockquote&gt;</code> ou <code>&lt;q&gt;</code> lorsque nécessaire)</li><li>lien (<code>&lt;a&gt;</code>), pour tout changement de contexte via chargement d'une nouvelle URL</li><li>bouton (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), pour tout déclenchement d'action,  validation ou sélection</li></ul>"
 		],
     "resultat": [
+		"Tous les contenus, traités visuellement comme des listes, possèdent une sémantique liste HTML (<code>&lt;ol&gt;</code> pour des listes ordonnées, <code>&lt;ul&gt;</code> pour des listes non ordonnées)",
 		"Toutes les citations possèdent une sémantique de liste citation HTML",
 		"Tous les éléments interactifs entraînant un changement de contexte via un chargement d'URL, possède une sémantique de lien HTML (<code>&lt;a&gt;</code>)",
 		"Tous les éléments interactifs permettant le déclenchement d'une action, une validation ou une sélection, possèdent une sémantique de bouton HTML (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>)"
@@ -84,7 +85,7 @@
       "Vérifier l'absence de liste vide"
     ],
     "resultat": [
-      "Tous les contenus, traités visuellement comme des listes et qui sont bien des listes, possèdent une sémantique liste HTML (<code>&lt;ol&gt;</code> pour des listes ordonnées, <code>&lt;ul&gt;</code> pour des listes non ordonnées) ou équivalent <abbr>ARIA</abbr>"
+      "Existence de listes d'énumération pertinentes"
     ],
     "exception": "",
     "raccourcis": "",
@@ -103,10 +104,10 @@
 		"A minima vérifier : <ul><li>les éléments ont des balises de début et de fin,</li><li>les éléments sont imbriqués conformément à leurs spécifications,</li><li>les éléments ne contiennent pas d’attributs dupliqués,</li><li>chaque id est unique</li></ul>"
 		],
     "resultat": [
-      "Tous les éléments présenteNT des balises de débuts et de fin",
+      "Tous les éléments présentes des balises de débuts et de fin",
       "Tous les éléments sont imbriqués conformément à leur spécification",
-      "Tous les éléments ne contiennent pas d'attribut dupliqué",
-      "Absence d'attribut <code>id</code> dupliqué"
+      "Tous les éléments ne contiennent pas d'attributs dupliqués",
+      "Absence d'attributs <code>id</code> dupliqué"
     ],
     "exception": "",
     "raccourcis": "",
@@ -128,7 +129,7 @@
     ],
     "resultat": [
       "Un attribut lang est présent dans l'élément  <code>&lt;html&gt;</code> de la page",
-      "La valeur de l'attribut lang correspond à la langue principale du document, soit la langue utilisée pour rédiger la page"
+      "La valeur de l'attribut lang correspond à la langue principale du document"
     ],
     "exception": "",
     "raccourcis": "",
@@ -148,7 +149,7 @@
       "Vérifier qu'un attribut lang est renseigné pour le mots et expressions en langue étrangère"
     ],
     "resultat": [
-		"L'attribut lang doit être présent dans l'élément encapsulant le texte. <br/>Exemple : <code>…et comme dit Tim Berners Lee&nbsp;: &lt;q lang='en'&gt;The only disability is when people cannot see human potential&lt;/q&gt;</code>"
+		"L'attribut lang doit être présent dans l'élément encapsulant le texte. <br/>Exemple : <code>&lt;q lang='en'&gt;[…]&lt;/q&gt;</code>"
 	],
     "exception": "Pour les mots ou les expressions en langue étrangère passés dans l’usage courant (Google, newsletter…) ou les noms propres, ne pas indiquer de changement de langue.",
     "raccourcis": "",
@@ -166,19 +167,19 @@
       "Examiner les <code>table</code>"
     ],
     "verifier": [
-		"Vérifier que les tableaux ne sont pas utilisés à des fins de mise en page",
-		"<strong>Pour les tableaux de données :</strong> <br/>Vérifier que les tableaux de données possèdent un élément <code>caption</code> non vide, ou un titre de niveaux placé juste avant le tableau",
-		"<strong>Tableau à une entrée :</strong> <br/> Vérifier la présence d'entêtes (<code>th</code>) pour les tableaux simples",
-		"<strong>Tableau à deux entrées :</strong> <br/> Pour chaque <code>th</code> vérifier la présence d'un attribut  <code>scope='col'</code> pour les entêtes de colonnes, <br/>et la présence d'un <code>scope='row'</code> pour les entête de lignes",
+		"Vérifier que les tableaux ne sont pas utiliser à des fins de mise en page",
+		"<strong>Pour les tableaux de données :</strong> <br/>Vérifier que les tableaux de données possèdent un élément caption non vide, ou un titre de niveaux placé juste avant le tableau",
+		"<strong>Tableau à 1 entrée :</strong> <br/> Vérifier la présence d'entêtes ( <code>th</code>) pour la tableaux simples",
+		"<strong>Tableau à 2 entrées :</strong> <br/> Pour chaque <code>th</code> vérifier la présence d'un attribut  <code>scope='col'</code> pour les entêtes de colonnes, <br/>et la présence d'un <code>scope='row'</code> pour les entête de lignes",
 		"<strong>Tableaux complexes :</strong> <br/> Vérifier la présence d'entêtes <code>th</code> ou  d'attributs <code>id</code> et <code>headers</code>",
 		"Vérifier la présence d'un résumé explicitant la structure du tableau. <br/>HTML5 : présence d'un résumé, si nécessaire en masquage accessible ou <code>display:none</code>. <br/>Le résumé est lié au tableau via un <code>aria-describedby</code> <br/>Version antérieure : résumé présent dans un attribut <code>summary</code>"
 	],
     "resultat": [
-		"Les tableaux sont utilisés uniquement pour la présentation de données",
+		"Les tableaux sont utilisées uniquement pour la présentation de données",
 		"Les tableaux possèdent une légende (caption ou titre de niveaux placé juste avant)",
-		"Les tableaux simples possèdent des entêtes <code>th</code>",
+		"Les tableaux simples possèdent des entêtes  <code>th</code>",
 		"Les tableaux à double entrée possède des entêtes <code>th</code> ainsi que des attributs <code>scope='col'</code> et <code>scope='row'</code>",
-		"Les tableaux complexes possèdent des entêtes (<code>th</code> + attributs <code>scope</code>) ou des entêtes complexes basés sur l'utilisation d'attribut <code>id</code> et <code>headers</code>",
+		"Les tableaux complexes possèdent des entêtes (<code>th</code> + attributs <code>scope</code>) ou des entêtes complexes basées sur l'utilisation d'attribut <code>id</code> et <code>headers</code>",
 		"Les tableaux complexes possèdent un résumé  pertinent"
 	],
     "exception": "",
@@ -203,7 +204,7 @@
       "Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code> et <code>iframe</code> "
     ],
     "exception": [
-      "Présence d'un attribut <code>alt</code> pour toutes les images ",
+      "Présence d'un attribut <code>alt</code> pour toutes les images",
       "Présence d'un attribut <code>title</code> pour toutes les <code>frame</code> et <code>iframe</code> "
     ],
     "raccourcis": "",
@@ -268,7 +269,7 @@
 		"Examiner les cadres"
 	],
     "verifier": [
-      "Vérifier que la valeur des attributs <code>title</code> décrit le contenu ou la fonction de <code>iframe</code> ou <code>frame</code>"
+      "Vérifier que la valeur des attributs <code>title</code> décrit la contenu ou la fonction de <code>iframe</code> ou  <code>frame</code>"
     ],
     "resultat": [
       "Tous les cadres possèdent un attribut <code>title</code> pertinent"
@@ -284,7 +285,7 @@
       "Test manuel"
     ],
     "tests": [
-      "Examiner les contenus audio et vidéo de la page"
+      "Examiner les contenus audio et vidéos de la page"
     ],
     "verifier": [
 		"Vérifier que pour toute piste audio ou vidéo, un transcrit complet <br/>(texte contenant l'ensemble des informations visuelles et auditives) <br/>sous forme de texte html est, soit présent dans la page, <br/>soit, un lien pointe vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire",
@@ -307,10 +308,10 @@
       "Test manuel"
     ],
     "tests": [
-      "Examiner les contenus audio et vidéo de la page"
+      "Examiner les contenus audio et vidéos de la page"
     ],
     "verifier": [
-      "Vérifier qu'aucune piste audio ou vidéo ne se lance automatiquement au lancement de la page"
+      "Vérifier qu'aucune piste audio ou vidéo ne lance automatiquement au lancement de la page"
     ],
     "resultat": [
       "Les pistes audios et vidéos ne se lancent pas automatiquement au chargement de la page"
@@ -326,7 +327,7 @@
       "Test manuel"
     ],
     "tests": [
-      "Examiner les contenus audio et vidéo de la page"
+      "Examiner les contenus audio et vidéos de la page"
     ],
     "verifier": [
       "Vérifier pour toute piste audio ou vidéo qu'un mécanisme de contrôle est présent (pause, lecture)",
@@ -334,7 +335,7 @@
       "Vérifier manuellement, qu'il est possible de stopper/reprendre la lecture d'une piste audio ou vidéo, depuis une navigation clavier"
     ],
     "resultat": [
-		"Un mécanisme de contrôle de la piste audio ou vidéo est présent. <br/>Ce mécanisme permet la lecture ou la mise en pause du média, quelque soit l'aide technique utilisée"
+		"Un mécanisme de contrôle de la piste audio ou vidéo est présent. <br/>Ce mécanisme permet la lecture ou la mise en pause du média, quelque-soit l'aide technique utilisée"
 	],
     "exception": "",
     "raccourcis": "",
@@ -347,7 +348,7 @@
       "Test manuel"
     ],
     "tests": [
-      "Examiner les contenus de type animation et vidéo de la page qui clignotent"
+      "Examiner les contenus de type animations et vidéos de la page qui clignotent"
     ],
     "verifier": [
       "Vérifier qu'il n'y a pas de contenu présentant de clignotements rapides (plus de 3 flash à la seconde) ou les <a href='https://www.w3.org/TR/WCAG21/#dfn-general-flash-and-red-flash-thresholds' hreflang='en'>flashs sont inférieurs au seuil général ou seuil de rouge</a>."
@@ -409,10 +410,10 @@
       "Lancer le Color Contrast Analyser"
     ],
     "verifier": [
-      "Vérifier que les textes sous forme d'images, les graphiques, les icônes, et les composants interactifs ont un contraste suffisant"
+      "Vérifier que les textes sous forme d'images, les graphiques, les icônes, et les composants interactifs ont un contraste suffisant pour transmettre l'information"
     ],
     "resultat": [
-      "Présence de textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs suffisamment contrastés pour transmettre l'information"
+      "Présence de textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs suffisamment contrastés"
     ],
     "exception": "Sont exclus du périmètre  : <ul><li>les logos</li><li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li>si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>",
     "raccourcis": "",
@@ -465,14 +466,14 @@
     ],
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
-		"Localiser les liens, boutons et tout élément de navigation",
-		"Inspecter le libellé texte de ces éléments, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
+		"Localiser les liens, boutons et tous les items de navigation",
+		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>arai-label</code> et <code>title</code>"
 	],
     "verifier": [
       "Vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes"
     ],
     "resultat": [
-      "Les liens, boutons et éléments de navigation ayant un libellé identique, pointent vers la même cible, ou portent la même action"
+      "Les liens, boutons et items de navigation ayant un libellé identique, pointent vers la même cible, ou portent la même action"
     ],
     "exception": "",
     "raccourcis": "",
@@ -486,15 +487,15 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Localiser les liens, boutons et tout élément de navigation",
-      "Inspecter le libellé texte de ces éléments",
+      "Localiser les liens, boutons et tout items de navigation",
+      "Inspecter le libellé texte de ces items",
       "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
     ],
     "verifier": [
-      "Vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton, uniquement à partir de son <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>nom accessible</a>)"
+      "Vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton, uniquement à partir de son <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'> nom accessible</a>)"
     ],
     "resultat": [
-      "Les liens, boutons et éléments de navigation sont compréhensibles hors contextes"
+      "Les liens, boutons et items de navigation sont compréhensibles hors contextes"
     ],
     "exception": "",
     "raccourcis": "",
@@ -508,14 +509,14 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Localiser les liens, boutons et tout élément de navigation",
-      "Comparer le libellé texte ou le texte contenu dans l'image et <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible</a> de ces éléments" 
+      "Localiser les liens, boutons et tout items de navigation",
+      "Comparer le libellé texte ou le texte contenu dans l'image et <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible</a> de ces items" 
     ],
     "verifier": [
-      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran) est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>le nom accessible en HTML</a>"
+      "Vérifier que le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran) est présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'>Le nom accessible en HTML</a>"
     ],
     "resultat": [
-      "Les liens, boutons et éléments de navigation, en fait, tout composant d'interface, le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran) est présent (en premier, si possible) dans le nom (accessible) de ce composant"
+      "Les liens, boutons et items de navigation ont pour tout composant d'interface, le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran est présent (en premier, si possible) dans le nom (accessible) de ce composant"
     ],
     "exception": "",
     "raccourcis": "",
@@ -529,8 +530,8 @@
     ],
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
-      "Localiser les liens, boutons et tout élément de navigation",
-      "Inspecter le libellé texte de ces éléments",
+      "Localiser les liens, boutons et tout items de navigation",
+      "Inspecter le libellé texte de ces items",
       "Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
     ],
     "verifier": [
@@ -600,8 +601,8 @@
     ],
     "resultat": [
       "le contenu additionnel reste affiché lors du déplacement du pointeur de l'élément déclencheur vers le nouveau contenu",
-      "Le contenu additionnel peut être effacé sans avoir besoin de déplacer le pointeur ou le focus (par exemple, avec la touche <kbd>échap.</kbd>)",
-      "Le contenu additionnel est persistant jusqu'à la suppression du focus ou du survol sur l'élément déclenchant, que l'utilisateur le fasse disparaître ou que celui-ci n'est plus valide"
+      "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple, avec la touche <kbd>échap.</kbd>)",
+      "Le contenu additionnel  est persistant jusqu'à la suppression du focus ou du survol sur l'élément déclenchant, que l'utilisateur le fasse disparaître ou que ce contenu n'est plus valide"
     ],
     "exception": "",
     "raccourcis": "",
@@ -656,10 +657,10 @@
       "Identifier les éléments de navigation et de recherche"
     ],
     "verifier": [
-		"Vérifier qu'au moins deux des mécanismes listés ci-dessous sont présents sur la page, pour permettre à un utilisateur de se situer au sein d'un site : <ul><li>fournir un menu de navigation principal, identifiant la position courante de l'utilisateur</li><li>fournir une table des matières</li><li>fournir un sitemap</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site</li></ul>"
+		"Vérifier qu'au moins 2 des mécanismes listés ci-dessous sont présents sur la page, pour permettre à un utilisateur de se situer au sein d'un site : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur</li><li>fournir une table des matières</li><li>fournir un sitemap</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site</li></ul>"
 	],
     "resultat": [
-		"Deux des mécanismes ci-dessous sont présents sur la page : <ul><li>fournir un menu de navigation principal, identifiant la position courante de l'utilisateur (attention l'information ne doit pas reposer uniquement sur la couleur)</li><li>fournir un fil d'Ariane</li><li>fournir un sitemap, table des matières</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de liens permettant de naviguer à travers tout le site (en pied de page)</li></ul>"
+		"2 des mécanismes ci-dessous sont présents sur la page : <ul><li>fournir un menu de navigation principal, présentant la position courante de l'utilisateur (attention l'information ne doit reposer uniquement sur la couleur)</li><li>fournir un fil d'ariane</li><li>fournir un sitemap,  table des matières</li><li>fournir un mécanisme de recherche</li><li>fournir une liste de lien permettant de naviguer à travers tout le site (en pied de page)</li></ul>"
 	],
     "exception": "",
     "raccourcis": "",
@@ -679,7 +680,7 @@
       "Vérifier que la position courante de l'utilisateur au sein d'un site est matérialisée visuellement et programmatiquement"
     ],
     "resultat": [
-      "Une indication pas seulement visuelle est présente afin d'identifier la page active (attention l'information ne doit pas reposer uniquement sur la couleur)"
+      "Une indication pas seulement visuelle est présente afin d'identifier la page active (attention l'information ne doit reposer uniquement sur la couleur)"
     ],
     "exception": "",
     "raccourcis": "",
@@ -720,7 +721,7 @@
       "Vérifier que ce mécanisme est accessible à la souris et à la navigation clavier"
     ],
     "resultat": [
-		"L'utilisateur peut mettre en pause/relancer les animations, les mouvements, les mises à jour ou les clignotements."
+		"L'utilisateur peut mettre pause/relancer les animations, les mouvements, les mises à jour ou les clignotement."
 	],
     "exception": "",
     "raccourcis": "",
@@ -779,7 +780,7 @@
       "Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est suffisamment  visible"
     ],
     "resultat": [
-      "La prise de focus est visible (par exemple, la propriété CSS <code>outline</code> a une taille suffisante >1px)"
+      "La prise de focus est visible (par exemple, pour la propriété CSS <code>outline</code> a une taille suffisante >1px)"
     ],
     "exception": "",
     "raccourcis": "",
@@ -798,7 +799,7 @@
       "Tester avec le Color Contrast Analyzer"
     ],
     "verifier": [
-      "Vérifier que le niveau de contraste entre la couleur de l'indicateur de focus et le fond, est suffisant"
+      "Vérifier que le niveau de contraste entre la couleur de l'indicateur de focus et le fond, est suffisante"
     ],
     "resultat": [
       "Le niveau de contraste est suffisant 3:1"
@@ -818,10 +819,10 @@
       "Zoom à 200%"
     ],
     "verifier": [
-      "Vérifier qu'il n'y ai pas de contenu ou de fonctionnalité inutilisable tronqué ou masqué"
+      "Vérifier qu'il n'y ai pas de contenus ou de fonctionnalités inutilisables tronqués ou masqués"
     ],
     "resultat": [
-      "Absence de contenu et fonctionnalité inutilisable, tronqué ou masqué"
+      "Absence de contenus et fonctionnalités inutilisables, tronqués ou masqués"
     ],
     "exception": "",
     "raccourcis": "",
@@ -834,13 +835,13 @@
       "Test manuel"
     ],
     "tests": [
-      "Dimensionner le viewport à 320 pixels CSS de large ou utiliser un smartphone de cette taille"
+      "Dimensionner le viewport à 320 px CSS de large ou utiliser un smartphone de cette taille"
     ],
     "verifier": [
       "Vérifier qu'aucune barre de défilement n'apparaît dans le sens horizontal"
     ],
     "resultat": [
-      "Les pages conçues pour scroll vertical (donc avec un texte horizontal), ne font par apparaître d'ascenseur horizontal lorsqu'on fixe une largeur d'affichage à 320 pixels CSS"
+      "Les pages conçues pour scroll vertical (donc avec un texte horizontal), ne font par apparaître d'ascenseur horizontal lorsqu'on fixe une largeur d'affichage à 320px CSS"
     ],
     "exception": "Certains contenus tels des cartes, tableaux de données, jeux, etc…, peuvent nécessiter un scroll à 2 dimensions.",
     "raccourcis": "",
@@ -853,7 +854,7 @@
       "Bookmarklet"
     ],
     "tests": [
-      "Se rendre sur <a href='https://a11y.forge.orange-labs.fr/web/aerer-texte.html'>notre site de recommandation, aérer le texte</a>",
+      "Se rendre sur <a href='https://a11y.forge.orange-labs.fr/web/aerer-texte.html'>notre site de recommandation</a>",
       "Ajouter le bookmarklet à vos favoris",
       "Consulter la page",
       "Activer le bookmarklet"
@@ -962,7 +963,7 @@
       "Lancer aXe"
     ],
     "verifier": [
-		"Vérifier l'absence d'erreur relative à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
+		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
 	],
     "resultat": [
 		"Présence, de préférence, d'une balise <code>label</code> ou l'équivalent pour tout champ de formulaire"
@@ -985,7 +986,7 @@
       "Vérifier que le texte des labels (élément <code>label</code>, ou <code>aria-label</code>, ou <code>title</code>) est pertinent"
     ],
     "resultat": [
-      "Présence d'intitulés pertinents pour tout champ de formulaire (<code>label</code> ou l'équivalent)"
+      "Présence d'intitulés d'une balise <code>label</code> ou l'équivalent pertinents pour tout champ de formulaire"
     ],
     "exception": "",
     "raccourcis": "",
@@ -1005,7 +1006,7 @@
 		"Vérifier que le texte des labels indique le format de données lorsque nécessaire."
 	],
     "resultat": [
-      "Présence de texte précisent le format de saisie attendu"
+      "Présence de texte précisent le formats de saisie"
     ],
     "exception": "",
     "raccourcis": "",
@@ -1069,7 +1070,7 @@
     "resultat": [
       "Les erreurs sont détectées et les messages pertinents"
     ],
-    "exception": "",
+    "exception": [],
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
@@ -1108,8 +1109,7 @@
 	    "Ou utiliser axe (conseillé pour les profils qualifieurs)"
     ],
     "verifier": [
-      "Vérifier que pour la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code> n’est pas présent</li><li>Et le paramètre maximum-scale n’est pas inférieur à 2</li></ul>", 
-      "ou que aXe ne remonte pas 'Zooming and scaling should allow maximum scale of 5'"
+      "Vérifier que pour la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code> n’est pas présent</li><li>Et le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
     ],
     "resultat": [
       "La page ne contient pas dans la <code>&lt;meta name= 'viewport'&gt;</code> : <ul><li>Le paramètre <code>user-scalable='no'</code></li><li>Et  le paramètre maximum-scale n’est pas inférieur à 2</li></ul>"
