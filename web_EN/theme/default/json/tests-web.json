@@ -1232,7 +1232,9 @@
     "verifier": [
       "Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"
     ],
-    "resultat":"",
+    "resultat":[
+      "The site's content is usable and readable whatever the orientation of the screen"
+    ],
     "exception":"",
     "raccourcis":"",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
@@ -1250,7 +1252,7 @@
 		"Check that all features are available with a screen reader: <ul><li>Content is correctly vocalized</li><li>Features are usable</li></ul>"
 	],
     "resultat": [
-		"The main features can be used from a screen reader"
+		"The main features can be used with a screen reader"
 	],
     "exception":"",
     "raccourcis":"",

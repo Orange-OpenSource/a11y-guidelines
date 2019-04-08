@@ -1170,7 +1170,7 @@
       "Si une action doit être absolument déclenchée sur l'événement Down, vérifier alors qu'il existe un mécanisme pour annuler l'action"
     ],
     "resultat": [
-      "Un boîte modale apparaît demandant la confirmation de l'action"
+      "Une boîte modale apparaît demandant la confirmation de l'action"
     ],
     "exception": [
       "La fonction sur l'événement Down est essentielle, les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles"
@@ -1211,7 +1211,9 @@
     "verifier": [
       "Vérifier que le contenu et les fonctionnalités sont disponibles dans les 2 orientations (pas de perte d'information, pas d'éléments tronqués)"
     ],
-    "resultat": "",
+    "resultat": [
+      "Le contenu du site est utilisable et lisible quelque soit l'orientation de l'écran"
+    ],
     "exception": "",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
@@ -1229,7 +1231,7 @@
 		"Vérifier que toutes les fonctionnalités sont disponibles avec un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables</li></ul>"
 	],
     "resultat": [
-		"Les principales fonctionnalités sont utilisables depuis un lecteur d'écran"
+		"Les principales fonctionnalités sont utilisables avec un lecteur d'écran"
 	],
     "exception": "",
     "raccourcis": "",
