@@ -46,7 +46,7 @@
   },
   {
     "themes": "Textual content",
-    "title": "Use HTML semantics",
+    "title": "Use HTML semantics / citation, link, button",
     "type": [
       "Manual test - Code inspector"
     ],
@@ -56,11 +56,9 @@
       "Inspect the content"
     ],
     "verifier": [
-		"Check that appropriate HTML semantics are used to markup content, including: <ul><li>list (see details next step)</li><li>quote (presence of <code>&lt;blockquote&gt;</code> or <code>&lt;q&gt;</code> when necessary)</li><li>link (<code>&lt;a&gt;</code>), for any change of context via loading a new URL</li><li>button (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), for any triggering of an action, validation or selection</li></ul>"
+		"Check that appropriate HTML semantics are used to markup content, including: <ul><li>quote (presence of <code>&lt;blockquote&gt;</code> or <code>&lt;q&gt;</code> when necessary)</li><li>link (<code>&lt;a&gt;</code>), for any change of context via loading a new URL</li><li>button (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), for any triggering of an action, validation or selection</li></ul>"
 		],
     "resultat": [
-		"All content, visually treated as lists, has a semantic HTML list (<code>&lt;ol&gt;</code> for ordered lists, <code>&lt;ul&gt;</code> for non-ordered lists)",
-		"All quotes have HTML quotation list semantics",
 		"All interactive elements that cause a context change via URL loading, have HTML link semantics (<code>&lt;a&gt</code>)",
 		"All interactive elements allowing the triggering of an action, validation or selection, have HTML button semantics (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>)"
 		],
@@ -85,7 +83,8 @@
       "Check for the absence of an empty list"
     ],
     "resultat": [
-      "Existence of relevant enumeration lists"
+      "All content, visually treated as lists and are real lists, has a semantic HTML list (<code>&lt;ol&gt;</code> for ordered lists, <code>&lt;ul&gt;</code> for non-ordered lists) or <abbr>ARIA</abbr> equivalent",
+      "All quotes have HTML quotation list semantics",
     ],
     "exception":"",
     "raccourcis":"",
@@ -106,8 +105,8 @@
     "resultat": [
       "All the elements present in the beginning and end tags",
       "All elements are nested according to their specification",
-      "No element contain duplicated attributes",
-      "No duplicated <code>id</code> attributes"
+      "No element contain duplicated attribute",
+      "No duplicated <code>id</code> attribute"
     ],
     "exception":"",
     "raccourcis":"",
@@ -129,7 +128,7 @@
     ],
     "resultat": [
       "A language attribute is present in the <code>&lt;html&gt;</code> element of the page",
-      "The value of the lang attribute matches to the main language of the document"
+      "The value of the lang attribute matches to the main language of the document, so the language used to write the page"
     ],
     "exception":"",
     "raccourcis":"",
@@ -149,7 +148,7 @@
       "Check that a language attribute is present for the foreign language words and expressions"
     ],
     "resultat": [
-		"The lang attribute must be present in the element encapsulating the text. <br/>ex : <code>&lt;q lang='en'&gt;[...]&lt;/q&gt;</code>"
+		"The lang attribute must be present in the element encapsulating the text. <br/>ex : <code>…and as Tim Berners Lee says: &lt;q&gtThe only disability is when people cannot see human potential&lt;/q&gt;</code>"
 	],
     "exception": "For words or expressions in a foreign language that have passed into common use (déjà-vu, cul-de-sac..) or proper names, do not indicate a change of language.",
     "raccourcis":"",
@@ -410,10 +409,10 @@
       "Launch Color Contrast Analyser"
     ],
     "verifier": [
-      "Verify that text of images, graphics, icons, and interactive components have sufficient contrast to transmit information."
+      "Verify that text of images, graphics, icons, and interactive components have sufficient contrast"
     ],
     "resultat": [
-      "Presence of text of images, graphic objects, icons, and interactive components with sufficient contrast"
+      "Presence of text of images, graphic objects, icons, and interactive components with sufficient contrast to transmit information"
     ],
     "exception": "Are excluded from the scope: <ul><li> logos</li><li> if a text, such as a label, a data table, provides the same information as the icon or graphic</li><li> if the lack of contrast of the image does not prevent the understanding of the content or its function</li><li> inactive components</li></ul>",
     "raccourcis":"",
@@ -467,7 +466,7 @@
     "tests": [
 		"Run the code inspector of the browser",
 		"Locate links, buttons and all navigation items",
-		"Inspect the text wording of these items, <br/>If the test cannot be validated in step 3, inspect the <code>title</code> and <code>title</code> attributes"
+		"Inspect the text wording of these items, <br/>If the test cannot be validated in step 3, inspect the <code>aria-label</code> and <code>title</code> attributes"
 	],
     "verifier": [
       "Check that there are no identical labels pointing to different destinations"
@@ -510,38 +509,17 @@
     "tests": [
       "Run the code inspector of the browser",
       "Locate links, buttons and all navigation items",
-      "Compare the text of links, buttons... or the text of the image and <a href='http://a11y-guidelines.orange.com/web_EN/a11y-name.html'>the accessible name</a> of these items"
+      "Compare the text of links, buttons or the text of the image with <a href='http://a11y-guidelines.orange.com/web_EN/a11y-name.html'>the accessible name</a> of these items"
     ],
     "verifier": [
-      "Verify that the text of the displayed label (the text or the text of image of interactive items) is present (first, if possible) in the (accessible) name of this component (more details, <a href='http://a11y-guidelines.orange.com/web_EN/a11y-name.html'>the accessible name</a>"
+      "Verify that the text of the displayed label of all interface components (the text or the text of image of interactive items) is present (first, if possible) in the (accessible) name of this component (more details, <a href='http://a11y-guidelines.orange.com/web_EN/a11y-name.html'>the accessible name</a>"
     ],
     "resultat": [
-      "The links, buttons and navigation items have for any interface component, the text of the displayed label (the text or the text of the image of interactive items) is present (first, if possible) in the (accessible) name of this component"
+      "The links, buttons and navigation items, so, any interface component have a displayed text for label (the text or the text of the image of interactive items) present (first, if possible) in the (accessible) name of this component"
     ],
     "exception": "",
     "raccourcis": "",
     "profils": ["Accessibility Expert"]
-  },
-  {
-    "themes": "Common navigation",
-    "title": "Link and button labels must be understandable out of context / names",
-    "type": [
-      "Manual test - Code inspector"
-    ],
-    "tests": [
-      "Run the code inspector of the browser",
-      "Locate links, buttons and all navigation items",
-      "/////Compare the text wording or text contained in the image of these items with the <a href='?'>accessible name</a>"
-    ],
-    "verifier": [
-      "/////Check that the text of the displayed label (the text label or the text of the image visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of this component"
-    ],
-    "resultat": [
-      "/////For each interface component, the text of the displayed label (the text label or image text visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of that component"
-    ],
-    "exception":"",
-    "raccourcis":"",
-    "profils": ["Developer", "Accessibility Expert"]
   },
   {
     "themes": "Common navigation",
@@ -678,10 +656,10 @@
       "Identify navigation and search elements"
     ],
     "verifier": [
-		"Verify that at least 2 of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu, locating the current position of the user</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>"
+		"Verify that at least two of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu, locating the current position of the user</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>"
 	],
     "resultat": [
-		"2 of the following mechanisms are present on the page: <ul><li>provide a main navigation menu, presenting the current position of the user (be careful, the information must not be based on color only)</li><li>provide a breadcrumb trail</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li></ul>"
+		"Two of the following mechanisms are present on the page: <ul><li>provide a main navigation menu, locating the current position of the user (be careful, the information must not be based on color only)</li><li>provide a breadcrumb trail</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li></ul>"
 	],
     "exception":"",
     "raccourcis":"",
@@ -742,7 +720,7 @@
       "Check that this mechanism is accessible with mouse and keyboard"
     ],
     "resultat": [
-		"The user can pause/restart animations, motions, updates or blinking content."
+		"The user can pause/restart animations, motions, updates or blinking contents."
 	],
     "exception":"",
     "raccourcis":"",
@@ -840,7 +818,7 @@
       "Zoom to 200%"
     ],
     "verifier": [
-      "Check that there are not unusable, truncated or hidden content or features"
+      "Check that there are not unusable, truncated or hidden content or feature"
     ],
     "resultat": [
       "Absence of content and functionality unusable, truncated or hidden"
@@ -856,13 +834,13 @@
       "Manual test"
     ],
     "tests": [
-      "Sizing the viewport to 320 px CSS wide or use a smartphone of that size"
+      "Sizing the viewport to 320 pixels CSS wide or use a smartphone of that size"
     ],
     "verifier": [
       "Check that no scroll bars appear horizontally"
     ],
     "resultat": [
-      "Pages designed for vertical scroll (e.g. with horizontal text), do not show a horizontal scrollbar when a display width is set to 320px CSS"
+      "Pages designed for vertical scroll (e.g. with horizontal text), do not show a horizontal scrollbar when a display width is set to 320 pixels CSS"
     ],
     "exception": "Some content such as maps, data tables, games, etc., may require a 2-dimensional scroll.",
     "raccourcis":"",
@@ -875,7 +853,7 @@
       "Bookmarklet"
     ],
     "tests": [
-      "Go to our guidelines site: https://a11y-guidelines.orange.com/web_EN/inc-dev-aerer-texte.html",
+      "Go to our <a href='https://a11y.forge.orange-labs.fr/web/aerer-texte.html'>guidelines site, text spacing</a>",
       "Add the bookmarklet to your favorites",
       "Consult the page",
       "Activate the bookmarklet"
@@ -1091,7 +1069,7 @@
     "resultat": [
       "Errors are detected and messages relevant"
     ],
-    "exception": [],
+    "exception": "",
     "raccourcis":"",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
   },
@@ -1130,7 +1108,8 @@
 	  "Or use aXe (recommended for qualifying profiles)"
     ],
     "verifier": [
-      "Check that for the <code>&lt;meta name=the viewport'&gt;</code> <ul><li>The <code>user-scalable='no'</code> parameter is not present</li><li>And the maximum-scale parameter is not less than 2</li></ul>"
+      "Check that for the <code>&lt;meta name=the viewport'&gt;</code> <ul><li>The <code>user-scalable='no'</code> parameter is not present</li><li>And the maximum-scale parameter is not less than 2</li></ul>", 
+      "Or be sure aXe don't display 'Zooming and scaling should allow maximum scale of 5' error"
     ],
     "resultat": [
       "The page does not contain in the <code>&lt;meta name='viewport' &gt;</code> <ul><li>The <code>user-scalable='no'</code> parameter</li><li>And the maximum-scale parameter is not less than 2</li></ul>"
