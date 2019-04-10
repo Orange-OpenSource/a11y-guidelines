@@ -467,7 +467,7 @@
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
 		"Localiser les liens, boutons et tous les items de navigation",
-		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>arai-label</code> et <code>title</code>"
+		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
 	],
     "verifier": [
       "Vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes"
@@ -963,7 +963,7 @@
       "Lancer aXe"
     ],
     "verifier": [
-		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
+		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>title</code></li><li>Présence de l'attribut <code>aria-label</code></li></ul>"
 	],
     "resultat": [
 		"Présence, de préférence, d'une balise <code>label</code> ou l'équivalent pour tout champ de formulaire"
@@ -983,7 +983,7 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-      "Vérifier que le texte des labels (élément <code>label</code>, ou <code>aria-label</code>, ou <code>title</code>) est pertinent"
+      "Vérifier que le texte des labels (élément <code>label</code>, ou <code>title</code>) est pertinent, ou <code>aria-label</code>"
     ],
     "resultat": [
       "Présence d'intitulés d'une balise <code>label</code> ou l'équivalent pertinents pour tout champ de formulaire"
