@@ -53,10 +53,10 @@ $(document).ready(function() {
         document.title = title;
     });        
     
-    push("Djingo", "Bonjour, puis-je vous aider ?", true); 
+    push("Djingo", "Hello, may I help you ?", true); 
    
     $("#btnExemple1, #btnExemple2").on("click", function () {
-        alert("Ouverture du chatbot !");
+        alert("Opening the chatbot !");
     });
 
     $("#btnChoice").on("click", function () {
@@ -64,14 +64,14 @@ $(document).ready(function() {
         $("#btnChatbot").addClass("sr-only");
         $("#chatbot-window").removeClass("chatbot-hidden");
         window.setTimeout(function () {
-            push("moi", "Et si on parlait accessibilité ?");        
+            push("me", "What about accessibility ?");
         },0);
         
         window.setTimeout(function () {
             $("#chat-container").attr("aria-live", "off");
             $("#poll1, #poll-web, #poll-mobile").attr("id","");
-            push("Djingo", "Excellente idée ! Vous souhaitez parler d'accessibilité web ou mobile ?", true, "poll1"); 
-            rawPush('moi', '<button id="poll-web" class="btn btn-primary btn-poll">Web</button><button id="poll-mobile" class="btn btn-primary btn-poll">Mobile</button>');            
+            push("Djingo", "Excellent idea ! Do you want to talk about web or mobile accessibility ?", true, "poll1"); 
+            rawPush('me', '<button id="poll-web" class="btn btn-primary btn-poll">Web</button><button id="poll-mobile" class="btn btn-primary btn-poll">Mobile</button>');            
             window.setTimeout(function() {
                 $("#chat-container").attr("aria-live", "polite");
             }, 0);
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
     $('body').on('click', '#poll-web', function () {                
         window.setTimeout(function () {
-            push("moi", "Parlons d'accessibilité Web.");
+            push("me", "Let's talk about web accessibility.");
         }, 500);
         $("#chat-input").val("").focus();
         $(".from.invisible").remove();
@@ -93,7 +93,7 @@ $(document).ready(function() {
         $(".from.invisible").remove();
         $(".messages").last().remove();
         window.setTimeout(function () {
-            push("moi", "Parlons d'accessibilité mobile.");
+            push("me", "Let's talk about mobile accessibility.");
         },500);
     });    
 
@@ -104,7 +104,7 @@ function rawPush(from, message) {
     if (lastFrom !== from) {
         $("#chat-content").append('<span data-from="' + from + '" class="from invisible" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
     }
-    $("#chat-content .messages").last().append('<div class="raw-message"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>');    
+    $("#chat-content .messages").last().append('<div class="raw-message"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');    
     $("#chat-content").animate({scrollTop: document.getElementById("chat-content").scrollHeight }, 100);
 }
 
@@ -116,17 +116,17 @@ function push(from, message, silence, id) {
     }
 
     if (!silence) {
-        if (from==="moi") {
+        if (from==="me") {
             playSound("Send_a_message");
         } else {
             playSound("Receive_a_message");
             if (!document.hasFocus() || document.activeElement !== document.getElementById('chat-input')) {
-                document.title = "Djingo dit ... " + title;
+                document.title = "Djingo says ... " + title;
             }
         }
     }
 
-    $("#chat-content .messages").last().append('<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>');    
+    $("#chat-content .messages").last().append('<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');    
     $("#chat-content").animate({scrollTop: document.getElementById("chat-content").scrollHeight }, 100);
 }
 
@@ -135,7 +135,7 @@ function sendMessage() {
     if (msg == '') {
         return;
     }
-    push("moi", msg);
+    push("me", msg);
     $("#chat-input").val("").focus();
     
     // echo reply

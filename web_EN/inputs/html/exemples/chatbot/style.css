@@ -162,7 +162,7 @@ button.btn-poll {
     clear: both;
 }
 
-#chatbot span.from[data-from=moi] {
+#chatbot span.from[data-from=me] {
     float: right;    
     text-align: right;
 }
@@ -177,11 +177,11 @@ button.btn-poll {
     margin-bottom: .5rem;
 }
 
-#chatbot .messages[data-from=moi] .message:first-child {
+#chatbot .messages[data-from=me] .message:first-child {
     border-top-right-radius: 1rem;
 }
 
-#chatbot .messages[data-from=moi] .message:last-child {
+#chatbot .messages[data-from=me] .message:last-child {
     border-bottom-right-radius: 1rem;
 }
 
@@ -194,7 +194,7 @@ button.btn-poll {
     clear: both;    
 }
 
-#chatbot .messages[data-from=moi] .message {
+#chatbot .messages[data-from=me] .message {
     border-radius: 1rem .3rem .3rem 1rem;
     float: right;
     text-align: right;
@@ -208,7 +208,7 @@ button.btn-poll {
     background-color: transparent;
 }
 
-#chatbot .messages[data-from=moi] .raw-message {
+#chatbot .messages[data-from=me] .raw-message {
     float: right;
 }
 
