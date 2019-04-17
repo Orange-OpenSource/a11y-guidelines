@@ -27,7 +27,7 @@
     <dd>Sample code to make accessible tags (part 1).</dd>
     <dt><a href="exemples/tag-exemples/index.html">Create accessible “tags” 2/2 (examples)</a></dt>
     <dd>Sample code to make accessible tags (part 2) examples.</dd>
-    <dt><a href="exemples/iframes-techniques/index.html">Hidding technical <code>iframes</code></a></dt>
+    <dt><a href="exemples/iframes-techniques/index.html">Hiding technical <code>iframes</code></a></dt>
     <dd>Hidding iframes to assistive technology.</dd>
     <dt><a href="label-ledby-describedby.html"><abbr>ARIA</abbr> attributes that can save you</a></dt>
     <dd>Some ARIA attributes to know.</dd>
