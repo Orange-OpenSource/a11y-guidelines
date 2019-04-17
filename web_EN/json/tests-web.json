@@ -522,28 +522,7 @@
     "raccourcis": "",
     "profils": ["Accessibility Expert"]
   },
-  {
-    "themes": "Common navigation",
-    "title": "Link and button labels must be understandable out of context / names",
-    "type": [
-      "Manual test - Code inspector"
-    ],
-    "tests": [
-      "Run the code inspector of the browser",
-      "Locate links, buttons and all navigation items",
-      "/////Compare the text wording or text contained in the image of these items with the <a href='?'>accessible name</a>"
-    ],
-    "verifier": [
-      "/////Check that the text of the displayed label (the text label or the text of the image visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of this component"
-    ],
-    "resultat": [
-      "/////For each interface component, the text of the displayed label (the text label or image text visible on the screen is present (first, if possible) in the <a href='?'>accessible name</a> of that component"
-    ],
-    "exception":"",
-    "raccourcis":"",
-    "profils": ["Developer", "Accessibility Expert"]
-  },
-  {
+    {
     "themes": "Common navigation",
     "title": "Warn the user when opening a new window",
     "type": [
@@ -984,7 +963,7 @@
       "Launch aXe"
     ],
     "verifier": [
-		"Check for errors for unlabelled form elements. <br/><br/>One of the following solutions must be implemented, in order of preference: <ul><li>Presence of an <code>&lt;label&gt;</code> element accessible hiding or not, correctly linked to its field</li><li>Presence of the <code>aria-label</code> attribute</li><li>Presence of the <code>title</code> attribute</li></ul>"
+		"Check for errors for unlabelled form elements. <br/><br/>One of the following solutions must be implemented, in order of preference: <ul><li>Presence of an <code>&lt;label&gt;</code> element accessible hiding or not, correctly linked to its field</li><li>Presence of the <code>title</code> attribute</li><li>Presence of the <code>aria-label</code> attribute</li></ul>"
 	],
     "resultat": [
 		"Presence of, preferably, a <code>label</code> tag or equivalent for every form field"
@@ -1004,7 +983,7 @@
       "Browse forms"
     ],
     "verifier": [
-      "Check that the text of the labels (<code>label</code> element, or <code>aria-label</code> attribute, or <code>title</code> attribute) is relevant"
+      "Check that the text of the labels (<code>label</code> element, or <code>title</code> attribute) is relevant, or <code>aria-label</code> attribute"
     ],
     "resultat": [
       "Presence of relevant content in <code>label</code> tag or equivalent for every form field"
@@ -1232,7 +1211,9 @@
     "verifier": [
       "Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"
     ],
-    "resultat":"",
+    "resultat":[
+      "The site's content is usable and readable whatever the orientation of the screen"
+    ],
     "exception":"",
     "raccourcis":"",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
@@ -1250,7 +1231,7 @@
 		"Check that all features are available with a screen reader: <ul><li>Content is correctly vocalized</li><li>Features are usable</li></ul>"
 	],
     "resultat": [
-		"The main features can be used from a screen reader"
+		"The main features can be used with a screen reader"
 	],
     "exception":"",
     "raccourcis":"",

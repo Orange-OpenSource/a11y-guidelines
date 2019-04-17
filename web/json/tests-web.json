@@ -467,7 +467,7 @@
     "tests": [
 		"Lancer l'inspecteur de code du navigateur",
 		"Localiser les liens, boutons et tous les items de navigation",
-		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>arai-label</code> et <code>title</code>"
+		"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
 	],
     "verifier": [
       "Vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes"
@@ -963,7 +963,7 @@
       "Lancer aXe"
     ],
     "verifier": [
-		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>aria-label</code></li><li>Présence de l'attribut <code>title</code></li></ul>"
+		"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>title</code></li><li>Présence de l'attribut <code>aria-label</code></li></ul>"
 	],
     "resultat": [
 		"Présence, de préférence, d'une balise <code>label</code> ou l'équivalent pour tout champ de formulaire"
@@ -983,7 +983,7 @@
       "Parcourir les formulaires"
     ],
     "verifier": [
-      "Vérifier que le texte des labels (élément <code>label</code>, ou <code>aria-label</code>, ou <code>title</code>) est pertinent"
+      "Vérifier que le texte des labels (élément <code>label</code>, ou <code>title</code>) est pertinent, ou <code>aria-label</code>"
     ],
     "resultat": [
       "Présence d'intitulés d'une balise <code>label</code> ou l'équivalent pertinents pour tout champ de formulaire"
@@ -1170,7 +1170,7 @@
       "Si une action doit être absolument déclenchée sur l'événement Down, vérifier alors qu'il existe un mécanisme pour annuler l'action"
     ],
     "resultat": [
-      "Un boîte modale apparaît demandant la confirmation de l'action"
+      "Une boîte modale apparaît demandant la confirmation de l'action"
     ],
     "exception": [
       "La fonction sur l'événement Down est essentielle, les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles"
@@ -1211,7 +1211,9 @@
     "verifier": [
       "Vérifier que le contenu et les fonctionnalités sont disponibles dans les 2 orientations (pas de perte d'information, pas d'éléments tronqués)"
     ],
-    "resultat": "",
+    "resultat": [
+      "Le contenu du site est utilisable et lisible quelque soit l'orientation de l'écran"
+    ],
     "exception": "",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
@@ -1229,7 +1231,7 @@
 		"Vérifier que toutes les fonctionnalités sont disponibles avec un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables</li></ul>"
 	],
     "resultat": [
-		"Les principales fonctionnalités sont utilisables depuis un lecteur d'écran"
+		"Les principales fonctionnalités sont utilisables avec un lecteur d'écran"
 	],
     "exception": "",
     "raccourcis": "",
