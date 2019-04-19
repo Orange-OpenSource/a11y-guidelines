@@ -38,6 +38,9 @@ Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les 
 #### 4. WWDC
 Section qui détaille des présentations Apple faites au `World Wide Developers Conference` ayant un impact fort dans la démarche d'accessibilité mobile.
 </br></br>
+#### 5. Tests
+Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que les recommandations iOS sont bien prises en compte avant mise en production de l'application.
+</br></br>
 ### Démonstrateur mDAN
 Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile.
 </br></br>

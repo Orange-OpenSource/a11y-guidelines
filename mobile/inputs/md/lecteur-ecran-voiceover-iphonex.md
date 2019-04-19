@@ -8,7 +8,8 @@
         {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
         {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
         {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
-        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);	
 });</script>
 

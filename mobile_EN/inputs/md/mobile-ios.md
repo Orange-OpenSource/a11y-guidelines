@@ -6,7 +6,8 @@
         {"label":"Design criteria","url":"criteria-ios.html"}, 
         {"label":"Developers guide","url":"dev-ios.html"},
         {"label":"VoiceOver","url":"voiceover.html"},
-        {"label":"WWDC","url":"dev-ios-wwdc.html"}
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);        
 });</script>
 
@@ -27,6 +28,9 @@ These gestures are all illustrated and well explained in this section.
 ## [WWDC](./dev-ios-wwdc.html)
 This section gathers presentations at the `World Wide Developers Conference` dealing with accessibility.
 Each one of them is detailed with time references to their different contents.
+</br></br>
+## [Tests](./criteria-ios-test.html)
+This part contains testings that follow the iOS recommendations.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

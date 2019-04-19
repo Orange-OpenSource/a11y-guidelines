@@ -7,8 +7,9 @@
     addSubMenu([
         {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
         {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html", "expanded": true},
-        {"label":"VoiceOver","url":"screen-reader.html"},
-        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);	
 });</script>
 

@@ -8,7 +8,8 @@
         {"label":"Design criteria","url":"criteria-ios.html"}, 
         {"label":"Developers guide","url":"dev-ios.html"},
         {"label":"VoiceOver","url":"voiceover.html"},
-        {"label":"WWDC","url":"dev-ios-wwdc.html"}
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);        
 });</script>
 

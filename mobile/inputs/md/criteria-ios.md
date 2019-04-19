@@ -6,7 +6,8 @@
         {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
         {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
         {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
-        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);    
 });</script>
 
@@ -31,6 +32,9 @@ Afin de comprendre parfaitement les problématiques liées au lecteur d'écran, 
 ## [WWDC](./criteria-ios-wwdc.html)
 Cette section regroupe des présentations concernant l'accessibilité faites par Apple à la World Wide Developers Conference présentée chaque année.
 </br>Chacune de ces présentations est détaillée et chaque thème décrit fait référence à une indication temporelle au sein de la vidéo de façon à pouvoir le visualiser le plus rapidement possible.
+</br></br>
+## [Tests](./criteria-ios-test.html)
+Cette partie contient l'ensemble des tests à réaliser afin de s'assurer que les recommandations iOS sont bien suivies.
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

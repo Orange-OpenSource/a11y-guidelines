@@ -40,6 +40,9 @@ Guide to using the native screen reader.
 #### 4. WWDC
 Contains many detailed `World Wide Developers Conference` videos that represent a significant milestone to mobile accessibility.
 </br></br>
+#### 5. Tests
+Includes tests to be done so as to be sure that the iOS recommendations are taken into account before the prod launching.
+</br></br>
 ### mDAN
 mDAN application overview, the digital accessibility demonstrator for mobile.
 </br></br>
