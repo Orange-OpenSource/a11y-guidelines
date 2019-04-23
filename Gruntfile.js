@@ -231,8 +231,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build-web', ['clean:web', 'createMarkdown:web', 'bfdocs:web', 'imageCopy:web', 'dist:web']);
     grunt.registerTask('build-web_EN', ['clean:web_EN', 'createMarkdown:web_EN', 'bfdocs:web_EN', 'imageCopy:web_EN', 'dist:web_EN']);
 
-    grunt.registerTask('build-mobile', ['clean:mobile', 'createMarkdown:mobile', 'bfdocs:mobile', 'imageCopy:mobile', 'dist:mobile']);
-    grunt.registerTask('build-mobile_EN', ['clean:mobile_EN', 'createMarkdown:mobile_EN', 'bfdocs:mobile_EN', 'imageCopy:mobile_EN', 'dist:mobile_EN']);
+    grunt.registerTask('build-mobile', ['clean:mobile', 'createMarkdown:mobile', 'bfdocs:mobile', 'dist:mobile']);
+    grunt.registerTask('build-mobile_EN', ['clean:mobile_EN', 'createMarkdown:mobile_EN', 'bfdocs:mobile_EN', 'dist:mobile_EN']);
 
     grunt.registerTask('build-others', ['clean:others', 'createMarkdown:others', 'bfdocs:others', 'imageCopy:others', 'dist:others']);
     grunt.registerTask('build-others_EN', ['clean:others_EN', 'createMarkdown:others_EN', 'bfdocs:others_EN', 'imageCopy:others_EN', 'dist:others_EN']);
