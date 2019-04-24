@@ -39,19 +39,19 @@
       <h2> Introduction </h2>
         <p>In this article, the terms “chatbot” and “chat” refer to a dialogue window that allows you to engage in a written conversation with an operator or an artificial intelligence, sometimes also called conversational agent. </p>
   
-        <h2> 1. The Brand’s recommendations</h2>
+        <h2> 1. Brand’s guidelines</h2>
   
-        <p> This article details a number of technical points to be aware of. If the objective is to develop a chatbot for an Orange site, it is advisable at first to be familiar with the Brand recommendations on this subject, available at <a href="https://design.orange.com/guidelines">design.orange.com</a> (Conversational UI guideline).</p>
+        <p> This article details a number of technical points. If the objective is to develop a chatbot for an Orange site, it is advisable at first to be familiar with the Brand recommendations on this topic, available at <a href="https://design.orange.com/guidelines">design.orange.com</a> (Conversational UI guideline).</p>
         
         <h2> 2. Go to the chatbot</h2>
-        <p>Before using a chatbot, it is often necessary to make it appear by clicking on a button located in a corner of the page. The user must be able to discover that he has the chance to use a chatbot on the page he consults. This is why it is important to use a button whose wording is sufficiently explicit. It may depend on the context but, for example, on a merchant site a button labelled “Contact us”, “A problem with your order?” are valid proposals.
+        <p>Before using a chatbot, it is often necessary to make it appear by clicking on a button located in a corner of the page. The user must be able to discover that he has the chance to use a chatbot on the page he consults. This is why it is important to use a button whose label is sufficiently explicit. It depend on the context: for example, on a e-commerce site, label such as “Contact us”, or “A problem with your order?” are valid proposals.
         </p>
   
         <h3> Keyboard Navigation </h3>
-        <p> It is sufficient to put a button in a corner of the page provided that it is accessible, in particular, using the keyboard (see more info on <a href = "../methodes-outils-clavier.html">navigation using the keyboard</a>). Be sure to use a real button (<code>&lt;button&gt;</code>) in the code, as is the case on this page (contact button located at the bottom right of the page).
+        <p> It is sufficient to put a button in a corner of the page provided that it is accessible, in particular, using the keyboard only (see more info on <a href = "../methodes-outils-clavier.html">navigation using the keyboard</a>). Be sure to use a real button (<code>&lt;button&gt;</code>) in the code, as is the case on this page (contact button located at the bottom right of the page).
           </p>
         <strong> Example: </strong>
-        <p>The two buttons below look identical when used with the mouse. However, if you try to use them when navigating with the <kbd>Tab</kbd> key, the second button (using a <code>&lt;span&gt;</code> tag) is not focusable. In the latter case, a user who navigates using the keyboard will simply not be able to open the chatbot.
+        <p>The two buttons below look identical when used with the mouse. However, if you try to use them when navigating with the <kbd>Tab</kbd> key, the second button (using a <code>&lt;span&gt;</code> tag) is not focusable. In the latter case, a user who navigates using the keyboard will not be able to open the chatbot.
         </p>
         <p>Test them, using the mouse and using the keyboard: </p>
         <p>
@@ -74,9 +74,9 @@
           <p><img class = "screenshot" src = "./images/zoom-ok.png" alt = "screenshot of the visible contact button despite the presence of a tooltip">
           </p>
           <h3>Screen reader navigation</h3>
-          <p>The presence of a button to access the chatbot, in the lower right, will be enough to make some users understand that a chatbot is available on the page. But, for blind or visually impaired users who are navigating with a screen reader, this may pose difficulties. Indeed, to hear this button, often placed at the end of the code, it would be necessary for the user to listen to the entire page to the last line. Thus, they should listen to the whole page footer generally containing many links. In practice, we suspect this is not what users do.
+          <p>The presence of a button to access the chatbot, in the lower right, is enough to make some users understand that a chatbot is available on the page. But, for blind or visually impaired users who are navigating with a screen reader, this may pose difficulties. Indeed, to hear this button, often placed at the end of the code, it is necessary for the user to listen to the entire page to the last line. Thus, they should listen to the whole footer generally containing many links. In reality, it is not what users do.
           </p>
-          <p> In this case, a visually impaired user will simply not be aware of this button, so they will not be able to access the chat.
+          <p> In this case, a visually impaired user is not aware of this button, so they are not able to access the chat.
           </p>
           <p>
           <strong> There are several ways to avoid this problem: </strong>
@@ -119,7 +119,7 @@
             <p>
               According to recurring polls from <a href="https://webaim.org">WebAIM</a> about screen reader users, landmarks are not known by everyone yet. For robustness, we can also add a heading tag (<code>h1</code>, <code>h2</code>...) before the chat.
               </p>
-            <p>To make this heading not visible on the screen, it is enough to use an <a href="../masquage/index.html">accessible hiding</a> class (<code>sr-only</code>). This will also allow users to access the chat from the list of headings on the page.
+            <p>To make this heading not visible on the screen, it is enough to use an <a href="../masquage/index.html">accessible hiding</a> class (<code>sr-only</code>). This also allows users to access the chat from the list of headings on the page.
               </p>
       
             <pre><code class="html">
@@ -134,11 +134,11 @@
       
             <h2>3. Chatbot accessibility</h2>
       
-            <p>Now that everyone can access the chatbot, make sure it’s accessible.</p>
+            <p>Now that everyone can access the chatbot, make sure it is accessible.</p>
       
             <h3>Keyboard Navigation</h3>
             <p>Regarding keyboard navigation, it is enough to check while navigating without the help of the mouse, if it is possible to click on all the buttons (<kbd>Tab</kbd> key to move the focus, <kbd>Enter</kbd> key to activate a button) and to type and send messages.</p>
-            <p>After a few exchanges in the chat, a scroll bar appears. It must also be ensured that the chat can be used with the arrow keys. This is the case natively in Firefox, but for Chrome it was necessary to make this element focusable using a <code>tabindex</code>attribute.</p>
+            <p>After a few exchanges in the chat, a scroll bar appears. It must also be ensured that the chat can be used with the arrow keys. This is the case natively in Firefox, but for Chrome it is necessary to make this element focusable using a <code>tabindex</code>attribute.</p>
       
             <pre><code class="html">
     &lt;div id="chat-content" <span class="important">tabindex="0"</span>&gt;
@@ -154,7 +154,7 @@
       
       <h3>Browsing with a screen magnifier </h3>
         <p>
-          The width of the chat window can affect the reading comfort. Indeed, if it is too wide, reading the chat with magnifying software can become tedious. Especially if the user is forced to scroll to read the entire line on the chat.
+          The width of the chat window can affect the reading comfort. Indeed, if it is too wide, reading the chat with magnifying software can become tedious. Especially if the user has to scroll to read the entire line on the chat.
         </p>
         <p>In the screenshot below (screen magnifier on 600%), the window is too wide, the user will have to move the visible area to the left and right to browse through the chat window: </p>
         <p><img class="screenshot" src="./images/chatbot-zoom-ko.png" alt="screenshot of a chat window too large">
@@ -172,10 +172,10 @@
   &lt;input type="submit" title="Send this message" <span class="important"> aria-label="Send" </span>&gt;
           </code></pre>
   
-        <p>The same thing on the buttons to reduce and close the chat window. </p>
+        <p>The same thing must be done on the buttons to reduce and close the chat window. </p>
   
         <h4>Notify the user when a new message arrives</h4>
-        <p>Although the received messages appear on the screen, the screen reader will not automatically read them by default. </p>
+        <p>Although the received messages appear on the screen, the screen reader does not automatically read them by default. </p>
         <p>To solve this problem, just add an <code>aria-live</code> attribute to tell the screen reader that it should automatically vocalize any changes to the message list. </p>
         <pre><code class="html">
   &lt;div id="chat-content" tabindex="0" <span class="important">aria-live="polite"</span>&gt;
@@ -190,7 +190,7 @@
   
         <p>For a user who does not see the screen, it can become complicated since the sender of the message is visually inserted (rightly) only when there is a change of sender in the conversation.
         </p>
-        <p>To be sure, we will indicate in front of each message its transmitter for the users who navigate using a screen reader only (use of the accessible masking class <code>sr-only</code>).
+        <p>To be sure, we recommanded to indicate in front of each message its transmitter, useful for the users who navigate using a screen reader only (use of the accessible masking class <code>sr-only</code>).
           </p>
          <pre><code class="html">
   &lt;div class="message"&gt;
@@ -219,11 +219,11 @@
   
         <h4>Sounds</h4>
         
-        <p>The <a href="https://design.orange.com/guidelines">Orange Brand recommendations</a> (Conversational UI guideline) specify the audio files to use. It is important to make a sound when sending and receiving messages. This is useful for everyone but, especially, for the visually impaired. They will have confirmation that their message has been sent without needing to read the message thread for example. </p>
+        <p>The <a href="https://design.orange.com/guidelines">Orange Brand recommendations</a> (Conversational UI guideline) specify the audio files to use. It is important to make a sound when sending and receiving messages. This is useful for everyone but, especially, for the visually impaired. They have confirmation that their message has been sent without needing to read the message thread for example. </p>
   
         <h4>Window title</h4>
      
-        <p>To complete the audio alert, it is also important to change the title of the window when receiving a message. This will allow the user who has been absent, to detect, at a glance, that a message has arrived even if it is on another tab of the browser. Similarly, for a user who navigates with a screen reader, it is very easy to access at any time the browser tab title.
+        <p>To complete the audio alert, it is also important to change the title of the window when receiving a message. This allows the user who has been absent, to detect, at a glance, that a message has arrived even if it is on another tab of the browser. Similarly, for a user who navigates with a screen reader, it is very easy to access at any time the browser tab title.
         </p>
   
         <p><img class="screenshot img-fluid" src="./images/window-title.png" alt="screenshot of a browser tab with a title starting with: Djingo says…"></p>
@@ -239,14 +239,14 @@
         </code></pre>
   
         <h4>Interactions</h4>
-        <p> Some conversations lead the chatbot to propose to the user a choice among several proposals. The following button illustrates this possibility: </p>
+        <p> Some conversations lead the chatbot to propose multiple choice options. The following button illustrates this possibility: </p>
        <p>  
         <button class = "btn btn-secondary" id = "btnChoice">Sample interaction</button>
         </p>
-        <p>In the example triggered by the previous button, the chatbot asks the user to choose from several options. In this case, it is necessary to take some precautions to simplify navigation.</p>
+        <p>In this example, the user must make a choice. In this case, it is necessary to take some precautions to simplify navigation.</p>
 
         <strong>Focus Management</strong>
-        <p>To simplify the keyboard navigation, when the choice is offered to the user, rather than focusing the chat input field, the focus is moved to the text preceding the buttons. This then allows the user to navigate the first choice by pressing the <kbd>Tab</kbd> key once.</p>
+        <p>To simplify the keyboard navigation, rather than focusing the chat input field, the focus is moved to the text preceding the buttons. This then allows the user to navigate the first choice by pressing the <kbd>Tab</kbd> key once.</p>
         <p>To locate the focus on the textual element (a <code>&lt;div&gt;</code>in this example) that is not focusable by default, it is necessary to add a <code>tabindex="- 1"</code> attribute, so it can receive focus via Javascript. As a reminder, this attribute can take the following values: </p>
         <ul>
           <li> tabindex = 0: the element is focusable on the keyboard (<kbd>Tab</kbd> key) and via Javascript.</li>
