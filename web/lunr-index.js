@@ -1241,3 +1241,17 @@ index.add({
 });
 
 
+
+documentTitles["exemples/masquage/index.html"] = "Masquer des éléments de manière accessible";
+index.add({
+    url: "exemples/masquage/index.html",
+    title: "Masquer des éléments de manière accessible",
+    body: "masquer accessible masquage hidden sr-only aria-hidden lecteur d'écran display:none display none visibility"
+});
+
+documentTitles["exemples/chatbot/index.html"] = "Exemple de tchat bot accessible";
+index.add({
+    url: "exemples/chatbot/index.html",
+    title: "Exemple de tchat bot accessible",    
+    body: "chat bot chatbot exemple liens d'évitement skip links message"
+});

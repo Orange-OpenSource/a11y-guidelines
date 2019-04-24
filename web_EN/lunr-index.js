@@ -1136,3 +1136,17 @@ index.add({
 });
 
 
+
+documentTitles["exemples/masquage/index.html"] = "Accessible hiding";
+index.add({
+    url: "exemples/masquage/index.html",
+    title: "Accessible hiding",
+    body: "Elements not visible on the screen but accessible to assistive technology huidden display none visibility sr-only aria-hidden."
+});
+
+documentTitles["exemples/chatbot/index.html"] = "Chatbot accessibility best practices";
+index.add({
+    url: "exemples/chatbot/index.html",
+    title: "Chatbot accessibility best practices",    
+    body: "Chatbot accessibility best practices, create an accessible chat bot message skip links"
+});
