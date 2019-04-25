@@ -16,7 +16,7 @@
 
 This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options.
 </br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
-</br>Code snippets are also available to show you how to implement it (Swift 4.2, Objective C).
+</br>Code snippets are also available to show the different possible implementations {(Swift 5.0, Objective C) + (Xcode 10, iOS 12)}.
 
 <a name="AccessibilityTraits"></a>
 ## Element trait
@@ -706,7 +706,7 @@ UIAccessibilityElement * elt;
                            action: #selector(configChanged),
                            for: .valueChanged)
         
-        elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        elt = UIAccessibilityElement(accessibilityContainer: self.view!)
         let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
         
         if let elt = elt {
@@ -777,10 +777,10 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
         
         //Reads 6, 8, 9 and 5 in this order inside the blue block.
         blueBlock.isAccessibilityElement = false
-        blueBlock.accessibilityElements = [key_6,
-                                           key_8,
-                                           key_9,
-                                           key_5]
+        blueBlock.accessibilityElements = [key_6!,
+                                           key_8!,
+                                           key_9!,
+                                           key_5!]
     }
 </code></pre>
 ### Links
@@ -1677,7 +1677,7 @@ class ViewController: UIViewController {
         let testTwoButton = self.view.viewWithTag(2) as? UIButton
         let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
 
-        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view)
+        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view!)
 
         testWrap.isAccessibilityElement = false
         testWrap.accessibilityFrame = testWrapFrame!
@@ -1689,24 +1689,24 @@ class ViewController: UIViewController {
         let secondGroupRect = btn1.frame.union(btn2.frame)
         let secondGroupFrame = btnsParentView.convert(secondGroupRect,
                                                       to: self.view)
-        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
+        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
 
         secondGroup.isAccessibilityElement = false
         secondGroup.accessibilityFrame = secondGroupFrame
         secondGroup.accessibilityNavigationStyle = .separate
-        secondGroup.accessibilityElements = [btn1, btn2]
+        secondGroup.accessibilityElements = [btn1!, btn2!]
 
 
         //Creation of the 'thirdGroup' COMBINING the last two buttons.
         let thirdGroupRect = btn5.frame.union(btn6.frame)
         let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
                                                      to: self.view)
-        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
+        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
 
         thirdGroup.isAccessibilityElement = false
         thirdGroup.accessibilityFrame = thirdGroupFrame
         thirdGroup.accessibilityNavigationStyle = .combined
-        thirdGroup.accessibilityElements = [btn5, btn6]
+        thirdGroup.accessibilityElements = [btn5!, btn6!]
 
 
         self.view.accessibilityElements = [testWrap,
