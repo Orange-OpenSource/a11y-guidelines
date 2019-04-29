@@ -1,17 +1,16 @@
 # Android accessibility guide
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Mobile criteria", "url": "./criteria-mobile.html"},
-        {"label":"Android accessibility guide"}
-	]);
+    setBreadcrumb([{"label":"Android", "url": "./mobile-android.html"},
+                   {"label":"Design criteria"}]);
     addSubMenu([
-        {"label":"Android guide","url":"criteria-mobile.html", "expanded": true}, 
-        {"label":"iOS guide","url":"criteria-ios.html"}
-    ]);        	
+        {"label":"Design criteria","url":"criteria-android.html", "expanded": true}, 
+        {"label":"Developers guide","url":"dev-android.html"},
+        {"label":"TalkBack","url":"talkback.html"}
+    ]);    
 });</script>
 
-<span data-menuitem="criteria-mobile"></span>
+<span data-menuitem="mobile-android"></span>
 
 This guide aims to present the different accessibility criteria for getting an accessible Android application. Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule. The criteria are explained through code snippets and real case examples. We invite you to install the [mDAN](./mdan.html) application for working examples of Talkback, the screen reader for Android, and other assistive tools. For more information on the tool (how to activate it, how to use it…) please refer to the [Talkback section](./talkback.html).
 

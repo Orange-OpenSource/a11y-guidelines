@@ -1,17 +1,18 @@
 # iPhoneX basic gestures
 
 <script>$(document).ready(function () {
-    setBreadcrumb([
-        {"label":"Screen reader", "url": "./screen-reader.html"},
-        {"label":"iOS guide", "url": "./voiceover.html"}
-    ]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"VoiceOver"}]);
     addSubMenu([
-        {"label":"Android guide","url":"talkback.html"}, 
-        {"label":"iOS guide","url":"voiceover.html"}
-    ]);
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="mobile-ios"></span>
 
 This page describes the iPhoneX common gestures thanks to textual explanations and illustrations so as to easily understand the movements to be done.
 </br>Thereafter, **illustrations with a home button device** are also included to see possible differences.

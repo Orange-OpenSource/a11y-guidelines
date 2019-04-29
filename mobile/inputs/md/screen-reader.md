@@ -1,14 +1,20 @@
 # Guide d’utilisation des lecteurs d’écran <span lang="en">TalkBack</span> et <span lang="en">VoiceOver</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Lecteur d’écran"}]);
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+        {"label":"VoiceOver"}
+	]);
     addSubMenu([
-        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}
-    ]);                
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Aide au développement","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html", "expanded": true},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"testing-ios.html"}
+    ]);
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="criteria-ios"></span>
+
 
 À travers cette section, nous allons présenter les gestes de base pour une utilisation des lecteurs d’écran d’Android et iOS. Ces outils sont riches en fonctionnalités mais nécessitent une connaissance minimale pour être utilisés efficacement. C’est cette utilisation standard qui sera présentée ici.
 

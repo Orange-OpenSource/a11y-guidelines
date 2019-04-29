@@ -1,29 +1,106 @@
 # iOS developer guide
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
-        {"label":"iOS developer guide"}
-	]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"Developers guide"}]);
     addSubMenu([
-        {"label":"Android guide","url":"dev-android.html"}, 
-        {"label":"iOS guide","url":"dev-mobile.html", "expanded": true},
-        {"label":"iOS WWDC","url":"dev-ios-wwdc.html"}
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html", "expanded": true},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);        
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="mobile-ios"></span>
 
 This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options.
-</br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`official documentation from Apple`](https://developer.apple.com/documentation/uikit/accessibility).
-</br>Code snippets are also available to show you how to implement it (Swift 4.2, Objective C).
+</br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
+</br>Code snippets are also available to show the different possible implementations {(Swift 5.0, Objective C) + (Xcode 10, iOS 12)}.
+
+<a name="AccessibilityTraits"></a>
+## Element trait
+### Description
+The `accessibilityTraits` attribute allows to specify the trait of an element to the accessibility <abbr>API</abbr>. Thus, it is possible to make a list item be considered as a button because it is clickable. Therefore, the `accessibilityTrait` attribute plays an important role on the element vocalization because the trait is vocalized by VoiceOver.  
+ 
+This accessibility attribute is available via the builder interface but also programmatically.
+
+There are many available traits. The more commonly used are:  
+- **accessibilityTraitNone**&nbsp;: removes any semantic value to the element.
+- **accessibilityTraitButton**&nbsp;: adds the “button” trait, the element is seen as a button by VoiceOver.
+- **accessibilityTraitLink**&nbsp;: useful to define a label as a “link”.
+- **accessibilityTraitHeader**&nbsp;: defines an element as a header (see the <a href="criteria-ios.html#title-and-header">«&nbsp;Title and header&nbsp;»</a> section).
+- **accessibilityTraitAdjustable**&nbsp;: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see [VoiceOver user guide](./voiceover.html)).
+### Example
+<pre><code class="objective-c">
+- (void)customTraits() {
+    //Specified UIPageControl with the ’ajustable’ trait.
+    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable;
+    
+    //Added header.  
+    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
+}
+</code></pre><pre><code class="swift">
+func customTraits() {
+    //Specified UIPageControl with the ’ajustable’ trait.
+    pageControl.accessibilityTraits = .adjustable
+    
+    //Added header.  
+    defaultHeaderViewCell.accessibilityTraits = .header
+}
+</code></pre>
+
+### Basic operations
+This attribute is actually a `bitmask` in which each element has its own value.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
+</br>It's then possible to add and remove some `traits` after having checked their existence in the bitmask for instance.
+
+<pre><code class="objective-c">
+- (void)changeTraits {
+
+    //Dedicated trait set with no other option.
+    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+    
+    //Added traits to the existing ones.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
+    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
+    
+    //Remove a trait.
+    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
+    
+    //Check out the bitmask trait existence.
+    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
+        // Do the job if '.header' is one of the traits...
+    }
+}
+</code></pre><pre><code class="swift">
+func changeTraits() {
+        
+    //Dedicated trait set with no other option.
+    onePageButton.accessibilityTraits = [.button, .link]
+        
+    //Added traits to the existing ones.
+    pageControl.accessibilityTraits.insert(.header) //Only one trait.
+    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
+        
+    //Remove a trait.
+    onePageButton.accessibilityTraits.remove(.link)
+        
+    //Check out the bitmask trait existence.
+    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
+        // Do the job if '.header' is one of the traits...
+    }
+}
+</code></pre>
+### Link
+- [`accessibilityTraits`](https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits)
 
 ## Text alternatives
 ### Description 
 On iOS, the vocalization of an element is done through four attributes: `label`, `hint`, `value` and `trait`.
 The order of vocalization is always as follows: `label`, `value`, `trait` and `hint`. This order cannot be changed and the vocalization is performed only once.
 
-A section of this guide is dedicated to the trait, we describe here the other three:
+A section of this guide is dedicated to the [`trait`](#AccessibilityTraits), we describe here the other three:
 - **accessibilityLabel**&nbsp;: the `label` redefines the text read by VoiceOver. This allows a component to be more explicit than the text displayed on the screen. For example, for a button whose title is “OK”, this attribute can indicate that the button is used to confirm an action.
 - **accessibilityValue**&nbsp;: the `value` of an element is by default the completion percentage (e.g. a progress bar percentage). Note that for most elements available in the <abbr>SDK</abbr>, this value does not need to be set (the system automatically sets the value).
 - **accessibilityHint**&nbsp;: the `hint` describes the component’s behaviour. Example: “click here to get the result”.
@@ -72,80 +149,260 @@ class ChangeTextView: UIViewController {
 - [`accessibilityValue`](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)
 - [`accessibilityHint`](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)
 
-## Element trait
+## Date, time and numbers
 ### Description
-The `accessibilityTraits` attribute allows to specify the trait of an element to the accessibility <abbr>API</abbr>. Thus, it is possible to make a list item be considered as a button because it is clickable. Therefore, the `accessibilityTrait` attribute plays an important role on the element vocalization because the trait is vocalized by VoiceOver.  
- 
-This accessibility attribute is available via the builder interface but also programmatically.
+Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.
+</br></br>
+#### Date and time vocalization
+The rendering isn't natural if the date or time data are imported text in a `label`.
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
+</br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
+</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" />
+<pre><code class="objective-c">
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+    
+    NSDate * date = [dateFormatter dateFromString:@"01/04/2015 05:30"];
+    
+    dateLabel.text = [NSDateFormatter localizedStringFromDate:date
+                                                    dateStyle:NSDateFormatterShortStyle
+                                                    timeStyle:NSDateFormatterNoStyle];
+    
+    dateLabel.accessibilityLabel = [NSDateFormatter localizedStringFromDate:date
+                                                                  dateStyle:NSDateFormatterMediumStyle
+                                                                  timeStyle:NSDateFormatterNoStyle];
 
-There are many available traits. The more commonly used are:  
-- **accessibilityTraitNone**&nbsp;: removes any semantic value to the element.
-- **accessibilityTraitButton**&nbsp;: adds the “button” trait, the element is seen as a button by VoiceOver.
-- **accessibilityTraitLink**&nbsp;: useful to define a label as a “link”.
-- **accessibilityTraitHeader**&nbsp;: defines an element as a header (see the <a href="criteria-ios.html#title-and-header">«&nbsp;Title and header&nbsp;»</a> section).
-- **accessibilityTraitAdjustable**&nbsp;: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see [VoiceOver user guide](./voiceover.html)).
+    
+    hourLabel.text = [NSDateFormatter localizedStringFromDate:date
+                                                    dateStyle:NSDateFormatterNoStyle
+                                                    timeStyle:NSDateFormatterShortStyle];
+    
+    NSDateComponents * hourComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitHour | NSCalendarUnitMinute
+                                                                        fromDate:date];
+                                                                        
+    hourLabel.accessibilityLabel = [NSDateComponentsFormatter localizedStringFromDateComponents:hourComponents
+                                                                                     unitsStyle:NSDateComponentsFormatterUnitsStyleSpellOut];
+</code></pre><pre><code class="swift">
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+    let date = dateFormatter.date(from: "01/04/2015 05:30")
+        
+    dateLabel.text = DateFormatter.localizedString(from: date!,
+                                                   dateStyle: .short,
+                                                   timeStyle: .none)
+                                                       
+    dateLabel.accessibilityLabel = DateFormatter.localizedString(from: date!,
+                                                                 dateStyle: .medium,
+                                                                 timeStyle: .none)
+        
+        
+    hourLabel.text = DateFormatter.localizedString(from: date!,
+                                                   dateStyle: .none,
+                                                   timeStyle: .short)
+        
+    let hourComponents = Calendar.current.dateComponents([.hour, .minute],
+                                                         from: date!)
+    hourLabel.accessibilityLabel = DateComponentsFormatter.localizedString(from: hourComponents,
+                                                                           unitsStyle: .spellOut)
+</code></pre>
+
+</br></br>
+#### Numbers vocalization
+If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
+</br><img alt="" style="max-width: 475px; height: auto; " src="./images/iOSdev/DateHeureNombres_12.png" />
+</br>As the previous chapter dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
+<pre><code class="objective-c">
+    NSNumber * numberValue = @54038921.7;
+    
+    NSNumberFormatter * numberFormatter = [[NSNumberFormatter alloc]init];
+    numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    numberLabel.text = [numberFormatter stringFromNumber:numberValue];
+    
+    numberLabel.accessibilityLabel = [NSNumberFormatter localizedStringFromNumber:numberValue
+                                                                      numberStyle:NSNumberFormatterSpellOutStyle];
+</code></pre><pre><code class="swift">
+    let numberValue = NSNumber(value: 54038921.7)
+        
+    numberLabel.text = NumberFormatter.localizedString(from: numberValue,
+                                                       number: .decimal)
+                                                           
+    numberLabel.accessibilityLabel = NumberFormatter.localizedString(from: numberValue,
+                                                                     number: .spellOut)
+</code></pre>
+
+</br></br>
+#### Phone numbers vocalization
+Once more, formatting data is an essential step for a phone number vocalization including the special cases of the "0" figures.
+</br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
+</br><img alt="default vocalization is not valid for the following phone number : 06.11.22.33.06" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
+</br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
+</br><img alt="in this case the phone number is well vocalized" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
+<pre><code class="objective-c">
+    NSString * phoneNumberValue = @"06.11.22.33.06";
+    NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
+    
+    NSNumberFormatter * nbFormatter = [[NSNumberFormatter alloc]init];
+    nbFormatter.numberStyle = NSNumberFormatterSpellOutStyle;
+    
+    NSMutableString * spelledOutString = [[NSMutableString alloc]init];
+    
+    [phoneNumberElts enumerateObjectsUsingBlock:^(id  _Nonnull obj,
+                                                  NSUInteger idx,
+                                                  BOOL * _Nonnull stop) {
+        NSString * elt = (NSString *)obj;
+        
+        if (idx != 0) {
+            [spelledOutString appendString:@","];
+        }
+        
+        if ([elt hasPrefix:@"0"]) {
+            
+            NSString * firstFigure = [nbFormatter stringFromNumber:@([[elt substringToIndex:1] integerValue])];
+            NSString * secondFigure = [nbFormatter stringFromNumber:@([[elt substringFromIndex:1] integerValue])];
+            
+            [spelledOutString appendString:firstFigure];
+            [spelledOutString appendString:secondFigure];
+            
+        } else {
+            [spelledOutString appendString:[nbFormatter stringFromNumber:@([elt integerValue])]];
+        }
+    }];
+    
+    phoneNumberLabel.text = phoneNumberValue;
+    phoneNumberLabel.accessibilityLabel = spelledOutString;
+</code></pre><pre><code class="swift">
+        let phoneNumberValue = "06.11.22.33.06"
+        let phoneNumberElts = phoneNumberValue.components(separatedBy: ".")
+        
+        let nbFormatter = NumberFormatter()
+        nbFormatter.numberStyle = .spellOut
+        
+        var spelledOutString = String()
+        
+        for (index, elt) in phoneNumberElts.enumerated() {
+            
+            if (index != 0) {
+                spelledOutString.append(",")
+            }
+            
+            if (elt.hasPrefix("0")) {
+                
+                let firstFigureValue = Int(String(elt[elt.startIndex]))!
+                let firstFigure = nbFormatter.string(from: NSNumber(value:firstFigureValue))
+                spelledOutString.append(firstFigure!)
+                
+                let secondFigureValue = Int(String(elt[elt.index(elt.startIndex, offsetBy: 1)]))!
+                let secondFigure = nbFormatter.string(from: NSNumber(value:secondFigureValue))
+                spelledOutString.append(secondFigure!)
+                
+            } else {
+                
+                let figure = nbFormatter.string(from: NSNumber(value:Int(elt)!))
+                spelledOutString.append(figure!)
+            }
+        }
+
+        phoneNumberLabel.text = phoneNumberValue
+        phoneNumberLabel.accessibilityLabel = spelledOutString
+</code></pre>
+
+## Trigger a vocalization
+### Description
+It is very easy to trigger vocalizations with VoiceOver.
+</br>Note that we are talking about VoiceOver vocalization and not <abbr>TTS</abbr> (Text To Speech) that can operate whether VoiceOver is on or off. 
+
+To trigger a vocalization, just call the **UIAccessibilityPostNotification** method passing the notification allowing to trigger a vocalization (**UIAccessibilityAnnouncementNotification**) and the string to vocalize as parameters.
+
+Note: the vocalization is done in the system’s language.
 ### Example
 <pre><code class="objective-c">
-- (void)customTraits() {
-    //Specified UIPageControl with the ’ajustable’ trait.
-    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable;
-    
-    //Added header.  
-    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
-}
+UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
+                                @"This is a VoiceOver message.");
 </code></pre><pre><code class="swift">
-func customTraits() {
-    //Specified UIPageControl with the ’ajustable’ trait.
-    pageControl.accessibilityTraits = .adjustable
-    
-    //Added header.  
-    defaultHeaderViewCell.accessibilityTraits = .header
-}
+UIAccessibility.post(notification: .announcement,
+                     argument: "This is a VoiceOver message.")
 </code></pre>
-### Basic operations
-This attribute is actually a `bitmask` in which each element has its own value.
-</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
-</br>It's then possible to add and remove some `traits` after having checked their existence in the bitmask for instance.
+### Links
+- [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
+- [`UIAccessibilityAnnouncementNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification)
 
+## Change the vocalization language
+### Description
+To change the vocalization language of VoiceOver for a word or a sentence, one can use the **accessibilityLanguage**&nbsp; attribute.
+</br>Available through the `UIAccessibility` informal protocol, this attribute allows to specify a language for a dedicated text.
+</br>For instance, if we use this attribute on a `UILabel`, it will be vocalized by <span lang="en">VoiceOver</span> in the language set on this attribute.
+</br>
+### Example
 <pre><code class="objective-c">
-- (void)changeTraits {
-
-    //Dedicated trait set with no other option.
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+- (IBAction)tapHere:(UIButton *)sender {
     
-    //Added traits to the existing ones.
-    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
-    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
-    
-    //Remove a trait.
-    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
-    
-    //Check out the bitmask trait existence.
-    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
-        // Do the job if '.header' is one of the traits...
-    }
+    myLabel.accessibilityLanguage = @"fr";
+    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
 }
 </code></pre><pre><code class="swift">
-func changeTraits() {
+@IBAction func tapHere(_ sender: UIButton) {
         
-    //Dedicated trait set with no other option.
-    onePageButton.accessibilityTraits = [.button, .link]
-        
-    //Added traits to the existing ones.
-    pageControl.accessibilityTraits.insert(.header) //Only one trait.
-    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
-        
-    //Remove a trait.
-    onePageButton.accessibilityTraits.remove(.link)
-        
-    //Check out the bitmask trait existence.
-    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
-        // Do the job if '.header' is one of the traits...
-    }
+    myLabel.accessibilityLanguage = "fr"
+    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
 }
 </code></pre>
-### Link
-- [`accessibilityTraits`](https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits)
+### Link   
+- [`accessibilityLanguage`](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage)
+
+## Notify a content change
+### Description
+When there is a content change in the current page, it is possible to notify the accessibility <abbr>API</abbr> using several types of notifications. To do that, we must send the change notification to the accessibility <abbr>API</abbr> using the following method: `UIAccessibilityPostNotification`.  
+
+There are several types of change notifications but the two most commonly used are:
+- **UIAccessibilityLayoutChangedNotification**&nbsp;: notifies that a part of the page has changed with 2 possible incoming parameters (a `NSString` or a `UIObject`).
+</br>With a `NSString`, the notification behaves like a **UIAccessibilityAnnouncementNotification** with a <span lang="en">VoiceOver</span> vocalization.
+</br>With a `UIObject`, focus is shifted to the user interface element.
+</br>This notification is very similar to the **UIAccessibilityAnnouncementNotification** but should come as a result of dynamic content being deleted or added to the current view.
+- **UIAccessibilityScreenChangedNotification**&nbsp;: notifies that the whole page has changed including `nil` or a `UIObject` as incoming parameters.  
+With `nil`, the first accessible element in the page is focused.
+</br>With a `UIObject`, focus is shifted to the specified element with a <span lang="en">VoiceOver</span>.
+</br>This notification comes along with a vocalization including a sound like announcing a new page.
+### Example
+<pre><code class="objective-c">
+//The element 'myLabel' is focused and vocalized with its new value.
+- (IBAction)tapHere:(UIButton *)sender {
+    
+    myLabel.accessibilityLabel = @"This is a new label.";
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
+}
+
+//The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
+- (IBAction)clic:(UIButton *)sender {
+    
+    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
+}
+</code></pre><pre><code class="swift">
+//The element 'myLabel' is focused and vocalized with its new value.
+@IBAction func tapHere(_ sender: UIButton) {
+        
+    myLabel.accessibilityLabel = "This is a new label."
+    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                         argument: myLabel)
+}
+    
+//The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
+@IBAction func clic(_ sender: UIButton) {
+        
+    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                         argument: nil)
+}
+</code></pre>
+### Links
+- [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
+- [`UIAccessibilityLayoutChangedNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilitylayoutchangednotification)
+- [`UIAccessibilityScreenChangedNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilityscreenchangednotification)
+- [`UIAccessibilityPageScrolledNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification)
 
 ## Hide elements
 ### Description
@@ -245,298 +502,7 @@ override func viewDidAppear(_ animated: Bool) {
 - [`isAccessibilityElement`](https://developer.apple.com/documentation/objectivec/nsobject/1615141-isaccessibilityelement)
 - [`accessibilityElementsHidden`](https://developer.apple.com/documentation/objectivec/nsobject/1615080-accessibilityelementshidden)
 - [`accessibilityViewIsModal`](https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal)
-
-## Trigger a vocalization
-### Description
-It is very easy to trigger vocalizations with VoiceOver.
-</br>Note that we are talking about VoiceOver vocalization and not <abbr>TTS</abbr> (Text To Speech) that can operate whether VoiceOver is on or off. 
-
-To trigger a vocalization, just call the **UIAccessibilityPostNotification** method passing the notification allowing to trigger a vocalization (**UIAccessibilityAnnouncementNotification**) and the string to vocalize as parameters.
-
-Note: the vocalization is done in the system’s language.
-### Example
-<pre><code class="objective-c">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
-                                @"This is a VoiceOver message.");
-</code></pre><pre><code class="swift">
-UIAccessibility.post(notification: .announcement,
-                     argument: "This is a VoiceOver message.")
-</code></pre>
-### Links
-- [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
-- [`UIAccessibilityAnnouncementNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification)
-
-## Accessibility options
-### States
-On iOS, it is possible to check the accessibility options state. 
-</br>Is VoiceOver activated? Is the audio-mono mode activated? Several methods that are part of the `UIKit` framework can help you to check with that.
-</br>The most useful method is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
-</br></br>Some other methods are deeply explained in a WWDC 2018 video *(Deliver en exceptional accessibility experience)* whose content is perfectly detailed in the [iOS WWDC section](./dev-ios-wwdc-18230.html) of this site.</br></br>
-### Example
-<pre><code class="objective-c">
-    BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
-    BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
-    
-    NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
-</code></pre><pre><code class="swift">
-    let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
-    let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
-        
-    print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
-</code></pre>
-### Events
-iOS sends many accessibility events when accessibility options have changed.
-</br>For example, if VoiceOver is deactivated, the running applications will receive the `UIAccessibilityVoiceOverStatusDidChangeNotification` event.
-</br>This is very useful when used simultaneously with `UIAccessibilityIsVoiceOverRunning`.
-
-Let's say the application behaves differently when VoiceOver is turned on.
-</br>What happens if VoiceOver is disabled ? This is exactly the use case when the system events can be used.
-</br>By listening to these events, it is possible to dynamically change how the application behaves.</br></br>
-### Example
-In this example, a method is fired when VoiceOver or Switch Control status has changed.
-<pre><code class="objective-c">
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
-                                               object:nil];
-}
-
-- (void)methodToBeCalled:(NSNotification *)notification {
-    
-    NSArray * checkStatus = @[@"NOK", @"OK"];
-    
-    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
-          checkStatus[UIAccessibilityIsSwitchControlRunning()],
-          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
-}
-</code></pre><pre><code class="swift">
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(methodToBeCalled(notification:)),
-                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
-                                               object: nil)
-    }
-    
-    @objc private func methodToBeCalled(notification: Notification) {
-
-        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
-        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
-        
-        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
-    }
-</code></pre>
-### Links
-- [Accessibility options](./criteria-ios.html#accessibility-options) *(iOS conception)*
-
-All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
-</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br>
-
-## Notify a content change
-### Description
-When there is a content change in the current page, it is possible to notify the accessibility <abbr>API</abbr> using several types of notifications. To do that, we must send the change notification to the accessibility <abbr>API</abbr> using the following method: `UIAccessibilityPostNotification`.  
-
-There are several types of change notifications but the two most commonly used are:
-- **UIAccessibilityLayoutChangedNotification**&nbsp;: notifies that a part of the page has changed with 2 possible incoming parameters (a `NSString` or a `UIObject`).
-</br>With a `NSString`, the notification behaves like a **UIAccessibilityAnnouncementNotification** with a <span lang="en">VoiceOver</span> vocalization.
-</br>With a `UIObject`, focus is shifted to the user interface element.
-</br>This notification is very similar to the **UIAccessibilityAnnouncementNotification** but should come as a result of dynamic content being deleted or added to the current view.
-- **UIAccessibilityScreenChangedNotification**&nbsp;: notifies that the whole page has changed including `nil` or a `UIObject` as incoming parameters.  
-With `nil`, the first accessible element in the page is focused.
-</br>With a `UIObject`, focus is shifted to the specified element with a <span lang="en">VoiceOver</span>.
-</br>This notification comes along with a vocalization including a sound like announcing a new page.
-### Example
-<pre><code class="objective-c">
-//The element 'myLabel' is focused and vocalized with its new value.
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLabel = @"This is a new label.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-
-//The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
-- (IBAction)clic:(UIButton *)sender {
-    
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
-}
-</code></pre><pre><code class="swift">
-//The element 'myLabel' is focused and vocalized with its new value.
-@IBAction func tapHere(_ sender: UIButton) {
-        
-    myLabel.accessibilityLabel = "This is a new label."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-    
-//The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
-@IBAction func clic(_ sender: UIButton) {
-        
-    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
-                         argument: nil)
-}
-</code></pre>
-### Links
-- [`UIAccessibilityPostNotification`](https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification)
-- [`UIAccessibilityLayoutChangedNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilitylayoutchangednotification)
-- [`UIAccessibilityScreenChangedNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilityscreenchangednotification)
-- [`UIAccessibilityPageScrolledNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification)
-
-## Change the vocalization language
-### Description
-To change the vocalization language of VoiceOver for a word or a sentence, one can use the **accessibilityLanguage**&nbsp; attribute.
-</br>Available through the `UIAccessibility` informal protocol, this attribute allows to specify a language for a dedicated text.
-</br>For instance, if we use this attribute on a `UILabel`, it will be vocalized by <span lang="en">VoiceOver</span> in the language set on this attribute.
-</br>
-### Example
-<pre><code class="objective-c">
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLanguage = @"fr";
-    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre><pre><code class="swift">
-@IBAction func tapHere(_ sender: UIButton) {
-        
-    myLabel.accessibilityLanguage = "fr"
-    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-</code></pre>
-### Link   
-- [`accessibilityLanguage`](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage)
-
-## Modify the focus area of VoiceOver
-### Description
-In the case of dynamically modified element or component not inheriting from `UIView`, it is possible to modify the focus area of accessibility of this element, i.e. the area <span lang="en">VoiceOver</span> highlights when focusing an element.
-
-- **accessibilityFrame**&nbsp;: sets the area via a rectangle (`CGRect`).
-</br>Usually, for an element inheriting from `UIView`, this area is the «&nbsp;visible&nbsp;» part of the view.
-- **accessibilityPath**&nbsp;: equivalent to `accessibilityFrame` but sets the area via Bezier curves.
-<a name="AccessibilityActivationPoint"></a>
-- **accessibilityActivationPoint**&nbsp;: defines a contact point inside the `frame` whose action will be fired by a double-tap element activation.
-</br>The default value is the midpoint of the `frame` but it can be redefine anywhere inside.
-</br>A classical use case could be an easy activation inside a [regroupment of elements](#ActivationPointExemple) for instance.
-</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
-</br>By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.
-
-### Example
-<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
-<pre><code class="objective-c">
-float xVal;
-float yVal;
-float widthVal;
-float heightVal;
-    
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    xVal = myLabel.accessibilityFrame.origin.x;
-    yVal = myLabel.accessibilityFrame.origin.y;
-    widthVal = myLabel.accessibilityFrame.size.width;
-    heightVal = myLabel.accessibilityFrame.size.height;
-    
-}
-
-//First way to enlarge the focus area.
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityFrame = CGRectMake(xVal,
-                                            yVal,
-                                            widthVal + 100.0,
-                                            heightVal+ 100.0);
-    
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-
-//Second way to enlarge the focus area (Bezier).
-- (IBAction)clic:(UIButton *)sender {
-    
-    UIBezierPath * bezierPath = [UIBezierPath bezierPath];
-    
-    [bezierPath moveToPoint:CGPointMake(xVal, yVal)];
-    
-    [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
-                                           yVal)];
-    [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
-                                           yVal + heightVal+ 100.0)];
-    [bezierPath addLineToPoint:CGPointMake(xVal, 
-                                           yVal + heightVal+ 100.0)];
-    [bezierPath closePath];
-    
-    myLabel.accessibilityPath = bezierPath;
-    
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre><pre><code class="swift">
-    var xVal: CGFloat = 0.0
-    var yVal: CGFloat = 0.0
-    var widthVal: CGFloat = 0.0
-    var heightVal: CGFloat = 0.0
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        xVal = myLabel.accessibilityFrame.origin.x;
-        yVal = myLabel.accessibilityFrame.origin.y;
-        widthVal = myLabel.accessibilityFrame.size.width;
-        heightVal = myLabel.accessibilityFrame.size.height;
-    }
-    
-    //Première façon d'augmenter la zone de focus.
-    @IBAction func clicHere(_ sender: UIButton) {
-        
-        myLabel.accessibilityFrame = CGRect.init(x: xVal,
-                                                 y: yVal,
-                                                 width: widthVal + 100.0,
-                                                 height: heightVal + 100.0)
-        
-        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                             argument: myLabel)
-    }
-    
-    //Seconde façon d'augmenter la zone de focus (Bézier).
-    @IBAction func clic(_ sender: UIButton) {
-        
-        let bezierPath = UIBezierPath.init()
-        
-        bezierPath.move(to: CGPoint.init(x: xVal, y: yVal))
-        
-        bezierPath.addLine(to: CGPoint.init(x: xVal + widthVal + 100.0,
-                                            y: yVal))
-        bezierPath.addLine(to: CGPoint.init(x: xVal + widthVal + 100.0,
-                                            y: yVal + heightVal + 100.0))
-        bezierPath.addLine(to: CGPoint.init(x: xVal,
-                                            y: yVal + heightVal + 100.0))
-        bezierPath.close()
-        
-        myLabel.accessibilityPath = bezierPath
-        
-        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
-                             argument: myLabel)
-    }
-</code></pre>
-### Links
-- [`accessibilityFrame`](https://developer.apple.com/documentation/uikit/uiaccessibilityelement/1619579-accessibilityframe)
-- [`accessibilityPath`](https://developer.apple.com/documentation/objectivec/nsobject/1615159-accessibilitypath)
-- [`accessibilityActivationPoint`](https://developer.apple.com/documentation/objectivec/nsobject/1615179-accessibilityactivationpoint)
-
 ## Grouping elements
 ### Description
 Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.</br></br>
@@ -589,7 +555,7 @@ We wish to obtain a 'label' and a 'switch control' as one unique block behaving 
 </code></pre>
 
 </br>... and implement the wrapper class to define accurately the
-<a href="https://a11y-guidelines.orange.com/mobile_EN/dev-ios-wwdc-17215.html#DefaultActivation">action when a double tap occurs</a> :
+<a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios-wwdc-17215.html#DefaultActivation">action when a double tap occurs</a> :
 <pre><code class="objective-c">
 @implementation MyWrapView
 
@@ -740,7 +706,7 @@ UIAccessibilityElement * elt;
                            action: #selector(configChanged),
                            for: .valueChanged)
         
-        elt = UIAccessibilityElement(accessibilityContainer: self.view)
+        elt = UIAccessibilityElement(accessibilityContainer: self.view!)
         let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
         
         if let elt = elt {
@@ -767,11 +733,244 @@ UIAccessibilityElement * elt;
 </code></pre>
 
 Another grouping elements case could use the **shouldGroupAccessibilityChildren** attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
-</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="https://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
+</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).
 ### Links
 - [`accessibilityActivate`](https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate)
 - [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
+</br></br>
+## Reading order
+### Description
+Redefining the VoiceOver reading order is done using the **UIAccessibilityContainer** protocol.
+</br>The idea is to have a table of elements that defines the reading order of the elements.
+</br>It is often very useful to use the **shouldGroupAccessibilityElement** attribute so we have a precise order but only for a part of the view *(the rest of it will be read using the native order provided by VoiceOver)*.
+### Example
+The best way to illustrate this feature is the keyboard whose keys order isn't necessary the appropriate one.
+</br>Here's the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
+</br><span aria-hidden="true">Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :</span>
+</br><img alt="display of the blue and grey views" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
+<pre><code class="objective-c">
+    __weak IBOutlet UIView * blueBlock;
+    __weak IBOutlet UIView * greyColumn;
+    
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    //Reads the first three numbers in the grey column.
+    greyColumn.shouldGroupAccessibilityChildren = YES;
+    
+    //Reads 6, 8, 9 and 5 in this order inside the blue block.
+    blueBlock.isAccessibilityElement = NO;
+    blueBlock.accessibilityElements = @[key_6,
+                                        key_8,
+                                        key_9,
+                                        key_5];
+}
+</code></pre><pre><code class="swift">
+    @IBOutlet weak var greyColumn: UIView!
+    @IBOutlet weak var blueBlock: UIView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Reads the first three numbers in the grey column.
+        greyColumn.shouldGroupAccessibilityChildren = true
+        
+        //Reads 6, 8, 9 and 5 in this order inside the blue block.
+        blueBlock.isAccessibilityElement = false
+        blueBlock.accessibilityElements = [key_6!,
+                                           key_8!,
+                                           key_9!,
+                                           key_5!]
+    }
+</code></pre>
+### Links
+- [`UIAccessibilityContainer`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilitycontainer?language=objc)
+- [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
+</br></br>
+## Focus an element
+### Description
+The **UIAccessibilityFocus** informal protocol provides programming elements to be informed of the accessible element focus :
+- **accessibilityElementDidBecomeFocused** : called when the accessible element is focused.
+- **accessibilityElementDidLoseFocus** : fired when the accessible element lost focus.
+- **accessibilityElementIsFocused** : boolean value indicating the accessible element selection.
 
+Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
+</br>However, if they are **implemented in the accessible element itself**, you won't be disappointed.
+</br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it's not accessible... like a view controller for instance.
+</br></br>The example below enables to follow the focus of an accessible element identified by its `accessibleIdentifier`.
+<pre><code class="objective-c">
+#import "UIView+focus.h"
+
+@implementation UIView (focus)
+
+- (void)accessibilityElementDidBecomeFocused {
+    
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"My element has become focused.");
+    }
+}
+
+- (void)accessibilityElementDidLoseFocus {
+    
+    if ([self accessibilityElementIsFocused]) {
+        NSLog(@"My element has lost focus.");
+    }
+}
+
+- (BOOL)accessibilityElementIsFocused {
+    
+    if ([self.accessibilityIdentifier isEqualToString:@"myAccessibleElt"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+extension UIView {
+    override open func accessibilityElementDidBecomeFocused() {
+        
+        if self.accessibilityElementIsFocused() {
+            print("My element has become focused.")
+        }
+    }
+    
+    override open func accessibilityElementDidLoseFocus() {
+        
+        if self.accessibilityElementIsFocused() {
+            print("My element has lost focus.")
+        }
+    }
+    
+    override open func accessibilityElementIsFocused() -> Bool {
+        
+        if (self.accessibilityIdentifier == "myAccessibleElt") {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+</code></pre>
+
+### Link
+- [`UIAccessibilityFocus`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus)
+</br></br>
+## Modify the focus area of VoiceOver
+### Description
+In the case of dynamically modified element or component not inheriting from `UIView`, it is possible to modify the focus area of accessibility of this element, i.e. the area <span lang="en">VoiceOver</span> highlights when focusing an element.
+
+- **accessibilityFrame**&nbsp;: sets the area via a rectangle (`CGRect`).
+</br>Usually, for an element inheriting from `UIView`, this area is the «&nbsp;visible&nbsp;» part of the view.
+- **accessibilityPath**&nbsp;: equivalent to `accessibilityFrame` but sets the area via Bezier curves.
+<a name="AccessibilityActivationPoint"></a>
+- **accessibilityActivationPoint**&nbsp;: defines a contact point inside the `frame` whose action will be fired by a double-tap element activation.
+</br>The default value is the midpoint of the `frame` but it can be redefine anywhere inside.
+</br>A classical use case could be an easy activation inside a [regroupment of elements](#ActivationPointExemple) for instance.
+</br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
+</br>By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.
+
+### Example
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" />
+<pre><code class="objective-c">
+float xVal;
+float yVal;
+float widthVal;
+float heightVal;
+    
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    xVal = myLabel.accessibilityFrame.origin.x;
+    yVal = myLabel.accessibilityFrame.origin.y;
+    widthVal = myLabel.accessibilityFrame.size.width;
+    heightVal = myLabel.accessibilityFrame.size.height;
+    
+}
+
+//First way to enlarge the focus area.
+- (IBAction)tapHere:(UIButton *)sender {
+    
+    myLabel.accessibilityFrame = CGRectMake(xVal,
+                                            yVal,
+                                            widthVal + 100.0,
+                                            heightVal+ 100.0);
+    
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
+}
+
+//Second way to enlarge the focus area (Bezier).
+- (IBAction)clic:(UIButton *)sender {
+    
+    UIBezierPath * bezierPath = [UIBezierPath bezierPath];
+    
+    [bezierPath moveToPoint:CGPointMake(xVal, yVal)];
+    
+    [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
+                                           yVal)];
+    [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
+                                           yVal + heightVal+ 100.0)];
+    [bezierPath addLineToPoint:CGPointMake(xVal, 
+                                           yVal + heightVal+ 100.0)];
+    [bezierPath closePath];
+    
+    myLabel.accessibilityPath = bezierPath;
+    
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
+}
+</code></pre><pre><code class="swift">
+    var xVal: CGFloat = 0.0
+    var yVal: CGFloat = 0.0
+    var widthVal: CGFloat = 0.0
+    var heightVal: CGFloat = 0.0
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        xVal = myLabel.accessibilityFrame.origin.x;
+        yVal = myLabel.accessibilityFrame.origin.y;
+        widthVal = myLabel.accessibilityFrame.size.width;
+        heightVal = myLabel.accessibilityFrame.size.height;
+    }
+    
+    //Première façon d'augmenter la zone de focus.
+    @IBAction func clicHere(_ sender: UIButton) {
+        
+        myLabel.accessibilityFrame = CGRect.init(x: xVal,
+                                                 y: yVal,
+                                                 width: widthVal + 100.0,
+                                                 height: heightVal + 100.0)
+        
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                             argument: myLabel)
+    }
+    
+    //Seconde façon d'augmenter la zone de focus (Bézier).
+    @IBAction func clic(_ sender: UIButton) {
+        
+        let bezierPath = UIBezierPath.init()
+        
+        bezierPath.move(to: CGPoint.init(x: xVal, y: yVal))
+        
+        bezierPath.addLine(to: CGPoint.init(x: xVal + widthVal + 100.0,
+                                            y: yVal))
+        bezierPath.addLine(to: CGPoint.init(x: xVal + widthVal + 100.0,
+                                            y: yVal + heightVal + 100.0))
+        bezierPath.addLine(to: CGPoint.init(x: xVal,
+                                            y: yVal + heightVal + 100.0))
+        bezierPath.close()
+        
+        myLabel.accessibilityPath = bezierPath
+        
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                             argument: myLabel)
+    }
+</code></pre>
+### Links
+- [`accessibilityFrame`](https://developer.apple.com/documentation/uikit/uiaccessibilityelement/1619579-accessibilityframe)
+- [`accessibilityPath`](https://developer.apple.com/documentation/objectivec/nsobject/1615159-accessibilitypath)
+- [`accessibilityActivationPoint`](https://developer.apple.com/documentation/objectivec/nsobject/1615179-accessibilityactivationpoint)
+</br></br>
 ## Text size
 ### Description
 Since iOS7, it is possible to make the text size dynamic according to the phone settings.
@@ -842,7 +1041,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
 - [Dynamic Type & Text Styles](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
-
+</br></br>
 ## Truncation hyphen
 ### Description
 The `Dynamic Type` feature introduced in the previous section may come along with a word truncation according to the magnifying defined in the settings.
@@ -909,6 +1108,7 @@ class TruncationHyphen: UIViewController {
 }
 </code></pre>
 
+</br></br>
 ## Graphical elements size
 ### Description
 Exactly like text, images and tab/tool bar items have a scalable size thanks to accessibility settings but **only since iOS11 with Xcode 9**.
@@ -923,351 +1123,13 @@ Exactly like text, images and tab/tool bar items have a scalable size thanks to 
 </br>**WARNING : don't forget to check your layout with these new images larger sizes.**
 ### Example
 An application with a tab bar, whose second bar item displays the Orange logo (added `Aspect Fit` content mode and constraints to stretch the image view), is created to test the features exposed in the description.
-</br></br>With the `Larger Accessibility Sizes` activation in the settings (see <a href="https://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:
+</br></br>With the `Larger Accessibility Sizes` activation in the settings (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:
 - A larger Orange image size.
 - A larger version of the bar item in an overlay if you touch and hold over it.
 </br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" />
 ### Link
 - [`adjustsImageSizeForAccessibilityContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility)
-
-## Reading order
-### Description
-Redefining the VoiceOver reading order is done using the **UIAccessibilityContainer** protocol.
-</br>The idea is to have a table of elements that defines the reading order of the elements.
-</br>It is often very useful to use the **shouldGroupAccessibilityElement** attribute so we have a precise order but only for a part of the view *(the rest of it will be read using the native order provided by VoiceOver)*.
-### Example
-The best way to illustrate this feature is the keyboard whose keys order isn't necessary the appropriate one.
-</br>Here's the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br><span aria-hidden="true">Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :</span>
-</br><img alt="display of the blue and grey views" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
-<pre><code class="objective-c">
-    __weak IBOutlet UIView * blueBlock;
-    __weak IBOutlet UIView * greyColumn;
-    
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    //Reads the first three numbers in the grey column.
-    greyColumn.shouldGroupAccessibilityChildren = YES;
-    
-    //Reads 6, 8, 9 and 5 in this order inside the blue block.
-    blueBlock.isAccessibilityElement = NO;
-    blueBlock.accessibilityElements = @[key_6,
-                                        key_8,
-                                        key_9,
-                                        key_5];
-}
-</code></pre><pre><code class="swift">
-    @IBOutlet weak var greyColumn: UIView!
-    @IBOutlet weak var blueBlock: UIView!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //Reads the first three numbers in the grey column.
-        greyColumn.shouldGroupAccessibilityChildren = true
-        
-        //Reads 6, 8, 9 and 5 in this order inside the blue block.
-        blueBlock.isAccessibilityElement = false
-        blueBlock.accessibilityElements = [key_6,
-                                           key_8,
-                                           key_9,
-                                           key_5]
-    }
-</code></pre>
-### Links
-- [`UIAccessibilityContainer`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilitycontainer?language=objc)
-- [`shouldGroupAccessibilityChildren`](https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren)
-
-## Date, time and numbers
-### Description
-Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.
-#### Date and time vocalization
-The rendering isn't natural if the date or time data are imported text in a `label`.
-</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
-</br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
-</br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" />
-<pre><code class="objective-c">
-    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
-    
-    NSDate * date = [dateFormatter dateFromString:@"01/04/2015 05:30"];
-    
-    dateLabel.text = [NSDateFormatter localizedStringFromDate:date
-                                                    dateStyle:NSDateFormatterShortStyle
-                                                    timeStyle:NSDateFormatterNoStyle];
-    
-    dateLabel.accessibilityLabel = [NSDateFormatter localizedStringFromDate:date
-                                                                  dateStyle:NSDateFormatterMediumStyle
-                                                                  timeStyle:NSDateFormatterNoStyle];
-
-    
-    hourLabel.text = [NSDateFormatter localizedStringFromDate:date
-                                                    dateStyle:NSDateFormatterNoStyle
-                                                    timeStyle:NSDateFormatterShortStyle];
-    
-    NSDateComponents * hourComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitHour | NSCalendarUnitMinute
-                                                                        fromDate:date];
-                                                                        
-    hourLabel.accessibilityLabel = [NSDateComponentsFormatter localizedStringFromDateComponents:hourComponents
-                                                                                     unitsStyle:NSDateComponentsFormatterUnitsStyleSpellOut];
-</code></pre><pre><code class="swift">
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
-        
-    let date = dateFormatter.date(from: "01/04/2015 05:30")
-        
-    dateLabel.text = DateFormatter.localizedString(from: date!,
-                                                   dateStyle: .short,
-                                                   timeStyle: .none)
-                                                       
-    dateLabel.accessibilityLabel = DateFormatter.localizedString(from: date!,
-                                                                 dateStyle: .medium,
-                                                                 timeStyle: .none)
-        
-        
-    hourLabel.text = DateFormatter.localizedString(from: date!,
-                                                   dateStyle: .none,
-                                                   timeStyle: .short)
-        
-    let hourComponents = Calendar.current.dateComponents([.hour, .minute],
-                                                         from: date!)
-    hourLabel.accessibilityLabel = DateComponentsFormatter.localizedString(from: hourComponents,
-                                                                           unitsStyle: .spellOut)
-</code></pre>
-#### Numbers vocalization
-If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
-</br><img alt="" style="max-width: 475px; height: auto; " src="./images/iOSdev/DateHeureNombres_12.png" />
-</br>As the previous chapter dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" />
-<pre><code class="objective-c">
-    NSNumber * numberValue = @54038921.7;
-    
-    NSNumberFormatter * numberFormatter = [[NSNumberFormatter alloc]init];
-    numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-    
-    numberLabel.text = [numberFormatter stringFromNumber:numberValue];
-    
-    numberLabel.accessibilityLabel = [NSNumberFormatter localizedStringFromNumber:numberValue
-                                                                      numberStyle:NSNumberFormatterSpellOutStyle];
-</code></pre><pre><code class="swift">
-    let numberValue = NSNumber(value: 54038921.7)
-        
-    numberLabel.text = NumberFormatter.localizedString(from: numberValue,
-                                                       number: .decimal)
-                                                           
-    numberLabel.accessibilityLabel = NumberFormatter.localizedString(from: numberValue,
-                                                                     number: .spellOut)
-</code></pre>
-#### Phone numbers vocalization
-Once more, formatting data is an essential step for a phone number vocalization including the special cases of the "0" figures.
-</br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
-</br><img alt="default vocalization is not valid for the following phone number : 06.11.22.33.06" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
-</br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
-</br><img alt="in this case the phone number is well vocalized" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_9.png" />
-<pre><code class="objective-c">
-    NSString * phoneNumberValue = @"06.11.22.33.06";
-    NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
-    
-    NSNumberFormatter * nbFormatter = [[NSNumberFormatter alloc]init];
-    nbFormatter.numberStyle = NSNumberFormatterSpellOutStyle;
-    
-    NSMutableString * spelledOutString = [[NSMutableString alloc]init];
-    
-    [phoneNumberElts enumerateObjectsUsingBlock:^(id  _Nonnull obj,
-                                                  NSUInteger idx,
-                                                  BOOL * _Nonnull stop) {
-        NSString * elt = (NSString *)obj;
-        
-        if (idx != 0) {
-            [spelledOutString appendString:@","];
-        }
-        
-        if ([elt hasPrefix:@"0"]) {
-            
-            NSString * firstFigure = [nbFormatter stringFromNumber:@([[elt substringToIndex:1] integerValue])];
-            NSString * secondFigure = [nbFormatter stringFromNumber:@([[elt substringFromIndex:1] integerValue])];
-            
-            [spelledOutString appendString:firstFigure];
-            [spelledOutString appendString:secondFigure];
-            
-        } else {
-            [spelledOutString appendString:[nbFormatter stringFromNumber:@([elt integerValue])]];
-        }
-    }];
-    
-    phoneNumberLabel.text = phoneNumberValue;
-    phoneNumberLabel.accessibilityLabel = spelledOutString;
-</code></pre><pre><code class="swift">
-        let phoneNumberValue = "06.11.22.33.06"
-        let phoneNumberElts = phoneNumberValue.components(separatedBy: ".")
-        
-        let nbFormatter = NumberFormatter()
-        nbFormatter.numberStyle = .spellOut
-        
-        var spelledOutString = String()
-        
-        for (index, elt) in phoneNumberElts.enumerated() {
-            
-            if (index != 0) {
-                spelledOutString.append(",")
-            }
-            
-            if (elt.hasPrefix("0")) {
-                
-                let firstFigureValue = Int(String(elt[elt.startIndex]))!
-                let firstFigure = nbFormatter.string(from: NSNumber(value:firstFigureValue))
-                spelledOutString.append(firstFigure!)
-                
-                let secondFigureValue = Int(String(elt[elt.index(elt.startIndex, offsetBy: 1)]))!
-                let secondFigure = nbFormatter.string(from: NSNumber(value:secondFigureValue))
-                spelledOutString.append(secondFigure!)
-                
-            } else {
-                
-                let figure = nbFormatter.string(from: NSNumber(value:Int(elt)!))
-                spelledOutString.append(figure!)
-            }
-        }
-
-        phoneNumberLabel.text = phoneNumberValue
-        phoneNumberLabel.accessibilityLabel = spelledOutString
-</code></pre>
-
-## Switch Control
-### Description
-The accessibility Switch Control feature revolves around the point mode and the item mode.
-</br><img alt="accessibility switch control screenshots" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControl.png" />
-</br>The element selection using the item mode works fine when the user interface isn't too complicated and uses native elements.
-</br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
-#### Customization of the item mode
-The Xcode InterfaceBuilder shows the structure used for the example hereunder :
-</br><img alt="xcode screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControlIB.png" />
-</br>The following steps represent the customization :
-- Creation of 2 groups {Test_1 + Test_2 ; Btn 5 + Btn 6} that must be selectable in the item mode.
-- Within the other elements, only Btn 1 et Btn 2 must be separately accessible.
-
-<pre><code class="objective-c">
-@interface ViewController2 ()
-
-@property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
-@property (weak, nonatomic) IBOutlet UIButton * btn1;
-@property (weak, nonatomic) IBOutlet UIButton * btn2;
-@property (weak, nonatomic) IBOutlet UIButton * btn5;
-@property (weak, nonatomic) IBOutlet UIButton * btn6;
-
-@end
-
-
-@implementation ViewController2
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
-    UIButton * testOneButton = [self.view viewWithTag:1];
-    UIButton * testTwoButton = [self.view viewWithTag:2];
-    CGRect testWrapFrame = CGRectUnion(testOneButton.frame, testTwoButton.frame);
-    
-    UIAccessibilityElement * testWrap = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
-    
-    testWrap.isAccessibilityElement = false;
-    testWrap.accessibilityFrame = testWrapFrame;
-    testWrap.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined; //Property specific to Switch Control.
-    testWrap.accessibilityElements = @[testOneButton, testTwoButton];
-    
-    
-    //Creation of the 'secondGroup' SEPARATING the first two buttons.
-    CGRect secondGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
-    CGRect secondGroupFrame = [_btnsParentView convertRect:secondGroupRect
-                                                    toView:self.view];
-    UIAccessibilityElement * secondGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
-    
-    secondGroup.isAccessibilityElement = false;
-    secondGroup.accessibilityFrame = secondGroupFrame;
-    secondGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleSeparate;
-    secondGroup.accessibilityElements = @[_btn1, _btn2];
-
-    
-    //Creation of the 'thirdGroup' COMBINING the last two buttons.
-    CGRect thirdGroupRect = CGRectUnion(_btn5.frame, _btn6.frame);
-    CGRect thirdGroupFrame = [_btnsParentView convertRect:thirdGroupRect
-                                                   toView:self.view];
-    UIAccessibilityElement * thirdGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
-    
-    thirdGroup.isAccessibilityElement = false;
-    thirdGroup.accessibilityFrame = thirdGroupFrame;
-    thirdGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined;
-    thirdGroup.accessibilityElements = @[_btn5, _btn6];
-    
-    
-    self.view.accessibilityElements = @[testWrap, 
-                                        secondGroup, 
-                                        thirdGroup];
-}
-@end
-</code></pre><pre><code class="swift">
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var btnsParentView: UIStackView!
-    @IBOutlet weak var btn1: UIButton!
-    @IBOutlet weak var btn2: UIButton!
-    @IBOutlet weak var btn5: UIButton!
-    @IBOutlet weak var btn6: UIButton!
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
-        let testOneButton = self.view.viewWithTag(1) as? UIButton
-        let testTwoButton = self.view.viewWithTag(2) as? UIButton
-        let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
-
-        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view)
-
-        testWrap.isAccessibilityElement = false
-        testWrap.accessibilityFrame = testWrapFrame!
-        testWrap.accessibilityNavigationStyle = .combined   //Property specific to Switch Control.
-        testWrap.accessibilityElements = [testOneButton!, testTwoButton!]
-
-
-        //Creation of the 'secondGroup' SEPARATING the first two buttons.
-        let secondGroupRect = btn1.frame.union(btn2.frame)
-        let secondGroupFrame = btnsParentView.convert(secondGroupRect,
-                                                      to: self.view)
-        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
-
-        secondGroup.isAccessibilityElement = false
-        secondGroup.accessibilityFrame = secondGroupFrame
-        secondGroup.accessibilityNavigationStyle = .separate
-        secondGroup.accessibilityElements = [btn1, btn2]
-
-
-        //Creation of the 'thirdGroup' COMBINING the last two buttons.
-        let thirdGroupRect = btn5.frame.union(btn6.frame)
-        let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
-                                                     to: self.view)
-        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView)
-
-        thirdGroup.isAccessibilityElement = false
-        thirdGroup.accessibilityFrame = thirdGroupFrame
-        thirdGroup.accessibilityNavigationStyle = .combined
-        thirdGroup.accessibilityElements = [btn5, btn6]
-
-
-        self.view.accessibilityElements = [testWrap,
-                                           secondGroup, 
-                                           thirdGroup]
-    }
-}
-</code></pre>
-
-</br>The visual rendering is exposed hereunder :
-</br><img alt="visual rendering screenshot" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
-</br>Once activated, the created groups allow to reach directly the elements which they contain.
-### Link
-- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
-
+</br></br>
 ## Continuous adjustable values
 ### Description
 Graphics like `picker`, `stepper` or `slider` have the ability to continuously change the value they provide.
@@ -1433,7 +1295,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 </code></pre>
 ### Link
 - [`UIAccessibilityTraitAdjustable`](https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable)
-
+</br></br>
 ## Custom actions
 ### Description
 Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
@@ -1533,76 +1395,7 @@ class CustomActions: UIViewController {
 ### Links
 - [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
 - [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
-
-## Focus an element
-### Description
-The **UIAccessibilityFocus** informal protocol provides programming elements to be informed of the accessible element focus :
-- **accessibilityElementDidBecomeFocused** : called when the accessible element is focused.
-- **accessibilityElementDidLoseFocus** : fired when the accessible element lost focus.
-- **accessibilityElementIsFocused** : boolean value indicating the accessible element selection.
-
-Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
-</br>However, if they are **implemented in the accessible element itself**, you won't be disappointed.
-</br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it's not accessible... like a view controller for instance.
-</br></br>The example below enables to follow the focus of an accessible element identified by its `accessibleIdentifier`.
-<pre><code class="objective-c">
-#import "UIView+focus.h"
-
-@implementation UIView (focus)
-
-- (void)accessibilityElementDidBecomeFocused {
-    
-    if ([self accessibilityElementIsFocused]) {
-        NSLog(@"My element has become focused.");
-    }
-}
-
-- (void)accessibilityElementDidLoseFocus {
-    
-    if ([self accessibilityElementIsFocused]) {
-        NSLog(@"My element has lost focus.");
-    }
-}
-
-- (BOOL)accessibilityElementIsFocused {
-    
-    if ([self.accessibilityIdentifier isEqualToString:@"myAccessibleElt"]) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-@end
-</code></pre><pre><code class="swift">
-extension UIView {
-    override open func accessibilityElementDidBecomeFocused() {
-        
-        if self.accessibilityElementIsFocused() {
-            print("My element has become focused.")
-        }
-    }
-    
-    override open func accessibilityElementDidLoseFocus() {
-        
-        if self.accessibilityElementIsFocused() {
-            print("My element has lost focus.")
-        }
-    }
-    
-    override open func accessibilityElementIsFocused() -> Bool {
-        
-        if (self.accessibilityIdentifier == "myAccessibleElt") {
-            return true
-        } else {
-            return false
-        }
-    }
-}
-</code></pre>
-
-### Link
-- [`UIAccessibilityFocus`](https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus)
-
+</br></br>
 ## Custom rotor
 ### Description
 Since iOS10, adding a new rotor option is possible thanks to the **UIAccessibilityCustomRotor** whose creation is based on 2 elements :
@@ -1714,6 +1507,220 @@ class CustomRotor: UIViewController {
 - [`UIAccessibilityCustomRotor`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor)
 - [`UIAccessibilityCustomRotorItemResult`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult)
 - [`UIAccessibilityCustomRotorSearchPredicate`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate)
+</br></br>
+## Accessibility options
+### States
+On iOS, it is possible to check the accessibility options state. 
+</br>Is VoiceOver activated? Is the audio-mono mode activated? Several methods that are part of the `UIKit` framework can help you to check with that.
+</br>The most useful method is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
+</br></br>Some other methods are deeply explained in a WWDC 2018 video *(Deliver en exceptional accessibility experience)* whose content is perfectly detailed in the [iOS WWDC section](./dev-ios-wwdc-18230.html) of this site.</br></br>
+### Example
+<pre><code class="objective-c">
+    BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
+    BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
+    
+    NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
+</code></pre><pre><code class="swift">
+    let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
+    let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
+        
+    print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
+</code></pre>
+### Events
+iOS sends many accessibility events when accessibility options have changed.
+</br>For example, if VoiceOver is deactivated, the running applications will receive the `UIAccessibilityVoiceOverStatusDidChangeNotification` event.
+</br>This is very useful when used simultaneously with `UIAccessibilityIsVoiceOverRunning`.
+
+Let's say the application behaves differently when VoiceOver is turned on.
+</br>What happens if VoiceOver is disabled ? This is exactly the use case when the system events can be used.
+</br>By listening to these events, it is possible to dynamically change how the application behaves.</br></br>
+### Example
+In this example, a method is fired when VoiceOver or Switch Control status has changed.
+<pre><code class="objective-c">
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(methodToBeCalled:)
+                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
+                                               object:nil];
+}
+
+- (void)methodToBeCalled:(NSNotification *)notification {
+    
+    NSArray * checkStatus = @[@"NOK", @"OK"];
+    
+    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
+          checkStatus[UIAccessibilityIsSwitchControlRunning()],
+          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
+}
+</code></pre><pre><code class="swift">
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.switchControlStatusDidChangeNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodToBeCalled(notification:)),
+                                               name: UIAccessibility.voiceOverStatusDidChangeNotification,
+                                               object: nil)
+    }
+    
+    @objc private func methodToBeCalled(notification: Notification) {
+
+        let switchControlStatus = (UIAccessibility.isSwitchControlRunning ? "OK" : "NOK")
+        let voiceOverStatus = (UIAccessibility.isVoiceOverRunning ? "OK" : "NOK")
+        
+        print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
+    }
+</code></pre>
+### Links
+- [Accessibility options](./criteria-ios.html#accessibility-options) *(iOS conception)*
+
+All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
+</br></br>
+## Switch Control
+### Description
+The accessibility Switch Control feature revolves around the point mode and the item mode.
+</br><img alt="accessibility switch control screenshots" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControl.png" />
+</br>The element selection using the item mode works fine when the user interface isn't too complicated and uses native elements.
+</br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
+#### Customization of the item mode
+The Xcode InterfaceBuilder shows the structure used for the example hereunder :
+</br><img alt="xcode screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControlIB.png" />
+</br>The following steps represent the customization :
+- Creation of 2 groups {Test_1 + Test_2 ; Btn 5 + Btn 6} that must be selectable in the item mode.
+- Within the other elements, only Btn 1 et Btn 2 must be separately accessible.
+
+<pre><code class="objective-c">
+@interface ViewController2 ()
+
+@property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
+@property (weak, nonatomic) IBOutlet UIButton * btn1;
+@property (weak, nonatomic) IBOutlet UIButton * btn2;
+@property (weak, nonatomic) IBOutlet UIButton * btn5;
+@property (weak, nonatomic) IBOutlet UIButton * btn6;
+
+@end
+
+
+@implementation ViewController2
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
+    UIButton * testOneButton = [self.view viewWithTag:1];
+    UIButton * testTwoButton = [self.view viewWithTag:2];
+    CGRect testWrapFrame = CGRectUnion(testOneButton.frame, testTwoButton.frame);
+    
+    UIAccessibilityElement * testWrap = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+    
+    testWrap.isAccessibilityElement = false;
+    testWrap.accessibilityFrame = testWrapFrame;
+    testWrap.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined; //Property specific to Switch Control.
+    testWrap.accessibilityElements = @[testOneButton, testTwoButton];
+    
+    
+    //Creation of the 'secondGroup' SEPARATING the first two buttons.
+    CGRect secondGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
+    CGRect secondGroupFrame = [_btnsParentView convertRect:secondGroupRect
+                                                    toView:self.view];
+    UIAccessibilityElement * secondGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+    
+    secondGroup.isAccessibilityElement = false;
+    secondGroup.accessibilityFrame = secondGroupFrame;
+    secondGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleSeparate;
+    secondGroup.accessibilityElements = @[_btn1, _btn2];
+
+    
+    //Creation of the 'thirdGroup' COMBINING the last two buttons.
+    CGRect thirdGroupRect = CGRectUnion(_btn5.frame, _btn6.frame);
+    CGRect thirdGroupFrame = [_btnsParentView convertRect:thirdGroupRect
+                                                   toView:self.view];
+    UIAccessibilityElement * thirdGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+    
+    thirdGroup.isAccessibilityElement = false;
+    thirdGroup.accessibilityFrame = thirdGroupFrame;
+    thirdGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined;
+    thirdGroup.accessibilityElements = @[_btn5, _btn6];
+    
+    
+    self.view.accessibilityElements = @[testWrap, 
+                                        secondGroup, 
+                                        thirdGroup];
+}
+@end
+</code></pre><pre><code class="swift">
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var btnsParentView: UIStackView!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn5: UIButton!
+    @IBOutlet weak var btn6: UIButton!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
+        let testOneButton = self.view.viewWithTag(1) as? UIButton
+        let testTwoButton = self.view.viewWithTag(2) as? UIButton
+        let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
+
+        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view!)
+
+        testWrap.isAccessibilityElement = false
+        testWrap.accessibilityFrame = testWrapFrame!
+        testWrap.accessibilityNavigationStyle = .combined   //Property specific to Switch Control.
+        testWrap.accessibilityElements = [testOneButton!, testTwoButton!]
+
+
+        //Creation of the 'secondGroup' SEPARATING the first two buttons.
+        let secondGroupRect = btn1.frame.union(btn2.frame)
+        let secondGroupFrame = btnsParentView.convert(secondGroupRect,
+                                                      to: self.view)
+        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
+
+        secondGroup.isAccessibilityElement = false
+        secondGroup.accessibilityFrame = secondGroupFrame
+        secondGroup.accessibilityNavigationStyle = .separate
+        secondGroup.accessibilityElements = [btn1!, btn2!]
+
+
+        //Creation of the 'thirdGroup' COMBINING the last two buttons.
+        let thirdGroupRect = btn5.frame.union(btn6.frame)
+        let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
+                                                     to: self.view)
+        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
+
+        thirdGroup.isAccessibilityElement = false
+        thirdGroup.accessibilityFrame = thirdGroupFrame
+        thirdGroup.accessibilityNavigationStyle = .combined
+        thirdGroup.accessibilityElements = [btn5!, btn6!]
+
+
+        self.view.accessibilityElements = [testWrap,
+                                           secondGroup, 
+                                           thirdGroup]
+    }
+}
+</code></pre>
+
+</br>The visual rendering is exposed hereunder :
+</br><img alt="visual rendering screenshot" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
+</br>Once activated, the created groups allow to reach directly the elements which they contain.
+### Link
+- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

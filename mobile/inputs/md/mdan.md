@@ -1,7 +1,7 @@
 # Démonstrateur d’accessibilité sur mobile mDAN   
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Démonstrateur d’accessibilité sur mobile mDAN"}]);
+    setBreadcrumb([{"label":"Démonstrateur mDAN"}]);
 });</script>
 
 <span data-menuitem="mdan"></span>

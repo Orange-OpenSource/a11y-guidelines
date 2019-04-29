@@ -1,22 +1,23 @@
 # WWDC : World Wide Developers Conference
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
-                   {"label":"iOS WWDC"}
-	]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"WWDC"}]);
     addSubMenu([
-        {"label":"Android guide","url":"dev-android.html"}, 
-        {"label":"iOS guide","url":"dev-mobile.html"},
-        {"label":"iOS WWDC","url":"dev-ios-wwdc.html", "expanded": true}
-    ]);
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html", "expanded": true},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="mobile-ios"></span>
 
 This section regroups [presentations at the WWDC](https://developer.apple.com/videos/) dealing with accessibility.
 </br>Each one of them is detailed with time references to their different contents.
 </br></br>Most of the illustrations are parts of Apple presentations and are available at the `Resources` section inside the `Overview` sheet of each video.
-</br>The summary of each video can be reached on clicking the title or the image presentation.
+</br>**The summary of each video can be reached on clicking the title or the image presentation**.
 </br></br>
 
 ## [2018 - Deliver an exceptional accessibility experience](./dev-ios-wwdc-18230.html)
