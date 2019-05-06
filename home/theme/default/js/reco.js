@@ -327,6 +327,9 @@ var Glossary = { // collection of all terms to be defined
     "base":"<span lang='en'>Internet Protocol</span>",
     "fr":"protocole internet"
   },
+  "IPA":{
+    "base":"<span lang='en'>International Phonetic Alphabet</span>",
+  },
   "ISO":{
     "base":"<span lang='en'>International Organization for Standardization</span>",
     "fr":"organisation internationale pour la standardisation"

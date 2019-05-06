@@ -25,6 +25,11 @@ This presentation is a detailed explanation of functionalities for visual impair
 </br>A demo application will highlight these functionalities purposes so as to understand the rationale behind their implementation.
 </br><a href="./dev-ios-wwdc-18230.html"><img style="max-width: 700px; height: auto;" alt="Access to deliver an exceptional accessibility experience." src="./images/iOSdev/wwdc18-230.png" />
 </br></br>
+    
+## [2018 - AVSpeechSynthesizer](./dev-ios-wwdc-18236.html)
+This short video introduces the essential elements to be implemented so as to make an iOS application talk.
+</br><a href="./dev-ios-wwdc-18236.html"><img style="max-width: 466px; height: auto;" alt="Access to AVSpeechSynthesizer." src="./images/iOSdev/wwdc18-236.png" />
+</br></br>
 
 ## [2017 - What's New in Accessibility](./dev-ios-wwdc-17215.html)
 Introduction of new iOS 11 accessibility features merging the user and the developer sides.
