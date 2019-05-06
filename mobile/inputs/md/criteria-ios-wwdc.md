@@ -25,6 +25,10 @@ Présentation de toutes les fonctionnalités qui vont permettre de créer une ap
 </br>Le détail de leurs mises en oeuvre est exposé aux développeurs par le biais d'une démonstration de façon à saisir la logique à suivre quel que soit le contexte.
 </br><a href="./criteria-ios-wwdc-18230.html"><img style="max-width: 700px; height: auto;" alt="Accès à fournir une expérience exceptionnelle en accessibilité." src="./images/iOSdev/wwdc18-230.png" />
     
+## [2018 - Utiliser une voix synthétisée](./criteria-ios-wwdc-18236.html)
+Cette très courte vidéo présente les éléments principaux à mettre en oeuvre pour implémenter une vocalisation synthétisée.
+</br><a href="./criteria-ios-wwdc-18236.html"><img style="max-width: 466px; height: auto;" alt="Accès à utiliser une voix synthétisée." src="./images/iOSdev/wwdc18-236.png" />
+    
 ## [2017 - Les nouveautés en accessibilité](./criteria-ios-wwdc-17215.html)
 Présentation des nouvelles fonctionnalités d'accessibilité iOS 11 en associant la pratique de l'utilisateur à la conception du développeur.
 </br><a href="./criteria-ios-wwdc-17215.html"><img style="max-width: 700px; height: auto;" alt="Accès aux nouveautés en accessibilité 2017." src="./images/iOSdev/wwdc17-215.png" />
