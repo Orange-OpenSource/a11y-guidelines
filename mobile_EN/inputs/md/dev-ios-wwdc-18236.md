@@ -33,7 +33,7 @@ Thereafter, the selection of a title will give rise to the video playback on the
 </br></br>
 <a name="Uses"></a>
 ### [Uses (00:48)](https://developer.apple.com/videos/play/wwdc2018/236/?time=48)
-The wide range of possible use cases offered by this ** iOS 11 new feature** are introduced in this section.
+The wide range of possible use cases offered by this ** iOS 12 new feature** are introduced in this section.
 </br></br>
 <a name="Basics"></a>
 ### [Basics (02:03)](https://developer.apple.com/videos/play/wwdc2018/236/?time=123)

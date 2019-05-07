@@ -33,7 +33,7 @@ Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de prés
 </br></br>
 <a name="Uses"></a>
 ### [Cas d'usage (00:48)](https://developer.apple.com/videos/play/wwdc2018/236/?time=48)
-Les différentes utilisations possibles de cette **nouveauté iOS 11** sont décrites dans cette partie.
+Les différentes utilisations possibles de cette **nouveauté iOS 12** sont décrites dans cette partie.
 </br></br>
 <a name="Basics"></a>
 ### [Par où commencer ? (02:03)](https://developer.apple.com/videos/play/wwdc2018/236/?time=123)
