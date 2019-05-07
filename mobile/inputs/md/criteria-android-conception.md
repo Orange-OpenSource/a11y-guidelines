@@ -1,17 +1,18 @@
 # Les critères incontournables sous Android pour la conception
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Critères incontournables sous Android", "url": "./criteria-android.html"},
-        {"label":"Pour la conception"}
+    setBreadcrumb([{"label":"Android", "url": "./criteria-android.html"},
+        {"label":"Critères de conception"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-android-conception.html", "expanded": true}, 
-        {"label":"Pour le développement","url":"criteria-android-dev.html"}
+        {"label":"Critères de conception","url":"criteria-android-conception.html", "expanded": true}, 
+        {"label":"Guide pour les développeurs","url":"criteria-android-dev.html"},
+        {"label":"TalkBack","url":"screen-reader-talkback.html"}
     ]);        
 });</script>
 
 <span data-menuitem="criteria-android"></span>
+
 
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application [mDAN](./mdan.html) pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section concernant <span lang="en">TalkBack</span>](./screen-reader-talkback.html).
 

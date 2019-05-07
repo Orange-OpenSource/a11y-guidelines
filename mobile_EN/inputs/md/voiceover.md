@@ -1,15 +1,18 @@
 # VoiceOver user guide
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Screen reader", "url":"./screen-reader.html"},
-                   {"label":"VoiceOver user guide"}]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"VoiceOver"}]);
     addSubMenu([
-        {"label":"Android guide","url":"talkback.html"}, 
-        {"label":"iOS guide","url":"voiceover.html", "expanded": true}
-    ]);            
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html", "expanded": true},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="mobile-ios"></span>
 
 VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen.
 </br>It vocalizes all visible elements in the page specially for blind or impaired, dyslexic or illiterate users.

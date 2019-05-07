@@ -1,18 +1,20 @@
 # WWDC 2017 : Application du Dynamic Type
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
                    {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
                    {"label":"2017 - Application du Dynamic Type"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
-        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);
 });</script>
 
-<span data-menuitem="criteria-ios-wwdc"></span>
+<span data-menuitem="criteria-ios"></span>
 
 Cette présentation visualisable sur le **site développeur officiel d'Apple** ([session 245](https://developer.apple.com/videos/play/wwdc2017/245/)) a pour but d'expliquer ce qu'est le <span lang="en">Dynamic Type</span> et comment le mettre en oeuvre par le biais de bonnes pratiques.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />

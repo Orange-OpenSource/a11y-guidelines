@@ -1,19 +1,19 @@
 # Rappels sur les gestes de base avec un iPhone X
 
 <script>$(document).ready(function () {
-    setBreadcrumb([
-        {"label":"lecteur d’écran", "url": "./screen-reader.html"}, 
-        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}, 
-        {"label":"Rappels sur les gestes de base avec un iPhone X"}
-    ]);
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+                   {"label":"Rappels sur les gestes de base avec un iPhone X"}
+	]);
     addSubMenu([
-        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}
-    ]);
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);	
 });</script>
 
-<span data-menuitem="screen-reader"></span>
-
+<span data-menuitem="criteria-ios"></span>
 
 Cette page décrit de façon non exhaustive les gestes spécifiques de l'iPhone X à l'aide d'explications textuelles et de schémas permettant de visualiser plus facilement les manipulations à réaliser.
 

@@ -1,18 +1,16 @@
 # Android developer guide
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Guide for developers", "url": "./dev-mobile.html"},
-        {"label":"Android developer guide"}
-	]);
+    setBreadcrumb([{"label":"Android", "url": "./mobile-android.html"},
+                   {"label":"Developers guide"}]);
     addSubMenu([
-        {"label":"Android guide","url":"dev-mobile.html", "expanded": true}, 
-        {"label":"iOS guide","url":"dev-ios.html"},
-        {"label":"iOS WWDC","url":"dev-ios-wwdc.html"}
-    ]);            
+        {"label":"Design criteria","url":"criteria-android.html"}, 
+        {"label":"Developers guide","url":"dev-android.html", "expanded": true},
+        {"label":"TalkBack","url":"talkback.html"}
+    ]);    
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="mobile-android"></span>
 
 This guide aims to present the various accessibility options available on the Android <abbr>SDK</abbr>. Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the official Google documentation. Code snippets are also available to show you how to implement it.  
 

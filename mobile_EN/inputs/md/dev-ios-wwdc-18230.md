@@ -1,18 +1,19 @@
 # WWDC 2018 : Deliver an exceptional accessibility experience
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
-                   {"label":"iOS WWDC", "url": "./dev-ios-wwdc.html"},
-                   {"label":"2018 - Deliver an exceptional accessibility experience"}
-	]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"WWDC","url":"dev-ios-wwdc.html"},
+                   {"label":"2018 - Deliver an exceptional accessibility experience"}]);
     addSubMenu([
-        {"label":"Android guide","url":"dev-android.html"}, 
-        {"label":"iOS guide","url":"dev-mobile.html"},
-        {"label":"iOS WWDC","url":"dev-ios-wwdc.html"}
-    ]);
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="mobile-ios"></span>
 
 This video available on the **official Apple website** ([session 230](https://developer.apple.com/videos/play/wwdc2018/230/)) aims at highlighting the essential elements that will provide an optimal user experience for visual impaired people.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230.png" />

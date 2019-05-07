@@ -1,18 +1,19 @@
 # WWDC 2016 : Auditing Your Apps for Accessibility 
 
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
-                   {"label":"iOS WWDC", "url": "./dev-ios-wwdc.html"},
-                   {"label":"2016 - Auditing Your Apps for Accessibility"}
-	]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"WWDC","url":"dev-ios-wwdc.html"},
+                   {"label":"2016 - Auditing Your Apps for Accessibility"}]);
     addSubMenu([
-        {"label":"Android guide","url":"dev-android.html"}, 
-        {"label":"iOS guide","url":"dev-mobile.html"},
-        {"label":"iOS WWDC","url":"dev-ios-wwdc.html"}
-    ]);
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);        
 });</script>
 
-<span data-menuitem="dev-mobile"></span>
+<span data-menuitem="mobile-ios"></span>
 
 This video available on the **official Apple website** ([session 407](https://developer.apple.com/videos/play/wwdc2016/407/)) aims at defining and using the `Accessibility Inspector` tool of Xcode, based on good practice implementation.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc16-logo.png" />

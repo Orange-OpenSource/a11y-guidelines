@@ -1,22 +1,22 @@
-# Les critères incontournables sous iOS pour la conception
+# Les critères de conception iOS
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
-        {"label":"Pour la conception"}
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+        {"label":"Critères de conception"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html", "expanded": true}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
-        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+        {"label":"Critères de conception","url":"criteria-ios-conception.html", "expanded": true}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);	
 });</script>
 
 <span data-menuitem="criteria-ios"></span>
 
-Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application [mDAN](./mdan.html) pour obtenir des exemples fonctionnels avec <span lang="en">VoiceOver</span>, le lecteur d’écran d’iOS, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section correspondant à <span lang="en">VoiceOver</span>](./screen-reader-voiceover.html).  
-
-À noter&nbsp;: les quelques exemples de code dans cette section seront présentés en Swift.
+Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.
+</br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.
 
 ## Images
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  

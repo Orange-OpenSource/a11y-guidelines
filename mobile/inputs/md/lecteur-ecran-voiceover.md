@@ -1,17 +1,19 @@
 # Guide d’utilisation de <span lang="en">VoiceOver</span>
 
 <script>$(document).ready(function () {
-    setBreadcrumb([
-        {"label":"lecteur d’écran", "url": "./screen-reader.html"},
-        {"label":"Guide d’utilisation de <span lang=\"en\">VoiceOver</span>"}
-    ]);
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+        {"label":"VoiceOver"}
+	]);
     addSubMenu([
-        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html", "expanded": true}
-    ]);
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html", "expanded": true},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);	
 });</script>
 
-<span data-menuitem="screen-reader"></span>
+<span data-menuitem="criteria-ios"></span>
 
 <span lang="en">VoiceOver</span> est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone.
 </br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. 
@@ -108,7 +110,7 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 - [Sélectionner le dernier élément d'une page.](#PageLastElement)
 - [Activer/désactiver l'écran "rideau".](#CurtainScreen)
 - [Changer la vocalisation d'un élément.](#CustomLabel)
-- [Lancer une recherche](#SpotlightSearch)
+- [Lancer une recherche.](#SpotlightSearch)
 - [Ouvrir un lien dans une vue.](#OpenLink)
 
 <a name="ReadAllElementsFromTop"></a>

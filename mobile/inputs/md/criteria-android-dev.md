@@ -1,14 +1,14 @@
 # Les critères incontournables sous Android pour le développement
 
 <script>$(document).ready(function () {
-    
-    setBreadcrumb([{"label":"Critères incontournables sous Android", "url": "./criteria-android.html"},
-        {"label":"Pour le développement"}
+    setBreadcrumb([{"label":"Android", "url": "./criteria-android.html"},
+        {"label":"Guide pour les développeurs"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-android-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-android-dev.html", "expanded": true}
-    ]);
+        {"label":"Critères de conception","url":"criteria-android-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-android-dev.html", "expanded": true},
+        {"label":"TalkBack","url":"screen-reader-talkback.html"}
+    ]);        
 });</script>
 
 <span data-menuitem="criteria-android"></span>
