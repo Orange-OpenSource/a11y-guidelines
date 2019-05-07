@@ -44,21 +44,47 @@
           
               <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
-                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
                   <li class="nav-item">
                     <a class="nav-link" href="../web/index.html">Web</a>
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <a href="../mobile/index.html" 
+                       class="nav-link">Mobile
+                      </a>
                     <ul id="navigation" class="nav navbar-nav">
-                        <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
-                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
-                        <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
-                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
-                        <li><a class="page-links" href="links.html">Liens utiles</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>                        
+                        <li><a class="page-index" 
+                               href="index.html">Présentation
+                            </a>
+                        </li>
+                        <li><a class="page-criteria-android" 
+                               href="criteria-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-criteria-ios" 
+                               href="criteria-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>
+                        <li><a class="page-mdan" 
+                               href="mdan.html">Démonstrateur mDAN
+                            </a>
+                        </li>
+                        <li><a class="page-links" 
+                               href="links.html">Liens utiles
+                            </a>
+                        </li>
+                        <li><a class="page-contact" 
+                               href="contact.html">Contact
+                            </a>
+                        </li>
+                        <li><a class="page-about" 
+                               href="about.html">À propos
+                            </a>
+                        </li>                        
                     </ul>                                        
                   </li>   
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
@@ -113,14 +139,19 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="guide-d-utilisation-des-lecteurs-d-cran-span-lang-en-talkback-span-et-span-lang-en-voiceover-span-">Guide d’utilisation des lecteurs d’écran <span lang="en">TalkBack</span> et <span lang="en">VoiceOver</span></h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Lecteur d’écran"}]);
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+        {"label":"VoiceOver"}
+    ]);
     addSubMenu([
-        {"label":"Sous Android","url":"screen-reader-talkback.html"}, 
-        {"label":"Sous iOS","url":"lecteur-ecran-voiceover.html"}
-    ]);                
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Aide au développement","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html", "expanded": true},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"testing-ios.html"}
+    ]);
 });</script>
 
-<p><span data-menuitem="screen-reader"></span></p>
+<p><span data-menuitem="criteria-ios"></span></p>
 <p>À travers cette section, nous allons présenter les gestes de base pour une utilisation des lecteurs d’écran d’Android et iOS. Ces outils sont riches en fonctionnalités mais nécessitent une connaissance minimale pour être utilisés efficacement. C’est cette utilisation standard qui sera présentée ici.</p>
 <p>Deux versions sont disponibles&nbsp;:</p>
 <ul>

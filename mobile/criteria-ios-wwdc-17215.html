@@ -44,21 +44,47 @@
           
               <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
-                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
                   <li class="nav-item">
                     <a class="nav-link" href="../web/index.html">Web</a>
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="../mobile/index.html" class="nav-link">Mobile</a>
+                    <a href="../mobile/index.html" 
+                       class="nav-link">Mobile
+                      </a>
                     <ul id="navigation" class="nav navbar-nav">
-                        <li><a class="page-index" href="index.html">Présentation</a></li>
-                        <li><a class="page-criteria-android" href="criteria-android.html" aria-haspopup="true" aria-expanded="false">Critères incontournables Android</a></li>
-                        <li><a class="page-criteria-ios" href="criteria-ios.html" aria-haspopup="true" aria-expanded="false">Critères incontournables iOS</a></li>            
-                        <li><a class="page-mdan" href="mdan.html">Démonstrateur d’accessibilité sur mobile mDAN</a></li>                                                                  
-                        <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Lecteur d’écran</a></li>
-                        <li><a class="page-links" href="links.html">Liens utiles</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>                        
+                        <li><a class="page-index" 
+                               href="index.html">Présentation
+                            </a>
+                        </li>
+                        <li><a class="page-criteria-android" 
+                               href="criteria-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-criteria-ios" 
+                               href="criteria-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>
+                        <li><a class="page-mdan" 
+                               href="mdan.html">Démonstrateur mDAN
+                            </a>
+                        </li>
+                        <li><a class="page-links" 
+                               href="links.html">Liens utiles
+                            </a>
+                        </li>
+                        <li><a class="page-contact" 
+                               href="contact.html">Contact
+                            </a>
+                        </li>
+                        <li><a class="page-about" 
+                               href="about.html">À propos
+                            </a>
+                        </li>                        
                     </ul>                                        
                   </li>   
                   <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
@@ -113,18 +139,20 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="wwdc-2017-les-nouveaut-s-en-accessibilit-">WWDC 2017 : les nouveautés en accessibilité</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Les critères incontournables sous iOS", "url": "./criteria-ios.html"},
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
                    {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
                    {"label":"2017 - Les nouveautés en accessibilité"}
     ]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-ios-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-ios-dev.html"},
-        {"label":"WWDC","url":"criteria-ios-wwdc.html"}
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
     ]);
 });</script>
 
-<p><span data-menuitem="criteria-ios-wwdc"></span></p>
+<p><span data-menuitem="criteria-ios"></span></p>
 <p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/215/">session 215</a>) a pour but de mettre en avant les principales nouveautés iOS 11 en terme d&#39;accessibilité avec une importance notable pour <span lang="en">VoiceOver</span>.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
 <img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />

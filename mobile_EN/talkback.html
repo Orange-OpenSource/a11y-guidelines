@@ -42,20 +42,47 @@
           
               <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Back to home" title="Back to home"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
-                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>             
                   <li class="nav-item">
                     <a class="nav-link" href="../web_EN/index.html">Web</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" 
+                       class="nav-link">Mobile
+                      </a>
                     <ul id="navigation" class="nav navbar-nav">
-                      <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
-                      <li><a class="page-links" href="links.html">Useful links</a></li>
-                      <li><a class="page-contact" href="contact.html">Contact</a></li>
-                      <li><a class="page-about" href="about.html">About</a></li>                        
+                      <li><a class="page-index" 
+                             href="index.html">Presentation
+                          </a>
+                        </li>
+                      <li><a class="page-mobile-android" 
+                               href="mobile-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-mobile-ios" 
+                               href="mobile-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>          
+                      <li><a class="page-mdan" 
+                             href="mdan.html">mDAN
+                          </a>
+                        </li>
+                      <li><a class="page-links" 
+                             href="links.html">Useful links
+                          </a>
+                        </li>
+                      <li><a class="page-contact" 
+                             href="contact.html">Contact
+                          </a>
+                        </li>
+                      <li><a class="page-about" 
+                             href="about.html">About
+                          </a>
+                        </li>                        
                     </ul>                      
                   </li>  
                   <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
@@ -110,14 +137,16 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="talkback-user-guide">Talkback user guide</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Screen reader", "url":"./screen-reader.html"}, {"label":"Talkback user guide"}]);
+    setBreadcrumb([{"label":"Android", "url": "./mobile-android.html"},
+                   {"label":"TalkBack"}]);
     addSubMenu([
-        {"label":"Android guide","url":"talkback.html", "expanded": true}, 
-        {"label":"iOS guide","url":"voiceover.html"}
-    ]);                
+        {"label":"Design criteria","url":"criteria-android.html"}, 
+        {"label":"Developers guide","url":"dev-android.html"},
+        {"label":"TalkBack","url":"talkback.html"}
+    ]);    
 });</script>
 
-<p><span data-menuitem="screen-reader"></span></p>
+<p><span data-menuitem="mobile-android"></span></p>
 <p>TalkBack is a built-in screen reader for Android that reads aloud the items that appear on the device screen. It is free and it vocalizes all visible elements in the page specially for blind or partially sighted, dyslexic or illiterate users. A tool like TalkBack is called either screen reader or speech synthesizer, even if a screen reader is actually a software associated with voice synthesis.</p>
 <p>When TalkBack is on, the standard gestures behave differently. Furthermore, additional gestures let you move the focus on the screen and control the selected items. TalkBack has gestures with one, two and three fingers to select and to go through elements. We describe here the basic gestures commonly used. Note: TalkBack is considered as accessible since the JellyBean release (4.1) because you can navigate sequentially.</p>
 <p>First of all, update TalkBack here: <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">PlayStore Link</a></p>

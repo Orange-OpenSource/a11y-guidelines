@@ -42,20 +42,47 @@
           
               <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Back to home" title="Back to home"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
-                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>             
                   <li class="nav-item">
                     <a class="nav-link" href="../web_EN/index.html">Web</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" 
+                       class="nav-link">Mobile
+                      </a>
                     <ul id="navigation" class="nav navbar-nav">
-                      <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
-                      <li><a class="page-links" href="links.html">Useful links</a></li>
-                      <li><a class="page-contact" href="contact.html">Contact</a></li>
-                      <li><a class="page-about" href="about.html">About</a></li>                        
+                      <li><a class="page-index" 
+                             href="index.html">Presentation
+                          </a>
+                        </li>
+                      <li><a class="page-mobile-android" 
+                               href="mobile-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-mobile-ios" 
+                               href="mobile-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>          
+                      <li><a class="page-mdan" 
+                             href="mdan.html">mDAN
+                          </a>
+                        </li>
+                      <li><a class="page-links" 
+                             href="links.html">Useful links
+                          </a>
+                        </li>
+                      <li><a class="page-contact" 
+                             href="contact.html">Contact
+                          </a>
+                        </li>
+                      <li><a class="page-about" 
+                             href="about.html">About
+                          </a>
+                        </li>                        
                     </ul>                      
                   </li>  
                   <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
@@ -110,17 +137,16 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="android-accessibility-guide">Android accessibility guide</h1>
 <script>$(document).ready(function () {
-
-    setBreadcrumb([{"label":"Mobile criteria", "url": "./criteria-mobile.html"},
-        {"label":"Android accessibility guide"}
-    ]);
+    setBreadcrumb([{"label":"Android", "url": "./mobile-android.html"},
+                   {"label":"Design criteria"}]);
     addSubMenu([
-        {"label":"Android guide","url":"criteria-mobile.html", "expanded": true}, 
-        {"label":"iOS guide","url":"criteria-ios.html"}
-    ]);            
+        {"label":"Design criteria","url":"criteria-android.html", "expanded": true}, 
+        {"label":"Developers guide","url":"dev-android.html"},
+        {"label":"TalkBack","url":"talkback.html"}
+    ]);    
 });</script>
 
-<p><span data-menuitem="criteria-mobile"></span></p>
+<p><span data-menuitem="mobile-android"></span></p>
 <p>This guide aims to present the different accessibility criteria for getting an accessible Android application. Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule. The criteria are explained through code snippets and real case examples. We invite you to install the <a href="./mdan.html">mDAN</a> application for working examples of Talkback, the screen reader for Android, and other assistive tools. For more information on the tool (how to activate it, how to use it…) please refer to the <a href="./talkback.html">Talkback section</a>.</p>
 <p>For the web, the level of accessibility to achieve to any HTML interface by the Orange group is the respect of the criteria of level AA of the Web Content Accessibility Guidelines (WCAG) 2.1, without blocking point following a test of user of technical help for the main scenarios for using the features of the site or application. For native mobile applications, a transposition of these criteria and compliance with the recommendations of the Android platform in terms of accessibility is requested, see these recommendations. The purpose is to explain these recommendations without replacing it.</p>
 <h2 id="images">Images</h2>

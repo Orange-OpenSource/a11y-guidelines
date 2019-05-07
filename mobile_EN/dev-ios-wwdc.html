@@ -42,20 +42,47 @@
           
               <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Back to home" title="Back to home"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
-                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>             
                   <li class="nav-item">
                     <a class="nav-link" href="../web_EN/index.html">Web</a> 
                   </li>
                   <li class="nav-item active mobile">
-                    <a href="./index.html" class="nav-link">Mobile</a>
+                    <a href="./index.html" 
+                       class="nav-link">Mobile
+                      </a>
                     <ul id="navigation" class="nav navbar-nav">
-                      <li><a class="page-index" href="index.html">Presentation</a></li>
-                      <li><a class="page-criteria-mobile" href="criteria-mobile.html" aria-haspopup="true" aria-expanded="false">Mobile criteria</a></li>  
-                      <li><a class="page-dev-mobile" href="dev-mobile.html" aria-haspopup="true" aria-expanded="false">Guide for developers</a></li>                
-                      <li><a class="page-mdan" href="mdan.html">mDAN</a></li>                                           <li><a class="page-screen-reader" href="screen-reader.html" aria-haspopup="true" aria-expanded="false">Screen reader</a></li>
-                      <li><a class="page-links" href="links.html">Useful links</a></li>
-                      <li><a class="page-contact" href="contact.html">Contact</a></li>
-                      <li><a class="page-about" href="about.html">About</a></li>                        
+                      <li><a class="page-index" 
+                             href="index.html">Presentation
+                          </a>
+                        </li>
+                      <li><a class="page-mobile-android" 
+                               href="mobile-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-mobile-ios" 
+                               href="mobile-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>          
+                      <li><a class="page-mdan" 
+                             href="mdan.html">mDAN
+                          </a>
+                        </li>
+                      <li><a class="page-links" 
+                             href="links.html">Useful links
+                          </a>
+                        </li>
+                      <li><a class="page-contact" 
+                             href="contact.html">Contact
+                          </a>
+                        </li>
+                      <li><a class="page-about" 
+                             href="about.html">About
+                          </a>
+                        </li>                        
                     </ul>                      
                   </li>  
                   <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
@@ -110,26 +137,31 @@
         <div class="col-xs-12 col-sm-9" id="content">          
           <h1 id="wwdc-world-wide-developers-conference">WWDC : World Wide Developers Conference</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Developer guide", "url": "./dev-mobile.html"},
-                   {"label":"iOS WWDC"}
-    ]);
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"WWDC"}]);
     addSubMenu([
-        {"label":"Android guide","url":"dev-android.html"}, 
-        {"label":"iOS guide","url":"dev-mobile.html"},
-        {"label":"iOS WWDC","url":"dev-ios-wwdc.html", "expanded": true}
-    ]);
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html", "expanded": true},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);        
 });</script>
 
-<p><span data-menuitem="dev-mobile"></span></p>
+<p><span data-menuitem="mobile-ios"></span></p>
 <p>This section regroups <a href="https://developer.apple.com/videos/">presentations at the WWDC</a> dealing with accessibility.
 </br>Each one of them is detailed with time references to their different contents.
 </br></br>Most of the illustrations are parts of Apple presentations and are available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.
-</br>The summary of each video can be reached on clicking the title or the image presentation.
+</br><strong>The summary of each video can be reached on clicking the title or the image presentation</strong>.
 </br></br></p>
 <h2 id="-2018-deliver-an-exceptional-accessibility-experience-dev-ios-wwdc-18230-html-"><a href="./dev-ios-wwdc-18230.html">2018 - Deliver an exceptional accessibility experience</a></h2>
 <p>This presentation is a detailed explanation of functionalities for visual impaired people leading to a very good user experience.
 </br>A demo application will highlight these functionalities purposes so as to understand the rationale behind their implementation.
 </br><a href="./dev-ios-wwdc-18230.html"><img style="max-width: 700px; height: auto;" alt="Access to deliver an exceptional accessibility experience." src="./images/iOSdev/wwdc18-230.png" />
+</br></br></p>
+<h2 id="-2018-avspeechsynthesizer-dev-ios-wwdc-18236-html-"><a href="./dev-ios-wwdc-18236.html">2018 - AVSpeechSynthesizer</a></h2>
+<p>This short video introduces the essential elements to be implemented so as to make an iOS application talk.
+</br><a href="./dev-ios-wwdc-18236.html"><img style="max-width: 466px; height: auto;" alt="Access to AVSpeechSynthesizer." src="./images/iOSdev/wwdc18-236.png" />
 </br></br></p>
 <h2 id="-2017-what-s-new-in-accessibility-dev-ios-wwdc-17215-html-"><a href="./dev-ios-wwdc-17215.html">2017 - What&#39;s New in Accessibility</a></h2>
 <p>Introduction of new iOS 11 accessibility features merging the user and the developer sides.

@@ -317,6 +317,10 @@ var Glossary = { // collection of all terms to be defined
     "base":"<span lang='en'>Identifier</span>",
     "fr":"identifiant"
   },
+  "IDE":{
+    "base":"<span lang='en'>Integrated Development Environment</span>",
+    "fr":"environnement de développement intégré"
+  },
   "IE":{
     "base":"<span lang='en'>Microsoft Internet Explorer</span>",
   },
@@ -327,6 +331,9 @@ var Glossary = { // collection of all terms to be defined
   "IP":{
     "base":"<span lang='en'>Internet Protocol</span>",
     "fr":"protocole internet"
+  },
+  "IPA":{
+    "base":"<span lang='en'>International Phonetic Alphabet</span>",
   },
   "ISO":{
     "base":"<span lang='en'>International Organization for Standardization</span>",
@@ -387,6 +394,10 @@ var Glossary = { // collection of all terms to be defined
   "TBD":{
     "base":"<span lang='en'>To Be Done</span>",
     "fr":"à faire"
+  },
+  "TDD":{
+    "base":"<span lang='en'>Test Driven Development</span>",
+    "fr":"tests unitaires"
   },
   "TICS":{
     "base":"<span lang='fr'>Technologies de l'Information et de la Communication</span>",
