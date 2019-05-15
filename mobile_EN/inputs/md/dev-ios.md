@@ -1588,6 +1588,221 @@ In this example, a method is fired when VoiceOver or Switch Control status has c
 All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br>
+## Speech synthesis
+### Description
+Many [use cases](./dev-ios-wwdc-18236.html#Uses) are good candidates to use the speech synthesis and they aren't necessary all part of accessibility.
+</br>However, in that perspective, it's important to note that this **new iOS 12 feature doesn't replace VoiceOver** but could be a good complement to the screen reader implementation *(the speech overlaps the screen reader voice)*.
+### Details
+Few elements are mandatory to create a speech synthesis on the fly:
+- **The text**: `AVSpeechUtterance` instance with a `voice` property that's `AVSpeechSynthesisVoice` typed.
+- **The synthesizer**: `AVSpeechSynthesizer` instance that handles the incoming text with an events control thanks to the `AVSpeechSynthesizerDelegate` protocol.
+</br></br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/SpeechSynthesizer.png" />
+### Example
+To be sure that a bunch of `AVSpeechUtterance` instances is entirely vocalized, it's [essential](./dev-ios-wwdc-18236.html#Basics) to retain the `AVSpeechSynthesizer` instance until the speech is done.
+</br></br>The following example will define the speech rate and the voice pitch/volume for each utterance while:
+- Highlighting the vocalized word thanks to the `AVSpeechSynthesizerDelegate` protocol.
+- Pausing and resuming from where the speech stopped thanks to some `AVSpeechSynthesizer` instance methods.
+
+<pre><code class="objective-c">
+@interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
+
+    NSMutableArray * playerQueue;
+    AVSpeechSynthesizer * synthesizer;
+    __weak IBOutlet UILabel * textLabel;
+}
+@end
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation SpeechSynthesis
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    playerQueue = [[NSMutableArray alloc] init];
+    synthesizer = [[AVSpeechSynthesizer alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    for (int i = 1 ; i < 11 ; i++) {
+     
+        NSString * stringNbPrefix = @"Sentence number ";
+        NSString * stringNbSuffix = @" of the speech synthesizer.";
+        NSString * stringNb = [NSString stringWithFormat:@"%@%i%@", stringNbPrefix, i, stringNbSuffix];
+        
+        AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithString:stringNb];
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
+        utterance.pitchMultiplier = 1.0;
+        utterance.volume = 1.0;
+        
+        [playerQueue addObject:utterance];
+    }
+    
+    synthesizer.delegate = self;
+    
+    for (AVSpeechUtterance * utterance in playerQueue) {
+        [synthesizer speakUtterance:utterance];
+    }
+}
+
+//AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer
+willSpeakRangeOfSpeechString:(NSRange)characterRange
+                utterance:(AVSpeechUtterance *)utterance {
+    
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:utterance.speechString];
+    
+    [attributedString addAttribute:NSFontAttributeName
+                             value:[UIFont systemFontOfSize:19.0]
+                             range:characterRange];
+    
+    NSAttributedString * subString = [attributedString attributedSubstringFromRange:characterRange];
+    textLabel.attributedText = attributedString;
+    
+    NSString * output = [NSString stringWithFormat:@"%@%@", @"word : ", subString.string];
+    NSLog(@"%@", output);
+}
+
+- (IBAction)pauseButton:(UIButton *)sender {
+    
+    if (synthesizer.isSpeaking == TRUE) {
+        if ([synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate] == TRUE) {
+            NSLog(@"PAUSE");
+        } else {
+            NSLog(@"P.R.O.B.L.E.M. when pausing.");
+        }
+    }
+}
+
+- (IBAction)resumeButton:(UIButton *)sender {
+    
+    if (synthesizer.isPaused == TRUE) {
+        if ([synthesizer continueSpeaking] == TRUE) {
+            NSLog(@"RESUME");
+        } else {
+            NSLog(@"P.R.O.B.L.E.M. when resuming.");
+        }
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
+    
+    @IBOutlet weak var textLabel: UILabel!
+    
+    var synthesizer = AVSpeechSynthesizer()
+    var playQueue = [AVSpeechUtterance]()
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        for i in 1...10 {
+            
+            let stringNb = "Sentence number " + String(i) + " of the speech synthesizer."
+            
+            let utterance = AVSpeechUtterance(string: stringNb)
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+            utterance.pitchMultiplier = 1.0
+            utterance.volume = 1.0
+            
+            playQueue.append(utterance)
+        }
+
+        synthesizer.delegate = self
+
+        for utterance in playQueue {
+            synthesizer.speak(utterance)
+        }
+    }
+    
+    //AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                           willSpeakRangeOfSpeechString characterRange: NSRange,
+                           utterance: AVSpeechUtterance) {
+
+        let attributedString = NSMutableAttributedString(string: utterance.speechString)
+        attributedString.addAttribute(.font,
+                                      value: UIFont.boldSystemFont(ofSize: 19),
+                                      range: characterRange)
+
+        textLabel.attributedText = attributedString
+
+        let subString = attributedString.attributedSubstring(from: characterRange)
+        print("word : \(subString.string)")
+    }
+    
+    
+    @IBAction func pauseAction(_ sender: UIButton) {
+    
+        if (synthesizer.isSpeaking == true) {
+            if (synthesizer.pauseSpeaking(at: .immediate) == true) {
+                print("PAUSE")
+            } else {
+                print("P.R.O.B.L.E.M. when pausing.")
+            }
+        }
+    }
+    
+    
+    @IBAction func resumeAction(_ sender: UIButton) {
+     
+        if (synthesizer.isPaused == true) {
+            if (synthesizer.continueSpeaking() == true) {
+                print("RESUME")
+            } else {
+                print("P.R.O.B.L.E.M. when resuming.")
+            }
+        }
+    }
+}
+</code></pre>
+
+When a particular spelling is intended, phonetics is highly recommended to get the desired purpose.
+
+<pre><code class="objective-c">
+    NSMutableAttributedString * attrStr = [[NSMutableAttributedString alloc] initWithString:@"blablabla" 
+                                                                             attributes:@{AVSpeechSynthesisIPANotationAttribute:@"ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"}];
+    
+    AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithAttributedString:attrStr];
+    
+    AVSpeechSynthesizer * synthesizer = [[AVSpeechSynthesizer alloc] init];
+    [synthesizer speakUtterance:utterance];
+</code></pre><pre><code class="swift">
+        let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
+        
+        let attrStr = NSMutableAttributedString(string: "blablabla",
+                                                attributes: [pronunciationKey: "ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"])
+
+        let utterance = AVSpeechUtterance(attributedString: attrStr)
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+</code></pre>
+
+</br>Generating phonetics may be done in the device settings.
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
+</br>Once the menu `General` - ` Accessibility` - `Speech` - `Pronunciations` is reached...
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br>
+1. Select the '**+**' icon to add a new phonetic element.
+2. Name this new element in order to quickly find it later on.
+3. Tap the **microphone** icon.
+4. Vocalize an entire sentence or a single word.
+5. Listen to the different system proposals.
+6. Validate your choice with the '**OK**' button or cancel to start over.
+7. Tap the back button to confirm the new created phonetic element.
+8. Find all the generated elements in the `Pronunciations` page.
+
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
+</br>To get the phonetic expression inside the code, pass it through the mobile `Notes` application to be synchronized with the iCloud one from which a copy-paste becomes easy as a pie.
+</br></br>All the speech synthesizer functionalities are introduced in a [WWDC 2018 video](./dev-ios-wwdc-18236.html) that's perfectly summarized in the WWDC section of this site.</br>
+### Links
+- [AVSpeechSynthesisVoice](https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice)
+- [AVSpeechSynthesizer](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer)
+- [AVSpeechSynthesizerDelegate](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate)
+- [AVSpeechUtterance](https://developer.apple.com/documentation/avfoundation/avspeechutterance)
+
 ## Switch Control
 ### Description
 The accessibility Switch Control feature revolves around the point mode and the item mode.

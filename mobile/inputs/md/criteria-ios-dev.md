@@ -1591,6 +1591,220 @@ Dans cet exemple, on appelle une méthode spécifique au moment où le statut de
 Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">événements</a> et les <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options d'accessibilité</a> sont disponibles sur la documentation officielle d'Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br>
+## Vocalisation synthétisée
+### Description
+L'utilisation d'une voix synthétisée peut se faire dans [bon nombre de cas](./criteria-ios-wwdc-18236.html#Uses) non nécessairement liés à l'accessibilité mais, dans ce cadre, il est important de noter que **cette nouvelle fonctionnalité iOS 12 ne remplace absolument pas <span lang="en">VoiceOver</span>** mais peut judicieusement compléter son implémentation selon les configurations rencontrées *(la voix synthétisée peut chevaucher celle du lecteur d'écran)*.</br>
+### Fonctionnement
+Très peu d'éléments sont nécessaires pour créer rapidement une vocalisation synthétisée :
+- **Le texte à fournir** : se présente sous forme d'instance `AVSpeechUtterance` comprenant une propriété `voice` typée `AVSpeechSynthesisVoice`.
+- **Le synthétiseur** : instance `AVSpeechSynthesizer` qui se charge de traiter le texte à fournir en assurant un contrôle d'événements grâce au protocole `AVSpeechSynthesizerDelegate`.
+</br></br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/SpeechSynthesizer.png" />
+### Exemple
+Pour assurer la vocalisation complète d'instances `AVSpeechUtterance`, il est [primordial](./criteria-ios-wwdc-18236.html#Basics) de **conserver l'instance `AVSpeechSynthesizer` jusqu'à la fin de l'ensemble de la vocalisation**.
+</br></br>L'exemple suivant va permettre de définir le débit vocal, la hauteur tonale ainsi que le volume de la voix pour chaque type de texte passé au synthétiseur vocal tout en permettant aussi de :
+- Mettre en avant le mot vocalisé grâce au protocole `AVSpeechSynthesizerDelegate`.
+- Réaliser une pause et repartir de l'endroit d'où l'on vient avec des méthodes d'instance `AVSpeechSynthesizer`.
+
+<pre><code class="objective-c">
+@interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
+
+    NSMutableArray * playerQueue;
+    AVSpeechSynthesizer * synthesizer;
+    __weak IBOutlet UILabel * textLabel;
+}
+@end
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation SpeechSynthesis
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    playerQueue = [[NSMutableArray alloc] init];
+    synthesizer = [[AVSpeechSynthesizer alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    for (int i = 1 ; i < 11 ; i++) {
+     
+        NSString * stringNbPrefix = @"phrase numéro ";
+        NSString * stringNbSuffix = @" de la voix synthétisée.";
+        NSString * stringNb = [NSString stringWithFormat:@"%@%i%@", stringNbPrefix, i, stringNbSuffix];
+        
+        AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithString:stringNb];
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate;     //débit vocal
+        utterance.pitchMultiplier = 1.0;     //hauteur tonale
+        utterance.volume = 1.0;      //volume de la voix
+        
+        [playerQueue addObject:utterance];
+    }
+    
+    synthesizer.delegate = self;
+    
+    for (AVSpeechUtterance * utterance in playerQueue) {
+        [synthesizer speakUtterance:utterance];
+    }
+}
+
+//Méthode du protocole AVSpeechSynthesizerDelegate pour déterminer visuellement le mot vocalisé.
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer
+willSpeakRangeOfSpeechString:(NSRange)characterRange
+                utterance:(AVSpeechUtterance *)utterance {
+    
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:utterance.speechString];
+    
+    [attributedString addAttribute:NSFontAttributeName
+                             value:[UIFont systemFontOfSize:19.0]
+                             range:characterRange];
+    
+    NSAttributedString * subString = [attributedString attributedSubstringFromRange:characterRange];
+    textLabel.attributedText = attributedString;
+    
+    NSString * output = [NSString stringWithFormat:@"%@%@", @"mot : ", subString.string];
+    NSLog(@"%@", output);
+}
+
+- (IBAction)pauseButton:(UIButton *)sender {
+    
+    if (synthesizer.isSpeaking == TRUE) {
+        if ([synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate] == TRUE) {
+            NSLog(@"PAUSE");
+        } else {
+            NSLog(@"P.R.O.B.L.È.M.E. avec la PAUSE.");
+        }
+    }
+}
+
+- (IBAction)resumeButton:(UIButton *)sender {
+    
+    if (synthesizer.isPaused == TRUE) {
+        if ([synthesizer continueSpeaking] == TRUE) {
+            NSLog(@"REPRISE");
+        } else {
+            NSLog(@"P.R.O.B.L.È.M.E. avec la REPRISE.");
+        }
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
+    
+    @IBOutlet weak var textLabel: UILabel!
+    
+    var synthesizer = AVSpeechSynthesizer()
+    var playQueue = [AVSpeechUtterance]()
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        for i in 1...10 {
+            
+            let stringNb = "phrase numéro " + String(i) + " de la voix synthétisée."
+            
+            let utterance = AVSpeechUtterance(string: stringNb)
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate     //débit vocal
+            utterance.pitchMultiplier = 1.0     //hauteur tonale
+            utterance.volume = 1.0      //volume de la voix
+            
+            playQueue.append(utterance)
+        }
+
+        synthesizer.delegate = self
+
+        for utterance in playQueue {
+            synthesizer.speak(utterance)
+        }
+    }
+    
+    //Méthode du protocole AVSpeechSynthesizerDelegate pour déterminer visuellement le mot vocalisé.
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                           willSpeakRangeOfSpeechString characterRange: NSRange,
+                           utterance: AVSpeechUtterance) {
+
+        let attributedString = NSMutableAttributedString(string: utterance.speechString)
+        attributedString.addAttribute(.font,
+                                      value: UIFont.boldSystemFont(ofSize: 19),
+                                      range: characterRange)
+
+        textLabel.attributedText = attributedString
+
+        let subString = attributedString.attributedSubstring(from: characterRange)
+        print("mot : \(subString.string)")
+    }
+    
+    
+    @IBAction func pauseAction(_ sender: UIButton) {
+    
+        if (synthesizer.isSpeaking == true) {
+            if (synthesizer.pauseSpeaking(at: .immediate) == true) {
+                print("PAUSE")
+            } else {
+                print("P.R.O.B.L.È.M.E. avec la PAUSE.")
+            }
+        }
+    }
+    
+    
+    @IBAction func resumeAction(_ sender: UIButton) {
+     
+        if (synthesizer.isPaused == true) {
+            if (synthesizer.continueSpeaking() == true) {
+                print("REPRISE")
+            } else {
+                print("P.R.O.B.L.È.M.E. avec la REPRISE.")
+            }
+        }
+    }
+}
+</code></pre>
+
+Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réaliser une épellation spécifique, l'utilisation de la phonétique est fortement recommandée pour s'assurer du résultat.
+
+<pre><code class="objective-c">
+    NSMutableAttributedString * attrStr = [[NSMutableAttributedString alloc] initWithString:@"blablabla" 
+                                                                             attributes:@{AVSpeechSynthesisIPANotationAttribute:@"mɔ̃.daj.fɔ.nə.fɔ̃.ksjɔ.nə.paʀ.fɛ.tə.ˈmɑ̃"}];
+    
+    AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithAttributedString:attrStr];
+    
+    AVSpeechSynthesizer * synthesizer = [[AVSpeechSynthesizer alloc] init];
+    [synthesizer speakUtterance:utterance];
+</code></pre><pre><code class="swift">
+        let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
+        
+        let attrStr = NSMutableAttributedString(string: "blablabla",
+                                                attributes: [pronunciationKey: "mɔ̃.daj.fɔ.nə.fɔ̃.ksjɔ.nə.paʀ.fɛ.tə.ˈmɑ̃"])
+
+        let utterance = AVSpeechUtterance(attributedString: attrStr)
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+</code></pre>
+
+</br>La génération de cette phonétique peut se faire en passant par les réglages du terminal.
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
+</br>Une fois le menu `Général` - ` Accessibilité` - `Parole` - `Prononciations` activé...
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br>
+1. Sélectionner l'icône '**+**' pour ajouter une nouvelle phonétique.
+2. Donner un nom à la nouvelle entrée de façon à la retrouver plus facilement ultérieurement.
+3. Taper sur l'icône **micro**.
+4. Vocaliser la phrase ou le mot souhaité.
+5. Écouter les différentes propositions faites par le système.
+6. Valider le choix à l'aide du bouton '**OK**' ou annuler pour recommencer l'opération.
+7. Sélectionner le bouton de retour pour valider la nouvelle phonétique créée.
+8. Retrouver l'ensemble des éléments ainsi générés sur la page `Prononciations`.
+
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
+</br>Une des possibilités pour copier cette expression dans le code est de passer par l'**application locale `Notes`** dans laquelle on copiera la phonétique pour la synchroniser avec l'**application iCloud `Notes`** d'où on pourra aisément transférer l'information désirée au sein de `Xcode`.</br></br>
+### Liens
+- [AVSpeechSynthesisVoice](https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice)
+- [AVSpeechSynthesizer](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer)
+- [AVSpeechSynthesizerDelegate](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate)
+- [AVSpeechUtterance](https://developer.apple.com/documentation/avfoundation/avspeechutterance)
+
+L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une [vidéo WWDC 2018](./criteria-ios-wwdc-18236.html) parfaitement résumée dans la partie WWDC de ce site.</br></br>
 ## Contrôle de sélection
 ### Description
 L'utilisation du contrôle de sélection s'articule autour du mode point et du mode élément définis ci-dessous.
