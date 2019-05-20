@@ -1591,7 +1591,7 @@ All accessibility <a href="https://developer.apple.com/documentation/uikit/acces
 ## Speech synthesis
 ### Description
 Many [use cases](./dev-ios-wwdc-18236.html#Uses) are good candidates to use the speech synthesis and they aren't necessary all part of accessibility.
-</br>However, in that perspective, it's important to note that this **new iOS 12 feature doesn't replace VoiceOver** but could be a good complement to the screen reader implementation *(the speech overlaps the screen reader voice)*.
+</br>However, in that perspective, it's important to note that this **feature doesn't replace VoiceOver** but could be a good complement to the screen reader implementation *(the speech overlaps the screen reader voice)*.
 ### Details
 Few elements are mandatory to create a speech synthesis on the fly:
 - **The text**: `AVSpeechUtterance` instance with a `voice` property that's `AVSpeechSynthesisVoice` typed.

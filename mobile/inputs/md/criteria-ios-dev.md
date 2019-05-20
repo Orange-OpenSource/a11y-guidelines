@@ -1593,7 +1593,7 @@ Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/
 </br></br>
 ## Vocalisation synthétisée
 ### Description
-L'utilisation d'une voix synthétisée peut se faire dans [bon nombre de cas](./criteria-ios-wwdc-18236.html#Uses) non nécessairement liés à l'accessibilité mais, dans ce cadre, il est important de noter que **cette nouvelle fonctionnalité iOS 12 ne remplace absolument pas <span lang="en">VoiceOver</span>** mais peut judicieusement compléter son implémentation selon les configurations rencontrées *(la voix synthétisée peut chevaucher celle du lecteur d'écran)*.</br>
+L'utilisation d'une voix synthétisée peut se faire dans [bon nombre de cas](./criteria-ios-wwdc-18236.html#Uses) non nécessairement liés à l'accessibilité mais, dans ce cadre, il est important de noter que **cette fonctionnalité ne remplace absolument pas <span lang="en">VoiceOver</span>** mais peut judicieusement compléter son implémentation selon les configurations rencontrées *(la voix synthétisée peut chevaucher celle du lecteur d'écran)*.</br>
 ### Fonctionnement
 Très peu d'éléments sont nécessaires pour créer rapidement une vocalisation synthétisée :
 - **Le texte à fournir** : se présente sous forme d'instance `AVSpeechUtterance` comprenant une propriété `voice` typée `AVSpeechSynthesisVoice`.
