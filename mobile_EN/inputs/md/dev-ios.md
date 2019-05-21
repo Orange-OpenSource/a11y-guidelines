@@ -1935,8 +1935,17 @@ class ViewController: UIViewController {
 </br><img alt="visual rendering screenshot" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
 </br>Once activated, the created groups allow to reach directly the elements which they contain.
 ### Link
-- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
-
+- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)</br></br>
+## Vocalized application name
+### Description
+The same result as the [VoiceOver gesture](./voiceover.html#CustomLabel) to set a custom label can be reached by code.
+</br>The rationale behind is to render a better vocalisation for an application name that could be very obscure according to its written abbreviation.
+</br></br>**CFBundleSpokenName** is the property list key that vocally replaces an application name and might take many different translations depending on the foreign languages.
+</br><img alt="" style="max-width: 750px; height: auto; " src="./images/iOSdev/AppName_1.png" />
+</br>In the end, we go from a weird to an understandable vocalized name that is defined upstream with no user modifications.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/AppName_2.png" />
+### Link
+- [`CFBundleSpokenName`](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundlespokenname)</br></br>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

@@ -1937,8 +1937,17 @@ class ViewController: UIViewController {
 </br><img alt="rendu final avec le code implémenté" style="max-width: 1100px; height: auto; " src="./images/iOSdev/ControleDeSelection_1.png" />
 </br>Les groupes créés permettent d'accéder directement aux éléments qu'ils contiennent dès qu'ils sont activés.
 ### Lien
-- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)
-
+- [`accessibilityNavigationStyle`](https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle)</br></br>
+## Vocalisation du nom de l'application
+### Description
+Même s'il est possible à un utilisateur de personnaliser manuellement la vocalisation du nom d'une application via une [gestuelle spécifique <span lang="en">VoiceOver</span>](./lecteur-ecran-voiceover.html#CustomLabel), cette manipulation est aussi réalisable en programmation.
+</br>L'idée est de pouvoir vocaliser proprement les sigles présents sur les icônes applicatives qui sont très expressifs visuellement mais textuellement incompréhensibles.
+</br></br>**CFBundleSpokenName** est la clé permettant d'adapter la vocalisation du texte définissant le nom d'une application qui, dans un cadre d'internationalisation, peut prendre différentes valeurs selon les langues visées.
+</br><img alt="" style="max-width: 750px; height: auto; " src="./images/iOSdev/AppName_1.png" />
+</br>On passe alors d'un sigle incompréhensible avec une icône éventuellement plus parlante à une expression parfaitement compréhensible par un utilisateur pour lequel l'icône n'est peut-être pas du tout accessible.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/AppName_2.png" />
+### Lien
+- [`CFBundleSpokenName`](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundlespokenname)</br></br>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
