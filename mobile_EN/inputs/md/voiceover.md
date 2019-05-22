@@ -17,10 +17,12 @@
 VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen.
 </br>It vocalizes all visible elements in the page specially for blind or impaired, dyslexic or illiterate users.
 
+VoiceOver can be switched on thanks to the `Settings` - `General` - `Accessibility` - `VoiceOver` device menu.
+</br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iphonex_voiceOverActivation.png" />
 When VoiceOver is on, the standard gestures behave differently and additional gestures let you move the focus on the screen and control the selected items. 
 
 It's better but not mandatory to **activate the vibration** feature in the accessibility settings in order to feel the trigger of some actions.
-</br><img style="max-width: 350px; height: auto;" alt="" src="./images/iphonex_vo_en_vibration.png" />
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_vibration.png" />
 </br>A sound may be heard in case of a disactivated vibration feature but VoiceOver might cover it.
 
 Two gestures are important to be well understood so as to perfectly harness the provided details thereafter :

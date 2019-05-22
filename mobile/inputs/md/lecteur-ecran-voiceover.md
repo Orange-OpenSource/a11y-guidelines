@@ -15,14 +15,16 @@
 
 <span data-menuitem="criteria-ios"></span>
 
-<span lang="en">VoiceOver</span> est un lecteur d’écran intégré qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre téléphone.
-</br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page. 
+<span lang="en">VoiceOver</span> est le lecteur d’écran natif iOS qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre terminal.
+</br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page.
 
-Lorsque <span lang="en">VoiceOver</span> est activé, les gestes standards effectués sur l’écran tactile donnent des résultats différents.
+L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages` - `Général` - `Accessibilité` - `VoiceOver` du téléphone.
+</br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iphonex_voiceOverActivation.png" />
+</br>Lorsque l'activation est effective, les gestes standards effectués sur l’écran tactile donnent des résultats différents.
 </br>Cependant, des gestes supplémentaires permettent de se déplacer à l’écran et de contrôler des éléments sélectionnés.
 
 Il est préférable mais non obligatoire d'**activer la vibration** pour percevoir le point de déclenchement de certaines fonctionnalités.
-</br><img style="max-width: 350px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration.png" />
+</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration.png" />
 </br>Si cette fonction est désactivée, il est toutefois possible d'entendre un bip signalant le déclenchement qui risque néanmoins d'être parasité par la vocalisation.
 
 Deux mouvements principaux sont importants à maîtriser pour appliquer sans problème les détails fournis par la suite :
