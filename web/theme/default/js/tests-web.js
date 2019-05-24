@@ -1,15 +1,62 @@
 $(document).ready(function () {
 
-	//appel asynchrone
-	var oReq = new XMLHttpRequest();
+	//requette XMLHttpRequest
+	function doXHR(url, callback) {
+	  var oReq = new XMLHttpRequest();
 
-	oReq.addEventListener("load", reqListener);
-	oReq.addEventListener("error", reqError);
-	oReq.open('get', 'json/tests-web.json', true);
+	  oReq.onreadystatechange = function(event) {
+		if (this.readyState === XMLHttpRequest.DONE) {
+		  if (this.status === 200) {
+			return callback(null, this.responseText);
+		  } else {
+			return callback({errCode: this.status, errMsg: this.statusText});
+		  }
+		}
+	  };
+
+	  oReq.open('GET', url, true);
+	  oReq.send(null);
+	}
+
+	//appel des Json
+	doXHR('json/tests-web.json', function(errFirst, responseFirst) {
+	  if (errFirst) {
+		reqError(); 
+	  }
+		return doXHR('json/tests-concepteur.json', function(errSecond, responseSecond) {
+			if (errSecond) {
+			  reqError(); 
+			}
+			return reqListener(responseFirst, responseSecond);
+		  });
+	 
+	});
 	
-	oReq.send();
+	
+	function reqError(err) {
+	   let elrefTests = document.getElementById('refTests');
+	   elrefTests.innerHTML = '<div class="alert alert-warning">Erreur chargement ressource JSON</div>';
+	}
+	
+	//on concatene les 2 jsons en les réorganisant par tests
+	function compareReorder(a, b) {
+		
+		for (var i = 0; i < a.length; i++) {
+			
+		const testA = a[i].title;
+			
+			for (var j = 0; j < b.length; j++) {
+			
+				const testB = b[j].title;
 
-
+				if (testA==testB){
+					a.splice(i++, 0,  b[j]);
+				}
+			}		
+		}
+		return a;
+	}
+	
 	// function encode(str){
 
 		// str=str.replace(/[\x26\x0A\<>'"^]/gi, function(r){return"&#"+r.charCodeAt(0)+";"});
@@ -27,6 +74,7 @@ $(document).ready(function () {
 		return str;
 	}
 	
+	//supprimer les doublons dans les filtres
 	function delDoublon(arrCond, inputId){
 		for (var i = 0; i < arrCond.length; i++) {
 		//for (let condition of arrCond) {
@@ -40,72 +88,83 @@ $(document).ready(function () {
 	}
 	
 
-function reqError(err) {
-   let elrefTests = document.getElementById('refTests');
-   elrefTests.innerHTML = '<div class="alert alert-warning">Erreur chargement ressource JSON</div>';
-}
+function reqListener(responseFirst, responseSecond) {
 	
-function reqListener() {
 	
-	var data = JSON.parse(this.responseText);
-	let refTests = data;
+	var data = JSON.parse(responseFirst);
+	var data2 = JSON.parse(responseSecond);
 
+	let refTests = compareReorder(data, data2);
+	
 	let app = new function() {
 	  // Récupération des données
 	  this.refTests = refTests;
-
-	  this.FetchAll = function(data) {
 	  
-	  // Selection de l'élément
-	  let elrefTests = document.getElementById('refTests');
-	  let htmlrefTests = '';
-	  let headingTheme = '';
-	
-	  //on boucle dans le tableau passé en paramètre de la fonction
-	  for (let i in data) {
-		if(headingTheme!=data[i].themes){
-			headingTheme=data[i].themes;
-			htmlrefTests +='<h2 id="test-'+formatHeading(data[i].themes)+'">'+data[i].themes+'</h2>';
-		}
-		htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">' + data[i].title + '</a></h3>';
+	  this.FetchAll = function(refTests) {
+	  
+		  // Selection de l'élément
+		  let elrefTests = document.getElementById('refTests');
+		  let htmlrefTests = '';
+		  let headingTheme = '';
+		  let elrefTypes = [];
 		
-		htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
-		htmlrefTests += '<div class="card-block"><div class="row">';
-		htmlrefTests += '<div class="col-lg-6"><h4>Procédures</h4><ol>';
-		for (let j in data[i].tests) {
-			htmlrefTests += '<li>' + data[i].tests[j] + '</li> ';
-		}
-		htmlrefTests += '</ol></div>';
-		htmlrefTests += '<div class="col-lg-6"><h4>A vérifier</h4><ol>';
-		for (let j in data[i].verifier) {
-			htmlrefTests += '<li>' +  data[i].verifier[j] + '</li> ';
-		}
-		htmlrefTests += '</ol></div>';
-		htmlrefTests += '</div>';
-		htmlrefTests += '<div class="row">';
-		htmlrefTests += '<div class="col-lg-12"><h4>Résultats</h4><ol>';
-		for (let j in data[i].resultat) {
-			htmlrefTests += '<li>' + data[i].resultat[j] + '</li> ';
-		}
-		htmlrefTests += '</ol></div>';
-		htmlrefTests += '</div>';
-		if (data[i].exception) {
-			htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>Exceptions</h4>';
-			htmlrefTests += '<p>' + data[i].exception + '</p> ';
+			// TEST TYPE EN COURS => A METTRE DANS FONCTION
+			  for (let i in refTests) {
+				for (let j in refTests[i].type) {
+				  elrefTypes.push(refTests[i].type[j]);
+				}
+			  }
+			  let uniqueTypes =  elrefTypes.filter(function(value, index, self) {
+				return self.indexOf(value) === index;
+			});
+			
+			
+		
+		  //on boucle dans le tableau passé en paramètre de la fonction
+		  for (let i in refTests) {
+			if(headingTheme!=refTests[i].themes){
+				headingTheme=refTests[i].themes;
+				htmlrefTests +='<h2 id="test-'+formatHeading(refTests[i].themes)+'">'+refTests[i].themes+'</h2>';
+			}
+			htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">' + refTests[i].title + '<span class="badge badge-pill badge-light pull-xs-right">'+((refTests[i].profils[0] == 'Concepteur') ? "Conception" : "Développement")+'</span></a></h3>';
+			
+			htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
+			htmlrefTests += '<div class="card-block"><div class="row">';
+			htmlrefTests += '<div class="col-lg-6"><h4>Procédures</h4><ol>';
+			for (let j in refTests[i].tests) {
+				htmlrefTests += '<li>' + refTests[i].tests[j] + '</li> ';
+			}
+			htmlrefTests += '</ol></div>';
+			htmlrefTests += '<div class="col-lg-6"><h4>A vérifier</h4><ol>';
+			for (let j in refTests[i].verifier) {
+				htmlrefTests += '<li>' +  refTests[i].verifier[j] + '</li> ';
+			}
+			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
+			htmlrefTests += '<div class="row">';
+			htmlrefTests += '<div class="col-lg-12"><h4>Résultats</h4><ol>';
+			for (let j in refTests[i].resultat) {
+				htmlrefTests += '<li>' + refTests[i].resultat[j] + '</li> ';
+			}
+			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
-		}		
-		htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>' + data[i].profils + ' ';
-		htmlrefTests += '<br /> <b>Outils : </b>';
-		for (let j in data[i].type) {
-		  htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + data[i].type[j] + ' ';
-		}
-		htmlrefTests += '</div>';
-		htmlrefTests += '</div></article>';
-	  }
+			if (refTests[i].exception) {
+				htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>Exceptions</h4>';
+				htmlrefTests += '<p>' + refTests[i].exception + '</p> ';
+				htmlrefTests += '</div>';
+				htmlrefTests += '</div>';
+			}		
+			htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>' + refTests[i].profils + ' ';
+			htmlrefTests += '<br /> <b>Outils : </b>';
+			for (let j in refTests[i].type) {
+			  htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + refTests[i].type[j] + ' ';
+			}
+			htmlrefTests += '</div>';
+			htmlrefTests += '</div></article>';
+		  }
 
-		  // Affichage de l'ensemble des lignes en HTML
-		  data.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">Aucun résultat ne correspond à votre sélection</div>' : elrefTests.innerHTML = htmlrefTests;
+			  // Affichage de l'ensemble des lignes en HTML
+			  refTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">Aucun résultat ne correspond à votre sélection</div>' : elrefTests.innerHTML = htmlrefTests;
 
 		};
 		
@@ -133,7 +192,6 @@ function reqListener() {
 				  profils.push(refTests[i].profils[j]);
 				}
 				
-				
 			  }
 
 			  //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
@@ -158,8 +216,6 @@ function reqListener() {
 				
 			  let htmlProfils = '';
 			  
-			  //temporaire, pour profil Concepteur
-			  htmlProfils += '<li><input type="radio" id="profilcptr" name="profil" value="" disabled> <label for="profilcptr" class="disabled" >Concepteur (à venir)</label></li>';
 			
 			  for (let i in uniqueProfils) {
 				htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '" '+((uniqueProfils[i] == 'Expert Accessibilité') ? " checked" : " ")+'> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
@@ -180,14 +236,17 @@ function reqListener() {
 		  let arrType    = [];	
 		  let arrProfil  = [];
 		  let conditions = [];
-		let self       = this;
+		  let self       = this;
 
 		
 		//init array conditions avec valeur Expert Accessibilité
-		arrProfil.push("Expert Accessibilité");		
+		
+		//arrProfil.push("Expert Accessibilité");
+		
 		conditions.unshift(function(item) { 
 			return item.profils.indexOf(arrProfil[0]) !== -1;								
 		});	
+		
 		//on nomme la fonction, pour les boutons radio on utilise this.name
 		Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});	
 		
@@ -222,7 +281,6 @@ function reqListener() {
 
 					let indice = arrType.length + arrProfil.length;
 						
-						console.log(indice);
 						
 					if (indice > 0) {	
 
@@ -285,7 +343,6 @@ function reqListener() {
 							}		
 						}
 
-						console.table(conditions);
 						
 						//on applique tous les filtres stockés dans conditions
 						 filteredTest = self.refTests.filter(function(d) {
@@ -294,12 +351,12 @@ function reqListener() {
 							});
 						});		
 
+						
 						//on met à jour la page				
 						app.FetchAll(filteredTest);
 							
 				 } else {
 					//aucun critère de sélectionné, on réinitialise la page
-					
 					app.FetchAll(refTests);
 				 }
 
@@ -310,14 +367,11 @@ function reqListener() {
     };
 
 }
- 
 	// Affichage de tous les tests
 	app.FetchAll(refTests);
 	// Filtrage
 	app.FilterByType();
-  
 }
-	
 
 });
 

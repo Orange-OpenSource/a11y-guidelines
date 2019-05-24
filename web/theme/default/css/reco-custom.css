@@ -67,14 +67,11 @@
 #refTests h3::before, #refTests h4::before, #refTests h5::before, #refTests h6::before {content:none;}
 #refTests h2{margin:4rem 0 2rem 0;}
 #refTests h2:first-child{margin:2rem 0 2rem 0;}
-
 #refTests h3{font-size: 1rem; margin:0.2rem 0;}
 #refTests .card-header{position: relative; background-color: #fff; border-bottom: 1px solid #ccc; padding: 0 0;}
 #refTests ol {list-style-type: decimal;}
 #refTests ul, #refTests ol {padding-left: 1rem;}
 #refTests ol ul{padding-top: 1rem;}
-
-
 
 #filter h3{margin:0.2rem 0;}
 #filter ul{padding-left:1rem;}
@@ -103,7 +100,23 @@
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-
 .accordion .card-block a {
     text-decoration: underline;
+}
+
+.badge-light {
+    color: #000;
+    background-color: #ddd;
+}
+
+.badge {
+    display: inline-block;
+    padding: .1875rem .625rem;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
