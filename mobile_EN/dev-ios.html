@@ -1749,6 +1749,225 @@ class CustomRotor: UIViewController {
 <p>All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br></p>
+<h2 id="speech-synthesis">Speech synthesis</h2>
+<h3 id="description">Description</h3>
+<p>Many <a href="./dev-ios-wwdc-18236.html#Uses">use cases</a> are good candidates to use the speech synthesis and they aren&#39;t necessary all part of accessibility.
+</br>However, in that perspective, it&#39;s important to note that this <strong>feature doesn&#39;t replace VoiceOver</strong> but could be a good complement to the screen reader implementation <em>(the speech overlaps the screen reader voice)</em>.</p>
+<h3 id="details">Details</h3>
+<p>Few elements are mandatory to create a speech synthesis on the fly:</p>
+<ul>
+<li><strong>The text</strong>: <code>AVSpeechUtterance</code> instance with a <code>voice</code> property that&#39;s <code>AVSpeechSynthesisVoice</code> typed.</li>
+<li><strong>The synthesizer</strong>: <code>AVSpeechSynthesizer</code> instance that handles the incoming text with an events control thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol.
+</br></br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/SpeechSynthesizer.png" /></li>
+</ul>
+<h3 id="example">Example</h3>
+<p>To be sure that a bunch of <code>AVSpeechUtterance</code> instances is entirely vocalized, it&#39;s <a href="./dev-ios-wwdc-18236.html#Basics">essential</a> to retain the <code>AVSpeechSynthesizer</code> instance until the speech is done.
+</br></br>The following example will define the speech rate and the voice pitch/volume for each utterance while:</p>
+<ul>
+<li>Highlighting the vocalized word thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol.</li>
+<li>Pausing and resuming from where the speech stopped thanks to some <code>AVSpeechSynthesizer</code> instance methods.</li>
+</ul>
+<pre><code class="objective-c">
+@interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
+
+    NSMutableArray * playerQueue;
+    AVSpeechSynthesizer * synthesizer;
+    __weak IBOutlet UILabel * textLabel;
+}
+@end
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation SpeechSynthesis
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    playerQueue = [[NSMutableArray alloc] init];
+    synthesizer = [[AVSpeechSynthesizer alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    for (int i = 1 ; i < 11 ; i++) {
+
+        NSString * stringNbPrefix = @"Sentence number ";
+        NSString * stringNbSuffix = @" of the speech synthesizer.";
+        NSString * stringNb = [NSString stringWithFormat:@"%@%i%@", stringNbPrefix, i, stringNbSuffix];
+
+        AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithString:stringNb];
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
+        utterance.pitchMultiplier = 1.0;
+        utterance.volume = 1.0;
+
+        [playerQueue addObject:utterance];
+    }
+
+    synthesizer.delegate = self;
+
+    for (AVSpeechUtterance * utterance in playerQueue) {
+        [synthesizer speakUtterance:utterance];
+    }
+}
+
+//AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer
+willSpeakRangeOfSpeechString:(NSRange)characterRange
+                utterance:(AVSpeechUtterance *)utterance {
+
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:utterance.speechString];
+
+    [attributedString addAttribute:NSFontAttributeName
+                             value:[UIFont systemFontOfSize:19.0]
+                             range:characterRange];
+
+    NSAttributedString * subString = [attributedString attributedSubstringFromRange:characterRange];
+    textLabel.attributedText = attributedString;
+
+    NSString * output = [NSString stringWithFormat:@"%@%@", @"word : ", subString.string];
+    NSLog(@"%@", output);
+}
+
+- (IBAction)pauseButton:(UIButton *)sender {
+
+    if (synthesizer.isSpeaking == TRUE) {
+        if ([synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate] == TRUE) {
+            NSLog(@"PAUSE");
+        } else {
+            NSLog(@"P.R.O.B.L.E.M. when pausing.");
+        }
+    }
+}
+
+- (IBAction)resumeButton:(UIButton *)sender {
+
+    if (synthesizer.isPaused == TRUE) {
+        if ([synthesizer continueSpeaking] == TRUE) {
+            NSLog(@"RESUME");
+        } else {
+            NSLog(@"P.R.O.B.L.E.M. when resuming.");
+        }
+    }
+}
+@end
+</code></pre><pre><code class="swift">
+class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
+
+    @IBOutlet weak var textLabel: UILabel!
+
+    var synthesizer = AVSpeechSynthesizer()
+    var playQueue = [AVSpeechUtterance]()
+
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        for i in 1...10 {
+
+            let stringNb = "Sentence number " + String(i) + " of the speech synthesizer."
+
+            let utterance = AVSpeechUtterance(string: stringNb)
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+            utterance.pitchMultiplier = 1.0
+            utterance.volume = 1.0
+
+            playQueue.append(utterance)
+        }
+
+        synthesizer.delegate = self
+
+        for utterance in playQueue {
+            synthesizer.speak(utterance)
+        }
+    }
+
+    //AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                           willSpeakRangeOfSpeechString characterRange: NSRange,
+                           utterance: AVSpeechUtterance) {
+
+        let attributedString = NSMutableAttributedString(string: utterance.speechString)
+        attributedString.addAttribute(.font,
+                                      value: UIFont.boldSystemFont(ofSize: 19),
+                                      range: characterRange)
+
+        textLabel.attributedText = attributedString
+
+        let subString = attributedString.attributedSubstring(from: characterRange)
+        print("word : \(subString.string)")
+    }
+
+
+    @IBAction func pauseAction(_ sender: UIButton) {
+
+        if (synthesizer.isSpeaking == true) {
+            if (synthesizer.pauseSpeaking(at: .immediate) == true) {
+                print("PAUSE")
+            } else {
+                print("P.R.O.B.L.E.M. when pausing.")
+            }
+        }
+    }
+
+
+    @IBAction func resumeAction(_ sender: UIButton) {
+
+        if (synthesizer.isPaused == true) {
+            if (synthesizer.continueSpeaking() == true) {
+                print("RESUME")
+            } else {
+                print("P.R.O.B.L.E.M. when resuming.")
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>When a particular spelling is intended, phonetics is highly recommended to get the desired purpose.</p>
+<pre><code class="objective-c">
+    NSMutableAttributedString * attrStr = [[NSMutableAttributedString alloc] initWithString:@"blablabla" 
+                                                                             attributes:@{AVSpeechSynthesisIPANotationAttribute:@"ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"}];
+
+    AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithAttributedString:attrStr];
+
+    AVSpeechSynthesizer * synthesizer = [[AVSpeechSynthesizer alloc] init];
+    [synthesizer speakUtterance:utterance];
+</code></pre><pre><code class="swift">
+        let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
+
+        let attrStr = NSMutableAttributedString(string: "blablabla",
+                                                attributes: [pronunciationKey: "ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"])
+
+        let utterance = AVSpeechUtterance(attributedString: attrStr)
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+</code></pre>
+
+<p></br>Generating phonetics may be done in the device settings.
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
+</br>Once the menu <code>General</code> - <code>Accessibility</code> - <code>Speech</code> - <code>Pronunciations</code> is reached...
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></p>
+<ol>
+<li>Select the &#39;<strong>+</strong>&#39; icon to add a new phonetic element.</li>
+<li>Name this new element in order to quickly find it later on.</li>
+<li>Tap the <strong>microphone</strong> icon.</li>
+<li>Vocalize an entire sentence or a single word.</li>
+<li>Listen to the different system proposals.</li>
+<li>Validate your choice with the &#39;<strong>OK</strong>&#39; button or cancel to start over.</li>
+<li>Tap the back button to confirm the new created phonetic element.</li>
+<li>Find all the generated elements in the <code>Pronunciations</code> page.</li>
+</ol>
+<p><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
+</br>To get the phonetic expression inside the code, pass it through the mobile <code>Notes</code> application to be synchronized with the iCloud one from which a copy-paste becomes easy as a pie.
+</br></br>All the speech synthesizer functionalities are introduced in a <a href="./dev-ios-wwdc-18236.html">WWDC 2018 video</a> that&#39;s perfectly summarized in the WWDC section of this site.</br></p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice">AVSpeechSynthesisVoice</a></li>
+<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer">AVSpeechSynthesizer</a></li>
+<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate">AVSpeechSynthesizerDelegate</a></li>
+<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechutterance">AVSpeechUtterance</a></li>
+</ul>
 <h2 id="switch-control">Switch Control</h2>
 <h3 id="description">Description</h3>
 <p>The accessibility Switch Control feature revolves around the point mode and the item mode.
@@ -1883,11 +2102,23 @@ class ViewController: UIViewController {
 </br>Once activated, the created groups allow to reach directly the elements which they contain.</p>
 <h3 id="link">Link</h3>
 <ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle"><code>accessibilityNavigationStyle</code></a></li>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle"><code>accessibilityNavigationStyle</code></a></br></br></li>
 </ul>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h2 id="vocalized-application-name">Vocalized application name</h2>
+<h3 id="description">Description</h3>
+<p>The same result as the <a href="./voiceover.html#CustomLabel">VoiceOver gesture</a> to set a custom label can be reached by code.
+</br>The rationale behind is to render a better vocalisation for an application name that could be very obscure according to its written abbreviation.
+</br></br><strong>CFBundleSpokenName</strong> is the property list key that vocally replaces an application name and might take many different translations depending on the foreign languages.
+</br><img alt="" style="max-width: 750px; height: auto; " src="./images/iOSdev/AppName_1.png" />
+</br>In the end, we go from a weird to an understandable vocalized name that is defined upstream with no user modifications.
+</br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/AppName_2.png" /></p>
+<h3 id="link">Link</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundlespokenname"><code>CFBundleSpokenName</code></a></br></br><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+Copyright (C) 2016  Orange SA
+See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+</ul>
+
           
         </div>
       </div>
