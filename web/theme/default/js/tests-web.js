@@ -93,12 +93,44 @@ function reqListener(responseFirst, responseSecond) {
 	
 	var data = JSON.parse(responseFirst);
 	var data2 = JSON.parse(responseSecond);
-
+	
 	let refTests = compareReorder(data, data2);
 	
 	let app = new function() {
 	  // Récupération des données
 	  this.refTests = refTests;
+	  
+	  this.UpdateTypes = function(allTypes, updatedTypes) {
+		let elrefTypes = [];
+		  
+			  for (let i in updatedTypes) {
+				for (let j in updatedTypes[i].type) {
+				  elrefTypes.push(updatedTypes[i].type[j]);
+				}
+			  }
+			 let uniqueUpdatedTypes =  elrefTypes.filter(function(value, index, self) {
+				return self.indexOf(value) === index; 
+				});
+		
+			for (let i in allTypes) {	
+						var elem = document.getElementById('type'+i);
+						elem.disabled = true;
+						var elemLabel = document.getElementById('labelType'+i);
+						elemLabel.classList.remove("disabled");
+						
+			  }	
+			for (let i in allTypes) {
+				for (let j in uniqueUpdatedTypes) {
+				  if (allTypes[i]==uniqueUpdatedTypes[j]) {
+						var elem = document.getElementById('type'+i);
+						elem.disabled = false;
+						var elemLabel = document.getElementById('labelType'+i);
+						elemLabel.classList.add("disabled");
+				  }
+				}
+			  }
+				
+	  };
 	  
 	  this.FetchAll = function(refTests) {
 	  
@@ -106,19 +138,8 @@ function reqListener(responseFirst, responseSecond) {
 		  let elrefTests = document.getElementById('refTests');
 		  let htmlrefTests = '';
 		  let headingTheme = '';
-		  let elrefTypes = [];
 		
-			// TEST TYPE EN COURS => A METTRE DANS FONCTION
-			  for (let i in refTests) {
-				for (let j in refTests[i].type) {
-				  elrefTypes.push(refTests[i].type[j]);
-				}
-			  }
-			  let uniqueTypes =  elrefTypes.filter(function(value, index, self) {
-				return self.indexOf(value) === index;
-			});
-			
-			
+	
 		
 		  //on boucle dans le tableau passé en paramètre de la fonction
 		  for (let i in refTests) {
@@ -193,12 +214,13 @@ function reqListener(responseFirst, responseSecond) {
 				}
 				
 			  }
-
+				
 			  //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
 			  let uniqueTypes = types.filter(function(value, index, self) {
 				return self.indexOf(value) === index;
 				});
 			  
+			  //on tri par ordre alphabétique
 			  uniqueTypes.sort(function (a, b) {
 				return a.toLowerCase().localeCompare(b.toLowerCase());
 			  });
@@ -206,7 +228,7 @@ function reqListener(responseFirst, responseSecond) {
 			  let htmlTypes = '';
 
 			  for (let i in uniqueTypes) {
-				htmlTypes += '<li><input type="checkbox" id="type' + i + '" name="types" value="' + uniqueTypes[i] + '"> <label for="type' + i + '">' + uniqueTypes[i] + '</label></li>';
+				htmlTypes += '<li><input type="checkbox" id="type' + i + '" name="types" value="' + uniqueTypes[i] + '"> <label for="type' + i + '" id="labelType' + i + '">' + uniqueTypes[i] + '</label></li>';
 			  }
 
 			 //let uniqueProfils = profils.filter( (value, index, self) => self.indexOf(value) === index );
@@ -223,6 +245,8 @@ function reqListener(responseFirst, responseSecond) {
 
 			  elTypes.innerHTML = htmlTypes;
 			  elProfils.innerHTML = htmlProfils;
+			 
+			
 		};
 		
 
@@ -239,8 +263,7 @@ function reqListener(responseFirst, responseSecond) {
 		  let self       = this;
 
 		
-		//init array conditions avec valeur Expert Accessibilité
-		
+		//init array conditions avec valeur Expert Accessibilité	
 		//arrProfil.push("Expert Accessibilité");
 		
 		conditions.unshift(function(item) { 
@@ -354,6 +377,7 @@ function reqListener(responseFirst, responseSecond) {
 						
 						//on met à jour la page				
 						app.FetchAll(filteredTest);
+						//app.UpdateTypes(uniqueTypes, filteredTest);
 							
 				 } else {
 					//aucun critère de sélectionné, on réinitialise la page
@@ -371,6 +395,7 @@ function reqListener(responseFirst, responseSecond) {
 	app.FetchAll(refTests);
 	// Filtrage
 	app.FilterByType();
+
 }
 
 });
