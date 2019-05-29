@@ -43,16 +43,36 @@ $(document).ready(function () {
 		
 		for (var i = 0; i < a.length; i++) {
 			
-		const testA = a[i].title;
+			var testA = a[i].title;
+			
+		
+			for (var j = 0; j < b.length; j++) {
+			
+				var testB = b[j].title;
+				
+				if (testA==testB){
+					a.splice(i++, 0,  b[j]);
+					b.splice(j, 1);
+					
+				} 
+
+			}	
+
+		}
+		for (var i = 0; i < a.length; i++) {
+			
+			var testC = a[i].themes;
 			
 			for (var j = 0; j < b.length; j++) {
 			
-				const testB = b[j].title;
+				var testD = b[j].themes;
+				
+				if (testC==testD){
+					a.splice(i, 0,  b[j]);
+					b.splice(j, 1);
+				} 
 
-				if (testA==testB){
-					a.splice(i++, 0,  b[j]);
-				}
-			}		
+			}	
 		}
 		return a;
 	}
@@ -93,7 +113,7 @@ function reqListener(responseFirst, responseSecond) {
 	
 	var data = JSON.parse(responseFirst);
 	var data2 = JSON.parse(responseSecond);
-	
+	var uniqueTypes = [];
 	let refTests = compareReorder(data, data2);
 	
 	let app = new function() {
@@ -116,7 +136,7 @@ function reqListener(responseFirst, responseSecond) {
 						var elem = document.getElementById('type'+i);
 						elem.disabled = true;
 						var elemLabel = document.getElementById('labelType'+i);
-						elemLabel.classList.remove("disabled");
+						elemLabel.classList.add("disabled");
 						
 			  }	
 			for (let i in allTypes) {
@@ -125,7 +145,7 @@ function reqListener(responseFirst, responseSecond) {
 						var elem = document.getElementById('type'+i);
 						elem.disabled = false;
 						var elemLabel = document.getElementById('labelType'+i);
-						elemLabel.classList.add("disabled");
+						elemLabel.classList.remove("disabled");
 				  }
 				}
 			  }
@@ -138,9 +158,7 @@ function reqListener(responseFirst, responseSecond) {
 		  let elrefTests = document.getElementById('refTests');
 		  let htmlrefTests = '';
 		  let headingTheme = '';
-		
-	
-		
+
 		  //on boucle dans le tableau passé en paramètre de la fonction
 		  for (let i in refTests) {
 			if(headingTheme!=refTests[i].themes){
@@ -216,7 +234,7 @@ function reqListener(responseFirst, responseSecond) {
 			  }
 				
 			  //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
-			  let uniqueTypes = types.filter(function(value, index, self) {
+			  uniqueTypes = types.filter(function(value, index, self) {
 				return self.indexOf(value) === index;
 				});
 			  
@@ -240,16 +258,14 @@ function reqListener(responseFirst, responseSecond) {
 			  
 			
 			  for (let i in uniqueProfils) {
-				htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '" '+((uniqueProfils[i] == 'Expert Accessibilité') ? " checked" : " ")+'> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
+				htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '"> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
 			  }
 
 			  elTypes.innerHTML = htmlTypes;
 			  elProfils.innerHTML = htmlProfils;
-			 
-			
+
 		};
 		
-
 		// Retourne les tests filtrés
 		this.FilterByType = function() {
 		
@@ -262,17 +278,17 @@ function reqListener(responseFirst, responseSecond) {
 		  let conditions = [];
 		  let self       = this;
 
-		
+		/*
 		//init array conditions avec valeur Expert Accessibilité	
-		//arrProfil.push("Expert Accessibilité");
+		arrProfil.push("Expert Accessibilité");
 		
 		conditions.unshift(function(item) { 
 			return item.profils.indexOf(arrProfil[0]) !== -1;								
 		});	
 		
 		//on nomme la fonction, pour les boutons radio on utilise this.name
-		Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});	
-		
+		Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
+		*/
 
 			for (var i = 0; i < checkboxes.length; i++) {
 				
@@ -374,10 +390,9 @@ function reqListener(responseFirst, responseSecond) {
 							});
 						});		
 
-						
 						//on met à jour la page				
 						app.FetchAll(filteredTest);
-						//app.UpdateTypes(uniqueTypes, filteredTest);
+						app.UpdateTypes(uniqueTypes, filteredTest);
 							
 				 } else {
 					//aucun critère de sélectionné, on réinitialise la page
@@ -395,6 +410,7 @@ function reqListener(responseFirst, responseSecond) {
 	app.FetchAll(refTests);
 	// Filtrage
 	app.FilterByType();
+
 
 }
 
