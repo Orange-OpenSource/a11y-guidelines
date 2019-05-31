@@ -41,9 +41,10 @@ $(document).ready(function () {
 	//on concatene les 2 jsons en les réorganisant par tests
 	function compareReorder(a, b) {
 		
+		// si les titres sont identiques, on regroupe par titre
 		for (var i = 0; i < a.length; i++) {
 			
-			var testA = a[i].title;
+			let testA = a[i].title;
 			
 		
 			for (var j = 0; j < b.length; j++) {
@@ -59,9 +60,11 @@ $(document).ready(function () {
 			}	
 
 		}
+		
+		//sinon on regroupe les tests par themes
 		for (var i = 0; i < a.length; i++) {
 			
-			var testC = a[i].themes;
+			let testC = a[i].themes;
 			
 			for (var j = 0; j < b.length; j++) {
 			
@@ -109,16 +112,15 @@ $(document).ready(function () {
 	
 
 function reqListener(responseFirst, responseSecond) {
-	
-	
+		
 	var data = JSON.parse(responseFirst);
 	var data2 = JSON.parse(responseSecond);
 	var uniqueTypes = [];
-	let refTests = compareReorder(data, data2);
+	var refTests = compareReorder(data, data2);
 	
 	let app = new function() {
 	  // Récupération des données
-	  this.refTests = refTests;
+	  //this.refTests = refTests;
 	  
 	  this.UpdateTypes = function(allTypes, updatedTypes) {
 		let elrefTypes = [];
@@ -152,64 +154,102 @@ function reqListener(responseFirst, responseSecond) {
 				
 	  };
 	  
-	  this.FetchAll = function(refTests) {
+	  this.UpdateFeedback = function(activeFilter, nbTests) {
+		let elBtnReinit = document.getElementById('reinit');
+		let elFeedback = document.getElementById('feedback');
+		if (activeFilter) {
+			elBtnReinit.disabled = false;
+			
+			 let htmlFeedback = '';
+			  htmlFeedback +=  '<p><b>'+nbTests+'</b> tests dans filtres en cours | <a href="#" id="reinitLink">reinitialiser</a></p>';
+			elFeedback.innerHTML = htmlFeedback;
+			
+			let elreinitLink = document.getElementById('reinitLink');
+			 elreinitLink.addEventListener('click', function() {
+				 app.FetchAll(refTests);
+				 app.FilterByType();
+				 app.UpdateFeedback(false);
+			 });
+			 
+			 
+		} else {
+			elBtnReinit.disabled = true;
+			elFeedback.innerHTML = '';
+		}
+				
+	  };
 	  
+	  this.FetchAll = function(currentRefTests) {
+	 
+			
 		  // Selection de l'élément
 		  let elrefTests = document.getElementById('refTests');
 		  let htmlrefTests = '';
 		  let headingTheme = '';
 
 		  //on boucle dans le tableau passé en paramètre de la fonction
-		  for (let i in refTests) {
-			if(headingTheme!=refTests[i].themes){
-				headingTheme=refTests[i].themes;
-				htmlrefTests +='<h2 id="test-'+formatHeading(refTests[i].themes)+'">'+refTests[i].themes+'</h2>';
+		  for (let i in currentRefTests) {
+			if(headingTheme!=currentRefTests[i].themes){
+				headingTheme=currentRefTests[i].themes;
+				htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'">'+currentRefTests[i].themes+'</h2>';
 			}
-			htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">' + refTests[i].title + '<span class="badge badge-pill badge-light pull-xs-right">'+((refTests[i].profils[0] == 'Concepteur') ? "Conception" : "Développement")+'</span></a></h3>';
+			htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">' + currentRefTests[i].title + '<span class="badge badge-pill badge-light pull-xs-right">'+((currentRefTests[i].profils[0] == 'Concepteur') ? "Conception" : "Développement")+'</span></a></h3>';
 			
 			htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
 			htmlrefTests += '<div class="card-block"><div class="row">';
 			htmlrefTests += '<div class="col-lg-6"><h4>Procédures</h4><ol>';
-			for (let j in refTests[i].tests) {
-				htmlrefTests += '<li>' + refTests[i].tests[j] + '</li> ';
+			for (let j in currentRefTests[i].tests) {
+				htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';
 			}
 			htmlrefTests += '</ol></div>';
 			htmlrefTests += '<div class="col-lg-6"><h4>A vérifier</h4><ol>';
-			for (let j in refTests[i].verifier) {
-				htmlrefTests += '<li>' +  refTests[i].verifier[j] + '</li> ';
+			for (let j in currentRefTests[i].verifier) {
+				htmlrefTests += '<li>' +  currentRefTests[i].verifier[j] + '</li> ';
 			}
 			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
 			htmlrefTests += '<div class="row">';
 			htmlrefTests += '<div class="col-lg-12"><h4>Résultats</h4><ol>';
 			for (let j in refTests[i].resultat) {
-				htmlrefTests += '<li>' + refTests[i].resultat[j] + '</li> ';
+				htmlrefTests += '<li>' + currentRefTests[i].resultat[j] + '</li> ';
 			}
 			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
 			if (refTests[i].exception) {
 				htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>Exceptions</h4>';
-				htmlrefTests += '<p>' + refTests[i].exception + '</p> ';
+				htmlrefTests += '<p>' + currentRefTests[i].exception + '</p> ';
 				htmlrefTests += '</div>';
 				htmlrefTests += '</div>';
 			}		
-			htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>' + refTests[i].profils + ' ';
+			htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>' + currentRefTests[i].profils + ' ';
 			htmlrefTests += '<br /> <b>Outils : </b>';
-			for (let j in refTests[i].type) {
-			  htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + refTests[i].type[j] + ' ';
+			for (let j in currentRefTests[i].type) {
+			  htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + currentRefTests[i].type[j] + ' ';
 			}
 			htmlrefTests += '</div>';
 			htmlrefTests += '</div></article>';
 		  }
 
 			  // Affichage de l'ensemble des lignes en HTML
-			  refTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">Aucun résultat ne correspond à votre sélection</div>' : elrefTests.innerHTML = htmlrefTests;
+			  currentRefTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">Aucun résultat ne correspond à votre sélection</div>' : elrefTests.innerHTML = htmlrefTests;
 
 		};
 		
 		
 		// Retourne la liste des checkboxes
 		this.DisplayFilters = function() {
+			  let elFilterFooter = document.getElementById('filter-footer');
+			  let htmlFilterFooter = '';
+			  htmlFilterFooter += '<button id="reinit" class="btn" disabled>Réinitialiser</button>';
+			  elFilterFooter.innerHTML = htmlFilterFooter;
+			  let elBtnReinit = document.getElementById('reinit');
+			  
+			 elBtnReinit.addEventListener('click', function() {
+				 app.FetchAll(refTests);
+				 app.FilterByType();
+				 app.UpdateFeedback(false);
+			 });
+			
 			  // Selection de l'élément
 			  let elTypes = document.getElementById('types');
 			  let types   = [];
@@ -232,6 +272,7 @@ function reqListener(responseFirst, responseSecond) {
 				}
 				
 			  }
+			
 				
 			  //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
 			  uniqueTypes = types.filter(function(value, index, self) {
@@ -384,7 +425,8 @@ function reqListener(responseFirst, responseSecond) {
 
 						
 						//on applique tous les filtres stockés dans conditions
-						 filteredTest = self.refTests.filter(function(d) {
+						 //filteredTest = self.refTests.filter(function(d) {
+						filteredTest = refTests.filter(function(d) {
 							return conditions.every(function(c) {
 								return c(d);
 							});
@@ -393,10 +435,13 @@ function reqListener(responseFirst, responseSecond) {
 						//on met à jour la page				
 						app.FetchAll(filteredTest);
 						app.UpdateTypes(uniqueTypes, filteredTest);
+						app.UpdateFeedback(true,filteredTest.length);
+			
 							
 				 } else {
 					//aucun critère de sélectionné, on réinitialise la page
 					app.FetchAll(refTests);
+					
 				 }
 
 				});
