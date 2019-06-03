@@ -229,8 +229,9 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 <h2 id="test-aides-techniques">Aides techniques</h2>
 </section>
 <aside id="filter" class="col-md-4">
-<div id="feedback"></div>
+
 <h2>Filtres</h2>
+<div id="feedback"></div>
 <h3>Profils</h3>
 <ul id="profils" class="list-unstyled"></ul>
 <h3>Outils</h3>

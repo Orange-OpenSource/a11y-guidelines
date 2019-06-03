@@ -73,6 +73,7 @@
 #refTests ul, #refTests ol {padding-left: 1rem;}
 #refTests ol ul{padding-top: 1rem;}
 
+#filter h2{margin:0.2rem 0 0 0;}
 #filter h3{margin:0.2rem 0;}
 #filter ul{padding-left:1rem;}
 #filter .disabled {color: #666;}
@@ -104,6 +105,12 @@
     text-decoration: underline;
 }
 
+.accordion-title {
+    display: inline-block;
+	max-width: 33rem;
+}
+
+
 .badge-light {
     color: #000;
     background-color: #ddd;
@@ -120,3 +127,5 @@
     vertical-align: baseline;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+#feedback {margin-bottom: 2rem;}
