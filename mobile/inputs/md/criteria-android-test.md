@@ -5,9 +5,10 @@
         {"label":"Pour le test"}
 	]);
     addSubMenu([
-        {"label":"Pour la conception","url":"criteria-android-conception.html"}, 
-        {"label":"Pour le développement","url":"criteria-android-dev.html"},
-        {"label":"Pour le test","url":"criteria-android-test.html", "expanded": true}
+        {"label":"Critères de conception","url":"criteria-android-conception.html"},
+        {"label":"Guide pour les développeurs","url":"criteria-android-dev.html"},
+        {"label":"TalkBack","url":"screen-reader-talkback.html"},
+        {"label":"Tests","url":"criteria-android-test.html", "expanded": true}
     ]);
 });</script>
 
@@ -29,7 +30,7 @@ Dans l’idéal, les tests doivent être effectués sur des mobiles Android sans
 
 Dans les premières versions des outils, il n’était pas possible d’en activer plusieurs en même temps. Au fil des versions, les outils se sont stabilisés et il est possible de les combiner pour vérifier plus de critères à la fois.
 
-Pour tester l’accessibilité sur Android, il faut commencer par télécharger sur le [<span lang="en">Google Play</span>](https://play.google.com/store/apps?hl=fr), la [<span lang="en">Android Accessibility Suite</span>](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) et l’[<span lang="en">Accessibility Scanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor).
+Pour tester l’accessibilité sur Android, il faut commencer par télécharger sur le [<span lang="en">Google Play</span>](https://play.google.com/store/apps?hl=fr), [<span lang="en">Android Accessibility Suite</span>](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) et [<span lang="en">Accessibility Scanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor).
 
 
 
@@ -48,7 +49,7 @@ Certaines de ces vérifications font doublon avec `lint`.
 En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</span>](https://developer.paciellogroup.com/resources/contrastanalyser/) permet de faire un diagnostic plus précis.
 
 Mode opératoire :
-* Activer le scanner dans les **paramètres/accessibilité/Accessibility Scanner**. Cela affiche un bouton, “<span lang="en">flotting action button</span>” sur l’écran.
+* Activer le scanner dans les **paramètres/accessibilité/Accessibility Scanner**. Cela affiche un bouton, “<span lang="en">floatting action button</span>” sur l’écran.
 * Actioner le bouton sur les écrans à tester. Une capture d’écran est réalisée et la liste des suggestions de correction s’affiche.
 
 ## Agrandissement
@@ -110,9 +111,9 @@ De plus le focus doit rester suffisamment visible sur chaque élément recevant 
 * La barre espace pour cocher/décocher une case à cocher.
 * Les flèches directionnelles pour modifier la sélection des boutons radio, pour se déplacer dans une liste déroulante, ou faire défiler les ascenseurs **scrollbar** ) lorsque ceux-ci sont présents.
 
-Cette liste issue du web est la même en Android, néanmoins un distingo moins strict est fait entre l’usage du Tab et des flèches ainsi qu’entre l’usage de la barre et la touche entrée : on considère le test comme réussi lorsqu’au moins l’un des deux permet de réaliser l’action.
+Il s'agit des touches également utilisées pour tester l'accessibilité d'un site web, néanmoins un distingo moins strict est fait entre l’usage du Tab et des flèches ainsi qu’entre l’usage de la barre et la touche entrée : on considère le test comme réussi lorsqu’au moins l’un des deux permet de réaliser l’action.
 
-Dans la navigation clavier est considéré comme bloquant l’impossibilité de sortir d’une fonctionnalité ou de l’application.
+Il est considéré comme bloquant l’impossibilité de sortir d’une fonctionnalité ou de l’application.
 
 ## Colour Contrast Analyser
 Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) via l'outil <span lang="en">Colour Contrast Analyser</span>.

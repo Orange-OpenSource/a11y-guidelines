@@ -22,7 +22,23 @@
 ## Site organization
 
 ### Android
-... to be completed.
+#### 1. Design criteria
+List of different accessibility criteria for obtaining an accessible mobile app.
+</br>A good way to be aware of the main criteria and commit progressively in accessibility. 
+</br></br>
+
+#### 2. Developers guide
+Section for developers.
+</br>Everything you need to know to code accessible on mobile.
+</br></br>
+
+#### 3. Talkback
+Guide to using the native screen reader.
+</br>Details all the necessary gestures for a Talkback complete mastery.
+</br></br>
+
+#### 4. Tests
+Includes tests to be done so as to be sure that the Android recommendations are taken into account before the prod launching.
 
 ### iOS
 #### 1. Design criteria

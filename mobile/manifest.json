@@ -8,6 +8,7 @@
         "output/markdown/criteria-android-conception.md",
         "output/markdown/criteria-ios-conception.md",
         "output/markdown/criteria-android.md",
+        "output/markdown/criteria-android-test.md",
         "output/markdown/criteria-ios.md",
         "output/markdown/criteria-ios-test.md",
         "output/markdown/criteria-ios-wwdc.md",

@@ -21,7 +21,23 @@
 
 ## Organisation de ce site
 ### Android
-... à remplir.
+#### 1. Critères de conception
+Liste des différents critères à respecter pour obtenir une application mobile accessible.  
+Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité.  
+&nbsp;  
+
+#### 2. Guide pour les développeurs
+Section à destination des développeurs.  
+Tout ce qu’il faut savoir pour coder accessible sur mobile.  
+&nbsp;  
+
+#### 3. Talkback
+Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser Talkback, outil incontournable dans une démarche d'accessibilité mobile.  
+&nbsp;  
+
+#### 4. Tests
+Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que les recommandations android sont bien prises en compte avant mise en production de l'application. 
+&nbsp;  
 
 ### iOS
 #### 1. Critères de conception
