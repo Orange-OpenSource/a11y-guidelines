@@ -1194,7 +1194,7 @@ documentTitles["criteria-android.html#les-criteres-incontournables-sous-android"
 index.add({
     url: "criteria-android.html#les-criteres-incontournables-sous-android",
     title: "Les critères incontournables sous Android",    
-    body: "# Les critères incontournables sous Android  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Android\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Critères de conception\&quot;,\&quot;url\&quot;:\&quot;criteria-android-conception.html\&quot;},          {\&quot;label\&quot;:\&quot;Guide pour les développeurs\&quot;,\&quot;url\&quot;:\&quot;criteria-android-dev.html\&quot;},         {\&quot;label\&quot;:\&quot;TalkBack\&quot;,\&quot;url\&quot;:\&quot;screen-reader-talkback.html\&quot;}     ]);     });&lt;/script&gt;  &lt;span data-menuitem=\&quot;criteria-android\&quot;&gt;&lt;/span&gt;  "
+    body: "# Les critères incontournables sous Android  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Android\&quot;}]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Critères de conception\&quot;,\&quot;url\&quot;:\&quot;criteria-android-conception.html\&quot;},         {\&quot;label\&quot;:\&quot;Guide pour les développeurs\&quot;,\&quot;url\&quot;:\&quot;criteria-android-dev.html\&quot;},         {\&quot;label\&quot;:\&quot;TalkBack\&quot;,\&quot;url\&quot;:\&quot;screen-reader-talkback.html\&quot;},         {\&quot;label\&quot;:\&quot;Tests\&quot;,\&quot;url\&quot;:\&quot;criteria-android-test.html\&quot;}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;criteria-android\&quot;&gt;&lt;/span&gt;  "
 });
 
 documentTitles["criteria-android.html#pour-la-conception"] = "Pour la conception";
@@ -1208,7 +1208,93 @@ documentTitles["criteria-android.html#pour-le-developpement"] = "Pour le dévelo
 index.add({
     url: "criteria-android.html#pour-le-developpement",
     title: "Pour le développement",    
-    body: "## Pour le développement  Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du &lt;abbr&gt;SDK&lt;/abbr&gt; Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google. &lt;div class=\&quot;col-xs-12\&quot;&gt;     &lt;div class=\&quot;row\&quot;&gt;         &lt;div class=\&quot;mobileImg col-xs-12 col-md-6 col-lg-4\&quot;&gt;             &lt;h2 class=\&quot;sr-only\&quot;&gt;Critères incontournables sous Android pour la conception&lt;/h2&gt;                       &lt;a href=\&quot;./criteria-android-conception.html\&quot; class=\&quot;btn btn-info\&quot;&gt;                 ![](./images/android.png)                 &lt;div&gt;Critères incontournables sous Android pour la conception&lt;/div&gt;             &lt;/a&gt;         &lt;/div&gt;         &lt;div class=\&quot;mobileImg col-xs-12 col-md-6 col-lg-4\&quot;&gt;             &lt;h2 class=\&quot;sr-only\&quot;&gt;Critères incontournables sous Android pour le développement&lt;/h2&gt;                       &lt;a href=\&quot;./criteria-android-dev.html\&quot; class=\&quot;btn btn-info\&quot;&gt;                 ![](./images/android.png)                 &lt;div&gt;Critères incontournables sous Android pour le développement&lt;/div&gt;             &lt;/a&gt;         &lt;/div&gt;         &lt;/div&gt;     &amp;nbsp;&amp;nbsp; &lt;/div&gt; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Pour le développement  Les critères incontournables pour le développement ont pour vocation d’aider les développeurs avec les principales options d’accessibilité du &lt;abbr&gt;SDK&lt;/abbr&gt; Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google.  "
+});
+
+documentTitles["criteria-android.html#pour-le-test"] = "Pour le test";
+index.add({
+    url: "criteria-android.html#pour-le-test",
+    title: "Pour le test",    
+    body: "## Pour le test  Pour vérifier le respect des critères, un certain nombre d’outils sont disponibles sous Android. Certains sont des outils dédiés au test comme l’accessibility scanner, d’autres sont les outils permettant de palier à des déficiences comme Talkback.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
+documentTitles["criteria-android-test.html#le-test-de-laccessibilite-sous-android"] = "Le test de l’accessibilité sous Android";
+index.add({
+    url: "criteria-android-test.html#le-test-de-laccessibilite-sous-android",
+    title: "Le test de l’accessibilité sous Android",    
+    body: "# Le test de l’accessibilité sous Android  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Critères incontournables sous Android\&quot;, \&quot;url\&quot;: \&quot;./criteria-android.html\&quot;},         {\&quot;label\&quot;:\&quot;Pour le test\&quot;} 	]);     addSubMenu([         {\&quot;label\&quot;:\&quot;Critères de conception\&quot;,\&quot;url\&quot;:\&quot;criteria-android-conception.html\&quot;},         {\&quot;label\&quot;:\&quot;Guide pour les développeurs\&quot;,\&quot;url\&quot;:\&quot;criteria-android-dev.html\&quot;},         {\&quot;label\&quot;:\&quot;TalkBack\&quot;,\&quot;url\&quot;:\&quot;screen-reader-talkback.html\&quot;},         {\&quot;label\&quot;:\&quot;Tests\&quot;,\&quot;url\&quot;:\&quot;criteria-android-test.html\&quot;, \&quot;expanded\&quot;: true}     ]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;criteria-android\&quot;&gt;&lt;/span&gt;  Pour le web, le niveau d’accessibilité demandé à toute interface &lt;abbr&gt;HTML&lt;/abbr&gt; par le groupe Orange est **le respect des critères du niveau AA des &lt;span lang=\&quot;en\&quot;&gt;Web Content Accessibility Guidelines&lt;/span&gt; (&lt;abbr&gt;WCAG&lt;/abbr&gt;) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé.  Des recommandations pour le test de l’accessibilité sous Android sont décrites sur le site de la plateforme, voir ces [recommandations](https://developer.android.com/training/accessibility/testing).  L’objet de ces pages est de décrire les tests techniques et fonctionnels. Ces tests sont des pré-requis aux tests utilisateurs.   Les tests d’accessibilité doivent être effectués tout au long du cycle de vie des projets :  * Au démarrage du projet, lors du choix du Framework, du logiciel ou progiciel…  * Dès la phase de conception sur les maquettes ou les prototypes lors des développements et des tests en production, pour les nouveaux contenus.  Dans l’idéal, les tests doivent être effectués sur des mobiles Android sans surcouche constructeur comme le Pixel. Ils doivent ensuite être réalisés sur les mobiles avec surcouche constructeur les plus utilisés par l’application.  Dans les premières versions des outils, il n’était pas possible d’en activer plusieurs en même temps. Au fil des versions, les outils se sont stabilisés et il est possible de les combiner pour vérifier plus de critères à la fois.  Pour tester l’accessibilité sur Android, il faut commencer par télécharger sur le [&lt;span lang=\&quot;en\&quot;&gt;Google Play&lt;/span&gt;](https://play.google.com/store/apps?hl=fr), [&lt;span lang=\&quot;en\&quot;&gt;Android Accessibility Suite&lt;/span&gt;](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) et [&lt;span lang=\&quot;en\&quot;&gt;Accessibility Scanner&lt;/span&gt;](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor).    "
+});
+
+documentTitles["criteria-android-test.html#accessibility-scanner"] = "Accessibility Scanner";
+index.add({
+    url: "criteria-android-test.html#accessibility-scanner",
+    title: "Accessibility Scanner",    
+    body: "## Accessibility Scanner  Le [scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor) est téléchargeable sur le playstore.  Le scanner prend des captures d’écran de la page et vérifie : * que l’écran contient des “vocalisations ou label” pour le lecteur d’écran, * que les zones cliquables sont suffisamment grandes et qu’elles ont un label propre,  * Les contrastes de couleur.  Attention, c’est une aide à la vérification, l’outil remonte parfois des faux positifs.  Certaines de ces vérifications font doublon avec `lint`. En cas de doute sur les contrastes, [&lt;span lang=\&quot;en\&quot;&gt;Colour contrast analysor&lt;/span&gt;](https://developer.paciellogroup.com/resources/contrastanalyser/) permet de faire un diagnostic plus précis.  Mode opératoire : * Activer le scanner dans les **paramètres/accessibilité/Accessibility Scanner**. Cela affiche un bouton, “&lt;span lang=\&quot;en\&quot;&gt;floatting action button&lt;/span&gt;” sur l’écran. * Actioner le bouton sur les écrans à tester. Une capture d’écran est réalisée et la liste des suggestions de correction s’affiche.  "
+});
+
+documentTitles["criteria-android-test.html#agrandissement"] = "Agrandissement";
+index.add({
+    url: "criteria-android-test.html#agrandissement",
+    title: "Agrandissement",    
+    body: "## Agrandissement  Android propose plusieurs options d’agrandissement : * Taille de la police * Taille d’affichage * Agrandissement (zoom)  Lire les instructions lors de l’activation des outils.  Positionner **Taille de la police** et **Taille d’affichage** au maximum. Parcourir l’application et noter les textes qui ne sont plus lisibles car ils ont disparu ou se chevauchent.   Positionner **Agrandissement** sur **Utiliser le service**. Revenir à l’application, cliquer 3 fois sur l’écran. Vérifier que les écrans sont lisibles dans ce mode. Pour agrandir, placer 2 doigts sur l’écran puis écarter les, se déplacer avec deux doigts sur l’écran et un doigt dans certaines listes. Toutes les informations de l’écran doivent être lisibles en mode zoom.   "
+});
+
+documentTitles["criteria-android-test.html#lecteur-decran"] = "Lecteur d’écran";
+index.add({
+    url: "criteria-android-test.html#lecteur-decran",
+    title: "Lecteur d’écran",    
+    body: "## Lecteur d’écran  Le lecteur d’écran est un outil pour les personnes non voyantes et mal-voyantes. Il a deux fonctions, la vocalisation et la navigation dans l’écran. Tous les éléments signifiants doivent être vocalisés et dans un ordre logique.  Pour l’activation et l’utilisation du lecteur, voir la [section concernant &lt;span lang=\&quot;en\&quot;&gt;TalkBack&lt;/span&gt;](./screen-reader-talkback.html).  La navigation peut être utilisée en : - lecture automatique de la page ou lecture élément par élément, balayage au doigt vers la droite pour l’élément suivant (obligatoire) - lecture par niveau : **Par défaut** (obligatoire), si l’application s’y prête, le mode **En-têtes** peut avoir de l’intérêt (page structurée à plusieurs niveaux), ou **Liens**, **Commandes**, **Mots**, **Paragraphes**.  Une option développeur (Paramètres / Accessibilité / Talkback / Paramètres / Paramètres du développeur / Afficher la sortie vocale) permet d’afficher à l’écran ce qui est vocalisé et ainsi de faire un rapport de bug plus facile. Lorsque Talkback est utilisé avec l’option activée, les vocalisations sont affichées en bas de l’écran (en sur-impression), il est donc possible d’en faire un screenshot. Il est néanmoins nécessaire d’écouter le rendu audible qui n’est pas toujours correct (comme certaines abréviations).  Parcourir l’application sur les scénarios utilisateurs et vérifier que toutes les informations sont vocalisées dans un ordre logique et compréhensible ainsi que : - les actions associées (bouton, case à cocher… Appuyer deux fois pour activer), - avec l’état des éléments (désactivé, coché…), - les messages d’erreurs, - les transitions entre les écrans, - Les images signifiantes vocalisées, les images décoratives ignorées, - Les titres des pages vocalisés, - Pas d’élément fantôme, - Les scrolls horizontaux vocalisés, - les contenus dynamiques et les erreurs, - les formulaires (compréhension des champs à remplir, des messages d’erreur), - dans les vidéos, les boutons de contrôles de la vidéo.   Idéalement, le test peut se faire sans regarder l’écran, ou en activant l’écran noir (**Assombrir l’écran**).  "
+});
+
+documentTitles["criteria-android-test.html#navigation-au-focus-au-clavier"] = "Navigation au focus (au clavier)";
+index.add({
+    url: "criteria-android-test.html#navigation-au-focus-au-clavier",
+    title: "Navigation au focus (au clavier)",    
+    body: "## Navigation au focus (au clavier)  Pour cela, connecter un clavier d’ordinateur sur votre smartphone soit avec un adaptateur (USB - USB C par exemple) soit si le clavier est bluetooth, en appairant le clavier et le téléphone. Le clavier bluetooth a l’avantage de faciliter le débuggage.  La navigation dans une application ou une page web doit être possible à l’aide du clavier seul, notamment pour les personnes qui ne peuvent pas utiliser l’écran tactile. Il est important de vérifier son fonctionnement, car certains développements peuvent entraîner des difficultés pour naviguer correctement dans la page.    Parcourir l’application à l’aide du clavier, toutes les fonctionnalités doivent être accessibles.    De plus le focus doit rester suffisamment visible sur chaque élément recevant ce focus (éléments activables, boutons, éléments cliquables, cases à cocher,…).  "
+});
+
+documentTitles["criteria-android-test.html#liste-des-raccourcis-clavier-principauxnbsp"] = "Liste des raccourcis clavier principaux&amp;nbsp;:";
+index.add({
+    url: "criteria-android-test.html#liste-des-raccourcis-clavier-principauxnbsp",
+    title: "Liste des raccourcis clavier principaux&amp;nbsp;:",    
+    body: "### Liste des raccourcis clavier principaux&amp;nbsp;:  * La touche **TAB :** pour faire avancer le focus. * Les touches **maj+TAB :** pour faire reculer le focus. * La touche entrée pour activer l’élément qui a le focus (lien, bouton, menu…). * La barre espace pour cocher/décocher une case à cocher. * Les flèches directionnelles pour modifier la sélection des boutons radio, pour se déplacer dans une liste déroulante, ou faire défiler les ascenseurs **scrollbar** ) lorsque ceux-ci sont présents.  Il s'agit des touches également utilisées pour tester l'accessibilité d'un site web, néanmoins un distingo moins strict est fait entre l’usage du Tab et des flèches ainsi qu’entre l’usage de la barre et la touche entrée : on considère le test comme réussi lorsqu’au moins l’un des deux permet de réaliser l’action.  Il est considéré comme bloquant l’impossibilité de sortir d’une fonctionnalité ou de l’application.  "
+});
+
+documentTitles["criteria-android-test.html#colour-contrast-analyser"] = "Colour Contrast Analyser";
+index.add({
+    url: "criteria-android-test.html#colour-contrast-analyser",
+    title: "Colour Contrast Analyser",    
+    body: "## Colour Contrast Analyser Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via &lt;span lang=\&quot;en\&quot;&gt;Accessibility Scanner&lt;/span&gt; sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) via l'outil &lt;span lang=\&quot;en\&quot;&gt;Colour Contrast Analyser&lt;/span&gt;.  Pour les valeurs à respecter voir la [section concernant les couleurs](./criteria-android-conception.html#couleurs).  "
+});
+
+documentTitles["criteria-android-test.html#autres-outils-optionnels"] = "Autres outils - optionnels";
+index.add({
+    url: "criteria-android-test.html#autres-outils-optionnels",
+    title: "Autres outils - optionnels",    
+    body: "## Autres outils - optionnels  "
+});
+
+documentTitles["criteria-android-test.html#selectionner-pour-prononcer"] = "Sélectionner pour prononcer";
+index.add({
+    url: "criteria-android-test.html#selectionner-pour-prononcer",
+    title: "Sélectionner pour prononcer",    
+    body: "### Sélectionner pour prononcer **Sélectionner pour prononcer** est un outil intégré à l’[&lt;span lang=\&quot;en\&quot;&gt;Android Accessibility Suite&lt;/span&gt;](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) qui permet de lire certaines parties de l’écran qui sont sélectionnées.   Lorsqu’un seul élément est sélectionné, il réalise la vocalisation de l’élément. Lorsque plusieurs éléments sont sélectionnés, il implémente un ordre logique de lecture comme **&lt;span lang=\&quot;en\&quot;&gt;Talkback&lt;/span&gt;** mais il n’implémente pas les actions ni l’état des éléments.  Il est utile pour les malvoyants, lorsque l’écran n’est pas lisible, pour l’apprentissage de la lecture (fonctionne comme un karaoké), pour l’apprentissage d’une langue étrangère.  Il peut être utilisé dans un but de démonstration mais est redondant avec Talkback pour des tests d’accessibilité, sans pouvoir le remplacer.  "
+});
+
+documentTitles["criteria-android-test.html#voice-access"] = "Voice Access";
+index.add({
+    url: "criteria-android-test.html#voice-access",
+    title: "Voice Access",    
+    body: "### Voice Access [Voice Access](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess) est une applicationl intégrée à [&lt;span lang=\&quot;en\&quot;&gt;Android Accessibility Suite&lt;/span&gt;](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback), à destination des personnes présentant des troubles moteur. Elle permet de commander à la voix l’application à la place de l’écran tactile.   "
+});
+
+documentTitles["criteria-android-test.html#switch-access"] = "Switch Access";
+index.add({
+    url: "criteria-android-test.html#switch-access",
+    title: "Switch Access",    
+    body: "### Switch Access **Switch Access** est une application à destination des personnes présentant des troubles moteur. Elle permet de contrôler le téléphone en programmant des touches. Elle pourrait remplacer la navigation clavier mais peut introduire des incompréhensions du fait de son paramétrage ou de l’application. Elle ne peut donc se substituer aux tests au clavier.    &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
@@ -1907,7 +1993,35 @@ documentTitles["index.html#android"] = "Android";
 index.add({
     url: "index.html#android",
     title: "Android",    
-    body: "### Android ... à remplir.  "
+    body: "### Android "
+});
+
+documentTitles["index.html#1-criteres-de-conception"] = "1. Critères de conception";
+index.add({
+    url: "index.html#1-criteres-de-conception",
+    title: "1. Critères de conception",    
+    body: "#### 1. Critères de conception Liste des différents critères à respecter pour obtenir une application mobile accessible.   Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité.   &amp;nbsp;    "
+});
+
+documentTitles["index.html#2-guide-pour-les-developpeurs"] = "2. Guide pour les développeurs";
+index.add({
+    url: "index.html#2-guide-pour-les-developpeurs",
+    title: "2. Guide pour les développeurs",    
+    body: "#### 2. Guide pour les développeurs Section à destination des développeurs.   Tout ce qu’il faut savoir pour coder accessible sur mobile.   &amp;nbsp;    "
+});
+
+documentTitles["index.html#3-talkback"] = "3. Talkback";
+index.add({
+    url: "index.html#3-talkback",
+    title: "3. Talkback",    
+    body: "#### 3. Talkback Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser Talkback, outil incontournable dans une démarche d'accessibilité mobile.   &amp;nbsp;    "
+});
+
+documentTitles["index.html#4-tests"] = "4. Tests";
+index.add({
+    url: "index.html#4-tests",
+    title: "4. Tests",    
+    body: "#### 4. Tests Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que les recommandations android sont bien prises en compte avant mise en production de l'application.  &amp;nbsp;    "
 });
 
 documentTitles["index.html#ios"] = "iOS";

@@ -1843,7 +1843,35 @@ documentTitles["index.html#android"] = "Android";
 index.add({
     url: "index.html#android",
     title: "Android",    
-    body: "### Android ... to be completed.  "
+    body: "### Android "
+});
+
+documentTitles["index.html#1-design-criteria"] = "1. Design criteria";
+index.add({
+    url: "index.html#1-design-criteria",
+    title: "1. Design criteria",    
+    body: "#### 1. Design criteria List of different accessibility criteria for obtaining an accessible mobile app. &lt;/br&gt;A good way to be aware of the main criteria and commit progressively in accessibility.  &lt;/br&gt;&lt;/br&gt;  "
+});
+
+documentTitles["index.html#2-developers-guide"] = "2. Developers guide";
+index.add({
+    url: "index.html#2-developers-guide",
+    title: "2. Developers guide",    
+    body: "#### 2. Developers guide Section for developers. &lt;/br&gt;Everything you need to know to code accessible on mobile. &lt;/br&gt;&lt;/br&gt;  "
+});
+
+documentTitles["index.html#3-talkback"] = "3. Talkback";
+index.add({
+    url: "index.html#3-talkback",
+    title: "3. Talkback",    
+    body: "#### 3. Talkback Guide to using the native screen reader. &lt;/br&gt;Details all the necessary gestures for a Talkback complete mastery. &lt;/br&gt;&lt;/br&gt;  "
+});
+
+documentTitles["index.html#4-tests"] = "4. Tests";
+index.add({
+    url: "index.html#4-tests",
+    title: "4. Tests",    
+    body: "#### 4. Tests Includes tests to be done so as to be sure that the Android recommendations are taken into account before the prod launching.  "
 });
 
 documentTitles["index.html#ios"] = "iOS";
