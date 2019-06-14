@@ -4,15 +4,15 @@
     "title": "Give a title to the pages",
     "type": [],
     "tests": [
-      "Identify all the pages / screens composing the structure of the site or the application"
+      "Identify all the pages / screens making up the structure of the site or the application"
     ],
     "verifier": [
       "Every page or screen has a title",
-      "Each title is specific and specific to the page content, and is written from the most accurate information to the most general. <br/> example: [name of the current page - name of the site]."
+      "Each title is specific and applied to the page content, and is written from the most accurate information to the most general. <br/> example: [current page name - site name]."
     ],
     "resultat": [
-      "The page titles allow the user to know where he is in the site tree",
-      "To be effective the page title must be unique and depict the content of the page"
+      "The page titles allow a user to know where they are in the site tree",
+      "To be effective the page title must be unique and represent the content of the page"
 	],
     "exception": "",
     "raccourcis": "",
@@ -20,23 +20,23 @@
   },
   {
     "themes": "Textual content",
-    "title": "Give titles to headings",
+    "title": "Provide sections with headings",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
-      "Examine the title hierarchy"
+      "Examine wireframes and graphic mockups",
+      "Examine the heading hierarchy"
     ],
     "verifier": [
-      "The content of the page is structured with headings level",
+      "The page content is structured with headings level",
       "The structure is adapted to the content",
-      "The titles are connected in a logical way",
-      "Every title is relevant to the content that follows it"
+      "The headings are logically ordered",
+      "Every heading is relevant to the content that follows it"
     ],
     "resultat": [
       "The page structure facilitates its understanding and makes it possible to optimize reading (quick reading, targeted reading)",
-      "The number of titles depends on the informational density of the page. The absence of title can be embarrassing but, conversely, the abundance of titles can be counterproductive",
-      "Level jumps, such as changing from one 'N' level title to directly one 'N+2' level title, are inherently illogical and can disrupt reading",
-      "The titles guide and facilitate the reading, provided, they are consistent with the content they precedee"
+      "The number of headings depends on the information density of the page. The absence of headings can be cumbersome but, conversely, an abundance of headings can be counterproductive",
+      "Level jumps, such as going from a “N” level heading straight to a “N+2” level heading, are inherently illogical and can disrupt reading",
+      "Headings guide and facilitate the reading, provided they are consistent with the content they precedee"
     ],
     "exception": "",
     "raccourcis": "",
@@ -44,49 +44,49 @@
   },
   {
     "themes": "Textual content",
-    "title": "Structuring the data tables",
+    "title": "Structuring data tables",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
-      "Identify the data tables"
+      "Examine wireframes and graphic mockups",
+      "Identify data tables"
     ],
     "verifier": [
-      "The data tables are preceded by a level heading, otherwise, a legend is specified",
-      "Column and / or line headers indicate the nature of the data",
+      "Data tables are preceded by a heading; otherwise a legend is specified",
+      "Column and/or line headers indicate the nature of the data",
       "Whenever possible, several simple tables are used instead of a complex table",
-"In all the tables of the application, the texts are aligned to the left in the columns and the quantitative data (e.g. numeric value) are aligned to the right",
-"In multi-line arrays, a pajama or zebra effect is applied (e.g. alternate background color in one line out of 2)",
-"The column and the header line are always displayed if an elevator is needed to navigate the table",
-"For multiple-selection tables, actions that can be applied to multiple rows are grouped under the table (versus action buttons repeated on each row)"
+      "In all the tables of the application, the texts are aligned to the left in the columns and the quantitative data (e.g. numeric values) are aligned to the right",
+      "In multi-line tables, a pajama or zebra effect is applied (e.g. alternate background color in one line out of 2)",
+      "Column and line headers are always displayed if a scrollbar is needed to navigate the table",
+      "For multiple-selection tables, actions that can be applied to multiple rows are grouped under the table (versus action buttons repeated on each row)"
     ],
     "resultat": [
-      "A level title or caption, makes it easier for screen reader users to find a table in a page, but more importantly to quickly understand the nature of the data presented",
-      "Column and / or line headers allow users to understand the nature of the table data",
-      "Tables are for any user difficult to analyze, they must be used sparingly, when there is no other solution",
-"In a table, a text aligned to the left is easier to read, for quantitative data it's the opposite, you have to align them to the right,",
-"A background of different color 1 line out of 2, facilitates the consultation of a line in a multi-line table",
-"If an elevator is needed to display the contents of the table, column and header line must be set to keep them close to the data and facilitate their identification",
-"Multi-selectable arrays with identical actions for each line provide generic action buttons to ease presentation and cognitive load."
+      "A heading or a caption makes it easier for screen reader users to find a table in a page, but more importantly to quickly understand the nature of the data presented",
+      "Column and/or line headers allow users to understand the nature of the table data",
+      "Tables are hard to parse for any user, they must be used sparingly, when there is no other solution",
+      "In a table, a text aligned to the left is easier to read; for quantitative data it's the opposite, you have to align them to the right",
+      "A background with an alternating color makes it easier to read a line in a multi-line table",
+      "If a scrollbar is needed to display the contents of the table, column and line headers must be fixed to keep them close to the data and facilitate their identification",
+      "Multi-selectable tables with identical actions for each line provide generic action buttons to ease presentation and cognitive load."
     ],
     "exception": "",
     "raccourcis": "",
     "profils": ["Concepteur"]
   },
   {
-    "themes": "Non-textual content",
+    "themes": "Non-text content",
     "title": "Set text alternatives",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
-      "Identify all non-textual informative elements (images, icons, etc.)"
+      "Examine wireframes and graphic mockups",
+      "Identify all non-text elements conveying information (images, icons, etc.)"
     ],
     "verifier": [
-      "Text alternative is specified for any non-textual information element",
-      "The text alternative is relevant, considering the role of the <ul> <li>Image link element: the target of the link </li> <li>Image carrying information: the information conveyed by the image </li> <li>Image containing text: the text carried by the image </li> <li>Complex image (diagrams, graphs, etc.): the description of the image by a text, either directly in the page , accessible via a link present near the image </li> <li>Decorative image: an empty text alternative</li> </ul> ",
-      "The functional icons and pictograms are explicit and have a relevant text alternative and, if necessary, a tooltip with the information is also provided in addition"
+      "Text alternative is specified for any non-text element conveying information",
+      "The text alternative is relevant, considering the role of the element.<ul> <li>Image link element: the target of the link </li> <li>Image conveying information: the information conveyed by the image </li> <li>Image containing text: the text shown in the image </li> <li>Complex image (diagrams, graphs, etc.): the description of the image by a text, either directly in the page, or accessible via a link close to the image </li> <li>Decorative image: an empty text alternative</li> </ul> ",
+      "The functional icons and pictograms are explicit and have a relevant text alternative; if necessary, a tooltip with the information is also provided in addition"
     ],
     "resultat": [
-      "A text alternative (ALT attribute of the images) makes it possible to describe, to users having access only to textual content, any non-textual informative element",
+      "A text alternative (ALT attribute of the images) makes it possible to describe to users having access only to textual content any non-text informative element",
       "The text alternative must describe the purpose or function of the element to be usable",
       "Icons and pictograms with a function must be understandable and have a text alternative describing their exact function. An additional tooltip may be useful to visually impaired users"
     ],
@@ -95,27 +95,27 @@
     "profils": ["Concepteur"]
   },
   {
-    "themes": "Non-textual content",
+    "themes": "Non-text content",
     "title": "Make audio, video and animation tracks accessible",
     "type": [],
     "tests": [
-      "Identify the audio, video and animation content of the site or application",
-      "The article 'Making videos, animations or audios accessible' presents the complete definitions and recommendations on this subject"
+      "Identify the audio, video and animation contents of the site or application",
+      "The article “Making videos, animations or audios accessible” presents the complete definitions and recommendations on this subject"
     ],
     "verify": [
-      "For all audio and video content, a complete transcript (text containing all visual and auditory information) is present on the page or accessible via a link nearby",
+      "For all audio and video content, a complete transcript (text containing all the visual and auditory information) is present on the page or accessible via a link nearby",
       "All videos are subtitled, subtitles are provided in text format and are not embedded directly into the video",
       "Audio description is available for videos presenting information in visual form",
       "No audio or video track will automatically start loading a page",
-      "'Pause', 'playback' and 'volume control' controls are associated with any audio and video track,",
-      "Videos do not flash fast (blink faster than 3 flashes per second)"
+      "“Pause”, “playback” and “volume control” controls are associated with every audio and video track,",
+      "Videos do not flash fast (no more than 3 flashes per second)"
     ],
     "resultat": [
-      "In order to allow any private user of sound or images to have access to the information, any audio or video track must be accompanied by a complete transcription in the form of text, located near the element to be described, or accessible via a link ",
-      "The subtitles allow to restore all information of the soundtrack.These must be provided in text format to be adapted to the needs of users (color, size, etc.)",
-      "An audio description describes the information accessible only by the image, thus completing the audio for, for example, the visually impaired",
-"The launch of an audio or video track must always be done at the request of the user, he must have control",
-      "Any audio or video track must be interrupted and paused in order to leave the choice to the user and its volume must be adjustable",
+      "In order to allow any user who cannot hear or see to have access to the information, any audio or video track must be accompanied by a complete transcription in the form of text, located near the element to be described, or made available via a link ",
+      "Subtitles allow to convey all the information of the soundtrack. They must be provided in text format so they can be adapted to the needs of users (color, size, etc.)",
+      "An audio description describes the information conveyed only by the image, thus completing the audio for, for example, visually impaired users",
+      "Playing an audio or video track must always be done at the request of the user, they must have control over it",
+      "Any audio or video track can be interrupted and paused in order to leave the choice to the user; its volume must be adjustable",
       "A quick flash in a video can trigger disorders such as epileptic seizures"
     ],
     "exception": "",
@@ -123,7 +123,7 @@
     "profils": ["Concepteur"]
   },
   {
-    "themes": "Non-textual content",
+    "themes": "Non-text content",
     "title": "Avoid captchas",
     "type": [],
     "tests": [
@@ -164,7 +164,7 @@
     "title": "Do not use color or other sensory characteristics as the only source of information",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
 "Identify the elements using color to convey information",
 "Identify the elements using sensory data of position, size or sound type, to transmit information"
     ],
@@ -185,7 +185,7 @@
     "title": "Labelling links and buttons concisely and unequivocally",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
 "List all links, buttons and navigation items"
     ],
     "verifier": [
@@ -210,7 +210,7 @@
     "title": "Avoid the dialogs and the opening of new windows",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models"
+      "Examine wireframes and graphic mockups"
     ],
     "verifier": [
       "The opening of any new window or dialog is justified,",
@@ -231,7 +231,7 @@
     "title": "Providing skip links",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models"
+      "Examine wireframes and graphic mockups"
     ],
     "verifier": [
       "Skip links are present as the first interactive element of the page. These links redirect to the main regions of the page (navigation, main content, footer, etc.)",
@@ -250,7 +250,7 @@
     "title": "Ensuring that the user keeps control of the system during interactions",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
       "Examine user paths and associated specifications"
     ],
     "verifier": [
@@ -268,7 +268,7 @@
     "title": "Allow the user to control animations",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
       "Identify any content intended to be in motion, updated automatically, flashing or scrolling for more than 5 seconds"
     ],
     "verifier": [
@@ -290,7 +290,7 @@
     "title": "Explicitly locate the page in the site and provide several ways to access it",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
       "Identify navigation and search items"
     ],
     "verifier": [
@@ -312,7 +312,7 @@
     "title": "Reassure the user with contextual messages",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
       "Examine user paths"
     ],
     "verifier": [
@@ -351,7 +351,7 @@
     "title": "Ensure a sufficiant visibility of the focus",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
     "Identify interactive elements (links, buttons, form elements, interactive components)"
     ],
     "verifier": [
@@ -373,7 +373,7 @@
     "title": "Make sure the focus order is logical",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
     "Identify interactive elements (links, buttons, form elements, interactive components)"
     ],
     "verifier": [
@@ -393,7 +393,7 @@
     "title": "Use relative sizes to make the web responsive",
     "type": [],
     "tests": [
-      "Examine the specifications associated with wireframes and graphic models"
+      "Examine the specifications associated with wireframes and graphic mockups"
     ],
     "verifier": [
       "No specification imposes a fixed maximum value (px (pixel), mm (millimeters), cm (centimeters), in (inches), pt (points is 1/72 of an inch) or pc (picas is 12 points)) both for the width and height of a text container.If a fixed width is set, then the height will have no fixed value ",
@@ -415,7 +415,7 @@
     "title": "Make possible the aeration of the texts",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models"
+      "Examine wireframes and graphic mockups"
     ],
     "verifier": [
       "The space between the lines is equivalent to 1.5 times the size of the minimum text. If this is not the case, no specification imposes a fixed value for the line spacing",
@@ -438,7 +438,7 @@
       "title": "Identify the different regions and elements of the page and ensure the coherence of the groupings",
       "type": [],
       "tests": [
-        "Examine wireframes and graphic models",
+        "Examine wireframes and graphic mockups",
     "Identify the main regions of the page (header, menu, etc.)",
     "Identify the main content groups (interactive components, pop-in, etc.)"
       ],
@@ -463,7 +463,7 @@
     "title": "Define sensitive areas of sufficient size",
     "type": [],
     "tests": [
-   "Examine wireframes and graphic models",
+   "Examine wireframes and graphic mockups",
   "Identify the interactive elements"
     ],
     "verifier": [
@@ -481,7 +481,7 @@
     "title": "Facilitating the completion of forms",
     "type": [],
     "tests": [
-   "Examine wireframes and graphic models",
+   "Examine wireframes and graphic mockups",
   "Identify the forms"
     ],
     "verifier": [
@@ -509,7 +509,7 @@
     "title": "Protecting the user from errors in forms",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models"
+      "Examine wireframes and graphic mockups"
     ],
     "verifier": [
       "If the application has multiple forms, fields that expect identical data have all the same label",
@@ -540,7 +540,7 @@
     "title": "Provide an alternative to complex gestures",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models",
+      "Examine wireframes and graphic mockups",
    "Identify multi-pointer interactions (requiring multiple fingers)"
     ],
     "verifier": [
@@ -558,7 +558,7 @@
     "title": "Allow the user to choose the orientation of the screen",
     "type": [],
     "tests": [
-      "Examine wireframes and graphic models"
+      "Examine wireframes and graphic mockups"
     ],
     "verifier": [
       "The layout of all screens has been designed to allow interaction in portrait and landscape mode"
