@@ -15,20 +15,23 @@
 
 **Description&nbsp;:**
 
-Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
+Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) lorsque l'ordre du focus est nécessaire pour la compréhension ou l'opérabilité clavier, et l’utilisateur ne reste ni piégé ou ni bloqué, cela même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). 
 
 Exemple, les puces numérotées indiquent l'ordre de déplacement du focus dans cette page :  
 ![Capture d'écran indiquant l'ordre de déplacement du focus dans une page](./images/focus/focus-order.png)
 
 **À vérifier&nbsp;:**
 - Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété `outline` et `:focus` en <abbr>CSS</abbr>), voir exigence 20, ci-dessous.
-- Attention à l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>est le même  que l'ordre de déplacement du focus dans la page. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
+- Attention à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>soit le même que l'ordre de déplacement du focus dans la page, si cet ordre impacte la compréhension ou capacité d'utiliser l'interface. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. 
 - Pour la maintenabilité, éviter l’utilisation de l’attribut `tabindex` avec des valeurs supérieures à 0.
 - Même lors d’apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.
  Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en"><abbr>SPA</abbr> (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir [Gérer le focus pour du contenu dynamique](./exemples/dynFocus/index.html)
 
 **Objectif utilisateur&nbsp;:**
-Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).
+Permettre la navigation logique, sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).
+
+**Exemple valide&nbsp;:**      
+Dans une page dédiée à la recherche dans le site, on passe, à la navigation clavier, sur le formulaire de recherche avant d'arriver à la liste des résultats.      
 
 **Exemple non-valide&nbsp;:**      
 Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        

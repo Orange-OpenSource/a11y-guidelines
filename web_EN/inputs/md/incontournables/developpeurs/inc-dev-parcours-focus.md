@@ -15,7 +15,7 @@
 
 **Description: **
 
-Elements (links, buttons, form fields) must receive the focus in a logical order for the user, without being trapped or blocked, even for dynamically-generated content appearing or disappearing (changing the DOM, Ajax,…). 
+Elements (links, buttons, form fields) must receive the focus in a logical order (top to bottom, left to right) when the order of focus is necessary for understanding or keyboard operability, and the user does not remain trapped or blocked, even for dynamically generated content appearing or disappearing (DOM modification, Ajax,…). 
 
 Example (numbered bullets indicate how focus moves in the page) :  
 ![Screenshot showing focus order](./images/focus/focus-order.png)
@@ -23,13 +23,16 @@ Example (numbered bullets indicate how focus moves in the page) :
 **Checklist: **
 
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 20 below.
-- Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
+- Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page, if this order is important for understanding or ability to use the interface. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
 - For maintainability, avoid using the `tabindex` attribute with values higher than 0.
 - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see [Manage Focus for Dynamic Content](./exemples/dynFocus/index.html)
 
 **Users’ goal: **
 
 Allowing logical navigation without “trapping” the keyboard in the pages of the application. Necessary for users navigating with the keyboard (visually impaired, motor impaired, cognitive impaired, using a device outdoors).
+
+** Do: **
+In a page dedicated to search in the site content, the focus order first go to the search form before going to the list of the results.
 
 **Don’t:**     
 A page containing a video player where the focus can enter inside the player, but cannot get out (keyboard trap).        
