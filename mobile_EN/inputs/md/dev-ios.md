@@ -1628,8 +1628,7 @@ Using the standard components with few navigation bar customizations is a good w
            role="tab" 
            aria-selected="false">Reading order</a>
     </li>
-</ul>
-<div class="tab-content">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="navBar-LeftBarItem"
      role="tabpanel">

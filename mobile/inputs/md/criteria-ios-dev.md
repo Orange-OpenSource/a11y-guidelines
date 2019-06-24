@@ -1631,8 +1631,7 @@ Utiliser les composants standards en personnalisant un minimum la barre de navig
            role="tab" 
            aria-selected="false">Ordre de lecture</a>
     </li>
-</ul>
-<div class="tab-content">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="navBar-LeftBarItem"
      role="tabpanel">
