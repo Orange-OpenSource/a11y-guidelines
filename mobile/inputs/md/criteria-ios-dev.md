@@ -1591,6 +1591,434 @@ Dans cet exemple, on appelle une méthode spécifique au moment où le statut de
 Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">événements</a> et les <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options d'accessibilité</a> sont disponibles sur la documentation officielle d'Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </br></br>
+## Barre de navigation
+L'utilisation d'une barre de navigation est particulièrement répandue pour développer des applications iOS et peut se résumer à trois parties à étudier de façon précise pour obtenir un résultat efficace :
+</br></br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/NavigationBar_1.png" />
+
+- **LeftBarItem** : comprend généralement un seul élément qui permet le retour vers la page de provenance.
+- **Titre** : souvent un simple texte qui peut aussi se présenter sous forme de <span lang="en">StackView</span> dans les cas les plus complexes.
+- **RightBarItem** : zone qui comprend souvent plusieurs icônes *(compte, authentification, validation...)*.
+
+Utiliser les composants standards en personnalisant un minimum la barre de navigation permet d'assurer sans trop d'efforts un résultat probant avec <span lang="en">VoiceOver</span>.
+</br></br>Malheureusement, ce n'est pas toujours possible selon les contraintes liées au projet, c'est pourquoi des exemples concrets sont fournis ci-dessous pour faciliter une implémentation parfois délicate pouvant aller jusqu'à une modification de l'ordre de lecture au sein-même des éléments de la barre de navigation.</br></br>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#navBar-LeftBarItem" 
+           role="tab" 
+           aria-selected="true">LeftBarItem</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#navBar-Title" 
+           role="tab" 
+           aria-selected="false">Titre</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#navBar-RightBarItem" 
+           role="tab" 
+           aria-selected="false">RightBarItem</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#navBar-ReadingOrder" 
+           role="tab" 
+           aria-selected="false">Ordre de lecture</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active"
+     id="navBar-LeftBarItem"
+     role="tabpanel">
+    
+Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> de cet élément sans en changer l'aspect, il suffit de lui fournir un nouveau `label` une fois la barre de navigation chargée.
+<pre><code class="objective-c">
+    self.navigationController.navigationBar.backItem.accessibilityLabel = @"nouveau label pour le bouton de retour";
+</code></pre><pre><code class="swift">
+    navigationController?.navigationBar.backItem?.accessibilityLabel = "nouveau label pour le bouton de retour"
+</code></pre>
+
+</br>La personnalisation de cet élément consiste souvent à **afficher un chevron particulier sans texte**.
+</br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/NavigationBar_2.png" />
+</br>Les deux façons possibles de réalisation détaillées dans les exemples ci-dessous s'appuient sur le remplacement de l'élément standard par un **UIBarButtonItem** personnalisé avec une simple **image fournie en entrée** qui définit le chevron à présenter :
+
+<pre><code class="objective-c">
+    UIBarButtonItem &#42; _a11yLeftBarButton;
+    
+    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"info_chevron"]
+                                                         style:UIBarButtonItemStyleDone
+                                                        target:self
+                                                        action:@selector(goBackToThePreviousView:)];
+    
+    _a11yLeftBarButton.accessibilityLabel = @"écran précédent";
+    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
+</code></pre><pre><code class="swift">
+    var a11yLeftBarButton: UIBarButtonItem?
+    
+    a11yLeftBarButton = UIBarButtonItem(image: UIImage(named: "info_chevron"),
+                                        style: .done,
+                                        target: self,
+                                        action: #selector(goBackToThePreviousView(info:)))
+
+    a11yLeftBarButton!.accessibilityLabel = "écran précédent"
+    navigationItem.leftBarButtonItem = a11yLeftBarButton
+</code></pre>
+
+</br>... ou avec une **UIView** pour laquelle une action doit être ajoutée pour définir le rôle du nouveau bouton : cette implémentation est plus longue que la précédente mais a l'avantage de **fournir une <span lang="en">frame</span>** dont on va avoir besoin si l'on souhaite travailler sur l'ordre de lecture des éléments de la barre de navigation par exemple.
+
+<pre><code class="objective-c">
+    var a11yLeftBarButton: UIBarButtonItem?
+    
+    UIImage &#42; img = [UIImage imageNamed:@"info_chevron"];
+    UIImageView &#42; imgView = [[UIImageView alloc]initWithImage:img];
+    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithCustomView:imgView];
+    
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                          action:@selector(goBackToThePreviousView:)];
+    [_a11yLeftBarButton.customView addGestureRecognizer:tap];
+    
+    _a11yLeftBarButton.isAccessibilityElement = YES;
+    _a11yLeftBarButton.accessibilityTraits = UIAccessibilityTraitButton;
+    _a11yLeftBarButton.accessibilityLabel = @"écran précédent";
+    
+    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
+</code></pre><pre><code class="swift">
+    var a11yLeftBarButton: UIBarButtonItem?
+    
+    let a11yLeftBarButtonImage = UIImage(named: "info_chevron")
+    a11yLeftBarButton = UIBarButtonItem(customView: UIImageView(image: a11yLeftBarButtonImage))
+        
+    let tap = UITapGestureRecognizer(target: self,
+                                     action: #selector(goBackToThePreviousView(info:)))
+    a11yLeftBarButton?.customView?.addGestureRecognizer(tap)
+        
+    a11yLeftBarButton?.isAccessibilityElement = true
+    a11yLeftBarButton?.accessibilityTraits = .button
+    a11yLeftBarButton?.accessibilityLabel = "écran précédent"
+        
+    navigationItem.leftBarButtonItem = a11yLeftBarButton
+</code></pre>
+
+</br>L'implémentation de l'une ou l'autre de ces solutions va donc dépendre de l'utilisation ultérieure du nouvel élément avec <span lang="en">VoiceOver</span>.
+</div>
+<div class="tab-pane" id="navBar-Title" role="tabpanel" >
+De façon à pouvoir utiliser rapidement les propriétés d'accessibilité du titre d'une barre de navigation, le plus simple est d'**implémenter son contenu sous forme de <span lang="en">UIView</span>** :
+
+<pre><code class="objective-c">
+    UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
+    a11yTitleLabel.text = @"TITRE";
+    [a11yTitleLabel sizeToFit];
+    
+    self.navigationItem.titleView = a11yTitleLabel;
+    self.navigationItem.titleView.accessibilityLabel = @"vocalisation du titre différente de l'écrit";
+</code></pre><pre><code class="swift">
+    let a11yTitleLabel = UILabel()
+    a11yTitleLabel.text = "TITRE"
+    a11yTitleLabel.sizeToFit()
+
+    navigationItem.titleView = a11yTitleLabel
+    navigationItem.titleView?.accessibilityLabel = "vocalisation du titre différente de l'écrit"
+</code></pre>
+
+</div>
+<div class="tab-pane" id="navBar-RightBarItem" role="tabpanel">
+</br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/NavigationBar_3.png" />
+</br>À la création d'éléments dans la partie droite de la barre de navigation, l'utilisation de <span lang="en">UIView</span> est recommandée de façon à pouvoir interagir avec <span lang="en">VoiceOver</span> sans effectuer trop de modifications ultérieurement.
+<pre><code class="objective-c">
+    UIBarButtonItem &#42; _a11yRightBarButton;
+
+    UILabel &#42; a11y = [[UILabel alloc]init];
+    a11y.text = @"OK";
+    [a11y sizeToFit];
+    [a11y setUserInteractionEnabled:YES]; //Obligatoire pour reconnaître le 'tap gesture'.
+    
+    _a11yRightBarButton = [[UIBarButtonItem alloc]initWithCustomView:a11y];
+    
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self 
+                                                                          action:@selector(validateActions:)];
+    [_a11yRightBarButton.customView addGestureRecognizer:tap];
+    
+    _a11yRightBarButton.isAccessibilityElement = YES;
+    _a11yRightBarButton.accessibilityTraits = UIAccessibilityTraitButton;
+    _a11yRightBarButton.accessibilityLabel = @"validation des actions";
+    
+    self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
+</code></pre><pre><code class="swift">
+    var a11yRightBarButton: UIBarButtonItem?
+
+    let a11y = UILabel()
+    a11y.text = "OK"
+    a11y.sizeToFit()
+    a11y.isUserInteractionEnabled = true //Obligatoire pour reconnaître le 'tap gesture'.
+
+    a11yRightBarButton = UIBarButtonItem(customView: a11y)
+        
+    let tap = UITapGestureRecognizer(target: self,
+                                     action: #selector(validateActions(info:)))
+    a11yRightBarButton?.customView?.addGestureRecognizer(tap)
+        
+    a11yRightBarButton?.isAccessibilityElement = true
+    a11yRightBarButton?.accessibilityTraits = .button
+    a11yRightBarButton?.accessibilityLabel = "validation des actions"
+        
+    navigationItem.rightBarButtonItem = a11yRightBarButton
+</code></pre>
+
+</div>
+<div class="tab-pane" id="navBar-ReadingOrder" role="tabpanel">
+Généralement, on n'a pas à toucher l'ordre de lecture <span lang="en">VoiceOver</span> pour les éléments de la barre de navigation mais il arrive pourtant que cela soit nécessaire ⟹ exemple d'une page de tutoriel pour laquelle `RightBarItem` permet de passer à la page suivante.
+</br></br>De façon à pouvoir illustrer une modification d'ordre de lecture impactant les éléments de la barre de navigation, nous allons supposer que le `RightBarItem` doit être le dernier élément de la page atteint à l'aide de balayages horizontaux successifs avec un seul doigt.
+</br></br>La page étudiée comprendra :
+<ul>
+  <li>Une barre de navigation avec un chevron simple *(LeftBarItem)*, un titre et un bouton 'OK' *(RightBarItem)*.</li>
+  <li>Cinq labels non consécutifs.</li>
+  <li>Un bouton 'ACTION' centré en milieu de page.</li>
+</ul>
+<img alt="" style="max-width: 200px; height: auto; " src="./images/iOSdev/NavigationBar_4.png" />
+</br>L'idée est de lire les éléments dans l'ordre suivant : LeftBarItem, titre, Label1, Label2, Label3, bouton 'ACTION', Label4, Label5 et RightBarItem.
+</br></br>Dans un premier temps, on **personnalise les éléments de la barre de navigation** en s'appuyant sur les exemples de code fournis dans les autres onglets de cette section. 
+
+<pre><code class="objective-c">
+@interface NavigationBarReadingOrder() {
+    UIBarButtonItem &#42; _a11yLeftBarButton;
+    UIView &#42; _a11yBarTitle;
+    UIBarButtonItem &#42; _a11yRightBarButton;
+}
+@end
+
+
+@implementation NavigationBarReadingOrder
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setBackItem];
+    [self setTitle];
+    [self setNextPageBarButton];
+}
+
+
+- (void)setBackItem {
+    
+    UIImage &#42; img = [UIImage imageNamed:@"info_chevron"];
+    UIImageView &#42; imgView = [[UIImageView alloc]initWithImage:img];
+    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithCustomView:imgView];
+    
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                          action:@selector(goBackToThePreviousView:)];
+    [_a11yLeftBarButton.customView addGestureRecognizer:tap];
+    
+    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
+}
+
+
+- (void)setTitle {
+    
+    UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
+    a11yTitleLabel.text = @"TITRE";
+    [a11yTitleLabel sizeToFit];
+    
+    self.navigationItem.titleView = a11yTitleLabel;
+    _a11yBarTitle = self.navigationItem.titleView;
+}
+
+
+- (void)setNextPageBarButton {
+    
+    UILabel &#42; a11y = [[UILabel alloc]init];
+    a11y.text = @"OK";
+    [a11y sizeToFit];
+    [a11y setUserInteractionEnabled:YES];
+    
+    _a11yRightBarButton = [[UIBarButtonItem alloc]initWithCustomView:a11y];
+    
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                          action:@selector(validateActions:)];
+    [_a11yRightBarButton.customView addGestureRecognizer:tap];
+    
+    self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
+}
+@end
+</code></pre><pre><code class="swift">
+class OrderViewController: UIViewController {
+
+    var a11yLeftBarButton: UIBarButtonItem?
+    var a11yBarTitle: UIView?
+    var a11yRightBarButton: UIBarButtonItem?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setBackItem()
+        setTitle()
+        setNextPageBarButton()
+    }
+    
+    private func setBackItem() {
+        let a11yLeftBarButtonImage = UIImage(named: "infoChevron")
+        a11yLeftBarButton = UIBarButtonItem(customView: UIImageView(image: a11yLeftBarButtonImage))
+
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(goBackToThePreviousView(info:)))
+        a11yLeftBarButton?.customView?.addGestureRecognizer(tap)
+
+        navigationItem.leftBarButtonItem = a11yLeftBarButton
+    }
+    
+    private func setTitle() {
+        
+        let a11yTitleLabel = UILabel()
+        a11yTitleLabel.text = "TITRE"
+        a11yTitleLabel.sizeToFit()
+
+        navigationItem.titleView = a11yTitleLabel
+        a11yBarTitle = navigationItem.titleView
+    }
+    
+    private func setNextPageBarButton() {
+    
+        let a11y = UILabel()
+        a11y.text = "OK"
+        a11y.sizeToFit()
+        a11y.isUserInteractionEnabled = true
+
+        a11yRightBarButton = UIBarButtonItem(customView: a11y)
+        
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(goToTheNextPage(info:)))
+        a11yRightBarButton?.customView?.addGestureRecognizer(tap)
+        
+        navigationItem.rightBarButtonItem = a11yRightBarButton
+    }
+}
+</code></pre>
+
+</br>Ensuite, on **crée des éléments accessibles** pour la barre de navigation et on **spécifie l'ordre de lecture** <span lang="en">VoiceOver</span> pour les éléments de la vue à l'aide de son tableau `accessibilityElements`.
+</br>La vue et la barre de navigation étant deux conteneurs différents, on **cache les éléments de la barre de navigation à <span lang="en">VoiceOver</span>** et on les transfère à la vue en les créant avec des coordonnées de focus appropriées.
+
+<pre><code class="objective-c">
+@interface NavigationBarReadingOrder() {
+    UIBarButtonItem &#42; _a11yLeftBarButton;
+    UIView &#42; _a11yBarTitle;
+    UIBarButtonItem &#42; _a11yRightBarButton;
+}
+
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel1;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel2;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel3;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel4;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel5;
+@property (weak, nonatomic) IBOutlet UIButton &#42; a11yCentralButton;
+
+@end
+
+
+@implementation NavigationBarReadingOrder
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self createA11yElts];
+    self.navigationController.navigationBar.accessibilityElementsHidden = YES;
+}
+
+
+- (void)createA11yElts {
+    
+    UIView &#42; navBarView = [[[_a11yBarTitle superview] superview] superview];
+    
+    UIView &#42; leftButtonView = [_a11yLeftBarButton valueForKey:@"view"];
+    UIAccessibilityElement * a11yLBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+    a11yLBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[leftButtonView superview] superview].frame toView:self.view];
+    a11yLBB.accessibilityLabel = @"écran précédent";
+    a11yLBB.accessibilityTraits = UIAccessibilityTraitButton;
+    
+    UIAccessibilityElement &#42; a11yTBV = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+    a11yTBV.accessibilityFrameInContainerSpace = [navBarView convertRect:[self.navigationItem.titleView superview].frame toView:self.view];
+    a11yTBV.accessibilityLabel = @"vocalisation du titre différente de l'écrit";
+    a11yTBV.accessibilityTraits = UIAccessibilityTraitHeader;
+
+    UIView &#42; rightButtonView = [_a11yRightBarButton valueForKey:@"view"];
+    UIAccessibilityElement &#42; a11yRBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+    a11yRBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[rightButtonView superview] superview].frame toView:self.view];
+    a11yRBB.accessibilityLabel = @"écran suivant";
+    a11yRBB.accessibilityTraits = UIAccessibilityTraitButton;
+    
+    self.view.accessibilityElements = @[a11yLBB,
+                                        a11yTBV,
+                                        _a11yLabel1,
+                                        _a11yLabel2,
+                                        _a11yLabel3,
+                                        _a11yCentralButton,
+                                        _a11yLabel4,
+                                        _a11yLabel5,
+                                        a11yRBB];
+}
+@end
+
+</code></pre><pre><code class="swift">
+@IBOutlet weak var a11yLabel1: UILabel!
+@IBOutlet weak var a11yLabel2: UILabel!
+@IBOutlet weak var a11yLabel3: UILabel!
+@IBOutlet weak var a11yLabel4: UILabel!
+@IBOutlet weak var a11yLabel5: UILabel!
+@IBOutlet weak var a11yCentralButton: UIButton!
+
+override func viewDidAppear(&#95; animated: Bool) {
+    super.viewDidAppear(animated)
+        
+    createA11yElts()
+    navigationController?.navigationBar.accessibilityElementsHidden = true
+}
+    
+private func createA11yElts() {
+        
+    let navBarView = a11yBarTitle?.superview?.superview?.superview
+
+    let leftButtonView = a11yLeftBarButton?.value(forKey: "view") as? UIView
+    let a11yLBB = UIAccessibilityElement(accessibilityContainer: self.view!)
+    a11yLBB.accessibilityFrameInContainerSpace = navBarView!.convert((leftButtonView?.superview?.superview!.frame)!,to:self.view)
+    a11yLBB.accessibilityLabel = "écran précédent"
+    a11yLBB.accessibilityTraits = .button
+
+    let a11yTBV = UIAccessibilityElement(accessibilityContainer: self.view!)
+    a11yTBV.accessibilityFrameInContainerSpace = navBarView!.convert((navigationItem.titleView?.superview!.frame)!,to:self.view)
+    a11yTBV.accessibilityLabel = "vocalisation du titre différente de l'écrit"
+    a11yTBV.accessibilityTraits = .header
+
+    let rightButtonView = a11yRightBarButton?.value(forKey: "view") as? UIView
+    let a11yRBB = UIAccessibilityElement(accessibilityContainer: self.view!)
+    a11yRBB.accessibilityFrameInContainerSpace = navBarView!.convert((rightButtonView?.superview?.superview!.frame)!,to:self.view)
+    a11yRBB.accessibilityLabel = "écran suivant"
+    a11yRBB.accessibilityTraits = .button
+
+    self.view.accessibilityElements = [a11yLBB,
+                                       a11yTBV,
+                                       a11yLabel1!,
+                                       a11yLabel2!,
+                                       a11yLabel3!,
+                                       a11yCentralButton!,
+                                       a11yLabel4!,
+                                       a11yLabel5!,
+                                       a11yRBB]
+}
+</code></pre>
+    
+</br>Le résultat correspond bien à l'ordre de lecture souhaité à l'aide de balayages successifs avec un doigt pour sélectionner les différents éléments accessibles.
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/NavigationBar_5.png" />
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/NavigationBar_6.png" />
+</div>
+</div>
+
+### Lien
+- [UINavigationBar](https://developer.apple.com/documentation/uikit/uinavigationbar)
+</br></br>
 ## Vocalisation synthétisée
 ### Description
 L'utilisation d'une voix synthétisée peut se faire dans [bon nombre de cas](./criteria-ios-wwdc-18236.html#Uses) non nécessairement liés à l'accessibilité mais, dans ce cadre, il est important de noter que **cette fonctionnalité ne remplace absolument pas <span lang="en">VoiceOver</span>** mais peut judicieusement compléter son implémentation selon les configurations rencontrées *(la voix synthétisée peut chevaucher celle du lecteur d'écran)*.</br>
