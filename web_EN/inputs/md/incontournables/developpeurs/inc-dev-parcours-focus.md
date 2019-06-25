@@ -39,7 +39,7 @@ In a page dedicated to search in the site content, the focus order should first 
 
 A page containing a video player where the focus can enter the player, but cannot get out (keyboard trap).        
 
-**<abbr>WCAG</abbr> references:**
+## **<abbr>WCAG</abbr> references:
 
 - [1.3.2 Meaningful Sequence](https://www.w3.org/TR/WCAG21/#meaningful-sequence)
 - [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap)
