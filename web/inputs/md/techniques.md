@@ -9,6 +9,8 @@
 </style>
 
 <dl>
+     <dt><a href="skiplinks.html">Les liens d'évitement</a></dt>
+     <dd>Les liens d'évitement, qu'est ce et comment bien les mettre en oeuvre.</dd>
     <dt><a href="captcha.html">Les CAPTCHAs</a></dt>
     <dd>Les CAPTCHAs et l'accessibilité</dd>
     <dt><a href="htmlaria.html">HTML 5 et <abbr>ARIA</abbr></a></dt>

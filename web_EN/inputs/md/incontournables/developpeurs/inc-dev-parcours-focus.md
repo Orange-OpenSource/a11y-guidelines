@@ -15,7 +15,9 @@
 
 **Description: **
 
-Elements (links, buttons, form fields) must receive the focus in a logical order (top to bottom, left to right) when the focus order is necessary for understanding contents or for keyboard operability, and the user must not be trapped or blocked, even for dynamically generated content appearing or disappearing (DOM modification, Ajax,…). 
+Elements (links, buttons, form fields) must receive the focus in a logical order (top to bottom, left to right) when the focus order is necessary for understanding contents or for keyboard operability, even for dynamically generated content appearing or disappearing (DOM modification, Ajax,…). Of course, the focus must not be trapped or blocked.
+
+For the content too, if a sense of reading is necessary for a good understanding, it must be ensured that it is coherent for all users.
 
 Example (numbered bullets indicate how the focus moves in the page) :  
 ![Screenshot showing focus order](./images/focus/focus-order.png)
@@ -23,7 +25,7 @@ Example (numbered bullets indicate how the focus moves in the page) :
 **Checklist: **
 
 - To validate this requirement, the focus position must be visible at all times (`outline` and `:focus` <abbr>CSS</abbr>  properties), see requirement 20 below.
-- Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code must be the same as the order in which the focus is moved though the page, if this order is important to understand or to be able to use the interface. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.
+- Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code must be the same as the order in which the focus is moved or the reading order though the page if this order is important to understand or to be able to use the interface. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus. It's the easiest solution! 
 - For maintainability, avoid using the `tabindex` attribute with values higher than 0.
 - Even when content appears or disappears of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPAs</abbr> (single page applications). For more details, see [Manage Focus for Dynamic Content](./exemples/dynFocus/index.html)
 

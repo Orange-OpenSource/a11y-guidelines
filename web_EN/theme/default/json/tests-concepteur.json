@@ -36,7 +36,7 @@
       "The page structure facilitates its understanding and makes it possible to optimize reading (quick reading, targeted reading)",
       "The number of headings depends on the information density of the page. The absence of headings can be cumbersome but, conversely, an abundance of headings can be counterproductive",
       "Level jumps, such as going from a “N” level heading straight to a “N+2” level heading, are inherently illogical and can disrupt reading",
-      "Headings guide and facilitate the reading, provided they are consistent with the content they precedee"
+      "Headings guide and facilitate the reading, provided they are consistent with the content they precede"
     ],
     "exception": "",
     "raccourcis": "",
@@ -74,7 +74,7 @@
   },
   {
     "themes": "Non-text content",
-    "title": "Set text alternatives",
+    "title": "Define text alternatives",
     "type": [],
     "tests": [
       "Examine wireframes and graphic mockups",
@@ -402,7 +402,7 @@
     ],
     "resultat": [
       "Texts contained in an element whose dimensions are defined in fixed size: (px (pixel), mm (millimeters), cm (centimeters), in (inches), pt (points is 1/72 of an inch) or pc (picas is 12 points), will be truncated when zoomed (text zoom to 200%) ",
-      "The definition of fixed maximum dimensions will also cause loss of information when zoomed",
+      "The definition of fixed maximum dimensions will also cause loss $or overlaps of information when zoomed",
       "The dimensions must be defined by minimum values (min-width, min-height) or values in relative units (%, em, rem), in order to ensure an enlargement of the containers whatever the level of zoom",
       "In the case of an adaptive (or responsive) site the user can interact with the application and view all the information regardless of the screen size"
 	],

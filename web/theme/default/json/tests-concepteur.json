@@ -402,7 +402,7 @@
     ],
     "resultat": [
       "Les textes contenus dans un élément dont les dimensions sont définies en taille fixe&nbsp;: (px (pixel), mm (millimètres), cm (centimètres), in (pouces), pt (points soit 1/72 de pouce) ou pc (picas soit 12 points)), vont être tronqués lors d’un agrandissement (zoom texte à 200%)",
-	  "La définition de dimensions maximales fixes va également engendrer des pertes d’informations lors d’un agrandissement",
+	  "La définition de dimensions maximales fixes va également engendrer des pertes ou chevauchements d’informations lors d’un agrandissement",
 	  "Les dimensions doivent être définies via des valeurs minimales (min-width, min-height) ou des valeurs en unités relatives (%, em, rem), afin d’assurer un agrandissement des conteneurs quel que soit le niveau de zoom",
 	  "Dans le cas d’un site adaptatif (ou responsive) l’utilisateur peut interagir avec l’application et consulter l’ensemble des informations quelle que soit la taille de l’écran"
 	],

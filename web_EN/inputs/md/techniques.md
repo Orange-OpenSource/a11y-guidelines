@@ -9,6 +9,8 @@
 </style>
 
 <dl>
+<dt><a href="skiplinks.html">Skip links</a></dt>
+<dd>Skip links, what is it and how to implement them.</dd>
     <dt><a href="captcha.html"><abbr>CAPTCHA</abbr> Accessibility</a></dt>
     <dd><abbr>CAPTCHA</abbr> and accessibility</dd>
     <dt><a href="htmlaria.html">HTML 5 and <abbr>ARIA</abbr></a></dt>
