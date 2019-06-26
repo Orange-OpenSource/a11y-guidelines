@@ -374,14 +374,16 @@
     "type": [],
     "tests": [
       "Examine wireframes and graphic mockups",
-      "Identify interactive elements (links, buttons, form elements, interactive components)"
+      "Identify interactive elements (links, buttons, form elements, interactive components) and content"
     ],
     "verifier": [
-      "The location of the elements on the screen respects a logical and predictable reading and navigation order (from the most important to the least important, from top to bottom of the screen)",
+      "Moving the focus through the screen allows a logical and consistent navigation (from most important to least important, from top to bottom of the screen)",
+      "The reading order allows a good understanding of the content (from the most important to the least important, from top to bottom of the screen)",
       "Visually, elements of the same nature are grouped, respecting the logic of reading and navigation"
     ],
     "resultat": [
       "The focus order during keyboard navigation must be intuitive for the users. Interactive elements must be positioned on the screen in a logical way to avoid unintentional movements of the viewport",
+      "If the reading order is important, it must be consistent for any user",
       "It may be necessary to group elements of the same kind in the same space, in order to facilitate understanding. The order of navigation in a group and the positioning of the groups in the overall course must be logical and predictable"
 	],
     "exception": "",

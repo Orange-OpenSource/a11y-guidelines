@@ -370,18 +370,20 @@
   },
   {
     "themes": "Navigation clavier",
-    "title": "S’assurer que le déplacement du focus est logique",
+    "title": "S’assurer que l'ordre de lecture et les déplacements du focus sont logiques et cohérents",
     "type": [],
     "tests": [
       "Examiner les wireframes et les maquettes graphiques",
-	  "Identifier les éléments interactifs (liens, boutons, éléments de formulaire, composants interactifs)"
+	  "Identifier les éléments interactifs (liens, boutons, éléments de formulaire, composants interactifs) et le contenu"
     ],
     "verifier": [
-      "Le positionnement des éléments à l’écran respecte un ordre de lecture et de navigation logique (du plus important au moins important, de haut en bas de l’écran)",
+      "Le déplacement du focus à l’écran permet une navigation logique et cohérente (du plus important au moins important, de haut en bas de l’écran)",
+      "L'ordre de lecture permet la bonne compréhension du contenu (du plus important au moins important, de haut en bas de l’écran)",
       "Visuellement, les éléments de même nature sont groupés, en respectant la logique de lecture et de navigation"
     ],
     "resultat": [
       "Le déplacement du focus lors d’une navigation clavier doit être intuitif pour les utilisateurs. Les éléments interactifs doivent donc être positionnés à l’écran de manière logique pour éviter des mouvements intempestifs du viewport",
+      "Si l'ordre de lecture est important, celui-ci doit être cohérent pour tout utilisateur",
 	  "Il peut être nécessaire de regrouper des éléments de même nature dans un même espace, afin de faciliter la compréhension. L’ordre de navigation dans un groupe et le positionnement des groupes dans le parcours global doivent être logiques"
 	],
     "exception": "",
