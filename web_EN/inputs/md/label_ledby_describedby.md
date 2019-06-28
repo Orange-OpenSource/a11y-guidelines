@@ -19,7 +19,7 @@ Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr
 - `aria-label`, `aria-labelledby` allow to give an accessible name to an element
 - `aria-describedby` allows to add to the accessible name, if necessary, in addition, an accessible description to an element
 
-However, they only work well with certain elements:
+However, they only work well with some elements:
 - interactive elements: `a` (with `href` attribute), `audio` and `video` (with `controls` attribute), `input` (exept `type="hidden"`), `select`, `button` and `textarea`
 - `img` and `iframe` elements
 - elements with an explicit landmark role, therefore, with a `role` attribute or an implicit landmark (a <abbr>HTML5</abbr> structural tag: `header`, `footer`, `main`, `nav`, `aside` and `section`) 
@@ -27,11 +27,11 @@ However, they only work well with certain elements:
 
 For any other <abbr>HTML</abbr> element, these three <abbr>ARIA</abbr> attributes have few or even random support depending on the <abbr>AT</abr> / browser pair, so do not use as the only way of giving necessary information.
 
-## Should it be used and how&nbsp;?
+## Should it be used and how?
 
-Yes, we can use these three <abbr>ARIA</abbr> attributes on the elements with which it works (see above) to pass essential information, specifically to <abbr>AT</abbr>.
+Yes, we can use these three <abbr>ARIA</abbr> attributes on the elements with which it works (see above) to pass essential information specifically to <abbr>AT</abbr>.
 
-You should know that `aria-label` must contain, as a value, a string of characters that will be the accessible name. While for `aria-labelledby` and `aria-describedby`, the value of this attribute references the `id` of an element of the page whose content will be used as the accessible name of the element.
+You should know that `aria-label` must contain, as a value, a string of characters that will be the accessible name. While for `aria-labelledby` and `aria-describedby`, the value of this attribute references one or more (space separated) `id` (auto referencing possible) of page elements whose content will be used as the accessible name of the element.
 
 When using `aria-label` or` aria-labelledby` on an element, the content or title of that element is no longer rendered to <abbr>AT</abbr> but replaced by the accessible name (for `aria-label` the contents of this attribute, for` aria-labelledby` the contents of the referenced element). Therefore, only the accessible name must give all the necessary information to <abbr>AT</abbr> and therefore to the user.
 

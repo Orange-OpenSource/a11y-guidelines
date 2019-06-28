@@ -57,7 +57,7 @@
 		<li>The new content must appear in the source code just after the triggering element (example: drop-down menu), </li>
 		<li>The focus must be moved to one of the first elements of the new content that appeared (the container, a title, a link, a button ...). </li>
 		</ol>
-	<h3> Disappearance of content </ h3>
+	<h3> Disappearance of content </h3>
 	<ol>
 		<li>Notify the user, if necessary, before he triggers this disappearance,</li>
 		<li>The focus must be returned to the triggering element or, if it is impossible, set the focus just before the content that has disappeared. For example, when closing a dialog box, the focus must be repositioned on the element that triggered the opening (button, link, ...). </li>
@@ -71,13 +71,13 @@
 	<p> The user must be able to spot the appearance or disappearance of content and interact with it, if necessary. <br />We must therefore warn the user, and there are several solutions in case of content modifications: </p>
 	<ul> 
 		<li>By providing the user with informative text, </li>
-		<li>>By managing the focus path, </li>
+		<li>By managing the focus path, </li>
 		<li>By using <abbr>ARIA</abbr>. </li>
 	</ul>			
 	<p> See [the sample drop-down menu] (./ simple-menu / simple-menu.html) for putting the <code>aria-haspopup</code> attribute into practice. </p>
 	<h3>Case of the <code>Tabindex</code> attribute</h3>
 	<p>As much as possible, do not redefine the reading order by using <code>tabindex</code> attributes (with positive values).</p>
-	<p>In practice, the <code> tabindex </ code> attribute should only be used with two values: </p>
+	<p>In practice, the <code> tabindex </code> attribute should only be used with two values: </p>
 	<ul>
 		<li> <code>tabindex = "- 1"</code>: to prevent an element from receiving focus via the <kbd>TAB</kbd> key and allow it to receive focus via Javascript . </li>
 		<li><code>tabindex = "0"</code>: to make a focusable element via the <kbd>TAB </kbd> key and via Javascript. </li>

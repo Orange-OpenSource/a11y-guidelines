@@ -45,13 +45,13 @@
 
       <pre><code class="html">
         &lt;ul&gt;
-            &lt;li>Alcatel&lt;/li&gt;
-            &lt;li>Doro&lt;/li&gt;
-            &lt;li>Apple&lt;/li&gt;
-            &lt;li>LG&lt;/li&gt;
-            &lt;li>Sony&lt;/li&gt;
+            &lt;li&gt;Alcatel&lt;/li&gt;
+            &lt;li&gt;Doro&lt;/li&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;LG&lt;/li&gt;
+            &lt;li&gt;Sony&lt;/li&gt;
         &lt;/ul&gt;
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 1</h3>
@@ -70,7 +70,7 @@
           &lt;li&gt;LG&lt;button&gt;Retirer LG de la liste&lt;/button&gt;&lt;/li&gt;
           &lt;li&gt;Sony&lt;button&gt;Retirer Sony de la liste&lt;/button&gt;&lt;/li&gt;
         &lt;/ul&gt;
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 2</h3>
@@ -88,7 +88,7 @@
         &lt;ul&gt;
           &lt;li&gt;Alcatel&lt;button&gt;X&lt;/button&gt;&lt;/li&gt;
         &lt;/ul&gt;
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 3</h3>
@@ -101,7 +101,7 @@
         &lt;ul&gt;
           &lt;li&gt;Alcatel&lt;button aria-label="Retirer Alcatel de la liste"&gt;X&lt;/button&gt;&lt;/li&gt;
         &lt;/ul&gt;
-      </pre></code>
+      </code></pre>
       
       <p>On ajoute un peu de CSS pour faire disparaître le fond et les contours des boutons.</p>
       
@@ -112,7 +112,7 @@
           color: #fff;
           font-weight: bold;
       }
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 4</h3>
@@ -129,7 +129,7 @@
         &lt;ul&gt;
           &lt;li&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
         &lt;/ul&gt;
-      </pre></code>
+      </code></pre>
 
       <p>On ajoute la croix avec du CSS&nbsp;:</p>
 
@@ -140,7 +140,7 @@
           padding-left: .4rem;    
           border-left: .15rem solid #fff;
         }
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 5</h3>
@@ -153,7 +153,7 @@
         &lt;ul&gt;
           &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
         &lt;/ul&gt;
-      </pre></code>
+      </code></pre>
       <p>Ainsi au lecteur d’écran, pour chaque tag, on entend son libellé, puis un bouton pour le supprimer.</p>
 
       <div class="exemple">
@@ -185,7 +185,7 @@
             <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
             $(this).parent().remove();
         });
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 8</h3>
@@ -201,7 +201,7 @@
             $(this).parent().remove();
             srSpeak($(this).text() + "supprimé");
         });
-      </pre></code>
+      </code></pre>
 
       <div class="exemple">
         <h3>Exemple 9</h3>

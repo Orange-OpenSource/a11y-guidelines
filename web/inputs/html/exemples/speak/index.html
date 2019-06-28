@@ -36,8 +36,8 @@
       <p>Dans certains cas, il peut être intéressant de vouloir faire parler le lecteur d'écran, pour confirmer une action utilisateur par exemple. Dans cet exemple, nous allons voir comment ceci peut être réalisé simplement à l'aide de l'attribut <code>aria-live</code>.</p>
 
       <h2>Principe de fonctionnement</h2>
-      <p>L'attribut <code>aria-live</code> positionné sur un élément permet d'indiquer au lecteur d'écran que cet élément doit être vocalisé automatiquement lorsque son contenu est modifié.
-      Les valeurs possibles sont&nbsp;: </p>
+      <p>L'attribut <code>aria-live</code> positionné sur un élément permet d'indiquer au lecteur d'écran que cet élément doit être vocalisé automatiquement lorsque son contenu est modifié.</p>
+    <p>  Les valeurs possibles sont&nbsp;: </p>
         <ul>
           <li><code>aria-live="off"</code>&nbsp;: valeur par défaut, l'utilisateur n'est pas averti lorsque l'élément est mis à jour.</li>
           <li><code>aria-live="polite"</code>&nbsp;: le lecteur d'écran vocalise de manière polie lorsque l'élément est mis à jour. C'est-à-dire que si le lecteur d'écran était déjà en train de lire du texte, celui-ci n'est pas interrompu.</li>
@@ -46,7 +46,7 @@
 
 
       <h2>Et en Javascript&nbsp;?</h2>
-      <p>Cette première solution permet dans bien des cas de rendre son application accessible. Il existe tout de même quelques cas où il serait pratique de pouvoir faire parler le lecteur d'écran directement à l'aide d'une fonction Javascript (exemple&nbsp;: <code>speak('Article supprimé du panier')</code>). Malheureusement ceci n'est pas disponible nativement.<p>
+      <p>Cette première solution permet dans bien des cas de rendre son application accessible. Il existe tout de même quelques cas où il serait pratique de pouvoir faire parler le lecteur d'écran directement à l'aide d'une fonction Javascript (exemple&nbsp;: <code>speak('Article supprimé du panier')</code>). Malheureusement ceci n'est pas disponible nativement.</p>
       <p>Heureusement, on peut rapidement réaliser une petite fonction Javascript qui utilisera un élément <code>aria-live</code> sous le capot pour réaliser cette fonctionnalité.</p>
 
       <p>À l'appel de la fonction <code>speak</code>, on ajoute une <code>div</code> à la fin de la page. On lui affecte un attribut <code>aria-live</code> et on insère le message à vocaliser dans la <code>div</code>. Pour ne pas que ce message soit visible dans la page, on peut ajouter également une classe de masquage accessible sur cette <code>div</code>, ainsi celle-ci sera vocalisée mais ne sera pas visible à l'écran.</p>

@@ -76,9 +76,9 @@
       <strong>Exemple&nbsp;: </strong>
       <p><a href="#">En savoir plus<span class="sr-only"> sur nos offres mobiles</span></a></p>
       
-      <p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien comme ceci:
+      <p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien comme ceci&nbsp;:</p>
       <pre><code class="html">
-      &lt;a href="…" aria-label="En savoir plus sur nos offres mobiles">En savoir plus&lt;/a&gt;
+      &lt;a href="…" aria-label="En savoir plus sur nos offres mobiles"&gt;En savoir plus&lt;/a&gt;
       </code></pre>
       <p>La solution utilisant la classe de masquage accessible offre néanmoins un avantage par rapport à la solution <code>aria-label</code>. Si les <abbr>CSS</abbr> sont désactivées (pour les remplacer par des <abbr>CSS</abbr> personnalisées adaptées à une certaine pathologie, par exemple), les textes en masquage accessible apparaîtront automatiquement à l’écran.</p>
        
@@ -86,7 +86,7 @@
       <p>Cet attribut permet de masquer un élément (ou un groupe d’éléments) pour les lecteurs d’écran. Celui-ci n’a en revanche aucun effet sur l’affichage à l’écran.</p>
       
       <h3>Mise en œuvre</h3>
-      <p>Pour masquer un élément aux lecteurs d’écran (ainsi que les éléments enfants), il suffit d’ajouter un attribut <code>aria-hidden="true"</code>.<p>
+      <p>Pour masquer un élément aux lecteurs d’écran (ainsi que les éléments enfants), il suffit d’ajouter un attribut <code>aria-hidden="true"</code>.</p>
       
       <p><strong>Exemple&nbsp;: </strong><br>
       La capture d’écran suivante montre un lecteur vidéo contenant un certain nombre de boutons (chaîne précédente, chaîne suivante, pause…). Ce lecteur est entouré par deux boutons permettant également d’accéder aux chaînes précédentes et suivantes.</p>
@@ -94,7 +94,7 @@
       
       <p><img src="../../images/exemples/masquage/player.png" alt="capture d’écran présentant un lecteur vidéo"></p>
       
-      <p>Pour éviter de perturber l’utilisateur inutilement, le plus simple est de masquer ces deux boutons (pour les lecteurs d’écran) à l’aide d’un attribut <code>aria-hidden</code>.
+      <p>Pour éviter de perturber l’utilisateur inutilement, le plus simple est de masquer ces deux boutons (pour les lecteurs d’écran) à l’aide d’un attribut <code>aria-hidden</code>.</p>
       
       <pre><code class="html">      
       &lt;div class="icon icon-arrow-left2" <span class="important">aria-hidden="true"</span>&gt;

@@ -62,7 +62,7 @@
              &lt;/header&gt;
              &lt;p&gt;section's content&lt;/p&gt;
              &lt;footer&gt;
-               &lt;p&gt;section footer's content &nbsp;: copyright…&lt;/p&gt;
+               &lt;p&gt;section footer content &nbsp;: copyright…&lt;/p&gt;
                …
              &lt;/footer&gt;
           &lt;/section&gt;
@@ -78,7 +78,7 @@
           […]
         &lt;/aside&gt;
         &lt;footer&gt;
-          &lt;p&gt;footer's content&nbsp;: copyright…&lt;/p&gt;
+          &lt;p&gt;footer content&nbsp;: copyright…&lt;/p&gt;
           […]
         &lt;/footer&gt;
       &lt;/body&gt;
@@ -108,7 +108,7 @@
           &lt;/header&gt;
           &lt;p&gt;region's content&lt;/p&gt;
           &lt;div role="contentinfo"&gt;
-            &lt;p&gt;region footer's content&nbsp;: copyright…&lt;/p&gt;
+            &lt;p&gt;region footer content&nbsp;: copyright…&lt;/p&gt;
           &lt;/div&gt;
         &lt;/div&gt;
         &lt;div role="article"&gt;
@@ -123,7 +123,7 @@
           […]
         &lt;/div&gt;
       &lt;div role="contentinfo"&gt;
-        &lt;p&gt;footer's content&nbsp;: copyright…&lt;/p&gt;
+        &lt;p&gt;footer content&nbsp;: copyright…&lt;/p&gt;
           […]
       &lt;/div&gt;
     &lt;/body&gt;
@@ -146,15 +146,13 @@
 
 <p>All these landmarks can rely on the <abbr>ARIA</abbr> attributes that are <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code> to provide them with a more relevant accessible name.</p>
 <p> Especially when several landmarks of the same type are present in the page, it may be important to give them a description via these <abbr>ARIA</abbr> attributes. </p>
-  <p>Example of a page with three navigation regions: <br/>
+  <p>Example of a page with three navigation regions: </p>
   <pre><code class = "html">
      &lt;nav aria-label="Main Menu"&gt; [...] &lt;/nav &gt;
      &lt;nav aria-label="Secondary Menu"&gt; [...] &lt;/nav&gt;
      &lt;nav aria-label="breadcrumb trail"&gt; [...] &lt;/nav&gt;
   </code></pre>
-</p>
-  
-  More details on <a href="../../label-ledby-describedby.html"> "The <abbr>ARIA</abbr> attributes that can save you" </a>. </p>
+<p>More details on <a href="../../label-ledby-describedby.html"> "The <abbr>ARIA</abbr> attributes that can save you" </a>. </p>
   
     <h3>Landmarks, users and assistive devices</h3>
     <p> The <abbr>HTML5</abbr> tags defining the main regions of the page have sufficient support with technical aids (screen readers, magnifying software...). We must therefore use them to structure his page without adding roles Landmarks.</p>
