@@ -15,6 +15,11 @@
 **Description: ** 
 Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization …) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.
 
+**Checklist: **
+- Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.
+- Turn off the speakers, the level of information should remain the same.
+- Be sure that links are not only identified by a different colour, usually underline them. If the are not underlined, on focus and on hover, provide an another way than color to distinguish them.
+
 **Example:**  
 For a pie chart, where each part is coloured differently, you could add different pattern fills to identify them without colour.
  
@@ -26,10 +31,6 @@ For a pie chart, where each part is coloured differently, you could add differen
 
 This example is not valid because the information is conveyed only by colour.
 
-**Checklist: **
-- Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.
-- Turn off the speakers, the level of information should remain the same.
-- Be sure that links are not only identified by a different colour, usually underline them.
 
 **Users’ goal: **
 

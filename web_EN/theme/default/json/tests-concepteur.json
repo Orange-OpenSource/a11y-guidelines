@@ -150,11 +150,13 @@
     ],
     "verifier": [
       "The contrast between the text (or text as an image) and the background color is as follows: <ul><li>4.5:1 minimum for text size less than 24 CSS pixels or 19 CSS pixels in bold</li> <li>3:1 is sufficient for a text size greater than 24 CSS pixels or 19 CSS pixels in bold </li></ul>",
-      "Any graphical object conveying information and any interactive component and its states respects the 3: 1 ratio"
+      "Any graphical object conveying information and any interactive component and its states respects the 3: 1 ratio",
+      "Special case of non-underlined links, they must have a 3:1 contrast ratio with the surrounding text"
     ],
     "resultat": [
       "In order to be legible, a text (or text as an image) must be sufficiently contrasted with the background",
-      "It is the same for the contrast of graphical objects conveying information (example: icons, diagram), interactive components (example: outline of an input field) and its states (example: hovering or on focus)"
+      "It is the same for the contrast of graphical objects conveying information (example: icons, diagram), interactive components (example: outline of an input field) and its states (example: hovering or on focus)",
+      "It must easy to distinguish a link from the rest of the text"
     ],
     "exception": "This recommendation does not apply in the following cases: <ul> <li>if the image is a logo </li><li>if a text, such as a label or a data table, provides the same information as the icon or graphic</li><li>if the lack of contrast in the image does not preclude understanding of the content or its function </li><li>if the components are inactive </li></ul> ",
     "raccourcis": "",
@@ -174,7 +176,7 @@
       "Information conveyed by sensory data can also be obtained through an explicit text"
     ],
     "resultat": [
-      "Color may not be perceived by a user, that is why any information conveyed by a color must also be conveyed by an explicit text or a visually explicit information (example: icons of different forms)",
+      "Color may not be perceived by a user, that is why any information conveyed by a color must also be conveyed by an explicit text or a visually explicit information (example: icons of different forms). Special case of links in text: if they are not underlined, on keyboard focus and mouse hover, provide a way other than color to distinguish them.",
       "The same is true of sensory indications such as shape, position in space or sound, all must be accompanied by an alternative in a textual form"
     ],
     "exception": "",

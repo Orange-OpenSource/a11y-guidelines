@@ -18,7 +18,7 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 **À vérifier&nbsp;:**
 - Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.
 - Couper le son, le niveau d’information doit rester identique. 
-- S'assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement).
+- S'assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement). S'ils ne sont pas soulignés, sur le focus et le survol souris, fournir un autre moyen que le couleur pour les distinguer.
 
 **Objectif utilisateur&nbsp;:**
 

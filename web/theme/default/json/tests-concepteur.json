@@ -150,11 +150,13 @@
     ],
     "verifier": [
       "Le contraste entre le texte (ou texte en image) et la couleur du fond respecte les ratios suivants&nbsp;: <ul><li>4.5:1 minimum pour une taille de texte inférieure à 24px CSS et 19px CSS en gras</li><li>3:1 minimum suffit pour une taille de texte supérieure à 24px CSS et 19px CSS en gras</li></ul>",
-      "Tout objet graphique convoyant de l’information et tout composant interactif et ses états respecte le ratio 3:1"
+      "Tout objet graphique convoyant de l’information et tout composant interactif et ses états respecte le ratio 3:1",
+      "Cas particulier des liens non soulignés, ils doivent avoir un rapport de contraste de 3:1 avec le texte qui les entoure"
     ],
     "resultat": [
       "Pour être lisible un texte (ou texte en image) doit être suffisamment contrasté par rapport au fond",
-      "Il en est de même pour le contraste des objets graphiques convoyant de l’information (exemple&nbsp;: icônes, diagramme), les composants interactifs (exemple&nbsp;: contour d’un champ de saisie) et ses états (exemple&nbsp;: survol ou prise de focus)"
+      "Il en est de même pour le contraste des objets graphiques convoyant de l’information (exemple&nbsp;: icônes, diagramme), les composants interactifs (exemple&nbsp;: contour d’un champ de saisie) et ses états (exemple&nbsp;: survol ou prise de focus)",
+      "Il faut pouvoir distinguer facilement un lien du reste du texte"
     ],
     "exception": "Cette recommandation ne s’applique pas dans les cas suivants&nbsp;: <ul><li>si l’image est un logo </li><li>si un texte, comme un label ou un tableau de donnée, apporte la même information que l’icône ou le graphique </li><li>si le manque de contraste de l’image n’interdit pas la compréhension du contenu ou de sa fonction </li><li>si les composants sont inactifs</li></ul>",
     "raccourcis": "",
@@ -174,7 +176,7 @@
       "L'information transmise par une donnée sensorielle peut également être obtenue par un texte explicite"
     ],
     "resultat": [
-      "La couleur peut ne pas être perçue par un utilisateur, c’est pourquoi toute information transmise par une couleur doit également être véhiculée par un texte explicite ou une information visuellement explicite (exemple&nbsp;: icônes de formes différentes)",
+      "La couleur peut ne pas être perçue par un utilisateur, c’est pourquoi toute information transmise par une couleur doit également être véhiculée par un texte explicite ou une information visuellement explicite (exemple&nbsp;: icônes de formes différentes). Cas particulier des liens dans du texte : s'ils ne sont pas soulignés, sur le focus clavier et au survol souris, fournir un autre moyen que le couleur pour les distinguer.",
       "Il en est de même des indications sensorielles comme la forme, le positionnement dans l’espace ou encore le son, toutes doivent être accompagnées d’une alternative sous la forme d’un texte"
     ],
     "exception": "",

@@ -369,11 +369,9 @@
     "tests": [
       "Inspect the captcha"
     ],
-    "verifier": 
-	[
+    "verifier": [
       "Verify that for any visual-only or sound-only captcha, at least one of the alternatives below is given: <ul><li>audio + visual captcha </li><li> logical tests (question whose answer is obvious, simple mathematical test...)</li><li>There is another solution to access the functionality secured by CAPTCHA</li></ul>"
-    ]
-	,
+    ],
     "resultat": [
       "The page proposes at least one of the solutions below: <ul><li>captcha audio + visual</li><li>captcha audio or visual + logical tests (question with obvious answer, simple mathematical test...)</li></ul>"
     ],
@@ -391,10 +389,12 @@
       "Launch aXe"
     ],
     "verifier": [
-      "Check that the contrast is sufficient to understand the information conveyed by all interactive components, texts"
+      "Check that the contrast is sufficient to understand the information conveyed by all interactive components, texts",
+      "Check that non-underlined links have a sufficient contrast ratio with the surrounding text"
     ],
     "resultat": [
-      "Presence of sufficiently contrasting elements"
+      "Presence of sufficiently contrasting elements",
+      "Presence of non-underlined links sufficiently contrasted"
     ],
     "exception": "Exception on the color pair #F16E00 / #FFFFFFFF, for interfaces implementing the latest version of the Orange brand.",
     "raccourcis":"",
@@ -433,7 +433,7 @@
 	],
     "resultat": [
       "Information conveyed by colour can also be obtained by means of an explicit text",
-      "The information conveyed by colour is complemented by other visual information (example: icons use different colours, but also different shapes)"
+      "The information conveyed by colour is complemented by other visual information (example: icons use different colours, but also different shapes). Special case of links in text: if they are not underlined, on keyboard focus and mouse hover, provide a way other than color to distinguish them."
     ],
     "exception":"",
     "raccourcis":"",
