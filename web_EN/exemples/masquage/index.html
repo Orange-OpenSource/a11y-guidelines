@@ -75,9 +75,9 @@
       <strong>Example: </strong>
       <p><a href="#">Learn more<span class="sr-only"> about our mobile plans</span></a></p>
       
-      <p>We would have obtained the same result using the <code>aria-label</code> attribute on the link:
+      <p>We would have obtained the same result using the <code>aria-label</code> attribute on the link:</p>
       <pre><code class="html">
-      &lt;a href="…" aria-label="Learn more about our mobile plans">Learn more&lt;/a&gt;
+      &lt;a href="…" aria-label="Learn more about our mobile plans"&gt;Learn more&lt;/a&gt;
       </code></pre>
       <p>The accessible hiding class solution still offers an advantage compared to the <code>aria-label</code> solution. If the <abbr>CSS</abbr> is disabled (replaced with a custom <abbr>CSS</abbr> adapted to a certain disability, for example), the hidden accessibly text will be displayed.</p>
        
@@ -85,7 +85,7 @@
       <p>This attribute will hide an element (or group of elements) to screen readers. It has however no effect on the display.</p>
       
       <h3>Implementation</h3>
-      <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute.<p>
+      <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute.</p>
       
       <strong>Example: </strong>
       <p>The following screenshot shows a video player with a number of buttons (previous channel, next channel, pause…). This player is surrounded by two buttons also providing access to previous and next channels.</p>
@@ -95,7 +95,7 @@
       
       <br><br>
       
-      <p>To avoid disturbing the user unnecessarily, the easiest way is to hide these buttons (for screen readers) with the <code>aria-hidden</code> attribute.
+      <p>To avoid disturbing the user unnecessarily, the easiest way is to hide these buttons (for screen readers) with the <code>aria-hidden</code> attribute.</p>
       
       <pre><code class="html">      
       &lt;div class="icon icon-arrow-left2" <span class="important">aria-hidden="true"</span>&gt;

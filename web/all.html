@@ -222,9 +222,9 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <li>les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d&#39;<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>.</li>
 </ul>
 <p>Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couples <abbr>AT</abr>/navigateur, donc ne pas l&#39;utiliser comme seul moyen de passer une information nécessaire.</p>
-<h2 id="faut-il-l-utiliser-et-comment-nbsp-">Faut-il l’utiliser et comment&nbsp;?</h2>
+<h2 id="faut-il-les-utiliser-et-comment-nbsp-">Faut-il les utiliser et comment&nbsp;?</h2>
 <p>Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.</p>
-<p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence l&#39;<code>id</code> d&#39;un élément de la page dont le contenu sera utilisé comme nom accessible de l&#39;élément portant l&#39;attribut <abbr>Aria</abbr>.</p>
+<p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence le  ou les (séparée par un espace) <code>id</code> d&#39;éléments (auto référencement possible) de la page dont le contenu sera utilisé comme nom accessible de l&#39;élément portant l&#39;attribut <abbr>Aria</abbr>.</p>
 <p>Lorsqu&#39;on utilise <code>aria-label</code> ou <code>aria-labelledby</code> sur un élément, le contenu ou l&#39;intitulé de cet élément n&#39;est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour <code>aria-label</code> le contenu de cet attribut, pour <code>aria-labelledby</code> le contenu de l&#39;élément référencé). Donc, seul, le nom accessible doit donner l&#39;ensemble des informations nécessaires à l&#39;<abbr>AT</abbr> et donc à l&#39;utilisateur.</p>
 <p><strong>Important&nbsp;: </strong>l&#39;<code>aria-labelledby</code> peut admettre plusieurs valeurs séparées par un espace et peut s&#39;auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> <code>::before</code> ou <code>::after</code>. On peut également référencer un contenu masqué visuellement par <abbr>CSS</abbr>&nbsp;: <code>visibility:hidden;</code> ou <code>display:none;</code>. Cependant, les bonnes pratiques demandent que si l&#39;interface est telle qu&#39;il n&#39;est pas possible d&#39;avoir une étiquette textuelle visible à l&#39;écran, il est préférable d&#39;utiliser <code>aria-label</code> plutôt que <code>aria-labelledby</code>. </p>
 <p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité (et donc sera le seul contenu restitué) à <code>aria-labelledby</code> lors du calcul de la propriété de nom accessible. </p>
@@ -799,20 +799,27 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
 <p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
-<li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :<ul>
-<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
-<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
+<li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est&nbsp;:<ul>
+<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras</li>
+<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras</li>
 </ul>
 </li>
-<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<li>Cas particulier des liens non soulignés&nbsp;: <ul>
+<li>Ces liens doivent avoir un rapport de contraste de 3:1 avec le texte qui les entoure</li>
+<li>Ces liens doivent avoir un autre moyen que la couleur permettant de les distinguer au focus clavier ou au survol souris </li>
+</ul>
+</li>
+<li>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover…) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… </li>
+</ul>
+<p>On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
 <ul>
-<li>si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
-<li>si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
-<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
-<li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
+<li>Si le composant graphique ne peut pas être représenté autrement (drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
+<li>Si un texte, comme un label, un tableau de donnée… apporte la même information que l’icône ou le graphique.</li>
+<li>Si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
+<li>Si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.<ul>
+<li><strong>Attention&nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous</li>
 </ul>
 </li>
-<li><strong>Attention&nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
 <p><strong>Outil&nbsp;:</strong><br>L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  </p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
@@ -890,19 +897,20 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, en particulier les daltoniens et plus généralement les personnes malvoyantes ou ayant une déficience cognitive, auditive et les seniors.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, orientation, localisation visuelle…) comme la seule façon de véhiculer de l’information, d’indiquer une action, de solliciter une réponse ou de distinguer un élément. L’information fournie par un changement de couleur ou une information sensorielle doit être complétée par une information textuelle (alternative) ou/et structuration sémantique.</p>
+<p><strong>À vérifier&nbsp;:</strong></p>
+<ul>
+<li>Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.</li>
+<li>Couper le son, le niveau d’information doit rester identique.</li>
+<li>S&#39;assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement). S&#39;ils ne sont pas soulignés, sur le focus et le survol souris, fournir un autre moyen que le couleur pour les distinguer.</li>
+</ul>
 <p><strong>Exemple valide&nbsp;:</strong>  </p>
 <p><img src="images/couleur-ok.png" alt="illustration utilisant des icônes de couleurs avec des formes différenciées pour transmettre l’information"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong></p>
 <p><img src="images/couleur-ko.png" alt="illustration utilisant des icônes de couleurs avec des formes identiques pour transmettre l’information">  </p>
 <p>Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.</p>
-<p><strong>À vérifier&nbsp;:</strong></p>
-<ul>
-<li>Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.</li>
-<li>Couper le son, le niveau d’information doit rester identique.<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
-</ul>
-
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="libell-des-liens-et-des-boutons">Libellé des liens et des boutons</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -1409,19 +1417,26 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :<ul>
-<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
-<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras.</li>
+<li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras</li>
+<li>De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras</li>
 </ul>
 </li>
-<li><p>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
+<li>Cas particulier des liens non soulignés&nbsp;: <ul>
+<li>Ces liens doivent avoir un rapport de contraste de 3:1 avec le texte qui les entoure</li>
+<li>Ces liens doivent avoir un autre moyen que la couleur permettant de les distinguer au focus clavier ou au survol souris </li>
+</ul>
+</li>
+<li>S&#39;assurer que Les objets graphiques porteurs d&#39;information non-textuelle, les composants d’interface utilisateur et les états de l&#39;interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… </li>
+</ul>
+<p>On n’est pas tenus d’appliquer ce critère&nbsp;:</p>
 <ul>
-<li>si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
-<li>si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.</li>
-<li>si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
-<li>si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.</li>
+<li>Si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d&#39;écran, diagrammes d&#39;informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)</li>
+<li>Si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.</li>
+<li>Si le manque de contraste de l’image n&#39;empêche pas la compréhension du contenu ou d&#39;identifier la fonction </li>
+<li>Si un composant d&#39;interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d&#39;information.<ul>
+<li><strong>Attention &nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous</li>
 </ul>
 </li>
-<li><strong>Attention &nbsp;:</strong> pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).</p>
@@ -1639,7 +1654,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <ul>
 <li>Faire une capture d’écran et la passer en noir et blanc. La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.</li>
 <li>Couper le son, le niveau d’information doit rester identique. </li>
-<li>S&#39;assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement).</li>
+<li>S&#39;assurer que les liens sont identifiables par un autre moyen que la couleur (en général, le soulignement). S&#39;ils ne sont pas soulignés, sur le focus et le survol souris, fournir un autre moyen que le couleur pour les distinguer.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Permettre aux utilisateurs ne distinguant pas les couleurs ou l’information sensorielle (les daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant…), d’accéder tout de même à l’information par d’autres moyens.</p>
@@ -1860,18 +1875,20 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention 1et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). </p>
+<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) lorsque l&#39;ordre du focus est nécessaire pour la compréhension ou l&#39;opérabilité clavier et cela même pour du contenu généré dynamiquement (modification du DOM, Ajax,…). Bien-sûr, le focus ne doit ni rester piégé, ni bloqué. </p>
+<p>Pour le contenu, également, si un sens de lecture est nécessaire à la bonne compréhension, il faut s&#39;assurer que celui-ci est cohérent pour tout utilisateur.</p>
 <p>Exemple, les puces numérotées indiquent l&#39;ordre de déplacement du focus dans cette page :<br><img src="./images/focus/focus-order.png" alt="Capture d&#39;écran indiquant l&#39;ordre de déplacement du focus dans une page"></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété <code>outline</code> et <code>:focus</code> en <abbr>CSS</abbr>), voir exigence 20, ci-dessous.</li>
-<li>Attention à l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>est le même  que l&#39;ordre de déplacement du focus dans la page. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. </li>
+<li>Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>soit le même que l&#39;ordre de déplacement du focus ou de lecture de l&#39;information dans la page si cet ordre impacte la compréhension du contenu ou capacité d&#39;utiliser l&#39;interface. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. C&#39;est la solution la plus simple&nbsp;!</li>
 <li>Pour la maintenabilité, éviter l’utilisation de l’attribut <code>tabindex</code> avec des valeurs supérieures à 0.</li>
 <li>Même lors d’apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.
 Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en"><abbr>SPA</abbr> (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir <a href="./exemples/dynFocus/index.html">Gérer le focus pour du contenu dynamique</a></li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
+Permettre la navigation logique, sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
+<p><strong>Exemple valide&nbsp;:</strong><br>Dans une page dédiée à la recherche dans le site, on passe, à la navigation clavier, sur le formulaire de recherche avant d&#39;arriver à la liste des résultats.      </p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        </p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong></p>
 <ul>
@@ -2631,6 +2648,8 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 </style>
 
 <p><dl>
+     <dt><a href="skiplinks.html">Les liens d&#39;évitement</a></dt>
+     <dd>Les liens d&#39;évitement, qu&#39;est ce et comment bien les mettre en oeuvre.</dd>
     <dt><a href="captcha.html">Les CAPTCHAs</a></dt>
     <dd>Les CAPTCHAs et l&#39;accessibilité</dd>
     <dt><a href="htmlaria.html">HTML 5 et <abbr>ARIA</abbr></a></dt>

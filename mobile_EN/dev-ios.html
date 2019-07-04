@@ -150,22 +150,65 @@
 
 <p><span data-menuitem="mobile-ios"></span></p>
 <p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options.
-</br>Through different categories, this guide explains how to use the accessibility attributes&nbsp;/ methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>Apple official documentation</code></a>.
-</br>Code snippets are also available to show the different possible implementations {(Swift 5.0, Objective C) + (Xcode 10, iOS 12)}.</p>
+</br>Through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>Apple official documentation</code></a>.
+</br>Code snippets are also available to show the different possible implementations <em>{ (Swift 5.0, Objective C) + (Xcode 10, iOS 12) }</em>.</p>
 <p><a name="AccessibilityTraits"></a></p>
 <h2 id="element-trait">Element trait</h2>
-<h3 id="description">Description</h3>
-<p>The <code>accessibilityTraits</code> attribute allows to specify the trait of an element to the accessibility <abbr>API</abbr>. Thus, it is possible to make a list item be considered as a button because it is clickable. Therefore, the <code>accessibilityTrait</code> attribute plays an important role on the element vocalization because the trait is vocalized by VoiceOver.  </p>
-<p>This accessibility attribute is available via the builder interface but also programmatically.</p>
-<p>There are many available traits. The more commonly used are:  </p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#TraitElt-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TraitElt-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TraitElt-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TraitElt-BasicOperations" 
+           role="tab" 
+           aria-selected="false">Basic operations</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TraitElt-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="TraitElt-Description"
+     role="tabpanel">
+The <code>accessibilityTraits</code> attribute allows to specify the trait of an element to the accessibility <abbr>API</abbr>.
+</br>Then, the <code>accessibilityTrait</code> attribute <strong>plays an important role on the element vocalization</strong> because it enables VoiceOver to recognize its type.  </p>
+<p></div></p>
+<p><div class="tab-pane" id="TraitElt-Details" role="tabpanel" >
+This accessibility attribute is available via the interface builder but also programmatically.
+</br></br>There are many available traits. The most commonly used are:  </p>
 <ul>
 <li><strong>accessibilityTraitNone</strong>&nbsp;: removes any semantic value to the element.</li>
 <li><strong>accessibilityTraitButton</strong>&nbsp;: adds the “button” trait, the element is seen as a button by VoiceOver.</li>
 <li><strong>accessibilityTraitLink</strong>&nbsp;: useful to define a label as a “link”.</li>
-<li><strong>accessibilityTraitHeader</strong>&nbsp;: defines an element as a header (see the <a href="criteria-ios.html#title-and-header">«&nbsp;Title and header&nbsp;»</a> section).</li>
-<li><strong>accessibilityTraitAdjustable</strong>&nbsp;: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see <a href="./voiceover.html">VoiceOver user guide</a>).</li>
+<li><strong>accessibilityTraitHeader</strong>&nbsp;: defines an element as a header <em>(see the <a href="criteria-ios.html#title-and-header">«&nbsp;Title and header&nbsp;»</a> section)</em>.</li>
+<li><strong>accessibilityTraitAdjustable</strong>&nbsp;: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view <em>(see the <a href="./voiceover.html">VoiceOver user guide</a>)</em>.</li>
 </ul>
-<h3 id="example">Example</h3>
+<p></div></p>
+<p><div class="tab-pane" id="TraitElt-Example" role="tabpanel" ></p>
 <pre><code class="objective-c">
 - (void)customTraits() {
     //Specified UIPageControl with the ’ajustable’ trait.
@@ -184,8 +227,9 @@ func customTraits() {
 }
 </code></pre>
 
-<h3 id="basic-operations">Basic operations</h3>
-<p>This attribute is actually a <code>bitmask</code> in which each element has its own value.
+<p></div></p>
+<p><div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel" >
+The <code>accessibilityTrait</code> attribute is actually a <code>bitmask</code> in which each element has its own value.
 </br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/Traits.png" />
 </br>It&#39;s then possible to add and remove some <code>traits</code> after having checked their existence in the bitmask for instance.</p>
 <pre><code class="objective-c">
@@ -225,22 +269,52 @@ func changeTraits() {
     }
 }
 </code></pre>
-<h3 id="link">Link</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="TraitElt-Links" role="tabpanel" ></p>
 <ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits"><code>accessibilityTraits</code></a></li>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits"><code>accessibilityTraits</code></a>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="text-alternatives">Text alternatives</h2>
-<h3 id="description">Description</h3>
-<p>On iOS, the vocalization of an element is done through four attributes: <code>label</code>, <code>hint</code>, <code>value</code> and <code>trait</code>.
-The order of vocalization is always as follows: <code>label</code>, <code>value</code>, <code>trait</code> and <code>hint</code>. This order cannot be changed and the vocalization is performed only once.</p>
-<p>A section of this guide is dedicated to the <a href="#AccessibilityTraits"><code>trait</code></a>, we describe here the other three:</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#textAlt-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#textAlt-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#textAlt-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="textAlt-Details"
+     role="tabpanel">
+On iOS, the vocalization of an element is done through four attributes: <code>label</code>, <code>hint</code>, <code>value</code> and <code>trait</code>.
+The order of vocalization is always as follows: <code>label</code>, <code>value</code>, <code>trait</code> and <code>hint</code>. This order cannot be changed and the vocalization is performed only once.
+</br></br>A section of this guide is dedicated to the <a href="#AccessibilityTraits" style="text-decoration: underline;">trait</a>, we describe here the other three:</p>
 <ul>
 <li><strong>accessibilityLabel</strong>&nbsp;: the <code>label</code> redefines the text read by VoiceOver. This allows a component to be more explicit than the text displayed on the screen. For example, for a button whose title is “OK”, this attribute can indicate that the button is used to confirm an action.</li>
 <li><strong>accessibilityValue</strong>&nbsp;: the <code>value</code> of an element is by default the completion percentage (e.g. a progress bar percentage). Note that for most elements available in the <abbr>SDK</abbr>, this value does not need to be set (the system automatically sets the value).</li>
 <li><strong>accessibilityHint</strong>&nbsp;: the <code>hint</code> describes the component’s behaviour. Example: “click here to get the result”.</li>
 </ul>
 <p>These accessibility attributes are available via the builder interface but also programmatically. Anything inheriting from <code>UIView</code> has these attributes by default. These attributes accept an optional string, and are therefore easily localizable.</p>
-<h3 id="example">Example</h3>
+<p></div></p>
+<p><div class="tab-pane" id="textAlt-Example" role="tabpanel" >   </p>
 <pre><code class="objective-c">
 @interface ChangeTextView() {
 
@@ -277,18 +351,54 @@ class ChangeTextView: UIViewController {
     }
 }
 </code></pre>
-<h3 id="links">Links</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="textAlt-Links" role="tabpanel" > </p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel"><code>accessibilityLabel</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue"><code>accessibilityValue</code></a></li>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint</code></a></li>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint</code></a>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="date-time-and-numbers">Date, time and numbers</h2>
-<h3 id="description">Description</h3>
-<p>Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.
-</br></br></p>
-<h4 id="date-and-time-vocalization">Date and time vocalization</h4>
-<p>The rendering isn&#39;t natural if the date or time data are imported text in a <code>label</code>.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#format-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#format-DateTime" 
+           role="tab" 
+           aria-selected="false">Date &amp; Time</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#format-Numbers" 
+           role="tab" 
+           aria-selected="false">Numbers</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#format-PhoneNumbers" 
+           role="tab" 
+           aria-selected="false">Phone numbers</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="format-Description"
+     role="tabpanel">
+Using VoiceOver for reading date, time and numbers may become rapidly a headache if some steps fade into obscurity.</p>
+<p></div></p>
+<p><div class="tab-pane" id="format-DateTime" role="tabpanel" >
+The rendering isn&#39;t natural if the date or time data are imported text in a <code>label</code>.
 </br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_11.png" />
 </br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
 </br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/DateHeureNombres_7.png" /></p>
@@ -341,11 +451,11 @@ class ChangeTextView: UIViewController {
                                                                            unitsStyle: .spellOut)
 </code></pre>
 
-<p></br></br></p>
-<h4 id="numbers-vocalization">Numbers vocalization</h4>
-<p>If a number is imported as is in a <code>label</code>text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
+<p></div></p>
+<p><div class="tab-pane" id="format-Numbers" role="tabpanel" >
+If a number is imported as is in a <code>label</code>text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
 </br><img alt="" style="max-width: 475px; height: auto; " src="./images/iOSdev/DateHeureNombres_12.png" />
-</br>As the previous chapter dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
+</br>As the previous sheet dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
 </br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/DateHeureNombres_8.png" /></p>
 <pre><code class="objective-c">
     NSNumber * numberValue = @54038921.7;
@@ -367,9 +477,9 @@ class ChangeTextView: UIViewController {
                                                                      number: .spellOut)
 </code></pre>
 
-<p></br></br></p>
-<h4 id="phone-numbers-vocalization">Phone numbers vocalization</h4>
-<p>Once more, formatting data is an essential step for a phone number vocalization including the special cases of the &quot;0&quot; figures.
+<p></div></p>
+<p><div class="tab-pane" id="format-PhoneNumbers" role="tabpanel" >
+Once more, formatting data is an essential step for a phone number vocalization including the special cases of the &quot;0&quot; figures.
 </br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
 </br><img alt="default vocalization is not valid for the following phone number : 06.11.22.33.06" style="max-width: 550px; height: auto; " src="./images/iOSdev/DateHeureNombres_10.png" />
 </br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
@@ -443,13 +553,39 @@ class ChangeTextView: UIViewController {
         phoneNumberLabel.accessibilityLabel = spelledOutString
 </code></pre>
 
+<p></div>
+</div></br></br></p>
 <h2 id="trigger-a-vocalization">Trigger a vocalization</h2>
-<h3 id="description">Description</h3>
-<p>It is very easy to trigger vocalizations with VoiceOver.
-</br>Note that we are talking about VoiceOver vocalization and not <abbr>TTS</abbr> (Text To Speech) that can operate whether VoiceOver is on or off. </p>
-<p>To trigger a vocalization, just call the <strong>UIAccessibilityPostNotification</strong> method passing the notification allowing to trigger a vocalization (<strong>UIAccessibilityAnnouncementNotification</strong>) and the string to vocalize as parameters.</p>
-<p>Note: the vocalization is done in the system’s language.</p>
-<h3 id="example">Example</h3>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#triggerVocal-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#triggerVocal-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#triggerVocal-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="triggerVocal-Details"
+     role="tabpanel">
+To trigger a vocalization, just call the <strong>UIAccessibilityPostNotification</strong> method passing the notification allowing to trigger a vocalization (<strong>UIAccessibilityAnnouncementNotification</strong>) and the string to vocalize as parameters.
+</br></br>Note: the vocalization is done in the system’s language.</p>
+<p></div></p>
+<p><div class="tab-pane" id="triggerVocal-Example" role="tabpanel" ></p>
 <pre><code class="objective-c">
 UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
                                 @"This is a VoiceOver message.");
@@ -457,18 +593,47 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification,
 UIAccessibility.post(notification: .announcement,
                      argument: "This is a VoiceOver message.")
 </code></pre>
-<h3 id="links">Links</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="triggerVocal-Links" role="tabpanel" >  </p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification"><code>UIAccessibilityPostNotification</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification"><code>UIAccessibilityAnnouncementNotification</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification"><code>UIAccessibilityAnnouncementNotification</code></a>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="change-the-vocalization-language">Change the vocalization language</h2>
-<h3 id="description">Description</h3>
-<p>To change the vocalization language of VoiceOver for a word or a sentence, one can use the <strong>accessibilityLanguage</strong>&nbsp; attribute.
-</br>Available through the <code>UIAccessibility</code> informal protocol, this attribute allows to specify a language for a dedicated text.
-</br>For instance, if we use this attribute on a <code>UILabel</code>, it will be vocalized by <span lang="en">VoiceOver</span> in the language set on this attribute.
-</br></p>
-<h3 id="example">Example</h3>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#changeLang-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="changeLang-Details"
+     role="tabpanel">
+To change the vocalization language of VoiceOver for a word or a sentence, one can use the <strong>accessibilityLanguage</strong>&nbsp; attribute.
+</br>Available through the <code>UIAccessibility</code> informal protocol, this attribute allows to specify a language for a dedicated text.</p>
+<p></div></p>
+<p><div class="tab-pane" id="changeLang-Example" role="tabpanel" >
+If we use the <code>accessibilityLanguage</code> attribute on a <code>UILabel</code>, it will be vocalized by <span lang="en">VoiceOver</span> in the language set on this attribute.</p>
 <pre><code class="objective-c">
 - (IBAction)tapHere:(UIButton *)sender {
 
@@ -485,14 +650,53 @@ UIAccessibility.post(notification: .announcement,
                          argument: myLabel)
 }
 </code></pre>
-<h3 id="link">Link</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="changeLang-Links" role="tabpanel" >  </p>
 <ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage"><code>accessibilityLanguage</code></a></li>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage"><code>accessibilityLanguage</code></a>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="notify-a-content-change">Notify a content change</h2>
-<h3 id="description">Description</h3>
-<p>When there is a content change in the current page, it is possible to notify the accessibility <abbr>API</abbr> using several types of notifications. To do that, we must send the change notification to the accessibility <abbr>API</abbr> using the following method: <code>UIAccessibilityPostNotification</code>.  </p>
-<p>There are several types of change notifications but the two most commonly used are:</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#changeNotif-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeNotif-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeNotif-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeNotif-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="changeNotif-Description"
+     role="tabpanel">
+When there is a content change in the current page, it is possible to notify the accessibility <abbr>API</abbr> using several types of notifications.
+</br>To do that, we must send the change notification to the accessibility <abbr>API</abbr> using the following <code>UIAccessibilityPostNotification</code> method.  </p>
+<p></div></p>
+<p><div class="tab-pane" id="changeNotif-Details" role="tabpanel" >
+There are several types of change notifications but the most two commonly used are:</p>
 <ul>
 <li><strong>UIAccessibilityLayoutChangedNotification</strong>&nbsp;: notifies that a part of the page has changed with 2 possible incoming parameters (a <code>NSString</code> or a <code>UIObject</code>).
 </br>With a <code>NSString</code>, the notification behaves like a <strong>UIAccessibilityAnnouncementNotification</strong> with a <span lang="en">VoiceOver</span> vocalization.
@@ -502,7 +706,8 @@ UIAccessibility.post(notification: .announcement,
 </br>With a <code>UIObject</code>, focus is shifted to the specified element with a <span lang="en">VoiceOver</span>.
 </br>This notification comes along with a vocalization including a sound like announcing a new page.</li>
 </ul>
-<h3 id="example">Example</h3>
+<p></div></p>
+<p><div class="tab-pane" id="changeNotif-Example" role="tabpanel" ></p>
 <pre><code class="objective-c">
 //The element 'myLabel' is focused and vocalized with its new value.
 - (IBAction)tapHere:(UIButton *)sender {
@@ -532,25 +737,66 @@ UIAccessibility.post(notification: .announcement,
                          argument: nil)
 }
 </code></pre>
-<h3 id="links">Links</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="changeNotif-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/1615194-uiaccessibilitypostnotification"><code>UIAccessibilityPostNotification</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitylayoutchangednotification"><code>UIAccessibilityLayoutChangedNotification</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilityscreenchangednotification"><code>UIAccessibilityScreenChangedNotification</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification"><code>UIAccessibilityPageScrolledNotification</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification"><code>UIAccessibilityPageScrolledNotification</code></a>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="hide-elements">Hide elements</h2>
-<h3 id="description">Description</h3>
-<p>It is possible via an accessibility attribute to hide elements from accessibility tools (e.g. VoiceOver). By extension, it is possible to force some elements to be visible to accessibility tools.</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#hideElts-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#hideElts-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#hideElts-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#hideElts-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="hideElts-Description"
+     role="tabpanel">
+It is possible via an accessibility attribute to hide elements from accessibility tools (e.g. VoiceOver).
+</br>By extension, it is possible to force some elements to be visible to accessibility tools.</p>
+<p></div></p>
+<p><div class="tab-pane" id="hideElts-Details" role="tabpanel" ></p>
 <ul>
-<li><strong>isAccessibilityElement</strong>&nbsp;: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
-<li><strong>accessibilityElementsHidden</strong>&nbsp;: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
-<li><strong>accessibilityViewIsModal</strong>&nbsp;: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>.
+<li><strong>isAccessibilityElement</strong>: boolean to specify that an element is visible or not to the Accessibility <abbr>API</abbr> (VoiceOver or other).</li>
+<li><strong>accessibilityElementsHidden</strong>: boolean to indicate that the children elements of the target element are visible or not to the Accessibility <abbr>API</abbr>.</li>
+<li><strong>accessibilityViewIsModal</strong>: boolean that can make visible or not the sibling elements of the target element to the Accessibility <abbr>API</abbr>.
 </br>A <a href="./dev-ios-wwdc-18230.html#accessibilityViewIsModal">theoretical explanation</a> and a <a href="./dev-ios-wwdc-18230.html#DemoModalView">practical example</a> are provided in a video detailed in the WWDC part.</li>
 </ul>
-<p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code. The other two attributes are available only through the code.</p>
-<h3 id="example">Example</h3>
-<p>A red square will be drawn and contain two other squares (blue and yellow) in order to apply the attributes defined hereabove.</p>
+<p>The <code>accessibilityElement</code> attribute is available via the interface builder but can also be used directly through the code.
+</br>The other two attributes are available only through the code.</p>
+<p></div></p>
+<p><div class="tab-pane" id="hideElts-Example" role="tabpanel" >
+A red square will be drawn and contain two other squares (blue and yellow) in order to apply the attributes defined in the <code>Details</code> sheet.</p>
 <p><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/MasquerDesElements_1.png" /></p>
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
@@ -632,18 +878,54 @@ override func viewDidAppear(_ animated: Bool) {
         theView.isAccessibilityElement = true
     }
 </code></pre>
-<h3 id="links">Links</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="hideElts-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615141-isaccessibilityelement"><code>isAccessibilityElement</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615080-accessibilityelementshidden"><code>accessibilityElementsHidden</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal"><code>accessibilityViewIsModal</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="grouping-elements">Grouping elements</h2>
-<h3 id="description">Description</h3>
-<p>Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.</br></br></p>
-<h3 id="example-1">Example 1</h3>
-<p>We wish to obtain a &#39;label&#39; and a &#39;switch control&#39; as one unique block behaving like a <code>switch control</code>.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#groupElts-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#groupElts-Example1" 
+           role="tab" 
+           aria-selected="false">Example 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#groupElts-Example2" 
+           role="tab" 
+           aria-selected="false">Example 2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#groupElts-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="groupElts-Description"
+     role="tabpanel">
+Grouping elements may be used to vocalize the bundle once and to associate a dedicated action to it.</br></br></p>
+<p></div></p>
+<p><div class="tab-pane" id="groupElts-Example1" role="tabpanel" >
+We wish to obtain a &#39;label&#39; and a &#39;switch control&#39; as one unique block behaving like a <code>switch control</code>.
 </br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
 </br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/GrouperDesElements_1.png" />
 </br>Create your wrapper as an accessible element :</p>
@@ -777,10 +1059,11 @@ int indexSwitch = 1;
 }
 </code></pre>
 
-<p><a name="ActivationPointExemple"></a></p>
-<h3 id="example-2">Example 2</h3>
-<p>We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.
-</br>The easiest way would be to place the switch control in the middle of the created frame in order to locate its <a href="#AccessibilityActivationPoint">accessibilityActivationPoint</a> directly on it.
+<p></div>
+<a name="ActivationPointExemple"></a></p>
+<p><div class="tab-pane" id="groupElts-Example2" role="tabpanel" >
+We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.
+</br></br>The easiest way would be to place the switch control in the middle of the created frame in order to locate its <a href="#AccessibilityActivationPoint">accessibilityActivationPoint</a> directly on it.
 </br>Unfortunately, that&#39;s not always possible.
 </br></br>A new accessible element must then be created to gather all the desired objects and its <strong>accessibilityActivationPoint</strong> has to be defined on the switch control.
 </br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/GrouperDesElements_2.png" /></p>
@@ -869,22 +1152,50 @@ UIAccessibilityElement * elt;
 </code></pre>
 
 <p>Another grouping elements case could use the <strong>shouldGroupAccessibilityChildren</strong> attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
-</br>This allows making unique vocalizations or define a particular reading order for a part of the page (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#reading-order">Reading order</a> section for further information).</p>
-<h3 id="links">Links</h3>
+</br>This allows making unique vocalizations or define a particular reading order for a part of the page <em>(see <a href="#ReadingOrder">Reading order</a> section for further information)</em>.</p>
+<p></div></p>
+<p><div class="tab-pane" id="groupElts-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615165-accessibilityactivate"><code>accessibilityActivate</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a>
-</br></br></li>
+</div>
+</div></br></br>
+<a name="ReadingOrder"></a></li>
 </ul>
 <h2 id="reading-order">Reading order</h2>
-<h3 id="description">Description</h3>
-<p>Redefining the VoiceOver reading order is done using the <strong>UIAccessibilityContainer</strong> protocol.
-</br>The idea is to have a table of elements that defines the reading order of the elements.
-</br>It is often very useful to use the <strong>shouldGroupAccessibilityElement</strong> attribute so we have a precise order but only for a part of the view <em>(the rest of it will be read using the native order provided by VoiceOver)</em>.</p>
-<h3 id="example">Example</h3>
-<p>The best way to illustrate this feature is the keyboard whose keys order isn&#39;t necessary the appropriate one.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#readingOrder-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#readingOrder-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#readingOrder-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="readingOrder-Details"
+     role="tabpanel">
+Redefining the VoiceOver reading order is done using the <strong>UIAccessibilityContainer</strong> protocol: the idea is to have a table of elements that defines the reading order of the elements.
+</br></br>It is often very useful to use the <strong>shouldGroupAccessibilityElement</strong> attribute so we have a precise order but only for a part of the view <em>(the rest of it will be read using the native order provided by VoiceOver)</em>.</p>
+<p></div></p>
+<p><div class="tab-pane" id="readingOrder-Example" role="tabpanel" >
+The best way to illustrate this feature is the keyboard whose keys order isn&#39;t necessary the appropriate one.
 </br>Here&#39;s the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br><span aria-hidden="true">Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder :</span>
+</br></br>Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder:
 </br><img alt="display of the blue and grey views" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
@@ -921,15 +1232,52 @@ UIAccessibilityElement * elt;
                                            key_5!]
     }
 </code></pre>
-<h3 id="links">Links</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="readingOrder-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilitycontainer?language=objc"><code>UIAccessibilityContainer</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="focus-an-element">Focus an element</h2>
-<h3 id="description">Description</h3>
-<p>The <strong>UIAccessibilityFocus</strong> informal protocol provides programming elements to be informed of the accessible element focus :</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#focusElt-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#focusElt-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#focusElt-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#focusElt-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="focusElt-Description"
+     role="tabpanel">
+The <strong>UIAccessibilityFocus</strong> informal protocol provides programming elements to be informed of the accessible element focus.</p>
+<p></div></p>
+<p><div class="tab-pane" id="focusElt-Details" role="tabpanel" ></p>
 <ul>
 <li><strong>accessibilityElementDidBecomeFocused</strong> : called when the accessible element is focused.</li>
 <li><strong>accessibilityElementDidLoseFocus</strong> : fired when the accessible element lost focus.</li>
@@ -937,8 +1285,10 @@ UIAccessibilityElement * elt;
 </ul>
 <p>Overriden inside a view controller, these elements will be helpless if you think they will be called when an accessible element is focused.
 </br>However, if they are <strong>implemented in the accessible element itself</strong>, you won&#39;t be disappointed.
-</br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it&#39;s not accessible... like a view controller for instance.
-</br></br>The example below enables to follow the focus of an accessible element identified by its <code>accessibleIdentifier</code>.</p>
+</br></br>This mistake is due to the informal aspect of the protocol that allows an override of its methods inside an inherited NSObject element even if it&#39;s not accessible... like a view controller for instance.</p>
+<p></div></p>
+<p><div class="tab-pane" id="focusElt-Example" role="tabpanel" >
+The example below enables to follow the focus of an accessible element identified by its <code>accessibleIdentifier</code>.</p>
 <pre><code class="objective-c">
 #import "UIView+focus.h"
 
@@ -994,14 +1344,50 @@ extension UIView {
 }
 </code></pre>
 
-<h3 id="link">Link</h3>
+<p></div></p>
+<p><div class="tab-pane" id="focusElt-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus"><code>UIAccessibilityFocus</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="modify-the-focus-area-of-voiceover">Modify the focus area of VoiceOver</h2>
-<h3 id="description">Description</h3>
-<p>In the case of dynamically modified element or component not inheriting from <code>UIView</code>, it is possible to modify the focus area of accessibility of this element, i.e. the area <span lang="en">VoiceOver</span> highlights when focusing an element.</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#focusArea-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#focusArea-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#focusArea-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#focusArea-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="focusArea-Description"
+     role="tabpanel">
+In the case of dynamically modified element or component not inheriting from <code>UIView</code>, it is possible to modify the focus area of accessibility of this element, i.e. the area <span lang="en">VoiceOver</span> highlights when focusing an element.</p>
+<p></div></p>
+<p><div class="tab-pane" id="focusArea-Details" role="tabpanel" ></p>
 <ul>
 <li><strong>accessibilityFrame</strong>&nbsp;: sets the area via a rectangle (<code>CGRect</code>).
 </br>Usually, for an element inheriting from <code>UIView</code>, this area is the «&nbsp;visible&nbsp;» part of the view.</li>
@@ -1013,8 +1399,9 @@ extension UIView {
 </br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_2.png" />
 </br>By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.</li>
 </ul>
-<h3 id="example">Example</h3>
-<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
+<p></div></p>
+<p><div class="tab-pane" id="focusArea-Example" role="tabpanel" >
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModifierLaZoneDeFocus_1.png" /></p>
 <pre><code class="objective-c">
 float xVal;
 float yVal;
@@ -1076,7 +1463,7 @@ float heightVal;
         heightVal = myLabel.accessibilityFrame.size.height;
     }
 
-    //Première façon d'augmenter la zone de focus.
+    //First way to enlarge the focus area.
     @IBAction func clicHere(_ sender: UIButton) {
 
         myLabel.accessibilityFrame = CGRect.init(x: xVal,
@@ -1088,7 +1475,7 @@ float heightVal;
                              argument: myLabel)
     }
 
-    //Seconde façon d'augmenter la zone de focus (Bézier).
+    //Second way to enlarge the focus area (Bezier).
     @IBAction func clic(_ sender: UIButton) {
 
         let bezierPath = UIBezierPath.init()
@@ -1109,17 +1496,47 @@ float heightVal;
                              argument: myLabel)
     }
 </code></pre>
-<h3 id="links">Links</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="focusArea-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilityelement/1619579-accessibilityframe"><code>accessibilityFrame</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615159-accessibilitypath"><code>accessibilityPath</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615179-accessibilityactivationpoint"><code>accessibilityActivationPoint</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="text-size">Text size</h2>
-<h3 id="description">Description</h3>
-<p>Since iOS7, it is possible to make the text size dynamic according to the phone settings.
-</br><img alt="larger accessibility sizes option screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#textSize-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#textSize-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#textSize-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="textSize-Description"
+     role="tabpanel">
+Since iOS7, it is possible to make the text size dynamic according to the phone settings.</p>
+<p></div></p>
+<p><div class="tab-pane" id="textSize-Details" role="tabpanel" >
+<img alt="larger accessibility sizes option screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:</p>
 <ul>
 <li><strong>Use the text styles</strong> available with the application iOS version.
@@ -1184,19 +1601,41 @@ float heightVal;
 <li>Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.</li>
 <li>Don&#39;t forget to adapt the <a href="./criteria-ios.html#colours">color contrast</a> to the text size.</li>
 </ul>
-<h3 id="links">Links</h3>
+<p></div></p>
+<p><div class="tab-pane" id="textSize-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">Dynamic Type &amp; Text Styles</a></li>
 <li><a href="https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange"><code>UIContentSizeCategoryDidChange</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc"><code>adjustsFontForContentSizeCategory</code></a>
-</br></br></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc"><code>adjustsFontForContentSizeCategory</code></a></li>
 </ul>
+<p></div>
+</div></br></br></p>
 <h2 id="truncation-hyphen">Truncation hyphen</h2>
-<h3 id="description">Description</h3>
-<p>The <code>Dynamic Type</code> feature introduced in the previous section may come along with a word truncation according to the magnifying defined in the settings.
-</br>Unfortunately, the iOS system doesn&#39;t handle natively this point that can be implemented only by programing to get an appreciated visual depiction.
-</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/Troncature.png" />
-</br>The rationale behind is the use of a <code>NSMutableAttributedString</code> with a <code>NSMutableParagraphStyle</code> type property as exposed hereunder :</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#truncHyphen-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#truncHyphen-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="truncHyphen-Description"
+     role="tabpanel">
+The <code>Dynamic Type</code> feature introduced in the previous section may come along with a word truncation according to the magnifying that is defined in the settings.
+</br>Unfortunately, the iOS system doesn&#39;t handle natively this point that can be implemented only by programing to get an appreciated visual depiction.</p>
+<p></div></p>
+<p><div class="tab-pane" id="truncHyphen-Example" role="tabpanel" >
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/Troncature.png" />
+</br>The rationale behind is the use of a <code>NSMutableAttributedString</code> with a <code>NSMutableParagraphStyle</code> type property as exposed hereunder:</p>
 <pre><code class="objective-c">
 @interface TruncationHyphen () {
     __weak IBOutlet UILabel * myLabel;
@@ -1257,11 +1696,39 @@ class TruncationHyphen: UIViewController {
 }
 </code></pre>
 
-<p></br></br></p>
+<p></div>
+</div></br></br></p>
 <h2 id="graphical-elements-size">Graphical elements size</h2>
-<h3 id="description">Description</h3>
-<p>Exactly like text, images and tab/tool bar items have a scalable size thanks to accessibility settings but <strong>only since iOS11 with Xcode 9</strong>.
-</br>The example below to illustrate these new features is obtained by following the steps hereafter &nbsp;:
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#graphEltSize-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#graphEltSize-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#graphEltSize-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="graphEltSize-Description"
+     role="tabpanel">
+Exactly like text, images and tab/tool bar items have a scalable size thanks to accessibility settings but <strong>only since iOS11 with Xcode 9</strong>.</p>
+<p></div></p>
+<p><div class="tab-pane" id="graphEltSize-Example" role="tabpanel" >
+To illustrate these new features, the example below is obtained by following the steps hereafter:
 </br></br>1. Under Xcode, import the image to be enlarged with a <code>pdf</code> extension and a x1 resolution in the <code>xcassets</code> catalog.
 </br></br>2. In the new Image Set, tick <code>Preserve Vector Data</code> and specify <code>Single Scale</code> as Scales attribute &nbsp;:
 </br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
@@ -1269,26 +1736,54 @@ class TruncationHyphen: UIViewController {
 </br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_5.png" />
 </br></br>4. If a <strong>tab bar</strong> or a <strong>tool bar</strong> is used in the application, first repeat the previous 3 steps for each image included in the items to be enlarged in the middle of the screen and then link the image to its appropriate item &nbsp;:
 </br><img alt="" style="max-width: 350px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_6.png" />
-</br><strong>WARNING : don&#39;t forget to check your layout with these new images larger sizes.</strong></p>
-<h3 id="example">Example</h3>
-<p>An application with a tab bar, whose second bar item displays the Orange logo (added <code>Aspect Fit</code> content mode and constraints to stretch the image view), is created to test the features exposed in the description.
+</br><strong>WARNING : don&#39;t forget to check out your layout with these new images larger sizes.</strong>
+</br></br>An application with a tab bar, whose second bar item displays the Orange logo (added <code>Aspect Fit</code> content mode and constraints to stretch the image view), is created to test the features exposed in the description.
 </br></br>With the <code>Larger Accessibility Sizes</code> activation in the settings (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:</p>
 <ul>
 <li>A larger Orange image size.</li>
 <li>A larger version of the bar item in an overlay if you touch and hold over it.
-</br><img alt="" style="max-width: 1200px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" /></li>
+</br><img alt="" style="max-width: 1050px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" /></li>
 </ul>
-<h3 id="link">Link</h3>
+<p></div></p>
+<p><div class="tab-pane" id="graphEltSize-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility"><code>adjustsImageSizeForAccessibilityContentSizeCategory</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="continuous-adjustable-values">Continuous adjustable values</h2>
-<h3 id="description">Description</h3>
-<p>Graphics like <code>picker</code>, <code>stepper</code> or <code>slider</code> have the ability to continuously change the value they provide.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#adjustable-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#adjustable-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#adjustable-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="adjustable-Description"
+     role="tabpanel">
+Graphics like <code>picker</code>, <code>stepper</code> or <code>slider</code> have the ability to continuously change the value they provide.
 </br><img alt="picker, stepper and slider screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/ValeursAjustables_1.png" />
-</br>It&#39;s hard to render what&#39;s happening when the changing isn&#39;t graphically or vocally notified.
-</br>The following methodology to resolve this problem for blind people using VoiceOver may be the same for these three graphics, that&#39;s why only the <code>stepper</code> will be handled.
+</br>It&#39;s hard to render what&#39;s happening when the changing isn&#39;t graphically or vocally notified.</p>
+<p></div></p>
+<p><div class="tab-pane" id="adjustable-Example" role="tabpanel" >
+The following methodology to resolve this problem for blind people using VoiceOver may be the same for these three graphics, that&#39;s why only the <code>stepper</code> will be handled.
 </br></br>Creating a <code>stepper</code> with a <code>label</code> to display its value provides the following rendering :
 </br><img alt="stepper is vocalize like 3 differents objects" style="max-width: 900px; height: auto; " src="./images/iOSdev/ValeursAjustables_2.png" />
 </br>The focus must change to :</p>
@@ -1449,18 +1944,48 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
     }
 }
 </code></pre>
-<h3 id="link">Link</h3>
+
+<p></div></p>
+<p><div class="tab-pane" id="adjustable-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable"><code>UIAccessibilityTraitAdjustable</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="custom-actions">Custom actions</h2>
-<h3 id="description">Description</h3>
-<p>Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#customActions-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#customActions-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#customActions-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="customActions-Description"
+     role="tabpanel">
+Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
 </br>A convincing example is the iOS native mail that may suggest some actions as follows :
 </br><img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
-</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the previous accessible element instead of suggesting actions as above.
-</br></br>A solution may consist of <strong>associating the selected element with an array of actions</strong> that will be automatically introduced to the user.
+</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the previous accessible element instead of suggesting actions as above.</p>
+<p></div></p>
+<p><div class="tab-pane" id="customActions-Example" role="tabpanel" >
+A solution may consist of <strong>associating the selected element with an array of actions</strong> that will be automatically introduced to the user.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
 <pre><code class="objective-c">
 @interface CustomActions ()
@@ -1473,14 +1998,14 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
     [super viewDidLoad];
 
     UIAccessibilityCustomAction * a11yMoreAction = [[UIAccessibilityCustomAction alloc]initWithName:@"more"
-                                                                                                target:self
-                                                                                              selector:@selector(moreAction)];
+                                                                                             target:self
+                                                                                           selector:@selector(moreAction)];
     UIAccessibilityCustomAction * a11yFlagAction = [[UIAccessibilityCustomAction alloc]initWithName:@"flag"
-                                                                                                target:self
-                                                                                              selector:@selector(flagAction)];
+                                                                                             target:self
+                                                                                           selector:@selector(flagAction)];
     UIAccessibilityCustomAction * a11yDeleteAction = [[UIAccessibilityCustomAction alloc]initWithName:@"delete"
-                                                                                                  target:self
-                                                                                                selector:@selector(deleteAction)];
+                                                                                               target:self
+                                                                                             selector:@selector(deleteAction)];
 
     _persoElt.accessibilityCustomActions = @[a11yMoreAction,
                                              a11yFlagAction,
@@ -1548,21 +2073,50 @@ class CustomActions: UIViewController {
 
 <p></br>The code above gives rise to the following result thanks to consecutive flicks on the selected accessible element :
 </br><img alt="flick up to vocalize suggesterd actions with VoiceOver activated" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" /></p>
-<h3 id="links">Links</h3>
+<p></div></p>
+<p><div class="tab-pane" id="customActions-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions"><code>accessibilityCustomActions</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction"><code>UIAccessibilityCustomAction</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="custom-rotor">Custom rotor</h2>
-<h3 id="description">Description</h3>
-<p>Since iOS10, adding a new rotor option is possible thanks to the <strong>UIAccessibilityCustomRotor</strong> whose creation is based on 2 elements :</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#rotor-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#rotor-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#rotor-Link" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="rotor-Details"
+     role="tabpanel">
+Since iOS10, adding a new rotor option is possible thanks to the <strong>UIAccessibilityCustomRotor</strong> whose creation is based on 2 elements :</p>
 <ul>
 <li><strong>UIAccessibilityCustomRotorSearchPredicate</strong> : defines the logic according to the flick type on the screen.</li>
 <li><strong>UIAccessibilityCustomRotorItemResult</strong> : ensued element from the logic above.</li>
 </ul>
-<p><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" />
-</br></br>To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.</p>
+<p><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/CustomRotor_1.png" /></p>
+<p></div></p>
+<p><div class="tab-pane" id="rotor-Example" role="tabpanel" >
+    To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.</p>
 <pre><code class="objective-c">
 @interface CustomRotor ()
 @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
@@ -1657,25 +2211,58 @@ class CustomRotor: UIViewController {
 </code></pre>
 
 <p></br>The code above gives rise to the following illustrated steps :
-</br><img alt="changed display with a rotor option" style="max-width: 1200px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
+</br><img alt="changed display with a rotor option" style="max-width: 1100px; height: auto; " src="./images/iOSdev/CustomRotor_2.png" />
 </br>The use of a custom rotor is definitely not a natural part of a mobile application, that&#39;s why its <strong>functioning</strong> and <strong>purpose</strong> must be <strong>fully explained</strong> to assist the user experience.
 </br></br>The main difference between a rotor option and a custom action or an adjustable element relies on the fact that it can be activated whatever the selected element.
 </br>However, if the selected element is adjustable or holds any custom actions, <strong>its actions will prevail over those of the rotor</strong>.
 </br></br>Such a feature must be implemented with <strong>caution</strong> and according to <strong>specific needs</strong> whose only purpose should be to <strong>improve and facilitate the user experience</strong>.</p>
-<h3 id="links">Links</h3>
+<p></div></p>
+<p><div class="tab-pane" id="rotor-Link" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotor"><code>UIAccessibilityCustomRotor</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotoritemresult"><code>UIAccessibilityCustomRotorItemResult</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomrotorsearchpredicate"><code>UIAccessibilityCustomRotorSearchPredicate</code></a>
-</br></br></li>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="accessibility-options">Accessibility options</h2>
-<h3 id="states">States</h3>
-<p>On iOS, it is possible to check the accessibility options state. 
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#a11yOptions-States" 
+           role="tab" 
+           aria-selected="true">States</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#a11yOptions-Events" 
+           role="tab" 
+           aria-selected="false">Events</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#a11yOptions-Recap" 
+           role="tab" 
+           aria-selected="false">Recap</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#a11yOptions-Link" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="a11yOptions-States"
+     role="tabpanel">
+On iOS, it is possible to check the accessibility options state. 
 </br>Is VoiceOver activated? Is the audio-mono mode activated? Several methods that are part of the <code>UIKit</code> framework can help you to check with that.
 </br>The most useful method is <strong>UIAccessibilityIsVoiceOverRunning</strong> which allows to know whether VoiceOver is activated.
-</br></br>Some other methods are deeply explained in a WWDC 2018 video <em>(Deliver en exceptional accessibility experience)</em> whose content is perfectly detailed in the <a href="./dev-ios-wwdc-18230.html">iOS WWDC section</a> of this site.</br></br></p>
-<h3 id="example">Example</h3>
+</br></br>Some other methods are deeply explained in a <a href="./dev-ios-wwdc-18230.html" style="text-decoration: underline;">WWDC 2018 video</a> <em>(Deliver en exceptional accessibility experience)</em> whose content is perfectly detailed in the iOS WWDC section of this site.</br></br></p>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
@@ -1687,14 +2274,15 @@ class CustomRotor: UIViewController {
 
     print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
 </code></pre>
-<h3 id="events">Events</h3>
-<p>iOS sends many accessibility events when accessibility options have changed.
-</br>For example, if VoiceOver is deactivated, the running applications will receive the <code>UIAccessibilityVoiceOverStatusDidChangeNotification</code> event.
-</br>This is very useful when used simultaneously with <code>UIAccessibilityIsVoiceOverRunning</code>.</p>
-<p>Let&#39;s say the application behaves differently when VoiceOver is turned on.
+
+<p></div></p>
+<p><div class="tab-pane" id="a11yOptions-Events" role="tabpanel" >
+iOS sends many accessibility events when accessibility options have changed.
+</br></br>For example, if VoiceOver is deactivated, the running applications will receive the <code>UIAccessibilityVoiceOverStatusDidChangeNotification</code> event.
+</br>This is very useful when used simultaneously with <code>UIAccessibilityIsVoiceOverRunning</code>.
+</br></br>Let&#39;s say the application behaves differently when VoiceOver is turned on.
 </br>What happens if VoiceOver is disabled ? This is exactly the use case when the system events can be used.
 </br>By listening to these events, it is possible to dynamically change how the application behaves.</br></br></p>
-<h3 id="example">Example</h3>
 <p>In this example, a method is fired when VoiceOver or Switch Control status has changed.</p>
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
@@ -1742,31 +2330,518 @@ class CustomRotor: UIViewController {
         print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
     }
 </code></pre>
-<h3 id="links">Links</h3>
-<ul>
-<li><a href="./criteria-ios.html#accessibility-options">Accessibility options</a> <em>(iOS conception)</em></li>
-</ul>
-<p>All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc">options</a> are available on the official documentation from Apple.
+
+<p></div></p>
+<p><div class="tab-pane" id="a11yOptions-Recap" role="tabpanel" >
+All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc" style="text-decoration: underline;">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc" style="text-decoration: underline;">options</a> are available on the official documentation from Apple.
 </br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
-</br></br></p>
+</div></p>
+<p><div class="tab-pane" id="a11yOptions-Link" role="tabpanel" ></p>
+<ul>
+<li><a href="./criteria-ios.html#accessibility-options">Accessibility options</a> <em>(iOS conception)</em>
+</div>
+</div></br></br></li>
+</ul>
+<h2 id="navigation-bar">Navigation bar</h2>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#navBar-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#navBar-LeftBarItem" 
+           role="tab" 
+           aria-selected="false">LeftBarItem</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#navBar-Title" 
+           role="tab" 
+           aria-selected="false">Title</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#navBar-RightBarItem" 
+           role="tab" 
+           aria-selected="false">RightBarItem</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#navBar-ReadingOrder" 
+           role="tab" 
+           aria-selected="false">Reading order</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#navBar-Link" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="navBar-Description"
+     role="tabpanel">
+Using a navigation bar is a common practice that can be divided into three main parts:
+</br></br><img alt="" style="max-width: 500px; height: auto; " src="./images/iOSdev/NavigationBar_1.png" /></p>
+<ul>
+<li><strong>LeftBarItem</strong> : usually includes only a single element to get back to the previous screen.</li>
+<li><strong>Title</strong> : often presented as a simple text that may be build with StackViews in the most complex use cases.</li>
+<li><strong>RightBarItem</strong> : area  that might contains many different icons <em>(account, authentication, validation...)</em>.</li>
+</ul>
+<p>Using the standard components with few navigation bar customizations is a good way to give rise to the best VoiceOver result with minimal effort.
+</br></br>Unfortunately, some project constraints may prevent such a practice: specific examples are then provided hereunder so as to ease some delicate implementations that might include the reading order of items comprising even those of the navigation bar.
+</div></p>
+<div class="tab-pane" id="navBar-LeftBarItem" role="tabpanel" >
+
+<p>Once the navigation bar loaded, a new <code>label</code> must be provided so as to amend only the VoiceOver reading out without modifying the appearance of the left bar item.</p>
+<pre><code class="objective-c">
+    self.navigationController.navigationBar.backItem.accessibilityLabel = @"new label for the back button";
+</code></pre><pre><code class="swift">
+    navigationController?.navigationBar.backItem?.accessibilityLabel = "new label for the back button"
+</code></pre>
+
+<p></br>The customization of this element often consists in <strong>displaying a single disclosure indicator with no text</strong>.
+</br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/NavigationBar_2.png" />
+</br>The two possible achievements that are detailed in the following examples are based on the standard component replacement by a customized <strong>UIBarButtonItem</strong> with a simple <strong>image as an incoming parameter</strong> for the disclosure indicator: </p>
+<pre><code class="objective-c">
+    UIBarButtonItem &#42; _a11yLeftBarButton;
+
+    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"imgInfo"]
+                                                         style:UIBarButtonItemStyleDone
+                                                        target:self
+                                                        action:@selector(goBackToThePreviousView:)];
+
+    _a11yLeftBarButton.accessibilityLabel = @"previous screen";
+    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
+</code></pre><pre><code class="swift">
+    var a11yLeftBarButton: UIBarButtonItem?
+
+    a11yLeftBarButton = UIBarButtonItem(image: UIImage(named: "imgInfo"),
+                                        style: .done,
+                                        target: self,
+                                        action: #selector(goBackToThePreviousView(info:)))
+
+    a11yLeftBarButton!.accessibilityLabel = "previous screen"
+    navigationItem.leftBarButtonItem = a11yLeftBarButton
+</code></pre>
+
+<p></br>... or on a <strong>UIView</strong> with an added gesture recognizer to define the action of this element: it&#39;s a little bit longer than the previous one but it has the advantage of <strong>providing a frame</strong> whose interest will be enlighted if the reading order of the page items will include those of the navigation bar for instance.</p>
+<pre><code class="objective-c">
+    var a11yLeftBarButton: UIBarButtonItem?
+
+    UIImage &#42; img = [UIImage imageNamed:@"imgInfo"];
+    UIImageView &#42; imgView = [[UIImageView alloc]initWithImage:img];
+    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithCustomView:imgView];
+
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                          action:@selector(goBackToThePreviousView:)];
+    [_a11yLeftBarButton.customView addGestureRecognizer:tap];
+
+    _a11yLeftBarButton.isAccessibilityElement = YES;
+    _a11yLeftBarButton.accessibilityTraits = UIAccessibilityTraitButton;
+    _a11yLeftBarButton.accessibilityLabel = @"previous screen";
+
+    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
+</code></pre><pre><code class="swift">
+    var a11yLeftBarButton: UIBarButtonItem?
+
+    let a11yLeftBarButtonImage = UIImage(named: "imgInfo")
+    a11yLeftBarButton = UIBarButtonItem(customView: UIImageView(image: a11yLeftBarButtonImage))
+
+    let tap = UITapGestureRecognizer(target: self,
+                                     action: #selector(goBackToThePreviousView(info:)))
+    a11yLeftBarButton?.customView?.addGestureRecognizer(tap)
+
+    a11yLeftBarButton?.isAccessibilityElement = true
+    a11yLeftBarButton?.accessibilityTraits = .button
+    a11yLeftBarButton?.accessibilityLabel = "previous screen"
+
+    navigationItem.leftBarButtonItem = a11yLeftBarButton
+</code></pre>
+
+<p></br>Then, the chosen implementation will depend on the purpose of the new created element.
+</div></p>
+<p><div class="tab-pane" id="navBar-Title" role="tabpanel" >
+In order to have a quick access to the accessibility properties of a navigation bar title item, it&#39;s recommended to <strong>implement its content in UIView form</strong>:</p>
+<pre><code class="objective-c">
+    UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
+    a11yTitleLabel.text = @"TITLE";
+    [a11yTitleLabel sizeToFit];
+
+    self.navigationItem.titleView = a11yTitleLabel;
+    self.navigationItem.titleView.accessibilityLabel = @"writing and reading out are different";
+</code></pre><pre><code class="swift">
+    let a11yTitleLabel = UILabel()
+    a11yTitleLabel.text = "TITLE"
+    a11yTitleLabel.sizeToFit()
+
+    navigationItem.titleView = a11yTitleLabel
+    navigationItem.titleView?.accessibilityLabel = "writing and reading out are different"
+</code></pre>
+
+<p></div></p>
+<p><div class="tab-pane" id="navBar-RightBarItem" role="tabpanel">
+</br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/NavigationBar_3.png" />
+</br><strong>Using UIView is recommended</strong> when new elements are created in the right part of the navigation bar so as to ease some VoiceOver future implementations.</p>
+<pre><code class="objective-c">
+    UIBarButtonItem &#42; _a11yRightBarButton;
+
+    UILabel &#42; a11y = [[UILabel alloc]init];
+    a11y.text = @"OK";
+    [a11y sizeToFit];
+    [a11y setUserInteractionEnabled:YES]; //Mandatory to use the 'tap gesture'.
+
+    _a11yRightBarButton = [[UIBarButtonItem alloc]initWithCustomView:a11y];
+
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self 
+                                                                          action:@selector(validateActions:)];
+    [_a11yRightBarButton.customView addGestureRecognizer:tap];
+
+    _a11yRightBarButton.isAccessibilityElement = YES;
+    _a11yRightBarButton.accessibilityTraits = UIAccessibilityTraitButton;
+    _a11yRightBarButton.accessibilityLabel = @"validate your actions";
+
+    self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
+</code></pre><pre><code class="swift">
+    var a11yRightBarButton: UIBarButtonItem?
+
+    let a11y = UILabel()
+    a11y.text = "OK"
+    a11y.sizeToFit()
+    a11y.isUserInteractionEnabled = true //Mandatory to use the 'tap gesture'.
+
+    a11yRightBarButton = UIBarButtonItem(customView: a11y)
+
+    let tap = UITapGestureRecognizer(target: self,
+                                     action: #selector(validateActions(info:)))
+    a11yRightBarButton?.customView?.addGestureRecognizer(tap)
+
+    a11yRightBarButton?.isAccessibilityElement = true
+    a11yRightBarButton?.accessibilityTraits = .button
+    a11yRightBarButton?.accessibilityLabel = "validate your actions"
+
+    navigationItem.rightBarButtonItem = a11yRightBarButton
+</code></pre>
+
+<p></div></p>
+<p><div class="tab-pane" id="navBar-ReadingOrder" role="tabpanel">
+Usually, we don&#39;t need to change the VoiceOver reading order for the navigation bar items but it&#39;s sometimes necessary ⟹ tutorial page whose <code>RightBarItem</code> triggers the display of the next page for instance.
+</br></br>As an example, let&#39;s assume that the <code>RightBarItem</code> must be the last focused element thanks to one-finger left flicks in order to illustrate a reading order modification that involves the navigation bar items.
+</br></br>The proposed page will be composed of the following elements:</p>
+<p><ul>
+  <li>A navigation bar with a disclosure indicator <em>(LeftBarItem)</em>, a title and a &#39;OK&#39; button <em>(RightBarItem)</em>.</li>
+  <li>Five not consecutive labels.</li>
+  <li>An &#39;ACTION&#39; button that is horizontally and vertically centered.</li>
+</ul>
+<img alt="" style="max-width: 200px; height: auto; " src="./images/iOSdev/NavigationBar_4.png" />
+</br>The rationale behind this presentation is to follow this order: LeftBarItem, title, Label1, Label2, Label3, &#39;ACTION&#39; button, Label4, Label5 and RightBarItem.
+</br></br>First of all, the navigation bar items are customized thanks to the code examples provided in the other sheets of this section.</p>
+<pre><code class="objective-c">
+@interface NavigationBarReadingOrder() {
+    UIBarButtonItem &#42; _a11yLeftBarButton;
+    UIView &#42; _a11yBarTitle;
+    UIBarButtonItem &#42; _a11yRightBarButton;
+}
+@end
+
+
+@implementation NavigationBarReadingOrder
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [self setBackItem];
+    [self setTitle];
+    [self setNextPageBarButton];
+}
+
+
+- (void)setBackItem {
+
+    UIImage &#42; img = [UIImage imageNamed:@"infoImg"];
+    UIImageView &#42; imgView = [[UIImageView alloc]initWithImage:img];
+    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithCustomView:imgView];
+
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                          action:@selector(goBackToThePreviousView:)];
+    [_a11yLeftBarButton.customView addGestureRecognizer:tap];
+
+    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
+}
+
+
+- (void)setTitle {
+
+    UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
+    a11yTitleLabel.text = @"TITLE";
+    [a11yTitleLabel sizeToFit];
+
+    self.navigationItem.titleView = a11yTitleLabel;
+    _a11yBarTitle = self.navigationItem.titleView;
+}
+
+
+- (void)setNextPageBarButton {
+
+    UILabel &#42; a11y = [[UILabel alloc]init];
+    a11y.text = @"OK";
+    [a11y sizeToFit];
+    [a11y setUserInteractionEnabled:YES];
+
+    _a11yRightBarButton = [[UIBarButtonItem alloc]initWithCustomView:a11y];
+
+    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                          action:@selector(validateActions:)];
+    [_a11yRightBarButton.customView addGestureRecognizer:tap];
+
+    self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
+}
+@end
+</code></pre><pre><code class="swift">
+class OrderViewController: UIViewController {
+
+    var a11yLeftBarButton: UIBarButtonItem?
+    var a11yBarTitle: UIView?
+    var a11yRightBarButton: UIBarButtonItem?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setBackItem()
+        setTitle()
+        setNextPageBarButton()
+    }
+
+    private func setBackItem() {
+        let a11yLeftBarButtonImage = UIImage(named: "infoImg")
+        a11yLeftBarButton = UIBarButtonItem(customView: UIImageView(image: a11yLeftBarButtonImage))
+
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(goBackToThePreviousView(info:)))
+        a11yLeftBarButton?.customView?.addGestureRecognizer(tap)
+
+        navigationItem.leftBarButtonItem = a11yLeftBarButton
+    }
+
+    private func setTitle() {
+
+        let a11yTitleLabel = UILabel()
+        a11yTitleLabel.text = "TITLE"
+        a11yTitleLabel.sizeToFit()
+
+        navigationItem.titleView = a11yTitleLabel
+        a11yBarTitle = navigationItem.titleView
+    }
+
+    private func setNextPageBarButton() {
+
+        let a11y = UILabel()
+        a11y.text = "OK"
+        a11y.sizeToFit()
+        a11y.isUserInteractionEnabled = true
+
+        a11yRightBarButton = UIBarButtonItem(customView: a11y)
+
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(goToTheNextPage(info:)))
+        a11yRightBarButton?.customView?.addGestureRecognizer(tap)
+
+        navigationItem.rightBarButtonItem = a11yRightBarButton
+    }
+}
+</code></pre>
+
+<p></br>Next, we <strong>create accessible elements</strong> for the navigation bar and we <strong>define the VoiceOver reading order</strong> for the entire page thanks to its <code>accessibilityElements</code> array.
+</br>The entire page and the navigation bar are two different containers that lead to <strong>hiding to VoiceOver the navigation bar native items</strong> and to transfer them to the page view with the focus appropriate coordinates.</p>
+<pre><code class="objective-c">
+@interface NavigationBarReadingOrder() {
+    UIBarButtonItem &#42; _a11yLeftBarButton;
+    UIView &#42; _a11yBarTitle;
+    UIBarButtonItem &#42; _a11yRightBarButton;
+}
+
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel1;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel2;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel3;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel4;
+@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel5;
+@property (weak, nonatomic) IBOutlet UIButton &#42; a11yCentralButton;
+
+@end
+
+
+@implementation NavigationBarReadingOrder
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self createA11yElts];
+    self.navigationController.navigationBar.accessibilityElementsHidden = YES;
+}
+
+
+- (void)createA11yElts {
+
+    UIView &#42; navBarView = [[[_a11yBarTitle superview] superview] superview];
+
+    UIView &#42; leftButtonView = [_a11yLeftBarButton valueForKey:@"view"];
+    UIAccessibilityElement * a11yLBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+    a11yLBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[leftButtonView superview] superview].frame toView:self.view];
+    a11yLBB.accessibilityLabel = @"previous screen";
+    a11yLBB.accessibilityTraits = UIAccessibilityTraitButton;
+
+    UIAccessibilityElement &#42; a11yTBV = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+    a11yTBV.accessibilityFrameInContainerSpace = [navBarView convertRect:[self.navigationItem.titleView superview].frame toView:self.view];
+    a11yTBV.accessibilityLabel = @"writing and reading out are different";
+    a11yTBV.accessibilityTraits = UIAccessibilityTraitHeader;
+
+    UIView &#42; rightButtonView = [_a11yRightBarButton valueForKey:@"view"];
+    UIAccessibilityElement &#42; a11yRBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+    a11yRBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[rightButtonView superview] superview].frame toView:self.view];
+    a11yRBB.accessibilityLabel = @"next screen";
+    a11yRBB.accessibilityTraits = UIAccessibilityTraitButton;
+
+    self.view.accessibilityElements = @[a11yLBB,
+                                        a11yTBV,
+                                        _a11yLabel1,
+                                        _a11yLabel2,
+                                        _a11yLabel3,
+                                        _a11yCentralButton,
+                                        _a11yLabel4,
+                                        _a11yLabel5,
+                                        a11yRBB];
+}
+@end
+
+</code></pre><pre><code class="swift">
+@IBOutlet weak var a11yLabel1: UILabel!
+@IBOutlet weak var a11yLabel2: UILabel!
+@IBOutlet weak var a11yLabel3: UILabel!
+@IBOutlet weak var a11yLabel4: UILabel!
+@IBOutlet weak var a11yLabel5: UILabel!
+@IBOutlet weak var a11yCentralButton: UIButton!
+
+override func viewDidAppear(&#95; animated: Bool) {
+    super.viewDidAppear(animated)
+
+    createA11yElts()
+    navigationController?.navigationBar.accessibilityElementsHidden = true
+}
+
+private func createA11yElts() {
+
+    let navBarView = a11yBarTitle?.superview?.superview?.superview
+
+    let leftButtonView = a11yLeftBarButton?.value(forKey: "view") as? UIView
+    let a11yLBB = UIAccessibilityElement(accessibilityContainer: self.view!)
+    a11yLBB.accessibilityFrameInContainerSpace = navBarView!.convert((leftButtonView?.superview?.superview!.frame)!,to:self.view)
+    a11yLBB.accessibilityLabel = "previous screen"
+    a11yLBB.accessibilityTraits = .button
+
+    let a11yTBV = UIAccessibilityElement(accessibilityContainer: self.view!)
+    a11yTBV.accessibilityFrameInContainerSpace = navBarView!.convert((navigationItem.titleView?.superview!.frame)!,to:self.view)
+    a11yTBV.accessibilityLabel = "writing and reading out are different"
+    a11yTBV.accessibilityTraits = .header
+
+    let rightButtonView = a11yRightBarButton?.value(forKey: "view") as? UIView
+    let a11yRBB = UIAccessibilityElement(accessibilityContainer: self.view!)
+    a11yRBB.accessibilityFrameInContainerSpace = navBarView!.convert((rightButtonView?.superview?.superview!.frame)!,to:self.view)
+    a11yRBB.accessibilityLabel = "next screen"
+    a11yRBB.accessibilityTraits = .button
+
+    self.view.accessibilityElements = [a11yLBB,
+                                       a11yTBV,
+                                       a11yLabel1!,
+                                       a11yLabel2!,
+                                       a11yLabel3!,
+                                       a11yCentralButton!,
+                                       a11yLabel4!,
+                                       a11yLabel5!,
+                                       a11yRBB]
+}
+</code></pre>
+
+<p></br>The result corresponds to the desired reading order using successive one-finger flicks to select the different accessible elements.
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/NavigationBar_5.png" />
+</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/NavigationBar_6.png" />
+</div></p>
+<p><div class="tab-pane" id="navBar-Link" role="tabpanel"></p>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/uinavigationbar">UINavigationBar</a>
+</div>
+</div>
+</br></br></li>
+</ul>
 <h2 id="speech-synthesis">Speech synthesis</h2>
-<h3 id="description">Description</h3>
-<p>Many <a href="./dev-ios-wwdc-18236.html#Uses">use cases</a> are good candidates to use the speech synthesis and they aren&#39;t necessary all part of accessibility.
-</br>However, in that perspective, it&#39;s important to note that this <strong>feature doesn&#39;t replace VoiceOver</strong> but could be a good complement to the screen reader implementation <em>(the speech overlaps the screen reader voice)</em>.</p>
-<h3 id="details">Details</h3>
-<p>Few elements are mandatory to create a speech synthesis on the fly:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#speechSyn-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#speechSyn-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#speechSyn-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#speechSyn-Phonemes" 
+           role="tab" 
+           aria-selected="false">Phonemes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#speechSyn-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="speechSyn-Description"
+     role="tabpanel">
+Many <a href="./dev-ios-wwdc-18236.html#Uses">use cases</a> are good candidates to use the speech synthesis and they aren&#39;t necessary all part of accessibility.
+</br></br>However, in that perspective, it&#39;s important to note that this <strong>feature doesn&#39;t replace VoiceOver</strong> but could be a good complement to the screen reader implementation <em>(the speech overlaps the screen reader voice)</em>.
+
+</div>
+<div class="tab-pane" id="speechSyn-Details" role="tabpanel">
+Few elements are mandatory to create a speech synthesis on the fly:
 <ul>
-<li><strong>The text</strong>: <code>AVSpeechUtterance</code> instance with a <code>voice</code> property that&#39;s <code>AVSpeechSynthesisVoice</code> typed.</li>
-<li><strong>The synthesizer</strong>: <code>AVSpeechSynthesizer</code> instance that handles the incoming text with an events control thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol.
-</br></br><img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/SpeechSynthesizer.png" /></li>
+  <li><strong>The text</strong>: <code>AVSpeechUtterance</code> instance with a <code>voice</code> property that&#39;s <code>AVSpeechSynthesisVoice</code> typed.</li>
+  <li><strong>The synthesizer</strong>: <code>AVSpeechSynthesizer</code> instance that handles the incoming text with an events control thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol.</li>
 </ul>
-<h3 id="example">Example</h3>
-<p>To be sure that a bunch of <code>AVSpeechUtterance</code> instances is entirely vocalized, it&#39;s <a href="./dev-ios-wwdc-18236.html#Basics">essential</a> to retain the <code>AVSpeechSynthesizer</code> instance until the speech is done.
-</br></br>The following example will define the speech rate and the voice pitch/volume for each utterance while:</p>
+<img alt="" style="max-width: 800px; height: auto; " src="./images/iOSdev/SpeechSynthesizer.png" />
+</div>
+<div class="tab-pane" id="speechSyn-Example" role="tabpanel">
+To be sure that a bunch of <code>AVSpeechUtterance</code> instances is entirely vocalized, it&#39;s <a href="./dev-ios-wwdc-18236.html#Basics">essential</a> to retain the <code>AVSpeechSynthesizer</code> instance until the speech is done.
+</br></br>The following example will define the speech rate and the voice pitch/volume for each utterance while:
 <ul>
-<li>Highlighting the vocalized word thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol.</li>
-<li>Pausing and resuming from where the speech stopped thanks to some <code>AVSpeechSynthesizer</code> instance methods.</li>
+  <li>Highlighting the vocalized word thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol.</li>
+  <li>Pausing and resuming from where the speech stopped thanks to some <code>AVSpeechSynthesizer</code> instance methods.</li>
 </ul>
+
 <pre><code class="objective-c">
 @interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
 
@@ -1923,20 +2998,23 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 }
 </code></pre>
 
-<p>When a particular spelling is intended, phonetics is highly recommended to get the desired purpose.</p>
+<p></div></p>
+<div class="tab-pane" id="speechSyn-Phonemes" role="tabpanel">
+When a particular spelling is intended, phonetics is highly recommended to get the desired purpose.
+
 <pre><code class="objective-c">
-    NSMutableAttributedString * attrStr = [[NSMutableAttributedString alloc] initWithString:@"blablabla" 
-                                                                             attributes:@{AVSpeechSynthesisIPANotationAttribute:@"ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"}];
+    NSMutableAttributedString &#42; attrStr = [[NSMutableAttributedString alloc] initWithString:@&quot;blablabla&quot; 
+                                                                             attributes:@{AVSpeechSynthesisIPANotationAttribute:@&quot;ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt&quot;}];
 
-    AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithAttributedString:attrStr];
+    AVSpeechUtterance &#42; utterance = [[AVSpeechUtterance alloc] initWithAttributedString:attrStr];
 
-    AVSpeechSynthesizer * synthesizer = [[AVSpeechSynthesizer alloc] init];
+    AVSpeechSynthesizer &#42; synthesizer = [[AVSpeechSynthesizer alloc] init];
     [synthesizer speakUtterance:utterance];
 </code></pre><pre><code class="swift">
         let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
 
-        let attrStr = NSMutableAttributedString(string: "blablabla",
-                                                attributes: [pronunciationKey: "ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"])
+        let attrStr = NSMutableAttributedString(string: &quot;blablabla&quot;,
+                                                attributes: [pronunciationKey: &quot;ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt&quot;])
 
         let utterance = AVSpeechUtterance(attributedString: attrStr)
 
@@ -1944,38 +3022,70 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
         synthesizer.speak(utterance)
 </code></pre>
 
-<p></br>Generating phonetics may be done in the device settings.
+</br>Generating phonetics may be done in the device settings.
 </br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
 </br>Once the menu <code>General</code> - <code>Accessibility</code> - <code>Speech</code> - <code>Pronunciations</code> is reached...
-</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></p>
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></br>
 <ol>
-<li>Select the &#39;<strong>+</strong>&#39; icon to add a new phonetic element.</li>
-<li>Name this new element in order to quickly find it later on.</li>
-<li>Tap the <strong>microphone</strong> icon.</li>
-<li>Vocalize an entire sentence or a single word.</li>
-<li>Listen to the different system proposals.</li>
-<li>Validate your choice with the &#39;<strong>OK</strong>&#39; button or cancel to start over.</li>
-<li>Tap the back button to confirm the new created phonetic element.</li>
-<li>Find all the generated elements in the <code>Pronunciations</code> page.</li>
+  <li>Select the &#39;<strong>+</strong>&#39; icon to add a new phonetic element.</li>
+  <li>Name this new element in order to quickly find it later on.</li>
+  <li>Tap the <strong>microphone</strong> icon.</li>
+  <li>Vocalize an entire sentence or a single word.</li>
+  <li>Listen to the different system proposals.</li>
+  <li>Validate your choice with the &#39;<strong>OK</strong>&#39; button or cancel to start over.</li>
+  <li>Tap the back button to confirm the new created phonetic element.</li>
+  <li>Find all the generated elements in the <code>Pronunciations</code> page.</li>
 </ol>
-<p><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
+
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
 </br>To get the phonetic expression inside the code, pass it through the mobile <code>Notes</code> application to be synchronized with the iCloud one from which a copy-paste becomes easy as a pie.
-</br></br>All the speech synthesizer functionalities are introduced in a <a href="./dev-ios-wwdc-18236.html">WWDC 2018 video</a> that&#39;s perfectly summarized in the WWDC section of this site.</br></p>
-<h3 id="links">Links</h3>
+</div>
+<div class="tab-pane" id="speechSyn-Links" role="tabpanel">
 <ul>
-<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice">AVSpeechSynthesisVoice</a></li>
-<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer">AVSpeechSynthesizer</a></li>
-<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate">AVSpeechSynthesizerDelegate</a></li>
-<li><a href="https://developer.apple.com/documentation/avfoundation/avspeechutterance">AVSpeechUtterance</a></li>
+  <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice">AVSpeechSynthesisVoice</a></li>
+  <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer">AVSpeechSynthesizer</a></li>
+  <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate">AVSpeechSynthesizerDelegate</a></li>
+  <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechutterance">AVSpeechUtterance</a> </li>
 </ul>
+</div>
+</div>
+
+<p>All the speech synthesizer functionalities are introduced in a <a href="./dev-ios-wwdc-18236.html">WWDC 2018 video</a> that&#39;s perfectly summarized in the WWDC section of this site.
+</br></br></p>
 <h2 id="switch-control">Switch Control</h2>
-<h3 id="description">Description</h3>
-<p>The accessibility Switch Control feature revolves around the point mode and the item mode.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#switchCtrl-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#switchCtrl-Custom" 
+           role="tab" 
+           aria-selected="false">Item mode customization</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#switchCtrl-Link" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="switchCtrl-Description"
+     role="tabpanel">
+The accessibility Switch Control feature revolves around the point mode and the item mode.
 </br><img alt="accessibility switch control screenshots" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControl.png" />
 </br>The element selection using the item mode works fine when the user interface isn&#39;t too complicated and uses native elements.
-</br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.</p>
-<h4 id="customization-of-the-item-mode">Customization of the item mode</h4>
-<p>The Xcode InterfaceBuilder shows the structure used for the example hereunder :
+</br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
+</div></p>
+<p><div class="tab-pane" id="switchCtrl-Custom" role="tabpanel">
+The Xcode InterfaceBuilder shows the structure used for the example hereunder :
 </br><img alt="xcode screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/SwitchControlIB.png" />
 </br>The following steps represent the customization :</p>
 <ul>
@@ -2100,21 +3210,54 @@ class ViewController: UIViewController {
 <p></br>The visual rendering is exposed hereunder :
 </br><img alt="visual rendering screenshot" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SwitchControl_1.png" />
 </br>Once activated, the created groups allow to reach directly the elements which they contain.</p>
-<h3 id="link">Link</h3>
+<p></div></p>
+<p><div class="tab-pane" id="switchCtrl-Link" role="tabpanel"></p>
 <ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle"><code>accessibilityNavigationStyle</code></a></br></br></li>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615200-accessibilitynavigationstyle"><code>accessibilityNavigationStyle</code></a>
+</div>
+</div></br></br></li>
 </ul>
 <h2 id="vocalized-application-name">Vocalized application name</h2>
-<h3 id="description">Description</h3>
-<p>The same result as the <a href="./voiceover.html#CustomLabel">VoiceOver gesture</a> to set a custom label can be reached by code.
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#appName-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#appName-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#appName-Link" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="appName-Description"
+     role="tabpanel">
+The same result as the <a href="./voiceover.html#CustomLabel" style="text-decoration: underline;">VoiceOver gesture</a> to set a custom label can be reached by code.
 </br>The rationale behind is to render a better vocalisation for an application name that could be very obscure according to its written abbreviation.
-</br></br><strong>CFBundleSpokenName</strong> is the property list key that vocally replaces an application name and might take many different translations depending on the foreign languages.
+</div></p>
+<p><div class="tab-pane" id="appName-Example" role="tabpanel">
+<strong>CFBundleSpokenName</strong> is the property list key that vocally replaces an application name and might take many different translations depending on the foreign languages.
 </br><img alt="" style="max-width: 750px; height: auto; " src="./images/iOSdev/AppName_1.png" />
 </br>In the end, we go from a weird to an understandable vocalized name that is defined upstream with no user modifications.
 </br><img alt="" style="max-width: 600px; height: auto; " src="./images/iOSdev/AppName_2.png" /></p>
-<h3 id="link">Link</h3>
+<p></div></p>
+<p><div class="tab-pane" id="appName-Link" role="tabpanel"></p>
 <ul>
-<li><a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundlespokenname"><code>CFBundleSpokenName</code></a></br></br><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+<li><a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundlespokenname"><code>CFBundleSpokenName</code></a>
+</div>
+</div></br></br><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
 Copyright (C) 2016  Orange SA
 See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
 </ul>

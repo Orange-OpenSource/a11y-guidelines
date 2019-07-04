@@ -423,15 +423,17 @@ Allow the screen reader user access to the main features of the application, but
 </section>
 <aside id="filter" class="col-md-4">
 <a name="filters"></a><h2>Filters</h2>
+<div id="feedback"></div>
 <a name="profiles"></a><h3>Profiles</h3>
 <ul id="profils" class="list-unstyled"></ul>
 <a name="tools"></a><h3>Tools</h3>
 <ul id="types" class="list-unstyled"></ul>
-</aside>
-</div>
-</div>
-</div>
+<div id="filter-footer"></div>
 
+<p></aside>
+</div>
+</div>
+</div></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -622,17 +624,25 @@ Insufficient contrast level will have detrimental impact on users with visual di
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:<ul>
-<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
-<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold</li>
+<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold</li>
 </ul>
 </li>
-<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … We do not have to apply this criterion, if:<ul>
-<li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
-<li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
-<li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
+<li>Special case of non-underlined links:<ul>
+<li>These links must have a 3:1 contrast ratio with the surrounding text</li>
+<li>These links must have a way other than the color to distinguish them on keyboard focus or mouse hover </li>
 </ul>
 </li>
-<li><strong>Important: </strong> for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all.</li>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics… </li>
+</ul>
+<p>We do not have to apply this criterion:</p>
+<ul>
+<li>If the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
+<li>If a text, like a label, a data table, brings the same information as the icon or the graphic</li>
+<li>If the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function<ul>
+<li><strong>Important: </strong> for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all</li>
+</ul>
+</li>
 </ul>
 <p><strong>Tool: </strong><br>The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> application can quickly measure colour contrast levels (free for Windows and Mac).  </p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
@@ -712,16 +722,17 @@ It is also possible to add a “pause” button directly in the interface.</p>
 <p><span data-menuitem="incontournables"></span>
 <strong>Target: </strong> everyone, especially the colour-blind and more generally people with visual impairments, cognitive limitations, hearing impairments and elderly people.<br><strong>When: </strong> as of design and during development.</p>
 <p><strong>Description: </strong><br>Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization…) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.</p>
+<p><strong>Checklist: </strong></p>
+<ul>
+<li>Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.</li>
+<li>Turn off the speakers, the level of information should remain the same.</li>
+<li>Be sure that links are not only identified by a different colour, usually underline them. If the are not underlined, on focus and on hover, provide an another way than color to distinguish them.</li>
+</ul>
 <p><strong>Do: </strong>  </p>
 <p><img src="images/couleur-ok.png" alt="illustration using coloured icons to convey information"></p>
 <p><strong>Don’t: </strong></p>
 <p><img src="images/couleur-ko.png" alt="illustration using coloured icons to convey information">  </p>
 <p>This example is not valid because the information is conveyed only by colour.</p>
-<p><strong>Checklist: </strong></p>
-<ul>
-<li>Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.</li>
-<li>Turn off the speakers, the level of information should remain the same.</li>
-</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -1227,18 +1238,25 @@ The label “film | 20h40…” does not have enough contrast. It will not be re
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:<ul>
-<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
-<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold.</li>
+<li>4.5: 1 minimum for a size smaller than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold</li>
+<li>3: 1 minimum is sufficient for a size greater than 24px <abbr>CSS </abbr> and 19px <abbr>CSS </abbr> in bold</li>
 </ul>
 </li>
-<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics … 
-We do not have to apply this criterion, if:<ul>
-<li>if the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
-<li>if a text, like a label, a data table, brings the same information as the icon or the graphic</li>
-<li>if the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function</li>
+<li>Special case of non-underlined links:<ul>
+<li>These links must have a 3:1 contrast ratio with the surrounding text</li>
+<li>These links must have a way other than the color to distinguish them on keyboard focus or mouse hover </li>
 </ul>
 </li>
-<li><strong>Important: </strong> for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all.</li>
+<li>Make sure that non-text GUI components, graphical objects and interface status (focus, hover) have a contrast of 3:1. This includes: buttons, radio buttons, check boxes, selection lists, navigation menus and panels, toolbars, tabs, carousels, sliders, progress bars, tooltips, graphics… </li>
+</ul>
+<p>We do not have to apply this criterion:</p>
+<ul>
+<li>If the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)</li>
+<li>If a text, like a label, a data table, brings the same information as the icon or the graphic</li>
+<li>If the contrast ratio of the image doesn&#39;t prevent the understanding of the content or the function<ul>
+<li><strong>Important: </strong> for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all</li>
+</ul>
+</li>
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).</p>
@@ -1452,16 +1470,16 @@ For fields with auto-completion, this avoids users input errors.</p>
 <p><strong>Target: </strong>everyone, especially the colour-blind and more generally people with visual impairments, cognitive limitations, hearing impairments and elderly people.<br><strong>When: </strong>as of design and during development.</p>
 <p><strong>Description: </strong> 
 Do not use colour or sensory characteristics (shape, size, sound, direction, visual localization …) as the only way of conveying information, indicating an action, requesting a response or distinguishing an element. The information provided by a colour change or a sensory characteristic must be completed with textual information (alternative) or / and semantic structuring.</p>
-<p><strong>Example:</strong><br>For a pie chart, where each part is coloured differently, you could add different pattern fills to identify them without colour.</p>
-<p><strong>Do: </strong><br><img src="images/couleur-ok.png" alt="illustration using coloured icons to convey information"></p>
-<p><strong>Don’t: </strong><br><img src="images/couleur-ko.png" alt="illustration using coloured icons to convey information">  </p>
-<p>This example is not valid because the information is conveyed only by colour.</p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>Take a screenshot and convert it in black and white. The loss of colour should not cause difficulty while navigating, nor cause loss of information.</li>
 <li>Turn off the speakers, the level of information should remain the same.</li>
-<li>Be sure that links are not only identified by a different colour, usually underline them.</li>
+<li>Be sure that links are not only identified by a different colour, usually underline them. If the are not underlined, on focus and on hover, provide an another way than color to distinguish them.</li>
 </ul>
+<p><strong>Example:</strong><br>For a pie chart, where each part is coloured differently, you could add different pattern fills to identify them without colour.</p>
+<p><strong>Do: </strong><br><img src="images/couleur-ok.png" alt="illustration using coloured icons to convey information"></p>
+<p><strong>Don’t: </strong><br><img src="images/couleur-ko.png" alt="illustration using coloured icons to convey information">  </p>
+<p>This example is not valid because the information is conveyed only by colour.</p>
 <p><strong>Users’ goal: </strong></p>
 <p>Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments …) to access the same information by other means.</p>
 <p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong></p>
@@ -1658,27 +1676,31 @@ If it is not possible, use the <code>title</code> attribute with the whole infor
 <h1 id="the-focus-order-must-be-sequential-and-logical-without-keyboard-trap">The focus order must be sequential and logical without keyboard trap</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"WCAG criteria by project phase - Developers", "url": "./incontournables.html#dev"},
+        {"label":"WCAG criteria by project phase – Developers", "url": "./incontournables.html#dev"},
         {"label":"The focus order must be sequential and logical without keyboard trap"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Target: </strong>everyone, especially people with motor or visual impairments and using a device outdoors.<br><strong>When: </strong>during development.</p>
+<p><strong>Target: </strong> everyone, especially people with motor or visual impairments and using a device outdoors.<br><strong>When: </strong> during development.</p>
 <p><strong>Description: </strong></p>
-<p>Elements (links, buttons, form fields) must receive the focus in a logical order for the user, without being trapped or blocked, even for dynamically-generated content appearing or disappearing (changing the DOM, Ajax,…). </p>
-<p>Example (numbered bullets indicate how focus moves in the page) :<br><img src="./images/focus/focus-order.png" alt="Screenshot showing focus order"></p>
+<p>Elements (links, buttons, form fields) must receive the focus in a logical order (top to bottom, left to right) when the focus order is necessary for understanding contents or for keyboard operability, even for dynamically generated content appearing or disappearing (DOM modification, Ajax,…). Of course, the focus must not be trapped or blocked.</p>
+<p>For the content too, if a sense of reading is necessary for a good understanding, it must be ensured that it is coherent for all users.</p>
+<p>Example (numbered bullets indicate how the focus moves in the page) :<br><img src="./images/focus/focus-order.png" alt="Screenshot showing focus order"></p>
 <p><strong>Checklist: </strong></p>
 <ul>
 <li>To validate this requirement, the focus position must be visible at all times (<code>outline</code> and <code>:focus</code> <abbr>CSS</abbr>  properties), see requirement 20 below.</li>
-<li>Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the order in which the focus is moved though the page. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus.</li>
+<li>Be careful, the order of appearance of the elements in the <abbr>HTML</abbr> code must be the same as the order in which the focus is moved or the reading order though the page if this order is important to understand or to be able to use the interface. An element at the end of the source code but positioned at the top of the page via <abbr>CSS</abbr> will be the last to receive the focus. It&#39;s the easiest solution! </li>
 <li>For maintainability, avoid using the <code>tabindex</code> attribute with values higher than 0.</li>
-<li>Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. - Even when appearance or disappearance of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPA</abbr> (single page application). For more details, see <a href="./exemples/dynFocus/index.html">Manage Focus for Dynamic Content</a></li>
+<li>Even when content appears or disappears of content, it is necessary to keep this logical and sequential path. This is true for dynamically generated content or for <abbr>SPAs</abbr> (single page applications). For more details, see <a href="./exemples/dynFocus/index.html">Manage Focus for Dynamic Content</a></li>
 </ul>
 <p><strong>Users’ goal: </strong></p>
 <p>Allowing logical navigation without “trapping” the keyboard in the pages of the application. Necessary for users navigating with the keyboard (visually impaired, motor impaired, cognitive impaired, using a device outdoors).</p>
-<p><strong>Don’t:</strong><br>A page containing a video player where the focus can enter inside the player, but cannot get out (keyboard trap).        </p>
-<p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong></p>
+<p><strong> Do: </strong></p>
+<p>In a page dedicated to search in the site content, the focus order should first go to the search form before going to the list of the results.</p>
+<p><strong>Don’t:</strong>     </p>
+<p>A page containing a video player where the focus can enter the player, but cannot get out (keyboard trap).        </p>
+<h2 id="-abbr-wcag-abbr-references-">**<abbr>WCAG</abbr> references:</h2>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a></li>
 <li><a href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a></li>
@@ -2181,7 +2203,7 @@ It allows to quickly create a responsive and accessible website branded with the
 <li><code>aria-label</code>, <code>aria-labelledby</code> allow to give an accessible name to an element</li>
 <li><code>aria-describedby</code> allows to add to the accessible name, if necessary, in addition, an accessible description to an element</li>
 </ul>
-<p>However, they only work well with certain elements:</p>
+<p>However, they only work well with some elements:</p>
 <ul>
 <li>interactive elements: <code>a</code> (with <code>href</code> attribute), <code>audio</code> and <code>video</code> (with <code>controls</code> attribute), <code>input</code> (exept <code>type=&quot;hidden&quot;</code>), <code>select</code>, <code>button</code> and <code>textarea</code></li>
 <li><code>img</code> and <code>iframe</code> elements</li>
@@ -2189,9 +2211,9 @@ It allows to quickly create a responsive and accessible website branded with the
 <li>One of the <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en"><abbr>ARIA</abbr> widget roles (27 in <abbr>ARIA</abbr> 1.1)</a>.</li>
 </ul>
 <p>For any other <abbr>HTML</abbr> element, these three <abbr>ARIA</abbr> attributes have few or even random support depending on the <abbr>AT</abr> / browser pair, so do not use as the only way of giving necessary information.</p>
-<h2 id="should-it-be-used-and-how-nbsp-">Should it be used and how&nbsp;?</h2>
-<p>Yes, we can use these three <abbr>ARIA</abbr> attributes on the elements with which it works (see above) to pass essential information, specifically to <abbr>AT</abbr>.</p>
-<p>You should know that <code>aria-label</code> must contain, as a value, a string of characters that will be the accessible name. While for <code>aria-labelledby</code> and <code>aria-describedby</code>, the value of this attribute references the <code>id</code> of an element of the page whose content will be used as the accessible name of the element.</p>
+<h2 id="should-it-be-used-and-how-">Should it be used and how?</h2>
+<p>Yes, we can use these three <abbr>ARIA</abbr> attributes on the elements with which it works (see above) to pass essential information specifically to <abbr>AT</abbr>.</p>
+<p>You should know that <code>aria-label</code> must contain, as a value, a string of characters that will be the accessible name. While for <code>aria-labelledby</code> and <code>aria-describedby</code>, the value of this attribute references one or more (space separated) <code>id</code> (auto referencing possible) of page elements whose content will be used as the accessible name of the element.</p>
 <p>When using <code>aria-label</code> or<code>aria-labelledby</code> on an element, the content or title of that element is no longer rendered to <abbr>AT</abbr> but replaced by the accessible name (for <code>aria-label</code> the contents of this attribute, for<code>aria-labelledby</code> the contents of the referenced element). Therefore, only the accessible name must give all the necessary information to <abbr>AT</abbr> and therefore to the user.</p>
 <p>When the two attributes <code>aria-labelledby</code> and<code>aria-label</code> are used, user agents give priority to aria-labelledby when calculating the accessible name property.</p>
 <p>At last, `aria-describedby&#39; will add an accessible description in addition to the accessible name of the element.</p>
@@ -2464,6 +2486,8 @@ More information in the <strong>examples</strong> section: <a href="exemples/zoo
 </style>
 
 <dl>
+<dt><a href="skiplinks.html">Skip links</a></dt>
+<dd>Skip links, what is it and how to implement them.</dd>
     <dt><a href="captcha.html"><abbr>CAPTCHA</abbr> Accessibility</a></dt>
     <dd><abbr>CAPTCHA</abbr> and accessibility</dd>
     <dt><a href="htmlaria.html">HTML 5 and <abbr>ARIA</abbr></a></dt>

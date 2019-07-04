@@ -122,18 +122,20 @@
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention 1et en mobilité.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
-<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) pour l’utilisateur, sans que celui-ci ne reste piégé ou bloqué, même pour du contenu généré dynamiquement apparaissant ou disparaissant (modification du DOM, Ajax,…). </p>
+<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) lorsque l&#39;ordre du focus est nécessaire pour la compréhension ou l&#39;opérabilité clavier et cela même pour du contenu généré dynamiquement (modification du DOM, Ajax,…). Bien-sûr, le focus ne doit ni rester piégé, ni bloqué. </p>
+<p>Pour le contenu, également, si un sens de lecture est nécessaire à la bonne compréhension, il faut s&#39;assurer que celui-ci est cohérent pour tout utilisateur.</p>
 <p>Exemple, les puces numérotées indiquent l&#39;ordre de déplacement du focus dans cette page :<br><img src="./images/focus/focus-order.png" alt="Capture d&#39;écran indiquant l&#39;ordre de déplacement du focus dans une page"></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété <code>outline</code> et <code>:focus</code> en <abbr>CSS</abbr>), voir exigence 20, ci-dessous.</li>
-<li>Attention à l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>est le même  que l&#39;ordre de déplacement du focus dans la page. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. </li>
+<li>Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>soit le même que l&#39;ordre de déplacement du focus ou de lecture de l&#39;information dans la page si cet ordre impacte la compréhension du contenu ou capacité d&#39;utiliser l&#39;interface. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. C&#39;est la solution la plus simple&nbsp;!</li>
 <li>Pour la maintenabilité, éviter l’utilisation de l’attribut <code>tabindex</code> avec des valeurs supérieures à 0.</li>
 <li>Même lors d’apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.
 Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en"><abbr>SPA</abbr> (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir <a href="./exemples/dynFocus/index.html">Gérer le focus pour du contenu dynamique</a></li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-Permettre la navigation logique sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
+Permettre la navigation logique, sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
+<p><strong>Exemple valide&nbsp;:</strong><br>Dans une page dédiée à la recherche dans le site, on passe, à la navigation clavier, sur le formulaire de recherche avant d&#39;arriver à la liste des résultats.      </p>
 <p><strong>Exemple non-valide&nbsp;:</strong><br>Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        </p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong></p>
 <ul>

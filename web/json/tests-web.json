@@ -391,10 +391,12 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que le contraste soit suffisant pour comprendre l'information portée par tous les composants interactifs, les textes"
+      "Vérifier que le contraste soit suffisant pour comprendre l'information portée par tous les composants interactifs, les textes",
+      "Vérifier que les liens non-soulignés ont un rapport de contraste suffisent avec le texte environnent"
     ],
     "resultat": [
-      "Présence d'éléments suffisamment contrastés"
+      "Présence d'éléments suffisamment contrastés",
+      "Présence de liens non-soulignés suffisamment contrastés"
     ],
     "exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
     "raccourcis": "",
@@ -433,7 +435,8 @@
 	],
     "resultat": [
       "L'information transmise par la couleur peut également être obtenue par un texte explicite",
-      "L'information transmise par la couleur est complétée par une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes)"
+      "L'information transmise par la couleur est complétée par une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes)",
+      "Cas particulier des liens dans du texte : s'ils ne sont pas soulignés, sur le focus clavier et au survol souris, fournir un autre moyen que le couleur pour les distinguer."
     ],
     "exception": "",
     "raccourcis": "",
