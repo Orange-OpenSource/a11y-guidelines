@@ -230,10 +230,13 @@ Allow the screen reader user access to the main features of the application, but
 </section>
 <aside id="filter" class="col-md-4">
 <h2>Filters</h2>
+<div id="feedback"></div>
 <h3>Profiles</h3>
 <ul id="profils" class="list-unstyled"></ul>
 <h3>Tools</h3>
 <ul id="types" class="list-unstyled"></ul>
+<div id="filter-footer"></div>
+
 </aside>
 </div>
 </div>
