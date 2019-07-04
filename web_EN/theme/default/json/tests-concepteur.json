@@ -1,0 +1,577 @@
+[
+  {
+    "themes": "Textual content",
+    "title": "Give a title to the pages",
+    "type": [],
+    "tests": [
+      "Identify all the pages / screens making up the structure of the site or the application"
+    ],
+    "verifier": [
+      "Every page or screen has a title",
+      "Each title is specific and applied to the page content, and is written from the most accurate information to the most general. <br/> example: [current page name - site name]."
+    ],
+    "resultat": [
+      "The page titles allow a user to know where they are in the site tree",
+      "To be effective the page title must be unique and represent the content of the page"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Provide sections with headings",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Examine the heading hierarchy"
+    ],
+    "verifier": [
+      "The page content is structured with headings level",
+      "The structure is adapted to the content",
+      "The headings are logically ordered",
+      "Every heading is relevant to the content that follows it"
+    ],
+    "resultat": [
+      "The page structure facilitates its understanding and makes it possible to optimize reading (quick reading, targeted reading)",
+      "The number of headings depends on the information density of the page. The absence of headings can be cumbersome but, conversely, an abundance of headings can be counterproductive",
+      "Level jumps, such as going from a “N” level heading straight to a “N+2” level heading, are inherently illogical and can disrupt reading",
+      "Headings guide and facilitate the reading, provided they are consistent with the content they precede"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Textual content",
+    "title": "Structuring data tables",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify data tables"
+    ],
+    "verifier": [
+      "Data tables are preceded by a heading; otherwise a legend is specified",
+      "Column and/or line headers indicate the nature of the data",
+      "Whenever possible, several simple tables are used instead of a complex table",
+      "In all the tables of the application, the texts are aligned to the left in the columns and the quantitative data (eg. numeric values) are aligned to the right",
+      "In multi-line tables, a pajama or zebra effect is applied (eg. alternate background color in one line out of 2)",
+      "Column and line headers are always displayed if a scrollbar is needed to navigate the table",
+      "For multiple-selection tables, actions that can be applied to multiple rows are grouped under the table (versus action buttons repeated on each row)"
+    ],
+    "resultat": [
+      "A heading or a caption makes it easier for screen reader users to find a table in a page, but more importantly to quickly understand the nature of the data presented",
+      "Column and/or line headers allow users to understand the nature of the table data",
+      "Tables are hard to parse for any user, they must be used sparingly, when there is no other solution",
+      "In a table, a text aligned to the left is easier to read; for quantitative data it's the opposite, you have to align them to the right",
+      "A background with an alternating color makes it easier to read a line in a multi-line table",
+      "If a scrollbar is needed to display the contents of the table, column and line headers must be fixed to keep them close to the data and facilitate their identification",
+      "Multi-selectable tables with identical actions for each line provide generic action buttons to ease presentation and cognitive load."
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Define text alternatives",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify all non-text elements conveying information (images, icons, etc.)"
+    ],
+    "verifier": [
+      "Text alternative is specified for any non-text element conveying information",
+      "The text alternative is relevant, considering the role of the element.<ul> <li>Image link element: the target of the link </li> <li>Image conveying information: the information conveyed by the image </li> <li>Image containing text: the text shown in the image </li> <li>Complex image (diagrams, graphs, etc.): the description of the image by a text, either directly in the page, or accessible via a link close to the image </li> <li>Decorative image: an empty text alternative</li> </ul> ",
+      "The functional icons and pictograms are explicit and have a relevant text alternative; if necessary, a tooltip with the information is also provided in addition"
+    ],
+    "resultat": [
+      "A text alternative (ALT attribute of the images) makes it possible to describe to users having access only to textual content any non-text informative element",
+      "The text alternative must describe the purpose or function of the element to be usable",
+      "Icons and pictograms with a function must be understandable and have a text alternative describing their exact function. An additional tooltip may be useful to visually impaired users"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Make audio, video and animation tracks accessible",
+    "type": [],
+    "tests": [
+      "Identify the audio, video and animation contents of the site or application",
+      "The article “Making videos, animations or audios accessible” presents the complete definitions and recommendations on this subject"
+    ],
+    "verify": [
+      "For all audio and video content, a complete transcript (text containing all the visual and auditory information) is present on the page or accessible via a link nearby",
+      "All videos are subtitled, subtitles are provided in text format and are not embedded directly into the video",
+      "Audio description is available for videos presenting information in visual form",
+      "No audio or video track will automatically start loading a page",
+      "“Pause”, “playback” and “volume control” controls are associated with every audio and video track,",
+      "Videos do not flash fast (no more than 3 flashes per second)"
+    ],
+    "resultat": [
+      "In order to allow any user who cannot hear or see to have access to the information, any audio or video track must be accompanied by a complete transcription in the form of text, located near the element to be described, or made available via a link ",
+      "Subtitles allow to convey all the information of the soundtrack. They must be provided in text format so they can be adapted to the needs of users (color, size, etc.)",
+      "An audio description describes the information conveyed only by the image, thus completing the audio for, for example, visually impaired users",
+      "Playing an audio or video track must always be done at the request of the user, they must have control over it",
+      "Any audio or video track can be interrupted and paused in order to leave the choice to the user; its volume must be adjustable",
+      "A quick flash in a video can trigger disorders such as epileptic seizures"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Non-text content",
+    "title": "Avoid captchas",
+    "type": [],
+    "tests": [
+      "Examine the captcha"
+    ],
+    "verifier": [
+      "To solve the captcha, users have the choice between an audio or visual system",
+      "If the captcha is only audio or only visual, an alternative is present in the form of a logical test (a question whose answer is obvious, a simple mathematical test, etc.) Otherwise, another solution to access the functionality secured by the captcha is provided"
+    ],
+    "resultat": [
+      "Users deprived of the visual information must be able to solve the captcha by an audio system; samely, those deprived of the auditory information must be able to solve it visually",
+      "Captchas based on a single resolution system must offer an alternative to allow the greatest number of users to have access to it"
+       ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Colors and contrasts",
+    "title": "Ensure a sufficient contrast between text and background",
+    "type": [],
+    "tests": [
+      "Examine graphic mockups using the Color Contrast Analyzer tool"
+    ],
+    "verifier": [
+      "The contrast between the text (or text as an image) and the background color is as follows: <ul><li>4.5:1 minimum for text size less than 24 CSS pixels or 19 CSS pixels in bold</li> <li>3:1 is sufficient for a text size greater than 24 CSS pixels or 19 CSS pixels in bold </li></ul>",
+      "Any graphical object conveying information and any interactive component and its states respects the 3: 1 ratio",
+      "Special case of non-underlined links, they must have a 3:1 contrast ratio with the surrounding text"
+    ],
+    "resultat": [
+      "In order to be legible, a text (or text as an image) must be sufficiently contrasted with the background",
+      "It is the same for the contrast of graphical objects conveying information (example: icons, diagram), interactive components (example: outline of an input field) and its states (example: hovering or on focus)",
+      "It must easy to distinguish a link from the rest of the text"
+    ],
+    "exception": "This recommendation does not apply in the following cases: <ul> <li>if the image is a logo </li><li>if a text, such as a label or a data table, provides the same information as the icon or graphic</li><li>if the lack of contrast in the image does not preclude understanding of the content or its function </li><li>if the components are inactive </li></ul> ",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Colors and contrasts",
+    "title": "Do not use color or other sensory-based information as the only source of information",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify elements using color to convey information",
+      "Identify elements using sensory data, like position, size or sound type, to transmit information"
+    ],
+    "verifier": [
+      "Color is not the only way to convey information",
+      "Information conveyed by sensory data can also be obtained through an explicit text"
+    ],
+    "resultat": [
+      "Color may not be perceived by a user, that is why any information conveyed by a color must also be conveyed by an explicit text or a visually explicit information (example: icons of different forms). Special case of links in text: if they are not underlined, on keyboard focus and mouse hover, provide a way other than color to distinguish them.",
+      "The same is true of sensory indications such as shape, position in space or sound, all must be accompanied by an alternative in a textual form"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Labelling links and buttons concisely and unequivocally",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "List all links, buttons and navigation items"
+    ],
+    "verifier": [
+      "Any link, button or navigation item with the same function is identically labelled",
+      "Each wording is relevant to the function it describes outside of any visual context,",
+      "The size of a label is short (<80 characters)",
+      "Image-based links and buttons have text alternatives"
+    ],
+    "resultat": [
+      "To avoid confusion, links, buttons and navigation items with the same label must point to the same target, or perform the same action",
+      "A link or a button must be understandable without the visual context of the page via its label. For more efficiency, the action button titles start with an explicit action verb (eg. “print” versus “impression”)",
+      "In order to alleviate the cognitive load for users, labels for links and buttons are short (maximum size recommended: 80 characters)",
+      "A link or button based on an image or icon, respects image recommendations"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Avoid dialog boxes and the opening of new windows",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "The opening of any new window or dialog is justified,",
+      "The texts contained in the dialog boxes are concise and explicit",
+      "The user is notified when an action may open a new window or tab"
+    ],
+    "resultat": [
+      "Any opening of windows or dialog boxes (pop-in) causes a change of context that can disturb the user. <br/> The use of dialog boxes must be limited to the presentation of information or actions that require immediate attention from the user. <br/> A new window is justified for the opening of an office document (eg. PDF), for the display of complementary contextual information (eg. instructions to fill a form), or when the user connected to a secure area, opens a page outside the secure zone",
+      "Dialogs allow you to interact with the user, for example, to alert them or ask them for confirmation; messages must be short and clear",
+      "In order not to surprise the user, the opening of a new window must first be announced. Thus they can choose to avoid triggering the event. In a specification document or in mockups, the label for the triggers is described as: [link target] + (new window), for exemple: 'Orange.com (new window)' "
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Providing skip links",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "Skip links are present as the first interactive element of the page. These links point to the main regions of the page (navigation, main content, footer, etc.)",
+      "The number of skip links and their destinations are relevant to the density of the content (1 to 6 links maximum)"
+    ],
+    "resultat": [
+      "Skip links are useful shortcuts for all users who can not use a mouse (keyboard user, screen reader, etc.) or only have a partial view of the screen (screen magnifier user). <br/>For example they enable a keyboard user to avoid tabbing through all the items in the main menu to reach the main content of the page ",
+      "The implementation of skip links must take into account the level of difficulty of access to information and the structure of the page. Heavy content pages have a maximum of 6 skip links, versus 1 link minimum for a classic page (light content, reduced main menu, etc.) Moreover, it is useless to provide a “Skip to main content” shortcut, if the number of elements preceding the content is limited"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Make sure that the user keeps control of the system during interactions",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Examine user paths and associated specifications"
+    ],
+    "verifier": [
+      "Whatever the user paths, only the actions requested by the user are executed and the user can always interrupt them. The user controls the system"
+    ],
+    "resultat": [
+      "The user must control the system and not the other way around. <br/> It's even more important if the user does not see what is happening on the screen, they can quickly be lost if the system takes control without notifying them. For isntance, the validation of a form must not be automatic but requires an explicit activation of a button by the user. In the same way, updating an application or downloading a new element must be done with the agreement of the user "
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Allow the user to control animations",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify any content intended to be in motion, updated automatically, flashing or scrolling for more than 5 seconds"
+    ],
+    "verifier": [
+      "The animations (including video and audio) are paused when the page loads",
+      "If an animation is moving when the page loads, a mechanism allows the user to stop it, pause it or hide it",
+      "No item on the page blinks fast or generates flashes more than 3 times per second"
+    ],
+    "resultat": [
+      "Moving elements distract some users and make reading harder (especially for those being visually impaired, epileptic, or having attention problems), so they should be paused by default on page load",
+      "If animations are in automatic reading, it is essential to be able to stop or hide them",
+      "Flashes or any flashing element have a strong impact on epileptic users, and will also disrupt the attention of all users"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Explicitly locate the page in the site and provide several ways to access it",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify navigation and search items"
+    ],
+    "verifier": [
+      "In all pages, at least 2 of the mechanisms listed below are present: <ul><li>a main navigation menu, showing the current position of the user </li><li>a sitemap </li><li>a search mechanism </li><li>a list of links to navigate through the whole site </li></ul>",
+      "In the main navigation menu, the active item is accompanied by a visual hint",
+      "The label of each topic, tab, menu item is identical to the title of the page to which it refers"
+    ],
+    "resultat": [
+      "Depending on the user (capabilities, materials, preferences, etc.), it may be easier to use one mechanism or another. Best practices recommend giving the user a choice of at least 2 mechanisms to locate and access a page or content in the site",
+      "So that the user always knows where they are, in the global navigation menu, the active page is accompanied by a visual indication. This hint should not be based solely on color; for instance the current menu item is underlined",
+      "In order to confirm to the user after an action that they are in the right place, the title of the page must be consistent with the label of the starting point (name of the link, the heading or the item of menu)"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "General navigation",
+    "title": "Reassure the user with contextual messages",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Examine user paths"
+    ],
+    "verifier": [
+      "When the system is working (for example, when it's taken control), check that the user is warned: <ul><li>by a throbber for a delay between 2 and 6 seconds </li><li>by a progress bar beyond 6 seconds, completed with an numeric indication and/or a description of the current task </li><li>by an infinite progress bar if the time is unknown </li></ul>"
+    ],
+    "resultat": [
+      "The user must be informed of any system operation taking more than 3 seconds in order to be reassured and to avoid erroneous actions"
+	   ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Allow keyboard-only navigation",
+    "type": [],
+    "tests": [
+      "Examine the specifications"
+    ],
+    "verifier": [
+      "The interactive components of the application are based on native HTML interactive elements",
+      "Complex interactive components provide a keyboard equivalent to all mouse behaviors",
+      "A keyboard-based alternative solution is provided for any mouse-specific interaction (drag-and-drop, menu appearing on right-click, etc.)"
+    ],
+    "resultat": [
+      "Native HTML interactive elements are by default usable with a keyboard and well-known to users, so a user without a mouse will not be blocked if they have to use the application with the keyboard only",
+      "Complex interactive components (eg. drop-down menu) not based on native elements only, must be usable with the keyboard",
+      "Alternative solutions must be provided to any user who can not use a mouse. A feature based on a specific interaction with the mouse, must also be usable by a means compatible with keyboard navigation"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Ensure a sufficient visibility of the focus",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify interactive elements (links, buttons, form elements, interactive components)"
+    ],
+    "verifier": [
+      "The keyboard focus provided the browser is present and visible for all the interactive elements",
+      "The outline (the border that makes the element that has the focus prominent) has a thickness greater than 1 px",
+      "The outline has a contrast level of at least 3:1, regardless of the background color"
+    ],
+    "resultat": [
+      "Highlighting the elements receiving the focus allows keyboard users to get their bearings",
+      "The native thickness of the outline is not sufficient to ensure good visibility, so it needs to be increased",
+      "In the same way, the default outline does not always provide sufficient contrast depending on the background color, so the outline color has to be adjusted according to the background color."
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Keyboard navigation",
+    "title": "Make sure the focus order is logical and predictable",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify interactive elements (links, buttons, form elements, interactive components) and content"
+    ],
+    "verifier": [
+      "Moving the focus through the screen allows a logical and consistent navigation (from most important to least important, from top to bottom of the screen)",
+      "The reading order allows a good understanding of the content (from the most important to the least important, from top to bottom of the screen)",
+      "Visually, elements of the same nature are grouped, respecting the logic of reading and navigation"
+    ],
+    "resultat": [
+      "The focus order during keyboard navigation must be intuitive for the users. Interactive elements must be positioned on the screen in a logical way to avoid unintentional movements of the viewport",
+      "If the reading order is important, it must be consistent for any user",
+      "It may be necessary to group elements of the same kind in the same space, in order to facilitate understanding. The order of navigation in a group and the positioning of the groups in the overall course must be logical and predictable"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Use relative sizes for Responsive Web's sake",
+    "type": [],
+    "tests": [
+      "Examine the specifications associated with wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "No specification imposes a fixed maximum value (px (pixel), mm (millimeters), cm (centimeters), in (inches), pt (points is 1/72 of an inch) or pc (picas is 12 points)) for both the width and height of a text container. If a fixed width is set, then the height will have no fixed value ",
+      "This being said, a minimum value and/or values in relative units are allowed",
+      "If the site is adaptive (or responsive web design), features and information are available for the most common screen sizes (variable depending on the context of the project)"
+    ],
+    "resultat": [
+      "Texts contained in an element whose dimensions are defined in fixed size: (px (pixel), mm (millimeters), cm (centimeters), in (inches), pt (points is 1/72 of an inch) or pc (picas is 12 points), will be truncated when zoomed (text zoom to 200%) ",
+      "The definition of fixed maximum dimensions will also cause loss $or overlaps of information when zoomed",
+      "The dimensions must be defined by minimum values (min-width, min-height) or values in relative units (%, em, rem), in order to ensure an enlargement of the containers whatever the level of zoom",
+      "In the case of an adaptive (or responsive) site the user can interact with the application and view all the information regardless of the screen size"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes": "Layout",
+    "title": "Make it possible to lighten the texts",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "The space between the lines is equivalent to at least 1.5 times the size of the text. If this is not the case, no specification imposes a fixed value for the line spacing",
+      "No specification imposes a fixed value for the space between two paragraphs",
+      "No specification imposes a fixed value for the spacing between letters",
+      "No specification imposes a fixed value for the spacing between words"
+    ],
+    "resultat": [
+      "Users who are visually impaired, dyslexic or have cognitive problems have reading difficulties when the lines are too tight, they can be lost at the line break. This spacing criterion will ensure the text is always readable. Users must be able to adjust the spacing between lines to overcome their reading difficulties.To allow these adjustments, spacings should not be defined in a fixed-size unit: px (pixel), mm (millimeters), cm (centimeters), in (inches), pt (points is 1/72 of an inch) or pc (picas is 12 points) ",
+      "Samely, the space between paragraphs must be adjustable by the user",
+      "The spacing between letters must be adjustable by the user",
+      "The spacing between words must be adjustable by the user"
+	  ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+    {
+      "themes": "Layout",
+      "title": "Identify the different regions and elements of the page and ensure the coherence of the groupings",
+      "type": [],
+      "tests": [
+        "Examine wireframes and graphic mockups",
+        "Identify the main regions of the page (header, menu, etc.)",
+        "Identify the main content groups (interactive components, pop-in, etc.)"
+      ],
+      "verifier": [
+        "All links in text content are underlined or highlighted by visual cues, complementing the color",
+        "Information of the same nature is grouped in the same components (the same page, the same area in the page, the same menu, etc.)",
+        "The main regions of the page and groups of elements (submenu, drop-down list, etc.) are clearly identifiable visually (border, texture, colors, etc.)",
+        "A navigation system common to a group of pages is always presented in a consistent way (position, graphic aspect). Samely, action buttons common to several pages (same function or action on all pages) are always positioned in the same place"
+      ],
+      "resultat": [
+        "Assigning a different color to links is not enough to distinguish a link from the surrounding content; additional visual proof is necessary for a user who cannot see colors to spot them",
+        "Elements, data and information of the same nature and/or semantically related (eg. navigation links) must be physically grouped to facilitate their identification. For example, the logo, the title of the application and shared functions (utility links such as search engine, language choice) are located in the page header. Access to help or FAQ, contacts and legal notices are located in the footer ",
+        "All pages or dialogs of the same nature (eg. form page, help page, etc.) must have the same zoning (eg. the same organization). <br />For example, screen magnifier users, not perceiving the whole of a page on their screen, must be able to easily identify the limits of the different zones of contents. ",
+        "To gain efficiency and avoid errors, a navigation system common to a page group is always presented consistently (eg. if the application includes a step bar, this bar is set to the identically and visibly on all pages throughout the process)"
+      ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+   {
+    "themes": "Layout",
+    "title": "Define sensitive areas of sufficient size",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify the interactive elements"
+    ],
+    "verifier": [
+      "The dimensions of the interactive elements (links, form elements, boutons) are sufficient (at least 44px by 44px)"
+    ],
+    "resultat": [
+      "A user with motor difficulties may have trouble interacting with a touch application or using a mouse, if the interactive elements are not large enough"
+    ],
+    "exception": "<ul><li>Anchor / internal link to the page </ li><li>Link in the middle of a text block</li><li>Link to a footnote (at the end of a paragraph or sentence) </li><li>Clickable icon inside a text </li></ul> ",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "Themes": "Forms",
+    "title": "Facilitate the completion of forms",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify the forms"
+    ],
+    "verifier": [
+      "Each input field is accompanied by a label",
+      "The wording is concise and explicit",
+      "Each label is positioned in the immediate vicinity of its field. If there are several labels, they are left-aligned if the longest label in the list is 6 or less characters, and right-aligned otherwise",
+      "The same data does not need to be entered several times by the user",
+      "Default values are offered whenever the content is predictable",
+      "The application does not offer a form that exceeds the height of a screen page"
+    ],
+    "resultat": [
+      "A label allows the user to understand the role of the field, the type and format of data expected",
+      "The labels for fields and buttons must be relevant and understandable by all users",
+      "The label position must allow the user to associate it without hesitation with the field to which it refers",
+      "In order to alleviate the work of the user and avoid typing errors, an identical data must only be entered once, except for data that requires confirmation",
+      "For the same reasons, when possible, default values are proposed to the user to fill a field, eg. a list of checkable items rather than a free entry field",
+      "Long and complex forms, requiring scrolling, are to be avoided. They must be divided into several pages, using a visual process step"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+   {
+    "Themes": "Forms",
+    "title": "Protect the user from errors in forms",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "If the application has multiple forms, fields that expect identical data have all the same label",
+      "Required fields are indicated to users",
+      "The specific input formats are announced to users (example: date format)",
+      "Lists of selectable items use relevant inputs: <ol><li><b>radio buttons: </b>when only one item can be selected from a list of up to 5 items </li><li><b>drop-down lists: </b>when a single item can be selected from a list of more than 5 items </li><li><b>check boxes: </b>when more than one item can be selected. </li></ol>",
+      "An input control for text fields is proposed when necessary. Mandatory fields left empty are reported to the user, if possible before the validation of the form",
+      "Actions whose effect cannot be canceled can be controlled by the user.",
+      "Error or warning messages are easily identifiable and presented in a homogeneous way",
+      "The contents of the error or alert messages are relevant: <ul><li>Generic error messages like “You made a mistake” or “Error 404” must not be used; </li><li> each message explicitly describes the problem (context / origin of the error); </li><li> a procedure for solving the error is proposed whenever possible </li></ul>"
+    ],
+    "resultat": [
+      "For consistency and simplification, fields expecting identical data must be identically labelled",
+      "To avoid omissions before sending the form, mandatory fields must be indicated to the user, for example by an asterisk placed at the end of the label",
+      "Some data can easily be entered in different ways (eg. a date). To avoid typing errors, the expected format for this type of data must be specified",
+      "Radio button, check box, drop-down list are separate components each having their own role. A drop-down list allows to optimize space (vs. a long radio button list)",
+      "Real-time control of the form fields allows the user to correct their entry on the fly, and not after the form is submitted",
+      "In the interest of security, it is important to protect with a confirmation message actions that may be harmful (for example: Do you really want to delete?)",
+      "Accompany error, alert or help messages with a specific icon displayed to the left of the message (for example: exclamation point for an alert message, cross in a red dot to report an error, question mark for a help message) to allow the user to quickly locate them ",
+      "To be useful, error messages must be explicit; they specify in particular what error was made and, if possible, a way to correct it"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+   {
+    "themes": "Touch and interactions",
+    "title": "Provide an alternative to complex gestures",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups",
+      "Identify multi-pointer interactions (requiring multiple fingers)"
+    ],
+    "verifier": [
+      "All multi-pointer gestures (requiring several fingers), and/or gestures requiring a trajectory to perform an action, have an alternative needing only a single pointer (one finger)"
+    ],
+    "resultat": [
+      "Some users cannot perform a complex action requiring, for example, several fingers. To be accessible, this type of action must also be achieved via a simple interaction. <br />Example: for a zoom action on a card with a two-finger pinch, an alternative in the form of [+] and [-] buttons is provided"
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+   {
+    "themes": "Touch and interactions",
+    "title": "Allow the user to choose the orientation of the screen",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "The layout of all screens has been designed to allow interaction in portrait and landscape mode"
+    ],
+    "resultat": [
+      "Some users are forced to display their screen in portrait mode or landscape mode only (tablet mounted on a wheelchair for example). It is therefore important that these users can view all the information and use all the features in the 2 orientations "
+	],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  }
+]
