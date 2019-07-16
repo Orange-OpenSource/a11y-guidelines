@@ -16,7 +16,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Textual content",
@@ -40,7 +40,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Textual content",
@@ -70,7 +70,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Non-text content",
@@ -92,7 +92,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Non-text content",
@@ -120,7 +120,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Non-text content",
@@ -139,7 +139,7 @@
        ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Colors and contrasts",
@@ -160,7 +160,7 @@
     ],
     "exception": "This recommendation does not apply in the following cases: <ul> <li>if the image is a logo </li><li>if a text, such as a label or a data table, provides the same information as the icon or graphic</li><li>if the lack of contrast in the image does not preclude understanding of the content or its function </li><li>if the components are inactive </li></ul> ",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Colors and contrasts",
@@ -181,7 +181,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -205,7 +205,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -226,7 +226,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -245,7 +245,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -263,7 +263,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -285,7 +285,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -307,7 +307,7 @@
     ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "General navigation",
@@ -325,7 +325,7 @@
 	   ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Keyboard navigation",
@@ -346,7 +346,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Keyboard navigation",
@@ -368,7 +368,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Keyboard navigation",
@@ -390,7 +390,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Layout",
@@ -412,7 +412,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "themes": "Layout",
@@ -435,7 +435,7 @@
 	  ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
     {
       "themes": "Layout",
@@ -460,7 +460,7 @@
       ],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
    {
     "themes": "Layout",
@@ -478,7 +478,7 @@
     ],
     "exception": "<ul><li>Anchor / internal link to the page </ li><li>Link in the middle of a text block</li><li>Link to a footnote (at the end of a paragraph or sentence) </li><li>Clickable icon inside a text </li></ul> ",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
   {
     "Themes": "Forms",
@@ -506,7 +506,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
    {
     "Themes": "Forms",
@@ -537,7 +537,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
    {
     "themes": "Touch and interactions",
@@ -555,7 +555,7 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   },
    {
     "themes": "Touch and interactions",
@@ -572,6 +572,6 @@
 	],
     "exception": "",
     "raccourcis": "",
-    "profils": ["Concepteur"]
+    "profils": ["Designer"]
   }
 ]
