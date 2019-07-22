@@ -200,7 +200,7 @@ function reqListener(responseFirst, responseSecond) {
 				headingTheme=currentRefTests[i].themes;
 				htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'">'+currentRefTests[i].themes+'</h2>';
 			}
-			htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title">' + currentRefTests[i].title + '</span><span class="badge badge-pill badge-light pull-xs-right">'+((currentRefTests[i].profils[0] == 'Concepteur') ? "Conception" : "Développement")+'</span></a></h3>';
+			htmlrefTests += '<article class=""><div class="card-header" id="heading'+i+'"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title">' + currentRefTests[i].title + '</span><span class="badge badge-pill badge-light pull-xs-right">'+((currentRefTests[i].profils[0] == 'Designer') ? "Designer" : "Development")+'</span></a></h3>';
 			
 			htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
 			htmlrefTests += '<div class="card-block"><div class="row">';
@@ -216,7 +216,7 @@ function reqListener(responseFirst, responseSecond) {
 			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
 			htmlrefTests += '<div class="row">';
-			htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Concepteur') ? textContent.title4 : textContent.title3)+'</h4><ol>';
+			htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Designer') ? textContent.title4 : textContent.title3)+'</h4><ol>';
 			for (let j in refTests[i].resultat) {
 				htmlrefTests += '<li>' + currentRefTests[i].resultat[j] + '</li> ';
 			}
@@ -228,12 +228,12 @@ function reqListener(responseFirst, responseSecond) {
 				htmlrefTests += '</div>';
 				htmlrefTests += '</div>';
 			}		
-			htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>';
+			htmlrefTests += '</div><div class="card-footer text-muted"><b>Profiles : </b>';
 			for (let j in currentRefTests[i].profils) {
 			  htmlrefTests += currentRefTests[i].profils[j];
 			  j != ((currentRefTests[i].profils).length-1) ? htmlrefTests +=',  ' : '';
 			}
-			htmlrefTests += '<br />'+((currentRefTests[i].type).length > 0 ? '<b>Outils : </b>' : '');
+			htmlrefTests += '<br />'+((currentRefTests[i].type).length > 0 ? '<b>Tools : </b>' : '');
 			for (let j in currentRefTests[i].type) {
 			  htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + currentRefTests[i].type[j] + ' ';
 			}
