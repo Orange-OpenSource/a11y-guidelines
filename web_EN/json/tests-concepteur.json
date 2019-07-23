@@ -184,7 +184,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Labelling links and buttons concisely and unequivocally",
     "type": [],
     "tests": [
@@ -208,7 +208,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Avoid dialog boxes and the opening of new windows",
     "type": [],
     "tests": [
@@ -229,7 +229,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Providing skip links",
     "type": [],
     "tests": [
@@ -248,7 +248,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Make sure that the user keeps control of the system during interactions",
     "type": [],
     "tests": [
@@ -266,7 +266,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Allow the user to control animations",
     "type": [],
     "tests": [
@@ -288,7 +288,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Explicitly locate the page in the site and provide several ways to access it",
     "type": [],
     "tests": [
@@ -310,7 +310,7 @@
     "profils": ["Designer"]
   },
   {
-    "themes": "General navigation",
+    "themes": "Common navigation",
     "title": "Reassure the user with contextual messages",
     "type": [],
     "tests": [
@@ -481,7 +481,7 @@
     "profils": ["Designer"]
   },
   {
-    "Themes": "Forms",
+    "themes": "Forms",
     "title": "Facilitate the completion of forms",
     "type": [],
     "tests": [
@@ -509,7 +509,7 @@
     "profils": ["Designer"]
   },
    {
-    "Themes": "Forms",
+    "themes": "Forms",
     "title": "Protect the user from errors in forms",
     "type": [],
     "tests": [

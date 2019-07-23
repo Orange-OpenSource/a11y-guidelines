@@ -502,7 +502,7 @@
     "profils": ["Developer", "Accessibility Expert"]
   },
   {
-    "themes": "Commun navigation",
+    "themes": "Common navigation",
 	"title": "Make text of links and buttons accessible / names",
     "type": [
       "Manual testing - Code inspector"
