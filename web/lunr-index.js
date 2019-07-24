@@ -954,58 +954,58 @@ index.add({
 
 
 
-documentTitles["skiplink.html#les-bonnes-pratiques-pour-les-liens-devitements"] = "Les bonnes pratiques pour les liens d’évitements";
+documentTitles["skiplinks.html#les-bonnes-pratiques-pour-les-liens-devitements"] = "Les bonnes pratiques pour les liens d’évitements";
 index.add({
-    url: "skiplink.html#les-bonnes-pratiques-pour-les-liens-devitements",
+    url: "skiplinks.html#les-bonnes-pratiques-pour-les-liens-devitements",
     title: "Les bonnes pratiques pour les liens d’évitements",    
     body: "# Les bonnes pratiques pour les liens d’évitements &lt;script&gt;$(document).ready(function () {     setBreadcrumb([       {\&quot;label\&quot;:\&quot;Articles techniques\&quot;, \&quot;url\&quot;:\&quot;techniques.html\&quot;},       {\&quot;label\&quot;:\&quot;Les bonnes pratiques pour les liens d’évitements\&quot;}     ]);     });&lt;/script&gt;  "
 });
 
-documentTitles["skiplink.html#quest-ce-quun-lien-devitementnbsp"] = "Qu’est-ce qu’un lien d’évitement&amp;nbsp;?";
+documentTitles["skiplinks.html#quest-ce-quun-lien-devitementnbsp"] = "Qu’est-ce qu’un lien d’évitement&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#quest-ce-quun-lien-devitementnbsp",
+    url: "skiplinks.html#quest-ce-quun-lien-devitementnbsp",
     title: "Qu’est-ce qu’un lien d’évitement&amp;nbsp;?",    
     body: "## Qu’est-ce qu’un lien d’évitement&amp;nbsp;?  "
 });
 
-documentTitles["skiplink.html#quest-cenbsp"] = "Qu'est ce&amp;nbsp;?";
+documentTitles["skiplinks.html#quest-cenbsp"] = "Qu'est ce&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#quest-cenbsp",
+    url: "skiplinks.html#quest-cenbsp",
     title: "Qu'est ce&amp;nbsp;?",    
     body: "### Qu'est ce&amp;nbsp;?  Les liens d’évitement sont des raccourcis permettant d’accéder directement à une zone de contenu ou d’éviter des régions de la page, afin de naviguer plus rapidement. On peut distinguer 3 types de liens&amp;nbsp;: 1. les liens d'accès rapide : rassemblés en haut de page et permettant d’aller aux principales régions de la page&amp;nbsp;: «&amp;nbsp;Aller au menu&amp;nbsp;», «&amp;nbsp;Aller au contenu&amp;nbsp;», «&amp;nbsp;Aller à la recherche&amp;nbsp;», par exemple 2. les liens d’évitement : positionnés avant la région qu’ils permettent de sauter : «&amp;nbsp;Passer la section&amp;nbsp;», «&amp;nbsp;Passer le chapitre&amp;nbsp;»  3. les liens de navigation interne à une page : «&amp;nbsp;Retour en haut de page&amp;nbsp;», par exemple  Ces liens d’évitement permettent donc à l’utilisateur d’éviter des parties de pages, que l’on navigue au clavier, que l’on ait du mal à se repérer dans une page longue ou que scroller soit difficile.  "
 });
 
-documentTitles["skiplink.html#pour-quinbsp"] = "Pour qui&amp;nbsp;?";
+documentTitles["skiplinks.html#pour-quinbsp"] = "Pour qui&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#pour-quinbsp",
+    url: "skiplinks.html#pour-quinbsp",
     title: "Pour qui&amp;nbsp;?",    
     body: "### Pour qui&amp;nbsp;?  Les liens d’évitement sont précieux pour de multiples utilisateurs&amp;nbsp;: - les utilisateurs de lecteur d’écran ou ne pouvant utiliser la souris, qui se déplacent donc au clavier uniquement - Les utilisateurs qui peinent à naviguer dans une page longue&amp;nbsp;: les déficients moteurs (fatigabilité ou limitations motrices) ou les personnes qui naviguent sur leur smartphone (on évite le swipe, le balayage) - les malvoyants, qui utilisent ou pas une loupe d’écran, et ayant du mal à se faire une représentation globale de la topologie de la page  "
 });
 
-documentTitles["skiplink.html#quelles-sont-les-types-de-solutionsnbsp"] = "Quelles sont les types de solutions&amp;nbsp;?";
+documentTitles["skiplinks.html#quelles-sont-les-types-de-solutionsnbsp"] = "Quelles sont les types de solutions&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#quelles-sont-les-types-de-solutionsnbsp",
+    url: "skiplinks.html#quelles-sont-les-types-de-solutionsnbsp",
     title: "Quelles sont les types de solutions&amp;nbsp;?",    
     body: "### Quelles sont les types de solutions&amp;nbsp;?  1. les liens d'accès rapide&amp;nbsp;: la solution la plus répandue, est une série de liens (entre 1 et 6 généralement) positionnés tout en haut de page visuellement et intégrés dans le code juste après l’ouverture de la balise body. Chaque lien pointe vers  une région,  ou toute autre partie importante de la page. Ils sont, généralement, définies avec une taille de police plus petite que le corps du texte ou par défaut cachés et rendus visibles, lors de la navigation clavier, à la prise de focus. 2. Les liens d‘évitement&amp;nbsp;: ces éléments sont positionnés juste avant chaque partie de page ou région à sauter. Ils peuvent être toujours visibles ou bien rendus visibles, lors de la navigation clavier, à la prise de focus. 3. Les liens de navigation internes de type « retour en haut de page »&amp;nbsp;: ils sont souvent collés (position CSS `sticky`) tout en bas, côté droit du viewport, toujours visible ou n’apparaissant que lorsqu’on arrive en fin de scroll vertical.  "
 });
 
-documentTitles["skiplink.html#quelles-sont-les-bonnes-pratiquesnbsp"] = "Quelles sont les bonnes pratiques&amp;nbsp;?";
+documentTitles["skiplinks.html#quelles-sont-les-bonnes-pratiquesnbsp"] = "Quelles sont les bonnes pratiques&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#quelles-sont-les-bonnes-pratiquesnbsp",
+    url: "skiplinks.html#quelles-sont-les-bonnes-pratiquesnbsp",
     title: "Quelles sont les bonnes pratiques&amp;nbsp;?",    
     body: "## Quelles sont les bonnes pratiques&amp;nbsp;?  "
 });
 
-documentTitles["skiplink.html#quand-doit-on-mettre-en-place-des-liens-devitementnbsp"] = "Quand doit-on mettre en place des liens d’évitement&amp;nbsp;?";
+documentTitles["skiplinks.html#quand-doit-on-mettre-en-place-des-liens-devitementnbsp"] = "Quand doit-on mettre en place des liens d’évitement&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#quand-doit-on-mettre-en-place-des-liens-devitementnbsp",
+    url: "skiplinks.html#quand-doit-on-mettre-en-place-des-liens-devitementnbsp",
     title: "Quand doit-on mettre en place des liens d’évitement&amp;nbsp;?",    
     body: "### Quand doit-on mettre en place des liens d’évitement&amp;nbsp;?  La première question à se poser est, sur mon site, l’utilisateur a-t-il besoin de liens d’évitement&amp;nbsp;?  Les principales raisons de la mise en place de liens d’évitement&amp;nbsp;: - la page est longue - la navigation contient beaucoup de liens - le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…) - la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)  "
 });
 
-documentTitles["skiplink.html#utiliser-une-solution-hybridenbsp"] = "Utiliser une solution hybride&amp;nbsp;?";
+documentTitles["skiplinks.html#utiliser-une-solution-hybridenbsp"] = "Utiliser une solution hybride&amp;nbsp;?";
 index.add({
-    url: "skiplink.html#utiliser-une-solution-hybridenbsp",
+    url: "skiplinks.html#utiliser-une-solution-hybridenbsp",
     title: "Utiliser une solution hybride&amp;nbsp;?",    
     body: "### Utiliser une solution hybride&amp;nbsp;?  On a vu que les liens d’accès rapide, peuvent être visibles, ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n’utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l’ouverture et la fermeture du panneau des liens d’accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l’ouverture de la page et qui disparaît lors du scroll vers le bas de page.  Quelle que soit la solution, il faut que les liens d’évitement soient visibles (dans la mesure du possible) et utilisables par tous !  Pour toutes remarques, suggestions, n'hésitez pas à consulter ou créer une issue sur notre (&lt;a href=\&quot;https://github.com/Orange-OpenSource/a11y-guidelines/issues\&quot;&gt;compte github&lt;/a&gt;).   &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
@@ -1228,7 +1228,7 @@ documentTitles["techniques.html#articles-techniques-pour-la-mise-en-place-de-lac
 index.add({
     url: "techniques.html#articles-techniques-pour-la-mise-en-place-de-laccessibilite",
     title: "Articles techniques pour la mise en place de l'accessibilité",    
-    body: "# Articles techniques pour la mise en place de l'accessibilité &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Articles techniques\&quot;}]); });&lt;/script&gt;  &lt;style&gt;     dt a {text-decoration: underline;}     dd {margin-bottom: 1rem;} &lt;/style&gt;  &lt;dl&gt;      &lt;dt&gt;&lt;a href=\&quot;skiplink.html\&quot;&gt;Les liens d'évitement&lt;/a&gt;&lt;/dt&gt;      &lt;dd&gt;Les liens d'évitement, qu'est ce et comment bien les mettre en oeuvre.&lt;/dd&gt;     &lt;dt&gt;&lt;a href=\&quot;captcha.html\&quot;&gt;Les CAPTCHAs&lt;/a&gt;&lt;/dt&gt;     &lt;dd&gt;Les CAPTCHAs et l'accessibilité&lt;/dd&gt;     &lt;dt&gt;&lt;a href=\&quot;htmlaria.html\&quot;&gt;HTML 5 et &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/a&gt;&lt;/dt&gt;     &lt;dd&gt;Introduction HTML 5 et &lt;abbr&gt;ARIA&lt;/abbr&gt;.&lt;/dd&gt;     &lt;dt&gt;&lt;a href=\&quot;aria-status.html\&quot;&gt;Utiliser les attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; pour les messages d'état&lt;/a&gt;&lt;/dt&gt;      &lt;dd&gt;Les messages d'état, de statut ou contextuel gérés par &lt;abbr&gt;ARIA&lt;/abbr&gt;.&lt;/dd&gt;      &lt;dt&gt;&lt;a href=\&quot;a11y-name.html\&quot;&gt;Le nom accessible&lt;/a&gt;&lt;/dt&gt;      &lt;dd&gt;Le nom accessible, qu'est ce et son rapport avec les &lt;abbr&gt;AT&lt;/abbr&gt;.&lt;/dd&gt; &lt;/dl&gt; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Articles techniques pour la mise en place de l'accessibilité &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Articles techniques\&quot;}]); });&lt;/script&gt;  &lt;style&gt;     dt a {text-decoration: underline;}     dd {margin-bottom: 1rem;} &lt;/style&gt;  &lt;dl&gt;      &lt;dt&gt;&lt;a href=\&quot;skiplinks.html\&quot;&gt;Les liens d'évitement&lt;/a&gt;&lt;/dt&gt;      &lt;dd&gt;Les liens d'évitement, qu'est ce et comment bien les mettre en oeuvre.&lt;/dd&gt;     &lt;dt&gt;&lt;a href=\&quot;captcha.html\&quot;&gt;Les CAPTCHAs&lt;/a&gt;&lt;/dt&gt;     &lt;dd&gt;Les CAPTCHAs et l'accessibilité&lt;/dd&gt;     &lt;dt&gt;&lt;a href=\&quot;htmlaria.html\&quot;&gt;HTML 5 et &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/a&gt;&lt;/dt&gt;     &lt;dd&gt;Introduction HTML 5 et &lt;abbr&gt;ARIA&lt;/abbr&gt;.&lt;/dd&gt;     &lt;dt&gt;&lt;a href=\&quot;aria-status.html\&quot;&gt;Utiliser les attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; pour les messages d'état&lt;/a&gt;&lt;/dt&gt;      &lt;dd&gt;Les messages d'état, de statut ou contextuel gérés par &lt;abbr&gt;ARIA&lt;/abbr&gt;.&lt;/dd&gt;      &lt;dt&gt;&lt;a href=\&quot;a11y-name.html\&quot;&gt;Le nom accessible&lt;/a&gt;&lt;/dt&gt;      &lt;dd&gt;Le nom accessible, qu'est ce et son rapport avec les &lt;abbr&gt;AT&lt;/abbr&gt;.&lt;/dd&gt; &lt;/dl&gt; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
