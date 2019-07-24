@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Orange digital accessibility guidelines</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="/web/css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+	  <script type="text/javascript" src="./js/tests-web.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Presentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">WCAG criteria by project phase</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Resources</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Methods and testing tools</a></li>
+                        <li><a class="page-nos-outils" href="nos-outils.html">Open source Orange tools</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Component examples</a></li>
+                        <li><a class="page-techniques" href="techniques.html">Technical articles</a></li>
+                        <li><a class="page-about" href="about.html">About / Contact</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile_EN/index.html" class="nav-link">Mobile</a></li>                  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>                                    
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort + : browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="../web/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a href="#" aria-disabled="true" aria-label="english version" class="nav-link active">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">You are here : </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web_EN/index.html">Website</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="skip-links-best-practices">Skip links best practices</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Technical articles", "url":"techniques.html"},
+        {"label":"Skip links best practices"}
+    ]);
+});</script>
+
+<h2 id="what-is-an-skip-link-">What is an skip link?</h2>
+<h3 id="what-is-it-">What is it?</h3>
+<p>Skip links are shortcuts that allow you to directly access a content area or avoid some areas of the page, so you can navigate faster.</p>
+<p>We can distinguish 3 types of skip links:</p>
+<ol>
+<li><strong>quick access links:</strong> gathered at the top of the page to go to the main regions of the page: “Skip to menu”, “Skip to content”, “Skip to search”, for example</li>
+<li><strong>section skip links:</strong> positioned before the region that they allow to jump: “Skip the section”, “Skip the chapter”</li>
+<li><strong>In-page navigation links:</strong> “Back to top”, for example</li>
+</ol>
+<p>These skip links allow the user to avoid parts of pages, if we navigate with the keyboard, or if it is difficult to locate content in a large page or even if scrolling thought the page is difficult.</p>
+<h3 id="for-whom-">For whom?</h3>
+<p>Skip links are valuable for many users:</p>
+<ul>
+<li>Screen reader users or people unable to use the mouse, so they only navigate with the keyboard</li>
+<li>Users who are struggling to navigate a large page: motor impaired people (fatigability or motor limitations) or people on their smartphone (this is a way to spare the user from swiping to browse the page)</li>
+<li>the visually impaired, who use or not a screen magnifier, and have trouble having a global representation of the topology of the page</li>
+</ul>
+<h3 id="what-are-the-types-of-solutions-">What are the types of solutions?</h3>
+<ol>
+<li>Quick Links: The most common solution, is a series of links (usually between 1 and 6) positioned at the top of the page and embedded in the code just after the body tag. Each link points to a region, or any other important part of the page. They are, generally, defined with a font size smaller than the body text, or hidden by default and appearing only when keyboard navigation is detected or when listening to focus capture events.</li>
+<li>Skip links: These elements are positioned just before each page part or region to skip. They can be always visible or made visible, during keyboard navigation, on focus.</li>
+<li>“Back to top” internal navigation links: they are often pinned (CSS <code>sticky</code> position) at the very bottom, right side of the viewport, always visible or appearing only when we&#39;re at the end of the vertical scrolling.</li>
+</ol>
+<h2 id="what-are-the-best-practices-">What are the best practices?</h2>
+<h3 id="when-should-skip-links-be-put-in-place-">When should skip links be put in place?</h3>
+<p>The first question to ask is: on my site, does the user need skip links?</p>
+<p>The main reasons for setting up skip links:</p>
+<ul>
+<li>the page is long</li>
+<li>navigation contains a lot of links</li>
+<li>the content has a lot of links (several navigation menus, footers acting as a site map, etc.)</li>
+<li>the page is divided into many different parts (portal, dashboard, etc.)</li>
+</ul>
+<h3 id="using-a-hybrid-solution-">Using a hybrid solution?</h3>
+<p>We have seen that the quick access links can be visible or hidden by default and can be displayed according to keyboard navigation. This last option often answers aesthetic problems. Nevertheless, it removes the benefit that these links could bring to other users who do not use the keyboard (users of software magnifiers for example). One solution, which would reconcile the advantages of the two techniques, would be to position a discrete but affording button at the top of the page, to trigger on demand the opening and closing of the quick access links panel. We could also think of a horizontal bar visible at the top of the page opening and disappearing when scrolling down the page.</p>
+<p>Whatever the solution, the skip links must be visible (as far as possible) and usable by everyone!</p>
+<p>For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues"> github account </a>) .</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>
