@@ -447,54 +447,425 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 11. [Secouer pour annuler](#optionA11Y_secouerPourAnnuler).
 12. [Énoncer le contenu de l'écran](#optionA11Y_lecturePage).
 13. [Énoncer la sélection](#optionA11Y_speakSelection).
-14. [Activer le Contrôle de Sélection](#optionA11Y_switchontrol).
+14. [Activer le Contrôle de Sélection](#optionA11Y_switchControl).
 15. [Activer VoiceOver](#optionA11Y_voiceOver).
+16. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews) ⟹ **nouveauté iOS 13**
+17. [Différencier sans couleur](#optionA11Y_differentiateWithourColour) ⟹ **nouveauté iOS 13**
 
 <a name="optionA11Y_contraste"></a>
-- **Augmenter le contraste** *(UIAccessibilityDarkerSystemColorsEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Contrast).
-</br><img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Augmenter le contraste." src="./images/optionA11Y_contraste.png" />
+- **Augmenter le contraste** *(UIAccessibilityDarkerSystemColorsEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Contrast) pour un descriptif de la fonctionnalité.
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Contrast-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Contrast-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Contrast-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Augmenter le contraste." src="./images/optionA11Y_iOS13_contraste.png" />
+</div>
+<div class="tab-pane" id="Contrast-iOS12" role="tabpanel" >
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Augmenter le contraste." src="./images/optionA11Y_iOS12_contraste.png" />
+</div></div></br>
 <a name="optionA11Y_assistiveTouch"></a>
 - **Activer l'AssistiveTouch** *(UIAccessibilityIsAssistiveTouchRunning)* : affiche le menu homonyme au premier plan quelle que soit l'application lancée.
-</br><img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - AssistiveTouch" src="./images/optionA11Y_assistiveTouch.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#AssistiveTouch-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#AssistiveTouch-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="AssistiveTouch-iOS13"
+     role="tabpanel">
+<img style="max-width: 1100px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Toucher - AssistiveTouch - AssistiveTouch." src="./images/optionA11Y_iOS13_assistiveTouch.png" />
+</div>
+<div class="tab-pane" id="AssistiveTouch-iOS12" role="tabpanel" >
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - AssistiveTouch" src="./images/optionA11Y_iOS12_assistiveTouch.png" />
+</div></div></br>
 <a name="optionA11Y_bold"></a>
-- **Mettre le texte en gras** *(UIAccessibilityIsBoldTextEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Sizing).
-</br><img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Texte en gras" src="./images/optionA11Y_bold.png" />
+- **Mettre le texte en gras** *(UIAccessibilityIsBoldTextEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Sizing) pour un descriptif de la fonctionnalité.
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Bold-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Bold-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Bold-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Texte en gras" src="./images/optionA11Y_iOS13_bold.png" />
+</div>
+<div class="tab-pane" id="Bold-iOS12" role="tabpanel" >
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Texte en gras" src="./images/optionA11Y_iOS12_bold.png" />
+</div></div></br>
 <a name="optionA11Y_closedCaption"></a>
 - **Afficher les sous-titres** *(UIAccessibilityIsClosedCaptioningEnabled)* : permet l'affichage de sous-titres codés (SC) ou pour sourds/malentendants selon leur disponibilité au visionnage dans l'`appTV` ou dans `Vidéos`.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Sous-titres codés et SM" src="./images/optionA11Y_closedCaptions.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ClosedCaption-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ClosedCaption-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ClosedCaption-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Sous-titres codés et SM" src="./images/optionA11Y_iOS13_closedCaptions.png" />
+</div>
+<div class="tab-pane" id="ClosedCaption-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Sous-titres codés et SM" src="./images/optionA11Y_iOS12_closedCaptions.png" />
+</div></div></br>
 <a name="optionA11Y_grayScale"></a>
 - **Modifier les couleurs en échelle de gris** *(UIAccessibilityIsGrayscaleEnabled)* : permet aux personnes ne distinguant pas les couleurs de pouvoir cerner sans problèmes les écrans particulièrement bigarrés.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Filtres de couleur" src="./images/optionA11Y_grayScale.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#GrayScale-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#GrayScale-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="GrayScale-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Filtres de couleur" src="./images/optionA11Y_iOS13_grayScale.png" />
+</div>
+<div class="tab-pane" id="GrayScale-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Filtres de couleur" src="./images/optionA11Y_iOS12_grayScale.png" />
+</div></div></br>
+</br>
 <a name="optionA11Y_guidedAccess"></a>
 - **Activer l'Accès Guidé** *(UIAccessibilityIsGuidedAccessEnabled)* : limite l'utilisation du terminal à une seule et unique application.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Accès guidé" src="./images/optionA11Y_guidedAccess.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#GuidedAccess-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#GuidedAccess-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="GuidedAccess-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Accès guidé - Accès guidé" src="./images/optionA11Y_iOS13_guidedAccess.png" />
+</div>
+<div class="tab-pane" id="GuidedAccess-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Accès guidé - Accès guidé" src="./images/optionA11Y_iOS12_guidedAccess.png" />
+</div></div></br>
 <a name="optionA11Y_inverserLesCouleurs"></a>
 - **Inverser les couleurs** *(UIAccessibilityIsInvertColorsEnabled)* : limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue occulaires en passant le terminal en `mode sombre`.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Inverser les couleurs" src="./images/optionA11Y_inverserLesCouleurs.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#invertColors-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#invertColors-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="invertColors-iOS13"
+     role="tabpanel">
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Inversion intelligente" src="./images/optionA11Y_iOS13_invertColors.png" />
+</div>
+<div class="tab-pane" id="invertColors-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Inverser les couleurs - Inversion intelligente" src="./images/optionA11Y_iOS12_invertColors.png" />
+</div></div></br>
 <a name="optionA11Y_audioEnMono"></a>
 - **Passer l'audio en mono** *(UIAccessibilityIsMonoAudioEnabled)* : aide les personnes malentendantes ou sourdes d'une oreille par exemple.
-</br><img style="max-width: 590px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Audio mono" src="./images/optionA11Y_audioEnMono.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#AudioMono-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#AudioMono-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="AudioMono-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Audio Visuel - Mono Audio" src="./images/optionA11Y_iOS13_audioEnMono.png" />
+</div>
+<div class="tab-pane" id="AudioMono-iOS12" role="tabpanel" >
+<img style="max-width: 590px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Audio mono" src="./images/optionA11Y_iOS12_audioEnMono.png" />
+</div></div></br>
 <a name="optionA11Y_limiteVisuel"></a>
-- **Limiter les animations visuelles** *(UIAccessibilityIsReduceMotionEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Motion).
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire les animations" src="./images/optionA11Y_limiteVisuel.png" />
+- **Limiter les animations visuelles** *(UIAccessibilityIsReduceMotionEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Motion) pour un descriptif de la fonctionnalité.
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ReduceMotion-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ReduceMotion-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ReduceMotion-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Réduire les animations" src="./images/optionA11Y_iOS13_reduceMotion.png" />
+</div>
+<div class="tab-pane" id="ReduceMotion-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire les animations" src="./images/optionA11Y_iOS12_reduceMotion.png" />
+</div></div></br>
 <a name="optionA11Y_reductionTransparence"></a>
-- **Réduire le floutage et la transparence** *(UIAccessibilityIsReduceTransparencyEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#TransparencyAndBlurring).
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire la transparence" src="./images/optionA11Y_reductionTransparence.png" />
+- **Réduire le floutage et la transparence** *(UIAccessibilityIsReduceTransparencyEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#TransparencyAndBlurring) pour un descriptif de la fonctionnalité.
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ReduceTransparency-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ReduceTransparency-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ReduceTransparency-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Réduire la transparence" src="./images/optionA11Y_iOS13_reduceTransparency.png" />
+</div>
+<div class="tab-pane" id="ReduceTransparency-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire la transparence" src="./images/optionA11Y_iOS12_reduceTransparency.png" />
+</div></div></br>
 <a name="optionA11Y_secouerPourAnnuler"></a>
 - **Secouer pour annuler** *(UIAccessibilityIsShakeToUndoEnabled)* : affichage d'un menu par secousse du terminal qui permet de rétablir une action supprimée ou encore d'éviter de rester appuyé sur la touche d'effacement pour regarder les lettres s'effacer l'une après l'autre.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Secouer pour annuler" src="./images/optionA11Y_secouerPourAnnuler.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ShakeToUndo-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ShakeToUndo-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ShakeToUndo-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Toucher - Secouer pour annuler" src="./images/optionA11Y_iOS13_shakeToUndo.png" />
+</div>
+<div class="tab-pane" id="ShakeToUndo-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Secouer pour annuler" src="./images/optionA11Y_iOS12_shakeToUndo.png" />
+</div></div></br>
 <a name="optionA11Y_lecturePage"></a>
 - **Énoncer le contenu de l'écran** *(UIAccessibilityIsSpeakScreenEnabled)* : permet l'accès au player natif pour lire automatiquement une page web par exemple.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer le contenu de l'écran" src="./images/optionA11Y_lecturePage.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SpeakScreen-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SpeakScreen-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SpeakScreen-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer lecontenu de l'écran" src="./images/optionA11Y_iOS13_speakScreen.png" />
+</div>
+<div class="tab-pane" id="SpeakScreen-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer le contenu de l'écran" src="./images/optionA11Y_iOS12_speakScreen.png" />
+</div></div></br>
 <a name="optionA11Y_speakSelection"></a>
 - **Énoncer la sélection** *(UIAccessibilityIsSpeakSelectionEnabled)* : donne accès à l'affichage d'un menu qui propose d'énoncer la sélection qui a déclenché son apparition.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer la sélection" src="./images/optionA11Y_speakSelection.png" />
-<a name="optionA11Y_switchontrol"></a>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SpeakSelection-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SpeakSelection-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SpeakSelection-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer la sélection" src="./images/optionA11Y_iOS13_speakSelection.png" />
+</div>
+<div class="tab-pane" id="SpeakSelection-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer la sélection" src="./images/optionA11Y_iOS12_speakSelection.png" />
+</div></div></br>
+<a name="optionA11Y_switchControl"></a>
 - **Activer le Contrôle de Sélection** *(UIAccessibilityIsSwitchControlRunning)* : active la fonctionnalité en `mode point` ou en `mode élément`.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Contrôle de sélection" src="./images/optionA11Y_switchontrol.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Switch Control - Switch Control" src="./images/optionA11Y_iOS13_switchControl.png" />
+</div>
+<div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Contrôle de sélection" src="./images/optionA11Y_iOS12_switchControl.png" />
+</div></div></br>
 <a name="optionA11Y_voiceOver"></a>
 - **Activer VoiceOver** *(UIAccessibilityIsVoiceOverRunning)* : active le lecteur d'écran.
-</br><img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - VoiceOver" src="./images/optionA11Y_voiceOver.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - VoiceOver - VoiceOver" src="./images/optionA11Y_iOS13_voiceOver.png" />
+</div>
+<div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - VoiceOver - VoiceOver" src="./images/optionA11Y_iOS12_voiceOver.png" />
+</div></div></br>
+<a name="optionA11Y_autoPlayVideoPreviews"></a>
+- **Prévisualisation vidéo** *(UIAccessibilityIsVideoAutoplayEnabled)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
+</br><img style="max-width: 375px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" src="./images/iOSdev/wwdc19-244-TextStyles_6.png" />
+</br>
+<a name="optionA11Y_differentiateWithourColour"></a>
+- **Différencier sans couleur** *(UIAccessibilityShouldDifferentiateWithoutColour)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
+</br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur" src="./images/optionA11Y_iOS13_differentiateWithoutColour.png" />
+</br>
 
 </br>Une fois l'option activée, si l'action désirée n'est pas effective au sein de l'application, il est **très fortement recommandé** d'agir en conséquence en se tenant informé de l'état de l'option impactée pour fournir à l'utilisateur l'expérience à laquelle il s'attend.
 </br>La liste complète des options d'accessibilité avec leur notification dédiée est présente dans la [partie développement](./criteria-ios-dev.html#options-d-accessibilit-).

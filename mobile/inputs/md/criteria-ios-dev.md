@@ -2189,7 +2189,7 @@ Dans cet exemple, on appelle une méthode spécifique au moment où le statut de
 </div>
 <div class="tab-pane" id="a11yOptions-Recap" role="tabpanel" >
 Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc" style="text-decoration: underline;">événements</a> et les <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc" style="text-decoration: underline;">options d'accessibilité</a> sont disponibles sur la documentation officielle d'Apple.
-</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel" >
 - [Options d'accessibilité](./criteria-ios-conception.html#options-d-accessibilit-) *(conception iOS)*

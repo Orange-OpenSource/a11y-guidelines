@@ -18,7 +18,7 @@
 
 This video available on the **official Apple website** ([session 236](https://developer.apple.com/videos/play/wwdc2018/236/)) aims at highlighting the essential elements to be implemented in order to **use a synthesized speech thanks to AVSpeechSynthesizer**.
 </br><img style="max-width: 466px; height: auto;" alt="" src="./images/iOSdev/wwdc18-236.png" />
-</br></br>Various contents and their video timelapse are indicated hereunder :
+</br></br>Various contents and their video timelapse are indicated hereunder:
 
 - [Uses](#Uses) (00:48)
 - [Basics](#Basics) (02:03)

@@ -38,7 +38,7 @@ Cette présentation visualisable sur le **site développeur officiel d'<span lan
 
 Le dernier thème développe un exemple d'application particulièrement intéressant pour :
 - Les développeurs qui souhaitent trouver des réponses détaillées aux problèmes d'implémentation avec VoiceOver.
-- Celles et ceux qui souhaitent découvrir comment une application doit interagir avec VoiceOver pour que le parcours utilisateur soit optimal (voir '[Rendu final de l'application avec VoiceOVer optimisé](#DemoExceptionalVoiceOverExperience)').
+- Celles et ceux qui souhaitent découvrir comment une application doit interagir avec VoiceOver pour que le parcours utilisateur soit optimal (voir '[Rendu final de l'application avec VoiceOver optimisé](#DemoExceptionalVoiceOverExperience)').
 
 Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.
 </br></br>

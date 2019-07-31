@@ -2188,7 +2188,7 @@ In this example, a method is fired when VoiceOver or Switch Control status has c
 </div>
 <div class="tab-pane" id="a11yOptions-Recap" role="tabpanel" >
 All accessibility <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc" style="text-decoration: underline;">events</a> and <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc" style="text-decoration: underline;">options</a> are available on the official documentation from Apple.
-</br><img alt="" style="max-width: 1000px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/OptionsA11Y.png" />
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel" >
 - [Accessibility options](./criteria-ios.html#accessibility-options) *(iOS conception)*

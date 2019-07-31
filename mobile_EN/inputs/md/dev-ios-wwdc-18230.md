@@ -17,7 +17,7 @@
 
 This video available on the **official Apple website** ([session 230](https://developer.apple.com/videos/play/wwdc2018/230/)) aims at highlighting the essential elements that will provide an optimal user experience for visual impaired people.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc18-230.png" />
-</br></br>Various contents and their video timelapse are indicated hereunder :
+</br></br>Various contents and their video timelapse are indicated hereunder:
 
 - [Transparency and blurring](#TransparencyAndBlurring) (03:07)
 - [Contrast](#Contrast) (04:38)
