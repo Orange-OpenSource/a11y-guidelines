@@ -449,6 +449,7 @@ The full list of these options including their purpose and their coding name is 
 15. [VoiceOver](#optionA11Y_voiceOver)
 16. [Auto-Play Video Previews](#optionA11Y_autoPlayVideoPreviews) ⟹ **iOS 13 new feature**
 17. [Differentiate Without Colour](#optionA11Y_differentiateWithourColour) ⟹ **iOS 13 new feature**
+18. [On/Off Labels](#optionA11Y_onOffSwitchLabels) ⟹ **new in iOS 13**
 
 <a name="optionA11Y_contraste"></a>
 - **Increase Contrast** *(UIAccessibilityDarkerSystemColorsEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Contrast) for a detailed description.
@@ -858,10 +859,14 @@ The full list of these options including their purpose and their coding name is 
 <a name="optionA11Y_autoPlayVideoPreviews"></a>
 - **Auto-Play Video Previews** *(UIAccessibilityIsVideoAutoplayEnabled)* : see the [WWDC 2019 video](./dev-ios-wwdc-19000.html#VisualDesignAccessibility) for a detailed description of this **iOS 13 new feature**.
 </br><img style="max-width: 375px; height: auto;" alt="Access illustration via Settings - Accessibility - Motion - Auto-play Video Previews" src="./images/iOSdev/wwdc19-244-TextStyles_6.png" />
-</br>
+</br></br></br>
 <a name="optionA11Y_differentiateWithourColour"></a>
 - **Differentiate Without Colour** *(UIAccessibilityShouldDifferentiateWithoutColour)* : see the [WWDC 2019 video](./dev-ios-wwdc-19000.html#VisualDesignAccessibility) for a detailed description of this **iOS 13 new feature**.
 </br><img style="max-width: 1000px; height: auto;" alt="Access illustration via Settings - Accessibility - Display & Text Size - Differentiate Without Colour" src="./images/optionA11Y_iOS13_differentiateWithoutColour.png" />
+</br></br></br>
+<a name="optionA11Y_onOffSwitchLabels"></a>
+- **On/Off Labels** *(UIAccessibilityIsOnOffSwitchLabelsEnabled)* : once activated, this option whose **programmatic access is new in iOS 13** displays each button state.
+</br><img style="max-width: 1000px; height: auto;" alt="Access illustration via Settings - Accessibility - Display & Text Size - On/Off Labels" src="./images/optionA11Y_iOS13_onOffSwitchLabels.png" />
 </br>
 
 </br>Once activated, if the accessibility option has no result in the application running, it's **highly recommended** to keep oneself posted of the impacted options states so as to provide the best user experience.

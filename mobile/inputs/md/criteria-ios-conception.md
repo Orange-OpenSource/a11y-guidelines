@@ -451,6 +451,7 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 15. [Activer VoiceOver](#optionA11Y_voiceOver).
 16. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews) ⟹ **nouveauté iOS 13**
 17. [Différencier sans couleur](#optionA11Y_differentiateWithourColour) ⟹ **nouveauté iOS 13**
+18. [Boutons avec I/O](#optionA11Y_onOffSwitchLabels) ⟹ **nouveau dans iOS 13**
 
 <a name="optionA11Y_contraste"></a>
 - **Augmenter le contraste** *(UIAccessibilityDarkerSystemColorsEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Contrast) pour un descriptif de la fonctionnalité.
@@ -861,10 +862,14 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 <a name="optionA11Y_autoPlayVideoPreviews"></a>
 - **Prévisualisation vidéo** *(UIAccessibilityIsVideoAutoplayEnabled)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 </br><img style="max-width: 375px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" src="./images/iOSdev/wwdc19-244-TextStyles_6.png" />
-</br>
+</br></br></br>
 <a name="optionA11Y_differentiateWithourColour"></a>
 - **Différencier sans couleur** *(UIAccessibilityShouldDifferentiateWithoutColour)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 </br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur" src="./images/optionA11Y_iOS13_differentiateWithoutColour.png" />
+</br></br></br>
+<a name="optionA11Y_onOffSwitchLabels"></a>
+- **Boutons avec I/O** *(UIAccessibilityIsOnOffSwitchLabelsEnabled)* : une fois activée, cette option dont l'**accès programmatique est une nouveauté iOS 13** affiche directement l'état des boutons à bascule pour éviter que seule la couleur soit porteuse de l'information.
+</br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Boutons avec I/O" src="./images/optionA11Y_iOS13_onOffSwitchLabels.png" />
 </br>
 
 </br>Une fois l'option activée, si l'action désirée n'est pas effective au sein de l'application, il est **très fortement recommandé** d'agir en conséquence en se tenant informé de l'état de l'option impactée pour fournir à l'utilisateur l'expérience à laquelle il s'attend.
