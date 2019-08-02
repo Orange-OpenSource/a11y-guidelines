@@ -65,3 +65,6 @@ pre code {
 .source-nav li.active button:hover {
   background-color: #f16e00;
 }
+.source-nav li.active button:focus {
+  color: #000 !important;
+}
