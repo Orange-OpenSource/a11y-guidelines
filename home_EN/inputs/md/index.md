@@ -3,7 +3,7 @@
     setBreadcrumb([{"label":"Presentation"}]);
 });</script>
 
-<h2 class="page-title">What is digital accessibility?</h2>
+<h2 id="what-is-digital-accessibility" class="page-title">What is digital accessibility?</h2>
 
 Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones. 
 
