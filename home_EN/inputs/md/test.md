@@ -17,6 +17,7 @@ User evaluation refers to having digital services tested by users with disabilit
 
 For more details&nbsp;:
 - [Methods and tools specific to the Web](/web_EN/methodes-outils.html)
+- [Accessibility user testing](methode-tests-utilisateur.html)
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
