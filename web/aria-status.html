@@ -123,40 +123,48 @@
 <p>Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que les informations importantes pour l&#39;utilisateur, qui n&#39;induisent pas de changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
 <h2 id="quelques-exemple-de-messages-d-tat-de-statut-ou-contextuels">Quelques exemple de messages d&#39;état, de statut ou contextuels</h2>
 <p>Lorsqu&#39;un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; est en haut de ce nouveau contenu. Un lecteur d&#39;écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l&#39;information fournie à l&#39;utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle &quot;alert&quot;. </p>
-<p><code>&lt;h2 role=&quot;alert&quot;&gt;
-    5 résultats ont été trouvés
-&lt;/h2&gt;</code></p>
+<p>`<h2 role="alert">
+    5 résultats ont été trouvés</p>
+</h2>`
+
 <p>Lorsqu&#39;un utilisateur après avoir choisi un article, appuie sur un bouton &quot;Ajouter au panier&quot;, une mention textuelle &quot;1 élément ajouté, 4 articles dans le panier&quot; apparaît temporairement près de l&#39;icône du panier. Un lecteur d&#39;écran devra annoncer &quot;un article ajouté au panier, le panier contient actuellement 4 articles&quot;. Ici, l&#39;information à pousser à l&#39;utilisateur est moins cruciale que précédemment donc on utilisera le rôle &quot;status&quot;.</p>
-<p><code>&lt;p role=&quot;status&quot;&gt;
-    un article ajouté au panier, le panier contient actuellement 4 articles
-&lt;/p&gt;</code></p>
+<p>`<p role="status">
+    un article ajouté au panier, le panier contient actuellement 4 articles</p>
+</p>`
+
 <p>Une fois qu&#39;un utilisateur a activé un processus d&#39;application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge… apparaît à l&#39;écran. Le lecteur d&#39;écran annonce &quot;Application occupée, chargement en cours&quot;.</p>
-<p><code>&lt;div role=&quot;alert&quot;&gt;
-    Application occupée, chargement en cours
-&lt;/div&gt;</code></p>
+<p>`<div role="alert">
+    Application occupée, chargement en cours</p>
+</div>`
+
 <p>Une application affiche une barre de progression pour indiquer l&#39;état d&#39;une mise à jour d&#39;un élément de contenu. Le lecteur d&#39;écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;…</p>
-<p><code>&lt;div role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-20% mis à jour
-&lt;/div&gt;</code></p>
+<p>`<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+20% mis à jour</p>
+</div>`
+
 <p>Après qu&#39;un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant comme suit&nbsp;: &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d&#39;écran annonce le même message.</p>
-<p><code>&lt;div role=&quot;alert&quot;&gt;
-    Votre formulaire a été soumis avec succès
-&lt;/div&gt;</code></p>
+<p>`<div role="alert">
+    Votre formulaire a été soumis avec succès</p>
+</div>`
+
 <p>Lorsqu&#39;un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique &quot;XX erreurs dans le formulaire&quot;. Le lecteur d&#39;écran annonce le message &quot;Formulaire non envoyé car XX erreurs de validation&quot; (ceci ne dispense pas de donner les détails de l&#39;erreur pour chaque champ incorrectement rempli). L&#39;information d&#39;erreur dans le formulaire est importante et urgente, immédiate, donc on utilise  le rôle &quot;alertdialog&quot;.</p>
-<p><code>&lt;div role=&quot;alertdialog&quot; aria-labelledby=&quot;errors&quot;&gt;
-   &lt;p id=&quot;errors&quot;&gt; Formulaire non envoyé car 2 erreurs de validation &lt;/p&gt;
-&lt;/div&gt;</code></p>
+<p>`<div role="alertdialog" aria-labelledby="errors">
+   <p id="errors"> Formulaire non envoyé car 2 erreurs de validation </p></p>
+</div>`
+
 <p>Une fois qu&#39;un utilisateur, dans une application de gestion documentaire en ligne, a inséré un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message &quot;Le document YYY est bien enregistré dans le répertoire XXX&quot;, qui est également lu par un lecteur d&#39;écran.</p>
-<p><code>&lt;p role=&quot;status&quot;&gt;
-    Le document YYY est bien enregistré dans le répertoire XXX
-&lt;/p&gt;</code></p>
+<p>`<p role="status">
+    Le document YYY est bien enregistré dans le répertoire XXX</p>
+</p>`
+
 <p>Dans une application de mailing en ligne, l&#39;utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l&#39;adresse e-mail du destinataire est affichée à l&#39;écran à la suite de celle déjà choisies pour ce message. Le lecteur d&#39;écran devra annoncer l&#39;ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l&#39;écran pour certains utilisateurs d&#39;<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d&#39;écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle &quot;log&quot;.</p>
-<p><code>&lt;div role=&quot;log&quot;&gt;
-  &lt;ol&gt;
-    &lt;li&gt;XX@YY.ZZ a été rajouté&lt;/li&gt;
-    &lt;li&gt;XX@YY.ZZ a été retiré&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</code></p>
+<p>`<div role="log">
+  <ol>
+    <li><a href="mailto:XX@YY.ZZ">XX@YY.ZZ</a> a été rajouté</li>
+    <li><a href="mailto:XX@YY.ZZ">XX@YY.ZZ</a> a été retiré</li>
+  </ol></p>
+</div>`
+
 <p>Parfois, on veut fournir des messages que pour les lecteurs d&#39;écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d&#39;écran sans les afficher à l&#39;écran.</p>
 <h2 id="les-messages-de-statut-qui-n-en-sont-pas-">Les messages de statut qui n&#39;en sont pas !</h2>
 <p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d&#39;<abbr>AT</abbr>, ce n&#39;est pas un message de statut&nbsp;:</p>

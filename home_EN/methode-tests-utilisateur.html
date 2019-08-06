@@ -107,73 +107,48 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="orange-digital-accessibility-guidelines-h2-class-page-title-assistive-technologies-h2-">Orange digital accessibility guidelines <h2 class="page-title">Assistive technologies</h2></h1>
+          <h1 id="orange-digital-accessibility-guidelines">Orange digital accessibility guidelines</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Assistive technologies"}]);
+    setBreadcrumb([
+        {"label":"Testing methods", "url":"./test.html"},
+        {"label":"Accessibility user testing"},
+    ]);
 });</script>
 
-<p>People with disabilities can use assistive technologies to access the web whatever the device. These technologies include:</p>
+<h2 id="accessibility-user-testing">Accessibility user testing</h2>
+<p>In order to evaluate the accessibility of a site, application, or product, accessibility experts conduct audits with the objective to check their compliance against standard or best practices rules (<abbr>WCAG</abbr> 2.1 Level AA for web).</p>
+<p>Once the application is compliant or mostly compliant with guidelines, experts can complete their audit with tests performed by users with disabilities. </p>
+<p>In ergonomics: «User testing is the main method for evaluating the user experience in an iterative process. The evaluation relies on the observation of users performing a set of tasks while interacting with a system. Data collected regarding their behavior, reactions and performances provide information about strengths and weaknesses of the evaluated system, as well as about the experience of users.» (translated from <a href="http://tecfaetu.unige.ch/etu-maltt/xerneas/jaquiet7/tests_utilisateurs_(Lallemand2016).pdf" title="Méthodes de design UX (french PDF file)" aria-label="Méthodes de design UX (french PDF file)">Méthodes de design UX</a>. Carine Lallemand &amp; Guillaume Gronier. Eyrolles, 2016).
+The goal of the accessibility expert is not so sharp. User tests will mainly allow to: </p>
 <ul>
-<li>Software solutions, such as screen reader or digital screen magnifiers,</li>
-<li>Equipment : ergonomic mice, keyboards with large keys, microphones, trackballs, Braille display, etc.</li>
+<li>Ensure people with disabilities can use the application (absence of blocking points) </li>
+<li>(If difficulties) List new anomalies identified thanks to the user test in progress</li>
+<li>Confirm and illustrate the remaining anomalies detected during previous audit </li>
+<li>Have concrete elements to prioritize corrections</li>
 </ul>
-<p>Digital services are accessible when they work with assistive technologies. It is important to highlight these technologies work only when web sites, mobile applications and digital content are created according to design and development accessibility rules (see dedicated tabs of this website for more information).</p>
-<h2 id="some-examples-and-definitions">Some examples and definitions</h2>
-<h3 id="screen-reader">Screen reader</h3>
-<p>A <strong>screen reader</strong> is a software application that allows blind or visually impaired people to read the information displayed on the screen with a speech synthesizer or braille display.<br>Examples: Jaws and NVDA on Windows PC, TalkBack on Android devices, VoiceOver on Apple mobile devices or Mac computers.</p>
-<img src="../images/audio.jpg" alt="" class="img-fluid">
-
-<h3 id="braille-display">Braille display</h3>
-<p>A <strong>Braille display</strong> allows reading digital information using fingers. It can be connected to a computer or any other device.  The Braille display get the text currently highlighted on the screen and then the screen reader translates the text in Braille and the device displays it on its Braille cells. Each cell has metal or nylon pins to create Braille dots. Braille displays are refreshable.</p>
-<figure>
-    <img src="../images/plage-braille.jpg" alt="Braille display" class="img-fluid">
-    <figcaption>Picture: Braille display, Karola Riegler, 2009, License CC BY ND</figcaption>
-</figure>
-
-<h3 id="screen-magnifier">Screen magnifier</h3>
-<p>A <strong>screen magnifier</strong> is a software application that increases the size of texts and graphics on device screen. Screen magnifiers can also provide features to customize color contrasts, brightness, cursor…<br>Some screen readers offer option to read aloud captured text or all screen.<br>Example: ZoomText.</p>
-<figure>
-    <img src="../images/loupe.jpg" alt="computer screen with Windows magnifier at 400% magnification" class="img-fluid">
-    <figcaption>Picture: computer screen with Windows magnifier at 400% magnification.</figcaption>
-</figure>
-
-<h3 id="keyboard-keyguard">Keyboard keyguard</h3>
-<p>A <strong>keyguard</strong> is an overlay made of plastic and perforated with holes for keys on the keyboard. It is placed on top of the keyboard. It helps prevent the user from unintentionally pressing multiple keys.</p>
-<figure>
-    <img src="../images/guidedoigt.jpg" alt="keyboard with a keyguard" class="img-fluid">
-    <figcaption>Picture: keyguard copyplastic.com</figcaption>
-</figure>
-
-<h3 id="pointing-devices">Pointing devices</h3>
-<p>Pointing devices are any device used to control the movement of a cursor on a computer screen (or tablet or mobile). For people who lack the coordination to use a standard mouse or keyboard, there are many alternatives:</p>
-<ul>
-<li><strong>Joysticks</strong> (or joystick mouse) consist of a stick that pivots on a base. They allow controlling the cursor by shifting the stick. </li>
-<li><strong>Trackballs</strong> are equipped with a ball that moves the cursor by rolling it.</li>
-<li><strong>Switches</strong> or contactors are buttons that have two states – on and off -. Switches have different activation methods according to the body part that can be controlled: eyes, mouth, head, foot, voice etc.  </li>
+<p>To enable non-ergonomic accessibility experts to realise relevant user tests, we have defined a detailed protocol that is reproducible whatever the application. The protocol consists of 5 parts; only the third stage (application interaction) depends on the application being tested. </p>
+<ol>
+<li>Reception of the participant (context, objective, instructions) </li>
+<li>Information regarding the participant profile<ul>
+<li>His/her characteristics (age, digital experience…), equipment of his computer station and job</li>
+<li>His/her experience with using the application</li>
 </ul>
-<p>Most of these pointing devices rely on keyboard-only navigation features to perform mouse/pointer functions.   </p>
-<h3 id="keyboard-only-navigation">Keyboard-only navigation</h3>
-<p><strong>Keyboard navigation</strong> refers to using keys instead of a mouse to move from item to item on the screen. The movement must be in a meaningful order, order specified by the operating system or the application. The focus (the place where the cursor is located) must be visible. 
-Typical keys used for keyboard navigation are the Tab key and Shift+Tab to move between controls, as well as arrow keys to move up, down, and sideways between items.
-Keyboard navigation is essential for some assistive technologies and requires compliance with design and development accessibility criteria.</p>
-<img src="../images/clavier.jpg" alt="" class="img-fluid">
-
-<h3 id="speech-recognition">Speech recognition</h3>
-<p><strong>Speech recognition</strong> is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.  </p>
-<p>Equivalent term: voice recognition.<br>Examples: Dragon dictation software, voice assistants of smartphones.</p>
-<figure>
-    <img src="../images/vocale.jpg" alt="Person on the phone" class="img-fluid">
-    <figcaption>Photo: Alex Washburn / Wired / Creative Commons License</figcaption>
-</figure>
-
-<h3 id="transcript">Transcript</h3>
-<p>A <strong>transcript</strong> is the text version of video or audio recordings. The transcript is presented in a digital document (Word, PDF, HTML...).</p>
-<h3 id="closed-captions">Closed captions</h3>
-<p><strong>Closed captions</strong> are audio transcribed into text and reflect both spoken words and non-verbal sounds. The text is synchronized within the video to match the audio. Closed captions are usually located on the bottom of a video screen as an overlay.</p>
-<p><img src="../images/soustitres.jpg" alt="Screenshot of a video with closed captions" class="img-fluid">    </p>
-<h3 id="audio-description">Audio description</h3>
-<p><strong>Audio description</strong> is a narration added to the soundtrack to describe important visual details that cannot be understood from the main soundtrack alone.  Audio description is a means to inform individuals about visual content essential for comprehension.  Audio description of video provides information about actions, characters…  </p>
-<p>Equivalent terms: video description, descriptive narration.</p>
+</li>
+<li>Testing: users interacts with the application following scenarios of use<ul>
+<li>2 to 5 scenarios are defined based on the main tasks of the application</li>
+</ul>
+</li>
+<li>User feedback <ul>
+<li>The feeling after interaction (appreciations, difficulties, suggestions) </li>
+<li>The ergonomic qualities of the application</li>
+</ul>
+</li>
+<li>Conclusion <ul>
+<li>Opinion on the test and information on the continuation of the study</li>
+</ul>
+</li>
+</ol>
+<p>Users are volunteers, ideally 4 or 5 users with different impairments using different assistive technologies (or not using assistive technologies). Tests are performed with the user&#39;s own equipment, face-to-face (in person or remotely) or over the phone. Each test lasts no more than 1:30 hours. Sessions are not recorded and the anonymity of the participant is preserved. </p>
 <p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

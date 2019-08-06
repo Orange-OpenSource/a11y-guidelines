@@ -160,9 +160,8 @@
 android:id="@+id/myTextviewId"
 android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
 &#47;&gt;</code></pre><pre>
-<code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);
-myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
-
+<p><code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);
+myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre></p>
 <p>Example of a <code>Tab</code>:<br>The example has tabs above and below a <code>ViewPager</code> in one case in<code>TabLayout</code> and in the other in <code>BottomNavigationView</code>. The tabs are no longer coded in <code>TabHost</code> component.
 It is necessary to indicate the state and the nature of the tabs (not internationalized):</p>
 <pre><code class="xml">//In the layout of the activity
@@ -250,7 +249,7 @@ It is necessary to indicate the state and the nature of the tabs (not internatio
     }
 </code></pre>
 
-<p><strong>Link: </strong></p>
+<p>*<em>Link: *</em></p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#attr_android:contentDescription"><code>contentDescription</code></a></li>
 </ul>
@@ -276,13 +275,12 @@ android:importantForAccessibility="4"
 android:id="@+id/myTextviewId2"
 android:importantForAccessibility="noHideDescendants"
 &#47;&gt;</code></pre><pre>
-<code class="java">myTextView1 = (TextView) findViewById(R.id.myTextviewId1);
+<p><code class="java">myTextView1 = (TextView) findViewById(R.id.myTextviewId1);
 myTextView2 = (TextView) findViewById(R.id.myTextviewId2);
 myTextView1.setImportantForAccessibility(4); // JELLY_BEAN
 myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = "4" // JELLY_BEAN
 myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT
-</code></pre>
-
+</code></pre></p>
 <h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setImportantForAccessibility%28int%29"><code>importantForAccessibility</code></a></li>
@@ -299,11 +297,10 @@ myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE
     myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
     }
 </code></pre><pre>
-<code class="kotlin">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+<p><code class="kotlin">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
     myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce))
     }
-</code></pre>
-
+</code></pre></p>
 <h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#announceForAccessibility%28java.lang.CharSequence%29"><code>announceForAccessibility</code></a></li>
@@ -315,11 +312,9 @@ myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE
 <pre><code class="java">AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
 boolean isAccessibilityEnabled = am.isEnabled();
 </code></pre><pre>
-<code class="kotlin">val am = context.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
+<p><code class="kotlin">val am = context.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
 val isAccessibilityEnabled = am.isEnabled
-</code></pre>
-
-
+</code></pre></p>
 <h2 id="live-region-dynamic-content-">Live region (dynamic content)</h2>
 <h3 id="description-">Description:</h3>
 <p>You can specify to a view that it is a “live” region, it means that its content is subject to change dynamically and should in this case notify the Accessibility <abbr>API</abbr>. This will generate TalkBack vocalizations. A typical use case: on a form, if the user makes a mistake and an error message appears, the view containing the error message must be defined as a “live” region.</p>
@@ -352,11 +347,10 @@ val isAccessibilityEnabled = am.isEnabled
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre><pre>
-<code class="kotlin">volupButton.accessibilityTraversalAfter = remote0Button.id
+<p><code class="kotlin">volupButton.accessibilityTraversalAfter = remote0Button.id
 voldownButton.accessibilityTraversalAfte = volupButton.id
 chaineplusButton.accessibilityTraversalAfter = voldownButton.id
-chainemoinsButton.accessibilityTraversalAfter = chaineplusButton.id</code></pre>
-
+chainemoinsButton.accessibilityTraversalAfter = chaineplusButton.id</code></pre></p>
 <h3 id="link-">Link:</h3>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalAfter%28int%29"><code>setAccessibilityTraversalAfter</code></a></li>
@@ -364,9 +358,9 @@ chainemoinsButton.accessibilityTraversalAfter = chaineplusButton.id</code></pre>
 </ul>
 <h2 id="manage-the-reading-of-headers-talkback-">Manage the reading of headers (TalkBack)</h2>
 <p>Android <i>Pie</i> introduces an additional level of reading of the <code>accessibilityHeading</code> feature that allows you to browse the page on these titles instead of all the elements of the page.</p>
-<h3 id="description-nbsp-">Description&nbsp;:</h3>
+<h3 id="description-">Description&nbsp;:</h3>
 <p>The screen reader can read only the headers defined in a page (see the TalkBack User Guide, the “Slide Up Using a Finger” gesture). These headers allow the reader to browse the large sections of the page to see if the information sought is there, without having to listen to everything.</p>
-<h4 id="example-nbsp-">Example&nbsp;:</h4>
+<h4 id="example-">Example&nbsp;:</h4>
 <pre><code class="xml">&lt;TextView
 […]
 android:id="@+id/myTextLevel1viewId"

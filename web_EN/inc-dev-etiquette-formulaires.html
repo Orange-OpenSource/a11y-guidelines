@@ -117,28 +117,28 @@
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Target: </strong>everyone and especially people with visual impairments, cognitive limitations, experiencing attention difficulties and mobile and tablet users.<br><strong>When: </strong>during design and development.</p>
-<p><strong>Description: </strong> </p>
+<p>*<em>Target: *</em>everyone and especially people with visual impairments, cognitive limitations, experiencing attention difficulties and mobile and tablet users.<br>*<em>When: *</em>during design and development.</p>
+<p>*<em>Description: *</em> </p>
 <p>Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. </p>
 <p>This label should be visually close to the field so we can easily mentally link them (especially for people using zoom or software magnifier or even mobile users).</p>
 <p>Each label must be set in a <code>label</code> tag, which is associated to the form field with a<code>for</code> attribute, using the <code>id</code> attribute of the form element.</p>
 <p>In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
 The <code>title</code> attribute set on a form element can also be used like a label. You can also use the <code>aria-label</code> and <code>aria-labelledby</code> attributes (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>), preferably in this order.
 The <code>autocompleted</code> attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
-<p><strong>Checklist: </strong></p>
+<p>*<em>Checklist: *</em></p>
 <p>For any form element, the label should be visually close to the field it identifies.</p>
 <p>Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters &amp; nbsp ;; beyond that, align all the labels on the right.</p>
 <p>If relevant, the fields have an <code>autocompleted</code> attribute so that the user can use a list of pre-recorded or auto-complete proposals.</p>
 <p>For radio and check box buttons, in addition to the label tag you can use other tags (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> or, in some cases, <code>fieldset</code> and <code>legend</code>). </p>
 <p>For required fields, this should be specified in the label using an image, a text symbol (<code>*</code> for example) or text and / or the <code>aria-required</code> property.</p>
-<p><strong>Users’ goal: </strong></p>
+<p>*<em>Users’ goal: *</em></p>
 <p>Not meeting this requirement is a blocking point for all users using speech synthesis. For mobile users and motor deficient it allows to click on the form elements more easily.
 For fields with auto-completion, this avoids users input errors.</p>
-<p><strong>Do: </strong><br><img src="images/formulaire.png" alt="screenshot of a valid form"></p>
+<p>*<em>Do: *</em><br><img src="images/formulaire.png" alt="screenshot of a valid form"></p>
 <p>&nbsp;</p>
-<p><strong>Don’t: </strong><br><img src="images/formulaire2.png" alt="screenshot of a form with a missing label"></p>
+<p>*<em>Don’t: *</em><br><img src="images/formulaire2.png" alt="screenshot of a form with a missing label"></p>
 <p>&nbsp;  </p>
-<p><strong>Example of an accessible form: </strong></p>
+<p>*<em>Example of an accessible form: *</em></p>
 <p>See <a href="./exemples/formulaire/index.html">the example of an accessible form</a> for more details.</p>
 <p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>

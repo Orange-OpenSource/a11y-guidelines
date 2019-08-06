@@ -172,9 +172,9 @@
 </br></br>Foresee two ways of evaluation in order to make sure that the iOS accessibility recommendations have been well implemented:</p>
 <ul>
 <li><a href="#FunctionalMode"><strong>FUNCTIONAL</strong></a>: the <strong>user navigation</strong> among the screens must be hassle-free and provide all visual information without questions to be asked: <strong>simple</strong>, <strong>clear</strong> and <strong>fluid</strong>.</li>
-<li><a href="#TechnicalMode"><strong>TECHNICAL</strong></a>: the technical compliance of some elements must be checked <em>(colours contrast, icons size...)</em> while creating code tests <em>(<abbr>TDD</abbr>, <abbr>UI</abbr>)</em>. Sometimes, this mode also confirms and solves any functional problems.
-</br>
-<a name="FunctionalMode"></a></li>
+<li><a href="#TechnicalMode"><strong>TECHNICAL</strong></a>: the technical compliance of some elements must be checked <em>(colours contrast, icons size...)</em> while creating code tests <em>(<abbr>TDD</abbr>, <abbr>UI</abbr>)</em>. Sometimes, this mode also confirms and solves any functional problems.</br>
+<a name="FunctionalMode"></a>
+</li>
 </ul>
 <h2 id="functional-review">Functional review</h2>
 <p>There&#39;s no need in having technical knowledge for this part but (de)activate and use iOS accessibility features.
@@ -189,9 +189,9 @@
 <ul>
 <li><a href="#DynamicType">Dynamic Type</a></li>
 <li><a href="#VoiceOver">VoiceOver</a></li>
-<li><a href="#SwitchControl">Switch Control</a>
-</br>
-<a name="DynamicType"></a></li>
+<li><a href="#SwitchControl">Switch Control</a></br>
+<a name="DynamicType"></a>
+</li>
 </ul>
 <h3 id="dynamic-type">Dynamic Type</h3>
 <p>To understand how this feature works, it&#39;s highly recommended to watch the example in this <a href="./dev-ios-wwdc-17245.html#Demo">WWDC 2017 video</a> that is detailed in the WWDC part of this site.
@@ -202,15 +202,14 @@
 <li>Highest threshold <strong>WITHOUT</strong> accessibility.</li>
 <li>Highest threshold <strong>WITH</strong> accessibility.</li>
 </ul>
-<p><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-DynamicType.png" />
-</br>The following points must be thoroughly checked:</p>
-<ul>
-<li>The <strong>truncation &#39;...&#39; mustn&#39;t be used</strong> and should be replaced by a hyphen at the end of the sentence.
-</br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" /></li>
-<li><strong>Illustration and icon sizes must be adapted to the magnification</strong>. 1/. Use of a central element like <a href="./dev-ios.html#graphical-elements-size">tab bar items</a>, 2/. a two fingers pinch implementation to avoid the <code>Zoom</code> native feature trigger or 3/. only a <a href="./dev-ios.html#graphical-elements-size">graphical element magnification</a> are potential solutions according to the context.</li>
-<li><strong>Change the text sizes in every screen</strong> to ensure that all the elements perfectly meet the graphical contraints.</li>
-<li>As soon as a <strong>corrected fault</strong> is effective, it <strong>must be checked for every device used for tests</strong> to be sure of its definitive rectification.</li>
-</ul>
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-DynamicType.png" />
+</br>The following points must be thoroughly checked:
+- The **truncation '...' mustn't be used** and should be replaced by a hyphen at the end of the sentence.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" />
+- **Illustration and icon sizes must be adapted to the magnification**. 1/. Use of a central element like [tab bar items](./dev-ios.html#graphical-elements-size), 2/. a two fingers pinch implementation to avoid the `Zoom` native feature trigger or 3/. only a [graphical element magnification](./dev-ios.html#graphical-elements-size) are potential solutions according to the context.
+- **Change the text sizes in every screen** to ensure that all the elements perfectly meet the graphical contraints.
+- As soon as a **corrected fault** is effective, it **must be checked for every device used for tests** to be sure of its definitive rectification.
+
 <p>All these <strong>tests are quite long to be performed</strong> because every screen is impacted with different devices including the changing of the text size inside each one of them.
 </br></br>
 <a name="VoiceOver"></a></p>
@@ -252,7 +251,7 @@
 </br>Its goal and way of being used won&#39;t be developed here because they&#39;re perfectly explained in this detailed <a href="./dev-ios-wwdc-16407.html">WWDC video</a> that&#39;s highly recommended to be watched.
 </br></br></p>
 <h3 id="code-testing">Code testing</h3>
-<p>Many kinds of tests <em>(<abbr>TDD</abbr></em>, <em><abbr>UI</abbr>)</em> may be set up by the developers in order to maintain a stable and reliable code over time.
+<p>Many kinds of tests <em>(<abbr>TDD</abbr></em>, *<abbr>UI</abbr>)* may be set up by the developers in order to maintain a stable and reliable code over time.
 </br>These good practice ensure functional continuity by being informed of any deviation introduced in subsequent developments.
 </br></br></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
