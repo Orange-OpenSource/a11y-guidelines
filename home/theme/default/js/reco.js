@@ -99,6 +99,7 @@ $(document).ready( function () {
   }
 
   // Lien retour en haut de page
+  $('.skip-links').attr('tabindex','-1');
   $(window).scroll(function () {
     if (app.scrollTimer) {
       window.clearTimeout(app.scrollTimer);
@@ -124,6 +125,7 @@ $(document).ready( function () {
     $('body,html').animate({
         scrollTop: 0
     }, 800);
+    $('.skip-links').focus();
     return false;
   });
 
