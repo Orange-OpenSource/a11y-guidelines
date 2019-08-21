@@ -25,7 +25,8 @@ Cette présentation visualisable sur le **site développeur officiel d'Apple** (
 - [Inspection](#Inspection) (20:30)
 - [Settings](#Settings) (28:33)
 
-Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.
+À la fin de cette présentation, il est très fortement recommandé de consulter les [nouveautés Xcode 11 de l'outil Accessibilty Inspector](./criteria-ios-wwdc-19000.html#AccessibilityInspector) de façon à connaître parfaitement la toute dernière version.
+</br></br>Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.
 
 <a name="AccessibilityInspector"></a>
 ### [Accessibility Inspector (09:38)](https://developer.apple.com/videos/play/wwdc2016/407/?time=578)

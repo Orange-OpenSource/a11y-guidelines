@@ -23,7 +23,8 @@ Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une appl
 - Consacrer le temps nécessaire à la maîtrise de la gestuelle ([VoiceOver](./lecteur-ecran-voiceover.html), contrôle de sélection).
 - Visionner les exemples d'utilisation fournis dans les [vidéos WWDC](./criteria-ios-wwdc.html).
 - Assimiler les [critères de conception](./criteria-ios-conception.html) pour s'asurer de la bonne voie sur laquelle on s'engage.
-- Pour les [développeurs](./criteria-ios-dev.html), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.</br></br>
+- Pour les [développeurs](./criteria-ios-dev.html), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
+- Il faut absolument que les contenus web et les éléments tiers qui pourraient être utilisés au sein de l'application soient eux-mêmes déjà parfaitement accessibles.</br></br>
 ### Environnement de travail
 Quatre grandes familles peuvent être dépeintes au sein de chaque projet :
 - À l'initiative de tout ce qui va être créé, la **personne en charge de prioriser les fonctionnalités à implémenter** doit parfaitement comprendre les besoins utilisateurs et la façon de les décliner sous iOS.
@@ -45,6 +46,7 @@ La participation aux tests de cette partie ne nécessite aucune connaissance tec
 - **Orientation de l'écran** : il est très fortement recommandé de pouvoir utiliser une application en mode portrait ou paysage. Cette [fonctionnalité](./criteria-ios-conception.html#orientation-de-l-cran) doit absolument être vérifiée pour tous les écrans d'une application.
 - **Limiter les animations visuelles** : lorsque des personnes sont susceptibles d'être plus ou moins gênées par les mouvements visuels, il faut absolument s'assurer que les éventuelles animations proposées répondent bien aux [souhaits de l'utilisateur](./criteria-ios-wwdc-18230.html#Motion).
 - **Réduire le floutage et la transparence** : victime de problèmes visuels, une personne peut rapidement trouver les effets de flou et de transparence très inconfortables. Il faut donc vérifier que l'[atténuation proposée par le système](./criteria-ios-wwdc-18230.html#TransparencyAndBlurring) est bien prise en compte sur les pages applicatives où ces effets sont implémentés.
+- **Mode sombre** : le résultat graphique de cette *nouvelle fonctionnalité iOS 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter le contraste](./criteria-ios-conception.html#optionA11Y_contraste) qui est aussi un élément incontournable à vérifer dans ce contexte.
 
 En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifer à minima une application d'accessible :
 - [Dynamic Type](#DynamicType)
@@ -86,6 +88,7 @@ L'activation du lecteur d'écran natif change radicalement les résultats obtenu
 - L'utilisateur doit réaliser un minimum de sélections au sein de l'écran.
 
 Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par VoiceOver.
+</br>Maintenant, **si le lecteur d'écran n'est pas encore implémenté** sur une application déjà en diffusion publique, il est primordial d'en **informer l'utilisateur** dès [sélection de l'icône applicatif](./criteria-ios-dev.html#vocalisation-du-nom-de-l-application) en indiquant très clairement la situation de façon à en éviter une consultation catastrophique et décevante.
 </br></br>
 <a name="SwitchControl"></a>
 ### Contrôle de sélection
@@ -103,6 +106,7 @@ Comme son nom l'indique, cette partie requiert des connaissances plus ou moins p
 </br></br>
 ### Contraste des couleurs
 Graphiquement, [ce point](./criteria-ios-conception.html#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local *(Colour Contrast Analyzer...)* ou à des sites web publics *(WebAIM...)*.
+</br>L'outil <span lang="en">Accessibility Inspector</span> dispose d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](./criteria-ios-wwdc-19000.html#ColorContrast) depuis Xcode 11 qui permet aussi de réaliser le même type de vérifications.
 </br></br>
 ### Inspection de code
 L'interface de développement Apple *(Xcode)* fournit un outil particulièrement intéressant intitulé **Accessibility Inspector**.

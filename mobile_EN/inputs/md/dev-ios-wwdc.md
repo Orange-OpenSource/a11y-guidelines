@@ -20,6 +20,10 @@ This section regroups [presentations at the WWDC](https://developer.apple.com/vi
 </br>**The summary of each video can be reached on clicking the title or the image presentation**.
 </br></br></br>
 
+## [2019 - Large Content Viewer](./dev-ios-wwdc-19261.html)
+This video session deals with the **Large Content Viewer** feature that helps people who prefer and/or need larger text sizes.
+</br><a href="./dev-ios-wwdc-19261.html"><img style="max-width: 700px; height: auto;" alt="Access to the large content viewer video session." src="./images/iOSdev/wwdc19-261.png" /></br></br></br>
+
 ## [2019 - Accessibility lessons](./dev-ios-wwdc-19000.html)
 This video session encompasses four short presentations dealing with accessiblity.
 </br><a href="./dev-ios-wwdc-19000.html"><img style="max-width: 800px; height: auto;" alt="Access to the accessibility lessons." src="./images/iOSdev/wwdc19-000.png" /></br></br></br>

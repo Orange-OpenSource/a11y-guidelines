@@ -66,11 +66,15 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
 </br></br> Avec l’apparition du [Dynamic Type](./criteria-ios-dev.html#taille-des-textes) permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
 </br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" />
+</br></br>Il existe des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.
+</br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iOSdev/wwdc19-244-TextStyles_11.png" />
+</br>Dans ce cas, l'utilisation de l'option d'accessibilité [différencier sans couleur](#optionA11Y_differentiateWithoutColour) *(nouveauté iOS 13)* va permettre ce type d'affichage **uniquement à la demande de l'utilisateur**.</br>
 
 **À vérifier&nbsp;:**
 
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément. 
-- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> par exemple)*.
+- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité [Color Contrast Calculator](./criteria-ios-wwdc-19000.html#ColorContrast) de l'outil <span lang="en">Accessibility Inspector</span> sous Xcode 11)*.
+- Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité [augmenter le contraste](#optionA11Y_contraste).
 
 **Objectif utilisateur&nbsp;:** 
 
@@ -78,7 +82,8 @@ Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes 
 Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure…), d’accéder tout de même à l’information par d’autres moyens.
 
 **Outil&nbsp;:**
-L’application [<span lang="en">Colour Contrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).  
+L’application [<span lang="en">Colour Contrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).
+</br>L'outil <span lang="en">Accessibility Inspector</span> dispose aussi d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](./criteria-ios-wwdc-19000.html#ColorContrast) depuis Xcode 11 qui permet d'obtenir les mêmes résultats.
 
 **Exemple de contraste non valide&nbsp;:**  
 Le texte «&nbsp;film | 20h40 …&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
@@ -450,7 +455,7 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 14. [Activer le Contrôle de Sélection](#optionA11Y_switchControl).
 15. [Activer VoiceOver](#optionA11Y_voiceOver).
 16. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews) ⟹ **nouveauté iOS 13**
-17. [Différencier sans couleur](#optionA11Y_differentiateWithourColour) ⟹ **nouveauté iOS 13**
+17. [Différencier sans couleur](#optionA11Y_differentiateWithoutColour) ⟹ **nouveauté iOS 13**
 18. [Boutons avec I/O](#optionA11Y_onOffSwitchLabels) ⟹ **nouveau dans iOS 13**
 
 <a name="optionA11Y_contraste"></a>
@@ -863,7 +868,7 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 - **Prévisualisation vidéo** *(UIAccessibilityIsVideoAutoplayEnabled)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 </br><img style="max-width: 375px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" src="./images/iOSdev/wwdc19-244-TextStyles_6.png" />
 </br></br></br>
-<a name="optionA11Y_differentiateWithourColour"></a>
+<a name="optionA11Y_differentiateWithoutColour"></a>
 - **Différencier sans couleur** *(UIAccessibilityShouldDifferentiateWithoutColour)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 </br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur" src="./images/optionA11Y_iOS13_differentiateWithoutColour.png" />
 </br></br></br>

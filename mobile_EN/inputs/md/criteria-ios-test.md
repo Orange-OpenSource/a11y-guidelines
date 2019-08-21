@@ -22,7 +22,8 @@
 - Spend as much time as necessary to perfectly control the gestures ([VoiceOver](./voiceover.html), Switch Control). 
 - Watch the examples provided by the [WWDC videos](./dev-ios-wwdc.html).
 - Assimilate the [design criteria](./criteria-ios.html) to be sure that you're following the appropriate working path.
-- Create as many blank projects as needed to test a dedicated feature and be sure that it's working before introducing inside the final app coding global environment.</br></br>
+- Create as many blank projects as needed to test a dedicated feature and be sure that it's working before introducing inside the final app coding global environment.
+- Be sure that third-party elements or web contents that may be parts of the application are themselves already perfectly accessible.</br></br>
 ### Working environment
 Four different groups may be described as parts of every project:
 - The **person in charge of defining the priorities of every functionality** must know the app users needs so as to accurately define the functionalities acceptance criteria and be able to check himself the desired achievement.
@@ -43,6 +44,7 @@ There's no need in having technical knowledge for this part but (de)activate and
 - **Screen orientation**: it's highly recommended to implement the landscape and portrait modes. When implemented, this [functionality](./criteria-ios.html#screen-orientation) must be checked for each page of the application.
 - **Reduce motion** : because visual movements may give rise to problems *(nausea...)* for some people, it's imperative to check the [user settings dealing with animations](./criteria-ios.html#optionA11Y_limiteVisuel).
 - **Reduce transparency** : blurring effects may give rise to sighting difficulties for people having visual impairments. These effects can be weakened by the system thanks to an [accessibility option](./criteria-ios.html#optionA11Y_reductionTransparence) that must be checked in every page it occurs.
+- **Dark mode** : the result of this *iOS 13 new feature* must be checked out to ensure the conformity of the different color contrasts: the [increase contrast](./criteria-ios.html#optionA11Y_contraste) accessibility option must also be verified in this context.
 
 Besides these basic criteria, there are also fundamental requirements for an accessible application:
 - [Dynamic Type](#DynamicType)
@@ -83,6 +85,7 @@ The iOS native screen reader activation drastically changes the visual behavior 
 - The number of element selections must be as small as possible.
 
 All these **tests are quite long to be performed** and they require a strong empathy to suggest constructive criticism  of the vocally VoiceOver information.
+</br></br>Besides, **if the screen reader isn't implemented yet**, it's essential to **inform the user** about this situation once the [application icon is selected](./dev-ios.html#vocalized-application-name) so as to avoid disappointement and possible frustration.
 </br></br>
 <a name="SwitchControl"></a>
 ### Switch Control
@@ -100,6 +103,7 @@ The use of this section requires more or less special expertise according to wha
 </br></br>
 ### Colour contrast
 The [colour contrast](./criteria-ios.html#colours) is certainly the easiest point to be checked thanks to softwares *(Colour Contrast Analyzer...)* or web sites *(WebAIM...)*.
+</br>Since Xcode 11, the Accessibility Inspector tool provides a specific [Color Contrast Calculator](./dev-ios-wwdc-19000.html#ColorContrast) feature that reaches the same purpose.
 </br></br>
 ### Code review
 The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled **Accessibility Inspector**.

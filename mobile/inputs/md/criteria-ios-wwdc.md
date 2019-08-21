@@ -20,6 +20,10 @@ Cette partie regroupe des [présentations faites à la WWDC](https://developer.a
 </br></br>La plupart des illustrations proviennent des supports de présentations fournies par Apple et sont disponibles dans la partie `Resources` de l'onglet `Overview` propre à chaque vidéo.
 </br>**L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation**.</br></br></br>
 
+## [2019 - Large Content Viewer](./criteria-ios-wwdc-19261.html)
+Cette courte vidéo concerne la fonctionnalité **Large Content Viewer** apparue avec iOS 11 et les nouveautés iOS 13 associées.
+</br><a href="./criteria-ios-wwdc-19261.html"><img style="max-width: 700px; height: auto;" alt="Accès aux quelques enseignements en accessibilité." src="./images/iOSdev/wwdc19-261.png" /></br></br></br>
+
 ## [2019 - Quelques enseignements en accessibilité](./criteria-ios-wwdc-19000.html)
 Cette session regroupe quatre courtes interventions toutes liées à l'accessibilité.
 </br><a href="./criteria-ios-wwdc-19000.html"><img style="max-width: 800px; height: auto;" alt="Accès aux quelques enseignements en accessibilité." src="./images/iOSdev/wwdc19-000.png" /></br></br></br>

@@ -29,8 +29,6 @@ Pour tout le monde en somme&nbsp;!
 ## Je veux mDAN&nbsp;!
 [Le code source est disponible sur github](https://github.com/Orange-OpenSource/m-dan)
 
-L'application mDAN sera prochainement disponible pour Android et iOS sur le <span lang="en">Play Store</span> et l'<span lang="en">App Store</span>.
-
 Vous pouvez déjà [télécharger la version Android](/mDAN_v2.2.0.apk)
 
 &nbsp;

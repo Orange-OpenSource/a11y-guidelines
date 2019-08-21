@@ -65,11 +65,15 @@ Colours have a very important role in the transmission of information.
 </br><img style="max-width: 1000px; height: auto;" alt="" src="./images/color_contrast_3.png" />
 </br></br> With [Dynamic Type](./dev-ios.html#text-size) whose purpose is to increase the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
 </br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" />
+</br></br>Adding different forms to differentiate the information provided only by colors may unnecessarily overlay the graphic interface if the user doesn't need them.
+</br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iOSdev/wwdc19-244-TextStyles_11.png" />
+</br>In this case, the [Differentiate Without Colour](#optionA11Y_differentiateWithoutColour) accessibility option *(iOS 13 new feature)* will allow this display **only at the user's demand**.</br>
 
 **Checklist: **
 
 - Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.
-- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool)*.
+- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool or with the [Color Contrast Calculator](./dev-ios-wwdc-19261.html#ColorContrast) feature of Accessibility Inspector under Xcode 11)*.
+- With the **Dark Mode** iOS 13 new feature, special attention must be paid to the contrasts used in the different themes and that can be modified with the [Increase Contrast](#optionA11Y_contraste) accessibility option.
 
 **Users’ goal: ** 
 
@@ -77,7 +81,8 @@ Ease of reading for all users, especially the visually impaired, or people in a 
 Allow users who cannot distinguish colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments…) to access the same information by other means.
 
 ** Tools: **
-The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  
+The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).
+</br>The Accessibility Inspector tool provides a specific [Color Contrast Calculator](./dev-ios-wwdc-19000.html#ColorContrast) feature that reaches the same purpose since Xcode 11.
 
 ** Example of invalid contrast **  
 The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.  
@@ -448,7 +453,7 @@ The full list of these options including their purpose and their coding name is 
 14. [Switch Control](#optionA11Y_switchControl)
 15. [VoiceOver](#optionA11Y_voiceOver)
 16. [Auto-Play Video Previews](#optionA11Y_autoPlayVideoPreviews) ⟹ **iOS 13 new feature**
-17. [Differentiate Without Colour](#optionA11Y_differentiateWithourColour) ⟹ **iOS 13 new feature**
+17. [Differentiate Without Colour](#optionA11Y_differentiateWithoutColour) ⟹ **iOS 13 new feature**
 18. [On/Off Labels](#optionA11Y_onOffSwitchLabels) ⟹ **new in iOS 13**
 
 <a name="optionA11Y_contraste"></a>
@@ -860,7 +865,7 @@ The full list of these options including their purpose and their coding name is 
 - **Auto-Play Video Previews** *(UIAccessibilityIsVideoAutoplayEnabled)* : see the [WWDC 2019 video](./dev-ios-wwdc-19000.html#VisualDesignAccessibility) for a detailed description of this **iOS 13 new feature**.
 </br><img style="max-width: 375px; height: auto;" alt="Access illustration via Settings - Accessibility - Motion - Auto-play Video Previews" src="./images/iOSdev/wwdc19-244-TextStyles_6.png" />
 </br></br></br>
-<a name="optionA11Y_differentiateWithourColour"></a>
+<a name="optionA11Y_differentiateWithoutColour"></a>
 - **Differentiate Without Colour** *(UIAccessibilityShouldDifferentiateWithoutColour)* : see the [WWDC 2019 video](./dev-ios-wwdc-19000.html#VisualDesignAccessibility) for a detailed description of this **iOS 13 new feature**.
 </br><img style="max-width: 1000px; height: auto;" alt="Access illustration via Settings - Accessibility - Display & Text Size - Differentiate Without Colour" src="./images/optionA11Y_iOS13_differentiateWithoutColour.png" />
 </br></br></br>

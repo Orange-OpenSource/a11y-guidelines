@@ -24,7 +24,8 @@ This video available on the **official Apple website** ([session 407](https://de
 - [Inspection](#Inspection) (20:30)
 - [Settings](#Settings) (28:33)
 
-Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.
+At the end of this presentation, it's highly recommended to take a look at the [Accessibilty Inspector new features](./dev-ios-wwdc-19000.html#AccessibilityInspector) introduced in Xcode 11 so as to be as up to date as possible.
+</br></br>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.</br></br>
 
 <a name="AccessibilityInspector"></a>
 ### [Accessibility Inspector (09:38)](https://developer.apple.com/videos/play/wwdc2016/407/?time=578)
@@ -36,7 +37,7 @@ Overview of the tool pointing out the themes to be developed : audit, inspection
 This part contains a demo [(12:22)](https://developer.apple.com/videos/play/wwdc2016/407/?time=742) that highlights the way to find out a solution for the problem detected by the tool [(14:24)](https://developer.apple.com/videos/play/wwdc2016/407/?time=864) while providing a bug report [(17:07)](https://developer.apple.com/videos/play/wwdc2016/407/?time=1027).
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Audit.png" />
 </br>A complementary **manual audit** is also **mandatory** to avoid bypassing some kind of hidden problems [(18:55)](https://developer.apple.com/videos/play/wwdc2016/407/?time=1135).
-
+</br></br>
 <a name="Inspection"></a>
 ### [Inspection (20:30)](https://developer.apple.com/videos/play/wwdc2016/407/?time=1230)
 This feature explanation is build on an example [(21:58)](https://developer.apple.com/videos/play/wwdc2016/407/?time=1318) that points out possible kinds of problems in an app like :
@@ -46,7 +47,7 @@ This feature explanation is build on an example [(21:58)](https://developer.appl
 
 The presentation of the view hierarchy of this feature [(24:40)](https://developer.apple.com/videos/play/wwdc2016/407/?time=1480) comes along with an important point dealing with CALayer elements that aren't taken into account by VoiceOver.
 </br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc16-407-Inspection.png" />
-
+</br></br>
 <a name="Settings"></a>
 ### [Settings (28:33)](https://developer.apple.com/videos/play/wwdc2016/407/?time=1713)
 Last but not least, this feature (highlighted thanks to a demo - [30:25](https://developer.apple.com/videos/play/wwdc2016/407/?time=1825)) avoids switching back and forth between changing some accessibility settings and verifying the result on the app.
