@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orange digital accessibility guidelines</title>
+        
+      
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="./js/lunr.min.js"></script>
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">                  
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Skip to navigation</a>
+        <a id="skip-content" href="#content">Skip to main content</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Navigation bar</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Back to home" title="Back to home"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../home_EN/index.html">Home</a></li>             
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web_EN/index.html">Web</a> 
+                  </li>
+                  <li class="nav-item active mobile">
+                    <a href="./index.html" 
+                       class="nav-link">Mobile
+                      </a>
+                    <ul id="navigation" class="nav navbar-nav">
+                      <li><a class="page-index" 
+                             href="index.html">Presentation
+                          </a>
+                        </li>
+                      <li><a class="page-mobile-android" 
+                               href="mobile-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-mobile-ios" 
+                               href="mobile-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>          
+                      <li><a class="page-mdan" 
+                             href="mdan.html">mDAN
+                          </a>
+                        </li>
+                      <li><a class="page-links" 
+                             href="links.html">Useful links
+                          </a>
+                        </li>
+                      <li><a class="page-contact" 
+                             href="contact.html">Contact
+                          </a>
+                        </li>
+                      <li><a class="page-about" 
+                             href="about.html">About
+                          </a>
+                        </li>                        
+                    </ul>                      
+                  </li>  
+                  <li class="nav-item"><a href="../others_EN/index.html" class="nav-link">Editorial content</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">                  
+                    <a href="http://confort-plus.orange.com/index_en" target="_blank" 
+                      title="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website." 
+                      aria-label="Discover Confort +: browser extension allowing to adapt the reading comfort when consulting a website.">
+                      Discover Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="../mobile/index.html" class="nav-link" lang="fr" aria-label="version française">fr</a><a aria-disabled="true" aria-label="english version" href="#" class="nav-link active">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Display search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Search</label>
+            <input placeholder="Enter your search" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Search</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">You are here: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile_EN/index.html">Mobile app</a></li>        
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="wwdc-2019-large-content-viewer">WWDC 2019 : Large Content Viewer</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"iOS","url":"mobile-ios.html"},
+                   {"label":"WWDC","url":"dev-ios-wwdc.html"},
+                   {"label":"2019 - Large Content Viewer"}
+    ]);
+    addSubMenu([
+        {"label":"Design criteria","url":"criteria-ios.html"}, 
+        {"label":"Developers guide","url":"dev-ios.html"},
+        {"label":"VoiceOver","url":"voiceover.html"},
+        {"label":"WWDC","url":"dev-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="mobile-ios"></span></p>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/261/">session 261</a>) aims at highlighting the new iOS 13 features dealing with the <strong>Large Content Viewer</strong> implemented with the Dynamic Type accordingly since iOS 11.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261.png" />
+</br></br>Various contents and their video timelapse are indicated hereunder:</p>
+<ul>
+<li><a href="#DynamicType">Dynamic Type</a> (00:57)</li>
+<li><a href="#LargeContentViewer">Large Content Viewer</a> (01:54)</li>
+<li><a href="#ImageSettings">Image settings</a> (04:02)</li>
+<li><a href="#CustomViews">Custom Views</a> (04:52) ⟹ <strong>iOS 13 new feature</strong></li>
+<li><a href="#Examples">Examples</a> (09:15)</li>
+</ul>
+<p>Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the appropriate moment.
+</br></br>
+<a name="DynamicType"></a></p>
+<h2 id="-dynamic-type-00-57-https-developer-apple-com-videos-play-wwdc2019-261-time-57-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=57">Dynamic Type (00:57)</a></h2>
+<p>Reminder on the Dynamic Type feature whose goal is to <strong>customize the text size</strong> thanks to the user settings.
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-DynamicType.png" />
+</br>The <a href="./dev-ios.html#text-size">iOS developers guide section</a> of this site contains many useful information about the implementation of this feature.
+</br></br></br>
+<a name="LargeContentViewer"></a></p>
+<h2 id="-large-content-viewer-01-54-https-developer-apple-com-videos-play-wwdc2019-261-time-114-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=114">Large Content Viewer (01:54)</a></h2>
+<p>This feature introduced in iOS 11 and <strong>available only for the accessibility text sizes</strong> allows people with low vision to use UIKit bar elements as effective as the Dynamic Type grows the text size.
+</br><img style="max-width: 350px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-LargeContentViewer_1.png" />
+</br>To trigger this functionnality, the user must <strong>long press</strong> the element to see a larger version, <strong>drag his finger along the bottom bar</strong> to find out all the bar items and let it go to activate the proper one.
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-LargeContentViewer_2.png" />
+</br>It&#39;s important to notice that <strong>&#39;scaling with Dynamic Type is always preferred to showing the Large Content Viewer&#39;</strong> that must be implemented <strong>&#39;only for the case when your custom UI cannot grow in size&#39;</strong>.
+</br></br></br>
+<a name="ImageSettings"></a></p>
+<h2 id="-image-settings-04-02-https-developer-apple-com-videos-play-wwdc2019-261-time-242-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=242">Image settings (04:02)</a></h2>
+<p>In this part of the video, all the image characteristics are reviewed to get as smooth and detailed a rendering as possible when the image is getting larger, as indicated in the <a href="./dev-ios.html#graphical-elements-size">iOS developers guide section</a>.
+</br></br>The Xcode Interface Builder can be associated to some lines of code for this purpose:
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-ImageSettings.png" />
+</br></br></br>
+<a name="CustomViews"></a></p>
+<h2 id="-custom-views-04-52-https-developer-apple-com-videos-play-wwdc2019-261-time-292-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=292">Custom Views (04:52)</a></h2>
+<p>When implementing the Dynamic Type feature, <strong>iOS 13</strong> allows to <strong>show the same UI that&#39;s shown for standard UIKit bar items</strong> following the steps hereafter:
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_1.png" />
+</br>The <strong><code>UILargeContentViewerItem</code> protocol</strong> (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=335">05:35</a>) defines the needed information for the large content viewer and is <strong>already implemented by the UIView class</strong> that provides setters as well <em>(no need to subclass and override)</em>:
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_2.png" />
+</br></br>A gesture interaction must also be added (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=412">06:52</a>) to finalize the large content viewer implementation:
+</br><img style="max-width: 850px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_3.png" />
+</br></br>Some properties are also bound to this interaction (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=431">07:11</a>) to get and/or define more details:
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_4.png" />
+</br></br>Finally, the delegate of the gesture interaction contains some specific options (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=472">07:52</a>) to provide custom actions:
+</br><img style="max-width: 850px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_5.png" />
+</br></br></br>
+<a name="Examples"></a></p>
+<h2 id="-examples-09-15-https-developer-apple-com-videos-play-wwdc2019-261-time-555-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=555">Examples (09:15)</a></h2>
+<p>The first example deals with <strong>standard UIKit views</strong>:
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-Examples_1.png" />
+</br></br>The second example takes into account <strong>custom classes for some buttons</strong> (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=593">09:53</a>) whose properties must be overriden to be well defined:
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-Examples_2.png" />
+</br></br>The last example tackles a <strong>button with an already existing long press action</strong> (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">10:36</a>).
+</br></br></br>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to top of page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

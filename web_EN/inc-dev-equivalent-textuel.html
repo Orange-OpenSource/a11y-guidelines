@@ -117,8 +117,8 @@
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p>*<em>Target: *</em>everyone and especially people with visual impairments and cognitive limitations.<br>*<em>When: *</em>from design and during development.</p>
-<p>*<em>Description: *</em></p>
+<p><strong>Target: </strong>everyone and especially people with visual impairments and cognitive limitations.<br><strong>When: </strong>from design and during development.</p>
+<p><strong>Description: </strong></p>
 <p>All <code>img</code> tags should have an <code>alt</code> attribute with a relevant description: </p>
 <ul>
 <li>For clickable images: specify the function&nbsp;/ link target in the <code>alt</code> attribute,</li>
@@ -128,23 +128,23 @@
 <li>For images having <code>alt</code> attributes that won’t be convenient when the text is too long (diagrams, graphs…), add a describing text close to the image, or add a link pointing to an <abbr>HTML</abbr> page with the description.</li>
 </ul>
 <p>Add a <code>title</code> attribute to describe all <code>frame</code> or <code>iframe</code> content or function. If a <code>frame</code> or <code>iframe</code> doesn&#39;t convey information for the user (only technical), render it invisible, see example: <a href="./exemples/iframes-techniques/index.html">Hidden accessible frames technics</a></p>
-<p>*<em>Checklist: *</em></p>
+<p><strong>Checklist: </strong></p>
 <ul>
 <li>Each <code>img</code> tag must have an <code>alt</code> attribute.</li>
 <li>For images not carrying information, set them as background images preferably (<abbr>CSS</abbr>). </li>
 <li>For graphics, you can add a link under them to access the data table (revealing it in the same page or in a different page).</li>
 </ul>
-<p>*<em>Users’ goal: *</em></p>
+<p><strong>Users’ goal: </strong></p>
 <p>Access the information included in images for users who cannot access it.</p>
 <p>Blocking point: an image without textual Description: is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth…).</p>
-<p>*<em>Technical goal: *</em></p>
+<p><strong>Technical goal: </strong></p>
 <p>Improve the natural referencing.</p>
 <p><strong>Valid example:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;back to home&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Good deal, family max plan 2 euros per month for 12 months instead of 16 euros.&quot;&gt;</code></p>
 <p><strong>Example with an empty alternative:</strong> 
 In the example below, the right pictogram doesn’t have to be vocalized as the text on the left already provides the information.<br>In this case setting the <code>alt</code> attribute to something other than empty would provide redundant information.  </p>
 <p><img src="./images/service-24.png" alt="example with empty alternative">  </p>
 <p><code>&lt;h3&gt;guaranteed 24h service&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code> </p>
-<p>*<em>Tools: *</em>
+<p><strong>Tools: </strong>
 The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> extension (ability to display text alternatives for all images). </p>
 <p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>

@@ -166,8 +166,7 @@
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles.</p>
 <p><strong>Exemples&nbsp;:</strong></p>
-<img src="./images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
-
+<p><img src="./images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400"></p>
 <p>En décomposant l’image&nbsp;:</p>
 <ul>
 <li><img src="./images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de <code>contentDescription</code></li>
@@ -191,9 +190,7 @@ L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser
 <p><strong>Exemple de contraste non valide&nbsp;:</strong><br>Le texte &quot;film | 20h40 …&quot; ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  </p>
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant">   </p>
 <p><strong>Exemple de passage d’information par la couleur valide et non valide&nbsp;:</strong> </p>
-<img src="./images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
-
-
+<p><img src="./images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300"></p>
 <h2 id="alternative-textuelle">Alternative textuelle</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
 <p><strong>Description&nbsp;:</strong>  </p>
@@ -217,11 +214,13 @@ containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES)
 mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le bouton-icône pour éviter une redondance d’information
 infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le texte pour éviter une redondance d’information
 </code></pre><pre>
-<p><code class="kotlin">containerView.contentDescription = "3 mails non lus, bouton" //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
+<code class="kotlin">containerView.contentDescription = "3 mails non lus, bouton" //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
 containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.
 mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information
 infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //On masque le texte pour éviter une redondance d’information
-</code></pre></p>
+</code></pre>
+
+
 <h2 id="titre-et-en-t-te">Titre et en-tête</h2>
 <p><strong>Cible&nbsp;:</strong> tout le monde<br><strong>Quand&nbsp;:</strong> dès la conception et à la rédaction du contenu.</p>
 <p><strong>Description&nbsp;:</strong> </p>
@@ -273,9 +272,7 @@ infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_N
 <p><strong>Exemple valide&nbsp;:</strong> </p>
 <p>Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.<br><img src="./images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300"></p>
 <p><strong>Exemple non-valide&nbsp;:</strong>  </p>
-<img src="./images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
-
-
+<p><img src="./images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300"></p>
 <h2 id="-l-ment-fant-me">Élément fantôme</h2>
 <p><strong>Cible&nbsp;:</strong> les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
 <p><strong>Description&nbsp;:</strong>  </p>
@@ -353,12 +350,12 @@ L’application <a href="https://play.google.com/store/apps/details?id=com.googl
 <p>Donner une indication visuelle aux utilisateurs lors de la présence de <i lang="en">scrolls</i> horizontaux. Permettre aux utilisateurs de lecteur d’écran d’utiliser les <i lang="en">scrolls</i> horizontaux.</p>
 <div class="sideToSide row">
 <div class="col-sm-6 col-xs-12">
-**Exemple valide&nbsp;:**
+<strong>Exemple valide&nbsp;:</strong>
 
 <img src="./images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
-**Exemple non-valide&nbsp;:**
+<strong>Exemple non-valide&nbsp;:</strong>
 
 <img src="./images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 </div>

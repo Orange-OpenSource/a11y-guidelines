@@ -117,8 +117,8 @@
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p>*<em>Target: *</em>everyone, especially people with visual impairments, cognitive limitations (dyslexic) or attention difficulties.<br>*<em>When: *</em>as of design and during development.</p>
-<p>*<em>Description: *</em></p>
+<p><strong>Target: </strong>everyone, especially people with visual impairments, cognitive limitations (dyslexic) or attention difficulties.<br><strong>When: </strong>as of design and during development.</p>
+<p><strong>Description: </strong></p>
 <p>Make the link and button labels understandable without the context for all users and, in particular, the visually impaired. During the navigation with a screen reader, it should be possible to access the links list of the page to navigate quickly. If your page contains several “learn more” links, it will be impossible to differentiate from each other.  </p>
 <p>If it is not possible to make a link more explicit (e.g. not enough space) but the label of the current link is sufficiently clear for people having access to the screen, <strong>a <code>title</code></strong>attribute must use to display a tooltip, containing all the necessary information, at the mouse rollover, but also to complete the title with additional content with, at choice:</p>
 <ul>
@@ -140,7 +140,7 @@
 &lt;a title="confirm to pay in one go" aria-label="confirm to pay in one go" href="…"&gt;confirm&lt;/a&gt;
 </code></pre>
 
-<p>*<em>Checklist: *</em>
+<p><strong>Checklist: </strong>
 Make sure that the semantics <abbr>HTML</abbr> are respected:</p>
 <ul>
 <li>a link must allow to change <abbr>URL</abbr>, to page, to download a file, to make appear / disappear content, to go to an anchor.</li>
@@ -148,11 +148,11 @@ Make sure that the semantics <abbr>HTML</abbr> are respected:</p>
 </ul>
 <p>Ensure that links, out of context, give good information about the triggered action or destination.</p>
 <p>A page must not contain multiple links with the same label but pointing to different destinations&nbsp;/ actions.</p>
-<p>*<em>Users’ goal: *</em></p>
+<p><strong>Users’ goal: </strong></p>
 <p>Allow users who don’t have access to the visual context to know the destination of the link. </p>
 <p>Particularly important for users navigating 
 through a list of links extracted from the page (screen readers) or software magnifying glass users who see only a fraction of the page.</p>
-<p>*<em>Technical goal: *</em></p>
+<p><strong>Technical goal: </strong></p>
 <p>Making explicit link labels improves natural referencing.</p>
 <p><strong>Do:</strong><br>Associate a link labelled “click here” with a hidden label: “order you mobile phone”. </p>
 <p><strong>Don’t:</strong><br>“Click here” or “Read more…” links without clarification.</p>

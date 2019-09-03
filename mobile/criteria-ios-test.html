@@ -161,7 +161,8 @@
 <li>Consacrer le temps nécessaire à la maîtrise de la gestuelle (<a href="./lecteur-ecran-voiceover.html">VoiceOver</a>, contrôle de sélection).</li>
 <li>Visionner les exemples d&#39;utilisation fournis dans les <a href="./criteria-ios-wwdc.html">vidéos WWDC</a>.</li>
 <li>Assimiler les <a href="./criteria-ios-conception.html">critères de conception</a> pour s&#39;asurer de la bonne voie sur laquelle on s&#39;engage.</li>
-<li>Pour les <a href="./criteria-ios-dev.html">développeurs</a>, ne pas hésiter à se créer des projets vierges en n&#39;y incorporant que la partie impactant la fonctionnalité désirée afin de s&#39;assurer qu&#39;elle est parfaitement fonctionnelle et que seul l&#39;environnement au sein de laquelle elle va être introduite risque éventuellement d&#39;altérer son comportement.</br></br></li>
+<li>Pour les <a href="./criteria-ios-dev.html">développeurs</a>, ne pas hésiter à se créer des projets vierges en n&#39;y incorporant que la partie impactant la fonctionnalité désirée afin de s&#39;assurer qu&#39;elle est parfaitement fonctionnelle et que seul l&#39;environnement au sein de laquelle elle va être introduite risque éventuellement d&#39;altérer son comportement.</li>
+<li>Il faut absolument que les contenus web et les éléments tiers qui pourraient être utilisés au sein de l&#39;application soient eux-mêmes déjà parfaitement accessibles.</br></br></li>
 </ul>
 <h3 id="environnement-de-travail">Environnement de travail</h3>
 <p>Quatre grandes familles peuvent être dépeintes au sein de chaque projet :</p>
@@ -176,9 +177,9 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 </br></br>De façon à pouvoir s&#39;assurer que les recommandations d&#39;accessibilité iOS ont bien été prises en compte, deux modes d&#39;évaluation sont à prévoir :</p>
 <ul>
 <li><a href="#FunctionalMode"><strong>FONCTIONNEL</strong></a> : on s&#39;assure que l&#39;utilisateur peut naviguer parmi tous les écrans sans soucis, en ayant accès à toute l&#39;information visuelle mise à disposition et surtout sans avoir à se poser de questions. Le parcours utilisateur doit être fluide, simple et sans équivoque. </li>
-<li><a href="#TechnicalMode"><strong>TECHNIQUE</strong></a> : on vérifie la conformité technique de certains éléments <em>(contraste des couleurs, taille d&#39;icônes...)</em> tout en pouvant mettre en place des tests liés au code utilisé <em>(<abbr>TDD</abbr>, <abbr>UI</abbr>)</em>. Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctionnels rencontrés.</br>
-<a name="FunctionalMode"></a>
-</li>
+<li><a href="#TechnicalMode"><strong>TECHNIQUE</strong></a> : on vérifie la conformité technique de certains éléments <em>(contraste des couleurs, taille d&#39;icônes...)</em> tout en pouvant mettre en place des tests liés au code utilisé <em>(<abbr>TDD</abbr>, <abbr>UI</abbr>)</em>. Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctionnels rencontrés.
+</br>
+<a name="FunctionalMode"></a></li>
 </ul>
 <h2 id="-valuation-fonctionnelle">Évaluation fonctionnelle</h2>
 <p>La participation aux tests de cette partie ne nécessite aucune connaissance technique particulière si ce n&#39;est savoir (dés)activer et utiliser des fonctionnalités d&#39;accessibilité iOS.
@@ -188,14 +189,15 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 <li><strong>Orientation de l&#39;écran</strong> : il est très fortement recommandé de pouvoir utiliser une application en mode portrait ou paysage. Cette <a href="./criteria-ios-conception.html#orientation-de-l-cran">fonctionnalité</a> doit absolument être vérifiée pour tous les écrans d&#39;une application.</li>
 <li><strong>Limiter les animations visuelles</strong> : lorsque des personnes sont susceptibles d&#39;être plus ou moins gênées par les mouvements visuels, il faut absolument s&#39;assurer que les éventuelles animations proposées répondent bien aux <a href="./criteria-ios-wwdc-18230.html#Motion">souhaits de l&#39;utilisateur</a>.</li>
 <li><strong>Réduire le floutage et la transparence</strong> : victime de problèmes visuels, une personne peut rapidement trouver les effets de flou et de transparence très inconfortables. Il faut donc vérifier que l&#39;<a href="./criteria-ios-wwdc-18230.html#TransparencyAndBlurring">atténuation proposée par le système</a> est bien prise en compte sur les pages applicatives où ces effets sont implémentés.</li>
+<li><strong>Mode sombre</strong> : le résultat graphique de cette <em>nouvelle fonctionnalité iOS 13</em> doit absolument être vérifié pour s&#39;assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l&#39;option d&#39;accessibilité <a href="./criteria-ios-conception.html#optionA11Y_contraste">augmenter le contraste</a> qui est aussi un élément incontournable à vérifer dans ce contexte.</li>
 </ul>
 <p>En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifer à minima une application d&#39;accessible :</p>
 <ul>
 <li><a href="#DynamicType">Dynamic Type</a></li>
 <li><a href="#VoiceOver">VoiceOver</a></li>
-<li><a href="#SwitchControl">Contrôle de sélection</a></br>
-<a name="DynamicType"></a>
-</li>
+<li><a href="#SwitchControl">Contrôle de sélection</a>
+</br>
+<a name="DynamicType"></a></li>
 </ul>
 <h3 id="dynamic-type">Dynamic Type</h3>
 <p>Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l&#39;exemple proposé dans la <a href="./criteria-ios-wwdc-17245.html#Demo">vidéo WWDC 2017</a> parfaitement résumée dans la partie WWDC de ce site.
@@ -206,14 +208,15 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 <li>Seuil le plus <strong>haut SANS</strong> accessibilité.</li>
 <li>Seuil le plus <strong>haut AVEC</strong> accessibilité.</li>
 </ul>
-<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-DynamicType.png" />
-</br>Enfin, les quelques points suivants sont à examiner minutieusement :
-- La **troncature '...' est à éviter** pour laisser place à la coupure du mot impacté identifiée par un trait d'union en fin de phrase.
-</br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" />
-- **Les illustrations comme les icônes doivent s'adapter au grossissement souhaité**. 1/. L'utilisation d'une fenêtre centrale à l’instar des [éléments dans les barres de tabulation](./criteria-ios-dev.html#taille-des-l-ments-graphiques) après un appui long, 2/. l'implémentation un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore 3/. le simple [grossissement d'un élément graphique](./criteria-ios-dev.html#taille-des-l-ments-graphiques) peuvent être des solutions selon les cas rencontrés.
-- Penser à **modifier le grossissement de texte au sein de chaque écran** pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place.
-- Dès que la **correction d’une anomalie** remontée sur un terminal est effective, elle **doit être vérifiée sur les autres terminaux utilisés en tests** afin de s'assurer que le problème est réellement éradiqué.
-
+<p><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-DynamicType.png" />
+</br>Enfin, les quelques points suivants sont à examiner minutieusement :</p>
+<ul>
+<li>La <strong>troncature &#39;...&#39; est à éviter</strong> pour laisser place à la coupure du mot impacté identifiée par un trait d&#39;union en fin de phrase.
+</br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" /></li>
+<li><strong>Les illustrations comme les icônes doivent s&#39;adapter au grossissement souhaité</strong>. 1/. L&#39;utilisation d&#39;une fenêtre centrale à l’instar des <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">éléments dans les barres de tabulation</a> après un appui long, 2/. l&#39;implémentation un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité <code>Zoom</code> ou encore 3/. le simple <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">grossissement d&#39;un élément graphique</a> peuvent être des solutions selon les cas rencontrés.</li>
+<li>Penser à <strong>modifier le grossissement de texte au sein de chaque écran</strong> pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place.</li>
+<li>Dès que la <strong>correction d’une anomalie</strong> remontée sur un terminal est effective, elle <strong>doit être vérifiée sur les autres terminaux utilisés en tests</strong> afin de s&#39;assurer que le problème est réellement éradiqué.</li>
+</ul>
 <p>Les <strong>tests</strong> à réaliser pour le <code>Dynamic Type</code> sont <strong>assez longs</strong> car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.
 </br></br>
 <a name="VoiceOver"></a></p>
@@ -233,6 +236,7 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 <li>L&#39;utilisateur doit réaliser un minimum de sélections au sein de l&#39;écran.</li>
 </ul>
 <p>Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l&#39;information vocale doit être diffusée par VoiceOver.
+</br>Maintenant, <strong>si le lecteur d&#39;écran n&#39;est pas encore implémenté</strong> sur une application déjà en diffusion publique, il est primordial d&#39;en <strong>informer l&#39;utilisateur</strong> dès <a href="./criteria-ios-dev.html#vocalisation-du-nom-de-l-application">sélection de l&#39;icône applicatif</a> en indiquant très clairement la situation de façon à en éviter une consultation catastrophique et décevante.
 </br></br>
 <a name="SwitchControl"></a></p>
 <h3 id="contr-le-de-s-lection">Contrôle de sélection</h3>
@@ -250,6 +254,7 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 </br></br></p>
 <h3 id="contraste-des-couleurs">Contraste des couleurs</h3>
 <p>Graphiquement, <a href="./criteria-ios-conception.html#couleurs">ce point</a> est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local <em>(Colour Contrast Analyzer...)</em> ou à des sites web publics <em>(WebAIM...)</em>.
+</br>L&#39;outil <span lang="en">Accessibility Inspector</span> dispose d&#39;une fonctionnalité <a href="./criteria-ios-wwdc-19000.html#ColorContrast"><span lang="en">Color Contrast Calculator</span></a> depuis Xcode 11 qui permet aussi de réaliser le même type de vérifications.
 </br></br></p>
 <h3 id="inspection-de-code">Inspection de code</h3>
 <p>L&#39;interface de développement Apple <em>(Xcode)</em> fournit un outil particulièrement intéressant intitulé <strong>Accessibility Inspector</strong>.

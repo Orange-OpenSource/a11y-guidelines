@@ -117,15 +117,15 @@
 });</script>
 
 
-<p><strong>* L’accessibilité, un avantage pour tous, une nécessité pour certains&nbsp;! *</strong></p>
+<p><strong><em> L’accessibilité, un avantage pour tous, une nécessité pour certains&nbsp;! </em></strong></p>
 <h2 id="d-finition-de-l-accessibilit-web">Définition de l’accessibilité web</h2>
-<p>** C’est un service web utilisable par tous **</p>
+<p><strong> C’est un service web utilisable par tous </strong></p>
 <ul>
 <li>Personnes valides</li>
 <li>Seniors</li>
 <li>Personnes en situation de handicap (temporaire ou permanent)</li>
 </ul>
-<p>** et dans tous les contextes **</p>
+<p><strong> et dans tous les contextes </strong></p>
 <ul>
 <li>Avec tous types de matériel&nbsp;: navigateurs, <abbr>PC</abbr>, Mac, téléphones mobiles, tablettes</li>
 <li>Dans un contexte dégradé&nbsp;: mauvaise luminosité, <i lang="en">touchpad</i> en mobilité, etc.</li>
@@ -198,7 +198,7 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="les-attributs-abbr-aria-abbr-qui-peuvent-vous-sauver-aria-label-aria-labelledby-et-aria-describedby">Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h1>
+<h1 id="les-attributs-abbr-aria-abbr-qui-peuvent-vous-sauver-nbsp-aria-label-aria-labelledby-et-aria-describedby-">Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"<abbr>ARIA</abbr> aria-Label, labelledy et describedby"}]);
 });</script>
@@ -208,7 +208,7 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <p>Un nom accessible (pour aller plus loin, <a href="./a11y-name.html">Le nom accessible en HTML</a>) est l&#39;information qui permet à l&#39;aide technique (<abbr>AT</abbr>), par exemple, un lecteur d&#39;écran ou une loupe logicielle, d&#39;identifier l&#39;élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l&#39;intitulé ou le contenu d&#39;un élément, un attribut (par exemple, un attribut <code>alt</code> pour une image) ou par un élément associé (par exemple, une balise <code>label</code> pour un champ <code>input</code>).</p>
 <p>Une description accessible est une information plus étendue qui est utilisée par l&#39;<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n&#39;est pas suffisant.</p>
 <p>Le  comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien&nbsp;: visible, alternative d&#39;image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>...)</p>
-<h3 id="les-attributs-abbr-aria-abbr-aria-label-aria-labelledby-et-aria-describedby">Les attributs <abbr>ARIA</abbr>&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h3>
+<h3 id="les-attributs-abbr-aria-abbr-nbsp-aria-label-aria-labelledby-et-aria-describedby-">Les attributs <abbr>ARIA</abbr>&nbsp;: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code></h3>
 <p>Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code>. Ils permettent de rajouter de l&#39;information à un élément <abbr>HTML</abbr>&nbsp;:</p>
 <ul>
 <li><code>aria-label</code>, <code>aria-labelledby</code> permettent de donner un nom accessible à un élément</li>
@@ -222,33 +222,33 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <li>les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d&#39;<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>.</li>
 </ul>
 <p>Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couples <abbr>AT</abr>/navigateur, donc ne pas l&#39;utiliser comme seul moyen de passer une information nécessaire.</p>
-<h2 id="faut-il-les-utiliser-et-comment-">Faut-il les utiliser et comment&nbsp;?</h2>
+<h2 id="faut-il-les-utiliser-et-comment-nbsp-">Faut-il les utiliser et comment&nbsp;?</h2>
 <p>Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.</p>
 <p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence le  ou les (séparée par un espace) <code>id</code> d&#39;éléments (auto référencement possible) de la page dont le contenu sera utilisé comme nom accessible de l&#39;élément portant l&#39;attribut <abbr>Aria</abbr>.</p>
 <p>Lorsqu&#39;on utilise <code>aria-label</code> ou <code>aria-labelledby</code> sur un élément, le contenu ou l&#39;intitulé de cet élément n&#39;est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour <code>aria-label</code> le contenu de cet attribut, pour <code>aria-labelledby</code> le contenu de l&#39;élément référencé). Donc, seul, le nom accessible doit donner l&#39;ensemble des informations nécessaires à l&#39;<abbr>AT</abbr> et donc à l&#39;utilisateur.</p>
-<p>*<em>Important&nbsp;: *</em>l&#39;<code>aria-labelledby</code> peut admettre plusieurs valeurs séparées par un espace et peut s&#39;auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> <code>::before</code> ou <code>::after</code>. On peut également référencer un contenu masqué visuellement par <abbr>CSS</abbr>&nbsp;: <code>visibility:hidden;</code> ou <code>display:none;</code>. Cependant, les bonnes pratiques demandent que si l&#39;interface est telle qu&#39;il n&#39;est pas possible d&#39;avoir une étiquette textuelle visible à l&#39;écran, il est préférable d&#39;utiliser <code>aria-label</code> plutôt que <code>aria-labelledby</code>. </p>
+<p><strong>Important&nbsp;: </strong>l&#39;<code>aria-labelledby</code> peut admettre plusieurs valeurs séparées par un espace et peut s&#39;auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> <code>::before</code> ou <code>::after</code>. On peut également référencer un contenu masqué visuellement par <abbr>CSS</abbr>&nbsp;: <code>visibility:hidden;</code> ou <code>display:none;</code>. Cependant, les bonnes pratiques demandent que si l&#39;interface est telle qu&#39;il n&#39;est pas possible d&#39;avoir une étiquette textuelle visible à l&#39;écran, il est préférable d&#39;utiliser <code>aria-label</code> plutôt que <code>aria-labelledby</code>. </p>
 <p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité (et donc sera le seul contenu restitué) à <code>aria-labelledby</code> lors du calcul de la propriété de nom accessible. </p>
 <p>Quant à lui, <code>aria-describedby</code> va rajouter au nom accessible de l&#39;élément, une description accessible, plus longue ou plus complète, logiquement, que le nom accessible. </p>
 <h2 id="exemples">Exemples</h2>
-<pre><code class="html">
-&lt;button aria-label="accéder au code Hypertext markup language"&gt;html&lt;/button&gt;
+<p><pre><code class="html">
+&lt;button aria-label=&quot;accéder au code Hypertext markup language&quot;&gt;html&lt;/button&gt;
 </code></pre>
-<p>Sortie pour un lecteur d&#39;écran : &quot;accéder au code Hypertext markup language&quot;</p>
-<pre><code class="html">
-&lt;h2 id="titre"&gt;Code de la page HTML&lt;h2&gt;
-&lt;button aria-label="accéder au code Hypertext markup language" aria-labelledby="titre"&gt;html&lt;/buttton&gt;
+Sortie pour un lecteur d&#39;écran : &quot;accéder au code Hypertext markup language&quot;</p>
+<p><pre><code class="html">
+&lt;h2 id=&quot;titre&quot;&gt;Code de la page HTML&lt;h2&gt;
+&lt;button aria-label=&quot;accéder au code Hypertext markup language&quot; aria-labelledby=&quot;titre&quot;&gt;html&lt;/buttton&gt;
 </code></pre>
-<p>Sortie pour un lecteur d&#39;écran : &quot;Code de la page HTML&quot;</p>
-<pre><code class="html">
-&lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;h3&gt;
-&lt;button aria-label="accéder au code HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
+Sortie pour un lecteur d&#39;écran : &quot;Code de la page HTML&quot;</p>
+<p><pre><code class="html">
+&lt;h3 id=&quot;titre&quot;&gt;Code de la page de formulaire de connexion&lt;h3&gt;
+&lt;button aria-label=&quot;accéder au code HTML&quot; aria-describedby=&quot;titre&quot;&gt;html&lt;/buttton&gt;
 </code></pre>
-<p>Sortie pour un lecteur d&#39;écran : &quot;accéder au code HTML code de la page de formulaire de connexion&quot;</p>
-<pre><code class="html">
-&lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;h3&gt;
-&lt;button id="code" aria-describedby="code titre"&gt;Accéder au code HTML&lt;/buttton&gt;
+Sortie pour un lecteur d&#39;écran : &quot;accéder au code HTML code de la page de formulaire de connexion&quot;</p>
+<p><pre><code class="html">
+&lt;h3 id=&quot;titre&quot;&gt;Code de la page de formulaire de connexion&lt;h3&gt;
+&lt;button id=&quot;code&quot; aria-describedby=&quot;code titre&quot;&gt;Accéder au code HTML&lt;/buttton&gt;
 </code></pre>
-<p>Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la page de formulaire de connexion&quot;</p>
+Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la page de formulaire de connexion&quot;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -264,48 +264,40 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <p>Le critère  <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que les informations importantes pour l&#39;utilisateur, qui n&#39;induisent pas de changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport<span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
 <h2 id="quelques-exemple-de-messages-d-tat-de-statut-ou-contextuels">Quelques exemple de messages d&#39;état, de statut ou contextuels</h2>
 <p>Lorsqu&#39;un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; est en haut de ce nouveau contenu. Un lecteur d&#39;écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l&#39;information fournie à l&#39;utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle &quot;alert&quot;. </p>
-<p>`<h2 role="alert">
-    5 résultats ont été trouvés</p>
-</h2>`
-
+<p><code>&lt;h2 role=&quot;alert&quot;&gt;
+    5 résultats ont été trouvés
+&lt;/h2&gt;</code></p>
 <p>Lorsqu&#39;un utilisateur après avoir choisi un article, appuie sur un bouton &quot;Ajouter au panier&quot;, une mention textuelle &quot;1 élément ajouté, 4 articles dans le panier&quot; apparaît temporairement près de l&#39;icône du panier. Un lecteur d&#39;écran devra annoncer &quot;un article ajouté au panier, le panier contient actuellement 4 articles&quot;. Ici, l&#39;information à pousser à l&#39;utilisateur est moins cruciale que précédemment donc on utilisera le rôle &quot;status&quot;.</p>
-<p>`<p role="status">
-    un article ajouté au panier, le panier contient actuellement 4 articles</p>
-</p>`
-
+<p><code>&lt;p role=&quot;status&quot;&gt;
+    un article ajouté au panier, le panier contient actuellement 4 articles
+&lt;/p&gt;</code></p>
 <p>Une fois qu&#39;un utilisateur a activé un processus d&#39;application de filtres de recherche complexes, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge… apparaît à l&#39;écran. Le lecteur d&#39;écran annonce &quot;Application occupée, chargement en cours&quot;.</p>
-<p>`<div role="alert">
-    Application occupée, chargement en cours</p>
-</div>`
-
+<p><code>&lt;div role=&quot;alert&quot;&gt;
+    Application occupée, chargement en cours
+&lt;/div&gt;</code></p>
 <p>Une application affiche une barre de progression pour indiquer l&#39;état d&#39;une mise à jour d&#39;un élément de contenu. Le lecteur d&#39;écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;…</p>
-<p>`<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-20% mis à jour</p>
-</div>`
-
+<p><code>&lt;div role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+20% mis à jour
+&lt;/div&gt;</code></p>
 <p>Après qu&#39;un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant comme suit&nbsp;: &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d&#39;écran annonce le même message.</p>
-<p>`<div role="alert">
-    Votre formulaire a été soumis avec succès</p>
-</div>`
-
+<p><code>&lt;div role=&quot;alert&quot;&gt;
+    Votre formulaire a été soumis avec succès
+&lt;/div&gt;</code></p>
 <p>Lorsqu&#39;un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique &quot;XX erreurs dans le formulaire&quot;. Le lecteur d&#39;écran annonce le message &quot;Formulaire non envoyé car XX erreurs de validation&quot; (ceci ne dispense pas de donner les détails de l&#39;erreur pour chaque champ incorrectement rempli). L&#39;information d&#39;erreur dans le formulaire est importante et urgente, immédiate, donc on utilise  le rôle &quot;alertdialog&quot;.</p>
-<p>`<div role="alertdialog" aria-labelledby="errors">
-   <p id="errors"> Formulaire non envoyé car 2 erreurs de validation </p></p>
-</div>`
-
+<p><code>&lt;div role=&quot;alertdialog&quot; aria-labelledby=&quot;errors&quot;&gt;
+   &lt;p id=&quot;errors&quot;&gt; Formulaire non envoyé car 2 erreurs de validation &lt;/p&gt;
+&lt;/div&gt;</code></p>
 <p>Une fois qu&#39;un utilisateur, dans une application de gestion documentaire en ligne, a inséré un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message &quot;Le document YYY est bien enregistré dans le répertoire XXX&quot;, qui est également lu par un lecteur d&#39;écran.</p>
-<p>`<p role="status">
-    Le document YYY est bien enregistré dans le répertoire XXX</p>
-</p>`
-
+<p><code>&lt;p role=&quot;status&quot;&gt;
+    Le document YYY est bien enregistré dans le répertoire XXX
+&lt;/p&gt;</code></p>
 <p>Dans une application de mailing en ligne, l&#39;utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l&#39;adresse e-mail du destinataire est affichée à l&#39;écran à la suite de celle déjà choisies pour ce message. Le lecteur d&#39;écran devra annoncer l&#39;ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l&#39;écran pour certains utilisateurs d&#39;<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d&#39;écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle &quot;log&quot;.</p>
-<p>`<div role="log">
-  <ol>
-    <li><a href="mailto:XX@YY.ZZ">XX@YY.ZZ</a> a été rajouté</li>
-    <li><a href="mailto:XX@YY.ZZ">XX@YY.ZZ</a> a été retiré</li>
-  </ol></p>
-</div>`
-
+<p><code>&lt;div role=&quot;log&quot;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;XX@YY.ZZ a été rajouté&lt;/li&gt;
+    &lt;li&gt;XX@YY.ZZ a été retiré&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</code></p>
 <p>Parfois, on veut fournir des messages que pour les lecteurs d&#39;écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d&#39;écran sans les afficher à l&#39;écran.</p>
 <h2 id="les-messages-de-statut-qui-n-en-sont-pas-">Les messages de statut qui n&#39;en sont pas !</h2>
 <p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d&#39;<abbr>AT</abbr>, ce n&#39;est pas un message de statut&nbsp;:</p>
@@ -363,11 +355,11 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 
 <p>Ce bouton de menu hamburger a donc un nom : &quot;Ouverture menu navigation&quot;. 
 Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer un autre élément de la page comme nom :</p>
-<pre><code class="html">
-&lt;input type="search" aria-labelledby="this"&gt;
-&lt;button id="this"&gt;Rechercher dans le site&lt;/button&gt;
+<p><pre><code class="html">
+&lt;input type=&quot;search&quot; aria-labelledby=&quot;this&quot;&gt;
+&lt;button id=&quot;this&quot;&gt;Rechercher dans le site&lt;/button&gt;
 </code></pre>
-<p>Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Rechercher sur le site édition&quot;.</p>
+Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Rechercher sur le site édition&quot;.</p>
 <p>Plus de détails sur <a href="label-ledby-describedby.html">&quot;Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&quot;</a>.</p>
 <h2 id="webographie">Webographie</h2>
 <ul>
@@ -431,18 +423,17 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <li><strong>La version développement</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
 <li><strong>La version tests</strong> présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. Pour tirer le meilleur partie de ces tests, il faut utiliser <a href="https://a11y-guidelines.orange.com/web/methodes-outils.html">une méthode de tests d&#39;accessibilité et des outils</a></li>
 </ul>
-<ul class="nav nav-tabs" role="tablist">
-<li class="nav-item">
+<p><ul class="nav nav-tabs" role="tablist"></p>
+<p><li class="nav-item">
 <a class="nav-link active" id="incontournables-concepteurs-tab" data-toggle="tab" href="#incontournables-concepteurs" role="tab" aria-controls="incontournables-concepteurs" aria-selected="true">Conception</a>
-</li>
-<li class="nav-item">
+</li></p>
+<p><li class="nav-item">
 <a class="nav-link" id="incontournables-developpeurs-tab" data-toggle="tab" href="#incontournables-developpeurs" role="tab" aria-controls="incontournables-developpeurs" aria-selected="false">Développement</a>
-</li>
-<li class="nav-item">
+</li></p>
+<p><li class="nav-item">
 <a class="nav-link" id="incontournables-testeurs-tab" data-toggle="tab" href="#incontournables-testeurs" role="tab" aria-controls="incontournables-testeurs" aria-selected="false">Tests</a>
 </li>
-</ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab">
-
+</ul><div class="tab-content"><div class="tab-pane show active" id="incontournables-concepteurs" role="tabpanel" aria-labelledby="incontournables-concepteurs-tab"></p>
 <h2 id="contenu-textuel">Contenu textuel</h2>
 <p>S’assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
 <ul>
@@ -496,91 +487,91 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <li><a href="inc-con-alternative-gestures.html">Proposer une alternative aux gestuelles complexes</a></li>
 <li><a href="inc-con-orientation-ecran.html">Donner accès au contenu quelle que soit l’orientation de l’écran</a></li>
 </ul>
-</div>
+<p></div></p>
 <div class="tab-pane" id="incontournables-developpeurs" role="tabpanel" aria-labelledby="incontournables-developpeurs-tab">
 <h2 id="dev-contenu-textuel">Contenu textuel</h2>
 
-<p>S’assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
+S’assurer que les contenus textuels soient structurés avec la sémantique appropriée
 <ul>
-    <li>[Donner un titre aux pages](inc-dev-titre-pages.html)</li>
-    <li>[Donner des titres aux rubriques](inc-dev-titre-rubriques.html)</li>
-    <li>[Respecter la sémantique HTML](inc-dev-semantique-html.html)</li>
-    <li>[Indiquer la langue principale et les changements de langue](inc-dev-changement-langue.html)</li>
-    <li>[Structurer les tableaux de données](inc-dev-tableaux.html)</li>
+    <li><a href="inc-dev-titre-pages.html">Donner un titre aux pages</a></li>
+    <li><a href="inc-dev-titre-rubriques.html">Donner des titres aux rubriques</a></li>
+    <li><a href="inc-dev-semantique-html.html">Respecter la sémantique HTML</a></li>
+    <li><a href="inc-dev-changement-langue.html">Indiquer la langue principale et les changements de langue</a></li>
+    <li><a href="inc-dev-tableaux.html">Structurer les tableaux de données</a></li>
 </ul>
 
 <h2 id="dev-contenu-non-textuel">Contenu non-textuel</h2>
 
-<p>S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur</p>
+S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur
 <ul>
-    <li>[Fournir un équivalent textuel pour les images et les cadres](inc-dev-equivalent-textuel.html)</li>
-    <li>[Rendre accessible les pistes audio ou vidéo](inc-dev-audio-video.html)</li>
-    <li>[Éviter les captcha](inc-dev-crit-captcha.html)</li>
+    <li><a href="inc-dev-equivalent-textuel.html">Fournir un équivalent textuel pour les images et les cadres</a></li>
+    <li><a href="inc-dev-audio-video.html">Rendre accessible les pistes audio ou vidéo</a></li>
+    <li><a href="inc-dev-crit-captcha.html">Éviter les captcha</a></li>
 </ul>
 
 <h2 id="dev-couleurs-et-contrastes">Couleurs et contrastes</h2>
 
-<p>S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur</p>
+S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur
 <ul>
-    <li>[Assurer un contraste suffisant entre texte et fond](inc-dev-contrastes.html)</li>
-    <li>[Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information](inc-dev-information-sensorielle.html)</li>
+    <li><a href="inc-dev-contrastes.html">Assurer un contraste suffisant entre texte et fond</a></li>
+    <li><a href="inc-dev-information-sensorielle.html">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</a></li>
 </ul>
 
 <h2 id="dev-navigation-generale">Navigation générale</h2>
 
-<p>S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site</p>
+S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site
 <ul>
-    <li>[Rendre les intitulés des liens et des boutons accessibles](inc-dev-intitules-hors-contexte.html)</li>
-    <li>[Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre](inc-dev-nouvelle-fenetre.html)</li>
-    <li>[Fournir des liens d’évitement](inc-dev-liens-evitement.html)</li>
-    <li>[S’assurer que l’utilisateur garde le contrôle lors des interactions](inc-dev-controle-interactions.html)</li>
-    <li>[Fournir des accès multiples et une localisation](inc-dev-acces-multiples.html)</li>
-    <li>[Permettre de connaître le résultat d’une interaction utilisateur à l’aide de messages contextuels](inc-dev-message-contextuel.html)</li>
-    <li>[Permettre le contrôle des animations](inc-dev-controle-animations.html)</li>
+    <li><a href="inc-dev-intitules-hors-contexte.html">Rendre les intitulés des liens et des boutons accessibles</a></li>
+    <li><a href="inc-dev-nouvelle-fenetre.html">Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</a></li>
+    <li><a href="inc-dev-liens-evitement.html">Fournir des liens d’évitement</a></li>
+    <li><a href="inc-dev-controle-interactions.html">S’assurer que l’utilisateur garde le contrôle lors des interactions</a></li>
+    <li><a href="inc-dev-acces-multiples.html">Fournir des accès multiples et une localisation</a></li>
+    <li><a href="inc-dev-message-contextuel.html">Permettre de connaître le résultat d’une interaction utilisateur à l’aide de messages contextuels</a></li>
+    <li><a href="inc-dev-controle-animations.html">Permettre le contrôle des animations</a></li>
 </ul>
 
 <h2 id="dev-navigation-clavier">Navigation clavier</h2>
 
-<p>S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier</p>
+S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier
 <ul>
-    <li>[Permettre d’utiliser les principales fonctionnalités de l’application au clavier](inc-dev-utilisation-clavier.html)</li>
-    <li>[Rendre le parcours du focus séquentiel et logique sans piège clavier](inc-dev-parcours-focus.html)</li>
-    <li>[Rendre visible le focus en toute circonstance](inc-dev-visibilite-focus.html)</li>
+    <li><a href="inc-dev-utilisation-clavier.html">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</a></li>
+    <li><a href="inc-dev-parcours-focus.html">Rendre le parcours du focus séquentiel et logique sans piège clavier</a></li>
+    <li><a href="inc-dev-visibilite-focus.html">Rendre visible le focus en toute circonstance</a></li>
 </ul>
 
 <h2 id="dev-mise-en-page">Mise en page</h2>
 
-<p>S’assurer que la mise en page soit adaptée à l’utilisateur.</p>
+S’assurer que la mise en page soit adaptée à l’utilisateur.
 <ul>
-    <li>[Utiliser des tailles relatives et faire du web adaptatif](inc-dev-adaptatif.html)</li>
-    <li>[Permettre d’aérer le texte](inc-dev-aerer-texte.html)</li>
-    <li>[Identifier et conserver la cohérence des regroupements et des différentes régions de la page](inc-dev-coherence-navigation.html)</li>
-    <li>[Définir des zones sensibles de taille suffisante](inc-dev-taille-zones.html)</li>
+    <li><a href="inc-dev-adaptatif.html">Utiliser des tailles relatives et faire du web adaptatif</a></li>
+    <li><a href="inc-dev-aerer-texte.html">Permettre d’aérer le texte</a></li>
+    <li><a href="inc-dev-coherence-navigation.html">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</a></li>
+    <li><a href="inc-dev-taille-zones.html">Définir des zones sensibles de taille suffisante</a></li>
 </ul>
 
 <h2 id="dev-formulaires">Formulaires</h2>
 
-<p>S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
+S’assurer que l’utilisateur puisse efficacement compléter les formulaires
 <ul>
-    <li>[Rendre accessible les champs de formulaire](inc-dev-etiquette-formulaires.html)</li>
-    <li>[Détecter, identifier les erreurs et suggérer des corrections](inc-dev-identifier-erreurs.html)</li>
+    <li><a href="inc-dev-etiquette-formulaires.html">Rendre accessible les champs de formulaire</a></li>
+    <li><a href="inc-dev-identifier-erreurs.html">Détecter, identifier les erreurs et suggérer des corrections</a></li>
 </ul>
 
 <h2 id="dev-tactile-et-interactions">Tactile et interactions</h2>
 
-<p>S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
+S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles
 <ul>
-    <li>[Autoriser l’utilisation du zoom](inc-dev-autoriser-zoom.html)</li>
-    <li>[Permettre d’annuler le déclenchement des interactions](inc-dev-annuler-gestuelle.html)</li>
-    <li>[Proposer une alternative aux gestuelles complexes](inc-dev-alternative-gestures.html)</li>
-    <li>[Donner accès au contenu quelle que soit l’orientation de l’écran](inc-dev-orientation-ecran.html)</li>
+    <li><a href="inc-dev-autoriser-zoom.html">Autoriser l’utilisation du zoom</a></li>
+    <li><a href="inc-dev-annuler-gestuelle.html">Permettre d’annuler le déclenchement des interactions</a></li>
+    <li><a href="inc-dev-alternative-gestures.html">Proposer une alternative aux gestuelles complexes</a></li>
+    <li><a href="inc-dev-orientation-ecran.html">Donner accès au contenu quelle que soit l’orientation de l’écran</a></li>
 </ul>
 
 <h2 id="dev-aides-techniques">Aides techniques</h2>
 
-<p>Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application</p>
+Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application
 <ul>
-    <li>[S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran](inc-dev-lecteur-ecran.html)</li>
+    <li><a href="inc-dev-lecteur-ecran.html">S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</a></li>
 </ul>
 
 </div>
@@ -731,10 +722,11 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
 <p>Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.</p>
 <p><strong>Objectif technique&nbsp;:</strong></p>
-<p>Permet le référencement de tout contenu audio et vidéo.</p>
+<p>Permet le référencement de tout contenu audio et vidéo.
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="-viter-les-captcha">Éviter les captcha</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -805,7 +797,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <p><img src="images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant"></p>
 <p>Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors avoir un contraste de couleur de 3:1.</p>
 <p><img src="images/icones.png" alt="capture d’écran présentant des icônes et des graphiques dont le contraste n&#39;est suffisant"></p>
-<p>*<em>À vérifier&nbsp;: *</em></p>
+<p><strong>À vérifier&nbsp;: </strong></p>
 <ul>
 <li>S&#39;assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est&nbsp;:<ul>
 <li>De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras</li>
@@ -869,10 +861,10 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 <li>«&nbsp;couper le son&nbsp;»</li>
 <li>…  </li>
 </ul>
-<p><img src="images/player.png" alt="capture d’écran d’un lecteur vidéo contenant plusieurs boutons">  </p>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+<p><img src="images/player.png" alt="capture d’écran d’un lecteur vidéo contenant plusieurs boutons"><br><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="rendre-utilisables-les-formulaires">Rendre utilisables les formulaires</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -1059,10 +1051,11 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 (Titre 1) Accueil - Orange
     (Titre 2) Les actualités
     (Titre 2) La fibre arrive&nbsp;!
-        (Titre 3) Êtes-vous éligible&nbsp;?</p>
+        (Titre 3) Êtes-vous éligible&nbsp;?
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="assurer-la-visibilit-du-focus">Assurer la visibilité du focus</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -1095,7 +1088,7 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour les utilisateurs de périphériques tactiles (smartphones, tablettes...), les zones tactiles doivent avoir une taille suffisante pour permettre une navigation aisée. Par ailleurs celles-ci doivent être également suffisamment espacées les unes des autres.</p>
-<p>** A vérifier **</p>
+<p><strong> A vérifier </strong></p>
 <ul>
 <li>La taille des zones tactiles doit être de 9mm minimum de largeur et de hauteur.</li>
 <li>L&#39;espacement entre les zones tactiles ne doit pas être inférieur à 2mm.<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
@@ -1112,16 +1105,16 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p>** Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
-<p>** Description&nbsp;:**
+<p><strong> Cible&nbsp;:</strong> tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
+<p><strong> Description&nbsp;:</strong>
 Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, l’implémentation d’accès multiples peut être ignorée.</p>
-<p>** À vérifier&nbsp;:**
+<p><strong> À vérifier&nbsp;:</strong>
 S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation principal présentant la position courante de l&#39;utilisateur, un fil d’Ariane…</p>
-<p>** Objectif utilisateur&nbsp;:**
+<p><strong> Objectif utilisateur&nbsp;:</strong>
 Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.</p>
-<p>** Exemple valide&nbsp;:**
+<p><strong> Exemple valide&nbsp;:</strong>
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
-<p>** Exemple invalide&nbsp;:**
+<p><strong> Exemple invalide&nbsp;:</strong>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
@@ -1748,7 +1741,7 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p>*<em>Cible&nbsp;: *</em> tout le monde, et en particulier les personnes déficientes visuelles.<br>*<em>Quand&nbsp;: *</em>lors du développement.</p>
+<p><strong>Cible&nbsp;: </strong> tout le monde, et en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;: </strong>lors du développement.</p>
 <p><strong>Description&nbsp;:</strong></p>
 <p>Respecter les recommandations générales d’accessibilité, utiliser en priorité les composants standards <abbr>HTML</abbr>, sinon, utiliser <abbr>ARIA</abbr> (<i lang="en">Accessible Rich Internet Applications</i>) pour les composants d’interface complexes.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
@@ -1947,7 +1940,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a></li>
 </ul>
-<p>*<em>Outil&nbsp;: *</em><a href="https://validator.w3.org/">validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr></a></p>
+<p><strong>Outil&nbsp;: </strong><a href="https://validator.w3.org/">validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr></a></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
@@ -2038,7 +2031,7 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour les utilisateurs de périphériques tactiles (smartphones, tablettes...), les zones tactiles doivent avoir une taille suffisante pour permettre une navigation aisée. Par ailleurs celles-ci doivent être également suffisamment espacées les unes des autres.</p>
-<p>** A vérifier **</p>
+<p><strong> A vérifier </strong></p>
 <ul>
 <li>La taille des zones tactiles doit être de 9mm minimum de largeur et de hauteur.</li>
 <li>L&#39;espacement entre les zones tactiles ne doit pas être inférieur à 2mm.</li>
@@ -2232,16 +2225,14 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <li><strong>La seconde version</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
 </ul>
 <div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
-    <h2 class="sr-only">Pour les concepteurs et designers</h2>          
-    <a href="./fondamentaux-nontech.html" class="btn btn-info">
-        ![](./images/perso1.png)
+    <h2 class="sr-only">Pour les concepteurs et designers</h2><br>    <a href="./fondamentaux-nontech.html" class="btn btn-info">
+        <img src="./images/perso1.png" alt="">
         <div>Les critères incontournables pour la conception</div>
     </a>
 </div>
 <div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
-    <h2 class="sr-only">Pour les développeurs</h2>          
-    <a href="./fondamentaux-tech.html" class="btn btn-info">
-        ![](./images/perso3.png)
+    <h2 class="sr-only">Pour les développeurs</h2><br>    <a href="./fondamentaux-tech.html" class="btn btn-info">
+        <img src="./images/perso3.png" alt="">
         <div>Les critères incontournables pour le développement</div>
     </a>
 </div>
@@ -2265,26 +2256,24 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
 <p>Le site <a href="http://accede-web.com/">Accede-Web</a> propose d’excellentes notices sur l’accessibilité au format Web et <abbr>PDF</abbr>. Celles-ci sont très pratiques, pédagogiques et émanent de la société Atalan, d’un collectif de grandes entreprises ainsi que d’écoles et d’associations de personnes en situation de handicap.</p>
 <p>Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).</p>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso1.png) 
+    <img src="./images/perso1.png" alt=""> 
     <a href="http://www.accede-web.com/notices/graphique/" class="btn btn-info">Notice d’accessibilité pour la conception fonctionnelle et graphique</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso2.png)    
-    <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
+    <img src="./images/perso2.png" alt=""><br>    <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso3.png)  
-    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité <abbr>HTML</abbr>, <abbr>CSS</abbr> et JavaScript</a>
+    <img src="./images/perso3.png" alt=""><br>    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité <abbr>HTML</abbr>, <abbr>CSS</abbr> et JavaScript</a>
 </div>
 <div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso4.png)  
-    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interfaces riches</a>
+    <img src="./images/perso4.png" alt=""><br>    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interfaces riches</a>
 </div>      
 
-<p><br>&nbsp;</p>
+<p><br>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="m-thodes-et-outils-de-test">Méthodes et outils de test</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Outils de test"}]);
@@ -2378,8 +2367,8 @@ Il permet la mise en place rapide d’un site web responsive et accessible aux c
     ]);    
 });</script>
 
-<h2 id="qu-est-ce-qu-un-lien-d-vitement-">Qu’est-ce qu’un lien d’évitement&nbsp;?</h2>
-<h3 id="qu-est-ce-">Qu&#39;est ce&nbsp;?</h3>
+<h2 id="qu-est-ce-qu-un-lien-d-vitement-nbsp-">Qu’est-ce qu’un lien d’évitement&nbsp;?</h2>
+<h3 id="qu-est-ce-nbsp-">Qu&#39;est ce&nbsp;?</h3>
 <p>Les liens d’évitement sont des raccourcis permettant d’accéder directement à une zone de contenu ou d’éviter des régions de la page, afin de naviguer plus rapidement.
 On peut distinguer 3 types de liens&nbsp;:</p>
 <ol>
@@ -2388,21 +2377,21 @@ On peut distinguer 3 types de liens&nbsp;:</p>
 <li>les liens de navigation interne à une page : «&nbsp;Retour en haut de page&nbsp;», par exemple</li>
 </ol>
 <p>Ces liens d’évitement permettent donc à l’utilisateur d’éviter des parties de pages, que l’on navigue au clavier, que l’on ait du mal à se repérer dans une page longue ou que scroller soit difficile.</p>
-<h3 id="pour-qui-">Pour qui&nbsp;?</h3>
+<h3 id="pour-qui-nbsp-">Pour qui&nbsp;?</h3>
 <p>Les liens d’évitement sont précieux pour de multiples utilisateurs&nbsp;:</p>
 <ul>
 <li>les utilisateurs de lecteur d’écran ou ne pouvant utiliser la souris, qui se déplacent donc au clavier uniquement</li>
 <li>Les utilisateurs qui peinent à naviguer dans une page longue&nbsp;: les déficients moteurs (fatigabilité ou limitations motrices) ou les personnes qui naviguent sur leur smartphone (on évite le swipe, le balayage)</li>
 <li>les malvoyants, qui utilisent ou pas une loupe d’écran, et ayant du mal à se faire une représentation globale de la topologie de la page</li>
 </ul>
-<h3 id="quelles-sont-les-types-de-solutions-">Quelles sont les types de solutions&nbsp;?</h3>
+<h3 id="quelles-sont-les-types-de-solutions-nbsp-">Quelles sont les types de solutions&nbsp;?</h3>
 <ol>
 <li>les liens d&#39;accès rapide&nbsp;: la solution la plus répandue, est une série de liens (entre 1 et 6 généralement) positionnés tout en haut de page visuellement et intégrés dans le code juste après l’ouverture de la balise body. Chaque lien pointe vers  une région,  ou toute autre partie importante de la page. Ils sont, généralement, définies avec une taille de police plus petite que le corps du texte ou par défaut cachés et rendus visibles, lors de la navigation clavier, à la prise de focus.</li>
 <li>Les liens d‘évitement&nbsp;: ces éléments sont positionnés juste avant chaque partie de page ou région à sauter. Ils peuvent être toujours visibles ou bien rendus visibles, lors de la navigation clavier, à la prise de focus.</li>
 <li>Les liens de navigation internes de type « retour en haut de page »&nbsp;: ils sont souvent collés (position CSS <code>sticky</code>) tout en bas, côté droit du viewport, toujours visible ou n’apparaissant que lorsqu’on arrive en fin de scroll vertical.</li>
 </ol>
-<h2 id="quelles-sont-les-bonnes-pratiques-">Quelles sont les bonnes pratiques&nbsp;?</h2>
-<h3 id="quand-doit-on-mettre-en-place-des-liens-d-vitement-">Quand doit-on mettre en place des liens d’évitement&nbsp;?</h3>
+<h2 id="quelles-sont-les-bonnes-pratiques-nbsp-">Quelles sont les bonnes pratiques&nbsp;?</h2>
+<h3 id="quand-doit-on-mettre-en-place-des-liens-d-vitement-nbsp-">Quand doit-on mettre en place des liens d’évitement&nbsp;?</h3>
 <p>La première question à se poser est, sur mon site, l’utilisateur a-t-il besoin de liens d’évitement&nbsp;?</p>
 <p>Les principales raisons de la mise en place de liens d’évitement&nbsp;:</p>
 <ul>
@@ -2411,7 +2400,7 @@ On peut distinguer 3 types de liens&nbsp;:</p>
 <li>le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…)</li>
 <li>la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)</li>
 </ul>
-<h3 id="utiliser-une-solution-hybride-">Utiliser une solution hybride&nbsp;?</h3>
+<h3 id="utiliser-une-solution-hybride-nbsp-">Utiliser une solution hybride&nbsp;?</h3>
 <p>On a vu que les liens d’accès rapide, peuvent être visibles, ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n’utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l’ouverture et la fermeture du panneau des liens d’accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l’ouverture de la page et qui disparaît lors du scroll vers le bas de page.</p>
 <p>Quelle que soit la solution, il faut que les liens d’évitement soient visibles (dans la mesure du possible) et utilisables par tous !</p>
 <p>Pour toutes remarques, suggestions, n&#39;hésitez pas à consulter ou créer une issue sur notre (<a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">compte github</a>).</p>
@@ -2471,8 +2460,8 @@ On peut distinguer 3 types de liens&nbsp;:</p>
 
 <p><span data-menuitem="methodes-outils"></span></p>
 <p>La navigation dans une page web doit être possible à l’aide du clavier seul, notamment pour les personnes qui ne peuvent pas utiliser de souris. Cette fonctionnalité est prise en charge directement par le navigateur. Il est tout de même important de vérifier son fonctionnement, car certains développements peuvent entraîner des difficultés pour naviguer correctement dans la page.</p>
-<p>Pour tester si votre service est accessible à l’aide du clavier, vous pouvez tenter de naviguer sans votre souris. Toutes les fonctionnalités disponibles habituellement doivent rester accessible.<br>** Rappel&nbsp;: **le focus doit rester suffisamment visible sur tous les éléments recevant le focus.</p>
-<h2 id="liste-des-raccourcis-clavier-principaux-">Liste des raccourcis clavier principaux&nbsp;:</h2>
+<p>Pour tester si votre service est accessible à l’aide du clavier, vous pouvez tenter de naviguer sans votre souris. Toutes les fonctionnalités disponibles habituellement doivent rester accessible.<br><strong> Rappel&nbsp;: </strong>le focus doit rester suffisamment visible sur tous les éléments recevant le focus.</p>
+<h2 id="liste-des-raccourcis-clavier-principaux-nbsp-">Liste des raccourcis clavier principaux&nbsp;:</h2>
 <ul>
 <li>La touche <code>TAB</code>&nbsp;: pour faire avancer le focus.</li>
 <li>Les touches <code>maj+TAB</code>&nbsp;: pour faire reculer le focus.</li>
@@ -2480,10 +2469,11 @@ On peut distinguer 3 types de liens&nbsp;:</p>
 <li>La barre espace pour cocher/décocher une case à cocher.</li>
 <li>Les flèches directionnelles pour modifier la sélection des boutons radio, pour se déplacer dans une liste déroulante, ou faire défiler les ascenseurs (<i lang="en">scrollbar</i>) lorsque ceux-ci sont présents.</li>
 </ul>
-<p><em>* Remarque&nbsp;: sur Mac la navigation au clavier doit être activée au préalable. **<br>Dans Safari&nbsp;: Edition &gt; Préférences… &gt; Avancées<br>Puis cocher la case *«&nbsp;La touche TAB permet de naviguer parmi les objets des pages web&nbsp;»</em>.</p>
+<p><strong> Remarque&nbsp;: sur Mac la navigation au clavier doit être activée au préalable. </strong><br>Dans Safari&nbsp;: Edition &gt; Préférences… &gt; Avancées<br>Puis cocher la case <em>«&nbsp;La touche TAB permet de naviguer parmi les objets des pages web&nbsp;»</em>.
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="acc-der-la-liste-des-titres-de-la-page-balises-h1-h6-">Accéder à la liste des titres de la page (balises <code>H1</code> à <code>H6</code>)</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -2628,12 +2618,12 @@ Pour désactiver ce mode de navigation, faites un clic droit sur l’icône de <
 <h2 id="quelles-cons-quences-sur-le-d-veloppement-">Quelles conséquences sur le développement ?</h2>
 <p>Si votre page ne s’affiche pas correctement lorsque vous agrandissez le texte, il se peut que ceci soit lié à l’utilisation du pixel comme unité pour dimensionner la taille des textes et la taille des éléments (hauteur ou largeur des <code>div</code>…).
 Pour corriger les problèmes d’affichage lorsque le zoom est à 200%, il ne s’agit pas nécessairement de tout revoir et de supprimer les pixels définitivement. L’idée est de revoir uniquement les éléments qui posent un problème (remplacer les <code>px</code> par des <code>em</code>, <code>rem</code> ou <code>%</code>).</p>
-<p>** Exemple zoom à 100% **<br><img src="images/zoom.png" alt="capture d’une page avec zoom à 100%"></p>
+<p><strong> Exemple zoom à 100% </strong><br><img src="images/zoom.png" alt="capture d’une page avec zoom à 100%"></p>
 <p>&nbsp;</p>
-<p>** Exemple zoom à 200% et taille en pixels**<br>La hauteur des éléments n’étant pas fonction de la taille du texte, ceux-ci ne s’agrandissent pas.</p>
+<p><strong> Exemple zoom à 200% et taille en pixels</strong><br>La hauteur des éléments n’étant pas fonction de la taille du texte, ceux-ci ne s’agrandissent pas.</p>
 <p><img src="images/zoom-ko.png" alt="capture d’une page avec zoom à 100%"></p>
 <p>&nbsp;</p>
-<p>** Exemple zoom à 200% et hauteur des éléments en unités relatives (<code>rem</code>)**<br>La hauteur des éléments contenant le texte a été renseignée avec une unité relative qui varie en fonction de la taille du texte (<code>rem</code>). Les éléments s’agrandissent, le texte reste lisible.</p>
+<p><strong> Exemple zoom à 200% et hauteur des éléments en unités relatives (<code>rem</code>)</strong><br>La hauteur des éléments contenant le texte a été renseignée avec une unité relative qui varie en fonction de la taille du texte (<code>rem</code>). Les éléments s’agrandissent, le texte reste lisible.</p>
 <p><img src="images/zoom-ok.png" alt="capture d’une page avec zoom à 100%"></p>
 <p>&nbsp;
 Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="exemples/zoom/index.html">gestion de l’agrandissement de la taille du texte à 200%</a>.  </p>
@@ -2651,13 +2641,13 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     dd {margin-bottom: 1rem;}
 </style>
 
-<dl>
+<p><dl>
     <dt><a href="exemples/masquage/index.html">Masquage accessible</a></dt>
-    <dd>Créer des éléments non-visibles à l'écran mais accessibles aux outils d'assistances.</dd>
+    <dd>Créer des éléments non-visibles à l&#39;écran mais accessibles aux outils d&#39;assistances.</dd>
     <dt><a href="exemples/formulaire/index.html">Gestion des formulaires</a><dt>
     <dd>Exemple de formulaire accessible.</dd>
     <dt><a href="exemples/zoom/index.html">Gestion du zoom, agrandissement de la taille du texte</a><dt>
-    <dd>Gestion de l'agrandissement de la taille des caractères par l'utilisateur.</dd>
+    <dd>Gestion de l&#39;agrandissement de la taille des caractères par l&#39;utilisateur.</dd>
     <dt><a href="exemples/prix/index.html">Affichage et vocalisation des prix</a><dt>
     <dd>Afficher des promos, des prix barrés accessibles.</dd>
     <dt><a href="exemples/landmarks/index.html">Les régions ARIA</a><dt>
@@ -2668,16 +2658,16 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <dd>Exemple de boite de dialogue accessible (partie 2).</dd>
     <dt><a href="exemples/simple-menu/simple-menu.html">Menu déroulant</a><dt>
     <dd>Créer un menu déroulant accessible.</dd>
-    <dt><a href="exemples/speak/index.html">Faire parler le lecteur d'écran via Javascript</a><dt>
+    <dt><a href="exemples/speak/index.html">Faire parler le lecteur d&#39;écran via Javascript</a><dt>
     <dd>Exemple de code permettant de faire parler la synthèse vocale.</dd>
     <dt><a href="exemples/chatbot/index.html">Exemple de chatbot accessible</a><dt>
     <dd>Créer un chatbot accessible.</dd>
     <dt><a href="exemples/tag/index.html">Créer des «&nbsp;tags&nbsp;» accessibles 1/2</a><dt>
-    <dd>Exemple d'étiquettes accessibles (partie 1).</dd>
+    <dd>Exemple d&#39;étiquettes accessibles (partie 1).</dd>
     <dt><a href="exemples/tag-exemples/index.html">Créer des «&nbsp;tags&nbsp;» accessibles 2/2 (exemples)</a><dt>
-    <dd>Exemple d'étiquettes accessibles (partie 2).</dd>
+    <dd>Exemple d&#39;étiquettes accessibles (partie 2).</dd>
     <dt><a href="exemples/iframes-techniques/index.html">Les <span lang="en">iframes</span> «&nbsp;techniques&nbsp;»</a><dt>
-    <dd>Comment masquer les <span lang="en">iframes</span> aux outils d'assistance.</dd>
+    <dd>Comment masquer les <span lang="en">iframes</span> aux outils d&#39;assistance.</dd>
     <dt><a href="label-ledby-describedby.html">Les attributs ARIA qui peuvent vous sauver</a><dt>
     <dd>Quelques attributs ARIA à connaître.</dd>
     <dt><a href="exemples/listbox/index.html">Les listes <abbr>ARIA</abbr> (listbox) 1/3</a><dt>
@@ -2687,14 +2677,14 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <dt><a href="exemples/listbox-pattern-aria/index.html">Les <i lang="en">listbox</i> et <i lang="en">patterns</i> <abbr>ARIA</abbr> 3/3 (navigation au clavier)</a><dt>
     <dd>Exemple de liste ARIA (partie 3), gestion de la navigation clavier.</dd>
     <dt><a href="exemples/files/index.html">Explorateur de fichiers (<i lang="en">cloud</i>)</a><dt>
-    <dd>Exemple d'explorateur de fichier accessible.</dd>
+    <dd>Exemple d&#39;explorateur de fichier accessible.</dd>
     <dt><a href="exemples/dynFocus/index.html">Les régions vivantes (<i lang="en">live regions</i>), contenu dynamique, gestion du focus et <abbr>ARIA</abbr></a></dt>
-    <dd>Gestion des zones qui se mettent à jour dynamiquement dans vos pages.</dd>
-
-</dl>
+    <dd>Gestion des zones qui se mettent à jour dynamiquement dans vos pages.</dd></p>
+<p></dl>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="articles-techniques-pour-la-mise-en-place-de-l-accessibilit-">Articles techniques pour la mise en place de l&#39;accessibilité</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Articles techniques"}]);
@@ -2705,21 +2695,22 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     dd {margin-bottom: 1rem;}
 </style>
 
-<dl>
-     <dt><a href="skiplinks.html">Les liens d'évitement</a></dt>
-     <dd>Les liens d'évitement, qu'est ce et comment bien les mettre en oeuvre.</dd>
+<p><dl>
+     <dt><a href="skiplinks.html">Les liens d&#39;évitement</a></dt>
+     <dd>Les liens d&#39;évitement, qu&#39;est ce et comment bien les mettre en oeuvre.</dd>
     <dt><a href="captcha.html">Les CAPTCHAs</a></dt>
-    <dd>Les CAPTCHAs et l'accessibilité</dd>
+    <dd>Les CAPTCHAs et l&#39;accessibilité</dd>
     <dt><a href="htmlaria.html">HTML 5 et <abbr>ARIA</abbr></a></dt>
     <dd>Introduction HTML 5 et <abbr>ARIA</abbr>.</dd>
-    <dt><a href="aria-status.html">Utiliser les attributs <abbr>ARIA</abbr> pour les messages d'état</a></dt>
-     <dd>Les messages d'état, de statut ou contextuel gérés par <abbr>ARIA</abbr>.</dd>
+    <dt><a href="aria-status.html">Utiliser les attributs <abbr>ARIA</abbr> pour les messages d&#39;état</a></dt>
+     <dd>Les messages d&#39;état, de statut ou contextuel gérés par <abbr>ARIA</abbr>.</dd>
      <dt><a href="a11y-name.html">Le nom accessible</a></dt>
-     <dd>Le nom accessible, qu'est ce et son rapport avec les <abbr>AT</abbr>.</dd>
+     <dd>Le nom accessible, qu&#39;est ce et son rapport avec les <abbr>AT</abbr>.</dd>
 </dl>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="-abbr-html5-abbr-abbr-aria-abbr-"><abbr>HTML5</abbr> &amp; <abbr>ARIA</abbr></h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
@@ -2731,9 +2722,9 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 <h2 id="introduction">Introduction</h2>
 <p>Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d’interface complexes&nbsp;: <i lang="en">slider</i>, <i lang="en">datepicker</i>…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le <abbr>HTML</abbr> classique. </p>
 <p>Même avec l’évolution due au <abbr>HTML5</abbr>, on manque encore d’informations sémantiques à fournir aux aides techniques (lecteurs d’écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées.</p>
-<h2 id="qu-est-ce-que-c-est-">Qu’est-ce que c’est&nbsp;?</h2>
+<h2 id="qu-est-ce-que-c-est-nbsp-">Qu’est-ce que c’est&nbsp;?</h2>
 <p>Pour remédier à ces limitations, le <abbr>W3c</abbr>/<abbr>WAI</abbr> a officiellement publié une recommandation appelée <abbr>ARIA</abbr>, pour <i lang="en">Accessible Rich Internet Applications</i>, ainsi qu’une suite de documents traitant de l’utilisation d’<abbr>ARIA</abbr>.</p>
-<p><abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. ** <abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu’il est utilisé dans du <abbr>HTML5</abbr> **.</p>
+<p><abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. <strong> <abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu’il est utilisé dans du <abbr>HTML5</abbr> </strong>.</p>
 <p>Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d’interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l’interactivité via Javascript.</p>
 <h2 id="le-support">Le support</h2>
 <p>Le support d’<abbr>ARIA</abbr> s’améliore constamment et est déjà présent depuis longtemps&nbsp;:</p>
@@ -2742,7 +2733,7 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 <li>Dans les aides techniques (<abbr>NVDA</abbr> &gt;=2010, Orca &gt;= 2 + Firefox uniquement, VoiceOver <abbr>OSX</abbr> &gt;=10.5, <abbr>iOS</abbr> &gt;=4, <abbr>JAWS</abbr> &gt;=8, Window-Eyes &gt;=7, ZoomText 10 pour un support basique, ZoomText &gt;=11 pour un support avancé).  </li>
 </ul>
 <p>De plus, l’efficacité optimale de la prise en charge d’<abbr>ARIA</abbr> dépend du couple navigateur&nbsp;/ aide technique&nbsp;: Firefox avec <abbr>NVDA</abbr>, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
-<h2 id="faut-il-l-utiliser-">Faut-il l’utiliser&nbsp;?</h2>
+<h2 id="faut-il-l-utiliser-nbsp-">Faut-il l’utiliser&nbsp;?</h2>
 <p>Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents en <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’<a href="https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html">une vingtaine de techniques WCAG 2.1 soient spécifiques à <abbr>ARIA</abbr></a> (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.</p>
 <p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs&nbsp;/ aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p>
 <p>Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement&nbsp;!</p>
@@ -2774,10 +2765,11 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 <p>Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des «&nbsp;<i lang="en">issues</i>&nbsp;»</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.</p>
 <h2 id="gestion-des-cookies">Gestion des cookies</h2>
 <p>Vous pouvez modifier à tous moments vos préférences directement depuis le <a role="button" href="javascript:tarteaucitron.userInterface.openPanel();">panneau de gestion des cookies</a>.</p>
-<p>&nbsp;</p>
+<p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 
           
         </div>

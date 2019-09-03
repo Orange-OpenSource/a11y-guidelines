@@ -108,7 +108,7 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="-abbr-aria-abbr-attributes-that-can-save-you-aria-label-aria-labelledby-and-aria-describedby"><abbr>ARIA</abbr> attributes that can save you: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code></h1>
+          <h1 id="-abbr-aria-abbr-attributes-that-can-save-you-aria-label-aria-labelledby-and-aria-describedby-"><abbr>ARIA</abbr> attributes that can save you: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code></h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"<abbr>ARIA</abbr> aria-Label, labelledy and describedby"}]);
 });</script>
@@ -139,20 +139,20 @@
 <p>When the two attributes <code>aria-labelledby</code> and<code>aria-label</code> are used, user agents give priority to aria-labelledby when calculating the accessible name property.</p>
 <p>At last, `aria-describedby&#39; will add an accessible description in addition to the accessible name of the element.</p>
 <h2 id="examples">Examples</h2>
-<pre><code class="html">
-&lt;button aria-label="Access Hypertext markup language"&gt;html&lt;/button&gt;
+<p><pre><code class="html">
+&lt;button aria-label=&quot;Access Hypertext markup language&quot;&gt;html&lt;/button&gt;
 </code></pre>
-<p>Screen reader output: &quot;Access Hypertext markup language&quot;</p>
-<pre><code class="html">
-&lt;h2 id="titre"&gt;HTML source&lt;h2&gt;
-&lt;button aria-label="Access Hypertext markup language" aria-labelledby="titre"&gt;html&lt;/buttton&gt;
+Screen reader output: &quot;Access Hypertext markup language&quot;</p>
+<p><pre><code class="html">
+&lt;h2 id=&quot;titre&quot;&gt;HTML source&lt;h2&gt;
+&lt;button aria-label=&quot;Access Hypertext markup language&quot; aria-labelledby=&quot;titre&quot;&gt;html&lt;/buttton&gt;
 </code></pre>
-<p>Screen reader output: &quot;HTML source&quot;</p>
-<pre><code class="html">
-&lt;h3 id="titre"&gt;Login page sourcecode&lt;h3&gt;
-&lt;button aria-label="Access HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
+Screen reader output: &quot;HTML source&quot;</p>
+<p><pre><code class="html">
+&lt;h3 id=&quot;titre&quot;&gt;Login page sourcecode&lt;h3&gt;
+&lt;button aria-label=&quot;Access HTML&quot; aria-describedby=&quot;titre&quot;&gt;html&lt;/buttton&gt;
 </code></pre>
-<p>Screen reader output: &quot;Access HTML Login page sourcecode&quot;</p>
+Screen reader output: &quot;Access HTML Login page sourcecode&quot;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

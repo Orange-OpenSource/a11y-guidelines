@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommandations accessibilité numérique Orange</title>
+        
+      
+       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+      
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Retour à l’accueil" title="Retour à l’accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../web/index.html">Web</a>
+                  </li>
+                  <li class="nav-item active mobile">
+                    <a href="../mobile/index.html" 
+                       class="nav-link">Mobile
+                      </a>
+                    <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" 
+                               href="index.html">Présentation
+                            </a>
+                        </li>
+                        <li><a class="page-criteria-android" 
+                               href="criteria-android.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">Android
+                            </a>
+                        </li>  
+                        <li><a class="page-criteria-ios" 
+                               href="criteria-ios.html" 
+                               aria-haspopup="true" 
+                               aria-expanded="false">iOS
+                            </a>
+                        </li>
+                        <li><a class="page-mdan" 
+                               href="mdan.html">Démonstrateur mDAN
+                            </a>
+                        </li>
+                        <li><a class="page-links" 
+                               href="links.html">Liens utiles
+                            </a>
+                        </li>
+                        <li><a class="page-contact" 
+                               href="contact.html">Contact
+                            </a>
+                        </li>
+                        <li><a class="page-about" 
+                               href="about.html">À propos
+                            </a>
+                        </li>                        
+                    </ul>                                        
+                  </li>   
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d’adapter le confort de lecture lors de la consultation d’un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../mobile_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+    
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/mobile/index.html">Application mobile</a></li>
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="wwdc-2019-large-content-viewer">WWDC 2019 : Large Content Viewer</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"iOS", "url": "./criteria-ios.html"},
+                   {"label":"WWDC", "url": "./criteria-ios-wwdc.html"},
+                   {"label":"2019 - Large Content Viewer"}
+    ]);
+    addSubMenu([
+        {"label":"Critères de conception","url":"criteria-ios-conception.html"}, 
+        {"label":"Guide pour les développeurs","url":"criteria-ios-dev.html"},
+        {"label":"VoiceOver","url":"lecteur-ecran-voiceover.html"},
+        {"label":"WWDC","url":"criteria-ios-wwdc.html"},
+        {"label":"Tests","url":"criteria-ios-test.html"}
+    ]);
+});</script>
+
+<p><span data-menuitem="criteria-ios"></span></p>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d&#39;<span lang="en">Apple</span></strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/261/">session 261</a>) détaille les nouveautés iOS&nbsp;13 de la fonctionnalité <strong><span lang="en">Large&nbsp;Content&nbsp;Viewer</span></strong> utilisée par les personnes souhaitant visualiser l&#39;écran avec une taille de police personnalisée et implémentée de concert avec le <strong><span lang="en">Dynamic&nbsp;Type</span></strong> depuis iOS&nbsp;11.
+</br><img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261.png" />
+</br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li><a href="#DynamicType">Dynamic Type</a> (00:57)</li>
+<li><a href="#LargeContentViewer">Large Content Viewer</a> (01:54)</li>
+<li><a href="#ImageSettings">Images</a> (04:02)</li>
+<li><a href="#CustomViews">Custom Views</a> (04:52) ⟹ <strong>nouveauté iOS 13</strong></li>
+<li><a href="#Examples">Exemples</a> (09:15)</li>
+</ul>
+<p>Par la suite, selon la configuration de la présentation, le fait de cliquer sur un titre ou un temps indiqué permet d&#39;ouvrir la vidéo <span lang="en">Apple</span> directement au moment spécifié.
+</br></br>
+<a name="DynamicType"></a></p>
+<h2 id="-dynamic-type-00-57-https-developer-apple-com-videos-play-wwdc2019-261-time-57-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=57">Dynamic Type (00:57)</a></h2>
+<p>Petit rappel sur la fonctionnalité <span lang="en">Dynamic&nbsp;Type</span> dont le but est de <strong>permettre l&#39;adaptation graphique à la taille des polices</strong> modifiable dans les réglages utilisateurs
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-DynamicType.png" />
+</br>Une explication détaillée de l&#39;implémentation de cette fonctionnalité est disponible dans la partie <a href="./criteria-ios-dev.html#taille-des-textes">guide pour les développeurs</a>.
+</br></br></br>
+<a name="LargeContentViewer"></a></p>
+<h2 id="-large-content-viewer-01-54-https-developer-apple-com-videos-play-wwdc2019-261-time-114-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=114">Large Content Viewer (01:54)</a></h2>
+<p>Cette fonctionnalité iOS&nbsp;11 <strong>disponible uniquement quand l&#39;option <code>Tailles de police plus grandes</code> est activée</strong> permet de rendre très efficace le grossissement des éléments de barres <em>(navigation, onglets...)</em> pour les personnes souhaitant grossir la taille des polices à l&#39;aide du <span lang="en">Dynamic&nbsp;Type</span>.
+</br><img style="max-width: 350px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-LargeContentViewer_1.png" />
+</br>Le déclenchement de cette fonctionnalité s&#39;effectue par un <strong>appui long</strong> sur l&#39;élément concerné que l&#39;on peut <strong>laisser glisser</strong> sur les éléments voisins pour les grossir à leur tour et finalement activer celui sur lequel on <strong>relève le doigt de l&#39;écran</strong>.
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-LargeContentViewer_2.png" />
+</br></br>Il est très important d&#39;avoir à l&#39;esprit que les modifications de taille liées au <span lang="en">Dynamic&nbsp;Type</span> doivent toujours être implémentées de façon <strong>P.R.I.O.R.I.T.A.I.R.E.</strong> : le <span lang="en">Large&nbsp;Content&nbsp;Viewer</span> n&#39;est à utiliser qu&#39;à partir du moment où <strong>l&#39;élément graphique impacté ne peut pas répondre aux changements souhaités</strong>.
+</br></br></br>
+<a name="ImageSettings"></a></p>
+<h2 id="-images-04-02-https-developer-apple-com-videos-play-wwdc2019-261-time-242-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=242">Images (04:02)</a></h2>
+<p>Dans cette partie de la vidéo, toutes les caractéristiques des images à importer sont passées en revue pour obtenir une excellente définition du rendu après grossissement comme détaillé dans la partie <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">guide pour les développeurs</a>.
+</br></br>L&#39;interface graphique de Xcode peut être utilisée conjointement à du code pour obtenir le résultat escompté :
+</br><img style="max-width: 900px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-ImageSettings.png" />
+</br></br></br>
+<a name="CustomViews"></a></p>
+<h2 id="-custom-views-04-52-https-developer-apple-com-videos-play-wwdc2019-261-time-292-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=292">Custom Views (04:52)</a></h2>
+<p>En implémentant le <span lang="en">Dynamic&nbsp;Type</span>, <strong>iOS&nbsp;13</strong> rend possible un <strong>même rendu graphique</strong> pour un élément standard UIKit d&#39;une barre <em>(navigation, onglets...)</em> et pour une UIView en suivant les étapes ci-dessous :
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_1.png" />
+</br>Le <strong>protocole <code>UILargeContentViewerItem</code></strong> (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=335">05:35</a>) définit toutes les informations nécessaires au <span lang="en">Large&nbsp;Content&nbsp;Viewer</span> ⟹ la classe <strong>UIView se conforme à ce protocole</strong> par défaut :
+</br><img style="max-width: 650px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_2.png" />
+</br></br>L&#39;ajout d&#39;une interaction tactile (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=412">06:52</a>) est aussi nécessaire pour finaliser l&#39;implémentation de cette fonctionnalité&nbsp;:
+</br><img style="max-width: 850px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_3.png" />
+</br></br>Quelques propriétés liées à cette interaction tactile (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=431">07:11</a>) permettent d&#39;obtenir et/ou de définir certains types de détails :
+</br><img style="max-width: 750px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_4.png" />
+</br></br>Pour finir, le <code>delegate</code> de cette interaction tactile contient un ensemble d&#39;options (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=472">07:52</a>) qui permettent de réaliser certaines actions :
+</br><img style="max-width: 850px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-CustomViews_5.png" />
+</br></br></br>
+<a name="Examples"></a></p>
+<h2 id="-exemples-09-15-https-developer-apple-com-videos-play-wwdc2019-261-time-555-"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=555">Exemples (09:15)</a></h2>
+<p>Le premier exemple concerne les <strong>éléments UIKit standards</strong> :
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-Examples_1.png" />
+</br></br>Le second exemple traite de <strong>classes personnalisées pour des boutons</strong> (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=593">09:53</a>) dont certaines propriétés doivent être redéfinies pour une parfaite implémentation du <span lang="en">Large&nbsp;Content&nbsp;Viewer</span> :
+</br><img style="max-width: 600px; height: auto;" alt="" src="./images/iOSdev/wwdc19-261-Examples_2.png" />
+</br></br>Enfin, le dernier exemple détaille les modifications à apporter à un <strong>bouton ayant déjà une action prévue suite à un appui long</strong> (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">10:36</a>) pour ne pas avoir de conflit avec le <span lang="en">Large&nbsp;Content&nbsp;Viewer</span>.
+</br></br></br>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>
