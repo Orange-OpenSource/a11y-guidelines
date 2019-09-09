@@ -9,7 +9,18 @@
 All pre-recorded videos should have a transcript attached and closed captions available, and audio description available when necessary.
 
 ## Provide a transcript 
-Transcripts include the text of the words spoken in the video, and also the text of important words that appear on screen and important actions or changes of scene. It must be provided in text, HTML (to be preferred) or Word and must be immediately after the video.  
+
+The transcription must reproduce textually all important informations conveyed by the content, these can be:
+- the dialogues
+- messages displayed on the screen
+- any graphics and animations that bring information
+- the name and title of person
+- the name of things (buildings, products ...)
+- the place
+- what happens in the video
+- The settings of the video (quality, black and white ...)
+
+It must be provided in text, HTML (to be preferred) or Word and must be immediately after the video.  
 
 **Perimeter:** all.
 

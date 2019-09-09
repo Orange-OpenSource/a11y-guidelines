@@ -20,7 +20,17 @@ Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doiven
 - Une audiodescription, si besoin.
 
 ### Transcription intégrale
-La transcription doit restituer textuellement l’ensemble des informations véhiculées par le contenu (paroles, messages affichés à l’écran, graphes, animations ...). La transcription peut être agrémentée d’images, si besoin.
+La transcription doit restituer textuellement l’ensemble des informations importantes véhiculées par le contenu, celles-ci peuvent être :
+ - les dialogues
+ - les messages affichés à l’écran
+ - les graphiques et animations éventuels qui apportent de l'information
+ - le nom et le titre des personnes
+ - le nom des objets (bâtiments, produit...)
+ - le lieu
+ - ce qui se passe dans la vidéo
+ - des informations sur les paramètres de la vidéo (qualité, noir et blanc...)
+
+La transcription peut être également agrémentée d’images, si besoin.
 
 **La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.**
 
