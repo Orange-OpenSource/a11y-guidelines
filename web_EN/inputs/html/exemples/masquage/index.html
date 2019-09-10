@@ -33,7 +33,7 @@
       <h1>Accessible hiding</h1>
 
       <h2>Introduction</h2>
-      <p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>). These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by speech synthesis.</p>
+      <p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by speech synthesis.</p>
       <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
       <p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
       
@@ -86,7 +86,8 @@
       
       <h3>Implementation</h3>
       <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute.</p>
-      
+      <p>Warning: if you put a focusable element in content (even on a parent node) with `aria-hidden =" true "`, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. So, do not do it.</p>
+
       <strong>Example: </strong>
       <p>The following screenshot shows a video player with a number of buttons (previous channel, next channel, pause…). This player is surrounded by two buttons also providing access to previous and next channels.</p>
       <p>Visually this is not a problem. Although, when listening to the page with a screen reader, one can find it curious to hear an “Animals” button vocalized at the beginning of the page, and a “Hunting and Fishing” button vocalized at the end of page.</p>                           
