@@ -63,6 +63,10 @@ This can provoke seizures in users with epilepsy.
 
 **All other relevant criteria such as color contrasts must also be enforced.**
 
+## For more detailed information
+- W3C&nbsp; <a href="https://www.w3.org/WAI/media/av/#how-to-make-audio-and-video-accessible">How to make audio and video accessible</a>
+- SitePoint&nbsp;:  <a href="https://www.sitepoint.com/accessible-video/">8 Steps to Creating Accessible Video</a>
+
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

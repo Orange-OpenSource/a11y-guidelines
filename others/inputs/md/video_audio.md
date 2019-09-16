@@ -68,7 +68,8 @@ Le lecteur vidéo utilisé doit&nbsp;:
 - Permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.
 
 ## Liens utiles
--  Article en anglais sur le site de SitePoint&nbsp;:  <a href="https://www.sitepoint.com/accessible-video/" hreflang="en">8 Steps to Creating Accessible Video</a> (en anglais)
+- Article en anglais sur le site du W3C&nbsp; <a href="https://www.w3.org/WAI/media/av/#how-to-make-audio-and-video-accessible" lang="en" hreflang="en">How to make audio and video accessible</a>
+-  Article en anglais sur le site de SitePoint&nbsp;:  <a href="https://www.sitepoint.com/accessible-video/" lang="en" hreflang="en">8 Steps to Creating Accessible Video</a>
 - Notice  d’accessibilité éditoriale AccedeWeb&nbsp;: <a href="https://www.accede-web.com/notices/editoriale/8-contenus-riches-multimedias/">Utiliser correctement les contenus riches et multimédias</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
