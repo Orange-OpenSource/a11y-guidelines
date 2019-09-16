@@ -462,7 +462,14 @@ documentTitles["video.html#do-not-use-videos-that-have-more-than-three-flashes-w
 index.add({
     url: "video.html#do-not-use-videos-that-have-more-than-three-flashes-within-a-period-of-1-second",
     title: "Do not use videos that have more than three flashes within a period of 1 second",    
-    body: "## Do not use videos that have more than three flashes within a period of 1 second This can provoke seizures in users with epilepsy.    **Perimeter:** videos, animated components.  **All other relevant criteria such as color contrasts must also be enforced.**  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "## Do not use videos that have more than three flashes within a period of 1 second This can provoke seizures in users with epilepsy.    **Perimeter:** videos, animated components.  **All other relevant criteria such as color contrasts must also be enforced.**  "
+});
+
+documentTitles["video.html#for-more-detailed-information"] = "For more detailed information";
+index.add({
+    url: "video.html#for-more-detailed-information",
+    title: "For more detailed information",    
+    body: "## For more detailed information - W3C&amp;nbsp; &lt;a href=\&quot;https://www.w3.org/WAI/media/av/#how-to-make-audio-and-video-accessible\&quot;&gt;How to make audio and video accessible&lt;/a&gt; - SitePoint&amp;nbsp;:  &lt;a href=\&quot;https://www.sitepoint.com/accessible-video/\&quot;&gt;8 Steps to Creating Accessible Video&lt;/a&gt;  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
