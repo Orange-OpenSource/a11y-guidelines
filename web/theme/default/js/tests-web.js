@@ -13,7 +13,6 @@ $(document).ready(function () {
 		  }
 		}
 	  };
-
 	  oReq.open('GET', url, true);
 	  oReq.send(null);
 	}
@@ -74,7 +73,6 @@ $(document).ready(function () {
 					a.splice(i, 0,  b[j]);
 					b.splice(j, 1);
 				} 
-
 			}	
 		}
 		return a;
@@ -192,8 +190,6 @@ function reqListener(responseFirst, responseSecond) {
 		  let htmlrefTests = '';
 		  let headingTheme = '';
 
-		
-		  
 		  //on boucle dans le tableau passé en paramètre de la fonction
 		  for (let i in currentRefTests) {
 			if(headingTheme!=currentRefTests[i].themes){
@@ -217,12 +213,12 @@ function reqListener(responseFirst, responseSecond) {
 			htmlrefTests += '</div>';
 			htmlrefTests += '<div class="row">';
 			htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Concepteur') ? textContent.title4 : textContent.title3)+'</h4><ol>';
-			for (let j in refTests[i].resultat) {
+			for (let j in currentRefTests[i].resultat) {
 				htmlrefTests += '<li>' + currentRefTests[i].resultat[j] + '</li> ';
 			}
 			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
-			if (refTests[i].exception) {
+			if (currentRefTests[i].exception) {
 				htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>Exceptions</h4>';
 				htmlrefTests += '<p>' + currentRefTests[i].exception + '</p> ';
 				htmlrefTests += '</div>';
@@ -333,17 +329,17 @@ function reqListener(responseFirst, responseSecond) {
 		  let self       = this;
 		  let runUpdateType = false;
 
-		/*
-		//init array conditions avec valeur Expert Accessibilité	
-		arrProfil.push("Expert Accessibilité");
-		
-		conditions.unshift(function(item) { 
-			return item.profils.indexOf(arrProfil[0]) !== -1;								
-		});	
-		
-		//on nomme la fonction, pour les boutons radio on utilise this.name
-		Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
-		*/
+			/*
+			//init array conditions avec valeur Expert Accessibilité	
+			arrProfil.push("Expert Accessibilité");
+			
+			conditions.unshift(function(item) { 
+				return item.profils.indexOf(arrProfil[0]) !== -1;								
+			});	
+			
+			//on nomme la fonction, pour les boutons radio on utilise this.name
+			Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
+			*/
 
 			for (var i = 0; i < checkboxes.length; i++) {
 				

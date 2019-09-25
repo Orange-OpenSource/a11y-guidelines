@@ -217,12 +217,12 @@ function reqListener(responseFirst, responseSecond) {
 			htmlrefTests += '</div>';
 			htmlrefTests += '<div class="row">';
 			htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Designer') ? textContent.title4 : textContent.title3)+'</h4><ol>';
-			for (let j in refTests[i].resultat) {
+			for (let j in currentRefTests[i].resultat) {
 				htmlrefTests += '<li>' + currentRefTests[i].resultat[j] + '</li> ';
 			}
 			htmlrefTests += '</ol></div>';
 			htmlrefTests += '</div>';
-			if (refTests[i].exception) {
+			if (currentRefTests[i].exception) {
 				htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>Exceptions</h4>';
 				htmlrefTests += '<p>' + currentRefTests[i].exception + '</p> ';
 				htmlrefTests += '</div>';
