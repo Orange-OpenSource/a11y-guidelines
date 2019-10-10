@@ -15,9 +15,9 @@
 
 <span data-menuitem="criteria-ios"></span>
 
-Ce guide a pour objectif de présenter les différentes notions d’accessibilité sous iOS 12 en associant&nbsp;:
+Ce guide a pour objectif de présenter les différentes notions d’accessibilité en associant&nbsp;:
 - Des explications détaillées concernant les attributs et méthodes d'accessibilité.
-- Des exemples de code en Swift 5.0 et en Objective C *(Xcode 10, iOS 12)*.
+- Des exemples de code en **Swift 5.1** et en **Objective C** *(Xcode 11, iOS 13)*.
 - Des liens vers la [`documentation officielle Apple`](https://developer.apple.com/documentation/uikit/accessibility).
 
 <a name="AccessibilityTraits"></a>
@@ -1394,7 +1394,34 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 
 </div>
 <div class="tab-pane" id="textSize-Details" role="tabpanel" >
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#TextSize-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TextSize-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="TextSize-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/iOSdev/TailleDesTextes_iOS13_1.png" />
+</div>
+<div class="tab-pane" 
+     id="TextSize-iOS12" 
+     role="tabpanel" >
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</div></div>
+
 </br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:
  - **Utiliser impérativement les styles de texte** proposés selon la version d'iOS avec laquelle l'application est développée.
  </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" />
@@ -1424,7 +1451,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 </code></pre>
  - Penser à écouter la notification **UIContentSizeCategoryDidChange** qui annonce le changement de la taille du texte à partir des paramètres du téléphone.
 </br>Cette tâche est simplifiée depuis iOS10 où l'attribut **adjustsFontForContentSizeCategory** se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l'application (cet attribut ne peut s'appliquer aux polices personnalisées qu'avec l'utilisation de `UIFontMetrics` en iOS11).
-</br>Il est aussi possible d'utiliser la méthode **traitCollectionDidChange** du protocole informel `UITraitEnvironment` qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra *(class/content size, portrait/paysage)*.
+</br>Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](./criteria-ios-wwdc-17245.html#Demo)** du protocole informel `UITraitEnvironment` qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra *(class/content size, portrait/paysage, constraste des couleurs)*.
 <pre><code class="objective-c">
     //Écoute de la notification annonçant le changement de taille de la police.
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -1456,7 +1483,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
         fontFootNote.font = UIFont.preferredFont(forTextStyle: .footnote)
     }
 </code></pre>
- - Ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques.
+ - Ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le **[Large Content Viewer](./criteria-ios-wwdc-19261.html)**.
  - Penser à adapter le [contraste des couleurs](./criteria-ios-conception.html#couleurs) à la taille de texte modifiée si nécessaire.
 
 </div>
@@ -1587,7 +1614,7 @@ Tout comme la taille des textes est adaptable selon les réglages d'accessibilit
 
 </div>
 <div class="tab-pane" id="graphEltSize-Example" role="tabpanel" >
-En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
+En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini dans la partie Description et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l'image à grossir au format `pdf` à la résolution x1 dans le catalogue `xcassets`.
 </br></br>2. Dans l'<span lang="en">Image Set</span> qui vient d'être créé, cocher la case `Preserve Vector Data` et spécifier `Single Scale` :
 </br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
@@ -1599,7 +1626,7 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
 </br></br>De façon à pouvoir tester à la fois le grossissement des images et celui d'un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l'image du logo Orange.
 </br></br>Après modification du grossissement de texte dans les réglages (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), on revient dans l'application pour constater :
 - Une taille de l'image Orange nettement plus conséquente.
-- Au milieu de l'écran, l'affichage grossi de l'onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.
+- Au milieu de l'écran, l'affichage grossi de l'onglet sur lequel on doit appuyer de façon continue pour provoquer cette apparition ⟹ fonctionnalité **[Large Content Viewer](./criteria-ios-wwdc-19261.html)** disponible depuis iOS 11.
 </br><img alt="" style="max-width: 1050px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" />
 
 </div>
@@ -2117,7 +2144,7 @@ class CustomRotor: UIViewController {
 Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;?
 </br>Plusieurs fonctions du <span lang="en">framework</span> `UIKit` permettent de connaître le statut de ces options d'accessibilité.
  </br>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (**UIAccessibilityIsVoiceOverRunning**).
- </br></br>Une présentation très visuelle de certaines fonctions, peut-être moins utiles à première vue, est faite lors d'une <a href="./criteria-ios-wwdc-18230.html" style="text-decoration: underline;">vidéo WWDC 2018</a> *(Fournir une expérience exceptionnelle en accessibilité)* dont le contenu est parfaitement détaillé sur ce site.</br></br>
+ </br></br>Une présentation très visuelle de certaines fonctions, peut-être moins utiles à première vue, est faite lors d'une <a href="./criteria-ios-wwdc-18230.html" style="text-decoration: underline;">vidéo WWDC</a> *(Fournir une expérience exceptionnelle en accessibilité)* dont le contenu est parfaitement détaillé sur ce site.</br></br>
 
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -2877,8 +2904,34 @@ Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réa
 </code></pre>
 
 La génération de cette phonétique peut se faire en passant par les réglages du terminal.
-</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
-</br>Une fois le menu `Général` - ` Accessibilité` - `Parole` - `Prononciations` activé...
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Phonemes-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Phonemes-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Phonemes-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 850px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_iOS13_1.png" />
+</div>
+<div class="tab-pane" 
+     id="Phonemes-iOS12" 
+     role="tabpanel" >
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
+</div></div>
+
+</br>Une fois le menu `Prononciations` activé...
 </br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></br>
 <ol>
   <li>Sélectionner l'icône '**+**' pour ajouter une nouvelle phonétique.</li>
@@ -2905,7 +2958,7 @@ La génération de cette phonétique peut se faire en passant par les réglages 
 </div>
 </div>
 
-L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une [vidéo WWDC 2018](./criteria-ios-wwdc-18236.html) parfaitement résumée dans la partie WWDC de ce site.
+L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une [vidéo WWDC](./criteria-ios-wwdc-18236.html) *(Utiliser une voix synthétisée avec AVSpeechSynthesizer)* parfaitement résumée dans la partie WWDC de ce site.
 </br></br>
 ## Contrôle de sélection
 <ul class="nav nav-tabs" role="tablist">

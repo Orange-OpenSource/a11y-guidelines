@@ -16,7 +16,7 @@
 
 This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options.
 </br>Through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
-</br>Code snippets are also available to show the different possible implementations *{ (Swift 5.0, Objective C) + (Xcode 10, iOS 12) }*.
+</br>Code snippets are also available to show the different possible implementations *{ (Swift 5.1, Objective C) + (Xcode 11, iOS 13) }*.
 
 <a name="AccessibilityTraits"></a>
 ## Element trait
@@ -1394,7 +1394,34 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
 
 </div>
 <div class="tab-pane" id="textSize-Details" role="tabpanel" >
-<img alt="larger accessibility sizes option screenshot" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+    
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#TextSize-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TextSize-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="TextSize-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/iOSdev/TailleDesTextes_iOS13_1.png" />
+</div>
+<div class="tab-pane" 
+     id="TextSize-iOS12" 
+     role="tabpanel" >
+<img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
+</div></div>
+    
 </br>The following steps should be respected in order to easily use this <abbr>API</abbr>&nbsp;:
  - **Use the text styles** available with the application iOS version.
  </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" />
@@ -1423,7 +1450,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
  - Listen to the font size settings change event **UIContentSizeCategoryDidChange** or directly use the property **adjustsFontForContentSizeCategory** to have an automatic update of your system font size if you're programming in iOS10 (this attribute applies to custom fonts only with the `UIFontMetrics` class).
-</br>Note that the **traitCollectionDidChange** method that belongs to the `UITraitEnvironment` informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes *(class/content size, portrait/landscape)*.
+</br>Note that the **[traitCollectionDidChange](./dev-ios-wwdc-17245.html#Demo)** method that belongs to the `UITraitEnvironment` informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes *(class/content size, portrait/landscape, color contrast)*.
 <pre><code class="objective-c">
     //Listens to the notification dealing with the font size changing from the mobile settings.
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -1455,7 +1482,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
         fontFootNote.font = UIFont.preferredFont(forTextStyle: .footnote)
     }
 </code></pre>
- - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
+ - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values. Don't forget to include the settings for the navigation/tab/status bar and toolbar items that will be handled by the **[Large Content Viewer](./dev-ios-wwdc-19261.html)**.
  - Don't forget to adapt the [color contrast](./criteria-ios.html#colours) to the text size.
 
 </div>
@@ -1599,8 +1626,8 @@ To illustrate these new features, the example below is obtained by following the
 </br></br>An application with a tab bar, whose second bar item displays the Orange logo (added `Aspect Fit` content mode and constraints to stretch the image view), is created to test the features exposed in the description.
 </br></br>With the `Larger Accessibility Sizes` activation in the settings (see <a href="http://a11y-guidelines.orange.com/mobile_EN/dev-ios.html#graphical-elements-size">the previous section</a>), one can easily note in the application &nbsp;:
 - A larger Orange image size.
-- A larger version of the bar item in an overlay if you touch and hold over it.
-</br><img alt="" style="max-width: 1050px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_10.png" />
+- A larger version of the bar item in an overlay if you touch and hold over it ⟹ **[Large Content Viewer](./dev-ios-wwdc-19261.html)** feature available since iOS 11.
+</br><img alt="" style="max-width: 1050px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" />
 
 </div>
 <div class="tab-pane" id="graphEltSize-Links" role="tabpanel" >
@@ -2114,7 +2141,7 @@ class CustomRotor: UIViewController {
 On iOS, it is possible to check the accessibility options state. 
 </br>Is VoiceOver activated? Is the audio-mono mode activated? Several methods that are part of the `UIKit` framework can help you to check with that.
 </br>The most useful method is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
-</br></br>Some other methods are deeply explained in a <a href="./dev-ios-wwdc-18230.html" style="text-decoration: underline;">WWDC 2018 video</a> *(Deliver en exceptional accessibility experience)* whose content is perfectly detailed in the iOS WWDC section of this site.</br></br>
+</br></br>Some other methods are deeply explained in a <a href="./dev-ios-wwdc-18230.html" style="text-decoration: underline;">WWDC video</a> *(Deliver an exceptional accessibility experience)* whose content is perfectly detailed in the iOS WWDC section of this site.</br></br>
 
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
@@ -2877,8 +2904,34 @@ When a particular spelling is intended, phonetics is highly recommended to get t
 </code></pre>
 
 </br>Generating phonetics may be done in the device settings.
-</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
-</br>Once the menu `General` - ` Accessibility` - `Speech` - `Pronunciations` is reached...
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Phonemes-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Phonemes-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Phonemes-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 850px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_iOS13_1.png" />
+</div>
+<div class="tab-pane" 
+     id="Phonemes-iOS12" 
+     role="tabpanel" >
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
+</div></div>
+
+</br>Once the menu `Pronunciations` is reached...
 </br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></br>
 <ol>
   <li>Select the '**+**' icon to add a new phonetic element.</li>
@@ -2904,7 +2957,7 @@ When a particular spelling is intended, phonetics is highly recommended to get t
 </div>
 </div>
 
-All the speech synthesizer functionalities are introduced in a [WWDC 2018 video](./dev-ios-wwdc-18236.html) that's perfectly summarized in the WWDC section of this site.
+All the speech synthesizer functionalities are introduced in a [WWDC video](./dev-ios-wwdc-18236.html) *(Making iOS talk with AVSpeechSynthesizer)* that's perfectly summarized in the WWDC section of this site.
 </br></br>
 ## Switch Control
 <ul class="nav nav-tabs" role="tablist">
