@@ -164,7 +164,7 @@ Graphiquement, [ce point](./criteria-ios-conception.html#couleurs) est très cer
 </br></br>
 ### Inspection de code
 L'interface de développement Apple *(Xcode)* fournit un outil particulièrement intéressant intitulé **Accessibility Inspector**.
-</br>L'intérêt et l'utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans cette [vidéo WWDC](./criteria-ios-wwdc-16407.html) parfaitement détaillée et dont le visionnage est très fortement recommandé.
+</br>L'intérêt et l'utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans les vidéos parfaitement détaillées [`Audit d'une app en accessibilité`](./criteria-ios-wwdc-16407.html) et [`Découvrir Accessibility Inspector`](./criteria-ios-wwdc-19000.html#AccessibilityInspector) dont le visionnage est très fortement recommandé.
 </br></br>
 ### Tests liés au code
 De façon à assurer une stabilité temporelle au niveau du code, des tests unitaires *(<abbr>TDD</abbr>)* et graphiques *(<abbr>UI</abbr>)* sont à mettre en place par les développeurs.

@@ -161,7 +161,7 @@ The [colour contrast](./criteria-ios.html#colours) is certainly the easiest poin
 </br></br>
 ### Code review
 The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled **Accessibility Inspector**.
-</br>Its goal and way of being used won't be developed here because they're perfectly explained in this detailed [WWDC video](./dev-ios-wwdc-16407.html) that's highly recommended to be watched.
+</br>Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos [`Auditing Your Apps for Accessibility`](./dev-ios-wwdc-16407.html) and [`Accessibility Inspector`](./dev-ios-wwdc-19000.html#AccessibilityInspector) that are highly recommended to be watched.
 </br></br>
 ### Code testing
 Many kinds of tests *(<abbr>TDD</abbr>*, *<abbr>UI</abbr>)* may be set up by the developers in order to maintain a stable and reliable code over time.
