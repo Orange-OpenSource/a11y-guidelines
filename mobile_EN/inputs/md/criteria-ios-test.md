@@ -64,7 +64,7 @@ To understand how this feature works, it's highly recommended to watch the examp
 </br>The following points must be thoroughly checked:
 - The **truncation '...' mustn't be used** and should be replaced by a hyphen at the end of the sentence.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" />
-- **Illustration and icon sizes must be adapted to the magnification**. 1/. Use of a central element like [tab bar items](./dev-ios.html#graphical-elements-size), 2/. a two fingers pinch implementation to avoid the `Zoom` native feature trigger or 3/. only a [graphical element magnification](./dev-ios.html#graphical-elements-size) are potential solutions according to the context.
+- **Illustration and icon sizes must be adapted to the magnification**: use of the [Large Content Viewer](./dev-ios-wwdc-19261.html) feature, a two fingers pinch implementation to avoid the `Zoom` native feature trigger or only a [graphical element magnification](./dev-ios.html#graphical-elements-size) are possible solutions according to the context.
 - **Change the text sizes in every screen** to ensure that all the elements perfectly meet the graphical contraints.
 - As soon as a **corrected fault** is effective, it **must be checked for every device used for tests** to be sure of its definitive rectification.
 
@@ -74,7 +74,34 @@ All these **tests are quite long to be performed** because every screen is impac
 ### VoiceOver
 The iOS native screen reader activation drastically changes the visual behavior obtained with the common gestures, that's why its [control](./voiceover.html) takes a little while.
 </br>It's **highly recommended** to know the basic gestures before activating this feature in the device user settings.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-voiceover.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-voiceover_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOver-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-voiceover_iOS12.png" />
+</div></div>
+
 </br>Don't believe that every element must be absolutely vocalized one after another : that's definitely the proper way to get a VoiceOver implementation that is anything but effective !
 </br></br>Keep in mind that the visual **information** is assimilated very quickly while the screen reader provides **sequentially** this information at the speed of successive selections of elements: a **huge effort** is necessary to get a synoptic vision of the screen and really understand what's offered.
 </br></br>To better deal with this situation, it's recommended to keep on navigating with the [curtain screen](./voiceover.html#CurtainScreen) mode that's particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.
@@ -95,7 +122,34 @@ The accessibility [Switch Control](https://support.apple.com/en-en/HT201370) fea
 </br></br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
 </br>In this case, the feedback information provided by the tests must be as helpful as getting the best user experience.
 </br></br>*Note*: this feature can be (de)activated in the device user settings.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_2.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-SwitchControl_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="SwitchControl-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_iOS12.png" />
+</div></div>
+
 </br>
 <a name="TechnicalMode"></a>
 ## Technical review

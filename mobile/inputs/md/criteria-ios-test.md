@@ -66,7 +66,7 @@ Pour bien comprendre comment le grossissement de texte fonctionne, il est fortem
 </br>Enfin, les quelques points suivants sont à examiner minutieusement :
 - La **troncature '...' est à éviter** pour laisser place à la coupure du mot impacté identifiée par un trait d'union en fin de phrase.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" />
-- **Les illustrations comme les icônes doivent s'adapter au grossissement souhaité**. 1/. L'utilisation d'une fenêtre centrale à l’instar des [éléments dans les barres de tabulation](./criteria-ios-dev.html#taille-des-l-ments-graphiques) après un appui long, 2/. l'implémentation un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore 3/. le simple [grossissement d'un élément graphique](./criteria-ios-dev.html#taille-des-l-ments-graphiques) peuvent être des solutions selon les cas rencontrés.
+- **Les illustrations comme les icônes doivent s'adapter au grossissement souhaité** : l'utilisation du [Large Content Viewer](./criteria-ios-wwdc-19261.html) après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore le simple [grossissement d'un élément graphique](./criteria-ios-dev.html#taille-des-l-ments-graphiques) peuvent être des solutions selon les cas rencontrés.
 - Penser à **modifier le grossissement de texte au sein de chaque écran** pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place.
 - Dès que la **correction d’une anomalie** remontée sur un terminal est effective, elle **doit être vérifiée sur les autres terminaux utilisés en tests** afin de s'assurer que le problème est réellement éradiqué.
 
@@ -76,7 +76,34 @@ Les **tests** à réaliser pour le `Dynamic Type` sont **assez longs** car plusi
 ### VoiceOver
 L'activation du lecteur d'écran natif change radicalement les résultats obtenus par les gestes standards effectués sur l’écran tactile, c'est pourquoi son utilisation demande un certain temps d'adaptation pour une maîtrise de sa [gestuelle spécifique](./lecteur-ecran-voiceover.html).
 </br>Il est donc **très fortement recommandé** de connaître au moins les gestes de base avant d'activer cette fonctionnalité à partir des réglages du terminal.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-voiceover.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-VoiceOver_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOver-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-VoiceOver_iOS12.png" />
+</div></div>
+
 </br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif !
 </br></br>Il faut bien avoir à l'esprit que l'**information** diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d'écran arrive de façon **séquentielle** à la vitesse de sélections successives d'éléments : un **effort énorme de mémorisation** est à fournir pour avoir une vision synoptique de l'écran et comprendre réellement ce qui est proposé.
 </br></br>Pour mieux comprendre cette situation, il est recommandé de passer son écran en [mode "rideau"](./lecteur-ecran-voiceover.html#CurtainScreen) puis naviguer comme si on voyait l'écran.
@@ -98,7 +125,34 @@ L'utilisation du [contrôle de sélection](https://support.apple.com/fr-fr/HT201
 </br></br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l'ordre désiré.
 </br>Dans ce cas, les tests réalisés devront donc remonter toute amélioration nécessaire pour aboutir à la meilleure expérience utilisateur possible.
 </br></br>*Remarque* : l'activation de cette fonctionnalité se fait elle aussi via les réglages du terminal.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_2.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-SwitchControl_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="SwitchControl-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_iOS12.png" />
+</div></div>
+
 </br>
 <a name="TechnicalMode"></a>
 ## Évaluation technique
