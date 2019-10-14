@@ -222,6 +222,8 @@ class ChangeTextView: UIViewController {
 - [`accessibilityLabel`](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel)
 - [`accessibilityValue`](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)
 - [`accessibilityHint`](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)
+- [Writing Great Accessibility Labels](./dev-ios-wwdc-19000.html#WritingGreatAccessibilityLabels)
+    
 </div>
 </div></br></br>
 ## Date, time and numbers
@@ -1490,7 +1492,8 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
 - [Dynamic Type & Text Styles](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
-
+- [Building Apps with Dynamic Type](./dev-ios-wwdc-17245.html)
+    
 </div>
 </div></br></br>
 ## Truncation hyphen
@@ -1604,7 +1607,7 @@ class TruncationHyphen: UIViewController {
            data-toggle="tab" 
            href="#graphEltSize-Links" 
            role="tab" 
-           aria-selected="false">Link</a>
+           aria-selected="false">Links</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -1632,6 +1635,7 @@ To illustrate these new features, the example below is obtained by following the
 </div>
 <div class="tab-pane" id="graphEltSize-Links" role="tabpanel" >
 - [`adjustsImageSizeForAccessibilityContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility)
+- [WWDC 2019 : Large Content Viewer](./dev-ios-wwdc-19261.html)
 </div>
 </div></br></br>
 ## Continuous adjustable values
@@ -1959,6 +1963,8 @@ class CustomActions: UIViewController {
 <div class="tab-pane" id="customActions-Links" role="tabpanel" >
 - [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
 - [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
+- [WWDC 2017 : What's New in Accessibility](./dev-ios-wwdc-17215.html#CustomActions)
+- [Accessibility Custom Actions](./dev-ios-wwdc-19000.html#AccessibilityCustomActions)
 </div>
 </div></br></br>
 ## Custom rotor
@@ -2953,6 +2959,7 @@ When a particular spelling is intended, phonetics is highly recommended to get t
   <li>[AVSpeechSynthesizer](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer)</li>
   <li>[AVSpeechSynthesizerDelegate](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate)</li>
   <li>[AVSpeechUtterance](https://developer.apple.com/documentation/avfoundation/avspeechutterance) </li>
+  <li>[WWDC 2018 : Making iOS talk with AVSpeechSynthesizer](./dev-ios-wwdc-18236.html) </li>
 </ul>
 </div>
 </div>

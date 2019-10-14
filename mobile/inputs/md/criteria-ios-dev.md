@@ -228,6 +228,7 @@ class ChangeTextView: UIViewController {
 - [`accessibilityLabel`](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel)
 - [`accessibilityValue`](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)
 - [`accessibilityHint`](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)
+- [La bonne rédaction des labels](./criteria-ios-wwdc-19000.html#WritingGreatAccessibilityLabels)
 </div>
 </div></br></br>
 ## Date, heure et nombres
@@ -1491,7 +1492,8 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 - [<span lang="en">Dynamic Type</span> et styles de texte](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/)
 - [`UIContentSizeCategoryDidChange`](https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange)
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
-
+- [Application du Dynamic Type](./criteria-ios-wwdc-17245.html)
+    
 </div>
 </div></br></br>
 ## Trait d'union de troncature
@@ -1604,7 +1606,7 @@ class TruncationHyphen: UIViewController {
            data-toggle="tab" 
            href="#graphEltSize-Links" 
            role="tab" 
-           aria-selected="false">Lien</a>
+           aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -1632,6 +1634,7 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
 </div>
 <div class="tab-pane" id="graphEltSize-Links" role="tabpanel" >
 - [`adjustsImageSizeForAccessibilityContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility)
+- [WWDC 2019 : Large Content Viewer](./criteria-ios-wwdc-19261.html)
 </div>
 </div></br></br>
 ## Valeurs continûment ajustables
@@ -1962,6 +1965,8 @@ class CustomActions: UIViewController {
 <div class="tab-pane" id="customActions-Links" role="tabpanel" >
 - [`accessibilityCustomActions`](https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions)
 - [`UIAccessibilityCustomAction`](https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction)
+- [WWDC 2017 : les nouveautés en accessibilité](./criteria-ios-wwdc-17215.html#CustomActions)
+- [Utiliser les actions personnalisées](./criteria-ios-wwdc-19000.html#AccessibilityCustomActions)
 </div>
 </div></br></br>
 ## Rotor personnalisé
@@ -2952,7 +2957,8 @@ La génération de cette phonétique peut se faire en passant par les réglages 
   <li>[AVSpeechSynthesisVoice](https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice)</li>
   <li>[AVSpeechSynthesizer](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer)</li>
   <li>[AVSpeechSynthesizerDelegate](https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate)</li>
-  <li>[AVSpeechUtterance](https://developer.apple.com/documentation/avfoundation/avspeechutterance) </li>
+  <li>[AVSpeechUtterance](https://developer.apple.com/documentation/avfoundation/avspeechutterance)</li>
+  <li>[WWDC 2018 : Utiliser une voix synthétisée avec AVSpeechSynthesizer](./criteria-ios-wwdc-18236.html) </li>
 </ul>
 
 </div>
