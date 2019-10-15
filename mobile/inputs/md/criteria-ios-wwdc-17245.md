@@ -20,12 +20,12 @@ Cette présentation visualisable sur le **site développeur officiel d'Apple** (
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
 <img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245.png" />
 </br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :
-- [Styles de texte](#TextStyles) (06:06)
-- [Police personnalisée](#CustomFonts) (08:17)
+- [Styles de texte](#TextStyles) (06:06) ⟹ **amélioration iOS 11**
+- [Police personnalisée](#CustomFonts) (08:17) ⟹ **nouveauté iOS 11**
 - [Utilisation de pages web](#WebViews) (09:25)
 - [Affichage sur plusieurs lignes](#WrapToMultipleLines) (10:14)
 - [ConstraintEqualToSystemSpacingBelow](#AutoLayoutSystemSpacingConstraints) (11:31)
-- [ScaledValue](#ScaledValue) (12:56)
+- [ScaledValue](#ScaledValue) (12:56) ⟹ **nouveauté iOS 11**
 - [Grossissement d'éléments voisins](#SideBySideText) (13:36)
 - [PreferredContentSizeCategory](#PreferredContentSizeCategory) (15:23)
 - [Table view cells](#TableViewCells) (16:38)

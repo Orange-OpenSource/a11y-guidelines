@@ -19,12 +19,12 @@ This video available on the **official Apple website** ([session 245](https://de
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
 <img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-245.png" />
 </br></br>Various contents and their video timelapse are indicated hereunder :
-- [Text styles](#TextStyles) (06:06)
-- [Custom fonts](#CustomFonts) (08:17)
+- [Text styles](#TextStyles) (06:06) ⟹ **iOS 11 upgrade**
+- [Custom fonts](#CustomFonts) (08:17) ⟹ **iOS 11 new feature**
 - [Web views](#WebViews) (09:25)
 - [Wrap to multiple lines](#WrapToMultipleLines) (10:14)
 - [Auto layout system spacing constraints](#AutoLayoutSystemSpacingConstraints) (11:31)
-- [Scaled values](#ScaledValue) (12:56)
+- [Scaled values](#ScaledValue) (12:56) ⟹ **iOS 11 new feature**
 - [Side-by-side text](#SideBySideText) (13:36)
 - [PreferredContentSizeCategory](#PreferredContentSizeCategory) (15:23)
 - [Table view cells](#TableViewCells) (16:38)

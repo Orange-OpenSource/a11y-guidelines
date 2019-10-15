@@ -19,19 +19,19 @@ This video available on the **official Apple website** ([session 215](https://de
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
 <img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
 </br></br>Various contents and their video timelapse are indicated hereunder :
-- [Text detection in image](#ImageTextDetection) (07:07)
-- [Improved photo description](#ImprovedPhotoDescription) (08:01)
-- [Type to SIRI](#TypeToSIRI) (11:37)
+- [Text detection in image](#ImageTextDetection) (07:07) ⟹ **iOS 11 new feature**
+- [Improved photo description](#ImprovedPhotoDescription) (08:01) ⟹ **iOS 11 new feature**
+- [Type to SIRI](#TypeToSIRI) (11:37) ⟹ **iOS 11 new feature**
 - [Accessibility Inspector](#AccessibilityInspector) (15:35)
 - [UIAccessibilityProtocol](#UIAccessibilityProtocol) (21:14)
-- [Attributed Accessibility Properties](#AttributedProperties) (26:07)
-- [Accessibility Container Type](#AccessibilityContainer) (27:20)
+- [Attributed Accessibility Properties](#AttributedProperties) (26:07) ⟹ **iOS 11 new feature**
+- [Accessibility Container Type](#AccessibilityContainer) (27:20) ⟹ **iOS 11 new feature**
 - [Custom actions](#CustomActions) (35:43)
 - [Default activation](#DefaultActivation) (37:38)
 - [Adjustable](#AdjustableValues) (38:22)
 - [Pass through](#PassThrough) (39:40)
 - [Custom scrolling](#CustomScrolling) (41:02)
-- [Drag & Drop](#DragAndDrop) (42:54)
+- [Drag & Drop](#DragAndDrop) (42:54) ⟹ **iOS 11 new feature**
 
 </br>During this presentation, the following solutions for accessibility development pitfalls are suggested thanks to a simple application ([take a look at it](https://developer.apple.com/videos/play/wwdc2017/215/?time=1007)) :
 - How to define an (in)accessible element ? [(31:10)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1870)

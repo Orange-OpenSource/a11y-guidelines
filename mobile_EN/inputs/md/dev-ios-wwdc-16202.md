@@ -21,18 +21,18 @@ This video available on the **official Apple website** ([session 202](https://de
 </br></br>Various contents and their video timelapse are indicated hereunder :
 
 - **Functionalities**
-    - [MOTOR - Switch Control](#SwitchControl) (02:29)
+    - [MOTOR - Switch Control](#SwitchControl) (02:29) ⟹ **tvOS 10 new feature**
     - [MOTOR - Dwell Control](#DwellControl) (03:36)
-    - [VISION - Display adjustments](#DisplayAdjustments) (04:15)
+    - [VISION - Display adjustments](#DisplayAdjustments) (04:15) ⟹ **tvOS 10 new feature**
     - [VISION - Taptic time](#TapticTime) (04:53)
-    - [VISION - Magnifier](#Magnifier) (05:17)
-    - [HEARING - TTY](#SoftwareTTY) (06:51)
+    - [VISION - Magnifier](#Magnifier) (05:17) ⟹ **iOS 10 new feature**
+    - [HEARING - TTY](#SoftwareTTY) (06:51) ⟹ **iOS 10 new feature**
     - [LEARNING - Enhanced typing feedback](#EnhancedTypingFeedback) (07:51)
 - **Programing**
     - [UIAccessibilityProtocol](#UIAccessibilityProtocol) (14:19)
     - [accessibilityElements](#accessibilityElements) (18:00)
-    - [accessibilityFrameInContainerSpace](#accessibilityFrameInContainerSpace) (19:02)
-    - [accessibilityCustomRotors](#accessibilityCustomRotors) (24:19)
+    - [accessibilityFrameInContainerSpace](#accessibilityFrameInContainerSpace) (19:02) ⟹ **iOS 10 new feature**
+    - [accessibilityCustomRotors](#accessibilityCustomRotors) (24:19) ⟹ **iOS 10 new feature**
     - [tvOS header elements](#tvOS) (31:20)
 - **Example** : during this presentation, the hereunder solutions for VoiceOver development pitfalls are suggested thanks to a simple application that's highly recommended [to be watched](https://developer.apple.com/videos/play/wwdc2016/202/?time=698) before going further. Once implemented, these solutions give rise to an application whose VoiceOver efficiency is shown in a [live demonstration](https://developer.apple.com/videos/play/wwdc2016/202/?time=1753).
     - Activate a `table view cell` [(19:58)](https://developer.apple.com/videos/play/wwdc2016/202/?time=1198).

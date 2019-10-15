@@ -21,19 +21,19 @@ Cette présentation visualisable sur le **site développeur officiel d'Apple** (
 </br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :
 
 - **Fonctionnalités**
-    - [MOTEUR - Switch Control](#SwitchControl) (02:29)
+    - [MOTEUR - Switch Control](#SwitchControl) (02:29) ⟹ **nouveauté tvOS 10**
     - [MOTEUR - Dwell Control](#DwellControl) (03:36)
-    - [VUE - Adaptation des couleurs](#DisplayAdjustments) (04:15)
+    - [VUE - Adaptation des couleurs](#DisplayAdjustments) (04:15) ⟹ **nouveauté tvOS 10**
     - [VUE - Taptic time](#TapticTime) (04:53)
-    - [VUE - Loupe](#Magnifier) (05:17)
-    - [OUÏE - TTY](#SoftwareTTY) (06:51)
+    - [VUE - Loupe](#Magnifier) (05:17) ⟹ **nouveauté iOS 10**
+    - [OUÏE - TTY](#SoftwareTTY) (06:51) ⟹ **nouveauté iOS 10**
     - [APPRENTISSAGE - Retour audio d'écriture](#EnhancedTypingFeedback) (07:51)
 
 - **Programmation**
     - [Découvrir le protocole UIAccessibility](#UIAccessibilityProtocol) (14:19)
     - [accessibilityElements](#accessibilityElements) (18:00)
-    - [accessibilityFrameInContainerSpace](#accessibilityFrameInContainerSpace) (19:02)
-    - [accessibilityCustomRotors](#accessibilityCustomRotors) (24:19)
+    - [accessibilityFrameInContainerSpace](#accessibilityFrameInContainerSpace) (19:02) ⟹ **nouveauté iOS 10**
+    - [accessibilityCustomRotors](#accessibilityCustomRotors) (24:19) ⟹ **nouveauté iOS 10**
     - [tvOS header elements](#tvOS) (31:20)
 
 - **Exemple** : au cours de cette présentation, de nombreuses solutions sont proposées par le biais d'une application d'exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span>. Il est vivement conseillé de regarder l'[application d'exemple sans améliorations](https://developer.apple.com/videos/play/wwdc2016/202/?time=698) avant de consulter les solutions. Une fois tous les problèmes soulevés par ces questions solutionnés, l'accessibilité VoiceOver de l'application s'améliore nettement pour aboutir à la [démonstration](https://developer.apple.com/videos/play/wwdc2016/202/?time=1753) réalisée en séance.

@@ -20,19 +20,19 @@ Cette présentation visualisable sur le **site développeur officiel d'Apple** (
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/iOSdev/wwdc17-logo.png" />
 <img style="max-width: 700px; height: auto;" alt="" src="./images/iOSdev/wwdc17-215.png" />
 </br></br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :
-- [Détection de texte dans une image](#ImageTextDetection) (07:07)
-- [Amélioration de la description d'une photo](#ImprovedPhotoDescription) (08:01)
-- [Ecrire des infos pour SIRI](#TypeToSIRI) (11:37)
+- [Détection de texte dans une image](#ImageTextDetection) (07:07) ⟹ **nouveauté iOS 11**
+- [Amélioration de la description d'une photo](#ImprovedPhotoDescription) (08:01) ⟹ **nouveauté iOS 11**
+- [Ecrire des infos pour SIRI](#TypeToSIRI) (11:37) ⟹ **nouveauté iOS 11**
 - [Accessibility Inspector : cas pratique](#AccessibilityInspector) (15:35)
 - [Découvrir le protocole UIAccessibility](#UIAccessibilityProtocol) (21:14)
-- [Attributed Accessibility Properties](#AttributedProperties) (26:07)
-- [Accessibility Container Type](#AccessibilityContainer) (27:20)
+- [Attributed Accessibility Properties](#AttributedProperties) (26:07) ⟹ **nouveauté iOS 11**
+- [Accessibility Container Type](#AccessibilityContainer) (27:20) ⟹ **nouveauté iOS 11**
 - [Les actions personnalisées](#CustomActions) (35:43)
 - [Action par défaut](#DefaultActivation) (37:38)
 - [Les valeurs continûment ajustables](#AdjustableValues) (38:22)
 - [Sélection en défilement continu](#PassThrough) (39:40)
 - [Défilement personnalisé](#CustomScrolling) (41:02)
-- [Drag & Drop](#DragAndDrop) (42:54)
+- [Drag & Drop](#DragAndDrop) (42:54) ⟹ **nouveauté iOS 11**
 
 </br>Au cours de cette présentation, de nombreuses solutions sont proposées par le biais d'une application d'exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span> (regarder l'[application d'exemple](https://developer.apple.com/videos/play/wwdc2017/215/?time=1007) avant de lire la suite) :
 - Rendre un élément (in)accessible [(31:10)](https://developer.apple.com/videos/play/wwdc2017/215/?time=1870)
