@@ -18,13 +18,67 @@
 <span lang="en">VoiceOver</span> est le lecteur d’écran natif iOS qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre terminal.
 </br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page.
 
-L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages` - `Général` - `Accessibilité` - `VoiceOver` du téléphone.
-</br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iphonex_voiceOverActivation.png" />
+L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages` du téléphone :
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOverActivation-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOverActivation-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOverActivation-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iphonex_VoiceOverActivation_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOverActivation-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 1100px; height: auto;" alt="" src="./images/iphonex_VoiceOverActivation_iOS12.png"/>
+</div></div>
+
 </br>Lorsque l'activation est effective, les gestes standards effectués sur l’écran tactile donnent des résultats différents.
 </br>Cependant, des gestes supplémentaires permettent de se déplacer à l’écran et de contrôler des éléments sélectionnés.
 
 Il est préférable mais non obligatoire d'**activer la vibration** pour percevoir le point de déclenchement de certaines fonctionnalités.
-</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#iPhoneVibration-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#iPhoneVibration-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="iPhoneVibration-iOS13"
+     role="tabpanel">
+<img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration_iOS13.png"/>
+</div>
+<div class="tab-pane" 
+     id="iPhoneVibration-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration_iOS12.png"/>
+</div></div>
+
 </br>Si cette fonction est désactivée, il est toutefois possible d'entendre un bip signalant le déclenchement qui risque néanmoins d'être parasité par la vocalisation.
 
 Deux mouvements principaux sont importants à maîtriser pour appliquer sans problème les détails fournis par la suite :

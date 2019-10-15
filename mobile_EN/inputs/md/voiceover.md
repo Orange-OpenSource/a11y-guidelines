@@ -17,12 +17,66 @@
 VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen.
 </br>It vocalizes all visible elements in the page specially for blind or impaired, dyslexic or illiterate users.
 
-VoiceOver can be switched on thanks to the `Settings` - `General` - `Accessibility` - `VoiceOver` device menu.
-</br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iphonex_voiceOverActivation.png" />
-When VoiceOver is on, the standard gestures behave differently and additional gestures let you move the focus on the screen and control the selected items. 
+VoiceOver can be switched on thanks to the `Settings` device menu:
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOverActivation-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOverActivation-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOverActivation-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iphonex_VoiceOverActivation_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOverActivation-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 1100px; height: auto;" alt="" src="./images/iphonex_VoiceOverActivation_iOS12.png"/>
+</div></div>
+
+</br>When VoiceOver is on, the standard gestures behave differently and additional gestures let you move the focus on the screen and control the selected items. 
 
 It's better but not mandatory to **activate the vibration** feature in the accessibility settings in order to feel the trigger of some actions.
-</br><img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_en_vibration.png" />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#iPhoneVibration-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#iPhoneVibration-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="iPhoneVibration-iOS13"
+     role="tabpanel">
+<img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration_iOS13.png"/>
+</div>
+<div class="tab-pane" 
+     id="iPhoneVibration-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 500px; height: auto;" alt="" src="./images/iphonex_vo_fr_vibration_iOS12.png"/>
+</div></div>
+
 </br>A sound may be heard in case of a disactivated vibration feature but VoiceOver might cover it.
 
 Two gestures are important to be well understood so as to perfectly harness the provided details thereafter :
