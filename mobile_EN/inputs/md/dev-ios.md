@@ -1863,13 +1863,45 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
      id="customActions-Description"
      role="tabpanel">
 Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
-</br>A convincing example is the iOS native mail that may suggest some actions as follows :
-</br><img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
-</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the previous accessible element instead of suggesting actions as above.
+</br>A convincing example is the iOS native mail that may suggest some actions as follows:
+</br></br>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CustomActionsVoiceOver"
+           role="tab" 
+           aria-selected="true">VoiceOver</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CustomActionsSwitchControl"
+           role="tab" 
+           aria-selected="false">Switch Control</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active"
+     id="CustomActionsVoiceOver"
+     role="tabpanel">
+<img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_VoiceOver.png"/>
+</br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the next accessible element instead of suggesting actions as above.
+</br></br>In this case, it would have been relevant to follow the pattern described in the `Example` sheet to get these actions if they weren't natively implemented.
+</div>
+<div class="tab-pane" 
+     id="CustomActionsSwitchControl" 
+     role="tabpanel" >
+<img alt="direct access to the mail actions with the switch control." style="max-width: 1000px; height: auto; " src="./images/iOSdev/Actions_SwitchControl.png"/>
+</br>All the available actions are present at the first screen so as to ease the user experience by reaching his goal as quick as possible.
+</br>It's highly recommended to follow the pattern described in the `Example` sheet to get this purpose for a custom component.
+</div></div>
 
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel" >
-A solution may consist of **associating the selected element with an array of actions** that will be automatically introduced to the user.
+Whatever the VoiceOver or the Switch Control feature, the implementation to get the desired actions on a custom element is exactly the same: VoiceOver is the option to illustrate the following example.
+</br></br>A solution may consist of **associating the selected element with an array of actions** that will be automatically introduced to the user.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" />
 
 <pre><code class="objective-c">
@@ -1929,10 +1961,13 @@ class CustomActions: UIViewController {
                                                          target: self,
                                                          selector: #selector(flagAction))
         
+        // iOS 13 new syntax with a closure.
         let a11yDeleteAction = UIAccessibilityCustomAction(name: "delete",
-                                                           target: self,
-                                                           selector: #selector(deleteAction))
-        
+                                                           actionHandler: { (customAction: UIAccessibilityCustomAction) -> Bool in
+                                                              //Code to be implemented for the appropriate action.
+                                                              return true
+                                                           })
+                                                           
         persoElt.accessibilityCustomActions = [a11yMoreAction,
                                                a11yFlagAction,
                                                a11yDeleteAction]
@@ -1948,16 +1983,12 @@ class CustomActions: UIViewController {
         //Code to be implemented for the appropriate action.
         return true
     }
-    
-    @objc func deleteAction() -> Bool {
-        //Code to be implemented for the appropriate action.
-        return true
-    }
 }
 </code></pre>
 
 </br>The code above gives rise to the following result thanks to consecutive flicks on the selected accessible element :
 </br><img alt="flick up to vocalize suggesterd actions with VoiceOver activated" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" />
+</br>To get a visual information about this topic, take a look at the **Accessibility Custom Actions** video whose [detailed summary](./dev-ios-wwdc-19000.html#AccessibilityCustomActions) is available at the WWDC section of this site.
 
 </div>
 <div class="tab-pane" id="customActions-Links" role="tabpanel" >

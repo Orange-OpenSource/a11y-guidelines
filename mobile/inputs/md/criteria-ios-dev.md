@@ -1865,13 +1865,46 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
      id="customActions-Description"
      role="tabpanel">
 Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.
-</br></br>Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensemble d'actions comme le montre le schéma suivant :
-</br><img alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
-</br>La gestuelle utilisée graphiquement ne peut convenir à VoiceOver : un balayage vers la gauche sélectionnerait l'élément accessible suivant au lieu de proposer les choix avancés dans l'exemple précédent.
+</br></br>Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensemble d'actions.
+</br></br>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CustomActionsVoiceOver"
+           role="tab" 
+           aria-selected="true">Lecteur d'écran</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CustomActionsSwitchControl"
+           role="tab" 
+           aria-selected="false">Contrôle de sélection</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active"
+     id="CustomActionsVoiceOver"
+     role="tabpanel">
+<img alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_VoiceOver.png"/>
+</br>La gestuelle utilisée sans utilisation du lecteur d'écran ne peut pas convenir à VoiceOver pour obtenir le résultat désiré : un balayage vers la gauche sélectionnerait l'élément accessible suivant au lieu de proposer les actions à réaliser sur le mail sélectionné.
+</br></br>Dans un cas comme celui-là, il conviendrait de réaliser les opérations décrites dans l'onglet `Exemple` pour donner accès à ces opérations si elles n'étaient pas implémentées nativement.
+</div>
+<div class="tab-pane" 
+     id="CustomActionsSwitchControl" 
+     role="tabpanel" >
+<img alt="accès aux actions d'un mail avec le contrôle de sélection" style="max-width: 1000px; height: auto; " src="./images/iOSdev/Actions_SwitchControl.png"/>
+</br>Ici, toutes les actions sont directement disponibles dès le premier écran pour faciliter grandement l'expérience utilisateur en arrivant rapidement aux resultats souhaités.
+</br></br>Pour un composant développé au sein d'une application, il est très fortement recommandé de réaliser ce même type de parcours en s'appuyant sur le modèle fourni dans l'onglet `Exemple`.
+</div></div>
 
 </div>
+
 <div class="tab-pane" id="customActions-Example" role="tabpanel" >
-Une solution consiste à **associer à l'élément sélectionné un tableau d'actions** dont le système se chargera d'indiquer automatiquement la présence en informant vocalement l'utilisateur de leur disponibilité.
+Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l'exemple suivant sera illustré pour VoiceOver.
+</br></br>Une solution consiste à **associer à l'élément sélectionné un tableau d'actions** dont le système se chargera d'indiquer automatiquement la présence en informant vocalement l'utilisateur de leur disponibilité.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" />
 
 <pre><code class="objective-c">
@@ -1931,9 +1964,12 @@ class CustomActions: UIViewController {
                                                             target: self,
                                                             selector: #selector(drapeauAction))
         
+        // Nouvelle syntaxe iOS 13 avec une 'closure'.
         let a11yCorbeilleAction = UIAccessibilityCustomAction(name: "corbeille",
-                                                              target: self,
-                                                              selector: #selector(corbeilleAction))
+                                                              actionHandler: { (customAction: UIAccessibilityCustomAction) -> Bool in
+                                                                //Code à implémenter pour cette action.
+                                                                return true
+                                                              })
         
         persoElt.accessibilityCustomActions = [a11yOptionsAction,
                                                a11yDrapeauAction,
@@ -1950,16 +1986,12 @@ class CustomActions: UIViewController {
         //Code à implémenter pour cette action.
         return true
     }
-    
-    @objc func corbeilleAction() -> Bool {
-        //Code à implémenter pour cette action.
-        return true
-    }
 }
 </code></pre>
 
 </br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné :
 </br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" />
+</br>Pour plus d'informations sur ce sujet, ne pas hésiter à visualiser la vidéo **Utiliser les actions personnalisées** dont le [résumé détaillé](./criteria-ios-wwdc-19000.html#AccessibilityCustomActions) se trouve dans la section WWDC de ce site.
 
 </div>
 <div class="tab-pane" id="customActions-Links" role="tabpanel" >
