@@ -1637,6 +1637,142 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
 - [WWDC 2019 : Large Content Viewer](./criteria-ios-wwdc-19261.html)
 </div>
 </div></br></br>
+## Large Content Viewer
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#largeContentViewer-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#largeContentViewer-Example" 
+           role="tab" 
+           aria-selected="false">Exemple</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#largeContentViewer-Links" 
+           role="tab" 
+           aria-selected="false">Liens</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="largeContentViewer-Description"
+     role="tabpanel">
+Le `Dynamic Type` permet le grossissement de tous les éléments graphiques avec une particularité pour les éléments {`navigation`/`tab`/`status bars` + `toolbars`} pour lesquels un appui long est nécessaire pour afficher un `HUD` en plein écran appelé **Large Content Viewer** *(voir <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">Taille des éléments graphiques</a>)*.
+</br></br>Disponible depuis iOS 11, cette fonctionnalité était confinée aux seuls éléments UIKit mentionnés précédemment jusqu'à **iOS 13** où son utilisation est désormais possible sur tout élément graphique qui se conforme au protocole **UILargeContentViewerItem**.
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_1.png" />
+</br></br>Avant d'implémenter le `Large Content Viewer`, il y a deux points importants qu'il est nécessaire de préciser&nbsp;:
+
+- Cette fonctionnalité n'est **disponible que pour les cinq dernières tailles de grossissement activées en accessibilité** dans les réglages du terminal.
+- Il est très important d'avoir à l'esprit que les modifications de taille liées au `Dynamic Type` doivent toujours être implémentées de façon **P.R.I.O.R.I.T.A.I.R.E.**&nbsp;: le `Large Content Viewer` n'est à utiliser qu'à partir du moment où **l'élément graphique impacté ne peut pas répondre aux changements souhaités** ⟹ [recommandation Apple](./criteria-ios-wwdc-19261.html#LargeContentViewer).
+</div>
+<div class="tab-pane" id="largeContentViewer-Example" role="tabpanel" >
+Si le grossissement extrême d'un élément graphique risque de dégrader l'expérience utilisateur, on peut très simplement implémenter le `Large Content Viewer` sur cette vue pour obtenir le résultat grossi an milieu d'écran&nbsp;:
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_2.png" />
+
+<pre><code class="objective-c">
+@interface LogoViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView * myView;
+@end
+
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation LogoViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _myView.showsLargeContentViewer = YES;
+    _myView.largeContentTitle = @"logo";
+    _myView.largeContentImage = [UIImage systemImageNamed:@"hand.thumbsup"];
+    
+    [_myView addInteraction:[[UILargeContentViewerInteraction alloc] init]];
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class LogoViewController: UIViewController {
+    
+    @IBOutlet weak var myView: UIImageView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myView.isUserInteractionEnabled = true
+        
+        myView.showsLargeContentViewer = true
+        myView.largeContentTitle = "logo"
+        myView.largeContentImage = UIImage(systemName: "hand.thumbsup")
+        
+        myView.addInteraction(UILargeContentViewerInteraction())
+    }
+}
+</code></pre>
+
+</br>De la même façon, pour un **élément cliquable** comme un bouton dont le grossissement pourrait devenir problématique, il est tout à fait possible d'utiliser cette fonctionnalité pour afficher son contenu et s'assurer que **son action sera déclenchée dès que le doigt sera relevé**&nbsp;:
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_3.png" />
+
+<pre><code class="objective-c">
+@interface ButtonViewController ()
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@end
+
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation ButtonViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _myButton.showsLargeContentViewer = YES;
+    _myButton.largeContentTitle = @"button";
+    _myButton.largeContentImage = @"hand.thumbsup";
+    
+    [_myButton addInteraction:[[UILargeContentViewerInteraction alloc] init]];
+}
+
+- (IBAction)tapButton:(UIButton *)sender {
+    //Actions à réaliser dès que le bouton est activé.
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class ButtonViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myButton.showsLargeContentViewer = true
+        myButton.largeContentTitle = "button"
+        myButton.largeContentImage = UIImage(systemName: "hand.thumbsup")
+        myButton.addInteraction(UILargeContentViewerInteraction())
+    }
+    
+    
+    @IBAction func tapButton(_ sender: UIButton) {
+        //Actions à réaliser dès que le bouton est activé.
+    }
+}
+</code></pre>
+
+</br>Lorsque la **gestuelle 'appui long' est déjà implémentée sur l'élément impacté**, il est nécessaire d'utiliser la méthode `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` qui permettra de [mettre en place concomitamment les deux gestuelles](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
+</div>
+<div class="tab-pane" id="largeContentViewer-Links" role="tabpanel" >
+- [`UILargeContentViewerItem`](https://developer.apple.com/documentation/uikit/uilargecontentvieweritem)
+- [`UILargeContentViewerInteraction`](https://developer.apple.com/documentation/uikit/uilargecontentviewerinteraction)
+- [`UIInteraction`](https://developer.apple.com/documentation/uikit/uiinteraction)
+- [`gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)`](https://developer.apple.com/documentation/uikit/uigesturerecognizerdelegate/1624208-gesturerecognizer)
+- [WWDC 2019 : Large Content Viewer](./criteria-ios-wwdc-19261.html)
+</div>
+</div></br></br>
 ## Valeurs continûment ajustables
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">

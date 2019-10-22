@@ -1638,6 +1638,143 @@ To illustrate these new features, the example below is obtained by following the
 - [WWDC 2019 : Large Content Viewer](./dev-ios-wwdc-19261.html)
 </div>
 </div></br></br>
+## Large Content Viewer
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#largeContentViewer-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#largeContentViewer-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#largeContentViewer-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="largeContentViewer-Description"
+     role="tabpanel">
+This feature **introduced in iOS 11** allows people with low vision to use UIKit bar elements as effective as the `Dynamic Type` grows the text size.
+</br>To trigger this **Large Content Viewer** *(see <a href="./dev-ios.html#graphical-elements-size">Graphical elements size</a>)*, the user must long press the element to see a larger version in the middle of the screen.
+</br></br>When implementing the `Dynamic Type` feature, **iOS 13** allows to show the same UI that's shown for standard UIKit bar items for every element that conforms to the **UILargeContentViewerItem** protocol.
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_1.png" />
+</br></br>The following points are important to be noticed before implementing the `Large Content Viewer` feature&nbsp;:
+
+- It's important to notice that '**scaling with Dynamic Type is always preferred to showing the Large Content Viewer**' that must be implemented '**only for the case when your custom UI cannot grow in size**' ⟹ [Apple recommendation](./dev-ios-wwdc-19261.html#LargeContentViewer).
+- This feature is **available only for the the accessibility text sizes**.
+</div>
+<div class="tab-pane" id="largeContentViewer-Example" role="tabpanel" >
+If an element magnification may lower the user experience, the `Large Content Viewer` can be implemented on that particular view to get the Head's Up Display in the middle of the screen&nbsp;:
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_2.png" />
+
+<pre><code class="objective-c">
+@interface LogoViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView * myView;
+@end
+
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation LogoViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _myView.showsLargeContentViewer = YES;
+    _myView.largeContentTitle = @"logo";
+    _myView.largeContentImage = [UIImage systemImageNamed:@"hand.thumbsup"];
+    
+    [_myView addInteraction:[[UILargeContentViewerInteraction alloc] init]];
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class LogoViewController: UIViewController {
+    
+    @IBOutlet weak var myView: UIImageView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myView.isUserInteractionEnabled = true
+        
+        myView.showsLargeContentViewer = true
+        myView.largeContentTitle = "logo"
+        myView.largeContentImage = UIImage(systemName: "hand.thumbsup")
+        
+        myView.addInteraction(UILargeContentViewerInteraction())
+    }
+}
+</code></pre>
+
+</br>In the same way, on a **clickable element** like a button whose magnification may become problematic, it's quite possible to use this feature to display its content and to ensure to **trigger its actions when the finger is up**&nbsp;:
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_3.png" />
+
+<pre><code class="objective-c">
+@interface ButtonViewController ()
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@end
+
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation ButtonViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _myButton.showsLargeContentViewer = YES;
+    _myButton.largeContentTitle = @"button";
+    _myButton.largeContentImage = @"hand.thumbsup";
+    
+    [_myButton addInteraction:[[UILargeContentViewerInteraction alloc] init]];
+}
+
+- (IBAction)tapButton:(UIButton *)sender {
+    //Appropriate actions when the button is tapped.
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class ButtonViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myButton.showsLargeContentViewer = true
+        myButton.largeContentTitle = "button"
+        myButton.largeContentImage = UIImage(systemName: "hand.thumbsup")
+        myButton.addInteraction(UILargeContentViewerInteraction())
+    }
+    
+    
+    @IBAction func tapButton(_ sender: UIButton) {
+        //Appropriate actions when the button is tapped.
+    }
+}
+</code></pre>
+
+</br>When **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set up the two gestures simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
+</div>
+<div class="tab-pane" id="largeContentViewer-Links" role="tabpanel" >
+- [`UILargeContentViewerItem`](https://developer.apple.com/documentation/uikit/uilargecontentvieweritem)
+- [`UILargeContentViewerInteraction`](https://developer.apple.com/documentation/uikit/uilargecontentviewerinteraction)
+- [`UIInteraction`](https://developer.apple.com/documentation/uikit/uiinteraction)
+- [`gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)`](https://developer.apple.com/documentation/uikit/uigesturerecognizerdelegate/1624208-gesturerecognizer)
+- [WWDC 2019 : Large Content Viewer](./dev-ios-wwdc-19261.html)
+</div>
+</div></br></br>
 ## Continuous adjustable values
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
