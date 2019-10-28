@@ -1059,7 +1059,7 @@ Redefining the VoiceOver reading order is done using the **UIAccessibilityContai
 <div class="tab-pane" id="readingOrder-Example" role="tabpanel" >
 The best way to illustrate this feature is the keyboard whose keys order isn't necessary the appropriate one.
 </br>Here's the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br></br>Two views are created (blue and grey) and we graphically put the numbers in them as defined hereunder:
+</br></br>Two views are created containing the numbers to be spelled out in a specific order:
 </br><img alt="display of the blue and grey views" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" />
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;

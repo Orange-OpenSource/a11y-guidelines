@@ -479,6 +479,7 @@ The full list of these options including their purpose and their coding name is 
      id="Contrast-iOS13"
      role="tabpanel">
 <img style="max-width: 1000px; height: auto;" alt="Access illustration via Settings - Accessibility - Display & Text Size - Increase Contrast." src="./images/optionA11Y_iOS13_contraste.png" />
+</br>Since **iOS 13**, this accessibility option is a `traitCollection` **<a href="https://developer.apple.com/documentation/uikit/uitraitcollection/3238079-accessibilitycontrast" style="text-decoration: underline;">variable instance</a>**.
 </div>
 <div class="tab-pane" id="Contrast-iOS12" role="tabpanel" >
 <img style="max-width: 600px; height: auto;" alt="Access illustration via Settings - General - Accessibility - Increase Contrast." src="./images/optionA11Y_iOS12_contraste.png" />
