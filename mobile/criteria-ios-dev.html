@@ -152,10 +152,10 @@
 });</script>
 
 <p><span data-menuitem="criteria-ios"></span></p>
-<p>Ce guide a pour objectif de présenter les différentes notions d’accessibilité sous iOS 12 en associant&nbsp;:</p>
+<p>Ce guide a pour objectif de présenter les différentes notions d’accessibilité en associant&nbsp;:</p>
 <ul>
 <li>Des explications détaillées concernant les attributs et méthodes d&#39;accessibilité.</li>
-<li>Des exemples de code en Swift 5.0 et en Objective C <em>(Xcode 10, iOS 12)</em>.</li>
+<li>Des exemples de code en <strong>Swift 5.1</strong> et en <strong>Objective C</strong> <em>(Xcode 11, iOS 13)</em>.</li>
 <li>Des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle Apple</code></a>.</li>
 </ul>
 <p><a name="AccessibilityTraits"></a></p>
@@ -365,7 +365,8 @@ class ChangeTextView: UIViewController {
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel"><code>accessibilityLabel</code></a></li>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue"><code>accessibilityValue</code></a></li>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint</code></a>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint</code></a></li>
+<li><a href="./criteria-ios-wwdc-19000.html#WritingGreatAccessibilityLabels">La bonne rédaction des labels</a>
 </div>
 </div></br></br></li>
 </ul>
@@ -1200,7 +1201,7 @@ Redéfinir l’ordre de lecture pour <span lang="en">VoiceOver</span> s’effect
 <p><div class="tab-pane" id="readingOrder-Example" role="tabpanel" >
 Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l&#39;ordre natif proposé par <span lang="en">VoiceOver</span>.
 </br>Dans cet exemple, on veut l&#39;ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
-</br></br>On crée  les 2 vues grise et bleue au sein desquelles on incorpore les chiffres appropriés comme défini ci-dessous :
+</br></br>On crée deux vues au sein desquelles on incorpore les chiffres qu&#39;on souhaite vocaliser selon un ordre bien précis :
 </br><img alt="affichage des vues grise et bleue pour l'exemple" style="max-width: 500px; height: auto; " src="./images/iOSdev/OrdreDeLecture_1.png" /></p>
 <pre><code class="objective-c">
     __weak IBOutlet UIView * blueBlock;
@@ -1533,14 +1534,42 @@ float heightVal;
            aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content"></p>
-<p><div class="tab-pane show active"
+<div class="tab-pane show active"
      id="textSize-Description"
      role="tabpanel">
-Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide des réglages du terminal.</p>
-<p></div></p>
-<p><div class="tab-pane" id="textSize-Details" role="tabpanel" >
+Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#39;une application à l’aide des réglages du terminal.
+
+</div>
+<div class="tab-pane" id="textSize-Details" role="tabpanel" >
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#TextSize-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TextSize-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="TextSize-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/iOSdev/TailleDesTextes_iOS13_1.png" />
+</div>
+<div class="tab-pane" 
+     id="TextSize-iOS12" 
+     role="tabpanel" >
 <img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesTextes_1.png" />
-</br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:</p>
+</div></div>
+
+<p></br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:</p>
 <ul>
 <li><strong>Utiliser impérativement les styles de texte</strong> proposés selon la version d&#39;iOS avec laquelle l&#39;application est développée.
 </br><img alt="" style="max-width: 400px; height: auto; " src="./images/iOSdev/TailleDesTextes_2.png" /></li>
@@ -1570,7 +1599,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#3
 </code></pre></li>
 <li><p>Penser à écouter la notification <strong>UIContentSizeCategoryDidChange</strong> qui annonce le changement de la taille du texte à partir des paramètres du téléphone.
 </br>Cette tâche est simplifiée depuis iOS10 où l&#39;attribut <strong>adjustsFontForContentSizeCategory</strong> se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l&#39;application (cet attribut ne peut s&#39;appliquer aux polices personnalisées qu&#39;avec l&#39;utilisation de <code>UIFontMetrics</code> en iOS11).
-</br>Il est aussi possible d&#39;utiliser la méthode <strong>traitCollectionDidChange</strong> du protocole informel <code>UITraitEnvironment</code> qui sera automatiquement appelée dès qu&#39;une modification concernant l&#39;environnement de l&#39;interface iOS surviendra <em>(class/content size, portrait/paysage)</em>.</p>
+</br>Il est aussi possible d&#39;utiliser la méthode <strong><a href="./criteria-ios-wwdc-17245.html#Demo">traitCollectionDidChange</a></strong> du protocole informel <code>UITraitEnvironment</code> qui sera automatiquement appelée dès qu&#39;une modification concernant l&#39;environnement de l&#39;interface iOS surviendra <em>(class/content size, portrait/paysage, constraste des couleurs)</em>.</p>
 <pre><code class="objective-c">
  //Écoute de la notification annonçant le changement de taille de la police.
  [[NSNotificationCenter defaultCenter] addObserver:self
@@ -1602,7 +1631,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#3
      fontFootNote.font = UIFont.preferredFont(forTextStyle: .footnote)
  }
 </code></pre></li>
-<li>Ne pas oublier d&#39;adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l&#39;utilisation de valeurs dynamiques.</li>
+<li>Ne pas oublier d&#39;adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l&#39;utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le <strong><a href="./criteria-ios-wwdc-19261.html">Large Content Viewer</a></strong>.</li>
 <li>Penser à adapter le <a href="./criteria-ios-conception.html#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</li>
 </ul>
 <p></div></p>
@@ -1611,6 +1640,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d&#3
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/"><span lang="en">Dynamic Type</span> et styles de texte</a></li>
 <li><a href="https://developer.apple.com/documentation/foundation/nsnotification.name/1622948-uicontentsizecategorydidchange"><code>UIContentSizeCategoryDidChange</code></a></li>
 <li><a href="https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc"><code>adjustsFontForContentSizeCategory</code></a></li>
+<li><a href="./criteria-ios-wwdc-17245.html">Application du Dynamic Type</a></li>
 </ul>
 <p></div>
 </div></br></br></p>
@@ -1723,7 +1753,7 @@ class TruncationHyphen: UIViewController {
            data-toggle="tab" 
            href="#graphEltSize-Links" 
            role="tab" 
-           aria-selected="false">Lien</a>
+           aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content"></p>
 <p><div class="tab-pane show active"
@@ -1732,7 +1762,7 @@ class TruncationHyphen: UIViewController {
 Tout comme la taille des textes est adaptable selon les réglages d&#39;accessibilité (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d&#39;une barre de tabulation ou d&#39;outils l&#39;est aussi mais <strong>uniquement depuis iOS11 avec Xcode 9</strong>.</p>
 <p></div></p>
 <p><div class="tab-pane" id="graphEltSize-Example" role="tabpanel" >
-En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet défini précédemment et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
+En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet défini dans la partie Description et présenté graphiquement en exemple à la fin de cette rubrique&nbsp;:
 </br></br>1. Sous Xcode, importer l&#39;image à grossir au format <code>pdf</code> à la résolution x1 dans le catalogue <code>xcassets</code>.
 </br></br>2. Dans l&#39;<span lang="en">Image Set</span> qui vient d&#39;être créé, cocher la case <code>Preserve Vector Data</code> et spécifier <code>Single Scale</code> :
 </br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_4.png" />
@@ -1745,13 +1775,151 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l&#39;effet déf
 </br></br>Après modification du grossissement de texte dans les réglages (voir <a href="http://a11y-guidelines.orange.com/mobile/criteria-ios-dev.html#taille-des-textes">la rubrique précédente</a>), on revient dans l&#39;application pour constater :</p>
 <ul>
 <li>Une taille de l&#39;image Orange nettement plus conséquente.</li>
-<li>Au milieu de l&#39;écran, l&#39;affichage grossi de l&#39;onglet sur lequel on doit appuyer de façon continue pour provoquer cettte apparition.
+<li>Au milieu de l&#39;écran, l&#39;affichage grossi de l&#39;onglet sur lequel on doit appuyer de façon continue pour provoquer cette apparition ⟹ fonctionnalité <strong><a href="./criteria-ios-wwdc-19261.html">Large Content Viewer</a></strong> disponible depuis iOS 11.
 </br><img alt="" style="max-width: 1050px; height: auto; " src="./images/iOSdev/TailleDesEltsGraphiques_9.png" /></li>
 </ul>
 <p></div></p>
 <p><div class="tab-pane" id="graphEltSize-Links" role="tabpanel" ></p>
 <ul>
-<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility"><code>adjustsImageSizeForAccessibilityContentSizeCategory</code></a>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycontentsizecategoryimageadjusting/2890929-adjustsimagesizeforaccessibility"><code>adjustsImageSizeForAccessibilityContentSizeCategory</code></a></li>
+<li><a href="./criteria-ios-wwdc-19261.html">WWDC 2019 : Large Content Viewer</a>
+</div>
+</div></br></br></li>
+</ul>
+<h2 id="large-content-viewer">Large Content Viewer</h2>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#largeContentViewer-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#largeContentViewer-Example" 
+           role="tab" 
+           aria-selected="false">Exemple</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#largeContentViewer-Links" 
+           role="tab" 
+           aria-selected="false">Liens</a>
+    </li>
+</ul><div class="tab-content"></p>
+<p><div class="tab-pane show active"
+     id="largeContentViewer-Description"
+     role="tabpanel">
+Le <code>Dynamic Type</code> permet le grossissement de tous les éléments graphiques avec une particularité pour les éléments {<code>navigation</code>/<code>tab</code>/<code>status bars</code> + <code>toolbars</code>} pour lesquels un appui long est nécessaire pour afficher un <code>HUD</code> en plein écran appelé <strong>Large Content Viewer</strong> <em>(voir <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">Taille des éléments graphiques</a>)</em>.
+</br></br>Disponible depuis iOS 11, cette fonctionnalité était confinée aux seuls éléments UIKit mentionnés précédemment jusqu&#39;à <strong>iOS 13</strong> où son utilisation est désormais possible sur tout élément graphique qui se conforme au protocole <strong>UILargeContentViewerItem</strong>.
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_1.png" />
+</br></br>Avant d&#39;implémenter le <code>Large Content Viewer</code>, il y a deux points importants qu&#39;il est nécessaire de préciser&nbsp;:</p>
+<ul>
+<li>Cette fonctionnalité n&#39;est <strong>disponible que pour les cinq dernières tailles de grossissement activées en accessibilité</strong> dans les réglages du terminal.</li>
+<li>Il est très important d&#39;avoir à l&#39;esprit que les modifications de taille liées au <code>Dynamic Type</code> doivent toujours être implémentées de façon <strong>P.R.I.O.R.I.T.A.I.R.E.</strong>&nbsp;: le <code>Large Content Viewer</code> n&#39;est à utiliser qu&#39;à partir du moment où <strong>l&#39;élément graphique impacté ne peut pas répondre aux changements souhaités</strong> ⟹ <a href="./criteria-ios-wwdc-19261.html#LargeContentViewer">recommandation Apple</a>.
+</div>
+<div class="tab-pane" id="largeContentViewer-Example" role="tabpanel" >
+Si le grossissement extrême d&#39;un élément graphique risque de dégrader l&#39;expérience utilisateur, on peut très simplement implémenter le <code>Large Content Viewer</code> sur cette vue pour obtenir le résultat grossi an milieu d&#39;écran&nbsp;:
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_2.png" /></li>
+</ul>
+<pre><code class="objective-c">
+@interface LogoViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView * myView;
+@end
+
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation LogoViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    _myView.showsLargeContentViewer = YES;
+    _myView.largeContentTitle = @"logo";
+    _myView.largeContentImage = [UIImage systemImageNamed:@"hand.thumbsup"];
+
+    [_myView addInteraction:[[UILargeContentViewerInteraction alloc] init]];
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class LogoViewController: UIViewController {
+
+    @IBOutlet weak var myView: UIImageView!
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        myView.isUserInteractionEnabled = true
+
+        myView.showsLargeContentViewer = true
+        myView.largeContentTitle = "logo"
+        myView.largeContentImage = UIImage(systemName: "hand.thumbsup")
+
+        myView.addInteraction(UILargeContentViewerInteraction())
+    }
+}
+</code></pre>
+
+<p></br>De la même façon, pour un <strong>élément cliquable</strong> comme un bouton dont le grossissement pourrait devenir problématique, il est tout à fait possible d&#39;utiliser cette fonctionnalité pour afficher son contenu et s&#39;assurer que <strong>son action sera déclenchée dès que le doigt sera relevé</strong>&nbsp;:
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/LargeContentViewer_3.png" /></p>
+<pre><code class="objective-c">
+@interface ButtonViewController ()
+@property (weak, nonatomic) IBOutlet UIButton * myButton;
+@end
+
+
+NS_ASSUME_NONNULL_BEGIN
+@implementation ButtonViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    _myButton.showsLargeContentViewer = YES;
+    _myButton.largeContentTitle = @"button";
+    _myButton.largeContentImage = @"hand.thumbsup";
+
+    [_myButton addInteraction:[[UILargeContentViewerInteraction alloc] init]];
+}
+
+- (IBAction)tapButton:(UIButton *)sender {
+    //Actions à réaliser dès que le bouton est activé.
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class ButtonViewController: UIViewController {
+
+    @IBOutlet weak var myButton: UIButton!
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        myButton.showsLargeContentViewer = true
+        myButton.largeContentTitle = "button"
+        myButton.largeContentImage = UIImage(systemName: "hand.thumbsup")
+        myButton.addInteraction(UILargeContentViewerInteraction())
+    }
+
+
+    @IBAction func tapButton(_ sender: UIButton) {
+        //Actions à réaliser dès que le bouton est activé.
+    }
+}
+</code></pre>
+
+<p></br>Lorsque la <strong>gestuelle &#39;appui long&#39; est déjà implémentée sur l&#39;élément impacté</strong>, il est nécessaire d&#39;utiliser la méthode <code>gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)</code> qui permettra de <a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">mettre en place concomitamment les deux gestuelles</a>. 
+</div></p>
+<p><div class="tab-pane" id="largeContentViewer-Links" role="tabpanel" ></p>
+<ul>
+<li><a href="https://developer.apple.com/documentation/uikit/uilargecontentvieweritem"><code>UILargeContentViewerItem</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uilargecontentviewerinteraction"><code>UILargeContentViewerInteraction</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uiinteraction"><code>UIInteraction</code></a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/uigesturerecognizerdelegate/1624208-gesturerecognizer"><code>gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)</code></a></li>
+<li><a href="./criteria-ios-wwdc-19261.html">WWDC 2019 : Large Content Viewer</a>
 </div>
 </div></br></br></li>
 </ul>
@@ -1983,16 +2151,49 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
            aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content"></p>
-<p><div class="tab-pane show active"
+<div class="tab-pane show active"
      id="customActions-Description"
      role="tabpanel">
 Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.
-</br></br>Un exemple probant est celui du mail iOS natif qui permet d&#39;accéder à un ensemble d&#39;actions comme le montre le schéma suivant :
-</br><img alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_1.png" />
-</br>La gestuelle utilisée graphiquement ne peut convenir à VoiceOver : un balayage vers la gauche sélectionnerait l&#39;élément accessible suivant au lieu de proposer les choix avancés dans l&#39;exemple précédent.</p>
+</br></br>Un exemple probant est celui du mail iOS natif qui permet d&#39;accéder à un ensemble d&#39;actions.
+</br></br>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CustomActionsVoiceOver"
+           role="tab" 
+           aria-selected="true">Lecteur d&#39;écran</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CustomActionsSwitchControl"
+           role="tab" 
+           aria-selected="false">Contrôle de sélection</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active"
+     id="CustomActionsVoiceOver"
+     role="tabpanel">
+<img alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_VoiceOver.png"/>
+</br>La gestuelle utilisée sans utilisation du lecteur d&#39;écran ne peut pas convenir à VoiceOver pour obtenir le résultat désiré : un balayage vers la gauche sélectionnerait l&#39;élément accessible suivant au lieu de proposer les actions à réaliser sur le mail sélectionné.
+</br></br>Dans un cas comme celui-là, il conviendrait de réaliser les opérations décrites dans l&#39;onglet <code>Exemple</code> pour donner accès à ces opérations si elles n&#39;étaient pas implémentées nativement.
+</div>
+<div class="tab-pane" 
+     id="CustomActionsSwitchControl" 
+     role="tabpanel" >
+<img alt="accès aux actions d'un mail avec le contrôle de sélection" style="max-width: 1000px; height: auto; " src="./images/iOSdev/Actions_SwitchControl.png"/>
+</br>Ici, toutes les actions sont directement disponibles dès le premier écran pour faciliter grandement l&#39;expérience utilisateur en arrivant rapidement aux resultats souhaités.
+</br></br>Pour un composant développé au sein d&#39;une application, il est très fortement recommandé de réaliser ce même type de parcours en s&#39;appuyant sur le modèle fourni dans l&#39;onglet <code>Exemple</code>.
+</div></div>
+
 <p></div></p>
 <p><div class="tab-pane" id="customActions-Example" role="tabpanel" >
-Une solution consiste à <strong>associer à l&#39;élément sélectionné un tableau d&#39;actions</strong> dont le système se chargera d&#39;indiquer automatiquement la présence en informant vocalement l&#39;utilisateur de leur disponibilité.
+Que ce soit pour le lecteur d&#39;écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l&#39;exemple suivant sera illustré pour VoiceOver.
+</br></br>Une solution consiste à <strong>associer à l&#39;élément sélectionné un tableau d&#39;actions</strong> dont le système se chargera d&#39;indiquer automatiquement la présence en informant vocalement l&#39;utilisateur de leur disponibilité.
 </br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_2.png" /></p>
 <pre><code class="objective-c">
 @interface CustomActions ()
@@ -2051,9 +2252,12 @@ class CustomActions: UIViewController {
                                                             target: self,
                                                             selector: #selector(drapeauAction))
 
+        // Nouvelle syntaxe iOS 13 avec une 'closure'.
         let a11yCorbeilleAction = UIAccessibilityCustomAction(name: "corbeille",
-                                                              target: self,
-                                                              selector: #selector(corbeilleAction))
+                                                              actionHandler: { (customAction: UIAccessibilityCustomAction) -> Bool in
+                                                                //Code à implémenter pour cette action.
+                                                                return true
+                                                              })
 
         persoElt.accessibilityCustomActions = [a11yOptionsAction,
                                                a11yDrapeauAction,
@@ -2070,21 +2274,19 @@ class CustomActions: UIViewController {
         //Code à implémenter pour cette action.
         return true
     }
-
-    @objc func corbeilleAction() -> Bool {
-        //Code à implémenter pour cette action.
-        return true
-    }
 }
 </code></pre>
 
 <p></br>Le code implémenté ci-dessus permet d&#39;obtenir le résultat suivant par balayages successifs sur l&#39;élément accessible sélectionné :
-</br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" /></p>
+</br><img alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_3.png" />
+</br>Pour plus d&#39;informations sur ce sujet, ne pas hésiter à visualiser la vidéo <strong>Utiliser les actions personnalisées</strong> dont le <a href="./criteria-ios-wwdc-19000.html#AccessibilityCustomActions">résumé détaillé</a> se trouve dans la section WWDC de ce site.</p>
 <p></div></p>
 <p><div class="tab-pane" id="customActions-Links" role="tabpanel" ></p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615150-accessibilitycustomactions"><code>accessibilityCustomActions</code></a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction"><code>UIAccessibilityCustomAction</code></a>
+<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitycustomaction"><code>UIAccessibilityCustomAction</code></a></li>
+<li><a href="./criteria-ios-wwdc-17215.html#CustomActions">WWDC 2017 : les nouveautés en accessibilité</a></li>
+<li><a href="./criteria-ios-wwdc-19000.html#AccessibilityCustomActions">Utiliser les actions personnalisées</a>
 </div>
 </div></br></br></li>
 </ul>
@@ -2269,7 +2471,7 @@ class CustomRotor: UIViewController {
 Est-ce que <span lang="en">VoiceOver</span> est activé&nbsp;? Est-ce que le mode audio-mono est activé&nbsp;?
 </br>Plusieurs fonctions du <span lang="en">framework</span> <code>UIKit</code> permettent de connaître le statut de ces options d&#39;accessibilité.
  </br>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (<strong>UIAccessibilityIsVoiceOverRunning</strong>).
- </br></br>Une présentation très visuelle de certaines fonctions, peut-être moins utiles à première vue, est faite lors d&#39;une <a href="./criteria-ios-wwdc-18230.html" style="text-decoration: underline;">vidéo WWDC 2018</a> <em>(Fournir une expérience exceptionnelle en accessibilité)</em> dont le contenu est parfaitement détaillé sur ce site.</br></br></p>
+ </br></br>Une présentation très visuelle de certaines fonctions, peut-être moins utiles à première vue, est faite lors d&#39;une <a href="./criteria-ios-wwdc-18230.html" style="text-decoration: underline;">vidéo WWDC</a> <em>(Fournir une expérience exceptionnelle en accessibilité)</em> dont le contenu est parfaitement détaillé sur ce site.</br></br></p>
 <pre><code class="objective-c">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
@@ -3026,9 +3228,35 @@ Lorsque des mots ont une consonance bien particulière ou que l&#39;on souhaite 
 </code></pre>
 
 La génération de cette phonétique peut se faire en passant par les réglages du terminal.
-</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
-</br>Une fois le menu <code>Général</code> - <code>Accessibilité</code> - <code>Parole</code> - <code>Prononciations</code> activé...
-</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></br>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Phonemes-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Phonemes-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Phonemes-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 850px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_iOS13_1.png" />
+</div>
+<div class="tab-pane" 
+     id="Phonemes-iOS12" 
+     role="tabpanel" >
+<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_1.png" />
+</div></div>
+
+<p></br>Une fois le menu <code>Prononciations</code> activé...
+</br><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_2.png" /></br></br></p>
 <ol>
   <li>Sélectionner l&#39;icône &#39;<strong>+</strong>&#39; pour ajouter une nouvelle phonétique.</li>
   <li>Donner un nom à la nouvelle entrée de façon à la retrouver plus facilement ultérieurement.</li>
@@ -3040,21 +3268,22 @@ La génération de cette phonétique peut se faire en passant par les réglages 
   <li>Retrouver l&#39;ensemble des éléments ainsi générés sur la page <code>Prononciations</code>.</li>
 </ol>
 
-<img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
+<p><img alt="" style="max-width: 1100px; height: auto; " src="./images/iOSdev/SpeechSynthesizerEx_3.png"/>
 </br>Une des possibilités pour copier cette expression dans le code est de passer par l&#39;<strong>application locale <code>Notes</code></strong> dans laquelle on copiera la phonétique pour la synchroniser avec l&#39;<strong>application iCloud <code>Notes</code></strong> d&#39;où on pourra aisément transférer l&#39;information désirée au sein de <code>Xcode</code>.</br></br>
-</div>
+</div></p>
 <div class="tab-pane" id="speechSyn-Links" role="tabpanel">
 <ul>
   <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesisvoice">AVSpeechSynthesisVoice</a></li>
   <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizer">AVSpeechSynthesizer</a></li>
   <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechsynthesizerdelegate">AVSpeechSynthesizerDelegate</a></li>
-  <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechutterance">AVSpeechUtterance</a> </li>
+  <li><a href="https://developer.apple.com/documentation/avfoundation/avspeechutterance">AVSpeechUtterance</a></li>
+  <li><a href="./criteria-ios-wwdc-18236.html">WWDC 2018 : Utiliser une voix synthétisée avec AVSpeechSynthesizer</a> </li>
 </ul>
 
 </div>
 </div>
 
-<p>L&#39;ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une <a href="./criteria-ios-wwdc-18236.html">vidéo WWDC 2018</a> parfaitement résumée dans la partie WWDC de ce site.
+<p>L&#39;ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une <a href="./criteria-ios-wwdc-18236.html">vidéo WWDC</a> <em>(Utiliser une voix synthétisée avec AVSpeechSynthesizer)</em> parfaitement résumée dans la partie WWDC de ce site.
 </br></br></p>
 <h2 id="contr-le-de-s-lection">Contrôle de sélection</h2>
 <p><ul class="nav nav-tabs" role="tablist">

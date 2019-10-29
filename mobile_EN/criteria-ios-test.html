@@ -209,7 +209,7 @@
 <ul>
 <li>The <strong>truncation &#39;...&#39; mustn&#39;t be used</strong> and should be replaced by a hyphen at the end of the sentence.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" /></li>
-<li><strong>Illustration and icon sizes must be adapted to the magnification</strong>. 1/. Use of a central element like <a href="./dev-ios.html#graphical-elements-size">tab bar items</a>, 2/. a two fingers pinch implementation to avoid the <code>Zoom</code> native feature trigger or 3/. only a <a href="./dev-ios.html#graphical-elements-size">graphical element magnification</a> are potential solutions according to the context.</li>
+<li><strong>Illustration and icon sizes must be adapted to the magnification</strong>: use of the <a href="./dev-ios-wwdc-19261.html">Large Content Viewer</a> feature, a two fingers pinch implementation to avoid the <code>Zoom</code> native feature trigger or only a <a href="./dev-ios.html#graphical-elements-size">graphical element magnification</a> are possible solutions according to the context.</li>
 <li><strong>Change the text sizes in every screen</strong> to ensure that all the elements perfectly meet the graphical contraints.</li>
 <li>As soon as a <strong>corrected fault</strong> is effective, it <strong>must be checked for every device used for tests</strong> to be sure of its definitive rectification.</li>
 </ul>
@@ -218,9 +218,35 @@
 <a name="VoiceOver"></a></p>
 <h3 id="voiceover">VoiceOver</h3>
 <p>The iOS native screen reader activation drastically changes the visual behavior obtained with the common gestures, that&#39;s why its <a href="./voiceover.html">control</a> takes a little while.
-</br>It&#39;s <strong>highly recommended</strong> to know the basic gestures before activating this feature in the device user settings.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-voiceover.png" />
-</br>Don&#39;t believe that every element must be absolutely vocalized one after another : that&#39;s definitely the proper way to get a VoiceOver implementation that is anything but effective !
+</br>It&#39;s <strong>highly recommended</strong> to know the basic gestures before activating this feature in the device user settings.</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content"></p>
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-voiceover_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOver-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-voiceover_iOS12.png" />
+</div></div>
+
+<p></br>Don&#39;t believe that every element must be absolutely vocalized one after another : that&#39;s definitely the proper way to get a VoiceOver implementation that is anything but effective !
 </br></br>Keep in mind that the visual <strong>information</strong> is assimilated very quickly while the screen reader provides <strong>sequentially</strong> this information at the speed of successive selections of elements: a <strong>huge effort</strong> is necessary to get a synoptic vision of the screen and really understand what&#39;s offered.
 </br></br>To better deal with this situation, it&#39;s recommended to keep on navigating with the <a href="./voiceover.html#CurtainScreen">curtain screen</a> mode that&#39;s particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.
 </br></br>Besides the <a href="./criteria-ios.html">design criteria</a> to be followed, <strong>four main principles</strong> must be kept in mind when testing:</p>
@@ -240,9 +266,35 @@
 </br>The element selection using the item mode works fine when the user interface isn&#39;t too complicated and uses native elements.
 </br></br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.
 </br>In this case, the feedback information provided by the tests must be as helpful as getting the best user experience.
-</br></br><em>Note</em>: this feature can be (de)activated in the device user settings.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_2.png" />
-</br>
+</br></br><em>Note</em>: this feature can be (de)activated in the device user settings.</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content"></p>
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-SwitchControl_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="SwitchControl-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_iOS12.png" />
+</div></div>
+
+<p></br>
 <a name="TechnicalMode"></a></p>
 <h2 id="technical-review">Technical review</h2>
 <p>The use of this section requires more or less special expertise according to what must be checked.
@@ -253,7 +305,7 @@
 </br></br></p>
 <h3 id="code-review">Code review</h3>
 <p>The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled <strong>Accessibility Inspector</strong>.
-</br>Its goal and way of being used won&#39;t be developed here because they&#39;re perfectly explained in this detailed <a href="./dev-ios-wwdc-16407.html">WWDC video</a> that&#39;s highly recommended to be watched.
+</br>Its goal and way of being used won&#39;t be developed here because they&#39;re perfectly explained in these detailed videos <a href="./dev-ios-wwdc-16407.html"><code>Auditing Your Apps for Accessibility</code></a> and <a href="./dev-ios-wwdc-19000.html#AccessibilityInspector"><code>Accessibility Inspector</code></a> that are highly recommended to be watched.
 </br></br></p>
 <h3 id="code-testing">Code testing</h3>
 <p>Many kinds of tests <em>(<abbr>TDD</abbr></em>, <em><abbr>UI</abbr>)</em> may be set up by the developers in order to maintain a stable and reliable code over time.

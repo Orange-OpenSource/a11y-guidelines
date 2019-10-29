@@ -213,7 +213,7 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 <ul>
 <li>La <strong>troncature &#39;...&#39; est à éviter</strong> pour laisser place à la coupure du mot impacté identifiée par un trait d&#39;union en fin de phrase.
 </br><img style="max-width: 200px; height: auto;" alt="" src="./images/ios-test-DynamicType_2.png" /></li>
-<li><strong>Les illustrations comme les icônes doivent s&#39;adapter au grossissement souhaité</strong>. 1/. L&#39;utilisation d&#39;une fenêtre centrale à l’instar des <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">éléments dans les barres de tabulation</a> après un appui long, 2/. l&#39;implémentation un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité <code>Zoom</code> ou encore 3/. le simple <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">grossissement d&#39;un élément graphique</a> peuvent être des solutions selon les cas rencontrés.</li>
+<li><strong>Les illustrations comme les icônes doivent s&#39;adapter au grossissement souhaité</strong> : l&#39;utilisation du <a href="./criteria-ios-wwdc-19261.html">Large Content Viewer</a> après un appui long, l&#39;implémentation d&#39;un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité <code>Zoom</code> ou encore le simple <a href="./criteria-ios-dev.html#taille-des-l-ments-graphiques">grossissement d&#39;un élément graphique</a> peuvent être des solutions selon les cas rencontrés.</li>
 <li>Penser à <strong>modifier le grossissement de texte au sein de chaque écran</strong> pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place.</li>
 <li>Dès que la <strong>correction d’une anomalie</strong> remontée sur un terminal est effective, elle <strong>doit être vérifiée sur les autres terminaux utilisés en tests</strong> afin de s&#39;assurer que le problème est réellement éradiqué.</li>
 </ul>
@@ -222,9 +222,35 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 <a name="VoiceOver"></a></p>
 <h3 id="voiceover">VoiceOver</h3>
 <p>L&#39;activation du lecteur d&#39;écran natif change radicalement les résultats obtenus par les gestes standards effectués sur l’écran tactile, c&#39;est pourquoi son utilisation demande un certain temps d&#39;adaptation pour une maîtrise de sa <a href="./lecteur-ecran-voiceover.html">gestuelle spécifique</a>.
-</br>Il est donc <strong>très fortement recommandé</strong> de connaître au moins les gestes de base avant d&#39;activer cette fonctionnalité à partir des réglages du terminal.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-voiceover.png" />
-</br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif !
+</br>Il est donc <strong>très fortement recommandé</strong> de connaître au moins les gestes de base avant d&#39;activer cette fonctionnalité à partir des réglages du terminal.</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content"></p>
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-VoiceOver_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOver-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-VoiceOver_iOS12.png" />
+</div></div>
+
+<p></br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif !
 </br></br>Il faut bien avoir à l&#39;esprit que l&#39;<strong>information</strong> diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d&#39;écran arrive de façon <strong>séquentielle</strong> à la vitesse de sélections successives d&#39;éléments : un <strong>effort énorme de mémorisation</strong> est à fournir pour avoir une vision synoptique de l&#39;écran et comprendre réellement ce qui est proposé.
 </br></br>Pour mieux comprendre cette situation, il est recommandé de passer son écran en <a href="./lecteur-ecran-voiceover.html#CurtainScreen">mode &quot;rideau&quot;</a> puis naviguer comme si on voyait l&#39;écran.
 </br>Cette opération est particulièrement utile lors de <strong>premiers tests sur une application qu&#39;on découvre</strong> car on n&#39;est pas influencé sur le parcours utilisateur qui serait déjà visionné inconsciemment.
@@ -245,9 +271,35 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 </br>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l&#39;application n&#39;est pas trop compliquée graphiquement.
 </br></br>Il peut très bien arriver que ce mode de sélection ne suive pas la logique souhaitée et ne propose pas les éléments dans l&#39;ordre désiré.
 </br>Dans ce cas, les tests réalisés devront donc remonter toute amélioration nécessaire pour aboutir à la meilleure expérience utilisateur possible.
-</br></br><em>Remarque</em> : l&#39;activation de cette fonctionnalité se fait elle aussi via les réglages du terminal.
-</br><img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_2.png" />
-</br>
+</br></br><em>Remarque</em> : l&#39;activation de cette fonctionnalité se fait elle aussi via les réglages du terminal.</p>
+<p><ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content"></p>
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="./images/ios-test-SwitchControl_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="SwitchControl-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="./images/ios-test-SwitchControl_iOS12.png" />
+</div></div>
+
+<p></br>
 <a name="TechnicalMode"></a></p>
 <h2 id="-valuation-technique">Évaluation technique</h2>
 <p>Comme son nom l&#39;indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l&#39;on souhaite vérifer.
@@ -258,7 +310,7 @@ Cette personne doit s&#39;assurer que des critères d&#39;acceptations sont parf
 </br></br></p>
 <h3 id="inspection-de-code">Inspection de code</h3>
 <p>L&#39;interface de développement Apple <em>(Xcode)</em> fournit un outil particulièrement intéressant intitulé <strong>Accessibility Inspector</strong>.
-</br>L&#39;intérêt et l&#39;utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans cette <a href="./criteria-ios-wwdc-16407.html">vidéo WWDC</a> parfaitement détaillée et dont le visionnage est très fortement recommandé.
+</br>L&#39;intérêt et l&#39;utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans les vidéos parfaitement détaillées <a href="./criteria-ios-wwdc-16407.html"><code>Audit d&#39;une app en accessibilité</code></a> et <a href="./criteria-ios-wwdc-19000.html#AccessibilityInspector"><code>Découvrir Accessibility Inspector</code></a> dont le visionnage est très fortement recommandé.
 </br></br></p>
 <h3 id="tests-li-s-au-code">Tests liés au code</h3>
 <p>De façon à assurer une stabilité temporelle au niveau du code, des tests unitaires <em>(<abbr>TDD</abbr>)</em> et graphiques <em>(<abbr>UI</abbr>)</em> sont à mettre en place par les développeurs.

@@ -905,7 +905,7 @@
       "Parcourir la page",
       "Identifier les liens dans le corps du texte"
     ],
-    "vérificateur": [
+    "verifier": [
       "Vérifiez que les liens dans le corps du texte sont facilement identifiables visuellement par un moyen autre que la couleur (souligné, gras ...) par rapport au reste du texte"
     ],
     "resultat": [
