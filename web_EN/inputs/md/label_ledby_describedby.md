@@ -13,7 +13,7 @@ An accessible description is more extensive information that is used by the <abb
 
 The accessible name as the accessible description can be visually noticeable or not (link title: visible, alternative image: hidden and usable only by <abbr>AT</abbr>...)
 
-###<abbr>ARIA</abbr> attributes: `aria-label`, `aria-labelledby` and `aria-describedby`
+### <abbr>ARIA</abbr> attributes: `aria-label`, `aria-labelledby` and `aria-describedby`
 
 Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr>AT</abbr>: `aria-label`, `aria-labelledby` and `aria-describedby`. They allow to add extra information to an <abbr>HTML</abbr> tag:
 - `aria-label`, `aria-labelledby` allow to give an accessible name to an element
