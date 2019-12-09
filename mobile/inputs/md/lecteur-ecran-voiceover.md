@@ -167,6 +167,7 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 - [Activer/désactiver l'écran "rideau".](#CurtainScreen)
 - [Changer la vocalisation d'un élément.](#CustomLabel)
 - [Lancer une recherche.](#SpotlightSearch)
+- [Réaliser un appui long](#LongPressure)
 - [Ouvrir un lien dans une vue.](#OpenLink)
 
 <a name="ReadAllElementsFromTop"></a>
@@ -235,6 +236,10 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 <a name="SpotlightSearch"></a>
 </br>Mouvement : **balayage avec 3 doigts** vers le bas n'importe où sur l'écran.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_fr_search.png" />
+
+<a name="LongPressure"></a>
+</br>Mouvement : **double tap avec 1 doigt en maintenant la pression** *(iOS 12)* ou ** triple tap avec un doigt** *(iOS 13)* n'importe où sur l'écran.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_fr_long_pressure.png" />
 
 <a name="OpenLink"></a>
 </br>Mouvement : **double tap avec 1 doigt en maintenant la pression** n'importe où sur l'écran.

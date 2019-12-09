@@ -167,6 +167,7 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 - [Toggle Curtain Screen.](#CurtainScreen)
 - [Set a custom label.](#CustomLabel)
 - [Use Spotlight Search.](#SpotlightSearch)
+- [Activate a long pressure.](#LongPressure)
 - [Open a link in a text view.](#OpenLink)
 
 <a name="ReadAllElementsFromTop"></a>
@@ -235,6 +236,10 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 <a name="SpotlightSearch"></a>
 </br>Gesture : **flick down with 3 fingers** anywhere on the screen.
 </br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_en_search.png" />
+
+<a name="LongPressure"></a>
+</br>Gesture: **double-tap and hold with 1 finger** *(iOS 12)* or ** triple-tap with 1 finger** *(iOS 13)* anywhere on the screen.
+</br><img style="max-width: 550px; height: auto;" alt="" src="./images/iphonex_en_long_pressure.png" />
 
 <a name="OpenLink"></a>
 </br>Gesture : **double-tap and hold with 1 finger** anywhere on the screen.
