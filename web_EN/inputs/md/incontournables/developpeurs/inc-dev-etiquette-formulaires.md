@@ -22,7 +22,7 @@ Each label must be set in a `label` tag, which is associated to the form field w
 
 In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
 The `title` attribute set on a form element can also be used like a label. You can also use the `aria-label` and `aria-labelledby` attributes (see [ARIA attributes that can save you](./label-ledby-describedby.html)), preferably in this order.
-The `autocompleted` attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
+The `autocomplete` attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
 
 **Checklist: **
 
@@ -30,7 +30,7 @@ For any form element, the label should be visually close to the field it identif
 
 Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters & nbsp ;; beyond that, align all the labels on the right.
 
-If relevant, the fields have an `autocompleted` attribute so that the user can use a list of pre-recorded or auto-complete proposals.
+If relevant, the fields have an `autocomplete` attribute so that the user can use a list of pre-recorded or auto-complete proposals.
 
 For radio and check box buttons, in addition to the label tag you can use other tags (`title`, `aria-labelledby`, `aria-label` or, in some cases, `fieldset` and `legend`). 
 
