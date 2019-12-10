@@ -1402,11 +1402,11 @@ The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> 
 <p>Each label must be set in a <code>label</code> tag, which is associated to the form field with a<code>for</code> attribute, using the <code>id</code> attribute of the form element.</p>
 <p>In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
 The <code>title</code> attribute set on a form element can also be used like a label. You can also use the <code>aria-label</code> and <code>aria-labelledby</code> attributes (see <a href="./label-ledby-describedby.html">ARIA attributes that can save you</a>), preferably in this order.
-The <code>autocompleted</code> attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
+The <code>autocomplete</code> attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>Checklist: </strong></p>
 <p>For any form element, the label should be visually close to the field it identifies.</p>
 <p>Align all labels to the left when the number of characters separating the longest label from the shortest label does not exceed 6 characters &amp; nbsp ;; beyond that, align all the labels on the right.</p>
-<p>If relevant, the fields have an <code>autocompleted</code> attribute so that the user can use a list of pre-recorded or auto-complete proposals.</p>
+<p>If relevant, the fields have an <code>autocomplete</code> attribute so that the user can use a list of pre-recorded or auto-complete proposals.</p>
 <p>For radio and check box buttons, in addition to the label tag you can use other tags (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> or, in some cases, <code>fieldset</code> and <code>legend</code>). </p>
 <p>For required fields, this should be specified in the label using an image, a text symbol (<code>*</code> for example) or text and / or the <code>aria-required</code> property.</p>
 <p><strong>Users’ goal: </strong></p>
@@ -2245,7 +2245,7 @@ It allows to quickly create a responsive and accessible website branded with the
 <p>An accessible name is the information that allows assistive technology (<abbr>AT</abbr>), for example, a screen reader or a magnification program, to identify a given element (<abbr>HTML</abbr> tag). It can be provided by the title or content of an element, an attribute (for example, an <code>alt</code> attribute for an image) or by an associated element (for example, a <code>label</code> tag for a <code>input</code> field).</p>
 <p>An accessible description is more extensive information that is used by the <abbr>AT</abbr> allowing it to complete the accessible name by specifying and adding meaning where the accessible name is not sufficient.</p>
 <p>The accessible name as the accessible description can be visually noticeable or not (link title: visible, alternative image: hidden and usable only by <abbr>AT</abbr>...)</p>
-<p>###<abbr>ARIA</abbr> attributes: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code></p>
+<h3 id="-abbr-aria-abbr-attributes-aria-label-aria-labelledby-and-aria-describedby-"><abbr>ARIA</abbr> attributes: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code></h3>
 <p>Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code>. They allow to add extra information to an <abbr>HTML</abbr> tag:</p>
 <ul>
 <li><code>aria-label</code>, <code>aria-labelledby</code> allow to give an accessible name to an element</li>

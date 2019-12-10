@@ -127,11 +127,11 @@
 <p>Chaque libellé (ou instructions) doit être inclus dans une balise <code>label</code>, elle-même associée au champ de formulaire grâce à un attribut <code>for</code> renseigné, reprenant la valeur de l’<code>id</code> du champ.</p>
 <p>Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
 L’attribut <code>title</code> positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs <code>aria-label</code> et <code>aria-labelledby</code> (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>) dans cet ordre de préférence.</p>
-<p>L&#39;attribut <code>autocompleted</code> doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
+<p>L&#39;attribut <code>autocomplete</code> doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <p>S’assurer que le libellé du champ (étiquette) est suffisamment proche du champ associé.</p>
 <p>Aligner tous les libellés à gauche lorsque le nombre de caractères séparant le libellé le plus long de celui le plus court ne dépasse pas 6 caractères&nbsp;; au-delà, aligner tous les libellés à droite.</p>
-<p>Si cela est pertinent, les champs ont un attribut <code>autocompleted</code> afin que l’utilisateur ait la possibilité d’utiliser une liste de propositions pré-enregistrées ou en auto-complétion.</p>
+<p>Si cela est pertinent, les champs ont un attribut <code>autocomplete</code> afin que l’utilisateur ait la possibilité d’utiliser une liste de propositions pré-enregistrées ou en auto-complétion.</p>
 <p>Pour les boutons radio et les cases à cocher, l’utilisation de la balise <code>label</code> est, parfois, à compléter par un autre dispositif (<code>title</code>, <code>aria-labelledby</code>, <code>aria-label</code> ou parfois, <code>fieldset</code> et <code>legend</code>).</p>
 <p>Pour les champs obligatoires, ceci doit être précisé dans le <code>label</code> via une image, un symbole texte (<code>*</code> par exemple) ou du texte et/ou une propriété <code>aria-required</code>.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong></p>
