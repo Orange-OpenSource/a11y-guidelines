@@ -611,6 +611,7 @@ With `nil`, the first accessible element in the page is focused.
 - [`UIAccessibilityPageScrolledNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification)
 </div>
 </div></br></br>
+<a name="MaskElements"></a>
 ## Hide elements
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1363,6 +1364,128 @@ float heightVal;
 - [`accessibilityFrame`](https://developer.apple.com/documentation/uikit/uiaccessibilityelement/1619579-accessibilityframe)
 - [`accessibilityPath`](https://developer.apple.com/documentation/objectivec/nsobject/1615159-accessibilitypath)
 - [`accessibilityActivationPoint`](https://developer.apple.com/documentation/objectivec/nsobject/1615179-accessibilityactivationpoint)
+</div>
+</div></br></br>
+## Modal view
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#modalView-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#modalView-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#modalView-Example"
+           id="modalView-Example_tab"
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#modalView-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="modalView-Description"
+     role="tabpanel">
+When a view is presented modally *(alert, popup...)*, the screen reader must only analyze its elements and definitely not those still present in the background.
+</br>To reach this goal, you must put the **[accessibilityViewIsModal](./dev-ios-wwdc-18230.html#accessibilityViewIsModal)** property value to `true` to be sure that VoiceOver only takes care of the appropriate instance elements. 
+
+</div>
+<div class="tab-pane" id="modalView-Details" role="tabpanel" >
+Writing `accessibilityViewIsModal = true` may not be enough to get the intended read out because of the views hierarchy.
+</br>Indeed, **only the impacted view siblings** aren't taken into account by VoiceOver, all the other ones are.
+</br></br>If the explanations provided in the <a role="button" onclick="$('#modalView-Example_tab').trigger('click');document.getElementById('modalView').scrollIntoView({ behavior: 'smooth', block: 'start' })">Examples</a> tab aren't detailed enough, take a look at this [David RÖNNQVIST article](http://ronnqvi.st/adding-accessible-behavior) containing a pedagogical and interactive illustration that explains how the modal view process works *('Implementing accessible modal views' section)*.
+
+</div>
+<div class="tab-pane" id="modalView-Example" role="tabpanel" >
+Hereafter, knowledge about hiding wrappers and their contents is assumed to be acquired: if further information is needed, please refer to the **[Hide elements](#MaskElements)** section to feel comfortable with this notion.
+</br></br>For the examples, let's assume we have a main view containting the following accessible elements&nbsp;:
+- A first view *(parent A)* with 3 subviews *(A1, A2, A3)*.
+- A second view *(parent B)* with a sublevel *(B1 et B2)* containing subviews *(B1.1, B1.2, B2.1, B2.2 et B3.3)*.
+</br></br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/ModalView_1.png" />
+
+**Example 1**&nbsp;: `Parent A` view as modal.
+</br>Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is enough to get the desired result.
+</br></br></br>**Example 2**&nbsp;: `A2` view as modal.
+</br>`A1` and `A3` aren't taken into account by VoiceOver because they're `A2` siblings **BUT** `Parent B` *(or possibly its subviews)* will be vocalized... and that's definitely not the goal.
+</br><img alt="" style="max-width: 700px; height: auto; " src="./images/iOSdev/ModalView_3.png" />
+</br>In order to figure out this problem, hiding the undesirable elements when the view is activated as modal is the solution to be applied.
+<pre><code class="objective-c">
+    parentA.isAccessibilityElement = NO;
+    parentA.accessibilityElementsHidden = NO;
+
+    A2.accessibilityViewIsModal = YES;
+        
+    //Resolves the problem with Parent B and its subviews.
+    parentB.isAccessibilityElement = NO;
+    parentB.accessibilityElementsHidden = YES;
+</code></pre><pre><code class="swift">
+    parentA.isAccessibilityElement = false
+    parentA.accessibilityElementsHidden = false
+
+    A2.accessibilityViewIsModal = true
+        
+    //Resolves the problem with Parent B and its subviews.
+    parentB.isAccessibilityElement = false
+    parentB.accessibilityElementsHidden = true
+</code></pre>
+
+</br>**Example 3**&nbsp;: `B1.1` view as modal.
+</br>In this case, `parent A` and `B2` *(or possibly their subviews)* are vocalized with the modal view: only `B1.2` isn't read out by VoiceOver because it's `B1.1` sibling.
+</br><img alt="" style="max-width: 900px; height: auto; " src="./images/iOSdev/ModalView_4.png" />
+</br>Again, all the undesirable elements must be hidden as soon as the modal view is activated as modal.
+<pre><code class="objective-c">
+    parentB.isAccessibilityElement = NO;
+    parentB.accessibilityElementsHidden = NO;
+
+    B1.isAccessibilityElement = NO;
+    B1.accessibilityElementsHidden = NO;
+
+    B11.accessibilityViewIsModal = YES;
+
+    //Resolves the problem with Parent A and B2.
+    parentA.isAccessibilityElement = NO;
+    parentA.accessibilityElementsHidden = YES;
+
+    B2.isAccessibilityElement = NO;
+    B2.accessibilityElementsHidden = YES;
+</code></pre><pre><code class="swift">
+    parentB.isAccessibilityElement = false
+    parentB.accessibilityElementsHidden = false
+
+    B1.isAccessibilityElement = false
+    B1.accessibilityElementsHidden = false
+
+    B11.accessibilityViewIsModal = true
+
+    //Resolves the problem with Parent A and B2.
+    parentA.isAccessibilityElement = false
+    parentA.accessibilityElementsHidden = true
+
+    B2.isAccessibilityElement = false
+    B2.accessibilityElementsHidden = true
+</code></pre>
+
+</div>
+<div class="tab-pane" id="modalView-Links" role="tabpanel" >
+- [Hide elements](#MaskElements)
+- [`accessibilityViewIsModal`](https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal)
+- [David Rönnqvist : "Implementing accessible modal views"](http://ronnqvi.st/adding-accessible-behavior)
+- [WWDC 2018 : Deliver an exceptional accessibility experience](./criteria-ios-wwdc-18230.html#accessibilityViewIsModal)
 </div>
 </div></br></br>
 ## Text size
