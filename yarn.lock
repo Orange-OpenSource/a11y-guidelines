@@ -812,9 +812,9 @@ lru-cache@2:
   integrity sha1-bUUk6LlV+V1PW1iFHOId1y+06VI=
 
 marked@>=0.2.9:
-  version "0.5.1"
-  resolved "https://artifactory-iva.si.francetelecom.fr/artifactory/api/npm/npmproxy/marked/-/marked-0.5.1.tgz#062f43b88b02ee80901e8e8d8e6a620ddb3aa752"
-  integrity sha1-Bi9DuIsC7oCQHo6NjmpiDds6p1I=
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
+  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
 
 media-typer@0.3.0:
   version "0.3.0"
