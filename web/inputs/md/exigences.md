@@ -8,15 +8,15 @@ Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de n
 
 Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.
 
-Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères incontournables](./fondamentaux.html) et des [exemples](./exemples.html) de ce site. Vous pouvez aussi utiliser les [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
+Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères WCAG par thème](./incontournables.html) et des [exemples](./exemples.html) de ce site. Vous pouvez aussi utiliser les [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
 
 
-## Le référentiel général d’accessibilité des administrations (<abbr>RGAA</abbr>)
+## Le référentiel général d’amélioration de l'accessibilité (<abbr>RGAA</abbr>)
 
-Si vous êtes familiarisé avec le [Référentiel Général d’Accessibilité des Administrations](http://references.modernisation.gouv.fr/referentiel) (<abbr>RGAA</abbr>), celui-ci peut être utilisé pour effectuer les tests d’accessibilité. 
+Si vous êtes familiarisé avec le [Référentiel Général d’Amélioration de l'accessibilité](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/) (<abbr>RGAA</abbr>), celui-ci peut être utilisé pour effectuer les tests d’accessibilité. 
 Il s’agit du référentiel officiel permettant de s’assurer qu’un site d’état et de collectivités territoriales est en conformité avec l’[article 47 de la loi de février 2005 pour l’égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées](http://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000001290363&cidTexte=JORFTEXT000000809647).
 
-Le <abbr>RGAA</abbr> est une méthode d’implémentation des <span lang="en">Web Content Accessibility Guidelines</span> v2 (<abbr>WCAG</abbr> 2). Un site conforme au <abbr>RGAA</abbr> est également conforme aux <abbr>WCAG</abbr>2.  
+Le <abbr>RGAA</abbr> est une méthode d’implémentation des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>). Un site conforme au <abbr>RGAA</abbr> est également conforme aux <abbr>WCAG</abbr>.  
 
 ## Les notices Accede-Web
 

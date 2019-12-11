@@ -8,11 +8,11 @@ For Orange internal accessibility requirements, we have chosen to rely on the [W
 
 All <abbr>HTML</abbr> pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without blocking point** for the user after testing the main features of the site or application.
 
-For technical solutions, you should consult [essential criteria](./fondamentaux.html) and [examples](./exemples.html) sections. You can also refer to an external resource available at [Accede-Web references](http://wiki.accede-web.com/en/home).
+For technical solutions, you should consult [WCAG criteria by project phase](./incontournables.html) and [examples](./exemples.html) sections. You can also refer to an external resource available at [Accede-Web references](http://wiki.accede-web.com/en/home).
 
 ## <abbr>RGAA</abbr>
 
-The <abbr>RGAA</abbr> is the French government’s [General Accessibility Reference for Administrations (in French)](http://references.modernisation.gouv.fr/referentiel/). It is meant to provide a way to check compliance against <abbr>WCAG</abbr> 2.1.
+The <abbr>RGAA</abbr> is the French government’s [General Accessibility Reference for improving accessibility (in French)](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/). It is meant to provide a way to check compliance against <abbr>WCAG</abbr> 2.1.
 If your are familiar with this reference, you can use it to test your site.
 
 An [English translation](https://disic.github.io/rgaa_referentiel_en/introduction-RGAA.html) is available for informational purposes only. 
