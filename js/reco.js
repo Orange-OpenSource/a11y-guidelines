@@ -378,8 +378,8 @@ var Glossary = { // collection of all terms to be defined
     "fr":"format de documents portables"
   },
   "RGAA":{
-    "base":"<span lang='fr'>Référentiel général d’Accessibilité des Administrations</span>",
-    "en":"French Referential for the accessibility of administrations"
+    "base":"<span lang='fr'>Référentiel général d’Amélioration de l'Accessibilité</span>",
+    "en":"French referential for improving accessibility"
     },
   "SDK":{
     "base":"<span lang='en'>Software Development Kit</span>",
