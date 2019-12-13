@@ -1485,7 +1485,7 @@ Hereafter, knowledge about hiding wrappers and their contents is assumed to be a
 - [Hide elements](#MaskElements)
 - [`accessibilityViewIsModal`](https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal)
 - [David Rönnqvist : "Implementing accessible modal views"](http://ronnqvi.st/adding-accessible-behavior)
-- [WWDC 2018 : Deliver an exceptional accessibility experience](./criteria-ios-wwdc-18230.html#accessibilityViewIsModal)
+- [WWDC 2018 : Deliver an exceptional accessibility experience](./dev-ios-wwdc-18230.html#accessibilityViewIsModal)
 </div>
 </div></br></br>
 ## Text size
