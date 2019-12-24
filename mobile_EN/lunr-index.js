@@ -275,6 +275,22 @@ index.add({
 
 
 
+documentTitles["criteria-flutter.html#accessibility-with-flutter"] = "Accessibility with Flutter";
+index.add({
+    url: "criteria-flutter.html#accessibility-with-flutter",
+    title: "Accessibility with Flutter",    
+    body: "# Accessibility with Flutter  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Flutter\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;criteria-flutter\&quot;&gt;&lt;/span&gt;  If you develop applications with Flutter, you should know that it is possible to produce accessible applications. The framework offers screen reader and text size management.  "
+});
+
+documentTitles["criteria-flutter.html#resources"] = "Resources";
+index.add({
+    url: "criteria-flutter.html#resources",
+    title: "Resources",    
+    body: "## Resources  For information on the subject, start with [the official accessibility page](https://flutter.dev/docs/development/accessibility-and-localization/accessibility) which does not yet reflect the full range of possibilities.  You can also watch the following videos which will allow you to explore some of the concepts in greater depth: - &lt;a href=\&quot;https://www.youtube.com/watch?v=bWbBgbmAdQs\&quot;&gt;Building in accessibility with Flutter (Flutter Interact '19)&lt;/a&gt; - &lt;a href=\&quot;https://youtu.be/YSULAJf6R6M?t=584\&quot;&gt;Beyond Mobile: Material Design, Adaptable UIs, and Flutter (Google I/O'19)&lt;/a&gt;  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
 documentTitles["criteria-ios-test.html#how-to-test-the-ios-accessibility"] = "How to test the iOS accessibility";
 index.add({
     url: "criteria-ios-test.html#how-to-test-the-ios-accessibility",

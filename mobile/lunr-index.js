@@ -542,6 +542,22 @@ index.add({
 
 
 
+documentTitles["criteria-flutter.html#laccessibilite-avec-flutter"] = "L'accessibilité avec Flutter";
+index.add({
+    url: "criteria-flutter.html#laccessibilite-avec-flutter",
+    title: "L'accessibilité avec Flutter",    
+    body: "# L'accessibilité avec Flutter  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Flutter\&quot;}]); });&lt;/script&gt;  &lt;span data-menuitem=\&quot;criteria-flutter\&quot;&gt;&lt;/span&gt;  Si vous développez des applications avec Flutter, sachez qu'il est possible de produire des applications accessibles. Le framework offre notamment la gestion des lecteurs d'écran ainsi que l'agrandissement de la taille des textes.  "
+});
+
+documentTitles["criteria-flutter.html#ressources"] = "Ressources";
+index.add({
+    url: "criteria-flutter.html#ressources",
+    title: "Ressources",    
+    body: "## Ressources  Pour obtenir des informations sur le sujet, commencez par [la page officielle sur l'accessibilité](https://flutter.dev/docs/development/accessibility-and-localization/accessibility) qui ne reflète pour le moment pas toute l'étendue des possibilités.  Vous pouvez également visionner les vidéos suivantes qui permettront d'approfondir certaines notions : - &lt;a href=\&quot;https://www.youtube.com/watch?v=bWbBgbmAdQs\&quot; lang=\&quot;en\&quot;&gt;Building in accessibility with Flutter (Flutter Interact '19)&lt;/a&gt; - &lt;a href=\&quot;https://youtu.be/YSULAJf6R6M?t=584\&quot; lang=\&quot;en\&quot;&gt;Beyond Mobile: Material Design, Adaptable UIs, and Flutter (Google I/O'19)&lt;/a&gt; - [Ok Flutter elle est où la rampe d'accès - Cédric Creusot](https://www.youtube.com/watch?v=EqInAYQMYT8)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
 documentTitles["criteria-android-conception.html#les-criteres-incontournables-sous-android-pour-la-conception"] = "Les critères incontournables sous Android pour la conception";
 index.add({
     url: "criteria-android-conception.html#les-criteres-incontournables-sous-android-pour-la-conception",
