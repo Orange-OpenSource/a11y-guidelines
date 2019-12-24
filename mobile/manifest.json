@@ -5,6 +5,7 @@
         "output/markdown/about.md",  
         "output/markdown/criteria-android-dev.md", 
         "output/markdown/criteria-ios-dev.md",
+        "output/markdown/criteria-flutter.md",
         "output/markdown/criteria-android-conception.md",
         "output/markdown/criteria-ios-conception.md",
         "output/markdown/criteria-android.md",
