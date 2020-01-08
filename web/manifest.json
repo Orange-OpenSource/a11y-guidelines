@@ -4,6 +4,7 @@
         "output/markdown/index.md",
         "output/markdown/captcha.md",
         "output/markdown/label_ledby_describedby.md",
+        "output/markdown/aria-live-alert.md",
         "output/markdown/aria-status.md",
         "output/markdown/a11y-name.md",
         "output/markdown/incontournables.md",
