@@ -252,6 +252,53 @@ Sortie pour un lecteur d&#39;écran : &quot;Accéder au code HTML code de la pag
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2018  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="l-attribut-aria-live-et-le-role-alert">L&#39;attribut aria-live et le role alert</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+            {"label":"Articles techniques", "url":"techniques.html"},
+            {"label":"L'attribut aria-live et le role alert"}
+        ]);
+});
+</script>
+
+<p>Les utilisateurs qui naviguent à l&#39;aide d&#39;un lecteur d&#39;écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu&#39;une information est actualisée ou lorsqu&#39;un message apparaît il est parfois nécessaire de faire parler le lecteur d&#39;écran pour informer l&#39;utilisateur. Pour ce faire, le language ARIA dispose du role <code>alert</code> et de l&#39;attribut <code>aria-live</code>.</p>
+<h2 id="le-role-alert">Le role alert</h2>
+<p>Positionné sur un élément HTML, celui-ci permet d&#39;indiquer au lecteur d&#39;écran de vocaliser l&#39;élément automatiquement lors de sa création. Veiller toutefois à utiliser ce role uniquement dans les cas appropriés comme il est clairement indiqué dans la documentation <a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_r%C3%B4le_alert">MDN de Mozilla</a>. De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que aria-live=&quot;polite&quot; ou autres rôles de zone live.</p>
+<p>Pour déclencher une alerte, plusieurs méthodes sont possibles, avec des supports qui différent en fonction du couple navigateur et lecteur d&#39;écran utilisé. Vous pouvez consulter <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">l&#39;article de Steve Faulkner (en anglais)</a> à ce sujet.</p>
+<p>Voici quelques exemples de méthodes qui sont bien supportées.</p>
+<h3 id="cr-er-un-nouvel-l-ment-dans-le-dom">Créer un nouvel élément dans le DOM</h3>
+<p>On peut déclencher une alerte en insérant un nouvel élément dans le DOM via Javascript.</p>
+<pre><code class="html">&lt;span role="alert"&gt;Ceci est un message d'alerte.&lt;/span&gt;</code></pre>
+
+<h3 id="ajouter-un-role-alert-sur-un-l-ment-existant">Ajouter un role alert sur un élément existant</h3>
+<p>Le déclenchement d&#39;une alerte peut également s&#39;effectuer en ajoutant un role alert à un élément existant dynamiquement via Javascript.</p>
+<pre><code class="js">
+document.getElementById('alert').addAttribute("role", "alert");
+</code></pre>
+
+<h3 id="utiliser-innerhtml">Utiliser innerHTML</h3>
+<p>Créer une alerte via la propriété innerHTML.</p>
+<pre><code class="js">
+element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt';
+</code></pre>
+
+<h2 id="l-attribut-aria-live">L&#39;attribut aria-live</h2>
+<p>Positionné sur un élément HTML, l&#39;attribut aria-live permet d&#39;indiquer au lecteur d&#39;écran que toute modification apportée à son contenu entraînera une vocalisation par le lecteur d&#39;écran.  </p>
+<p>Trois valeurs sont possibles : </p>
+<ul>
+<li>Off : aucune vocalisation</li>
+<li>Polite : la vocalisation aura lieu lorsque le lecteur d&#39;écran aura fini la tâche en cours</li>
+<li>Assertive : le lecteur d&#39;écran interrompt la tâche en cours pour informer l&#39;utilisateur</li>
+</ul>
+<pre><code class="html">
+&lt;span aria-live="polite"&gt;5 éléments sélectionnés&lt/span&gt;
+</code></pre>
+
+
+<p>&nbsp;</p>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="utiliser-abbr-aria-abbr-les-messages-d-tat-de-statut-ou-contextuel">Utiliser <abbr>ARIA</abbr>  les messages d&#39;état, de statut ou contextuel</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
