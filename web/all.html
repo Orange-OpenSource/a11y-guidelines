@@ -290,11 +290,24 @@ element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt';
 <li>Polite : la vocalisation aura lieu lorsque le lecteur d&#39;écran aura fini la tâche en cours</li>
 <li>Assertive : le lecteur d&#39;écran interrompt la tâche en cours pour informer l&#39;utilisateur</li>
 </ul>
+<p>Il est fortement recommandé que l&#39;attribut aria-live soit positionné sur l&#39;élément dès le chargement de la page pour maximiser la compatibilité avec les différents couples navigateurs et lecteurs d&#39;écran.</p>
 <pre><code class="html">
 &lt;span aria-live="polite"&gt;5 éléments sélectionnés&lt/span&gt;
 </code></pre>
 
-
+<p>Des attributs supplémentaires permettent de modifier finement le comportement par défaut d&#39;aria-live :</p>
+<ul>
+<li><strong>aria-atomic :</strong>  true ou false (défaut), permet d&#39;indiquer si la totalité de la zone live doit être lue (true) ou seulement la partie modifiée (false).</li>
+<li><strong>aria-relevant :</strong> indique quel type de changement déclenche une vocalisation, valeurs possibles : additions (défaut), removals, all.</li>
+</ul>
+<p>Enfin pour être complet, sachez que le langage ARIA prévoit également quelques roles spécifiques, <strong>status</strong> et <strong>log</strong> notamment qui peuvent s&#39;avérer utiles dans certains cas (barre d&#39;état, journalisation, chat...) et qui pour le moment doivent être utilisés en complément de l&#39;attribut aria-live pour maximiser la prise en charge par les outils d&#39;assistance. Vous trouverez plus d&#39;infos sur ces roles dans les liens ci-dessous.</p>
+<h2 id="r-f-rences">Références</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert">Utilisation du rôle alert</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA">Zones live ARIA</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log">Utiliser le rôle log</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status">Utiliser le rôle status</a></li>
+</ul>
 <p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -2749,11 +2762,13 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
     <dd>Les CAPTCHAs et l&#39;accessibilité</dd>
     <dt><a href="htmlaria.html">HTML 5 et <abbr>ARIA</abbr></a></dt>
     <dd>Introduction HTML 5 et <abbr>ARIA</abbr>.</dd>
+    <dt><a href="aria-live-alert.html">L&#39;attribut aria-live et le role alert</a></dt>
+    <dd>Quand et comment utiliser les roles et attributs de type live.</dd>
     <dt><a href="aria-status.html">Utiliser les attributs <abbr>ARIA</abbr> pour les messages d&#39;état</a></dt>
-     <dd>Les messages d&#39;état, de statut ou contextuel gérés par <abbr>ARIA</abbr>.</dd>
-     <dt><a href="a11y-name.html">Le nom accessible</a></dt>
-     <dd>Le nom accessible, qu&#39;est ce et son rapport avec les <abbr>AT</abbr>.</dd>
-</dl>
+    <dd>Les messages d&#39;état, de statut ou contextuel gérés par <abbr>ARIA</abbr>.</dd>
+    <dt><a href="a11y-name.html">Le nom accessible</a></dt>
+    <dd>Le nom accessible, qu&#39;est ce et son rapport avec les <abbr>AT</abbr>.</dd></p>
+<p></dl>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
