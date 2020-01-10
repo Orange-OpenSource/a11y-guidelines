@@ -46,10 +46,25 @@ Trois valeurs sont possibles :
 - Polite : la vocalisation aura lieu lorsque le lecteur d'écran aura fini la tâche en cours
 - Assertive : le lecteur d'écran interrompt la tâche en cours pour informer l'utilisateur
 
+Il est fortement recommandé que l'attribut aria-live soit positionné sur l'élément dès le chargement de la page pour maximiser la compatibilité avec les différents couples navigateurs et lecteurs d'écran.
+
 <pre><code class="html">
 &lt;span aria-live="polite"&gt;5 éléments sélectionnés&lt/span&gt;
 </code></pre>
+  
+Des attributs supplémentaires permettent de modifier finement le comportement par défaut d'aria-live :
 
+- **aria-atomic :**  true ou false (défaut), permet d'indiquer si la totalité de la zone live doit être lue (true) ou seulement la partie modifiée (false).
+- **aria-relevant :** indique quel type de changement déclenche une vocalisation, valeurs possibles : additions (défaut), removals, all.
+
+Enfin pour être complet, sachez que le langage ARIA prévoit également quelques roles spécifiques, **status** et **log** notamment qui peuvent s'avérer utiles dans certains cas (barre d'état, journalisation, chat...) et qui pour le moment doivent être utilisés en complément de l'attribut aria-live pour maximiser la prise en charge par les outils d'assistance. Vous trouverez plus d'infos sur ces roles dans les liens ci-dessous.
+
+
+## Références
+- [Utilisation du rôle alert](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
+- [Zones live ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA)
+- [Utiliser le rôle log](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log)
+- [Utiliser le rôle status](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status)
 
 &nbsp;
     
