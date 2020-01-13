@@ -4,7 +4,7 @@
     setBreadcrumb([{"label":"Concevoir des mails accessibles à tous"}]);
 });</script>
 
-Faire en sorte que tout le monde reçoive et comprenne vos messages doit être une priorité, peu importe que l’utilisateur utilise ou non des technologies d’assistance.
+Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.
 
 ## Les mails « du quotidien »
 ### Qu’est ce qui peut poser problème d’un point de vue accessibilité ?
@@ -26,7 +26,6 @@ Pour tous vos mails du quotidien :
 - Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle) 
 - Traduire les émoticônes, exemple : [smiley clin d’oeil]
 - Éviter les animations, les GIFs et les flashs 
-- Utiliser [l’outil de signature Orange](http://signature.com.ftgroup/) 
 - Rédiger des libellés de liens explicites (éviter les liens du type : « cliquer ici » ou « en savoir plus ») 
 - Vérifier que la taille des boutons et des zones cliquables est suffisante (1cm de côté)
 - Paramétrer votre outil mail : format HTML par défaut 
