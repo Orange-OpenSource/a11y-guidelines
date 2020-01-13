@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité numérique Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="/boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="/boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="/css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+
+              <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                  <li class="nav-item"><a href="../web/index.html" class="nav-link">Web</a></li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Mobile</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Contenu éditorial</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-editorial" href="editorial.html">Recommandations générales</a></li>
+                        <li><a class="page-word" href="word.html" lang="en">Microsoft Word</a></li>                        
+                        <li><a class="page-powerpoint" href="powerpoint.html" lang="en">Microsoft PowerPoint</a></li>                        
+                        <li><a class="page-pdf" href="pdf.html" lang="en">Documents <abbr>PDF</abbr></a></li>                         
+                        <li><a class="page-pushmail" href="pushmail.html">Email</a></li>
+                        <li><a class="page-video-audio" href="video-audio.html">Contenus vidéos ou audios</a></li>
+
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../others_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web." 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../others_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/others/index.html">Contenu éditorial</a></li>        
+      </ol>
+    </nav>
+    
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="concevoir-des-mails-accessibles-tous">Concevoir des mails accessibles à tous</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Concevoir des mails accessibles à tous"}]);
+});</script>
+
+<p>Faire en sorte que tout le monde reçoive et comprenne vos messages doit être une priorité, peu importe que l’utilisateur utilise ou non des technologies d’assistance.</p>
+<h2 id="les-mails-du-quotidien-">Les mails « du quotidien »</h2>
+<h3 id="qu-est-ce-qui-peut-poser-probl-me-d-un-point-de-vue-accessibilit-">Qu’est ce qui peut poser problème d’un point de vue accessibilité ?</h3>
+<ul>
+<li>Les images</li>
+<li>Les polices, couleurs et styles utilisés</li>
+<li>Les tableaux de mise en forme</li>
+<li>Les liens</li>
+</ul>
+<h3 id="les-basiques">Les basiques</h3>
+<p>Pour tous vos mails du quotidien :</p>
+<ul>
+<li>Utiliser des polices simples, sans serif : Arial, Calibri ou Accessible DfA</li>
+<li>Adopter une taille de police au moins égale à 12 points</li>
+<li>Conserver l’accent des lettres en majuscule</li>
+<li>Aligner les textes à gauche (éviter de justifier) </li>
+<li>Éviter l’italique </li>
+<li>Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule</li>
+<li>Vérifier le contraste entre la couleur de police et l’arrière-plan (outil Colour Contrast Analyzer) et limiter le nombre total de couleurs utilisées</li>
+<li>Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan</li>
+<li>Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle) </li>
+<li>Traduire les émoticônes, exemple : [smiley clin d’oeil]</li>
+<li>Éviter les animations, les GIFs et les flashs </li>
+<li>Utiliser <a href="http://signature.com.ftgroup/">l’outil de signature Orange</a> </li>
+<li>Rédiger des libellés de liens explicites (éviter les liens du type : « cliquer ici » ou « en savoir plus ») </li>
+<li>Vérifier que la taille des boutons et des zones cliquables est suffisante (1cm de côté)</li>
+<li>Paramétrer votre outil mail : format HTML par défaut </li>
+</ul>
+<h2 id="les-pushmails">Les Pushmails</h2>
+<p>Plusieurs options s’offrent à vous pour créer un Pushmail accessible.</p>
+<h3 id="cr-ation-partir-d-un-document-word">Création à partir d’un document Word</h3>
+<ol>
+<li>Créer un document Word accessible en suivant <a href="https://a11y-guidelines.orange.com/others/word.html">les recommandations Word</a>.</li>
+<li>Puis utiliser l’option « Envoyer au destinataire du message ».  </li>
+</ol>
+<p>Option à ajouter la première fois via Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message. 
+<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="./images/email1.png"></p>
+<h3 id="cr-ation-partir-de-mes-pushmails-">Création à partir de « Mes Pushmails »</h3>
+<p>L’outil fournit des gabarits nativement accessibles (à condition d’ajouter du texte de remplacement pour les images) ce qui n’empêche pas de suivre <a href="https://a11y-guidelines.orange.com/others/editorial.html">les recommandations générales</a> pour le contenu éditorial.</p>
+<p><img alt="capture d'écran de l'outil mes Pushmails" src="./images/email2.png"></p>
+<h3 id="cr-ation-partir-d-html-ou-autre-outil-d-di-">Création à partir d’HTML (ou autre outil dédié)</h3>
+<p>Composer le code HTML de façon accessible en suivant <a href="https://a11y-guidelines.orange.com/web/index.html">les principales recommandations Web</a>. 
+Important : compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux (en utilisant role=presentation dans la balise table). </p>
+<h3 id="la-derni-re-chance">La dernière chance</h3>
+<p>Si la mise en page de votre mail nécessite d’être très complexe : </p>
+<ul>
+<li>créer le mail avec la méthode qui vous est la plus simple, </li>
+<li>et ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme textuelle uniquement.</li>
+</ul>
+<h2 id="liens-utiles">Liens utiles</h2>
+<ul>
+<li><a href="https://a11y-guidelines.orange.com/others/index.html">Site des recommandations accessibilité Orange</a></li>
+<li><a href="https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775">Tuto Office mails accessibles</a></li>
+<li><a href="https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240">Guide le l’accessibilité des mails (anglais)</a></li>
+<li><a href="https://litmus.com/blog/ultimate-guide-accessible-emails">Guide Litmus : mails accessibles (anglais)</a></li>
+<li><a href="https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Taille idéale des zones cliquables (anglais)</a></li>
+<li><a href="https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/">Taille des boutons interface tactile</a></li>
+<li><a href="http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/">Police Accessible DfA</a></li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="/boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="/js/reco.js"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+</body>
+</html>

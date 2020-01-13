@@ -577,6 +577,78 @@ index.add({
 
 
 
+documentTitles["email.html#concevoir-des-mails-accessibles-a-tous"] = "Concevoir des mails accessibles à tous";
+index.add({
+    url: "email.html#concevoir-des-mails-accessibles-a-tous",
+    title: "Concevoir des mails accessibles à tous",    
+    body: "# Concevoir des mails accessibles à tous    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Concevoir des mails accessibles à tous\&quot;}]); });&lt;/script&gt;  Faire en sorte que tout le monde reçoive et comprenne vos messages doit être une priorité, peu importe que l’utilisateur utilise ou non des technologies d’assistance.  "
+});
+
+documentTitles["email.html#les-mails-du-quotidien"] = "Les mails « du quotidien »";
+index.add({
+    url: "email.html#les-mails-du-quotidien",
+    title: "Les mails « du quotidien »",    
+    body: "## Les mails « du quotidien » "
+});
+
+documentTitles["email.html#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite"] = "Qu’est ce qui peut poser problème d’un point de vue accessibilité ?";
+index.add({
+    url: "email.html#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite",
+    title: "Qu’est ce qui peut poser problème d’un point de vue accessibilité ?",    
+    body: "### Qu’est ce qui peut poser problème d’un point de vue accessibilité ? - Les images - Les polices, couleurs et styles utilisés - Les tableaux de mise en forme - Les liens  "
+});
+
+documentTitles["email.html#les-basiques"] = "Les basiques";
+index.add({
+    url: "email.html#les-basiques",
+    title: "Les basiques",    
+    body: "### Les basiques  Pour tous vos mails du quotidien : - Utiliser des polices simples, sans serif : Arial, Calibri ou Accessible DfA - Adopter une taille de police au moins égale à 12 points - Conserver l’accent des lettres en majuscule - Aligner les textes à gauche (éviter de justifier)  - Éviter l’italique  - Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule - Vérifier le contraste entre la couleur de police et l’arrière-plan (outil Colour Contrast Analyzer) et limiter le nombre total de couleurs utilisées - Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan - Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle)  - Traduire les émoticônes, exemple : [smiley clin d’oeil] - Éviter les animations, les GIFs et les flashs  - Utiliser [l’outil de signature Orange](http://signature.com.ftgroup/)  - Rédiger des libellés de liens explicites (éviter les liens du type : « cliquer ici » ou « en savoir plus »)  - Vérifier que la taille des boutons et des zones cliquables est suffisante (1cm de côté) - Paramétrer votre outil mail : format HTML par défaut   "
+});
+
+documentTitles["email.html#les-pushmails"] = "Les Pushmails";
+index.add({
+    url: "email.html#les-pushmails",
+    title: "Les Pushmails",    
+    body: "## Les Pushmails   Plusieurs options s’offrent à vous pour créer un Pushmail accessible.  "
+});
+
+documentTitles["email.html#creation-a-partir-dun-document-word"] = "Création à partir d’un document Word";
+index.add({
+    url: "email.html#creation-a-partir-dun-document-word",
+    title: "Création à partir d’un document Word",    
+    body: "### Création à partir d’un document Word 1. Créer un document Word accessible en suivant [les recommandations Word](https://a11y-guidelines.orange.com/others/word.html). 2. Puis utiliser l’option « Envoyer au destinataire du message ».    Option à ajouter la première fois via Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message.  &lt;img alt=\&quot;capture d'écran : paramétrer Word pour envoi de message à un destinataire\&quot; src=\&quot;./images/email1.png\&quot;&gt;  "
+});
+
+documentTitles["email.html#creation-a-partir-de-mes-pushmails"] = "Création à partir de « Mes Pushmails »";
+index.add({
+    url: "email.html#creation-a-partir-de-mes-pushmails",
+    title: "Création à partir de « Mes Pushmails »",    
+    body: "### Création à partir de « Mes Pushmails »  L’outil fournit des gabarits nativement accessibles (à condition d’ajouter du texte de remplacement pour les images) ce qui n’empêche pas de suivre [les recommandations générales](https://a11y-guidelines.orange.com/others/editorial.html) pour le contenu éditorial.  &lt;img alt=\&quot;capture d'écran de l'outil mes Pushmails\&quot; src=\&quot;./images/email2.png\&quot;&gt;  "
+});
+
+documentTitles["email.html#creation-a-partir-dhtml-ou-autre-outil-dedie"] = "Création à partir d’HTML (ou autre outil dédié)";
+index.add({
+    url: "email.html#creation-a-partir-dhtml-ou-autre-outil-dedie",
+    title: "Création à partir d’HTML (ou autre outil dédié)",    
+    body: "### Création à partir d’HTML (ou autre outil dédié)  Composer le code HTML de façon accessible en suivant [les principales recommandations Web](https://a11y-guidelines.orange.com/web/index.html).  Important : compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux (en utilisant role=presentation dans la balise table).   "
+});
+
+documentTitles["email.html#la-derniere-chance"] = "La dernière chance";
+index.add({
+    url: "email.html#la-derniere-chance",
+    title: "La dernière chance",    
+    body: "### La dernière chance Si la mise en page de votre mail nécessite d’être très complexe :  - créer le mail avec la méthode qui vous est la plus simple,  - et ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme textuelle uniquement.  "
+});
+
+documentTitles["email.html#liens-utiles"] = "Liens utiles";
+index.add({
+    url: "email.html#liens-utiles",
+    title: "Liens utiles",    
+    body: "## Liens utiles  - [Site des recommandations accessibilité Orange](https://a11y-guidelines.orange.com/others/index.html) - [Tuto Office mails accessibles](https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775) - [Guide le l’accessibilité des mails (anglais)](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240) - [Guide Litmus : mails accessibles (anglais)](https://litmus.com/blog/ultimate-guide-accessible-emails) - [Taille idéale des zones cliquables (anglais)](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/) - [Taille des boutons interface tactile](https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/) - [Police Accessible DfA](http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/)  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
 documentTitles["editorial.html#recommandations-editoriales-generales"] = "Recommandations éditoriales générales";
 index.add({
     url: "editorial.html#recommandations-editoriales-generales",
