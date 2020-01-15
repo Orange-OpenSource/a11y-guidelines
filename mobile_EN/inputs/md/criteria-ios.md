@@ -16,47 +16,112 @@
 
 This guide aims to present the different accessibility criteria for getting an accessible iOS application.
 </br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.
-
+</br></br>
 ## Images
-**Target: ** everyone, especially people with visual impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#images-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#images-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#images-Examples" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#images-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="images-Objectives"
+     role="tabpanel">
+    
+Access the information included in images for users who cannot access it.
+</br>Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images *(mobile, low bandwidth…)*.
+</br></br>**Target: ** everyone, especially people with visual impairments.  
 **When: ** as of design and during development.
-
-**Description: **
-
-Images are often used to convey a lot of information. As the saying goes, a picture is worth a thousand words. The blind cannot see the images, it is important that they have an alternative that gives all the information conveyed by the image.
-In the case of an image containing text, this text will be used for the alternative. In the case of an image that provides information as a graph, drawing or other, the alternative will contain all necessary information in the image.
-  
-Some images are used for decorative purposes. These pictures do not require alternative. By default, on iOS pictures are not vocalized by the VoiceOver screen reader.
-Illustrations in the application are also considered decorative images. The rule is the same: there is no alternative text to add.
-Icons are, conversely, widely used as buttons for various features. So they need relevant text alternatives.
-  
-The alternative of an image is set via the `accessibilityLabel` attribute (using the `UIAccessibility` protocol available on any children of `UIView`).
-
-**Checklist: **
-
-- Images with information must convey this information through their text alternative.
-- Decorative images have no alternative text.
-
-**Users’ goal: **
-
-Access the information included in images for users who cannot access it. Blocking point: an image without textual description is unusable by people with visual impairments or those that cannot display images (mobile, low bandwidth…).
-
-** Examples: **
-
+</div>
+<div class="tab-pane" id="images-Description" role="tabpanel" >
+Images are often used to convey a lot of information.
+</br>The blind cannot see the images, it is important that they have an alternative that gives all the information conveyed by the image.
+</br></br>In the case of an image containing text, this text will be used for the alternative.
+</br>In the case of an image that provides information as a graph, drawing or other, the alternative will contain all necessary information in the image.  
+</br>Some images are used for decorative purposes: these pictures do not require alternative.
+</br>By default, pictures are not vocalized by the VoiceOver screen reader.
+</br></br>Illustrations in the application are also considered decorative images.
+</br>The rule is the same: there is no alternative text to add.
+</br>Icons are, conversely, widely used as buttons for various features. So they need relevant text alternatives.
+</br></br>The alternative of an image is set via the `accessibilityLabel` attribute (using the `UIAccessibility` protocol available on any children of `UIView`).
+</div>
+<div class="tab-pane" id="images-Examples" role="tabpanel" >
 <img src="./images/image_ex.png" alt="complete example of decorative picture and informative icon" width="400">  
-  
-By decomposing the image:  
+</br></br>By decomposing the image:  
 - <img src="./images/montagnard.png" alt="example of decorative picture" width="256"> no `accessibilityLabel`  
 - <img src="./images/edit.png" alt="example of informative icon - parameters" width="48"> `buttonView.accessibilityLabel = "example_image_edit_accessibilityLabel".localized`  
 - <img src="./images/settings.png" alt="example of informative icon - edition" width="48"> `buttonView.accessibilityLabel = "example_image_settings_accessibilityLabel".localized`
-  
+</div>
+<div class="tab-pane" id="images-Check" role="tabpanel" >
+- Images with information must convey this information through their text alternative.
+- Decorative images have no alternative text.
+</div>
+</div></br></br>
+
 ## Colours
-
-** Target: ** everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts etc.)  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#colours-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#colours-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#colours-Examples" 
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#colours-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="colours-Objectives"
+     role="tabpanel">
+Ease of reading for all users, especially the visually impaired, or people in a very bright environment *(outdoors)*.
+</br>Allow users who cannot distinguish colours or sensory information *(colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments…)* to access the same information by other means.
+</br></br>** Target: ** everyone, especially people with visual impairments, elderly people and people with vision problems (colour blindness, vision contrasts...)  
 ** When: ** as of the design phase and during development.
-
-**Description: **
-
+</div>
+<div class="tab-pane" id="colours-Description" role="tabpanel" >
 Colours have a very important role in the transmission of information.
 </br>Some colours are associated with concepts or feelings but we must never forget the part of the population that does not correctly distinguish colours.
 </br></br>The bold font type will allow a weaker contrast for the lowest font sizes.
@@ -67,376 +132,698 @@ Colours have a very important role in the transmission of information.
 </br><img style="max-width: 300px; height: auto;" alt="" src="./images/color_contrast_1.png" />
 </br></br>Adding different forms to differentiate the information provided only by colors may unnecessarily overlay the graphic interface if the user doesn't need them.
 </br><img style="max-width: 1100px; height: auto;" alt="" src="./images/iOSdev/wwdc19-244-TextStyles_11.png" />
-</br>In this case, the [Differentiate Without Colour](#optionA11Y_differentiateWithoutColour) accessibility option *(iOS 13 new feature)* will allow this display **only at the user's demand**.</br>
-
-**Checklist: **
-
+</br>In this case, the [Differentiate Without Colour](#optionA11Y_differentiateWithoutColour) accessibility option *(iOS 13 new feature)* will allow this display **only at the user's demand**.
+</br></br>** Tools: **
+- The <a href="http://www.paciellogroup.com/resources/contrastanalyser/" style="text-decoration: underline;">Colour Contrast Analyser</a> application can quickly measure colour contrast levels (free for Windows and Mac).
+- The Accessibility Inspector tool provides a specific <a href="./dev-ios-wwdc-19000.html#ColorContrast" style="text-decoration: underline;">Color Contrast Calculator</a> feature that reaches the same purpose since Xcode 11.
+</div>
+<div class="tab-pane" id="colours-Examples" role="tabpanel" >
+The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.
+</br>![screenshot showing text with poor contrast](images/contraste.png)
+</br></br>Example of information conveyed through valid and invalid colour:
+</br><img src="./images/couleur_ios.png" alt="example of information conveyed through valid and invalid colour" width="300">
+</div>
+<div class="tab-pane" id="colours-Check" role="tabpanel" >
 - Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.
-- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool or with the [Color Contrast Calculator](./dev-ios-wwdc-19261.html#ColorContrast) feature of Accessibility Inspector under Xcode 11)*.
-- With the **Dark Mode** iOS 13 new feature, special attention must be paid to the contrasts used in the different themes and that can be modified with the [Increase Contrast](#optionA11Y_contraste) accessibility option.
+- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool or with the <a href="./dev-ios-wwdc-19000.html#ColorContrast" style="text-decoration: underline;">Color Contrast Calculator</a> feature of Accessibility Inspector under Xcode 11)*.
+- With the **Dark Mode** iOS 13 new feature, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a href="#optionA11Y_contraste" style="text-decoration: underline;">Increase Contrast</a> accessibility option.
+</div>
+</div></br></br>
 
-**Users’ goal: ** 
-
-Ease of reading for all users, especially the visually impaired, or people in a very bright environment (outdoors).
-Allow users who cannot distinguish colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments…) to access the same information by other means.
-
-** Tools: **
-The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).
-</br>The Accessibility Inspector tool provides a specific [Color Contrast Calculator](./dev-ios-wwdc-19000.html#ColorContrast) feature that reaches the same purpose since Xcode 11.
-
-** Example of invalid contrast **  
-The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.  
-
-![screenshot showing text with poor contrast](images/contraste.png)
-
-** Example of information conveyed through valid and invalid colour: ** 
-
-<img src="./images/couleur_ios.png" alt="example of information conveyed through valid and invalid colour" width="300">
-
-  
 ## Alternative text
-
-** Target: ** everyone, especially people with visual impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#alternativeText-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#alternativeText-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#alternativeText-Examples" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#alternativeText-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="alternativeText-Objectives"
+     role="tabpanel">
+Provide access to application information to screen reader users.
+</br></br>** Target: ** everyone, especially people with visual impairments.  
 ** When: ** as of design, content writing and during development.
-
-**Description: **
-
+</div>
+<div class="tab-pane" id="alternativeText-Description" role="tabpanel" >
 Text alternatives are at the core of mobile accessibility. Thanks to them, a visually impaired user can use an application without loss of information.
-  
-As for images, it is important to add a text alternative when information is not available for the visually impaired/blind. This is the case of components that provide information by colour, shape, position, sound… On mobile, all components can have a text alternative, it is possible to enrich the native vocalization of an element, including a simple text.
-  
-Space on mobile is reduced, we often use abbreviations for text. However, this raises an issue for users of screen readers that vocalize abbreviations literally. To correct these vocalizations, simply place a text alternative on the text. This alternative contains the expanded text. Note that VoiceOver can recognize some common abbreviations. For example, “etc.” is vocalized “etcetera”.
-  
-Some images are frequently associated with text to give information. This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”. In this case, the solution is to set a text alternative on the text that gives all the necessary information. For example: “3 unread messages”. One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.
-
-The text alternative of an element is set via the `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` and `accessibilityTrait` (using the `UIAccessibility` protocol available on any child of `UIView`).  
-The order of vocalization is as follows: label, value, trait and hint. This order cannot be changed and vocalization is done only once.  
-For more technical information on these attributes, please refer to the [textual alternatives on the developer guide](./dev-ios.html#alternatives-textuelles).
-
-**Checklist: **
-
+</br></br>As for images, it is important to add a text alternative when information is not available for the visually impaired/blind.
+</br>This is the case of components that provide information by colour, shape, position, sound… On mobile, all components can have a text alternative, it is possible to enrich the native vocalization of an element, including a simple text.
+</br></br>Space on mobile is reduced, we often use abbreviations for text.
+</br>However, this raises an issue for users of screen readers that vocalize abbreviations literally.
+</br>To correct these vocalizations, simply place a text alternative on the text.
+</br>This alternative contains the expanded text.
+</br>Note that VoiceOver can recognize some common abbreviations: for example, “etc.” is vocalized “etcetera”.
+</br></br>Some images are frequently associated with text to give information.
+</br>This is the case of “unread messages” when a badge shows the number of messages to read and which describes a “message”.
+</br>In this case, the solution is to set a text alternative on the text that gives all the necessary information: for example,“3 unread messages”.
+</br>One can also set this alternative on the images but in this case we must make the text “invisible” to the screen reader.
+</br></br>The text alternative of an element is set via the `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` and `accessibilityTrait` (using the `UIAccessibility` protocol available on any child of `UIView`).
+</br>The order of vocalization is as follows: label, value, trait and hint. This order cannot be changed and vocalization is done only once.
+</br></br>For more technical information on these attributes, please refer to the <a href="./dev-ios.html#text-alternatives" style="text-decoration: underline;">text alternatives on the developer guide</a>.
+</div>
+<div class="tab-pane" id="alternativeText-Examples" role="tabpanel" >
+Below is a common example of an icon that is associated with a text (badge) to add information.
+</br>In our case, the “mail” icon associated with the “3” in the badge makes us understand that we have “3 unread mails”.
+</br></br>If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”: it's obvious that we must add text alternatives.
+</br></br><img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left">
+</div>
+<div class="tab-pane" id="alternativeText-Check" role="tabpanel" >
 - Elements that require an alternative should have one.
 - The alternative text must be clear and understandable.
-
-**Users’ goal: **
-
-Provide access to application information to screen reader users.
-
-** Example: **
-
-Below is a common example of an icon that is associated with a text (badge) to add information. In our case, the “mail” icon associated with the “3” in the badge makes us understand that we have “3 unread mails”. If no text alternative is added, two vocalizations will be read “unlabelled button” and “3”. It is obvious that we must add text alternatives.
-</br><img src="./images/alt.png" alt="icon example coupled with the text that requires a text alternative" width="80" class="pull-left">
-
+</div>
+</div></br></br>
 ## Title and header
-
-** Target: ** everyone  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#titleAndHeaders-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#titleAndHeaders-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#titleAndHeaders-Examples" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#titleAndHeaders-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="titleAndHeaders-Objectives"
+     role="tabpanel">
+Allow users to identify the topic of a page, to locate and get a clear idea of the content of the page without having to read it.
+</br>Ease the navigation.
+</br></br>** Target: ** everyone  
 ** When: ** as of design and during content writing.
-
-**Description: ** 
-
-The page title is the first element vocalized or seen on a mobile screen. It makes navigation easier for everyone: at any time, we know where we are in the application.  
-A common mistake is to set the same title for every page of an application (or even no title at all).
-
-iOS headers allow structuring pages providing additional information. This information is useful to the accessibility API because VoiceOver can navigate through the headers (VoiceOver wheel, header mode). This allows the user to browse the page faster.
-To set an item as a header, set the `accessibilityTraits` attribute on the `accessibilityTraitHeader` value.
-
-**Checklist: ** 
-
-- Each screen must have its own title allowing us to know where we are in the application navigation (together with the back button).
+</div>
+<div class="tab-pane" id="titleAndHeaders-Description" role="tabpanel" >
+The page title is the first element vocalized or seen on a mobile screen.
+</br>It makes navigation easier for everyone: at any time, we know where we are in the application.
+</br>A common mistake is to set the same title for every page of an application *(or even no title at all)*.
+</br></br>iOS headers allow structuring pages providing additional information.
+</br>This information is useful to the accessibility API because VoiceOver can navigate through the headers *(VoiceOver wheel, header mode)*: it allows the user to browse the page faster.
+</div>
+<div class="tab-pane" id="titleAndHeaders-Examples" role="tabpanel" >
+** Invalid example: **
+</br><img src="./images/header_ios.png" alt="example of irrelevant title (no title)" width="300">
+</div>
+<div class="tab-pane" id="titleAndHeaders-Check" role="tabpanel" >
+- Each screen must have its own title allowing us to know where we are in the app navigation *(together with the back button)*.
 - The elements identified as headers must be declared as headers for assistive tools.
-
-**Users’ goal: **
-
-Allow users to identify the topic of a page, to locate and get a clear idea of the content of the page without having to read it. Ease the navigation.
-
-** Invalid example: **
-
-<img src="./images/header_ios.png" alt="example of irrelevant title (no title)" width="300">
-  
-
+</div>
+</div></br></br>
 ## Element states
-
-** Target: ** everyone, especially people with visual impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#eltStates-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#eltStates-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#eltStates-Examples" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="eltStates-Objectives"
+     role="tabpanel">
+Allow screen reader users to access components information, their status, their nature so they can use them without any difficulties.
+</br></br>** Target: ** everyone, especially people with visual impairments.  
 ** When: ** during development.
-
-**Description: **
-
-If an element does not vocalize its status, nature or state, the VoiceOver user is unable to understand what is happening on the screen. Not specifying that a view is unfolded or that we have tabs are very common examples.
-  
-By default, tabs in iOS are accessible. Meanwhile, it is very common to customize the tabs’ look and feel, so it is the developer’s responsibility to provide the tab state and nature to the user via the corresponding accessibility attributes. An example is available in the “Standard components” section.
-  
-Another common instance of elements that do not vocalize their state : expandable views. Again, thanks to the text alternative title of the view, we can vocalize the state of the view for VoiceOver users.
-  
-To set this kind of information, use the `accessibilityLabel` and `accessibilityTrait` attributes.
-
-**Checklist: **
-
-- Any item whose status changes when using the application must vocalize its status through its text alternative. For example, an item that can be selected/unselected must vocalize its state through a text alternative.
-
-**Users’ goal: **
-
-Allow screen reader users to access components’ information, their status, their nature so they can use them without any difficulties.
-
-** Example: **
-
-<img src="./images/expandable_list.png" alt="example of an expandable list that needs text alternative" width="250" class="pull-left">
-  
-
+</div>
+<div class="tab-pane" id="eltStates-Description" role="tabpanel" >
+If an element does not vocalize its status, nature or state, the VoiceOver user is unable to understand what is happening on the screen.
+</br>Not specifying that a view is unfolded or that we have tabs are very common examples.
+</br></br>By default, tabs in iOS are accessible.
+</br>Meanwhile, it is very common to customize the tabs’ look and feel, so it is the developer’s responsibility to provide the tab state and nature to the user via the corresponding accessibility attributes.
+</br>An example is available in the “Standard components” section.
+</br></br>Another common instance of elements that do not vocalize their state : expandable views.
+</br>Again, thanks to the text alternative title of the view, we can vocalize the state of the view for VoiceOver users.
+</br></br>To set this kind of information, use the `accessibilityLabel` and `accessibilityTrait` attributes.
+</div>
+<div class="tab-pane" id="eltStates-Examples" role="tabpanel" >
+Any item whose status changes when using the application must vocalize its status through its text alternative.
+</br></br><img src="./images/expandable_list.png" alt="example of an expandable list that needs text alternative" width="250" class="pull-left">
+</br></br>For example, an item that can be selected/unselected must vocalize its state through a text alternative.
+</div>
+</div></br></br>
 ## Standard components
-
-** Target: ** everyone.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#stdComponent-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#stdComponent-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="stdComponent-Objectives"
+     role="tabpanel">
+Improve user navigation and overall maintainability while reducing development time.
+</br></br>** Target: ** everyone.  
 ** When: ** when choosing the libraries and during development.
-
-**Description: **
-
-Accessibility is taken into account in native components (most of the time). Additionally, the use of standard components allows the user to be in a situation or behaviour that they are already used to. Navigation through a standard interface is more comfortable.
-  
-Use native components as much as possible and change their appearance. If no standard component corresponds to the need, create a dedicated component based on a standard component while keeping the navigation and accessibility consistency.
-
-**Users’ goal: **
-
-Improve user navigation.
-
-** Technical Objective: **
-
-Improve overall maintainability. Reduce development time.
-  
-
+</div>
+<div class="tab-pane" id="stdComponent-Description" role="tabpanel" >
+Accessibility is taken into account in native components *(most of the time)*.
+</br>Additionally, the use of standard components allows the user to be in a situation or behaviour that they are already used to. </br>Navigation through a standard interface is more comfortable.
+</br></br>Use native components as much as possible and change their appearance.
+</br>If no standard component corresponds to the need, create a dedicated component based on a standard component while keeping the navigation and accessibility consistency.
+</div>
+</div></br></br>
 ## Touch target
-
-** Target: ** everyone, especially people with motor impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#touchTarget-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#touchTarget-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#touchTarget-Examples" 
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#touchTarget-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="touchTarget-Objectives"
+     role="tabpanel">
+Improve the user experience providing a more comfortable environment.
+</br></br>** Target: ** everyone, especially people with motor impairments.  
 ** When: ** as of design and during development.
-
-**Description: **  
-
-If a touch target of a component is too small, it can prevent some users from enjoying the application. This can lead to frustration that can result in uninstalling it. Each clickable element must have a large enough touch target.
-
-**Checklist: **
-
-- 44 pt is the recommended touch target size for elements according to Apple (height and width); [see more information on the Apple guidelines](https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/).
-
-**Users’ goal: **
-
-Improve user experience.
-
-** Valid example: **
-
-In the examples below, the black box corresponds to the size of the interactive area.  
-<img src="./images/clic_ok.png" alt="interactive component example with a fairly large touch target" width="300">
-
-** Invalid example: **
-
-<img src="./images/clic_ko.png" alt="interactive component example with a small touch target" width="300">
-
-
+</div>
+<div class="tab-pane" id="touchTarget-Description" role="tabpanel" >
+If a touch target of a component is too small, it can prevent some users from enjoying the application.
+</br></br>This can lead to frustration that can result in uninstalling it.
+</br></br>Each clickable element must have a large enough touch target.
+</div>
+<div class="tab-pane" id="touchTarget-Examples" role="tabpanel" >
+</br>** Valid example: **
+</br><img src="./images/clic_ok.png" alt="interactive component example with a fairly large touch target" width="300">
+</br></br>** Invalid example: **
+</br><img src="./images/clic_ko.png" alt="interactive component example with a small touch target" width="300">
+</div>
+<div class="tab-pane" id="touchTarget-Check" role="tabpanel" >
+44 pt is the recommended touch target size for elements according to Apple (height and width).
+</div>
+</div></br></br>
 ## Ghost element
-
-** Target: ** people with visual impairments.  
-** When: ** during development.
-
-**Description: **  
-
-Although invisible on the screen, some elements can be vocalized by the screen reader (elements positioned outside the visible area or hidden by other elements). The superposition of screens is frequent when designing mobile apps but it generates very heavy accessibility problems if it is not done properly from the start. A screen reader such as VoiceOver is able to read information from a view that is placed “below” another. But if the user is able to interact with this view, it totally disturbs navigation and it quickly becomes impossible.
-  
-Ghost elements are very common when creating custom alert dialogs. However, this kind of component can be accessible. Please refer to the [corresponding section on the developer guide](./dev-ios.html#masquer-des-l-ments-l-accessibilit-)
-
-  
-Read the article on the [use of fragments](https://developer.android.com/guide/components/fragments.html) for more information.
-
-**Checklist: **
-
-- With the screen reader, no invisible element must be read or take focus when reading a page.
-
-**Users’ goal: **
-
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ghostElt-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ghostElt-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ghostElt-Examples" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ghostElt-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ghostElt-Objectives"
+     role="tabpanel">
 Allow screen reader users to navigate within the application without having hidden elements disturbing the reading of the current view.
-
-
+</br></br>** Target: ** people with visual impairments.  
+** When: ** during development.
+</div>
+<div class="tab-pane" id="ghostElt-Description" role="tabpanel" >
+Although invisible on the screen, some elements can be vocalized by the screen reader *(elements positioned outside the visible area or hidden by other elements)*.
+</br></br>The superposition of screens is frequent when designing mobile apps but it generates very heavy accessibility problems if it is not done properly from the start.
+</br>A screen reader such as VoiceOver is able to read information from a view that is placed “below” another but if the user is able to interact with this view, it totally disturbs navigation and it quickly becomes impossible.
+</br></br>Ghost elements are very common when creating custom alert dialogs. However, this kind of component can be accessible. </br>Please refer to the <a href="./dev-ios.html#modal-view" style="text-decoration: underline;">corresponding section on the developer guide</a>.
+</div>
+<div class="tab-pane" id="ghostElt-Examples" role="tabpanel" >
 ** Invalid example: **
 
-In the example below, the custom alert dialog has a ghost element. When VoiceOver is activated it vocalizes the content behind the current view (shown in black).  
+In the example below, the custom alert dialog has a ghost element.
+</br>When VoiceOver is activated it vocalizes the content behind the current view (shown in black).  
 <img src="./images/ghost_ios.png" alt="ghost element example" width="300">
-
-
+</div>
+<div class="tab-pane" id="ghostElt-Check" role="tabpanel" >
+With the screen reader, no invisible element must be read or take focus when reading a page.
+</div>
+</div></br></br>
 ## Content Control
-
-** Target: ** everyone and especially people with visual and cognitive deficiency.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#contentControl-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#contentControl-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#contentControl-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="contentControl-Objectives"
+     role="tabpanel">
+Allow users to keep control on the application and the screen reader user to avoid noise pollution which may affect navigation while improving a natural indexation.
+</br></br>** Target: ** everyone and especially people with visual and cognitive deficiency.  
 ** When: ** as of design and during development.
-
-**Description: **
-
-On mobile, screen readers try to notify the user when there is a context change. In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
-The user must control the content at any time. This is especially true with interactive content. So avoid video player launching directly in full screen mode or videos starting automatically without user action or a carousel scrolling automatically for instance.
-
-**Checklist: **
-
-- All interactive content must be controlled by the user (adding an accessible button to exit full-screen mode for instance).
-
-**Users’ goal: **
-
-Allow users to keep control on the application. Allow the screen reader user to avoid noise pollution which may affect navigation.
-
-** Technical Objective: **
-
-Improve natural indexation.
-
-
+</div>
+<div class="tab-pane" id="contentControl-Description" role="tabpanel" >
+On mobile, screen readers try to notify the user when there is a context change.
+</br>In some cases, it can give constant vocalizations, and can therefore become inaudible, or prevent any user action.
+</br></br>The user must control the content at any time.
+</br>This is especially true with interactive content.
+</br></br>So avoid video player launching directly in full screen mode or videos starting automatically without user action or a carousel scrolling automatically for instance.
+</div>
+<div class="tab-pane" id="contentControl-Check" role="tabpanel" >
+All interactive content must be controlled by the user *(adding an accessible button to exit full-screen mode for instance)*.
+</div>
+</div></br></br>
 ## Changing content
-
-** Target: ** everyone, especially people with visual impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#changingContent-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changingContent-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changingContent-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="changingContent-Objectives"
+     role="tabpanel">
+Provide access to changing content to screen reader users.
+</br></br>** Target: ** everyone, especially people with visual impairments.  
 ** When: ** during development.
-
-**Description: **
-
-When content is dynamically modified after a user action, the screen reader must notify it. Without any voice feedback, the user does not know that the content has changed.  
-If the content has changed dynamically after a user action, it is important that the screen reader is notified so that it triggers a vocalization. E.g. refreshing a list or a timer.
-
-To start a vocalization, one must send a notification to the accessibility API via the `UIAccessibilityPostNotification` method with the `UIAccessibilityAnnouncementNotification` notification in parameter and the text to vocalize.
-
-It is also recommended to notify the Accessibility API when there is a change of context. To do that, one must send a notification to the accessibility API via the `UIAccessibilityPostNotification`.  
-There are several types of notification, but the two most used are:  
+</div>
+<div class="tab-pane" id="changingContent-Description" role="tabpanel" >
+When content is dynamically modified after a user action, the screen reader must notify it.
+</br>Without any voice feedback, the user does not know that the content has changed.  
+</br>If the content has changed dynamically after a user action, it is important that the screen reader is notified so that it triggers a vocalization *(refreshing a list or a timer for instances)*.
+</br></br>To start a vocalization, one must send a notification to the accessibility API via the `UIAccessibilityPostNotification` method with the `UIAccessibilityAnnouncementNotification` notification in parameter and the text to vocalize.
+</br></br>It is also recommended to notify the Accessibility API when there is a change of context.
+</br>To do that, one must send a notification via the `UIAccessibilityPostNotification`.  
+There are several types of notifications, but the two most used are:  
 - `UIAccessibilityLayoutChangedNotification`: notify that a part of the content has changed.
 - `UIAccessibilityScreenChangedNotification`: notify a global change.
 
-For more technical information, please check out the corresponding section on the [developer guide for iOS](./dev-ios.html#informer-d-une-modification-sur-la-page).
-
-**Checklist: **
-
-- With a screen reader, make sure that dynamic changes are vocalized.
-
-**Users’ goal: **
-
-Provide access to changing content to screen reader users.
-
-
+For more technical information, please check out the corresponding section on the <a href="./dev-ios.html#notify-a-content-change" style="text-decoration: underline;">developer guide for iOS</a>.
+</div>
+<div class="tab-pane" id="changingContent-Check" role="tabpanel" >
+With a screen reader, make sure that dynamic changes are vocalized.
+</div>
+</div></br></br>
 ## Horizontal scroll
-
-** Target: ** everyone, especially people with visual impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#horizontalScroll-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#horizontalScroll-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#horizontalScroll-Examples" 
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#horizontalScroll-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="horizontalScroll-Objectives"
+     role="tabpanel">
+Provide a visual indication to users when there is an horizontal scrolling.
+</br>Allow screen reader users to scroll horizontally.
+</br></br>** Target: ** everyone, especially people with visual impairments.  
 ** When: ** as of design and during development.
-
-**Description: **
-
+</div>
+<div class="tab-pane" id="horizontalScroll-Description" role="tabpanel" >
 A horizontal scroll can be very difficult to detect if no visual feedback is displayed to help the user understand that there are several pages.
-Do not hesitate to display a view to indicate a horizontal scroll (dots on `UIPageControl` for example). When necessary, also add “next” and “previous” buttons.
-
-**Checklist: **
-
-- The horizontal scrolls are visually indicated.
-- It must be possible to switch pages for screen reader users.
-
-**Users’ goal: **
-
-Provide a visual indication to users when there is horizontal scroll. Allow screen reader users to scroll horizontally.
-
+</br>Do not hesitate to display a view to indicate a horizontal scroll *(dots on `UIPageControl` for example)*.
+</br>When necessary, also add “next” and “previous” buttons.
+</div>
+<div class="tab-pane" id="horizontalScroll-Examples" role="tabpanel" >
 <div class="sideToSide row">
 <div class="col-sm-6 col-xs-12">
 ** Valid example: **
-
-<img src="./images/scroll_ios_h1.png" alt="Valid example of a horizontal scroll" width="300">
+</br><img src="./images/scroll_ios_h1.png" alt="Valid example of a horizontal scroll" width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 ** Invalid example: **
-
-<img src="./images/scroll_ios_h2.png" alt="Invalid example of a horizontal scroll" width="300">
+</br><img src="./images/scroll_ios_h2.png" alt="Invalid example of a horizontal scroll" width="300">
 </div>
 </div>
-
+</div>
+<div class="tab-pane" id="horizontalScroll-Check" role="tabpanel" >
+- The horizontal scrolls are visually indicated.
+- It must be possible to switch pages for screen reader users.
+</div>
+</div></br></br>
 ## Form
-
-** Target: ** everyone, especially people with visual impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#form-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#form-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#form-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="form-Objectives"
+     role="tabpanel">
+Improve the navigation and the overall understanding of the page because form fields describing the expected input are easier to fill for visually impaired users.
+</br></br>** Target: ** everyone, especially people with visual impairments.  
 ** When: ** as of design and during development.
-
-**Description: **
-
+</div>
+<div class="tab-pane" id="form-Description" role="tabpanel" >
 Binding the form fields with their labels provides an additional vocalization allowing the user to understand what happens when filling out a form field.
-  
-We must use the `accessibilityLabel` attribute to associate a label to a form field.
-
-**Checklist: **
-
-- Form fields must vocalize their labels.
-
-**Users’ goal: **
-
-Improve navigation by improving the overall understanding of the page, because form fields describing the expected input are easier to fill for visually impaired users.
-
-
+</br></br>We must use the `accessibilityLabel` attribute to associate a label to a form field.
+</div>
+<div class="tab-pane" id="form-Check" role="tabpanel" >
+Form fields must vocalize their labels.
+</div>
+</div></br></br>
 ## Reading order
-
-** Target: ** people with visual impairments.  
-** When: ** during development.
-
-**Description: **
-
-The reading order allows the screen reader user to get their bearings and to ensure functional coherence. It is therefore important to pay attention to it.
-  
-By default, the reading order of voice synthesis depends on the “logical” reading order (in France), from left to right and top to bottom. However, there are some cases where the screen reader cannot determine the correct order, and uses the order of <abbr>xml</abbr> elements, leading to inconsistent vocalizations.
-  
-It is possible to redefine the VoiceOver reading order using the [`UIAccessibilityContainer`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/). The reading order is defined in a table. It is often useful to use the `shouldGroupAccessibilityElement` attribute to have a correct reading order in a sub-part of the page.  
-
-**Checklist: **
-
-- Traversal order (VoiceOver) is logical and coherent.
-
-**Users’ goal: **
-
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#readingOrder-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#readingOrder-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#readingOrder-Examples" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#readingOrder-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="readingOrder-Objectives"
+     role="tabpanel">
 Ensure logic order and coherent reading to screen reader users.
-
-** Example: **
-In this example, the default playback order depends completely on the implementation and on the order of element declaration. In this case: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. A more consistent reading order is `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p + p-`.
+</br></br>** Target: ** people with visual impairments.  
+** When: ** during development.
+</div>
+<div class="tab-pane" id="readingOrder-Description" role="tabpanel" >
+The reading order allows the screen reader user to get their bearings and to ensure functional coherence.
+</br>It is therefore important to pay attention to it.
+</br></br>By default, the reading order of voice synthesis depends on the “logical” reading order (in France), from left to right and top to bottom.
+</br></br>It is possible to redefine the VoiceOver reading order using the `UIAccessibilityContainer` protocol *(take a look at the <a href="./dev-ios.html#reading-order" style="text-decoration: underline;">developer section</a> if you need further information)*.
+</div>
+<div class="tab-pane" id="readingOrder-Examples" role="tabpanel" >
+In this example, the default playback order depends completely on the implementation and on the order of element declaration.
+</br>In this case: `1, 2, 3,  vol+, 4, 5, 6, p+, vol-, 7, 8, 9, p-, 0`.
 </br><img src="./images/order.png" alt="Example of reading order" width="300">
-
-
-
+</br>A more consistent reading order is `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.
+</div>
+<div class="tab-pane" id="readingOrder-Check" role="tabpanel" >
+Traversal order *(VoiceOver)* is logical and coherent.
+</div>
+</div></br></br>
 ## Language
-
-**Target : ** people with visual impairments.  
-**When: ** during development.
-
-**Description: **
-
-VoiceOver vocalization uses the default language of the mobile. Sometimes some words / texts of an application are in a different language. In order to make them properly understandable, they have to be declared in that specific language.  
-
-To change VoiceOver language pronunciation of a word or a text, use the `accessibilityLanguage` attribute, available via the `UIAccessibility` protocol.
-
-**Checklist: **
-
-- The words / text in a different language than the rest of the application should be vocalized in their corresponding language
-
-**Users’ goal: **
-
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#language-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#language-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#language-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="language-Objectives"
+     role="tabpanel">
 Ensure the understanding of the application text.
-
+</br></br>**Target : ** people with visual impairments.  
+**When: ** during development.
+</div>
+<div class="tab-pane" id="language-Description" role="tabpanel" >
+VoiceOver vocalization uses the default language of the mobile.
+</br>Sometimes some words/texts of an application are in a different language.
+</br>In order to make them properly understandable, they have to be declared in that specific language.
+</br></br>To change VoiceOver language pronunciation of a word or a text, use the `accessibilityLanguage` attribute, available via the `UIAccessibility` protocol *(see the <a href="dev-ios.html#change-the-vocalization-language" style="text-decoration: underline;">developer section</a> if need be)*.
+</div>
+<div class="tab-pane" id="language-Check" role="tabpanel" >
+The words/text in a different language than the rest of the application should be vocalized in their corresponding language.
+</div>
+</div></br></br>
 ## Screen orientation
-**Target&nbsp;: ** everyone, especially people with visual and/or motor impairments.  
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#screenOrientation-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#screenOrientation-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#screenOrientation-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="screenOrientation-Objectives"
+     role="tabpanel">
+Improve a better legibility of the content.
+</br></br>**Target&nbsp;: ** everyone, especially people with visual and/or motor impairments.  
 **When&nbsp;: ** as of design and during development.
-
-**Description&nbsp;: ** the screen orientation mustn't impact the access of an application content.
+</div>
+<div class="tab-pane" id="screenOrientation-Description" role="tabpanel" >
+The screen orientation mustn't impact the access of an application content.
 </br>It's highly recommended to :
 - **Implement both the portrait and the landscape modes** to be easily toggled by the user if it doesn't go against some functional constraints of the application itself (`serious game` for instance).
 - Provide for iPad screen sizes in order to facilitate reading and gestures.
-
-**Checklist&nbsp;: **
-
+</div>
+<div class="tab-pane" id="screenOrientation-Check" role="tabpanel" >
 - Perfectly detailed design guideline including all the screens to be implemented with their possible orientation constraints.
 - Very accurate definition of the way the transitions between portrait and landscape modes should occur.
-- Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests (very important for the `Dynamic Type`).
+- Portrait and landscape modes flawless adaptation to the content thanks to a bunch of graphic tests *(very important for the `Dynamic Type`)*.
 - Appropriate settings in the integrated development environment.
-</br><img style="max-width: 700px; height: auto;" alt="" src="./images/orientation.png" />
-
-**Users’ goal&nbsp;: ** improve a better legibility of the content.</br></br>
-
+</div>
+</div></br></br>
 ## Accessibility options
-**Target&nbsp;:** everyone.  
-**When&nbsp;:** as of design and during development.
-
-**Description&nbsp;:** the accessibility options located in the mobile settings are all about to improve the experience of an impaired user who can be significantly helped by these options.
-
-It's then primordial :
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#a11yOptions-Objectives" 
+           role="tab" 
+           aria-selected="true">Objective</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#a11yOptions-Description" 
+           role="tab" 
+           aria-selected="false">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#a11yOptions-Check" 
+           role="tab" 
+           aria-selected="false">Checklist</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="a11yOptions-Objectives"
+     role="tabpanel">
+The accessibility options located in the mobile settings are all about to improve the experience of an impaired user who can be significantly helped by these options.
+</br></br>It's then primordial :
 - To **understand perfectly** each one of these options that can have an impact during the conception or the implementation periods of an application.
 - To ** test** each appropriate option so as to be sure that its purpose is completely taken into account inside the application.
 
-The full list of these options including their purpose and their coding name is defined hereunder :
+**Target&nbsp;:** everyone.  
+**When&nbsp;:** as of design and during development.
+</div>
+<div class="tab-pane" id="a11yOptions-Description" role="tabpanel" >
+The full list of these options including their purpose and their coding name is defined hereunder:
+    
 1. [Increase Contrast](#optionA11Y_contraste)
 2. [AssistiveTouch](#optionA11Y_assistiveTouch)
 3. [Bold Text](#optionA11Y_bold)
@@ -873,11 +1260,13 @@ The full list of these options including their purpose and their coding name is 
 <a name="optionA11Y_onOffSwitchLabels"></a>
 - **On/Off Labels** *(UIAccessibilityIsOnOffSwitchLabelsEnabled)* : once activated, this option whose **programmatic access is new in iOS 13** displays each button state.
 </br><img style="max-width: 1000px; height: auto;" alt="Access illustration via Settings - Accessibility - Display & Text Size - On/Off Labels" src="./images/optionA11Y_iOS13_onOffSwitchLabels.png" />
-</br>
-
-</br>Once activated, if the accessibility option has no result in the application running, it's **highly recommended** to keep oneself posted of the impacted options states so as to provide the best user experience.
-</br>The full list of the accessibility options with their dedicated notification is located in the [developer part](./dev-ios.html#accessibility-options) of this site.
-</br></br>It may be particularly interesting to keep track of these options (de)activations with kind of indicators in order to have a better understanding of the users habits and to implement improvements accordingly.</br></br>
+</div>
+<div class="tab-pane" id="a11yOptions-Check" role="tabpanel" >
+Once activated, if the accessibility option has no result in the application running, it's **highly recommended** to keep oneself posted of the impacted options states so as to provide the best user experience.
+</br>The full list of the accessibility options with their dedicated notification is located in the <a href="./dev-ios.html#accessibility-options" style="text-decoration: underline;">developer part</a> of this site.
+</br></br>It may be particularly interesting to keep track of these options (de)activations with kind of indicators in order to have a better understanding of the users habits and to implement improvements accordingly.
+</div> 
+</div></br></br>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
