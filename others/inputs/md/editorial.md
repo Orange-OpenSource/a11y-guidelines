@@ -32,7 +32,7 @@ Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.
 -	Expliquer les mots compliqués.
 -	Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).
 -	Utiliser les caractères typographiques du Français&nbsp;: tiret - , cadratin — , «&nbsp;guillemets français&nbsp;».
--	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&nbsp;Insertion&nbsp;&gt; Symbole&nbsp;&gt; Texte normal&nbsp;»). 
+-	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&nbsp;Insertion&nbsp;&gt; Symbole&nbsp;&gt; Texte normal&nbsp;» ou utiliser [les raccourcis clavier](./editorial.html#annexes)).
 -	Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.
 
 ## Fournir une mise en page des tableaux accessibles
@@ -48,6 +48,50 @@ Simplifier les tableaux sachant que les clients de messagerie (Outlook inclus) o
 - Ne pas ajouter d’images de fond.
 - Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas).
 - Éviter les tableaux de données, mais aussi les graphiques ou les schémas complexes.
+
+## Annexes
+### Comment mettre des accents aux majuscules ?
+
+Pour mettre des accents sur mac, il suffit de taper la lettre désirée par exemple « E » et laisser la touche enfoncée. Un menu contextuel apparait et permet de sélectionner la lettre accentuée désirée (É, È, Ë...), à noter qu'il est également possible d'utiliser des raccourcis clavier (cf. tableau ci-dessous).  
+
+Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres majuscule accentuées quelle que soit l'application utilisée : 
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lettre</th>
+      <th scope="col">raccourci Windows</th>
+      <th scope="col">raccourci Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">À</th>
+      <td>Alt Gr + \` (touche 7) puis A majuscule</td>
+      <td>Maj lock puis à</td>
+    </tr>
+    <tr>
+      <th scope="row">Ç</th>
+      <td>alt + 128</td>
+      <td>Option + ç</td>
+    </tr>
+    <tr>
+      <th scope="row">È</th>
+      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
+      <td>Maj lock puis è</td>
+    </tr>
+    <tr>
+      <th scope="row">É</th>
+      <td>alt + 144</td>
+      <td>Maj lock puis é</td>
+    </tr>
+    <tr>
+      <th scope="row">Ê</th>
+      <td>^ puis E majuscule </td>
+      <td>^ puis E majuscule</td>
+    </tr>
+  </tbody>
+</table>
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

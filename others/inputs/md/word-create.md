@@ -52,48 +52,7 @@ Cela permet aux utilisateurs de trouver des informations plus aisément dans le 
 
 Limiter les abréviations et acronymes, et expliciter, à la première occurrence, ceux qui ne font pas partie du langage courant.
 
-Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion > Symbole** ou les raccourcis clavier ci-dessous.
-
-<img alt="" src="./images/word_table_caracteres_fr.png" class="img-fluid" /> 
-
-Liste des raccourcis clavier :
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Lettre</th>
-      <th scope="col">raccourci Windows</th>
-      <th scope="col">raccourci Mac</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">À</th>
-      <td>Alt Gr + \` (touche 7) puis A majuscule</td>
-      <td>Maj lock puis à</td>
-    </tr>
-    <tr>
-      <th scope="row">Ç</th>
-      <td>alt + 128</td>
-      <td>Option + ç</td>
-    </tr>
-    <tr>
-      <th scope="row">È</th>
-      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
-      <td>Maj lock puis è</td>
-    </tr>
-    <tr>
-      <th scope="row">É</th>
-      <td>alt + 144</td>
-      <td>Maj lock puis é</td>
-    </tr>
-    <tr>
-      <th scope="row">Ê</th>
-      <td>^ puis E majuscule </td>
-      <td>^ puis E majuscule</td>
-    </tr>
-  </tbody>
-</table>
+Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion > Symbole** ou utiliser [les raccourcis clavier](./editorial.html#annexes).
 
 ## Mise en forme des contenus
 
