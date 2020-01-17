@@ -17,7 +17,7 @@ Voici une liste de recommandations pour écrire des messages compréhensibles pa
 Pour tous vos mails du quotidien :
 - Utiliser des polices simples, sans serif : Arial, Calibri ou Accessible DfA
 - Adopter une taille de police au moins égale à 12 points
-- Conserver l’accent des lettres en majuscule
+- Conserver l’accentuation sur les majuscules (cf. [comment mettre des accents aux majuscules ?](./editorial.html#annexes))
 - Aligner les textes à gauche (éviter de justifier) 
 - Éviter l’italique 
 - Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule
