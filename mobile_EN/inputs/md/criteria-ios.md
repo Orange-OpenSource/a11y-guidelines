@@ -146,7 +146,10 @@ The label “film | 8:40 PM…” does not have enough contrast. It will not be 
 <div class="tab-pane" id="colours-Check" role="tabpanel" >
 - Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.
 - The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool or with the <a href="./dev-ios-wwdc-19000.html#ColorContrast" style="text-decoration: underline;">Color Contrast Calculator</a> feature of Accessibility Inspector under Xcode 11)*.
-- With the **Dark Mode** iOS 13 new feature, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a href="#optionA11Y_contraste" style="text-decoration: underline;">Increase Contrast</a> accessibility option.
+- With the **Dark Mode** iOS 13 new feature, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a role="button" style="text-decoration: underline;" onclick="
+    document.getElementById('a11yOptions').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    $('#a11yOptions-Description_tab').trigger('click');
+    document.getElementsByName('optionA11Y_contraste')[0].scrollIntoView({ behavior: 'smooth', block: 'start' });">Increase Contrast</a> accessibility option.
 </div>
 </div></br></br>
 
@@ -787,6 +790,8 @@ The screen orientation mustn't impact the access of an application content.
 </div>
 </div></br></br>
 ## Accessibility options
+
+<a id="a11yOptions"></a>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
@@ -798,7 +803,8 @@ The screen orientation mustn't impact the access of an application content.
     <li class="nav-item">
         <a class="nav-link" 
            data-toggle="tab" 
-           href="#a11yOptions-Description" 
+           href="#a11yOptions-Description"
+           id="a11yOptions-Description_tab"
            role="tab" 
            aria-selected="false">Description</a>
     </li>

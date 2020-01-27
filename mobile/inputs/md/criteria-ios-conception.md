@@ -149,7 +149,10 @@ Le texte «&nbsp;film | 20h40 …&nbsp;» ne présente pas un contraste suffisan
 <div class="tab-pane" id="colours-Check" role="tabpanel" >
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément. 
 - Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité [Color Contrast Calculator](./criteria-ios-wwdc-19000.html#ColorContrast) de l'outil <span lang="en">Accessibility Inspector</span> sous Xcode 11)*.
-- Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité [augmenter le contraste](#optionA11Y_contraste).
+- Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <a role="button" onclick="
+    document.getElementById('a11yOptions').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    $('#a11yOptions-Description_tab').trigger('click');
+    document.getElementsByName('optionA11Y_contraste')[0].scrollIntoView({ behavior: 'smooth', block: 'start' });">augmenter le contraste</a>.
 </div>
 </div></br></br>
 
@@ -803,6 +806,7 @@ L’accès au contenu d’une application ne doit absolument pas dépendre de l�
 
 ## Options d'accessibilité
 
+<a id="a11yOptions"></a>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
@@ -814,7 +818,8 @@ L’accès au contenu d’une application ne doit absolument pas dépendre de l�
     <li class="nav-item">
         <a class="nav-link" 
            data-toggle="tab" 
-           href="#a11yOptions-Description" 
+           href="#a11yOptions-Description"
+           id="a11yOptions-Description_tab"
            role="tab" 
            aria-selected="false">Description</a>
     </li>
