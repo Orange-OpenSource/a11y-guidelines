@@ -3257,6 +3257,161 @@ La génération de cette phonétique peut se faire en passant par les réglages 
 
 L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une [vidéo WWDC](./criteria-ios-wwdc-18236.html) *(Utiliser une voix synthétisée avec AVSpeechSynthesizer)* parfaitement résumée dans la partie WWDC de ce site.
 </br></br>
+## Retour haptique
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#haptic-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#haptic-Example"
+           id="haptic-Example_tab"
+           role="tab" 
+           aria-selected="false">Exemple</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#haptic-Links" 
+           role="tab" 
+           aria-selected="false">Lien</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="haptic-Description"
+     role="tabpanel">
+Le retour haptique permet d'informer par vibration tactile l'utilisateur de l'état final *(success, warning, failure...)* d'une action ou d'un événement sur un élément graphique par exemple.
+</br>Les différents types d'instances de générateurs de retour haptique (**UIImpactFeedbackGenerator**, **UISelectionFeedbackGenerator** et **UINotificationFeedbackGenerator**) sont décrits en détails dans la <a href="https://developer.apple.com/documentation/uikit/uifeedbackgenerator" style="text-decoration: underline;">documentation Apple</a> et leur utilisation dans l'onglet <a role="button" style="text-decoration: underline;" onclick="$('#haptic-Example_tab').trigger('click');">Exemple</a> de cette rubrique.</br>
+
+</div>
+<div class="tab-pane" id="haptic-Example" role="tabpanel">
+L'exemple ci-dessous permet à la fois de tester et de comprendre l'implémentation des différents types de retour haptique mis à disposition.</br>
+
+<pre><code class="objective-c">
+NS_ASSUME_NONNULL_BEGIN
+@implementation HapticFeedback
+
+int i = 0;
+
+- (IBAction)myButton:(UIButton *)sender {
+    
+    i += 1;
+    
+    switch (i) {
+        case 1: {
+            UINotificationFeedbackGenerator * generator = [[UINotificationFeedbackGenerator alloc] init];
+            [generator notificationOccurred:UINotificationFeedbackTypeError];
+            break;
+        }
+        case 2: {
+            UINotificationFeedbackGenerator * generator = [[UINotificationFeedbackGenerator alloc] init];
+            [generator notificationOccurred:UINotificationFeedbackTypeSuccess];
+            break;
+        }
+        case 3: {
+            UINotificationFeedbackGenerator * generator = [[UINotificationFeedbackGenerator alloc] init];
+            [generator notificationOccurred:UINotificationFeedbackTypeWarning];
+            break;
+        }
+        case 4: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
+            [generator impactOccurred];
+            break;
+        }
+        case 5: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
+            [generator impactOccurred];
+            break;
+        }
+        case 6: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
+            [generator impactOccurred];
+            break;
+        }
+        case 7: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleSoft];
+            [generator impactOccurred];
+            break;
+        }
+        case 8: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleRigid];
+            [generator impactOccurred];
+            break;
+        }
+        default: {
+            i = 0;
+            UISelectionFeedbackGenerator * generator = [[UISelectionFeedbackGenerator alloc] init];
+            [generator selectionChanged];
+            break;
+        }
+    }
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class HapticViewController: UIViewController {
+
+    var i = 0
+
+    @IBAction func tapButton(_ sender: UIButton) {
+    
+        i += 1
+        
+        switch i {
+        case 1:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+
+        case 2:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+
+        case 3:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+
+        case 4:
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
+
+        case 5:
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+
+        case 6:
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+        
+        case 7:
+            let generator = UIImpactFeedbackGenerator(style: .soft)
+            generator.impactOccurred()
+            
+        case 8:
+            let generator = UIImpactFeedbackGenerator(style: .rigid)
+            generator.impactOccurred()
+            
+        default:
+            let generator = UISelectionFeedbackGenerator()
+            generator.selectionChanged()
+            i = 0
+        }
+    }
+}
+</code></pre>
+
+</div>
+<div class="tab-pane" id="haptic-Links" role="tabpanel">
+    
+- [UIFeedbackGenerator](https://developer.apple.com/documentation/uikit/uifeedbackgenerator)
+
+</div>
+</div>
+</br></br>
 ## Contrôle de sélection
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">

@@ -3257,6 +3257,163 @@ When a particular spelling is intended, phonetics is highly recommended to get t
 
 All the speech synthesizer functionalities are introduced in a [WWDC video](./dev-ios-wwdc-18236.html) *(Making iOS talk with AVSpeechSynthesizer)* that's perfectly summarized in the WWDC section of this site.
 </br></br>
+## Haptic feedback
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#haptic-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#haptic-Example"
+           id="haptic-Example_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#haptic-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="haptic-Description"
+     role="tabpanel">
+
+
+Haptic feedback is a tactile response that provides a statish indication *(success, warning, failure...)* for actions and events on a graphic item for instance.
+</br>The different types of feedback generators (**UIImpactFeedbackGenerator**, **UISelectionFeedbackGenerator** and **UINotificationFeedbackGenerator**) are detailed in the <a href="https://developer.apple.com/documentation/uikit/uifeedbackgenerator" style="text-decoration: underline;">Apple documentation</a> and their implementation in the <a role="button" style="text-decoration: underline;" onclick="$('#haptic-Example_tab').trigger('click');">Example</a> sheet of this section.</br>
+
+</div>
+<div class="tab-pane" id="haptic-Example" role="tabpanel">
+The following example highlights testing and understanding of the implementation for the different available haptic feedbacks.</br>
+
+<pre><code class="objective-c">
+NS_ASSUME_NONNULL_BEGIN
+@implementation HapticFeedback
+
+int i = 0;
+
+- (IBAction)myButton:(UIButton *)sender {
+    
+    i += 1;
+    
+    switch (i) {
+        case 1: {
+            UINotificationFeedbackGenerator * generator = [[UINotificationFeedbackGenerator alloc] init];
+            [generator notificationOccurred:UINotificationFeedbackTypeError];
+            break;
+        }
+        case 2: {
+            UINotificationFeedbackGenerator * generator = [[UINotificationFeedbackGenerator alloc] init];
+            [generator notificationOccurred:UINotificationFeedbackTypeSuccess];
+            break;
+        }
+        case 3: {
+            UINotificationFeedbackGenerator * generator = [[UINotificationFeedbackGenerator alloc] init];
+            [generator notificationOccurred:UINotificationFeedbackTypeWarning];
+            break;
+        }
+        case 4: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
+            [generator impactOccurred];
+            break;
+        }
+        case 5: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
+            [generator impactOccurred];
+            break;
+        }
+        case 6: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
+            [generator impactOccurred];
+            break;
+        }
+        case 7: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleSoft];
+            [generator impactOccurred];
+            break;
+        }
+        case 8: {
+            UIImpactFeedbackGenerator * generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleRigid];
+            [generator impactOccurred];
+            break;
+        }
+        default: {
+            i = 0;
+            UISelectionFeedbackGenerator * generator = [[UISelectionFeedbackGenerator alloc] init];
+            [generator selectionChanged];
+            break;
+        }
+    }
+}
+@end
+NS_ASSUME_NONNULL_END
+</code></pre><pre><code class="swift">
+class HapticViewController: UIViewController {
+
+    var i = 0
+
+    @IBAction func tapButton(_ sender: UIButton) {
+    
+        i += 1
+        
+        switch i {
+        case 1:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+
+        case 2:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+
+        case 3:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+
+        case 4:
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
+
+        case 5:
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+
+        case 6:
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+        
+        case 7:
+            let generator = UIImpactFeedbackGenerator(style: .soft)
+            generator.impactOccurred()
+            
+        case 8:
+            let generator = UIImpactFeedbackGenerator(style: .rigid)
+            generator.impactOccurred()
+            
+        default:
+            let generator = UISelectionFeedbackGenerator()
+            generator.selectionChanged()
+            i = 0
+        }
+    }
+}
+</code></pre>
+
+</div>
+<div class="tab-pane" id="haptic-Links" role="tabpanel">
+    
+- [UIFeedbackGenerator](https://developer.apple.com/documentation/uikit/uifeedbackgenerator)
+
+</div>
+</div>
+</br></br>
 ## Switch Control
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
