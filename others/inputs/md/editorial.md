@@ -72,7 +72,7 @@ Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres ma
     </tr>
     <tr>
       <th scope="row">Ç</th>
-      <td>alt + 128</td>
+      <td>alt + 128 (du pavé numérique)</td>
       <td>Option + ç</td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres ma
     </tr>
     <tr>
       <th scope="row">É</th>
-      <td>alt + 144</td>
+      <td>alt + 144 (du pavé numérique)</td>
       <td>Maj lock puis é</td>
     </tr>
     <tr>
