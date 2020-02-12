@@ -6,8 +6,7 @@
 
 Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.
 
-## Les mails « du quotidien »
-### Qu’est ce qui peut poser problème d’un point de vue accessibilité ?
+Qu’est ce qui peut poser problème d’un point de vue accessibilité ?
 - Les images
 - Les polices, couleurs et styles utilisés
 - Les tableaux de mise en forme
