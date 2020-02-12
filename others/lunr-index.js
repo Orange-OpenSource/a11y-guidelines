@@ -509,21 +509,7 @@ documentTitles["pushmail.html#concevoir-des-mails-accessibles-a-tous"] = "Concev
 index.add({
     url: "pushmail.html#concevoir-des-mails-accessibles-a-tous",
     title: "Concevoir des mails accessibles à tous",    
-    body: "# Concevoir des mails accessibles à tous    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Concevoir des mails accessibles à tous\&quot;}]); });&lt;/script&gt;  Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.  "
-});
-
-documentTitles["pushmail.html#les-mails-du-quotidien"] = "Les mails « du quotidien »";
-index.add({
-    url: "pushmail.html#les-mails-du-quotidien",
-    title: "Les mails « du quotidien »",    
-    body: "## Les mails « du quotidien » "
-});
-
-documentTitles["pushmail.html#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite"] = "Qu’est ce qui peut poser problème d’un point de vue accessibilité ?";
-index.add({
-    url: "pushmail.html#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite",
-    title: "Qu’est ce qui peut poser problème d’un point de vue accessibilité ?",    
-    body: "### Qu’est ce qui peut poser problème d’un point de vue accessibilité ? - Les images - Les polices, couleurs et styles utilisés - Les tableaux de mise en forme - Les liens  "
+    body: "# Concevoir des mails accessibles à tous    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Concevoir des mails accessibles à tous\&quot;}]); });&lt;/script&gt;  Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.  Qu’est ce qui peut poser problème d’un point de vue accessibilité ? - Les images - Les polices, couleurs et styles utilisés - Les tableaux de mise en forme - Les liens  "
 });
 
 documentTitles["pushmail.html#a-noter"] = "À noter";
