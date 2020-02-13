@@ -6,13 +6,13 @@
 
 Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.
 
-Qu’est ce qui peut poser problème d’un point de vue accessibilité ?
+## Qu’est ce qui peut poser problème d’un point de vue accessibilité ?
 - Les images
 - Les polices, couleurs et styles utilisés
 - Les tableaux de mise en forme
 - Les liens
 
-## À noter
+### À noter
 Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe : 
 - créer le mail avec la méthode qui vous est la plus simple, 
 - ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme textuelle uniquement, 
