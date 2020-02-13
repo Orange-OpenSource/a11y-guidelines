@@ -509,14 +509,21 @@ documentTitles["pushmail.html#concevoir-des-mails-accessibles-a-tous"] = "Concev
 index.add({
     url: "pushmail.html#concevoir-des-mails-accessibles-a-tous",
     title: "Concevoir des mails accessibles à tous",    
-    body: "# Concevoir des mails accessibles à tous    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Concevoir des mails accessibles à tous\&quot;}]); });&lt;/script&gt;  Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.  Qu’est ce qui peut poser problème d’un point de vue accessibilité ? - Les images - Les polices, couleurs et styles utilisés - Les tableaux de mise en forme - Les liens  "
+    body: "# Concevoir des mails accessibles à tous    &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Concevoir des mails accessibles à tous\&quot;}]); });&lt;/script&gt;  Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.  "
+});
+
+documentTitles["pushmail.html#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite"] = "Qu’est ce qui peut poser problème d’un point de vue accessibilité ?";
+index.add({
+    url: "pushmail.html#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite",
+    title: "Qu’est ce qui peut poser problème d’un point de vue accessibilité ?",    
+    body: "## Qu’est ce qui peut poser problème d’un point de vue accessibilité ? - Les images - Les polices, couleurs et styles utilisés - Les tableaux de mise en forme - Les liens  "
 });
 
 documentTitles["pushmail.html#a-noter"] = "À noter";
 index.add({
     url: "pushmail.html#a-noter",
     title: "À noter",    
-    body: "## À noter Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe :  - créer le mail avec la méthode qui vous est la plus simple,  - ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme textuelle uniquement,  - ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe.    "
+    body: "### À noter Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe :  - créer le mail avec la méthode qui vous est la plus simple,  - ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme textuelle uniquement,  - ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe.    "
 });
 
 documentTitles["pushmail.html#les-mails-du-quotidien"] = "Les mails « du quotidien »";
