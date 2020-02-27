@@ -48,6 +48,7 @@ Mouvement : **balayage** vers le haut à partir du bas de l'écran avec **1 doig
 
 <a name="ControlCenter"></a>
 </br>Mouvement : **balayage** vers le bas à partir du coin à droite en haut de l'écran avec **1 doigt**.
+</br>**Quel que soit le modèle de l'iPhone**, il est **obligatoire de sélectionner un élément de la barre d'état** avant de réaliser la gestuelle à 3 doigts.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_fr_control_center.png" />
 
 <a name="Multitask"></a>

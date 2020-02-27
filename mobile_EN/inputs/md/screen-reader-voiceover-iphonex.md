@@ -45,6 +45,7 @@ Gesture : **flick up with 1 finger** from the bottom edge of the locked screen.
 
 <a name="ControlCenter"></a>
 </br>Gesture : **flick down with 1 finger** from the upper right corner of the screen.
+</br>**For all the iPhone models**, it's **mandatory to select an element in the status bar** before doing the 3 fingers gesture.
 </br><img style="max-width: 700px; height: auto;" alt="" src="./images/iphonex_en_control_center.png" />
 
 <a name="Multitask"></a>
