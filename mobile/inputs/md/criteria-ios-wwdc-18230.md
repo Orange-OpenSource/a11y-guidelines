@@ -122,7 +122,7 @@ Un exemple d'application est proposé pour répondre aux questions que se posent
 - Notification de mise à jour d'écran dès qu'un nouvel élément du carrousel est sélectionné. [(30:14)](https://developer.apple.com/videos/play/wwdc2018/230/?time=1814)
 </br></br>
 <a name="DemoUpdateData"></a>
-##### [Comment synchroniser la mise à jour de données avec l'élément du carrousel sélectioné ? (30:53)](https://developer.apple.com/videos/play/wwdc2018/230/?time=1853)
+##### [Comment synchroniser la mise à jour de données avec l'élément du carrousel sélectionné ? (30:53)](https://developer.apple.com/videos/play/wwdc2018/230/?time=1853)
 - Grouper des données pour améliorer significativement la sélection d'éléments. [(31:14)](https://developer.apple.com/videos/play/wwdc2018/230/?time=1874)
 - Synchronisation des données regroupées avec l'élément du carrousel sélectionné. [(32:46)](https://developer.apple.com/videos/play/wwdc2018/230/?time=1966)
 </br></br>
