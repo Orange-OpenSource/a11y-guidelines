@@ -4,6 +4,7 @@
         "output/markdown/about.md",
         "output/markdown/contact.md",        
         "output/markdown/editorial.md",
+        "output/markdown/email.md",
         "output/markdown/index.md",        
         "output/markdown/pdf.md",
         "output/markdown/powerpoint.md",
