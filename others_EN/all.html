@@ -57,6 +57,7 @@
                         <li><a class="page-word" href="word.html" lang="en">Microsoft Word</a></li>                        
                         <li><a class="page-powerpoint" href="powerpoint.html" lang="en">Microsoft PowerPoint</a></li>                        
                         <li><a class="page-pdf" href="pdf.html" lang="en"><abbr>PDF</abbr> documents</a></li>                         
+                        <li><a class="page-email" href="email.html" lang="en">Emails</a></li>                         
                         <li><a class="page-video" href="video.html">Videos, audios, and animated components </a></li>
 
                         <li><a class="page-contact" href="contact.html">Contact</a></li>
@@ -189,6 +190,71 @@
 <li>Don’t add background images.</li>
 <li>Make sure that the sequential order is correct (one can read left to right and top to bottom).</li>
 <li>Avoid complex data tables, graphs or schemas.</li>
+</ul>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="emails-accessibility">Emails accessibility</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Emails accessibility"}]);
+});</script>
+
+<p>Here, a list of guidelines/best practices for writing messages that everyone can understand whether or not the recipient usesis using assistive technology.</p>
+<h2 id="what-can-be-problematic-">What can be problematic?</h2>
+<ul>
+<li>Images</li>
+<li>Fonts, colors and styles used</li>
+<li>Layout tables</li>
+<li>Links</li>
+</ul>
+<h2 id="important">Important</h2>
+<p>If your communication contains a lot of information and its layout needs to be complex:</p>
+<ul>
+<li>create the email with the method which is the easiest for you,</li>
+<li>add <a href="./word-create.html">an accessible Word file</a> (or text file) as an attachment containing the same level of information (but only in text!),</li>
+<li>specify that the equivalent accessible text is contained in the attachment.</li>
+</ul>
+<h2 id="-everyday-emails">&quot;Everyday&quot; emails</h2>
+<p>For all your everyday emails:</p>
+<ul>
+<li>Use simple, sans serif fonts: Arial, Calibri or <a href="http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/">Accessible DfA</a></li>
+<li>Adopt a font size at least equal to 10 points</li>
+<li>Put a capital letter at the beginning of each sentence but avoid whole sentences in capital letters</li>
+<li>Align the texts to the left (avoid justifying)</li>
+<li>Avoid too many italic or bold chunks of text or phrases</li>
+<li>Check the contrast between the font color and the background (Colour Contrast Analyzer) and limit the total number of colors used</li>
+<li>Use a neutral background: no decorative paper letter or background images</li>
+<li>Enter an alternative text for all the images (Office: right click on the picture&gt; Format Picture &gt; Alt text&gt; &quot;Description&quot; field) or if the image is just descriptive, leave the &quot;Description&quot; field empty</li>
+<li>Use the &quot;Title&quot; and &quot;Subtitle&quot; styles of the &quot;text format&quot; menu if long mail, with several sections</li>
+<li>Add an emoticon alternative text, example: &quot;;) [wink smiley] &quot; instead of just &quot;;)&quot;</li>
+<li>Avoid animations, animated GIFs and luminosity flashes</li>
+<li>Write explicit link labels, for example: prefer &quot;discover our offers&quot; to &quot;click here&quot; or &quot;find out more&quot;</li>
+<li>Use the &quot;Withdrawal, Spacing&quot; functions to skip lines, example Office suite: Page Layout menu&gt; Paragraph&gt; Indent or Spacing or Right click on your text: &quot;Paragraph ...&quot;)</li>
+<li>Check that the size of the buttons and clickable areas is sufficient : no smaller than 1cm (0.4&quot;)</li>
+<li>Configure your mail tool: HTML format by default, Outlook for example: File&gt; Options&gt; Mail&gt; Compose messages</li>
+</ul>
+<h2 id="pushmails">Pushmails</h2>
+<p>You have several options for creating an accessible Pushmail.</p>
+<h2 id="from-a-word-document">From a Word document</h2>
+<ol>
+<li>Create a Word document accessible by following <a href="word-create.html">the Word recommendations</a>.</li>
+<li>Then use the &quot;Send to Mail Recipient&quot;<em> option.
+</em>Add this Option the first time via File&gt; Options&gt; Quick access toolbar&gt; “Send to Mail Recipient”</li>
+</ol>
+<h2 id="from-my-pushmails-spip-">From &quot;My Pushmails&quot; (SPIP)</h2>
+<p>The tool provides natively accessible templates (don’t forget alternative text for the images) which does not prevent you from following <a href="editorial.html">the general recommendations for editorial content</a>.</p>
+<p><img alt="My pushmails screenshot" src="./images/email1.png"></p>
+<h2 id="creation-from-html-or-other-dedicated-tool-">Creation from HTML (or other dedicated tool)</h2>
+<p>Compose the HTML code in an accessible way by following <a href="../web_EN/index.html">the main web recommendations</a>.  </p>
+<p>Important: there are multiple email clients so there can be interpretation issues, the layout should rather be done via tables (using role=presentation in the &lt;table&gt; tag).</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://support.office.com/en-us/article/video-improve-email-accessibility-ebf3730a-18f8-4b57-81d1-730086231775?omkt=en-001&amp;ui=en-US&amp;rs=en-001&amp;ad=US">Improve email accessibility </a></li>
+<li><a href="https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240">A Beginner’s Guide to Email Accessibility</a></li>
+<li><a href="https://litmus.com/blog/ultimate-guide-accessible-emails">The Ultimate Guide to Accessible Emails</a></li>
+<li><a href="https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Ideal Mobile Touchscreen Target Sizes</a></li>
 </ul>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.

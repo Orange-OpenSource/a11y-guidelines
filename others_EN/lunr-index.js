@@ -70,6 +70,71 @@ index.add({
 
 
 
+documentTitles["email.html#emails-accessibility"] = "Emails accessibility";
+index.add({
+    url: "email.html#emails-accessibility",
+    title: "Emails accessibility",    
+    body: "# Emails accessibility &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;Emails accessibility\&quot;}]); });&lt;/script&gt;  Here, a list of guidelines/best practices for writing messages that everyone can understand whether or not the recipient usesis using assistive technology.  "
+});
+
+documentTitles["email.html#what-can-be-problematic"] = "What can be problematic?";
+index.add({
+    url: "email.html#what-can-be-problematic",
+    title: "What can be problematic?",    
+    body: "## What can be problematic? - Images - Fonts, colors and styles used - Layout tables - Links  "
+});
+
+documentTitles["email.html#important"] = "Important";
+index.add({
+    url: "email.html#important",
+    title: "Important",    
+    body: "## Important  If your communication contains a lot of information and its layout needs to be complex: - create the email with the method which is the easiest for you, - add [an accessible Word file](./word-create.html) (or text file) as an attachment containing the same level of information (but only in text!), - specify that the equivalent accessible text is contained in the attachment.  "
+});
+
+documentTitles["email.html#everyday-emails"] = "\&quot;Everyday\&quot; emails";
+index.add({
+    url: "email.html#everyday-emails",
+    title: "\&quot;Everyday\&quot; emails",    
+    body: "## \&quot;Everyday\&quot; emails For all your everyday emails: - Use simple, sans serif fonts: Arial, Calibri or [Accessible DfA](http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/) - Adopt a font size at least equal to 10 points - Put a capital letter at the beginning of each sentence but avoid whole sentences in capital letters - Align the texts to the left (avoid justifying) - Avoid too many italic or bold chunks of text or phrases - Check the contrast between the font color and the background (Colour Contrast Analyzer) and limit the total number of colors used - Use a neutral background: no decorative paper letter or background images - Enter an alternative text for all the images (Office: right click on the picture&gt; Format Picture &gt; Alt text&gt; \&quot;Description\&quot; field) or if the image is just descriptive, leave the \&quot;Description\&quot; field empty - Use the \&quot;Title\&quot; and \&quot;Subtitle\&quot; styles of the \&quot;text format\&quot; menu if long mail, with several sections - Add an emoticon alternative text, example: \&quot;;) [wink smiley] \&quot; instead of just \&quot;;)\&quot; - Avoid animations, animated GIFs and luminosity flashes - Write explicit link labels, for example: prefer \&quot;discover our offers\&quot; to \&quot;click here\&quot; or \&quot;find out more\&quot; - Use the \&quot;Withdrawal, Spacing\&quot; functions to skip lines, example Office suite: Page Layout menu&gt; Paragraph&gt; Indent or Spacing or Right click on your text: \&quot;Paragraph ...\&quot;) - Check that the size of the buttons and clickable areas is sufficient : no smaller than 1cm (0.4\&quot;) - Configure your mail tool: HTML format by default, Outlook for example: File&gt; Options&gt; Mail&gt; Compose messages  "
+});
+
+documentTitles["email.html#pushmails"] = "Pushmails";
+index.add({
+    url: "email.html#pushmails",
+    title: "Pushmails",    
+    body: "## Pushmails You have several options for creating an accessible Pushmail.  "
+});
+
+documentTitles["email.html#from-a-word-document"] = "From a Word document";
+index.add({
+    url: "email.html#from-a-word-document",
+    title: "From a Word document",    
+    body: "## From a Word document 1. Create a Word document accessible by following [the Word recommendations](word-create.html). 2. Then use the \&quot;Send to Mail Recipient\&quot;* option. *Add this Option the first time via File&gt; Options&gt; Quick access toolbar&gt; “Send to Mail Recipient”  "
+});
+
+documentTitles["email.html#from-my-pushmails-spip"] = "From \&quot;My Pushmails\&quot; (SPIP)";
+index.add({
+    url: "email.html#from-my-pushmails-spip",
+    title: "From \&quot;My Pushmails\&quot; (SPIP)",    
+    body: "## From \&quot;My Pushmails\&quot; (SPIP) The tool provides natively accessible templates (don’t forget alternative text for the images) which does not prevent you from following [the general recommendations for editorial content](editorial.html).  &lt;img alt=\&quot;My pushmails screenshot\&quot; src=\&quot;./images/email1.png\&quot;&gt;  "
+});
+
+documentTitles["email.html#creation-from-html-or-other-dedicated-tool"] = "Creation from HTML (or other dedicated tool)";
+index.add({
+    url: "email.html#creation-from-html-or-other-dedicated-tool",
+    title: "Creation from HTML (or other dedicated tool)",    
+    body: "## Creation from HTML (or other dedicated tool) Compose the HTML code in an accessible way by following [the main web recommendations](../web_EN/index.html).    Important: there are multiple email clients so there can be interpretation issues, the layout should rather be done via tables (using role=presentation in the &amp;lt;table&amp;gt; tag).  "
+});
+
+documentTitles["email.html#links"] = "Links";
+index.add({
+    url: "email.html#links",
+    title: "Links",    
+    body: "## Links - [Improve email accessibility ](https://support.office.com/en-us/article/video-improve-email-accessibility-ebf3730a-18f8-4b57-81d1-730086231775?omkt=en-001&amp;ui=en-US&amp;rs=en-001&amp;ad=US) - [A Beginner’s Guide to Email Accessibility](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240) - [The Ultimate Guide to Accessible Emails](https://litmus.com/blog/ultimate-guide-accessible-emails) - [Ideal Mobile Touchscreen Target Sizes](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)   &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+});
+
+
+
 documentTitles["index.html#accessibility-recommendations-orange-for-content"] = "Accessibility recommendations Orange for content";
 index.add({
     url: "index.html#accessibility-recommendations-orange-for-content",
