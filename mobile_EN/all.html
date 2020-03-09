@@ -4457,14 +4457,13 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
            aria-selected="false">Links</a>
     </li>
 </ul><div class="tab-content"></p>
-<div class="tab-pane show active"
+<p><div class="tab-pane show active"
      id="customActions-Description"
      role="tabpanel">
 Some basic gestures may become a real headache to be perfectly understood by VoiceOver in a fluent way for the user.
 </br>A convincing example is the iOS native mail that may suggest some actions as follows:
-</br></br>
-
-<ul class="nav nav-tabs" role="tablist">
+</br></br></p>
+<p><ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -4479,24 +4478,26 @@ Some basic gestures may become a real headache to be perfectly understood by Voi
            role="tab" 
            aria-selected="false">Switch Control</a>
     </li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane show active"
+</ul></p>
+<p><div class="tab-content"></p>
+<p><div class="tab-pane show active"
      id="CustomActionsVoiceOver"
      role="tabpanel">
 <img alt="flick left to display actions without VoiceOver" style="max-width: 900px; height: auto; " src="./images/iOSdev/Actions_VoiceOver.png"/>
 </br>This gesture cannot lead to the proper result with VoiceOver because a flick left will give rise to the selection of the next accessible element instead of suggesting actions as above.
 </br></br>In this case, it would have been relevant to follow the pattern described in the <code>Example</code> sheet to get these actions if they weren&#39;t natively implemented.
-</div>
-<div class="tab-pane" 
+</div></p>
+<p><div class="tab-pane" 
      id="CustomActionsSwitchControl" 
      role="tabpanel" >
 <img alt="direct access to the mail actions with the switch control." style="max-width: 1000px; height: auto; " src="./images/iOSdev/Actions_SwitchControl.png"/>
 </br>All the available actions are present at the first screen so as to ease the user experience by reaching his goal as quick as possible.
 </br>It&#39;s highly recommended to follow the pattern described in the <code>Example</code> sheet to get this purpose for a custom component.
 </div></div>
-
-<p></div></p>
+</br><strong>iOS 13</strong> introduced a <strong>new custom actions behavior</strong>: the <em>&quot;actions available&quot;</em> announcement isn&#39;t always present anymore.
+</br>It was previously offered to every element containing custom actions but, now, <strong>it will occur</strong> when you navigate to another element that <strong>contains a different set of actions</strong>.
+</br>The purpose is to <strong>prevent repetitive announcements</strong> on elements where the same actions are present as the previous element.
+</div></p>
 <p><div class="tab-pane" id="customActions-Example" role="tabpanel" >
 Whatever the VoiceOver or the Switch Control feature, the implementation to get the desired actions on a custom element is exactly the same: VoiceOver is the option to illustrate the following example.
 </br></br>A solution may consist of <strong>associating the selected element with an array of actions</strong> that will be automatically introduced to the user.

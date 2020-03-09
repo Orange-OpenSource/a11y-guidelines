@@ -2315,8 +2315,10 @@ Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fon
 </br>Ici, toutes les actions sont directement disponibles dès le premier écran pour faciliter grandement l&#39;expérience utilisateur en arrivant rapidement aux resultats souhaités.
 </br></br>Pour un composant développé au sein d&#39;une application, il est très fortement recommandé de réaliser ce même type de parcours en s&#39;appuyant sur le modèle fourni dans l&#39;onglet <code>Exemple</code>.
 </div></div>
+</br><strong>iOS 13</strong> a introduit un <strong>nouveau comportement</strong> des actions personnalisées : seul le premier élément avec des actions sera vocalisé, tous les autres disposant du même jeu d&#39;actions resteront muets afin d&#39;éviter les annonces répétitives des &quot;actions disponibles&quot;.
+</br>Dès que la <strong>liste d&#39;actions</strong> est <strong>différente</strong> sur un élément, <strong>l&#39;annonce reprend</strong> sur ce dernier de façon à faire comprendre à l&#39;utilisateur qu&#39;un nouveau jeu d&#39;actions est à disposition.
+</div>
 
-<p></div></p>
 <p><div class="tab-pane" id="customActions-Example" role="tabpanel" >
 Que ce soit pour le lecteur d&#39;écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l&#39;exemple suivant sera illustré pour VoiceOver.
 </br></br>Une solution consiste à <strong>associer à l&#39;élément sélectionné un tableau d&#39;actions</strong> dont le système se chargera d&#39;indiquer automatiquement la présence en informant vocalement l&#39;utilisateur de leur disponibilité.
