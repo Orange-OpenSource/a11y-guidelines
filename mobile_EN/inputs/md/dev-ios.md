@@ -2157,7 +2157,9 @@ Some basic gestures may become a real headache to be perfectly understood by Voi
 </br>All the available actions are present at the first screen so as to ease the user experience by reaching his goal as quick as possible.
 </br>It's highly recommended to follow the pattern described in the `Example` sheet to get this purpose for a custom component.
 </div></div>
-
+</br>**iOS 13** introduced a **new custom actions behavior**: the *"actions available"* announcement isn't always present anymore.
+</br>It was previously offered to every element containing custom actions but, now, **it will occur** when you navigate to another element that **contains a different set of actions**.
+</br>The purpose is to **prevent repetitive announcements** on elements where the same actions are present as the previous element.
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel" >
 Whatever the VoiceOver or the Switch Control feature, the implementation to get the desired actions on a custom element is exactly the same: VoiceOver is the option to illustrate the following example.

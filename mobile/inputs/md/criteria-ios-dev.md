@@ -2158,7 +2158,8 @@ Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fon
 </br>Ici, toutes les actions sont directement disponibles dès le premier écran pour faciliter grandement l'expérience utilisateur en arrivant rapidement aux resultats souhaités.
 </br></br>Pour un composant développé au sein d'une application, il est très fortement recommandé de réaliser ce même type de parcours en s'appuyant sur le modèle fourni dans l'onglet `Exemple`.
 </div></div>
-
+</br>**iOS 13** a introduit un **nouveau comportement** des actions personnalisées : seul le premier élément avec des actions sera vocalisé, tous les autres disposant du même jeu d'actions resteront muets afin d'éviter les annonces répétitives des "actions disponibles".
+</br>Dès que la **liste d'actions** est **différente** sur un élément, **l'annonce reprend** sur ce dernier de façon à faire comprendre à l'utilisateur qu'un nouveau jeu d'actions est à disposition.
 </div>
 
 <div class="tab-pane" id="customActions-Example" role="tabpanel" >
