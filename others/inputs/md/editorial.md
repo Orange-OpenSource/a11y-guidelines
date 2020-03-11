@@ -68,7 +68,7 @@ Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres ma
   <tbody>
     <tr>
       <th scope="row"><kbd>À</kbd></th>
-      <td><kbd>Alt Gr</kbd> + <kbd>`</kbd> (touche 7) puis <kbd>A</kbd> majuscule</td>
+      <td><kbd>Alt Gr</kbd> + <kbd>\`</kbd> (touche 7) puis <kbd>A</kbd> majuscule</td>
       <td><kbd>Verr. Maj.</kbd> puis <kbd>à</kbd></td>
       <td><kbd>Verr. Maj.</kbd> puis <kbd>à</kbd></td>
     </tr>
