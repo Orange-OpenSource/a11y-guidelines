@@ -80,7 +80,7 @@ Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres ma
     </tr>
     <tr>
       <th scope="row">È</th>
-      <td><kbd>Alt Gr</kbd> + <kbd>`</kbd> (touche 7) puis <kbd>E</kbd> majuscule</td>
+      <td><kbd>Alt Gr</kbd> + <kbd>\`</kbd> (touche 7) puis <kbd>E</kbd> majuscule</td>
       <td><kbd>Verr. Maj.</kbd> puis <kbd>è</kbd></td>
       <td><kbd>Verr. Maj.</kbd> puis <kbd>è</kbd></td>
     </tr>
