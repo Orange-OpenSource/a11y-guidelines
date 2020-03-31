@@ -19,6 +19,8 @@
     <dd>Example of an accessible dialog (part 2).</dd>
     <dt><a href="exemples/simple-menu/simple-menu.html">Dropdown menu</a></dt>
     <dd>Create an accessible drop-down menu.</dd>
+    <dt><a href="exemples/prix/index.html">Prices</a></dt>
+    <dd>Showing and vocalizing prices.</dd>
     <dt><a href="exemples/speak/index.html">Make a screen reader speak using Javascript<a></dt>
     <dd>Sample code to make screen reader speech.</dd>
     <dt><a href="exemples/chatbot/index.html">Chatbot accessibility best practices<a></dt>
