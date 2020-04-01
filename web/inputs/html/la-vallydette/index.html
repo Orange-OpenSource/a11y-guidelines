@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Grille Audit Wcag 2.1 d'Orange - La va11ydette</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="./boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="./boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="./boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="./css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="./css/lavallydette.css">
+
+      <script src="./js/jquery.min.js"></script>
+      
+      <!-- Favicons -->
+      <link rel="icon" href="./img/favicon.ico">      
+
+</head>
+<body>
+
+<header class="navbar navbar-dark bg-dark navbar-expand-md fixed-top " id="docs-navbar">
+  <nav><a class="navbar-brand" href="/" aria-label="Boosted">
+      <!-- Boosted mod change brand -->
+      <img src="./img/orange_logo.svg" alt="Back to homepage" title="Go to homepage">
+      <!-- end mod -->
+    </a>
+   <span class="h1">La va11ydette</span>
+   </nav>
+   
+
+</header>
+<main role="main" class="container">
+
+	<div class="row" >
+		<div class="col-md-8">
+		
+			<h1 id="checklistName"></h1>
+			<button class="btn btn-secondary btn-sm" id="btnChecklistName"  aria-label="Modifier le nom de l'audit"  title="Modifier le nom de l'audit" data-element="checklistName" data-property="checklist.name" data-toggle="modal" data-target="#modalEdit"><span class="icon-Pencil" aria-hidden="true"></span></button>	
+			<button class="btn btn-secondary btn-sm" type="button" data-toggle="modal" data-target="#modalResult" id="btnShowResult">Afficher le résultat de l'audit</button> 	
+		</div>
+		
+	</div>
+
+  <div class="row" >
+   <div class="col-md-4" id="importexport">
+		
+		<div class="input-group">
+		  <div class="custom-file btn-sm">
+			<input class="custom-file-input" id="selectFiles" value="Import" type="file" lang="fr">
+			<label class="custom-file-label" for="selectFiles" data-browse="Parcourir">Sélectionner un audit</label>
+		  </div>
+		  <div class="input-group-append">
+			<button class="btn btn-outline-secondary btn-sm" type="button" id="import">Importer</button>
+		  </div>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		
+		<a href="#" id="export" role="button" class="btn btn-primary btn-sm  float-lg-right disabled" aria-disabled="true">Exporter</a> 
+		
+	</div>
+  </div>
+  
+  <div class="row mt-3">
+	<div class="col-md-8" id="pageManager">
+	
+	
+	</div>
+  </div>
+  
+  <div class="row mt-5">
+	<div class="col-md-8" id="currentPageManager">
+		<h1 id="pageName">Nom de la page</h1>
+		<button class="btn btn-secondary btn-sm" id="btnPageName" aria-label="Modifier le nom de la page" title="Modifier le nom de la page" data-element="pageName" data-secondary-element="pageID-0" data-property="checklist.page.0.name" data-toggle="modal" data-target="#modalEdit"><span class="icon-Pencil" aria-hidden="true"></span></button>	
+		<button id="btnDelPage" class="btn btn-secondary btn-sm" data-element="pageName" data-property="checklist.page.0" data-toggle="modal" data-target="#modalDelete" disabled>Supprimer</button>
+	</div>
+  </div>
+	
+
+  <span id="count" class="alert-danger"></span>
+  <div class="row mt-3">
+
+    <section id="refTests" class="col-md-8 accordion">
+      <!-- Liste des tests -->
+    </section>
+	
+	<aside id="filter" class="col-md-4">
+		<h2>Filtres</h2>
+		<div id="feedback"></div>
+		<ul id="types" class="list-unstyled"></ul>
+		<div id="filter-footer"></div>
+	</aside>
+
+  </div>
+ </main>
+ <footer class="o-footer" id="footer" role="contentinfo">
+    <div class="o-footer-body">
+      <div class="container-fluid">
+			<p class="m-0">Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>.  </p>
+			<p class="m-0">Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange : Copyright (C) 2016 Orange SA All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+	<script src="./boosted/js/boosted.min.js"></script>
+	<script src="./js/lavallydette.js"></script>
+	
+	<div id="modal"></div>
+</body>
+</html>
