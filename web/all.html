@@ -47,7 +47,7 @@
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Web</a>
+                    <a aria-current="location" class="nav-link" href="./index.html">Web</a>
                       <ul id="navigation" class="nav navbar-nav">
                         <li><a class="page-index" href="index.html">Présentation</a></li>
                         <li><a class="page-incontournables" href="incontournables.html">Critères WCAG par thème</a></li>
@@ -431,6 +431,40 @@ Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Re
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="audit-wcag">Audit WCAG</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères WCAG par thème", "url": "./incontournables.html"},
+        {"label":"Audit WCAG"}
+        ]);
+    addSubMenu([
+        {
+            "label":"Conception", "url":"incontournables.html#", "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
+        },
+        {
+            "label":"Développement", "url":"incontournables.html#dev", "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
+        },
+        {
+            "label":"Tests", "url":"incontournables.html#test", "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
+        },
+        {
+            "label":"Audit WCAG", "url":"audit-wcag.html"
+        }
+    ]);    
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p>L’audit WCAG a pour objectif de calculer les taux de conformité mentionnés sur les déclarations d’accessibilité des sites Web d’Orange.</p>
+<p>Orange a mis en place une grille de questions nommée la va11ydette.  Cette grille reprend les 50 critères du standard WCAG version 2.1 de niveau A et AA en 67 questions. Chaque question permet de valider ou d’invalider un ou plusieurs critères, un critère peut être traité par une ou plusieurs questions. </p>
+<p>La grille calcule un taux de conformité par page auditée : ce taux est égal à la somme des critères conformes divisée par le nombre de critères applicables. Elle calcule aussi le taux moyen de conformité qui correspond à la moyenne des taux de conformité de chaque page de l’échantillon.</p>
+<h2 id="acc-der-la-va11ydette">Accéder à la va11ydette</h2>
+<p>Le lien ci-dessous entraine l&#39;ouverture de la grille dans un nouvel onglet du navigateur.  </p>
+<p><a href="./la-vallydette/" target="_blank" class="btn btn-secondary" style="text-decoration: none">Ouvrir la va11ydette<span class="sr-only"> (nouvelle fenêtre)</span></a></p>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
 <h1 id="liste-des-crit-res-wcag-par-th-me">Liste des critères WCAG par thème</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Critères WCAG par thème"}]);
@@ -455,6 +489,9 @@ Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Re
                 $("#incontournables-testeurs-tab").tab("show");
                 window.location.hash = 'test';
             }
+        },
+        {
+            "label":"Audit WCAG", "url":"audit-wcag.html"
         }
     ]);
     $("#incontournables-concepteurs-tab").on("click", function() {

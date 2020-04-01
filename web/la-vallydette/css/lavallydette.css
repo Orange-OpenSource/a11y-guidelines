@@ -1,0 +1,168 @@
+body {  
+  padding-top: 9.5rem;
+  background-color: #f6f6f6;
+  line-height: 1.5;
+}
+
+
+.navbar {
+  padding: 1.4rem;
+  width: 100vw;
+}
+
+
+/* Custom css pour VALLYDETTE */
+h1 {display:inline-block;}
+
+h2::before {
+    display: block;
+    content: " ";
+    margin-top: 0;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+input:focus{outline: 2px solid #000; outline-offset: 2px;}
+
+.accordion .card-header a, .accordion .card-header button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0.6rem 2.125rem 0.6rem 0.6rem;
+    line-height: 1.125rem;
+    text-align: left;
+    border: 0;
+	font-weight:normal;
+	border-bottom: 1px solid #eee; 
+}
+
+.accordion .card-header > a::after, .accordion .card-header > button::after {
+    position: absolute;
+    top: 1.1125rem;
+    right: .625rem;
+    width: .875rem;
+    height: .4375rem;
+    content: "";
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.accordion .card-header a[aria-expanded="true"], .accordion .card-header button[aria-expanded="true"] {
+    color: #000;
+	background-color: #eee;
+	border-bottom: solid 1px #000;
+}
+
+.accordion .card-header a[aria-expanded="true"]::after, .accordion .card-header button[aria-expanded="true"]::after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.accordion .card-header label {
+    color: #000;
+	font-weight: normal;
+}
+
+.accordion .card-block {
+    padding: 1.2rem;
+	background-color: #FFFFFF;
+}
+
+.accordion .card-block a {
+    text-decoration: underline;
+}
+
+.accordion .card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #f6f6f6;
+    border-top: none;
+	border-bottom: 1px solid #ccc; 
+}
+
+.accordion .card-footer p{
+    margin: 0;
+}
+
+.accordion-title {
+    display: inline-block;
+	max-width: 33rem;
+	font-weight: bold;
+	color:#000;
+	padding: 0.6rem;
+}
+
+.badge-light {
+    color: #000;
+    background-color: #ddd;
+}
+
+.badge {
+    display: inline-block;
+    padding: .1875rem .625rem;
+	margin: 0.6rem .825rem;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.accordion .card-header .testForm {padding: 0.6rem 1.2rem;}
+.accordion .card-header .testForm label{padding-top: 0.5rem; padding-right: 0.4rem;}
+.accordion .card-header .testForm input[type="radio"]{padding-top: 0.5rem; margin-right: 1.2rem;}
+.accordion .card-header .testForm button{display: inline-block; padding: calc(.3125rem - 1px) .625rem calc(.3125rem + 1px); margin-right: 1rem; position: relative; width: auto; height: auto; border: 0;}
+.accordion .card-header .testForm button::after{position: relative; background-image: none; }
+.accordion .card-header .testForm ul.list-inline{display: inline-block; padding-left: 0; margin-bottom: 0;}
+.accordion .card-header .card-title > a:focus {
+	outline: 2px solid #000;
+
+}
+.accordion .card-header .card-title button::after, .accordion .card-header .card-title  a::after {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 100%;
+    content: "";
+    background-image: url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M7 7L0 0h14L7 7z'/%3e%3c/svg%3e");
+    background-color: #eee;
+    color: #FFF;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    background-size: 50%;
+    background-position: center;
+
+}
+
+#docs-navbar span {display: inline-block; color: #FFF;}
+
+#refTests {border-right: solid #ccc 1px; position: static;}
+#refTests h3::before, #refTests h4::before, #refTests h5::before, #refTests h6::before {content:none;}
+#refTests h2{margin:4rem 0 2rem 0;}
+#refTests h2:first-child{margin:0 0 2rem 0;}
+#refTests h3{font-size: 1rem; margin:0.2rem 0 0 0;}
+#refTests .card-header{position: relative; background-color: #fff; border: none; padding: 0 0;}
+#refTests ol {list-style-type: decimal;}
+#refTests ol ul{padding-top: 1rem;}
+
+#filter h2{margin:0;}
+#filter h3{margin:0.2rem 0;}
+#filter ul{padding-left:1rem;}
+#filter .disabled {color: #666;}
+
+#export.btn-sm {padding: 0.5rem 1.125rem;}
+
+#pageManager .btn-secondary:hover, #pageManager .btn-secondary:focus, #pageManager .btn-light:hover, #pageManager .btn-light:focus {
+
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+#modalResult h3 {margin:0;}
+#modalResult .finalResult {font-size: 3rem; color: #F16E00; font-weight: bold;}
+
+#feedback {margin-bottom: 2rem;}
