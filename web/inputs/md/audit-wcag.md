@@ -32,7 +32,7 @@ La grille calcule un taux de conformité par page auditée : ce taux est égal �
 
 Le lien ci-dessous entraine l'ouverture de la grille dans un nouvel onglet du navigateur.  
 
-<a href="./la-vallydette/" target="_blank" class="btn btn-secondary" style="text-decoration: none">Ouvrir la va11ydette</a>
+<a href="./la-vallydette/" target="_blank" class="btn btn-secondary" style="text-decoration: none">Ouvrir la va11ydette<span class="sr-only"> (nouvelle fenêtre)</span></a>
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
