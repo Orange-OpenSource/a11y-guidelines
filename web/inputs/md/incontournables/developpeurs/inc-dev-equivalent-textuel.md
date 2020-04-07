@@ -14,6 +14,8 @@
 
 **Description&nbsp;:** 
 
+Avant toutes choses, il ne faut pas utiliser une image-texte lorsque cela n'est pas nécessaire ou que l'image peut être remplacée par une mise en forme du texte en <abbr>CSS</abbr>.
+
 Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;: 
 - Pour les images cliquables&nbsp;: préciser la fonction&nbsp;/ la cible du lien dans l’attribut `alt`.
 - Pour les images porteuses d’information&nbsp;: mettre un `alt` décrivant l’information contenue dans l’image.
@@ -25,12 +27,13 @@ Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `fra
 
 **À vérifier&nbsp;:**
 
+- S'assurer que les images ne peuvent être remplacées par du texte mis en forme
 - Toute balise `img` doit posséder un attribut `alt`.
 - Pour les images non-porteuses d’information, il est préférable de les passer en image de fond <abbr>CSS</abbr>.
 - Pour les graphiques, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffres (le faire apparaître dans la même page ou sur une autre page).
 
 **Objectif utilisateur&nbsp;:**
-Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès.
+Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès et éviter des images inutiles.
 
 Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).
 
@@ -56,6 +59,7 @@ L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">We
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text">1.4.5 Images of text</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

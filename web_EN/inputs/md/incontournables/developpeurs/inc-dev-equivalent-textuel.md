@@ -14,6 +14,8 @@
 
 **Description: **
 
+First of all, do not use an image-text when it is not necessary or when the image can be replaced by formatted text in <abbr>CSS</abbr>.
+
 All `img` tags should have an `alt` attribute with a relevant description: 
 - For clickable images: specify the function&nbsp;/ link target in the `alt` attribute,
 - For images carrying information: add an `alt` attribute describing the information contained in the image
@@ -25,6 +27,7 @@ Add a `title` attribute to describe all `frame` or `iframe` content or function.
 
 **Checklist: **
 
+- Ensure that the images cannot be replaced by formatted text
 - Each `img` tag must have an `alt` attribute.
 - For images not carrying information, set them as background images preferably (<abbr>CSS</abbr>). 
 - For graphics, you can add a link under them to access the data table (revealing it in the same page or in a different page).
@@ -57,7 +60,7 @@ The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
-
+- <a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text">1.4.5 Images of text</a>
 
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
