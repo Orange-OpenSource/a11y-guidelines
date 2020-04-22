@@ -1,0 +1,54 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+
+.price {
+    font-size: 300%;    
+    font-weight: bold;
+    position: relative;
+}
+
+.price sup {    
+    font-size: 1rem;
+    position: absolute;
+    top: 1.25rem;
+}
+
+ .price sub {     
+     font-size: 1rem;
+     position: absolute;
+     bottom: 1.25rem;
+ }
+
+.example {
+    font-weight: bold;
+    background-color: #4bb4e6;
+    padding: .5rem;
+}
+
+.example2 {    
+    background-color: #fbcd00;
+    color: #333;
+    padding: .5rem;
+    height: 21rem;
+}
+
+.example2 img {
+    height: 20rem;
+    float: left;
+}
+
+.example2 p {
+    margin-top: 5rem;
+}
+
+.example2 .price {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.line-through {
+    text-decoration: line-through;
+    font-weight: normal;
+}

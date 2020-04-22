@@ -1,0 +1,101 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+[role=dialog], .dialog {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1050;    
+  display: none;
+  background-color : rgba(0,0,0,0.4);
+}
+
+#dialogTitle {
+  font-weight: bold;
+  font-size: 3rem;
+  border-bottom: 0.1rem solid #ccc;
+  padding: 1rem;
+}
+
+.dialogContainer {  
+  width: 55rem;
+  height: 34rem;  
+  margin: 5rem auto;  
+  background: #fff;
+}
+
+.dialogContent {
+  padding: 0 2rem;
+  font-weight: bold;
+}
+
+[role=dialog] .closeButton,
+.dialog .closeButton {
+  float: right;
+  background: none;
+  border: medium none;
+  margin: 0px;
+  padding: 2rem;
+  font-weight: bold;
+}
+
+[role=dialog] .closeButton:focus,
+.dialog .closeButton:focus,
+[role=dialog] .closeButton:hover,
+.dialog .closeButton:hover {
+  color: #fff;
+  background: #000;
+} 
+
+[role=listbox] {
+  height: 15rem;
+  border: 0.2rem solid rgb(0, 0, 0);
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+[role=listbox]:focus {
+  outline: none;
+  border-color: #f16e00;
+}
+
+[role=option] {
+  padding: .2rem .5rem;
+  cursor: pointer;
+}
+
+[role=option][aria-selected=true] {
+  background: #000;
+  color: #fff;
+}
+
+[role=option]:focus {
+  background: #f16e00;
+}
+
+[role=option][aria-selected=true]:focus {
+  color: #fff;
+}
+
+[role=option] span {
+  vertical-align: middle;
+}
+
+[role=option] .glyphicon:before {  
+  margin-right: .5rem;
+}
+.btnbar {
+  text-align: right;
+  padding: 2rem;
+}
+
+#list-label {
+  margin-top: 1rem;
+}
+
+.option-label {
+  padding-top: 0.5rem;
+}

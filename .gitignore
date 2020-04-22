@@ -1,0 +1,7 @@
+# IDE & dev things
+.idea
+node_modules
+
+# Output directory
+_site
+

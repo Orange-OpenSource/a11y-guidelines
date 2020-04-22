@@ -1,0 +1,18 @@
+{
+  "name": "a11y-guidelines",
+  "version": "2.0.0",
+  "description": "Recommandations accessibilité numérique Orange",
+  "repository": "https://github.com/Orange-OpenSource/a11y-guidelines",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && eleventy",
+    "serve": "npm run clean && eleventy --serve",
+    "clean": "rm -rf _site",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orange SA",
+  "license": "CC-BY-SA-3.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
