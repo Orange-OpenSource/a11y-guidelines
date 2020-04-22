@@ -1,0 +1,7 @@
+<ul id="main-menu" class="navbar-nav">
+  {% for link in header.mainNavigation[locale] %}
+    <li class="nav-item">
+      <a href="{{ link.href }}" class="nav-link{% if page.url == link.href %} active{% endif %}"{% if page.url == link.href %} aria-current="true"{% endif %}>{{ link.label }}</a>
+    </li>
+  {% endfor %}
+</ul>

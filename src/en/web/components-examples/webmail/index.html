@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webmail ARIA example - Orange web accessibility guidelines</title>
+
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../../../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../../../boosted/css/boosted.css">
+
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/jquery.validate.min.js"></script>
+      
+      <script src="script.js"></script>      
+      <link rel="stylesheet" href="style.css">
+</head>
+<body role="application">
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="sr-only">Navigation menu</span>
+            <span class="icon-menu"></span>
+        </button>
+          
+        <a href="index.html" class="navbar-brand"><img src="../../../../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Back to home" title="Back to home"/></a>
+        <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+            <li class="nav-item"><a class="nav-link" href="#">New</a></li>                                    
+            <li class="nav-item"><a class="nav-link" href="#">Reply</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Delete</a></li>
+        </ul>   
+      </nav>
+    </header>
+    <main role="main" class="container-fluid">
+      <h1 class="sr-only">Webmail <abbr>ARIA</abbr> example</h1>
+
+      <div class="row"> 
+        <!-- Liste des dossiers email -->             
+        <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-2" aria-label="Folders list">
+            <li tabindex="-1" role="option">Inbox (24) <span class="sr-only">unread messages</span></li>
+            <li tabindex="-1" role="option">Sent</li>
+            <li tabindex="-1" role="option">Drafts</li>
+            <li tabindex="-1" role="option">Trash</li>          
+        </ul> 
+         
+        <!-- liste des email -->
+        <ul role="listbox" tabindex="0" class="emails col-md-5" aria-label="Emails list">
+            <li class="unread" tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"><label for="check1"></label>
+                <span class="sr-only">Unread. </span>Important information about your account
+            </li>
+            <li class="unread" tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check2" class="o-checkbox" type="checkbox"><label for="check2"></label>
+                <span class="sr-only">Unread. </span>Sending message test
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check3" class="o-checkbox" type="checkbox"><label for="check3"></label>
+                Photos of the weekend at the sea
+            </li>
+            <li class="unread" tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check4" class="o-checkbox" type="checkbox"><label for="check4"></label>
+                <span class="sr-only">Unread. </span>Re: Your order N°3642
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check5" class="o-checkbox" type="checkbox"><label for="check5"></label>
+                Newsletter of the week
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check6" class="o-checkbox" type="checkbox"><label for="check6"></label>
+                Special offers: -20% discount on several articles 
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+                <input tabindex="-1" id="check7" class="o-checkbox" type="checkbox"><label for="check7"></label>
+                Tonight !
+            </li>                                                                                
+        </ul>
+        
+        <div class="col-md-5">
+            Reading pane…
+        </div>
+                               
+      </div>   
+      
+
+     
+    </main>
+    <br><br><br><br>
+    
+    <script src="../../../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
