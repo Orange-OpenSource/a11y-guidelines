@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ locale }}" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }} - {{ site.title[locale] }}</title>
+    <link rel="icon" href="https://boosted.orange.com/docs/4.4/assets/img/favicons/favicon.ico">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/css/boosted.min.css" integrity="sha384-OB/gcmnjN4zOvILOKtMqzd/ZUoKc/cgZDpn0c2C5FoQAJqmQdjX4ITe6XSK32JyO" crossorigin="anonymous">
+  </head>
+  <body>
+    {% include "partials/header.njk" %}
+    <main id="main-content" class="container-lg" role="main">
+      {% block content %}{% endblock %}
+      {{ content | safe }}
+    </main>
+    {% include "partials/footer.njk" %}
+    <script src="../assets/script.js"></script>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+  </body>
+</html>

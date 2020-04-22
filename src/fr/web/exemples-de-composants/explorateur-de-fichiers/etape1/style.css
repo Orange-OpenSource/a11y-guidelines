@@ -1,0 +1,127 @@
+/*!
+* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
+
+.control-label {
+    margin-left: 1rem;
+}
+
+ease-file:focus {
+    outline: none;
+}
+
+ease-file.active:focus .fileName, ease-file:hover .fileName {
+     background-color: #000;
+     color: #fff;
+}
+
+ease-file.active:focus .file {
+    outline: .2rem solid #000;
+}
+        
+.list {
+    width: 80%;
+    outline: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;      
+}
+
+ease-file[aria-selected="true"] .fileName {
+    background: #f16e00 !important;
+}
+
+.display-list  ease-file {
+    display: block;
+}
+
+.display-list  .file-thumbnail {
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+}
+
+.display-list .fileName {
+    display: inline-block;
+    width: 50rem;
+    vertical-align: top;
+    margin-top: 1.5rem;
+}
+
+.display-list #name, .display-list #size {
+    width: 24rem;
+    display: inline-block;
+}
+
+.display-list .file {
+    padding-top: .5rem;
+    padding-left: .5rem;
+}
+
+.display-list ease-file[aria-selected="true"] .fileName {
+    background: transparent !important;
+}
+    
+.display-list .fileName {
+    background: transparent !important;
+    color: #000 !important;    
+}
+
+.display-list ease-file[aria-selected="true"]:focus .fileName {
+    color: #fff !important;
+}
+    
+.display-list ease-file[aria-selected="true"] .file {
+    background-color: #f16e00 !important;
+}
+
+.display-list .file:hover {
+    background: #eee;
+}
+
+.display-list ease-file {
+    border-bottom: .2rem solid #ddd;    
+}
+
+.list-head {
+    display: none;
+}
+
+.display-list .list-head {
+    display: block;    
+    padding: 1rem;
+    font-weight: bold;
+    width: 80%;
+    border-bottom: .4rem solid #ddd;
+}
+
+.display-list .list-head span {
+    display: inline-block;
+    width: 29rem;
+}
+
+/* --- clearfix --- */	
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+/* --- --- */

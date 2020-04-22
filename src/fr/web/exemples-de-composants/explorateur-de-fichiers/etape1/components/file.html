@@ -1,0 +1,125 @@
+<head>
+<!-- * This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+* Copyright (C) 2016  Orange SA
+* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+<template id="template">    
+    <div class="file">
+      <div class="file-thumbnail"></div>
+      <div class="fileName">
+        <span id="name"></span>
+        <span id="size"></span>
+      </div>
+    </div>
+      <style>
+        .file {
+          margin: .5rem;
+          float: left;
+          cursor: pointer;
+          outline: none;
+        }                        
+
+        .file-thumbnail {
+          background-color: #ccc;          
+          width: 15rem;
+          height: 15rem;
+        }
+                        
+        .fileName {
+          padding-left: .1rem;
+        }
+                
+        :host(.active:focus) .fileName, .file:hover .fileName {
+          background-color: #000;
+          color: #fff;
+        } 
+        
+        :host(.active:focus) .file {
+          outline: .2rem solid #000;
+        }
+        :host(:focus) {
+          outline: none;
+        }
+        
+        :host([aria-selected="true"]) .fileName {
+            background: #f16e00 !important;
+        }                       
+        
+        #name {
+          font-weight: bold;
+          display: block;
+        }
+        
+        :host-context(.display-list)  .file-thumbnail {
+            width: 5rem;
+            height: 5rem;
+            display: inline-block;
+        }
+        
+        :host-context(.display-list) .fileName {
+          display: inline-block;
+          width: 50rem;
+          vertical-align: top;
+          margin-top: 1.5rem;
+        }        
+                        
+        :host-context(.display-list) #name, .display-list #size {
+            width: 24rem;
+            display: inline-block;
+        }
+
+        :host-context(.display-list) .file {
+            padding-top: .5rem;
+            padding-left: .5rem;
+        }
+        
+        :host-context(.display-list):host([aria-selected="true"]) .fileName {
+            background: transparent !important;
+        }
+            
+        :host-context(.display-list) .fileName {
+            background: transparent !important;
+            color: #000 !important;    
+        }
+
+        :host-context(.display-list):host([aria-selected="true"]:focus) .fileName {
+            color: #fff !important;
+        }
+            
+        :host-context(.display-list):host([aria-selected="true"]) .file {
+            background-color: #f16e00 !important;
+        }
+
+        :host-context(.display-list) .file:hover {
+            background: #eee;
+        }      
+        
+    </style>
+
+</template>
+
+<script>     
+    var component = Object.create(HTMLElement.prototype);
+    var ownerDoc = (document._currentScript || document.currentScript).ownerDocument;    
+    var template = ownerDoc.querySelector('#template');
+        
+    component.createdCallback = function() {
+        var root = this.createShadowRoot();        
+        var content = document.importNode(template.content, true);                 
+                
+        root.host.setAttribute("role", "option");
+        root.host.setAttribute("aria-label", this.getAttribute("name") + ", " + this.getAttribute("type") + ", " + this.getAttribute("size"));
+        root.host.setAttribute("tabindex", "-1");
+        content.querySelector('#name').innerText = this.getAttribute("name") || "";
+        content.querySelector('#size').innerText = this.getAttribute("size") || "";
+        content.querySelector('.file-thumbnail').style.backgroundImage = "url('" + this.getAttribute("thumbnail") + "')";
+                
+        root.host.setAttribute("aria-selected", "false");                
+        root.appendChild(content);            
+    };
+    
+    document.registerElement('ease-file', {
+        prototype: component
+    });
+    
+</script>

@@ -1,0 +1,13 @@
+<footer class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="o-footer-body" role="navigation">
+      <ul class="nav">
+        {% for link in footer.navigation[locale] %}
+          <li class="nav-item">
+            <a href="{{ link.href }}" class="nav-link">{{ link.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>
