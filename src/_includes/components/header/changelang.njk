@@ -2,7 +2,7 @@
   {% for lang in site.locales.available %}
     {% set active = locale == lang %}
     <li class="nav-item">
-      <a href="/{{ lang }}/" class="nav-link{% if active %} active{% endif %}"{% if active %} aria-current="true"{% endif %}>
+      <a href="/{{ lang }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %}>
         {{ lang | upper }}
       </a>
     </li>
