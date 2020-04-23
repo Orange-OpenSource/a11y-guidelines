@@ -7,12 +7,13 @@
   "scripts": {
     "build": "npm run clean && eleventy",
     "serve": "npm run clean && eleventy --serve",
-    "clean": "rm -rf _site",
+    "clean": "del-cli _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Orange SA",
   "license": "CC-BY-SA-3.0",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "del-cli": "^3.0.0"
   }
 }
