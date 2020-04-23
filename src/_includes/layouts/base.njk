@@ -9,7 +9,7 @@
   </head>
   <body>
     {% include "partials/header.njk" %}
-    <main id="main-content" class="container-lg" role="main">
+    <main id="main-content" class="container-lg pt-4" role="main">
       {% block content %}{% endblock %}
       {{ content | safe }}
     </main>
