@@ -25,7 +25,7 @@ module.exports = {
       { label: 'Articles', href: '/en/articles/' },
     ],
     'fr': [
-      { label: 'Accueil', href: '/' },
+      { label: 'Accueil', href: '/fr/' },
       { label: 'Web', href: '/fr/web/' },
       { label: 'Android', href: '/fr/mobile/android/' },
       { label: 'iOS', href: '/fr/mobile/ios/' },
