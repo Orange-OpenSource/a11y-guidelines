@@ -294,7 +294,7 @@
 	},
 	{
 		"wcag": "4.1.3",
-		"level": "A",
+		"level": "AA",
 		"tests": ["testID-034"], 
 		"resultat":"nt"
 	}

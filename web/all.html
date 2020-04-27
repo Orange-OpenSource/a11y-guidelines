@@ -1631,6 +1631,7 @@ donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles ou cognitives.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong> </p>
+<p>Avant toutes choses, il ne faut pas utiliser une image-texte lorsque cela n&#39;est pas nécessaire ou que l&#39;image peut être remplacée par une mise en forme du texte en <abbr>CSS</abbr>.</p>
 <p>Mettre, dans toute balise <code>img</code>, un attribut <code>alt</code> pertinent&nbsp;: </p>
 <ul>
 <li>Pour les images cliquables&nbsp;: préciser la fonction&nbsp;/ la cible du lien dans l’attribut <code>alt</code>.</li>
@@ -1642,12 +1643,13 @@ donner à tous les utilisateurs la maîtrise de l&#39;apparition de contenu, des
 <p>Mettre un attribut <code>title</code> décrivant le contenu et/ou la fonction de toute <code>frame</code> ou <code>iframe</code>. Si la <code>frame</code> ou <code>iframe</code> ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: <a href="./exemples/iframes-techniques/index.html">Masquer les iframe techniques de manière accessible</a></p>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
+<li>S&#39;assurer que les images ne peuvent être remplacées par du texte mis en forme</li>
 <li>Toute balise <code>img</code> doit posséder un attribut <code>alt</code>.</li>
 <li>Pour les images non-porteuses d’information, il est préférable de les passer en image de fond <abbr>CSS</abbr>.</li>
 <li>Pour les graphiques, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffres (le faire apparaître dans la même page ou sur une autre page).</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès.</p>
+Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès et éviter des images inutiles.</p>
 <p>Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).</p>
 <p><strong>Objectif technique&nbsp;:</strong></p>
 <p>Améliorer le référencement naturel.</p>
@@ -1659,6 +1661,7 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+<li><a lang="en" href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text">1.4.5 Images of text</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

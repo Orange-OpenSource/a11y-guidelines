@@ -1,0 +1,780 @@
+{
+		"items": [{
+				"themes": "Contenu textuel",
+				"ID": "testID-001",
+				"title": "Donner un titre aux pages",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Examiner le titre de page (<code>&lt;title&gt;[title]&lt;/title&gt;</code>)",
+					"ou Lire le titre présent dans l'onglet du navigateur"
+				],
+				"verifier": [
+					"Vérifier que le titre de page est renseigné",
+					"Vérifier que le titre de page est unique, celui-ci doit permettre à l'utilisateur de comprendre le contexte de la page"
+				],
+				"resultat": [
+					"Chaque page possède un titre unique et descriptif, <br/>globalement du plus précis vers le plus général. <br/>Exemple :  [résumé du contenu de la page - nom du site]"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu textuel",
+				"ID": "testID-002",
+				"title": "Donner des titres aux rubriques",
+				"type": [
+					"Wave toolbar"
+				],
+				"tests": [
+					"Lancer Wave > Outline",
+					"Examiner la hiérarchisation de titre"
+				],
+				"verifier": [
+					"Vérifier que les titres sont pertinents et non vides",
+					"Vérifier que les titres s'enchaînent de façon logique",
+					"Vérifier l'absence de sauts dans la hiérarchie des titres"
+				],
+				"resultat": [
+					"Tous les contenus, traités visuellement comme des titres, possèdent une sémantique de titre (balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>)",
+					" Les titres de niveaux sont structurés de manière logique"
+				],
+				"exception": "Ne pas tenir compte des titres masqués (<code>visibility:hidden</code> ou <code>display:none</code>) via des directives CSS. Si un de ces titres masqués est susceptible d'apparaître, il faut refaire les observations sur la nouvelle structuration du titrage.",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			
+			{
+				"themes": "Contenu textuel",
+				"ID": "testID-006",
+				"title": "Indiquer la langue principale et les changements de langue / langue principale",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Examiner l'élément <code>&lt;html&gt;</code>"
+				],
+				"verifier": [
+					"Vérifier la présence d'un attribut lang",
+					"La valeur de l'attribut <code>lang</code> doit correspondre à la langue principale du document"
+				],
+				"resultat": [
+					"Un attribut lang est présent dans l'élément  <code>&lt;html&gt;</code> de la page",
+					"La valeur de l'attribut lang correspond à la langue principale du document"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu textuel",
+				"ID": "testID-007",
+				"title": "Indiquer la langue principale et les changements de langue / changement de langue",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Examiner les termes en langue étrangère"
+				],
+				"verifier": [
+					"Vérifier qu'un attribut lang est renseigné pour le mots et expressions en langue étrangère"
+				],
+				"resultat": [
+					"L'attribut lang doit être présent dans l'élément encapsulant le texte. <br/>Exemple : <code>&lt;q lang='en'&gt;[…]&lt;/q&gt;</code>"
+				],
+				"exception": "Pour les mots ou les expressions en langue étrangère passés dans l’usage courant (Google, newsletter…) ou les noms propres, ne pas indiquer de changement de langue.",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu textuel",
+				"ID": "testID-008",
+				"title": "Structurer les tableaux de données",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Localiser les <code>table</code> en effectuant une recherche sur le terme <code>table</code>",
+					"Examiner les <code>table</code>"
+				],
+				"verifier": [
+					"Vérifier que les tableaux ne sont pas utiliser à des fins de mise en page",
+					"<strong>Pour les tableaux de données :</strong> <br/>Vérifier que les tableaux de données possèdent un élément caption non vide, ou un titre de niveaux placé juste avant le tableau",
+					"<strong>Tableau à 1 entrée :</strong> <br/> Vérifier la présence d'entêtes ( <code>th</code>) pour la tableaux simples",
+					"<strong>Tableau à 2 entrées :</strong> <br/> Pour chaque <code>th</code> vérifier la présence d'un attribut  <code>scope='col'</code> pour les entêtes de colonnes, <br/>et la présence d'un <code>scope='row'</code> pour les entête de lignes",
+					"<strong>Tableaux complexes :</strong> <br/> Vérifier la présence d'entêtes <code>th</code> ou  d'attributs <code>id</code> et <code>headers</code>",
+					"Vérifier la présence d'un résumé explicitant la structure du tableau. <br/>HTML5 : présence d'un résumé, si nécessaire en masquage accessible ou <code>display:none</code>. <br/>Le résumé est lié au tableau via un <code>aria-describedby</code> <br/>Version antérieure : résumé présent dans un attribut <code>summary</code>"
+				],
+				"resultat": [
+					"Les tableaux sont utilisées uniquement pour la présentation de données",
+					"Les tableaux possèdent une légende (caption ou titre de niveaux placé juste avant)",
+					"Les tableaux simples possèdent des entêtes  <code>th</code>",
+					"Les tableaux à double entrée possède des entêtes <code>th</code> ainsi que des attributs <code>scope='col'</code> et <code>scope='row'</code>",
+					"Les tableaux complexes possèdent des entêtes (<code>th</code> + attributs <code>scope</code>) ou des entêtes complexes basées sur l'utilisation d'attribut <code>id</code> et <code>headers</code>",
+					"Les tableaux complexes possèdent un résumé  pertinent"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu non-textuel",
+				"ID": "testID-009",
+				"title": "Fournir un équivalent textuel pour les images et les cadres / images",
+				"type": [
+					"aXe"
+				],
+				"tests": [
+					"Lancer aXe"
+				],
+				"verifier": [
+					"Vérifier que toutes les images possèdent un attribut <code>alt</code>",
+					"Vérifier que toutes les <code>iframe</code> et <code>frame</code> contiennent un attribut <code>title</code> non-vide"
+				],
+				"resultat": [
+					"Aucune erreur relative à l'absence d'attribut <code>alt</code>",
+					"Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code> et <code>iframe</code> "
+				],
+				"exception": [
+					"Présence d'un attribut <code>alt</code> pour toutes les images",
+					"Présence d'un attribut <code>title</code> pour toutes les <code>frame</code> et <code>iframe</code> "
+				],
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu non-textuel",
+				"ID": "testID-011",
+				"title": "Fournir un équivalent textuel pour les images et les cadres / alternatives aux images",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Examiner les images"
+				],
+				"verifier": [
+					"Vérifier manuellement que la valeur des attributs <code>alt</code> est pertinente :",
+					"<strong>Image lien :</strong> <br/> vérifier que le contenu de l'attribut <code>alt</code> de chaque image-lien est pertinent par rapport à sa fonction de lien",
+					"<strong>Image porteuse d'information :</strong> <br/> vérifier que l'attribut <code>alt</code> de chaque image est pertinent par rapport au rôle de l'image dans la page",
+					"<strong>Image contenant du texte :</strong> <br/> vérifier que l'attribut <code>alt</code> reprend au moins le texte de l’image",
+					"<strong>Image décorative :</strong> <br/> vérifier que l'attribut <code>alt</code> est vide",
+					"<strong>Image complexe dont le contenu du <code>alt</code> serait trop long (schémas, graphes…) :</strong> <br/> Vérifier que pour toute description d'image trop longue pour être mise dans un attribut <code>alt</code>, la description de l'image sous forme de texte html est, soit présente dans la page, soit, un lien pointe vers une page html contenant la description, et ceci, à proximité de l'image à décrire"
+				],
+				"resultat": [
+					"<strong>Image lien :</strong> la cible du lien est précisée dans le  <code>alt</code>",
+					"<strong>Image porteuse d'information :</strong> l'attribut  <code>alt</code>contient l'information convoyée par l'image",
+					"<strong>Image contenant du texte :</strong> l'attribut  <code>alt</code> contient le texte convoyé par l'image",
+					"<strong>Image décorative :</strong> l'attribut <code>alt</code> est vide",
+					"<strong>Image complexe :</strong> une description de l'image sous forme de texte est disponible, soit directement dans la page, soit accessible via un lien présent à proximité de l'image"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu non-textuel",
+				"ID": "testID-013",
+				"title": "Rendre accessible les pistes audio ou vidéo",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Examiner les contenus audio et vidéos de la page"
+				],
+				"verifier": [
+					"Vérifier que pour toute piste audio ou vidéo, un transcrit complet <br/>(texte contenant l'ensemble des informations visuelles et auditives) <br/>sous forme de texte html est, soit présent dans la page, <br/>soit, un lien pointe vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire",
+					"Vérifier que pour toute vidéo, des sous-titres sont disponibles",
+					"Vérifier qu’une audio-description, est disponible pour les vidéos présentant des informations sous forme visuelle"
+				],
+				"resultat": [
+					"Présence d'un transcrit complet dans la même page ou dans une  autre via un lien",
+					"Des sous-titres sous formats texte sont présents pour toutes vidéos et restituent l’ensemble des informations de la bande son",
+					"Une audio-description est présente en complément de la bande audio. <br/>Celle-ci présente sous format texte, les informations sont accessibles uniquement par l’image."
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu non-textuel",
+				"ID": "testID-014",
+				"title": "Rendre accessible les pistes audio ou vidéo / lancement auto",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Examiner les contenus audio et vidéos de la page"
+				],
+				"verifier": [
+					"Vérifier qu'aucune piste audio ou vidéo ne lance automatiquement au lancement de la page"
+				],
+				"resultat": [
+					"Les pistes audios et vidéos ne se lancent pas automatiquement au chargement de la page"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu non-textuel",
+				"ID": "testID-015",
+				"title": "Rendre accessible les pistes audio ou vidéo / mécanismes de contrôle",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Examiner les contenus audio et vidéos de la page"
+				],
+				"verifier": [
+					"Vérifier pour toute piste audio ou vidéo qu'un mécanisme de contrôle est présent (pause, lecture)",
+					"Vérifier manuellement, qu'il est possible de stopper/reprendre la lecture d'une piste audio ou vidéo, depuis une navigation souris",
+					"Vérifier manuellement, qu'il est possible de stopper/reprendre la lecture d'une piste audio ou vidéo, depuis une navigation clavier"
+				],
+				"resultat": [
+					"Un mécanisme de contrôle de la piste audio ou vidéo est présent. <br/>Ce mécanisme permet la lecture ou la mise en pause du média, quelque-soit l'aide technique utilisée"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Contenu non-textuel",
+				"ID": "testID-016",
+				"title": "Rendre accessible les clignotements",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Examiner les contenus de type animations et vidéos de la page qui clignotent"
+				],
+				"verifier": [
+					"Vérifier qu'il n'y a pas de contenu présentant de clignotements rapides (plus de 3 flash à la seconde) ou les <a href='https://www.w3.org/TR/WCAG21/#dfn-general-flash-and-red-flash-thresholds' hreflang='en'>flashs sont inférieurs au seuil général ou seuil de rouge</a>."
+				],
+				"resultat": [
+					"Absence de clignotement ou de flash rapide ou dépassant le seuil général ou de rouge"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Couleurs et contrastes",
+				"ID": "testID-018",
+				"title": "Assurer un contraste suffisant entre texte et fond",
+				"type": [
+					"aXe"
+				],
+				"tests": [
+					"Lancer aXe"
+				],
+				"verifier": [
+					"Vérifier que le contraste soit suffisant pour comprendre l'information portée par tous les composants interactifs, les textes",
+					"Vérifier que les liens non-soulignés ont un rapport de contraste suffisent avec le texte environnent"
+				],
+				"resultat": [
+					"Présence d'éléments suffisamment contrastés",
+					"Présence de liens non-soulignés suffisamment contrastés"
+				],
+				"exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Couleurs et contrastes",
+				"ID": "testID-019",
+				"title": "Assurer un contraste suffisant entre texte et fond / images et composants",
+				"type": [
+					"Color Contrast Analyser"
+				],
+				"tests": [
+					"Lancer le Color Contrast Analyser"
+				],
+				"verifier": [
+					"Vérifier que les textes sous forme d'images, les graphiques, les icônes, et les composants interactifs ont un contraste suffisant pour transmettre l'information"
+				],
+				"resultat": [
+					"Présence de textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs suffisamment contrastés"
+				],
+				"exception": "Sont exclus du périmètre  : <ul><li>les logos</li><li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li>si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Couleurs et contrastes",
+				"ID": "testID-020",
+				"title": "Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information / couleur",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Identifier les éléments utilisant de la couleur pour porter de l'information"
+				],
+				"verifier": [
+					"Vérifier que la couleur n'est pas le seul moyen de convoyer d'information : <br/>au moins un autre moyen visuel est disponible pour obtenir la même information"
+				],
+				"resultat": [
+					"L'information transmise par la couleur peut également être obtenue par un texte explicite",
+					"L'information transmise par la couleur est complétée par une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes)",
+					"Cas particulier des liens dans du texte : s'ils ne sont pas soulignés, sur le focus clavier et au survol souris, fournir un autre moyen que le couleur pour les distinguer."
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Couleurs et contrastes",
+				"ID": "testID-021",
+				"title": "Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information / autre information sensorielle",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Identifier les éléments utilisant une l’information sensorielle (ex : position, taille, son) pour transmettre de l'information"
+				],
+				"verifier": [
+					"Vérifier que l'information transmise par une information sensorielle peut également être obtenue par un texte, ou un message explicite"
+				],
+				"resultat": [
+					"Un texte, ou un message explicite est présent pour transmettre l'information"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation générale",
+				"ID": "testID-022",
+				"title": "Rendre les intitulés des liens et des boutons compréhensibles hors contexte / libellés identiques",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Localiser les liens, boutons et tous les items de navigation",
+					"Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
+				],
+				"verifier": [
+					"Vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes"
+				],
+				"resultat": [
+					"Les liens, boutons et items de navigation ayant un libellé identique, pointent vers la même cible, ou portent la même action"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation générale",
+				"ID": "testID-023",
+				"title": "Rendre les intitulés des liens et des boutons compréhensibles hors contexte / libellés",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Localiser les liens, boutons et tout items de navigation",
+					"Inspecter le libellé texte de ces items",
+					"Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
+				],
+				"verifier": [
+					"Vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton, uniquement à partir de son <a href='http://a11y-guidelines.orange.com/web/a11y-name.html'> nom accessible</a>)"
+				],
+				"resultat": [
+					"Les liens, boutons et items de navigation sont compréhensibles hors contextes"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation générale",
+				"ID": "testID-025",
+				"title": "Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre",
+				"type": [
+					"Test manuel - Inspecteur de code"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code du navigateur",
+					"Localiser les liens, boutons et tout items de navigation",
+					"Inspecter le libellé texte de ces items",
+					"Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
+				],
+				"verifier": [
+					"Vérifier que l'ouverture d'une nouvelle fenêtre est mentionnée aux utilisateurs"
+				],
+				"resultat": [
+					"Présence d'une mention précisant l'ouverture d'une nouvelle fenêtre <br/>En général, l'intitulé du lien suivi de la mention 'nouvelle fenêtre', sinon, l'attribut <code>title</code> et <code>aria-label</code> doivent contenir la mention 'nouvelle fenêtre'. <br/>Exemple :  google (nouvelle fenêtre)"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation générale",
+				"ID": "testID-033",
+				"title": "Permettre le contrôle des animations",
+				"type": ["Test manuel"],
+				"tests": [
+					"Parcourir la page",
+					"Identifier tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement, durant plus de 5 secondes et lancé automatiquement"
+				],
+				"verifier": [
+					"Vérifier pour chacun, qu'un mécanisme est présent pour permettre à l'utilisateur de le mettre en pause/lancer l'animation",
+					"Vérifier que ce mécanisme est accessible à la souris et à la navigation clavier"
+				],
+				"resultat": [
+					"L'utilisateur peut mettre pause/relancer les animations, les mouvements, les mises à jour ou les clignotement."
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation clavier",
+				"ID": "testID-034",
+				"title": "Permettre d’utiliser les principales fonctionnalités de l’application au clavier",
+				"type": [
+					"Navigation clavier"
+				],
+				"tests": [
+					"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
+				],
+				"verifier": [
+					"Vérifier que l'on obtient un résultat équivalent à la navigation au moyen de la souris pour les fonctionnalités principales de la page"
+				],
+				"resultat": [
+					"Tous les éléments interactifs sont atteignables depuis une navigation clavier",
+					"Tous les éléments interactifs sont utilisables depuis des interactions clavier"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation clavier",
+				"ID": "testID-035",
+				"title": "Rendre le parcours du focus séquentiel et logique sans piège clavier",
+				"type": [
+					"Navigation clavier"
+				],
+				"tests": [
+					"Désactiver les styles de pages <br/>sous Firefox > Affichage > Style de la page > Aucun style",
+					"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
+				],
+				"verifier": [
+					"Vérifier l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est cohérent et logique (souvent équivalent à l'ordre visuel)"
+				],
+				"resultat": [
+					"Le parcours clavier à travers la page est logique et fait sens"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation clavier",
+				"ID": "testID-036",
+				"title": "Rendre visible le focus en toute circonstance / outline",
+				"type": [
+					"Navigation clavier"
+				],
+				"tests": [
+					"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
+				],
+				"verifier": [
+					"Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est suffisamment  visible"
+				],
+				"resultat": [
+					"La prise de focus est visible (par exemple, pour la propriété CSS <code>outline</code> a une taille suffisante >1px)"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Navigation clavier",
+				"ID": "testID-037",
+				"title": "Rendre visible le focus en toute circonstance / contraste",
+				"type": [
+					"Navigation clavier"
+				],
+				"tests": [
+					"Lancer l'inspecteur de code",
+					"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>",
+					"Identifier la couleur du focus et la couleur de fond",
+					"Tester avec le Color Contrast Analyzer"
+				],
+				"verifier": [
+					"Vérifier que le niveau de contraste entre la couleur de l'indicateur de focus et le fond, est suffisante"
+				],
+				"resultat": [
+					"Le niveau de contraste est suffisant 3:1"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Mise en page",
+				"ID": "testID-038",
+				"title": "Utiliser des tailles relatives et faire du web adaptatif",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Navigateur > Affichage > Zoom texte seulement",
+					"Zoom à 200%"
+				],
+				"verifier": [
+					"Vérifier qu'il n'y ai pas de contenus ou de fonctionnalités inutilisables tronqués ou masqués"
+				],
+				"resultat": [
+					"Absence de contenus et fonctionnalités inutilisables, tronqués ou masqués"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-045",
+				"title": "Associer une étiquette pertinente à chaque champ de formulaire - Label",
+				"type": [
+					"aXe"
+				],
+				"tests": [
+					"Lancer aXe"
+				],
+				"verifier": [
+					"Vérifier l'absence d'erreur relatives à des éléments de formulaire non labellisés. <br/><br/>Une des solutions ci-dessous doit être implémentée, par ordre de préférence : <ul><li>Présence d'un élément <code>&lt;label&gt;</code> en masquage accessible ou non, correctement lié à son champ</li><li>Présence de l'attribut <code>title</code></li><li>Présence de l'attribut <code>aria-label</code></li></ul>"
+				],
+				"resultat": [
+					"Présence, de préférence, d'une balise <code>label</code> ou l'équivalent pour tout champ de formulaire"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-046",
+				"title": "Associer une étiquette pertinente à chaque champ de formulaire - Pertinence des labels",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Test manuel",
+					"Parcourir les formulaires"
+				],
+				"verifier": [
+					"Vérifier que le texte des labels (élément <code>label</code>, ou <code>title</code>) est pertinent, ou <code>aria-label</code>"
+				],
+				"resultat": [
+					"Présence d'intitulés d'une balise <code>label</code> ou l'équivalent pertinents pour tout champ de formulaire"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-047",
+				"title": "Associer une étiquette pertinente à chaque champ de formulaire - Formats de données",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Test manuel",
+					"Parcourir les formulaires"
+				],
+				"verifier": [
+					"Vérifier que le texte des labels indique le format de données lorsque nécessaire."
+				],
+				"resultat": [
+					"Présence de texte précisent le formats de saisie"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-048",
+				"title": "Associer une étiquette pertinente à chaque champ de formulaire - Champs obligatoire",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Test manuel",
+					"Parcourir les formulaires"
+				],
+				"verifier": [
+					"Vérifier que les champs obligatoires sont identifiables visuellement et programmatiquement : <ul><li>l'identification visuelle du champ obligatoire ne repose pas uniquement sur la couleur</li><li>Une des techniques ci-dessous est implémentée pour transmettre l'information programmatiquement : <ul><li>l'information visuelle est intégrée dans le label. Une alternative texte est disponible pour transmettre l'information</li><li>présence d'un attribut <code>required</code></li><li>présence d'un attribut <code>aria-required</code></li></ul></li></ul>"
+				],
+				"resultat": [
+					"Les champs obligatoire sont identifiables visuellement et programmatiquement"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-049",
+				"title": "Associer une étiquette pertinente à chaque champ de formulaire - Groupe",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Test manuel",
+					"Parcourir les formulaires"
+				],
+				"verifier": [
+					"Vérifier que les champs de même nature sont groupés. <br/><br/>Une des solutions ci-dessous est implémentée : <ul><li>présence d'une balise <code>fieldset</code></li><li>présence d'un attribut <code>role='group'</code> (ou radiogroup pour les boutons radio) sur l'élément parent encapsulant les champs</li></ul>"
+				],
+				"resultat": [
+					"Les champs de même nature sont groupés"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-050",
+				"title": "Détecter, identifier les erreurs et suggérer des corrections / pertinence des messages",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Test manuel",
+					"Parcourir les formulaires",
+					"Renseigner les formulaires avec des données erronées",
+					"Soumettre les formulaires"
+				],
+				"verifier": [
+					"Vérifier que des messages d'erreurs sont présents, et pertinents"
+				],
+				"resultat": [
+					"Les erreurs sont détectées et les messages pertinents"
+				],
+				"exception": [],
+				"raccourcis": "",
+				"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Formulaires",
+				"ID": "testID-036",
+				"title": "Détecter, identifier les erreurs et suggérer des corrections / identification des erreurs",
+				"type": [
+					"Test manuel"
+				],
+				"tests": [
+					"Test manuel",
+					"Parcourir les formulaires",
+					"Renseigner les formulaires avec des données erronées",
+					"Soumettre les formulaires"
+				],
+				"verifier": [
+					"Vérifier qu'une des solutions ci-dessous est implémentée : <ul><li>Le message d'erreur est présent avant le formulaire. <br/>Le message liste les champs en erreur. <br/>Le focus est positionné sur le message d'erreur. <br/>Des ancres permettent à l'utilisateur de se positionner sur les champs en erreurs</li><li>Les messages d'erreurs sont ajoutés dans les labels des champs.</li><li>Les messages d'erreurs ne sont pas intégrés dans les labels, mais un mécanisme est présent afin de lier les champs et les erreurs de manière programmatique : voir <code>aria-describedby</code></li></ul>"
+				],
+				"resultat": [
+					"Les erreurs sont détectées",
+					"Un mécanisme accessible est présent pour identifier les erreurs"
+				],
+				"exception": [],
+				"raccourcis": "",
+				"profils": ["Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			},
+			{
+				"themes": "Aides techniques",
+				"title": "S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran",
+				"type": [
+					"Lecteur d'écran"
+				],
+				"tests": [
+					"Parcourir l'application"
+				],
+				"verifier": [
+					"Vérifier que toutes les fonctionnalités sont disponibles avec un lecteur d'écran : <ul><li>Les contenus sont correctement vocalisés</li><li>Les fonctionnalités sont utilisables</li></ul>"
+				],
+				"resultat": [
+					"Les principales fonctionnalités sont utilisables avec un lecteur d'écran"
+				],
+				"exception": "",
+				"raccourcis": "",
+				"profils": ["Expert Accessibilité"],
+				"resultatTest": "",
+				"commentaire": ""
+			}
+		]
+}
