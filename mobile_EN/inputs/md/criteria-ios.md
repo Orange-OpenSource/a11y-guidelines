@@ -789,6 +789,26 @@ The screen orientation mustn't impact the access of an application content.
 - Appropriate settings in the integrated development environment.
 </div>
 </div></br></br>
+## Accessibility dedicated screen
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" 
+           data-toggle="tab" 
+           href="#DedicatedScreen-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active" 
+     id="DedicatedScreen-Description" 
+     role="tabpanel" >
+It may be pretty much easier to **create a new dedicated accessibility screen**
+ in order not to challenge the current state that may contain hard graphical elements to be adapted.
+</br></br>However, even if it could be a brilliant idea at first sight, it's definitely not recommended **to move in this direction** because:  
+- The screen reader is not only used by sight-impaired people but also by **illiterate persons** who may notice that a different screen appears when this feature is activated and then may think that different information is also provided ⟹ this situation may lead to a kind of discriminatory feeling.
+- From a practical point of view for the maintainability of the application, adding a new dedicated screen that will be used only when an accessibility feature is activated  may be forgotten by the developers if some modifications are added to the initial one that doesn't deal with accessibility.
+</div>
+</div></br></br>
 ## Accessibility options
 
 <a id="a11yOptions"></a>

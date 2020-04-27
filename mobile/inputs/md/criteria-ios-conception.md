@@ -804,6 +804,26 @@ L’accès au contenu d’une application ne doit absolument pas dépendre de l�
 </div>
 </div></br></br>
 
+## Écran spécifique accessibilité
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" 
+           data-toggle="tab" 
+           href="#DedicatedScreen-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active" 
+     id="DedicatedScreen-Description" 
+     role="tabpanel" >
+En fonction des spécificités liées aux interfaces graphiques proposées, il peut être beaucoup plus facile de vouloir **créer un nouvel écran dédié accessibilité** pour ne pas avoir à remettre en cause les développements déjà implémentés.
+</br></br>Même si cela peut sembler être une bonne idée à première vue, il ne faut **absolument pas s'engager dans cette voie** car&nbsp;:  
+- Le lecteur d'écran est utilisé pour les personnes aveugles mais aussi par les personnes illétrées. Pour ces dernières, s'apercevoir qu'un écran d'application change en fonction de l'activation de cette fonctionnalité peut laisser croire que toutes les informations fournies initialement ne sont peut-être pas les mêmes que celles proposées en accessibilité, ce qui peut conduire à un sentiment discriminant.
+- D'un point de vue pratique pour la maintenabilité de l'application, le fait de rajouter un écran qui ne sera utilisé que lorsqu'une option d'accessibilité est activée risque de rapidement l'oublier si des modifications ultérieures sont à apporter sur l'écran initial.
+</div>
+</div></br></br>
+
 ## Options d'accessibilité
 
 <a id="a11yOptions"></a>
