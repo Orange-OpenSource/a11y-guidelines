@@ -9,6 +9,10 @@
   </head>
   <body>
     {% include "partials/header.njk" %}
+    {# We don't want to display the breadcrumb on the home pages #}
+    {% if not page.url | isHomeUrl %}
+      {% include "../components/breadcrumbs.njk" %}
+    {% endif %}
     <main id="main-content" class="container-lg pt-4" role="main">
       {% block content %}{% endblock %}
       {{ content | safe }}
