@@ -1,0 +1,24 @@
+{% set breadcrumb = header.mainNavigation | getBreadcrumb(locale, page, title) %}
+
+<nav class="container-lg" role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">{% translate 'breadcrumb.label', locale %}</p>
+  <ol class="breadcrumb">
+    {% for item in breadcrumb %}
+      {% if item.isActive %}
+        <li class="breadcrumb-item" aria-current="location">
+          {{ item.label }}
+        </li>
+      {% else %}
+        <li class="breadcrumb-item">
+          <a href="{{ item.href }}">
+            {#
+              For now, a bug in Boosted prevents breadcrumb links from beeing underlined if they are not inside the <main> tag
+              @see https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/372
+            #}
+            <u>{{ item.label }}</u>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
