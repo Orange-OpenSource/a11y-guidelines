@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && eleventy",
-    "serve": "npm run clean && eleventy --serve",
+    "serve": "npm run clean && eleventy --serve --quiet",
     "clean": "del-cli _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
