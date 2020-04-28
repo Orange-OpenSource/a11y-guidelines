@@ -9,10 +9,10 @@ module.exports = {
   },
   fr: {
     breadcrumb: {
-      label: "Vous êtes ici :"
+      label: "Vous êtes ici&nbsp;:"
     },
     header: {
-      logoAlt: "Aller à l'accueil"
+      logoAlt: "Aller à l’accueil"
     }
   }
 }
