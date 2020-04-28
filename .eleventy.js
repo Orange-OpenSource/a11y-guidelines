@@ -1,3 +1,4 @@
+const site = require('./src/_data/site')
 const locales = require('./src/_data/locales')
 const collections = require('./src/config/collections')
 
@@ -28,6 +29,67 @@ module.exports = function (eleventyConfig) {
     }
 
     return translation
+  })
+
+  eleventyConfig.addNunjucksFilter('isHomeUrl', function (url) {
+    return site.locales.available.includes(url.replace(/\//g, ''))
+  })
+
+  eleventyConfig.addNunjucksFilter('getBreadcrumb', function (data, locale, page, pageTitle) {
+    const breadcrumb = []
+    const navigation = data[locale]
+    const homeURL = `/${locale}/`
+    const home = navigation.filter(path => path.href === homeURL)[0]
+
+    /**
+     * @param target
+     * @returns {boolean}
+     */
+    function isActive (target) {
+      return target === page.url
+    }
+
+    function addBreadcrumbItem (item) {
+      breadcrumb.push({
+        href: item.href,
+        label: item.label,
+        isActive: isActive(item.href)
+      })
+    }
+
+    /**
+     * @param url
+     * @returns {boolean}
+     */
+    function breadcrumbContains (url) {
+      return breadcrumb.some(item => item.href === url)
+    }
+
+    addBreadcrumbItem(home)
+
+    navigation.forEach(item => {
+      if (page.url.includes(item.href) && !breadcrumbContains(item.href)) {
+        addBreadcrumbItem(item)
+      }
+      if (item.subLevels) {
+        item.subLevels.forEach(subLevel => {
+          if (page.url.includes(subLevel.href) && !breadcrumbContains(item.href)) {
+            addBreadcrumbItem(item)
+            addBreadcrumbItem(subLevel)
+          }
+        })
+      }
+    })
+
+    // Generally the last level, which is not included in the mainNavigation data (articles, ...)
+    if (!breadcrumbContains(page.url)) {
+      addBreadcrumbItem({
+        href: page.url,
+        label: pageTitle
+      })
+    }
+
+    return breadcrumb
   })
 
   // Create collections & dynamically suffix their name by the locale key

@@ -1,6 +1,6 @@
 {% macro navLink(link) %}
   {% set strictlyActive = page.url == link.href %}
-  {% set active = strictlyActive or link.href in page.url and link.href | replace('/', '') not in site.locales.available %}
+  {% set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl %}
 
   {% set current = "page" if strictlyActive else "true" %}
 
