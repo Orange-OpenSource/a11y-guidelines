@@ -15,7 +15,6 @@
     {% endif %}
     <main id="main-content" class="container-lg pt-4" role="main">
       {% block content %}{% endblock %}
-      {{ content | safe }}
     </main>
     {% include "partials/footer.njk" %}
     <script src="../assets/script.js"></script>
