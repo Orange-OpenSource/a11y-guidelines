@@ -23,7 +23,7 @@ On peut déclencher une alerte en insérant un nouvel élément dans le DOM via 
 Le déclenchement d'une alerte peut également s'effectuer en ajoutant un role alert à un élément existant dynamiquement via Javascript.
 
 <pre><code class="js">
-document.getElementById('alert').addAttribute("role", "alert");
+document.getElementById('alert').setAttribute("role", "alert");
 </code></pre>
 
 ### Utiliser innerHTML
