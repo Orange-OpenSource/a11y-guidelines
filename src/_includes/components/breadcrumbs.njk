@@ -10,13 +10,7 @@
         </li>
       {% else %}
         <li class="breadcrumb-item">
-          <a href="{{ item.href }}">
-            {#
-              For now, a bug in Boosted prevents breadcrumb links from beeing underlined if they are not inside the <main> tag
-              @see https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/372
-            #}
-            <u>{{ item.label }}</u>
-          </a>
+          <a href="{{ item.href }}">{{ item.label }}</a>
         </li>
       {% endif %}
     {% endfor %}
