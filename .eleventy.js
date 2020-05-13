@@ -5,6 +5,8 @@ const collections = require('./src/config/collections')
 const IMAGES_EXTENSIONS = ['jpg', 'png']
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true)
+
   eleventyConfig.addPassthroughCopy({ 'src/assets/': 'assets' })
 
   // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
