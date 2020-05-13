@@ -6,10 +6,10 @@
     <link rel="icon" href="https://boosted.orange.com/docs/4.4/assets/img/favicons/favicon.ico">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/css/boosted.min.css" integrity="sha384-OB/gcmnjN4zOvILOKtMqzd/ZUoKc/cgZDpn0c2C5FoQAJqmQdjX4ITe6XSK32JyO" crossorigin="anonymous">
+    {% for item in head %}{{ item | safe }}{% endfor %}
     {% for item in css %}
       <link rel="stylesheet" href="{{ item }}">
     {% endfor %}
-    {% block head %}{% endblock %}
   </head>
   <body>
     {% include "partials/header.njk" %}
@@ -21,11 +21,10 @@
       {% block content %}{% endblock %}
     </main>
     {% include "partials/footer.njk" %}
-    <script src="../assets/script.js"></script>
+    <script src="/assets/script.js"></script>
     {% for item in js %}
       <script src="{{ item }}"></script>
     {% endfor %}
-    {% block tail %}{% endblock %}
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
   </body>
 </html>
