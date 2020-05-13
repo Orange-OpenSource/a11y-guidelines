@@ -1,0 +1,73 @@
+.example label {
+  font-weight: bold;
+}
+
+.example select, .example ul {
+  font-family: "Arial";
+  font-size: 1rem;
+  border: .2rem solid #000;
+  display: block;
+  margin: 1rem 0 2rem 0;
+  width: 30rem;
+  height: 15rem;
+}
+
+.example ul {
+  list-style: none;
+  padding: .25rem;
+  height: auto;
+  min-height: 2rem;
+  width: 100%;
+}
+
+.example li {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: .25rem;
+}
+
+.example li button {
+  font-size: 1rem;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Arial";
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  padding: 0.25rem;
+}
+
+.example li button:after {
+  content: "x";
+  margin: .25rem .25rem .25rem .75rem;
+  padding-left: .4rem;
+  border-left: .15rem solid #fff;
+}
+
+.example li button:focus, .example li button:hover {
+  background-color: #f16e00;
+  color: #000;
+}
+
+.example option {
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: .1rem solid #eee;
+}
+
+.example option:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.example option:hover,
+.example option:focus,
+.example option:active,
+.example option:checked {
+  background: #000;
+  color: #fff;
+}
