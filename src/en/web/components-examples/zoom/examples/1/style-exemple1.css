@@ -1,12 +1,4 @@
-/*!
-* This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-* Copyright (C) 2016  Orange SA
-* See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file).**/
-body {
-  font-size: 1.6rem;
-}
-
-nav {
+.example nav {
   background: #EEEEEE;
   padding: 15px;
   margin-top: 30px;
@@ -14,12 +6,12 @@ nav {
   text-align: center;
 }
 
-ul {
+.example ul {
   padding: 0;
   list-style: none;
 }
 
-li {
+.example li {
   display: inline-block;  
   background: #fff;
   color: #000;
@@ -31,18 +23,14 @@ li {
   overflow: hidden;
 }
 
-li h2 {
+.example li h2 {
   font-size: 20px;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-li button {
-  width: 100%;
-}
-
-li p {
+.example li p {
   font-size: 15px;
   text-align: left;
   font-weight: bold;
