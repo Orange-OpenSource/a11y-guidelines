@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Arial";
+}
+
+.example label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+}
+
+.example h2 {
+  font-size: inherit;
+  display: inline;
+}
+
+.example .field {
+  border: .2rem solid #000;
+}
+
+.example .focus {
+  background: #eee;
+}
+
+.example input[type=submit] {
+  border: .2rem solid #000;
+  background-color: #fff;
+  font-weight: bold;
+  font-family: "Arial";
+  margin: 1rem 0;
+  padding: .25rem;
+  font-size: 1rem;
+  width: auto;
+}
+
+.example input[type=submit]:hover, .example input[type=submit]:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.example input {
+  background-color: transparent;
+  display: inline-block;
+  width: 40rem;
+  min-height: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: .25rem;
+  font-size: 1rem;
+  font-family: "Arial";
+  border: 0;
+  margin: 0;
+}
+
+.example textarea {
+  border: .2rem solid #000;
+  width: 100%;
+  min-height: 15rem;
+  font-family: "Arial";
+  padding: .25rem;
+}
+
+.example ul {
+  font-family: "Arial";
+  font-size: 1rem;
+  display: inline;
+  margin: 1rem 0 2rem 0;
+  list-style: none;
+  padding: 0;
+  height: auto;
+  min-height: 2rem;
+  width: auto;
+}
+
+.example li {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: .25rem;
+}
+
+.example li button {
+  font-size: 1rem;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Arial";
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  padding: 0.25rem;
+}
+
+.example li button:after {
+  content: "x";
+  margin: .25rem .25rem .25rem .75rem;
+  padding-left: .4rem;
+  border-left: .15rem solid #fff;
+}
+
+.example li button:focus, .example li button:hover {
+  background-color: #f16e00;
+  color: #000;
+}
