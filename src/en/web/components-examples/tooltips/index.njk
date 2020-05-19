@@ -1,0 +1,57 @@
+---
+title: "Tooltips"
+js:
+  - script.js
+---
+
+<h1>Tooltip</h1>
+
+<h2>Introduction</h2>
+<p>
+Tooltips are part of the components conventionally found on websites. <abbr>HTML</abbr> provides the ability to display tooltips via the <code>title</code> attribute. That being said, this solution is unfortunately not very attractive since it is impossible to change its appearance. The most common solution is to create tooltips from standard <abbr>HTML</abbr> elements (<code>span</code>, <code>div</code>…) whose appearance can be adapted to your needs using <abbr>CSS</abbr>. However, for these tooltips to be accessible for users who do not use a mouse, some precautions must be taken.  
+</p>
+
+<h2>The easiest solution</h2>
+<p>
+      The easiest way to display tooltips is to use a Javascript component already accessible. This is the case of <a href="http://boosted.orange.com/javascript/#tooltips">the tooltip component available in the Boosted library </a>.
+</p>
+
+<h3>Example</h3>
+
+<p>
+      <div class="row">
+            <div class="col-md-6">
+                  <form class="border border-secondary p-3 mt-2">
+                        <div class="form-group">
+                              <label for="serial-number">Please enter the serial number <span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="on the back of the device"></span></label>
+                              <input type="text" class="form-control" id="serial-number">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+            </div>
+      </div>
+</p>
+
+<h3>Snippet example</h3>
+<pre><code class="html">
+      &lt;form&gt;
+            &lt;div class="form-group"&gt;
+                  &lt;label for="serial-number"&gt;
+                        Please enter the serial number
+                        &lt;span tabindex="0" class="icon-info" data-toggle="tooltip" data-placement="right" title="on the back of the device"&gt;&lt;/span&gt;
+                  &lt;/label&gt;
+                  &lt;input type="email" class="form-control" id="serial-number"&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-default"&gt;Envoyer&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+
+<h2>Testing</h2>
+<dl>
+   <dt>Move the focus on the “i” using the <kbd>Tab</kbd> key.</dt>
+   <dd>The tooltip appears.</dd>
+   <dt>Navigating the example using a screen reader.</dt>
+   <dd>The text of the tooltip properly vocalized.</dd>
+</dl>
+
+<p><strong>Note: </strong>the <code>tabindex</code> attribute is required when the tooltip is used on a non-focusable element (<code>span</code>). Without this attribute, the tooltip would not be accessible from the keyboard.</p>

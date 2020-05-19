@@ -1,3 +1,5 @@
 {
-  "layout": ""
+  "css": [
+    "/assets/components-examples.css"
+  ]
 }
