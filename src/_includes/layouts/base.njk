@@ -5,7 +5,7 @@
     <title>{{ title }} - {{ site.title[locale] }}</title>
     <link rel="icon" href="https://boosted.orange.com/docs/{{ vendors.boosted.favicon.version }}/assets/img/favicons/favicon.ico">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.css.version }}/dist/css/boosted.min.css" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/css/boosted.min.css" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">
     {% for item in head %}{{ item | safe }}{% endfor %}
     {% for item in css %}
       <link rel="stylesheet" href="{{ item }}">
