@@ -1,5 +1,10 @@
 ---
 title: "L'attribut aria-live et le role alert"
+abstract: "Lorem ipsum dolor sit amet"
+date: "2020-03-02"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # L'attribut aria-live et le role alert

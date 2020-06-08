@@ -1,10 +1,59 @@
 {% macro navLink(link) %}
-  {% set strictlyActive = page.url == link.href %}
-  {% set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl %}
+{% set strictlyActive = page.url == link.href %}
+{% set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl %}
 
-  {% set current = "page" if strictlyActive else "true" %}
+{% set current = "page" if strictlyActive else "true" %}
 
-  <a href="{{ link.href }}" class="nav-link{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
-    {{ link.label }}
-  </a>
+<a href="{{ link.href }}" class="nav-link{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
+  {{ link.label }}
+</a>
+{% endmacro %}
+
+{% macro postsList(posts, filters = true) %}
+{% if filters == true %}
+  {{ filtersBar(posts) }}
+{% endif %}
+<ol class="list-unstyled">
+{% for post in posts | reverse %}{% if page.url != post.url %}
+  {% set tags = post.data.tags %}
+
+  <li class="border-bottom border-500 py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
+    <article>
+      <h2 class="mb-1">
+        <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
+      </h2>
+      {% if post.date %}
+        <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
+      {% endif %}
+      {% if post.data.abstract %}
+        <p class="my-2">{{ post.data.abstract }}</p>
+      {% endif %}
+      {% if tags %}
+        <ul class="list-inline">
+          {% for tag in tags %}
+            <li class="list-inline-item"><a href="?tag={{ tag }}" class="badge badge-secondary">{{ locales[locale].tags[tag] }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </article>
+  </li>
+{% endif %}{% endfor %}
+</ol>
+{% endmacro %}
+
+{% macro filtersBar(posts) %}
+{% set tags = posts | getPostsTags %}
+<nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
+  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ locales[locale].filtersBar.label }} :</h2>
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="?all" class="nav-link" data-tag="all">{{ locales[locale].filtersBar.all }}</a>
+    </li>
+    {% for tag in tags %}
+      <li class="nav-item">
+        <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">{{ locales[locale].tags[tag] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
 {% endmacro %}
