@@ -1,5 +1,10 @@
 ---
 title: "HTML5 & ARIA"
+abstract: "Lorem ipsum dolor sit amet"
+date: "2018-08-04"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # <abbr>HTML5</abbr> & <abbr>ARIA</abbr>

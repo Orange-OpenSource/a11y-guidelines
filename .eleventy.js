@@ -33,6 +33,24 @@ module.exports = function (eleventyConfig) {
     return translation
   })
 
+  eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
+    if (date === null) {
+      throw new Error('[localizedDate]: no date provided')
+    }
+
+    if (locale === null) {
+      throw new Error('[localizedDate]: no locale provided')
+    }
+
+    const options = {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    }
+
+    return new Intl.DateTimeFormat(locale, options).format(date)
+  })
+
   eleventyConfig.addNunjucksFilter('isHomeUrl', function (url) {
     return site.locales.available.includes(url.replace(/\//g, ''))
   })
@@ -92,6 +110,20 @@ module.exports = function (eleventyConfig) {
     }
 
     return breadcrumb
+  })
+
+  eleventyConfig.addNunjucksFilter('getPostsTags', function (posts) {
+    const tags = new Set()
+
+    posts.forEach(post => {
+      if (!post.data.tags) {
+        return
+      }
+
+      post.data.tags.forEach(item => tags.add(item))
+    })
+
+    return tags
   })
 
   // Create collections & dynamically suffix their name by the locale key

@@ -1,5 +1,10 @@
 ---
 title: "Utiliser ARIA, les messages d'état, de statut ou contextuel"
+abstract: "Lorem ipsum dolor sit amet"
+date: "2020-12-29"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # Utiliser <abbr>ARIA</abbr>  les messages d'état, de statut ou contextuel

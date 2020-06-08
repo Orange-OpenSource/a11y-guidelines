@@ -1,5 +1,10 @@
 ---
 title: "Les attributs ARIA qui peuvent vous sauver !"
+abstract: "Lorem ipsum dolor sit amet"
+date: "2019-01-17"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&nbsp;: `aria-label`, `aria-labelledby` et `aria-describedby` 

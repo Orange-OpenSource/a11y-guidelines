@@ -1,5 +1,10 @@
 ---
 title: "Le nom accessible en HTML"
+abstract: "Lorem ipsum dolor sit amet"
+date: "2020-11-23"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # Le nom accessible en <abbr>HTML</abbr>

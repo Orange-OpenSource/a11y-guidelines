@@ -5,6 +5,16 @@ module.exports = {
     },
     header: {
       logoAlt: 'Go to homepage'
+    },
+    filtersBar: {
+      label: 'Filters',
+      all: "All"
+    },
+    tags: {
+      componentExample: "Component example",
+      mobile: 'Mobile',
+      technicalArticle: 'Technical article',
+      web: 'Web'
     }
   },
   fr: {
@@ -13,6 +23,16 @@ module.exports = {
     },
     header: {
       logoAlt: "Aller à l’accueil"
+    },
+    filtersBar: {
+      label: 'Filtres',
+      all: 'Tout'
+    },
+    tags: {
+      componentExample: "Exemple de composant",
+      mobile: 'Mobile',
+      technicalArticle: 'Article technique',
+      web: 'Web'
     }
   }
 }
