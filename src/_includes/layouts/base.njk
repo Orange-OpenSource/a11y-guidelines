@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ title }} - {{ site.title[locale] }}</title>
     <link rel="icon" href="https://boosted.orange.com/docs/{{ vendors.boosted.favicon.version }}/assets/img/favicons/favicon.ico">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/css/boosted.min.css" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">
     {% for item in head %}{{ item | safe }}{% endfor %}
@@ -22,6 +23,9 @@
       {% block content %}{% endblock %}
     </main>
     {% include "partials/footer.njk" %}
+    {% if jquery == true %}
+      <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
+    {% endif %}
     <script src="/assets/script.js"></script>
     {% for item in js %}
       <script src="{{ item }}"></script>
