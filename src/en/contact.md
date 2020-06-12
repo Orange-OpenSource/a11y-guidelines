@@ -2,7 +2,7 @@
 title: "Your opinion matters"
 ---
 
-# Orange digital accessibility guidelines <h2 class="page-title">Your opinion matters…</h2>
+# Your opinion matters
 
 Have a bug or a feature request?  
 

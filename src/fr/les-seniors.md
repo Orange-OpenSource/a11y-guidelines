@@ -2,8 +2,7 @@
 title: "Les seniors"
 ---
 
-# Recommandations accessibilité numérique Orange
-<h2 class="page-title">Les séniors</h2>
+# Les séniors
 
 ### Problématique
 

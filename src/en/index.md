@@ -2,9 +2,7 @@
 title: "What is digital accessibility"
 ---
 
-# Orange digital accessibility guidelines
-
-<h2 id="what-is-digital-accessibility" class="page-title">What is digital accessibility?</h2>
+# What is digital accessibility?
 
 Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones. 
 

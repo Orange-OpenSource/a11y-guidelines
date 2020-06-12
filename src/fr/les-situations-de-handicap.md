@@ -2,8 +2,7 @@
 title: "Les situations de handicap"
 ---
 
-# Recommandations accessibilité numérique Orange
-<h2 class="page-title">Les situations de handicap</h2>
+# Les situations de handicap
 
 ### Le handicap auditif
 <div class="axs-picto auditif">
@@ -51,7 +50,7 @@ title: "Les situations de handicap"
 </div>
 &nbsp;
 
-<h2 class="page-title">L’accessibilité numérique</h2>
+## L’accessibilité numérique
 
 <div class="axs-picto">
     Les règles d’accessibilité servent au-delà des situations de handicaps identifiées et apportent du confort pour tous&nbsp;; quelques cas ci-dessous&nbsp;:      
