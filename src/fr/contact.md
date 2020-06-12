@@ -2,7 +2,7 @@
 title: "Votre avis compte"
 ---
 
-# Recommandations accessibilité numérique Orange <h2 class="page-title">Votre avis compte</h2>
+# Votre avis compte
 
 Vous avez une remarque, une suggestion à apporter&nbsp;?  
 

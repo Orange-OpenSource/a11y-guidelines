@@ -2,8 +2,7 @@
 title: "Cognitive disability"
 ---
 
-# Orange digital accessibility guidelines
-<h2 class="page-title">Cognitive disability</h2>
+# Cognitive disability
 
 **Cognitive disability** is the consequence of cognitive dysfunctions: difficulties with memory, problems coping with change, language, receptive identification and gestures. Cognitive disability **does not imply intellectual deficiency**, but difficulties to muster capacities.
 

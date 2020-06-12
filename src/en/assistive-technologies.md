@@ -2,7 +2,7 @@
 title: "Assistive technologies"
 ---
 
-# Orange digital accessibility guidelines <h2 class="page-title">Assistive technologies</h2>
+# Assistive technologies
 
 People with disabilities can use assistive technologies to access the web whatever the device. These technologies include:
 - Software solutions, such as screen reader or digital screen magnifiers,

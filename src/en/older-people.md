@@ -2,8 +2,7 @@
 title: "Older people"
 ---
 
-# Orange digital accessibility guidelines
-<h2 class="page-title">Older people</h2>
+# Older people
 
 ### Summary
 

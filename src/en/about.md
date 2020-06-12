@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-# Orange digital accessibility guidelines <h2 class="page-title">About</h2>
+# About
 
 Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on github](https://github.com/Orange-OpenSource/a11y-guidelines).  
 
