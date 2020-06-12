@@ -36,4 +36,28 @@
   })
 
   document.getElementById('filtersbar_counter').innerHTML = `${String(posts.length - hiddenPosts)}&nbsp;`
+})();
+
+/* Table Of Content */
+(function Toc () {
+  const toc = document.getElementById('toc')
+
+  if (!toc) {
+    return
+  }
+
+  const hash = document.location.hash
+  const tocLinks = toc.querySelectorAll('a')
+
+  window.addEventListener('hashchange', Toc)
+
+  tocLinks.forEach(link => {
+    link.classList.remove('active')
+    link.removeAttribute('aria-current')
+
+    if (link.hash === hash) {
+      link.classList.add('active')
+      link.setAttribute('aria-current', 'true')
+    }
+  })
 })()
