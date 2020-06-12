@@ -15,6 +15,9 @@ module.exports = {
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web'
+    },
+    toc: {
+      title: 'Table of content'
     }
   },
   fr: {
@@ -33,6 +36,9 @@ module.exports = {
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web'
+    },
+    toc: {
+      title: 'Sommaire'
     }
   }
 }
