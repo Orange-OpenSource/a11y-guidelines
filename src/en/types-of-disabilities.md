@@ -2,8 +2,7 @@
 title: "Types of disabilities"
 ---
 
-# Orange digital accessibility guidelines
-<h2 class="page-title">Types of Disabilities</h2>
+# Types of Disabilities
 
 ### Hearing impairments
 <div class="axs-picto auditif">

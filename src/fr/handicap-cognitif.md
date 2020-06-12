@@ -2,8 +2,7 @@
 title: "Le handicap cognitif"
 ---
 
-# Recommandations accessibilité numérique Orange
-<h2 class="page-title">Le handicap cognitif</h2>
+# Le handicap cognitif
 
 **Le handicap cognitif** est la conséquence de dysfonctionnements des fonctions cognitives : troubles de l’attention, de la mémoire, de l’adaptation au changement, du langage, des identifications perceptives (gnosies) et des gestes (praxies). Le handicap cognitif n’implique **pas de déficience intellectuelle** mais des difficultés à mobiliser ses capacités.
 À ne pas confondre avec le handicap mental et le handicap psychique :
