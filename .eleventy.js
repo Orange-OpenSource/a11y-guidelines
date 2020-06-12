@@ -1,4 +1,9 @@
+const cheerio = require('cheerio')
+const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
+
 const site = require('./src/_data/site')
+const config = require('./src/_data/config')
 const locales = require('./src/_data/locales')
 const collections = require('./src/config/collections')
 
@@ -13,6 +18,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
   eleventyConfig.addPassthroughCopy(`src/en/web/components-examples/**/*.{html,css,js}`)
   eleventyConfig.addPassthroughCopy(`src/fr/web/exemples-de-composants/**/*.{html,css,js}`)
+
+  /**
+   * Override markdown generator to create ids automatically on headings
+   */
+  eleventyConfig.setLibrary('md',
+    markdownIt(config.eleventy.markdownIt).use(markdownItAnchor, config.eleventy.markdownItAnchor)
+  )
 
   /**
    * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
@@ -124,6 +136,26 @@ module.exports = function (eleventyConfig) {
     })
 
     return tags
+  })
+
+  eleventyConfig.addNunjucksFilter('getHeadingsForToc', function (content) {
+    if (typeof content === 'undefined') {
+      console.warn('[getHeadingsForToc filter]: `content` parameter is undefined. Are you sure you imported the ui macros `with context` ?')
+    }
+
+    const $ = cheerio.load(content)
+    const permalinkSymbol = config.eleventy.markdownItAnchor.permalinkSymbol
+
+    const items = []
+
+    $(config.toc.selector.join(',')).each(function () {
+      items.push({
+        id: $(this).attr('id'),
+        text: $(this).text().replace(permalinkSymbol, '').trim()
+      })
+    })
+
+    return items
   })
 
   // Create collections & dynamically suffix their name by the locale key

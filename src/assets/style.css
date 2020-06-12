@@ -1,0 +1,9 @@
+/**
+ * Table Of Content
+ */
+
+#toc a[aria-current] {
+  border-left: 4px solid currentColor;
+  color: #ff7900;
+  margin-left: -4px;
+}

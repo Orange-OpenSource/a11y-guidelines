@@ -57,3 +57,16 @@
   </ul>
 </nav>
 {% endmacro %}
+
+{% macro toc() %}
+<nav id="toc" role="navigation" aria-labelledby="toc-title">
+  <h2 id="toc-title">{{ locales[locale].toc.title }}</h2>
+  <ul class="nav flex-column">
+    {% for heading in content | getHeadingsForToc %}
+      <li class="nav-item">
+        <a href="#{{ heading.id }}" class="nav-link">{{ heading.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endmacro %}
