@@ -14,7 +14,7 @@ Nous vous présenterons des guides ayant pour objectifs de vous fournir les info
 
 ### Avec Microsoft Word
 
-Vous trouverez les recommandations Microsoft Word, ainsi que la procédure pour exporter le document en <abbr>PDF</abbr>, sur la <a href="/others/word.html">rubrique Microsoft Word des recommandations accessibilité Orange</a>.
+Vous trouverez les recommandations Microsoft Word, ainsi que la procédure pour exporter le document en <abbr>PDF</abbr>, sur la <a href="../word">rubrique Microsoft Word des recommandations accessibilité Orange</a>.
 
 ### Avec Adobe InDesign
 

@@ -35,7 +35,7 @@ Pour tous vos mails du quotidien :
 Plusieurs options s’offrent à vous pour créer un Pushmail accessible.
 
 ### Création à partir d’un document Word
-1. Créer un document Word accessible en suivant [les recommandations Word](https://a11y-guidelines.orange.com/others/word.html).
+1. Créer un document Word accessible en suivant [les recommandations Word](../word).
 2. Puis utiliser l’option « Envoyer au destinataire du message ».  
 
 Option à ajouter la première fois via Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message. 
@@ -43,13 +43,13 @@ Option à ajouter la première fois via Fichier > Option > Barre d’outils acc�
 
 ### Création à partir de « Mes Pushmails »
 
-L’outil fournit des gabarits nativement accessibles (à condition d’ajouter du texte de remplacement pour les images) ce qui n’empêche pas de suivre [les recommandations générales](https://a11y-guidelines.orange.com/others/editorial.html) pour le contenu éditorial.
+L’outil fournit des gabarits nativement accessibles (à condition d’ajouter du texte de remplacement pour les images) ce qui n’empêche pas de suivre [les recommandations générales](../generalites) pour le contenu éditorial.
 
-<img alt="capture d'écran de l'outil mes Pushmails" src="images/email2.png">
+<img alt="capture d'écran de l'outil mes Pushmails" src="../images/email2.png">
 
 ### Création à partir d’HTML (ou autre outil dédié)
 
-Composer le code HTML de façon accessible en suivant [les principales recommandations Web](https://a11y-guidelines.orange.com/web/index.html). 
+Composer le code HTML de façon accessible en suivant [les principales recommandations Web](../../web). 
 Important : compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux (en utilisant role=presentation dans la balise table). 
 
 ### La dernière chance
@@ -59,7 +59,7 @@ Si la mise en page de votre mail nécessite d’être très complexe :
 
 ## Liens utiles
 
-- [Site des recommandations accessibilité Orange](https://a11y-guidelines.orange.com/others/index.html)
+- [Site des recommandations accessibilité Orange](https://a11y-guidelines.orange.com/)
 - [Tuto Office mails accessibles](https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775)
 - [Guide le l’accessibilité des mails (anglais)](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240)
 - [Guide Litmus : mails accessibles (anglais)](https://litmus.com/blog/ultimate-guide-accessible-emails)

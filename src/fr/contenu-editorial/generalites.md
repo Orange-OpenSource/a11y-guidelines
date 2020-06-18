@@ -31,7 +31,7 @@ Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.
 -	Expliquer les mots compliqués.
 -	Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).
 -	Utiliser les caractères typographiques du Français&nbsp;: tiret - , cadratin — , «&nbsp;guillemets français&nbsp;».
--	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&nbsp;Insertion&nbsp;&gt; Symbole&nbsp;&gt; Texte normal&nbsp;» ou utiliser [les raccourcis clavier](./editorial.html#annexes)).
+-	Ajouter des accents même aux majuscules éèêçàïùÉÈÊÇÀÏÙ («&nbsp;Insertion&nbsp;&gt; Symbole&nbsp;&gt; Texte normal&nbsp;» ou utiliser [les raccourcis clavier](#annexes)).
 -	Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.
 
 ## Fournir une mise en page des tableaux accessibles

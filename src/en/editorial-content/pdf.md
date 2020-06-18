@@ -14,7 +14,7 @@ Below are listed guides aiming at providing necessary information in order to ma
 
 ### With Microsoft Word
 
-You will find Microsoft Word recommendations as well as the <abbr>PDF</abbr> export procedure on our <a href="/others_EN/word.html">Creating accessible Word documents</a> page.
+You will find Microsoft Word recommendations as well as the <abbr>PDF</abbr> export procedure on our <a href="../word">Creating accessible Word documents</a> page.
 
 ### With Adobe InDesign
 
