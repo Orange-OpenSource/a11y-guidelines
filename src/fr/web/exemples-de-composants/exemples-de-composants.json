@@ -1,5 +1,7 @@
 {
   "css": [
     "/assets/components-examples.css"
-  ]
+  ],
+  "jquery": true,
+  "highlightjs": true
 }

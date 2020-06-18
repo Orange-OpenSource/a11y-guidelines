@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/css/boosted.min.css" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">
+    {% if highlightjs == true %}
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightjs.version }}/build/styles/{{ vendors.highlightjs.theme }}.min.css">
+    {% endif %}
     <link rel="stylesheet" href="/assets/style.css">
     {% for item in head %}{{ item | safe }}{% endfor %}
     {% for item in css %}
@@ -26,6 +29,10 @@
     {% include "partials/footer.njk" %}
     {% if jquery == true %}
       <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
+    {% endif %}
+    {% if highlightjs == true %}
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+      <script>hljs.initHighlightingOnLoad()</script>
     {% endif %}
     <script src="/assets/script.js"></script>
     {% for item in js %}
