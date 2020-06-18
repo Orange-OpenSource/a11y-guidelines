@@ -4,16 +4,16 @@ title: "Recommandations accessibilité Orange pour le web"
 
 # Recommandations accessibilité Orange pour le web
 
-*** L’accessibilité, un avantage pour tous, une nécessité pour certains&nbsp;! ***
+***L’accessibilité, un avantage pour tous, une nécessité pour certains&nbsp;!***
 
 ## Définition de l’accessibilité web
-** C’est un service web utilisable par tous **
+**C’est un service web utilisable par tous**
 
 - Personnes valides
 - Seniors
 - Personnes en situation de handicap (temporaire ou permanent)
 
-** et dans tous les contextes **
+**et dans tous les contextes**
 
 - Avec tous types de matériel&nbsp;: navigateurs, <abbr>PC</abbr>, Mac, téléphones mobiles, tablettes
 - Dans un contexte dégradé&nbsp;: mauvaise luminosité, <i lang="en">touchpad</i> en mobilité, etc.

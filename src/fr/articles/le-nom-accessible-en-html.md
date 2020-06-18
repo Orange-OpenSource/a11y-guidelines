@@ -50,7 +50,7 @@ Donc, un élément de ce type `<button type=”submit”></button>` sans intitul
 Par ailleurs, pour les éléments de formulaire, le nom accessible est le `label` lorsqu’il est programmatiquement associé à l'élément via l'attribut `for` référençant l'`id` du champ.
 
 <pre><code class="html">
-&lt;label for="search"&lt;Rechercher&gt;/label&gt;
+&lt;label for="search"&gt;Rechercher&lt;/label&gt;
 &lt;input id="search" type="text"&gt;
 </code></pre>
 

@@ -1,5 +1,6 @@
 ---
 title: "Recommandations accessibilité pushmail Orange"
+highlightjs: true
 ---
 
 # Recommandations accessibilité <span lang="en">pushmail</span> Orange
@@ -17,14 +18,14 @@ En interne Orange, nous utilisons principalement trois méthodes pour composer l
 - Utilisation d'un outil dédié comme «&nbsp;Mes Pushmails&nbsp;».
 - Composition directe ou indirecte (via des <i lang="en">frameworks</i>) en <abbr>HTML</abbr>.
 
-Quelle que soit la méthode choisie, il faut au préalable respecter les [recommandations générales](./editorial.html) pour tout document rédactionnel.
+Quelle que soit la méthode choisie, il faut au préalable respecter les [recommandations générales](../generalites) pour tout document rédactionnel.
 
 ### Création à partir d’un document Word 
-Créer un document Word accessible en suivant les [recommandations Word](./word.html). Puis utiliser l’option «&nbsp;Envoyer au destinataire du message&nbsp;» (option à ajouter la première fois via Fichier&nbsp;> Option&nbsp;> Barre d’outils accès rapide&nbsp;> Envoyer au destinataire du message). 
+Créer un document Word accessible en suivant les [recommandations Word](../word). Puis utiliser l’option «&nbsp;Envoyer au destinataire du message&nbsp;» (option à ajouter la première fois via Fichier&nbsp;> Option&nbsp;> Barre d’outils accès rapide&nbsp;> Envoyer au destinataire du message). 
 
 ### Création à partir d’<abbr>HTML</abbr> ou d'un outil dédié
-Créer des pages <abbr>HTML</abbr> accessibles en suivant [les recommandations Web](../web/index.html), si besoin et les recommandations spécifiques ci dessous.  
-Á noter&nbsp;: en interne à Orange, l’outil «&nbsp;Mes Pushmails&nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](./editorial.html) pour du contenu éditorial.
+Créer des pages <abbr>HTML</abbr> accessibles en suivant [les recommandations Web](../../web), si besoin et les recommandations spécifiques ci dessous.  
+Á noter&nbsp;: en interne à Orange, l’outil «&nbsp;Mes Pushmails&nbsp;» fournit des gabarits nativement accessibles, ce qui n’empêche pas de suivre les [recommandations générales](../generalites) pour du contenu éditorial.
 
 ## Règle spécifique <span lang="en">pushmail</span> <abbr>HTML</abbr>
 

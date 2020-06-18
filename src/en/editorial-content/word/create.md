@@ -16,7 +16,7 @@ Every change of language within the document must be identified by selecting the
 ## Document properties
 
 Title, author and tags fields have to be completed in tab `File > Info > Properties`.
-<img alt="" src="./images/word1.png" class="img-fluid">
+<img alt="" src="../../images/word1.png" class="img-fluid">
 
 These properties are readable by everyone in Windows Explorer and by the screen readers. 
 
@@ -38,16 +38,16 @@ If necessary, keep accentuation on capital letters (example: É or Ç): use the 
 Use familiar sans serif fonts (such as Arial or Calibri), in a large font size (12pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.  
 Use predefined styles for formatting content: "normal" style must be assigned almost everywhere (default style), the "quote" style for quotes, etc.
 Avoid justifying the text; prefer left alignment.  
-<img alt="" src="./images/word2.png" class="img-fluid">
+<img alt="" src="../../images/word2.png" class="img-fluid">
 
 Do not use carriage returns to skip rows nor successive tabs ("Tab" key on the keyboard ) for text formatting.  
 In order to add white space between sentences and paragraphs, use option: `right click` on the text and select `Paragraph… > Indents and Spacing`.  
-<img alt="" src="./images/word3.png" class="img-fluid">  
+<img alt="" src="../../images/word3.png" class="img-fluid">  
 Do not use text boxes because their content is not interpreted by screen readers.  
 Use the page break option via the `Insert Tab > “Page Break”` menu to move to the next page.  
 Number pages of your document (`Insert Tab > “Page Number”`) to allow users to navigate easily.  
 Note: the « Tabs… » options can let you adjust the Tab stop position.  
-<img alt="" src="./images/word4.png" class="img-fluid">  
+<img alt="" src="../../images/word4.png" class="img-fluid">  
 
 ## Colors and contrasts
 ### Use sufficient contrast between text and background colors
@@ -60,14 +60,14 @@ If you choose to not use the Orange Group colors guidelines, you can download th
 
 ### Ensure that color is not the only way to convey content
 For people who cannot see the colors or the shades of colors, it is important to convey content differently.
-<img alt="" src="./images/word5.png" class="img-fluid">  
-<img alt="" src="./images/word6.png" class="img-fluid">
+<img alt="" src="../../images/word5.png" class="img-fluid">  
+<img alt="" src="../../images/word6.png" class="img-fluid">
 
 ## Bulleted Lists or Numbered Lists
 Always use the appropriate and native functions to create lists: 
 - Ordered (numbered) lists are used to present a group of items (words, sentences…) that follow a sequence
 - Unordered (bulleted) lists are used for a group of items without a sequence
-<img alt="" src="./images/word7.png" class="img-fluid">
+<img alt="" src="../../images/word7.png" class="img-fluid">
 
 ## Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content
 The alternative text has to convey the content and the purpose of the image and its context in a concise and unambiguous manner.  
@@ -79,13 +79,13 @@ Note: if you use a layout option other than "In Line With Text" (by right-clicki
 
 ## Audio or video file
 For audio and video content, in addition to alt text, be sure the video or audio as well as the player are accessible.  
-<a href="https://a11y-guidelines.orange.com/others_EN/video.html">See our recommendations for audio or video files.</a>  
+<a href="../../animated-components">See our recommendations for audio or video files.</a>  
 
 ## Links 
 Specify clear and accurate link text: it must make sense as standalone information to understand the destination target.  
 Specify when links are opened in a new window:  
 `Insert tab > Hyperlink > SreenTip`  
-<img alt="" src="./images/word8.png" class="img-fluid">  
+<img alt="" src="../../images/word8.png" class="img-fluid">  
 Note: a blind person asks his screen reader to list all the links on a page. Each link text will therefore be read isolated from its visual context.
 
 ## Data Tables
@@ -97,21 +97,21 @@ Finally, tables should not be used for formatting purposes : use the "Columns" o
 ## Accessibility Checker
 At least, run Accessibility Checker to make sure your content is accessible. It can detect the main errors and suggests some solutions.  
 In `File tab > Check for Issues`.
-<img alt="" src="./images/word9.png" class="img-fluid">  
+<img alt="" src="../../images/word9.png" class="img-fluid">  
 
 Important: if you encounter some difficulties, try to save your document from within Word 2010 in ".docx" (or ".pptx") format. The option to "Maintain compatibility with previous versions of Word" has to remains unchecked. 
 
 ## Converting to PDF
 If you want to save you presentation as PDF, select: `File tab > Save & Send` and create PDF document.  
 Check if the « Document structure tags for accessibility » option is selected.  
-<img alt="" src="./images/word10.png" class="img-fluid">  
-<img alt="" src="./images/word11.png" class="img-fluid">  
+<img alt="" src="../../images/word10.png" class="img-fluid">  
+<img alt="" src="../../images/word11.png" class="img-fluid">  
 
 Note: with Word 2010, generated PDF documents may have accessibility issues (especially with the images vocalization). These issues have been fixed in later versions of Microsoft Office.
 
 ## For more detailed information
 
 - <a href="http://webaim.org/techniques/word/" hreflang="en">Word Accessibility, WebAIM</a>.
-- check <a href="https://a11y-guidelines.orange.com/others_EN/pdf.html">PDF</a> document accessibility: download <a href="https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">PDF Accessibility Checker (PAC 3)</a>.
+- check <a href="../../pdf">PDF</a> document accessibility: download <a href="https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">PDF Accessibility Checker (PAC 3)</a>.
 - <a href="https://support.office.com/en-us/article/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25?ui=en-US&rs=en-US&ad=US">Microsoft Accessibility Support website</a>
 - <a lang="fr" href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">(FR) Créer des documents bureautiques accessible <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.</a> 
