@@ -4,16 +4,16 @@ title: "Orange web accessibility guidelines"
 
 # Orange web accessibility guidelines  
 
-*** Accessibility, a benefit for all, a need for some! ***
+***Accessibility, a benefit for all, a need for some!***
 
 ## Web accessibility definition
-** An accessible web service can be used by anyone: **
+**An accessible web service can be used by anyone:**
 
 - A valid person,
 - elderly people,
 - people with disabilities (temporary or permanent).
 
-** and in all situations: **
+**and in all situations:**
 
 - with any kind of material: web browser, PC, MAC, mobile phones, tablet;
 - in an unfavourable environment: poor luminosity, touchpad while moving, etc.;

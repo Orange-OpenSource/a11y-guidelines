@@ -10,14 +10,14 @@ title: "Check accessibility in Word"
 Start your tests with the Office Accessibility Verification Tool: 
 **File > Info > Check for Issues > Check Accessibility**
 
-<img alt="Accessibility checker screenshot" src="./images/word_verification_en.png" class="img-fluid" />  
+<img alt="Accessibility checker screenshot" src="../../images/word_verification_en.png" class="img-fluid" />  
 
 **Important:** if you encounter some difficulties, try to save your document from within Word 2010 in ".docx" format. The option to "Maintain compatibility with previous versions of Word" has to remains unchecked. 
 
 ### Color contrasts
 [Download Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)
 
-<img alt="colour contrast analyser screenshot" src="./images/cca.png" class="img-fluid" />  
+<img alt="colour contrast analyser screenshot" src="../../images/cca.png" class="img-fluid" />  
 
 ### Screen reader: JAWS & NVDA
 To complete the verification, you can test with a screen reader. 
