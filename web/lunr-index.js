@@ -1175,7 +1175,7 @@ documentTitles["methodes-outils-lecteur-ecran.html#installation"] = "Installatio
 index.add({
     url: "methodes-outils-lecteur-ecran.html#installation",
     title: "Installation",    
-    body: "### Installation  Télécharger le fichier d’installation de &lt;abbr&gt;NVDA&lt;/abbr&gt; sur le [site officiel](http://nvda-fr.org/).  La voix par défaut n’est pas de très bonne qualité mais elle est très réactive. Ce n’est pas indispensable, mais le téléchargement d’une voix de meilleure qualité est conseillé comme celle d’[Hortense](https://www.nvda-fr.org/voix/). Il suffit ensuite de se rendre dans les préférences de &lt;abbr&gt;NVDA&lt;/abbr&gt; pour modifier les paramètres vocaux.  "
+    body: "### Installation  Télécharger le fichier d’installation de &lt;abbr&gt;NVDA&lt;/abbr&gt; sur le [site officiel](http://nvda-fr.org/).  La voix par défaut n’est pas de très bonne qualité mais elle est très réactive. Ce n’est pas indispensable, mais le téléchargement d’une voix de meilleure qualité est conseillé comme celle d’[Hortense](https://www.nvda-fr.org/voix/MSSpeech_TTS_fr-FR_Hortense.msi). Il suffit ensuite de se rendre dans les préférences de &lt;abbr&gt;NVDA&lt;/abbr&gt; pour modifier les paramètres vocaux.  "
 });
 
 documentTitles["methodes-outils-lecteur-ecran.html#configuration"] = "Configuration";
