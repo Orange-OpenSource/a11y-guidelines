@@ -6,12 +6,18 @@ $('.o-nav-local').prioritynav('Autres pages');
  * Global vars
  */
 var dataVallydette;
+var dataWCAG;
 var	currentPage = 0;
 var statutClass = "badge-light";
 var arrayFilterNameAndValue = [];	
 var arrayFilterActivated = [];
 var currentCriteriaListName;
 
+var htmlContextualMenuContent = document.getElementById('contextualMenu');
+var htmlFilterContent = document.getElementById('filter');
+
+
+	
 /**
  * Vallydette object
  */
@@ -133,6 +139,8 @@ function importRGAA(dataVallydette, dataRGAA) {
 
 function runVallydetteApp() {
    	
+	currentPage = 0;
+	
 	textContent = {
         title1: "Procédures",
 		title2: "À vérifier",
@@ -155,6 +163,7 @@ function runVallydetteApp() {
     runTestListMarkup(dataVallydette.checklist.page[currentPage].items);
 	eventHandler();
     updateCounter(false, dataVallydette.checklist.page[currentPage].items.length);
+	utils.setPageTitle ( dataVallydette.checklist.page[currentPage].name);
 }
 
 function eventHandler() {
@@ -177,31 +186,37 @@ function eventHandler() {
 		setValue(btnChecklist.dataset.element, btnChecklist.dataset.property)
 	}, false);
 
-	var btnPage = document.getElementById("btnPageName");
-	btnPage.addEventListener('click', function () {
-		setValue(btnPage.dataset.element, btnPage.dataset.property, btnPage.dataset.secondaryElement)
+	btnActionPageEventHandler ();
+	
+}
+
+function btnActionPageEventHandler () {
+	
+	var currentBtnPageName = document.getElementById('btnPageName');
+	var currentBtnDelPage = document.getElementById('btnDelPage');
+	
+	currentBtnPageName.addEventListener('click', function () {
+		setValue(currentBtnPageName.dataset.element, currentBtnPageName.dataset.property, currentBtnPageName.dataset.secondaryElement)
 	}, false);
 
-	var btndelPage = document.getElementById("btnDelPage");
-	btndelPage.addEventListener('click', function () {
-		setDeletePage(btnPage.dataset.element)
+	
+	currentBtnDelPage.addEventListener('click', function () {
+		setDeletePage(currentBtnPageName.dataset.element)
 	}, false);
 	
 }
 
-
 runTestListMarkup = function (currentRefTests) {
 
-	let elrefTests = document.getElementById('refTests');
+	let elrefTests = document.getElementById('mainContent');
 	let htmlrefTests = '';
 	let headingTheme = '';
 	let headingCriterium = '';
 	let nextIndex = 1;
 
 	if (currentCriteriaListName === 'wcagEase') {
-		var currentPageName = document.getElementById('pageName');
-		currentPageName.innerHTML = dataVallydette.checklist.page[currentPage].name;
-
+		setPageName(dataVallydette.checklist.page[currentPage].name);
+		
 		for (let i in currentRefTests) {
 			var currentTest = currentRefTests[i].ID;
 			if (headingTheme != currentRefTests[i].themes) {
@@ -227,21 +242,21 @@ runTestListMarkup = function (currentRefTests) {
 
 			htmlrefTests += '<button type="button" id="commentBtn' + currentTest + '" class="btn btn-link" aria-labelledby="commentBtn' + currentTest + ' title-' + currentTest + '" data-toggle="modal" data-target="#modal' + currentTest + '">' + getCommentState(currentTest) + '</button>';
 
-			//if (currentRefTests[i].verifier || currentRefTests[i].exception) {
-				htmlrefTests += '<button class="btn btn-secondary btn-icon" type="button" data-toggle="collapse" data-target="#collapse-' + currentTest + '" aria-expanded="false" aria-controls="collapse-' + currentTest + '"><span class="icon-arrow-down" aria-hidden="true"><span class="sr-only">Informations supplémentaires</span></button></div>';
-				htmlrefTests += '<div class="collapse ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + ' border-light pt-3 mx-3" id="collapse-' + currentTest + '">';
+			
+			htmlrefTests += '<button class="btn btn-secondary btn-icon" type="button" data-toggle="collapse" data-target="#collapse-' + currentTest + '" aria-expanded="false" aria-controls="collapse-' + currentTest + '"><span class="icon-arrow-down" aria-hidden="true"></span><span class="sr-only">Informations supplémentaires</span></button></div>';
+			htmlrefTests += '<div class="collapse ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + ' border-light pt-3 mx-3" id="collapse-' + currentTest + '">';
 
-				if (currentRefTests[i].verifier) {
-					htmlrefTests += '<h4 class="h5">' + textContent.title2 + '</h4>';
-					htmlrefTests += currentRefTests[i].verifier;
-					htmlrefTests += currentRefTests[i].complement;
-				}
+			if (currentRefTests[i].verifier) {
+				htmlrefTests += '<h4 class="h5">' + textContent.title2 + '</h4>';
+				htmlrefTests += currentRefTests[i].verifier;
+				htmlrefTests += currentRefTests[i].complement;
+			}
 
-				if (currentRefTests[i].exception) {
-					htmlrefTests += '<h4 class="h5">Exceptions</h4>';
-					htmlrefTests += '<p>' + currentRefTests[i].exception + '</p>';
-				}
-			//}
+			if (currentRefTests[i].exception) {
+				htmlrefTests += '<h4 class="h5">Exceptions</h4>';
+				htmlrefTests += '<p>' + currentRefTests[i].exception + '</p>';
+			}
+			
 
 			htmlrefTests += '<div class="py-2 ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + 'border-light"><p class="text-muted mb-0"><abbr title="Web Content Accessibility Guidelines" aria-label="Web Content Accessibility Guidelines" lang="en">WCAG</abbr>&nbsp;:';
 			for (let j in currentRefTests[i].wcag) {
@@ -424,11 +439,14 @@ function initComputation() {
 	matriceRequest.open(method, matriceVallydette, true);
 	matriceRequest.onreadystatechange = function () {
 	  if(matriceRequest.readyState === 4 && matriceRequest.status === 200) {
-			matriceWcag = JSON.parse(matriceRequest.responseText);
-         
+			dataWCAG = JSON.parse(matriceRequest.responseText);
+
             var btnShowResult = document.getElementById("btnShowResult");
             btnShowResult.addEventListener('click', function () {
-                runFinalComputation(matriceWcag, dataVallydette)
+                runComputation();
+				utils.setPageTitle("Résultat d'audit");
+				utils.resetActive(document.getElementById("pageManager"));
+				utils.putTheFocus(document.getElementById("pageName"));
             }, false);
 	  }
 	};
@@ -436,53 +454,74 @@ function initComputation() {
 	
 }
 
-function runComputation(referentielMatrice) {
-    const matriceObject = referentielMatrice;
-    pagesResults = [];
+function runComputation(referentielWCAG) {
 
+    pagesResults = [];
+	dataWCAG.items.forEach(initProperties);
+	
     for (let i in dataVallydette.checklist.page) {
         pagesResults[i] = [];
         pagesResults[i].items = [];
         pagesResults[i].name = dataVallydette.checklist.page[i].name;
+		pagesResults[i].url = dataVallydette.checklist.page[i].url;
+		
 
-        for (let k in matriceObject.items) {
+        for (let k in dataWCAG.items) {
             pagesResults[i].items[k] = {};
-            pagesResults[i].items[k].wcag = matriceObject.items[k].wcag;
-			pagesResults[i].items[k].level = matriceObject.items[k].level;
+            pagesResults[i].items[k].wcag = dataWCAG.items[k].wcag;
+			pagesResults[i].items[k].level = dataWCAG.items[k].level;
             pagesResults[i].items[k].resultat = "nt";
             pagesResults[i].items[k].complete = true;
+			
 
-            for (let l in matriceObject.items[k].tests) {
+            for (let l in dataWCAG.items[k].tests) {
                 for (let j in dataVallydette.checklist.page[i].items) {
-                    if (matriceObject.items[k].tests[l] === dataVallydette.checklist.page[i].items[j].IDorigin) {
+					
+                    if (dataWCAG.items[k].tests[l] === dataVallydette.checklist.page[i].items[j].IDorigin) {
+						
                         if (dataVallydette.checklist.page[i].items[j].resultatTest === "nt") {
                             pagesResults[i].items[k].complete = false;
                         }
 
+						if (dataVallydette.checklist.page[i].items[j].resultatTest === "ko") {
+							dataWCAG.items[k].resultat = false;
+							if (dataVallydette.checklist.page[i].items[j].commentaire!=="") { 
+                               dataWCAG.items[k].comment.push(dataVallydette.checklist.page[i].items[j].commentaire);
+							}
+                         }
+						
                         if (pagesResults[i].items[k].resultat) {
                             if (dataVallydette.checklist.page[i].items[j].resultatTest === "ok") {
-                                pagesResults[i].items[k].resultat = true;
+                                pagesResults[i].items[k].resultat = true;	
+								break;	
+								
                             } else if (dataVallydette.checklist.page[i].items[j].resultatTest === "ko") {
                                 pagesResults[i].items[k].resultat = false;
+								break;	
+								
+								
                             } else if ((dataVallydette.checklist.page[i].items[j].resultatTest === "na") && (pagesResults[i].items[k].resultat === "nt")) {
                                 pagesResults[i].items[k].resultat = "na";
+								break;	
                             }
                         }
+						
+						
                     }
                 }
 
                 if (pagesResults[i].items[k].complete === false) {
-                    pagesResults[i].items[k].resultat = "nt";
+                    // pagesResults[i].items[k].resultat = "nt";
                 }
             }
         }
     }
 
-    return pagesResults;
+    return runFinalComputation(pagesResults);
 }
 
-function runFinalComputation(referentielMatrice) {
-    pagesResultsArray = runComputation(referentielMatrice);
+function runFinalComputation(pagesResultsArray) {
+    
     nbNTResultsArray = utils.getNbNotTested();
 
     var nbNT = nbNTResultsArray.total;
@@ -554,107 +593,123 @@ function runFinalComputation(referentielMatrice) {
 
     finalResult = Math.round((finalTotal / nbPage));
 
-    let htmlModal = '';
-    htmlModal = '<div id="modalResult" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="">';
-    htmlModal += '<div class="modal-dialog modal-dialog-scrollable" role="document">';
-    htmlModal += '<div class="modal-content">';
-    htmlModal += '<div class="modal-header">';
-    htmlModal += '<h2>Résultat de conformité</h2>';
-    htmlModal += '<button type="button" class="close" data-dismiss="modal" aria-label="Fermer"></button>';
-    htmlModal += '</div>';
-    htmlModal += '<div class="modal-body">';
+   
+    let htmlMainContent = document.getElementById('mainContent');
+	let computationContent = '';
 
-
+	setPageName("Résultat de l'audit");
+	removeContextualMenu();
+	removeFilterSection();
+	
     if (nbNT >= 1) {
-        htmlModal += '<h3>Conformité globale : </h3>';
-        htmlModal += '<p>Audit en cours.</p>';
-		htmlModal += '<h3>Résultat par pages : </h3>';
-		htmlModal += '<ul>';
-		for (let i in pagesResultsArray) {
-			if (pagesResultsArray[i].complete === false) {
-				htmlModal += '<li><strong>' + pagesResultsArray[i].name + ' : </strong>en cours (' + nbNTResultsArray['page' + i] + ' non-testé(s))</li>';
-			} else {
-				htmlModal += '<li><strong>' + pagesResultsArray[i].name + ' : </strong>' + ((typeof pagesResultsArray[i].result === 'number') ? pagesResultsArray[i].result.toFixed(2) + ' %' : pagesResultsArray[i].result) + ' </li>';
-			}
-		}
-		htmlModal += '</ul>';
+        computationContent += '<h2 class="pt-4 pb-3">Conformité globale : <span class="text-primary">audit en cours</span></h2>';
+		
     } else if (nbNT === 0 && !isNaN(finalResult)) {
-        htmlModal += '<h3>Conformité globale : </h3>';
-        htmlModal += '<span class="h1 text-primary">' + finalResult + '%</span>';
+        computationContent += '<h2 class="pt-4 pb-3">Conformité globale : <span class="text-primary">' + finalResult + '%</span></h2>';
+	}	
+	
+		computationContent += '<ul class="nav nav-tabs" role="tablist">';
+		computationContent += '	<li class="nav-item" role="presentation"><a class="nav-link active" href="#resultatPage" data-toggle="tab" id="tabResultatPage" role="tab" tabindex="0" aria-selected="true" aria-controls="resultatPage">Résultats par page</a></li>';
+		computationContent += '	<li class="nav-item" role="presentation"><a class="nav-link" href="#syntheseNiveau" data-toggle="tab" id="tabSyntheseNiveau" role="tab" tabindex="-1" aria-selected="false" aria-controls="syntheseNiveau">Synthèse par niveau</a></li>';	
+		computationContent += '	<li class="nav-item" role="presentation"><a class="nav-link" href="#nonConformites" data-toggle="tab" id="tabNonConformites" role="tab" tabindex="-1" aria-selected="false" aria-controls="nonConformites">Liste des non-conformités</a></li>';
+		computationContent += '</ul>';
+		
+		computationContent += '<div class="tab-content border-0">';
+		computationContent += '  <div class="tab-pane active" id="resultatPage" role="tabpanel" tabindex="0" aria-hidden="false" aria-labelledby="tabResultatPage">';
 		
 		
-		htmlModal += '<ul class="nav nav-tabs" role="tablist">';
-		htmlModal += '	<li class="nav-item"><a class="nav-link active" href="#resultatPage" data-toggle="tab" id="tabResultatPage" role="tab" tabindex="0" aria-selected="true" aria-controls="resultatPage">Résultats par page</a></li>';
-		htmlModal += '	<li class="nav-item "><a class="nav-link" href="#syntheseNiveau" data-toggle="tab" id="tabSyntheseNiveau" role="tab" tabindex="-1" aria-selected="false" aria-controls="syntheseNiveau">Synthèse par niveau</a></li>';
-		htmlModal += '</ul>';
-		
-		htmlModal += '<div class="tab-content border-0">';
-		htmlModal += '  <div class="tab-pane active" id="resultatPage" role="tabpanel" tabindex="0" aria-hidden="false" aria-labelledby="tab456843">';
-		htmlModal += '<ul>';
 		for (let i in pagesResultsArray) {
-			if (pagesResultsArray[i].complete === false) {
-				htmlModal += '<li><strong>' + pagesResultsArray[i].name + ' : </strong>en cours (' + nbNTResultsArray['page' + i] + ' non-testé(s))</li>';
+			computationContent += '<h3>' + pagesResultsArray[i].name + ' : </h3>';
+			
+			computationContent += '<ul>';
+			computationContent += '<li><strong>résultat :</strong> ';
+			computationContent += (!isNaN(pagesResultsArray[i].result.toFixed(2))) ? pagesResultsArray[i].result.toFixed(2) + ' % ' : '';
+			computationContent += (pagesResultsArray[i].complete === false) ?  '(en cours / ' + nbNTResultsArray['page' + i] + ' non-testé(s))' : '';
+			computationContent += '</li>';
+			computationContent += (pagesResultsArray[i].url!== undefined && pagesResultsArray[i].url!== '') ? '<li><strong> url : </strong>' + pagesResultsArray[i].url + '</li>': '';
+			computationContent += '</ul>';
+		}
+		
+		
+		computationContent += '  </div>';
+		computationContent += '  <div class="tab-pane" id="syntheseNiveau" role="tabpanel" tabindex="-1" aria-hidden="true" aria-labelledby="tab779525">';
+		computationContent += '<table class="table table-striped"><caption class="sr-only">Synthèse par niveau</caption>';
+		computationContent += '<thead><tr>';
+		computationContent += '<th scope="row">Critères</th>';
+		computationContent += '<th scope="col" colspan="2" class="text-center">Conformes</th>';
+		computationContent += '<th scope="col" colspan="2" class="text-center">Non-conformes</th>';
+		computationContent += '<th scope="col" colspan="2" class="text-center">Non-applicables</th>';
+		computationContent += '<th rowspan="2" class="text-center bg-light">Taux de conformité </th>';
+		computationContent += '</tr><tr>';
+		computationContent += '<th scope="col">Niveau</th>';
+		computationContent += '<th scope="col" class="text-center">A</th>';
+		computationContent += '<th scope="col" class="text-center">AA</th>';
+		computationContent += '<th scope="col" class="text-center">A</th>';
+		computationContent += '<th scope="col" class="text-center">AA</th>';
+		computationContent += '<th scope="col" class="text-center">A</th>';
+		computationContent += '<th scope="col" class="text-center">AA</th>';
+		computationContent += '</tr></thead>';
+		computationContent += '<tbody>';
+	
+		
+		for (let i in pagesResultsArray) {
+			
+			computationContent += '<tr>';
+			computationContent += '<th scope="row" class="font-weight-bold">' + pagesResultsArray[i].name + '</th>';
+			computationContent += '<td class="text-center">' + pagesResultsArray[i].conformeA+ '</td>';
+			computationContent += '<td class="text-center">' + pagesResultsArray[i].conformeAA+ '</td>';
+			computationContent += '<td class="text-center">' + pagesResultsArray[i].nonconformeA+ '</td>';
+			computationContent += '<td class="text-center">' + pagesResultsArray[i].nonconformeAA+ '</td>';
+			computationContent += '<td class="text-center">' + pagesResultsArray[i].naA+ '</td>';
+			computationContent += '<td class="text-center">' + pagesResultsArray[i].naAA+ '</td>';
+			computationContent += '<td class="text-center bg-light">';
+			computationContent += (!isNaN(pagesResultsArray[i].result.toFixed(2))) ? pagesResultsArray[i].result.toFixed(2) + ' % ' : '';
+			computationContent += (pagesResultsArray[i].complete === false) ?  '(en cours)' : '';	
+			computationContent += '</td>';
+			computationContent += '</tr>';
+			
+		}
+		computationContent += '</tbody>';
+		computationContent += '</table>';
+		computationContent += ' </div>';
+		
+		computationContent += '<div class="tab-pane" id="nonConformites" role="tabpanel" tabindex="-1" aria-hidden="true" aria-labelledby="tab779525">';
+		
+			const listNonConformity = dataWCAG.items.filter(dataWcagResult => dataWcagResult.resultat === false);
+			
+			if (listNonConformity.length > 0) {
+				
+				for (let i in listNonConformity) {
+				
+					computationContent += '<ul>';
+					computationContent += '<li><strong>Critère ' + listNonConformity[i].wcag + ', ' + listNonConformity[i].name  + ', niveau ' + listNonConformity[i].level + '</strong>';
+				
+					if (listNonConformity[i].comment.length > 0) {
+
+							computationContent += '<ul>';
+							for (let j in listNonConformity[i].comment) {
+								computationContent += '<li>' + listNonConformity[i].comment[j] + '</li>';	
+							}
+							computationContent += '</ul>';	
+					} 
+					
+					computationContent += '</li>';
+					computationContent += '</ul>';
+		
+				}
+				
 			} else {
-				htmlModal += '<li><strong>' + pagesResultsArray[i].name + ' : </strong>' + ((typeof pagesResultsArray[i].result === 'number') ? pagesResultsArray[i].result.toFixed(2) + ' %' : pagesResultsArray[i].result) + ' </li>';
+				
+				computationContent += '<p>Absence de non-conformité</p>';
+				
 			}
-		}
-		htmlModal += '</ul>';
-		htmlModal += '  </div>';
-		htmlModal += '  <div class="tab-pane" id="syntheseNiveau" role="tabpanel" tabindex="-1" aria-hidden="true" aria-labelledby="tab779525">';
-		htmlModal += '<table class="table table-striped"><caption class="sr-only">Synthèse par niveau</caption>';
-		htmlModal += '<thead><tr>';
-		htmlModal += '<th scope="row">Critères</th>';
-		htmlModal += '<th scope="col" colspan="2" class="text-center">Conformes</th>';
-		htmlModal += '<th scope="col" colspan="2" class="text-center">Non-conformes</th>';
-		htmlModal += '<th scope="col" colspan="2" class="text-center">Non-applicables</th>';
-		htmlModal += '<th rowspan="2" class="text-center bg-light">Taux de conformité </th>';
-		htmlModal += '</tr><tr>';
-		htmlModal += '<th scope="col">Niveau</th>';
-		htmlModal += '<th scope="col" class="text-center">A</th>';
-		htmlModal += '<th scope="col" class="text-center">AA</th>';
-		htmlModal += '<th scope="col" class="text-center">A</th>';
-		htmlModal += '<th scope="col" class="text-center">AA</th>';
-		htmlModal += '<th scope="col" class="text-center">A</th>';
-		htmlModal += '<th scope="col" class="text-center">AA</th>';
-		htmlModal += '</tr></thead>';
-		htmlModal += '<tbody>';
-	
+			
+			
 		
-		for (let i in pagesResultsArray) {
-			
-			htmlModal += '<tr>';
-			htmlModal += '<th scope="row" class="font-weight-bold">' + pagesResultsArray[i].name + '</th>';
-			htmlModal += '<td class="text-center">' + pagesResultsArray[i].conformeA+ '</td>';
-			htmlModal += '<td class="text-center">' + pagesResultsArray[i].conformeAA+ '</td>';
-			htmlModal += '<td class="text-center">' + pagesResultsArray[i].nonconformeA+ '</td>';
-			htmlModal += '<td class="text-center">' + pagesResultsArray[i].nonconformeAA+ '</td>';
-			htmlModal += '<td class="text-center">' + pagesResultsArray[i].naA+ '</td>';
-			htmlModal += '<td class="text-center">' + pagesResultsArray[i].naAA+ '</td>';
-			htmlModal += '<td class="text-center bg-light">' + pagesResultsArray[i].result.toFixed(2) + ' %</td>';
-			htmlModal += '</tr>';
-			
-		}
-		htmlModal += '</tbody>';
-		htmlModal += '</table>';
-		htmlModal += ' </div>';
-		  
-		htmlModal += '</div>';
-			
-    }
-	
-    htmlModal += '</div>';
-    htmlModal += '<div class="modal-footer">';
-    htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>';
-    htmlModal += '</div>';
-    htmlModal += '</div>';
-    htmlModal += '</div>';
-    htmlModal += '</div>';
+		computationContent += '</div>';
 
-
-    let elModal = document.getElementById('modal');
-    elModal.innerHTML = htmlModal;
+    htmlMainContent.innerHTML = computationContent;
 }
-
 
 
 /**
@@ -681,18 +736,19 @@ initPagination = function (pages) {
 		addPage();
 	}, false);
 
+	initContextualMenu(0, "pageID-0");
+	
 	for (let i in getPages) {
 		let newPage = document.createElement("li");
 		newPage.classList.add("nav-item");
-		//display pagination
+
 		let newBtnPage = document.createElement("button");
 
 		newBtnPage.innerHTML = getPages[i].name;
 		newBtnPage.setAttribute('id', getPages[i].IDPage);
 		newBtnPage.classList.add("btn", "btn-link", "nav-link", "border-0");
 		if (i === 0) {
-			newBtnPage.classList.add("active");
-			newBtnPage.setAttribute("aria-current", "true");
+			utils.setActive(newBtnPage);
 		}
 		newPage.appendChild(newBtnPage);
 		pageElement.querySelector(".nav").appendChild(newPage);
@@ -712,7 +768,6 @@ addPage = function () {
 	dataVallydette.checklist.page.push(arr2);
 
 	indexPage = dataVallydette.checklist.page.length - 1;
-   // idPageIndex = idPageIndex + 1;
 
 	var newIdPage = new Uint32Array(1);
 	window.crypto.getRandomValues(newIdPage);
@@ -751,12 +806,33 @@ addPage = function () {
 	//enabled delete button
 	var currentBtnDelPage = document.getElementById('btnDelPage');
 	currentBtnDelPage.disabled = false;
+	
+	showPage(currentIdPage);
 }
 
 initNewPage = function (item) {
 	item.ID = item.ID + '-p' + indexPage;
 	item.resultatTest = 'nt';
 	item.commentaire = '';
+}
+
+initProperties = function (item) {
+	item.resultat = 'nt';
+	item.comment = [];
+}
+
+initContextualMenu = function (currentPageIndex, currentPageID) {
+	var htmlMenu = '';
+	htmlMenu += '<button class="btn btn-secondary btn-icon" id="btnPageName" aria-label="Modifier le nom de la page" title="Modifier le nom de la page" data-element="pageName" data-secondary-element="' + currentPageID + '" data-property="checklist.page.' + currentPageIndex + '.name" data-toggle="modal" data-target="#modalEdit"><span class="icon-Pencil" aria-hidden="true"></span></button>';
+	htmlMenu += '<button id="btnDelPage" class="btn btn-secondary btn-icon ml-2" aria-label="Supprimer la page" title="Supprimer la page" data-element="pageName" data-property="checklist.page.' + currentPageIndex + '" data-toggle="modal" data-target="#modalDelete" data-pagination="' + currentPageID + '"><span class="icon-trash" aria-hidden="true"></span></button>';
+	htmlMenu += '<hr class="border-light  w-100">';
+	htmlContextualMenuContent.innerHTML = htmlMenu;
+	
+	btnActionPageEventHandler ();
+}
+
+removeContextualMenu = function () {
+	htmlContextualMenuContent.innerHTML = "";
 }
 
 showPage = function (id) {
@@ -768,24 +844,30 @@ showPage = function (id) {
 
 	onPageLoaded();
 
-	var currentBtnPageName = document.getElementById('btnPageName');
-	currentBtnPageName.dataset.property = "checklist.page." + currentPage + ".name";
-	currentBtnPageName.dataset.secondaryElement = id;
+	if (!document.getElementById('btnPageName')) {
+		
+		initContextualMenu(currentPage, id);
+		
+	} else {
+		
+		var currentBtnPageName = document.getElementById('btnPageName'); 
+		currentBtnPageName.dataset.property = "checklist.page." + currentPage + ".name";
+		currentBtnPageName.dataset.secondaryElement = id;
 
-	var currentBtnDelPage = document.getElementById('btnDelPage');
-	currentBtnDelPage.dataset.property = "checklist.page." + currentPage;
-	currentBtnDelPage.dataset.pagination = id;
-
-	var pagination = document.getElementById("pageManager");
-	var lastBtnPagination = pagination.querySelector(".active");
-	if (lastBtnPagination != undefined) {
-		lastBtnPagination.classList.remove("active");
-		lastBtnPagination.removeAttribute("aria-current");
+		var currentBtnDelPage = document.getElementById('btnDelPage');
+		currentBtnDelPage.dataset.property = "checklist.page." + currentPage;
+		currentBtnDelPage.dataset.pagination = id;
+		
 	}
+	
+	utils.setPageTitle(dataVallydette.checklist.page[currentPage].name);
+	
+	utils.resetActive(document.getElementById("pageManager"));
 
-	var currentBtnPagination = document.getElementById(dataVallydette.checklist.page[currentPage].IDPage);
-	currentBtnPagination.classList.add("active");
-	currentBtnPagination.setAttribute("aria-current", "true");
+	utils.setActive(document.getElementById(dataVallydette.checklist.page[currentPage].IDPage));
+	
+	utils.putTheFocus(document.getElementById("pageName"));
+	
 }
 
 setDeletePage = function (targetElement) {
@@ -836,6 +918,14 @@ deletePage = function (currentPage, targetElement) {
 
 	jsonUpdate();
 
+}
+
+
+function setPageName(value) {
+	
+	var currentPageName = document.getElementById('pageName');
+	currentPageName.innerHTML = value;
+	
 }
 
 getIfFilter = function (name) {
@@ -1024,6 +1114,8 @@ updateProperty = function(arrayPropertyValue, targetElement, targetProperty, tar
 	var feedbackMessage = document.getElementById('modal-alert');
 	feedbackMessage.innerHTML = feedbackHtml;
 	
+	utils.setPageTitle(dataVallydette.checklist.page[currentPage].name);
+	
 	jsonUpdate();
 }
 
@@ -1061,7 +1153,7 @@ setComment = function (targetId, title) {
 	let titleModal = title;
 
 	let htmlModal = '';
-	htmlModal = '<div id="modal' + targetId + '" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle">';
+	htmlModal = '<div id="modal' + targetId + '" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal' + targetId + 'Title">';
 	htmlModal += '<div class="modal-dialog modal-dialog-scrollable" role="document">';
 	htmlModal += '<div class="modal-content">';
 	htmlModal += '<div class="modal-header">';
@@ -1069,7 +1161,7 @@ setComment = function (targetId, title) {
 	htmlModal += '<button type="button" class="close" data-dismiss="modal" aria-label="Fermer"></button>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="modal-body">';
-	htmlModal += '<textarea class="form-control" id="comment' + targetId + '" aria-labelledby="modal' + targetId + 'Title">' + getComment(targetId) + '</textarea>';
+	htmlModal += '<textarea class="form-control" id="comment' + targetId + '" aria-labelledby="modal' + targetId + 'Title" autofocus>' + getComment(targetId) + '</textarea>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="modal-footer">';
 	htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>';
@@ -1086,7 +1178,11 @@ setComment = function (targetId, title) {
 	commentSave.addEventListener('click', function () {
 		addComment(targetId, comment.value)
 	});
+	
+	utils.putTheFocus(document.getElementById('comment' + targetId));
 
+	
+	
 }
 
 addComment = function (targetId, newComment) {
@@ -1173,52 +1269,56 @@ updateCounter = function (activeFilter, nbTests) {
 };
 
 initFilters = function () {
-            
-	/* let elFilterFooter = document.getElementById('filter-footer');
-	let htmlFilterFooter = '';
+    
+   if (htmlFilterContent.innerHTML.trim() !== '') {
 
-	htmlFilterFooter += '<button id="reinit" type="reset" class="btn btn-secondary" disabled>Tout afficher</button>';
-	elFilterFooter.innerHTML = htmlFilterFooter;
+	   return;
+	   
+   } else {
+	   
+	   let htmlFilterHeading = document.createElement('h2');
+		htmlFilterHeading.textContent = "Filtres";
+		htmlFilterContent.appendChild(htmlFilterHeading);
+   
+		let htmlFilterFeedback = document.createElement('div');
+		htmlFilterFeedback.setAttribute("id", "feedback"); 
+		htmlFilterContent.appendChild(htmlFilterFeedback);
+	
+		let htmlFilterList = document.createElement('ul');
+		htmlFilterList.classList.add("list-unstyled");
+		
+		for (let i in arrayFilterNameAndValue) {
+			var isChecked = "";
+			arrayFilterActivated.forEach(element => {element === arrayFilterNameAndValue[i][1] ? isChecked = "checked" : ''});
+			htmlTypes = '<label class="custom-control custom-switch pb-1" id="labelType' + i + '"><input type="checkbox" class="custom-control-input" id="type' + i + '" value="' + arrayFilterNameAndValue[i][1] + '" '+ isChecked+ '><span class="custom-control-label">' + arrayFilterNameAndValue[i][0] + '</span></label>';
+			
+			var listItem = document.createElement("li");
+			listItem.innerHTML = htmlTypes;
+			htmlFilterList.appendChild(listItem);
+			htmlFilterContent.appendChild(htmlFilterList);
 
-	let elBtnReinit = document.getElementById('reinit');
+			var inputItem = document.getElementById("type" + i);
+			inputItem.addEventListener('click', function () {
+				updateArrayFilter(this)
+			}, false);
 
-	elBtnReinit.addEventListener('click', function () {
+		}
+   }
+   
+}
 
-		updateArrayFilter();
-		updateCounter(false, refTests.length);
-
-		var elToReinit = document.querySelector("#types input:checked");
-		elToReinit.checked = false;
-	}); */
-
-	let htmlTypes = '';
-	let elTypes = document.getElementById('types');
-	elTypes.innerHTML = "";
-
-	for (let i in arrayFilterNameAndValue) {
-		htmlTypes = '<label class="custom-control custom-switch pb-1" id="labelType' + i + '"><input type="checkbox" class="custom-control-input" id="type' + i + '" value="' + arrayFilterNameAndValue[i][1] + '"><span class="custom-control-label">' + arrayFilterNameAndValue[i][0] + '</span></label>';
-		var node = document.createElement("li");
-	    //node.classList.add('custom-control', 'custom-checkbox');
-		node.innerHTML = htmlTypes;
-		elTypes.appendChild(node);
-
-		var elRadio = document.getElementById("type" + i);
-		elRadio.addEventListener('click', function () {
-			updateArrayFilter(this)
-		}, false);
-
-	}
-	//fin ajout input de filtre
-
+removeFilterSection = function () {
+	htmlFilterContent.innerHTML = "";
 }
 		
 
 onPageLoaded = function () {
+	initFilters();
 	if(arrayFilterActivated && arrayFilterActivated.length > 0){
 		runFilter();
 	} else {
 		runTestListMarkup(dataVallydette.checklist.page[currentPage].items);
-		updateCounter(true, dataVallydette.checklist.page[currentPage].items.length);
+		updateCounter(false, dataVallydette.checklist.page[currentPage].items.length);
 	}
 }
 
@@ -1262,7 +1362,7 @@ const utils = {
     return arrCond;
   },
   reqError: function (err) {
-	let elrefTests = document.getElementById('refTests');
+	let elrefTests = document.getElementById('mainContent');
     elrefTests.innerHTML = '<div class="alert alert-warning">Erreur chargement ressource JSON</div>';
   },
   formatHeading: function (str) {
@@ -1299,7 +1399,26 @@ const utils = {
     nbNTArray.total = nbNTtests;
 
     return nbNTArray;
-	}
+	},
+  putTheFocus: function (e) {
+	e.setAttribute("tabindex", "-1");
+	e.focus();
+    },
+  resetActive: function (e) {
+	var btnActive = e.querySelector(".active");
+		if (btnActive != undefined) {
+			btnActive.classList.remove("active");
+			btnActive.removeAttribute("aria-current");
+		}
+	},
+  setActive: function (e) {
+	e.classList.add("active");
+	e.setAttribute("aria-current", "true");
+  },
+  setPageTitle: function (e) {
+	document.title = e + " — Grille Audit Wcag 2.1 d’Orange — La va11ydette";
+  }
+	
 }  
 
 initVallydetteApp('wcagEase');

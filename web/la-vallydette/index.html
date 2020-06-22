@@ -80,12 +80,17 @@
                     </span>
                 </a>
                 <div class="ml-auto" id="importexport">
-                    <button type="button" class="btn btn-inverse btn-link mr-n3"
+                    <button type="button" class="btn btn-inverse btn-link ml-2 mr-n3" title="importer un audit (json)"
                             data-toggle="collapse" data-target="#import-form"
                             aria-expanded="false" aria-controls="import-form">
                         <span class="icon-modifier-upload" aria-hidden="true"></span>
-                        Import
+                        Importer
                     </button>
+					 <a href="#" id="export" class="btn btn-inverse btn-link mr-n3 disabled" title="télécharger l'audit (json)"
+                        disabled aria-disabled="true">
+                    <span class="icon-Modifier-download" aria-hidden="true"></span>
+                    Télécharger
+                </a>
                 </div>
             </div>
             <div class="collapse w-100 border-top border-900" id="import-form">
@@ -116,21 +121,17 @@
                         data-toggle="modal" data-target="#modalResult"
                         id="btnShowResult">Afficher le résultat de l’audit
                 </button>
-                <a href="#" id="export" class="btn btn-primary ml-2 disabled"
-                        disabled aria-disabled="true">
-                    <span class="icon-Modifier-download" aria-hidden="true"></span>
-                    Télécharger
-                </a>
+               
             </div>
 
             <div class="o-nav-local bg-white navbar-light my-3" id="pageManager"></div>
 
             <div class="container">
                 <div class="row align-items-start position-relative">
-                    <div class="col-md-2 sticky-top pt-4" id="currentPageManager">
+                    <div class="col-md-2 sticky-top pt-4 pr-0" id="currentPageManager">
                         <h1 id="pageName" class="mb-0">Nom de la page</h1>
-                        <hr class="border-light mr-n2">
-                        <div class="d-flex w-100">
+                        <hr class="border-light">
+                        <div id="contextualMenu" class="d-flex align-content-stretch flex-wrap  w-100">
                             <button class="btn btn-secondary btn-icon" id="btnPageName"
                                     aria-label="Modifier le nom de la page" title="Modifier le nom de la page"
                                     data-element="pageName" data-secondary-element="pageID-0"
@@ -143,18 +144,16 @@
                                     data-toggle="modal" data-target="#modalDelete" disabled>
                                 <span class="icon-trash" aria-hidden="true"></span>
                             </button>
+							<hr class="border-light w-100">	
                         </div>
-                        <hr class="border-light mr-n2">
+                        
                     </div>
                     <div class="col-md-8 bg-white border border-light">
                         <span id="count" class="alert-danger"></span>
-                        <section id="refTests"></section>
+                        <section id="mainContent"></section>
                     </div>
                     <aside id="filter" class="col-md-2 sticky-top pt-4">
-                        <h2>Filtres</h2>
-                        <div id="feedback"></div>
-                        <ul id="types" class="list-unstyled"></ul>
-                        <div id="filter-footer"></div>
+                        
                     </aside>
                 </div>
             </div>
