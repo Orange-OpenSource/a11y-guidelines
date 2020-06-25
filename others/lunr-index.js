@@ -547,13 +547,6 @@ index.add({
     body: "### Création à partir d’un document Word 1. Créer un document Word accessible en suivant [les recommandations Word](./word.html). 2. Puis utiliser l’option « Envoyer au destinataire du message ».    Option à ajouter la première fois via Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message.  &lt;img alt=\&quot;capture d'écran : paramétrer Word pour envoi de message à un destinataire\&quot; src=\&quot;./images/email1.png\&quot;&gt;  "
 });
 
-documentTitles["pushmail.html#creation-a-partir-de-mes-pushmails-spip"] = "Création à partir de « Mes Pushmails » (SPIP)";
-index.add({
-    url: "pushmail.html#creation-a-partir-de-mes-pushmails-spip",
-    title: "Création à partir de « Mes Pushmails » (SPIP)",    
-    body: "### Création à partir de « Mes Pushmails » (SPIP)  L’outil fournit des gabarits nativement accessibles (à condition d’ajouter du texte de remplacement pour les images) ce qui n’empêche pas de suivre [les recommandations générales](./editorial.html) pour le contenu éditorial.  &lt;img alt=\&quot;capture d'écran de l'outil mes Pushmails\&quot; src=\&quot;./images/email2.png\&quot;&gt;  "
-});
-
 documentTitles["pushmail.html#creation-a-partir-dhtml-ou-autre-outil-dedie"] = "Création à partir d’HTML (ou autre outil dédié)";
 index.add({
     url: "pushmail.html#creation-a-partir-dhtml-ou-autre-outil-dedie",
