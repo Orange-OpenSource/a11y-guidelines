@@ -4,6 +4,7 @@ module.exports = {
       { label: 'Go to menu', href: '#main-menu' },
       { label: 'Go to search', href: '#search' },
       { label: 'Go to content', href: '#main-content' },
+      { label: 'Go to footer', href: '#footer' },
       { label: 'Better contrasts', href: '#' },
       { label: 'Guided tour', href: '#' }
     ],
@@ -11,6 +12,7 @@ module.exports = {
       { label: 'Aller au menu', href: '#main-menu' },
       { label: 'Aller à la recherche', href: '#search' },
       { label: 'Aller au contenu', href: '#main-content' },
+      { label: 'Aller au pied de page', href: '#footer' },
       { label: 'Contrastes renforcés', href: '#' },
       { label: 'Lancer la visite guidée', href: '#' }
     ]
