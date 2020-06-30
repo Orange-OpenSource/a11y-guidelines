@@ -7,3 +7,18 @@
   color: #ff7900;
   margin-left: -4px;
 }
+
+
+
+/**
+ * Footer
+ */
+
+[role="contentinfo"] svg {
+  fill: #fff;
+}
+
+[role="contentinfo"] a:hover svg,
+[role="contentinfo"] a:focus svg {
+  fill: currentColor;
+}
