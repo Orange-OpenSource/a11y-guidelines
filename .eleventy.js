@@ -106,8 +106,7 @@ module.exports = function (eleventyConfig) {
       }
       if (item.subLevels) {
         item.subLevels.forEach(subLevel => {
-          if (page.url.includes(subLevel.href) && !breadcrumbContains(item.href)) {
-            addBreadcrumbItem(item)
+          if (page.url.includes(subLevel.href) && !breadcrumbContains(subLevel.href)) {
             addBreadcrumbItem(subLevel)
           }
         })
