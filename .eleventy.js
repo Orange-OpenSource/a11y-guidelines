@@ -64,8 +64,26 @@ module.exports = function (eleventyConfig) {
     return new Intl.DateTimeFormat(locale, options).format(date)
   })
 
+  eleventyConfig.addNunjucksFilter('getDefaultLocale', function (locales, outputKey = null) {
+    for (let key in locales) {
+      let locale = locales[key]
+
+      if (locale.default === true) {
+        if (outputKey === null) {
+          return locale
+        }
+
+        if (!locale.hasOwnProperty(outputKey)) {
+          throw new Error(`[getDefaultLocale filter]: locale \`${locale.code}\` is missing outputKey \`${outputKey}\``)
+        }
+
+        return locale[outputKey]
+      }
+    }
+  })
+
   eleventyConfig.addNunjucksFilter('isHomeUrl', function (url) {
-    return site.locales.available.includes(url.replace(/\//g, ''))
+    return Object.keys(site.locales).includes(url.replace(/\//g, ''))
   })
 
   eleventyConfig.addNunjucksFilter('getBreadcrumb', function (data, locale, page, pageTitle) {

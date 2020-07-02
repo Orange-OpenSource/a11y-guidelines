@@ -1,9 +1,9 @@
 <ul class="navbar-nav">
-  {% for lang in site.locales.available %}
-    {% set active = locale == lang %}
+  {% for key, lang in site.locales %}
+    {% set active = locale == lang.code %}
     <li class="nav-item">
-      <a href="/{{ lang }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %}>
-        {{ lang | upper }}
+      <a href="/{{ lang.code }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
+        {{ lang.displayName | capitalize }}
       </a>
     </li>
   {% endfor %}
