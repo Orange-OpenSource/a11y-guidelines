@@ -1,6 +1,6 @@
 ---
 title: "Components examples"
-layout: "templates/page"
+layout: "templates/default"
 ---
 
 # Components examples
