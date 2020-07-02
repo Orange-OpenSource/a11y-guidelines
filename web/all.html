@@ -43,7 +43,7 @@
               <span class="icon-menu"></span>
           </button>
           
-              <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <a href="index.html" class="navbar-brand"><img src="/images/master_logo_rwd.svg" alt="Orange, retour à l'accueil" title="Orange, retour à l'accueil"/></a>
               <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
                   <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
                   <li class="nav-item active">
@@ -1653,7 +1653,7 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <p>Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).</p>
 <p><strong>Objectif technique&nbsp;:</strong></p>
 <p>Améliorer le référencement naturel.</p>
-<p><strong>Exemple valide&nbsp;:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;Retour à l’accueil&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.&quot;&gt;</code></p>
+<p><strong>Exemple valide&nbsp;:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;Orange, retour à l’accueil&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.&quot;&gt;</code></p>
 <p><strong>Exemple d’alternative vide&nbsp;:</strong><br>Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.<br>Renseigner l’attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
 <p><img src="./images/service-24.png" alt="exemple d’image décorative">  </p>
 <p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
@@ -2303,6 +2303,48 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
 </ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<h1 id="les-bonnes-pratiques-pour-les-liens-de-t-l-chargement">Les bonnes pratiques pour les liens de téléchargement</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+      {"label":"Articles techniques", "url":"techniques.html"},
+      {"label":"Les bonnes pratiques pour les liens de téléchargement"}
+    ]);    
+});</script>
+
+<p>Il existe différents types de liens : <a href="./inc-dev-intitules-hors-contexte.html">les liens classiques</a> permettant d&#39;atteindre une nouvelle page, <a href="./skiplinks.html">les liens d&#39;évitements</a> permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article, les liens permettant de télécharger un fichier.</p>
+<p>Ces liens doivent respecter quelques règles :</p>
+<ul>
+<li>l&#39;intitulé doit être explicite et préciser le type et le poid du fichier</li>
+<li>l&#39;intitulé doit également préciser la langue si le document est dans une langue différente que celle de la page courante</li>
+<li>le lien doit être réalisé à l&#39;aide d&#39;une balise <code>&lt;a&gt;</code> (et non une balise <code>&lt;button&gt;</code>)</li>
+<li>le lien doit s&#39;ouvrir dans la fenêtre en cours (pas d&#39;attribut <code>target</code> pour ouvrir dans un nouvel onglet)</li>
+</ul>
+<p>En plus de servir l&#39;accessibilité, fournir ces informations permettrons à l&#39;utilisateur d&#39;éviter un téléchargement inutile ce qui est une bonne pratique eco-responsable.  </p>
+<a name="exemples-valides"></a><h2>Exemples valides</h2>
+
+<p>Voici un exemple de lien présentant les informations nécessaires :  </p>
+<p>Télécharger le <a href="#">bilan complet 2020 (PDF, 1.5 Mo)</a>.</p>
+<pre><code class="html">&lt;a href="#"&gt;Bilan complet 2020 (PDF, 1.5 Mo)&lt;/a&gt;</code></pre>
+
+<p>Il est important que ces informations complémentaires soient présentes dans l&#39;intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d&#39;écran). Cela dit pour des questions esthétiques il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :  </p>
+<p>Télécharger le <a href="#" style="text-decoration: none"><span style="text-decoration: underline">bilan complet 2020 </span>(PDF, 1.5Mo)</a></p>
+<pre><code class="html">&lt;a href="#" style="text-decoration: none"&gt;
+  &lt;span style="text-decoration: underline"&gt;Bilan complet 2020 &lt;/span&gt;
+  (PDF, 1.5Mo)
+&lt;/a&gt;</code></pre>
+
+<a name="a-propos-des-unites"></a><h2>À propos des unités</h2>
+
+<p>En anglais, les unités utilisés pour exprimer le poids des fichiers s&#39;écrivent en lettres capitales (KB, MB, GB ...).</p>
+<a name="langue-du-fichier"></a><h2>Langue du fichier</h2>
+
+<p>Pour les liens permettant de télécharger un document dans une langue autre que celle de la page courante, il est important de le préciser.<br>Exemple de document en anglais :<br><a href="#"><span lang="en">Complete review</span> (Anglais, DOC, 800 Ko)</p>
+<pre><code class="html">&lt;a href="#"&gt;&lt;span lang="en"&gt;Complete review&lt;/span&gt; (Anglais, DOC, 800 Ko)</code></pre>
+
+
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

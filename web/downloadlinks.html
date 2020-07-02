@@ -111,42 +111,48 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="permettre-d-utiliser-les-principales-fonctionnalit-s-de-l-application-au-clavier">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</h1>
+          <h1 id="les-bonnes-pratiques-pour-les-liens-de-t-l-chargement">Les bonnes pratiques pour les liens de téléchargement</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
-        {"label":"Permettre d’utiliser les principales fonctionnalités de l’application au clavier"}
-    ]);
+      {"label":"Articles techniques", "url":"techniques.html"},
+      {"label":"Les bonnes pratiques pour les liens de téléchargement"}
+    ]);    
 });</script>
 
-<p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives, motrices et en mobilité.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong>
-Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniquement sur des événements souris, permettent donc d&#39;être pilotable au clavier et ceci sans limite de temps. </p>
-<p><strong>À vérifier&nbsp;:</strong></p>
+<p>Il existe différents types de liens : <a href="./inc-dev-intitules-hors-contexte.html">les liens classiques</a> permettant d&#39;atteindre une nouvelle page, <a href="./skiplinks.html">les liens d&#39;évitements</a> permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article, les liens permettant de télécharger un fichier.</p>
+<p>Ces liens doivent respecter quelques règles :</p>
 <ul>
-<li><p>Toutes les actions importantes effectuées à la souris peuvent aussi l’être avec le clavier, quitte à proposer une alternative spécifique pour les interactions complexes (<i lang="en">drag’n’drop</i>, gestes à plusieurs doigts sur mobile …) tout en évitant d&#39;innombrables frappes.</p>
-</li>
-<li><p>Utiliser au maximum les composants <abbr>HTML</abbr> interactifs de base (champs, liens, boutons), ceux-ci étant nativement accessibles au clavier. À défaut, veiller à ce que les composants personnalisés soient opérables au clavier de manière classique.</p>
-</li>
+<li>l&#39;intitulé doit être explicite et préciser le type et le poid du fichier</li>
+<li>l&#39;intitulé doit également préciser la langue si le document est dans une langue différente que celle de la page courante</li>
+<li>le lien doit être réalisé à l&#39;aide d&#39;une balise <code>&lt;a&gt;</code> (et non une balise <code>&lt;button&gt;</code>)</li>
+<li>le lien doit s&#39;ouvrir dans la fenêtre en cours (pas d&#39;attribut <code>target</code> pour ouvrir dans un nouvel onglet)</li>
 </ul>
-<p>Voir <a href="./methodes-outils-clavier.html">la façon de naviguer au clavier</a> dans un navigateur web.</p>
-<p><strong>Objectif utilisateur&nbsp;:</strong>
- Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, cognitives, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.</p>
-<p><strong>Exemple valide&nbsp;:</strong>      </p>
-<ul>
-<li>Un sous-menu qui se déroule au survol doit aussi se dérouler quand l’item de menu parent reçoit le focus clavier.</li>
-<li>Dans un webmail, un clic droit permet d’accéder à un menu pour vider la corbeille, un bouton «&nbsp;vider la corbeille&nbsp;» est également présent dans l’interface quand la corbeille est en cours de consultation. </li>
-</ul>
-<p><strong>Exemple non-valide&nbsp;:</strong><br>Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n’drop</i> et sans équivalent au clavier.</p>
-<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
-Copyright (C) 2016  Orange SA
-See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
-</ul>
+<p>En plus de servir l&#39;accessibilité, fournir ces informations permettrons à l&#39;utilisateur d&#39;éviter un téléchargement inutile ce qui est une bonne pratique eco-responsable.  </p>
+<a name="exemples-valides"></a><h2>Exemples valides</h2>
 
+<p>Voici un exemple de lien présentant les informations nécessaires :  </p>
+<p>Télécharger le <a href="#">bilan complet 2020 (PDF, 1.5 Mo)</a>.</p>
+<pre><code class="html">&lt;a href="#"&gt;Bilan complet 2020 (PDF, 1.5 Mo)&lt;/a&gt;</code></pre>
+
+<p>Il est important que ces informations complémentaires soient présentes dans l&#39;intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d&#39;écran). Cela dit pour des questions esthétiques il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :  </p>
+<p>Télécharger le <a href="#" style="text-decoration: none"><span style="text-decoration: underline">bilan complet 2020 </span>(PDF, 1.5Mo)</a></p>
+<pre><code class="html">&lt;a href="#" style="text-decoration: none"&gt;
+  &lt;span style="text-decoration: underline"&gt;Bilan complet 2020 &lt;/span&gt;
+  (PDF, 1.5Mo)
+&lt;/a&gt;</code></pre>
+
+<a name="a-propos-des-unites"></a><h2>À propos des unités</h2>
+
+<p>En anglais, les unités utilisés pour exprimer le poids des fichiers s&#39;écrivent en lettres capitales (KB, MB, GB ...).</p>
+<a name="langue-du-fichier"></a><h2>Langue du fichier</h2>
+
+<p>Pour les liens permettant de télécharger un document dans une langue autre que celle de la page courante, il est important de le préciser.<br>Exemple de document en anglais :<br><a href="#"><span lang="en">Complete review</span> (Anglais, DOC, 800 Ko)</p>
+<pre><code class="html">&lt;a href="#"&gt;&lt;span lang="en"&gt;Complete review&lt;/span&gt; (Anglais, DOC, 800 Ko)</code></pre>
+
+
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
           
         </div>
       </div>
