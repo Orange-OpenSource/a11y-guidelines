@@ -1,7 +1,14 @@
 module.exports = {
   locales: {
-    default: 'fr',
-    available: ['en', 'fr']
+    en: {
+      code: 'en',
+      displayName: 'english'
+    },
+    fr: {
+      code: 'fr',
+      displayName: 'français',
+      default: true
+    }
   },
   title: {
     en: 'Orange digital accessibility guidelines',
