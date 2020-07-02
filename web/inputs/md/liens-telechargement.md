@@ -22,16 +22,9 @@ Voici un exemple de lien présentant les informations nécessaires :
   
 Télécharger le <a href="#">bilan complet 2020 (PDF, 1.5 Mo)</a>.
 
-<pre><code class="html">&lt;a href="#"&gt;Bilan complet 2020 (PDF, 1.5 Mo)&lt;/a&gt;</code></pre>
-
 Il est important que ces informations complémentaires soient présentes dans l'intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d'écran). Cela dit pour des questions esthétiques il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :  
   
 Télécharger le <a href="#" style="text-decoration: none"><span style="text-decoration: underline">bilan complet 2020 </span>(PDF, 1.5Mo)</a>
-
-<pre><code class="html">&lt;a href="#" style="text-decoration: none"&gt;
-  &lt;span style="text-decoration: underline"&gt;Bilan complet 2020 &lt;/span&gt;
-  (PDF, 1.5Mo)
-&lt;/a&gt;</code></pre>
 
 <h2>À propos des unités</h2>
 
@@ -45,12 +38,9 @@ Exemples de documents en anglais sur un site français :
 - <a href="#"><span lang="en">Complete review</span> (Anglais, DOC, 800 Ko)
 - <a href="#"><span>Notice d'utilisation</span> (Anglais, PDF, 1.2 Mo)
 
-<pre><code class="html">&lt;a href="#"&gt;&lt;span lang="en"&gt;Complete review&lt;/span&gt; (Anglais, DOC, 800 Ko)
-&lt;a href="#"&gt;&lt;span&gt;Notice d'utilisation&lt;/span&gt; (Anglais, PDF, 1.2 Mo)</code></pre>
-
 <h2>Une petite image pour la déco, mais pas seulement</h2>
 
-Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de le percevoir plus rapidement :
+Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de le percevoir plus rapidement :  
 <a style="background-image: url(./images/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">bilan complet 2020 (PDF, 1.5 Mo)</a>
 
   
