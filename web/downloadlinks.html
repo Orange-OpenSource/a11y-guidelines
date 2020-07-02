@@ -111,23 +111,23 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="les-bonnes-pratiques-pour-les-liens-de-t-l-chargement">Les bonnes pratiques pour les liens de téléchargement</h1>
+          <h1 id="quelques-bonnes-pratiques-pour-les-liens-de-t-l-chargement">Quelques bonnes pratiques pour les liens de téléchargement</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
       {"label":"Articles techniques", "url":"techniques.html"},
-      {"label":"Les bonnes pratiques pour les liens de téléchargement"}
+      {"label":"Quelques bonnes pratiques pour les liens de téléchargement"}
     ]);    
 });</script>
 
-<p>Il existe différents types de liens : <a href="./inc-dev-intitules-hors-contexte.html">les liens classiques</a> permettant d&#39;atteindre une nouvelle page, <a href="./skiplinks.html">les liens d&#39;évitements</a> permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article, les liens permettant de télécharger un fichier.</p>
-<p>Ces liens doivent respecter quelques règles :</p>
+<p>Il existe différents types de liens : <a href="./inc-dev-intitules-hors-contexte.html">les liens classiques</a> permettant d&#39;atteindre une nouvelle page, <a href="./skiplinks.html">les liens d&#39;évitement</a> permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article : les liens permettant de télécharger un fichier.</p>
+<p>Un lien permettant de télécharger un fichier devrait respecter les règles suivantes :</p>
 <ul>
-<li>l&#39;intitulé doit être explicite et préciser le type et le poid du fichier</li>
-<li>l&#39;intitulé doit également préciser la langue si le document est dans une langue différente que celle de la page courante</li>
-<li>le lien doit être réalisé à l&#39;aide d&#39;une balise <code>&lt;a&gt;</code> (et non une balise <code>&lt;button&gt;</code>)</li>
-<li>le lien doit s&#39;ouvrir dans la fenêtre en cours (pas d&#39;attribut <code>target</code> pour ouvrir dans un nouvel onglet)</li>
+<li>son intitulé doit être explicite, il doit également préciser le type et le poids du fichier</li>
+<li>son intitulé doit préciser la langue du document lorsque celui-ci est rédigé dans une langue différente que celle de la page courante</li>
+<li>ce lien doit être réalisé à l&#39;aide d&#39;une balise <code>&lt;a&gt;</code> (et non une balise <code>&lt;button&gt;</code>)</li>
+<li>ce lien doit s&#39;ouvrir dans la fenêtre en cours (pas d&#39;attribut <code>target</code> pour ouvrir dans un nouvel onglet)</li>
 </ul>
-<p>En plus de servir l&#39;accessibilité, fournir ces informations permettrons à l&#39;utilisateur d&#39;éviter un téléchargement inutile ce qui est une bonne pratique eco-responsable.  </p>
+<p>En plus de servir l&#39;accessibilité, fournir ces informations permettra à l&#39;utilisateur d&#39;éviter un téléchargement inutile ce qui est également une bonne pratique eco-responsable.  </p>
 <a name="exemples-valides"></a><h2>Exemples valides</h2>
 
 <p>Voici un exemple de lien présentant les informations nécessaires :  </p>
@@ -143,16 +143,26 @@
 
 <a name="a-propos-des-unites"></a><h2>À propos des unités</h2>
 
-<p>En anglais, les unités utilisés pour exprimer le poids des fichiers s&#39;écrivent en lettres capitales (KB, MB, GB ...).</p>
+<p>En anglais, les unités utilisées pour exprimer le poids des fichiers s&#39;écrivent en lettres capitales (KB, MB, GB ...).</p>
 <a name="langue-du-fichier"></a><h2>Langue du fichier</h2>
 
-<p>Pour les liens permettant de télécharger un document dans une langue autre que celle de la page courante, il est important de le préciser.<br>Exemple de document en anglais :<br><a href="#"><span lang="en">Complete review</span> (Anglais, DOC, 800 Ko)</p>
-<pre><code class="html">&lt;a href="#"&gt;&lt;span lang="en"&gt;Complete review&lt;/span&gt; (Anglais, DOC, 800 Ko)</code></pre>
+<p>Pour les liens permettant de télécharger un document dans une langue autre que celle de la page courante, il est important de le préciser.  </p>
+<p>Exemples de documents en anglais sur un site français :  </p>
+<ul>
+<li><a href="#"><span lang="en">Complete review</span> (Anglais, DOC, 800 Ko)</li>
+<li><a href="#"><span>Notice d&#39;utilisation</span> (Anglais, PDF, 1.2 Mo)</li>
+</ul>
+<pre><code class="html">&lt;a href="#"&gt;&lt;span lang="en"&gt;Complete review&lt;/span&gt; (Anglais, DOC, 800 Ko)
+&lt;a href="#"&gt;&lt;span&gt;Notice d'utilisation&lt;/span&gt; (Anglais, PDF, 1.2 Mo)</code></pre>
 
+<a name="une-petite-image-pour-la-deco-mais-pas-seulement"></a><h2>Une petite image pour la déco, mais pas seulement</h2>
 
+<p>Si le type de fichier est connu, une petite icône à côté du fichier permet à l&#39;utilisateur de percevoir plus rapidement le type du fichier :<br><a style="background-image: url(./images/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">bilan complet 2020 (PDF, 1.5 Mo)</a></p>
+<p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
           
         </div>
       </div>
