@@ -43,7 +43,7 @@ Blocking point: an image without textual Description: is unusable by people with
 Improve the natural referencing.
 
 **Valid example:**     
-`<a href="./home"><img src="logo_orange.jpg" alt="back to home"></a>`        
+`<a href="./home"><img src="logo_orange.jpg" alt="Orange, back to home"></a>`        
 `<img src="banner_bouquet_famille.png" alt="Good deal, family max plan 2 euros per month for 12 months instead of 16 euros.">`
 
 **Example with an empty alternative:** 

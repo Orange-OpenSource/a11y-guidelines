@@ -42,7 +42,7 @@ Point bloquant&nbsp;: une image sans description textuelle est inexploitable par
 Améliorer le référencement naturel.
 
 **Exemple valide&nbsp;:**      
-`<a href="./home"><img src="logo_orange.jpg" alt="Retour à l’accueil"></a>`        
+`<a href="./home"><img src="logo_orange.jpg" alt="Orange, retour à l’accueil"></a>`        
 `<img src="banner_bouquet_famille.png" alt="Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.">`
 
 **Exemple d’alternative vide&nbsp;:**  
