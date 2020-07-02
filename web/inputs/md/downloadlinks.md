@@ -50,7 +50,7 @@ Exemples de documents en anglais sur un site français :
 
 <h2>Une petite image pour la déco, mais pas seulement</h2>
 
-Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de percevoir plus rapidement le type du fichier :  
+Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de le percevoir plus rapidement :
 <a style="background-image: url(./images/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">bilan complet 2020 (PDF, 1.5 Mo)</a>
 
   
