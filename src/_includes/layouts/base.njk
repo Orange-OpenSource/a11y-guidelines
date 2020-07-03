@@ -23,9 +23,7 @@
     {% if not page.url | isHomeUrl %}
       {% include "../components/breadcrumbs.njk" %}
     {% endif %}
-    <main id="main-content" class="container-lg pt-4" role="main">
-      {% block content %}{% endblock %}
-    </main>
+    {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
     {% if jquery == true %}
       <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
