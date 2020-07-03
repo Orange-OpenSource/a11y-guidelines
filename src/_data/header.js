@@ -23,6 +23,14 @@ module.exports = {
       {
         label: 'Web',
         href: '/en/web/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'web',
+          height: 130,
+          width: 190
+        },
+        theme: 'info',
         subLevels: [
           { label: 'Design', href: '/en/web/design/' },
           { label: 'Develop', href: '/en/web/develop/' },
@@ -33,6 +41,14 @@ module.exports = {
       {
         label: 'Android',
         href: '/en/mobile/android/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'android',
+          height: 130,
+          width: 72
+        },
+        theme: 'warning',
         subLevels: [
           { label: 'Criteria', href: '/en/mobile/android/criteria/' },
           { label: 'Develop', href: '/en/mobile/android/development/' },
@@ -42,6 +58,14 @@ module.exports = {
       {
         label: 'iOS',
         href: '/en/mobile/ios/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'ios',
+          height: 130,
+          width: 72
+        },
+        theme: 'warning',
         subLevels: [
           { label: 'Design', href: '/en/mobile/ios/design/' },
           { label: 'Develop', href: '/en/mobile/ios/development/' },
@@ -53,6 +77,14 @@ module.exports = {
       {
         label: 'Editorial content',
         href: '/en/editorial-content/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'editorial-content',
+          height: 151,
+          width: 131
+        },
+        theme: 'purple',
         subLevels: [
           { label: 'Transversal recommendations', href: '/en/editorial-content/general/' },
           { label: 'Word', href: '/en/editorial-content/word/' },
@@ -69,6 +101,14 @@ module.exports = {
       {
         label: 'Web',
         href: '/fr/web/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'web',
+          height: 130,
+          width: 190
+        },
+        theme: 'info',
         subLevels: [
           { label: 'Designer', href: '/fr/web/designer/' },
           { label: 'Développer', href: '/fr/web/developper/' },
@@ -79,6 +119,14 @@ module.exports = {
       {
         label: 'Android',
         href: '/fr/mobile/android/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'android',
+          height: 130,
+          width: 72
+        },
+        theme: 'warning',
         subLevels: [
           { label: 'Designer', href: '/fr/mobile/android/conception/' },
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
@@ -89,6 +137,14 @@ module.exports = {
       {
         label: 'iOS',
         href: '/fr/mobile/ios/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'ios',
+          height: 130,
+          width: 72
+        },
+        theme: 'warning',
         subLevels: [
           { label: 'Designer', href: '/fr/mobile/ios/conception/' },
           { label: 'Développer', href: '/fr/mobile/ios/developpement/' },
@@ -100,6 +156,14 @@ module.exports = {
       {
         label: 'Contenu éditorial',
         href: '/fr/contenu-editorial/',
+        inCardNavigation: true,
+        abstract: 'Lorem ipsum dolor sit amet',
+        icon: {
+          name: 'editorial-content',
+          height: 151,
+          width: 131
+        },
+        theme: 'purple',
         subLevels: [
           { label: 'Recommandations transverses', href: '/fr/contenu-editorial/generalites/' },
           { label: 'Word', href: '/fr/contenu-editorial/word/' },

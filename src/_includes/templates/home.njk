@@ -1,0 +1,33 @@
+{% extends "../layouts/base.njk" %}
+
+{% block content %}
+<main id="main-content" class="pt-4" role="main">
+  <section class="container-lg pb-5">
+    {{ content | safe }}
+  </section>
+  <div class="bg-success py-4">
+    <section class="container-lg">
+      <h2>{{ cardNavigationTitle }}</h2>
+      <div class="card-deck">
+        {% for category in header.mainNavigation[locale] %}
+          {% if category.inCardNavigation == true %}
+            <div class="card bg-{{ category.theme }}">
+              <div class="p{% if category.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 text-center">
+                <img src="../images/icons/{{ category.icon.name }}.svg" alt="" width="{{ category.icon.width }}" height="{{ category.icon.height }}">
+              </div>
+              <div class="card-body bg-dark">
+                <h3 class="card-title text-primary">{{ category.label }}</h3>
+                {% if category.abstract %}
+                  <p class="card-text">
+                    {{ category.abstract }}
+                  </p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock %}

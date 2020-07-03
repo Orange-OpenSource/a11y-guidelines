@@ -7,7 +7,7 @@ const config = require('./src/_data/config')
 const locales = require('./src/_data/locales')
 const collections = require('./src/config/collections')
 
-const IMAGES_EXTENSIONS = ['jpg', 'png']
+const IMAGES_EXTENSIONS = ['jpg', 'png', 'svg']
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true)

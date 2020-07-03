@@ -5,59 +5,50 @@ title: "Les situations de handicap"
 # Les situations de handicap
 
 ### Le handicap auditif
-<div class="axs-picto auditif">
-    <ul>
-        <li>Personnes sourdes</li>
-        <li>Personnes malentendantes</li>
-        <li>Personnes sourdes-aveugles</li>
-        <li>Difficulté de perception de la parole dans un environnement bruyant</li>
-    </ul>
+
+- Personnes sourdes
+- Personnes malentendantes
+- Personnes sourdes-aveugles
+- Difficulté de perception de la parole dans un environnement bruyant
+
 **Solutions adaptées&nbsp;:** transcription, sous-titres.
-</div>
+
 
 ### Le handicap visuel
 
-<div class="axs-picto visuel">
-    <ul>
-        <li>Personnes malvoyantes</li>
-        <li>Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)</li>
-        <li>Personnes sensibles à une forte luminosité des couleurs</li>
-        <li>Personnes aveugles</li>
-        <li>Personnes sourdes-aveugles</li>
-    </ul>
+- Personnes malvoyantes
+- Personnes qui ne distinguent pas ou mal les couleurs (daltonisme, achromatopsie)
+- Personnes sensibles à une forte luminosité des couleurs
+- Personnes aveugles
+- Personnes sourdes-aveugles
+
 **Solutions adaptées&nbsp;:** tablette Braille, synthèse vocale, personnalisation de l’affichage (ajustement des couleurs).
-</div>
+
 
 ### Le handicap cognitif
-<div class="axs-picto cognitif">
-    <ul>
-        <li>Personnes avec des troubles DYS</li>
-        <li>Autres troubles affectant la lecture, la mémorisation, la concentration, la compréhension, la résolution des problèmes, le raisonnement et le langage.</li>
-    </ul>
+
+- Personnes avec des troubles DYS
+- Autres troubles affectant la lecture, la mémorisation, la concentration, la compréhension, la résolution des problèmes, le raisonnement et le langage.
+
 **Solutions adaptées&nbsp;:** hiérarchisation et simplification de l’information, mise en page linéaire, police sans serif (Arial, OpenDyslexic, AccessibleDfa), logiciels de dictée.  
 &nbsp;
-</div>
 
 ### Le handicap moteur et de préhension
-<div class="axs-picto dexterity">
-    <ul>
-        <li>Difficultés de préhension et de contrôle des mouvements.</li>
-        <li>Personnes ayant des difficultés pour réaliser des combinaisons de touches</li>
-        <li>Personnes dont les mains tremblent</li>
-        <li>Personnes ne pouvant pas se servir d’une main ou de ses deux main(s)</li>        
-    </ul>
+
+- Difficultés de préhension et de contrôle des mouvements.
+- Personnes ayant des difficultés pour réaliser des combinaisons de touches
+- Personnes dont les mains tremblent
+- Personnes ne pouvant pas se servir d’une main ou de ses deux mains
+
 **Solutions adaptées&nbsp;:** périphériques adaptés (souris ou clavier ergonomique, guide-doigts pour clavier, trackball, joystick, contacteur…), logiciels de dictée
-</div>
 &nbsp;
+
 
 ## L’accessibilité numérique
 
-<div class="axs-picto">
-    Les règles d’accessibilité servent au-delà des situations de handicaps identifiées et apportent du confort pour tous&nbsp;; quelques cas ci-dessous&nbsp;:      
-    <ul>
-        <li>Les environnements bruyants tels que open space, boutiques, hall d’accueil…</li>
-        <li>Les personnes avec un handicap temporaire (bras cassé, infection de l’œil…)</li>
-        <li>Un matériel ou service inapproprié (imprimante noir et blanc, bas débit…)</li>
-        <li>Les formulaires à renseigner : la navigation au clavier permet de remplir les formulaires sans utiliser la souris et apporte un gain de temps appréciable</li>
-    </ul>
-</div>
+Les règles d’accessibilité servent au-delà des situations de handicaps identifiées et apportent du confort pour tous&nbsp;; quelques cas ci-dessous&nbsp;:      
+
+- Les environnements bruyants tels que open space, boutiques, hall d’accueil, …
+- Les personnes avec un handicap temporaire (bras cassé, infection de l’œil, …)
+- Un matériel ou service inapproprié (imprimante noir et blanc, bas débit, …)
+- Les formulaires à renseigner : la navigation au clavier permet de remplir les formulaires sans utiliser la souris et apporte un gain de temps appréciable
