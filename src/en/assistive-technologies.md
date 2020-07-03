@@ -16,14 +16,16 @@ Digital services are accessible when they work with assistive technologies. It i
 A **screen reader** is a software application that allows blind or visually impaired people to read the information displayed on the screen with a speech synthesizer or braille display.  
 Examples: Jaws and NVDA on Windows PC, TalkBack on Android devices, VoiceOver on Apple mobile devices or Mac computers.
 
-<img src="../images/audio.jpg" alt="" class="img-fluid">
+<figure class="figure">
+    <img src="../../images/audio.jpg" alt="" class="figure-img img-fluid">
+</figure>
 
 ### Braille display
 A **Braille display** allows reading digital information using fingers. It can be connected to a computer or any other device.  The Braille display get the text currently highlighted on the screen and then the screen reader translates the text in Braille and the device displays it on its Braille cells. Each cell has metal or nylon pins to create Braille dots. Braille displays are refreshable.
 
-<figure>
-    <img src="../images/plage-braille.jpg" alt="Braille display" class="img-fluid">
-    <figcaption>Picture: Braille display, Karola Riegler, 2009, License CC BY ND</figcaption>
+<figure class="figure">
+    <img src="../../images/plage-braille.jpg" alt="Braille display" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Picture: Braille display, Karola Riegler, 2009, License CC BY ND</figcaption>
 </figure>
 
 ### Screen magnifier
@@ -32,18 +34,18 @@ A **screen magnifier** is a software application that increases the size of text
 Some screen readers offer option to read aloud captured text or all screen.  
 Example: ZoomText.
 
-<figure>
-    <img src="../images/loupe.jpg" alt="computer screen with Windows magnifier at 400% magnification" class="img-fluid">
-    <figcaption>Picture: computer screen with Windows magnifier at 400% magnification.</figcaption>
+<figure class="figure">
+    <img src="../../images/loupe.jpg" alt="computer screen with Windows magnifier at 400% magnification" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Picture: computer screen with Windows magnifier at 400% magnification.</figcaption>
 </figure>
 
 ### Keyboard keyguard
 
 A **keyguard** is an overlay made of plastic and perforated with holes for keys on the keyboard. It is placed on top of the keyboard. It helps prevent the user from unintentionally pressing multiple keys.
 
-<figure>
-    <img src="../images/guidedoigt.jpg" alt="keyboard with a keyguard" class="img-fluid">
-    <figcaption>Picture: keyguard copyplastic.com</figcaption>
+<figure class="figure">
+    <img src="../../images/guidedoigt.jpg" alt="keyboard with a keyguard" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Picture: keyguard copyplastic.com</figcaption>
 </figure>
 
 ### Pointing devices
@@ -60,16 +62,16 @@ Most of these pointing devices rely on keyboard-only navigation features to perf
 Typical keys used for keyboard navigation are the Tab key and Shift+Tab to move between controls, as well as arrow keys to move up, down, and sideways between items.
 Keyboard navigation is essential for some assistive technologies and requires compliance with design and development accessibility criteria.
 
-<img src="../images/clavier.jpg" alt="" class="img-fluid">
+<img src="../../images/clavier.jpg" alt="" class="figure-img img-fluid">
 
 ### Speech recognition
 **Speech recognition** is the ability of software to identify words and phrases in spoken language and convert them into text. It is an alternative to typing on a keyboard: you talk to the computer and the words appear on the screen.  
 
 Equivalent term: voice recognition.  
 Examples: Dragon dictation software, voice assistants of smartphones.
-<figure>
-    <img src="../images/vocale.jpg" alt="Person on the phone" class="img-fluid">
-    <figcaption>Photo: Alex Washburn / Wired / Creative Commons License</figcaption>
+<figure class="figure">
+    <img src="../../images/vocale.jpg" alt="Person on the phone" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Photo: Alex Washburn / Wired / Creative Commons License</figcaption>
 </figure>
 
 ### Transcript
@@ -78,7 +80,9 @@ A **transcript** is the text version of video or audio recordings. The transcrip
 ### Closed captions
 **Closed captions** are audio transcribed into text and reflect both spoken words and non-verbal sounds. The text is synchronized within the video to match the audio. Closed captions are usually located on the bottom of a video screen as an overlay.
 
-<img src="../images/soustitres.jpg" alt="Screenshot of a video with closed captions" class="img-fluid">    
+<figure class="figure">
+    <img src="../../images/soustitres.jpg" alt="Screenshot of a video with closed captions" class="figure-img img-fluid">    
+</figure>
 
 ### Audio description
 **Audio description** is a narration added to the soundtrack to describe important visual details that cannot be understood from the main soundtrack alone.  Audio description is a means to inform individuals about visual content essential for comprehension.  Audio description of video provides information about actions, characters…  

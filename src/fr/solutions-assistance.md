@@ -21,15 +21,16 @@ La **synthèse vocale** est une voix qui lit les textes et images affichés à l
 Autre terme utilisé : lecteur d’écran (note : le lecteur d’écran est un logiciel qui récupère le texte présent sur l’écran. Le texte est ensuite  restitué vocalement ou en Braille).  
 Exemples : Jaws et NVDA sur PC Windows, TalkBack sur mobile Android, VoiceOver sur mobile Apple ou Mac.
 
-<img src="./images/audio.jpg" alt="" class="img-fluid">
-
+<figure class="figure">
+    <img src="../../images/audio.jpg" alt="" class="figure-img img-fluid">
+</figure>
 
 ### La plage braille
 La **plage Braille** permet de lire du bout des doigts la transcription en braille du contenu de l’écran ou de rentrer de l'information en braille dans l'ordinateur. 
 
-<figure>
-    <img src="./images/plage-braille.jpg" alt="photo d'une plage braille" class="img-fluid">
-    <figcaption>Photo : terminal braille, de Karola Riegler, 2009, Licence CC BY ND</figcaption>
+<figure class="figure">
+    <img src="../../images/plage-braille.jpg" alt="photo d'une plage braille" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Photo : terminal braille, de Karola Riegler, 2009, Licence CC BY ND</figcaption>
 </figure>
 
 ### La loupe numérique
@@ -39,17 +40,17 @@ La **loupe numérique** est un logiciel qui permet un agrandissement total ou pa
 Autres termes utilisés : logiciel de zoom, logiciel de grossissement de caractères.  
 Exemples : le logiciel ZoomText, le logiciel loupe de windows.
 
-<figure>
-    <img src="./images/loupe.jpg" alt="photo d'un ecran d'ordinateur avec zoom à 400%" class="img-fluid">
-    <figcaption>Exemple d'utilisation de la loupe windows avec réglage du grossissement à 400%.</figcaption>
+<figure class="figure">
+    <img src="../../images/loupe.jpg" alt="photo d'un ecran d'ordinateur avec zoom à 400%" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Exemple d'utilisation de la loupe windows avec réglage du grossissement à 400%.</figcaption>
 </figure>
 
 ### Le guide-doigts
 Le **guide-doigts** est une plaque posée sur le clavier qui permet de faciliter l’accès aux touches et d’éviter les frappes parasites ou la pression simultanée sur plusieurs touches.
 
-<figure>
-    <img src="./images/guidedoigt.jpg" alt="photo d'un clavier équipé d'un guide doigt" class="img-fluid">
-    <figcaption>Photo : guide doigt copyplastic.com</figcaption>
+<figure class="figure">
+    <img src="../../images/guidedoigt.jpg" alt="photo d'un clavier équipé d'un guide doigt" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Photo : guide doigt copyplastic.com</figcaption>
 </figure>
 
 ### Les périphériques tactiles de pointage
@@ -67,7 +68,9 @@ La plupart de ces périphériques tactiles fonctionnent avec le système de « n
 La **navigation au clavier** permet à un utilisateur de parcourir le contenu et d’utiliser les fonctionnalités des sites Web ou applications mobiles uniquement grâce au clavier ou à la gestuelle mobile. Le curseur est contrôlé à l'aide de quelques touches. La navigation au sein d’une page se fait d’item en item à l’aide de la touche de tabulation principalement. Et la manipulation de ces items se fait à l’aide des touches directionnelles (flèche gauche, flèche droite…), de la touche espace et de la touche de validation. Au fur et à mesure des actions, le focus (l’endroit où est positionné le curseur) doit être visible pour permettre à l’utilisateur de se situer.
 La  navigation au clavier est indispensable pour certains périphériques et demande de respecter des règles de développement précises. 
 
-<img src="./images/clavier.jpg" alt="" class="img-fluid">
+<figure class="figure">
+    <img src="../../images/clavier.jpg" alt="" class="figure-img img-fluid">
+</figure>
 
 ### La reconnaissance vocale
 
@@ -75,9 +78,9 @@ La **reconnaissance vocale** permet d'analyser la voix humaine captée au moyen 
 
 Exemples : le logiciel de dictée Dragon, les assistants vocaux de nos smartphones.
 
-<figure>
-    <img src="./images/vocale.jpg" alt="photo d'une personne parlant devant son téléphone" class="img-fluid">
-    <figcaption>Photo : Alex Washburn / Wired / Licence Creative Commons</figcaption>
+<figure class="figure">
+    <img src="../../images/vocale.jpg" alt="photo d'une personne parlant devant son téléphone" class="figure-img img-fluid">
+    <figcaption class="figure-caption">Photo : Alex Washburn / Wired / Licence Creative Commons</figcaption>
 </figure>
 
 ### La transcription
@@ -90,4 +93,6 @@ Les **sous-titres** sont une version textuelle synchronisée du contenu audio d�
 
 Autres termes utilisés : sous-titres transcrits, « <span lang="en">Closed Captions</span> » (CC). L’anglais fait une distinction entre le texte transcrit (« <span lang="en">Closed Captions</span> ») destiné en premier aux malentendants et le texte traduit d’une langue à une autre (« <span lang="en">subtitles </span>»). Cette distinction n’existe pas en français qui parle simplement de sous-titres.  
 
-<img src="./images/soustitres.jpg" alt="capture d'écran d'une vidéo affichant des sous-titres" class="img-fluid">    
+<figure class="figure">
+    <img src="../../images/soustitres.jpg" alt="capture d'écran d'une vidéo affichant des sous-titres" class="figure-img img-fluid">
+</figure>    
