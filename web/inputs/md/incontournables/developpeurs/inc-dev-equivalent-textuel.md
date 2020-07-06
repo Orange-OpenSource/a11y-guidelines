@@ -41,9 +41,11 @@ Point bloquant&nbsp;: une image sans description textuelle est inexploitable par
 
 Améliorer le référencement naturel.
 
-**Exemple valide&nbsp;:**      
-`<a href="./home"><img src="logo_orange.jpg" alt="Orange, retour à l’accueil"></a>`        
-`<img src="banner_bouquet_famille.png" alt="Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.">`
+**Exemples valides&nbsp;:**      
+`<a href="./home"><img src="logo_orange.jpg" alt="Orange, retour à l’accueil"></a>`  
+`<img src="banner_bouquet_famille.png" alt="Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.">`  
+`<iframe title="contenu publicitaire" id="cool_ads_iframe_/0101/woo_rec_1_300x250_0" height="250" width="300">`
+
 
 **Exemple d’alternative vide&nbsp;:**  
 Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.  
