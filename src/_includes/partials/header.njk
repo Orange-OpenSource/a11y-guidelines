@@ -7,8 +7,8 @@
   </nav>
   <nav class="navbar navbar-dark navbar-expand" role="navigation">
     <div class="container-lg justify-content-start">
-      <a href="/{{ locale }}" class="navbar-brand">
-        <img src="https://boosted.orange.com/docs/4.4/dist/img/orange_logo.svg" alt="{% translate 'header.logoAlt', locale %}" title="{% translate 'header.logoAlt', locale %}" width="50" height="50">
+      <a href="/{{ locale }}" class="navbar-brand" title="{% translate 'header.logoAlt', locale %}">
+        <img src="/assets/images/orange-logo.svg" alt="{% translate 'header.logoAlt', locale %}" width="50" height="50">
       </a>
       {% include "components/header/main-menu.njk" %}
     </div>

@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title }} - {{ site.title[locale] }}</title>
-    <link rel="icon" href="https://boosted.orange.com/docs/{{ vendors.boosted.favicon.version }}/assets/img/favicons/favicon.ico">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    {# favicons #}
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    {# styles #}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/css/boosted.min.css" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">
     {% if highlightjs == true %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightjs.version }}/build/styles/{{ vendors.highlightjs.theme }}.min.css">
