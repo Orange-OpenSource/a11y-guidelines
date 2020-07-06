@@ -16,7 +16,9 @@
                 <img src="../images/icons/{{ category.icon.name }}.svg" alt="" width="{{ category.icon.width }}" height="{{ category.icon.height }}">
               </div>
               <div class="card-body bg-dark">
-                <h3 class="card-title text-primary">{{ category.label }}</h3>
+                <h3 class="card-title text-primary">
+                  <a href="{{ category.href }}" class="text-primary stretched-link">{{ category.label }}</a>
+                </h3>
                 {% if category.abstract %}
                   <p class="card-text">
                     {{ category.abstract }}
