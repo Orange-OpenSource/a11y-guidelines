@@ -4,7 +4,7 @@ module.exports = {
       label: "You are here:"
     },
     header: {
-      logoAlt: 'Go to homepage'
+      logoAlt: 'Orange, go to homepage'
     },
     filtersBar: {
       label: 'Filters',
@@ -25,7 +25,7 @@ module.exports = {
       label: "Vous êtes ici&nbsp;:"
     },
     header: {
-      logoAlt: "Aller à l’accueil"
+      logoAlt: "Orange, aller à l’accueil"
     },
     filtersBar: {
       label: 'Filtres',
