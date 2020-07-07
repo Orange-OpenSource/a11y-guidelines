@@ -1,6 +1,10 @@
 /**
  * Table Of Content
  */
+#toc {
+  position: sticky;
+  top: 1.25rem;
+}
 
 #toc a[aria-current] {
   border-left: 4px solid currentColor;
