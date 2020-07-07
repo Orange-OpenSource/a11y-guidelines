@@ -23,7 +23,7 @@
     {% endfor %}
      <style>.no-js .hidden-if-no-js{display:none!important}</style>
   </head>
-  <body>
+  <body{% if displayToc == true %} data-spy="scroll" data-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
     {# We don't want to display the breadcrumb on the home pages #}
     {% if not page.url | isHomeUrl %}
@@ -31,8 +31,11 @@
     {% endif %}
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
-    {% if jquery == true %}
+    {% if jquery == true or boostedJS == true %}
       <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
+    {% endif %}
+    {% if boostedJS == true %}
+      <script src="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/js/boosted.min.js" integrity="{{ vendors.boosted.js.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
     {% if highlightjs == true %}
       <script src="/assets/vendors/highlightjs/highlight.js"></script>
