@@ -22,3 +22,11 @@
 [role="contentinfo"] a:focus svg {
   fill: currentColor;
 }
+
+/**
+ * Utilities
+ */
+
+.bg-300 {
+  background-color: #eee !important;
+}

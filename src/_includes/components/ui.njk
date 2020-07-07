@@ -12,9 +12,9 @@
 {% macro lastPosts(posts, max) %}
 <ol class="list-unstyled row">
   {% for post in posts | reverse | limit(max) %}
-    <li class="col-md-4 pb-3">
-      <article>
-        <h3 class="mb-0">
+    <li class="col-md-4 pb-3 d-flex">
+      <article class="bg-white p-3 flex-grow-1">
+        <h3 class="mb-1">
           <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
         </h3>
         {% if post.date %}
