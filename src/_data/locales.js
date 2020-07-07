@@ -18,6 +18,10 @@ module.exports = {
     },
     toc: {
       title: 'Table of content'
+    },
+    lastPosts: {
+      title: 'Last posts',
+      seeAll: 'See all'
     }
   },
   fr: {
@@ -39,6 +43,10 @@ module.exports = {
     },
     toc: {
       title: 'Sommaire'
+    },
+    lastPosts: {
+      title: 'Derniers articles',
+      seeAll: 'Voir tout'
     }
   }
 }
