@@ -32,14 +32,16 @@
       </div>
     </section>
   </div>
-  <section class="container-lg py-4">
-    <div class="d-flex">
-      <h2>{% translate 'lastPosts.title', locale %}</h2>
-      <div class="pl-3">
-        <a href="articles/" class="btn btn-secondary btn-sm">{% translate 'lastPosts.seeAll', locale %}</a>
+  <div class="bg-300">
+    <section class="container-lg py-4">
+      <div class="d-flex">
+        <h2>{% translate 'lastPosts.title', locale %}</h2>
+        <div class="pl-3">
+          <a href="articles/" class="btn btn-secondary btn-sm">{% translate 'lastPosts.seeAll', locale %}</a>
+        </div>
       </div>
-    </div>
-    {{ ui.lastPosts(collections["articles_" + locale], site.home.lastPosts.limit) }}
-  </section>
+      {{ ui.lastPosts(collections["articles_" + locale], site.home.lastPosts.limit) }}
+    </section>
+  </div>
 </main>
 {% endblock %}
