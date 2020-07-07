@@ -9,6 +9,26 @@
 </a>
 {% endmacro %}
 
+{% macro lastPosts(posts, max) %}
+<ol class="list-unstyled row">
+  {% for post in posts | reverse | limit(max) %}
+    <li class="col-md-4 pb-3">
+      <article>
+        <h3 class="mb-0">
+          <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
+        </h3>
+        {% if post.date %}
+          <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
+        {% endif %}
+        {% if post.data.abstract %}
+          <p class="my-2">{{ post.data.abstract }}</p>
+        {% endif %}
+      </article>
+    </li>
+  {% endfor %}
+</ol>
+{% endmacro %}
+
 {% macro postsList(posts, filters = true) %}
 {% if filters == true %}
   {{ filtersBar(posts) }}

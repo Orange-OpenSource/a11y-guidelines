@@ -176,6 +176,10 @@ module.exports = function (eleventyConfig) {
     return items
   })
 
+  eleventyConfig.addNunjucksFilter('limit', function (arr, limit) {
+    return arr.slice(0, limit)
+  })
+
   // Create collections & dynamically suffix their name by the locale key
   for (let locale in collections) {
     collections[locale].forEach(collection => {
