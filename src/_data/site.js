@@ -13,5 +13,10 @@ module.exports = {
   title: {
     en: 'Orange digital accessibility guidelines',
     fr: 'Recommandations accessibilité numérique Orange'
+  },
+  home: {
+    lastPosts: {
+      limit: 6
+    }
   }
 }
