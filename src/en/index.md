@@ -12,16 +12,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus, nisl i
 
 
 <ul class="list-inline">
-  <li class="list-inline-item">
+  <li class="list-inline-item pb-2">
     <a href="types-of-disabilities" class="btn btn-secondary btn-sm">Types of disabilities</a>
   </li>
-  <li class="list-inline-item">
+  <li class="list-inline-item pb-2">
     <a href="assistive-technologies" class="btn btn-secondary btn-sm">Assistive technologies</a>
   </li>
-  <li class="list-inline-item">
+  <li class="list-inline-item pb-2">
     <a href="legal-context" class="btn btn-secondary btn-sm">Legal context</a>
   </li>
-  <li class="list-inline-item">
+  <li class="list-inline-item pb-2">
     <a href="accessibility-at-orange" class="btn btn-secondary btn-sm">Accessibility at Orange</a>
   </li>
 </ul>
