@@ -1,4 +1,4 @@
-{% set breadcrumb = header.mainNavigation | getBreadcrumb(locale, page, title) %}
+{% set breadcrumb = navigation.main | getBreadcrumb(locale, page, title) %}
 
 <nav class="container-lg" role="navigation" aria-labelledby="breadcrumb-label">
   <p id="breadcrumb-label" class="sr-only">{% translate 'breadcrumb.label', locale %}</p>

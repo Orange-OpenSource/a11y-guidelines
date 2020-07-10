@@ -1,7 +1,7 @@
 {% import "../ui.njk" as ui with context %}
 
 <ul class="nav">
-  {% for category in header.mainNavigation[locale] %}
+  {% for category in navigation.main[locale] %}
     {% if category.href in page.url %}
       {% for link in category.subLevels %}
         <li class="nav-item">

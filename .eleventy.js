@@ -131,7 +131,7 @@ module.exports = function (eleventyConfig) {
       }
     })
 
-    // Generally the last level, which is not included in the mainNavigation data (articles, ...)
+    // Generally the last level, which is not included in the navigation.main data (articles, ...)
     if (!breadcrumbContains(page.url)) {
       addBreadcrumbItem({
         href: page.url,
