@@ -3,8 +3,11 @@
 
 {% block content %}
 <main id="main-content" class="pt-4" role="main">
-  <section class="container-lg pb-5">
-    {{ content | safe }}
+  <section class="container-lg">
+    <div class="row">
+      <div class="col-md-7 pb-5">{{ content | safe }}</div>
+      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
+    </div>
   </section>
   <div class="bg-success py-4">
     <section class="container-lg">
