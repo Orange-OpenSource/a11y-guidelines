@@ -1,3 +1,4 @@
 {
-  "boostedJS": true
+  "boostedJS": true,
+  "highlightjs": true
 }
