@@ -9,6 +9,28 @@
 </a>
 {% endmacro %}
 
+{% macro tileNavigation(links) %}
+<div class="card-deck">
+{% for link in links %}
+  <div class="card bg-{{ link.theme }}">
+    <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 text-center">
+      <img src="../images/icons/{{ link.icon.name }}.svg" alt="" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
+    </div>
+    <div class="card-body bg-dark">
+      <h3 class="card-title text-primary">
+        <a href="{{ link.href }}" class="text-primary stretched-link">{{ link.label }}</a>
+      </h3>
+      {% if link.abstract %}
+        <p class="card-text">
+          {{ link.abstract }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endmacro %}
+
 {% macro lastPosts(posts, max) %}
 <ol class="list-unstyled row">
   {% for post in posts | reverse | limit(max) %}

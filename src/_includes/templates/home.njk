@@ -12,27 +12,7 @@
   <div class="bg-success py-4">
     <section class="container-lg">
       <h2>{{ cardNavigationTitle }}</h2>
-      <div class="card-deck">
-        {% for category in navigation.main[locale] %}
-          {% if category.inCardNavigation == true %}
-            <div class="card bg-{{ category.theme }}">
-              <div class="p{% if category.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 text-center">
-                <img src="../images/icons/{{ category.icon.name }}.svg" alt="" width="{{ category.icon.width }}" height="{{ category.icon.height }}">
-              </div>
-              <div class="card-body bg-dark">
-                <h3 class="card-title text-primary">
-                  <a href="{{ category.href }}" class="text-primary stretched-link">{{ category.label }}</a>
-                </h3>
-                {% if category.abstract %}
-                  <p class="card-text">
-                    {{ category.abstract }}
-                  </p>
-                {% endif %}
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+      {{ ui.tileNavigation(navigation.main[locale] | filterArrayOfObjByKey('inCardNavigation', true)) }}
     </section>
   </div>
   <div class="bg-300">
