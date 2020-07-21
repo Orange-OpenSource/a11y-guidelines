@@ -8,7 +8,7 @@ module.exports = {
       integrity: 'sha384-R024d8eLkqTtaLUSJ9MrQ9ay65hb/spmrvV7W1B2MuguSjYsCx3KVKjdjc9zUbPb'
     }
   },
-  highlightjs: {
+  highlightJS: {
     version: '10.1.1',
     theme: 'github'
   },
