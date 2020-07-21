@@ -1,6 +1,6 @@
 ---
 title: "Recommandations accessibilité pushmail Orange"
-highlightjs: true
+highlightJS: true
 ---
 
 # Recommandations accessibilité <span lang="en">pushmail</span> Orange

@@ -3,5 +3,5 @@
     "/assets/components-examples.css"
   ],
   "jquery": true,
-  "highlightjs": true
+  "highlightJS": true
 }
