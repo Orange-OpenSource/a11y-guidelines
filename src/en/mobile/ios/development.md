@@ -10,7 +10,7 @@ This guide aims to present the various iOS <abbr>SDK</abbr> accessibility option
 
 <a name="AccessibilityTraits"></a>
 ## Element trait
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -46,7 +46,7 @@ This guide aims to present the various iOS <abbr>SDK</abbr> accessibility option
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="TraitElt-Description"
      role="tabpanel">
@@ -139,7 +139,7 @@ func changeTraits() {
 </div><br><br>
 
 ## Text alternatives
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -161,7 +161,7 @@ func changeTraits() {
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="textAlt-Details"
      role="tabpanel">
@@ -227,7 +227,7 @@ class ChangeTextView: UIViewController {
 </div><br><br>
 
 ## Date, time and numbers
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -256,7 +256,7 @@ class ChangeTextView: UIViewController {
            role="tab" 
            aria-selected="false">Phone numbers</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="format-Description"
      role="tabpanel">
@@ -427,7 +427,7 @@ Once more, formatting data is an essential step for a phone number vocalization 
 </div><br><br>
 
 ## Trigger a vocalization
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -449,7 +449,7 @@ Once more, formatting data is an essential step for a phone number vocalization 
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="triggerVocal-Details"
      role="tabpanel">
@@ -477,7 +477,7 @@ UIAccessibility.post(notification: .announcement,
 </div><br><br>
 
 ## Change the vocalization language
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -499,7 +499,7 @@ UIAccessibility.post(notification: .announcement,
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="changeLang-Details"
      role="tabpanel">
@@ -536,7 +536,7 @@ If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocal
 </div><br><br>
 
 ## Notify a content change
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -565,7 +565,7 @@ If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocal
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="changeNotif-Description"
      role="tabpanel">
@@ -631,7 +631,7 @@ With `nil`, the first accessible element in the page is focused.
 
 <a name="MaskElements"></a>
 ## Hide elements
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -660,7 +660,7 @@ With `nil`, the first accessible element in the page is focused.
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="hideElts-Description"
      role="tabpanel">
@@ -776,7 +776,7 @@ override func viewDidAppear(_ animated: Bool) {
 </div><br><br>
 
 ## Grouping elements
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -805,7 +805,7 @@ override func viewDidAppear(_ animated: Bool) {
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="groupElts-Description"
      role="tabpanel">
@@ -1055,7 +1055,7 @@ Another grouping elements case could use the **shouldGroupAccessibilityChildren*
 <a name="ReadingOrder"></a>
 
 ## Reading order
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1077,7 +1077,7 @@ Another grouping elements case could use the **shouldGroupAccessibilityChildren*
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="readingOrder-Details"
      role="tabpanel">
@@ -1137,7 +1137,7 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
 </div><br><br>
 
 ## Focus an element
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1166,7 +1166,7 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="focusElt-Description"
      role="tabpanel">
@@ -1251,7 +1251,7 @@ extension UIView {
 </div><br><br>
 
 ## Modify the focus area of VoiceOver
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1280,7 +1280,7 @@ extension UIView {
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="focusArea-Description"
      role="tabpanel">
@@ -1409,7 +1409,7 @@ float heightVal;
 </div><br><br>
 
 ## Modal view
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1439,7 +1439,7 @@ float heightVal;
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="modalView-Description"
      role="tabpanel">
@@ -1536,7 +1536,7 @@ Hereafter, knowledge about hiding wrappers and their contents is assumed to be a
 </div><br><br>
 
 ## Text size
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1558,7 +1558,7 @@ Hereafter, knowledge about hiding wrappers and their contents is assumed to be a
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="textSize-Description"
      role="tabpanel">
@@ -1568,7 +1568,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
 </div>
 <div class="tab-pane" id="textSize-Details" role="tabpanel">
     
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1583,7 +1583,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
            role="tab" 
            aria-selected="false">iOS 12</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="TextSize-iOS13"
      role="tabpanel">
@@ -1672,7 +1672,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
 </div><br><br>
 
 ## Truncation hyphen
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1687,7 +1687,7 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="truncHyphen-Description"
      role="tabpanel">
@@ -1765,7 +1765,7 @@ class TruncationHyphen: UIViewController {
 </div><br><br>
 
 ## Graphical elements size
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1787,7 +1787,7 @@ class TruncationHyphen: UIViewController {
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="graphEltSize-Description"
      role="tabpanel">
@@ -1821,7 +1821,7 @@ To illustrate these new features, the example below is obtained by following the
 </div><br><br>
 
 ## Large Content Viewer
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1843,7 +1843,7 @@ To illustrate these new features, the example below is obtained by following the
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="largeContentViewer-Description"
      role="tabpanel">
@@ -1962,7 +1962,7 @@ class ButtonViewController: UIViewController {
 </div><br><br>
 
 ## Continuous adjustable values
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -1984,7 +1984,7 @@ class ButtonViewController: UIViewController {
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="adjustable-Description"
      role="tabpanel">
@@ -2163,7 +2163,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 </div><br><br>
 
 ## Custom actions
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -2185,7 +2185,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="customActions-Description"
      role="tabpanel">
@@ -2194,7 +2194,7 @@ Some basic gestures may become a real headache to be perfectly understood by Voi
 <br>A convincing example is the iOS native mail that may suggest some actions as follows:
 <br><br>
 
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -2210,7 +2210,7 @@ Some basic gestures may become a real headache to be perfectly understood by Voi
            aria-selected="false">Switch Control</a>
     </li>
 </ul>
-<div class="tab-content border-0">
+<div class="tab-content">
 <div class="tab-pane show active"
      id="CustomActionsVoiceOver"
      role="tabpanel">
@@ -2332,7 +2332,7 @@ class CustomActions: UIViewController {
 </div><br><br>
 
 ## Custom rotor
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -2354,7 +2354,7 @@ class CustomActions: UIViewController {
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="rotor-Details"
      role="tabpanel">
@@ -2479,7 +2479,7 @@ class CustomRotor: UIViewController {
 </div><br><br>
 
 ## Accessibility options
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -2508,7 +2508,7 @@ class CustomRotor: UIViewController {
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="a11yOptions-States"
      role="tabpanel">
@@ -2601,7 +2601,7 @@ All accessibility <a href="https://developer.apple.com/documentation/uikit/acces
 </div><br><br>
 
 ## Navigation bar
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -2644,7 +2644,7 @@ All accessibility <a href="https://developer.apple.com/documentation/uikit/acces
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="navBar-Description"
      role="tabpanel">
@@ -3049,7 +3049,7 @@ private func createA11yElts() {
 <br><br>
 
 ## Speech synthesis
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -3085,7 +3085,7 @@ private func createA11yElts() {
            role="tab" 
            aria-selected="false">Links</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="speechSyn-Description"
      role="tabpanel">
@@ -3294,7 +3294,7 @@ When a particular spelling is intended, phonetics is highly recommended to get t
 </code></pre>
 
 <br>Generating phonetics may be done in the device settings.
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -3309,7 +3309,7 @@ When a particular spelling is intended, phonetics is highly recommended to get t
            role="tab" 
            aria-selected="false">iOS 12</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="Phonemes-iOS13"
      role="tabpanel">
@@ -3355,7 +3355,7 @@ All the speech synthesizer functionalities are introduced in a [WWDC video](./de
 <br><br>
 
 ## Switch Control
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -3377,7 +3377,7 @@ All the speech synthesizer functionalities are introduced in a [WWDC video](./de
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="switchCtrl-Description"
      role="tabpanel">
@@ -3522,7 +3522,7 @@ class ViewController: UIViewController {
 </div><br><br>
 
 ## Vocalized application name
-<ul class="nav nav-tabs nav-tabs-light" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
            data-toggle="tab" 
@@ -3544,7 +3544,7 @@ class ViewController: UIViewController {
            role="tab" 
            aria-selected="false">Link</a>
     </li>
-</ul><div class="tab-content border-0">
+</ul><div class="tab-content">
 <div class="tab-pane show active"
      id="appName-Description"
      role="tabpanel">

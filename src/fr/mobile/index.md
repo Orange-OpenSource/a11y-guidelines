@@ -42,23 +42,23 @@ Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que
 ### iOS
 #### 1. Critères de conception
 Liste des différents critères à respecter pour obtenir une application mobile accessible.
-</br>Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité. 
-</br></br>
+<br>Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité. 
+<br><br>
 #### 2. Guide pour les développeurs
 Section à destination des développeurs.
-</br>Tout ce qu’il faut savoir pour coder accessible sur mobile.
-</br></br>
+<br>Tout ce qu’il faut savoir pour coder accessible sur mobile.
+<br><br>
 #### 3. VoiceOver
 Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser VoiceOver, outil incontournable dans une démarche d'accessibilité mobile.
-</br></br>
+<br><br>
 #### 4. WWDC
 Section qui détaille des présentations Apple faites au `World Wide Developers Conference` ayant un impact fort dans la démarche d'accessibilité mobile.
-</br></br>
+<br><br>
 #### 5. Tests
 Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que les recommandations iOS sont bien prises en compte avant mise en production de l'application.
-</br></br>
+<br><br>
 ### Démonstrateur mDAN
 Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile.
-</br></br>
+<br><br>
 ### Liens utiles
 Quelques liens utiles qui pourront compléter les explications de ce site.
