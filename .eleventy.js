@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(`src/en/web/components-examples/**/*.{html,css,js}`)
   eleventyConfig.addPassthroughCopy(`src/fr/web/exemples-de-composants/**/*.{html,css,js}`)
   eleventyConfig.addPassthroughCopy(`src/**/*.xlsx`)
+  eleventyConfig.addPassthroughCopy(`src/**/*.apk`)
 
   /**
    * Override markdown generator to create ids automatically on headings
