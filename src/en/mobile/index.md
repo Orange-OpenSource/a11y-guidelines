@@ -4,16 +4,16 @@ title: "Mobile devices"
 
 # Orange mobile accessibility guidelines
 
-*** Accessibility: a need for some, a benefit for all! ***
+***Accessibility: a need for some, a benefit for all!***
 
 ## Mobile accessibility definition
-** It is an application usable by everyone **
+**It is an application usable by everyone**
 
 - People with no disabilities.
 - Elderly people.
 - People with disabilities *(temporary or permanent)*.
 
-** and in all situations **
+**and in all situations**
 
 - With any kind of material: mobile browser, Android, iOS, tablet.
 - In an unfavourable environment: poor luminosity, touchpad while moving,...
