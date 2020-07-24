@@ -10,17 +10,19 @@ Two versions are available:
 - **TalkBack** built-in screen reader for Android.
 - **VoiceOver** built-in screen reader for iOS.
 
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">TalkBack</h2>          
-    <a href="./talkback.html" class="btn btn-info">
-        ![](./images/android.png)
-        <div>TalkBack user guide</div>
-    </a>
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">TalkBack</h2>
+        <a href="../android/talkback/" class="btn btn-info">
+            <img src="../images/android.png" alt="">
+            <div>TalkBack user guide</div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">Voiceover</h2>
+        <a href="../ios/voiceover/" class="btn btn-info">
+            <img src="../images/iphone.png" alt="">
+            <div>VoiceOver user guide</div>
+        </a>
+    </div>
 </div>
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">Voiceover</h2>          
-    <a href="./voiceover.html" class="btn btn-info">
-        ![](./images/iphone.png)
-        <div>VoiceOver user guide</div>
-    </a>
-</div>            

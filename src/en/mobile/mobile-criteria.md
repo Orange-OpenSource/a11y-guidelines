@@ -11,20 +11,22 @@ Following the Orange guidelines (Design for digital platforms Guideline), availa
 Some elements already present in the Orange Brand (such as the use of colours) have not been included in this list of criteria.
 
 Two versions are available:
-- ** Android version ** focused on the development of applications for the Google platform, Android.
-- ** iOS version ** focused on the development of applications for the Apple platform, iOS.
+- **Android version** focused on the development of applications for the Google platform, Android.
+- **iOS version** focused on the development of applications for the Apple platform, iOS.
 
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">Android criteria</h2>          
-    <a href="./criteria-android.html" class="btn btn-info">
-        ![](./images/android.png)
-        <div>Android accessibility guide</div>
-    </a>
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">Android criteria</h2>
+        <a href="../android/criteria/" class="btn btn-info">
+            <img src="../images/android.png" alt="">
+            <div>Android accessibility guide</div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">iOS criteria</h2>
+        <a href="../ios/design/" class="btn btn-info">
+            <img src="../images/iphone.png" alt="">
+            <div>iOS accessibility guide</div>
+        </a>
+    </div>
 </div>
-<div class="mobileImg col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">iOS criteria</h2>          
-    <a href="./criteria-ios.html" class="btn btn-info">
-        ![](./images/iphone.png)
-        <div>iOS accessibility guide</div>
-    </a>
-</div>            
