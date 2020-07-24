@@ -4,7 +4,7 @@ title: "Les critères incontournables sous Android pour la conception"
 
 # Les critères incontournables sous Android pour la conception
 
-Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application [mDAN](./mdan.html) pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section concernant <span lang="en">TalkBack</span>](./screen-reader-talkback.html).
+Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application [mDAN](../../mdan/) pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section concernant <span lang="en">TalkBack</span>](../talkback/).
 
 Pour le web, le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé, voir ces [recommandations](https://developer.android.com/guide/topics/ui/accessibility/). L’objet de ces pages étant d’en faire un « digest » sans s’y substituer.
 
@@ -35,12 +35,12 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 
 **Exemples&nbsp;:**
 
-<img src="./images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
+<img src="../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
 
 En décomposant l’image&nbsp;:
-- <img src="./images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
-- <img src="./images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`
-- <img src="./images/edit.png" alt="exemple d’icône informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l’image")`
+- <img src="../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
+- <img src="../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`
+- <img src="../../images/edit.png" alt="exemple d’icône informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l’image")`
 
 ## Couleurs
 
@@ -69,11 +69,11 @@ L’application [<span lang="en">AccessibilityScanner</span>](https://play.googl
 **Exemple de contraste non valide&nbsp;:**  
 Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
-![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)   
+![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)   
 
 **Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 
-<img src="./images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
+<img src="../../images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
 
   
 ## Alternative textuelle
@@ -92,7 +92,7 @@ La place sur mobile étant réduite, on utilise bien souvent des abréviations p
 Certaines images sont régulièrement associées à du texte pour donner une information. C’est le cas notamment des «&nbsp;messages non lus&nbsp;» où une infobulle donne le nombre de messages à lire et où une image donne l’information «&nbsp;message&nbsp;». Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple&nbsp;: «&nbsp;3 messages non lus&nbsp;». On peut également placer cette alternative sur l’image, mais dans ce cas, il faut penser à rendre le texte «&nbsp;invisible&nbsp;» pour le lecteur d’écran.
 
 L’alternative textuelle d’un élément est renseignée via l’attribut `contentDescription` (disponible pour tout élément héritant de `View`). Pour les boutons présents dans l’`ActionBar` (ou `ToolBar`), c’est l’attribut `title` qu’il faut renseigner.
-Le texte ou son alternative est vocalisé automatiquement avec des informations sur le type de composant (bouton, case à cocher…), de son état éventuel (coché décoché, sélectionné), s’il est utilisable (désactivé). Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](./criteria-android-dev.html#alternatives-textuelles).
+Le texte ou son alternative est vocalisé automatiquement avec des informations sur le type de composant (bouton, case à cocher…), de son état éventuel (coché décoché, sélectionné), s’il est utilisable (désactivé). Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](../developpement#alternatives-textuelles).
 
 **À vérifier&nbsp;:**
 
@@ -106,7 +106,7 @@ Permettre aux utilisateurs du lecteur d’écran d’accéder à toutes les info
 **Exemple&nbsp;:**
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
-<img src="./images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
+<img src="../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
 <pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
 containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.
 mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le bouton-icône pour éviter une redondance d’information
@@ -139,7 +139,7 @@ Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer 
 
 **Exemple non valide&nbsp;:**
 
-<img src="./images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
+<img src="../../images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
   
 
 ## État des éléments
@@ -167,8 +167,9 @@ Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informati
 
 **Exemple&nbsp;:**
 
-<img src="./images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400">  
-Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du [guide développeur](./criteria-android-dev.html#alternatives-textuelles) correspondante.
+<img src="../../images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"> 
+ 
+Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du [guide développeur](../developpement#alternatives-textuelles) correspondante.
   
 
 ## Composant standard
@@ -215,11 +216,11 @@ L’application [<span lang="en">AccessibilityScanner</span>](https://play.googl
 **Exemple valide&nbsp;:** 
 
 Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.  
-<img src="./images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300">
+<img src="../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300">
 
 **Exemple non-valide&nbsp;:**  
 
-<img src="./images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
+<img src="../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
 
 ## Élément fantôme
@@ -246,7 +247,7 @@ Permettre la navigation dans l’application sans avoir d’élément perturbant
 **Exemple non-valide&nbsp;:**  
 
 Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en">TalkBack</span>. Ce dernier vocalise (la vocalisation est affichée en bas de l’écran sur la capture) un contenu se trouvant derrière la vue active.  
-<img src="./images/ghost.png" alt="exemple d’élément fantôme" width="300">
+<img src="../../images/ghost.png" alt="exemple d’élément fantôme" width="300">
 
 
 ## Taille des textes
@@ -278,7 +279,7 @@ L’application [<span lang="en">AccessibilityScanner</span>](https://play.googl
 
 **Exemple&nbsp;:**
 
-<img src="./images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 
+<img src="../../images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 
 
 
 ## Contrôle de contenu
@@ -353,12 +354,12 @@ Donner une indication visuelle aux utilisateurs lors de la présence de <i lang=
 <div class="col-sm-6 col-xs-12">
 **Exemple valide&nbsp;:**
 
-<img src="./images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
+<img src="../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 **Exemple non-valide&nbsp;:**
 
-<img src="./images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
+<img src="../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 </div>
 </div>
 
@@ -412,7 +413,7 @@ Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteurs d�
 **Exemple&nbsp;:**      
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
 
-<img src="./images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
+<img src="../../images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
 <pre><code class="java" >volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());

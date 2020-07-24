@@ -115,7 +115,7 @@ It is necessary to indicate the state and the nature of the tabs (not internatio
     }
 </code></pre>
 
-**Link: **
+**Link:**
 
 - [`contentDescription`](https://developer.android.com/reference/android/view/View.html#attr_android:contentDescription)
 
@@ -329,7 +329,7 @@ For more information, please refer to the following links:
 
 #### Description: 
 
-`WebView`s are a special thing on Android. First, if you want a page to be accessible, its <abbr>HTML</abbr> content must be accessible as well, it must follow the international standards: the <abbr>WCAG</abbr>2. To know the requirements and learn techniques for developing an accessible Web, please visit the following section in our site: [accessibility recommendations for the Web](../web/index.html).
+`WebView`s are a special thing on Android. First, if you want a page to be accessible, its <abbr>HTML</abbr> content must be accessible as well, it must follow the international standards: the <abbr>WCAG</abbr>2. To know the requirements and learn techniques for developing an accessible Web, please visit the following section in our site: [accessibility recommendations for the Web](../../../web/).
 
 Second, on Android you must ensure that the `WebView` allows JavaScript `mWebView.getSettings().setJavaScriptEnabled(true);`
 

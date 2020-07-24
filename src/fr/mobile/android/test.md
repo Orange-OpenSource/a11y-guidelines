@@ -60,7 +60,7 @@ Positionner **Agrandissement** sur **Utiliser le service**. Revenir à l’appli
 
 Le lecteur d’écran est un outil pour les personnes non voyantes et mal-voyantes. Il a deux fonctions, la vocalisation et la navigation dans l’écran. Tous les éléments signifiants doivent être vocalisés et dans un ordre logique.
 
-Pour l’activation et l’utilisation du lecteur, voir la [section concernant <span lang="en">TalkBack</span>](./screen-reader-talkback.html).
+Pour l’activation et l’utilisation du lecteur, voir la [section concernant <span lang="en">TalkBack</span>](../talkback/).
 
 La navigation peut être utilisée en :
 - lecture automatique de la page ou lecture élément par élément, balayage au doigt vers la droite pour l’élément suivant (obligatoire)
@@ -106,9 +106,9 @@ Il s'agit des touches également utilisées pour tester l'accessibilité d'un si
 Il est considéré comme bloquant l’impossibilité de sortir d’une fonctionnalité ou de l’application.
 
 ## Colour Contrast Analyser
-Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](./methodes-outils-contrastes.html) via l'outil <span lang="en">Colour Contrast Analyser</span>.
+Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](../../../web/outils/mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
 
-Pour les valeurs à respecter voir la [section concernant les couleurs](./criteria-android-conception.html#couleurs).
+Pour les valeurs à respecter voir la [section concernant les couleurs](../conception#couleurs).
 
 ## Autres outils - optionnels
 
