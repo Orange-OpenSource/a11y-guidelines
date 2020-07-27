@@ -15,7 +15,7 @@ Pour tester si votre service est accessible à l’aide du clavier, vous pouvez 
 
 ## Liste des raccourcis clavier principaux&nbsp;: 
 
-![capture d’écran de l’outil colour contrast analyser](./images/keyboard.png)
+![présentation des raccourcis clavier](./images/keyboard.png)
 
 <table class="table">
 <caption class="sr-only">Liste des raccourcis clavier principaux</caption>
