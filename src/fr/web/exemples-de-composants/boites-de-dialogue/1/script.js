@@ -4,7 +4,7 @@ $(document).ready(function() {
   // Ouverture de l'exemple final
   $('#final-openButton').on('click', function () {
     $('[role=dialog], .dialog').hide();
-    $('#final-dialog').fadeIn();
+    $('#final-dialog').show();
 
     // Sauvegarde le focus pour le repositionner à la fermeture
     $('#final-dialog').attr('data-focusBack', 'final-openButton');
@@ -24,7 +24,7 @@ $(document).ready(function() {
   // Ouverture de l'exemple final 2
   $('#final-openButton2').on('click', function () {
     $('[role=dialog], .dialog').hide();
-    $('#final-dialog').fadeIn();
+    $('#final-dialog').show();
 
     // Sauvegarde le focus pour le repositionner à la fermeture
     $('#final-dialog').attr('data-focusBack', 'final-openButton2');
@@ -50,21 +50,21 @@ $(document).ready(function() {
 
   // --- Exemple step 1 ---
   // Overture de l'exemple step 1
-  $('#etape1-openButton').on('click', function () {
+  $('#step1-openButton').on('click', function () {    
     $('[role=dialog], .dialog').hide();
-    $('#etape1-dialog').fadeIn();
+    $('#step1-dialog').show();
   });
 
   // Boutons de fermeture
-  $('#etape1-dialog').on('click', function () {
-    $('#etape1-dialog').hide();
+  $('#step1-dialog').on('click', function () {
+    $('#step1-dialog').hide();
   })
 
   // --- Exemple step 2 ---
   // Overture de l'exemple step 2
  $('#step2-openButton').on('click', function () {
     $('[role=dialog], .dialog').hide();
-    $('#step2-dialog').fadeIn();
+    $('#step2-dialog').show();
 
     // Sauvegarde le focus pour le repositionner à la fermeture
     $('#step2-dialog').attr('data-focusBack', 'step2-openButton');
