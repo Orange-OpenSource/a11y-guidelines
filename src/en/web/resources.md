@@ -10,7 +10,7 @@ For Orange internal accessibility requirements, we have chosen to rely on the [W
 
 All <abbr>HTML</abbr> pages made by the Orange group must **comply with the AA level criteria of Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without blocking point** for the user after testing the main features of the site or application.
 
-For technical solutions, you should consult [WCAG criteria by project phase](./incontournables.html) and [examples](./exemples.html) sections. You can also refer to an external resource available at [Accede-Web references](http://wiki.accede-web.com/en/home).
+For technical solutions, you should consult [WCAG criteria by project phase](../wcag-criteria-by-project-phase/) and [examples](../components-examples/) sections. You can also refer to an external resource available at [Accede-Web references](http://wiki.accede-web.com/en/home).
 
 ## <abbr>RGAA</abbr>
 

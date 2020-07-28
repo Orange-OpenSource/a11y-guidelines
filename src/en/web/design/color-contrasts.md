@@ -4,19 +4,19 @@ title: "Color contrasts"
 
 # Make sure there is enough contrast between font and background colors
 
-**Target: ** everyone, especially mobile and tablet users, people with visual impairments, reading or attention difficulties and elderly people.   
-**When: ** as of design and during development.
+**Target:** everyone, especially mobile and tablet users, people with visual impairments, reading or attention difficulties and elderly people.   
+**When:** as of design and during development.
 
 **Description:**  
 The contrast between the text or the graphic component and the background should be high enough.
 Insufficient contrast level will have detrimental impact on users with visual difficulties and for mobile and tablet users in a very bright environment.
     
-**Don’t: **  
+**Don’t:**  
 The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  
 
-![screenshot showing text with poor contrast](images/contraste.png)
+![screenshot showing text with poor contrast](../../images/contraste.png)
 
-**Checklist: **
+**Checklist:**
 
 
 - Make sure that the contrast between the color of the background and that of the text and also for text in the form of image carrying information, is:
@@ -31,9 +31,9 @@ We do not have to apply this criterion:
    - If the graphic component can not be represented otherwise: flag, logotype, real photos, screenshots, medical information diagrams using the colors of biology, gradients representing a measurement (heat maps …)
    - If a text, like a label, a data table, brings the same information as the icon or the graphic
    - If the contrast ratio of the image doesn't prevent the understanding of the content or the function
-- **Important: ** for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all
+- **Important:** for applications used primarily in mobile web or in mobility, the contrast level of the most important elements must be 7:1 in order to ensure a good readability and usability for all
 
 
-**Tool: **  
+**Tool:**  
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  
  

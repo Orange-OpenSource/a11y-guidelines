@@ -58,7 +58,7 @@ Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majusc
 
 Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran. 
 
-Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="./images/word_tab_fr.png" />) pour mettre en forme le contenu. 
+Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="../../images/word_tab_fr.png" />) pour mettre en forme le contenu. 
 
 Utiliser les fonctions Retrait, Espacement : 
 - Menu **Mise en page > Paragraphe > Retrait** ou **Espacement** ou **Clic droit : « Paragraphe… »**

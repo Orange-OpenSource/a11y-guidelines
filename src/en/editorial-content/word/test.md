@@ -25,7 +25,7 @@ It helps you to simulate the configuration as the visually impaired and blind pe
 [For further information to navigate with JAWS & NVDA](https://a11y-guidelines.orange.com/web/methodes-outils-lecteur-ecran.html)
 
 ### Self-Assessment Grids 
-- <a href="AXS_assess_grid_WORD_EN.xlsx">Accessibility Assessment Grid for Word (16 ko)</a>
-- <a href="AXS_assess_grid_PPT_EN.xlsx">Accessibility Assessment Grid for PowerPoint (16 ko)</a>
+- <a href="../../AXS_assess_grid_WORD_EN.xlsx">Accessibility Assessment Grid for Word (16 ko)</a>
+- <a href="../../AXS_assess_grid_PPT_EN.xlsx">Accessibility Assessment Grid for PowerPoint (16 ko)</a>
 
 These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents: 

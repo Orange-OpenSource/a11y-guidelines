@@ -30,7 +30,7 @@ Installer <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-che
 
 Ce logiciel permet entre autres l’exécution des tests automatiques sur un document <abbr>PDF</abbr> et la détection des problèmes d’accessibilité,
 <figure>
-<img class="center" src="/others/images/pac1.png" alt="copie d’écran des résultats des tests automatiques dans PAC"/>
+<img class="center" src="../images/pac1.png" alt="copie d’écran des résultats des tests automatiques dans PAC"/>
 <figcaption>Capture d'écran de l'outil.</figcaption>
 </figure>
 

@@ -83,7 +83,7 @@ Petit rappel sur les 11 styles de texte disponibles depuis iOS 11 :
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_1.png" />
 <br>... ainsi que sur la façon programmatique de les implémenter :
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_2.png" />
-<br>Une explication détaillée de l'implémentation du `Dynamic Type` est disponible dans la partie <a href="./criteria-ios-dev.html#taille-des-textes" style="text-decoration: underline;">guide pour les développeurs</a>.
+<br>Une explication détaillée de l'implémentation du `Dynamic Type` est disponible dans la partie <a href="../../developpement#taille-des-textes" style="text-decoration: underline;">guide pour les développeurs</a>.
 </div>
 <div class="tab-pane" id="DynamicType-Xcode" role="tabpanel" >
 <a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=180">🎬 (03:00)</a>
@@ -132,7 +132,7 @@ Petit rappel sur la situation actuelle incluant la fonctionnalité déjà prése
 <br><img style="max-width: 450px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_4.png" />
 <br>... ainsi que sur la façon programmatique de connaître sa valeur issue des réglages du terminal :
 <br><img style="max-width: 750px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_5.png" />
-<br>Une explication détaillée des états et des événements des options d'accessibilité est disponible dans la partie <a href="./criteria-ios-dev.html#options-d-accessibilit-" style="text-decoration: underline;">guide pour les développeurs</a>.
+<br>Une explication détaillée des états et des événements des options d'accessibilité est disponible dans la partie <a href="../../developpement#options-d-accessibilit-" style="text-decoration: underline;">guide pour les développeurs</a>.
 </div>
 <div class="tab-pane" id="ReduceMotion-AutoplayingVideo" role="tabpanel" >
 <a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=257">🎬 (04:17)</a>
@@ -190,7 +190,7 @@ La **nouvelle fonctionnalité iOS 13** `Différencier sans couleur` permet à l'
 <br><img style="max-width: 900px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_9.png" />
 <br>La valeur de cette option est accessible de façon programmatique afin d'adapter subséquemment le visuel d'une application :
 <br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_10.png" />
-<br>Il est bien évidemment recommandé de <a href="./criteria-ios-conception.html#couleurs" style="text-decoration: underline;">ne jamais faire passer une information par la couleur uniquement</a> mais il y a des cas spécifiques où ce type de configuration est primordial et où l'intérêt de rajouter des éléments graphiques pour différencier les couleurs a un intérêt non négligeable *(jeu vidéo par exemple)*.
+<br>Il est bien évidemment recommandé de <a href="../../conception#couleurs" style="text-decoration: underline;">ne jamais faire passer une information par la couleur uniquement</a> mais il y a des cas spécifiques où ce type de configuration est primordial et où l'intérêt de rajouter des éléments graphiques pour différencier les couleurs a un intérêt non négligeable *(jeu vidéo par exemple)*.
 <br><br><img style="max-width: 1100px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_11.png" />
 </div>
 </div>
@@ -233,7 +233,7 @@ Cet exemple met en avant le fait que l'accessibilité pour ce type d'élément n
 <br><br><br>
 <a name="ColorContrast"></a>
 ### [Contraste des couleurs (06:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=386)
-Hormis le fait d'avoir des polices de taille suffisamment grande pour être perçues par tous, il est aussi primordial de [respecter un contraste de couleurs](./criteria-ios-conception.html#couleurs) pour permettre à l'ensemble des personnes ayant des troubles visuels de distinguer parfaitement ce qui est sur l'écran.
+Hormis le fait d'avoir des polices de taille suffisamment grande pour être perçues par tous, il est aussi primordial de [respecter un contraste de couleurs](../../conception#couleurs) pour permettre à l'ensemble des personnes ayant des troubles visuels de distinguer parfaitement ce qui est sur l'écran.
 <br><br>Une fois le problème décelé, une solution est apportée par la **nouvelle fonctionnalité Xcode 11** : **Color Contrast Calculator**.
 <br><img style="max-width: 850px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-ColorContrast.png" />
 <br><br><br>
@@ -260,7 +260,7 @@ Après une brève introduction concernant les attentes d'un utilisateur <span la
 <br><br><br>
 <a name="AccessibilityCustomActions"></a>
 ## Utiliser les actions personnalisées
-Cette présentation visualisable sur le **site développeur officiel d'<span lang="en">Apple</span>** ([session 250](https://developer.apple.com/videos/play/wwdc2019/250/)) met en avant l'intérêt et l'implémentation des actions personnalisées pour le [lecteur d'écran](./lecteur-ecran-voiceover.html) et le [contrôle de sélection](./criteria-ios-dev.html#contr-le-de-s-lection) en s'appuyant sur une application qui permet de comprendre directement les concepts développés.
+Cette présentation visualisable sur le **site développeur officiel d'<span lang="en">Apple</span>** ([session 250](https://developer.apple.com/videos/play/wwdc2019/250/)) met en avant l'intérêt et l'implémentation des actions personnalisées pour le [lecteur d'écran](../../voiceover) et le [contrôle de sélection](../../developpement#controle-de-selection) en s'appuyant sur une application qui permet de comprendre directement les concepts développés.
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250.png" />
 <br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :
 
@@ -298,7 +298,7 @@ Présentation rapide de VoiceOver ainsi que de la problématique liée à une im
      role="tabpanel">
 <a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=190">🎬 (03:10)</a>
 <br><br>
-L'intérêt des <a href="./criteria-ios-dev.html#actions-personnalis-es" style="text-decoration: underline;">actions personnalisées</a> avec <span lang="en">VoiceOver</span> est présenté de façon très pragmatique et particulièrement pédagogique de façon à comprendre pourquoi et dans quels contextes ce type de fonctionnalité doit absolument être mise en oeuvre pour améliorer significativement l'expérience utilisateur.
+L'intérêt des <a href="../../developpement#actions-personnalis-es" style="text-decoration: underline;">actions personnalisées</a> avec <span lang="en">VoiceOver</span> est présenté de façon très pragmatique et particulièrement pédagogique de façon à comprendre pourquoi et dans quels contextes ce type de fonctionnalité doit absolument être mise en oeuvre pour améliorer significativement l'expérience utilisateur.
 </div>
 <div class="tab-pane" id="CustomActions-SwitchControl" role="tabpanel" >
 <a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=268">🎬 (04:28)</a>
@@ -313,6 +313,6 @@ L'application de démonstration est utilisée avec le contrôle de sélection di
 
 <a name="CustomActionsCoding"></a>
 ## [Implémentation (07:59)](https://developer.apple.com/videos/play/wwdc2019/250/?time=479)
-Depuis iOS 8, la création d'[actions personnalisées](./criteria-ios-dev.html#actions-personnalis-es) s'appuie sur une syntaxe ObjectiveC qui s'est adaptée à Swift en incluant désormais une **<span lang="en">closure</span> en iOS 13**.
+Depuis iOS 8, la création d'[actions personnalisées](../../developpement#actions-personnalisees) s'appuie sur une syntaxe ObjectiveC qui s'est adaptée à Swift en incluant désormais une **<span lang="en">closure</span> en iOS 13**.
 <br><img style="max-width: 900px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250-CustomActionsCoding.png" />
 <br><br><br>

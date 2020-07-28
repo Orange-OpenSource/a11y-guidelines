@@ -68,7 +68,7 @@ The [AccessibilityScanner application](https://play.google.com/store/apps/detail
 **Example of invalid contrast**  
 The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.  
 
-![screenshot showing text with poor contrast](images/contraste.png)
+![screenshot showing text with poor contrast](../../images/contraste.png)
 
 **Example of information conveyed through valid and invalid colour:** 
 
