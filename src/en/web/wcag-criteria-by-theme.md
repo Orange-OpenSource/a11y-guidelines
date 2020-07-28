@@ -14,17 +14,19 @@ Two versions are available:
 - **The first version** does not mention the code, it is aimed at product designers, designers, project managers, etc.
 - **The second version** mentions the code and is aimed at developers, technical managers, validation teams, testers, etc.
 
-<div class="perso col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">For product designers, designers, project managers</h2>          
-    <a href="./fondamentaux-nontech.html" class="btn btn-info">
-        ![](./images/perso1.png)
-        <div>Criteria for designers</div>
-    </a>
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">For product designers, designers, project managers</h2>          
+        <a href="../design/" class="btn btn-info">
+            <img src="../images/perso1.png" alt="">
+            <div>Criteria for designers</div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2 class="sr-only">For developers</h2>          
+        <a href="../develop/" class="btn btn-info">
+            <img src="../images/perso3.png" alt="">
+            <div>Criteria for developers</div>
+        </a>
+    </div>
 </div>
-<div class="perso col-xs-12 col-md-6 col-lg-4">
-    <h2 class="sr-only">For developers</h2>          
-    <a href="./fondamentaux-tech.html" class="btn btn-info">
-        ![](./images/perso3.png)
-        <div>Criteria for developers</div>
-    </a>
-</div>            

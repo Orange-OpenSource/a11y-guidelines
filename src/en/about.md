@@ -8,8 +8,7 @@ Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSou
 
 The Orange logo and some images or screenshots are property of Orange:
 
-Copyright (C) 2016 Orange SA All rights reserved  
-[List of the concerned files](/NOTICE.txt)
+Copyright (C) 2016 Orange SA All rights reserved
 
 ## Cookie management
 

@@ -53,7 +53,7 @@ Colours have a very important role in the transmission of information.
 <br><img style="max-width: 1000px; height: auto;" alt="" src="../../images/color_contrast_2.png" />
 <br><br>The normal font type will require a higher contrast than the previous case.
 <br><img style="max-width: 1000px; height: auto;" alt="" src="../../images/color_contrast_3.png" />
-<br><br> With [Dynamic Type](./dev-ios.html#text-size) whose purpose is to increase the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
+<br><br> With [Dynamic Type](../development#text-size) whose purpose is to increase the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
 <br><img style="max-width: 300px; height: auto;" alt="" src="../../images/color_contrast_1.png" />
 <br><br>Adding different forms to differentiate the information provided only by colors may unnecessarily overlay the graphic interface if the user doesn't need them.
 <br><img style="max-width: 1100px; height: auto;" alt="" src="../../images/iOSdev/wwdc19-244-TextStyles_11.png" />
@@ -62,7 +62,7 @@ Colours have a very important role in the transmission of information.
 **Checklist:**
 
 - Do not use colour as the only way of conveying information, indicating an action, requesting a response or distinguishing an element.
-- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool or with the [Color Contrast Calculator](./dev-ios-wwdc-19261.html#ColorContrast) feature of Accessibility Inspector under Xcode 11)*.
+- The contrast between the colour of the background and the text must be appropriate *(can be measured with the Colour Contrast Analyser tool or with the [Color Contrast Calculator](../wwdc/2019/261#ColorContrast) feature of Accessibility Inspector under Xcode 11)*.
 - With the**Dark Mode** iOS 13 new feature, special attention must be paid to the contrasts used in the different themes and that can be modified with the [Increase Contrast](#optionA11Y_contraste) accessibility option.
 
 **Users’ goal:** 
@@ -72,12 +72,12 @@ Allow users who cannot distinguish colours or sensory information (colour blind,
 
 **Tools:**
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).
-<br>The Accessibility Inspector tool provides a specific [Color Contrast Calculator](./dev-ios-wwdc-19000.html#ColorContrast) feature that reaches the same purpose since Xcode 11.
+<br>The Accessibility Inspector tool provides a specific [Color Contrast Calculator](../wwdc/2019#ColorContrast) feature that reaches the same purpose since Xcode 11.
 
 **Example of invalid contrast**  
 The label “film | 8:40 PM…” does not have enough contrast. It will not be readable by all users.  
 
-![screenshot showing text with poor contrast](images/contraste.png)
+![screenshot showing text with poor contrast](../../images/contraste.png)
 
 **Example of information conveyed through valid and invalid colour:** 
 
@@ -101,7 +101,7 @@ Some images are frequently associated with text to give information. This is the
 
 The text alternative of an element is set via the `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` and `accessibilityTrait` (using the `UIAccessibility` protocol available on any child of `UIView`).  
 The order of vocalization is as follows: label, value, trait and hint. This order cannot be changed and vocalization is done only once.  
-For more technical information on these attributes, please refer to the [textual alternatives on the developer guide](./dev-ios.html#alternatives-textuelles).
+For more technical information on these attributes, please refer to the [textual alternatives on the developer guide](../development#alternatives-textuelles).
 
 **Checklist:**
 
@@ -228,7 +228,7 @@ In the examples below, the black box corresponds to the size of the interactive 
 
 Although invisible on the screen, some elements can be vocalized by the screen reader (elements positioned outside the visible area or hidden by other elements). The superposition of screens is frequent when designing mobile apps but it generates very heavy accessibility problems if it is not done properly from the start. A screen reader such as VoiceOver is able to read information from a view that is placed “below” another. But if the user is able to interact with this view, it totally disturbs navigation and it quickly becomes impossible.
   
-Ghost elements are very common when creating custom alert dialogs. However, this kind of component can be accessible. Please refer to the [corresponding section on the developer guide](./dev-ios.html#masquer-des-l-ments-l-accessibilit-)
+Ghost elements are very common when creating custom alert dialogs. However, this kind of component can be accessible. Please refer to the [corresponding section on the developer guide](../development#masquer-des-l-ments-l-accessibilit-)
 
   
 Read the article on the [use of fragments](https://developer.android.com/guide/components/fragments.html) for more information.
@@ -288,7 +288,7 @@ There are several types of notification, but the two most used are:
 - `UIAccessibilityLayoutChangedNotification`: notify that a part of the content has changed.
 - `UIAccessibilityScreenChangedNotification`: notify a global change.
 
-For more technical information, please check out the corresponding section on the [developer guide for iOS](./dev-ios.html#informer-d-une-modification-sur-la-page).
+For more technical information, please check out the corresponding section on the [developer guide for iOS](../development#informer-d-une-modification-sur-la-page).
 
 **Checklist:**
 
@@ -449,7 +449,7 @@ The full list of these options including their purpose and their coding name is 
 18. [On/Off Labels](#optionA11Y_onOffSwitchLabels) ⟹**new in iOS 13**
 
 <a name="optionA11Y_contraste"></a>
-- **Increase Contrast** *(UIAccessibilityDarkerSystemColorsEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Contrast) for a detailed description.
+- **Increase Contrast** *(UIAccessibilityDarkerSystemColorsEnabled)* : see the [WWDC 2018 video](../wwdc/2018/230#Contrast) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -508,7 +508,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div><br>
 
 <a name="optionA11Y_bold"></a>
-- **Bold Text** *(UIAccessibilityIsBoldTextEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Sizing) for a detailed description.
+- **Bold Text** *(UIAccessibilityIsBoldTextEnabled)* : see the [WWDC 2018 video](../wwdc/2018/230#Sizing) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -676,7 +676,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div><br>
 
 <a name="optionA11Y_limiteVisuel"></a>
-- **Reduce Motion** *(UIAccessibilityIsReduceMotionEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#Motion)  for a detailed description.
+- **Reduce Motion** *(UIAccessibilityIsReduceMotionEnabled)* : see the [WWDC 2018 video](../wwdc/2018/230#Motion)  for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -704,7 +704,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div><br>
 
 <a name="optionA11Y_reductionTransparence"></a>
-- **Reduce Transparency** *(UIAccessibilityIsReduceTransparencyEnabled)* : see the [WWDC 2018 video](./dev-ios-wwdc-18230.html#TransparencyAndBlurring) for a detailed description.
+- **Reduce Transparency** *(UIAccessibilityIsReduceTransparencyEnabled)* : see the [WWDC 2018 video](../wwdc/2018/230#TransparencyAndBlurring) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -872,12 +872,12 @@ The full list of these options including their purpose and their coding name is 
 </div></div><br>
 
 <a name="optionA11Y_autoPlayVideoPreviews"></a>
-- **Auto-Play Video Previews** *(UIAccessibilityIsVideoAutoplayEnabled)* : see the [WWDC 2019 video](./dev-ios-wwdc-19000.html#VisualDesignAccessibility) for a detailed description of this**iOS 13 new feature**.
+- **Auto-Play Video Previews** *(UIAccessibilityIsVideoAutoplayEnabled)* : see the [WWDC 2019 video](../wwdc/2019#VisualDesignAccessibility) for a detailed description of this**iOS 13 new feature**.
 <br><img style="max-width: 375px; height: auto;" alt="Access illustration via Settings - Accessibility - Motion - Auto-play Video Previews" src="../../images/iOSdev/wwdc19-244-TextStyles_6.png" />
 <br><br><br>
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
-- **Differentiate Without Colour** *(UIAccessibilityShouldDifferentiateWithoutColour)* : see the [WWDC 2019 video](./dev-ios-wwdc-19000.html#VisualDesignAccessibility) for a detailed description of this**iOS 13 new feature**.
+- **Differentiate Without Colour** *(UIAccessibilityShouldDifferentiateWithoutColour)* : see the [WWDC 2019 video](../wwdc/2019#VisualDesignAccessibility) for a detailed description of this**iOS 13 new feature**.
 <br><img style="max-width: 1000px; height: auto;" alt="Access illustration via Settings - Accessibility - Display & Text Size - Differentiate Without Colour" src="../../images/optionA11Y_iOS13_differentiateWithoutColour.png" />
 <br><br><br>
 
@@ -887,5 +887,5 @@ The full list of these options including their purpose and their coding name is 
 <br>
 
 <br>Once activated, if the accessibility option has no result in the application running, it's**highly recommended** to keep oneself posted of the impacted options states so as to provide the best user experience.
-<br>The full list of the accessibility options with their dedicated notification is located in the [developer part](./dev-ios.html#accessibility-options) of this site.
+<br>The full list of the accessibility options with their dedicated notification is located in the [developer part](../development#accessibility-options) of this site.
 <br><br>It may be particularly interesting to keep track of these options (de)activations with kind of indicators in order to have a better understanding of the users habits and to implement improvements accordingly.<br><br>

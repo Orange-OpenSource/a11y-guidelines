@@ -53,7 +53,7 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 <br><img style="max-width: 1000px; height: auto;" alt="" src="../../images/color_contrast_2.png" />
 <br><br>Ne pas mettre des polices en gras va demander un contraste des couleurs plus fort que dans le cas précédent.
 <br><img style="max-width: 1000px; height: auto;" alt="" src="../../images/color_contrast_3.png" />
-<br><br> Avec l’apparition du [Dynamic Type](./criteria-ios-dev.html#taille-des-textes) permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
+<br><br> Avec l’apparition du [Dynamic Type](../developpement#taille-des-textes) permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
 <br><img style="max-width: 300px; height: auto;" alt="" src="../../images/color_contrast_1.png" />
 <br><br>Il existe des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.
 <br><img style="max-width: 1100px; height: auto;" alt="" src="../../images/iOSdev/wwdc19-244-TextStyles_11.png" />
@@ -62,7 +62,7 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 **À vérifier&nbsp;:**
 
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément. 
-- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité [Color Contrast Calculator](./criteria-ios-wwdc-19000.html#ColorContrast) de l'outil <span lang="en">Accessibility Inspector</span> sous Xcode 11)*.
+- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant *(à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité [Color Contrast Calculator](../wwdc/2019#ColorContrast) de l'outil <span lang="en">Accessibility Inspector</span> sous Xcode 11)*.
 - Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité [augmenter le contraste](#optionA11Y_contraste).
 
 **Objectif utilisateur&nbsp;:** 
@@ -72,12 +72,12 @@ Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficie
 
 **Outil&nbsp;:**
 L’application [<span lang="en">Colour Contrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).
-<br>L'outil <span lang="en">Accessibility Inspector</span> dispose aussi d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](./criteria-ios-wwdc-19000.html#ColorContrast) depuis Xcode 11 qui permet d'obtenir les mêmes résultats.
+<br>L'outil <span lang="en">Accessibility Inspector</span> dispose aussi d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](../wwdc/2019#ColorContrast) depuis Xcode 11 qui permet d'obtenir les mêmes résultats.
 
 **Exemple de contraste non valide&nbsp;:**  
 Le texte «&nbsp;film | 20h40 …&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
-![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)   
+![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)   
 
 **Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 
@@ -101,7 +101,7 @@ Certaines images sont régulièrement associées à du texte pour donner une inf
 
 L’alternative textuelle d’un élément est renseignée via les attributs `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` et `accessibilityTrait` (via le protocole `UIAccessibility` implémenté par tout élément standard dérivant de `UIView`).  
 L’ordre de vocalisation est toujours le suivant : `label`, `value`, `trait` et `hint`. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  
-Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](./criteria-ios-dev.html#alternatives-textuelles).
+Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](../developpement#alternatives-textuelles).
 
 **À vérifier&nbsp;:**
 
@@ -229,7 +229,7 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 
 Bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">VoiceOver</span> est capable de lire les informations d’une vue qui est placée «&nbsp;sous&nbsp;» une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.  
   
-Un exemple fréquent d’élément fantôme survient lors de la création de composant personnalisé tel que des «&nbsp;<span lang="en">alert dialog</span>&nbsp;» (notification utilisateur). Notons toutefois que ce genre de composant personnalisé est tout à fait susceptible d’être accessible. Nous vous invitons à lire la section correspondante dans la [partie développeur](./criteria-ios-dev.html#masquer-des-l-ments-l-accessibilit-).
+Un exemple fréquent d’élément fantôme survient lors de la création de composant personnalisé tel que des «&nbsp;<span lang="en">alert dialog</span>&nbsp;» (notification utilisateur). Notons toutefois que ce genre de composant personnalisé est tout à fait susceptible d’être accessible. Nous vous invitons à lire la section correspondante dans la [partie développeur](../developpement#masquer-des-l-ments-l-accessibilit-).
 
 **À vérifier&nbsp;:**
 
@@ -286,7 +286,7 @@ Il existe plusieurs notifications de modification, mais les deux plus utiles son
 - `UIAccessibilityLayoutChangedNotification`&nbsp;: permet de spécifier à l’<abbr>API</abbr> d’accessibilité qu’une partie de la page a été modifiée.
 - `UIAccessibilityScreenChangedNotification`&nbsp;: permet d’annoncer un changement global de la page.
 
-Pour plus d’information technique sur ces méthodes, nous vous invitons à regarder la section correspondante dans le [guide développeur pour iOS](./criteria-ios-dev.html#informer-d-une-modification-sur-la-page).
+Pour plus d’information technique sur ces méthodes, nous vous invitons à regarder la section correspondante dans le [guide développeur pour iOS](../developpement#informer-d-une-modification-sur-la-page).
 
 **À vérifier&nbsp;:**
 
@@ -450,7 +450,7 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 18. [Boutons avec I/O](#optionA11Y_onOffSwitchLabels) ⟹ **nouveau dans iOS 13**
 
 <a name="optionA11Y_contraste"></a>
-- **Augmenter le contraste** *(UIAccessibilityDarkerSystemColorsEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Contrast) pour un descriptif de la fonctionnalité.
+- **Augmenter le contraste** *(UIAccessibilityDarkerSystemColorsEnabled)* : voir [WWDC 2018](../wwdc/2018/230#Contrast) pour un descriptif de la fonctionnalité.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -508,7 +508,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 </div></div>
 
 <a name="optionA11Y_bold"></a>
-- **Mettre le texte en gras** *(UIAccessibilityIsBoldTextEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Sizing) pour un descriptif de la fonctionnalité.
+- **Mettre le texte en gras** *(UIAccessibilityIsBoldTextEnabled)* : voir [WWDC 2018](../wwdc/2018/230#Sizing) pour un descriptif de la fonctionnalité.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -676,7 +676,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 </div></div>
 
 <a name="optionA11Y_limiteVisuel"></a>
-- **Limiter les animations visuelles** *(UIAccessibilityIsReduceMotionEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#Motion) pour un descriptif de la fonctionnalité.
+- **Limiter les animations visuelles** *(UIAccessibilityIsReduceMotionEnabled)* : voir [WWDC 2018](../wwdc/2018/230#Motion) pour un descriptif de la fonctionnalité.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -704,7 +704,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 </div></div>
 
 <a name="optionA11Y_reductionTransparence"></a>
-- **Réduire le floutage et la transparence** *(UIAccessibilityIsReduceTransparencyEnabled)* : voir [WWDC 2018](./criteria-ios-wwdc-18230.html#TransparencyAndBlurring) pour un descriptif de la fonctionnalité.
+- **Réduire le floutage et la transparence** *(UIAccessibilityIsReduceTransparencyEnabled)* : voir [WWDC 2018](../wwdc/2018/230#TransparencyAndBlurring) pour un descriptif de la fonctionnalité.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -872,12 +872,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 </div></div>
 
 <a name="optionA11Y_autoPlayVideoPreviews"></a>
-- **Prévisualisation vidéo** *(UIAccessibilityIsVideoAutoplayEnabled)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
+- **Prévisualisation vidéo** *(UIAccessibilityIsVideoAutoplayEnabled)* : voir [WWDC 2019](../wwdc/2019#nouveautes-ios-13-pour-laccessibilite-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 <br><img style="max-width: 375px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" src="../../images/iOSdev/wwdc19-244-TextStyles_6.png" />
 
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
-- **Différencier sans couleur** *(UIAccessibilityShouldDifferentiateWithoutColour)* : voir [WWDC 2019](./criteria-ios-wwdc-19000.html#nouveaut-s-ios-13-pour-l-accessibilit-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
+- **Différencier sans couleur** *(UIAccessibilityShouldDifferentiateWithoutColour)* : voir [WWDC 2019](../wwdc/2019#nouveautes-ios-13-pour-laccessibilite-visuelle) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 <br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur" src="../../images/optionA11Y_iOS13_differentiateWithoutColour.png" />
 
 
@@ -887,5 +887,5 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 <br>
 
 <br>Une fois l'option activée, si l'action désirée n'est pas effective au sein de l'application, il est **très fortement recommandé** d'agir en conséquence en se tenant informé de l'état de l'option impactée pour fournir à l'utilisateur l'expérience à laquelle il s'attend.
-<br>La liste complète des options d'accessibilité avec leur notification dédiée est présente dans la [partie développement](./criteria-ios-dev.html#options-d-accessibilit-).
+<br>La liste complète des options d'accessibilité avec leur notification dédiée est présente dans la [partie développement](../developpement#options-daccessibilite).
 <br><br>Il peut être aussi particulièrement intéressant de suivre les (dés)activations de ces options sous forme d'indicateurs afin de mieux connaître les utilisateurs d'une application et d'affiner subséquemment sa mise en oeuvre.<br><br>

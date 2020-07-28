@@ -39,7 +39,7 @@ Plusieurs options s’offrent à vous pour créer un Pushmail accessible.
 2. Puis utiliser l’option « Envoyer au destinataire du message ».  
 
 Option à ajouter la première fois via Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message. 
-<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="./images/email1.png">
+<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png">
 
 ### Création à partir de « Mes Pushmails »
 

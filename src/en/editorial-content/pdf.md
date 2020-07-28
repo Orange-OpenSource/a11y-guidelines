@@ -30,7 +30,7 @@ Install <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-check
 
 This tool can, among other things, run automatic tests on a <abbr>PDF</abbr> document and check for accessibility issues.
 <figure>
-<img class="center" src="/others/images/pac1.png" alt="Screenshot of automatic tests in PAC"/>
+<img class="center" src="../images/pac1.png" alt="Screenshot of automatic tests in PAC"/>
 <figcaption>Screenshot of the tool</figcaption>
 </figure>
 

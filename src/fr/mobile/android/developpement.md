@@ -312,7 +312,7 @@ Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.
 
 ## <i lang="en">WebView</i>
 #### Description&nbsp;:
-Les `WebView` ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet&nbsp;: les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet&nbsp;: [recommandations accessibilité pour le web](../web/index.html).
+Les `WebView` ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet&nbsp;: les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet&nbsp;: [recommandations accessibilité pour le web](../../../web/).
 
 Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le JavaScript&nbsp;: `mWebView.getSettings().setJavaScriptEnabled(true);`  
 Dans ces conditions, la page affichée à travers la `WebView`  réagit convenablement à l’<abbr>API</abbr> d’accessibilité.
