@@ -16,7 +16,7 @@ Here, a list of guidelines/best practices for writing messages that everyone can
 
 If your communication contains a lot of information and its layout needs to be complex:
 - create the email with the method which is the easiest for you,
-- add [an accessible Word file](.."/word) (or text file) as an attachment containing the same level of information (but only in text!),
+- add [an accessible Word file](../word) (or text file) as an attachment containing the same level of information (but only in text!),
 - specify that the equivalent accessible text is contained in the attachment.
 
 ## "Everyday" emails
@@ -46,9 +46,9 @@ You have several options for creating an accessible Pushmail.
 *Add this Option the first time via File> Options> Quick access toolbar> “Send to Mail Recipient”
 
 ## From "My Pushmails" (SPIP)
-The tool provides natively accessible templates (don’t forget alternative text for the images) which does not prevent you from following [the general recommendations for editorial content](editorial.html).
+The tool provides natively accessible templates (don’t forget alternative text for the images) which does not prevent you from following [the general recommendations for editorial content](../).
 
-<img alt="My pushmails screenshot" src="images/email1.png">
+<img alt="My pushmails screenshot" src="../images/email1.png">
 
 ## Creation from HTML (or other dedicated tool)
 Compose the HTML code in an accessible way by following [the main web recommendations](../../web).  

@@ -25,6 +25,7 @@ This video available on the **official Apple website** ([session 244](https://de
     - <a role="button" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text Styles</a>
     - <a role="button" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ **iOS 13 new feature**
 <br><br>
+
 - **REDUCE MOTION**
     - <a role="button" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
     - <a role="button" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Autoplaying Video</a> ⟹ **iOS 13 new feature**
@@ -199,7 +200,7 @@ The `Differentiate Without Color` **iOS 13 new feature** is a user setting that 
 <br><img style="max-width: 900px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_9.png" />
 <br>There's also a programmatic way to be aware of its value so as to subsequently adapt the user interface:
 <br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_10.png" />
-<br>Admittedly, it's highly recommended <a href="./criteria-ios.html#colours" style="text-decoration: underline;">never to transmit information by colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly *(video games for instance)*.
+<br>Admittedly, it's highly recommended <a href="../../design#colours" style="text-decoration: underline;">never to transmit information by colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly *(video games for instance)*.
 <br><br><img style="max-width: 1100px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_11.png" />
 </div>
 </div>
@@ -247,7 +248,7 @@ This example emphasizes the non automatic accessibility handling for this kind o
 
 <a name="ColorContrast"></a>
 ### [Color Contrast (06:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=386)
-Besides the font size, it's also very important to be above a [contrast ratio](./criteria-ios.html#colours) to enable sight-impaired people to perfectly understand the whole screen content.
+Besides the font size, it's also very important to be above a [contrast ratio](../../design#colours) to enable sight-impaired people to perfectly understand the whole screen content.
 <br>Once the color contrast issue is detected, a solution is brought about by the **Xcode 11 new feature**: **Color Contrast Calculator**.
 <br><img style="max-width: 850px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-ColorContrast.png" />
 <br><br><br>
@@ -276,7 +277,7 @@ After a quick introduction regarding the expectations of a blind user about a **
 <br><br><br>
 <a name="AccessibilityCustomActions"></a>
 ## Accessibility Custom Actions
-This video available on the **official Apple website** ([session 250](https://developer.apple.com/videos/play/wwdc2019/250/)) highlights the custom actions for the [screen reader](./voiceover.html) and the [Switch Control feature](../../development#switch-control) thanks to a demo application that presents the explained concepts.
+This video available on the **official Apple website** ([session 250](https://developer.apple.com/videos/play/wwdc2019/250/)) highlights the custom actions for the [screen reader](../../voiceover/) and the [Switch Control feature](../../development#switch-control) thanks to a demo application that presents the explained concepts.
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250.png" />
 <br><br>Various contents and their video timelapse are indicated hereunder:
 
@@ -289,6 +290,7 @@ This video available on the **official Apple website** ([session 250](https://de
 ## [Introduction (00:12)](https://developer.apple.com/videos/play/wwdc2019/250/?time=12)
 Quick introduction of VoiceOver with a problem due to an inadequate implementation highlighted by the demo application that's used all along the session.
 <br><br><br>
+
 <a id="CustomActions"></a>
 ## Custom Actions
 <ul class="nav nav-tabs" role="tablist">
@@ -312,6 +314,7 @@ Quick introduction of VoiceOver with a problem due to an inadequate implementati
 <div class="tab-pane show active"
      id="CustomActions-VoiceOver"
      role="tabpanel">
+     
 <a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=190">🎬 (03:10)</a>
 <br><br>
 The purpose of the <a href="../../development#custom-actions" style="text-decoration: underline;">custom actions</a>  with VoiceOver is clearly explained which helps understand why and in which contexts this functionality must be implemented to significantly improve the user experience.
@@ -319,6 +322,7 @@ The purpose of the <a href="../../development#custom-actions" style="text-decora
 <div class="tab-pane" id="CustomActions-SwitchControl" role="tabpanel" >
 <a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=268">🎬 (04:28)</a>
 <br><br>
+
 The demo application uses the Switch Control feature on the device that is paired with two switches: the first one *(orange)* aims at moving the focus to the next item while the second one *(white)* aims at activating the focused item.
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250-CustomActionsSwitchControl.png" />
 <br>Implementing custom actions in this context leads to a **drastic decrease of focus/activations actions** to be carried out by the user so as to reach the same result.

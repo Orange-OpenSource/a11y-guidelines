@@ -9,13 +9,13 @@ title: "CAPTCHA Accessibility"
 A CAPTCHA (“Completely Automated Public Turing-test to tell Computers and Humans Apart”) is an automated test aimed at telling apart a human user from a software program. It is often used on forms to prevent spam.
 There are several types of CAPTCHAs, most of them are visual tests that ask the user to type a series of deformed letters displayed on the screen.
 
-![Visual captcha screenshot](./images/captchas/captcha.png)  
+![Visual captcha screenshot](../../web/images/captchas/captcha.png)  
 **Example of a visual CAPTCHA**
 
 ## First analysis: CAPTCHAs and users
 CAPTCHAs are often problematic, even for savvy users. It is often necessary to undergo several trials before giving the right answer to a CAPTCHA. For some users a CAPTCHA is a no-go, plain and simple. For example a blind user cannot solve a visual CAPTCHA. Even if some sites provide alternatives, like audio CAPTCHAs in addition to visual CAPTCHAs, it actually seldom works. It’s even the first source of difficulty quoted by visually impaired users according to [WebAIM’s latest survey at the end of 2017](https://webaim.org/projects/screenreadersurvey7):
 
-![Graph from webaim survey](./images/captchas/webaim.png)  
+![Graph from webaim survey](../../web/images/captchas/webaim.png)  
 
 **CAPTCHAs pointed out by visually impaired users as most common annoyance (2017 WebAIM survey)**
 
@@ -23,7 +23,7 @@ The boom in computation means enables bots and other programs to be more and mor
 For the CAPTCHA to stay efficient against bots, it is necessary to augment deformations in the picture and audio file, thus making it even harder for users to get it right.
 This is why Google is trying to find alternatives to differentiate between a human user and a robot. They now propose “No CAPTCHA”, a plain checkbox from the user’s point of view. It uses additional information such as screen resolution, mouse pointer moves, the time it takes to fill a form, etc.
 
-![no captcha screenshot](./images/captchas/nocaptcha.png)  
+![no captcha screenshot](../../web/images/captchas/nocaptcha.png)  
 **No CAPTCHA by Google**
 
 Even if this solution is more efficient, it is still not satisfactory from an accessibility point of view because, in case of doubt, a standard CAPTCHA is displayed. It is often the case for a user who does not use a mouse but a keyboard, or for a screen reader user (visually impaired users). You must thus always provide an alternative contact means (email, telephone, etc.) in the case when the CAPTCHA cannot be filled.

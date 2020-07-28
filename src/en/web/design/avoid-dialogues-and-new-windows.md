@@ -4,8 +4,8 @@ title: "Avoid dialogues and opening new windows"
 
 # Avoid dialogues and opening new windows
 
-**Target: ** elderly people, people with cognitive or visual impairments or using a device outdoors.  
-**When: ** as of design and in the development.
+**Target:** elderly people, people with cognitive or visual impairments or using a device outdoors.  
+**When:** as of design and in the development.
 
 **Description:**  
 Avoid as much as possible the actions that open a new window (or a new tab) of the browser. If a link triggers the opening of a new window, you need to ensure that the text “new window” is vocalized by screen readers programmatically. So that visually impaired people know that a new window has been opened.
@@ -15,7 +15,7 @@ They must be reserved for important information that requires immediate attentio
 
  These modal windows or pop-in often cause accessibility problems for people who navigate with a keyboard or a screen reader, and they will require special attention during the development phase.
 
-**Don’t: **  
+**Don’t:**  
 In the example below the use of a dialogue is not justified. Using a standard web page would:
 - allow more space to the content (by removing the margins around the dialogue),
 - allow the “back” button to go back when navigating between pages of the dialogue,
@@ -23,4 +23,4 @@ In the example below the use of a dialogue is not justified. Using a standard we
 - avoid accessibility problems for people who navigate using the keyboard or using a screen reader,
 - reduce the weight of the page and improve loading time, as in this example the page behind the dialogue box must be charged.  
 
-![screenshot of a dialogue way too big](images/dialog.png)
+![screenshot of a dialogue way too big](../../images/dialog.png)
