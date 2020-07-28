@@ -4,7 +4,7 @@ $(document).ready(function() {
   // Ouverture de l'exemple final
   $('#openButton').on('click', function () {
     $('[role=dialog], .dialog').hide();
-    $('#dialog').fadeIn();
+    $('#dialog').show();
 
     // Sauvegarde le focus pour le repositionner à la fermeture
     $('#dialog').attr('data-focusBack', 'openButton');
