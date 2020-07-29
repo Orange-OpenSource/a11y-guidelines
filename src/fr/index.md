@@ -8,7 +8,7 @@ cardNavigationTitle: "Nos recommandations"
 
 ## En quelques mots
 
-Recommandations, méthodes, ressources et outils proposés par EASE, E-Accessibility Solutions for Everyone, le centre de compétences groupe d'Orange sur l'accessibilité numérique.
+Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.
 
 Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.
 Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureatiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...
