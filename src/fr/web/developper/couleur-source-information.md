@@ -23,10 +23,10 @@ Permettre aux utilisateurs ne distinguant pas les couleurs ou l’information se
 Pour un graphique type camembert, où chaque partie est colorée différemment, ajouter par exemple une texture différente pour les identifier sans la couleur.
  
 **Exemple valide&nbsp;:**  
-![Exemple d’image valide n’utilisant pas que la couleur pour transmettre l’information](./images/couleur-ok.png)
+![Exemple d’image valide n’utilisant pas que la couleur pour transmettre l’information](../../images/couleur-ok.png)
 
 **Exemple non-valide&nbsp;:**  
-![Exemple non-valide utilisant uniquement des voyants de couleur pour transmettre l’information](./images/couleur-ko.png)
+![Exemple non-valide utilisant uniquement des voyants de couleur pour transmettre l’information](../../images/couleur-ko.png)
 
 Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.
 

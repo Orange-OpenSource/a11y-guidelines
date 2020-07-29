@@ -4,21 +4,21 @@ title: "Structuring data tables"
 
 # Structuring data tables
 
-**Target: **everyone, particularly people with visual disabilities.  
-**When: **as of design and during development.
+**Target:** everyone, particularly people with visual disabilities.  
+**When:** as of design and during development.
 
-**Description: **
+**Description:**
 
 For tabular data:
 - Use the `table` element with `th`(for table headers), `td`,` tr` children elements.
 - Use the `scope` attribute with `row` / `col` values to associate header cells and data cells. For complex tables, use the` id` and `headers` attributes.
-- Use the `caption` tag, a `h1` to `h6` tag just before the table or use a text near the table via an `aria-labelledby` attribute in the `table` element to associate a title to the table (see [ARIA attributes that can save you](./label-ledby-describedby.html)).
+- Use the `caption` tag, a `h1` to `h6` tag just before the table or use a text near the table via an `aria-labelledby` attribute in the `table` element to associate a title to the table (see [ARIA attributes that can save you](../../../articles/aria-attributes-that-can-save-you/)).
 - Add a summary to explain the structure of a complex table :
  - **HTML5**: add the summary directly in the `caption`.
  - **Previous version:** add the summary in a `summary` attribute.
 
 
-**Checklist: **
+**Checklist:**
 
 - Reminder: Do not use tables for page layout purposes. 
 - The caption (`caption`) can be replaced by a section title (`hx`) located before the table.
@@ -30,11 +30,11 @@ In the case of a complex table, a summary is present to explain the structure:
 - **HTML5 - alternative solution**: the summary is linked to the array via an `aria-describedby` attribute.
 - **Previous version:** the summary is present in a `summary` attribute of the table.
 
-**Users’ goal: **
+**Users’ goal:**
 
 Giving a summary and title for data tables allows everyone to know quickly its purpose without having to read it. For visually impaired users, binding cells to headers allows them to know where they are situated and understand the data in it.
 
-**Technical goal: **
+**Technical goal:**
 
 Improve natural referencing.
 

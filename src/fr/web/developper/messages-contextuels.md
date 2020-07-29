@@ -19,7 +19,7 @@ Un message de statut, d'état ou message contextuel peut être&nbsp;:
 - un message d'erreur suite à une interaction utilisateur
 - un message qui donne une information sans un changement de contexte
 
-En <abbr>HTML</abbr>, les rôles spécifiques <abbr>ARIA</abbr> de type `alert`, `status`, `dialog`, `progressbar`, etc. sont les moyens de rendre accessible ces messages de statut (pour aller plus loin [Utiliser ARIA pour les messages d'état, de statut ou contextuel"](./aria-status.html).
+En <abbr>HTML</abbr>, les rôles spécifiques <abbr>ARIA</abbr> de type `alert`, `status`, `dialog`, `progressbar`, etc. sont les moyens de rendre accessible ces messages de statut (pour aller plus loin [Utiliser ARIA pour les messages d'état, de statut ou contextuel"](../../../articles/messages-de-statut-aria/).
 
 **Objectif utilisateur&nbsp;:**
 Pour tous les utilisateurs d'<abbr>AT</abbr>, avoir un feedback sur les actions essentielles qu'il effectue.

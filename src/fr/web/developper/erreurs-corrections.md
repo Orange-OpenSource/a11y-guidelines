@@ -17,22 +17,22 @@ Pour les pages Web qui entraînent des actions importantes (engagement juridique
 
 **À vérifier&nbsp;:**
 
-L’identification du champ en erreur ainsi qu’une éventuelle suggestion de correction peuvent être ajoutées dynamiquement à la balise `label`, en priorité, mais aussi à l’attribut `title` ou les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)) selon le contexte et les besoins.
+L’identification du champ en erreur ainsi qu’une éventuelle suggestion de correction peuvent être ajoutées dynamiquement à la balise `label`, en priorité, mais aussi à l’attribut `title` ou les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)) selon le contexte et les besoins.
 
 **Objectif utilisateur&nbsp;:**
 
 Guider l’utilisateur en cas d’erreurs permet d’améliorer la compréhension et la correction des erreurs, pour tous les utilisateurs, en particulier pour les novices sur internet, les seniors et les personnes déficientes cognitives.
 
 **Exemple valide&nbsp;:**  
-![capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides](images/formulaire-ok.png)  
+![capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides](../../images/formulaire-ok.png)  
 
 **Exemple non-valide&nbsp;:**  
-![capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides](images/formulaire-ko.png)
+![capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides](../../images/formulaire-ko.png)
 
 &nbsp;  
 **Exemple de formulaire accessible&nbsp;:**
   
-Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.html) pour plus d’informations.
+Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/formulaires/) pour plus d’informations.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error Identification</a>

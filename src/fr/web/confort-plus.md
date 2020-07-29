@@ -19,7 +19,7 @@ Vous pouvez tester le service en cliquant sur le lien «&nbsp;Confort+&nbsp;» s
 - Également disponible sous forme d’extensions pour navigateur
 - <span lang="en">Open source</span> sous Licence <abbr lang="en">MIT</abbr> 
 
-![capture d’écran du service confort plus](images/confort-plus.png)
+![capture d’écran du service confort plus](../images/confort-plus.png)
 
 ### Extensions à installer dans votre navigateur
 - [Firefox](https://addons.mozilla.org/fr/firefox/addon/orange-confort)

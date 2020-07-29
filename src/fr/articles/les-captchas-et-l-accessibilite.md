@@ -15,12 +15,12 @@ Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Hum
 
 Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visuels où on demande à l’utilisateur de saisir une série de lettres déformées affichées à l’écran.
   
-![Capture d'écran d'un captcha visuel](./images/captchas/captcha.png)  
+![Capture d'écran d'un captcha visuel](../../web/images/captchas/captcha.png)  
 **Exemple de CAPTCHA visuel**
 
 ## Premier constat : le Captcha et les utilisateurs
 Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C'est d'ailleurs la première source de difficultés citée par les utilisateurs malvoyants d'après [le sondage réalisé par le site WebAIM fin 2017](https://webaim.org/projects/screenreadersurvey7) :  
-![Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème](./images/captchas/webaim.png)  
+![Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème](../../web/images/captchas/webaim.png)  
 
 **Les CAPTCHA pointés du doigt par les utilisateurs malvoyants (sondage WebAIM 2017)**
 
@@ -29,7 +29,7 @@ Pour que le CAPTCHA reste efficace vis-à-vis des bots, il est donc nécessaire 
 
 C’est pourquoi Google tente de trouver des alternatives pour différencier un utilisateur humain d’un robot. Ils proposent le « No Captcha », une simple case à cocher du point de vue de l’utilisateur. Celui-ci utilise des données annexes telles que la résolution de l’écran, le déplacement du pointeur de la souris ou le temps de saisie d'un formulaire…etc.
 
-![Capture d'écran du no captcha de google](./images/captchas/nocaptcha.png)  
+![Capture d'écran du no captcha de google](../../web/images/captchas/nocaptcha.png)  
 **No CAPTCHA de Google**
 
 Bien que cette solution soit plus efficace, elle n’est pas aujourd’hui satisfaisante en termes d’accessibilité car en cas de doute, un CAPTCHA standard est affiché à l’écran. C’est souvent le cas pour un utilisateur qui ne peut pas utiliser une souris et qui navigue au clavier ou pour un utilisateur qui navigue à l’aide d’un lecteur d’écran (cas des personnes malvoyantes). Il faut donc toujours proposer un moyen de contact alternatif (email, téléphone….) dans le cas où le CAPTCHA ne pourrait pas être renseigné.

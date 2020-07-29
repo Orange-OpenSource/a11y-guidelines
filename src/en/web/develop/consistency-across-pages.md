@@ -4,25 +4,25 @@ title: "Maintain consistency across pages"
 
 # Identify and maintain consistency of groupings and different regions of the page
 
-**Target: **Everyone, especially people with visual, cognitive or attention deficit disorders.
+**Target:**Everyone, especially people with visual, cognitive or attention deficit disorders.
 
-**Description: **
+**Description:**
 Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.
 
-**Checklist: **
+**Checklist:**
 - Make sure that the navigation mechanisms are always located at the same place in a set of pages.
 - Ensure that the components and groupings that have the same function are identified (visually and semantically) in the same way.
 - Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast ...) or that there is a way to visually distinguish the groups (sub-menu, drop-down list ...) as well as the different regions of the page.
 
-**User Objective: **  
+**User Objective:**  
 Allow users to identify and locate interface elements in all pages.
 
-**Do: **  
-![screenshot of the site 100% practical](./images/groupement.jpg)  
+**Do:**  
+![screenshot of the site 100% practical](../../images/groupement.jpg)  
 Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently contrasted, to identify its content.
 
-**Don't: **  
-![screenshot of the fnac.com website](./images/groupement2.jpg)  
+**Don't:**  
+![screenshot of the fnac.com website](../../images/groupement2.jpg)  
 It is very difficult to associate the themes ("par region", "par genre", ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
 
 **Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **  

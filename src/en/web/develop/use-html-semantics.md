@@ -4,13 +4,13 @@ title: "Use HTML semantics"
 
 # Use HTML semantics
 
-**Target: **everyone, and especially people with visual impairments and cognitive limitations and elderly people.  
-**When: **as of design and during content writing.
+**Target:** everyone, and especially people with visual impairments and cognitive limitations and elderly people.  
+**When:** as of design and during content writing.
 
-**Description: **
+**Description:**
 Use HTML elements as they should, for that they have been made (code validation and compliance with specifications) and respect their semantics to be sure to be fully interpreted by assistive technologies. 
 
-**Checklist: **
+**Checklist:**
 Pages, if required, must contain semantically relevant lists. 
 Add semantics to the <abbr>HTML</abbr> content using the following tags:
  - `ol` for ordered lists
@@ -35,10 +35,10 @@ In the <abbr>HTML</abbr> code, ensure, when you validate, that, at least:
 - Each <abbr>ID</abbr> is unique
 
 
-**Objectif utilisateur&nbsp;: **  
+**Objectif utilisateur&nbsp;:**  
 Allows all users to anticipate how to use and possible behaviors for a given interface element.
 
-**Objectif technique&nbsp;: **  
+**Objectif technique&nbsp;:**  
 Forces the coherent structuring of the content by the creator of the site.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**

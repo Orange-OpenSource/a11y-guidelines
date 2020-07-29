@@ -4,10 +4,10 @@ title: "Allow to cancel the triggering of gestural interactions"
 
 # Allow to cancel the triggering of gestural interactions
 
-**Target: ** Everyone, especially people with motor or visual disabilities and mobility.  
-**When: ** during development.
+**Target:** Everyone, especially people with motor or visual disabilities and mobility.  
+**When:** during development.
 
-**Description: **  
+**Description:**  
 During a single-point gesture interaction, at least one condition is true:
 - the down event of the pointer (MouseDown) is not used to perform part of the function
 - Abort or cancel, the function is terminated on the up event (MouseUp) and a mechanism is available to abort the function before the end or to cancel the function when finished

@@ -4,8 +4,8 @@ title: "Allow text spacing"
 
 # Allow text spacing
 
-**Target: **everyone, particularly people with visual disabilities.  
-**When: **as of design and during development.
+**Target:** everyone, particularly people with visual disabilities.  
+**When:** as of design and during development.
 
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
 
@@ -30,7 +30,7 @@ This can be done by applying the following CSS rules :
 **Bookmarklet:**  
 To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
 
-**Users’ goal: **
+**Users’ goal:**
 Improve reading comfort for people with cognitive and visual disabilities.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  

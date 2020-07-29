@@ -12,13 +12,13 @@ title: "Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre"
 Prévenir l’utilisateur de l’ouverture de toute nouvelle fenêtre en l’indiquant dans l’intitulé du lien. 
 En cas d’impossibilité avérée, utiliser **un attribut `title`** avec l'ensemble de l'information nécessaire (exemple : "Acheter le Nokia 7510 (nouvelle fenêtre)") et compléter l'intitulé par, au choix :
 - l'utilisation d'une icône (image avec un `alt` indiquant l’ouverture d’une nouvelle fenêtre ou juste «&nbsp;(nouvelle fenêtre)&nbsp;»).
-- un morceau de texte caché en <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS.
-- un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).
+- un morceau de texte caché en <a href="../../exemples-de-composants/masquage-accessible/">masquage accessible</a> via CSS.
+- un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)).
 
 **Exemple&nbsp;:**  
   
 Exemple d’icône pouvant indiquer l’ouverture d’une nouvelle fenêtre.  
-![capture d’écran d’un lien accompagné d’une icône indiquant l’ouverture d’une nouvelle fenêtre](./images/nouvelle-fenetre.png)  
+![capture d’écran d’un lien accompagné d’une icône indiquant l’ouverture d’une nouvelle fenêtre](../../images/nouvelle-fenetre.png)  
 
 **À vérifier&nbsp;:**
 Pour tout lien ouvrant une nouvelle fenêtre ou un nouvel onglet, une mention du type «&nbsp;(nouvelle fenêtre)&nbsp;» est présente dans l’intitulé du lien, ou la mention «&nbsp;(nouvelle fenêtre)&nbsp;» est indiquée à l'utilisateur via le lecteur d'écran et via la présence d'une info-bulle sur le lien en question.

@@ -12,7 +12,7 @@ title: "Structurer les tableaux de données"
 Pour des données tabulaires&nbsp;:
 - Utiliser l’élément `table` avec les éléments enfants `th` (pour les cellules d’entêtes), `td`, `tr`.
 - Utiliser l’attribut `scope` avec la valeur `row`/`col` pour associer les cellules d’en-têtes et les cellules de données ; pour des tableaux complexes, utiliser les attributs `id` et `headers`.
-- Utiliser la balise `caption`, une balise `h1` à `h6` juste avant le tableau ou lier un texte proche du tableau via un attribut `aria-labelledby` dans l’élément `table` pour associer un titre au tableau (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).
+- Utiliser la balise `caption`, une balise `h1` à `h6` juste avant le tableau ou lier un texte proche du tableau via un attribut `aria-labelledby` dans l’élément `table` pour associer un titre au tableau (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)).
 - Ajouter un résumé afin d’expliciter la structure d'un tableau complexe :
  - **HTML5**: ajouter le résumé directement dans la légende (`caption`).
  - **Version antérieure d'HTML**: ajouter le résumé dans un attribut `summary`.
@@ -20,7 +20,7 @@ Pour des données tabulaires&nbsp;:
 **À vérifier&nbsp;:**
 
 - Rappel&nbsp;: ne pas utiliser de tableaux à des fins de mise en page. 
-- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau.
+- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau.v
 - Préférer scinder un tableau complexe en plusieurs tableaux plus simples.
 - Les balises `tbody`, `tfoot` et `thead` n’ont aucune influence sur l’accessibilité, il n’y a donc pas d’obligation à les utiliser.
 

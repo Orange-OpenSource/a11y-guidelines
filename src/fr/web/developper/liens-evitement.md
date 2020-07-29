@@ -21,7 +21,7 @@ Faciliter la navigation pour des utilisateurs naviguant au clavier, des utilisat
 Des liens d’évitement («&nbsp;Aller à la navigation&nbsp;», «&nbsp;Aller au contenu&nbsp;») sont disponibles sur ce site.
 Pour les faire apparaître, placer le focus en haut de la page en cliquant sur la barre d’adresse de votre navigateur par exemple puis appuyer plusieurs fois sur la touche <kbd>TAB</kbd>.
 
-![capture d’écran du site orange.com](images/skiplink.png)   
+![capture d’écran du site orange.com](../../images/skiplink.png)   
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#bypass-blocks">2.4.1 Bypass Blocks</a>

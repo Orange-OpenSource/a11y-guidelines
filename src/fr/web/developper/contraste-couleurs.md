@@ -14,11 +14,11 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 **Exemple non valide&nbsp;:**  
 Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
-![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)
+![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)
 
 Les images suivantes sont porteuses d’information pour les utilisateurs. Elles doivent fournir un contraste de couleur de 3:1 minimum.
 
-![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](images/icones.png)
+![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](../../images/icones.png)
 
 **À vérifier&nbsp;:**
 

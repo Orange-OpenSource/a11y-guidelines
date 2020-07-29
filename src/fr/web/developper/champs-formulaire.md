@@ -15,8 +15,8 @@ Ces informations doivent être proches visuellement du champ afin que l'utilisat
 
 Chaque libellé (ou instructions) doit être inclus dans une balise `label`, elle-même associée au champ de formulaire grâce à un attribut `for` renseigné, reprenant la valeur de l’`id` du champ.
 
-Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="./exemples/masquage/index.html">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
-L’attribut `title` positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)) dans cet ordre de préférence.
+Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple). Dans ce cas, prévoir tout de même un libellé, l’associer au champ de formulaire et le rendre invisible à l’écran (utiliser une classe de <a href="../../exemples-de-composants/masquage-accessible/">masquage accessible</a>), ainsi celui-ci sera quand même vocalisé par les lecteurs d’écran.
+L’attribut `title` positionné sur une balise de champ de formulaire peut faire également office de libellé tout comme les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)) dans cet ordre de préférence.
 
 L'attribut `autocomplete` doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
 
@@ -39,16 +39,16 @@ Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur
 Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur et cognitif, les dyslexiques. Cela permet d’éviter les erreurs de saisie et un gain de temps pour tous.
 
 **Exemple valide&nbsp;:**  
-![capture d’écran d’un formulaire valide](images/formulaire.png)
-![capture d’écran d’un formulaire label proche du champ](images/v_label.jpg)
+![capture d’écran d’un formulaire valide](../../images/formulaire.png)
+![capture d’écran d’un formulaire label proche du champ](../../images/v_label.jpg)
 
 **Exemple non-valide&nbsp;:**  
-![capture d’écran d’un formulaire auquel il manque un label](images/formulaire2.png)
-![capture d’écran d’un formulaire label loin du champ](images/nv_label.jpg)
+![capture d’écran d’un formulaire auquel il manque un label](../../images/formulaire2.png)
+![capture d’écran d’un formulaire label loin du champ](../../images/nv_label.jpg)
 
 **Exemple de formulaire accessible&nbsp;:**
   
-Consulter [l’exemple de formulaire accessible](./exemples/formulaire/index.html) pour plus d’informations.
+Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/formulaires/) pour plus d’informations.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>

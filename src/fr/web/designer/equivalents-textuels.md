@@ -18,4 +18,4 @@ Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception 
 - «&nbsp;couper le son&nbsp;»
 - …  
 
-![capture d’écran d’un lecteur vidéo contenant plusieurs boutons](images/player.png)  
+![capture d’écran d’un lecteur vidéo contenant plusieurs boutons](../../images/player.png)  

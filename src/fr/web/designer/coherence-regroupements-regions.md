@@ -20,12 +20,12 @@ Fournir des moyens d’identifier et de distinguer visuellement les différentes
 
 **Exemple valide&nbsp;:**  
 
-![capture d’écran du site 100% pratique](images/groupement.jpg)  
+![capture d’écran du site 100% pratique](../../images/groupement.jpg)  
 
 Ici, l’info bulle (<i lang="en">tooltip</i>) est délimitée par une bordure bien visible et suffisamment contrastée, permettant de bien identifier son contenu.
 
 **Exemple non-valide&nbsp;:**  
 
-![capture d’écran du site fnac.com](images/groupement2.jpg)  
+![capture d’écran du site fnac.com](../../images/groupement2.jpg)  
 
 Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «&nbsp;par genre&nbsp;»…) et les sous-thèmes en colonnes, d’autant plus que les filets horizontaux sont trop peu contrastés.
