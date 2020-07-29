@@ -16,7 +16,7 @@ Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;:
 - Pour les images décoratives&nbsp;: mettre un attribut `alt` vide.
 - Pour les images dont le contenu du `alt` serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.
 
-Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: [Masquer les iframe techniques de manière accessible](./exemples/iframes-techniques/index.html)
+Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: [Masquer les iframe techniques de manière accessible](../../exemples-de-composants/iframes-techniques/)
 
 **À vérifier&nbsp;:**
 
@@ -41,7 +41,7 @@ Améliorer le référencement naturel.
 Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.  
 Renseigner l’attribut `alt` dans ce cas apporterait une information redondante.  
 
-![exemple d’image décorative](./images/service-24.png)  
+![exemple d’image décorative](../../images/service-24.png)  
   
 `<h3>Le service 24h garanti</h3>`  
 `<img src="service-24.png" alt="">`

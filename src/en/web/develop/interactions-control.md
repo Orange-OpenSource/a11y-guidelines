@@ -4,10 +4,10 @@ title: "Ensure the user keeps control during interactions"
 
 # Ensure the user keeps control during interactions
 
-**Target: **Everyone, especially those who are visually impaired, cognitive or with attention deficit.  
-**When: **early in the design phase and during development.
+**Target:** Everyone, especially those who are visually impaired, cognitive or with attention deficit.  
+**When:** early in the design phase and during development.
 
-**Description: **  
+**Description:**  
 - Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.
 - Do not impose on the user a time limit to perform an action. This must be able to extend a time limit if appropriate.
 - If keyboard shortcuts based on a single key is available, it is necessary to take some measures to avoid possible conflicts with assistive technology.
@@ -25,9 +25,9 @@ title: "Ensure the user keeps control during interactions"
 
 3. If actions are to be performed in a timely manner, verify that the user can extend or remove this restriction.
 
-**User Objective: ** give all users control of the context changes related to their action and give them the necessary time to perform an action.
+**User Objective:** give all users control of the context changes related to their action and give them the necessary time to perform an action.
 
-**Example: ** a form must have a send button. It should not be sent automatically after the user input.
+**Example:** a form must have a send button. It should not be sent automatically after the user input.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>

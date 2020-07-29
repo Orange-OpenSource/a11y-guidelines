@@ -14,13 +14,13 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 **Exemple non-valide&nbsp;:**  
 Le texte «&nbsp;film&nbsp;| 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
-![capture d’écran présentant du texte dont le contraste n’est pas suffisant](images/contraste.png)
+![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)
 
 Les icônes ci-après sont porteuses d’information pour les utilisateurs. Elles devront alors avoir un contraste de couleur de 3:1.
 
-![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](images/icones.png)
+![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](../../images/icones.png)
 
-**À vérifier&nbsp;: **
+**À vérifier&nbsp;:**
 - S'assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est&nbsp;:
   - De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras
   - De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras

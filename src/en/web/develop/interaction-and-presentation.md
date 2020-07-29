@@ -4,14 +4,14 @@ title: "Decoupling content from interaction and presentation"
 
 # Decoupling content from interaction and presentation
 
-**Target: **everyone, especially people with visual disabilities, reading or attention difficulties.  
-**When: **during development.
+**Target:** everyone, especially people with visual disabilities, reading or attention difficulties.  
+**When:** during development.
 
-**Description: **
+**Description:**
 
 Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) and presentation (<abbr>CSS</abbr>). 
 
-**Checklist: **
+**Checklist:**
 
 - Do not use tables to design the page layout, they should be used only for tabular data. 
 - Do not use image to display text, except when the visual presentation cannot be achieved using <abbr>CSS</abbr>.
@@ -19,11 +19,11 @@ Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) 
 - Do not use <abbr>CSS</abbr> pseudo-elements (::before, ::after…) to display information (or provide an alternative for screen readers especially).
 - Do not write Javascript events directly inside the <abbr>HTML</abbr>, use a separate script or <abbr>JS</abbr> file instead.
 
-**Users’ goal: **
+**Users’ goal:**
 
 Allow users, via their User Agent or technical assistance (e.g. their browser) to change the visual appearance of the page (zoom, colour, position…). For example, increase the text size without display problems.
 
-**Technical goal: **
+**Technical goal:**
 
 Improves maintainability.
 

@@ -15,7 +15,7 @@ Par ailleurs, aucun élément de la page ne doit produire de flashs lumineux ou 
 Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper ou mettre en pause l’animation, la mise à jour ou le clignotement via un bouton par exemple.
 
 **Exemple&nbsp;:**  
-![capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation](./images/carrousel.png)  
+![capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation](../../images/carrousel.png)  
 
 Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il a le focus.  
 Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.

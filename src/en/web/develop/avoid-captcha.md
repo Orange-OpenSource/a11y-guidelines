@@ -4,10 +4,10 @@ title: "Avoid captcha"
 
 # Avoid captcha
 
-**Target: **Everyone in particular, visually impaired people.  
-**When: **during design and development.
+**Target:** Everyone in particular, visually impaired people.  
+**When:** during design and development.
 
-**Description: **
+**Description:**
 Captchas are often the source of difficulties for users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user & nbsp ;:
 
 - Double authentication
@@ -17,7 +17,7 @@ Captchas are often the source of difficulties for users. If the implementation o
 
 If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical test simple ...) + classic visual captcha…
 
-More details on [Captchas](./captcha.html).
+More details on [Captchas](../../../articles/captcha-accessibility).
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>

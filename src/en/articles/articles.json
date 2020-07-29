@@ -1,4 +1,5 @@
 {
   "displayToc": true,
-  "boostedJS": true
+  "boostedJS": true,
+  "highlightJS": true
 }
