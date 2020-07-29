@@ -8,10 +8,15 @@ cardNavigationTitle: "Our recommendations"
 
 ## In a few words
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus, nisl in commodo suscipit, nisi enim viverra enim, id volutpat mauris nunc ut lorem. Fusce ultricies massa id erat consequat interdum. Integer nec posuere mauris. Quisque et faucibus ante, suscipit ultricies mi.
+Guidelines, methods, resources and tools proposed by EASE, E-Accessibility Solutions for Everyone, the Orange skill center for digital accessibility.
+
+We offer training, publish resources for digital stakeholders, support projects and perform compliance audits. Our expertise covers websites (e-commerce, e-learning, business applications, Intranet, etc.), mobile applications, office documents, corporate social networks, emails, videos, software packages, etc.   
 
 
 <ul class="list-inline">
+  <li class="list-inline-item pb-2">
+    <a href="digital-accessibility-definition" class="btn btn-secondary btn-sm">Digital accessibility definition</a>
+  </li>
   <li class="list-inline-item pb-2">
     <a href="types-of-disabilities" class="btn btn-secondary btn-sm">Types of disabilities</a>
   </li>
@@ -19,9 +24,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus, nisl i
     <a href="assistive-technologies" class="btn btn-secondary btn-sm">Assistive technologies</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="legal-context" class="btn btn-secondary btn-sm">Legal context</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="accessibility-at-orange" class="btn btn-secondary btn-sm">Accessibility at Orange</a>
+    <a href="glossary" class="btn btn-secondary btn-sm">Glossary</a>
   </li>
 </ul>
