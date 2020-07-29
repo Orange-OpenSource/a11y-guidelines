@@ -8,9 +8,15 @@ cardNavigationTitle: "Nos recommandations"
 
 ## En quelques mots
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus, nisl in commodo suscipit, nisi enim viverra enim, id volutpat mauris nunc ut lorem. Fusce ultricies massa id erat consequat interdum. Integer nec posuere mauris. Quisque et faucibus ante, suscipit ultricies mi.
+Recommandations, méthodes, ressources et outils proposés par EASE, E-Accessibility Solutions for Everyone, le centre de compétences groupe d'Orange sur l'accessibilité numérique.
+
+Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.
+Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureatiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...
 
 <ul class="list-inline">
+  <li class="list-inline-item pb-2">
+    <a href="definition-accessibilite-numerique" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
+  </li>
   <li class="list-inline-item pb-2">
     <a href="les-situations-de-handicap" class="btn btn-secondary btn-sm">Les situations de handicap</a>
   </li>
@@ -18,9 +24,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus, nisl i
     <a href="solutions-assistance" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="le-cadre-legislatif" class="btn btn-secondary btn-sm">Le cadre législatif</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="accessibilite-chez-orange" class="btn btn-secondary btn-sm">L'accessibilité chez Orange</a>
+    <a href="glossaire" class="btn btn-secondary btn-sm">Glossaire</a>
   </li>
 </ul>
