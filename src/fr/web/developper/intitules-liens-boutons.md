@@ -12,25 +12,25 @@ title: "Rendre les intitulés des liens et des boutons accessibles"
 Il faut satisfaire à ces deux impératifs pour qu'un lien ou un bouton soit accessible :
 - Tout d'abord, rendre les intitulés des liens et des boutons compréhensibles hors contexte, en particulier pour les déficients visuels. Lors de la navigation avec un lecteur d’écran, il est possible d’accéder à la liste des liens de la page pour naviguer rapidement. Si votre page contient plusieurs liens «&nbsp;en savoir plus&nbsp;», il sera impossible de les différencier les uns des autres. 
 S’il n’est pas possible de rendre un lien ou un bouton plus explicite par l'intitulé, faute de place, mais que l’intitulé actuel est suffisant dans son contexte, on doit utiliser **un attribut `title`** pour faire apparaître une info-bulle, reprenant l'ensemble de l'information nécessaire, au survol avec la souris, mais également compléter l'intitulé par un contenu supplémentaire, au choix, via :
-    - un morceau de texte caché par <a href="./exemples/masquage/index.html">masquage accessible</a> via CSS 
-    - en utilisant un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).
+    - un morceau de texte caché par <a href="../../exemples-de-composants/masquage-accessible/">masquage accessible</a> via CSS 
+    - en utilisant un attribut `aria-label` ou `aria-labelledby` reprenant l'intégralité du contenu du `title` (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)).
 
-- De plus, le texte de l'étiquette affichée (l'intitulé textuel ou texte de l'image visible à l'écran) pour tout composant d'interface (lien, bouton...) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, [Le nom accessible en HTML](./a11y-name.html).
+- De plus, le texte de l'étiquette affichée (l'intitulé textuel ou texte de l'image visible à l'écran) pour tout composant d'interface (lien, bouton...) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant (pour aller plus loin, [Le nom accessible en HTML](../../../articles/le-nom-accessible-en-html/).
 
 Par exemple dans l’image ci-dessous, les deux éléments «&nbsp;valider&nbsp;» ne sont pas suffisamment explicites pour une personne utilisant un lecteur d’écran et ne bénéficiant pas obligatoirement du contexte. En revanche, quand on voit l’écran, le contexte fait qu’il n’y a pas d’ambiguïté sur leur rôle.
 
-![capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité](./images/liens-valider.png)
+![capture d’écran présentant deux liens «&nbsp;valider&nbsp;» dont le libellé doit être explicité](../../images/liens-valider.png)
 
 **Solutions&nbsp;:**  
 
-Ajouter un `span` en <a href="./exemples/masquage/index.html">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
+Ajouter un `span` en <a href="../../exemples-de-composants/masquage-accessible/">masquage accessible</a> pour compléter l’intitulé. Il ne sera pas affiché à l’écran mais sera vocalisé par les outils d’assistance.
 
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en plusieurs fois&lt;/span&gt;&lt;/a&gt;
 &lt;a href="…" title="Valider le paiement en une seule fois"&gt;valider&lt;span class="masquage-accessible"&gt; le paiement en une seule fois&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
-Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé (cf. [les attributs ARIA qui peuvent vous sauver](./label-ledby-describedby.html)).  
+Une autre solution consiste à utiliser un attribut `aria-label` ou `aria-labelledby` pour préciser l’intitulé (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)).  
 
 <pre><code class="html">
 &lt;a href="…" title="Valider le paiement en plusieurs fois" aria-label="Valider le paiement en plusieurs fois"&gt;valider&lt;/span&gt;&lt;/a&gt;

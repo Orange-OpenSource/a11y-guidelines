@@ -4,22 +4,22 @@ title: "Keyboard navigation"
 
 # Allow the use of the main features of the application with the keyboard
 
-**Target: **everyone, especially people with motor or visual impairment and using a device outdoors.  
-**When: **as of design and during development.
+**Target:** everyone, especially people with motor or visual impairment and using a device outdoors.  
+**When:** as of design and during development.
 
-**Description: **
+**Description:**
 
 Implement event handlers that don’t rely on mouse events only, therefore allow to be controlled by the keyboard and this without time limit.
 
-**Checklist: **
+**Checklist:**
 
 - All the important actions performed with the mouse can also be done with the keyboard, even if you have to provide a specific alternative for the complex interactions (drag'n'drop, gestures with several fingers on mobile ...) while avoiding countless strikes.
 - Make maximum use of the basic <abbr>HTML</abbr> interactive components (fields, links, buttons), these being natively accessible to the keyboard. Otherwise, ensure that the custom components are keyboard operable in a conventional manner.
 - All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag & drop, mobile touch gestures…).
 
-See [how to navigate with a keyboard](./methodes-outils-clavier.html) in a web browser.
+See [how to navigate with a keyboard](../../test-tools/keyboard-navigation/) in a web browser.
 
-**Users’ goal: **
+**Users’ goal:**
  
 Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor…) to access the main features of the application with the keyboard.
 

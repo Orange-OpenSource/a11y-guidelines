@@ -4,13 +4,13 @@ title: "Allow to know the result of a user interaction with status messages"
 
 # Allow to know the result of a user interaction with status messages
 
-**Target: ** Everyone, especially people with visual, cognitive and attention deficit disorders  
-**When: ** during conception to content writing and development.
+**Target:** Everyone, especially people with visual, cognitive and attention deficit disorders  
+**When:** during conception to content writing and development.
 
-**Description: **  
+**Description:**  
 Provide the user with status messages that give him feedback on the action he has just completed.
 
-**Checklist: **  
+**Checklist:**  
    Contextual messages must be perceived by anyone using a <abbr>AT</abbr> (speech synthesis) without taking focus on the message.
    
    A status message or pop-up message can be & nbsp ;:
@@ -18,7 +18,7 @@ Provide the user with status messages that give him feedback on the action he ha
 - a waiting message that indicates that the triggered action is running and indicates an approximate wait time
 - a message that gives information on a change of context
 
-**User Objective: **  
+**User Objective:**  
     For all users, have feedback on the essential actions it performs.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  

@@ -14,17 +14,19 @@ Deux versions sont disponibles&nbsp;
 - **La première version** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
 - **La seconde version** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
 
-<div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
-    <h2 class="sr-only">Pour les concepteurs et designers</h2>          
-    <a href="./fondamentaux-nontech.html" class="btn btn-info">
-        ![](./images/perso1.png)
-        <div>Les critères incontournables pour la conception</div>
-    </a>
-</div>
-<div class="perso col-xs-12 col-md-6 col-lg-6 col-xl-5">
-    <h2 class="sr-only">Pour les développeurs</h2>          
-    <a href="./fondamentaux-tech.html" class="btn btn-info">
-        ![](./images/perso3.png)
-        <div>Les critères incontournables pour le développement</div>
-    </a>
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-5">
+        <h2 class="sr-only">Pour les concepteurs et designers</h2>          
+        <a href="../criteres-wcag-par-theme/#incontournables-concepteurs" class="btn btn-info">
+            <img src="../images/perso1.png" alt="">
+            <div>Les critères incontournables pour la conception</div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-5">
+        <h2 class="sr-only">Pour les développeurs</h2>          
+        <a href="../criteres-wcag-par-theme/#incontournables-developpeurs" class="btn btn-info">
+            <img src="../images/perso3.png" alt="">
+            <div>Les critères incontournables pour le développement</div>
+        </a>
+    </div>
 </div>

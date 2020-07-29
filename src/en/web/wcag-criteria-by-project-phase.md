@@ -1,5 +1,6 @@
 ---
 title: "WCAG criteria by project phase"
+boostedJS: true
 ---
 
 # WCAG criteria by project phase
@@ -31,149 +32,149 @@ Three versions are available:
 
 Ensure that textual content is structured with the appropriate semantics
 
-- [Set a title for each page](inc-con-titre-pages.html)
-- [Start sections with headings](inc-con-titre-rubriques.html)
+- [Set a title for each page](../design/page-title/)
+- [Start sections with headings](../design/start-sections-with-headings/)
 
 ## Non-text content
 
 Ensure that an alternative to non-text content is provided to the user
 
-- [Define text alternatives](inc-con-equivalent-textuel.html)
-- [Provide accessible audio or video tracks](inc-con-audio-video.html)
-- [Avoid captcha](inc-con-captcha.html)
+- [Define text alternatives](../design/define-text-alternatives/)
+- [Provide accessible audio or video tracks](../design/audio-or-video-tracks/)
+- [Avoid captcha](../design/avoid-captcha/)
 
 ## Colors and contrasts
 
 Ensure that the colors used are not a problem for the user
 
-- [Make sure there is enough contrast between text and background](inc-con-contrastes.html)
-- [Do not use colour or sensory characteristics as the unique source of information](inc-con-information-sensorielle.html)
+- [Make sure there is enough contrast between text and background](../design/color-contrasts/)
+- [Do not use colour or sensory characteristics as the unique source of information](../design/color-as-information/)
 
 ## Common navigation
 
 Make sure that the user easily navigate within page and more generally in the website
 
-- [Link and button labels](inc-con-libelles.html)
-- [Avoid dialogues and opening new windows](inc-con-nouvelles-fenetres.html)
-- [Provide skip links](inc-con-liens-evitement.html)
-- [Allowing control of animations](inc-con-controle-animations.html)
-- [Explicitly locate the page in the site and provide several ways to access it](inc-con-acces-multiples.html)
+- [Link and button labels](../design/link-and-button-labels/)
+- [Avoid dialogues and opening new windows](../design/avoid-dialogues-and-new-windows/)
+- [Provide skip links](../design/provide-skip-links/)
+- [Allowing control of animations](../design/allowing-control-of-animations/)
+- [Explicitly locate the page in the site and provide several ways to access it](../design/locate-page/)
 
 ## Keyboard navigation
 
 Ensure the user can navigate using the keyboard only
 
-- [Navigating with the keyboard](inc-con-navigation-clavier.html)
-- [Focus visibility](inc-con-visibilite-focus.html)
+- [Navigating with the keyboard](../design/keyboard-navigation/)
+- [Focus visibility](../design/focus-visibility/)
 
 ## Layout
 
 Make sure the layout is suitable for the user
 
-- [Relative text size and responsive design](inc-con-adaptatif.html)
-- [Allow text spacing](inc-con-aerer-texte.html)
-- [Identify and maintain consistency of groupings and different regions of the page](inc-con-coherence-navigation.html)
-- [Define sensitive areas of sufficient size](inc-con-zones-sensibles.html)
+- [Relative text size and responsive design](../design/text-size-and-responsive-design/)
+- [Allow text spacing](../design/allow-text-spacing/)
+- [Identify and maintain consistency of groupings and different regions of the page](../design/consistency-across-pages/)
+- [Define sensitive areas of sufficient size](../design/sufficient-size-for-sensitive-areas/)
 
 ## Forms
 
 Ensure that the user can effectively complete the forms
 
-- [Usable forms](inc-con-formulaires.html)
+- [Usable forms](../design/usable-forms/)
 
 ## Touch and interactions
 
 Ensure that the user keeps control over interactions, particularly tactile ones
 
-- [Offer an alternative to complex gestures](inc-con-alternative-gestures.html)
-- [Give access to the content regardless of the orientation of the screen](inc-con-orientation-ecran.html)
+- [Offer an alternative to complex gestures](../design/complex-gestures/)
+- [Give access to the content regardless of the orientation of the screen](../design/screen-orientation/)
 
 </div>
 <div class="tab-pane" id="incontournables-developpeurs" role="tabpanel" aria-labelledby="incontournables-developpeurs-tab">
 <h2 id="dev-contenu-textuel">Textual content</h2>
 
 Ensure that textual content is structured with the appropriate semantics
-<ul>
-    <li>[Set a title for each page](inc-dev-titre-pages.html)</li>
-    <li>[Give a title to headings](inc-dev-titre-rubriques.html)</li>
-    <li>[Use HTML semantics](inc-dev-semantique-html.html)</li>
-    <li>[Declaring the main language and language changes](inc-dev-changement-langue.html)</li>
-    <li>[Structuring data tables](inc-dev-tableaux.html)</li>
-</ul>
+
+- [Set a title for each page](../develop/set-a-title-for-each-page/)
+- [Give a title to headings](../develop/start-sections-with-headings/)
+- [Use HTML semantics](../develop/use-html-semantics/)
+- [Declaring the main language and language changes](../develop/declare-language/)
+- [Structuring data tables](../develop/structuring-data-tables/)
+
 
 <h2 id="dev-contenu-non-textuel">Non-text content</h2>
 
 Ensure that an alternative to non-text content is provided to the user
-<ul>
-    <li>[Set a text alternatives for images and frames](inc-dev-equivalent-textuel.html)</li>
-    <li>[Provide accessible audio or video tracks](inc-dev-audio-video.html)</li>
-    <li>[Avoid captcha](inc-dev-crit-captcha.html)</li>
-</ul>
+
+- [Set a text alternatives for images and frames](../develop/images-and-frames-alternatives/)
+- [Provide accessible audio or video tracks](../develop/audio-or-video-tracks/)
+- [Avoid captcha](../develop/avoid-captcha/)
+
 
 <h2 id="dev-couleurs-et-contrastes">Colors and contrasts</h2>
 
 Ensure that the colors used are not a problem for the user
-<ul>
-    <li>[Provide enough contrast between text and background](inc-dev-contrastes.html)</li>
-    <li>[Do not use colour or sensory characteristics as the unique source of information](inc-dev-information-sensorielle.html)</li>
-</ul>
+
+- [Provide enough contrast between text and background](../develop/color-contrasts/)
+- [Do not use colour or sensory characteristics as the unique source of information](../develop/color-as-information/)
+
 
 <h2 id="dev-navigation-generale">Common navigation</h2>
 
 Make sure that the user easily navigate within page and more generally in the website
-<ul>
-    <li>[Link and button labels must be understandable out of context](inc-dev-intitules-hors-contexte.html)</li>
-    <li>[Warn the user when opening a new window](inc-dev-nouvelle-fenetre.html)</li>
-    <li>[Provide skip links](inc-dev-liens-evitement.html)</li>
-    <li>[Ensure the user keeps control during interactions](inc-dev-controle-interactions.html)</li>
-    <li>[Provide multiple access and location](inc-dev-acces-multiples.html)</li>
-    <li>[Allow to know the result of a user interaction with status messages](inc-dev-message-contextuel.html)</li>
-    <li>[Allowing animations control](inc-dev-controle-animations.html)</li>
-</ul>
+
+- [Link and button labels must be understandable out of context](../develop/link-and-button-labels/)
+- [Warn the user when opening a new window](../develop/opening-in-a-new-window/)
+- [Provide skip links](../develop/provide-skip-links/)
+- [Ensure the user keeps control during interactions](../develop/interactions-control/)
+- [Provide multiple access and location](../develop/multiple-access/)
+- [Allow to know the result of a user interaction with status messages](../develop/status-messages/)
+- [Allowing animations control](../develop/allowing-animations-control/)
+
 
 <h2 id="dev-navigation-clavier">Keyboard navigation</h2>
 
 Ensure the user can navigate using the keyboard only
-<ul>
-    <li>[Allow the use of the main features of the application with the keyboard](inc-dev-utilisation-clavier.html)</li>
-    <li>[The focus order must be sequential and logical without keyboard trap](inc-dev-parcours-focus.html)</li>
-    <li>[Make the focus visible at all times](inc-dev-visibilite-focus.html)</li>
-</ul>
+
+- [Allow the use of the main features of the application with the keyboard](../develop/keyboard-navigation/)
+- [The focus order must be sequential and logical without keyboard trap](../develop/focus-order/)
+- [Make the focus visible at all times](../develop/focus-visibility/)
+
 
 <h2 id="dev-mise-en-page">Layout</h2>
 
 Make sure the layout is suitable for the user
-<ul>
-    <li>[Use relative size to allow changing text size and responsive design](inc-dev-adaptatif.html)</li>
-    <li>[Allow text spacing](inc-dev-aerer-texte.html)</li>
-    <li>[Identify and maintain consistency of groupings and different regions of the page](inc-dev-coherence-navigation.html)</li>
-    <li>[Define sensitive areas of sufficient size](inc-dev-taille-zones.html)</li>
-</ul>
+
+- [Use relative size to allow changing text size and responsive design](../develop/relative-text-size/)
+- [Allow text spacing](../develop/allow-text-spacing/)
+- [Identify and maintain consistency of groupings and different regions of the page](../develop/consistency-across-pages/)
+- [Define sensitive areas of sufficient size](../develop/sufficient-size-for-sensitive-areas/)
+
 
 <h2 id="dev-formulaires">Forms</h2>
 
 Ensure that the user can effectively complete the forms
-<ul>
-    <li>[Make form fields accessible](inc-dev-etiquette-formulaires.html)</li>
-    <li>[Detect, identify errors and suggest corrections](inc-dev-identifier-erreurs.html)</li>
-</ul>
+
+- [Make form fields accessible](../develop/form-labels/)
+- [Detect, identify errors and suggest corrections](../develop/form-errors/)
+
 
 <h2 id="dev-tactile-et-interactions">Touch and interactions</h2>
 
 Ensure that the user keeps control over interactions, particularly tactile ones
-<ul>
-    <li>[Allow zooming](inc-dev-autoriser-zoom.html)</li>
-    <li>[Allow to cancel the triggering of gestural interactions](inc-dev-annuler-gestuelle.html)</li>
-    <li>[Offer an alternative to complex gestures](inc-dev-alternative-gestures.html)</li>
-    <li>[Give access to the content regardless of the orientation of the screen](inc-dev-orientation-ecran.html)</li>
-</ul>
+
+- [Allow zooming](../develop/allow-zooming/)
+- [Allow to cancel the triggering of gestural interactions](../develop/cancel-gestural-interactions/)
+- [Offer an alternative to complex gestures](../develop/complex-gestures/)
+- [Give access to the content regardless of the orientation of the screen](../develop/screen-orientation/)
+
 
 <h2 id="dev-aides-techniques">Assistive technology</h2>
 
 Allow the screen reader user access to the main features of the application, but also ensure for all users the usability of the application
-<ul>
-    <li>[Make sure the main features can be used with screen readers](inc-dev-lecteur-ecran.html)</li>
-</ul>
+
+- [Make sure the main features can be used with screen readers](../develop/usable-with-screen-readers/)
+
 
 </div>
 <div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">

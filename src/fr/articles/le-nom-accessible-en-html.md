@@ -26,11 +26,11 @@ Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des 
 
 Dans Chrome, il faut, dans les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>), inspecter un élément (onglet "Elements") et ouvrir le panneau "Accessibility" à la place de celui de "Style" (généralement à droite). On accède à l'"Accessibility tree" et dans "Computed properties" au "Name", le nom accessible de l'élément inspecté.
 
-![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](./images/chrome_name.png)
+![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../../web/images/chrome_name.png)
 
 Dans FireFox, il faut, dans les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
 
-![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](./images/FF_name.png)
+![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../../web/images/FF_name.png)
 ### Contenu d'une balise
 
 `<a href="canard.html">canards en plastique</a>`
@@ -75,7 +75,7 @@ Mais on pourrait aussi utiliser `aria-labelledby` pour référencer un autre él
 </code></pre>
 Lors de la prise de focus sur le champ, le lecteur d'écran annonce "Rechercher sur le site édition".
 
-Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"](label-ledby-describedby.html).
+Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"](../attributs-aria-qui-peuvent-vous-sauver/).
 
 ## Webographie
 

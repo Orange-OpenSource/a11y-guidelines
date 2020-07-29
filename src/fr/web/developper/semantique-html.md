@@ -40,7 +40,7 @@ Permettre à tous les utilisateurs d’anticiper la manière d’utiliser et les
 Oblige à la structuration cohérente du contenu par le créateur du site et permet d'améliorer la maintenabilité.
 
 **Exemple non-valide&nbsp;:**  
-![Exemple non-valide de mauvaise utilisation d ’un lien](./images/nv-semantiq.jpg)  
+![Exemple non-valide de mauvaise utilisation d ’un lien](../../images/nv-semantiq.jpg)  
 Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&nbsp;Actualiser&nbsp;» car ici il déclenche une action et non le chargement d’une <abbr>URL</abbr> (page).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
@@ -48,4 +48,4 @@ Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
 
-**Outil&nbsp;: **[validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)
+**Outil&nbsp;:** [validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)

@@ -4,20 +4,20 @@ title: "Make sure the main features can be used with screen readers"
 
 # Make sure the main features can be used with screen readers
 
-**Target: **everyone, especially people with visual impairments.  
-**When: **during development.
+**Target:** everyone, especially people with visual impairments.  
+**When:** during development.
 
-**Description: **
+**Description:**
 
 Follow general recommendations for accessibility, use primarily the <abbr>HTML</abbr> standard components, otherwise, use the <abbr>ARIA</abbr> (Accessible Rich Internet Applications) interface for complex components.
 
 
-**Checklist: **
+**Checklist:**
 
 Ensure there is no blocking point with a browser/screen reader combination (Firefox/NVDA, IE/Jaws, Safari/VoiceOver) when a user navigates (accessing the main features of the application).
 Indeed, screen reader users are the most affected by the lack of accessibility, we can identify a huge amount of problems in satisfying this requirement.
 
-**Users’ goal: **
+**Users’ goal:**
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
 

@@ -10,7 +10,7 @@ Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de n
 
 Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.
 
-Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères WCAG par thème](./incontournables.html) et des [exemples](./exemples.html) de ce site. Vous pouvez aussi utiliser les [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
+Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères WCAG par thème](../criteres-wcag-par-theme/) et des [exemples](../exemples-de-composants/) de ce site. Vous pouvez aussi utiliser les [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
 
 
 ## Le référentiel général d’amélioration de l'accessibilité (<abbr>RGAA</abbr>)
@@ -26,21 +26,21 @@ Le site [Accede-Web](http://accede-web.com/) propose d’excellentes notices sur
 
 Ces notices ont été traduites en anglais et font consensus dans le domaine de l’accessibilité numérique comme une source de bonnes pratiques, complète et de qualité. Ces notices sont mises à jour régulièrement pour coller à l’évolution des technologies (navigateurs, aides techniques…).
 
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso1.png) 
-    <a href="http://www.accede-web.com/notices/graphique/" class="btn btn-info">Notice d’accessibilité pour la conception fonctionnelle et graphique</a>
+<div class="row text-center">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso1.png" alt="">
+        <a href="http://www.accede-web.com/notices/graphique/" class="btn btn-info">Notice d’accessibilité pour la conception fonctionnelle et graphique</a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso2.png" alt="">
+        <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso3.png" alt="">
+        <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité HTML, CSS et JavaScript</a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso4.png" alt="">
+        <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interfaces riches</a>
+    </div>
 </div>
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso2.png)    
-    <a href="http://www.accede-web.com/notices/editoriale/" class="btn btn-info">Notice d’accessibilité éditoriale (modèle)</a>
-</div>
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso3.png)  
-    <a href="http://www.accede-web.com/notices/html-css-javascript/" class="btn btn-info">Notice d’accessibilité <abbr>HTML</abbr>, <abbr>CSS</abbr> et JavaScript</a>
-</div>
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso4.png)  
-    <a href="http://www.accede-web.com/notices/interface-riche/" class="btn btn-info">Notice d’accessibilité pour les composants d’interfaces riches</a>
-</div>      
-
-<br>&nbsp;

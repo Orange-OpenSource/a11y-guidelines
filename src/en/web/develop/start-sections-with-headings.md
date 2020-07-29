@@ -5,14 +5,14 @@ title: "Start sections with headings"
 # Start sections with headings
 
 **Target:** everyone and especially people with cognitive limitations, reading difficulties and visual disabilities.  
-**When: ** as of design, during content writing and development.
+**When:** as of design, during content writing and development.
 
 **Description:** 
 One must identify the heading tags (`h1` to `h6` <abbr>HTML</abbr> tags) used to structure the content of the pages.
 Visually impaired people browsing with a screen reader can access the list of headings in the page to navigate quickly. 
 Just like in a Word document, it is possible to use the table of contents only if the heading tags have been properly set within the document.  
 
-**Checklist: **
+**Checklist:**
 
 - The headings must be relevant, reflect the structure of the information contained in the page.
 - There must be no break in the heading hierarchy (we cannot jump from a `h2` title to a `h4` title).
@@ -20,7 +20,7 @@ Just like in a Word document, it is possible to use the table of contents only i
 - Hidden tags are dismissed by screen readers (`visibility: hidden;`, `display: none;` or `aria-hidden`).
 - The dynamically-generated content must also meet this requirement.
 
-**Goal: **
+**Goal:**
 
 - For all users: improve the structure of the page and its contents.
 - For search engines: improve SEO.
@@ -37,7 +37,7 @@ Page with consistent and relevant headings:
 (Heading 3) Check eligibility
 ```
 
-**Don’t: **
+**Don’t:**
 Page with a break in the heading hierarchy h2 → h4:
 
 <pre><code class="html">

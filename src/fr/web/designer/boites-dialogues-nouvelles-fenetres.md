@@ -22,4 +22,4 @@ Dans l’exemple ci-dessous le recours à une boîte de dialogue n’est pas jus
 - d’éviter des problèmes d’accessibilité pour les personnes qui naviguent à l’aide du clavier ou à l’aide d’un lecteur d’écran,
 - d’alléger le poids de la page et le temps de chargement, car dans cet exemple la page derrière la boite de dialogue doit être chargée.  
 
-![Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse](images/dialog.png)
+![Capture d’écran d’une boîte de dialogue beaucoup trop volumineuse](../../images/dialog.png)

@@ -4,10 +4,10 @@ title: "Make form fields accessible"
 
 # Make form fields accessible
 
-**Target: **everyone and especially people with visual impairments, cognitive limitations, experiencing attention difficulties and mobile and tablet users.  
-**When: **during design and development.
+**Target:** everyone and especially people with visual impairments, cognitive limitations, experiencing attention difficulties and mobile and tablet users.  
+**When:** during design and development.
 
-**Description: ** 
+**Description:** 
 
 Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. 
 
@@ -15,11 +15,11 @@ This label should be visually close to the field so we can easily mentally link 
 
 Each label must be set in a `label` tag, which is associated to the form field with a` for` attribute, using the `id` attribute of the form element.
 
-In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="./exemples/masquage/index.html">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
-The `title` attribute set on a form element can also be used like a label. You can also use the `aria-label` and `aria-labelledby` attributes (see [ARIA attributes that can save you](./label-ledby-describedby.html)), preferably in this order.
+In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it). In such case you can provide a hidden label (using <a href="../../components-examples/accessible-hiding/">accessible hiding</a>), it will not be displayed on the screen but it will be associated with the form field programmatically so screen readers can vocalize it.
+The `title` attribute set on a form element can also be used like a label. You can also use the `aria-label` and `aria-labelledby` attributes (see [ARIA attributes that can save you](../../../articles/aria-attributes-that-can-save-you)), preferably in this order.
 The `autocomplete` attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
 
-**Checklist: **
+**Checklist:**
 
 For any form element, the label should be visually close to the field it identifies.
 
@@ -31,24 +31,23 @@ For radio and check box buttons, in addition to the label tag you can use other 
 
 For required fields, this should be specified in the label using an image, a text symbol (`*` for example) or text and / or the `aria-required` property.
 
-**Users’ goal: **
+**Users’ goal:**
 
 Not meeting this requirement is a blocking point for all users using speech synthesis. For mobile users and motor deficient it allows to click on the form elements more easily.
 For fields with auto-completion, this avoids users input errors.
 
-**Do: **  
-![screenshot of a valid form](images/formulaire.png)
+**Do:**  
+![screenshot of a valid form](../../images/formulaire.png)
   
 &nbsp;
 
-**Don’t: **  
-![screenshot of a form with a missing label](images/formulaire2.png)
+**Don’t:**  
+![screenshot of a form with a missing label](../../images/formulaire2.png)
 
-&nbsp;  
 
-**Example of an accessible form: **
+**Example of an accessible form:**
   
-See [the example of an accessible form](./exemples/formulaire/index.html) for more details.
+See [the example of an accessible form](../../components-examples/forms/) for more details.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>

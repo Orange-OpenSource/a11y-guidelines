@@ -17,10 +17,10 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 
 **Exemple valide&nbsp;:**  
 
-![illustration utilisant des icônes de couleurs avec des formes différenciées pour transmettre l’information](images/couleur-ok.png)
+![illustration utilisant des icônes de couleurs avec des formes différenciées pour transmettre l’information](../../images/couleur-ok.png)
 
 **Exemple non-valide&nbsp;:**
   
-![illustration utilisant des icônes de couleurs avec des formes identiques pour transmettre l’information](images/couleur-ko.png)  
+![illustration utilisant des icônes de couleurs avec des formes identiques pour transmettre l’information](../../images/couleur-ko.png)  
 
 Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.

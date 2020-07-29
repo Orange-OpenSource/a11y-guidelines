@@ -17,12 +17,12 @@ Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place
     
 **Exemple&nbsp;:**    
 La capture ci-dessous montre une page avec un zoom à 100%.  
-![capture d’écran avec zoom à 100%](images/zoom.png)    
+![capture d’écran avec zoom à 100%](../../images/zoom.png)    
   
 **Exemple valide&nbsp;:**  
 Avec zoom du texte à 200%.  
-![capture d’écran avec zoom à 200% et texte lisible](images/zoom-ok.png)    
+![capture d’écran avec zoom à 200% et texte lisible](../../images/zoom-ok.png)    
   
 **Exemple non-valide&nbsp;:**  
 Avec zoom du texte à 200%. Ici la hauteur de l’élément contenant le texte n’a pas été rendue variable en fonction de la taille des caractères.  
-![capture d’écran avec zoom à 200% et texte tronqué](images/zoom-ko.png)  
+![capture d’écran avec zoom à 200% et texte tronqué](../../images/zoom-ko.png)  

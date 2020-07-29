@@ -40,7 +40,7 @@ You can test the service by clicking on the “Comfort+” button at the top rig
 - Also available as a browser extension
 - Open source, MIT license
 
-![screenshot of the Comfort+ service](images/confort-plus.png)
+![screenshot of the Comfort+ service](../images/confort-plus.png)
 
 ### Browser Extensions
 - [Firefox](https://addons.mozilla.org/fr/firefox/addon/orange-confort)
