@@ -36,7 +36,8 @@ module.exports = {
     lastPosts: {
       title: 'Last posts',
       seeAll: 'See all'
-    }
+    },
+    headingAnchorLabel: 'Anchor link'
   },
   fr: {
     breadcrumb: {
@@ -75,6 +76,7 @@ module.exports = {
     lastPosts: {
       title: 'Derniers articles',
       seeAll: 'Voir tout'
-    }
+    },
+    headingAnchorLabel: 'Lien pour ancrage'
   }
 }

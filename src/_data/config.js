@@ -11,6 +11,9 @@ module.exports = {
       level: 2,
       permalink: true,
       permalinkSymbol: '#',
+      permalinkAttrs: () => ({
+        'aria-labelledby': 'a11y_heading_anchor_label'
+      }),
       slugify: str => S(str).slugify().toString()
     }
   },
