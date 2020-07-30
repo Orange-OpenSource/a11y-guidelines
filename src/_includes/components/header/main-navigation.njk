@@ -1,0 +1,18 @@
+{% import "../ui.njk" as ui with context %}
+
+<nav class="navbar navbar-dark navbar-expand" role="navigation" aria-label="{{ locales[locale].navigation.main.label }}">
+  <div class="container-lg justify-content-start">
+    <a href="/{{ locale }}" class="navbar-brand" title="{% translate 'header.logoAlt', locale %}">
+      <img src="/assets/images/orange-logo.svg" alt="{% translate 'header.logoAlt', locale %}" width="50" height="50">
+    </a>
+    <ul id="main-menu" class="navbar-nav">
+      {% for link in navigation.main[locale] %}
+        <li class="nav-item">
+          {{ ui.navLink(link) }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+

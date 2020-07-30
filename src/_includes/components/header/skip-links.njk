@@ -1,7 +1,9 @@
-<ul class="navbar-nav">
-  {% for link in navigation.top[locale] %}
-    <li class="nav-item">
-      <a href="{{ link.href }}" class="nav-link">{{ link.label }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<nav role="navigation" aria-label="{{ locales[locale].skiplinks.label }}">
+  <ul class="navbar-nav">
+    {% for link in navigation.top[locale] %}
+      <li class="nav-item">
+        <a href="{{ link.href }}" class="nav-link">{{ link.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
