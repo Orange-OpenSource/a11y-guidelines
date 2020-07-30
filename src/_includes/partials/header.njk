@@ -1,21 +1,10 @@
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand supra" role="navigation">
+  <div class="navbar navbar-dark navbar-expand supra">
     <div class="container-lg">
       {% include "components/header/skip-links.njk" %}
       {% include "components/header/changelang.njk" %}
     </div>
-  </nav>
-  <nav class="navbar navbar-dark navbar-expand" role="navigation">
-    <div class="container-lg justify-content-start">
-      <a href="/{{ locale }}" class="navbar-brand" title="{% translate 'header.logoAlt', locale %}">
-        <img src="/assets/images/orange-logo.svg" alt="{% translate 'header.logoAlt', locale %}" width="50" height="50">
-      </a>
-      {% include "components/header/main-menu.njk" %}
-    </div>
-  </nav>
-  <nav class="o-nav-local navbar-light mb-0" role="navigation">
-    <div class="container-lg">
-      {% include "components/header/category-navigation.njk" %}
-    </div>
-  </nav>
+  </div>
+  {% include "components/header/main-navigation.njk" %}
+  {% include "components/header/secondary-navigation.njk" %}
 </header>
