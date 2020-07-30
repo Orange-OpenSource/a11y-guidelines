@@ -1,8 +1,8 @@
 ---
-title: "Créer un document Word accessibles"
+title: "Créer un document Word accessible"
 ---
 
-# Créer un document Word accessibles
+# Créer un document Word accessible
 
 Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance. 
 
