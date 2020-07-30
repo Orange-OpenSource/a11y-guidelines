@@ -3,6 +3,20 @@ module.exports = {
     breadcrumb: {
       label: "You are here:"
     },
+    changelang: {
+      label: 'Switch language'
+    },
+    skiplinks: {
+      label: 'Skip links'
+    },
+    navigation: {
+      main: {
+        label: 'Main navigation'
+      },
+      secondary: {
+        label: 'Secondary navigation'
+      }
+    },
     header: {
       logoAlt: 'Orange, go to homepage'
     },
@@ -27,6 +41,20 @@ module.exports = {
   fr: {
     breadcrumb: {
       label: "Vous êtes ici&nbsp;:"
+    },
+    changelang: {
+      label: 'Changement de langue'
+    },
+    skiplinks: {
+      label: 'Liens d\'évitements'
+    },
+    navigation: {
+      main: {
+        label: 'Navigation principale'
+      },
+      secondary: {
+        label: 'Navigation secondaire'
+      }
     },
     header: {
       logoAlt: "Orange, aller à l’accueil"
