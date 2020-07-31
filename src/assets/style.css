@@ -1,6 +1,7 @@
 /**
  * Table Of Content
  */
+
 #toc {
   background: #fff;
   position: sticky;
@@ -8,9 +9,17 @@
 }
 
 #toc a[aria-current] {
-  border-left: 4px solid currentColor;
-  color: #ff7900;
-  margin-left: -4px;
+  color: #000 !important;
+}
+
+#toc a[aria-current]::before {
+  background-color: #ff7900;
+  bottom: .625rem;
+  content: "";
+  left: -4px;
+  position: absolute;
+  top: .625rem;
+  width: 4px;
 }
 
 
