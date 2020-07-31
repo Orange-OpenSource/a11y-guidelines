@@ -9,7 +9,7 @@ The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG21/#status-messages">4
 
 ## Some examples of status messages
 
-When a user presses a search button, the content of the page is updated asynchronously to add the search results displayed in a region below the search button. The message "XX results found" is at the top of this new content. A screen reader will have to announce "XX results have been found". In this case, the information provided to the user is important and must be given immediately, so we will use the role "alert".
+When a user presses a search button, the content of the page is updated asynchronously to add the search results displayed in a region below the search button. The message "XX results found" is at the top of this new content. A screen reader will have to announce "XX results have been found". In this case, the information provided to the user is important and must be given immediately, so we will use the role `"alert"`.
 
 ```
 <h2 role="alert">
@@ -17,7 +17,7 @@ When a user presses a search button, the content of the page is updated asynchro
 </h2>
 ```
 
-When a user has chosen an item, presses an "Add to cart" button, a textual mention "1 item added, 4 items in the cart" appears temporarily near the shopping cart icon. A screen reader will have to announce "an item added to the cart, the cart currently contains 4 items". Here, the information to push to the user is less crucial than before so we will use the role "status".
+When a user has chosen an item, presses an "Add to cart" button, a textual mention "1 item added, 4 items in the cart" appears temporarily near the shopping cart icon. A screen reader will have to announce "an item added to the cart, the cart currently contains 4 items". Here, the information to push to the user is less crucial than before so we will use the role `"status"`.
 
 ```
 <p role="status">
@@ -49,7 +49,7 @@ After a user submits a form, text is added to the existing form as follows: "You
 </div>
 ```
 
-When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating "XX errors in the form". The screen reader announces the message "Form not sent because XX validation errors" (this does not dispense with giving details of the error for each incorrectly filled field). The error information in the form is important and urgent, immediate, so we use the role "alertdialog".
+When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating "XX errors in the form". The screen reader announces the message "Form not sent because XX validation errors" (this does not dispense with giving details of the error for each incorrectly filled field). The error information in the form is important and urgent, immediate, so we use the role `"alertdialog"`.
 
 ```
 <div role="alertdialog" aria-labelledby="errors">
@@ -65,7 +65,7 @@ Once a user, in an online document management application, has inserted a new do
 </p>
 ```
 
-In an online mailing application, the user chosen from a recipient list to add / remove a new e-mail address, this recipient's e-mail address is displayed on the screen following the one already chosen for this message. The screen reader will have to announce the addition of this new email address. It should be understood that the text, email address, added / removed to the list may not be visible on the screen for some users of <abbr>AT</abbr>. So, in order to give context to screen reader users, additional information is needed in the form of content not displayed but read by speech synthesis. As new information is added in a meaningful order and old information may disappear (another example could be a chat or chatbot), we use, here, the role "log".
+In an online mailing application, the user chosen from a recipient list to add / remove a new e-mail address, this recipient's e-mail address is displayed on the screen following the one already chosen for this message. The screen reader will have to announce the addition of this new email address. It should be understood that the text, email address, added / removed to the list may not be visible on the screen for some users of <abbr>AT</abbr>. So, in order to give context to screen reader users, additional information is needed in the form of content not displayed but read by speech synthesis. As new information is added in a meaningful order and old information may disappear (another example could be a chat or chatbot), we use, here, the role `"log"`.
 
 ```
 <div role="log">

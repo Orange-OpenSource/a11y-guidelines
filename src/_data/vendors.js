@@ -10,7 +10,7 @@ module.exports = {
   },
   highlightJS: {
     version: '10.1.1',
-    theme: 'github'
+    theme: 'a11y-light'
   },
   jquery: {
     version: '3.5.1',

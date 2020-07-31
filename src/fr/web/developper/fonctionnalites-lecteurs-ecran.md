@@ -4,8 +4,8 @@ title: "S’assurer que les principales fonctionnalités sont utilisables avec l
 
 # S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran
 
-**Cible&nbsp;: ** tout le monde, et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;: **lors du développement.
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**
 

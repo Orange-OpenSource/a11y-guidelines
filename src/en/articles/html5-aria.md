@@ -8,11 +8,11 @@ title: "HTML5 & ARIA"
 
 Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker…). So it is very difficult or impossible to make these components accessible with conventional <abbr>HTML</abbr>.
 
-Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user.
+Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user, in particular for the screenreaders.
 
 ## What is it ?
 
-To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recommendation called <abbr>ARIA</abbr>, standing for Accessible Rich Internet Applications, and several documents on the use of <abbr>ARIA</abbr>.
+To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recommendation called <abbr>ARIA</abbr>, standing for Accessible Rich Internet Applications, and several documents on the use of <abbr>ARIA</abbr>. We are currently at the 1.1 version of <abbr>ARIA</abbr> et for the Authoring Practices, an <abbr>ARIA</abbr>best practices.
 
 <abbr>ARIA</abbr> is a semantic wrapper based on the attribute&nbsp;/ value combination used in markup languages such as <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. This recommendation consists of roles, states and properties that will specifically interact with assistive technologies (<abbr>AT</abbr>). With <abbr>ARIA</abbr>, one can describe elements and behaviours with simple HTML when they do not exist natively, for example tabs, drop-downs, live regions, tooltips, modal windows, etc. <abbr>ARIA</abbr> also defines how an interface component has to behave with the keyboard in order to standardize the user experience with keyboard navigation. **<abbr>ARIA</abbr> makes sense and delivers its full potential when used with <abbr>HTML5</abbr>**.
 
@@ -28,7 +28,7 @@ Moreover, the optimal efficiency of the <abbr>ARIA</abbr> compatibility depends 
 
 ## Should we use it?
 
-<abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). <abbr>ARIA</abbr>’s robustness and interoperability is rather complacent, [twenty <abbr>WCAG</abbr> 2.1 techniques are specific to <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/WCAG20-TECHS/aria.html) (10 are <abbr>HTML5</abbr> techniques). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.
+<abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). <abbr>ARIA</abbr>’s robustness and interoperability is rather complacent, [around forty <abbr>WCAG</abbr> 2.1 techniques are specific to <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques) (10 are <abbr>HTML5</abbr> techniques). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.
 
 In all cases, you have to test developments in the target environments (browser/assistive technology combinations). This is a tough task, but absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/<abbr>NVDA</abbr>.
 
@@ -37,8 +37,8 @@ In a well-defined environment (e.g. intranet), target environments are known and
 ## Webography
 * W3C:
   * [<abbr>ARIA</abbr> specification](http://www.w3.org/TR/wai-aria/)
-  * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/) (be careful as it’s a “working draft”)
-  * [Use <abbr>ARIA</abbr> HTML (5)](http://www.w3.org/TR/aria-in-html/) (be careful as it’s a “working draft”)
-  * [<abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2](https://www.w3.org/TR/2008/WD-WCAG20-TECHS-20081103/aria.html)
+  * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/)
+  * [Use <abbr>ARIA</abbr> HTML (5)](http://www.w3.org/TR/aria-in-html/)
+  * [<abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques)
 * [Introduction to <abbr>ARIA</abbr> by Site Point](http://www.sitepoint.com/introduction-wai-aria/)
 * [Introduction and link list to <abbr>ARIA</abbr> sources](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)

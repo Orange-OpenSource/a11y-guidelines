@@ -7,7 +7,7 @@ title: "Navigation à l’aide du clavier"
 La navigation dans une page web doit être possible à l’aide du clavier seul, notamment pour les personnes qui ne peuvent pas utiliser de souris. Cette fonctionnalité est prise en charge directement par le navigateur. Il est tout de même important de vérifier son fonctionnement, car certains développements peuvent entraîner des difficultés pour naviguer correctement dans la page.
   
 Pour tester si votre service est accessible à l’aide du clavier, vous pouvez tenter de naviguer sans votre souris. Toutes les fonctionnalités disponibles habituellement doivent rester accessible.  
-** Rappel&nbsp;: **le focus doit rester suffisamment visible sur tous les éléments recevant le focus.
+** Rappel&nbsp;:** le focus doit rester suffisamment visible sur tous les éléments recevant le focus.
 
 ## Liste des raccourcis clavier principaux&nbsp;: 
 - La touche `TAB`&nbsp;: pour faire avancer le focus.
@@ -16,6 +16,6 @@ Pour tester si votre service est accessible à l’aide du clavier, vous pouvez 
 - La barre espace pour cocher/décocher une case à cocher.
 - Les flèches directionnelles pour modifier la sélection des boutons radio, pour se déplacer dans une liste déroulante, ou faire défiler les ascenseurs (<i lang="en">scrollbar</i>) lorsque ceux-ci sont présents.
 
-** Remarque&nbsp;: sur Mac la navigation au clavier doit être activée au préalable. **  
+**Remarque&nbsp;: sur Mac la navigation au clavier doit être activée au préalable.**  
 Dans Safari&nbsp;: Edition &gt; Préférences… &gt; Avancées  
 Puis cocher la case *«&nbsp;La touche TAB permet de naviguer parmi les objets des pages web&nbsp;»*.
