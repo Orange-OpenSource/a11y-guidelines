@@ -25,6 +25,20 @@
 
 
 /**
+ * Secondary navigation
+ */
+
+#secondary-navigation a[aria-current] {
+  color: #000;
+}
+
+#secondary-navigation a[aria-current]::before {
+  background-color: #ff7900;
+}
+
+
+
+/**
  * Footer
  */
 
