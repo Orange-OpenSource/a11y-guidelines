@@ -19,7 +19,7 @@ Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visu
 **Exemple de CAPTCHA visuel**
 
 ## Premier constat : le Captcha et les utilisateurs
-Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C'est d'ailleurs la première source de difficultés citée par les utilisateurs malvoyants d'après [le sondage réalisé par le site WebAIM fin 2017](https://webaim.org/projects/screenreadersurvey7) :  
+Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C'est d'ailleurs la première source de difficultés citée par les utilisateurs malvoyants d'après [le sondage réalisé par le site WebAIM fin 2017](https://webaim.org/projects/screenreadersurvey7)&nbsp;:  
 ![Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème](../../web/images/captchas/webaim.png)  
 
 **Les CAPTCHA pointés du doigt par les utilisateurs malvoyants (sondage WebAIM 2017)**
@@ -44,7 +44,7 @@ Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revi
 
 ## Les solutions préconisées
 
-L’idée est donc dans un premier temps de déterminer les risques et de se poser les questions suivantes :
+L’idée est donc dans un premier temps de déterminer les risques et de se poser les questions suivantes&nbsp;:
 
 - Quels sont les risques en cas d’attaque ?
 - Quel est le besoin réel, entre éliminer les requêtes des bots et apporter une solution sécurisée ?
