@@ -73,7 +73,11 @@
       {% if tags %}
         <ul class="list-inline">
           {% for tag in tags %}
-            <li class="list-inline-item"><a href="?tag={{ tag }}" class="badge badge-secondary">{{ locales[locale].tags[tag] }}</a></li>
+            <li class="list-inline-item">
+              <a href="?tag={{ tag }}" class="badge badge-secondary">
+                <span class="sr-only">{{ locales[locale].filtersBar.label }}&nbsp;</span>{{ locales[locale].tags[tag] }}
+              </a>
+            </li>
           {% endfor %}
         </ul>
       {% endif %}
@@ -89,11 +93,14 @@
   <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ locales[locale].filtersBar.label }} :</h2>
   <ul class="nav">
     <li class="nav-item">
-      <a href="?all" class="nav-link" data-tag="all">{{ locales[locale].filtersBar.all }}</a>
+      <a href="?all" class="nav-link" data-tag="all">
+        <span class="sr-only">{{ locales[locale].filtersBar.label }}&nbsp;</span>{{ locales[locale].filtersBar.all }}</a>
     </li>
     {% for tag in tags %}
       <li class="nav-item">
-        <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">{{ locales[locale].tags[tag] }}</a>
+        <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">
+          <span class="sr-only">{{ locales[locale].filtersBar.label }}&nbsp;</span>{{ locales[locale].tags[tag] }}
+        </a>
       </li>
     {% endfor %}
   </ul>
