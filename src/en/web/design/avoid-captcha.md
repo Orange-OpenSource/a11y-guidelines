@@ -4,8 +4,8 @@ title: "Avoid captcha"
 
 # Avoid captcha
 
-**Target: ** everyone in particular, visually impaired people.  
-**When: ** during design and development.
+**Target:** everyone in particular, visually impaired people.  
+**When:** during design and development.
 
 **Description **  
 Captchas are often the source of difficulties for all users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user:
