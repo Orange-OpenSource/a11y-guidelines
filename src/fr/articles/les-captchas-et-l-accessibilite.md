@@ -1,7 +1,7 @@
 ---
 title: "Les CAPTCHAs et l'accessibilité"
-abstract: "Lorem ipsum dolor sit amet"
-date: "2020-05-14"
+abstract: "Les CAPTCHAs et l'accessibilité"
+date: "2019-01-01"
 tags:
   - technicalArticle
   - web
