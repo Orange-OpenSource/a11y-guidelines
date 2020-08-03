@@ -4,10 +4,10 @@ title: "Offer an alternative to complex gestures"
 
 # Offer an alternative to complex gestures
 
-**Target: ** everyone in particular, people with motor or visual disability and mobility.  
+**Target:** everyone in particular, people with motor or visual disability and mobility.  
 **When & nbsp;: ** during design and development.
 
-**Description: **  
+**Description:**  
 For each complex gestural interaction, an alternative must be available (for example a non-gestural or simplified alternative).
 Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...).
 

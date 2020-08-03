@@ -4,8 +4,8 @@ title: "Link and button labels"
 
 # Link and button labels
 
-**Target: ** everyone and especially people with visual impairments, cognitive limitations or attention difficulties.  
-**When: ** when designing the service and during graphic design.
+**Target:** everyone and especially people with visual impairments, cognitive limitations or attention difficulties.  
+**When:** when designing the service and during graphic design.
 
 **Description:**  
 The links texts and buttons texts should be explicit enough.

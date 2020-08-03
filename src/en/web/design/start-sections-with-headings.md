@@ -4,8 +4,8 @@ title: "Start sections with headings"
 
 # Start sections with headings
 
-**Target: ** everyone and especially people with cognitive limitations, reading difficulties and visual impairments.  
-**When: ** as of design, content writing and during development.
+**Target:** everyone and especially people with cognitive limitations, reading difficulties and visual impairments.  
+**When:** as of design, content writing and during development.
 
 **Description:**  
 Identifying heading tags (`h1` to `h6` <abbr>HTML</abbr> tags) used to structure the content of the pages.
