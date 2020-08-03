@@ -18,7 +18,6 @@ module.exports = {
         label: 'Web',
         href: '/en/web/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'web',
           height: 130,
@@ -36,7 +35,6 @@ module.exports = {
         label: 'Android',
         href: '/en/mobile/android/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'android',
           height: 130,
@@ -53,7 +51,6 @@ module.exports = {
         label: 'iOS',
         href: '/en/mobile/ios/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'ios',
           height: 130,
@@ -72,7 +69,6 @@ module.exports = {
         label: 'Editorial content',
         href: '/en/editorial-content/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'editorial-content',
           height: 151,
@@ -96,7 +92,6 @@ module.exports = {
         label: 'Web',
         href: '/fr/web/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'web',
           height: 130,
@@ -114,7 +109,6 @@ module.exports = {
         label: 'Android',
         href: '/fr/mobile/android/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'android',
           height: 130,
@@ -132,7 +126,6 @@ module.exports = {
         label: 'iOS',
         href: '/fr/mobile/ios/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'ios',
           height: 130,
@@ -151,7 +144,6 @@ module.exports = {
         label: 'Contenu éditorial',
         href: '/fr/contenu-editorial/',
         inCardNavigation: true,
-        abstract: 'Lorem ipsum dolor sit amet',
         icon: {
           name: 'editorial-content',
           height: 151,
