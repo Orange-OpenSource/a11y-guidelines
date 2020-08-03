@@ -17,7 +17,7 @@
       <img src="../images/icons/{{ link.icon.name }}.svg" alt="" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
     </div>
     <div class="card-body bg-dark">
-      <h3 class="card-title text-primary">
+      <h3 class="card-title text-primary{% if not link.abstract %} mb-0{% endif %}">
         <a href="{{ link.href }}" class="text-primary stretched-link">{{ link.label }}</a>
       </h3>
       {% if link.abstract %}
