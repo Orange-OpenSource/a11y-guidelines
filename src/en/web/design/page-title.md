@@ -4,8 +4,8 @@ title: "Set a title for each page"
 
 # Set a title for each page
 
-**Target: **everyone and especially people with visual disabilities.  
-**When: **as of conception and during development.
+**Target:** everyone and especially people with visual disabilities.  
+**When:** as of conception and during development.
 
 **Description:**  
 Give each page a title that is specific to it and which reflects its content or function  (`<title>` tag).  
