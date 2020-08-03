@@ -1,5 +1,10 @@
 ---
 title: "The accessible name in HTML"
+abstract: "Accessible name, what's and his link with Assistive Technology"
+date: "2019-01-01"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # The accessible name in <abbr>HTML</abbr>

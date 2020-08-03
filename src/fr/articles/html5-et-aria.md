@@ -1,7 +1,7 @@
 ---
 title: "HTML5 & ARIA"
-abstract: "Lorem ipsum dolor sit amet"
-date: "2018-08-04"
+abstract: "Introduction HTML 5 et ARIA"
+date: "2019-01-01"
 tags:
   - technicalArticle
   - web

@@ -1,5 +1,10 @@
 ---
 title: "ARIA attributes that can save you"
+abstract: "Some ARIA attributes to know"
+date: "2019-01-01"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # <abbr>ARIA</abbr> attributes that can save you: `aria-label`, `aria-labelledby` and `aria-describedby` 
