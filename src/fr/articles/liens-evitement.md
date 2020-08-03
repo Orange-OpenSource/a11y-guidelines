@@ -1,7 +1,7 @@
 ---
 title: "Les bonnes pratiques pour les liens d’évitements"
 abstract: "Les liens d'évitement, qu'est-ce et comment bien les mettre en œuvre"
-date: "2018-08-31"
+date: "2019-01-01"
 tags:
   - componentExample
   - web

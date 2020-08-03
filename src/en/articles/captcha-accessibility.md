@@ -1,5 +1,10 @@
 ---
 title: "CAPTCHA Accessibility"
+abstract: "CAPTCHA and accessibility"
+date: "2019-01-01"
+tags:
+  - technicalArticle
+  - web
 ---
 
 # CAPTCHA Accessibility

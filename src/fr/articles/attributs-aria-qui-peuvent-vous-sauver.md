@@ -1,7 +1,7 @@
 ---
 title: "Les attributs ARIA qui peuvent vous sauver !"
-abstract: "Lorem ipsum dolor sit amet"
-date: "2019-01-17"
+abstract: "Quelques attributs ARIA à connaître."
+date: "2019-01-01"
 tags:
   - technicalArticle
   - web

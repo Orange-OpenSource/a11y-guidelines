@@ -1,7 +1,7 @@
 ---
 title: "Le nom accessible en HTML"
-abstract: "Lorem ipsum dolor sit amet"
-date: "2020-11-23"
+abstract: "Le nom accessible, qu'est-ce et son rapport avec les technologies d'assistance"
+date: "2019-01-01"
 tags:
   - technicalArticle
   - web
