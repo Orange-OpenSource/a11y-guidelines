@@ -75,7 +75,7 @@
           {% for tag in tags %}
             <li class="list-inline-item">
               <a href="?tag={{ tag }}" class="badge badge-secondary">
-                <span class="sr-only">{{ locales[locale].filtersBar.label }}&nbsp;</span>{{ locales[locale].tags[tag] }}
+                <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "tags." + tag, locale %}
               </a>
             </li>
           {% endfor %}
@@ -90,16 +90,17 @@
 {% macro filtersBar(posts) %}
 {% set tags = posts | getPostsTags %}
 <nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
-  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ locales[locale].filtersBar.label }} :</h2>
+  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{% translate "filtersBar.label", locale %} :</h2>
   <ul class="nav">
     <li class="nav-item">
       <a href="?all" class="nav-link" data-tag="all">
-        <span class="sr-only">{{ locales[locale].filtersBar.label }}&nbsp;</span>{{ locales[locale].filtersBar.all }}</a>
+        <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "filtersBar.all", locale %}
+      </a>
     </li>
     {% for tag in tags %}
       <li class="nav-item">
         <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">
-          <span class="sr-only">{{ locales[locale].filtersBar.label }}&nbsp;</span>{{ locales[locale].tags[tag] }}
+          <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "tags." + tag, locale %}
         </a>
       </li>
     {% endfor %}
@@ -109,7 +110,7 @@
 
 {% macro toc() %}
 <nav id="toc" role="navigation" aria-labelledby="toc-title">
-  <h2 id="toc-title">{{ locales[locale].toc.title }}</h2>
+  <h2 id="toc-title">{% translate "toc.title", locale %}</h2>
   <ul class="nav flex-column">
     {% for heading in content | getHeadingsForToc %}
       <li class="nav-item position-relative">

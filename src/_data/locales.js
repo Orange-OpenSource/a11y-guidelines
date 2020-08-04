@@ -37,7 +37,9 @@ module.exports = {
       title: 'Last posts',
       seeAll: 'See all'
     },
-    headingAnchorLabel: 'Anchor link',
+    headingsAnchor: {
+      label: 'Anchor link'
+    },
     backToTop: {
       label: 'Back to top'
     }
@@ -80,7 +82,9 @@ module.exports = {
       title: 'Derniers articles',
       seeAll: 'Voir tout'
     },
-    headingAnchorLabel: 'Lien pour ancrage',
+    headingsAnchor: {
+      label: 'Lien pour ancrage'
+    },
     backToTop: {
       label: 'Retour en haut de page'
     }
