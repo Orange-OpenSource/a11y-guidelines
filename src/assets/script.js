@@ -36,4 +36,38 @@
   })
 
   document.getElementById('filtersbar_counter').innerHTML = `${String(posts.length - hiddenPosts)}&nbsp;`
+})();
+
+/* Back to top link */
+(function () {
+  const handler = document.getElementById('back-to-top')
+  const threshold = 300
+
+  if (!handler || typeof window.requestAnimationFrame === 'undefined') {
+    return
+  }
+
+  function hideHandler () {
+    handler.style.right = '-99999px'
+    handler.style.opacity = '0'
+  }
+
+  function showHandler () {
+    handler.style.right = null
+    handler.style.opacity = '1'
+  }
+
+  function onScroll () {
+    if (window.pageYOffset >= threshold) {
+      showHandler()
+    } else {
+      hideHandler()
+    }
+  }
+
+  hideHandler()
+
+  window.addEventListener('scroll', function () {
+    window.requestAnimationFrame(onScroll)
+  })
 })()

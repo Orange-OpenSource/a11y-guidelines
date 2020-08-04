@@ -1,4 +1,14 @@
 /**
+ * General
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/**
  * Table Of Content
  */
 
@@ -34,6 +44,19 @@
 
 #secondary-navigation a[aria-current]::before {
   background-color: #ff7900;
+}
+
+
+
+/**
+ * Back to top link
+ */
+
+#back-to-top {
+  bottom: 1.25rem;
+  position: fixed;
+  right: 1.25rem;
+  transition: opacity .25s ease;
 }
 
 

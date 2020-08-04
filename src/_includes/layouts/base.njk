@@ -31,6 +31,9 @@
     {% endif %}
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="{% translate "backToTop.label", locale %}">
+      <span class="d-none d-sm-inline-block">{% translate "backToTop.label", locale %}</span>
+    </a>
     {% if jquery == true or boostedJS == true %}
       <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
