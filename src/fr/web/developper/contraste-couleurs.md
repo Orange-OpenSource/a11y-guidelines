@@ -43,7 +43,7 @@ On n’est pas tenus d’appliquer ce critère&nbsp;:
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).
 
 **Outil&nbsp;:**  
-L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows). <a href="https://a11y-guidelines.orange.com/web/methodes-outils-contrastes.html">Comment utiliser Colour Contrast Analyser</a>, quelques explications. 
+L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows). <a href="../../outils/mesurer-contraste-couleurs/">Comment utiliser Colour Contrast Analyser</a>, quelques explications. 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
