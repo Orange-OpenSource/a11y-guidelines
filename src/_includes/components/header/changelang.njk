@@ -1,4 +1,4 @@
-<nav role="navigation" aria-label="{{ locales[locale].changelang.label }}">
+<nav role="navigation" aria-label="{% translate "changelang.label", locale %}">
   <ul class="navbar-nav">
     {% for key, lang in site.locales %}
       {% set active = locale == lang.code %}
