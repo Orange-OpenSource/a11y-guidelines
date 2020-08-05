@@ -1,0 +1,12 @@
+{
+	"checklist": {
+		"name": "Audit WCAG 2.1",
+		"page": [{
+				"IDPage": "pageID-0",
+				"name": "Nom de la page",
+				"items": []
+			}
+		]
+
+	}
+}
