@@ -101,9 +101,10 @@ module.exports = {
         subLevels: [
           { label: 'Designer', href: '/fr/web/designer/' },
           { label: 'Développer', href: '/fr/web/developper/' },
-          { label: 'Tester', href: '/fr/web/outils/' },
+          { label: 'Tester', href: '/fr/web/criteres-wcag-par-theme/' },
           { label: 'Évaluer', href: '/fr/web/audit-wcag/' },
-          { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }
+          { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' },
+          { label: 'Articles web', href: '/fr/articles/?tag=web' }
         ]
       },
       {
