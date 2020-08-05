@@ -9,6 +9,29 @@ html {
 
 
 /**
+ * Typography
+ */
+
+/* Citations */
+blockquote {
+  quotes: "«\00A0" "\00A0»";
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+blockquote p::before {
+  content: open-quote;
+}
+
+blockquote p::after {
+  content: close-quote;
+}
+
+
+
+/**
  * Table Of Content
  */
 
