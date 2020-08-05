@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
   eleventyConfig.addPassthroughCopy(`src/en/web/components-examples/**/*.{html,css,js}`)
   eleventyConfig.addPassthroughCopy(`src/fr/web/exemples-de-composants/**/*.{html,css,js}`)
+  eleventyConfig.addPassthroughCopy(`src/fr/web/la-va11ydette/`)
   eleventyConfig.addPassthroughCopy(`src/**/*.xlsx`)
   eleventyConfig.addPassthroughCopy(`src/**/*.mp3`)
   eleventyConfig.addPassthroughCopy(`src/**/*.apk`)
