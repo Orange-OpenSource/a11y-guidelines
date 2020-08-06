@@ -6,11 +6,11 @@
       <img src="/assets/images/orange-logo.svg" alt="{% translate 'header.logoAlt', locale %}" width="50" height="50">
     </a>
     <ul id="main-menu" class="navbar-nav">
-      {% for link in navigation.main[locale] %}
+      {%- for link in navigation.main[locale] -%}
         <li class="nav-item">
           {{ ui.navLink(link) }}
         </li>
-      {% endfor %}
+      {%- endfor -%}
     </ul>
   </div>
 </nav>

@@ -3,15 +3,15 @@
 <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="{% translate "navigation.secondary.label", locale %}">
   <div class="container-lg">
     <ul class="nav">
-      {% for category in navigation.main[locale] %}
+      {%- for category in navigation.main[locale] -%}
         {% if category.href in page.url %}
-          {% for link in category.subLevels %}
+          {%- for link in category.subLevels -%}
             <li class="nav-item">
               {{ ui.navLink(link) }}
             </li>
-          {% endfor %}
+          {%- endfor -%}
         {% endif %}
-      {% endfor %}
+      {%- endfor -%}
     </ul>
   </div>
 </nav>
