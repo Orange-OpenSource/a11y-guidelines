@@ -27,7 +27,7 @@ module.exports = {
         subLevels: [
           { label: 'Design', href: '/en/web/design/' },
           { label: 'Develop', href: '/en/web/develop/' },
-          { label: 'Test', href: '/en/web/test-tools/' },
+          { label: 'Test', href: '/en/web/wcag-criteria-by-project-phase/' },
           { label: 'Component examples', href: '/en/web/components-examples/' }
         ]
       },
