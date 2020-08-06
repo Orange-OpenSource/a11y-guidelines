@@ -14,6 +14,7 @@ module.exports = {
   main: {
     'en': [
       { label: 'Home', href: '/en/' },
+      { label: 'Methods and resources', href: '/en/testing-methods/' },
       {
         label: 'Web',
         href: '/en/web/',
@@ -89,6 +90,7 @@ module.exports = {
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },
+      { label: 'Méthodes et ressources', href: '/fr/tester/' },
       {
         label: 'Web',
         href: '/fr/web/',
@@ -108,6 +110,7 @@ module.exports = {
           { label: 'Articles web', href: '/fr/articles/?tag=web' }
         ]
       },
+
       {
         label: 'Android',
         href: '/fr/mobile/android/',
