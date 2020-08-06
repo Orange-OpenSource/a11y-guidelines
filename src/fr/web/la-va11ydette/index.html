@@ -53,7 +53,13 @@
                 line-height: 1;
                 align-self: baseline;
             }
-
+		
+			
+			.minimized .navbar-brand img {
+				width: 1.875rem;
+				height: 1.875rem;
+			}
+			
             h2[id],
             #filter,
             #currentPageManager {
@@ -70,26 +76,52 @@
         </style>
     </head>
     <body>
-        <header id="docs-navbar" class="navbar navbar-dark navbar-expand-md fixed-top flex-wrap">
+        <header id="docs-navbar" class="" >
+		<div class="navbar navbar-dark navbar-expand supra">
+			<div class="d-flex flex-row-reverse container-lg">
+
+			  <nav role="navigation" aria-label="Changement de langue">
+				  <ul class="navbar-nav">
+					
+					  
+					  <li class="nav-item">
+						<a href="./?lang=en" id="link-en" class="nav-link" lang="en">
+						  English
+						</a>
+					  </li>
+					
+					  
+					  <li class="nav-item">
+						<a href="./?lang=fr" id="link-fr" class="nav-link active" aria-current="true" lang="fr">
+						  Français
+						</a>
+					  </li>
+					
+				  </ul>
+				</nav>
+
+			</div>
+		</div>
+			<nav class="navbar navbar-dark navbar-expand-md flex-wrap" role="navigation">
             <div class="container w-100">
                 <a class="navbar-brand" href="/">
                     <img src="https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/img/orange_logo.svg" alt="" width="50" height="50">
                     <span class="h2">
-                        La v<span class="text-primary">a11y</span>dette<br>
-                        <h1 class="small text-primary m-0">Grille d’audit WCAG 2.1 d’Orange</h1>
+                        <span id="va11ydette">La v<span class="text-primary">a11y</span>dette</span><br>
+                        <h1 class="small text-primary m-0" id="auditNameWcag">Grille d’audit WCAG 2.1 d’Orange</h1>
                     </span>
                 </a>
                 <div class="ml-auto" id="importexport">
-                    <button type="button" class="btn btn-inverse btn-link ml-2 mr-n3" title="importer un audit (json)"
+                    <button id="btnImport" type="button" class="btn btn-inverse btn-link ml-2 mr-n3" title="importer un audit (json)"
                             data-toggle="collapse" data-target="#import-form"
                             aria-expanded="false" aria-controls="import-form">
                         <span class="icon-modifier-upload" aria-hidden="true"></span>
-                        Importer
+                        <span id="btnImportTxt">Importer</span>
                     </button>
 					 <a href="#" id="export" class="btn btn-inverse btn-link mr-n3 disabled" title="télécharger l'audit (json)"
                         disabled aria-disabled="true">
                     <span class="icon-Modifier-download" aria-hidden="true"></span>
-                    Télécharger
+                    <span id="btnExportTxt">Télécharger</span>
                 </a>
                 </div>
             </div>
@@ -98,7 +130,7 @@
                     <div class="input-group">
                         <div class="custom-file">
                             <input class="custom-file-input" id="selectFiles" value="Import" type="file" lang="fr">
-                            <label class="custom-file-label" for="selectFiles" data-browse="Parcourir">Sélectionner un audit</label>
+                            <label class="custom-file-label" id="selectFilesLabel" for="selectFiles" data-browse="Parcourir">Sélectionner un audit</label>
                         </div>
                         <div class="input-group-append">
                             <button class="btn btn-secondary btn-inverse" type="button" id="import">Importer</button>
@@ -106,10 +138,11 @@
                     </div>
                 </div>
             </div>
+			</nav>
         </header>
 
-        <main role="main" class="mt-4">
-            <div class="container d-flex align-items-center mb-3">
+        <main role="main" class="mt-4" id="main">
+            <div class="container d-flex align-items-center mb-3" id="auditInfoManager">
                 <h1 id="checklistName" class="mb-0"></h1>
                 <button class="btn btn-secondary btn-icon ml-auto" id="btnChecklistName"
                         aria-label="Modifier le nom de l’audit" title="Modifier le nom de l’audit"
@@ -161,14 +194,14 @@
         <footer class="o-footer" id="footer" role="contentinfo">
             <div class="o-footer-body">
                 <div class="container py-3">
-                    <p class="mb-0">Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>.</p>
-                    <p class="mb-0">Le logo Orange ainsi que certaines images et captures sont la propriété d’Orange&nbsp;: Copyright © 2016 Orange SA <em lang="en">All rights reserved</em>.</p>
+                    <p class="mb-0" id="footerTxt1">Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>.</p>
+                    <p class="mb-0" id="footerTxt2">Le logo Orange ainsi que certaines images et captures sont la propriété d’Orange&nbsp;: Copyright © 2016 Orange SA <em lang="en">All rights reserved</em>.</p>
                 </div>
             </div>
         </footer>
 
         <a href="#" class="o-scroll-up">
-            <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+            <span class="d-none d-sm-inline-block" id="scrollUpTxt">Retour en haut de page</span>
         </a>
 
         <div id="modal"></div>
