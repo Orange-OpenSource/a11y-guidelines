@@ -49,6 +49,10 @@ module.exports = function (eleventyConfig) {
     return translation
   })
 
+  eleventyConfig.addShortcode('currentYear', function () {
+    return String(new Date().getFullYear())
+  })
+
   eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
     if (date === null) {
       throw new Error('[localizedDate]: no date provided')
