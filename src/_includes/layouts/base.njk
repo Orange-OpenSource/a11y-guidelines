@@ -17,10 +17,10 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightJS.version }}/build/styles/{{ vendors.highlightJS.theme }}.min.css">
     {% endif %}
     <link rel="stylesheet" href="/assets/style.css">
-    {% for item in head %}{{ item | safe }}{% endfor %}
-    {% for item in css %}
+    {%- for item in head -%}{{ item | safe }}{%- endfor -%}
+    {%- for item in css -%}
       <link rel="stylesheet" href="{{ item }}">
-    {% endfor %}
+    {%- endfor -%}
      <style>.no-js .hidden-if-no-js{display:none!important}</style>
   </head>
   <body{% if displayToc == true %} data-spy="scroll" data-target="#toc" style="position:relative;"{% endif %}>
@@ -45,9 +45,9 @@
       <script>hljs.initHighlightingOnLoad()</script>
     {% endif %}
     <script src="/assets/script.js"></script>
-    {% for item in js %}
+    {%- for item in js -%}
       <script src="{{ item }}"></script>
-    {% endfor %}
+    {%- endfor -%}
     <div id="a11y_heading_anchor_label" hidden>{% translate "headingsAnchor.label", locale %}</div>
     {% include "partials/licence.njk" %}
   </body>

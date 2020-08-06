@@ -3,7 +3,7 @@
 <nav class="container-lg" role="navigation" aria-labelledby="breadcrumb-label">
   <p id="breadcrumb-label" class="sr-only">{% translate 'breadcrumb.label', locale %}</p>
   <ol class="breadcrumb">
-    {% for item in breadcrumb %}
+    {%- for item in breadcrumb -%}
       {% if item.isActive %}
         <li class="breadcrumb-item" aria-current="location">
           {{ item.label }}
@@ -13,6 +13,6 @@
           <a href="{{ item.href }}">{{ item.label }}</a>
         </li>
       {% endif %}
-    {% endfor %}
+    {%- endfor -%}
   </ol>
 </nav>
