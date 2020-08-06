@@ -29,6 +29,7 @@ module.exports = {
           { label: 'Design', href: '/en/web/design/' },
           { label: 'Develop', href: '/en/web/develop/' },
           { label: 'Test', href: '/en/web/wcag-criteria-by-project-phase/' },
+          { label: 'Evaluate', href: '/en/web/wcag-audit/' },
           { label: 'Component examples', href: '/en/web/components-examples/' },
           { label: 'Web articles', href: '/en/articles/?tag=web' }
         ]
