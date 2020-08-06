@@ -1,6 +1,8 @@
 ---
 title: "WCAG criteria by project phase"
 boostedJS: true
+js:
+  - /assets/test-web.js
 ---
 
 # WCAG criteria by project phase
@@ -179,7 +181,7 @@ Allow the screen reader user access to the main features of the application, but
 </div>
 <div class="tab-pane" id="incontournables-testeurs" role="tabpanel" aria-labelledby="incontournables-testeurs-tab">
 <div class="row">
-<section id="refTests" class="col-md-8 panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+<section id="refTests" class="col-md-8 panel-group accordion border-right border-light" id="accordion" role="tablist" aria-multiselectable="true">
 <h2 id="test-textual-content">Textual content</h2>
 <h2 id="test-non-text-content">Non-text content</h2>
 <h2 id="test-colors-and-contrasts">Colors and contrasts</h2>
