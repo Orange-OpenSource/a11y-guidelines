@@ -1,4 +1,4 @@
-# Audit WCAG
+# WCAG audit 
 <script>$(document).ready(function () {
     setBreadcrumb([
         {"label":"Critères WCAG par thème", "url": "./incontournables.html"},
@@ -32,7 +32,7 @@ The grid calculates a compliance rate per page audited: this rate is equal to th
 
 The link below opens the grid in a new browser window.   
 
-<a href="../../web/la-vallydette/?lang=en" target="_blank" class="btn btn-secondary" style="text-decoration: none">Open the va11ydette <span class="sr-only"> (new windows)</span></a>
+<a href="../../web/la-vallydette/?lang=en" target="_blank" class="btn btn-secondary" style="text-decoration: none">Open the va11ydette <span class="sr-only"> (new window)</span></a>
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
