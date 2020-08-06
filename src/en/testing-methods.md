@@ -19,9 +19,3 @@ User evaluation refers to having digital services tested by users with disabilit
 For more details&nbsp;:
 - [Methods and tools specific to the Web](../web/test-tools/)
 - [Accessibility user testing](../accessibility-user-testing/)
-
-Bonjour Mickaël,
-
-Dans le cadre de la suite de la mission de Benjamin, Gaëtan m’a donné un retour positif sur le CV de Florian Pubert, développeur sénior fullstack Liferay (transmis le 20 juillet et ci-joint).
-
-Je vous propose donc un entretien avec lui afin d’échanger sur vos besoins et l’adéquation avec son profil.
