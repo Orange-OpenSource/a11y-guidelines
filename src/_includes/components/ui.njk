@@ -11,10 +11,10 @@
 
 {% macro tileNavigation(links) %}
 <div class="card-deck">
-{% for link in links %}
+{%- for link in links -%}
   <div class="card bg-{{ link.theme }}">
-    <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 text-center">
-      <img src="../images/icons/{{ link.icon.name }}.svg" alt="" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
+    <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 px-3 text-center">
+      <img src="../images/icons/{{ link.icon.name }}.svg" alt="" class="img-fluid" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
     </div>
     <div class="card-body bg-dark">
       <h3 class="card-title text-primary{% if not link.abstract %} mb-0{% endif %}">
@@ -27,13 +27,13 @@
       {% endif %}
     </div>
   </div>
-{% endfor %}
+{%- endfor -%}
 </div>
 {% endmacro %}
 
 {% macro lastPosts(posts, max) %}
 <ol class="list-unstyled row">
-  {% for post in posts | reverse | limit(max) %}
+  {%- for post in posts | reverse | limit(max) -%}
     <li class="col-md-4 pb-3 d-flex">
       <article class="bg-white p-3 flex-grow-1">
         <h3 class="mb-1">
@@ -47,7 +47,7 @@
         {% endif %}
       </article>
     </li>
-  {% endfor %}
+  {%- endfor -%}
 </ol>
 {% endmacro %}
 
@@ -56,7 +56,7 @@
   {{ filtersBar(posts) }}
 {% endif %}
 <ol class="list-unstyled">
-{% for post in posts | reverse %}{% if page.url != post.url %}
+{%- for post in posts | reverse %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
 
   <li class="border-bottom border-500 py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
@@ -72,18 +72,18 @@
       {% endif %}
       {% if tags %}
         <ul class="list-inline">
-          {% for tag in tags %}
+          {%- for tag in tags -%}
             <li class="list-inline-item">
               <a href="?tag={{ tag }}" class="badge badge-secondary">
                 <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "tags." + tag, locale %}
               </a>
             </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
       {% endif %}
     </article>
   </li>
-{% endif %}{% endfor %}
+{% endif %}{%- endfor -%}
 </ol>
 {% endmacro %}
 
@@ -97,13 +97,13 @@
         <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "filtersBar.all", locale %}
       </a>
     </li>
-    {% for tag in tags %}
+    {%- for tag in tags -%}
       <li class="nav-item">
         <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">
           <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "tags." + tag, locale %}
         </a>
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </nav>
 {% endmacro %}
@@ -112,11 +112,11 @@
 <nav id="toc" role="navigation" aria-labelledby="toc-title">
   <h2 id="toc-title">{% translate "toc.title", locale %}</h2>
   <ul class="nav flex-column">
-    {% for heading in content | getHeadingsForToc %}
+    {%- for heading in content | getHeadingsForToc -%}
       <li class="nav-item position-relative">
         <a href="#{{ heading.id }}" class="nav-link text-muted">{{ heading.text }}</a>
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </nav>
 {% endmacro %}
