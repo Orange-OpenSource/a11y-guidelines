@@ -72,7 +72,8 @@
         "output/markdown/exemples.md",
         "output/markdown/techniques.md",
         "output/markdown/htmlaria.md",
-        "output/markdown/about.md"
+        "output/markdown/about.md",
+		"output/markdown/audit-wcag.md"
     ],
     "maxTocLevel":"1"
 }

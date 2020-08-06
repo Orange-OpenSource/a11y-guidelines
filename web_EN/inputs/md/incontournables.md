@@ -23,6 +23,9 @@
                 $("#incontournables-testeurs-tab").tab("show");
                 window.location.hash = 'test';
             }
+        },
+        {
+            "label":"WCAG audit", "url":"audit-wcag.html"
         }
 	]);
     $("#incontournables-concepteurs-tab").on("click", function() {

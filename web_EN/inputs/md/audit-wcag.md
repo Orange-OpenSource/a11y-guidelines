@@ -15,24 +15,24 @@
             "label":"Tests", "url":"incontournables.html#test", "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
         },
         {
-            "label":"Audit WCAG", "url":"audit-wcag.html"
+            "label":"WCAG audit", "url":"audit-wcag.html"
         }
     ]);    
 });</script>
 
 <span data-menuitem="incontournables"></span>
 
-L’audit WCAG a pour objectif de calculer les taux de conformité mentionnés sur les déclarations d’accessibilité des sites Web d’Orange.
+The purpose of the WCAG audit is to calculate the compliance rates found in the accessibility statements which are available on Orange websites. 
 
-Orange a mis en place une grille de questions nommée la va11ydette.  Cette grille reprend les 50 critères du standard WCAG version 2.1 de niveau A et AA en 64 questions. Chaque question permet de valider ou d’invalider un ou plusieurs critères, un critère peut être traité par une ou plusieurs questions. 
+Orange has developed a grid of questions called the va11ydette. This grid consists of 64 questions, that between them cover the 50 criteria of the WCAG version 2.1 levels A and AA. Each question is used to validate or invalidate one or more criteria, and any given criterion can be addressed by one or more questions. 
 
-La grille calcule un taux de conformité par page auditée : ce taux est égal à la somme des critères conformes divisée par le nombre de critères applicables. Elle calcule aussi le taux moyen de conformité qui correspond à la moyenne des taux de conformité de chaque page de l’échantillon.
+The grid calculates a compliance rate per page audited: this rate is equal to the sum of the criteria that are compliant, divided by the number of criteria that are applicable. It also calculates the average compliance rate, which corresponds to the average of the compliance rates of the pages tested. 
 
-## Accéder à la va11ydette
+## Go to the va11ydette
 
-Le lien ci-dessous entraine l'ouverture de la grille dans un nouvel onglet du navigateur.  
+The link below opens the grid in a new browser window.   
 
-<a href="./la-vallydette/" target="_blank" class="btn btn-secondary" style="text-decoration: none">Ouvrir la va11ydette<span class="sr-only"> (nouvelle fenêtre)</span></a>
+<a href="../../web/la-vallydette/?lang=en" target="_blank" class="btn btn-secondary" style="text-decoration: none">Open the va11ydette <span class="sr-only"> (new windows)</span></a>
 
 &nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
