@@ -23,7 +23,6 @@
     {%- for item in css -%}
       <link rel="stylesheet" href="{{ item }}">
     {%- endfor -%}
-     <style>.no-js .hidden-if-no-js{display:none!important}</style>
   </head>
   <body{% if displayToc == true %} data-spy="scroll" data-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
