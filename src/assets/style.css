@@ -1,3 +1,27 @@
+@charset "UTF-8";
+
+@font-face {
+  font-display: swap;
+  font-family: "HelvNeueOrange";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/assets/fonts/HelvNeue55_W1G.woff2") format("woff2"),
+    url("/assets/fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelvNeueOrange";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/HelvNeue75_W1G.woff2") format("woff2"),
+    url("/assets/fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+
+
 /**
  * General
  */
