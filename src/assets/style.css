@@ -121,10 +121,37 @@ blockquote p::after {
   fill: currentColor;
 }
 
+
+
+/**
+ * Components examples
+ */
+
+pre code .important {
+  border: 1px solid #f00;
+}
+
+.highlight-code {
+  background-color:rgba(255, 255, 128, .5) !important;
+  z-index: 1000;
+}
+
+/* Source code */
+pre code {
+  border: .2rem solid #eee;
+  display: block;
+}
+
+
+
 /**
  * Utilities
  */
 
 .bg-300 {
   background-color: #eee !important;
+}
+
+.no-js .hidden-if-no-js {
+  display: none !important;
 }
