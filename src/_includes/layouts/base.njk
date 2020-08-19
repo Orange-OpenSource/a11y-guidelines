@@ -35,10 +35,10 @@
     <a href="#" id="back-to-top" class="o-scroll-up static" title="{% translate "backToTop.label", locale %}">
       <span class="d-none d-sm-inline-block">{% translate "backToTop.label", locale %}</span>
     </a>
-    {% if jquery == true or boostedJS == true %}
+    {% if jquery == true or boostedJS == true or displayToc == true %}
       <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
-    {% if boostedJS == true %}
+    {% if boostedJS == true or displayToc == true %}
       <script src="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/js/boosted.min.js" integrity="{{ vendors.boosted.js.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
     {% if highlightJS == true %}
