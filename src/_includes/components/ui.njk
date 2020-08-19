@@ -120,3 +120,16 @@
   </ul>
 </nav>
 {% endmacro %}
+
+{% macro sideNavigation() %}
+<nav id="side-navigation" role="navigation" aria-labelledby="side-navigation-label">
+  <h2 id="side-navigation-label" class="sr-only">{% translate "navigation.side.label", locale %}</h2>
+  <ul class="nav flex-column">
+    {%- for link in sideNavigationLinks -%}
+      <li class="nav-item position-relative">
+        {{ navLink(link, "text-muted") }}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+{% endmacro %}

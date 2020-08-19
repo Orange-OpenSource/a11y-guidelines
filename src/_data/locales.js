@@ -15,6 +15,9 @@ module.exports = {
       },
       secondary: {
         label: 'Secondary navigation'
+      },
+      side: {
+        label: 'Category navigation'
       }
     },
     header: {
@@ -60,6 +63,9 @@ module.exports = {
       },
       secondary: {
         label: 'Navigation secondaire'
+      },
+      side: {
+        label: 'Navigation de catégorie'
       }
     },
     header: {
