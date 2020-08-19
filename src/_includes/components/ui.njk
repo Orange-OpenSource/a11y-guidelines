@@ -1,10 +1,10 @@
-{% macro navLink(link) %}
+{% macro navLink(link, class) %}
 {% set strictlyActive = page.url == link.href %}
 {% set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl %}
 
 {% set current = "page" if strictlyActive else "true" %}
 
-<a href="{{ link.href }}" class="nav-link{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
+<a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
   {{ link.label }}
 </a>
 {% endmacro %}
