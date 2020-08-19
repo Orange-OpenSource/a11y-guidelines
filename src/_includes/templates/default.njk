@@ -2,20 +2,31 @@
 {% import "../components/ui.njk" as ui with context %}
 
 {% block content %}
-  {% if displayToc == true %}
+  {%- if displayToc == true or sideNavigationLinks -%}
+    {%- set mainContentColumn = "9" -%}
+    {%- if displayToc == true and sideNavigationLinks -%}
+      {% set mainContentColumn = "6" %}
+    {%- endif -%}
     <div class="container-lg pt-4">
       <div class="row">
-        <main id="main-content" class="col-md-8" role="main">
+        {% if sideNavigationLinks %}
+          <div class="col-md-3">
+            {{ ui.sideNavigation() }}
+          </div>
+        {% endif %}
+        <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">
           {{ content | safe }}
         </main>
-        <div class="col-md-4">
-          {{ ui.toc() }}
-        </div>
+        {% if displayToc == true %}
+          <div class="col-md-3">
+            {{ ui.toc() }}
+          </div>
+        {% endif %}
       </div>
     </div>
-  {% else %}
+  {%- else -%}
     <main id="main-content" class="container-lg pt-4" role="main">
       {{ content | safe }}
     </main>
-  {% endif %}
+  {%- endif -%}
 {% endblock %}
