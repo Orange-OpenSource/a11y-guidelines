@@ -1,0 +1,1358 @@
+[
+  {
+    "old": "about.html",
+    "new": "/fr/a-propos"
+  },
+  {
+    "old": "all.html",
+    "new": "/fr"
+  },
+  {
+    "old": "contact.html",
+    "new": "/fr/contact"
+  },
+  {
+    "old": "faq.html",
+    "new": "/fr"
+  },
+  {
+    "old": "focus-cognitif.html",
+    "new": "/fr/handicap-cognitif"
+  },
+  {
+    "old": "focus-seniors.html",
+    "new": "/fr/les-seniors"
+  },
+  {
+    "old": "focus.html",
+    "new": "/fr/les-situations-de-handicap"
+  },
+  {
+    "old": "home_EN/about.html",
+    "new": "/en/about"
+  },
+  {
+    "old": "home_EN/all.html",
+    "new": "/en"
+  },
+  {
+    "old": "home_EN/contact.html",
+    "new": "/en/contact"
+  },
+  {
+    "old": "home_EN/focus-cognitif.html",
+    "new": "/en/cognitive-disability"
+  },
+  {
+    "old": "home_EN/focus-seniors.html",
+    "new": "/en/older-people"
+  },
+  {
+    "old": "home_EN/focus.html",
+    "new": "/en/types-of-disabilities"
+  },
+  {
+    "old": "home_EN/index.html",
+    "new": "/en"
+  },
+  {
+    "old": "home_EN/methode-tests-utilisateur.html",
+    "new": "/en/accessibility-user-testing"
+  },
+  {
+    "old": "home_EN/organisation.html",
+    "new": "/en"
+  },
+  {
+    "old": "home_EN/outils.html",
+    "new": "/en/assistive-technologies"
+  },
+  {
+    "old": "home_EN/search.html",
+    "new": "/en/search"
+  },
+  {
+    "old": "home_EN/test.html",
+    "new": "/en/testing-methods"
+  },
+  {
+    "old": "index.html",
+    "new": "/fr"
+  },
+  {
+    "old": "methode-tests-utilisateur.html",
+    "new": "/fr/methode-tests-utilisateur"
+  },
+  {
+    "old": "mobile_EN/about.html",
+    "new": "/en/about"
+  },
+  {
+    "old": "mobile_EN/all.html",
+    "new": "/en/mobile"
+  },
+  {
+    "old": "mobile_EN/contact.html",
+    "new": "/en/contact"
+  },
+  {
+    "old": "mobile_EN/criteria-android.html",
+    "new": "/en/mobile/android/criteria"
+  },
+  {
+    "old": "mobile_EN/criteria-flutter.html",
+    "new": "/en/mobile/flutter"
+  },
+  {
+    "old": "mobile_EN/criteria-ios-test.html",
+    "new": "/en/mobile/ios/test"
+  },
+  {
+    "old": "mobile_EN/criteria-ios.html",
+    "new": "/en/mobile/ios/design"
+  },
+  {
+    "old": "mobile_EN/criteria-mobile.html",
+    "new": "/en/mobile-criteria"
+  },
+  {
+    "old": "mobile_EN/dev-android.html",
+    "new": "/en/mobile/android/development"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-16202.html",
+    "new": "/en/mobile/ios/wwdc/2016/202"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-16407.html",
+    "new": "/en/mobile/ios/wwdc/2016/407"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-17215.html",
+    "new": "/en/mobile/ios/wwdc/2017/215"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-17245.html",
+    "new": "/en/mobile/ios/wwdc/2017/245"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-18230.html",
+    "new": "/en/mobile/ios/wwdc/2018/230"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-18236.html",
+    "new": "/en/mobile/ios/wwdc/2018/236"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-19000.html",
+    "new": "/en/mobile/ios/wwdc/2019"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc-19261.html",
+    "new": "/en/mobile/ios/wwdc/2019/261"
+  },
+  {
+    "old": "mobile_EN/dev-ios-wwdc.html",
+    "new": "/en/mobile/ios/wwdc"
+  },
+  {
+    "old": "mobile_EN/dev-ios.html",
+    "new": "/en/mobile/ios/development"
+  },
+  {
+    "old": "mobile_EN/dev-mobile.html",
+    "new": "/en/mobile"
+  },
+  {
+    "old": "mobile_EN/index.html",
+    "new": "/en/mobile"
+  },
+  {
+    "old": "mobile_EN/links.html",
+    "new": "/en/mobile/useful-links"
+  },
+  {
+    "old": "mobile_EN/mdan.html",
+    "new": "/en/mobile/mdan"
+  },
+  {
+    "old": "mobile_EN/mobile-android.html",
+    "new": "/en/mobile/android"
+  },
+  {
+    "old": "mobile_EN/mobile-ios.html",
+    "new": "/en/mobile/ios"
+  },
+  {
+    "old": "mobile_EN/screen-reader-voiceover-iphonex.html",
+    "new": "/en/mobile/ios/voiceover/iphone-x"
+  },
+  {
+    "old": "mobile_EN/screen-reader.html",
+    "new": "/en/mobile/screen-readers"
+  },
+  {
+    "old": "mobile_EN/search.html",
+    "new": "/en/search"
+  },
+  {
+    "old": "mobile_EN/talkback.html",
+    "new": "/en/mobile/android/talkback"
+  },
+  {
+    "old": "mobile_EN/voiceover.html",
+    "new": "/en/mobile/ios/voiceover"
+  },
+  {
+    "old": "mobile/about.html",
+    "new": "/fr/a-propos"
+  },
+  {
+    "old": "mobile/all.html",
+    "new": "/fr/mobile"
+  },
+  {
+    "old": "mobile/contact.html",
+    "new": "/fr/contact"
+  },
+  {
+    "old": "mobile/criteria-android-conception.html",
+    "new": "/fr/mobile/android/conception"
+  },
+  {
+    "old": "mobile/criteria-android-dev.html",
+    "new": "/fr/mobile/android/developpement"
+  },
+  {
+    "old": "mobile/criteria-android-test.html",
+    "new": "/fr/mobile/android/test"
+  },
+  {
+    "old": "mobile/criteria-android.html",
+    "new": "/fr/mobile/android"
+  },
+  {
+    "old": "mobile/criteria-flutter.html",
+    "new": "/fr/mobile/flutter"
+  },
+  {
+    "old": "mobile/criteria-ios-conception.html",
+    "new": "/fr/mobile/ios/conception"
+  },
+  {
+    "old": "mobile/criteria-ios-dev.html",
+    "new": "/fr/mobile/ios/developpement"
+  },
+  {
+    "old": "mobile/criteria-ios-test.html",
+    "new": "/fr/mobile/ios/test"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-16202.html",
+    "new": "/fr/mobile/ios/wwdc/2016/202"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-16407.html",
+    "new": "/fr/mobile/ios/wwdc/2016/407"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-17215.html",
+    "new": "/fr/mobile/ios/wwdc/2017/215"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-17245.html",
+    "new": "/fr/mobile/ios/wwdc/2017/245"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-18230.html",
+    "new": "/fr/mobile/ios/wwdc/2018/230"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-18236.html",
+    "new": "/fr/mobile/ios/wwdc/2018/236"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-19000.html",
+    "new": "/fr/mobile/ios/wwdc/2019"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc-19261.html",
+    "new": "/fr/mobile/ios/wwdc/2019/261"
+  },
+  {
+    "old": "mobile/criteria-ios-wwdc.html",
+    "new": "/fr/mobile/ios/wwdc"
+  },
+  {
+    "old": "mobile/criteria-ios.html",
+    "new": "/fr/mobile/ios"
+  },
+  {
+    "old": "mobile/index.html",
+    "new": "/fr/mobile"
+  },
+  {
+    "old": "mobile/lecteur-ecran-voiceover-iphonex.html",
+    "new": "/fr/mobile/ios/voiceover/iphone-x"
+  },
+  {
+    "old": "mobile/lecteur-ecran-voiceover.html",
+    "new": "/fr/mobile/ios/voiceover"
+  },
+  {
+    "old": "mobile/links.html",
+    "new": "/fr/mobile/liens-utiles"
+  },
+  {
+    "old": "mobile/mdan.html",
+    "new": "/fr/mobile/mdan"
+  },
+  {
+    "old": "mobile/screen-reader-talkback.html",
+    "new": "/fr/mobile/android/talkback"
+  },
+  {
+    "old": "mobile/screen-reader.html",
+    "new": "/fr/mobile/lecteurs-decran"
+  },
+  {
+    "old": "mobile/search.html",
+    "new": "/fr/recherche"
+  },
+  {
+    "old": "organisation.html",
+    "new": "/fr"
+  },
+  {
+    "old": "others_EN/about.html",
+    "new": "/en/about"
+  },
+  {
+    "old": "others_EN/all.html",
+    "new": "/en/editorial-content"
+  },
+  {
+    "old": "others_EN/contact.html",
+    "new": "/en/contact"
+  },
+  {
+    "old": "others_EN/editorial.html",
+    "new": "/en/editorial-content/general"
+  },
+  {
+    "old": "others_EN/email.html",
+    "new": "/en/editorial-content/emails"
+  },
+  {
+    "old": "others_EN/index.html",
+    "new": "/en/editorial-content"
+  },
+  {
+    "old": "others_EN/pdf.html",
+    "new": "/en/editorial-content/pdf"
+  },
+  {
+    "old": "others_EN/powerpoint-create.html",
+    "new": "/en/editorial-content/powerpoint/create"
+  },
+  {
+    "old": "others_EN/powerpoint-test.html",
+    "new": "/en/editorial-content/powerpoint/test"
+  },
+  {
+    "old": "others_EN/powerpoint.html",
+    "new": "/en/editorial-content/powerpoint"
+  },
+  {
+    "old": "others_EN/search.html",
+    "new": "/en"
+  },
+  {
+    "old": "others_EN/video.html",
+    "new": "/en/editorial-content/animated-components"
+  },
+  {
+    "old": "others_EN/word-create.html",
+    "new": "/en/editorial-content/word/create"
+  },
+  {
+    "old": "others_EN/word-test.html",
+    "new": "/en/editorial-content/word/test"
+  },
+  {
+    "old": "others_EN/word.html",
+    "new": "/en/editorial-content/word"
+  },
+  {
+    "old": "others/about.html",
+    "new": "/fr/a-propos"
+  },
+  {
+    "old": "others/all.html",
+    "new": "/fr"
+  },
+  {
+    "old": "others/contact.html",
+    "new": "/fr/contact"
+  },
+  {
+    "old": "others/editorial.html",
+    "new": "/fr/contenu-editorial/generalites"
+  },
+  {
+    "old": "others/email.html",
+    "new": "/fr/contenu-editorial/emails"
+  },
+  {
+    "old": "others/index.html",
+    "new": "/fr/contenu-editorial"
+  },
+  {
+    "old": "others/pdf.html",
+    "new": "/fr/contenu-editorial/pdf"
+  },
+  {
+    "old": "others/powerpoint-create.html",
+    "new": "/fr/contenu-editorial/powerpoint/creer"
+  },
+  {
+    "old": "others/powerpoint-test.html",
+    "new": "/fr/contenu-editorial/powerpoint/tester"
+  },
+  {
+    "old": "others/powerpoint.html",
+    "new": "/fr/contenu-editorial/powerpoint"
+  },
+  {
+    "old": "others/pushmail.html",
+    "new": "/fr/contenu-editorial/emails"
+  },
+  {
+    "old": "others/search.html",
+    "new": "/fr/recherche"
+  },
+  {
+    "old": "others/video-audio.html",
+    "new": "/fr/contenu-editorial/composants-animes"
+  },
+  {
+    "old": "others/word-create.html",
+    "new": "/fr/contenu-editorial/word/creer"
+  },
+  {
+    "old": "others/word-test.html",
+    "new": "/fr/contenu-editorial/word/tester"
+  },
+  {
+    "old": "others/word.html",
+    "new": "/fr/contenu-editorial/word"
+  },
+  {
+    "old": "outils.html",
+    "new": "/fr/solutions-assistance"
+  },
+  {
+    "old": "search.html",
+    "new": "/fr/recherche"
+  },
+  {
+    "old": "test.html",
+    "new": "/fr/tester"
+  },
+  {
+    "old": "web_EN/about.html",
+    "new": "/en/about"
+  },
+  {
+    "old": "web_EN/all.html",
+    "new": "/en/web"
+  },
+  {
+    "old": "web_EN/captcha.html",
+    "new": "/en/articles/captcha-accessibility"
+  },
+  {
+    "old": "web_EN/exemples.html",
+    "new": "/en/web/components-examples"
+  },
+  {
+    "old": "web_EN/exemples/ARIA-clavier",
+    "new": "/en/web/components-examples/keyboard-navigation-aria"
+  },
+  {
+    "old": "web_EN/exemples/chatbot",
+    "new": "/en/web/components-examples/chatbot"
+  },
+  {
+    "old": "web_EN/exemples/check-listbox",
+    "new": "/en/web/components-examples/listbox-with-checkboxes"
+  },
+  {
+    "old": "web_EN/exemples/dynFocus",
+    "new": "/en/web/components-examples/dynamic-focus"
+  },
+  {
+    "old": "web_EN/exemples/files",
+    "new": "/en/web/components-examples/file-explorer"
+  },
+  {
+    "old": "web_EN/exemples/files/step1",
+    "new": "/en/web/components-examples/file-explorer/step1"
+  },
+  {
+    "old": "web_EN/exemples/formulaire",
+    "new": "/en/web/components-examples/forms"
+  },
+  {
+    "old": "web_EN/exemples/iframes-techniques",
+    "new": "/en/web/components-examples/technical-iframe"
+  },
+  {
+    "old": "web_EN/exemples/landmarks",
+    "new": "/en/web/components-examples/landmarks"
+  },
+  {
+    "old": "web_EN/exemples/listbox-pattern-aria",
+    "new": "/en/web/components-examples/listbox-and-keyboard-navigation"
+  },
+  {
+    "old": "web_EN/exemples/listbox",
+    "new": "/en/web/components-examples/listbox"
+  },
+  {
+    "old": "web_EN/exemples/masquage/index.html",
+    "new": "/en/web/components-examples/accessible-hiding"
+  },
+  {
+    "old": "web_EN/exemples/prix/index.html",
+    "new": "/en/web/components-examples/price-vocalization"
+  },
+  {
+    "old": "web_EN/exemples/role-dialog/role-dialog.html",
+    "new": "/en/web/components-examples/dialogs/1"
+  },
+  {
+    "old": "web_EN/exemples/role-dialog2/role-dialog.html",
+    "new": "/en/web/components-examples/dialogs/2"
+  },
+  {
+    "old": "web_EN/exemples/simple-menu/simple-menu.html",
+    "new": "/en/web/components-examples/dropdown-menu"
+  },
+  {
+    "old": "web_EN/exemples/speak",
+    "new": "/en/web/components-examples/make-a-screen-reader-talk"
+  },
+  {
+    "old": "web_EN/exemples/stepbar/stepbar.html",
+    "new": "/en/web/components-examples/stepbar"
+  },
+  {
+    "old": "web_EN/exemples/tag-exemples/Exemple_destinataire.html",
+    "new": "/en/web/components-examples/tags/examples/adding-a-recipient"
+  },
+  {
+    "old": "web_EN/exemples/tag-exemples/Exemple_filtre.html",
+    "new": "/en/web/components-examples/tags/examples/filter-by-brand"
+  },
+  {
+    "old": "web_EN/exemples/tag-exemples/index.html",
+    "new": "/en/web/components-examples/tags/2"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple1.html",
+    "new": "/en/web/components-examples/tags/examples/1"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple2.html",
+    "new": "/en/web/components-examples/tags/examples/2"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple3.html",
+    "new": "/en/web/components-examples/tags/examples/3"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple4.html",
+    "new": "/en/web/components-examples/tags/examples/4"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple5.html",
+    "new": "/en/web/components-examples/tags/examples/5"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple6.html",
+    "new": "/en/web/components-examples/tags/examples/6"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple7.html",
+    "new": "/en/web/components-examples/tags/examples/7"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple8.html",
+    "new": "/en/web/components-examples/tags/examples/8"
+  },
+  {
+    "old": "web_EN/exemples/tag/exemple9.html",
+    "new": "/en/web/components-examples/tags/examples/9"
+  },
+  {
+    "old": "web_EN/exemples/tag/index.html",
+    "new": "/en/web/components-examples/tags"
+  },
+  {
+    "old": "web_EN/exemples/tooltip/tooltip.html",
+    "new": "/en/web/components-examples/tooltips"
+  },
+  {
+    "old": "web_EN/exemples/webmail/index.html",
+    "new": "/en/web/components-examples/webmail"
+  },
+  {
+    "old": "web_EN/exemples/zoom/exemple1.html",
+    "new": "/en/web/components-examples/zoom/examples/1"
+  },
+  {
+    "old": "web_EN/exemples/zoom/exemple2.html",
+    "new": "/en/web/components-examples/zoom/examples/2"
+  },
+  {
+    "old": "web_EN/exemples/zoom",
+    "new": "/en/web/components-examples/zoom"
+  },
+  {
+    "old": "web_EN/exigences.html",
+    "new": "/en/web/resources"
+  },
+  {
+    "old": "web_EN/fondamentaux.html",
+    "new": "/en/web/wcag-criteria-by-theme"
+  },
+  {
+    "old": "web_EN/htmlaria.html",
+    "new": "/en/articles/html5-aria"
+  },
+  {
+    "old": "web_EN/inc-con-acces-multiples.html",
+    "new": "/en/web/design/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-adaptatif.html",
+    "new": "/en/web/design/layout"
+  },
+  {
+    "old": "web_EN/inc-con-aerer-texte.html",
+    "new": "/en/web/design/layout"
+  },
+  {
+    "old": "web_EN/inc-con-alternative-gestures.html",
+    "new": "/en/web/design/touch-and-interactions"
+  },
+  {
+    "old": "web_EN/inc-con-audio-video.html",
+    "new": "/en/web/design/non-textual-content"
+  },
+  {
+    "old": "web_EN/inc-con-captcha.html",
+    "new": "/en/web/design/non-textual-content"
+  },
+  {
+    "old": "web_EN/inc-con-coherence-navigation.html",
+    "new": "/en/web/design/layout"
+  },
+  {
+    "old": "web_EN/inc-con-contrastes.html",
+    "new": "/en/web/design/colors-and-contrasts"
+  },
+  {
+    "old": "web_EN/inc-con-controle-animations.html",
+    "new": "/en/web/design/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-equivalent-textuel.html",
+    "new": "/en/web/design/non-textual-content"
+  },
+  {
+    "old": "web_EN/inc-con-formulaires.html",
+    "new": "/en/web/design/forms"
+  },
+  {
+    "old": "web_EN/inc-con-information-sensorielle.html",
+    "new": "/en/web/design/colors-and-contrasts"
+  },
+  {
+    "old": "web_EN/inc-con-libelles.html",
+    "new": "/en/web/design/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-liens-evitement.html",
+    "new": "/en/web/design/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-navigation-clavier.html",
+    "new": "/en/web/design/keyboard-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-nouvelles-fenetres.html",
+    "new": "/en/web/design/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-orientation-ecran.html",
+    "new": "/en/web/design/touch-and-interactions"
+  },
+  {
+    "old": "web_EN/inc-con-titre-pages.html",
+    "new": "/en/web/design/textual-content"
+  },
+  {
+    "old": "web_EN/inc-con-titre-rubriques.html",
+    "new": "/en/web/design/textual-content"
+  },
+  {
+    "old": "web_EN/inc-con-visibilite-focus.html",
+    "new": "/en/web/design/keyboard-navigation"
+  },
+  {
+    "old": "web_EN/inc-con-zones-sensibles.html",
+    "new": "/en/web/design/layout"
+  },
+  {
+    "old": "web_EN/inc-dev-acces-multiples.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-adaptatif.html",
+    "new": "/en/web/develop/layout"
+  },
+  {
+    "old": "web_EN/inc-dev-aerer-texte.html",
+    "new": "/en/web/develop/layout"
+  },
+  {
+    "old": "web_EN/inc-dev-alternative-gestures.html",
+    "new": "/en/web/develop/touch-and-interactions"
+  },
+  {
+    "old": "web_EN/inc-dev-annuler-gestuelle.html",
+    "new": "/en/web/develop/touch-and-interactions"
+  },
+  {
+    "old": "web_EN/inc-dev-audio-video.html",
+    "new": "/en/web/develop/non-textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-autoriser-zoom.html",
+    "new": "/en/web/develop/touch-and-interactions"
+  },
+  {
+    "old": "web_EN/inc-dev-changement-langue.html",
+    "new": "/en/web/develop/textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-coherence-navigation.html",
+    "new": "/en/web/develop/layout"
+  },
+  {
+    "old": "web_EN/inc-dev-contrastes.html",
+    "new": "/en/web/develop/colors-and-contrasts"
+  },
+  {
+    "old": "web_EN/inc-dev-controle-animations.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-controle-interactions.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-crit-captcha.html",
+    "new": "/en/web/develop/non-textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-equivalent-textuel.html",
+    "new": "/en/web/develop/non-textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-etiquette-formulaires.html",
+    "new": "/en/web/develop/forms"
+  },
+  {
+    "old": "web_EN/inc-dev-identifier-erreurs.html",
+    "new": "/en/web/develop/forms"
+  },
+  {
+    "old": "web_EN/inc-dev-information-sensorielle.html",
+    "new": "/en/web/develop/colors-and-contrasts"
+  },
+  {
+    "old": "web_EN/inc-dev-intitules-hors-contexte.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-lecteur-ecran.html",
+    "new": "/en/web/develop/assistive-technology"
+  },
+  {
+    "old": "web_EN/inc-dev-liens-evitement.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-message-contextuel.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-nouvelle-fenetre.html",
+    "new": "/en/web/develop/common-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-orientation-ecran.html",
+    "new": "/en/web/develop/touch-and-interactions"
+  },
+  {
+    "old": "web_EN/inc-dev-parcours-focus.html",
+    "new": "/en/web/develop/keyboard-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-semantique-html.html",
+    "new": "/en/web/develop/textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-separation-contenu-presentation.html",
+    "new": "/en/web/develop/layout"
+  },
+  {
+    "old": "web_EN/inc-dev-tableaux.html",
+    "new": "/en/web/develop/textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-taille-zones.html",
+    "new": "/en/web/develop/layout"
+  },
+  {
+    "old": "web_EN/inc-dev-titre-pages.html",
+    "new": "/en/web/develop/textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-titre-rubriques.html",
+    "new": "/en/web/develop/textual-content"
+  },
+  {
+    "old": "web_EN/inc-dev-utilisation-clavier.html",
+    "new": "/en/web/develop/keyboard-navigation"
+  },
+  {
+    "old": "web_EN/inc-dev-visibilite-focus.html",
+    "new": "/en/web/develop/keyboard-navigation"
+  },
+  {
+    "old": "web_EN/incontournables.html",
+    "new": "/en/web/wcag-criteria-by-project-phase"
+  },
+  {
+    "old": "web_EN/index.html",
+    "new": "/en/web"
+  },
+  {
+    "old": "web_EN/label-ledby-describedby.html",
+    "new": "/en/articles/aria-attributes-that-can-save-you"
+  },
+  {
+    "old": "web_EN/methodes-outils-clavier.html",
+    "new": "/en/web/test-tools/keyboard-navigation"
+  },
+  {
+    "old": "web_EN/methodes-outils-contrastes.html",
+    "new": "/en/web/test-tools/color-contrast-level"
+  },
+  {
+    "old": "web_EN/methodes-outils-extensions.html",
+    "new": "/en/web/test-tools/browser-extensions"
+  },
+  {
+    "old": "web_EN/methodes-outils-lecteur-ecran.html",
+    "new": "/en/web/test-tools/navigating-with-a-screen-reader"
+  },
+  {
+    "old": "web_EN/methodes-outils-liste-titres.html",
+    "new": "/en/web/test-tools/page-headers"
+  },
+  {
+    "old": "web_EN/methodes-outils-zoom.html",
+    "new": "/en/web/test-tools/text-zoom"
+  },
+  {
+    "old": "web_EN/methodes-outils.html",
+    "new": "/en/web/test-tools"
+  },
+  {
+    "old": "web_EN/nos-outils.html",
+    "new": "/en/web/our-tools"
+  },
+  {
+    "old": "web_EN/web/search.html",
+    "new": "/en/search"
+  },
+  {
+    "old": "web_EN/skiplinks.html",
+    "new": "/en/articles/skip-links-best-practices"
+  },
+  {
+    "old": "web_EN/techniques.html",
+    "new": "/en/articles"
+  },
+  {
+    "old": "web/a11y-name.html",
+    "new": "/fr/articles/le-nom-accessible-en-html"
+  },
+  {
+    "old": "web/about.html",
+    "new": "/fr/a-propos"
+  },
+  {
+    "old": "web/all.html",
+    "new": "/fr/web"
+  },
+  {
+    "old": "web/aria-live-alert.html",
+    "new": "/fr/web/articles/aria-live-alert"
+  },
+  {
+    "old": "web/aria-status.html",
+    "new": "/fr/articles/messages-de-statut-aria"
+  },
+  {
+    "old": "web/captcha.html",
+    "new": "/fr/articles/les-captchas-et-l-accessibilite"
+  },
+  {
+    "old": "web/confort-plus.html",
+    "new": "/fr/web/confort-plus"
+  },
+  {
+    "old": "web/exemples.html",
+    "new": "/fr/web/exemples-de-composants"
+  },
+  {
+    "old": "web/exemples/ARIA-clavier/index.html",
+    "new": "/fr/web/exemples-de-composants/navigation-clavier-avec-aria"
+  },
+  {
+    "old": "web/exemples/chatbot/index.html",
+    "new": "/fr/web/exemples-de-composants/chatbot/bonnes-pratiques-pour-un-chatbot"
+  },
+  {
+    "old": "web/exemples/check-listbox/index.html",
+    "new": "/fr/web/exemples-de-composants/listbox-avec-cases-a-cocher"
+  },
+  {
+    "old": "web/exemples/dynFocus/index.html",
+    "new": "/fr/web/exemples-de-composants/gestion-dynamique-du-focus"
+  },
+  {
+    "old": "web/exemples/files/index.html",
+    "new": "/fr/web/exemples-de-composants/explorateur-de-fichiers"
+  },
+  {
+    "old": "web/exemples/files/step1/index.html",
+    "new": "/fr/web/exemples-de-composants/explorateur-de-fichiers/etape1"
+  },
+  {
+    "old": "web/exemples/formulaire/index.html",
+    "new": "/fr/web/exemples-de-composants/formulaires"
+  },
+  {
+    "old": "web/exemples/iframes-techniques/index.html",
+    "new": "/fr/web/exemples-de-composants/iframes-techniques"
+  },
+  {
+    "old": "web/exemples/landmarks/index.html",
+    "new": "/fr/web/exemples-de-composants/landmarks/landmarks-aria"
+  },
+  {
+    "old": "web/exemples/listbox-pattern-aria/index.html",
+    "new": "/fr/web/exemples-de-composants/listbox-et-navigation-clavier"
+  },
+  {
+    "old": "web/exemples/listbox/index.html",
+    "new": "/fr/web/exemples-de-composants/listbox"
+  },
+  {
+    "old": "web/exemples/masquage/index.html",
+    "new": "/fr/web/exemples-de-composants/masquage-accessible"
+  },
+  {
+    "old": "web/exemples/prix/index.html",
+    "new": "/fr/web/exemples-de-composants/vocalisation-des-prix"
+  },
+  {
+    "old": "web/exemples/role-dialog/role-dialog.html",
+    "new": "/fr/web/exemples-de-composants/boites-de-dialogue/1"
+  },
+  {
+    "old": "web/exemples/role-dialog2/role-dialog.html",
+    "new": "/fr/web/exemples-de-composants/boites-de-dialogue/2"
+  },
+  {
+    "old": "web/exemples/simple-menu/simple-menu.html",
+    "new": "/fr/web/exemples-de-composants/menu-deroulant"
+  },
+  {
+    "old": "web/exemples/speak/index.html",
+    "new": "/fr/web/exemples-de-composants/faire-parler-le-lecteur-d-ecran"
+  },
+  {
+    "old": "web/exemples/stepbar/stepbar.html",
+    "new": "/fr/web/exemples-de-composants/stepbar"
+  },
+  {
+    "old": "web/exemples/tag-exemples/Exemple_destinataire.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/ajout-destinataire"
+  },
+  {
+    "old": "web/exemples/tag-exemples/Exemple_filtre.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/filtre-par-marque"
+  },
+  {
+    "old": "web/exemples/tag-exemples/index.html",
+    "new": "/fr/web/exemples-de-composants/tags/2"
+  },
+  {
+    "old": "web/exemples/tag/exemple1.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/1"
+  },
+  {
+    "old": "web/exemples/tag/exemple2.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/2"
+  },
+  {
+    "old": "web/exemples/tag/exemple3.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/3"
+  },
+  {
+    "old": "web/exemples/tag/exemple4.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/4"
+  },
+  {
+    "old": "web/exemples/tag/exemple5.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/5"
+  },
+  {
+    "old": "web/exemples/tag/exemple6.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/6"
+  },
+  {
+    "old": "web/exemples/tag/exemple7.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/7"
+  },
+  {
+    "old": "web/exemples/tag/exemple8.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/8"
+  },
+  {
+    "old": "web/exemples/tag/exemple9.html",
+    "new": "/fr/web/exemples-de-composants/tags/exemples/9"
+  },
+  {
+    "old": "web/exemples/tag/index.html",
+    "new": "/fr/web/exemples-de-composants/tags"
+  },
+  {
+    "old": "web/exemples/tooltip/tooltip.html",
+    "new": "/fr/web/exemples-de-composants/tooltips"
+  },
+  {
+    "old": "web/exemples/webmail/index.html",
+    "new": "/fr/web/exemples-de-composants/webmail"
+  },
+  {
+    "old": "web/exemples/zoom/exemple1.html",
+    "new": "/fr/web/exemples-de-composants/zoom/exemples/1"
+  },
+  {
+    "old": "web/exemples/zoom/exemple2.html",
+    "new": "/fr/web/exemples-de-composants/zoom/exemples/1"
+  },
+  {
+    "old": "web/exemples/zoom/index.html",
+    "new": "/fr/web/exemples-de-composants/zoom"
+  },
+  {
+    "old": "web/exigences.html",
+    "new": "/fr/web/referentiels-ressources"
+  },
+  {
+    "old": "web/fondamentaux.html",
+    "new": "/fr/web/criteres-incontournables"
+  },
+  {
+    "old": "web/htmlaria.html",
+    "new": "/fr/articles/html5-et-aria"
+  },
+  {
+    "old": "web/inc-con-acces-multiples.html",
+    "new": "/fr/web/designer/navigation-generale"
+  },
+  {
+    "old": "web/inc-con-adaptatif.html",
+    "new": "/fr/web/designer/mise-en-page"
+  },
+  {
+    "old": "web/inc-con-aerer-texte.html",
+    "new": "/fr/web/designer/mise-en-pagecoherence-regroupements-regions/"
+  },
+  {
+    "old": "web/inc-con-alternative-gestures.html",
+    "new": "/fr/web/designer/mise-en-page"
+  },
+  {
+    "old": "web/inc-con-audio-video.html",
+    "new": "/fr/web/designer/contenu-non-textuel"
+  },
+  {
+    "old": "web/inc-con-captcha.html",
+    "new": "/fr/web/designer/contenu-non-textuel"
+  },
+  {
+    "old": "web/inc-con-coherence-navigation.html",
+    "new": "/fr/web/designer/mise-en-page"
+  },
+  {
+    "old": "web/inc-con-contrastes.html",
+    "new": "/fr/web/designer/couleurs-et-contrastes"
+  },
+  {
+    "old": "web/inc-con-controle-animations.html",
+    "new": "/fr/web/designer/navigation-generale"
+  },
+  {
+    "old": "web/inc-con-equivalent-textuel.html",
+    "new": "/fr/web/designer/contenu-non-textuel"
+  },
+  {
+    "old": "web/inc-con-formulaires.html",
+    "new": "/fr/web/designer/formulaires"
+  },
+  {
+    "old": "web/inc-con-information-sensorielle.html",
+    "new": "/fr/web/designer/couleurs-et-contrastes"
+  },
+  {
+    "old": "web/inc-con-libelles.html",
+    "new": "/fr/web/designer/navigation-generale"
+  },
+  {
+    "old": "web/inc-con-liens-evitement.html",
+    "new": "/fr/web/designer/navigation-generale"
+  },
+  {
+    "old": "web/inc-con-navigation-clavier.html",
+    "new": "/fr/web/designer/navigation-clavier"
+  },
+  {
+    "old": "web/inc-con-nouvelles-fenetres.html",
+    "new": "/fr/web/designer/navigation-generale"
+  },
+  {
+    "old": "web/inc-con-orientation-ecran.html",
+    "new": "/fr/web/designer/mise-en-page"
+  },
+  {
+    "old": "web/inc-con-titre-pages.html",
+    "new": "/fr/web/designer/contenu-textuel"
+  },
+  {
+    "old": "web/inc-con-titre-rubriques.html",
+    "new": "/fr/web/designer/contenu-textuel"
+  },
+  {
+    "old": "web/inc-con-visibilite-focus.html",
+    "new": "/fr/web/designer/navigation-clavier"
+  },
+  {
+    "old": "web/inc-con-zones-sensibles.html",
+    "new": "/fr/web/designer/mise-en-page"
+  },
+  {
+    "old": "web/inc-dev-acces-multiples.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-adaptatif.html",
+    "new": "/fr/web/developper/mise-en-page"
+  },
+  {
+    "old": "web/inc-dev-aerer-texte.html",
+    "new": "/fr/web/developper/mise-en-page"
+  },
+  {
+    "old": "web/inc-dev-alternative-gestures.html",
+    "new": "/fr/web/developper/tactile-et-interactions"
+  },
+  {
+    "old": "web/inc-dev-annuler-gestuelle.html",
+    "new": "/fr/web/developper/tactile-et-interactions"
+  },
+  {
+    "old": "web/inc-dev-audio-video.html",
+    "new": "/fr/web/developper/contenu-non-textuel"
+  },
+  {
+    "old": "web/inc-dev-autoriser-zoom.html",
+    "new": "/fr/web/developper/tactile-et-interactions"
+  },
+  {
+    "old": "web/inc-dev-changement-langue.html",
+    "new": "/fr/web/developper/contenu-textuel"
+  },
+  {
+    "old": "web/inc-dev-coherence-navigation.html",
+    "new": "/fr/web/developper/mise-en-page"
+  },
+  {
+    "old": "web/inc-dev-contrastes.html",
+    "new": "/fr/web/developper/couleurs-et-contrastes"
+  },
+  {
+    "old": "web/inc-dev-controle-animations.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-controle-interactions.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-crit-captcha.html",
+    "new": "/fr/web/developper/contenu-non-textuel"
+  },
+  {
+    "old": "web/inc-dev-equivalent-textuel.html",
+    "new": "/fr/web/developper/contenu-non-textuel"
+  },
+  {
+    "old": "web/inc-dev-etiquette-formulaires.html",
+    "new": "/fr/web/developper/formulaires"
+  },
+  {
+    "old": "web/inc-dev-identifier-erreurs.html",
+    "new": "/fr/web/developper/formulaires"
+  },
+  {
+    "old": "web/inc-dev-information-sensorielle.html",
+    "new": "/fr/web/developper/couleurs-et-contrastes"
+  },
+  {
+    "old": "web/inc-dev-intitules-hors-contexte.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-lecteur-ecran.html",
+    "new": "/fr/web/developper/aides-techniques"
+  },
+  {
+    "old": "web/inc-dev-liens-evitement.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-message-contextuel.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-nouvelle-fenetre.html",
+    "new": "/fr/web/developper/navigation-generale"
+  },
+  {
+    "old": "web/inc-dev-orientation-ecran.html",
+    "new": "/fr/web/developper/tactile-et-interactions"
+  },
+  {
+    "old": "web/inc-dev-parcours-focus.html",
+    "new": "/fr/web/developper/navigation-clavier"
+  },
+  {
+    "old": "web/inc-dev-semantique-html.html",
+    "new": "/fr/web/developper/contenu-textuel"
+  },
+  {
+    "old": "web/inc-dev-separation-contenu-presentation.html",
+    "new": "/fr/web/developper/mise-en-page"
+  },
+  {
+    "old": "web/inc-dev-tableaux.html",
+    "new": "/fr/web/developper/contenu-textuel"
+  },
+  {
+    "old": "web/inc-dev-taille-zones.html",
+    "new": "/fr/web/developper/mise-en-page"
+  },
+  {
+    "old": "web/inc-dev-titre-pages.html",
+    "new": "/fr/web/developper/contenu-textuel"
+  },
+  {
+    "old": "web/inc-dev-titre-rubriques.html",
+    "new": "/fr/web/developper/contenu-textuel"
+  },
+  {
+    "old": "web/inc-dev-utilisation-clavier.html",
+    "new": "/fr/web/developper/navigation-clavier"
+  },
+  {
+    "old": "web/inc-dev-visibilite-focus.html",
+    "new": "/fr/web/developper/navigation-clavier"
+  },
+  {
+    "old": "web/incontournables.html",
+    "new": "/fr/web/criteres-wcag-par-theme"
+  },
+  {
+    "old": "web/index.html",
+    "new": "/fr/web"
+  },
+  {
+    "old": "web/label-ledby-describedby.html",
+    "new": "/fr/articles/attributs-aria-qui-peuvent-vous-sauver"
+  },
+  {
+    "old": "web/methodes-outils-clavier.html",
+    "new": "/fr/outils/navigation-clavier"
+  },
+  {
+    "old": "web/methodes-outils-contrastes.html",
+    "new": "/fr/web/outils/mesurer-contraste-couleurs"
+  },
+  {
+    "old": "web/methodes-outils-extensions.html",
+    "new": "/fr/web/outils/extensions-navigateur"
+  },
+  {
+    "old": "web/methodes-outils-lecteur-ecran.html",
+    "new": "/fr/web/outils/navigation-lecteur-ecran"
+  },
+  {
+    "old": "web/methodes-outils-liste-titres.html",
+    "new": "/fr/web/outils/liste-titres"
+  },
+  {
+    "old": "web/methodes-outils-zoom.html",
+    "new": "/fr/web/outils/agrandissement-texte"
+  },
+  {
+    "old": "web/methodes-outils.html",
+    "new": "/fr/web/outils"
+  },
+  {
+    "old": "web/orange-boosted.html",
+    "new": "/fr/web/outils/orange-boosted"
+  },
+  {
+    "old": "web/search.html",
+    "new": "/fr/recherche"
+  },
+  {
+    "old": "web/skiplinks.html",
+    "new": "/fr/articles/liens-evitements"
+  },
+  {
+    "old": "web/techniques.html",
+    "new": "/fr/articles"
+  }
+]
