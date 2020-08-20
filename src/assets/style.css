@@ -65,20 +65,17 @@ blockquote p::after {
  * Table Of Content and Side navigation
  */
 
-#toc,
-#side-navigation {
+.StickySideNavigation {
   background: #fff;
   position: sticky;
   top: 1.25rem;
 }
 
-#toc a[aria-current],
-#side-navigation a[aria-current] {
+.StickySideNavigation a[aria-current] {
   color: #000 !important;
 }
 
-#toc a[aria-current]::before,
-#side-navigation a[aria-current]::before {
+.StickySideNavigation a[aria-current]::before {
   background-color: #ff7900;
   bottom: .625rem;
   content: "";
