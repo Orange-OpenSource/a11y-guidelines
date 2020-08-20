@@ -1,0 +1,38 @@
+{
+  "highlightJS": true,
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Contenu textuel",
+      "href": "/fr/web/designer/contenu-textuel/"
+    },
+    {
+      "label": "Contenu non-textuel",
+      "href": "/fr/web/designer/contenu-non-textuel/"
+    },
+    {
+      "label": "Couleurs et contrastes",
+      "href": "/fr/web/designer/couleurs-et-contrastes/"
+    },
+    {
+      "label": "Navigation générale",
+      "href": "/fr/web/designer/navigation-generale/"
+    },
+    {
+      "label": "Navigation clavier",
+      "href": "/fr/web/designer/navigation-clavier/"
+    },
+    {
+      "label": "Mise en page",
+      "href": "/fr/web/designer/mise-en-page/"
+    },
+    {
+      "label": "Formulaires",
+      "href": "/fr/web/designer/formulaires/"
+    },
+    {
+      "label": "Tactile et interactions",
+      "href": "/fr/web/designer/tactile-et-interactions/"
+    }
+  ]
+}
