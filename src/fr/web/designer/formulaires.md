@@ -1,8 +1,13 @@
 ---
-title: "Rendre utilisables les formulaires"
+title: "Les formulaires"
 ---
 
-# Rendre utilisables les formulaires
+# Les formulaires
+
+<p class="lead">S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
+
+
+## Rendre utilisables les formulaires
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
