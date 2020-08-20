@@ -27,7 +27,9 @@ module.exports = function (eleventyConfig) {
    * Override markdown generator to create ids automatically on headings
    */
   eleventyConfig.setLibrary('md',
-    markdownIt(config.eleventy.markdownIt).use(markdownItAnchor, config.eleventy.markdownItAnchor)
+    markdownIt(config.eleventy.markdownIt)
+      .use(markdownItAnchor, config.eleventy.markdownItAnchor)
+      .use(config.eleventy.markdownItCustomParser)
   )
 
   /**
