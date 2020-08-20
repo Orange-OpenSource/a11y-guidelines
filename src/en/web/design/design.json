@@ -1,0 +1,38 @@
+{
+  "highlightJS": true,
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Textual content",
+      "href": "/en/web/design/textual-content/"
+    },
+    {
+      "label": "Non-textual content",
+      "href": "/en/web/design/non-textual-content/"
+    },
+    {
+      "label": "Colors and contrasts",
+      "href": "/en/web/design/colors-and-contrasts/"
+    },
+    {
+      "label": "Common navigation",
+      "href": "/en/web/design/common-navigation/"
+    },
+    {
+      "label": "Keyboard navigation",
+      "href": "/en/web/design/keyboard-navigation/"
+    },
+    {
+      "label": "Layout",
+      "href": "/en/web/design/layout/"
+    },
+    {
+      "label": "Forms",
+      "href": "/en/web/design/forms/"
+    },
+    {
+      "label": "Touch and interactions",
+      "href": "/en/web/design/touch-and-interactions/"
+    }
+  ]
+}

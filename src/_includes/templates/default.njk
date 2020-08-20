@@ -2,16 +2,22 @@
 {% import "../components/ui.njk" as ui with context %}
 
 {% block content %}
-  {%- if displayToc == true or sideNavigationLinks -%}
+  {% set leftColumnShouldBeVisible = sideNavigationLinks or leftColumn.display == true %}
+  {%- if displayToc == true or leftColumnShouldBeVisible -%}
     {%- set mainContentColumn = "9" -%}
-    {%- if displayToc == true and sideNavigationLinks -%}
+    {%- if displayToc == true and leftColumnShouldBeVisible -%}
       {% set mainContentColumn = "6" %}
     {%- endif -%}
     <div class="container-lg pt-4">
       <div class="row">
-        {% if sideNavigationLinks %}
+        {% if leftColumnShouldBeVisible %}
           <div class="col-md-3">
             {{ ui.sideNavigation() }}
+            {% if leftColumn.components %}
+              {%- for component in leftColumn.components -%}
+                {% include "../components/" + component + ".njk" %}
+              {%- endfor -%}
+            {% endif %}
           </div>
         {% endif %}
         <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">

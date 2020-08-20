@@ -45,6 +45,11 @@ module.exports = {
     },
     backToTop: {
       label: 'Back to top'
+    },
+    wcagFilters: {
+      title: 'Filters',
+      profiles: 'Profiles',
+      tools: 'Tools'
     }
   },
   fr: {
@@ -93,6 +98,11 @@ module.exports = {
     },
     backToTop: {
       label: 'Retour en haut de page'
+    },
+    wcagFilters: {
+      title: 'Filtres',
+      profiles: 'Profils',
+      tools: 'Outils'
     }
   }
 }

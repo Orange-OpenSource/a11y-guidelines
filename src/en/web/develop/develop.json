@@ -1,0 +1,42 @@
+{
+  "highlightJS": true,
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Textual content",
+      "href": "/en/web/develop/textual-content/"
+    },
+    {
+      "label": "Non-textual content",
+      "href": "/en/web/develop/non-textual-content/"
+    },
+    {
+      "label": "Colors and contrasts",
+      "href": "/en/web/develop/colors-and-contrasts/"
+    },
+    {
+      "label": "Common navigation",
+      "href": "/en/web/develop/common-navigation/"
+    },
+    {
+      "label": "Keyboard navigation",
+      "href": "/en/web/develop/keyboard-navigation/"
+    },
+    {
+      "label": "Layout",
+      "href": "/en/web/develop/layout/"
+    },
+    {
+      "label": "Forms",
+      "href": "/en/web/develop/forms/"
+    },
+    {
+      "label": "Touch and interactions",
+      "href": "/en/web/develop/touch-and-interactions/"
+    },
+    {
+      "label": "Assistive technology",
+      "href": "/en/web/develop/assistive-technology/"
+    }
+  ]
+}
