@@ -12,12 +12,14 @@
       <div class="row">
         {% if leftColumnShouldBeVisible %}
           <div class="col-md-3">
-            {{ ui.sideNavigation() }}
-            {% if leftColumn.components %}
-              {%- for component in leftColumn.components -%}
-                {% include "../components/" + component + ".njk" %}
-              {%- endfor -%}
-            {% endif %}
+            <div class="StickySideNavigation">
+              {{ ui.sideNavigation() }}
+              {% if leftColumn.components %}
+                {%- for component in leftColumn.components -%}
+                  {% include "../components/" + component + ".njk" %}
+                {%- endfor -%}
+              {% endif %}
+            </div>
           </div>
         {% endif %}
         <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">
@@ -25,7 +27,9 @@
         </main>
         {% if displayToc == true %}
           <div class="col-md-3">
-            {{ ui.toc() }}
+            <div class="StickySideNavigation">
+              {{ ui.toc() }}
+            </div>
           </div>
         {% endif %}
       </div>
