@@ -455,7 +455,7 @@ Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &quot;Re
 
 <p><span data-menuitem="incontournables"></span></p>
 <p>L’audit WCAG a pour objectif de calculer les taux de conformité mentionnés sur les déclarations d’accessibilité des sites Web d’Orange.</p>
-<p>Orange a mis en place une grille de questions nommée la va11ydette.  Cette grille reprend les 50 critères du standard WCAG version 2.1 de niveau A et AA en 67 questions. Chaque question permet de valider ou d’invalider un ou plusieurs critères, un critère peut être traité par une ou plusieurs questions. </p>
+<p>Orange a mis en place une grille de questions nommée la va11ydette.  Cette grille reprend les 50 critères du standard WCAG version 2.1 de niveau A et AA en 64 questions. Chaque question permet de valider ou d’invalider un ou plusieurs critères, un critère peut être traité par une ou plusieurs questions. </p>
 <p>La grille calcule un taux de conformité par page auditée : ce taux est égal à la somme des critères conformes divisée par le nombre de critères applicables. Elle calcule aussi le taux moyen de conformité qui correspond à la moyenne des taux de conformité de chaque page de l’échantillon.</p>
 <h2 id="acc-der-la-va11ydette">Accéder à la va11ydette</h2>
 <p>Le lien ci-dessous entraine l&#39;ouverture de la grille dans un nouvel onglet du navigateur.  </p>
@@ -1653,7 +1653,7 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <p>Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).</p>
 <p><strong>Objectif technique&nbsp;:</strong></p>
 <p>Améliorer le référencement naturel.</p>
-<p><strong>Exemple valide&nbsp;:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;Orange, retour à l’accueil&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.&quot;&gt;</code></p>
+<p><strong>Exemples valides&nbsp;:</strong><br><code>&lt;a href=&quot;./home&quot;&gt;&lt;img src=&quot;logo_orange.jpg&quot; alt=&quot;Orange, retour à l’accueil&quot;&gt;&lt;/a&gt;</code><br><code>&lt;img src=&quot;banner_bouquet_famille.png&quot; alt=&quot;Bon plan, bouquet famille max à 2 euros par mois pendant 12 mois au lieu de 16 euros.&quot;&gt;</code><br><code>&lt;iframe title=&quot;contenu publicitaire&quot; id=&quot;cool_ads_iframe_/0101/woo_rec_1_300x250_0&quot; height=&quot;250&quot; width=&quot;300&quot;&gt;</code></p>
 <p><strong>Exemple d’alternative vide&nbsp;:</strong><br>Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.<br>Renseigner l’attribut <code>alt</code> dans ce cas apporterait une information redondante.  </p>
 <p><img src="./images/service-24.png" alt="exemple d’image décorative">  </p>
 <p><code>&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;</code><br><code>&lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;</code></p>
@@ -2602,15 +2602,51 @@ On peut distinguer 3 types de liens&nbsp;:</p>
 
 <p><span data-menuitem="methodes-outils"></span></p>
 <p>La navigation dans une page web doit être possible à l’aide du clavier seul, notamment pour les personnes qui ne peuvent pas utiliser de souris. Cette fonctionnalité est prise en charge directement par le navigateur. Il est tout de même important de vérifier son fonctionnement, car certains développements peuvent entraîner des difficultés pour naviguer correctement dans la page.</p>
-<p>Pour tester si votre service est accessible à l’aide du clavier, vous pouvez tenter de naviguer sans votre souris. Toutes les fonctionnalités disponibles habituellement doivent rester accessible.<br><strong> Rappel&nbsp;: </strong>le focus doit rester suffisamment visible sur tous les éléments recevant le focus.</p>
+<p>Pour tester si votre service est accessible à l’aide du clavier, vous pouvez tenter de naviguer sans votre souris. Toutes les fonctionnalités disponibles habituellement doivent rester accessible.<br><strong> Rappel&nbsp;: </strong>le focus doit rester suffisamment visible sur tous les éléments recevant le focus lors de la navigation clavier.</p>
 <h2 id="liste-des-raccourcis-clavier-principaux-nbsp-">Liste des raccourcis clavier principaux&nbsp;:</h2>
-<ul>
-<li>La touche <code>TAB</code>&nbsp;: pour faire avancer le focus.</li>
-<li>Les touches <code>maj+TAB</code>&nbsp;: pour faire reculer le focus.</li>
-<li>La touche entrée pour activer l’élément qui a le focus (lien, bouton, menu…).</li>
-<li>La barre espace pour cocher/décocher une case à cocher.</li>
-<li>Les flèches directionnelles pour modifier la sélection des boutons radio, pour se déplacer dans une liste déroulante, ou faire défiler les ascenseurs (<i lang="en">scrollbar</i>) lorsque ceux-ci sont présents.</li>
-</ul>
+<p><img src="./images/keyboard.png" alt="présentation des raccourcis clavier"></p>
+<table class="table">
+<caption class="sr-only">Liste des raccourcis clavier principaux</caption>
+   <thead>
+      <tr>
+         <th>Interactions</th>
+         <th>Raccourcis</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Faire avancer le focus</td>
+         <td><code>Tab</code></td>
+      </tr>
+      <tr>
+         <td>Faire reculer le focus</td>
+         <td><code>Shift + Tab</code></td>
+      </tr>
+      <tr>
+         <td>Activer l&#39;élément qui a le focus (lien, bouton, menu)</td>
+         <td><code>Entrée</code></td>
+      </tr>
+      <tr>
+         <td>Cocher / décocher une case à cocher</td>
+         <td><code>Barre espace</code></td>
+      </tr>
+      <tr>
+         <td>Sélectionner un bouton radio dans groupe</td>
+         <td>flèche directionnelles <code>Haut</code>&nbsp;/&nbsp;<code>Bas</code> ou <code>Gauche</code>&nbsp;/&nbsp;<code>Droite</code></td>
+      </tr>
+      <tr>
+         <td>Sélectionner une option dans une liste déroulante </td>
+         <td>flèche directionnelles <code>Haut</code>&nbsp;/&nbsp;<code>Bas</code>, puis <code>Barre espace</code></td>
+      </tr>
+      <tr>
+         <td>Déplacer un ascenceur (<i lang="en">scrollbar</i>)</td>
+         <td>flèche directionnelles <code>Haut</code>&nbsp;/&nbsp;<code>Bas</code> pour un ascenceur vertical,<br> flèche directionnelles <code>Gauche</code>&nbsp;/&nbsp;<code>Droite</code> pour un ascenceur horizontal </td>
+      </tr>
+   </tbody>
+</table>
+
+
+
 <p><strong> Remarque&nbsp;: sur Mac la navigation au clavier doit être activée au préalable. </strong><br>Dans Safari&nbsp;: Edition &gt; Préférences… &gt; Avancées<br>Puis cocher la case <em>«&nbsp;La touche TAB permet de naviguer parmi les objets des pages web&nbsp;»</em>.
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA

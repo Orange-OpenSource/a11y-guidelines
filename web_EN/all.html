@@ -228,6 +228,9 @@ This solution is at the same time more constraining for the user who must commun
                 $("#incontournables-testeurs-tab").tab("show");
                 window.location.hash = 'test';
             }
+        },
+        {
+            "label":"WCAG audit", "url":"audit-wcag.html"
         }
     ]);
     $("#incontournables-concepteurs-tab").on("click", function() {
@@ -2312,13 +2315,47 @@ Screen reader output: &quot;Access HTML Login page sourcecode&quot;</p>
 <p>Navigation in a web page should be possible using only the keyboard, particularly for people who cannot use a mouse. This feature is supported directly by the browser. It is important to verify it is operating correctly, as some developments can lead to difficulties to properly navigate the page.</p>
 <p>To test if your service is accessible using the keyboard, you can try to navigate without your mouse. All available features must be accessible.<br><strong> Reminder: </strong>the focus must be visible enough on all focusable elements.</p>
 <h2 id="list-of-keyboard-shortcuts-">List of keyboard shortcuts:</h2>
-<ul>
-<li>The <kbd>Tab</kbd> key: to move the focus.</li>
-<li>The <kbd>shift + Tab</kbd> keys: to move backwards the focus.</li>
-<li>The <kbd>Return</kbd> key to activate the element that has the focus (link, button, menu…).</li>
-<li>The <kbd>Spacebar</kbd> to check / uncheck a checkbox.</li>
-<li>The arrow keys to change the selection of the radio buttons, to move in a drop-down list, or to scroll (scrollbar) when available.</li>
-</ul>
+<p><img src="./images/keyboard.png" alt="keyboard shortcuts illustration"></p>
+<table class="table">
+<caption class="sr-only">List of keyboard shortcuts</caption>
+   <thead>
+      <tr>
+         <th>Interactions</th>
+         <th>Shortcuts</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>To move the focus</td>
+         <td><code>Tab</code></td>
+      </tr>
+      <tr>
+         <td>To move backwards the focus</td>
+         <td><code>Shift + Tab</code></td>
+      </tr>
+      <tr>
+         <td>To activate the element that has the focus (link, button, menu…)</td>
+         <td><code>Return</code> key</td>
+      </tr>
+      <tr>
+         <td>To check / uncheck a checkbox</td>
+         <td><code>Spacebar</code></td>
+      </tr>
+      <tr>
+         <td>To select of the radio buttons into a radio group</td>
+         <td>arrow keys <code>Up</code>&nbsp;/&nbsp;<code>Down</code> ou <code>Left</code>&nbsp;/&nbsp;<code>Right</code></td>
+      </tr>
+      <tr>
+         <td>To move in a drop-down list</td>
+         <td>arrow keys <code>Up</code>&nbsp;/&nbsp;<code>Down</code>, then <code>Spacebar</code></td>
+      </tr>
+      <tr>
+         <td>To scroll(scrollbar)</td>
+         <td>arrow keys <code>Up</code>&nbsp;/&nbsp;<code>Down</code> for a vertical scrollbar,<br> arrow keys <code>Left</code>&nbsp;/&nbsp;<code>Right</code> for a horizontal scrollbar</td>
+      </tr>
+   </tbody>
+</table>
+
 <p><strong> Note: on Mac, keyboard navigation must be enabled first: </strong><br>In Safari: Edit &gt; Preferences… &gt; Advanced<br>Then check the box <em>“Press tab to highlight each item on a webpage”</em>.</p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
@@ -2609,6 +2646,40 @@ More information in the <strong>examples</strong> section: <a href="exemples/zoo
 <p>Please first check <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">the issues</a> and search for existing and closed issues. If your problem or idea is not addressed yet, please <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">open a new issue</a>.</p>
 <h2 id="cookie-management">Cookie management</h2>
 <p>You can change your preferences at any time directly from the <a role="button" href="javascript:tarteaucitron.userInterface.openPanel();">Cookie Management Panel</a>.</p>
+<p>&nbsp;
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></p>
+
+<h1 id="wcag-audit">WCAG audit</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([
+        {"label":"Critères WCAG par thème", "url": "./incontournables.html"},
+        {"label":"Audit WCAG"}
+        ]);
+    addSubMenu([
+        {
+            "label":"Conception", "url":"incontournables.html#", "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
+        },
+        {
+            "label":"Développement", "url":"incontournables.html#dev", "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
+        },
+        {
+            "label":"Tests", "url":"incontournables.html#test", "itemsQuery":"#incontournables-testeurs section h2", "className": "menuitem-test",
+        },
+        {
+            "label":"WCAG audit", "url":"audit-wcag.html"
+        }
+    ]);    
+});</script>
+
+<p><span data-menuitem="incontournables"></span></p>
+<p>The purpose of the WCAG audit is to calculate the compliance rates found in the accessibility statements which are available on Orange websites. </p>
+<p>Orange has developed a grid of questions called the va11ydette. This grid consists of 64 questions, that between them cover the 50 criteria of the WCAG version 2.1 levels A and AA. Each question is used to validate or invalidate one or more criteria, and any given criterion can be addressed by one or more questions. </p>
+<p>The grid calculates a compliance rate per page audited: this rate is equal to the sum of the criteria that are compliant, divided by the number of criteria that are applicable. It also calculates the average compliance rate, which corresponds to the average of the compliance rates of the pages tested. </p>
+<h2 id="go-to-the-va11ydette">Go to the va11ydette</h2>
+<p>The link below opens the grid in a new browser tab.   </p>
+<p><a href="../../web/la-vallydette/?lang=en" target="_blank" class="btn btn-secondary" style="text-decoration: none">Open the va11ydette <span class="sr-only"> (new window)</span></a></p>
 <p>&nbsp;
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
