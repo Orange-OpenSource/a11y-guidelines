@@ -22,20 +22,22 @@ An [English translation](https://disic.github.io/rgaa_referentiel_en/introductio
 ## Accede-web references
 
 The [Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities: 
-  
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso1.png) 
-    <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info">Accessibility guidelines for graphic design (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
+
+<div class="row text-center">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso1.png" alt=""> 
+        <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info d-block">Accessibility guidelines for graphic design (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso2.png" alt="">    
+        <a href="http://wiki.accede-web.com/en/notices/contributeurs" class="btn btn-info d-block">Accessibility guidelines for editors (template)</a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso3.png" alt="">  
+        <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info d-block">Accessibility guidelines for <abbr>HTML</abbr> and <abbr>CSS</abbr> (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        <img src="../images/perso4.png" alt="">  
+        <a href="http://wiki.accede-web.com/en/notices/interfaces-riches-javascript d-block" class="btn btn-info">Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)</a>
+    </div>      
 </div>
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso2.png)    
-    <a href="http://wiki.accede-web.com/en/notices/contributeurs" class="btn btn-info">Accessibility guidelines for editors (template)</a>
-</div>
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso3.png)  
-    <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info">Accessibility guidelines for <abbr>HTML</abbr> and <abbr>CSS</abbr> (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
-</div>
-<div class="perso col-sm-12 col-md-6 col-lg-3">
-    ![](./images/perso4.png)  
-    <a href="http://wiki.accede-web.com/en/notices/interfaces-riches-javascript" class="btn btn-info">Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)</a>
-</div>      

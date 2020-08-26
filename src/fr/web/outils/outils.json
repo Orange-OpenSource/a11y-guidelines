@@ -1,0 +1,26 @@
+{
+  "sideNavigationLinks": [
+    {
+      "label": "Orange Boosted",
+      "href": "https://boosted.orange.com/"
+    },
+    {
+      "label": "Méthodes et outils de test",
+      "href": "#"
+    },
+    {
+      "label": "La Va11ydette",
+      "href": "/fr/web/la-va11ydette/",
+      "external": true,
+      "title": "Ouvrir la va11ydette"
+    },
+    {
+      "label": "Liens utiles",
+      "href": "/fr/web/referentiels-ressources/"
+    },
+    {
+      "label": "Glossaire",
+      "href": "/fr/glossaire/"
+    }
+  ]
+}
