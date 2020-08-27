@@ -857,27 +857,27 @@
   },
   {
     "old": "web_EN/methodes-outils-clavier.html",
-    "new": "/en/web/test-tools/keyboard-navigation"
+    "new": "/en/web/test-tools/methods-and-test-tools/keyboard-navigation"
   },
   {
     "old": "web_EN/methodes-outils-contrastes.html",
-    "new": "/en/web/test-tools/color-contrast-level"
+    "new": "/en/web/test-tools/methods-and-test-tools/color-contrast-level"
   },
   {
     "old": "web_EN/methodes-outils-extensions.html",
-    "new": "/en/web/test-tools/browser-extensions"
+    "new": "/en/web/test-tools/methods-and-test-tools/browser-extensions"
   },
   {
     "old": "web_EN/methodes-outils-lecteur-ecran.html",
-    "new": "/en/web/test-tools/navigating-with-a-screen-reader"
+    "new": "/en/web/test-tools/methods-and-test-tools/navigating-with-a-screen-reader"
   },
   {
     "old": "web_EN/methodes-outils-liste-titres.html",
-    "new": "/en/web/test-tools/page-headers"
+    "new": "/en/web/test-tools/methods-and-test-tools/page-headers"
   },
   {
     "old": "web_EN/methodes-outils-zoom.html",
-    "new": "/en/web/test-tools/text-zoom"
+    "new": "/en/web/test-tools/methods-and-test-tools/text-zoom"
   },
   {
     "old": "web_EN/methodes-outils.html",
@@ -1317,27 +1317,27 @@
   },
   {
     "old": "web/methodes-outils-contrastes.html",
-    "new": "/fr/web/outils/mesurer-contraste-couleurs"
+    "new": "/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs"
   },
   {
     "old": "web/methodes-outils-extensions.html",
-    "new": "/fr/web/outils/extensions-navigateur"
+    "new": "/fr/web/outils/methodes-et-outils-de-test/extensions-navigateur"
   },
   {
     "old": "web/methodes-outils-lecteur-ecran.html",
-    "new": "/fr/web/outils/navigation-lecteur-ecran"
+    "new": "/fr/web/outils/methodes-et-outils-de-test/navigation-lecteur-ecran"
   },
   {
     "old": "web/methodes-outils-liste-titres.html",
-    "new": "/fr/web/outils/liste-titres"
+    "new": "/fr/web/outils/methodes-et-outils-de-test/liste-titres"
   },
   {
     "old": "web/methodes-outils-zoom.html",
-    "new": "/fr/web/outils/agrandissement-texte"
+    "new": "/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte"
   },
   {
     "old": "web/methodes-outils.html",
-    "new": "/fr/web/outils"
+    "new": "/fr/web/outils/methodes-et-outils-de-test"
   },
   {
     "old": "web/orange-boosted.html",

@@ -16,7 +16,7 @@ All features must be accessible using the keyboard only. Pressing the keyboard <
 
 Moreover, if the features are mouse-specific (drag and drop, right click menu…), ensure that these are also available through other means elsewhere in the interface (button, icon, menu…).
 
-See [how to navigate with a keyboard](../../test-tools/keyboard-navigation/) in a web browser.
+See [how to navigate with a keyboard](../../test-tools/methods-and-test-tools/keyboard-navigation/) in a web browser.
 
 **Example:**  
 In the webmail, right-clicking on the “trash” opens a menu to empty the trash, this option should be also available through an “empty the trash” button elsewhere in the interface or from a drop-down menu accessible with the keyboard.
@@ -31,7 +31,7 @@ In the webmail, right-clicking on the “trash” opens a menu to empty the tras
 
 **Description:**  
 The position of the keyboard focus must be visible to all users. By default, the browser surrounds the item with dotted lines or a colored box. This behavior can be modified (we recommend at least `2px` for this dotted box) or replaced (color inversion, changing the background color / text ...) to be made more visible but must not be deleted.
-Be sure to provide a sufficient 3: 1 contrast ratio with the background color to make the focus visible (see [Measure Color Contrast Level](../../test-tools/color-contrast-level)).
+Be sure to provide a sufficient 3: 1 contrast ratio with the background color to make the focus visible (see [Measure Color Contrast Level](../../test-tools/methods-and-test-tools/color-contrast-level)).
 Moreover, it is necessary to check the visibility of the focus on all the focusable elements, in particular, because the background color of the element can be the same as the focus and thus, hide it.
 Users navigating using the keyboard (TAB key) need to know the focus position at all times.
 

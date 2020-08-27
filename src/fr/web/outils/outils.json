@@ -2,11 +2,11 @@
   "sideNavigationLinks": [
     {
       "label": "Orange Boosted",
-      "href": "https://boosted.orange.com/"
+      "href": "/fr/web/outils/orange-boosted/"
     },
     {
       "label": "Méthodes et outils de test",
-      "href": "#"
+      "href": "/fr/web/outils/methodes-et-outils-de-test/"
     },
     {
       "label": "La Va11ydette",
