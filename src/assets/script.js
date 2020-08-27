@@ -2,6 +2,29 @@
   document.documentElement.classList.replace('no-js', 'js')
 })();
 
+/* Cookie consent banner customization */
+(function () {
+  window.addEventListener('tac.root_available', function (e) {
+    document.getElementById('tarteaucitronPersonalize').classList.add('btn', 'btn-primary', 'btn-inverse', 'ml-2')
+    document.getElementById('tarteaucitronAllAllowed').classList.add('btn', 'btn-primary', 'btn-inverse', 'ml-2')
+    
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-inverse', 'btn-info', 'ml-2')
+    document.getElementById('tarteaucitronAllDenied').classList.add('btn', 'btn-inverse', 'btn-info', 'ml-2')
+  }, { once: true })
+
+  window.addEventListener('tac.open_panel', function () {
+    const servicesContainer = document.getElementById('tarteaucitronServices_api')
+
+    servicesContainer.querySelectorAll('.tarteaucitronAllow').forEach(function (button) {
+      button.classList.add('btn', 'btn-primary', 'ml-2')
+    })
+
+    servicesContainer.querySelectorAll('.tarteaucitronDeny').forEach(function (button) {
+      button.classList.add('btn', 'btn-secondary', 'ml-2')
+    })
+  }, { once: true })
+})();
+
 /* Filter bar */
 (function () {
   const filtersbar = document.getElementById('filtersbar')
