@@ -9,7 +9,7 @@ Orange <span lang="en">Boosted</span> est un framework <abbr>HTML</abbr>, <abbr>
 Il permet la mise en place rapide d’un site web responsive et accessible aux couleurs de la charte Orange.
 
 ## Pourquoi l’utiliser ?
- - Basé sur <span lang="en">[Twitter Boostrap](http://getbootstrap.com/)</span>
+ - Basé sur <span lang="en">[Twitter Boostrap](https://getbootstrap.com/)</span>
  - À la charte Orange, la Brand
  - Amélioré avec des composants **plus accessibles**
  - Enrichi de composants spécifiques à Orange
@@ -18,4 +18,4 @@ Il permet la mise en place rapide d’un site web responsive et accessible aux c
 
 ## Site officiel
 
-<span lang="en">[Orange Boosted with Bootstrap](http://boosted.orange.com/)</span>
+<span lang="en">[Orange Boosted with Bootstrap](https://boosted.orange.com/)</span>
