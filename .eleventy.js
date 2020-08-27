@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true)
 
   eleventyConfig.addPassthroughCopy({ 'src/assets/': 'assets' })
+  eleventyConfig.addPassthroughCopy({ 'node_modules/tarteaucitronjs': 'assets/vendors/tarteaucitronjs' })
 
   // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
   eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
