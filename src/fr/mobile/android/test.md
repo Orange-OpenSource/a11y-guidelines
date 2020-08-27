@@ -106,7 +106,7 @@ Il s'agit des touches également utilisées pour tester l'accessibilité d'un si
 Il est considéré comme bloquant l’impossibilité de sortir d’une fonctionnalité ou de l’application.
 
 ## Colour Contrast Analyser
-Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](../../../web/outils/mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
+Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](../../../web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
 
 Pour les valeurs à respecter voir la [section concernant les couleurs](../conception#couleurs).
 

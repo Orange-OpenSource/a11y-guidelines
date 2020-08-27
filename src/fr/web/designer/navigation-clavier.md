@@ -31,7 +31,7 @@ Dans un webmail, si un clic droit sur le dossier «&nbsp;Corbeille&nbsp;» perme
 
 **Description&nbsp;:**  
 La position du focus clavier doit être visible par tous les utilisateurs. Par défaut, le navigateur entoure l’élément avec des pointillés ou un cadre de couleur. Globalement, ce comportement peut être modifié (nous préconisons au moins `2px` pour ce cadre pointillé) ou remplacé (inversion de couleur, modification de la couleur de fond/texte...) pour être rendu plus visible mais ne doit pas être supprimé. 
-Veiller à fournir un niveau de contraste suffisant de 3:1 par rapport à la couleur de fond pour rendre visible le focus (cf. [mesurer le niveau de contraste des couleurs](../../outils/mesurer-contraste-couleurs/)).
+Veiller à fournir un niveau de contraste suffisant de 3:1 par rapport à la couleur de fond pour rendre visible le focus (cf. [mesurer le niveau de contraste des couleurs](../../outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/)).
 De plus, il faut vérifier la visibilité du focus sur tous les éléments focusables, notamment, car la couleur de fond de l'élément peut être la même que le focus et donc, masquer celui-ci. 
 Les utilisateurs qui naviguent à l’aide du clavier (touche TAB) ont besoin de connaître la position du focus à tout moment.
 

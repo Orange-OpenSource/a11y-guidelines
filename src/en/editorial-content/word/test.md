@@ -22,7 +22,7 @@ Start your tests with the Office Accessibility Verification Tool:
 ### Screen reader: JAWS & NVDA
 To complete the verification, you can test with a screen reader. 
 It helps you to simulate the configuration as the visually impaired and blind people.
-[For further information to navigate with JAWS & NVDA](../../../../fr/web/outils/navigation-lecteur-ecran/)
+[For further information to navigate with JAWS & NVDA](../../../../fr/web/outils/methodes-et-outils-de-test/navigation-lecteur-ecran/)
 
 ### Self-Assessment Grids 
 - <a href="../../AXS_assess_grid_WORD_EN.xlsx">Accessibility Assessment Grid for Word (16 ko)</a>
