@@ -194,6 +194,10 @@ module.exports = function (eleventyConfig) {
     return arr.filter(e => e[key] === value)
   })
 
+  eleventyConfig.addNunjucksFilter('sortByField', function (values, field) {
+    return values.slice().sort((a, b) => a.data[field].localeCompare(b.data[field]))
+  })
+
   // Create collections & dynamically suffix their name by the locale key
   for (let locale in collections) {
     collections[locale].forEach(collection => {

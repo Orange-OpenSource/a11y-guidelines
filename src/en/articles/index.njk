@@ -4,7 +4,7 @@ displayToc: false
 ---
 
 {% import "../../_includes/components/ui.njk" as ui with context %}
-{% set posts = collections.articles_en %}
+{% set posts = collections.articles_en | sort(true) %}
 
 <h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">{{ posts | length }}&nbsp;</span>Technical articles</h1>
 
