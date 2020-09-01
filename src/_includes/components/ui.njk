@@ -51,7 +51,7 @@
 </ol>
 {% endmacro %}
 
-{% macro postsList(posts, filters = true) %}
+{% macro postsList(posts, filters = true, displayDate = true, displayTags = true) %}
 {% if filters == true %}
   {{ filtersBar(posts) }}
 {% endif %}
@@ -64,13 +64,13 @@
       <h2 class="mb-1">
         <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
       </h2>
-      {% if post.date %}
+      {% if displayDate == true and post.date %}
         <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
       {% endif %}
       {% if post.data.abstract %}
         <p class="my-2">{{ post.data.abstract }}</p>
       {% endif %}
-      {% if tags %}
+      {% if displayTags == true and tags %}
         <ul class="list-inline">
           {%- for tag in tags -%}
             <li class="list-inline-item">
@@ -85,6 +85,10 @@
   </li>
 {% endif %}{%- endfor -%}
 </ol>
+{% endmacro %}
+
+{% macro componentsExamplesList(posts) %}
+  {{ postsList(posts, false, false, false) }}
 {% endmacro %}
 
 {% macro filtersBar(posts) %}
