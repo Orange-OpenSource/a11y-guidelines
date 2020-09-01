@@ -1,0 +1,11 @@
+---
+title: "Exemples de composants"
+layout: "templates/default"
+---
+
+{% import "../../../_includes/components/ui.njk" as ui with context %}
+{% set posts = collections.componentsExamples_fr | sortByField('title') %}
+
+<h1>Exemples de composants</h1>
+
+{{ ui.componentsExamplesList(posts) }}

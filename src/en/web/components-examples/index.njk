@@ -1,0 +1,10 @@
+---
+title: "Components examples"
+layout: "templates/default"
+---
+
+{% import "../../../_includes/components/ui.njk" as ui with context %}
+
+<h1>Components examples</h1>
+
+{{ ui.componentsExamplesList(collections.componentsExamples_en | sortByField('title')) }}
