@@ -56,7 +56,7 @@
   {{ filtersBar(posts) }}
 {% endif %}
 <ol class="list-unstyled">
-{%- for post in posts | reverse %}{% if page.url != post.url -%}
+{%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
 
   <li class="border-bottom border-500 py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
