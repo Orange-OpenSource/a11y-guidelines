@@ -18,26 +18,3 @@ The <abbr>RGAA</abbr> is the French government’s [General Accessibility Refere
 If your are familiar with this reference, you can use it to test your site.
 
 An [English translation](https://disic.github.io/rgaa_referentiel_en/introduction-RGAA.html) is available for informational purposes only. 
-
-## Accede-web references
-
-The [Accede-web](http://wiki.accede-web.com/en/) site offers great manuals on web accessibility. These references are very useful, pedagogical and come from Atalan, a group of major companies as well as schools and associations of people with disabilities: 
-
-<div class="row text-center">
-    <div class="col-sm-12 col-md-6 col-lg-3">
-        <img src="../images/perso1.png" alt=""> 
-        <a href="http://wiki.accede-web.com/en/notices/graphique-ergonomique" class="btn btn-info d-block">Accessibility guidelines for graphic design (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-3">
-        <img src="../images/perso2.png" alt="">    
-        <a href="http://wiki.accede-web.com/en/notices/contributeurs" class="btn btn-info d-block">Accessibility guidelines for editors (template)</a>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-3">
-        <img src="../images/perso3.png" alt="">  
-        <a href="http://wiki.accede-web.com/en/notices/html-css" class="btn btn-info d-block">Accessibility guidelines for <abbr>HTML</abbr> and <abbr>CSS</abbr> (to ensure <abbr>WCAG</abbr> 2.1 compliance)</a>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-3">
-        <img src="../images/perso4.png" alt="">  
-        <a href="http://wiki.accede-web.com/en/notices/interfaces-riches-javascript d-block" class="btn btn-info">Accessibility guidelines for rich interfaces and JavaScript (Use cases to comply with France’s accessibility guidelines)</a>
-    </div>      
-</div>
