@@ -12,7 +12,7 @@ js:
 
 # WCAG criteria by project phase
 
-This base criteria for the Orange websites and applications avoids the major accessibility errors. It is a subset of the accessibility requirements.   
+This base criteria for the Orange websites and applications avoids the major accessibility errors.
 Its implementation does not give you the guarantee to be 100% accessible, but is a clean bedrock so you can engage in a progressive accessibility implementation process.
 
 Following the Orange guidelines (<cite>Design for digital platforms Guidelines</cite>), available on the [Orange brand site](http://design.orange.com/) is a prerequisite to the use of this base criteria. 
