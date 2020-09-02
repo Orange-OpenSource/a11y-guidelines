@@ -145,7 +145,7 @@ function sendMessage() {
 }
 
 function playSound(filename){   
-    document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="../sounds/' + filename + '.mp3" type="audio/mpeg" /><embed hidden="true" autostart="true" loop="false" src="../sounds/' + filename +'.mp3" /></audio>';
+    document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="./sounds/' + filename + '.mp3" type="audio/mpeg" /><embed hidden="true" autostart="true" loop="false" src="./sounds/' + filename +'.mp3" /></audio>';
 }
 
 /* --- On supprime le focus lors de la navigation avec la souris --- */
