@@ -12,18 +12,18 @@ $(document).ready(function() {
         $("#skip-links").addClass("sr-only");
     });
 
-    $("#bonnes-pratiques-pour-un-chatbot-skiplink").on("click", function () {
-        if ($("#bonnes-pratiques-pour-un-chatbot-window").is(":visible")) {
+    $("#chatbot-skiplink").on("click", function () {
+        if ($("#chatbot-window").is(":visible")) {
             $("#chat-input").focus();
         } else {
-            $("#bonnes-pratiques-pour-un-chatbot-window").show();
+            $("#chatbot-window").show();
             $("#btnChatbot").addClass("sr-only");
             $("#chat-input").focus();
         }
     });
 
     $("#btnChatbot").on("click", function () {
-        $("#bonnes-pratiques-pour-un-chatbot-window").show();
+        $("#chatbot-window").show();
         $("#btnChatbot").addClass("sr-only");
         $("#chat-input").focus();
     });
@@ -32,17 +32,17 @@ $(document).ready(function() {
         sendMessage();
         return false;
     })
-    $("#bonnes-pratiques-pour-un-chatbot-close").on("click", function () {
-        $("#bonnes-pratiques-pour-un-chatbot-window").hide();
+    $("#chatbot-close").on("click", function () {
+        $("#chatbot-window").hide();
         $("#btnChatbot").removeClass("sr-only");
     });
-    $("#bonnes-pratiques-pour-un-chatbot-hide").on("click", function () {
-        $("#bonnes-pratiques-pour-un-chatbot-window").toggleClass("chatbot-hidden");
-        $("#bonnes-pratiques-pour-un-chatbot-show").focus();
+    $("#chatbot-hide").on("click", function () {
+        $("#chatbot-window").toggleClass("chatbot-hidden");
+        $("#chatbot-show").focus();
     });
-    $("#bonnes-pratiques-pour-un-chatbot-show").on("click", function () {
-        $("#bonnes-pratiques-pour-un-chatbot-window").toggleClass("chatbot-hidden");
-        $("#bonnes-pratiques-pour-un-chatbot-hide").focus();
+    $("#chatbot-show").on("click", function () {
+        $("#chatbot-window").toggleClass("chatbot-hidden");
+        $("#chatbot-hide").focus();
     });
 
     $("#chat-input").on("focus", function () {
@@ -52,13 +52,13 @@ $(document).ready(function() {
     push("Djingo", "Hello, may I help you ?", true); 
    
     $("#btnExemple1, #btnExemple2").on("click", function () {
-        alert("Opening the bonnes-pratiques-pour-un-chatbot !");
+        alert("Opening the chatbot !");
     });
 
     $("#btnChoice").on("click", function () {
-        $("#bonnes-pratiques-pour-un-chatbot-window").show();
+        $("#chatbot-window").show();
         $("#btnChatbot").addClass("sr-only");
-        $("#bonnes-pratiques-pour-un-chatbot-window").removeClass("chatbot-hidden");
+        $("#chatbot-window").removeClass("chatbot-hidden");
         window.setTimeout(function () {
             push("me", "What about accessibility ?");
         },0);
@@ -100,8 +100,11 @@ function rawPush(from, message) {
     if (lastFrom !== from) {
         $("#chat-content").append('<span data-from="' + from + '" class="from invisible" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
     }
-    $("#chat-content .messages").last().append('<div class="raw-message"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');    
-    $("#chat-content").animate({scrollTop: document.getElementById("chat-content").scrollHeight }, 100);
+    $("#chat-content .messages").last().append('<div class="raw-message"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');        
+    $("#chat-content").css({scrollTop: document.getElementById("chat-content").scrollHeight });
+
+    var chatContent = document.getElementById('chat-content');
+    chatContent.scrollTop = chatContent.scrollHeight;
 }
 
 function push(from, message, silence, id) {
@@ -123,7 +126,8 @@ function push(from, message, silence, id) {
     }
 
     $("#chat-content .messages").last().append('<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');    
-    $("#chat-content").animate({scrollTop: document.getElementById("chat-content").scrollHeight }, 100);
+    var chatContent = document.getElementById('chat-content');
+    chatContent.scrollTop = chatContent.scrollHeight;
 }
 
 function sendMessage() {
@@ -140,8 +144,8 @@ function sendMessage() {
     }, 4000);
 }
 
-function playSound(filename){   
-    document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="./sounds/' + filename + '.mp3" type="audio/mpeg" /><source src="./sounds/' + filename + '.ogg" type="audio/ogg" /><embed hidden="true" autostart="true" loop="false" src="./sounds/' + filename +'.mp3" /></audio>';
+function playSound(filename){
+    document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="./sounds/' + filename + '.mp3" type="audio/mpeg" /><embed hidden="true" autostart="true" loop="false" src="./sounds/' + filename +'.mp3" /></audio>';    
 }
 
 /* --- On supprime le focus lors de la navigation avec la souris --- */
