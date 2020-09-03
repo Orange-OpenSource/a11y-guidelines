@@ -12,12 +12,16 @@ js:
 <h1>File explorer example</h1>
 
 <div class="row">
-  <label class="control-label">Display mode: </label>
+  <label class="control-label">Display mode&nbsp;:&nbsp;</label>
 
-  <input id="mode-mosaique" type="radio" class="o-radio" name="mode" value="mosaique" checked="checked">
-  <label for="mode-mosaique">Grid</label>
-  <input id="mode-liste" type="radio" class="o-radio" name="mode" value="liste">
-  <label for="mode-liste">List</label>
+  <div class="custom-control custom-radio custom-control-inline">
+    <input id="mode-mosaique" type="radio" class="custom-control-input" name="mode" value="mosaique" checked="checked">
+    <label class="custom-control-label" for="mode-mosaique">Grid</label>
+  </div>
+  <div class="custom-control custom-radio custom-control-inline">
+    <input id="mode-liste" type="radio" class="custom-control-input" name="mode" value="liste">
+    <label class="custom-control-label" for="mode-liste">List</label>
+  </div>
 </div>
 
 <div class="row list-head" aria-hidden="true">
