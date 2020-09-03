@@ -93,4 +93,31 @@
   window.addEventListener('scroll', function () {
     window.requestAnimationFrame(onScroll)
   })
-})()
+})();
+
+function highlightCodeBlocks () {
+  hljs.initHighlighting()
+
+  const codeBlocks = document.querySelectorAll('.hljs')
+
+  if (!codeBlocks.length) {
+    return
+  }
+
+  codeBlocks.forEach(function (codeBlock) {
+    const language = codeBlock.classList.item(0)
+
+    const languageWrapper = document.createElement('div')
+    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
+    languageWrapper.textContent = language
+
+    codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
+  })
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  if (Application.vendors.highlightJS === true) {
+    highlightCodeBlocks()
+  }
+}, { once: true })
+
