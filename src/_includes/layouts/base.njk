@@ -49,8 +49,14 @@
     {% endif %}
     {% if highlightJS == true %}
       <script src="/assets/vendors/highlightjs/highlight.js"></script>
-      <script>hljs.initHighlightingOnLoad()</script>
     {% endif %}
+    <script>
+      const Application = {
+        vendors: {
+          highlightJS: {{ highlightJS == true }}
+        }
+      }
+    </script>
     <script src="/assets/script.js"></script>
     {%- for item in js -%}
       <script src="{{ item }}"></script>
