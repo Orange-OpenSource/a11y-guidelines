@@ -48,7 +48,7 @@ module.exports = {
         subLevels: [
           { label: 'Criteria', href: '/en/mobile/android/criteria/' },
           { label: 'Develop', href: '/en/mobile/android/development/' },
-          { label: 'Talkback', href: '/en/mobile/android/talkback/' }
+          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
         ]
       },
       {
@@ -128,7 +128,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/android/conception/' },
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
-          { label: 'Talkback', href: '/fr/mobile/android/talkback/' }
+          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
         ]
       },
       {
