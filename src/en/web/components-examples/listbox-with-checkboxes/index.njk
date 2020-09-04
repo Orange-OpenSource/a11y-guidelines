@@ -2,8 +2,6 @@
 title: "Listbox with checkboxes"
 abstract: "Example of ARIA list (part 3)."
 tags: componentsExamples_en
-css:
-  - style.css
 js:
   - script.js
 ---
@@ -46,8 +44,10 @@ In this case, we must also add the <code>label</code> tag.</p>
 <pre><code class="html">
   &lt;ul role="listbox" tabindex="0" aria-label="email list"&gt;
       &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
-          &lt;input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
+        &lt;div class="custom-control custom-checkbox mb-0"&gt;
+          &lt;input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
           Important information about your account
+        &lt;/div&gt;
       &lt;/li&gt;
       ...
   &lt;/ul&gt;
@@ -87,7 +87,7 @@ In this case, we must also add the <code>label</code> tag.</p>
           }
           e.preventDefault();
           break;
-<div class="important">            case 32: // Space                                                                                              
+<div class="important">            case 32: // Space
           if (currentItem.attr("aria-checked") === "true") {
               currentItem.attr("aria-checked", "false");
               currentItem.find("input[type=checkbox]").prop("checked", false);
@@ -106,22 +106,30 @@ In this case, we must also add the <code>label</code> tag.</p>
 <h3 id="email-list">Email list</h3>
 
 <div class="row">
-  <ul role="listbox" tabindex="0" class="col-md-8" aria-labelledby="email-list">
-      <li tabindex="-1" role="option" aria-checked="false">
-          <input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"><label for="check1"></label>
+  <ul role="listbox" class="list-group" tabindex="0" class="col-md-8" aria-labelledby="email-list">
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check1"></label>
           Important information about your account
+        </div>
       </li>
-      <li tabindex="-1" role="option" aria-checked="false">
-          <input tabindex="-1" id="check2" class="o-checkbox" type="checkbox"><label for="check2"></label>
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check2" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check2"></label>
           Sending message test
+        </div>
       </li>
-      <li tabindex="-1" role="option" aria-checked="false">
-          <input tabindex="-1" id="check3" class="o-checkbox" type="checkbox"><label for="check3"></label>
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check3" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check3"></label>
           Photos of the weekend at the sea
+        </div>
       </li>
-      <li tabindex="-1" role="option" aria-checked="false">
-          <input tabindex="-1" id="check4" class="o-checkbox" type="checkbox"><label for="check4"></label>
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check4" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check4"></label>
           Re: Your order N°3642
+        </div>
       </li>
   </ul>
 </div>
