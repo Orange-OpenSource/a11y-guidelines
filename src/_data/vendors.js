@@ -16,6 +16,9 @@ module.exports = {
     version: '3.5.1',
     integrity: 'sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj'
   },
+  jqueryValidate: {
+    version: '1.19.2'
+  },
   popper: {
     version: '1.16.1',
     integrity: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
