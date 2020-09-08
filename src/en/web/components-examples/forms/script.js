@@ -3,7 +3,7 @@ $(document).ready(function() {
             required: "Please fill in the field : {0}."
       });
       
-	jQuery("#forms").validate({
+	jQuery("#form").validate({
             errorContainer: "#globalErrorMessage",            
 
             rules: {                  
