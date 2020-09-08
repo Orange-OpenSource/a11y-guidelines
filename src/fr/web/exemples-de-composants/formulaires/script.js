@@ -4,7 +4,7 @@ $(document).ready(function() {
             required: "Veuillez renseigner le champ : {0}."
       });
 
-	jQuery("#formulaires").validate({
+	jQuery("#formulaire").validate({
             errorContainer: "#globalErrorMessage",
 
             rules: {
