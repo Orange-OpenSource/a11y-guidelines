@@ -114,6 +114,18 @@ blockquote p::after {
 
 
 
+/*
+ * Glossary
+ * @see https://twitter.com/hankchizljaw/status/1200557556399247360
+ */
+
+.Glossary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+
+
 /**
  * Footer
  */
