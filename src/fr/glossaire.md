@@ -1,5 +1,0 @@
----
-title: "Glossaire"
----
-
-# TODO
