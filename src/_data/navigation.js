@@ -31,8 +31,7 @@ module.exports = {
           { label: 'Test', href: '/en/web/wcag-criteria-by-project-phase/' },
           { label: 'Evaluate', href: '/en/web/wcag-audit/' },
           { label: 'Toolbox', href: '/en/web/test-tools/' },
-          { label: 'Component examples', href: '/en/web/components-examples/' },
-          { label: 'Web articles', href: '/en/articles/?tag=web' }
+          { label: 'Component examples', href: '/en/web/components-examples/' }
         ]
       },
       {
@@ -109,8 +108,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/web/criteres-wcag-par-theme/' },
           { label: 'Évaluer', href: '/fr/web/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/web/outils/' },
-          { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' },
-          { label: 'Articles web', href: '/fr/articles/?tag=web' }
+          { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }
         ]
       },
 
