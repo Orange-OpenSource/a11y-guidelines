@@ -30,18 +30,18 @@ button.btn-poll {
     background: #fff;
 }
 
+#chatbot-window,
+#btnChatbot {
+    bottom: 5rem;
+    position: fixed;
+    right: 1.25rem;
+}
+
 #chatbot-window {
     display: none;
-    position: fixed;
-    right: 2rem;
-    bottom: 1.5rem;
     border-bottom: .25rem solid #eee;
     border-top: .25rem solid #666;
     box-shadow: 2px 2px 5px 0px #cfcfcf;
-}
-
-#chatbot-window.chatbot-hidden {
-    bottom: 0;
 }
 
 .btnChatbot {
@@ -67,10 +67,7 @@ button.btn-poll {
 }
 
 #btnChatbot {
-    position: fixed;
     z-index: 99999;
-    bottom: 1.5rem;
-    right: 4rem;    
 }
 
 #chatbot {
