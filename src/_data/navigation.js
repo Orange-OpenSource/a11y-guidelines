@@ -64,7 +64,7 @@ module.exports = {
           { label: 'Design', href: '/en/mobile/ios/design/' },
           { label: 'Develop', href: '/en/mobile/ios/development/' },
           { label: 'Test', href: '/en/mobile/ios/test/' },
-          { label: 'VoiceOver', href: '/en/mobile/ios/voiceover/' },
+          { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
       },
@@ -143,7 +143,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/ios/conception/' },
           { label: 'Développer', href: '/fr/mobile/ios/developpement/' },
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
-          { label: 'VoiceOver', href: '/fr/mobile/ios/voiceover/' },
+          { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
       },
