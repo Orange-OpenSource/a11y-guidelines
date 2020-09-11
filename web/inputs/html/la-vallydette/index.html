@@ -73,10 +73,36 @@
             .border {
                 border-width: .0625rem !important;
             }
+			
+			.bg-light2 {background-color: #F6F6F6;}
+			
+			@media print {
+				body {padding-top: 0 !important;}
+			
+				.col-print-12{
+						flex: 0 0 100%;
+						max-width: 100%;
+				}
+				
+				.custom-switch .custom-control-label::before, .custom-control-label::before  {
+					content:none;
+				}
+				
+				.custom-switch .custom-control-label::after, .custom-control-label::after {
+					content:none;
+				}
+				
+				.custom-control-input {
+					position: relative;
+					z-index: 1;
+					opacity: 100;	
+				}
+				
+			 } 
         </style>
     </head>
     <body>
-        <header id="docs-navbar" class="" >
+        <header id="docs-navbar" class="d-print-none" >
 		<div class="navbar navbar-dark navbar-expand supra">
 			<div class="d-flex flex-row-reverse container-lg">
 
@@ -144,27 +170,33 @@
         <main role="main" class="mt-4" id="main">
             <div class="container d-flex align-items-center mb-3" id="auditInfoManager">
                 <h1 id="checklistName" class="mb-0"></h1>
-                <button class="btn btn-secondary btn-icon ml-auto" id="btnChecklistName"
+                <button class="btn btn-secondary btn-icon ml-auto d-print-none" id="btnChecklistName"
                         aria-label="Modifier le nom de l’audit" title="Modifier le nom de l’audit"
                         data-element="checklistName" data-property="checklist.name"
                         data-toggle="modal" data-target="#modalEdit">
                     <span class="icon-Pencil" aria-hidden="true"></span>
                 </button>
-                <button class="btn btn-secondary ml-2" type="button"
+				<button class="btn btn-secondary btn-icon ml-2 d-print-none" id="btnLocalStorage"
+                        aria-label="Récupérer le dernier audit" title="Récupérer le dernier audit"
+                        data-element="checklistName" data-property="checklist.name"
+                        data-toggle="modal" data-target="#modalLocalStorage">
+                     <span class="icon-Syncronise" aria-hidden="true"></span>
+                </button>
+                <button class="btn btn-secondary ml-2 d-print-none" type="button"
                         data-toggle="modal" data-target="#modalResult"
                         id="btnShowResult">Afficher le résultat de l’audit
                 </button>
                
             </div>
 
-            <div class="o-nav-local bg-white navbar-light my-3" id="pageManager"></div>
+            <div class="o-nav-local bg-white navbar-light my-3 d-print-none" id="pageManager"></div>
 
             <div class="container">
                 <div class="row align-items-start position-relative">
-                    <div class="col-md-2 sticky-top pt-4 pr-0" id="currentPageManager">
+                    <div class="col-md-2 sticky-top pt-4 pr-0 col-print-12" id="currentPageManager">
                         <h1 id="pageName" class="mb-0">Nom de la page</h1>
                         <hr class="border-light">
-                        <div id="contextualMenu" class="d-flex align-content-stretch flex-wrap  w-100">
+                        <div id="contextualMenu" class="d-flex align-content-stretch flex-wrap w-100 d-print-none">
                             <button class="btn btn-secondary btn-icon" id="btnPageName"
                                     aria-label="Modifier le nom de la page" title="Modifier le nom de la page"
                                     data-element="pageName" data-secondary-element="pageID-0"
@@ -181,11 +213,11 @@
                         </div>
                         
                     </div>
-                    <div class="col-md-8 bg-white border border-light">
+                    <div class="col-md-8 bg-white border border-light col-print-12">
                         <span id="count" class="alert-danger"></span>
                         <section id="mainContent"></section>
                     </div>
-                    <aside id="filter" class="col-md-2 sticky-top pt-4">
+                    <aside id="filter" class="col-md-2 sticky-top pt-4 col-print-12">
                         
                     </aside>
                 </div>
@@ -201,7 +233,7 @@
         </footer>
 
         <a href="#" class="o-scroll-up">
-            <span class="d-none d-sm-inline-block" id="scrollUpTxt">Retour en haut de page</span>
+            <span class="d-none d-sm-inline-block d-print-none" id="scrollUpTxt">Retour en haut de page</span>
         </a>
 
         <div id="modal"></div>
