@@ -76,7 +76,9 @@ This accessibility attribute is available via the interface builder but also pro
     //Added header.  
     defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 func customTraits() {
     //Specified UIPageControl with the ’ajustable’ trait.
     pageControl.accessibilityTraits = .adjustable
@@ -111,7 +113,9 @@ The `accessibilityTrait` attribute is actually a `bitmask` in which each element
         // Do the job if '.header' is one of the traits...
     }
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 func changeTraits() {
         
     //Dedicated trait set with no other option.
@@ -197,7 +201,9 @@ These accessibility attributes are available via the builder interface but also 
     myProgressView.accessibilityValue = @"45 per cent";
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class ChangeTextView: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
@@ -294,7 +300,9 @@ The rendering isn't natural if the date or time data are imported text in a `lab
                                                                         
     hourLabel.accessibilityLabel = [NSDateComponentsFormatter localizedStringFromDateComponents:hourComponents
                                                                                      unitsStyle:NSDateComponentsFormatterUnitsStyleSpellOut];
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         
@@ -336,7 +344,9 @@ If a number is imported as is in a `label`text, the vocalization will be made on
     
     numberLabel.accessibilityLabel = [NSNumberFormatter localizedStringFromNumber:numberValue
                                                                       numberStyle:NSNumberFormatterSpellOutStyle];
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     let numberValue = NSNumber(value: 54038921.7)
         
     numberLabel.text = NumberFormatter.localizedString(from: numberValue,
@@ -387,7 +397,9 @@ Once more, formatting data is an essential step for a phone number vocalization 
     
     phoneNumberLabel.text = phoneNumberValue;
     phoneNumberLabel.accessibilityLabel = spelledOutString;
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
         let phoneNumberValue = "06.11.22.33.06"
         let phoneNumberElts = phoneNumberValue.components(separatedBy: ".")
         
@@ -463,7 +475,9 @@ To trigger a vocalization, just call the **UIAccessibilityPostNotification** met
 <pre><code class="objective-c">
 UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
                                 @"This is a VoiceOver message.");
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 UIAccessibility.post(notification: .announcement,
                      argument: "This is a VoiceOver message.")
 </code></pre>
@@ -518,7 +532,9 @@ If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocal
     myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 @IBAction func tapHere(_ sender: UIButton) {
         
     myLabel.accessibilityLanguage = "fr"
@@ -602,7 +618,9 @@ With `nil`, the first accessible element in the page is focused.
     
     UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 //The element 'myLabel' is focused and vocalized with its new value.
 @IBAction func tapHere(_ sender: UIButton) {
         
@@ -685,6 +703,7 @@ The `accessibilityElement` attribute is available via the interface builder but 
 A red square will be drawn and contain two other squares (blue and yellow) in order to apply the attributes defined in the `Details` sheet.
 
 <img alt="" style="max-width: 500px; height: auto; " src="../../images/iOSdev/MasquerDesElements_1.png" />
+
 <pre><code class="objective-c">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -723,7 +742,9 @@ A red square will be drawn and contain two other squares (blue and yellow) in or
     
     theView.isAccessibilityElement = YES;
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -843,7 +864,9 @@ We wish to obtain a 'label' and a 'switch control' as one unique block behaving 
     [self.view addSubview:wrap];
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     class MyViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
@@ -901,7 +924,9 @@ int indexSwitch = 1;
     return YES;
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     class MyWrapView: UIView {
     
     //Indexes for the array containing all the wrapped elements.
@@ -999,7 +1024,9 @@ UIAccessibilityElement * elt;
     elt.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     class ActivationPointViewController: UIViewController {
     
     @IBOutlet weak var myButton: UIButton!
@@ -1109,7 +1136,9 @@ The best way to illustrate this feature is the keyboard whose keys order isn't n
                                         key_9,
                                         key_5];
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     @IBOutlet weak var greyColumn: UIView!
     @IBOutlet weak var blueBlock: UIView!
     
@@ -1216,7 +1245,9 @@ The example below enables to follow the focus of an accessible element identifie
     }
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 extension UIView {
     override open func accessibilityElementDidBecomeFocused() {
         
@@ -1350,7 +1381,9 @@ float heightVal;
     
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     var xVal: CGFloat = 0.0
     var yVal: CGFloat = 0.0
     var widthVal: CGFloat = 0.0
@@ -1478,7 +1511,9 @@ Hereafter, knowledge about hiding wrappers and their contents is assumed to be a
     //Resolves the problem with Parent B and its subviews.
     parentB.isAccessibilityElement = NO;
     parentB.accessibilityElementsHidden = YES;
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     parentA.isAccessibilityElement = false
     parentA.accessibilityElementsHidden = false
 
@@ -1508,7 +1543,9 @@ Hereafter, knowledge about hiding wrappers and their contents is assumed to be a
 
     B2.isAccessibilityElement = NO;
     B2.accessibilityElementsHidden = YES;
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     parentB.isAccessibilityElement = false
     parentB.accessibilityElementsHidden = false
 
@@ -1612,7 +1649,9 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
     UIFont * fontHead = [UIFont fontWithName:@"Chalkduster" size:30.0];
     UIFontMetrics * fontHeadMetrics = [[UIFontMetrics alloc]initForTextStyle:UIFontTextStyleHeadline];
     fontHeadline.font = [fontHeadMetrics scaledFontForFont:fontHead];
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     @IBOutlet weak var fontHeadline: UILabel!
     @IBOutlet weak var fontFootNote: UILabel!
     
@@ -1641,7 +1680,9 @@ Since iOS7, it is possible to make the text size dynamic according to the phone 
         //When handling the font size change event, you must redisplay the affected elements.
         fontFootNote.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
     }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     //Listens to the notification dealing with the font size changing from the mobile settings.
     NotificationCenter.default.addObserver(self,
                                            selector:#selector(methodToBeCalled(notification:)),
@@ -1733,7 +1774,9 @@ The `Dynamic Type` feature introduced in the previous section may come along wit
     myLabel.attributedText = myText;
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class TruncationHyphen: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
@@ -1882,7 +1925,9 @@ NS_ASSUME_NONNULL_BEGIN
 }
 @end
 NS_ASSUME_NONNULL_END
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class LogoViewController: UIViewController {
     
     @IBOutlet weak var myView: UIImageView!
@@ -1928,7 +1973,9 @@ NS_ASSUME_NONNULL_BEGIN
 }
 @end
 NS_ASSUME_NONNULL_END
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class ButtonViewController: UIViewController {
 
     @IBOutlet weak var myButton: UIButton!
@@ -2054,7 +2101,9 @@ NS_ASSUME_NONNULL_BEGIN
         [_delegate adjustableIncrementForView:self];
     }
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 protocol AdjustableForAccessibilityDelegate: class {
     func adjustableDecrementFor(_ view: StepperWrapper)
     func adjustableIncrementFor(_ view: StepperWrapper)
@@ -2122,7 +2171,9 @@ NS_ASSUME_NONNULL_BEGIN
 }
 @end
 NS_ASSUME_NONNULL_END
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
     
     @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
@@ -2275,7 +2326,9 @@ Whatever the VoiceOver or the Switch Control feature, the implementation to get 
     return YES;
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class CustomActions: UIViewController {
     
     @IBOutlet weak var persoElt: UILabel!
@@ -2419,7 +2472,9 @@ static NSInteger flicksDown;
                                            }];
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class CustomRotor: UIViewController {
 
     @IBOutlet weak var rotorTitle: UILabel!
@@ -2523,7 +2578,9 @@ On iOS, it is possible to check the accessibility options state.
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
     
     NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
     let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
         
@@ -2564,7 +2621,9 @@ In this example, a method is fired when VoiceOver or Switch Control status has c
           checkStatus[UIAccessibilityIsSwitchControlRunning()],
           checkStatus[UIAccessibilityIsVoiceOverRunning()]);
 }
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -2664,7 +2723,9 @@ Using the standard components with few navigation bar customizations is a good w
 Once the navigation bar loaded, a new `label` must be provided so as to amend only the VoiceOver reading out without modifying the appearance of the left bar item.
 <pre><code class="objective-c">
     self.navigationController.navigationBar.backItem.accessibilityLabel = @"new label for the back button";
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     navigationController?.navigationBar.backItem?.accessibilityLabel = "new label for the back button"
 </code></pre>
 
@@ -2682,7 +2743,9 @@ Once the navigation bar loaded, a new `label` must be provided so as to amend on
     
     _a11yLeftBarButton.accessibilityLabel = @"previous screen";
     self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     var a11yLeftBarButton: UIBarButtonItem?
     
     a11yLeftBarButton = UIBarButtonItem(image: UIImage(named: "imgInfo"),
@@ -2712,7 +2775,9 @@ Once the navigation bar loaded, a new `label` must be provided so as to amend on
     _a11yLeftBarButton.accessibilityLabel = @"previous screen";
     
     self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     var a11yLeftBarButton: UIBarButtonItem?
     
     let a11yLeftBarButtonImage = UIImage(named: "imgInfo")
@@ -2742,7 +2807,9 @@ In order to have a quick access to the accessibility properties of a navigation 
     
     self.navigationItem.titleView = a11yTitleLabel;
     self.navigationItem.titleView.accessibilityLabel = @"writing and reading out are different";
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     let a11yTitleLabel = UILabel()
     a11yTitleLabel.text = "TITLE"
     a11yTitleLabel.sizeToFit()
@@ -2775,7 +2842,9 @@ In order to have a quick access to the accessibility properties of a navigation 
     _a11yRightBarButton.accessibilityLabel = @"validate your actions";
     
     self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
     var a11yRightBarButton: UIBarButtonItem?
 
     let a11y = UILabel()
@@ -2872,7 +2941,9 @@ Usually, we don't need to change the VoiceOver reading order for the navigation 
     self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class OrderViewController: UIViewController {
 
     var a11yLeftBarButton: UIBarButtonItem?
@@ -2989,7 +3060,9 @@ class OrderViewController: UIViewController {
 }
 @end
 
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 @IBOutlet weak var a11yLabel1: UILabel!
 @IBOutlet weak var a11yLabel2: UILabel!
 @IBOutlet weak var a11yLabel3: UILabel!
@@ -3195,7 +3268,9 @@ willSpeakRangeOfSpeechString:(NSRange)characterRange
     }
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
     
     @IBOutlet weak var textLabel: UILabel!
@@ -3281,7 +3356,9 @@ When a particular spelling is intended, phonetics is highly recommended to get t
     
     AVSpeechSynthesizer &#42; synthesizer = [[AVSpeechSynthesizer alloc] init];
     [synthesizer speakUtterance:utterance];
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
         let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
         
         let attrStr = NSMutableAttributedString(string: "blablabla",
@@ -3453,7 +3530,9 @@ The Xcode InterfaceBuilder shows the structure used for the example hereunder :
                                         thirdGroup];
 }
 @end
-</code></pre><pre><code class="swift">
+</code></pre>
+
+<pre><code class="swift">
 class ViewController: UIViewController {
     
     @IBOutlet weak var btnsParentView: UIStackView!
