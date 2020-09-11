@@ -3,7 +3,6 @@ title: "Le nom accessible en HTML"
 abstract: "Le nom accessible, qu'est-ce et son rapport avec les technologies d'assistance"
 date: "2019-01-01"
 tags:
-  - technicalArticle
   - web
 ---
 
