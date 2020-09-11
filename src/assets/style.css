@@ -124,6 +124,11 @@ blockquote p::after {
   grid-template-columns: auto 1fr;
 }
 
+.Glossary dt:nth-of-type(odd),
+.Glossary dd:nth-of-type(odd) {
+  background-color: #eee;
+}
+
 
 
 /**
