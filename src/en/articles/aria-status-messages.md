@@ -3,7 +3,6 @@ title: "Use ARIA for status messages"
 abstract: "Status messages how to with ARIA"
 date: "2019-01-01"
 tags:
-  - technicalArticle
   - web
 ---
 
