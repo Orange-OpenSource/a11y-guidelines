@@ -171,6 +171,10 @@ pre code {
  * Utilities
  */
 
+.bg-200 {
+  background-color: #f6f6f6 !important;
+}
+
 .bg-300 {
   background-color: #eee !important;
 }
