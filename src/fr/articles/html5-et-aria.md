@@ -3,7 +3,6 @@ title: "HTML5 & ARIA"
 abstract: "Introduction HTML 5 et ARIA"
 date: "2019-01-01"
 tags:
-  - technicalArticle
   - web
 ---
 

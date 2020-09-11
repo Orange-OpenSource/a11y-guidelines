@@ -3,7 +3,6 @@ title: "ARIA attributes that can save you"
 abstract: "Some ARIA attributes to know"
 date: "2019-01-01"
 tags:
-  - technicalArticle
   - web
 ---
 

@@ -3,7 +3,6 @@ title: "L'attribut aria-live et le role alert"
 abstract: "Quand et comment utiliser les roles et attributs de type live"
 date: "2019-01-01"
 tags:
-  - technicalArticle
   - web
 ---
 
