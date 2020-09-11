@@ -115,12 +115,12 @@
 {% macro toc() %}
 {%- set headings = content | getHeadingsForToc -%}
 {%- if headings | length > 0 -%}
-  <nav id="toc" role="navigation" aria-labelledby="toc-title">
+  <nav id="toc" class="bg-200 p-3" role="navigation" aria-labelledby="toc-title">
     <h2 id="toc-title">{% translate "toc.title", locale %}</h2>
     <ul class="nav flex-column">
       {%- for heading in headings -%}
         <li class="nav-item position-relative">
-          <a href="#{{ heading.id }}" class="nav-link text-muted">{{ heading.text }}</a>
+          <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
         </li>
       {%- endfor -%}
     </ul>
