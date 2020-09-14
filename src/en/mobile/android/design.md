@@ -166,7 +166,8 @@ Allow screen reader users to access components’ information, their status, the
 
 **Example:**
 
-<img src="../../images/tabs.png" alt="example of tabs that do not provide information on their status and nature of default" width="400">  
+<img src="../../images/tabs.png" alt="example of tabs that do not provide information on their status and nature of default" width="400">
+
 To see a code snippet that corrects this issue, please refer to the corresponding page of the [Developer Guide](./dev-android.html#alternatives-textuelles).
   
 
