@@ -45,7 +45,7 @@ module.exports = {
         },
         theme: 'warning',
         subLevels: [
-          { label: 'Criteria', href: '/en/mobile/android/criteria/' },
+          { label: 'Design', href: '/en/mobile/android/design/' },
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
         ]

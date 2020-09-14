@@ -17,7 +17,7 @@ Two versions are available:
 <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-4">
         <h2 class="sr-only">Android criteria</h2>
-        <a href="../android/criteria/" class="btn btn-info">
+        <a href="../android/design/" class="btn btn-info">
             <img src="../images/android.png" alt="">
             <div>Android accessibility guide</div>
         </a>
