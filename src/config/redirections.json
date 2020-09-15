@@ -857,27 +857,27 @@
   },
   {
     "old": "web_EN/methodes-outils-clavier.html",
-    "new": "/en/web/test-tools/methods-and-test-tools/keyboard-navigation"
+    "new": "/en/web/toolbox/methods-and-test-tools/keyboard-navigation"
   },
   {
     "old": "web_EN/methodes-outils-contrastes.html",
-    "new": "/en/web/test-tools/methods-and-test-tools/color-contrast-level"
+    "new": "/en/web/toolbox/methods-and-test-tools/color-contrast-level"
   },
   {
     "old": "web_EN/methodes-outils-extensions.html",
-    "new": "/en/web/test-tools/methods-and-test-tools/browser-extensions"
+    "new": "/en/web/toolbox/methods-and-test-tools/browser-extensions"
   },
   {
     "old": "web_EN/methodes-outils-lecteur-ecran.html",
-    "new": "/en/web/test-tools/methods-and-test-tools/navigating-with-a-screen-reader"
+    "new": "/en/web/toolbox/methods-and-test-tools/navigating-with-a-screen-reader"
   },
   {
     "old": "web_EN/methodes-outils-liste-titres.html",
-    "new": "/en/web/test-tools/methods-and-test-tools/page-headers"
+    "new": "/en/web/toolbox/methods-and-test-tools/page-headers"
   },
   {
     "old": "web_EN/methodes-outils-zoom.html",
-    "new": "/en/web/test-tools/methods-and-test-tools/text-zoom"
+    "new": "/en/web/toolbox/methods-and-test-tools/text-zoom"
   },
   {
     "old": "web_EN/methodes-outils.html",
