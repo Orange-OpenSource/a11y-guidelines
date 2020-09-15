@@ -1,5 +1,5 @@
 ---
-title: "WCAG criteria by project phase"
+title: "WCAG based guidelines for testing"
 displayToc: true
 leftColumn:
   display: true
@@ -10,18 +10,16 @@ js:
   - /assets/test-web.js
 ---
 
-# WCAG criteria by project phase
+# WCAG based guidelines for testing
 
-This base criteria for the Orange websites and applications avoids the major accessibility errors.
-Its implementation does not give you the guarantee to be 100% accessible, but is a clean bedrock so you can engage in a progressive accessibility implementation process.
+This set of criteria intended for websites and web applications presents the procedures and tools to check compliance with the criteria. Tests are organized by profile and tool. It is aimed at designers, developers, testers, accessibility experts, etc..
 
-Following the Orange guidelines (<cite>Design for digital platforms Guidelines</cite>), available on the [Orange brand site](http://design.orange.com/) is a prerequisite to the use of this base criteria. 
-Some elements already present in the Orange Brand (such as the use of colours, text alignment...) have not been included in this list of criteria.
+Sites created for Orange must also be compliant with the [Orange Design guidelines](https://design.orange.com/guidelines/) (“Web browsing”, “Digital Colour Palettes”, “Accessibility”) that detail the color usage, the type system,etc.
 
-Three versions are available:
-- **The design version** does not mention the code, it is aimed at product designers, designers, project managers, etc.
-- **The development version** mentions the code and is aimed at developers, technical managers, validation teams, testers, etc.
-- **The test version** presents the procedures to follow in order to validate the compliance of each recommendation. It is intended for designers, developers, qualifiers, etc.
+Two other versions are available:
+- The **design version** focuses on design-related criteria. It is aimed at product owners, designers, project managers, etc.
+- The **development version** tackles the code. It is aimed at developers, technical managers, etc.
+
 
 
 <section id="refTests" class="accordion" aria-multiselectable="true">
