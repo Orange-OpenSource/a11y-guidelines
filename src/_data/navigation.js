@@ -47,6 +47,7 @@ module.exports = {
         subLevels: [
           { label: 'Design', href: '/en/mobile/android/design/' },
           { label: 'Develop', href: '/en/mobile/android/development/' },
+          { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
         ]
       },
