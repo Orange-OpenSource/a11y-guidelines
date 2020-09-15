@@ -30,7 +30,7 @@ module.exports = {
           { label: 'Develop', href: '/en/web/develop/' },
           { label: 'Test', href: '/en/web/wcag-criteria-by-project-phase/' },
           { label: 'Evaluate', href: '/en/web/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/web/test-tools/' },
+          { label: 'Toolbox', href: '/en/web/toolbox/' },
           { label: 'Component examples', href: '/en/web/components-examples/' }
         ]
       },

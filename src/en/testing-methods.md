@@ -17,5 +17,5 @@ These tests aim at checking the interfaces behavior with keyboard-only navigatio
 User evaluation refers to having digital services tested by users with disabilities. Users are asked to perform a series of tasks, usually the main scenarios of the service. The objective is to check the usability of the service from an accessibility point of view and to validate with users how critical are the remaining issues. These tests are  managed by accessibility experts.  
 
 For more details&nbsp;:
-- [Methods and tools specific to the Web](../web/test-tools/)
+- [Methods and tools specific to the Web](../web/toolbox/)
 - [Accessibility user testing](../accessibility-user-testing/)

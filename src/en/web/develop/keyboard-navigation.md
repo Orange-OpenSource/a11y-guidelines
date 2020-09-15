@@ -24,7 +24,7 @@ Implement event handlers that don’t rely on mouse events only, therefore allow
 - Make maximum use of the basic <abbr>HTML</abbr> interactive components (fields, links, buttons), these being natively accessible to the keyboard. Otherwise, ensure that the custom components are keyboard operable in a conventional manner.
 - All important actions performed with a mouse must also be reproduced with the keyboard, even complex interactions (drag & drop, mobile touch gestures…).
 
-See [how to navigate with a keyboard](../../test-tools/methods-and-test-tools/keyboard-navigation/) in a web browser.
+See [how to navigate with a keyboard](../../toolbox/methods-and-test-tools/keyboard-navigation/) in a web browser.
 
 **Users’ goal:**
  
@@ -97,7 +97,7 @@ A page containing a video player where the focus can enter the player, but canno
 
 Do not hide the focus and if necessary make it visible enough (e.g. by modifying the `outline` <abbr>CSS</abbr> property) on all elements likely to receive it (links, buttons, form elements). You can also accentuate the visibility of the focus so that it is easily identifiable.
 
-Make sure to provide a sufficient level of contrast so that it is visible to all (see [measure the level of contrast of colors](../../test-tools/methods-and-test-tools/color-contrast-level/)).
+Make sure to provide a sufficient level of contrast so that it is visible to all (see [measure the level of contrast of colors](../../toolbox/methods-and-test-tools/color-contrast-level/)).
 
 When an effect is visible on an element during mouse-over (e.g. `:hover` <abbr>CSS</abbr> property), this effect must also be displayed when capturing the focus (`:focus`).
 
