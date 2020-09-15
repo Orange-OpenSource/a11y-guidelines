@@ -625,7 +625,7 @@
   },
   {
     "old": "web_EN/fondamentaux.html",
-    "new": "/en/web/wcag-criteria-by-theme"
+    "new": "/en/web/wcag-criteria-by-project-phase"
   },
   {
     "old": "web_EN/htmlaria.html",
@@ -1081,7 +1081,7 @@
   },
   {
     "old": "web/fondamentaux.html",
-    "new": "/fr/web/criteres-incontournables"
+    "new": "/fr/web/criteres-wcag-par-theme"
   },
   {
     "old": "web/htmlaria.html",
