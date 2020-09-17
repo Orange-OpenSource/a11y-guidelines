@@ -182,3 +182,15 @@ pre code {
 .no-js .hidden-if-no-js {
   display: none !important;
 }
+
+
+
+/**
+ * Responsive
+ */
+
+@media screen and (max-width: 479.98px) {
+  .breadcrumb-item:nth-last-of-type(2)::before {
+    transform: rotate(0);
+  }
+}

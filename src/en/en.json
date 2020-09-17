@@ -1,4 +1,5 @@
 {
   "locale": "en",
-  "layout": "templates/default"
+  "layout": "templates/default",
+  "boostedJS": true
 }

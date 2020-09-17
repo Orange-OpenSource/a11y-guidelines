@@ -11,7 +11,8 @@ module.exports = {
     },
     navigation: {
       main: {
-        label: 'Main navigation'
+        label: 'Main navigation',
+        burgerLabel: 'Navigation menu'
       },
       secondary: {
         label: 'Secondary navigation'
@@ -64,7 +65,8 @@ module.exports = {
     },
     navigation: {
       main: {
-        label: 'Navigation principale'
+        label: 'Navigation principale',
+        burgerLabel: 'Menu de navigation'
       },
       secondary: {
         label: 'Navigation secondaire'
