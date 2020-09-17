@@ -52,7 +52,7 @@ Mode opératoire :
 - Positionner **Agrandissement** sur **Utiliser le service**. Revenir à l’application, cliquer 3 fois sur l’écran. Vérifier que les écrans sont lisibles dans ce mode. Pour agrandir, placer 2 doigts sur l’écran puis écarter les, se déplacer avec deux doigts sur l’écran et un doigt dans certaines listes. Toutes les informations de l’écran doivent être lisibles en mode zoom.
 
 
-## Lecteur d’écran
+## Le lecteur d’écran <span lang="en">TalkBack</span>
 
 Le lecteur d’écran est un outil pour les personnes non voyantes et malvoyantes. Il a deux fonctions, la vocalisation et la navigation dans l’écran. Tous les éléments signifiants doivent être **vocalisés** dans un **ordre logique**.
 
