@@ -4,12 +4,13 @@
   <p id="breadcrumb-label" class="sr-only">{% translate 'breadcrumb.label', locale %}</p>
   <ol class="breadcrumb">
     {%- for item in breadcrumb -%}
+      {% set beforeLast = loop.index == breadcrumb | length - 1 %}
       {% if item.isActive %}
-        <li class="breadcrumb-item" aria-current="location">
+        <li class="breadcrumb-item{% if not beforeLast %} d-none d-sm-flex{% endif %}" aria-current="location">
           {{ item.label }}
         </li>
       {% else %}
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item{% if not beforeLast %} d-none d-sm-flex{% endif %}">
           <a href="{{ item.href }}">{{ item.label }}</a>
         </li>
       {% endif %}
