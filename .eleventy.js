@@ -5,6 +5,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
 const locales = require('./src/_data/locales')
+const navigation = require('./src/_data/navigation')
 const collections = require('./src/config/collections')
 
 const IMAGES_EXTENSIONS = ['jpg', 'png', 'svg']
@@ -94,6 +95,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter('isHomeUrl', function (url) {
     return Object.keys(site.locales).includes(url.replace(/\//g, ''))
+  })
+
+  eleventyConfig.addNunjucksFilter('shouldDisplaySecondaryNavigation', function (page, locale) {
+    // Get the last nav object from the navigation data file which `href` property is included in the current page's URL
+    const pageNavigationObject = navigation.main[locale].filter(obj => page.url.includes(obj.href)).pop()
+
+    return pageNavigationObject.hasOwnProperty('subLevels') && pageNavigationObject.subLevels.length > 0
   })
 
   eleventyConfig.addNunjucksFilter('getBreadcrumb', function (data, locale, page, pageTitle) {
