@@ -1,5 +1,6 @@
 {
   "locale": "en",
   "layout": "templates/default",
-  "boostedJS": true
+  "boostedJS": true,
+  "popperJS": true
 }
