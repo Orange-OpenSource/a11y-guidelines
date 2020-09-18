@@ -152,3 +152,34 @@
   {%- endfor -%}
 </dl>
 {% endmacro %}
+
+{% macro changelang(mode) %}
+{%- if mode == "supra" -%}
+<nav role="navigation" aria-label="{% translate "changelang.label", locale %}">
+  <ul class="navbar-nav">
+    {%- for key, lang in site.locales -%}
+      {% set active = locale == lang.code %}
+      <li class="nav-item">
+        <a href="/{{ lang.code }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
+        {{ lang.displayName | capitalize }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+{%- elseif mode == "mobile" -%}
+<li class="nav-item d-md-none">
+  <span class="sr-only">{% translate "changelang.label", locale %}</span>
+  <ul class="d-flex list-inline">
+    {%- for key, lang in site.locales -%}
+      {% set active = locale == lang.code %}
+      <li class="list-inline-item flex-grow-1">
+        <a href="/{{ lang.code }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
+        {{ lang.displayName | capitalize }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</li>
+{%- endif -%}
+{% endmacro %}
