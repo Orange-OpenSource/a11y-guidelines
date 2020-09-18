@@ -95,6 +95,26 @@
   })
 })();
 
+/* Priority nav*/
+function initPriorityNav () {
+  const secondaryNavigation = jQuery('#secondary-navigation')
+
+  if (!secondaryNavigation) {
+    return
+  }
+
+  const locales = {
+    en: 'More',
+    fr: 'Plus'
+  }
+
+  if (!locales.hasOwnProperty(Application.lang)) {
+    throw new Error(`[initPriorityNav()] : lang '${Application.lang}' is not managed by the method's translations`)
+  }
+
+  secondaryNavigation.prioritynav(locales[Application.lang])
+}
+
 function highlightCodeBlocks () {
   hljs.initHighlighting()
 
@@ -116,6 +136,8 @@ function highlightCodeBlocks () {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
+  initPriorityNav()
+
   if (Application.vendors.highlightJS === true) {
     highlightCodeBlocks()
   }
