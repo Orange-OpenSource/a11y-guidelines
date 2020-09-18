@@ -1,8 +1,10 @@
+{% import "../components/ui.njk" as ui with context %}
+
 <header role="banner">
   <div class="navbar navbar-dark navbar-expand supra">
     <div class="container-lg">
       {% include "components/header/skip-links.njk" %}
-      {% include "components/header/changelang.njk" %}
+      {{ ui.changelang("supra") }}
     </div>
   </div>
   {% include "components/header/main-navigation.njk" %}
