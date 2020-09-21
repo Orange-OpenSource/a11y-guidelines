@@ -18,7 +18,7 @@ module.exports = {
         label: 'Secondary navigation'
       },
       side: {
-        label: 'Category navigation'
+        label: 'Topics'
       }
     },
     header: {
@@ -72,7 +72,7 @@ module.exports = {
         label: 'Navigation secondaire'
       },
       side: {
-        label: 'Navigation de catégorie'
+        label: 'Thématiques'
       }
     },
     header: {
