@@ -193,4 +193,8 @@ pre code {
   .breadcrumb-item:nth-last-of-type(2)::before {
     transform: rotate(0);
   }
+
+  .MobileDropdownNavigationContainer .dropdown ~ .dropdown {
+    margin-top: .625rem;
+  }
 }

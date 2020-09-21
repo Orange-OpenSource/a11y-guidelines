@@ -1,3 +1,4 @@
+{%- import "../components/ui.njk" as ui with context -%}
 <!doctype html>
 <html lang="{{ locale }}" dir="ltr" class="no-js">
   <head>
@@ -29,10 +30,18 @@
   </head>
   <body{% if displayToc == true %} data-spy="scroll" data-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
-    {# We don't want to display the breadcrumb on the home pages #}
-    {% if not page.url | isHomeUrl %}
-      {% include "../components/breadcrumbs.njk" %}
-    {% endif %}
+    <div class="container-lg pt-2">
+      {# We don't want to display the breadcrumb on the home pages #}
+      {% if not page.url | isHomeUrl %}
+        {% include "../components/breadcrumbs.njk" %}
+      {% endif %}
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        {{ ui.sideNavigation("mobile") }}
+        {% if displayToc == true %}
+          {{ ui.toc("mobile") }}
+        {% endif %}
+      </div>
+    </div>
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
     <a href="#" id="back-to-top" class="o-scroll-up static" title="{% translate "backToTop.label", locale %}">

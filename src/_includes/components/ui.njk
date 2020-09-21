@@ -113,33 +113,61 @@
 </nav>
 {% endmacro %}
 
-{% macro toc() %}
+{% macro toc(mode = "list") %}
 {%- set headings = content | getHeadingsForToc -%}
 {%- if headings | length > 0 -%}
-  <nav id="toc" class="bg-200 p-3" role="navigation" aria-labelledby="toc-title">
-    <h2 id="toc-title">{% translate "toc.title", locale %}</h2>
-    <ul class="nav flex-column">
-      {%- for heading in headings -%}
-        <li class="nav-item position-relative">
-          <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </nav>
+  {%- if mode == "list" -%}
+    <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">{% translate "toc.title", locale %}</h2>
+      <ul class="nav flex-column">
+        {%- for heading in headings -%}
+          <li class="nav-item position-relative">
+            <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {%- elseif mode == "mobile" -%}
+    <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        {% translate "toc.title", locale %}
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        {%- for heading in headings -%}
+          <a href="#{{ heading.id }}" class="dropdown-item text-wrap">{{ heading.text }}</a>
+        {%- endfor -%}
+      </div>
+    </nav>
+  {%- endif -%}
 {%- endif -%}
 {% endmacro %}
 
-{% macro sideNavigation() %}
-<nav id="side-navigation" role="navigation" aria-labelledby="side-navigation-label">
-  <h2 id="side-navigation-label" class="sr-only">{% translate "navigation.side.label", locale %}</h2>
-  <ul class="nav flex-column">
-    {%- for link in sideNavigationLinks -%}
-      <li class="nav-item position-relative">
-        {{ navLink(link, "text-muted") }}
-      </li>
-    {%- endfor -%}
-  </ul>
-</nav>
+{% macro sideNavigation(mode = "list") %}
+{% if sideNavigationLinks | length > 0 %}
+  {%- if mode == "list" -%}
+    <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label" class="sr-only">{% translate "navigation.side.label", locale %}</h2>
+      <ul class="nav flex-column">
+        {%- for link in sideNavigationLinks -%}
+          <li class="nav-item position-relative">
+            {{ navLink(link, "text-muted") }}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {%- elseif mode == "mobile" -%}
+    <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        {% translate "navigation.side.label", locale %}
+      </button>
+      <div class="dropdown-menu dropdown-menu-left">
+        {%- for link in sideNavigationLinks -%}
+          {{ navLink(link, "dropdown-item") }}
+        {%- endfor -%}
+      </div>
+    </nav>
+  {%- endif -%}
+{%- endif -%}
 {% endmacro %}
 
 {% macro glossaryList() %}
