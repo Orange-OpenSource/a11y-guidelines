@@ -15,7 +15,7 @@ The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG21/#status-messages">4
 
 When a user presses a search button, the content of the page is updated asynchronously to add the search results displayed in a region below the search button. The message "XX results found" is at the top of this new content. A screen reader will have to announce "XX results have been found". In this case, the information provided to the user is important and must be given immediately, so we will use the role `"alert"`.
 
-```
+```html
 <h2 role="alert">
     5 results were found
 </h2>
@@ -23,7 +23,7 @@ When a user presses a search button, the content of the page is updated asynchro
 
 When a user has chosen an item, presses an "Add to cart" button, a textual mention "1 item added, 4 items in the cart" appears temporarily near the shopping cart icon. A screen reader will have to announce "an item added to the cart, the cart currently contains 4 items". Here, the information to push to the user is less crucial than before so we will use the role `"status"`.
 
-```
+```html
 <p role="status">
     an item added to the cart, the cart currently contains 4 items
 </p>
@@ -31,7 +31,7 @@ When a user has chosen an item, presses an "Add to cart" button, a textual menti
 
 Once a user has activated a process for applying complex search filters, an icon symbolizing "pending": an hourglass, a clock… appears on the screen. The screen reader announces "Application busy, load in progress".
 
-```
+```html
 <div role="alert">
     Application busy, load in progress
 </div>
@@ -39,7 +39,7 @@ Once a user has activated a process for applying complex search filters, an icon
 
 An application displays a progress bar to indicate the status of an update of a content item. The screen reader provides intermittent progress announcements: "10% updated" then "20% updated"…
 
-```
+```html
 <div role="progressbar" aria-valuenow="20" aria-valued="0" aria-valuemax="100">
     20% updated
 </div>
@@ -47,7 +47,7 @@ An application displays a progress bar to indicate the status of an update of a 
 
 After a user submits a form, text is added to the existing form as follows: "Your form has been submitted successfully." The screen reader announces the same message.
 
-```
+```html
 <div role="alert">
     Your form has been submitted successfully
 </div>
@@ -55,7 +55,7 @@ After a user submits a form, text is added to the existing form as follows: "You
 
 When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating "XX errors in the form". The screen reader announces the message "Form not sent because XX validation errors" (this does not dispense with giving details of the error for each incorrectly filled field). The error information in the form is important and urgent, immediate, so we use the role `"alertdialog"`.
 
-```
+```html
 <div role="alertdialog" aria-labelledby="errors">
    <p id="errors">Form not sent because 2 validation errors</p>
 </div>
@@ -63,7 +63,7 @@ When a user fills out a form but some of the data entered is incorrect, text is 
 
 Once a user, in an online document management application, has inserted a new document in a directory, a toast notification (popup feedback message) displays the message "The YYY document is saved in the XXX directory" , which is also read by a screen reader.
 
-```
+```html
 <p role="status">
     The YYY document is saved in the XXX directory
 </p>
@@ -71,7 +71,7 @@ Once a user, in an online document management application, has inserted a new do
 
 In an online mailing application, the user chosen from a recipient list to add / remove a new e-mail address, this recipient's e-mail address is displayed on the screen following the one already chosen for this message. The screen reader will have to announce the addition of this new email address. It should be understood that the text, email address, added / removed to the list may not be visible on the screen for some users of <abbr>AT</abbr>. So, in order to give context to screen reader users, additional information is needed in the form of content not displayed but read by speech synthesis. As new information is added in a meaningful order and old information may disappear (another example could be a chat or chatbot), we use, here, the role `"log"`.
 
-```
+```html
 <div role="log">
   <ol>
     <li>XX@YY.ZZ has been added</li>
