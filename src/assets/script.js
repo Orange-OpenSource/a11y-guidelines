@@ -125,7 +125,7 @@ function highlightCodeBlocks () {
   }
 
   codeBlocks.forEach(function (codeBlock) {
-    const language = codeBlock.classList.item(0)
+    const language = codeBlock.result.language
 
     const languageWrapper = document.createElement('div')
     languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
