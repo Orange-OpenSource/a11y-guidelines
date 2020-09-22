@@ -28,7 +28,7 @@ module.exports = {
         subLevels: [
           { label: 'Design', href: '/en/web/design/' },
           { label: 'Develop', href: '/en/web/develop/' },
-          { label: 'Test', href: '/en/web/wcag-criteria-by-project-phase/' },
+          { label: 'Test', href: '/en/web/test/' },
           { label: 'Evaluate', href: '/en/web/wcag-audit/' },
           { label: 'Toolbox', href: '/en/web/toolbox/' },
           { label: 'Component examples', href: '/en/web/components-examples/' }
@@ -106,7 +106,7 @@ module.exports = {
         subLevels: [
           { label: 'Designer', href: '/fr/web/designer/' },
           { label: 'Développer', href: '/fr/web/developper/' },
-          { label: 'Tester', href: '/fr/web/criteres-wcag-par-theme/' },
+          { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Évaluer', href: '/fr/web/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/web/outils/' },
           { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }

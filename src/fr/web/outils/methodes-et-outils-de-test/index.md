@@ -9,7 +9,7 @@ title: "Méthodes et outils de test"
 Cette partie décrit une méthode d’évaluation à destination des acteurs projet pour tester la conformité d’un contenu Web et Web mobile aux critères d’accessibilité des Web Content Accessibility Guidelines (WCAG) version 2.1 niveau AA.
 
 
-Pour utiliser cette méthode, voici la [description détaillée des tests d'accessibilité](../criteres-wcag-par-theme#incontournables-testeurs) à utiliser, en fonction de différents profils&nbsp;: qualifieurs, développeurs, concepteurs et experts. 
+Pour utiliser cette méthode, voici la [description détaillée des tests d'accessibilité](../tester#incontournables-testeurs) à utiliser, en fonction de différents profils&nbsp;: qualifieurs, développeurs, concepteurs et experts. 
 
 Les tests d’accessibilité doivent être effectués tout au long du cycle de vie des projets :
 - au démarrage du projet, lors du choix du Framework, du logiciel ou progiciel… 

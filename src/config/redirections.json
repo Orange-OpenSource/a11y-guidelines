@@ -625,7 +625,7 @@
   },
   {
     "old": "web_EN/fondamentaux.html",
-    "new": "/en/web/wcag-criteria-by-project-phase"
+    "new": "/en/web/test"
   },
   {
     "old": "web_EN/htmlaria.html",
@@ -845,7 +845,7 @@
   },
   {
     "old": "web_EN/incontournables.html",
-    "new": "/en/web/wcag-criteria-by-project-phase"
+    "new": "/en/web/test"
   },
   {
     "old": "web_EN/index.html",
@@ -1081,7 +1081,7 @@
   },
   {
     "old": "web/fondamentaux.html",
-    "new": "/fr/web/criteres-wcag-par-theme"
+    "new": "/fr/web/tester"
   },
   {
     "old": "web/htmlaria.html",
@@ -1301,7 +1301,7 @@
   },
   {
     "old": "web/incontournables.html",
-    "new": "/fr/web/criteres-wcag-par-theme"
+    "new": "/fr/web/tester"
   },
   {
     "old": "web/index.html",
