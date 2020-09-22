@@ -7,7 +7,7 @@ title: "Web-specific methods and tools"
 ## Introduction
 This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 - level AA.  
 
-The detailed description of the tests can be found in the <a href="../wcag-criteria-by-project-phase/">WCAG criteria by project phase, "tests" section</a>.  
+The detailed description of the tests can be found in the <a href="../test/">WCAG criteria by project phase, "tests" section</a>.  
 
 Accessibility tests must be carried out throughout the project life cycle:
 - at the start of the project, when choosing the framework, software, or package...

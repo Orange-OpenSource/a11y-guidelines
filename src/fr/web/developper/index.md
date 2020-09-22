@@ -14,5 +14,5 @@ Cette version dédiée au développement aborde le code et s’adresse aux déve
 
 Deux autres versions sont disponibles :
 
-- **[La version conception](/fr/web/criteres-wcag-par-theme/designer/)** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
-- **[La version tests](/fr/web/criteres-wcag-par-theme/)** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. 
+- **[La version conception](/fr/web/designer/)** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
+- **[La version tests](/fr/web/tester/)** présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. 

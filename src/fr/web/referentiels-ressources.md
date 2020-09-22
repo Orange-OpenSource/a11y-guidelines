@@ -10,7 +10,7 @@ Pour les exigences d’accessibilité interne d’Orange, nous avons choisi de n
 
 Le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application.
 
-Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères WCAG par thème](../criteres-wcag-par-theme/) et des [exemples](../exemples-de-composants/) de ce site. Vous pouvez aussi utiliser les [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
+Pour les solutions à mettre en place afin de respecter cet objectif, nous vous conseillons la consultation des [critères WCAG par thème](../tester/) et des [exemples](../exemples-de-composants/) de ce site. Vous pouvez aussi utiliser les [notices Accede-Web](http://www.accede-web.com/notices/) cf. ci-dessous. 
 
 
 ## Le référentiel général d’amélioration de l'accessibilité (<abbr>RGAA</abbr>)
