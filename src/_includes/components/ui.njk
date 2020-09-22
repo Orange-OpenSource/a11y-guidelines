@@ -146,7 +146,7 @@
 {% if sideNavigationLinks | length > 0 %}
   {%- if mode == "list" -%}
     <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label" class="sr-only">{% translate "navigation.side.label", locale %}</h2>
+      <h2 id="side-navigation-label">{% translate "navigation.side.label", locale %}</h2>
       <ul class="nav flex-column">
         {%- for link in sideNavigationLinks -%}
           <li class="nav-item position-relative">
