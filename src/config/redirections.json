@@ -621,7 +621,7 @@
   },
   {
     "old": "web_EN/exigences.html",
-    "new": "/en/web/resources"
+    "new": "/en/web/useful-links"
   },
   {
     "old": "web_EN/fondamentaux.html",
@@ -1077,7 +1077,7 @@
   },
   {
     "old": "web/exigences.html",
-    "new": "/fr/web/referentiels-ressources"
+    "new": "/fr/web/liens-utiles"
   },
   {
     "old": "web/fondamentaux.html",
