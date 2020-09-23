@@ -124,12 +124,25 @@ function highlightCodeBlocks () {
     return
   }
 
+  const displayLanguageList = {
+    'css': 'CSS',
+    'html': 'HTML',
+    'java': 'Java',
+    'javascript': 'JavaScript',
+    'json': 'JSON',
+    'kotlin': 'Kotlin',
+    'objectivec':'Objective-C',
+    'swift': 'Swift',
+    'xml': 'XML'
+  }
+
   codeBlocks.forEach(function (codeBlock) {
     const language = codeBlock.result.language
+    const displayLanguage = displayLanguageList[language] || language
 
     const languageWrapper = document.createElement('div')
     languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
-    languageWrapper.textContent = language
+    languageWrapper.textContent = displayLanguage
 
     codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
   })
