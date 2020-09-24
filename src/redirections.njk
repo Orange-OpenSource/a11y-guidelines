@@ -1,0 +1,17 @@
+---
+pagination:
+  data: redirections
+  size: 1
+  alias: redirection
+permalink: "/{{ redirection.old | redirectionPermalink }}/"
+---
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Redirecting&hellip;</title>
+<script>location="{{ redirection.new }}/"</script>
+<meta http-equiv="refresh" content="0; url={{ redirection.new }}/">
+<meta name="robots" content="noindex">
+<h1>Redirecting&hellip;</h1>
+<a href="{{ redirection.new }}/">Click here if you are not redirected.</a>
+</html>

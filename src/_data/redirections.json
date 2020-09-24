@@ -1,9 +1,5 @@
 [
   {
-    "old": "about.html",
-    "new": "/fr/a-propos"
-  },
-  {
     "old": "all.html",
     "new": "/fr"
   },
