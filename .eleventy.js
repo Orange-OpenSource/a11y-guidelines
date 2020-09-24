@@ -75,6 +75,20 @@ module.exports = function (eleventyConfig) {
     return new Intl.DateTimeFormat(locale, options).format(date)
   })
 
+  eleventyConfig.addFilter('redirectionPermalink', function (path) {
+    // We already have a redirection template for the root page, so we don't want to generate it here
+    if (path === 'index.html') {
+      return false
+    }
+
+    // We remove the extension to prevent 11ty from throwing errors as it tries to write, for example : `/en/all.html/index.html`
+    if (path.includes('index.html')) {
+      return path.replace('index.html', '')
+    }
+
+    return path.replace('.html', '')
+  })
+
   eleventyConfig.addNunjucksFilter('getDefaultLocale', function (locales, outputKey = null) {
     for (let key in locales) {
       let locale = locales[key]
