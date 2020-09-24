@@ -6,7 +6,7 @@ title: "Le test de l’accessibilité sous Android"
 
 Pour le web, le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1. L'équivalent pour les applications mobiles natives est  une transposition de ces critères et le respect des [recommandations de la plateforme Android](https://developer.android.com/training/accessibility/testing).
 
-L’objet de ces pages est de décrire les [tests techniques et fonctionnels](https://a11y-guidelines-orange.netlify.app/fr/tester/). Ces tests sont des pré-requis aux tests utilisateurs. 
+L’objet de ces pages est de décrire les [tests techniques et fonctionnels](/fr/cadrage/). Ces tests sont des pré-requis aux tests utilisateurs. 
 
 Les tests d’accessibilité doivent être effectués tout au long du cycle de vie des projets :
 
