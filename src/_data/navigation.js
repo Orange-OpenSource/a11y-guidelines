@@ -14,7 +14,7 @@ module.exports = {
   main: {
     'en': [
       { label: 'Home', href: '/en/' },
-      { label: 'Methods and resources', href: '/en/testing-methods/' },
+      { label: 'Planning', href: '/en/planning/' },
       {
         label: 'Web',
         href: '/en/web/',
@@ -92,7 +92,7 @@ module.exports = {
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },
-      { label: 'Méthodes et ressources', href: '/fr/tester/' },
+      { label: 'Cadrage', href: '/fr/cadrage/' },
       {
         label: 'Web',
         href: '/fr/web/',
