@@ -1,18 +1,18 @@
-{% macro navLink(link, class) %}
-{% set strictlyActive = page.url == link.href %}
-{% set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl %}
+{%- macro navLink(link, class) -%}
+{%- set strictlyActive = page.url == link.href -%}
+{%- set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl -%}
 
-{% set current = "page" if strictlyActive else "true" %}
+{%- set current = "page" if strictlyActive else "true" -%}
 
 <a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
   {{ link.label }}
 </a>
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro cardNavigation(links) %}
+{%- macro cardNavigation(links) -%}
 <div class="card-deck flex-column flex-md-row">
 {%- for link in links -%}
-{% set isLast = loop.index == links | length %}
+{%- set isLast = loop.index == links | length -%}
   <div class="card bg-{{ link.theme }} border-secondary {{ "mb-0" if isLast else "mb-4 mb-md-0" }}">
     <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 px-3 text-center">
       <img src="../images/icons/{{ link.icon.name }}.svg" alt="" class="img-fluid" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
@@ -30,9 +30,9 @@
   </div>
 {%- endfor -%}
 </div>
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro lastPosts(posts, max) %}
+{%- macro lastPosts(posts, max) -%}
 <ol class="list-unstyled row">
   {%- for post in posts | reverse | limit(max) -%}
     <li class="col-md-4 pb-3 d-flex">
@@ -50,9 +50,9 @@
     </li>
   {%- endfor -%}
 </ol>
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro postsList(posts, filters = true, displayDate = true, displayTags = true) %}
+{%- macro postsList(posts, filters = true, displayDate = true, displayTags = true) -%}
 {% if filters == true %}
   {{ filtersBar(posts) }}
 {% endif %}
@@ -86,13 +86,13 @@
   </li>
 {% endif %}{%- endfor -%}
 </ol>
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro componentsExamplesList(posts) %}
+{%- macro componentsExamplesList(posts) -%}
   {{ postsList(posts, false, false, false) }}
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro filtersBar(posts) %}
+{%- macro filtersBar(posts) -%}
 {% set tags = posts | getPostsTags %}
 <nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
   <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{% translate "filtersBar.label", locale %} :</h2>
@@ -111,9 +111,9 @@
     {%- endfor -%}
   </ul>
 </nav>
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro toc(mode = "list") %}
+{%- macro toc(mode = "list") -%}
 {%- set headings = content | getHeadingsForToc -%}
 {%- if headings | length > 0 -%}
   {%- if mode == "list" -%}
@@ -140,9 +140,9 @@
     </nav>
   {%- endif -%}
 {%- endif -%}
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro sideNavigation(mode = "list") %}
+{%- macro sideNavigation(mode = "list") -%}
 {% if sideNavigationLinks | length > 0 %}
   {%- if mode == "list" -%}
     <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
@@ -168,9 +168,9 @@
     </nav>
   {%- endif -%}
 {%- endif -%}
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro glossaryList() %}
+{%- macro glossaryList() -%}
 <dl class="Glossary">
   {%- for key, value in glossary -%}
     {%- if (locale == "fr" and key != "ASSISTIVE TECHNOLOGIES") or (locale == "en" and key != "AIDES TECHNIQUES") -%}
@@ -179,9 +179,9 @@
     {%- endif -%}
   {%- endfor -%}
 </dl>
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro changelang(mode) %}
+{%- macro changelang(mode) -%}
 {%- if mode == "supra" -%}
 <nav role="navigation" aria-label="{% translate "changelang.label", locale %}">
   <ul class="navbar-nav">
@@ -210,4 +210,4 @@
   </ul>
 </li>
 {%- endif -%}
-{% endmacro %}
+{%- endmacro -%}
