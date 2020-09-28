@@ -1,5 +1,5 @@
 ---
-title: "Liste des critères WCAG par thème"
+title: "Liste des critères WCAG pour les tests"
 displayToc: true
 leftColumn:
   display: true
