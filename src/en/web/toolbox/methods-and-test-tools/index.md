@@ -5,9 +5,9 @@ title: "Web-specific methods and tools"
 # Web-specific methods and tools
 
 ## Introduction
-This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 - level AA.  
+This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (WCAG) version 2.1 - level AA.  
 
-The detailed description of the tests can be found in the <a href="../test/">WCAG criteria by project phase, "tests" section</a>.  
+The detailed description of the tests can be found in the [WCAG criteria by project phase, "tests" section](/en/web/test/).  
 
 Accessibility tests must be carried out throughout the project life cycle:
 - at the start of the project, when choosing the framework, software, or package...
@@ -26,13 +26,11 @@ Depending on your profile, you can perform technical tests, functional tests or 
 Some of the tests can be performed automatically by tools, but the majority of them require manual check. These tests can be performed by any actor in the project (designer, developer, tester, contributor...).  
 
 Approach:
-- [Perform automatic tests](./browser-extensions/) with the browser extensions aXe or Wave :
-    - aXe automatically identifies errors and validates the quality of the code
-    - Wave also identifies accessibility errors and specifies the manual checks to do (consistency of the language code with the language used on the page...)
+- There are tools that help you to test the accessibility of your web content: [learn how to perform automatic or semi-automatic tests](./browser-extensions/) (whistleblowing) with aXe or Wave browser extensions, for example.
 - [Measure the contrast level of the colours](./color-contrast-level/) with the Colour Contrast Analyser tool.
 - Check the valid text spacing via a tool to ensure the readability of the text
 - All other tests must be passed through a manual review of the code
-- Example: all relevance criteria (consistency of a textual alternative with the content of an image...)
+    - Example: all relevance criteria (consistency of a textual alternative with the content of an image...)
 
 ### Functional evaluation
 These tests can easily be performed by any project actor. Only screen readers require a learning period.
@@ -48,5 +46,7 @@ The tests for the mobile web are identical to those performed for the web. Some 
 - Device Toolbar on Chrome
 
 ### Functional evaluation
-These tests must be performed with smartphones on iOS and Android.
-- [Test navigation and vocalization with a screen reader](../../mobile/screen-readers/)
+These tests must be performed on smartphones, using the screen readers available on iOS and Android.
+- [Talkback on Android](/en/mobile/android/talkback/)
+- [VoiceOver on iOS](/en/mobile/ios/voiceover/)
+
