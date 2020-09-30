@@ -376,12 +376,12 @@ Ainsi, pour tester si ce besoin d’accessibilité est bien pris en compte par l
 - Aller dans les paramètres du téléphone
 - Naviguer dans le menu jusqu’à accessibilité, puis sélectionner <span lang="en">Time to take action</span>
 - Choisir un délai dans les options proposées
-- Vérifier que l’application s’adapte bien au délai indiqué précédemment, pour les changements d’UI potentiellement concerné par ce délai.
+- Vérifier que l’application s’adapte bien au délai indiqué précédemment, pour les changements d’UI potentiellement concernés par ce délai.
 
 
 ### <span lang="en">Voice Access</span>
 
-[<span lang="en">Voice Access</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess) est une applicationl intégrée à [<span lang="en">Android Accessibility Suite</span>](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback), à destination des personnes présentant des troubles moteur. Elle permet de commander à la voix l’application à la place de l’écran tactile.
+[<span lang="en">Voice Access</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess) est une application intégrée à [<span lang="en">Android Accessibility Suite</span>](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback), à destination des personnes présentant des troubles moteur. Elle permet de commander à la voix l’application à la place de l’écran tactile.
 
 Parmi les commandes possibles générales : 
 - Ouvrir « application »
