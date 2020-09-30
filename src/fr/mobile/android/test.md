@@ -37,6 +37,7 @@ Le développeur peut en premier lieu utiliser l’outil <span lang="en">Lint</sp
 
 <img src="../../images/lint.png" alt="capture d’écran présentant un rapport de l'outil Lint, qui affiche une erreur d'accessibilité" width="50%">
 
+
 ### Tests automatisés : Espresso
 
 Espresso est un framework permettant de testant son UI sous Android. On peut alors y intégrer le framework ATF (<span lang="en">Accessibility Test Framework</span>), qui va ajouter une couche de tests concernant l’accessibilité. 
@@ -105,11 +106,15 @@ En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</s
 
 **Exemple d'utilisation de l'<span lang="en">Accessibility Scanner</span> :**   
 
-Le <span lang="en">floating button</span> est présent sur l'écran pour déclencher un rapport en cas de clique.
+Le <span lang="en">floating button</span> présent sur l'écran pour déclencher un rapport en cas de clique.
+
 <img src="../../images/scanner_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan" width="25%">
 
 Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.
-<img src="../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil <span lang="en">Accessibility Scanner</span>" width="25%">  
+
+<img src="../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil Accessibility Scanner" width="25%">  
+
+
 
 ### <span lang="en">Google Play - Pre Launch Report</span>
 
@@ -126,6 +131,7 @@ Ce test étant réalisé depuis la console <span lang="en">Google Play</span>, c
 
 ![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../images/google_report.png) <!-- .element height="50%" width="50%" --> 
 
+
 ### aXe
 
 aXe est une application présente sur le <span lang="en">Google Play Store</span> et qui permet, de même que <span lang="en">Accessibility Scanner</span> ou que le <span lang="en">Pre Launch Report</span> de Google, d’afficher les problèmes d’accessibilité au sein des différents écrans de son application. Bien que redondant avec les deux outils précédents présentés dans certaines vérifications, il est recommandé de l’utiliser en complément, puisqu’il sera en mesure d’afficher des erreurs différentes d’accessibilité, et complètera donc parfaitement les premiers examens, pour avoir un compte rendu plus complet.
@@ -135,10 +141,14 @@ L’utilisation d’aXe est très facile, puisqu’il suffit de télécharger l�
 **Exemple d'utilisation de aXe :**   
 
 Le <span lang="en">floating button</span> de l'application aXe présent sur l'écran pour déclencher un rapport en cas de clique.
+
 <img src="../../images/aXe_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan grâce à aXe" width="25%">   
 
 Le rapport ainsi généré par aXe une fois le bouton cliqué.
+
 <img src="../../images/aXe_report.jpg" alt="capture d’écran présentant le rapport de l'outil aXe" width="25%">   
+
+
 
 ### <span lang="en">UI Automator View</span>
 
@@ -149,6 +159,8 @@ Pour utiliser cet outil, vous avez donc besoin d’installer le SDK Android. Une
 
 Il est ainsi possible de l’utiliser au sein d’une application présente sur son téléphone, si celui-ci a le mode développeur activé et qu’il est connecté via un câble USB à l’ordinateur sur lequel <span lang="en">UI Automator View/<span> est lancé. Une fois ces conditions réunies, il suffit de cliquer sur le bouton <span lang="en">Device Screenshot</span> dans l’outil pour lancer l’analyse des composants UI de l’écran affiché sur le téléphone.
 
+
+
 ### Outil tracé des contours
 
 Il est possible sous Android d’afficher les contours des différentes vues d’une application, ce qui permet de détecter les possibles problématiques liées aux dimensions des éléments, de vérifier des marges suffisantes entre divers éléments, et de vérifier que chaque zone sensible a une taille suffisante.
@@ -157,10 +169,13 @@ Pour ce faire, il suffit dans les paramètres, puis dans les options pour les d�
 **Exemple d'utilisation du tracé des contours :**   
 
 L'écran des paramètres permettant d'activer le tracé des contours.
+
 <img src="../../images/contour_param.jpg" alt="capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours" width="25%"> 
 
 Exemple d'écran avec le tracé des contours actifs
+
 <img src="../../images/contour_UI.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues" width="25%"> 
+
 
 
 ### <span lang="en">Colour Contrast Analyser</span>
@@ -168,9 +183,13 @@ Exemple d'écran avec le tracé des contours actifs
 Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](../../../web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
 Pour les valeurs à respecter voir la [section concernant les couleurs](../conception#couleurs).
 
+
+
 ## Les tests manuels : mise en situation
 
 Les tests manuels concernent ceux que vous allez réaliser par vous-même, en reproduisant la situation vécue par vos utilisateurs, et donc en utilisant leurs outils d’interaction pour votre application. Il est même préférable de faire tester l’application par de réels utilisateurs en situation de handicap si cela est possible. Plusieurs outils sont donc à utiliser, afin de prendre en compte le maximum de personnas possibles : 
+
+
 
 ### Le lecteur d’écran <span lang="en">TalkBack</span>
 
@@ -183,6 +202,7 @@ La navigation peut être utilisée en :
 - **Lecture par exploration avec le doigt** : en glissant lentement son doigt sur l’écran, <span lang="en">Talkback</span> annonce les éléments à mesure qu’on l’on passe son doigt sur l’écran.
 
 <img src="../../images/gesture1.png" alt="image schématisant l'action de glisser son doigt sur un écran de téléphone" width="80">   
+
 
 
 - **Lecture linéaire** : il est possible d’explorer l’écran, élément par élément en faisant glisser son doigt vers la gauche ou vers la droite pour naviguer entre les éléments, dans l’ordre. Il est aussi possible de parcourir les paramètres de navigation en balayant l’écran vers le haut ou vers le bas jusqu’à obtenir le paramètre souhaité. Le balayage vers la droite ou la gauche se fera alors en utilisant le paramètre choisi ; Les différents paramètres de navigation existant sont : 
@@ -224,11 +244,14 @@ La navigation peut être utilisée en :
     </dd>
   </dl>
 
+
 - **Recherche sur écran** : il est possible de naviguer en utilisant la recherche sur l’écran, pour cela, il faut balayez l’écran vers la gauche, puis vers le bas, saisir le terme de recherche et choisir une correspondance dans la liste fourni.
 
 <img src="../../images/search_talkback.jpg" alt="capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback" width="25%"> 
 
+
 - **Lecture continu** : Pour utiliser la lecture de l’écran en continu, il faut ouvrir le menu contextuel général avec un balayage vers le bas puis vers la droite, puis choisir l’option (en balayant vers la droite pour la trouver dans le menu) « Lire à partir du haut de page » ou « Lire à part de l’élément suivant », puis appuyez deux fois dessus pour sélectionner l’option. La lecture en continu démarre alors et peut-être arrêté en appuyant sur l’écran. 
+
 
 #### Mode opératoire
 
@@ -262,6 +285,7 @@ Parcourir l’application sur les scénarios utilisateurs et vérifier que toute
 
 Idéalement, le test doit se faire sans regarder l’écran, ou en activant l’écran noir (**Assombrir l’écran**).
 
+
 ### Navigation au focus (au clavier)
 
 La navigation dans une application ou une page web doit être possible à l’aide d’un clavier externe (connecté au smartphone par Bluetooth ou USB), afin de reproduire le cas des personnes ne pouvant pas utiliser l’écran tactile, tels que ceux utilisant un joystick (sur un fauteuil roulant par exemple), ou ceux étant atteint de la maladie de parkinson. Il est important de vérifier son fonctionnement car certains développements peuvent entraîner des difficultés pour naviguer correctement dans la page.
@@ -284,6 +308,7 @@ Parcourir l’application à l’aide du clavier
 Ce sont les mêmes touches utilisées pour tester l'accessibilité d'un site web. Mais l’usage du **Tab** par rapport aux **flèches** ainsi que l’usage de la **barre espace** par rapport à la touche **entrée** sont moins codifiés : on considère le test réussi lorsqu’au moins l’une des deux options permet de réaliser l’action.
 
 Il est considéré comme bloquant l’impossibilité de sortir d’une fonctionnalité ou de l’application.
+
 
 ### <span lang="en">Switch Access</span>
 
@@ -332,6 +357,7 @@ Lire les instructions lors de l’activation des outils.
 - Positionner **Taille de la police** et **Taille d’affichage** au maximum. Parcourir l’application et noter les textes qui ne sont plus lisibles car ils ont disparu ou se chevauchent.
 - Positionner **Agrandissement** sur **Utiliser le service**. Revenir à l’application, cliquer 3 fois sur l’écran. Vérifier que les écrans sont lisibles dans ce mode. Pour agrandir, placer 2 doigts sur l’écran puis écarter les, se déplacer avec deux doigts sur l’écran et un doigt dans certaines listes. Toutes les informations de l’écran doivent être lisibles en mode zoom.
 
+
 ### Orientation
 
 Il est nécessaire de vérifier l’orientation de son application, celle-ci devant fonctionner aussi bien en mode Paysage, qu’en mode portrait. Il convient donc de réaliser les tests manuels dans les deux cas, puisque contraindre l’utilisateur à un seul mode, pose des problèmes d’accessibilité.
@@ -350,6 +376,7 @@ Ainsi, pour tester si ce besoin d’accessibilité est bien pris en compte par l
 - Naviguer dans le menu jusqu’à accessibilité, puis sélectionner <span lang="en">Time to take action</span>
 - Choisir un délai dans les options proposé
 - Vérifier que l’application s’adapte bien au délai indiqué précédemment, pour les changements d’UI potentiellement concerné par ce délai.
+
 
 ### <span lang="en">Voice Access</span>
 
@@ -378,10 +405,13 @@ Il convient donc de tester qu’il n’y a pas plusieurs labels identiques pour 
 **Exemple d'utilisation de <span lang="en">Voice Access</span> :**   
 
 Exemple d'écran proposant le <span lang="en">floating button</span> qui permet de démarrer <span lang="en">Voice Access</span>.
+
 <img src="../../images/voice_access_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant" width="25%"> 
 
 Exemple d'écran avec <span lang="en">Voice Access</span> activé
+
 <img src="../../images/voice_access_actif.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro" width="25%"> 
+
 
 
 ### Sélectionner pour prononcer
