@@ -183,6 +183,10 @@ pre code {
   display: none !important;
 }
 
+.list-position-inside {
+  list-style-position: inside !important;
+}
+
 
 
 /**
