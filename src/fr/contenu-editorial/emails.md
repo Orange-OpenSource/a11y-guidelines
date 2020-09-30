@@ -41,12 +41,6 @@ Plusieurs options s’offrent à vous pour créer un Pushmail accessible.
 Option à ajouter la première fois via Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message. 
 <img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png">
 
-### Création à partir de « Mes Pushmails »
-
-L’outil fournit des gabarits nativement accessibles (à condition d’ajouter du texte de remplacement pour les images) ce qui n’empêche pas de suivre [les recommandations générales](../generalites) pour le contenu éditorial.
-
-<img alt="capture d'écran de l'outil mes Pushmails" src="../images/email2.png">
-
 ### Création à partir d’HTML (ou autre outil dédié)
 
 Composer le code HTML de façon accessible en suivant [les principales recommandations Web](../../web). 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 626.416 510" height="544" width="668.177">
+  <path d="M476.416 0h40.206l109.794 118.843V160h-150z" color="#000" overflow="visible" fill="gray"/>
+  <path d="M176.416 0H517.39l.023 91.277c.004 16.62 14.15 30.354 30.767 30l78.237-1.667V480c0 16.62-13.38 30-30 30h-420c-16.62 0-30-13.38-30-30V30c0-16.62 13.38-30 30-30z" color="#000" overflow="visible" fill="#bfbfbf"/>
+  <path d="M149.68 238.786h400.714c21.419 0 38.662 17.243 38.662 38.663v141.764c0 21.419-17.243 38.663-38.662 38.663H146.61z" color="#000" overflow="visible" opacity=".318" fill="gray"/>
+  <g transform="matrix(1.28876 0 0 1.28876 1031.012 -119.955)">
+    <rect width="440" height="170" x="-800" y="262" rx="30" ry="30" color="#000" overflow="visible" fill="#ee2a2a"/>
+    <text style="line-height:1000%" x="-721.357" y="400.32" font-weight="400" font-size="25" font-family="sans-serif" letter-spacing="0" word-spacing="0">
+      <tspan x="-721.357" y="400.32" style="-inkscape-font-specification:'Roboto Bold'" font-weight="700" font-size="150" font-family="Roboto" fill="#fff">PDF</tspan>
+    </text>
+  </g>
+</svg>

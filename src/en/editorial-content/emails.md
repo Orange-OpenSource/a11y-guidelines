@@ -45,11 +45,6 @@ You have several options for creating an accessible Pushmail.
 2. Then use the "Send to Mail Recipient"* option.
 *Add this Option the first time via File> Options> Quick access toolbar> “Send to Mail Recipient”
 
-## From "My Pushmails" (SPIP)
-The tool provides natively accessible templates (don’t forget alternative text for the images) which does not prevent you from following [the general recommendations for editorial content](../).
-
-<img alt="My pushmails screenshot" src="../images/email1.png">
-
 ## Creation from HTML (or other dedicated tool)
 Compose the HTML code in an accessible way by following [the main web recommendations](../../web).  
 
