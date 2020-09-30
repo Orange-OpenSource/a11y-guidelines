@@ -27,7 +27,7 @@ Cette étape permet de remonter directement des problèmes d’accessibilité pe
 ### <span lang="en">Lint</span>
 Le développeur peut en premier lieu utiliser l’outil <span lang="en">Lint</span> dans Android Studio, sur son application, afin de faire une première passe sur les problèmes d’accessibilités rencontrés. 5 problèmes d’accessibilités peuvent être remontés grâce à <span lang="en">Lint</span> :
 
-- **<span lang="en">ClickableViewAccessibility </span>**: Si une vue surcharge  <span lang="en">onTouchEvent </span> ou utilise un surcharge <span lang="en">onTouchListener</span> , mais n’implémente pas <span lang="en">performClick</span>-
+- **<span lang="en">ClickableViewAccessibility </span>**: Si une vue surcharge  <span lang="en">onTouchEvent </span> ou utilise une surcharge <span lang="en">onTouchListener</span> , mais n’implémente pas <span lang="en">performClick</span>
 - **<span lang="en">ContentDescription</span>** : les widgets non textuel ne portant aucune <span lang="en">contentDescription</span>
 - **<span lang="en">KeyboardInaccessibleWidget</span>** : les widgets étant déclaré comme clickable mais non focusable. 
 - **<span lang="en">LabelFor</span>** : un <span lang="en">EditText</span> doit contenir soit un <span lang="en">hint</span>, soit la référence d’un label associé avec <span lang="en">labelFor</span>
@@ -35,7 +35,7 @@ Le développeur peut en premier lieu utiliser l’outil <span lang="en">Lint</sp
 
 **Exemple de rapport Lint sous Android Studio :**   
 
-![capture d’écran présentant un rapport de l'outil Lint, qui affiche une erreur d'accessibilité](../../images/lint.png)   
+![capture d’écran présentant un rapport de l'outil Lint, qui affiche une erreur d'accessibilité](../../images/lint.png) <!-- .element height="50%" width="50%" -->  
 
 ### Tests automatisés : Espresso
 Espresso est un framework permettant de testant son UI sous Android. On peut alors y intégrer le framework ATF (<span lang="en">Accessibility Test Framework</span>), qui va ajouter une couche de tests concernant l’accessibilité. 
@@ -44,7 +44,6 @@ Aucun test explicite n’a besoin d’être écrit. Une fois ATF d’intégré a
 
 Voici comment l’intégrer :
 
-**JAVA** 
 <pre>
 <code class="java">
 @Before
@@ -53,7 +52,6 @@ Voici comment l’intégrer :
     }
 </code></pre>
 
-**KOTLIN**
 <pre>
 <code class="kotlin">
 companion object {
@@ -107,10 +105,10 @@ En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</s
 **Exemple d'utilisation de l'<span lang="en">Accessibility Scanner</span> :**   
 
 Le <span lang="en">floating button</span> est présent sur l'écran pour déclencher un rapport en cas de clique.
-![capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan](../../images/scanner_floating.jpg)   
+![capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan](../../images/scanner_floating.jpg) <!-- .element height="25%" width="25%" -->  
 
 Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.
-![capture d’écran présentant le rapport de l'outil <span lang="en">Accessibility Scanner</span>](../../images/scanner_report.jpg)   
+![capture d’écran présentant le rapport de l'outil <span lang="en">Accessibility Scanner</span>](../../images/scanner_report.jpg) <!-- .element height="25%" width="25%" -->  
 
 ### <span lang="en">Google Play - Pre Launch Report</span>
 
@@ -125,7 +123,7 @@ Ce test étant réalisé depuis la console <span lang="en">Google Play</span>, c
 
 **Exemple de rapport généré par <span lang="en">Google Play Report</span> :**   
 
-![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../images/google_report.png)  
+![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../images/google_report.png) <!-- .element height="50%" width="50%" --> 
 
 ### aXe
 
@@ -136,10 +134,10 @@ L’utilisation d’aXe est très facile, puisqu’il suffit de télécharger l�
 **Exemple d'utilisation de aXe :**   
 
 Le <span lang="en">floating button</span> de l'application aXe est présent sur l'écran pour déclencher un rapport en cas de clique.
-![capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan grâce à aXe](../../images/aXe_floating.jpg)   
+![capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan grâce à aXe](../../images/aXe_floating.jpg) <!-- .element height="25%" width="25%" -->  
 
 Le rapport ainsi généré par aXe une fois le bouton cliqué.
-![capture d’écran présentant le rapport de l'outil aXe](../../images/aXe_report.jpg)  
+![capture d’écran présentant le rapport de l'outil aXe](../../images/aXe_report.jpg) <!-- .element height="25%" width="25%" -->  
 
 ### <span lang="en">UI Automator View</span>
 
@@ -158,10 +156,10 @@ Pour ce faire, il suffit dans les paramètres, puis dans les options pour les d�
 **Exemple d'utilisation du tracé des contours :**   
 
 L'écran des paramètres permettant d'activer le tracé des contours.
-![capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours](../../images/contour_param.jpg)   
+![capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours](../../images/contour_param.jpg) <!-- .element height="25%" width="25%" -->  
 
 Exemple d'écran avec le tracé des contours actifs
-![capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues](../../images/contour_UI.jpg)  
+![capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues](../../images/contour_UI.jpg) <!-- .element height="25%" width="25%" -->  
 
 ### <span lang="en">Colour Contrast Analyser</span>
 
@@ -182,7 +180,7 @@ La navigation peut être utilisée en :
 
 - **Lecture par exploration avec le doigt** : en glissant lentement son doigt sur l’écran, <span lang="en">Talkback</span> annonce les éléments à mesure qu’on l’on passe son doigt sur l’écran.
 
-![image schématisant l'action de glisser son doigt sur un écran de téléphone](../../images/gesture1.png)   
+![image schématisant l'action de glisser son doigt sur un écran de téléphone](../../images/gesture1.png) <!-- .element height="25%" width="25%" -->   
 
 
 - **Lecture linéaire** : il est possible d’explorer l’écran, élément par élément en faisant glisser son doigt vers la gauche ou vers la droite pour naviguer entre les éléments, dans l’ordre. Il est aussi possible de parcourir les paramètres de navigation en balayant l’écran vers le haut ou vers le bas jusqu’à obtenir le paramètre souhaité. Le balayage vers la droite ou la gauche se fera alors en utilisant le paramètre choisi ; Les différents paramètres de navigation existant sont : 
@@ -226,7 +224,7 @@ La navigation peut être utilisée en :
 
 - **Recherche sur écran** : il est possible de naviguer en utilisant la recherche sur l’écran, pour cela, il faut balayez l’écran vers la gauche, puis vers le bas, saisir le terme de recherche et choisir une correspondance dans la liste fourni.
 
-![capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback](../../images/search_talkback.jpg)  
+![capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback](../../images/search_talkback.jpg) <!-- .element height="25%" width="25%" -->  
 
 - **Lecture continu** : Pour utiliser la lecture de l’écran en continu, il faut ouvrir le menu contextuel général avec un balayage vers le bas puis vers la droite, puis choisir l’option (en balayant vers la droite pour la trouver dans le menu) « Lire à partir du haut de page » ou « Lire à part de l’élément suivant », puis appuyez deux fois dessus pour sélectionner l’option. La lecture en continu démarre alors et peut-être arrêté en appuyant sur l’écran. 
 
@@ -378,10 +376,10 @@ Il convient donc de tester qu’il n’y a pas plusieurs labels identiques pour 
 **Exemple d'utilisation de <span lang="en">Voice Access</span> :**   
 
 Exemple d'écran proposant le <span lang="en">floating button</span> qui permet de démarrer <span lang="en">Voice Access</span>.
-![capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant](../../images/voice_access_floating.jpg)   
+![capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant](../../images/voice_access_floating.jpg) <!-- .element height="25%" width="25%" -->   
 
 Exemple d'écran avec <span lang="en">Voice Access</span> activé
-![capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro](../../images/voice_access_actif.jpg)  
+![capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro](../../images/voice_access_actif.jpg) <!-- .element height="25%" width="25%" -->  
 
 
 ### Sélectionner pour prononcer
