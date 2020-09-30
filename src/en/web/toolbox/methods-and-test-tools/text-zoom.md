@@ -35,4 +35,4 @@ The height of the elements containing the text has been set with a relative unit
 
 ![screenshot of a page with 100% zoom](../../images/zoom-ok.png)
 
-More information in the **examples** section: [handling zoom, increasing the text size](../../components-examples/zoom/).
+More information in the **examples** section: [handling zoom, increasing the text size](/en/web/components-examples/zoom/).

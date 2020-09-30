@@ -418,6 +418,17 @@ Ensure the understanding of the application text.
 
 **Users’ goal&nbsp;:** improve a better legibility of the content.<br><br>
 
+## Accessibility dedicated screen
+
+**Description&nbsp;:**
+
+It may be pretty much easier to **create a new dedicated accessibility screen**
+ in order not to challenge the current state that may contain hard graphical elements to be adapted.
+
+However, even if it could be a brilliant idea at first sight, it's definitely not recommended **to move in this direction** because:  
+- The screen reader is not only used by sight-impaired people but also by **illiterate persons** who may notice that a different screen appears when this feature is activated and then may think that different information is also provided ⟹ this situation may lead to a kind of discriminatory feeling.
+- From a practical point of view for the maintainability of the application, adding a new dedicated screen that will be used only when an accessibility feature is activated  may be forgotten by the developers if some modifications are added to the initial one that doesn't deal with accessibility.
+
 ## Accessibility options
 **Target&nbsp;:** everyone.  
 **When&nbsp;:** as of design and during development.

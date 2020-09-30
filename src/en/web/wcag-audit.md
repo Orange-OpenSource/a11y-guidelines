@@ -12,6 +12,6 @@ The grid calculates a compliance rate per page audited: this rate is equal to th
 
 ## Go to the va11ydette
 
-The link below opens the grid in a new browser window.   
+The link below opens the grid in a new browser tab.   
 
-<a href="/fr/web/la-va11ydette/?lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the va11ydette (new window)">Open the va11ydette <span class="sr-only"> (new window)</span></a>
+<a href="/fr/web/la-va11ydette/?lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the va11ydette (new tab)">Open the va11ydette <span class="sr-only"> (new tab)</span></a>

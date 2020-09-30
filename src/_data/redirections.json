@@ -1309,7 +1309,7 @@
   },
   {
     "old": "web/methodes-outils-clavier.html",
-    "new": "/fr/outils/navigation-clavier"
+    "new": "/fr/web/outils/methodes-et-outils-de-test/navigation-clavier"
   },
   {
     "old": "web/methodes-outils-contrastes.html",
@@ -1345,10 +1345,14 @@
   },
   {
     "old": "web/skiplinks.html",
-    "new": "/fr/articles/liens-evitements"
+    "new": "/fr/articles/liens-evitement"
   },
   {
     "old": "web/techniques.html",
     "new": "/fr/articles"
+  },
+  {
+    "old": "web/liens-telechargement.html",
+    "new": "/fr/articles/liens-telechargement"
   }
 ]
