@@ -157,7 +157,7 @@ Note:  If your presentation have more than 50 slides, it is better to advise you
 
 <img class="center" src="../../images/screen10.png" alt="Screenshot of screen reader options"/>
 
-To check <abbr>PDF</abbr> document accessibility: download [PDF Accessibility Checker (PAC 3)](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
+To check <abbr>PDF</abbr> document accessibility: download [PDF Accessibility Checker (PAC 3)](https://www.access-for-all.ch/en/pdf-accessibility-checker.html).
 
 ## For more detailed information
 - [PowerPoint Accessibility, WebAIM](https://webaim.org/techniques/powerpoint/)
