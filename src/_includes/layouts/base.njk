@@ -78,8 +78,10 @@
     <script>
       var tarteaucitronForceLanguage = "{{ locale }}"
       tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }})
-      tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
-      (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+      {%- if config.environment == "production" -%}
+        tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+      {%- endif -%}
     </script>
     <div id="a11y_heading_anchor_label" hidden>{% translate "headingsAnchor.label", locale %}</div>
     {% include "partials/licence.njk" %}
