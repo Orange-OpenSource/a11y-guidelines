@@ -1,0 +1,4 @@
+[build]
+  base = "/"
+  publish = "_site"
+  command = "npm run build:dev"
