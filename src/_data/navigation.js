@@ -173,13 +173,11 @@ module.exports = {
   footer: {
     en: [
       { label: 'Contact', href: '/en/contact' },
-      { label: 'About', href: '/en/about' },
-      { label: 'Sitemap', href: '/en/sitemap/' },
+      { label: 'About', href: '/en/about' }
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact' },
-      { label: 'À propos', href: '/fr/a-propos' },
-      { label: 'Plan de site', href: '/fr/plan-de-site/' },
+      { label: 'À propos', href: '/fr/a-propos' }
     ]
   }
 }
