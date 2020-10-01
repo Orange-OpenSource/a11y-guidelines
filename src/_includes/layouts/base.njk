@@ -77,7 +77,7 @@
     {%- endfor -%}
     <script>
       var tarteaucitronForceLanguage = "{{ locale }}"
-      tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }})
+      tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }});
       {%- if config.environment == "production" -%}
         tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
