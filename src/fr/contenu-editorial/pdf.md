@@ -26,7 +26,7 @@ Vous trouverez les recommandations Adobe Acrobat Pro sur la notice <a href="http
 
 ## Tester l’accessibilité d’un document <abbr>PDF</abbr>
 
-Installer <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>. 
+Installer <a href="https://www.access-for-all.ch/en/pdf-accessibility-checker.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>. 
 
 Ce logiciel permet entre autres l’exécution des tests automatiques sur un document <abbr>PDF</abbr> et la détection des problèmes d’accessibilité,
 <figure>
