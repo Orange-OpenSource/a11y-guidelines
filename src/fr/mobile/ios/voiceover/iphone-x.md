@@ -25,7 +25,7 @@ Par la suite, **la gestuelle graphique sur un terminal possédant un bouton prin
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../images/iphonex_fr_back_home.png" />
 <br><br>
 <a name="UnlockScreen"></a>
-### Déverrouiller l'écran
+## Déverrouiller l'écran
 Mouvement : **balayage** vers le haut à partir du bas de l'écran avec **1 doigt** sur l'écran verrouillé.
 <br>Résultat : déverrouillage automatique de l'écran avec la fonctionnalité <span lang="en">faceID</span> activée.
 <br>La manipulation est exactement la même que précédemment mais elle s'applique ici sur un écran verrouillé.

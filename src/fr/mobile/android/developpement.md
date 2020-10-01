@@ -268,11 +268,11 @@ android:accessibilityHeading="true"
 
 
 ## Formulaires
-#### Description&nbsp;:
+### Description&nbsp;:
 Il est important que les champs de formulaire soient liés à un label. Il existe 2 grandes techniques pour réaliser cette liaison&nbsp;:
 -	`labelFor`&nbsp;: permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’`id` de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> `android:labelFor` ou le code `setLabelFor`. `LabelFor` est utilisable depuis tout élément qui hérite de `View`.
 - `hint`&nbsp;: pour les `EditText` ou `TextView`. Permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les `TextView`. Prend en paramètre l’`id` d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> `android:hint` ou le code `setHint`.
-#### Exemples&nbsp;:
+### Exemples&nbsp;:
 `LabelFor` dans le <abbr>xml</abbr>&nbsp;: 
 <pre><code>&lt;TextView
 	[…]
@@ -290,20 +290,20 @@ Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de 
 - [`setHint`](https://developer.android.com/reference/android/widget/TextView.html#setHint%28java.lang.CharSequence%29)
 
 ## Taille des textes
-#### Description&nbsp;:
+### Description&nbsp;:
 Afin de permettre à l’option «&nbsp;grands caractères&nbsp;» d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements.
 - Utiliser une taille de police dynamique&nbsp;: le «&nbsp;sp&nbsp;». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android.
 - Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique («&nbsp;sp&nbsp;» donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le `min-height` et le `height` des conteneurs pour obtenir un résultat correct (un `height` en `wrap_content` permet de laisser au système le soin de s’adapter).
-#### Lien&nbsp;:
+### Lien&nbsp;:
 - [typographie sous Android](https://www.google.com/design/spec/style/typography.html#typography-styles)
 
 ## Événements d’accessibilité & <i lang="en">custom views</i>
-#### Description&nbsp;:
+### Description&nbsp;:
 Il existe sous Android un bon nombre d’événements liés à l’<abbr>API</abbr> d’accessibilité. Vous pouvez manipuler ces événements au même titre que d’autres événements. Ils permettent d’enrichir des composants <i lang="en">custom</i> insuffisamment accessibles. L’utilisation des événements d’accessibilité est assez rare dans les applications non dédiées à l’accessibilité, les autres options étant généralement suffisantes. Cependant, il faut savoir qu’ils existent et permettent de surcharger la vocalisation d’un composant.
 
 Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.
 
-#### Liens&nbsp;:
+### Liens&nbsp;:
 
 - [`AccessibilityEvents`](http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html)
 - [Construire une vue custom accessible](http://developer.android.com/guide/topics/ui/accessibility/apps.html#custom-views)
@@ -311,19 +311,19 @@ Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.
   
 
 ## <i lang="en">WebView</i>
-#### Description&nbsp;:
+### Description&nbsp;:
 Les `WebView` ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet&nbsp;: les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet&nbsp;: [recommandations accessibilité pour le web](../../../web/).
 
 Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le JavaScript&nbsp;: `mWebView.getSettings().setJavaScriptEnabled(true);`  
 Dans ces conditions, la page affichée à travers la `WebView`  réagit convenablement à l’<abbr>API</abbr> d’accessibilité.
 
 ## Vocalisation des listes
-#### Description&nbsp;:
+### Description&nbsp;:
 Il arrive parfois que les listes soient mal vocalisées&nbsp;: la synthèse vocale tente de vocaliser toute la liste en une seule fois (au moins ce qui est affiché à l’écran dans le cas de listes longues). C’est notamment le cas lorsque l’on utilise des `RecyclerView`. Pour pallier ce problème, une solution simple existe. Il suffit de positionner l’attribut `focusable` à `true` pour chaque item de la liste. Cela a pour effet de forcer la synthèse vocale (<span lang="en">TalkBack</span>) à lire les items un par un.
 
 
 ## Navigation au focus (clavier)
-#### Description&nbsp;:
+### Description&nbsp;:
 Pour gérer la navigation au focus, il faut s’assurer de 3 choses&nbsp;:
 - Permettre le focus sur les éléments interactifs&nbsp;: la navigation au focus ne concerne que les éléments interactifs. Si, par exemple, votre application possède des vues <i lang="en">custom</i> cliquables, il faut s’assurer que ces vues soient focusables en positionnant l’attribut `focusable` à `true`.
 - Gérer l’affichage du focus&nbsp;: tout élément interactif peut recevoir le focus, il faut donc que le `state_focused` soit défini et permette de distinguer d’un seul coup d’œil quel élément a le focus.

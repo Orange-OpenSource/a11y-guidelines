@@ -327,7 +327,7 @@ For more information, please refer to the following links:
 
 ## WebView
 
-#### Description: 
+### Description: 
 
 `WebView`s are a special thing on Android. First, if you want a page to be accessible, its <abbr>HTML</abbr> content must be accessible as well, it must follow the international standards: the <abbr>WCAG</abbr>2. To know the requirements and learn techniques for developing an accessible Web, please visit the following section in our site: [accessibility recommendations for the Web](../../../web/).
 
@@ -338,14 +338,14 @@ In these conditions, the page displayed through the `WebView` properly responds 
 
 ## List vocalization
 
-#### Description:
+### Description:
 
 Sometimes lists are not vocalized correctly: the speech synthesis is trying to vocalize the whole list at once (only the items displayed on the screen). This is especially the case when using the `RecyclerView`. To overcome this problem, there is a simple fix. Just set the `focusable` attribute to `true` for each item in the list. This has the effect of forcing the speech synthesis (TalkBack) to read the items one by one.
 
 
 ## Navigating via the focus (keyboard)
 
-#### Description:
+### Description:
 
 To handle focus-based navigation, make sure to:
 - Allow interactive elements to receive the focus: focus-based navigation only concerns interactive elements. If, for example, your application has clickable custom views, it must be ensured that these views are focusable setting the `focusable` attribute to `true`.
@@ -358,7 +358,7 @@ Note: `nextFocusDown`, `nextFocusUp`, `nextFocusRight`, `nextFocusLeft`, `focusa
 
 Note: Android Pie (9, <abbr>API</abbr> 28) introduces a screen reader-specific focus to avoid edge effects between the screen reader focus (`screenReaderFocusable`) and the keyboard focus (`focusable`). Keyboard navigation is not sensitive to `screenReaderFocusable`.
 
-#### Example:
+### Example:
 
 Selector handling the `state_focused`:
 <pre><code class="xml">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
@@ -380,6 +380,6 @@ Selector handling the `state_focused`:
 	&lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_selected_pressed_tab_selector" /&gt;
 &lt;/selector&gt;</code></pre>
 
-#### Link:
+### Link:
 
 - [Focus-based navigation](http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav)

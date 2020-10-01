@@ -8,13 +8,13 @@ Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une appl
 <br><br>Il est indispensable que **TOUS** les intervenants du projet connaissent les spécificités d'accessibilité iOS présentées sur ce site de façon à comprendre parfaitement le lien entre les besoins des utilisateurs et leur implémentation au sein de l'application à développer.
 <br><br>Chacune des fonctionnalités doit être vue comme un élément impactant fortement le confort de l'utilisateur, comme une brique essentielle à connotation humaine et pas juste fonctionnelle.
 <br><br>Que ce soit dans la conception, la réalisation ou la vérification, chaque décision se doit d'être particulièrement empathique de façon à fournir la meilleure expérience utilisateur possible.<br><br>
-### Pré-requis fondamentaux
+## Pré-requis fondamentaux
 - Consacrer le temps nécessaire à la maîtrise de la gestuelle ([VoiceOver](../voiceover/), contrôle de sélection).
 - Visionner les exemples d'utilisation fournis dans les [vidéos WWDC](../wwdc/).
 - Assimiler les [critères de conception](../conception/) pour s'asurer de la bonne voie sur laquelle on s'engage.
 - Pour les [développeurs](../developpement), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
 - Il faut absolument que les contenus web et les éléments tiers qui pourraient être utilisés au sein de l'application soient eux-mêmes déjà parfaitement accessibles.<br><br>
-### Environnement de travail
+## Environnement de travail
 Quatre grandes familles peuvent être dépeintes au sein de chaque projet :
 - À l'initiative de tout ce qui va être créé, la **personne en charge de prioriser les fonctionnalités à implémenter** doit parfaitement comprendre les besoins utilisateurs et la façon de les décliner sous iOS.
 Cette personne doit s'assurer que des critères d'acceptations sont parfaitement définis pour chacune des fonctionnalités et que leur réalisation répond exactement à ce qui était demandé en vérifiant elle-même le fonctionnement souhaité.
@@ -143,6 +143,7 @@ L'utilisation du [contrôle de sélection](https://support.apple.com/fr-fr/HT201
 </div></div>
 
 <br>
+
 <a name="TechnicalMode"></a>
 ## Évaluation technique
 Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifer.
