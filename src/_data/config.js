@@ -1,6 +1,7 @@
 const S = require('string')
 
 module.exports = {
+  environment: process.env.ELEVENTY_ENV,
   eleventy: {
     markdownIt: {
       html: true,

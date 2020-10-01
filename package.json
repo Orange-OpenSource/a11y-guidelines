@@ -5,8 +5,10 @@
   "repository": "https://github.com/Orange-OpenSource/a11y-guidelines",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && eleventy",
-    "serve": "npm run clean && eleventy --serve --quiet",
+    "build:dev": "npm run clean && ELEVENTY_ENV=development eleventy",
+    "serve:dev": "npm run clean && ELEVENTY_ENV=development eleventy --serve --quiet",
+    "build:prod": "npm run clean && ELEVENTY_ENV=production eleventy",
+    "serve:prod": "npm run clean && ELEVENTY_ENV=production eleventy --serve --quiet",
     "clean": "del-cli _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

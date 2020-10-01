@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   tracking: {
-    googletagmanagerId: "GTM-XXXX",
+    googletagmanagerId: "GTM-N3M5VXS",
     tarteaucitronConfig: {
       "privacyUrl": "", /* Privacy policy url */
       "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
