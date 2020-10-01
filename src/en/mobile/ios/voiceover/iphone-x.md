@@ -24,7 +24,7 @@ This page describes the iPhoneX common gestures thanks to textual explanations a
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../images/iphonex_en_back_home.png" />
 <br><br>
 <a name="UnlockScreen"></a>
-### Unlock the screen
+## Unlock the screen
 Gesture : **flick up with 1 finger** from the bottom edge of the locked screen.
 <br>Result : screen automatic unlock with the activated faceID functionality.
 <br>The gesture is exactly the same as previously explained but deals with a locked screen in our case.

@@ -7,13 +7,13 @@ title: "How to test the iOS accessibility"
 **ALL** the project members should know the iOS accessibility features introduced in this site to make a perfect link between the app implementations and the users needs.
 <br>Each one of these features should be seen as an important **human-made** element for the user comfort and not just a functional one.
 <br>Whatever the design, implementation or testing area, **every decision** must be particularly **empathetic** to provide the best user experience.<br><br>
-### Fundamental prerequisites
+## Fundamental prerequisites
 - Spend as much time as necessary to perfectly control the gestures ([VoiceOver](../voiceover/), Switch Control). 
 - Watch the examples provided by the [WWDC videos](../wwdc/).
 - Assimilate the [design criteria](../design/) to be sure that you're following the appropriate working path.
 - Create as many blank projects as needed to test a dedicated feature and be sure that it's working before introducing inside the final app coding global environment.
 - Be sure that third-party elements or web contents that may be parts of the application are themselves already perfectly accessible.<br><br>
-### Working environment
+## Working environment
 Four different groups may be described as parts of every project:
 - The **person in charge of defining the priorities of every functionality** must know the app users needs so as to accurately define the functionalities acceptance criteria and be able to check himself the desired achievement.
 - The **DESIGN** team must put itself in the user's shoes to provide recommendations as accurate as possible according to the project demands upstream.

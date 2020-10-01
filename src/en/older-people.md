@@ -4,13 +4,13 @@ title: "Older people"
 
 # Older people
 
-### Summary
+## Summary
 
 An older person (“senior”) belongs to a category of people whose definition varies according to context: work, health, etc. Regarding health, the World Health Organisation defines an older person as being over 60 years old. They estimate that between 2000 and 2050 this population will double on a world level, going from 11% to 22%. According to INSERM, French National Institute of Health and Medical Research, the decline in cognitive abilities begins at 45.
 
 Age-related disabilities impact our use of digital technologies.
 
-### Obstacles found
+## Obstacles found
 
 Obstacles found by people suffering from age-related disabilities can be numerous:
 
@@ -19,26 +19,26 @@ Obstacles found by people suffering from age-related disabilities can be numerou
 - Lower **hearing**: lower ability to perceive high-pitched sounds, to separate sounds, make it difficult to listen to audio documents (especially in a noisy environment).
 - Lower **cognitive** capabilities: lower short-term memory, concentration, make it difficult to browse and achieve tasks.
 
-### Examples of solutions
+## Examples of solutions
 
-#### Lower vision
+### Lower vision
 
 - The user can set the size of all the text contents in the application.
 - Colour contrasts are high.
 - Videos feature audiodescription or a text transcript.
 - Images feature a text alternative.
 
-#### Lower motor capacities
+### Lower motor capacities
 
 - Keyboard navigation makes it easy to use all functionalities without any keyboard trap.
 - Focus is always very visible.
 - Clickable zones are large enough (for instance in mobile applications: width and height at least the equivalent of 48 px)
 
-#### Lower hearing
+### Lower hearing
 
 - Videos feature captions or a text transcript
 
-#### Lower cognitive capabilities
+### Lower cognitive capabilities
 
 - Every screen has the same logic regarding content organisation and navigation
 - Interface components (links, buttons, etc.) area easily identifiable
