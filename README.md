@@ -10,12 +10,11 @@ To get started, check out [https://a11y-guidelines.orange.com/](https://a11y-gui
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](Orange-OpenSource/a11y-guidelines/issues/new).
+Have a bug or a feature request? Search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).
 
 ## Copyright and license
 
 Documentation under the [CC BY 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE).  
 
 The Orange logo and some images or screenshots are the property of Orange:
-Copyright (C) 2016 Orange SA All rights reserved  
-[List of the concerned files](/notice.txt)
+Copyright (C) 2016 - 2020 Orange SA All rights reserved
