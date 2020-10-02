@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Components examples - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="page">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Component examples
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+
+
+<h1>Components examples</h1>
+
+
+<ol class="list-unstyled">
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/accessible-hiding/" class="text-decoration-none">Accessible hiding and aria-hidden example</a>
+      </h2>
+      
+      
+        <p class="my-2">Elements not visible on the screen but accessible to assistive technology.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/chatbot/" class="text-decoration-none">Best practices for a chatbot</a>
+      </h2>
+      
+      
+        <p class="my-2">Create an accessible chatbot.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/tags/" class="text-decoration-none">Creating accessible “tags” 1/2</a>
+      </h2>
+      
+      
+        <p class="my-2">Sample code to make accessible tags (part 1).</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/tags/2/" class="text-decoration-none">Creating accessible “tags” 2/2</a>
+      </h2>
+      
+      
+        <p class="my-2">Sample code to make accessible tags (part 2) examples.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/dialogs/1/" class="text-decoration-none">Dialogs 1/2</a>
+      </h2>
+      
+      
+        <p class="my-2">Example of an accessible dialog (part 1).</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/dialogs/2/" class="text-decoration-none">Dialogs 2/2</a>
+      </h2>
+      
+      
+        <p class="my-2">Example of an accessible dialog (part 2).</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/dropdown-menu/" class="text-decoration-none">Dropdown menu</a>
+      </h2>
+      
+      
+        <p class="my-2">Create an accessible drop-down menu.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/dynamic-focus/" class="text-decoration-none">Dynamic focus</a>
+      </h2>
+      
+      
+        <p class="my-2">Management of areas that update dynamically in your pages.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/file-explorer/" class="text-decoration-none">File Explorer</a>
+      </h2>
+      
+      
+        <p class="my-2">Example of accessible file explorer.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/forms/" class="text-decoration-none">Forms</a>
+      </h2>
+      
+      
+        <p class="my-2">Creating accessible forms.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/technical-iframe/" class="text-decoration-none">Hiding technical iframe</a>
+      </h2>
+      
+      
+        <p class="my-2">Hidding iframe to assistive technology.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/listbox/" class="text-decoration-none">Listbox</a>
+      </h2>
+      
+      
+        <p class="my-2">Example of ARIA list (part 1).</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/listbox-and-keyboard-navigation/" class="text-decoration-none">Listbox and keyboard navigation</a>
+      </h2>
+      
+      
+        <p class="my-2">Example of ARIA list (part 2).</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/listbox-with-checkboxes/" class="text-decoration-none">Listbox with checkboxes</a>
+      </h2>
+      
+      
+        <p class="my-2">Example of ARIA list (part 3).</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/make-a-screen-reader-talk/" class="text-decoration-none">Make a screen reader talk with JavaScript and ARIA</a>
+      </h2>
+      
+      
+        <p class="my-2">Sample code to make screen reader speech.</p>
+      
+      
+    </article>
+  </li>
+
+
+  <li class="border-bottom border-500 py-3" data-tags="componentsExamples_en">
+    <article>
+      <h2 class="mb-1">
+        <a href="/en/web/components-examples/price-vocalization/" class="text-decoration-none">Price vocalization</a>
+      </h2>
+      
+      
+        <p class="my-2">Showing and vocalizing prices.</p>
+      
+      
+    </article>
+  </li>
+</ol>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

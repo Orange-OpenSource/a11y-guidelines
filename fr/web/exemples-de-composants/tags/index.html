@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Créer des tags accessibles 1/2 - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/web/designer/" class="nav-link">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/developper/" class="nav-link">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/tester/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/audit-wcag/" class="nav-link">
+  Évaluer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/outils/" class="nav-link">
+  Boite à outils
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/exemples-de-composants/" class="nav-link active" aria-current="true">
+  Exemples de composants
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/web/exemples-de-composants/">Exemples de composants</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Créer des tags accessibles 1/2
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>Créer des «&nbsp;tags&nbsp;» accessibles 1/2</h1>
+
+<h2>Préambule</h2>
+<p>Dans cet exemple, nous allons voir comment réaliser des «&nbsp;tags&nbsp;» accessibles. Vous savez, ces boutons que nous utilisons pour taguer du contenu, pour afficher une liste de destinataires...</p>
+
+<h2>Rendu final</h2>
+<p>Voici un exemple de rendu graphique&nbsp;:</p>
+<img src="exemples/tag.png" alt="capture d’écran de plusieurs tag dans une page web">
+
+<h2>Structure HTML</h2>
+<p>Comme les tags ne se promènent jamais seuls, nous allons créer une liste HTML. Ainsi, un utilisateur qui navigue à l’aide d’un lecteur d’écran entendra directement le nombre de tags affichés: «&nbsp;Liste de x éléments…&nbsp;».
+</p>
+
+<pre><code class="html">
+  &lt;ul&gt;
+      &lt;li&gt;Alcatel&lt;/li&gt;
+      &lt;li&gt;Doro&lt;/li&gt;
+      &lt;li&gt;Apple&lt;/li&gt;
+      &lt;li&gt;LG&lt;/li&gt;
+      &lt;li&gt;Sony&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 1</h3>
+  <a target="_blank" title="Ouvrir l’exemple 1 (nouvelle fenêtre)" href="exemples/1/"><img src="exemples/exemple1.png" alt="ouvrir l’exemple 1 (nouvelle fenêtre)"></a>
+</div>
+
+<h2>Suppression d’un tag</h2>
+<p>Un tag doit pouvoir être supprimé. Nous allons ajouter un bouton «&nbsp;Supprimer&nbsp;» sur chaque élément de notre liste. Pour les utilisateurs qui ne voient pas l’écran et qui naviguent à l’aide d’un lecteur d’écran, un simple bouton «&nbsp;Supprimer&nbsp;» n’est pas suffisant. Nous allons ajouter le nom du tag dans l’intitulé du bouton pour ôter toute ambiguïté. Exemple&nbsp;: «&nbsp;Sony,&nbsp;Retirer Sony de la liste&nbsp;».</p>
+<p>L’utilisation d’un vrai bouton, rend cette fonctionnalité accessible au lecteur d’écran, mais également aux personnes qui ne peuvent pas utiliser une souris et qui naviguent à l’aide du clavier en déplaçant le focus (touche <kbd>Tab</kbd>). En effet, un bouton est focusable nativement.</p>
+
+<pre><code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;Alcatel&lt;button&gt;Retirer Alcatel de la liste&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;Doro&lt;button&gt;Retirer Doro de la liste&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;Apple&lt;button&gt;Retirer Apple de la liste&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;LG&lt;button&gt;Retirer LG de la liste&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;Sony&lt;button&gt;Retirer Sony de la liste&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 2</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 2 (nouvelle fenêtre)" href="exemples/2/"><img src="exemples/exemple2.png" alt="ouvrir l’exemple 2 (nouvelle fenêtre)"></a></p>
+</div>
+
+<p>Et voilà&nbsp;! des tags simples et accessibles. Bon OK, ce n’est pas très beau.</p>
+
+<h2>Un peu de déco</h2>
+<p>Maintenant que nous avons des tags accessibles, on peut passer à la déco. L’idéal serait de faire ressembler nos tags à la première illustration proposée au début de cet article. Plusieurs solutions sont possibles.</p>
+
+<p>On peut par exemple commencer par remplacer l’intitulé du bouton par un «&nbsp;X&nbsp;» ou un icône en forme de croix.</p>
+
+<pre><code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;Alcatel&lt;button&gt;X&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 3</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 3 (nouvelle fenêtre)" href="exemples/3/"><img src="exemples/exemple3.png" alt="ouvrir l’exemple 3 (nouvelle fenêtre)"></a></p>
+</div>
+
+<p>Par contre, là, on vient de perdre les utilisateurs qui naviguent au lecteur d’écran, car les boutons seront désormais vocalisés «&nbsp;X&nbsp;». On peut corriger cela par exemple à l’aide d’un attribut <code>aria-label</code>.</p>
+
+<pre><code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;Alcatel&lt;button aria-label="Retirer Alcatel de la liste"&gt;X&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+<p>On ajoute un peu de CSS pour faire disparaître le fond et les contours des boutons.</p>
+
+<pre><code class="css">
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 4</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 4 (nouvelle fenêtre)" href="exemples/4/"><img src="exemples/exemple4.png" alt="ouvrir l’exemple 4 (nouvelle fenêtre)"></a></p>
+</div>
+
+<h2>Optimisation</h2>
+
+<p>Cela fonctionne, mais ce n’est pas parfait. Il faut bien viser pour supprimer un tag, car le bouton en forme de croix n’est pas très grand. Ce n’est pas agréable à utiliser et cela risque d’être réellement problématique pour les personnes qui tremblent ou qui ont des difficultés avec la souris.</p>
+
+<p>Sachant que le bouton Supprimer est la seule action disponible, on pourrait étendre la zone de clic à la totalité du tag. Ainsi même si on clique un peu à côté de la croix, l’action de suppression sera prise en compte.</p>
+
+<pre><code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+<p>On ajoute la croix avec du CSS&nbsp;:</p>
+
+<pre><code class="css">
+  li button:after {
+    content: "x";
+    margin: .25rem .25rem .25rem .75rem;
+    padding-left: .4rem;
+    border-left: .15rem solid #fff;
+  }
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 5</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 5 (nouvelle fenêtre)" href="exemples/5/"><img src="exemples/exemple5.png" alt="ouvrir l’exemple 5 (nouvelle fenêtre)"></a></p>
+</div>
+
+<p>C’est mieux. Visuellement on voit bien deux choses dans chaque tag, son libellé et un bouton de suppression. Au lecteur d’écran par contre, pour le moment, on n’entend qu’un seul bouton «&nbsp;Retirer xxx de la liste&nbsp;». Pour corriger cela, on ajoute un <code>span</code> contenant l’intitulé du tag. Pour éviter que celui-ci n’apparaisse à l’écran (cela ferait doublon), on lui ajoute une classe de masquage accessible (<code>sr-only</code>). Ainsi, ce texte ne sera visible que par les lecteurs d’écran.</p>
+
+<pre><code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+<p>Ainsi au lecteur d’écran, pour chaque tag, on entend son libellé, puis un bouton pour le supprimer.</p>
+
+<div class="exemple">
+  <h3>Exemple 6</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 6 (nouvelle fenêtre)" href="exemples/6/"><img src="exemples/exemple6.png" alt="ouvrir l’exemple 6 (nouvelle fenêtre)"></a></p>
+</div>
+
+<p>Il reste un dernier problème à résoudre&nbsp;: si on essaie de naviguer à l’aide du clavier (en déplaçant le focus à l’aide de la touche <kbd>Tab</kbd>), on ne sait pas sur quel bouton est le focus.</p>
+
+<p>On ajoute un peu de CSS pour mettre le focus en évidence, on en profite pour en faire de même au survol de la souris.</p>
+
+<pre><code class="css">
+  button:hover, button:focus {
+    background-color: #f16e00;
+    color: #000;
+  }
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 7</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 7 (nouvelle fenêtre)" href="exemples/7/"><img src="exemples/exemple7.png" alt="ouvrir l’exemple 7 (nouvelle fenêtre)"></a></p>
+</div>
+
+<h2>Optimisation (bis)</h2>
+<p>Nous avons des tags accessibles, par contre lorsqu’on supprime un tag à l’aide du clavier, le focus reste positionné sur le tag qui disparaît. La position du focus n’est donc plus visible après suppression. Cela se corrige facilement avec un peu de Javascript. Il suffit de repositionner le focus sur l’élément précédent par exemple&nbsp;:</p>
+
+<pre><code class="javascript">
+  $("button").on("click", function () {
+      <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+      $(this).parent().remove();
+  });
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 8</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 8 (nouvelle fenêtre)" href="exemples/8/"><img src="exemples/exemple8.png" alt="ouvrir l’exemple 8 (nouvelle fenêtre)"></a></p>
+</div>
+
+<p>Lorsqu’un tag est supprimé, nous le voyons disparaître à l’écran. Par contre pour qu’un utilisateur navigant au lecteur d’écran soit également certain que celui-ci a été supprimé, l’idéal, c’est de faire vocaliser un message de confirmation à l’utilisateur.</p>
+<p>Pour cela nous pouvons utiliser par exemple notre <a href="../faire-parler-le-lecteur-d-ecran/">fonction Javascript srSpeak</a> qui utilise de l’ARIA pour faire parler le lecteur d’écran.</p>
+
+<pre><code class="javascript">
+  $("button").on("click", function () {
+      <span class="highlight-code">$(this).parent().prev().find("button").focus();</span>
+      $(this).parent().remove();
+      srSpeak($(this).text() + "supprimé");
+  });
+</code></pre>
+
+<div class="exemple">
+  <h3>Exemple 9</h3>
+  <p><a target="_blank" title="ouvrir l’exemple 9 (nouvelle fenêtre)" href="exemples/9/"><img src="exemples/exemple9.png" alt="ouvrir l’exemple 9 (nouvelle fenêtre)"></a></p>
+</div>
+
+<p>Cette fois, nous avons bien des «&nbsp;tags&nbsp;» accessibles à la souris, au clavier et au lecteur d’écran.</p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/web/exemples-de-composants/tags/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

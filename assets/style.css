@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@font-face {
+  font-display: swap;
+  font-family: "HelvNeueOrange";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/assets/fonts/HelvNeue55_W1G.woff2") format("woff2"),
+    url("/assets/fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelvNeueOrange";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/HelvNeue75_W1G.woff2") format("woff2"),
+    url("/assets/fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+
+
+/**
+ * General
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+
+/**
+ * Typography
+ */
+
+/* Citations */
+blockquote {
+  quotes: "«\00A0" "\00A0»";
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+blockquote p::before {
+  content: open-quote;
+}
+
+blockquote p::after {
+  content: close-quote;
+}
+
+
+
+/**
+ * Table Of Content and Side navigation
+ */
+
+.StickySideNavigation {
+  background: #fff;
+  position: sticky;
+  top: 1.25rem;
+}
+
+.StickySideNavigation a[aria-current] {
+  color: #000 !important;
+}
+
+.StickySideNavigation a[aria-current]::before {
+  background-color: #ff7900;
+  bottom: .625rem;
+  content: "";
+  left: -4px;
+  position: absolute;
+  top: .625rem;
+  width: 4px;
+}
+
+
+
+/**
+ * Secondary navigation
+ */
+
+#secondary-navigation a[aria-current] {
+  color: #000;
+}
+
+#secondary-navigation a[aria-current]::before {
+  background-color: #ff7900;
+}
+
+
+
+/**
+ * Back to top link
+ */
+
+#back-to-top {
+  bottom: 1.25rem;
+  position: fixed;
+  right: 1.25rem;
+  transition: opacity .25s ease;
+}
+
+
+
+/*
+ * Glossary
+ * @see https://twitter.com/hankchizljaw/status/1200557556399247360
+ */
+
+.Glossary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.Glossary dt:nth-of-type(odd),
+.Glossary dd:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+
+
+/**
+ * Footer
+ */
+
+[role="contentinfo"] svg {
+  fill: #fff;
+}
+
+[role="contentinfo"] a:hover svg,
+[role="contentinfo"] a:focus svg {
+  fill: currentColor;
+}
+
+
+
+/**
+ * Components examples
+ */
+
+pre code .important {
+  border: 1px solid #f00;
+}
+
+.highlight-code {
+  background-color:rgba(255, 255, 128, .5) !important;
+  z-index: 1000;
+}
+
+/* Source code */
+pre code {
+  border: .2rem solid #eee;
+  display: block;
+}
+
+
+
+/**
+ * Utilities
+ */
+
+.bg-200 {
+  background-color: #f6f6f6 !important;
+}
+
+.bg-300 {
+  background-color: #eee !important;
+}
+
+.no-js .hidden-if-no-js {
+  display: none !important;
+}
+
+.list-position-inside {
+  list-style-position: inside !important;
+}
+
+
+
+/**
+ * Responsive
+ */
+
+@media screen and (max-width: 479.98px) {
+  .breadcrumb-item:nth-last-of-type(2)::before {
+    transform: rotate(0);
+  }
+
+  .MobileDropdownNavigationContainer .dropdown ~ .dropdown {
+    margin-top: .625rem;
+  }
+}

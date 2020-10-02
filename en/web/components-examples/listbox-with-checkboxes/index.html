@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Listbox with checkboxes - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="true">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/components-examples/">Component examples</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Listbox with checkboxes
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>ARIA listbox with checkboxes</h1>
+
+<h2>Introduction</h2>
+<p>In this example, we start from <a href="../listbox/">the listbox example</a> and we add checkboxes. We will get a component that will allow us to select an item from a list of items, just like a conventional listbox, but that allows us to check some items. We often find it in webmails.</p>
+
+<h2>Caution</h2>
+<p>Although improvements are being made with each new version, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
+
+<h2>Implementation</h2>
+
+<h3>HTML code</h3>
+<p>We take the same listbox from the listbox example and we add the ability to check&nbsp;/ uncheck the items. For this we use the <code>aria-checked</code> attribute.</p>
+
+<pre><code class="html">
+  &lt;ul role="listbox" tabindex="0" aria-label="liste des emails"&gt;
+      &lt;li tabindex="-1" role="option" aria-checked="false"&gt;Important information about your account&lt;/li&gt;
+      ...
+  &lt;/ul&gt;
+</code></pre>
+
+<p>To symbolize that the item is checked, it could be very simple to do it via <abbr>CSS</abbr>, displaying a pictogram just before the items having the attribute <code>aria-checked="true"</code>.<p>
+<p>In this example, we will insert real check boxes inside each item. These will not be vocalized by the screen reader because we added the <code>role="option"</code> attribute (for the screen reader, it will be considered as an item no matter what you put inside it).</p>
+
+<pre><code class="html">
+  &lt;ul role="listbox" tabindex="0" aria-label="email list"&gt;
+      &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
+          &lt;input tabindex="-1" type="checkbox"&gt;Important information about your account
+      &lt;/li&gt;
+      ...
+  &lt;/ul&gt;
+</code></pre>
+
+<p>Do not forget to add the <code>tabindex="-1"</code> attribute to ensure that the checkboxes do not get the focus</p>
+<p>If we want fancier checkboxes, we can use those from <a href="http://boosted.orange.com/">the Boosted library</a>.<br>
+In this case, we must also add the <code>label</code> tag.</p>
+<pre><code class="html">
+  &lt;ul role="listbox" tabindex="0" aria-label="email list"&gt;
+      &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
+        &lt;div class="custom-control custom-checkbox mb-0"&gt;
+          &lt;input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
+          Important information about your account
+        &lt;/div&gt;
+      &lt;/li&gt;
+      ...
+  &lt;/ul&gt;
+</code></pre>
+
+<p>Note that the <code>label</code> tag is left blank here intentionally. Indeed, in this component, we do not want the checkbox to be selected if you click on the item label.</p>
+
+<h3>Interactions</h3>
+<p>To manage the interaction with the mouse, simply change the value of the <code>aria-checked</code> attribute when a checkbox is clicked.</p>
+
+<pre><code class="javascript">
+ $("[type=checkbox]").on("click", function () {
+     if ($(this).prop("checked")) {
+         $(this).parent().attr("aria-checked", "true");
+     } else {
+         $(this).parent().attr("aria-checked", "false");
+     }
+ });
+ </code></pre>
+
+<p>Now you must only manage the interaction with the keyboard. An item must be checked or unchecked by using the space bar. We insert this behaviour right after the code that manages the arrow keys (see <a href="../listbox/">the listbox example</a>).</p>
+<pre><code class="javascript">
+  $("[role=listbox]").on("keydown", function (e) {
+  var currentItem = $(this).find("[aria-selected=true]");
+  switch (e.keyCode) {
+      case 38:  // Up arrow
+          if (currentItem.prev().length) {
+              currentItem.attr("aria-selected", "false");
+              currentItem.prev().attr("aria-selected", "true").focus();
+          }
+          e.preventDefault();
+          break;
+      case 40: // Down arrow
+          if (currentItem.next().length) {
+              currentItem.attr("aria-selected", "false");
+              currentItem.next().attr("aria-selected", "true").focus();
+          }
+          e.preventDefault();
+          break;
+<div class="important">            case 32: // Space
+          if (currentItem.attr("aria-checked") === "true") {
+              currentItem.attr("aria-checked", "false");
+              currentItem.find("input[type=checkbox]").prop("checked", false);
+          } else {
+              currentItem.attr("aria-checked", "true");
+              currentItem.find("input[type=checkbox]").prop("checked", true);
+          }
+          e.preventDefault();
+      break;</div>
+  }
+});
+</code></pre>
+
+<h2>Example</h2>
+
+<h3 id="email-list">Email list</h3>
+
+<div class="row">
+  <ul role="listbox" class="list-group" tabindex="0" class="col-md-8" aria-labelledby="email-list">
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check1"></label>
+          Important information about your account
+        </div>
+      </li>
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check2" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check2"></label>
+          Sending message test
+        </div>
+      </li>
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check3" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check3"></label>
+          Photos of the weekend at the sea
+        </div>
+      </li>
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+        <div class="custom-control custom-checkbox mb-0">
+          <input tabindex="-1" id="check4" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check4"></label>
+          Re: Your order N°3642
+        </div>
+      </li>
+  </ul>
+</div>
+
+<h3>Testing</h3>
+
+<p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Mouse support:</strong> you can select an item by clicking on the text. You can check or uncheck an option by clicking the checkboxes.</p>
+<p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Keyboard support:</strong> you can select an item using the arrow up or down keys. You can check or uncheck an option using the spacebar.</p>
+<p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Screen reader support:</strong>  same keyboard shortcuts (up, down and space bar). For each item, the screen reader gives us the information whether it is selected / checked or not.</p>
+
+
+<h2>Webmail example</h2>
+<p>Here is a static prototype that implements the listbox component of this example and the <a href="../listbox/">listbox example</a>.</p>
+<a class="btn btn-secondary" href="../webmail/">Open the webmail</a>
+
+<h2>Links</h2>
+More information on <abbr>ARIA</abbr> and listbox:
+<ul>
+  <li><a href="http://w3c.github.io/aria-practices/#Listbox">WAI-ARIA Authoring Practices 1.1</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles">The roles model</a></li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/listbox-with-checkboxes/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

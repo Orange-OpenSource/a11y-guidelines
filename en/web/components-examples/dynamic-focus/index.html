@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic focus - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"><link rel="stylesheet" href="style.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="true">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/components-examples/">Component examples</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Dynamic focus
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>Manage the focus for dynamically generated content</h1>
+
+<h2>Introduction</h2>
+<p>Handling focus in rich applications can be complex. It can raise some issues on the following cases:</p>
+<ul>
+<li>Adding / removing generated content triggered by a user action with page reloading</li>
+<li>Adding / removing dynamic content triggered by a user action without page reloading</li>
+<li>Special case: dynamic <code>iframes</code></li>
+</ul>
+
+<h2>Content triggered by a user action with page reloading</h2>
+<p>This case where we reload the whole page just to modify part of this page should be avoided even if it was triggered by the user, as there is a loss of context and a partial asynchronous update would be more suitable.<br />
+If there is no way to do asynchronous loading, you must at least:</p>
+<ol>
+<li>Warn, if needed, the user with a message like “Loading, please wait” and set the focus on it if there is loss of context.</li>
+<li>When reloading, put the focus on the generated content or when the content is removed put the focus on the triggering element (if it still exists after reload) or just set the focus right before the removed content.</li>
+<li> Ensure that the focus moves in a logical and sequential order when hiding or showing content.</li>
+</ol>
+
+<h2>Dynamic content triggered by a user action without page reloading (asynchronous)</h2>
+<p>It is the most common case: the page is not reloaded, only the <abbr>DOM</abbr> is modified by adding or removing content on a user action (for example, displaying the search results, displaying a dialogue popin...).</p>
+<h3>Addition of content</h3>
+<ol>
+<li>If necessary, warn the user of the appearance of content (for example, for a submenu to unfold, we can add a text " unfold" and put a property <code>aria-haspopup</code>). If this content is likely to disappear (popin, for example), keep in mind the element triggering the appearance to restore focus when the disappearance. </li>
+<li>The new content must appear in the source code just after the triggering element (example: drop-down menu), </li>
+<li>The focus must be moved to one of the first elements of the new content that appeared (the container, a title, a link, a button ...). </li>
+</ol>
+<h3> Disappearance of content </h3>
+<ol>
+<li>Notify the user, if necessary, before he triggers this disappearance,</li>
+<li>The focus must be returned to the triggering element or, if it is impossible, set the focus just before the content that has disappeared. For example, when closing a dialog box, the focus must be repositioned on the element that triggered the opening (button, link, ...). </li>
+</ol>
+<p>
+<strong> In all cases, ensure that the focus path has remained logical and sequential after the appearance / disappearance of content. </strong>
+</p>
+<h3>Notify the user of the content changes </h3>
+
+<p> This is the main problem for any user, especially those who are visually, cognitively or with attention deficit disorder or small screens.</p>
+<p> The user must be able to spot the appearance or disappearance of content and interact with it, if necessary. <br />We must therefore warn the user, and there are several solutions in case of content modifications: </p>
+<ul>
+<li>By providing the user with informative text, </li>
+<li>By managing the focus path, </li>
+<li>By using <abbr>ARIA</abbr>. </li>
+</ul>
+<p> See [the sample drop-down menu] (./ simple-menu / simple-menu.html) for putting the <code>aria-haspopup</code> attribute into practice. </p>
+<h3>Case of the <code>Tabindex</code> attribute</h3>
+<p>As much as possible, do not redefine the reading order by using <code>tabindex</code> attributes (with positive values).</p>
+<p>In practice, the <code> tabindex </code> attribute should only be used with two values: </p>
+<ul>
+<li> <code>tabindex = "- 1"</code>: to prevent an element from receiving focus via the <kbd>TAB</kbd> key and allow it to receive focus via Javascript . </li>
+<li><code>tabindex = "0"</code>: to make a focusable element via the <kbd>TAB </kbd> key and via Javascript. </li>
+</ul>
+
+<h2>Special case: dynamic <code>iframes</code></h2>
+<p>When an <code>iframe</code> is updated dynamically by a user action, you must:</p>
+<ul>
+<li>Inform the user of this update and update the <code>title</code> attribute to inform the user of this update. </li>
+<li> If necessary (the user must have access to the modified <code>iframe</code>  immediately after the action that triggered the update), you must put the focus on the <code>iframe</code> tag.</li>
+<li> Ensure that the focus moves in a logical and sequential order inside the page and the <code>iframe</code>.</li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/dynamic-focus/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

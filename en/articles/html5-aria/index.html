@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 &amp; ARIA - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          HTML5 &amp; ARIA
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#what-is-it" class="dropdown-item text-wrap">What is it ?</a><a href="#support" class="dropdown-item text-wrap">Support</a><a href="#should-we-use-it" class="dropdown-item text-wrap">Should we use it?</a><a href="#webography" class="dropdown-item text-wrap">Webography</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1><abbr>HTML5</abbr> &amp; <abbr>ARIA</abbr></h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker…). So it is very difficult or impossible to make these components accessible with conventional <abbr>HTML</abbr>.</p>
+<p>Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user, in particular for the screenreaders.</p>
+<h2 id="what-is-it">What is it ? <a class="header-anchor" href="#what-is-it" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>To overcome these limitations, the W3C / WAI has officially issued a recommendation called <abbr>ARIA</abbr>, standing for Accessible Rich Internet Applications, and several documents on the use of <abbr>ARIA</abbr>. We are currently at the 1.1 version of <abbr>ARIA</abbr> et for the Authoring Practices, an <abbr>ARIA</abbr>best practices.</p>
+<p><abbr>ARIA</abbr> is a semantic wrapper based on the attribute / value combination used in markup languages such as <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. This recommendation consists of roles, states and properties that will specifically interact with assistive technologies (<abbr>AT</abbr>). With <abbr>ARIA</abbr>, one can describe elements and behaviours with simple HTML when they do not exist natively, for example tabs, drop-downs, live regions, tooltips, modal windows, etc. <abbr>ARIA</abbr> also defines how an interface component has to behave with the keyboard in order to standardize the user experience with keyboard navigation. <strong><abbr>ARIA</abbr> makes sense and delivers its full potential when used with <abbr>HTML5</abbr></strong>.</p>
+<p><abbr>ARIA</abbr> does not add any particular behaviour or any style to <abbr>UI</abbr> components as it is only descriptive. So always make sure presentation is done through <abbr>CSS</abbr>, content control and interaction via Javascript.</p>
+<h2 id="support">Support <a class="header-anchor" href="#support" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><abbr>ARIA</abbr> support improves quickly and is already supported :</p>
+<ul>
+<li>in modern browsers (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera 9.5&gt;=, Internet Explorer 8 for a basic support, Internet Explorer &gt;=9 and Edge for advanced support);</li>
+<li>in assistive technologies (<abbr>NVDA</abbr> &gt;=2010, Orca &gt;=2 + Firefox only, VoiceOver <abbr>OSX</abbr> &gt;=10.5, iOS &gt;=4, JAWS &gt;=8, Window-Eyes &gt;=7, ZoomText 10 for a basic support, ZoomText &gt;=11 for advanced support).</li>
+</ul>
+<p>Moreover, the optimal efficiency of the <abbr>ARIA</abbr> compatibility depends heavily on the browser/assistive technology combination: Firefox with <abbr>NVDA</abbr>, Jaws with Internet Explorer or Safari with VoiceOver, for example.</p>
+<h2 id="should-we-use-it">Should we use it? <a class="header-anchor" href="#should-we-use-it" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). <abbr>ARIA</abbr>’s robustness and interoperability is rather complacent, <a href="https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques">around forty <abbr>WCAG</abbr> 2.1 techniques are specific to <abbr>ARIA</abbr></a> (10 are <abbr>HTML5</abbr> techniques). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.</p>
+<p>In all cases, you have to test developments in the target environments (browser/assistive technology combinations). This is a tough task, but absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/<abbr>NVDA</abbr>.</p>
+<p>In a well-defined environment (e.g. intranet), target environments are known and in a finite number, so it gets easier!</p>
+<h2 id="webography">Webography <a class="header-anchor" href="#webography" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>W3C:<br>
+  * <a href="http://www.w3.org/TR/wai-aria/"><abbr>ARIA</abbr> specification</a><br>
+  * <a href="http://www.w3.org/TR/wai-aria-practices/"><abbr>ARIA</abbr> implementation</a><br>
+  * <a href="http://www.w3.org/TR/aria-in-html/">Use <abbr>ARIA</abbr> HTML (5)</a><br>
+  * <a href="https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques"><abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2</a></li>
+<li><a href="http://www.sitepoint.com/introduction-wai-aria/">Introduction to <abbr>ARIA</abbr> by Site Point</a></li>
+<li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction and link list to <abbr>ARIA</abbr> sources</a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#what-is-it" class="nav-link text-muted bg-200">What is it ?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#support" class="nav-link text-muted bg-200">Support</a>
+          </li><li class="nav-item position-relative">
+            <a href="#should-we-use-it" class="nav-link text-muted bg-200">Should we use it?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#webography" class="nav-link text-muted bg-200">Webography</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/html5-aria.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

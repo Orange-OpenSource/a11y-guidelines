@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC 2019 : Accessibility Lessons - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC 2019 : Accessibility Lessons
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>WWDC 2019 : Accessibility Lessons</h1>
+<img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-000.png" />
+<br>This video encompasses four short presentations all available on the **official Apple website**:
+<ul>
+<li><a href="#VisualDesignAccessibility">Visual Design Accessibility</a></li>
+<li><a href="#AccessibilityInspector">Accessibility Inspector</a></li>
+<li><a href="#WritingGreatAccessibilityLabels">Writing Great Accessibility Labels</a></li>
+<li><a href="#AccessibilityCustomActions">Accessibility Custom Actions</a></li>
+</ul>
+<p>Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.<br>
+<br><br><br>
+<a name="VisualDesignAccessibility"></a></p>
+<h2 id="visual-design-accessibility">Visual Design Accessibility <a class="header-anchor" href="#visual-design-accessibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/244/">session 244</a>) highlights some points to <strong>provide a better accessible application visually speaking</strong>.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244.png" /><br>
+<br><br>Various contents are indicated hereunder:</p>
+<ul>
+<li>
+<p><strong>DYNAMIC TYPE</strong></p>
+<ul>
+<li><a role="button" onclick="$('#DynamicType-TheFourPrinciples_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Four Principles</a></li>
+<li><a role="button" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text Styles</a></li>
+<li><a role="button" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ <strong>iOS 13 new feature</strong><br>
+<br><br></li>
+</ul>
+</li>
+<li>
+<p><strong>REDUCE MOTION</strong></p>
+<ul>
+<li><a role="button" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a></li>
+<li><a role="button" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Autoplaying Video</a> ⟹ <strong>iOS 13 new feature</strong></li>
+<li><a role="button" onclick="$('#ReduceMotion-ScreenTransitions_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Screen Transitions</a> ⟹ <strong>iOS 13 new feature</strong><br>
+<br><br></li>
+</ul>
+</li>
+<li>
+<p><strong>COLOR</strong></p>
+<ul>
+<li><a role="button" onclick="$('#Color-TheBasics_tab').trigger('click');document.getElementById('Color').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a></li>
+<li><a role="button" onclick="$('#Color-DifferentiateWithoutColor_tab').trigger('click');document.getElementById('Color').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate Without Color</a> ⟹ <strong>iOS 13 new feature</strong><br>
+<br></li>
+</ul>
+</li>
+</ul>
+<p><a id="DynamicType"></a></p>
+<h3 id="dynamic-type">DYNAMIC TYPE <a class="header-anchor" href="#dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#DynamicType-TheFourPrinciples"
+           id="DynamicType-TheFourPrinciples_tab"
+           role="tab" 
+           aria-selected="true">The Four Principles</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#DynamicType-TextStyles"
+           id="DynamicType-TextStyles_tab"
+           role="tab" 
+           aria-selected="false">Text Styles</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#DynamicType-Xcode"
+           id="DynamicType-Xcode_tab"
+           role="tab" 
+           aria-selected="false">Xcode</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="DynamicType-TheFourPrinciples"
+     role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=77">🎬 (01:17)</a><br>
+<br><br><br>
+The use of <code>Dynamic Type</code> is based on four principles that are highly recommended to be followed:<br><br>
+<br></p>
+<ul>
+  <li>If the text can be dynamic, it must be implemented to reach this purpose.</li>
+  <li>Use as much of the screen width as possible.</li>
+  <li>Don't truncate text as it grows if it's not the case in the default user interface.</li>
+  <li>Scale the glyphs next to text to make the interface look balanced. </li>
+</ul>
+</div>
+<div class="tab-pane" id="DynamicType-TextStyles" role="tabpanel" >
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=110">🎬 (01:50)</a>
+<br><br>
+Reminder of the 11 text styles available since iOS 11:
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_1.png" />
+<br>... and the programmatic way of their implementations:
+<br><img style="max-width: 700px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_2.png" />
+<br>A more detailed explanation of the `Dynamic Type` implementation is available in the <a href="../../development#text-size" style="text-decoration: underline;">developers guide section</a>.
+</div>
+<div class="tab-pane" id="DynamicType-Xcode" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=180">🎬 (03:00)</a><br>
+<br><br><br>
+A <strong>new pane</strong> is available with <strong>Xcode 11</strong> to vary the text size and to dynamically visualize its rendering on the simulator.<br>
+<br><img style="max-width: 700px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_3.png" /></p>
+</div>
+</div>
+<br>
+<a id="ReduceMotion"></a>
+### REDUCE MOTION
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ReduceMotion-TheBasics"
+           id="ReduceMotion-TheBasics_tab"
+           role="tab" 
+           aria-selected="true">The Basics</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ReduceMotion-AutoplayingVideo"
+           id="ReduceMotion-AutoplayingVideo_tab"
+           role="tab" 
+           aria-selected="false">Autoplaying Video</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ReduceMotion-ScreenTransitions"
+           id="ReduceMotion-ScreenTransitions_tab"
+           role="tab" 
+           aria-selected="false">Screen Transitions</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ReduceMotion-TheBasics"
+     role="tabpanel">
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=203">🎬 (03:23)</a>
+<br><br>
+<p>Reminder of the current situation already including this functionality to reduce motion on screen:<br>
+<br><img style="max-width: 450px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_4.png" /><br>
+<br>... and of the programmatic way to be aware of its value from the device settings:<br>
+<br><img style="max-width: 750px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_5.png" /><br>
+<br>A detailed explanation of the accessibility options states and events is available in the <a href="../../development#accessibility-options" style="text-decoration: underline;">developers guide section</a>.</p>
+</div>
+<div class="tab-pane" id="ReduceMotion-AutoplayingVideo" role="tabpanel" >
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=257">🎬 (04:17)</a>
+<br><br>
+<p>The video automatic preview playing is now in the hands of the user who can decide its de/activation thanks to the device settings as an <strong>iOS 13 new feature</strong>:<br>
+<br><img style="max-width: 425px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_6.png" /><br>
+<br>It's also possible to be aware of this option state following a programmatic way:<br>
+<br><img style="max-width: 750px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_7.png" /><br>
+<br>If this option is deactivated, the video control must be regained only under the user interaction.</p>
+</div>
+<div class="tab-pane" id="ReduceMotion-ScreenTransitions" role="tabpanel" >
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=343">🎬 (05:43)</a>
+<br><br>
+<p>This <strong>iOS 13 new feature</strong> only appears once the <code>Reduce Motion</code> accessibility option is activated.<br>
+<br>Its purpose is to lower the transition visual effect between screens that may impact some users having a visual motion painful sensitivity.<br>
+<br><img style="max-width: 750px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_12.png" /><br>
+<br>Once activated, the <code>Prefer Cross-Fade Transitions</code> option is automatically taken into account by all the UIKit standard elements <em>(navigation, modal views...)</em>.</p>
+</div>
+</div>
+<br>
+<p><a id="Color"></a></p>
+<h3 id="color">COLOR <a class="header-anchor" href="#color" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Color-TheBasics"
+           id="Color-TheBasics_tab"
+           role="tab" 
+           aria-selected="true">The Basics</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Color-DifferentiateWithoutColor"
+           id="Color-DifferentiateWithoutColor_tab"
+           role="tab" 
+           aria-selected="false">Differentiate Without Color</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Color-TheBasics"
+     role="tabpanel">
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=400">🎬 (06:40)</a>
+<br><br>
+<p>Introduction of dyschromatopsia whose understanding will naturally lead towards the new functionality exposed in the next sheet.<br>
+<br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_8.png" /></p>
+</div>
+<div class="tab-pane" id="Color-DifferentiateWithoutColor" role="tabpanel" >
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=453">🎬 (07:33)</a>
+<br><br>
+<p>The <code>Differentiate Without Color</code> <strong>iOS 13 new feature</strong> is a user setting that indicates the will of having <strong>visual information not passed on by colors</strong>.<br>
+<br><img style="max-width: 900px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_9.png" /><br>
+<br>There's also a programmatic way to be aware of its value so as to subsequently adapt the user interface:<br>
+<br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_10.png" /><br>
+<br>Admittedly, it's highly recommended <a href="../../design#colours" style="text-decoration: underline;">never to transmit information by colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly <em>(video games for instance)</em>.<br>
+<br><br><img style="max-width: 1100px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_11.png" /></p>
+</div>
+</div>
+<br><br><br>
+<p><a name="AccessibilityInspector"></a></p>
+<h2 id="accessibility-inspector">Accessibility Inspector <a class="header-anchor" href="#accessibility-inspector" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/257/">session 257</a>) aims at introducing the Accessibility Inspector tool and some Xcode 11 new features that will solve problems exposed inside a demo application.<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257.png" /><br>
+<br><br>Various contents and their video timelapse are indicated hereunder:</p>
+<ul>
+<li><a href="#Introduction">Introduction</a> (00:51)</li>
+<li><a href="#Audit">Audit</a> (02:26)</li>
+<li><a href="#Inspection">Inspection</a> (03:40) including a <strong>Xcode 11 new feature</strong></li>
+<li><a href="#CATextLayer">CATextLayer</a> (05:26)</li>
+<li><a href="#ColorContrast">Color Contrast</a> (06:26) including a <strong>Xcode 11 new feature</strong></li>
+<li><a href="#Conclusion">Conclusion</a> (08:24)<br>
+<br><br></li>
+</ul>
+<p><a name="Introduction"></a></p>
+<h3 id="introduction-0051"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=51">Introduction (00:51)</a> <a class="header-anchor" href="#introduction-0051" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-Introduction.png" />
+<br>The demo application is introduced in depth so as to have a better understanding of some further issues while highlighting:
+<ul>
+<li>The way to open Accessibility Inspector <a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=94">(01:34)</a>.</li>
+<li>The <code>hover text</code> mac feature <a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=103">(01:43)</a>.<br>
+<br><br></li>
+</ul>
+<p><a name="Audit"></a></p>
+<h3 id="audit-0226"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=146">Audit (02:26)</a> <a class="header-anchor" href="#audit-0226" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The purpose of this functionality is to provide a list of potential accessibility issues.<br>
+<br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-Audit.png" /><br>
+<br><br><br></p>
+<p><a name="Inspection"></a></p>
+<h3 id="inspection-0340"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=220">Inspection (03:40)</a> <a class="header-anchor" href="#inspection-0340" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Introduction of a <strong>Xcode 11 new feature</strong> to <strong>vocalize and select elements on the simulator</strong> <a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=251">(04:11)</a> after showing the way to get the complete description of a graphic element in conjunction with its selection.<br>
+<br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-Inspection.png" /><br>
+<br><br><br></p>
+<p><a name="CATextLayer"></a></p>
+<h3 id="catextlayer-0526"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=326">CATextLayer (05:26)</a> <a class="header-anchor" href="#catextlayer-0526" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This example emphasizes the non automatic accessibility handling for this kind of element that must be programmatically implemented to behave like any other accessibility element.<br>
+<br><br><br></p>
+<p><a name="ColorContrast"></a></p>
+<h3 id="color-contrast-0626"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=386">Color Contrast (06:26)</a> <a class="header-anchor" href="#color-contrast-0626" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Besides the font size, it's also very important to be above a <a href="../../design#colours">contrast ratio</a> to enable sight-impaired people to perfectly understand the whole screen content.<br>
+<br>Once the color contrast issue is detected, a solution is brought about by the <strong>Xcode 11 new feature</strong>: <strong>Color Contrast Calculator</strong>.<br>
+<br><img style="max-width: 850px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-ColorContrast.png" /><br>
+<br><br><br></p>
+<p><a name="Conclusion"></a></p>
+<h3 id="conclusion-0824"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=504">Conclusion (08:24)</a> <a class="header-anchor" href="#conclusion-0824" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>All the previous tools that have been used during this session are highlighted in order to visualize the final rendering and to be sure that the suggested solutions are effective.<br>
+<br><br><br><br>
+<a name="WritingGreatAccessibilityLabels"></a></p>
+<h2 id="writing-great-accessibility-labels">Writing Great Accessibility Labels <a class="header-anchor" href="#writing-great-accessibility-labels" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/254/">session 254</a>) is entirely presented by a blind person who explains the importance and the way of writing labels to be perfectly understood whatever the context.<br>
+<br>Many examples are provided to show how the visual elements are exposed to a VoiceOver user when its properties are well fulfilled... or not.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-254.png" /><br>
+<br><br></p>
+<p>After a quick introduction regarding the expectations of a blind user about a <strong>mobile application at first launch</strong> <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=13">(00:13)</a>, the <strong>label definition</strong> is introduced in details <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=113">(01:53)</a> followed by clear <strong>explanations of different contexts</strong> a button example belongs to in order to adapt its label accordingly <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=161">(02:41)</a>.<br>
+<br><br>Finally, the following best practices are presented with illustrative examples: <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=264">(04:24)</a></p>
+<ul>
+<li>Always add appropriate labels to the accessibility elements <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=273">(04:33)</a>.</li>
+<li>Don't include the element type in the label <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=322">(05:22)</a>.</li>
+<li>Update labels when the user interface changes <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=346">(05:46)</a>.</li>
+<li>Provide a context clarification when necessary <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=367">(06:07)</a>.</li>
+<li>Avoid redundancy when things are clear according to the context <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=402">(06:42)</a>.</li>
+<li>Add labels to the meaningful animations <em>(spinner...)</em> <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=428">(07:08)</a>.</li>
+<li>Avoid verbose labels when not necessary <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=444">(07:24)</a> but don't hesitate to use it when appropriate <a href="https://developer.apple.com/videos/play/wwdc2019/254/?time=468">(07:48)</a>.<br>
+<br><br><br><br>
+<a name="AccessibilityCustomActions"></a></li>
+</ul>
+<h2 id="accessibility-custom-actions">Accessibility Custom Actions <a class="header-anchor" href="#accessibility-custom-actions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/250/">session 250</a>) highlights the custom actions for the <a href="../../voiceover/">screen reader</a> and the <a href="../../development#switch-control">Switch Control feature</a> thanks to a demo application that presents the explained concepts.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250.png" /><br>
+<br><br>Various contents and their video timelapse are indicated hereunder:</p>
+<ul>
+<li><a href="#CustomActionsIntroduction">Introduction</a> (00:12)</li>
+<li><a role="button" onclick="$('#CustomActions-VoiceOver_tab').trigger('click');document.getElementById('CustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: VoiceOver</a> (03:10)</li>
+<li><a role="button" onclick="$('#CustomActions-SwitchControl_tab').trigger('click');document.getElementById('CustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: Switch Control</a> (04:28)</li>
+<li><a href="#CustomActionsCoding">Implementation</a> (07:59) ⟹ <strong>iOS 13 new syntax</strong><br>
+<br><br><br><br>
+<a name="CustomActionsIntroduction"></a></li>
+</ul>
+<h2 id="introduction-0012"><a href="https://developer.apple.com/videos/play/wwdc2019/250/?time=12">Introduction (00:12)</a> <a class="header-anchor" href="#introduction-0012" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Quick introduction of VoiceOver with a problem due to an inadequate implementation highlighted by the demo application that's used all along the session.<br>
+<br><br><br></p>
+<p><a id="CustomActions"></a></p>
+<h2 id="custom-actions">Custom Actions <a class="header-anchor" href="#custom-actions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CustomActions-VoiceOver"
+           id="CustomActions-VoiceOver_tab"
+           role="tab" 
+           aria-selected="true">VoiceOver</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CustomActions-SwitchControl"
+           id="CustomActions-SwitchControl_tab"
+           role="tab" 
+           aria-selected="false">Switch Control</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="CustomActions-VoiceOver"
+     role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=190">🎬 (03:10)</a><br>
+<br><br><br>
+The purpose of the <a href="../../development#custom-actions" style="text-decoration: underline;">custom actions</a>  with VoiceOver is clearly explained which helps understand why and in which contexts this functionality must be implemented to significantly improve the user experience.</p>
+</div>
+<div class="tab-pane" id="CustomActions-SwitchControl" role="tabpanel" >
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=268">🎬 (04:28)</a>
+<br><br>
+<p>The demo application uses the Switch Control feature on the device that is paired with two switches: the first one <em>(orange)</em> aims at moving the focus to the next item while the second one <em>(white)</em> aims at activating the focused item.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250-CustomActionsSwitchControl.png" /><br>
+<br>Implementing custom actions in this context leads to a <strong>drastic decrease of focus/activations actions</strong> to be carried out by the user so as to reach the same result.</p>
+</div>
+</div>
+<p><br><br><br><br>
+<a name="CustomActionsCoding"></a></p>
+<h2 id="implementation-0759"><a href="https://developer.apple.com/videos/play/wwdc2019/250/?time=479">Implementation (07:59)</a> <a class="header-anchor" href="#implementation-0759" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Since iOS 8, the <a href="../../development#custom-actions">custom actions</a> implementation relies on an Objective C syntax that now fits a Swift form by introducing a <strong>closure</strong> in <strong>iOS 13</strong>.<br>
+<br><img style="max-width: 900px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250-CustomActionsCoding.png" /><br>
+<br><br><br></p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2019/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

@@ -1,0 +1,84 @@
+[role=listbox] {
+    border-right: .5rem solid #fff;    
+    list-style: none;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+[role=option] {
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: .1rem solid #ddd;
+    outline: none;
+}
+
+[role=option] label {
+    top: -1rem;        
+    border: 0!important;
+}
+
+[role=option]:last-child {
+    border-bottom: 0;
+}
+
+[role=option][aria-selected=true] {
+    background: #000;
+    color: #fff;
+}
+
+[role=option].active  {
+    background: #f16e00;
+    color: #000;    
+}
+
+[role=option].active .o-checkbox[type="checkbox"]:checked + label::before {
+    border-color: #e15e00 !important;
+}
+
+[role=option].active .o-checkbox[type="checkbox"]:checked + label::after {
+    background: transparent !important;
+}
+
+[role=option] .resume {
+    font-weight: normal;
+}
+
+[role=option] span {
+    display: block;    
+}
+
+.emails [role=option].unread {
+    background: #fff;
+    font-weight: bold;
+}
+.emails [role=option] {
+    background: #eee;
+    font-weight: normal;
+}
+
+.emails [role=option][aria-selected=true] {
+    background: #000;
+    color: #fff;
+}
+
+.emails [role=option].active {
+    background: #f16e00;
+    color: #000;    
+}
+
+.emails [role=option].active.unread {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::before, .o-checkbox[type="checkbox"]:checked + label::before {
+    top: .5rem;
+}
+
+.o-checkbox[type="checkbox"]:not(:checked) + label::after, .o-checkbox[type="checkbox"]:checked + label::after {
+    top: .5rem;
+}

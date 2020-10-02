@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>The accessible name in HTML - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          The accessible name in HTML
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#in-practice-how-does-it-work" class="dropdown-item text-wrap">In practice, how does it work?</a><a href="#access-to-the-accessible-name-via-the-browser" class="dropdown-item text-wrap">Access to the accessible name  via the browser</a><a href="#content-of-a-tag" class="dropdown-item text-wrap">Content of a tag</a><a href="#associated-element" class="dropdown-item text-wrap">Associated element</a><a href="#with-aria-too" class="dropdown-item text-wrap">With ARIA too!</a><a href="#sources" class="dropdown-item text-wrap">Sources</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>The accessible name in <abbr>HTML</abbr></h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The name of the interface components also called accessible name, is basically the name who will be exposed to assistive technology <abbr>AT</abbr> via the accessibility <abbr>API</abbr>. This name is calculated by the browser via an algorithm called <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation 1.1</a>.<br>
+In fact, to make it simple, the browser will generate an accessible tree from the <abbr>DOM</abbr> (Document Object Model) in which a large majority of <abbr>HTML</abbr> elements (those with only a presentation purpose, eg <code>div</code> and<code> span</code> tags do not have utility) need a (accessible) name to be correctly identified by the <abbr>AT</abbr>.</p>
+<p>The accessible name is derived from the content of a tag, attributes of this tag or an element associated with it.</p>
+<h2 id="in-practice-how-does-it-work">In practice, how does it work? <a class="header-anchor" href="#in-practice-how-does-it-work" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The accessible name is, for example, announced by a screen reader when the focus is on this element but the role of the element is also added (link, graphic, button…).</p>
+<h3 id="access-to-the-accessible-name-via-the-browser">Access to the accessible name  via the browser <a class="header-anchor" href="#access-to-the-accessible-name-via-the-browser" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>To access the (accessible) name, the easiest way is to use the tools of browsers.</p>
+<p>In Chrome, in Chrome dev tools (<kbd>Ctrl+ Shift + i</kbd>), inspect an element (&quot;Elements&quot; tab) and open the &quot;Accessibility&quot; panel instead of &quot;Style&quot; &quot;(usually on the right). Access to the &quot;Accessibility tree&quot; and in &quot;Computed properties&quot; you have to the &quot;Name&quot;, the accessible name of the item being inspected.</p>
+<p><img src="./images/chrome_name.png" alt="Panels of Chrome Development Tools with Open Accessibility Tree" class="img-fluid"></p>
+<p>In FireFox, in dev tools (<kbd>Ctrl+ Shift + i</kbd>), open the &quot;Accessibility&quot; tab (to display the &quot;Options&quot; of dev tools), inspect an element. You access the &quot;Name&quot;, the accessible name of the inspected item.</p>
+<p><img src="./images/FF_name.png" alt="Firefox Development Tool Panels with Open Accessibility Tab" class="img-fluid"></p>
+<h3 id="content-of-a-tag">Content of a tag <a class="header-anchor" href="#content-of-a-tag" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>&lt;a href=&quot;ducks.html&quot;&gt;plastic ducks&lt;/a&gt;</code></p>
+<p>Here, the name of the link is the content (text10) of it: &quot;plastic ducks&quot;. A screen reader user to take focus on this item will hear: &quot;plastic ducks link&quot;. For a voice command user, to click on this link, will say: &quot;click plastic ducks link&quot;.</p>
+<p>So an item of this type <code>&lt;button type=&quot;submit&quot;&gt;&lt;/button&gt;</code> without a title, will not be accessible, of course!</p>
+<p>Also, we can add the elements to give a name.</p>
+<p><code>&lt;button type=&quot;submit&quot;&gt;Buy &lt;img alt=&quot;the plastic duck&quot; src=&quot;duck.jpg&quot;&gt;&lt;/button&gt;</code></p>
+<p>This button will have an accessible name that is the content of the button: the textual title, &quot;Buy&quot; plus the &quot;alt&quot; of the image: &quot;the plastic duck&quot; therefore &quot;Buy the plastic duck&quot;.</p>
+<h3 id="associated-element">Associated element <a class="header-anchor" href="#associated-element" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Moreover, for form elements, the accessible name is the <code>label</code> when it is programmatically associated with the element via the <code>for</code> attribute referencing the <code>id</code> of the field.</p>
+<pre> <code class="html">
+&lt;label for="search"&lt;Search&gt;/label&gt;
+&lt;input id="search" type="text"&gt;
+</code> </pre>
+<p>With this code, the screen reader will say: &quot;Search edit&quot;.</p>
+<h3 id="with-aria-too">With <abbr>ARIA</abbr> too! <a class="header-anchor" href="#with-aria-too" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><abbr>ARIA</abbr> will be able to help us naming a <abbr>HTML</abbr> element, using <code>aria-label</code> and<code> aria-labelledby</code>.</p>
+<pre> <code class="html">
+&lt;button class="navbar-toggler" type="button" aria-label="Opening menu navigation" ... &gt;
+&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code> </pre>
+<p>This hamburger menu button has a name: &quot;Opening menu navigation&quot;.<br>
+But we could also use <code>aria-labelledby</code> to reference another element of the page like name:</p>
+<pre> <code class="html">
+&lt;input type="search" aria-labelledby="this"&gt;
+&lt;button id="this"&gt;Search the site&lt;/button&gt;
+</code> </pre>
+<p>When taking focus on the field, the screen reader announces &quot;Search on the site edit&quot;.</p>
+<p>More details on <a href="label-ledby-describedby.html">&quot;The attributes <abbr>ARIA</abbr> that can save you&quot;</a>.</p>
+<h2 id="sources">Sources <a class="header-anchor" href="#sources" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://www.w3.org/TR/accname-1.1/"> Accessible Name and Description Computation 1.1 </a> by the Accessible Rich Internet Applications Working Group</li>
+<li><a href="http://simplyaccessible.com/article/accessible-name/"> Demystifying Accessible Name </a> by Joe Watkins</li>
+<li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"> What is an accessible name? </a> by Léonie Watson</li>
+</ul>
+<p> </p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#in-practice-how-does-it-work" class="nav-link text-muted bg-200">In practice, how does it work?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#access-to-the-accessible-name-via-the-browser" class="nav-link text-muted bg-200">Access to the accessible name  via the browser</a>
+          </li><li class="nav-item position-relative">
+            <a href="#content-of-a-tag" class="nav-link text-muted bg-200">Content of a tag</a>
+          </li><li class="nav-item position-relative">
+            <a href="#associated-element" class="nav-link text-muted bg-200">Associated element</a>
+          </li><li class="nav-item position-relative">
+            <a href="#with-aria-too" class="nav-link text-muted bg-200">With ARIA too!</a>
+          </li><li class="nav-item position-relative">
+            <a href="#sources" class="nav-link text-muted bg-200">Sources</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/accessible-name.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

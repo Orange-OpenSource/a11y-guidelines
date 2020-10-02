@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>ARIA attributes that can save you - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          ARIA attributes that can save you
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#accessible-name-and-description" class="dropdown-item text-wrap">Accessible name and description</a><a href="#aria-attributes-aria-label-aria-labelledby-and-aria-describedby" class="dropdown-item text-wrap">ARIA attributes: aria-label, aria-labelledby and aria-describedby</a><a href="#should-it-be-used-and-how" class="dropdown-item text-wrap">Should it be used and how?</a><a href="#examples" class="dropdown-item text-wrap">Examples</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1><abbr>ARIA</abbr> attributes that can save you: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code></h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="accessible-name-and-description">Accessible name and description <a class="header-anchor" href="#accessible-name-and-description" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>An accessible name is the information that allows assistive technology (<abbr>AT</abbr>), for example, a screen reader or a magnification program, to identify a given element (<abbr>HTML</abbr> tag). It can be provided by the title or content of an element, an attribute (for example, an <code>alt</code> attribute for an image) or by an associated element (for example, a <code>label</code> tag for a <code>input</code> field).</p>
+<p>An accessible description is more extensive information that is used by the <abbr>AT</abbr> allowing it to complete the accessible name by specifying and adding meaning where the accessible name is not sufficient.</p>
+<p>The accessible name as the accessible description can be visually noticeable or not (link title: visible, alternative image: hidden and usable only by <abbr>AT</abbr>...)</p>
+<h3 id="aria-attributes-aria-label-aria-labelledby-and-aria-describedby"><abbr>ARIA</abbr> attributes: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code> <a class="header-anchor" href="#aria-attributes-aria-label-aria-labelledby-and-aria-describedby" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code>. They allow to add extra information to an <abbr>HTML</abbr> tag:</p>
+<ul>
+<li><code>aria-label</code>, <code>aria-labelledby</code> allow to give an accessible name to an element</li>
+<li><code>aria-describedby</code> allows to add to the accessible name, if necessary, in addition, an accessible description to an element</li>
+</ul>
+<p>However, they only work well with some elements:</p>
+<ul>
+<li>interactive elements: <code>a</code> (with <code>href</code> attribute), <code>audio</code> and <code>video</code> (with <code>controls</code> attribute), <code>input</code> (exept <code>type=&quot;hidden&quot;</code>), <code>select</code>, <code>button</code> and <code>textarea</code></li>
+<li><code>img</code> and <code>iframe</code> elements</li>
+<li>elements with an explicit landmark role, therefore, with a <code>role</code> attribute or an implicit landmark (a <abbr>HTML5</abbr> structural tag: <code>header</code>, <code>footer</code>, <code>main</code>, <code>nav</code>, <code>aside</code> and <code>section</code>)</li>
+<li>One of the <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en"><abbr>ARIA</abbr> widget roles (27 in <abbr>ARIA</abbr> 1.1)</a>.</li>
+</ul>
+<p>For any other <abbr>HTML</abbr> element, these three <abbr>ARIA</abbr> attributes have few or even random support depending on the <abbr>AT</abr> / browser pair, so do not use as the only way of giving necessary information.</p>
+<h2 id="should-it-be-used-and-how">Should it be used and how? <a class="header-anchor" href="#should-it-be-used-and-how" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Yes, we can use these three <abbr>ARIA</abbr> attributes on the elements with which it works (see above) to pass essential information specifically to <abbr>AT</abbr>.</p>
+<p>You should know that <code>aria-label</code> must contain, as a value, a string of characters that will be the accessible name. While for <code>aria-labelledby</code> and <code>aria-describedby</code>, the value of this attribute references one or more (space separated) <code>id</code> (auto referencing possible) of page elements whose content will be used as the accessible name of the element.</p>
+<p>When using <code>aria-label</code> or<code> aria-labelledby</code> on an element, the content or title of that element is no longer rendered to <abbr>AT</abbr> but replaced by the accessible name (for <code>aria-label</code> the contents of this attribute, for<code> aria-labelledby</code> the contents of the referenced element). Therefore, only the accessible name must give all the necessary information to <abbr>AT</abbr> and therefore to the user.</p>
+<p><strong>Important:</strong> attribute <code>aria-labelledby</code> can admit several values separated by a space and can self-refer. It also works with pseudo-class generated content <abbr>CSS</abbr> <code>:: before</code> or<code> :: after</code>.You can also reference content that is visually hidden by: <abbr>CSS</abbr>,  <code>visibility:hidden;</code> ou <code>display:none;</code>, et avec l'attribut <abbr>HTML</abbr>5 <code>hidden</code>. However, best practices require that if the interface is such that it is not possible to have a visible text label on the screen, it is better to use <code>aria-label</code> rather than<code>aria-labelledby</code>.</p>
+<p>When the two attributes <code>aria-labelledby</code> and<code> aria-label</code> are used, user agents give priority to aria-labelledby when calculating the accessible name property.</p>
+<p>At last, `aria-describedby' will add an accessible description in addition to the accessible name of the element.</p>
+<h2 id="examples">Examples <a class="header-anchor" href="#examples" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<pre><code class="html">
+&lt;button aria-label="Access Hypertext markup language"&gt;html&lt;/button&gt;
+</code></pre>
+<p>Screen reader output: &quot;Access Hypertext markup language&quot;</p>
+<pre><code class="html">
+&lt;h2 id="titre"&gt;HTML source&lt;h2&gt;
+&lt;button aria-label="Access Hypertext markup language" aria-labelledby="titre"&gt;html&lt;/buttton&gt;
+</code></pre>
+<p>Screen reader output: &quot;HTML source&quot;</p>
+<pre><code class="html">
+&lt;h3 id="titre"&gt;Login page sourcecode&lt;h3&gt;
+&lt;button aria-label="Access HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
+</code></pre>
+<p>Screen reader output: &quot;Access HTML Login page sourcecode&quot;</p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessible-name-and-description" class="nav-link text-muted bg-200">Accessible name and description</a>
+          </li><li class="nav-item position-relative">
+            <a href="#aria-attributes-aria-label-aria-labelledby-and-aria-describedby" class="nav-link text-muted bg-200">ARIA attributes: aria-label, aria-labelledby and aria-describedby</a>
+          </li><li class="nav-item position-relative">
+            <a href="#should-it-be-used-and-how" class="nav-link text-muted bg-200">Should it be used and how?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#examples" class="nav-link text-muted bg-200">Examples</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/aria-attributes-that-can-save-you.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

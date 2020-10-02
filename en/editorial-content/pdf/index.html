@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating accessible PDF documents - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link active" aria-current="true">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/editorial-content/general/" class="nav-link">
+  Transversal recommendations
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/pdf/" class="nav-link active" aria-current="page">
+  PDF documents
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/animated-components/" class="nav-link">
+  Audio/video content
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/editorial-content/">Editorial content</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          PDF documents
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Creating accessible <abbr>PDF</abbr> documents</h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Producing accessible <abbr>PDF</abbr> documents requires to follow recommendations to make sure they are structured through proper tagging, to make them understandable and useable by everyone (including users with assistive technology).</p>
+<p>Below are listed guides aiming at providing necessary information in order to manually create accessible <abbr>PDF</abbr> documents based on the most popular softwares, then we will list the mandatory criteria to follow for <abbr>PDF</abbr> accessibility.</p>
+<h2 id="guides-to-create-accessible-pdf-documents">Guides to create accessible <abbr>PDF</abbr> documents <a class="header-anchor" href="#guides-to-create-accessible-pdf-documents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="with-microsoft-word">With Microsoft Word <a class="header-anchor" href="#with-microsoft-word" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>You will find Microsoft Word recommendations as well as the <abbr>PDF</abbr> export procedure on our <a href="../word">Creating accessible Word documents</a> page.</p>
+<h3 id="with-adobe-indesign">With Adobe InDesign <a class="header-anchor" href="#with-adobe-indesign" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>You will find Adobe InDesign recommendations (in French) at <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign" lang="fr" hreflang="fr">Créer des documents <abbr>PDF</abbr> accessibles avec Adobe Indesign</a> by the AcceDe <abbr>PDF</abbr> initiative.</p>
+<h3 id="with-adobe-acrobat-pro">With Adobe Acrobat Pro <a class="header-anchor" href="#with-adobe-acrobat-pro" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>You will find Adobe Acrobat Pro recommendations at <a href="http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf">Making <abbr>PDF</abbr> documents accessible with Adobe Acrobat Pro</a> by the AcceDe <abbr>PDF</abbr> initiative.</p>
+<h2 id="testing-the-accessibility-of-a-pdf-document">Testing the accessibility of a <abbr>PDF</abbr> document <a class="header-anchor" href="#testing-the-accessibility-of-a-pdf-document" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Install <a href="https://www.access-for-all.ch/en/pdf-accessibility-checker.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>.</p>
+<p>This tool can, among other things, run automatic tests on a <abbr>PDF</abbr> document and check for accessibility issues.</p>
+<figure>
+<img class="center" src="../images/pac1.png" alt="Screenshot of automatic tests in PAC"/>
+<figcaption>Screenshot of the tool</figcaption>
+</figure>
+<h2 id="mandatory-criteria">Mandatory criteria <a class="header-anchor" href="#mandatory-criteria" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The following are the main criteria for a <abbr>PDF</abbr> document to be accessible, regardless of the method used to create it. Mandatory criteria will be useful for people creating <abbr>PDF</abbr> documents even when they don’t rely on publication software (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro), e.g. developers whose applications generate <abbr>PDF</abbr> documents.</p>
+<h3 id="document-structure">Document structure <a class="header-anchor" href="#document-structure" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le document doit contenir a minima un titre de document et une langue par défaut (les changements de langues seront indiqués dans le document).</p>
+<p>The document must at the very least include a document title and a default language (language changes must be indicated in the document).</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF16.html" title="WCAG 2.0 technique: PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document" aria-label="WCAG 2.0 technique: PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document"><abbr>PDF16</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF17.html" title="WCAG 2.0 technique: PDF17: Specifying consistent page numbering for PDF documents" aria-label="WCAG 2.0 technique: PDF17: Specifying consistent page numbering for PDF documents"><abbr>PDF17</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF18.html" title="WCAG 2.0 technique: PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document" aria-label="WCAG 2.0 technique: PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document"><abbr>PDF18</abbr></a>.</p>
+<p>The document is structured with titles, through the proper use of title “tags”. Moreover, long documents must include bookmarks to make navigation easier.</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF2.html" title="WCAG 2.0 technique: PDF2: Creating bookmarks in PDF documents" aria-label="WCAG 2.0 technique: PDF2: Creating bookmarks in PDF documents"><abbr>PDF2</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF9.html" title="WCAG 2.0 technique: PDF9: Providing headings by marking content with heading tags in PDF documents" aria-label="WCAG 2.0 technique: PDF9: Providing headings by marking content with heading tags in PDF documents"><abbr>PDF9</abbr></a>.</p>
+<p>The use of headers and footers must help the user locating themselves in the document.</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF14.html" title="WCAG 2.0 technique: PDF14: Providing running headers and footers in PDF documents" aria-label="WCAG 2.0 technique: PDF14: Providing running headers and footers in PDF documents"><abbr>PDF14</abbr></a>.</p>
+<h3 id="keyboard-navigation-and-reading-order">Keyboard navigation and reading order <a class="header-anchor" href="#keyboard-navigation-and-reading-order" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The reading order conveyed by an assistive tool, as well as keyboard navigation (through tabbing) must reflect the document’s structure. There must be no keyboard trap (keybaord navigation must be possible in the whole document without any blocking point).</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF3.html" title="WCAG 2.0 technique: PDF3: Ensuring correct tab and reading order in PDF documents" aria-label="WCAG 2.0 technique: PDF3: Ensuring correct tab and reading order in PDF documents"><abbr>PDF3</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/G21.html" title="WCAG 2.0 technique: G21: Ensuring that users are not trapped in content" aria-label="WCAG 2.0 technique: G21: Ensuring that users are not trapped in content"><abbr>G21</abbr></a>.</p>
+<h3 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Images featuring information must have an appropriate alternative. Scanned documents must be covnerted to text through optical character recognition (<abbr>OCR</abbr>). Decorational images must be hidden.</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF1.html" title="WCAG 2.0 technique: PDF1: Applying text alternatives to images with the Alt entry in PDF documents" aria-label="WCAG 2.0 technique: PDF1: Applying text alternatives to images with the Alt entry in PDF documents"><abbr>PDF1</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF4.html" title="WCAG 2.0 technique: PDF4: Hiding decorative images with the Artifact tag in PDF documents" aria-label="WCAG 2.0 technique: PDF4: Hiding decorative images with the Artifact tag in PDF documents"><abbr>PDF4</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF7.html" title="WCAG 2.0 technique: PDF7: Performing OCR on a scanned PDF document to provide actual text" aria-label="WCAG 2.0 technique: PDF7: Performing OCR on a scanned PDF document to provide actual text"><abbr>PDF7</abbr></a>.</p>
+<h3 id="tables">Tables <a class="header-anchor" href="#tables" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A data table must be structured by a <code>table</code> “tag” containing at least one line. Table headers must be used appropriately. All lines must contain the same number of cells. Merged cells must clearly indicate if the merge was vertical or horizontal (<code>rowSpan</code> or <code>colSpan</code> attribute).</p>
+<p>See<a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF6.html" title="WCAG 2.0 technique: PDF6: Using table elements for table markup in PDF Documents" aria-label="WCAG 2.0 technique: PDF6: Using table elements for table markup in PDF Documents"><abbr>PDF6</abbr></a>.</p>
+<h3 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Link texts must be explicit, or the links must provide an accessible alternative.</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF11.html" title="WCAG 2.0 technique: PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents" aria-label="WCAG 2.0 technique: PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents"><abbr>PDF11</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF13.html" title="WCAG 2.0 technique: PDF13: Providing replacement text using the /Alt entry for links in PDF documents" aria-label="WCAG 2.0 technique: PDF13: Providing replacement text using the /Alt entry for links in PDF documents"><abbr>PDF13</abbr></a>.</p>
+<h3 id="lists">Lists <a class="header-anchor" href="#lists" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Lists must use the appropriate “tags”: list tag <code>L</code>, list item tag <code>LI</code>, list item label tag <code>Lbl</code> (for instance the item number, or the <code>Lbody</code> content tag of the list item).</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF21.html" title="WCAG 2.0 technique: PDF21: Using List tags for lists in PDF documents" aria-label="WCAG 2.0 technique: PDF21: Using List tags for lists in PDF documents"><abbr>PDF21</abbr></a>, section 14.8.4.3.3 of the <a href="http://www.adobe.com/devnet/pdf/pdf_reference.html"><abbr>PDF</abbr> specification</a>.</p>
+<h3 id="forms">Forms <a class="header-anchor" href="#forms" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Form fields must have a name, a role, a value, and a state (if needed). Visually, labels must be correctly positioned towards the field. Mandatory fields and expected formats must be indicated. Fields must be accessible and keyboard-modifiable. Forms that can be submitted must provide a submit button.</p>
+<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF5.html" title="WCAG 2.0 technique: PDF5: Indicating required form controls in PDF forms" aria-label="WCAG 2.0 technique: PDF5: Indicating required form controls in PDF forms"><abbr>PDF5</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF10.html" title="WCAG 2.0 technique: PDF10: Providing labels for interactive form controls in PDF documents" aria-label="WCAG 2.0 technique: PDF10: Providing labels for interactive form controls in PDF documents"><abbr>PDF10</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF12.html" title="WCAG 2.0 technique: PDF12: Providing name, role, value information for form fields in PDF documents" aria-label="WCAG 2.0 technique: PDF12: Providing name, role, value information for form fields in PDF documents"><abbr>PDF12</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF15.html" title="WCAG 2.0 technique: PDF15: Providing submit buttons with the submit-form action in PDF forms" aria-label="WCAG 2.0 technique: PDF15: Providing submit buttons with the submit-form action in PDF forms"><abbr>PDF15</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF22.html" title="WCAG 2.0 technique: PDF22: Indicating when user input falls outside the required format or values in PDF forms" aria-label="WCAG 2.0 technique: PDF22: Indicating when user input falls outside the required format or values in PDF forms"><abbr>PDF22</abbr></a>.</p>
+<h3 id="colours">Colours <a class="header-anchor" href="#colours" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Colours must not be the only means to convey information.</p>
+<p>Contrast between the colour of text and of its background must be sufficient:</p>
+<ul>
+<li>4.5:1 for normal-size text;</li>
+<li>3:1 for bigger text.</li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/editorial-content/pdf.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

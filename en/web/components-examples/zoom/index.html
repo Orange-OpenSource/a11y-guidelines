@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Handling Zoom, enlarging text size - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"><link rel="stylesheet" href="style.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="true">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/components-examples/">Component examples</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Handling Zoom, enlarging text size
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>Handling Zoom, enlarging text size</h1>
+
+<h2>Introduction</h2>
+<p>
+      Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…). One of the accessibility requirements is being able to enlarge the text up to 200% without loss of information. At this zoom level, the presentation may be altered, but the text must remain readable (no text must be truncated or superposed).
+</p>
+
+<h2>Default zoom level</h2>
+<p>
+      All current browsers offer the possibility to zoom the page. This option enlarges the entire page (text, images, the spacing between the different areas of the page…).
+      Although this option is appropriate for occasional users, the drawback is that it adds horizontal scrollbars that make reading difficult.
+</p>
+
+<h3>Identifying the problem</h3>
+<p>Example of a page with a zoom set to 100%</p>
+<div class="zoom normal">
+      The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.
+</div>
+<br>
+<p>The following example simulates the browser default zoom. The entire page is enlarged, two scrollbars appear (horizontal and vertical). The text is difficult to read.</p>
+
+<div class="zoom">
+      <div>
+            The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.
+      </div>
+</div>
+<br>
+<p>In the last example, we simulate enlarging only the text size. In this case, the width of the page remains unchanged, visually it adds only a vertical scrollbar. Reading the text is much simpler.</p>
+<div class="zoom">
+      The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.
+</div>
+
+<h2>Zoom text only</h2>
+<p>
+     Fortunately, some browsers allow enlarging only the text size. This is the case for Firefox (available from the View menu &gt; Zoom &gt; Zoom text only).
+</p>
+<img alt="screenshot of the text zoom option in Firefox" src="../../images/zoom-firefox.png">
+<br><br>
+<p>When this option is enabled with a 200% zoom (in Firefox press <kbd>Ctrl +</kbd> four times), your page may not be displayed correctly. It is often because non-relative length units (<code>px</code>, <code>pt</code>) are used.</p>
+<h2>Relative length units</h2>
+<p>   Using relative length units such as <code>%</code>, <code>em</code>, or <code>rem</code> on the text size, but also on containers size (<code>div</code> height and width) allows to minimize the problems. Indeed, a container with adaptive size can enlarge without hiding or truncating the text inside it.</p>
+
+<h3>Invalid example</h3>
+
+<p> This example uses pixel as a size unit on the elements.</p>
+
+<a href="examples/1/" class="btn btn-secondary">Open example 1</a>
+
+<h3>Valid example</h3>
+<p> There are several ways to fix the problem, for example by using a relative size unit on the elements’ height.</p>
+
+<p>E.g., you can replace:<br>
+<code>height: 450px;</code><br><br>
+
+With a variable length unit depending on the size of characters:<br>
+<code>height: 45rem;</code><br><br>
+
+Or more easily, keeping the pixels, but specifying a minimum height:<br>
+<code>min-height: 450px;</code></p>
+
+<p><a href="examples/2/" class="btn btn-secondary">Open example 2</a></p>
+
+<h2>Conclusion</h2>
+
+<p>It is essential to test your pages with the zoom set to 200% and “Zoom Text Only” option enabled. This is the only way to check if your pages are readable. Although corrections can be minor, they can totally change the way information is perceived by some users.</p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/zoom/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

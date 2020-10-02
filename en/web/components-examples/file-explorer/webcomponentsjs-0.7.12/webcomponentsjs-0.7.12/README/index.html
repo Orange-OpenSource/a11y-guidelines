@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title> - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="true">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/components-examples/">Component examples</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>webcomponents.js</h1>
+<p><a href="https://gitter.im/webcomponents/webcomponentsjs?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/webcomponents/webcomponentsjs" class="img-fluid"></a></p>
+<p>A suite of polyfills supporting the <a href="http://webcomponents.org">Web Components</a> specs:</p>
+<p><strong>Custom Elements</strong>: allows authors to define their own custom tags (<a href="https://w3c.github.io/webcomponents/spec/custom/">spec</a>).</p>
+<p><strong>HTML Imports</strong>: a way to include and reuse HTML documents via other HTML documents (<a href="https://w3c.github.io/webcomponents/spec/imports/">spec</a>).</p>
+<p><strong>Shadow DOM</strong>: provides encapsulation by hiding DOM subtrees under shadow roots (<a href="https://w3c.github.io/webcomponents/spec/shadow/">spec</a>).</p>
+<p>This also folds in polyfills for <code>MutationObserver</code> and <code>WeakMap</code>.</p>
+<h2 id="releases">Releases <a class="header-anchor" href="#releases" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pre-built (concatenated &amp; minified) versions of the polyfills are maintained in the <a href="https://github.com/webcomponents/webcomponentsjs/releases">tagged versions</a> of this repo. There are two variants:</p>
+<p><code>webcomponents.js</code> includes all of the polyfills.</p>
+<p><code>webcomponents-lite.js</code> includes all polyfills except for shadow DOM.</p>
+<h2 id="browser-support">Browser Support <a class="header-anchor" href="#browser-support" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Our polyfills are intended to work in the latest versions of evergreen browsers. See below<br>
+for our complete browser support matrix:</p>
+<table>
+<thead>
+<tr>
+<th>Polyfill</th>
+<th style="text-align:center">IE10</th>
+<th style="text-align:center">IE11+</th>
+<th style="text-align:center">Chrome*</th>
+<th style="text-align:center">Firefox*</th>
+<th style="text-align:center">Safari 7+*</th>
+<th style="text-align:center">Chrome Android*</th>
+<th style="text-align:center">Mobile Safari*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Elements</td>
+<td style="text-align:center">~</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td>HTML Imports</td>
+<td style="text-align:center">~</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td>Shadow DOM</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+</tbody>
+</table>
+<p>*Indicates the current version of the browser</p>
+<p>~Indicates support may be flaky. If using Custom Elements or HTML Imports with Shadow DOM,<br>
+you will get the non-flaky Mutation Observer polyfill that Shadow DOM includes.</p>
+<p>The polyfills may work in older browsers, however require additional polyfills (such as classList)<br>
+to be used. We cannot guarantee support for browsers outside of our compatibility matrix.</p>
+<h3 id="manually-building">Manually Building <a class="header-anchor" href="#manually-building" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>If you wish to build the polyfills yourself, you'll need <code>node</code> and <code>gulp</code> on your system:</p>
+<ul>
+<li>install <a href="http://nodejs.org/">node.js</a> using the instructions on their website</li>
+<li>use <code>npm</code> to install <a href="http://gulpjs.com/">gulp.js</a>: <code>npm install -g gulp</code></li>
+</ul>
+<p>Now you are ready to build the polyfills with:</p>
+<pre><code># install dependencies
+npm install
+# build
+gulp build
+</code></pre>
+<p>The builds will be placed into the <code>dist/</code> directory.</p>
+<h2 id="contribute">Contribute <a class="header-anchor" href="#contribute" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>See the <a href="CONTRIBUTING.md">contributing guide</a></p>
+<h2 id="license">License <a class="header-anchor" href="#license" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Everything in this repository is BSD style license unless otherwise specified.</p>
+<p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
+<h2 id="helper-utilities">Helper utilities <a class="header-anchor" href="#helper-utilities" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="webcomponentsready"><code>WebComponentsReady</code> <a class="header-anchor" href="#webcomponentsready" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Under native HTML Imports, <code>&lt;script&gt;</code> tags in the main document block the loading of such imports. This is to ensure the imports have loaded and any registered elements in them have been upgraded.</p>
+<p>The webcomponents.js and webcomponents-lite.js polyfills parse element definitions and handle their upgrade asynchronously. If prematurely fetching the element from the DOM before it has an opportunity to upgrade, you'll be working with an <code>HTMLUnknownElement</code>.</p>
+<p>For these situations (or when you need an approximate replacement for the Polymer 0.5 <code>polymer-ready</code> behavior), you can use the <code>WebComponentsReady</code> event as a signal before interacting with the element. The criteria for this event to fire is all Custom Elements with definitions registered by the time HTML Imports available at load time have loaded have upgraded.</p>
+<pre><code class="language-js">window.addEventListener('WebComponentsReady', function(e) {
+  // imports are loaded and elements have been registered
+  console.log('Components are ready');
+});
+</code></pre>
+<h2 id="known-issues">Known Issues <a class="header-anchor" href="#known-issues" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="#constructor">Custom element's constructor property is unreliable</a></li>
+<li><a href="#contentedit">Contenteditable elements do not trigger MutationObserver</a></li>
+<li><a href="#hostcontext">ShadowCSS: :host-context(...):host(...) doesn't work</a></li>
+<li><a href="#execcommand">execCommand isn't supported under Shadow DOM</a></li>
+</ul>
+<h3 id="custom-elements-constructor-property-is-unreliable">Custom element's constructor property is unreliable <a id="constructor"></a> <a class="header-anchor" href="#custom-elements-constructor-property-is-unreliable" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>See <a href="https://github.com/webcomponents/webcomponentsjs/issues/215">#215</a> for background.</p>
+<p>In Safari and IE, instances of Custom Elements have a <code>constructor</code> property of <code>HTMLUnknownElementConstructor</code> and <code>HTMLUnknownElement</code>, respectively. It's unsafe to rely on this property for checking element types.</p>
+<p>It's worth noting that <code>customElement.__proto__.__proto__.constructor</code> is <code>HTMLElementPrototype</code> and that the prototype chain isn't modified by the polyfills(onto <code>ElementPrototype</code>, etc.)</p>
+<h3 id="contenteditable-elements-do-not-trigger-mutationobserver">Contenteditable elements do not trigger MutationObserver <a id="contentedit"></a> <a class="header-anchor" href="#contenteditable-elements-do-not-trigger-mutationobserver" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Using the MutationObserver polyfill, it isn't possible to monitor mutations of an element marked <code>contenteditable</code>.<br>
+See <a href="https://groups.google.com/forum/#!msg/polymer-dev/LHdtRVXXVsA/v1sGoiTYWUkJ">the mailing list</a></p>
+<h3 id="shadowcss-host-contexthost-doesnt-work">ShadowCSS: :host-context(...):host(...) doesn't work <a id="hostcontext"></a> <a class="header-anchor" href="#shadowcss-host-contexthost-doesnt-work" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>See <a href="https://github.com/webcomponents/webcomponentsjs/issues/16">#16</a> for background.</p>
+<p>Under the shadow DOM polyfill, rules like:</p>
+<pre><code>:host-context(.foo):host(.bar) {...}
+</code></pre>
+<p>don't work, despite working under native Shadow DOM. The solution is to use <code>polyfill-next-selector</code> like:</p>
+<pre><code>polyfill-next-selector { content: '.foo :host.bar, :host.foo.bar'; }
+</code></pre>
+<h3 id="execcommand-and-contenteditable-isnt-supported-under-shadow-dom">execCommand and contenteditable isn't supported under Shadow DOM <a id="execcommand"></a> <a class="header-anchor" href="#execcommand-and-contenteditable-isnt-supported-under-shadow-dom" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>See <a href="https://github.com/webcomponents/webcomponentsjs/issues/212">#212</a></p>
+<p><code>execCommand</code>, and <code>contenteditable</code> aren't supported under the ShadowDOM polyfill, with commands that insert or remove nodes being especially prone to failure.</p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/file-explorer/webcomponentsjs-0.7.12/webcomponentsjs-0.7.12/README.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>How to test the iOS accessibility - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link active" aria-current="page">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Test
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>How to test the iOS accessibility</h1>
+<p><strong>ALL</strong> the project members should know the iOS accessibility features introduced in this site to make a perfect link between the app implementations and the users needs.<br>
+<br>Each one of these features should be seen as an important <strong>human-made</strong> element for the user comfort and not just a functional one.<br>
+<br>Whatever the design, implementation or testing area, <strong>every decision</strong> must be particularly <strong>empathetic</strong> to provide the best user experience.<br><br></p>
+<h2 id="fundamental-prerequisites">Fundamental prerequisites <a class="header-anchor" href="#fundamental-prerequisites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>Spend as much time as necessary to perfectly control the gestures (<a href="../voiceover/">VoiceOver</a>, Switch Control).</li>
+<li>Watch the examples provided by the <a href="../wwdc/">WWDC videos</a>.</li>
+<li>Assimilate the <a href="../design/">design criteria</a> to be sure that you're following the appropriate working path.</li>
+<li>Create as many blank projects as needed to test a dedicated feature and be sure that it's working before introducing inside the final app coding global environment.</li>
+<li>Be sure that third-party elements or web contents that may be parts of the application are themselves already perfectly accessible.<br><br></li>
+</ul>
+<h2 id="working-environment">Working environment <a class="header-anchor" href="#working-environment" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Four different groups may be described as parts of every project:</p>
+<ul>
+<li>The <strong>person in charge of defining the priorities of every functionality</strong> must know the app users needs so as to accurately define the functionalities acceptance criteria and be able to check himself the desired achievement.</li>
+<li>The <strong>DESIGN</strong> team must put itself in the user's shoes to provide recommendations as accurate as possible according to the project demands upstream.</li>
+<li>The <strong>DEVELOPMENT</strong> team must rely heavily on the <a href="../wwdc/">WWDC videos</a> and the <a href="../development/">iOS developers guide</a> in order to find the most appropriate solutions.</li>
+<li>The <strong>TEST</strong> team must perfectly control the <a href="../voiceover/">dedicated gesture</a> and understand every iOS accessibility feature to optimally perform every test before starting production.</li>
+</ul>
+<p>Whatever the way you want to work <em>(SCRUM, ...)</em>, all the functions described above must be present in a project.<br>
+<br><br>Foresee two ways of evaluation in order to make sure that the iOS accessibility recommendations have been well implemented:</p>
+<ul>
+<li><a href="#FunctionalMode"><strong>FUNCTIONAL</strong></a>: the <strong>user navigation</strong> among the screens must be hassle-free and provide all visual information without questions to be asked: <strong>simple</strong>, <strong>clear</strong> and <strong>fluid</strong>.</li>
+<li><a href="#TechnicalMode"><strong>TECHNICAL</strong></a>: the technical compliance of some elements must be checked <em>(colours contrast, icons size...)</em> while creating code tests <em>(<abbr>TDD</abbr>, <abbr>UI</abbr>)</em>. Sometimes, this mode also confirms and solves any functional problems.<br>
+<br><br>
+<a name="FunctionalMode"></a></li>
+</ul>
+<h2 id="functional-review">Functional review <a class="header-anchor" href="#functional-review" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>There's no need in having technical knowledge for this part but (de)activate and use iOS accessibility features.<br>
+<br>Besides the <a href="../design/">design criteria</a> to be followed, it's crucial to be sure that the <a href="../design#accessibility-options">accessibility options</a> activated by a user are operational in the whole application.<br>
+<br><br>Few important criteria to be imperatively tested are introduced hereunder:</p>
+<ul>
+<li><strong>Screen orientation</strong>: it's highly recommended to implement the landscape and portrait modes. When implemented, this <a href="../design#screen-orientation">functionality</a> must be checked for each page of the application.</li>
+<li><strong>Reduce motion</strong> : because visual movements may give rise to problems <em>(nausea...)</em> for some people, it's imperative to check the <a href="../design#optionA11Y_limiteVisuel">user settings dealing with animations</a>.</li>
+<li><strong>Reduce transparency</strong> : blurring effects may give rise to sighting difficulties for people having visual impairments. These effects can be weakened by the system thanks to an <a href="../design#optionA11Y_reductionTransparence">accessibility option</a> that must be checked in every page it occurs.</li>
+<li><strong>Dark mode</strong> : the result of this <em>iOS 13 new feature</em> must be checked out to ensure the conformity of the different color contrasts: the <a href="../design#optionA11Y_contraste">increase contrast</a> accessibility option must also be verified in this context.</li>
+</ul>
+<p>Besides these basic criteria, there are also fundamental requirements for an accessible application:</p>
+<ul>
+<li><a href="#DynamicType">Dynamic Type</a></li>
+<li><a href="#VoiceOver">VoiceOver</a></li>
+<li><a href="#SwitchControl">Switch Control</a><br>
+<br><br>
+<a name="DynamicType"></a></li>
+</ul>
+<h3 id="dynamic-type">Dynamic Type <a class="header-anchor" href="#dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>To understand how this feature works, it's highly recommended to watch the example in this <a href="../wwdc/2017/245#Demo">WWDC 2017 video</a> that is detailed in the WWDC part of this site.<br>
+<br>Tests should be made with at least three devices having different screen sizes (<strong>iPhone5SE</strong>, <strong>iPhoneX</strong> and <strong>iPhone8Plus</strong> for instance) in order to <strong>imperatively check every page</strong>.<br>
+<br><br>Three zoom levels must be particularly scanned to determine the visual behavior at extremes:</p>
+<ul>
+<li>Lowest threshold <strong>WITHOUT</strong> accessibility.</li>
+<li>Highest threshold <strong>WITHOUT</strong> accessibility.</li>
+<li>Highest threshold <strong>WITH</strong> accessibility.</li>
+</ul>
+<img style="max-width: 900px; height: auto;" alt="" src="../../images/ios-test-DynamicType.png" />
+<p><br>The following points must be thoroughly checked:</p>
+<ul>
+<li>The <strong>truncation '...' mustn't be used</strong> and should be replaced by a hyphen at the end of the sentence.<br>
+<br><img style="max-width: 200px; height: auto;" alt="" src="../../images/ios-test-DynamicType_2.png" /></li>
+<li><strong>Illustration and icon sizes must be adapted to the magnification</strong>: use of the <a href="../wwdc/2019/261/">Large Content Viewer</a> feature, a two fingers pinch implementation to avoid the <code>Zoom</code> native feature trigger or only a <a href="../development#graphical-elements-size">graphical element magnification</a> are possible solutions according to the context.</li>
+<li><strong>Change the text sizes in every screen</strong> to ensure that all the elements perfectly meet the graphical contraints.</li>
+<li>As soon as a <strong>corrected fault</strong> is effective, it <strong>must be checked for every device used for tests</strong> to be sure of its definitive rectification.</li>
+</ul>
+<p>All these <strong>tests are quite long to be performed</strong> because every screen is impacted with different devices including the changing of the text size inside each one of them.<br>
+<br><br></p>
+<p><a name="VoiceOver"></a></p>
+<h3 id="voiceover">VoiceOver <a class="header-anchor" href="#voiceover" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The iOS native screen reader activation drastically changes the visual behavior obtained with the common gestures, that's why its <a href="../voiceover/">control</a> takes a little while.<br>
+<br>It's <strong>highly recommended</strong> to know the basic gestures before activating this feature in the device user settings.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="../../images/ios-test-voiceover_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOver-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="../../images/ios-test-voiceover_iOS12.png" />
+</div></div>
+<p><br>Don't believe that every element must be absolutely vocalized one after another : that's definitely the proper way to get a VoiceOver implementation that is anything but effective !<br>
+<br><br>Keep in mind that the visual <strong>information</strong> is assimilated very quickly while the screen reader provides <strong>sequentially</strong> this information at the speed of successive selections of elements: a <strong>huge effort</strong> is necessary to get a synoptic vision of the screen and really understand what's offered.<br>
+<br><br>To better deal with this situation, it's recommended to keep on navigating with the <a href="../voiceover#CurtainScreen">curtain screen</a> mode that's particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.<br>
+<br><br>Besides the <a href="../design/">design criteria</a> to be followed, <strong>four main principles</strong> must be kept in mind when testing:</p>
+<ul>
+<li>The visual information must be vocally transcribed.</li>
+<li>The user must always know where he is and where he can go.</li>
+<li>The user's navigation must he hassle-free, clear and fluid.</li>
+<li>The number of element selections must be as small as possible.</li>
+</ul>
+<p>All these <strong>tests are quite long to be performed</strong> and they require a strong empathy to suggest constructive criticism  of the vocally VoiceOver information.<br>
+<br><br>Besides, <strong>if the screen reader isn't implemented yet</strong>, it's essential to <strong>inform the user</strong> about this situation once the <a href="../development#vocalized-application-name">application icon is selected</a> so as to avoid disappointement and possible frustration.<br>
+<br><br></p>
+<p><a name="SwitchControl"></a></p>
+<h3 id="switch-control">Switch Control <a class="header-anchor" href="#switch-control" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The accessibility <a href="https://support.apple.com/en-en/HT201370">Switch Control</a> feature revolves around the <strong>point mode</strong> and the <strong>item mode</strong>.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../images/ios-test-SwitchControl.png" /></p>
+<p><br>The element selection using the item mode works fine when the user interface isn't too complicated and uses native elements.<br>
+<br><br>However, this mode may not be helpful according to the rationale behind some specific use cases and then needs to be customized.<br>
+<br>In this case, the feedback information provided by the tests must be as helpful as getting the best user experience.<br>
+<br><br><em>Note</em>: this feature can be (de)activated in the device user settings.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 950px; height: auto; " src="../../images/ios-test-SwitchControl_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="SwitchControl-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 900px; height: auto;" alt="" src="../../images/ios-test-SwitchControl_iOS12.png" />
+</div></div>
+<br>
+<p><a name="TechnicalMode"></a></p>
+<h2 id="technical-review">Technical review <a class="header-anchor" href="#technical-review" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The use of this section requires more or less special expertise according to what must be checked.<br>
+<br><br></p>
+<h3 id="colour-contrast">Colour contrast <a class="header-anchor" href="#colour-contrast" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <a href="../design#colours">colour contrast</a> is certainly the easiest point to be checked thanks to softwares <em>(Colour Contrast Analyzer...)</em> or web sites <em>(WebAIM...)</em>.<br>
+<br>Since Xcode 11, the Accessibility Inspector tool provides a specific <a href="../wwdc/2019#ColorContrast">Color Contrast Calculator</a> feature that reaches the same purpose.<br>
+<br><br></p>
+<h3 id="code-review">Code review <a class="header-anchor" href="#code-review" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled <strong>Accessibility Inspector</strong>.<br>
+<br>Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos <a href="../wwdc/2016/407/"><code>Auditing Your Apps for Accessibility</code></a> and <a href="../wwdc/2019#AccessibilityInspector"><code>Accessibility Inspector</code></a> that are highly recommended to be watched.<br>
+<br><br></p>
+<h3 id="code-testing">Code testing <a class="header-anchor" href="#code-testing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Many kinds of tests <em>(<abbr>TDD</abbr></em>, <em><abbr>UI</abbr>)</em> may be set up by the developers in order to maintain a stable and reliable code over time.<br>
+<br>These good practice ensure functional continuity by being informed of any deviation introduced in subsequent developments.<br>
+<br><br></p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/test.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

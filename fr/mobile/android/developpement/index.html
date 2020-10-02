@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Les critères incontournables sous Android pour le développement - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link active" aria-current="true">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/mobile/android/conception/" class="nav-link">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/android/developpement/" class="nav-link active" aria-current="page">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/android/test/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/android/outils/" class="nav-link">
+  Boite à outils
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/android/">Android</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Développer
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Les critères incontournables sous Android pour le développement</h1>
+<p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du <abbr>SDK</abbr> Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.</p>
+<h2 id="alternatives-textuelles">Alternatives textuelles <a class="header-anchor" href="#alternatives-textuelles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description">Description : <a class="header-anchor" href="#description" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Sous Android, la vocalisation d’un élément s’effectue à travers un attribut, à savoir le <code>contentDescription</code>. Cet attribut qui accepte une simple chaîne de caractère en paramètre (et donc internationalisable) redéfinit le texte qui sera lu par le service d’accessibilité et notamment <span lang="en">TalkBack</span>. Cela permet d’avoir un texte de composant plus explicite que celui affiché à l’écran. Par exemple, dans le cas d’un bouton dont le titre est « OK », on pourra indiquer que le bouton sert à valider un choix.</p>
+<p>Le <code>contentDescription</code> doit aussi être utilisé sur les éléments <i lang="en">custom</i> pour indiquer leur nature. Par exemple, un <code>LinearLayout</code> que l’on rendrait cliquable doit avoir un <code>contentDescription</code> de la forme « nom_du_bouton, bouton » (il faut également permettre le focus du bouton pour l’accessibilité, voir la section correspondante).</p>
+<p>À noter que le <code>contentDescription</code> est disponible pour tout élément qui hérite de <code>View</code>. Il est donc possible de positionner un <code>contentDescription</code> sur une <code>TextView</code> par exemple, comme montré dans la section « Pour la conception – Alternative textuelle ».</p>
+<p>Talkback va vocaliser pour une checkbox activée,  « coché, <code>text</code>, case à cocher » suivi de « appuyer deux fois pour cocher ou décocher ». Si la checkbox est désactivée <code>android:enabled=&quot;false&quot;</code>, la vocalisation est « coché, <code>text</code>, case à cocher, désactivé ». Le <code>contentDescription</code> va s’il est présent remplacer la partie <code>text</code> dans la vocalisation. L’ordre de lecture des éléments peut varier en fonction de la version du <abbr>SDK</abbr>, mais les informations les plus importantes sont de préférence vocalisées en premier.</p>
+<h3 id="exemples">Exemples : <a class="header-anchor" href="#exemples" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Exemple simple (internationalisé) :</p>
+<pre><code class="xml">&lt;TextView
+…
+android:id="@+id/myTextviewId"
+android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
+&#47;&gt;</code></pre><pre>
+<p><code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);<br>
+myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre></p>
+<p>Exemple des onglets tabulés :<br>
+L’exemple présente des onglets tabulés au-dessus et en-dessous d’un <code>ViewPager</code> dans un cas en <code>TabLayout</code> et dans l’autre en <code>BottomNavigationView</code>. Les onglets ne se pratiquent plus sous forme de <code>TabHost</code>.<br>
+Il faut indiquer l’état et la nature des onglets (non internationalisé) :</p>
+<pre><code class="xml">//Dans le layout de l’activité
+&lt;android.support.constraint.ConstraintLayout
+   …&gt;
+    &lt;android.support.v4.view.ViewPager
+    android:id="@+id/viewpager"
+        …
+        &gt;
+    &lt;android.support.design.widget.TabLayout
+            android:id="@+id/tabtoolbar_pager"
+            …
+    &lt;/android.support.v4.view.ViewPager&gt;
+    &lt;android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        […]
+        app:menu="@menu/navigation" /&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+&nbsp;
+&nbsp;
+//Dans le fichier strings.xml
+&lt;string name="cd_tab_title_param"&gt;%1$s, onglet %2$s sur %3$s&lt;/string&gt;
+</code></pre><pre>
+<code class="java">
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mTabLayout = (TabLayout) findViewById(R.id.tabtoolbar_pager);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mTabLayout.addOnLayoutChangeListener(mTabLayoutListener);
+        mTabLayout.setupWithViewPager(mViewPager);
+        mAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mAdapter);
+//initialise le contentDescription à la création
+        updateTabContentDescription(0);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            […]
+            public void onPageSelected(int position) {
+                updateTabContentDescription(position);
+            }
+        });
+//Le BottomNavigationView n’est pas forcément au bas de la vue, il est à positionner dans le layout. 
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        […]
+        }
+    private void updateTabContentDescription(int position) {
+        for (int i = 0; i &lt; mAdapter.getCount(); i++) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(i);
+            String cd_param_string = getString(R.string.cd_tab_title_param,
+                    mAdapter.getPageTitle(i), // titre en paramètre 1 voir le xml
+                    i + 1,                    // le numéro de l’onglet actuel, paramètre 2
+                    mAdapter.getCount());     // le nombre d’onglets automatique, paramètre 3
+            if (tab != null) {
+                tab.setContentDescription(cd_param_string);
+            }         
+//Pour Tablayout and BottomNavigationView l’information “sélectionné” est déjà vocalisée. 
+//Soit, par exemple : «&nbsp;sélectionné, `titre onglet 1`, onglet 1 sur 5&nbsp;»
+//ou encore «&nbsp;`titre onglet 3`, onglet 3 sur 5.&nbsp;» Puis  «&nbsp;appuyer deux fois pour activer&nbsp;».
+// Paramètrer la borne supérieure automatiquement permet de ne pas se retrouver avec une vocalisation du type :
+//«&nbsp;sélectionné, `titre onglet 4`, onglet 4 sur 3.&nbsp;», où la borne supérieure est incohérente.
+// Pour le `TabHost` il faudrait en plus préciser l’information «&nbsp;sélectionné&nbsp;».
+        }
+    }
+</code></pre><pre>
+<code class="kotlin">
+    private fun updateTabContentDescription(position: Int) {
+        for (i in 0 until mAdapter!!.count) {
+            val tab = mTabLayout!!.getTabAt(i)
+            val cd_param_string = getString(R.string.cd_tab_title_param,
+                    mAdapter!!.getPageTitle(i), // titre en paramètre 1 voir le xml
+                    i + 1,                      // le numéro de l’onglet actuel, paramètre 2
+                    mAdapter!!.count)           // le nombre d’onglets automatique, paramètre 3
+            if (tab != null) {
+                tab.contentDescription = cd_param_string
+//Pour Tablayout and BottomNavigationView l’information “sélectionné” est déjà vocalisée. 
+//Soit, par exemple : «&nbsp;sélectionné, `titre onglet 1`, onglet 1 sur 5&nbsp;»
+//ou encore «&nbsp;`titre onglet 3`, onglet 3 sur 5.&nbsp;» Puis  «&nbsp;appuyer deux fois pour activer&nbsp;».
+// Paramètrer la borne supérieure automatiquement permet de ne pas se retrouver avec une vocalisation du type :
+// «&nbsp;sélectionné, `titre onglet 5`, onglet 4 sur 3.&nbsp;», où la borne supérieure est incohérente.
+// Pour le `TabHost` il faudrait en plus préciser l’information «&nbsp;sélectionné&nbsp;».
+            }
+        }
+    }
+</code></pre>
+<h3 id="lien">Lien : <a class="header-anchor" href="#lien" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="http://developer.android.com/reference/android/view/View.html#attr_android:contentDescription"><code>contentDescription</code></a></li>
+</ul>
+<h2 id="masquer-des-elements-a-laccessibilite">Masquer des éléments à l’accessibilité <a class="header-anchor" href="#masquer-des-elements-a-laccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-2">Description : <a class="header-anchor" href="#description-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est possible via un attribut d’accessibilité de masquer des éléments aux outils d’accessibilité (<span lang="en">TalkBack</span> par exemple). Par extension, il est possible de forcer certains éléments à être visibles aux outils d’accessibilité.<br>
+<code>ImportantForAccessibility</code> : suivant la valeur de l’attribut, cela permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité.</p>
+<ul>
+<li><code>auto</code> (0) : valeur par défaut, c’est le système qui décide. Par exemple, un <code>Button</code> aura sa valeur par défaut à 1 (<i lang="en">yes</i>) et un <code>LinearLayout</code> à 2 (<i lang="en">no</i>).</li>
+<li><code>yes</code> (1) : la vue est importante pour l’accessibilité. Elle peut par exemple recevoir le focus de <span lang="en">TalkBack</span>.</li>
+<li><code>no</code> (2) : la vue n’est pas importante pour l’accessibilité. Elle ne déclenche plus d’événement d’accessibilité et est par conséquent ignorée par des services tel que <span lang="en">TalkBack</span>.</li>
+<li><code>noHideDescendants</code>  (4) : la vue n’est pas importante pour l’accessibilité, mais également toutes ses vues filles. Cela permet de cacher tous les éléments d’une vue à l’accessibilité en une seule fois. Très utile sur les éléments custom.</li>
+</ul>
+<p>À noter : l’attribut « <code>importantForAccessibility</code> » est disponible pour tout élément qui hérite de <code>View</code>.</p>
+<h3 id="exemples-2">Exemples : <a class="header-anchor" href="#exemples-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre><code class="xml">&lt;TextView
+[…]
+android:id="@+id/myTextviewId1"
+android:importantForAccessibility="4"
+&#47;&gt;
+&lt;TextView
+[…]
+android:id="@+id/myTextviewId2"
+android:importantForAccessibility="noHideDescendants"
+&#47;&gt;</code></pre><pre>
+<p><code class="java">myTextView1 = (TextView) findViewById(R.id.myTextviewId1);<br>
+myTextView2 = (TextView) findViewById(R.id.myTextviewId2);<br>
+myTextView1.setImportantForAccessibility(4); // JELLY_BEAN<br>
+myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = &quot;4&quot; // JELLY_BEAN<br>
+myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT<br>
+</code></pre></p>
+<h3 id="lien-2">Lien : <a class="header-anchor" href="#lien-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://developer.android.com/reference/android/view/View.html#setImportantForAccessibility%28int%29"><code>importantForAccessibility</code></a></li>
+</ul>
+<h2 id="declencher-une-vocalisation">Déclencher une vocalisation <a class="header-anchor" href="#declencher-une-vocalisation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-3">Description : <a class="header-anchor" href="#description-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est très facile de déclencher des vocalisations avec <span lang="en">TalkBack</span>. Déclencher une vocalisation est très utile dans le cas de contenu dynamique, au même titre que les <code>LiveRegion</code> (voir la section correspondante). Pour déclencher une vocalisation, il suffit de faire appel à la méthode <code>announceForAccessibility</code> en lui passant en paramètre l’<code>id</code> de la chaîne de caractères à vocaliser.</p>
+<p>À noter : la méthode <code>announceForAccessibility</code> est disponible sur tout élément qui hérite de <code>View</code> et se fait dans la langue du système.</p>
+<p>Attention : nous parlons ici de vocalisation <span lang="en">TalkBack</span> et non pas de <abbr>TTS</abbr> (Text To Speech) qui peut fonctionner indépendamment du statut de <span lang="en">TalkBack</span>.</p>
+<h3 id="exemple">Exemple : <a class="header-anchor" href="#exemple" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est fréquent de tester la version d’Android avant de déclencher une vocalisation <span lang="en">TalkBack</span>. En effet, <code>announceForAccessibility</code> ne fonctionne que depuis l’arrivée d’Android <i lang="en">Jelly Bean</i>.</p>
+<pre>
+<code class="java">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
+    }
+</code></pre><pre>
+<p><code class="kotlin">if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.JELLY_BEAN) {<br>
+myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce))<br>
+}<br>
+</code></pre></p>
+<h3 id="lien-3">Lien : <a class="header-anchor" href="#lien-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://developer.android.com/reference/android/view/View.html#announceForAccessibility%28java.lang.CharSequence%29"><code>announceForAccessibility</code></a></li>
+</ul>
+<h2 id="detecter-si-talkback-est-active">Détecter si <span lang="en">TalkBack</span> est activé <a class="header-anchor" href="#detecter-si-talkback-est-active" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-4">Description : <a class="header-anchor" href="#description-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Sous Android, il est possible de savoir si l’<abbr>API</abbr> d’accessibilité est activée, et par extension de savoir si <span lang="en">TalkBack</span> est activé.</p>
+<h3 id="exemple-2">Exemple : <a class="header-anchor" href="#exemple-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
+boolean isAccessibilityEnabled = am.isEnabled();
+</code></pre><pre>
+<p><code class="kotlin">val am = context.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager<br>
+val isAccessibilityEnabled = am.isEnabled<br>
+</code></pre></p>
+<h3 id="lien-4">Lien : <a class="header-anchor" href="#lien-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://developer.android.com/reference/android/view/accessibility/AccessibilityManager"><code>AccessibilityManager</code></a></li>
+</ul>
+<h2 id="regions-live-contenu-dynamique">Régions <i lang="en">live</i> (contenu dynamique) <a class="header-anchor" href="#regions-live-contenu-dynamique" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-5">Description : <a class="header-anchor" href="#description-5" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est possible de spécifier à une vue qu’elle est une région « <i lang="en">live</i> », c’est-à-dire que son contenu est susceptible d’être modifié dynamiquement et qu’elle doit dans ce cas prévenir l’<abbr>API</abbr> d’accessibilité. Cela aura pour conséquence de générer des vocalisations avec <span lang="en">TalkBack</span>. Un exemple type d’utilisation : sur un formulaire, si l’utilisateur fait une erreur et qu’un message d’erreur apparaît, la vue contenant le message doit être définie comme une région « <i lang="en">live</i> ».</p>
+<p>Il faut passer par la méthode <code>setAccessibilityLiveRegion</code> qui prend en paramètre un mode pour la région <i lang="en">live</i>. Il existe 3 modes :</p>
+<ul>
+<li><code>ACCESSIBILITY_LIVE_REGION_NONE</code> : cette vue n’est pas une région « <i lang="en">live</i> ». C’est la valeur par défaut de la plupart des vues.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code> : en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont « polies » : elles sont moins prioritaires que les vocalisations système par exemple.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code> : en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « <i lang="en">rude</i> » : elles sont prioritaires et immédiatement vocalisées.</li>
+</ul>
+<p>À noter : la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</p>
+<h3 id="exemples-3">Exemples : <a class="header-anchor" href="#exemples-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre><code class="xml">&lt;TextView
+   […]
+   android:accessibilityLiveRegion="polite" /&gt;
+</code></pre>
+<h3 id="lien-5">Lien : <a class="header-anchor" href="#lien-5" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityLiveRegion%28int%29"><code>setAccessibilityLiveRegion</code></a></li>
+</ul>
+<h2 id="gerer-lordre-de-lecture-talkback">Gérer l’ordre de lecture (<span lang="en">TalkBack</span>) <a class="header-anchor" href="#gerer-lordre-de-lecture-talkback" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-6">Description <a class="header-anchor" href="#description-6" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il est tout à fait possible de redéfinir cet ordre de lecture avec deux outils :</p>
+<ul>
+<li><code>accessibilityTraversalAfter</code> : prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité après la vue passée en paramètre.</li>
+<li><code>accessibilityTraversalBefore</code> : prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité avant la vue passée en paramètre.</li>
+</ul>
+<p>À noter : ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes <code>setAccessibilityTraversalAfter</code> et <code>setAccessibilityTraversalBefore</code>. Ces méthodes sont disponibles pour tout élément qui hérite de <code>View</code>.</p>
+<h3 id="exemple-3">Exemple : <a class="header-anchor" href="#exemple-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
+chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
+chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre>
+<h3 id="liens">Liens : <a class="header-anchor" href="#liens" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalAfter%28int%29"><code>setAccessibilityTraversalAfter</code></a></li>
+<li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalBefore%28int%29"><code>setAccessibilityTraversalBefore</code></a></li>
+</ul>
+<h2 id="gerer-la-lecture-des-en-tetes-talkback">Gérer la lecture des en-têtes (<span lang="en">TalkBack</span>) <a class="header-anchor" href="#gerer-la-lecture-des-en-tetes-talkback" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Android <i>Pie</i> introduit un niveau de lecture supplémentaire des entêtes <code>accessibilityHeading</code> qui permet de parcourir la page sur ces titres et non plus tous les éléments de la page.</p>
+<h3 id="description-7">Description : <a class="header-anchor" href="#description-7" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le lecteur d’écran peut lire uniquement les entêtes définies dans une page (voir le Guide d’utilisation de <span lang="en">TalkBack</span>, le geste « Slide vers le haut en utilisant un doigt »). Ces entêtes permettent au lecteur de parcourir les grandes sections de la page pour voir si l’information cherchée s’y trouve, sans avoir à tout écouter.</p>
+<h4 id="exemple-4">Exemple : <a class="header-anchor" href="#exemple-4" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<pre><code class="xml">&lt;TextView
+[…]
+android:id="@+id/myTextLevel1viewId"
+android:accessibilityHeading="true"
+&#47;&gt;</code></pre>
+<h4 id="liens-2">Liens : <a class="header-anchor" href="#liens-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul>
+<li><a href="https://developer.android.com/reference/android/R.attr#accessibilityHeading"><code>accessibilityHeading</code></a></li>
+</ul>
+<h2 id="formulaires">Formulaires <a class="header-anchor" href="#formulaires" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-8">Description : <a class="header-anchor" href="#description-8" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est important que les champs de formulaire soient liés à un label. Il existe 2 grandes techniques pour réaliser cette liaison :</p>
+<ul>
+<li><code>labelFor</code> : permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’<code>id</code> de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> <code>android:labelFor</code> ou le code <code>setLabelFor</code>. <code>LabelFor</code> est utilisable depuis tout élément qui hérite de <code>View</code>.</li>
+<li><code>hint</code> : pour les <code>EditText</code> ou <code>TextView</code>. Permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les <code>TextView</code>. Prend en paramètre l’<code>id</code> d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> <code>android:hint</code> ou le code <code>setHint</code>.</li>
+</ul>
+<h3 id="exemples-4">Exemples : <a class="header-anchor" href="#exemples-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>LabelFor</code> dans le <abbr>xml</abbr> :</p>
+<pre><code>&lt;TextView
+	[…]
+  android:labelFor="@+id/imageView11"
+  android:importantForAccessibility="no" /&gt;</code></pre>
+<p>Remarque : il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).</p>
+<p><code>Hint</code> dans le <abbr>xml</abbr> :</p>
+<pre><code>&lt;EditText
+  […]
+   android:hint="@string/criteria_form_ex1_placeholder" /&gt;</code></pre>
+<h4 id="liens-3">Liens : <a class="header-anchor" href="#liens-3" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul>
+<li><a href="https://developer.android.com/reference/android/view/View.html#setLabelFor%28int%29"><code>setLabelFor</code></a></li>
+<li><a href="https://developer.android.com/reference/android/widget/TextView.html#setHint%28java.lang.CharSequence%29"><code>setHint</code></a></li>
+</ul>
+<h2 id="taille-des-textes">Taille des textes <a class="header-anchor" href="#taille-des-textes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-9">Description : <a class="header-anchor" href="#description-9" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Afin de permettre à l’option « grands caractères » d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements.</p>
+<ul>
+<li>Utiliser une taille de police dynamique : le « sp ». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android.</li>
+<li>Gérer les débordements de contenu : une erreur courante est d’utiliser une taille de texte dynamique (« sp » donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (un <code>height</code> en <code>wrap_content</code> permet de laisser au système le soin de s’adapter).</li>
+</ul>
+<h3 id="lien-6">Lien : <a class="header-anchor" href="#lien-6" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://www.google.com/design/spec/style/typography.html#typography-styles">typographie sous Android</a></li>
+</ul>
+<h2 id="evenements-daccessibilite-custom-views">Événements d’accessibilité &amp; <i lang="en">custom views</i> <a class="header-anchor" href="#evenements-daccessibilite-custom-views" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-10">Description : <a class="header-anchor" href="#description-10" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il existe sous Android un bon nombre d’événements liés à l’<abbr>API</abbr> d’accessibilité. Vous pouvez manipuler ces événements au même titre que d’autres événements. Ils permettent d’enrichir des composants <i lang="en">custom</i> insuffisamment accessibles. L’utilisation des événements d’accessibilité est assez rare dans les applications non dédiées à l’accessibilité, les autres options étant généralement suffisantes. Cependant, il faut savoir qu’ils existent et permettent de surcharger la vocalisation d’un composant.</p>
+<p>Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.</p>
+<h3 id="liens-4">Liens : <a class="header-anchor" href="#liens-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html"><code>AccessibilityEvents</code></a></li>
+<li><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#custom-views">Construire une vue custom accessible</a></li>
+<li><a href="https://github.com/Pascale22/A11yEventApp">Exemple de squelette d’implémentation des événements</a> en <abbr>Kotlin</abbr></li>
+</ul>
+<h2 id="webview"><i lang="en">WebView</i> <a class="header-anchor" href="#webview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-11">Description : <a class="header-anchor" href="#description-11" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Les <code>WebView</code> ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet : les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet : <a href="../../../web/">recommandations accessibilité pour le web</a>.</p>
+<p>Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le JavaScript : <code>mWebView.getSettings().setJavaScriptEnabled(true);</code><br>
+Dans ces conditions, la page affichée à travers la <code>WebView</code>  réagit convenablement à l’<abbr>API</abbr> d’accessibilité.</p>
+<h2 id="vocalisation-des-listes">Vocalisation des listes <a class="header-anchor" href="#vocalisation-des-listes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-12">Description : <a class="header-anchor" href="#description-12" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il arrive parfois que les listes soient mal vocalisées : la synthèse vocale tente de vocaliser toute la liste en une seule fois (au moins ce qui est affiché à l’écran dans le cas de listes longues). C’est notamment le cas lorsque l’on utilise des <code>RecyclerView</code>. Pour pallier ce problème, une solution simple existe. Il suffit de positionner l’attribut <code>focusable</code> à <code>true</code> pour chaque item de la liste. Cela a pour effet de forcer la synthèse vocale (<span lang="en">TalkBack</span>) à lire les items un par un.</p>
+<h2 id="navigation-au-focus-clavier">Navigation au focus (clavier) <a class="header-anchor" href="#navigation-au-focus-clavier" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="description-13">Description : <a class="header-anchor" href="#description-13" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour gérer la navigation au focus, il faut s’assurer de 3 choses :</p>
+<ul>
+<li>Permettre le focus sur les éléments interactifs : la navigation au focus ne concerne que les éléments interactifs. Si, par exemple, votre application possède des vues <i lang="en">custom</i> cliquables, il faut s’assurer que ces vues soient focusables en positionnant l’attribut <code>focusable</code> à <code>true</code>.</li>
+<li>Gérer l’affichage du focus : tout élément interactif peut recevoir le focus, il faut donc que le <code>state_focused</code> soit défini et permette de distinguer d’un seul coup d’œil quel élément a le focus.</li>
+<li>Gérer l’ordre du focus : à travers les options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> et <code>nextFocusLeft</code>, vous pouvez spécifier quelle vue doit prendre le focus selon l’utilisation des flèches bas, haut, droit et gauche.</li>
+</ul>
+<p>La plupart du temps, seuls les point 1 et 2 sont à prendre la compte. En effet, le système Android est capable de déterminer assez précisément les positions des éléments les uns par rapport aux autres et donc de fournir un ordre de lecture au clavier logique et cohérent.</p>
+<p>À noter : <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> ainsi que d’autres options de gestion du focus sont accessibles directement dans le <abbr>xml</abbr> ou dans le code à travers les méthodes correspondantes.</p>
+<p>À noter : Android <i>Pie</i> (9, <abbr>API</abbr> 28), introduit un focus spécifique au lecteur d’écran permet d’éviter les effets de bords entre le focus du lecteur d’écran (<code>screenReaderFocusable</code>) et le focus clavier (<code>focusable</code>). La navigation clavier n’est pas sensible au <code>screenReaderFocusable</code>.</p>
+<h4 id="exemple-5">Exemple : <a class="header-anchor" href="#exemple-5" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Exemple de sélecteur qui prend en compte l’état <code>state_focused</code> :</p>
+<pre><code>&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+	&lt;!-- Non focused states --&gt;
+	&lt;item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/draw_unselected_selector" /&gt;
+	&lt;item android:state_focused="false" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/draw_selected_selector" /&gt;
+&nbsp;
+	&lt;!-- Focused states --&gt;
+	&lt;item android:state_focused="true" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/draw_unselected_focused_selector" /&gt;
+	&lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/draw_selected_focused_selector" /&gt;
+&nbsp;
+	&lt;!-- Pressed --&gt;
+	&lt;!-- Non focused states --&gt;
+	&lt;item android:state_focused="false" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/draw_unselected_pressed_selector" /&gt;
+	&lt;item android:state_focused="false" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/draw_selected_pressed_selector" /&gt;
+&nbsp;
+	&lt;!-- Focused states --&gt;
+	&lt;item android:state_focused="true" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/draw_unselected_pressed_selector" /&gt;
+	&lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/draw_selected_pressed_selector" /&gt;
+&lt;/selector&gt;</code></pre>
+<h4 id="lien-7">Lien : <a class="header-anchor" href="#lien-7" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul>
+<li><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">Gestion du focus sous Android</a></li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/android/developpement.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

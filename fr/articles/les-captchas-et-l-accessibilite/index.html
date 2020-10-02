@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Les CAPTCHAs et l&#39;accessibilité - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Les CAPTCHAs et l&#39;accessibilité
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#premier-constat-le-captcha-et-les-utilisateurs" class="dropdown-item text-wrap">Premier constat : le Captcha et les utilisateurs</a><a href="#deuxieme-constat-le-captcha-et-la-securite" class="dropdown-item text-wrap">Deuxième constat : Le CAPTCHA et la sécurité</a><a href="#les-solutions-preconisees" class="dropdown-item text-wrap">Les solutions préconisées</a><a href="#honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots" class="dropdown-item text-wrap">HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots</a><a href="#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots" class="dropdown-item text-wrap">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots</a><a href="#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel" class="dropdown-item text-wrap">Un test logique ou mathématique textuel, appelé aussi Captcha textuel</a><a href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" class="dropdown-item text-wrap">Une vérification par email, SMS ou téléphone pour une sécurité renforcée</a><a href="#pour-recapituler" class="dropdown-item text-wrap">Pour récapituler</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Les CAPTCHAs et l'accessibilité</h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Humans Apart », en français  « Test public de Turing complètement automatisé pour différencier les humains des ordinateurs ») est un test destiné à différencier un utilisateur d’un programme informatique. Il est utilisé notamment sur les formulaires pour se prémunir du SPAM.</p>
+<p>Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visuels où on demande à l’utilisateur de saisir une série de lettres déformées affichées à l’écran.</p>
+<p><img src="../../web/images/captchas/captcha.png" alt="Capture d'écran d'un captcha visuel" class="img-fluid"><br>
+<strong>Exemple de CAPTCHA visuel</strong></p>
+<h2 id="premier-constat-le-captcha-et-les-utilisateurs">Premier constat : le Captcha et les utilisateurs <a class="header-anchor" href="#premier-constat-le-captcha-et-les-utilisateurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C'est d'ailleurs la première source de difficultés citée par les utilisateurs malvoyants d'après <a href="https://webaim.org/projects/screenreadersurvey7">le sondage réalisé par le site WebAIM fin 2017</a> :<br>
+<img src="../../web/images/captchas/webaim.png" alt="Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème" class="img-fluid"></p>
+<p><strong>Les CAPTCHA pointés du doigt par les utilisateurs malvoyants (sondage WebAIM 2017)</strong></p>
+<p>L’explosion des moyens de calcul permet aux bots et autres programmes informatiques d’être de plus en plus performants. Il est aujourd’hui simple de concevoir un programme permettant de deviner le texte inscrit dans une image ou vocalisé dans un fichier audio.<br>
+Pour que le CAPTCHA reste efficace vis-à-vis des bots, il est donc nécessaire d’accentuer la déformation de l’image ou du son proposé par le CAPTCHA : cela accentue d’autant les difficultés pour l’utilisateur.</p>
+<p>C’est pourquoi Google tente de trouver des alternatives pour différencier un utilisateur humain d’un robot. Ils proposent le « No Captcha », une simple case à cocher du point de vue de l’utilisateur. Celui-ci utilise des données annexes telles que la résolution de l’écran, le déplacement du pointeur de la souris ou le temps de saisie d'un formulaire…etc.</p>
+<p><img src="../../web/images/captchas/nocaptcha.png" alt="Capture d'écran du no captcha de google" class="img-fluid"><br>
+<strong>No CAPTCHA de Google</strong></p>
+<p>Bien que cette solution soit plus efficace, elle n’est pas aujourd’hui satisfaisante en termes d’accessibilité car en cas de doute, un CAPTCHA standard est affiché à l’écran. C’est souvent le cas pour un utilisateur qui ne peut pas utiliser une souris et qui navigue au clavier ou pour un utilisateur qui navigue à l’aide d’un lecteur d’écran (cas des personnes malvoyantes). Il faut donc toujours proposer un moyen de contact alternatif (email, téléphone….) dans le cas où le CAPTCHA ne pourrait pas être renseigné.</p>
+<p>Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arrivent et ceux qui ne comprennent pas ce qu’il faut faire, la mise en place d’un CAPTCHA n’est pas anodine pour l’audience d’un site. Partant du principe que les CAPTCHAs posent des difficultés à de nombreux utilisateurs, la première recommandation est donc de <strong>ne pas utiliser de CAPTCHA</strong>.</p>
+<h2 id="deuxieme-constat-le-captcha-et-la-securite">Deuxième constat : Le CAPTCHA et la sécurité <a class="header-anchor" href="#deuxieme-constat-le-captcha-et-la-securite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Dans <a href="https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html">un article de Google publié en 2014</a>, on apprend qu’une intelligence artificielle obtient un score de 99,8% pour résoudre des CAPTCHAs visuels parmi les plus difficiles, soit un meilleur score que celui obtenu par un « vrai » utilisateur ! Même chose dans un autre article de 2018 (<a href="https://medium.com/mlmemoirs/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694" lang="en">Breaking CAPTCHA Using Machine Learning in 0.05 Seconds</a>). Des services sont en effet capables de déterminer la police de caractères utilisée dans une image ou bien de deviner si l’image contient un objet (un chat, une voiture, un chapeau, etc.).</p>
+<p>Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revient à notre première recommandation qui est de <strong>ne pas utiliser de CAPTCHA</strong>.</p>
+<h2 id="les-solutions-preconisees">Les solutions préconisées <a class="header-anchor" href="#les-solutions-preconisees" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>L’idée est donc dans un premier temps de déterminer les risques et de se poser les questions suivantes :</p>
+<ul>
+<li>Quels sont les risques en cas d’attaque ?</li>
+<li>Quel est le besoin réel, entre éliminer les requêtes des bots et apporter une solution sécurisée ?</li>
+</ul>
+<p>En fonction des réponses, il s’agit de mettre en place la solution la plus adaptée.</p>
+<h2 id="honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots">HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots <a class="header-anchor" href="#honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Si les risques sont limités, ces 2 techniques ont l’avantage d’être transparentes pour l’utilisateur.<br>
+La première solution consiste à ajouter un champ masqué à l’écran dans le formulaire. Celui-ci ne sera donc jamais renseigné par un utilisateur. Coté serveur si on constate que ce champ a été renseigné, c’est qu’il s’agit d’un programme malveillant.<br>
+La seconde technique consiste à mesurer le temps que l’utilisateur met pour saisir le formulaire. Si celui-ci s’avère très rapide, il s’agit très probablement d’un programme malveillant.</p>
+<h2 id="des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots <a class="header-anchor" href="#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Il est également possible coté serveur de trier les informations reçues à l’aide d’un logiciel anti-SPAM qui supprime automatiquement les soumissions des logiciels malveillants en analysant les données et l’adresse IP à l’origine de la requête.</p>
+<h2 id="un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel">Un test logique ou mathématique textuel, appelé aussi Captcha textuel <a class="header-anchor" href="#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Il s’agit de simples phrases demandant de recopier un mot, de résoudre une opération mathématique simple, etc.</p>
+<p>« Recopier le mot : maison »<br>
+« Combien font deux plus deux ? »<br>
+« Quel animal fait miaou ? »<br>
+« De quelle couleur est le ciel ? »</p>
+<p>A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.<br>
+Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphique/7-formulaires/7-13-tests-de-securite-tests-logiques/">la notice du site acceDe Web</a> une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.</p>
+<h2 id="une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee">Une vérification par email, SMS ou téléphone pour une sécurité renforcée <a class="header-anchor" href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Cette solution consiste à envoyer un email, un SMS ou à téléphoner directement à l’utilisateur pour que celui-ci confirme la transaction en cliquant sur un lien ou en renseignant le code indiqué.</p>
+<p>C'est à la fois à la fois plus contraignante pour l’utilisateur qui doit communiquer des informations personnelles et plus lourd à mettre en place mais c’est une solution très efficace quand un niveau de sécurité fort est nécessaire.</p>
+<h2 id="pour-recapituler">Pour récapituler <a class="header-anchor" href="#pour-recapituler" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.<br>
+ </p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#premier-constat-le-captcha-et-les-utilisateurs" class="nav-link text-muted bg-200">Premier constat : le Captcha et les utilisateurs</a>
+          </li><li class="nav-item position-relative">
+            <a href="#deuxieme-constat-le-captcha-et-la-securite" class="nav-link text-muted bg-200">Deuxième constat : Le CAPTCHA et la sécurité</a>
+          </li><li class="nav-item position-relative">
+            <a href="#les-solutions-preconisees" class="nav-link text-muted bg-200">Les solutions préconisées</a>
+          </li><li class="nav-item position-relative">
+            <a href="#honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots" class="nav-link text-muted bg-200">HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots</a>
+          </li><li class="nav-item position-relative">
+            <a href="#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots" class="nav-link text-muted bg-200">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots</a>
+          </li><li class="nav-item position-relative">
+            <a href="#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel" class="nav-link text-muted bg-200">Un test logique ou mathématique textuel, appelé aussi Captcha textuel</a>
+          </li><li class="nav-item position-relative">
+            <a href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" class="nav-link text-muted bg-200">Une vérification par email, SMS ou téléphone pour une sécurité renforcée</a>
+          </li><li class="nav-item position-relative">
+            <a href="#pour-recapituler" class="nav-link text-muted bg-200">Pour récapituler</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/les-captchas-et-l-accessibilite.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Web-specific methods and tools - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link active" aria-current="true">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/toolbox/">Toolbox</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Web-specific methods and tools
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
+  Orange Boosted
+</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item active" aria-current="page">
+  Methods and test tools
+</a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
+  The Va11ydette
+</a><a href="/en/web/useful-links" class="nav-link dropdown-item">
+  Useful links
+</a><a href="/en/glossary/" class="nav-link dropdown-item">
+  Glossary
+</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="https://boosted.orange.com/" class="nav-link text-muted">
+  Orange Boosted
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted active" aria-current="page">
+  Methods and test tools
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/wcag-audit/" class="nav-link text-muted">
+  The Va11ydette
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/useful-links" class="nav-link text-muted">
+  Useful links
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/glossary/" class="nav-link text-muted">
+  Glossary
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Web-specific methods and tools</h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (WCAG) version 2.1 - level AA.</p>
+<p>The detailed description of the tests can be found in the <a href="/en/web/test/">WCAG criteria by project phase, &quot;tests&quot; section</a>.</p>
+<p>Accessibility tests must be carried out throughout the project life cycle:</p>
+<ul>
+<li>at the start of the project, when choosing the framework, software, or package...</li>
+<li>at the design phase on storyboards or prototypes</li>
+<li>during development and testing</li>
+<li>in production, for content sites</li>
+</ul>
+<h2 id="general-method">General method <a class="header-anchor" href="#general-method" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The approach includes 2 types of tests:</p>
+<ul>
+<li>Technical tests that consist of inspecting the code and colour contrast.</li>
+<li>Functional tests that evaluate the interface's performance with various <abbr>assistive technologies</abbr> to ensure that there are no blocking points in the evaluated content.</li>
+</ul>
+<p>Depending on your profile, you can perform technical tests, functional tests or both, but both are necessary to test the accessibility of a website as a whole.</p>
+<h2 id="method-for-testing-the-web">Method for testing the Web <a class="header-anchor" href="#method-for-testing-the-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="technical-evaluation">Technical evaluation <a class="header-anchor" href="#technical-evaluation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Some of the tests can be performed automatically by tools, but the majority of them require manual check. These tests can be performed by any actor in the project (designer, developer, tester, contributor...).</p>
+<p>Approach:</p>
+<ul>
+<li>There are tools that help you to test the accessibility of your web content: <a href="./browser-extensions/">learn how to perform automatic or semi-automatic tests</a> (whistleblowing) with aXe or Wave browser extensions, for example.</li>
+<li><a href="./color-contrast-level/">Measure the contrast level of the colours</a> with the Colour Contrast Analyser tool.</li>
+<li>Check the valid text spacing via a tool to ensure the readability of the text</li>
+<li>All other tests must be passed through a manual review of the code
+<ul>
+<li>Example: all relevance criteria (consistency of a textual alternative with the content of an image...)</li>
+</ul>
+</li>
+</ul>
+<h3 id="functional-evaluation">Functional evaluation <a class="header-anchor" href="#functional-evaluation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>These tests can easily be performed by any project actor. Only screen readers require a learning period.<br>
+Approach:</p>
+<ul>
+<li><a href="./keyboard-navigation/">Test keyboard navigation</a> using the main keyboard shortcuts to navigate in a web page.</li>
+<li><a href="./text-zoom/">Check the adjustment of the text size</a> by handling the browser zoom.</li>
+<li><a href="./navigating-with-a-screen-reader/">Test navigation and vocalization</a> with a screen reader.</li>
+</ul>
+<h2 id="method-for-testing-the-mobile-web">Method for testing the mobile web <a class="header-anchor" href="#method-for-testing-the-mobile-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="technical-evaluation-2">Technical evaluation <a class="header-anchor" href="#technical-evaluation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The tests for the mobile web are identical to those performed for the web. Some of the tests can be performed from a computer using the development tools available in web browsers:</p>
+<ul>
+<li>The Adaptive View module on Firefox</li>
+<li>Device Toolbar on Chrome</li>
+</ul>
+<h3 id="functional-evaluation-2">Functional evaluation <a class="header-anchor" href="#functional-evaluation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>These tests must be performed on smartphones, using the screen readers available on iOS and Android.</p>
+<ul>
+<li><a href="/en/mobile/android/talkback/">Talkback on Android</a></li>
+<li><a href="/en/mobile/ios/voiceover/">VoiceOver on iOS</a></li>
+</ul>
+
+        </main>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

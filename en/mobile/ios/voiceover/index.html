@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>VoiceOver user guide - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          VoiceOver user guide
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>VoiceOver user guide</h1>
+<p>VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen.<br>
+<br>It vocalizes all visible elements in the page specially for blind or impaired, dyslexic or illiterate users.</p>
+<p>VoiceOver can be switched on thanks to the <code>Settings</code> device menu:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOverActivation-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOverActivation-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOverActivation-iOS13"
+     role="tabpanel">
+<img alt="" style="max-width: 1100px; height: auto; " src="../../images/iphonex_VoiceOverActivation_iOS13.png" />
+</div>
+<div class="tab-pane" 
+     id="VoiceOverActivation-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 1100px; height: auto;" alt="" src="../../images/iphonex_VoiceOverActivation_iOS12.png"/>
+</div></div>
+<p><br>When VoiceOver is on, the standard gestures behave differently and additional gestures let you move the focus on the screen and control the selected items.</p>
+<p>It's better but not mandatory to <strong>activate the vibration</strong> feature in the accessibility settings in order to feel the trigger of some actions.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#iPhoneVibration-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#iPhoneVibration-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="iPhoneVibration-iOS13"
+     role="tabpanel">
+<img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_fr_vibration_iOS13.png"/>
+</div>
+<div class="tab-pane" 
+     id="iPhoneVibration-iOS12" 
+     role="tabpanel" >
+<img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_fr_vibration_iOS12.png"/>
+</div></div>
+<p><br>A sound may be heard in case of a disactivated vibration feature but VoiceOver might cover it.</p>
+<p>Two gestures are important to be well understood so as to perfectly harness the provided details thereafter :<br>
+<br><img style="max-width: 100px; height: auto;" alt="" src="../../images/iphonex_1finger_flick_up.png" /><br>
+The <strong>flick</strong> consists in raising the finger of the screen at the end of the mopvement while continuing it in the air.<br>
+<br><img style="max-width: 100px; height: auto;" alt="" src="../../images/iphonex_1finger_swipe_up.png" /><br>
+The <strong>swipe</strong> consists in doing the gesture while keeping the finger on the screen.</p>
+<p>First, VoiceOver common gestures will be introduced to be followed by iPhoneX dedicated gestures.<br>
+<br>The last part will deal with unusual but useful features for an advanced user.</p>
+<h2 id="common-gestures">Common gestures <a class="header-anchor" href="#common-gestures" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="list-gesture">
+  <li class="clearfix">
+      <img src="../../images/gesture1.png" alt="" width="200">    
+      <h3>Drag one finger</h3>
+      <p>Explore your screen and hear audible feedback for what is being touched.</p>
+  </li><br><br>
+  <li class="clearfix">
+      <img src="../../images/gesture2.png" alt="" width="150">    
+      <h3>Double-tap anywhere on the screen</h3>
+      <p>Opens or activates the item that you last touched (vocalized).</p>
+  </li><br><br>
+    <li class="clearfix">
+      <img src="../../images/gesture9_1.png" alt="" width="170">
+      <img src="../../images/gesture9_2.png" alt="" width="170">  
+      <h3>Flick up or down using three fingers</h3>
+      <p>Scroll within lists or pages if selected. Equivalent to a vertical swipe.</p><br><br>
+  </li><br>
+  <li class="clearfix">
+      <img src="../../images/gesture10_1.png" alt="" width="200">
+      <img src="../../images/gesture10_2.png" alt="" width="220">  
+      <h3>Flick left or right using three fingers</h3>
+      <p>Change pages and screens when possible. Equivalent to a horizontal swipe.</p>
+  </li><br>
+  <li class="clearfix">    
+      <img src="../../images/gesture5.png" alt="" width="200">
+      <img src="../../images/gesture6.png" alt="" width="210">
+      <h3>Flick left/right using one finger</h3>
+      <p>Move the focus to the previous/next item.</p>
+  </li><br>
+  <li class="clearfix">   
+      <img src="../../images/gesture7.png" alt="" width="200">    
+      <img src="../../images/gesture8.png" alt="" width="220"> 
+      <h3>Flick up/down using one finger</h3>
+      <p>Increase/decrease the value of an adjustable element.</p>
+  </li>
+</ul>
+<br>
+<h2 id="iphonex">iPhoneX <a class="header-anchor" href="#iphonex" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The lack of the home button on the main screen for this device has modified the usual gestures.<br>
+<br>These <a href="iphone-x/">new common gestures</a> have induced new VoiceOver behavior for some actions :</p>
+<ul>
+<li><a href="#BackHome">Go to Home Screen.</a></li>
+<li><a href="#Multitask">Get Multitask Pane.</a></li>
+<li><a href="#ControlCenter">Open Control Center.</a></li>
+<li><a href="#NotificationCenter">See Notifications.</a></li>
+</ul>
+<p><a name="BackHome"></a><br>
+<br>Gesture : <strong>flick up with one finger</strong> from the bottom edge of the screen until you feel a <strong>simple vibration</strong> (approximately the <strong>first lower quarter part of the screen</strong>).<br>
+<br><img style="max-width: 470px; height: auto;" alt="" src="../../images/iphonex_vo_en_back_home.png" /></p>
+<p><a name="Multitask"></a><br>
+<br><br>Gesture : <strong>flick up with one finger</strong> from the bottom edge of the screen until you feel a <strong>double vibration</strong> (approximately <strong>in the middle of the screen</strong>).<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_en_multitask.png" /></p>
+<p><a name="ControlCenter"></a><br>
+<br>Gesture: <strong>flick down with one finger</strong> from the top edge of the screen until you feel a <strong>simple vibration</strong> (approximately the <strong>first upper quarter part of the screen</strong>).<br>
+<br><img style="max-width: 520px; height: auto;" alt="" src="../../images/iphonex_vo_en_control_center.png" /></p>
+<p><a name="NotificationCenter"></a><br>
+<br>Gesture: <strong>flick down with one finger</strong> from the top edge of the screen until you feel a <strong>double vibration</strong> (approximately <strong>in the middle of the screen</strong>).<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_vo_en_notification_center.png" /><br>
+<br><br><br></p>
+<h2 id="tips-tricks">Tips &amp; Tricks <a class="header-anchor" href="#tips-tricks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Hereunder are unusual features that may be useful to a VoiceOver user on <strong>any type of device</strong> :</p>
+<ul>
+<li><a href="#ReadAllElementsFromTop">Read elements from the top.</a></li>
+<li><a href="#ReadAllElementsFromSelection">Read elements from the selection.</a></li>
+<li><a href="#ToggleAutomaticReading">Start/pause the elements vocalization.</a></li>
+<li><a href="#LocateSelectedElement">Locate the selected element.</a></li>
+<li><a href="#ToggleSpeech">Toggle Speech.</a></li>
+<li><a href="#ControlCenterBis">Open Control Center.</a></li>
+<li><a href="#NotificationCenterBis">See Notifications.</a></li>
+<li><a href="#ElementActivation">Activate the selected element.</a></li>
+<li><a href="#Scrub">Go back to the previous page.</a></li>
+<li><a href="#ItemChooserList">Use the item chooser list.</a></li>
+<li><a href="#PageFirstElement">Select the first element on the page.</a></li>
+<li><a href="#PageLastElement">Select the last element on the page.</a></li>
+<li><a href="#CurtainScreen">Toggle Curtain Screen.</a></li>
+<li><a href="#CustomLabel">Set a custom label.</a></li>
+<li><a href="#SpotlightSearch">Use Spotlight Search.</a></li>
+<li><a href="#LongPressure">Activate a long pressure.</a></li>
+<li><a href="#OpenLink">Open a link in a text view.</a></li>
+</ul>
+<p><a name="ReadAllElementsFromTop"></a><br>
+<br>Gesture : <strong>flick up with 2 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_vo_en_all_from_top.png" /></p>
+<p><a name="ReadAllElementsFromSelection"></a><br>
+<br>Gesture : <strong>flick down with 2 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_en_all_from_selection.png" /></p>
+<p><a name="ToggleAutomaticReading"></a><br>
+<br>Gesture : <strong>simple-tap with 2 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_en_stop_resume_ auto_vocal.png" /></p>
+<p><a name="LocateSelectedElement"></a><br>
+<br>Gesture : <strong>simple-tap with 3 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_en_locate_select.png" /></p>
+<p><a name="ToggleSpeech"></a><br>
+<br>Gesture : <strong>double-tap with 3 fingers</strong> anywhere on the screen.<br>
+<br>If the <code>zoom</code> functionality is activated in the settings, a <strong>triple-tap</strong> will be mandatory to obtain the same result.<br>
+<br><img style="max-width: 400px; height: auto;" alt="" src="../../images/iphonex_vo_en_stop_resume_speech.png" /></p>
+<p><a name="ControlCenterBis"></a><br>
+<br>First of all, <strong>an element of the status bar must be selected</strong>.<br>
+<br>Gesture: <strong>flick up with 3 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_vo_en_control_center_bis.png" /></p>
+<p><a name="NotificationCenterBis"></a><br>
+<br>First of all, <strong>an element of the status bar must be selected</strong>.<br>
+<br>Gesture: <strong>flick down with 3 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../images/iphonex_vo_en_notification_center_bis.png" /></p>
+<p><a name="ElementActivation"></a><br>
+<br>Gesture : <strong>select and hold</strong> the element with <strong>one finger</strong>, then make a <strong>simple-tap with another finger</strong> anywhere on the screen.<br>
+<br>This is a very useful gesture when using a keyboard : the index finger select the letter while the middle finger makes the simple-tap.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../images/iphonex_vo_en_activate_elt_bis.png" /></p>
+<p><a name="Scrub"></a><br>
+<br>Gesture : <strong>swipe with 2 fingers</strong> drawing a <strong>Z-shape</strong> anywhere on the screen.<br>
+<br>This ends exactly in the same result as the click on the native back button.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../images/iphonex_vo_en_scrub.png" /></p>
+<p><a name="ItemChooserList"></a><br>
+<br>Gesture : <strong>triple-tap with 2 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../images/iphonex_vo_en_item_chooser_list.png" /></p>
+<p><a name="PageFirstElement"></a><br>
+<br>Gesture : <strong>simple-tap with 4 fingers</strong> in the upper half part of the screen.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_vo_en_first_elt.png" /></p>
+<p><a name="PageLastElement"></a><br>
+<br>Gesture : <strong>simple-tap with 4 fingers</strong> in the lower half part of the screen.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_vo_en_last_elt.png" /></p>
+<p><a name="CurtainScreen"></a><br>
+<br>Gesture : <strong>triple-tap with 3 fingers</strong> anywhere on the screen.<br>
+<br>If the <code>zoom</code> functionality is activated in the settings, a <strong>quadruple-tap</strong> will be mandatory to obtain the same result.<br>
+<br>It will allow a VoiceOver using with a dark screen promoting the confidentiality and the longevity of the battery at the same time.<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_en_curtain_screen.png" /></p>
+<p><a name="CustomLabel"></a><br>
+<br>Gesture : <strong>double-tap and hold with 2 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../images/iphonex_vo_en_custom_label.png" /></p>
+<p><a name="SpotlightSearch"></a><br>
+<br>Gesture : <strong>flick down with 3 fingers</strong> anywhere on the screen.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_en_search.png" /></p>
+<p><a name="LongPressure"></a><br>
+<br>Gesture: <strong>double-tap and hold with 1 finger</strong> <em>(iOS 12)</em> or <strong>triple-tap with 1 finger</strong> <em>(iOS 13)</em> anywhere on the screen.<br>
+<br><img style="max-width: 550px; height: auto;" alt="" src="../../images/iphonex_en_long_pressure.png" /></p>
+<p><a name="OpenLink"></a><br>
+<br>Gesture : <strong>double-tap and hold with 1 finger</strong> anywhere on the screen.<br>
+<br>First, select the 'Links' rotor item before flicking up to reach the desired link.<br>
+<br>Then, double-tap and hold with one finger once the link is selected <strong>until a popup shows up and an action sheet appears</strong> to suggest the appropriate option.<br>
+<br><img style="max-width: 1200px; height: auto;" alt="" src="../../images/iphonex_en_open_link.png" /></p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/voiceover/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

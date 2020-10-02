@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Layout - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link active" aria-current="true">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/develop/">Develop</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Layout
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/web/develop/textual-content/" class="nav-link dropdown-item">
+  Textual content
+</a><a href="/en/web/develop/non-textual-content/" class="nav-link dropdown-item">
+  Non-textual content
+</a><a href="/en/web/develop/colors-and-contrasts/" class="nav-link dropdown-item">
+  Colors and contrasts
+</a><a href="/en/web/develop/common-navigation/" class="nav-link dropdown-item">
+  Common navigation
+</a><a href="/en/web/develop/keyboard-navigation/" class="nav-link dropdown-item">
+  Keyboard navigation
+</a><a href="/en/web/develop/layout/" class="nav-link dropdown-item active" aria-current="page">
+  Layout
+</a><a href="/en/web/develop/forms/" class="nav-link dropdown-item">
+  Forms
+</a><a href="/en/web/develop/touch-and-interactions/" class="nav-link dropdown-item">
+  Touch and interactions
+</a><a href="/en/web/develop/assistive-technology/" class="nav-link dropdown-item">
+  Assistive technology
+</a></div>
+    </nav>
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" class="dropdown-item text-wrap">Use relative size to allow changing text size and responsive design</a><a href="#allow-text-spacing" class="dropdown-item text-wrap">Allow text spacing</a><a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="dropdown-item text-wrap">Identify and maintain consistency of groupings and different regions of the page</a><a href="#define-sensitive-areas-of-sufficient-size" class="dropdown-item text-wrap">Define sensitive areas of sufficient size</a><a href="#decoupling-content-from-interaction-and-presentation" class="dropdown-item text-wrap">Decoupling content from interaction and presentation</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/web/develop/textual-content/" class="nav-link text-muted">
+  Textual content
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/non-textual-content/" class="nav-link text-muted">
+  Non-textual content
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/colors-and-contrasts/" class="nav-link text-muted">
+  Colors and contrasts
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/common-navigation/" class="nav-link text-muted">
+  Common navigation
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/keyboard-navigation/" class="nav-link text-muted">
+  Keyboard navigation
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/layout/" class="nav-link text-muted active" aria-current="page">
+  Layout
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/forms/" class="nav-link text-muted">
+  Forms
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/touch-and-interactions/" class="nav-link text-muted">
+  Touch and interactions
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/develop/assistive-technology/" class="nav-link text-muted">
+  Assistive technology
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Layout</h1>
+<p class="lead">Make sure the layout is suitable for the user</p>
+<h2 id="use-relative-size-to-allow-changing-text-size-and-responsive-design">Use relative size to allow changing text size and responsive design <a class="header-anchor" href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and especially people with visual impairments, using a device outdoors and elderly people.<br>
+<strong>When:</strong> during development.</p>
+<p><strong>Description:</strong></p>
+<p>Use relative length units for font size (<code>em</code>, <code>rem</code>, <code>%</code>) and for containers handling text size enlargement up to 200% and design your pages to be responsive.</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>Do not use pixel (<code>px</code>) for size that must adapt if we increase the text size (impossible with Internet Explorer).</li>
+<li>Form fields must also have relative sizes to enlarge properly.</li>
+<li>Try to make the container adaptive so they can increase in size when the text is zoomed in.</li>
+<li>In Firefox, go to View&gt;Zoom and activate Zoom text only, set the zoom to 200%. Verify that there is no loss of information (disappearance or overlapping text).</li>
+<li>Content must respond to screen size changes, adjusting its contents without horizontal scroll even when screen width is reduced to 320 CSS pixels, unless special needs (map, table, diagram... ).</li>
+</ul>
+<p><img src="../../images/zoom-200.png" alt="screenshot Zoom settings In Firefox" class="img-fluid"></p>
+<p><strong>Users’ goal:</strong></p>
+<p>Allow users (visually impaired, using a device outdoors, elderly people…) to increase the font size and enlargement of the page so they can access easily the information.</p>
+<p><strong>Example:</strong><br>
+See the example <a href="../../components-examples/zoom/">handling zoom, increasing the text size</a> for more details.</p>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a></li>
+</ul>
+<h2 id="allow-text-spacing">Allow text spacing <a class="header-anchor" href="#allow-text-spacing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone, particularly people with visual disabilities.<br>
+<strong>When:</strong> as of design and during development.</p>
+<p>If the user applies the following settings, the text must remain legible (no truncated content, superimposed):</p>
+<ul>
+<li>The line height must be adjustable to at least 1.5 times the font size.</li>
+<li>The space between two paragraphs must be adjustable to at least 2 times the font size.</li>
+<li>The letter spacing must be adjustable to 0.12 times the font size.</li>
+<li>The word spacing between words must be adjustable to at least 0.16 times the font size.</li>
+</ul>
+<p>This can be done by applying the following CSS rules :</p>
+<pre><code class="css">
+  * {
+      line-height: 1.5!important;
+      letter-spacing:.12em!important;
+      word-spacing: .16em !important;
+  }
+
+  p {
+      margin-bottom: 2em!important;
+  }
+</code></pre>
+<p><strong>Bookmarklet:</strong><br>
+To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a></p>
+<p><strong>Users’ goal:</strong><br>
+Improve reading comfort for people with cognitive and visual disabilities.</p>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>
+</ul>
+<h2 id="identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page">Identify and maintain consistency of groupings and different regions of the page <a class="header-anchor" href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>**Target:**Everyone, especially people with visual, cognitive or attention deficit disorders.</p>
+<p><strong>Description:</strong><br>
+Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>Make sure that the navigation mechanisms are always located at the same place in a set of pages.</li>
+<li>Ensure that the components and groupings that have the same function are identified (visually and semantically) in the same way.</li>
+<li>Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast ...) or that there is a way to visually distinguish the groups (sub-menu, drop-down list ...) as well as the different regions of the page.</li>
+</ul>
+<p><strong>User Objective:</strong><br>
+Allow users to identify and locate interface elements in all pages.</p>
+<p><strong>Do:</strong><br>
+<img src="../../images/groupement.jpg" alt="screenshot of the site 100% practical" class="img-fluid"><br>
+Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently contrasted, to identify its content.</p>
+<p><strong>Don't:</strong><br>
+<img src="../../images/groupement2.jpg" alt="screenshot of the fnac.com website" class="img-fluid"><br>
+It is very difficult to associate the themes (&quot;par region&quot;, &quot;par genre&quot;, ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.</p>
+<p>**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **<br>
+To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 &lt;/ abbr&gt; structure tags (<code>main</code> for the main content of the page,<code> nav</code> for the main navigation, <code>header </code>for page header,<code> footer</code> for footer, <code>aside</code> for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html">the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)</a> and there, the support is much better &amp; nbsp ;!</p>
+<p>Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.</p>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a></li>
+</ul>
+<h2 id="define-sensitive-areas-of-sufficient-size">Define sensitive areas of sufficient size <a class="header-anchor" href="#define-sensitive-areas-of-sufficient-size" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> Everyone, especially people with motor or visual disabilities and mobility.<br>
+<strong>When:</strong> during design and development.</p>
+<p><strong>Description:</strong><br>
+Each sensitive area must have a sufficient size (minimum 9mm width and height).<br>
+In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).</p>
+<h2 id="decoupling-content-from-interaction-and-presentation">Decoupling content from interaction and presentation <a class="header-anchor" href="#decoupling-content-from-interaction-and-presentation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone, especially people with visual disabilities, reading or attention difficulties.<br>
+<strong>When:</strong> during development.</p>
+<p><strong>Description:</strong></p>
+<p>Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) and presentation (<abbr>CSS</abbr>).</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>Do not use tables to design the page layout, they should be used only for tabular data.</li>
+<li>Do not use image to display text, except when the visual presentation cannot be achieved using <abbr>CSS</abbr>.</li>
+<li>Use <abbr>CSS</abbr> classes rather than manipulating inline <abbr>CSS</abbr> styles in <abbr>HTML</abbr>.</li>
+<li>Do not use <abbr>CSS</abbr> pseudo-elements (::before, ::after…) to display information (or provide an alternative for screen readers especially).</li>
+<li>Do not write Javascript events directly inside the <abbr>HTML</abbr>, use a separate script or <abbr>JS</abbr> file instead.</li>
+</ul>
+<p><strong>Users’ goal:</strong></p>
+<p>Allow users, via their User Agent or technical assistance (e.g. their browser) to change the visual appearance of the page (zoom, colour, position…). For example, increase the text size without display problems.</p>
+<p><strong>Technical goal:</strong></p>
+<p>Improves maintainability.</p>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" class="nav-link text-muted bg-200">Use relative size to allow changing text size and responsive design</a>
+          </li><li class="nav-item position-relative">
+            <a href="#allow-text-spacing" class="nav-link text-muted bg-200">Allow text spacing</a>
+          </li><li class="nav-item position-relative">
+            <a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="nav-link text-muted bg-200">Identify and maintain consistency of groupings and different regions of the page</a>
+          </li><li class="nav-item position-relative">
+            <a href="#define-sensitive-areas-of-sufficient-size" class="nav-link text-muted bg-200">Define sensitive areas of sufficient size</a>
+          </li><li class="nav-item position-relative">
+            <a href="#decoupling-content-from-interaction-and-presentation" class="nav-link text-muted bg-200">Decoupling content from interaction and presentation</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/develop/layout.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

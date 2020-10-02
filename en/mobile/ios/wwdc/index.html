@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC : World Wide Developers Conference - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="page">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>WWDC : World Wide Developers Conference</h1>
+<p>This section regroups <a href="https://developer.apple.com/videos/">presentations at the WWDC</a> dealing with accessibility.<br>
+<br>Each one of them is detailed with time references to their different contents.<br>
+<br><br>Most of the illustrations are parts of Apple presentations and are available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+<br><strong>The summary of each video can be reached on clicking the title or the image presentation</strong>.<br>
+<br><br><br></p>
+<h2 id="2019-large-content-viewer"><a href="2019/261/">2019 - Large Content Viewer</a> <a class="header-anchor" href="#2019-large-content-viewer" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This video session deals with the <strong>Large Content Viewer</strong> feature that helps people who prefer and/or need larger text sizes.<br>
+<br><a href="2019/261/"><img style="max-width: 700px; height: auto;" alt="Access to the large content viewer video session." src="../../images/iOSdev/wwdc19-261.png" /><br><br><br></p>
+<h2 id="2019-accessibility-lessons"><a href="2019/">2019 - Accessibility lessons</a> <a class="header-anchor" href="#2019-accessibility-lessons" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This video session encompasses four short presentations dealing with accessiblity.<br>
+<br><a href="2019/"><img style="max-width: 800px; height: auto;" alt="Access to the accessibility lessons." src="../../images/iOSdev/wwdc19-000.png" /><br><br><br></p>
+<h2 id="2018-deliver-an-exceptional-accessibility-experience"><a href="2018/230/">2018 - Deliver an exceptional accessibility experience</a> <a class="header-anchor" href="#2018-deliver-an-exceptional-accessibility-experience" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This presentation is a detailed explanation of functionalities for visual impaired people leading to a very good user experience.<br>
+<br>A demo application will highlight these functionalities purposes so as to understand the rationale behind their implementation.<br>
+<br><a href="2018/230/"><img style="max-width: 700px; height: auto;" alt="Access to deliver an exceptional accessibility experience." src="../../images/iOSdev/wwdc18-230.png" /><br><br><br></p>
+<h2 id="2018-avspeechsynthesizer"><a href="2018/236/">2018 - AVSpeechSynthesizer</a> <a class="header-anchor" href="#2018-avspeechsynthesizer" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This short video introduces the essential elements to be implemented so as to make an iOS application talk.<br>
+<br><a href="2018/236/"><img style="max-width: 466px; height: auto;" alt="Access to AVSpeechSynthesizer." src="../../images/iOSdev/wwdc18-236.png" /><br><br><br></p>
+<h2 id="2017-whats-new-in-accessibility"><a href="2017/215/">2017 - What's New in Accessibility</a> <a class="header-anchor" href="#2017-whats-new-in-accessibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Introduction of new iOS 11 accessibility features merging the user and the developer sides.<br>
+<br><a href="2017/215/"><img style="max-width: 700px; height: auto;" alt="Access to what's new in accessibility." src="../../images/iOSdev/wwdc17-215.png" /><br><br><br></p>
+<h2 id="2017-building-apps-with-dynamic-type"><a href="2017/245/">2017 - Building Apps with Dynamic Type</a> <a class="header-anchor" href="#2017-building-apps-with-dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><code>Dynamic Type</code> highlights the iOS capacity to adapt the text size according to the user settings.<br>
+<br>This video contains a theoretical approach to understand all the <code>Dynamic Type</code> possibilities as well as a practical part dealing with the developer side to avoid common pitfalls.<br>
+<br><a href="2017/245/"><img style="max-width: 700px; height: auto;" alt="Access to building apps with dynamic type." src="../../images/iOSdev/wwdc17-245.png" /><br><br><br></p>
+<h2 id="2016-whats-new-in-accessibility"><a href="2016/202/">2016 - What's New in Accessibility</a> <a class="header-anchor" href="#2016-whats-new-in-accessibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Introduction of new iOS, MacOS, tvOS and WatchOS accessibility features merging the user and the developer sides.<br>
+<br><a href="2016/202/"><img style="max-width: 700px; height: auto;" alt="Access to what's new in accessibility" src="../../images/iOSdev/wwdc16-202.png" /><br><br><br></p>
+<h2 id="2016-auditing-your-apps-for-accessibility"><a href="2016/407">2016 - Auditing Your Apps for Accessibility</a> <a class="header-anchor" href="#2016-auditing-your-apps-for-accessibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This presentation is a detailed explanation of the <code>Accessibility Inspector</code> Xcode tool with a programatic VoiceOver introduction at the begining.<br>
+<br><a href="2016/407"><img style="max-width: 700px; height: auto;" alt="Access to auditing your apps for accessibility." src="../../images/iOSdev/wwdc16-407.png" /></p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

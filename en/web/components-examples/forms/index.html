@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"><link rel="stylesheet" href="style.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="true">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/components-examples/">Component examples</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Forms
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>Form examples</h1>
+
+<h2>Introduction</h2>
+<p>To create an accessible form to all users, some rules must be followed during development. This is what we will see
+  in detail in the next example.</p>
+
+<h2>Accessible form example</h2>
+<p>In this example, we used the <a href="http://boosted.orange.com/">Boosted library</a>. It provides forms that comply
+  with the Orange design guidelines. We also used the <a href="http://jqueryvalidation.org/">validate</a> jQuery plugin
+  for input validation.</p>
+
+<div class="row">
+  <div class="col-md-8">
+    <form id="form" class="border border-secondary p-3 mt-2">
+      <div class="form-group">
+        <fieldset>
+          <legend>Color</legend>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="white" name="color" class="custom-control-input" checked>
+            <label class="custom-control-label" for="white">White</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="black" name="color" class="custom-control-input">
+            <label class="custom-control-label" for="black">Black</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <label for="serial-number">Please enter the serial number *</label>
+        <input placeholder="e.g.: TS-4521" type="text" name="serie" data-displayname="serial number"
+               class="form-control" id="serial-number" aria-describedby="helpblock" aria-required="true">
+      </div>
+      <p id="helpblock" class="help-block">Serial number beginning with “TS-” followed by 4 digits.</p>
+
+      <div class="form-group">
+        <label for="addresse">Address *</label>
+        <input type="text" name="adresse" data-displayname="address" class="form-control" id="adresse"
+               aria-required="true">
+        <label class="sr-only" for="complement">Address complement</label>
+        <input type="text" class="form-control mt-2" id="complement">
+      </div>
+      <div class="form-group">
+        <label for="telephone">Phone *</label>
+        <input type="text" name="telephone" data-displayname="phone" class="form-control" id="telephone"
+               aria-required="true">
+      </div>
+      <button id="send" type="submit" class="btn btn-secondary">Send</button>
+    </form>
+  </div>
+</div>
+
+<h2>Implementation</h2>
+<h3>Add label to form fields</h3>
+<p>All form fields should be labelled with an appropriate label. Thus, the screen reader will automatically vocalize the
+  form field label.</p>
+<p>Additionally, field labels (<code>label</code>) must be visually close to their associated field in order to
+  facilitate the visually impaired or cognitive impaired or people having trouble concentrating.</p>
+<p>To label a field, there are several solutions.</p>
+
+<h4>Using the <code>label</code> tag</h4>
+<p>This is the standard solution, it should be used in priority, as it is supported by most of the assistive tools.</p>
+<p>Use a <code>label</code> tag and its <code>for</code> attribute with the `id` of the associated form field. It is
+  important for screen reader users, but it also improves the usability of the form: when the label is correctly
+  associated with the form field, it becomes possible to tick a check box or select a radio button by clicking on its
+  label.</p>
+<pre><code class="html">
+      &lt;input type="checkbox" <span class="important">id="tos"</span>&gt;
+      &lt;label <span class="important">for="tos"</span>&gt;Please accept the TOS.&lt;/label&gt;
+</code></pre>
+
+<p>In rare cases, it may not be necessary to display a label (e.g. search field).
+  You should still provide a label for screen readers and hide it using one of the following 3 methods:</p>
+
+<h4>Accessible hiding</h4>
+<p>This is the method used in the second input field of the address in the accessible form example (using the <code>sr-only</code>
+  Bootstrap/Boosted class).</p>
+
+<p><strong>CSS</strong></p>
+<pre><code class="css">
+.sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+}
+</code></pre>
+
+<p><strong>HTML</strong></p>
+<pre><code class="html">
+&lt;label for="address"&gt;Address *&lt;/label&gt;
+&lt;input name="address" data-displayname="Code" class="form-control" id="address" aria-required="true" type="text"&gt;
+<strong>&lt;label <span class="important">class="sr-only"</span> for="complement"&gt;Address complement&lt;/label&gt;
+&lt;input class="form-control" id="complement" type="text"&gt;</strong>
+</code></pre>
+
+<p>Accessible hiding lets you hide the item on the screen while maintaining its vocalization by assistive tools.
+  Caution, do not use <abbr>CSS</abbr> conventional hiding (<code>display: none;</code> or <code>visibility:
+    hidden;</code>) because the item will also be hidden for screen readers.</p>
+<p>See <a href="../accessible-hiding/index.html">the accessible hiding example</a> for more information.</p>
+
+<h4>Using the <code>title</code> attribute</h4>
+<p>The <code>title</code> attribute is not useful for accessibility except in this case. It is a robust way to label a
+  form field. It will also show a tooltip when the mouse is over the field.</p>
+<pre><code class="html">
+&lt;input type="text" title="Search in the catalog"&gt;
+</code></pre>
+<p><strong>Note:</strong> the <code>title</code> attribute positioned elsewhere than on a form field (e.g. in an image)
+  does not give you the certainty that its content will be vocalized by a screen reader.</p>
+
+<h4>Using the <code>aria-label</code> or <code>aria-labelledby</code> <abbr>ARIA</abbr> attribute</h4>
+<p>The <code>aria-label</code> and <code>aria-labelledby</code> attributes can be used to label the form fields and is
+  supported on the main browsers:</p>
+<ul>
+  <li>The <code>aria-labelledby</code> attribute is used to specify the `id` of an element that will be used to label
+    the field.
+  </li>
+  <li>The <code>aria-label</code> attribute is used to directly specify a label as a string.</li>
+</ul>
+
+<pre><code class="html">
+&lt;span id="label-address"&gt;Address *&lt;/span&gt;
+&lt;input type="text" aria-labelledby="label-address"&gt;
+&lt;input type="text" aria-label="address complement"&gt;
+</code></pre>
+
+<p>For example, to enter a date in a form with 3 fields, one for the day, one for the month and one for the year, a
+  possible solution could be:</p>
+<pre><code class="html">
+     &lt;label for="birthDay"&gt;Birthday&lt;/label&gt;
+     &lt;input type="text" id="birthDay" aria-label="Day of birth (DD)"&gt;
+     &lt;input type="text" id="birthMonth" aria-label="Month of birth (MM)"&gt;
+     &lt;input type="text" id="birthYear" aria-label="Year of birth (YYYY)"&gt;
+     </code></pre>
+
+<h4><code>placeholder</code> and <code>label</code></h4>
+<p>The <code>placeholder</code> (hint) attribute cannot be used instead of a <code>label</code>. Indeed, the text of
+  <code>placeholder</code> which appears in the field poses problems:</p>
+<ul>
+  <li>It usually does not have enough contrast.</li>
+  <li>It disappears when something is typed on the field (causes difficulties for cognitive impaired).</li>
+  <li><code>placeholder</code> is not always read by assistive technology.</li>
+  <li>It prevents the user from verifying the input before validating if used instead of the label.</li>
+  <li>It makes error corrections difficult if no label is displayed.</li>
+  <li>It makes them less visible than the input fields without <code>placeholder</code></li>
+</ul>
+<p>In contrast, the <code>placeholder</code> can guide the user, helping to fill a field (for example by describing the
+  expected format or value): do not hesitate to use it in this situation.</p>
+<div class="form-group">
+  <label for="serial-number2">Please enter the serial number *</label>
+  <input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number2"
+         aria-describedby="helpblock" aria-required="true" placeholder="e.g. TS-0000">
+</div>
+<pre><code class="html">
+  &lt;div class="form-group"&gt;
+        &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
+        &lt;input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number" aria-describedby="helpblock"
+        aria-required="true" placeholder="e.g. TS-0000"&gt;
+  &lt;/div&gt;
+</code></pre>
+
+<h3>Specify the required fields</h3>
+
+<p>You must, of course, clearly indicate to any user that a field is mandatory. This can be done using a distinctive
+  sign (indication, pictogram, image, etc.) but also with a simple text (e.g. “mandatory”) in the field
+  <code>label</code>. If necessary, add a mention at the beginning of the form to indicate that the symbol or pictogram
+  indicates a required field.</p>
+<p>Required fields must be provided in the code using the <code>required</code> <abbr>HTML5</abbr> attribute or the
+  <code>aria-required</code> <abbr>ARIA</abbr> attribute, especially for the visually impaired.</p>
+
+<pre><code class="html">
+  &lt;input type="text" name="phone" required&gt;
+  &lt;input type="text" name="phone" aria-required="true"&gt;
+ </code></pre>
+
+<h3>Specify the type or the expected format</h3>
+<p>When necessary, specify the type or format of the expected data. For this information to be vocalized automatically
+  by screen readers, add it to the <code>label</code> preferably or otherwise use the <code>aria-describedby</code>
+  attribute.</p>
+<pre><code class="html">
+  &lt;div class="form-group"&gt;
+        &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
+        &lt;input type="text" id="serial-number" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
+  &lt;/div&gt;
+  &lt;span <span class="important">id="helpblock"</span> class="help-block"&gt;Serial number starting with “TS-” followed by for digits (e.g. “TS-4521”).&lt;/span&gt;
+ </code></pre>
+
+<h3>Grouping similar information</h3>
+<p>Fields of the same kind shall be grouped together if necessary (fields with the same label or with a tag not explicit
+  enough), using a <code>fieldset</code> tag. The first child of the <code>fieldset</code> must be an explicit legend
+  (<code>legend</code> tag). The <code>fieldset</code>/<code>legend</code> pair is necessary, particularly when the
+  <code>legend</code> is useful for the understanding or the differenciation of otherwise undistinguishable labels using
+  the <code>label</code> tags included in the <code>fieldset</code>.</p>
+
+<pre><code class="html">
+  &lt;fieldset&gt;
+        &lt;legend&gt;Phone color&lt;/legend&gt;
+        &lt;input type="radio" name="color" id="white" checked&gt;
+        &lt;label for="white"&gt;White&lt;/label&gt;
+        &lt;input type="radio" name="color" id="black"&gt;
+        &lt;label for="black"&gt;Black&lt;/label&gt;
+  &lt;/fieldset&gt;
+ </code></pre>
+
+<pre><code class="html">
+  &lt;fieldset&gt;
+        &lt;legend&gt;Shipping address&lt;/legend&gt;
+        &lt;label for="name"&gt;Contact&lt;/label&gt;
+        &lt;input type="text" id="name"&gt;
+        &lt;label for="address"&gt;Address&lt;/label&gt;
+        &lt;input type="text" id="address"&gt;
+        &lt;label for="city"&gt;City&lt;/label&gt;
+        &lt;input type="text" id="city"&gt;
+  &lt;/fieldset&gt;
+
+&lt;fieldset&gt;
+        &lt;legend&gt;Billing address&lt;/legend&gt;
+        &lt;label for="name1"&gt;Contact&lt;/label&gt;
+        &lt;input type="text" id="name1"&gt;
+        &lt;label for="address1"&gt;Address&lt;/label&gt;
+        &lt;input type="text" id="address1"&gt;
+        &lt;label for="city1"&gt;City&lt;/label&gt;
+        &lt;input type="text" id="city1"&gt;
+  &lt;/fieldset&gt;
+ </code></pre>
+
+<h3>Input validation</h3>
+<p>During validation, if mandatory fields are not filled, or if the format of the data entered is not valid, the user
+  must be warned.</p>
+<h4>Use the <code>aria-invalid</code> attribute to indicate an input error.</h4>
+<p>Specify in the code the invalid fields.</p>
+<pre><code class="html">
+  &lt;input type="text" name="phone" <span class="important">aria-invalid="true"</span>&gt;
+ </code></pre>
+
+<h4>Warn the user in case of input error</h4>
+<p>If input errors prevent validation of the form, the user must be warned. Often messages appear on the screen, but by
+  default they are not vocalized by the screen reader. One solution is to automatically move the focus in the first
+  field containing an error. This will vocalize the label(s) of the concerned input field.</p>
+<p>In this accessible form example, error messages are reported as <code>label</code> and are associated with input
+  fields. Thus, when the focus moves in a field, the screen reader vocalizes the field label and the associated error
+  message.</p>
+<p>This mechanism is supported out of the box by the <a href="http://jqueryvalidation.org/">validate</a> jQuery plugin.
+</p>
+
+<pre><code class="html">
+  &lt;label <span class="important">for="serial-number"</span>&gt;Please enter the serial number *&lt;/label&gt;
+  &lt;input aria-invalid="true" class="error" <span class="important">id="serial-number"</span> aria-describedby="helpblock" aria-required="true" type="text"&gt;
+  &lt;label <span class="important">for="serial-number"</span> class="error" id="serial-number-error"&gt;Serial number is mandatory.&lt;/label&gt;
+ </code></pre>
+
+<p><strong>Please note</strong>, although it is perfectly valid to use multiple labels for a single form field, it is
+  for the time advised to double it with an <code>aria-labelledby</code> attribute. Read <a
+      href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/">Steve Faulkner’s blog post
+    for more information</a>.</p>
+
+<pre><code class="html">
+  &lt;label id="serie-label" for="numero-serie"&gt;Please enter the serial number *&lt;/label&gt;
+  &lt;input aria-invalid="true" class="error" <span class="important">aria-labelledby="serie-label serie-error"</span> id="numero-serie" aria-describedby="helpblock" aria-required="true" type="text"&gt;
+  &lt;label id="serie-error" for="numero-serie" class="error" id="numero-serie-error"&gt;Serial number is mandatory.&lt;/label&gt;
+ </code></pre>
+
+<h4>Display explicit error messages and, if necessary, suggest corrections</h4>
+<p>Error messages should be relevant and, if necessary, provide valid input examples.</p>
+<p><strong>Do:</strong><br>
+  <img alt="Screenshot of a form displaying valid error messages" src="../../images/formulaire-ok.png">
+</p>
+<p><strong>Don’t:</strong><br>
+  <img alt="Screenshot of a form displaying non-valid error messages" src="../../images/formulaire-ko.png">
+</p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/forms/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

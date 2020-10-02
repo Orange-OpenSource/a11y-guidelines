@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating accessible Word documents - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link active" aria-current="true">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/editorial-content/general/" class="nav-link">
+  Transversal recommendations
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/word/" class="nav-link active" aria-current="true">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/pdf/" class="nav-link">
+  PDF documents
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/animated-components/" class="nav-link">
+  Audio/video content
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/editorial-content/">Editorial content</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/editorial-content/word/">Word</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Creating accessible Word documents
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Creating accessible Word documents</h1>
+<p>Designing accessible Word Documents requires following different rules.<br>
+They are summarized below (and detailed guides are available on the <a href="https://webaim.org/techniques/word/">WebAIM Website</a>).<br>
+In order to help you, Word includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions.</p>
+<h2 id="language">Language <a class="header-anchor" href="#language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The main language of the document must be defined in the tab <code>File &gt; Options &gt; Language</code>.<br>
+Every change of language within the document must be identified by selecting the text and: <code>tab Review &gt; Language &gt; Set proofing language</code>.</p>
+<h2 id="document-properties">Document properties <a class="header-anchor" href="#document-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Title, author and tags fields have to be completed in tab <code>File &gt; Info &gt; Properties</code>.<br>
+<img alt="" src="../../images/word1.png" class="img-fluid"></p>
+<p>These properties are readable by everyone in Windows Explorer and by the screen readers.</p>
+<h2 id="headings">Headings <a class="header-anchor" href="#headings" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Give unique and descriptive headings allow users to clearly understand in which part they are on.<br>
+Use a “Heading 1” for the main content heading, and then a “Heading 2” for the major section headings and a “Heading 3” etc. (in the Home panel).<br>
+A good heading structure is often the most important accessibility criteria in Word documents.<br>
+Screen reader users have the ability to navigate long Word documents by heading structure.</p>
+<h2 id="table-of-contents">Table of contents <a class="header-anchor" href="#table-of-contents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Provide a table of contents for long documents using tab <code>References &gt; Table of Contents</code><br>
+It allows users to find information more easily in the document.</p>
+<h2 id="wording">Wording <a class="header-anchor" href="#wording" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use simple language: avoid abbreviations and acronyms (explain them at the first occurrence).<br>
+If necessary, keep accentuation on capital letters (example: É or Ç): use the <code>Insert tab &gt; Symbol</code></p>
+<h2 id="formatting-layout">Formatting / layout <a class="header-anchor" href="#formatting-layout" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use familiar sans serif fonts (such as Arial or Calibri), in a large font size (12pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.<br>
+Use predefined styles for formatting content: &quot;normal&quot; style must be assigned almost everywhere (default style), the &quot;quote&quot; style for quotes, etc.<br>
+Avoid justifying the text; prefer left alignment.<br>
+<img alt="" src="../../images/word2.png" class="img-fluid"></p>
+<p>Do not use carriage returns to skip rows nor successive tabs (&quot;Tab&quot; key on the keyboard ) for text formatting.<br>
+In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… &gt; Indents and Spacing</code>.<br>
+<img alt="" src="../../images/word3.png" class="img-fluid"><br>
+Do not use text boxes because their content is not interpreted by screen readers.<br>
+Use the page break option via the <code>Insert Tab &gt; “Page Break”</code> menu to move to the next page.<br>
+Number pages of your document (<code>Insert Tab &gt; “Page Number”</code>) to allow users to navigate easily.<br>
+Note: the « Tabs… » options can let you adjust the Tab stop position.<br>
+<img alt="" src="../../images/word4.png" class="img-fluid"></p>
+<h2 id="colors-and-contrasts">Colors and contrasts <a class="header-anchor" href="#colors-and-contrasts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="use-sufficient-contrast-between-text-and-background-colors">Use sufficient contrast between text and background colors <a class="header-anchor" href="#use-sufficient-contrast-between-text-and-background-colors" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The presentation of text should have a contrast ratio of at least 4.5:1. Here are some examples on a white background:</p>
+<ul>
+<li>Foreground black : very good contrast, ratio = 21:1</li>
+<li>Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1</li>
+<li>Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1</li>
+</ul>
+<p>If you choose to not use the Orange Group colors guidelines, you can download the <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser tool</a>; it will be useful for checking your contrasts.</p>
+<h3 id="ensure-that-color-is-not-the-only-way-to-convey-content">Ensure that color is not the only way to convey content <a class="header-anchor" href="#ensure-that-color-is-not-the-only-way-to-convey-content" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>For people who cannot see the colors or the shades of colors, it is important to convey content differently.<br>
+<img alt="" src="../../images/word5.png" class="img-fluid"><br>
+<img alt="" src="../../images/word6.png" class="img-fluid"></p>
+<h2 id="bulleted-lists-or-numbered-lists">Bulleted Lists or Numbered Lists <a class="header-anchor" href="#bulleted-lists-or-numbered-lists" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Always use the appropriate and native functions to create lists:</p>
+<ul>
+<li>Ordered (numbered) lists are used to present a group of items (words, sentences…) that follow a sequence</li>
+<li>Unordered (bulleted) lists are used for a group of items without a sequence<br>
+<img alt="" src="../../images/word7.png" class="img-fluid"></li>
+</ul>
+<h2 id="alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content">Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content <a class="header-anchor" href="#alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The alternative text has to convey the content and the purpose of the image and its context in a concise and unambiguous manner.<br>
+Right-click on an image and select Format Picture or Format <code>Shape &gt; Alt Text</code>.<br>
+Enter the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).<br>
+If the picture is only decorative, leave the Description text box blank.<br>
+Alternative text helps people who can’t see the screen to understand what’s important in pictures and other visuals.<br>
+Note: if you use a layout option other than &quot;In Line With Text&quot; (by right-clicking on the image an “Wrap Text” or the “Picture Tools” Tab), the image and text present in the description of image (Alt Text) will be ignored by some screen readers.</p>
+<h2 id="audio-or-video-file">Audio or video file <a class="header-anchor" href="#audio-or-video-file" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>For audio and video content, in addition to alt text, be sure the video or audio as well as the player are accessible.<br>
+<a href="../../animated-components">See our recommendations for audio or video files.</a></p>
+<h2 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Specify clear and accurate link text: it must make sense as standalone information to understand the destination target.<br>
+Specify when links are opened in a new window:<br>
+<code>Insert tab &gt; Hyperlink &gt; SreenTip</code><br>
+<img alt="" src="../../images/word8.png" class="img-fluid"><br>
+Note: a blind person asks his screen reader to list all the links on a page. Each link text will therefore be read isolated from its visual context.</p>
+<h2 id="data-tables">Data Tables <a class="header-anchor" href="#data-tables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use a simple table structure, and specify column header information.<br>
+Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.<br>
+If a table is too complex, you will need to provide an additional description: Right-click <code>Table Properties &gt; Alt Text</code><br>
+Finally, tables should not be used for formatting purposes : use the &quot;Columns&quot; option on the “Page Layout” tab to create a columns layout.</p>
+<h2 id="accessibility-checker">Accessibility Checker <a class="header-anchor" href="#accessibility-checker" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>At least, run Accessibility Checker to make sure your content is accessible. It can detect the main errors and suggests some solutions.<br>
+In <code>File tab &gt; Check for Issues</code>.<br>
+<img alt="" src="../../images/word9.png" class="img-fluid"></p>
+<p>Important: if you encounter some difficulties, try to save your document from within Word 2010 in &quot;.docx&quot; (or &quot;.pptx&quot;) format. The option to &quot;Maintain compatibility with previous versions of Word&quot; has to remains unchecked.</p>
+<h2 id="converting-to-pdf">Converting to PDF <a class="header-anchor" href="#converting-to-pdf" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>If you want to save you presentation as PDF, select: <code>File tab &gt; Save &amp; Send</code> and create PDF document.<br>
+Check if the « Document structure tags for accessibility » option is selected.<br>
+<img alt="" src="../../images/word10.png" class="img-fluid"><br>
+<img alt="" src="../../images/word11.png" class="img-fluid"></p>
+<p>Note: with Word 2010, generated PDF documents may have accessibility issues (especially with the images vocalization). These issues have been fixed in later versions of Microsoft Office.</p>
+<h2 id="for-more-detailed-information">For more detailed information <a class="header-anchor" href="#for-more-detailed-information" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="http://webaim.org/techniques/word/" hreflang="en">Word Accessibility, WebAIM</a>.</li>
+<li>check <a href="../../pdf">PDF</a> document accessibility: download <a href="https://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">PDF Accessibility Checker (PAC 3)</a>.</li>
+<li><a href="https://support.office.com/en-us/article/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25?ui=en-US&rs=en-US&ad=US">Microsoft Accessibility Support website</a></li>
+<li><a lang="fr" href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">(FR) Créer des documents bureautiques accessible <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.</a></li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/editorial-content/word/create.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

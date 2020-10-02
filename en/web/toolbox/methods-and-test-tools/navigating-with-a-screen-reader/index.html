@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Navigating with a screen reader - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link active" aria-current="true">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/toolbox/">Toolbox</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Navigating with a screen reader
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
+  Orange Boosted
+</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item active" aria-current="true">
+  Methods and test tools
+</a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
+  The Va11ydette
+</a><a href="/en/web/useful-links" class="nav-link dropdown-item">
+  Useful links
+</a><a href="/en/glossary/" class="nav-link dropdown-item">
+  Glossary
+</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="https://boosted.orange.com/" class="nav-link text-muted">
+  Orange Boosted
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted active" aria-current="true">
+  Methods and test tools
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/wcag-audit/" class="nav-link text-muted">
+  The Va11ydette
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/web/useful-links" class="nav-link text-muted">
+  Useful links
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/glossary/" class="nav-link text-muted">
+  Glossary
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Navigating with a screen reader</h1>
+<p>A screen reader is a voice synthesis software used by the visually impaired and the blind. It allows the user to interact with the computer and listen to what is displayed as text (usually) on the screen.<br>
+There are several screen readers, the most prevalent are:</p>
+<ul>
+<li><a href="http://nvda-fr.org/">NVDA</a>: free, available for Windows.</li>
+<li><a href="http://www.freedomscientific.com/Downloads/JAWS">Jaws</a>: commercial, available for Windows. In trial mode, you can only use it for 40 minutes, but if you restart your computer you can use it again.</li>
+<li><a href="http://www.apple.com/fr/accessibility/osx/voiceover/">VoiceOver</a>: free, available for Mac. It is directly integrated into the MacOS system.</li>
+</ul>
+<h2 id="getting-started-with-nvda">Getting started with NVDA <a class="header-anchor" href="#getting-started-with-nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>NVDA is a free screen reader available for Windows.</p>
+<h3 id="installation">Installation <a class="header-anchor" href="#installation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Download the NVDA installer on the <a href="https://www.nvaccess.org/">official website</a>.</p>
+<p>The default voice is not very good but it is very reactive. It is not mandatory, but you can <a href="https://github.com/nvaccess/nvda/wiki/ExtraVoices">download extra voices</a>. Then just go to preferences to change NVDA voice settings.</p>
+<h3 id="configuration">Configuration <a class="header-anchor" href="#configuration" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>At first startup, NVDA is configured to vocalize whatever the mouse pointer is over. This mode is used by visually-impaired people who have difficulties reading the text displayed on the screen, for example. It is recommended to disable this option if you use NVDA to test accessibility on your pages.<br>
+To disable this navigation mode, right-click on the NVDA icon located in the notification area. Then go to <em>Preferences &gt; Mouse settings</em> and uncheck “Enable mouse tracking”.</p>
+<p>Finally, it is advisable to change the default playback mode. On a webpage use the following keyboard shortcut <kbd>Ins + v</kbd> to disable the “screen layout is preserved” option and then save this configuration as default using the shortcut <kbd>Ins + Ctrl + c</kbd>.</p>
+<h3 id="navigating-web-pages">Navigating web pages <a class="header-anchor" href="#navigating-web-pages" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The main useful shortcuts to test navigation in a web page using NVDA are:</p>
+<ul>
+<li><kbd>Up</kbd> and <kbd>down</kbd> keys to go to the next or the prior line.</li>
+<li><kbd>Left</kbd> and <kbd>right</kbd> keys to move forward or backward one character</li>
+<li><kbd>Ctrl + Home</kbd> to move to the top of the page.</li>
+<li><kbd>Ctrl + End</kbd> to move to the bottom of the page.</li>
+<li><kbd>Ins + F7</kbd> to display the heading list and the link list.</li>
+<li><kbd>Ctrl</kbd> to mute NVDA.</li>
+<li><kbd>Ins + T</kbd> to read the page title.</li>
+<li><kbd>H</kbd> and <kbd>shift + H</kbd> to jump to the next title or the previous title (<code>H1</code> to <code>H6</code> title tags).</li>
+<li><kbd>B</kbd> and <kbd>shift + B</kbd> to move through buttons.</li>
+<li><kbd>C</kbd> and <kbd>shift + C</kbd> to move through drop down lists (Combobox).</li>
+<li><kbd>D</kbd> and <kbd>shift + D</kbd> to move through ARIA landmarks.</li>
+<li><kbd>E</kbd> and <kbd>shift + E</kbd> to move through text fields.</li>
+<li><kbd>F</kbd> and <kbd>shift + F</kbd> to move through forms.</li>
+<li><kbd>G</kbd> and <kbd>shift + G</kbd> to move through images (Graphics).</li>
+<li><kbd>I</kbd> and <kbd>shift + I</kbd> to move through HTML list items.</li>
+<li><kbd>K</kbd> and <kbd>shift + K</kbd> to move through links.</li>
+<li><kbd>L</kbd> and <kbd>shift + L</kbd> to move through HTML lists.</li>
+<li><kbd>M</kbd> and <kbd>shift + M</kbd> to move through frames and iframes.</li>
+<li><kbd>O</kbd> and <kbd>shift + O</kbd> to move through embedded objects (flash). Press <kbd>Ins + Space</kbd> to start interaction. <kbd>Esc</kbd> to finish interaction.</li>
+<li><kbd>Q</kbd> and <kbd>shift + Q</kbd> to move through quotes (blockquote).</li>
+<li><kbd>R</kbd> and <kbd>shift + R</kbd> to move through radio buttons.</li>
+<li><kbd>T</kbd> and <kbd>shift + T</kbd> to move through tables.</li>
+<li><kbd>X</kbd> and <kbd>shift + X</kbd> to move through checkboxes.</li>
+<li><kbd>Spacebar</kbd> to check or uncheck a checkbox.</li>
+<li><kbd>Ins + shift + S</kbd> allows to pause NVDA only in the current application.</li>
+<li><kbd>Ins + Q</kbd> to exit NVDA.</li>
+</ul>
+<p>Also note that NVDA has a speech viewer (<em>Tools &gt; Speech viewer</em>), it displays everything that is vocalized.</p>
+<h2 id="getting-started-with-jaws">Getting Started with Jaws <a class="header-anchor" href="#getting-started-with-jaws" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Jaws is a commercial and very famous screen reader, available for Windows. It is used primarily with Internet Explorer. In trial, you can only use it 40 min, but if you restart your computer you can use it again.</p>
+<h3 id="installation-2">Installation <a class="header-anchor" href="#installation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>You can download Jaws directly from <a href="http://www.freedomscientific.com/Downloads/JAWS">the Freedom Scientific site</a>.</p>
+<h3 id="navigating-web-pages-2">Navigating web pages <a class="header-anchor" href="#navigating-web-pages-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The most useful shortcuts to test navigation in a Web page with JAWS:</p>
+<ul>
+<li><kbd>Up</kbd> and <kbd>down</kbd> keys to go to the next or the prior line.</li>
+<li><kbd>Ins + T</kbd> to read the page title.</li>
+<li><kbd>Ins + F5</kbd> to display the form fields list.</li>
+<li><kbd>Ins + F6</kbd> to display header list.</li>
+<li><kbd>Ins + F7</kbd> to display link list.</li>
+<li><kbd>Spacebar</kbd> to check or uncheck a checkbox.</li>
+<li><kbd>Ctrl</kbd> to mute Jaws.</li>
+</ul>
+<h2 id="getting-started-with-voiceover">Getting Started with VoiceOver <a class="header-anchor" href="#getting-started-with-voiceover" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>VoiceOver screen reader is only available on Mac. It requires no installation since it is integrated directly into the system.<br>
+You can activate VoiceOver from <em>System Preferences &gt; Accessibility</em>. Or directly using the shortcut <kbd>Command + F5</kbd>.</p>
+<h3 id="navigating-web-pages-3">Navigating web pages <a class="header-anchor" href="#navigating-web-pages-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>When launching VoiceOver, it displays an interactive guide to learn the key shortcuts. You should have a look at it.<br>
+But here are the main shortcuts:</p>
+<ul>
+<li><kbd>Ctrl + Option + Right</kbd> and <kbd>Ctrl + Option + Left</kbd> to go to the next or the prior line.</li>
+<li><kbd>Ctrl + Option + U</kbd> to access the header, link, form field lists... (use the left and right arrows to navigate between lists).</li>
+<li><kbd>Ctrl</kbd> to mute VoiceOver.</li>
+<li><kbd>Ctrl + Option</kbd> [Uh-oh, something is missing here, we’ll come back to it, sorry.]</li>
+</ul>
+
+        </main>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/navigating-with-a-screen-reader.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

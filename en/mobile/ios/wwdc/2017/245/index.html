@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC 2017 : Building Apps with Dynamic Type - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC 2017 : Building Apps with Dynamic Type
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>WWDC 2017 : Building Apps with Dynamic Type</h1>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/245/">session 245</a>) aims at defining what <code>Dynamic Type</code> is, based on good practice implementation.<br>
+<br><img style="max-width: 200px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-logo.png" /><br>
+<img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245.png" /><br>
+<br><br>Various contents and their video timelapse are indicated hereunder :</p>
+<ul>
+<li><a href="#TextStyles">Text styles</a> (06:06) ⟹ <strong>iOS 11 upgrade</strong></li>
+<li><a href="#CustomFonts">Custom fonts</a> (08:17) ⟹ <strong>iOS 11 new feature</strong></li>
+<li><a href="#WebViews">Web views</a> (09:25)</li>
+<li><a href="#WrapToMultipleLines">Wrap to multiple lines</a> (10:14)</li>
+<li><a href="#AutoLayoutSystemSpacingConstraints">Auto layout system spacing constraints</a> (11:31)</li>
+<li><a href="#ScaledValue">Scaled values</a> (12:56) ⟹ <strong>iOS 11 new feature</strong></li>
+<li><a href="#SideBySideText">Side-by-side text</a> (13:36)</li>
+<li><a href="#PreferredContentSizeCategory">PreferredContentSizeCategory</a> (15:23)</li>
+<li><a href="#TableViewCells">Table view cells</a> (16:38)</li>
+<li><a href="#Images">Images</a> (20:13)</li>
+<li><a href="#Demo">Example</a> (24:32)</li>
+</ul>
+<p>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.</p>
+<p><a name="TextStyles"></a></p>
+<h2 id="text-styles-0606"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Text styles (06:06)</a> <a class="header-anchor" href="#text-styles-0606" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>All the text styles can have the 5 accessibility sizes</strong> in iOS 11 whereas it was only the case for the <em>body</em> text style before.<br>
+<br>In the Xcode Interface Builder, just indicate the style in the Attribute Inspector part and tick <code>Dynamic Type</code> to adjust the text size to the device settings.<br>
+<br><img style="max-width: 1000px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-TextStyle_1.png" /><br>
+<br>Get the exact same result with the following code :<br>
+<br><img style="max-width: 500px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-TextStyle_2.png" /></p>
+<p><a name="CustomFonts"></a></p>
+<h2 id="custom-fonts-0817"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=497">Custom fonts (08:17)</a> <a class="header-anchor" href="#custom-fonts-0817" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The new iOS 11 class <code>UIFontMetrics</code> allows a custom font to be automatically adjusted.<br>
+<br><img style="max-width: 750px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-CustomFonts.png" /></p>
+<p><a name="WebViews"></a></p>
+<h2 id="web-views-0925"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=565">Web views (09:25)</a> <a class="header-anchor" href="#web-views-0925" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>When a web view is used, the CSS may contain information about the text style to be displayed :<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-WebViews.png" /></p>
+<p><a name="WrapToMultipleLines"></a></p>
+<h2 id="wrap-to-multiple-lines-1014"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=614">Wrap to multiple lines (10:14)</a> <a class="header-anchor" href="#wrap-to-multiple-lines-1014" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>When a <code>label</code> may be troncatured after adjustment, it's recommended to write <code>0</code> number of lines in the Attribute Inspector part of the Interface Builder that will be understood as no limit.<br>
+<br><img style="max-width: 1000px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-WrapToMultipleLines.png" /></p>
+<p><a name="AutoLayoutSystemSpacingConstraints"></a></p>
+<h2 id="auto-layout-system-spacing-constraints-1131"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=691">Auto layout system spacing constraints (11:31)</a> <a class="header-anchor" href="#auto-layout-system-spacing-constraints-1131" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Using a baseline constraint between two labels, the good practice for <code>Dynamic Type</code> is not to put a constant value so as not to end up in the following situation :<br>
+<br><img style="max-width: 450px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-AutoLayoutsystemSpacingConstraints_1.png" /><br>
+<br>The baseline contraint <code>Standard Value</code> in Interface Builder or a programmatic solution using  <code>constraintEqualToSystemSpacingBelow</code> (iOS 11 feature) will lead to an overcome situation.<br>
+<br><img style="max-width: 650px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-AutoLayoutsystemSpacingConstraints_2.png" /></p>
+<p><a name="ScaledValue"></a></p>
+<h2 id="scaled-values-1256"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=776">Scaled values (12:56)</a> <a class="header-anchor" href="#scaled-values-1256" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The new <strong>scaledValue</strong> method provides the height of a graphical element containing text whose size may automacally grow or shrink.<br>
+<br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-ScaledValue.png" /><br>
+<br>This might be useful for a button whose background content must be updated after a font size modification for instance.</p>
+<p><a name="SideBySideText"></a></p>
+<h2 id="side-by-side-text-1336"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=816">Side-by-side text (13:36)</a> <a class="header-anchor" href="#side-by-side-text-1336" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Vertically nearby labeled elements may become unreadable or may worsen the graphical interface at a specific text size.<br>
+<br>In that case, it's highly recommended to update the alignment from horizontal to vertical once this size threshold is reached.<br>
+<br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-SideBySideText.png" /></p>
+<p><a name="PreferredContentSizeCategory"></a></p>
+<h2 id="preferredcontentsizecategory-1523"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=923">PreferredContentSizeCategory (15:23)</a> <a class="header-anchor" href="#preferredcontentsizecategory-1523" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>2 specific groups</strong> gather all the possible text sizes :</p>
+<ul>
+<li>The first one contains the <strong>7 basic thresholds</strong> from <code>extraSmall</code> to <code>extraExtraExtraLarge</code>.</li>
+<li>The second one is <strong>accessibility dedicated</strong> and must be activated to be taken into account. It includes the <strong>last 5 thresholds</strong> from <code>accessibilityMedium</code> to <code>accessibilityExtraExtraExtraLarge</code>.</li>
+</ul>
+<p>These values can be obtained from the view <code>traitCollection</code> or from the application <strong>preferredContentSizeCategory</strong> method.<br>
+<br><img style="max-width: 900px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-PreferredContentSizeCategory_1.png" /><br>
+<br>It's also possible to set conditions dealing with text sizing in order to rearrange graphical elements when necessary.<br>
+<br><img style="max-width: 650px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-PreferredContentSizeCategory_2.png" /></p>
+<p><a name="TableViewCells"></a></p>
+<h2 id="table-view-cells-1638"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=998">Table view cells (16:38)</a> <a class="header-anchor" href="#table-view-cells-1638" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Standard table view cells content is automatically adjusted thanks to the <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1058">cell-sizing</a>.<br>
+<br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-TableViews_1.png" /><br>
+<br>Constraints must be adapted in case of custom cells in order to obtain the desired rendering and let the cell-sizing work.<br>
+<br><img style="max-width: 750px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-245-TableViews_2.png" /></p>
+<p><a name="Images"></a></p>
+<h2 id="images-2013"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1213">Images (20:13)</a> <a class="header-anchor" href="#images-2013" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><code>Dynamic Type</code> allows image size adjustment for both views and tab bars as well.<br>
+<br>All the detailed explanations for this implementation can be found in the <a href="../../../development#graphical-elements-size">development part</a>.</p>
+<p><a name="Demo"></a></p>
+<h2 id="example-2432"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1472">Example (24:32)</a> <a class="header-anchor" href="#example-2432" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>During this presentation, some solutions for <code>Dynamic Type</code> pitfalls are suggested thanks to a simple application (<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1506">take a look at it</a> before reading what's next) :</p>
+<ul>
+<li><strong>Why doesn't my implemented <code>Dynamic Type</code> work</strong> ?<br>
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1579">(26:19)</a> (hint = <code>adjustsFontForContentSizeCategory</code> (code) or <code>Automatically Adjusts Font</code> (Attribute Inspector) + <code>scaledFont</code> if custom font is used)</li>
+<li><strong>How can I change items position to adapt text enlargement</strong> ?<br>
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1681">(28:01)</a> (hint = set up constraints for a vertical alignment + define these new constraints activation thanks to <code>preferredContentSizeCategory</code> + <code>traitCollectionDidChange</code> to be notified of a text size changing)</li>
+<li><strong>How to make my table view cells size to fit content</strong> ?<br>
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1863">(31:03)</a> (hint = <code>UITableViewAutomaticDimension</code> + <code>estimatedRowHeight</code>)</li>
+<li><strong>Why is there unscaled image size with the text enlargement</strong> ?<br>
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1931">(32:11)</a> (hint = <code>adjustsImageSizeForAccessibilityContentSizeCategory</code>)</li>
+<li><strong>Why have I unsmooth images when enlargement is set up</strong> ?<br>
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1987">(33:07)</a> (hint = <code>Preserve Vector Data</code> in the Attribute Inspector of the .xcassets)</li>
+<li><strong>How can I check enlargement with accessibility inspector</strong> ?<br>
+<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=2096">(34:56)</a></li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2017/245.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

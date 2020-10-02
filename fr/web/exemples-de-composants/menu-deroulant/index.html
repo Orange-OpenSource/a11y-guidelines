@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Exemple de menu déroulant - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/web/designer/" class="nav-link">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/developper/" class="nav-link">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/tester/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/audit-wcag/" class="nav-link">
+  Évaluer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/outils/" class="nav-link">
+  Boite à outils
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/exemples-de-composants/" class="nav-link active" aria-current="true">
+  Exemples de composants
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/web/exemples-de-composants/">Exemples de composants</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Exemple de menu déroulant
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>Menu déroulant</h1>
+
+<h2>Préambule</h2>
+<p>Dans cet exemple nous allons utiliser le <a href="https://boosted.orange.com/docs/4.5/components/dropdowns/">menu déroulant</a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Cette librairie basée sur Bootstrap permet de concevoir rapidement des interfaces accessibles aux couleurs de la charte Orange.</p>
+
+<h2>Rendu final</h2>
+<p>Voici le rendu de notre menu.</p>
+
+<!-- Final menu -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    Mon compte
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Mon panier</a></li>
+    <li><a class="dropdown-item" href="#">Mes commandes</a></li>
+    <li><a class="dropdown-item" href="#">Mes informations</a></li>
+    <li role="separator" class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+  </ul>
+</div>
+
+<h2>Code de l'exemple</h2>
+
+<!-- Code de l'exemple 1 -->
+<pre><code class="html">
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"&gt;
+    Mon compte
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>Place aux tests</h2>
+<p>Pour que ce menu soit accessible, il doit être utilisable, à la souris, au clavier et au lecteur d'écran.</p>
+
+<h3>Navigation au clavier</h3>
+ <dl>
+   <dt>Déplacer le focus sur le bouton «&nbsp;Mon compte&nbsp;» à l'aide de la touche <kbd>Tab</kbd> et valider avec la touche <kbd>Entrée</kbd>.</dt>
+   <dd>Le menu s'ouvre.</dd>
+   <dt>Utiliser les flèches <kbd>Haut</kbd>/<kbd>Bas</kbd>.</dt>
+   <dd>Celles-ci permettent de se déplacer sur les différents éléments du menu.</dd>
+   <dt>Appuyer sur la touche <kbd>Échap</kbd>.</dt>
+   <dd>Le menu se ferme. À la fermeture, le focus est automatiquement repositionné sur le bouton permetant d'ouvrir le menu</dd>
+   <dt></dt>
+</dl>
+
+<h3>Navigation au lecteur d'écran</h3>
+ <dl>
+   <dt>Se positionner sur le bouton «&nbsp;Mon compte&nbsp;».</dt>
+   <dd>Le lecteur d'écran indique qu'il s'agit d'un menu déroulant ; de plus il indique l'état du menu (ouvert ou fermé).</dd>
+   <dt>Appuyer sur la touche <kbd>Entrée</kbd>.</dt>
+   <dd>Le menu s'ouvre, le premier élément est sélectionné. Cet élément est automatiquement vocalisé par le lecteur d'écran.</dd>
+   <dt>Utiliser les flèches <kbd>Haut</kbd>/<kbd>Bas</kbd>.</dt>
+   <dd>Celles-ci permettent de se déplacer sur les différents éléments du menu.</dd>
+   <dt>Sélectionner un élément du menu à l'aide de la touche <kbd>Entrée</kbd>.</dt>
+   <dd>Le menu se ferme. Comme le focus est replacé automatiquement, le lecteur d'écran vocalise à nouveau le bouton du menu, ainsi que son état.</dd>
+ </dl>
+
+ <h2>Attributs <abbr>ARIA</abbr></h2>
+ <p>Si vous n'utilisez pas un composant menu déjà accessible, vous aller devoir utiliser quelques attributs <abbr>ARIA</abbr> pour que ce menu soit correctement vocalisé au lecteur d'écran.</p>
+ <p>Sur le bouton permettant d'ouvrir le menu&nbsp;:</p>
+ <ul>
+   <li>L'attribut <code>aria-haspopup="true"</code> permet de faire vocaliser par le lecteur d'écran qu'il s'agit d'un menu.</li>
+   <li>L'attribut <code>aria-expanded</code> avec comme valeur <code>true/false</code>, permet de faire vocaliser l'état du menu (ouvert ou fermé).</li>
+</ul>
+
+Exemple&nbsp;:
+<pre><code class="html">
+  &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+</code></pre>
+
+<p>Sur la liste des éléments à l'intérieur du menu&nbsp;:</p>
+<ul>
+  <li>Un attribut <code>role="menu"</code> sur la balise de liste <code>ul</code>.</li>
+  <li>Un attribut <code>role="menuitem"</code> sur les balises <code>a</code>.</li>
+</ul>
+
+Exemple&nbsp;:
+<pre><code class="html">
+  &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+  &lt;ul role="menu"&gt;
+    &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Mon panier&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Mes commandes&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/web/exemples-de-composants/menu-deroulant/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

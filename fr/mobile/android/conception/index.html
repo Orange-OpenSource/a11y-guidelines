@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Les critères incontournables sous Android pour la conception - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link active" aria-current="true">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/mobile/android/conception/" class="nav-link active" aria-current="page">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/android/developpement/" class="nav-link">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/android/test/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/android/outils/" class="nav-link">
+  Boite à outils
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/android/">Android</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Designer
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Les critères incontournables sous Android pour la conception</h1>
+<p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des exemples de code et des captures d’exemples réels. Nous vous invitons à installer l’application <a href="../../mdan/">mDAN</a> pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la <a href="../talkback/">section concernant <span lang="en">TalkBack</span></a>.</p>
+<p>Pour le web, le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est <strong>le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant</strong> suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité est demandé, voir ces <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommandations</a>. L’objet de ces pages étant d’en faire un « digest » sans s’y substituer.</p>
+<h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde (sur réseau à faible bande passante…) et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et pendant le développement.</p>
+<p><strong>Description :</strong></p>
+<p>Les images sont très souvent utilisées pour transmettre de nombreuses informations. Comme le dit l’adage, une image vaut mille mots. Les non-voyants ne pouvant voir les images, il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.<br>
+Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.</p>
+<p>Certaines images sont utilisées à des fins décoratives. Ces images ne nécessitent pas d’alternative. Par défaut sous Android, les images ne sont pas vocalisées par le lecteur d’écran <span lang="en">TalkBack</span>.<br>
+Les illustrations de l’application sont également considérées comme des images décoratives. La règle est donc la même : il n’y a pas d’alternative textuelle à ajouter.<br>
+Les icônes sont, a contrario, largement utilisées en tant que bouton pour des fonctionnalités diverses. Elles ont donc besoin d’alternatives textuelles pertinentes.</p>
+<p>L’alternative d’une image est renseignée via l’attribut <code>contentDescription</code> (disponible pour tout élément héritant de <code>View</code>).</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>les images portant de l’information restituent cette information à travers leur alternative textuelle,</li>
+<li>les images décoratives n’ont pas d’alternative textuelle.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles.</p>
+<p><strong>Exemples :</strong></p>
+<img src="../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
+<p>En décomposant l’image :</p>
+<ul>
+<li><img src="../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de <code>contentDescription</code></li>
+<li><img src="../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> <code>imageView.setContentDescription(&quot;paramètres&quot;)</code></li>
+<li><img src="../../images/edit.png" alt="exemple d’icône informative - édition" width="48"> <code>imageView.setContentDescription(&quot;éditer le nom de l’image&quot;)</code></li>
+</ul>
+<h2 id="couleurs">Couleurs <a class="header-anchor" href="#couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde (soleil sur l’écran, impression noir et blanc…) et en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)<br>
+<strong>Quand :</strong>  dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Les couleurs jouent un rôle très important dans la transmission des informations. On associe certaines couleurs à des concepts ou à des sensations, mais il ne faut pas oublier qu’une partie de la population ne distingue pas correctement les couleurs.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément.</li>
+<li>Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (7:1 sur mobile, 4,5:1 pour les textes larges, à calculer avec <span lang="en">Colour Constrast Analyzer</span> par exemple). Du fait des contraintes des mobiles (écran, luminosité,…) un niveau AAA est demandé.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).<br>
+Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure… ) d’accéder tout de même à l’information par d’autres moyens.</p>
+<p><strong>Outil :</strong><br>
+L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/"><span lang="en">Colour Constrast Analyzer</span></a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).</p>
+<p>L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible à partir d’Android 6.</p>
+<p><strong>Exemple de contraste non valide :</strong><br>
+Le texte &quot;film | 20h40 …&quot; ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.</p>
+<p><img src="../../images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant" class="img-fluid"></p>
+<p><strong>Exemple de passage d’information par la couleur valide et non valide :</strong></p>
+<img src="../../images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
+<h2 id="alternative-textuelle">Alternative textuelle <a class="header-anchor" href="#alternative-textuelle" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Description :</strong></p>
+<p>Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Grâce à elles, un utilisateur non-voyant peut utiliser une application sans perte d’information.</p>
+<p>Tout comme pour les images, il est important de renseigner une alternative textuelle lorsque l’information n’est pas disponible pour les personnes malvoyantes/non-voyantes. C’est le cas des composants fournissant de l’information par la couleur, la forme, la position, le son… Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d’enrichir la vocalisation native d’un élément, y compris celle d’un simple texte.</p>
+<p>La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restituent les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. À noter que <span lang="en">TalkBack</span> sait reconnaître quelques abréviations courantes. Par exemple, « etc. » et « Dr. » sont bien vocalisées « et cetera » et « Docteur ».</p>
+<p>Certaines images sont régulièrement associées à du texte pour donner une information. C’est le cas notamment des « messages non lus » où une infobulle donne le nombre de messages à lire et où une image donne l’information « message ». Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple : « 3 messages non lus ». On peut également placer cette alternative sur l’image, mais dans ce cas, il faut penser à rendre le texte « invisible » pour le lecteur d’écran.</p>
+<p>L’alternative textuelle d’un élément est renseignée via l’attribut <code>contentDescription</code> (disponible pour tout élément héritant de <code>View</code>). Pour les boutons présents dans l’<code>ActionBar</code> (ou <code>ToolBar</code>), c’est l’attribut <code>title</code> qu’il faut renseigner.<br>
+Le texte ou son alternative est vocalisé automatiquement avec des informations sur le type de composant (bouton, case à cocher…), de son état éventuel (coché décoché, sélectionné), s’il est utilisable (désactivé). Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des <a href="../developpement#alternatives-textuelles">alternatives textuelles dans le guide développeur</a>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les éléments de l’application qui nécessitent une alternative en possèdent bien une,</li>
+<li>Les alternatives textuelles de l’application sont explicites et compréhensibles.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs du lecteur d’écran d’accéder à toutes les informations véhiculées par l’application.</p>
+<p><strong>Exemple :</strong></p>
+<p>Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône « mail » couplée à l’infobulle de valeur « 3 » nous fait comprendre que nous avons « 3 mails non lus ». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues « bouton sans libellé » et « 3 ». On comprend bien ici l’importance d’ajouter des alternatives textuelles.<br>
+<img src="../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left"></p>
+<pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
+containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.
+mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le bouton-icône pour éviter une redondance d’information
+infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le texte pour éviter une redondance d’information
+</code></pre><pre>
+<p><code class="kotlin">containerView.contentDescription = &quot;3 mails non lus, bouton&quot; //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur<br>
+containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.<br>
+mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information<br>
+infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //On masque le texte pour éviter une redondance d’information<br>
+</code></pre></p>
+<h2 id="titre-et-en-tete">Titre et en-tête <a class="header-anchor" href="#titre-et-en-tete" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde<br>
+<strong>Quand :</strong> dès la conception et à la rédaction du contenu.</p>
+<p><strong>Description :</strong></p>
+<p>Le titre de la page est le premier élément qui est vocalisé ou vu sur un écran mobile. Il facilite la navigation pour tout le monde : à tout moment, on sait où on se trouve dans l’application.<br>
+Une erreur commune est de mettre un titre unique pour toutes les pages d’une application (ou même pas de titre du tout).</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour).</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et de se faire une idée précise du contenu de la page sans avoir à le lire.</p>
+<p><strong>Exemple non valide :</strong></p>
+<img src="../../images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
+<h2 id="etat-des-elements">État des éléments <a class="header-anchor" href="#etat-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Si un élément ne restitue pas à la vocalisation son statut, sa nature ou son état, l’utilisateur de <span lang="en">TalkBack</span> est dans l’impossibilité de comprendre ce qui se passe à l’écran. Ne pas préciser qu’une zone est dépliée ou que l’on se trouve face à un système d’onglets sont des exemples très fréquents.</p>
+<p>Grand classique de ce problème : les onglets. Les différents types d’onglets proposés dans Android ne donnent pas toutes les informations sur leur nature et sur leur état. Il est donc à la charge du développeur de donner ces informations à l’utilisateur via les attributs d’accessibilité correspondants (<code>contentDescription</code>). En l’occurrence, une bonne alternative pour le titre d’un onglet peut être : &quot;sélectionné, titre de l’onglet, onglet 1 sur 3&quot;</p>
+<p>Autre classique d’élément qui ne restitue pas par défaut son état : les zones dépliables. Encore une fois, c’est grâce à l’alternative textuelle du titre de la zone dépliable que l’on peut donner à l’utilisateur de <span lang="en">TalkBack</span> le statut de celle-ci.</p>
+<p>Pour renseigner ce genre d’information, il faut utiliser l’attribut <code>contentDescription</code> (disponible pour tout élément héritant de <code>View</code>).</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Tout élément dont le statut est modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné doit restituer son état à travers une alternative textuelle.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informations des composants, leur état, leur nature afin qu’ils puissent les utiliser sans difficultés.</p>
+<p><strong>Exemple :</strong></p>
+<img src="../../images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"> 
+<p>Pour obtenir un exemple de code qui corrige ce problème, nous vous invitons à vous référer à la page du <a href="../developpement#alternatives-textuelles">guide développeur</a> correspondante.</p>
+<h2 id="composant-standard">Composant standard <a class="header-anchor" href="#composant-standard" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde.<br>
+<strong>Quand :</strong> en phase de sélection des briques logicielles et lors des développements.</p>
+<p><strong>Description :</strong></p>
+<p>L’accessibilité est prise en compte dans les composants natifs (la plupart du temps). De plus, l’utilisation de composants standards permet à l’utilisateur de se retrouver dans une situation et un comportement habituels. La navigation dans une interface standard est donc plus confortable.</p>
+<p>Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun composant standard ne permet de répondre au besoin, créer un composant dédié basé sur un composant standard en veillant à conserver la cohérence de navigation et l’accessibilité.</p>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permet à tous les utilisateurs d’interagir plus intuitivement avec l’interface.</p>
+<p><strong>Objectif technique :</strong></p>
+<p>Améliore globalement la maintenabilité. Réduit les temps de développement.</p>
+<h2 id="zone-de-clic">Zone de clic <a class="header-anchor" href="#zone-de-clic" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> pour tous et en particulier les personnes avec des déficiences motrices<br>
+<strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Une taille insuffisante pour la zone d’action d’un composant peut empêcher certains utilisateurs de profiter pleinement de l’application. Cela peut engendrer des frustrations qui peuvent conduire à la désinstallation de l’application. Chaque élément cliquable de l’application doit donner à l’utilisateur une taille suffisante pour sa zone d’action.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Google définit pour son système une taille de zone de clic minimum de 48dp (en hauteur ET largeur, avec 8 dp de marge autour de l’élément).</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Améliorer le confort de navigation au toucher (<i lang="en">touch</i>).</p>
+<p><strong>Outil :</strong></p>
+<p>L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des zones de clic. Disponible à partir d’Android 6.</p>
+<p><strong>Exemple valide :</strong></p>
+<p>Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.<br>
+<img src="../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300"></p>
+<p><strong>Exemple non-valide :</strong></p>
+<img src="../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
+<h2 id="element-fantome">Élément fantôme <a class="header-anchor" href="#element-fantome" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">TalkBack</span> est capable de lire les informations d’une vue qui est placée « sous » une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.</p>
+<p>Grand classique du problème : les fragments. Un fragment est un composant qu’on peut facilement superposer par-dessus un autre sous Android. Une mauvaise utilisation des fragments peut aboutir à une navigation impossible avec le lecteur d’écran.</p>
+<p>Consulter l’article sur l’<a href="https://developer.android.com/guide/components/fragments.html">utilisation des fragments</a> pour plus d’informations.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li><span lang="en">TalkBack</span> ne doit pas vocaliser d’éléments indésirables appartenant à un autre écran que celui en cours de consultation.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre la navigation dans l’application sans avoir d’élément perturbant, non utilisable, sur la vue courante.</p>
+<p><strong>Exemple non-valide :</strong></p>
+<p>Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en">TalkBack</span>. Ce dernier vocalise (la vocalisation est affichée en bas de l’écran sur la capture) un contenu se trouvant derrière la vue active.<br>
+<img src="../../images/ghost.png" alt="exemple d’élément fantôme" width="300"></p>
+<h2 id="taille-des-textes">Taille des textes <a class="header-anchor" href="#taille-des-textes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>L’utilisateur a la possibilité d’augmenter la taille du texte via une option d’accessibilité. Afin que l’application réagisse correctement à cette option, il est nécessaire d’utiliser des tailles de texte dynamiques qui s’ajusteront en fonction des paramètres utilisateurs. Un texte trop petit sera facilement ignoré par certains utilisateurs malvoyants.</p>
+<p>L’application devra mettre en œuvre des tailles de textes dynamiques, s’assurer de la bonne réactivité des zones d’affichage au grossissement de texte (conteneurs qui s’adaptent à la taille de leur contenu). Il faut aussi assurer une taille minimum pour les textes (14sp).</p>
+<p>Afin de permettre à l’option « grand caractère » d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements :</p>
+<ul>
+<li>Utiliser une taille de police dynamique : le « sp ». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android.</li>
+<li>Gérer les débordements de contenu : une erreur courante est d’utiliser une taille de texte dynamique (« sp » donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (le <code>height</code> à <code>wrap_content</code> et le <code>min-height</code> à la hauteur voulue par défaut).</li>
+</ul>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>L’application réagit correctement à l’option grand caractère,</li>
+<li>Les textes de l’application ont une taille minimum de 14sp.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.</p>
+<p><strong>Outil :</strong><br>
+L’application <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr"><span lang="en">AccessibilityScanner</span></a> permet de tester directement vos applications sur certains critères d’accessibilité et notamment la taille des textes. Disponible à partir d’Android 6.</p>
+<p><strong>Exemple :</strong></p>
+<img src="../../images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 
+<h2 id="controle-de-contenu">Contrôle de contenu <a class="header-anchor" href="#controle-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles et cognitives.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.<br>
+L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel ne défile de manière automatique, etc.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les contenus interactifs peuvent être maîtrisés par l’utilisateur (présence d’un bouton pause sur carrousel automatique, bouton accessible pour sortir du mode plein-écran etc)</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs de rester maîtres de l’application. Permettre à l’utilisateur de lecteur d’écran d’éviter une pollution sonore qui peut nuire à sa navigation.</p>
+<p><strong>Objectif technique :</strong></p>
+<p>Améliorer le référencement naturel.</p>
+<h2 id="changement-de-contenu">Changement de contenu <a class="header-anchor" href="#changement-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Lorsque du contenu est modifié dynamiquement à la suite d’une action de l’utilisateur, il faut le notifier à la synthèse vocale. Sans retour vocal, l’utilisateur ne sait pas qu’une action a été déclenchée.<br>
+Sur une page, si du contenu est modifié dynamiquement suite à une action utilisateur, il est important que le lecteur d’écran soit notifié afin qu’il déclenche une vocalisation. Par exemple, les listes qui se rafraîchissent, ou un compteur de temps.</p>
+<p>Une simple vocalisation peut suffire à avertir l’utilisateur. Il est très facile de déclencher des vocalisations avec <span lang="en">TalkBack</span>. Attention : nous parlons de la vocalisation si <span lang="en">TalkBack</span> est activé et non pas de <abbr>TTS</abbr> (Text To Speech) qui peut fonctionner indépendamment du statut de <span lang="en">TalkBack</span>. Il suffit de faire appel à la méthode <code>announceForAccessibility</code> en lui passant en paramètre l’<code>id</code> de la chaîne de caractère à vocaliser. À noter : la méthode <code>announceForAccessibility</code> est disponible sur tout élément qui hérite de <code>View</code> et se fait dans la langue du système.</p>
+<p>Il est également possible de spécifier à une vue qu’elle est une région <i lang="en">live</i>, c’est-à-dire que son contenu est susceptible d’être modifié dynamiquement et qu’elle doit dans ce cas prévenir l’<abbr>API</abbr> d’accessibilité. Cela aura pour conséquence de générer des vocalisations avec <span lang="en">TalkBack</span> par exemple. Un exemple type d’utilisation : sur un formulaire, si l’utilisateur fait une erreur et qu’un message d’erreur apparaît, la vue contenant le message doit être définie comme une région <i lang="en">live</i>.  Il faut passer par la méthode <code>setAccessibilityLiveRegion</code> qui prend en paramètre un mode pour la région <i lang="en">live</i>. Il existe 3 modes :</p>
+<ul>
+<li><code>ACCESSIBILITY_LIVE_REGION_NONE</code> : cette vue n’est pas une région <i lang="en">live</i>. C’est la valeur par défaut de la plupart des vues.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code> : en cas de changement dans la vue, des vocalisations sont effectuées sur les changements. Ces vocalisations sont « polies » ; elles sont moins prioritaires que les vocalisations système par exemple.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code> : en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont « <i lang="en">rude</i> » ; elles sont prioritaires et immédiatement vocalisées. À noter, la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</li>
+</ul>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Avec un lecteur d’écran, s’assurer que les modifications dynamiques dans les pages sont bien vocalisées.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Donner accès aux modifications des informations de l’application aux utilisateurs de lecteurs d’écran.</p>
+<h2 id="scroll-horizontal"><i lang="en">Scroll</i> horizontal <a class="header-anchor" href="#scroll-horizontal" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Un <i lang="en">scroll</i> horizontal peut être très difficile à détecter si aucun visuel n’aide l’utilisateur à comprendre qu’il existe plusieurs pages.<br>
+Ne pas hésiter à afficher un élément pour indiquer un <i lang="en">scroll</i> horizontal (des « points » par exemple). Quand cela est nécessaire, ajouter également des boutons « suivant » et « précédent ».</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les scrolls horizontaux sont indiqués visuellement</li>
+<li>Avec le lecteur d’écran activé, un mécanisme permet de passer de page en page lorsqu’un <i lang="en">scroll</i> horizontal est présent.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Donner une indication visuelle aux utilisateurs lors de la présence de <i lang="en">scrolls</i> horizontaux. Permettre aux utilisateurs de lecteur d’écran d’utiliser les <i lang="en">scrolls</i> horizontaux.</p>
+<div class="sideToSide row">
+<div class="col-sm-6 col-xs-12">
+**Exemple valide&nbsp;:**
+<img src="../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
+</div>
+<div class="col-sm-6 col-xs-12">
+**Exemple non-valide&nbsp;:**
+<img src="../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
+</div>
+</div>
+<h2 id="formulaire">Formulaire <a class="header-anchor" href="#formulaire" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Lier les champs de formulaires avec leurs labels apporte une vocalisation supplémentaire qui permet à l’utilisateur de comprendre quoi remplir lorsqu’il arrive sur un champ de formulaire.</p>
+<p>Il existe 2 grandes techniques pour réaliser cette liaison :</p>
+<ul>
+<li><code>labelFor</code> : permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’<code>id</code> de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> <code>android:labelFor</code> ou le code <code>setLabelFor</code>.</li>
+<li><code>hint</code> : permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les <code>TextView</code>. Prend en paramètre l’<code>id</code> d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> <code>android:hint</code> ou le code <code>setHint</code>.</li>
+</ul>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>les champs de formulaire doivent être liés à un label si celui-ci est visible, sinon un <code>hint</code> est présent.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Améliorer la navigation et la compréhension globale de la page, car les champs de formulaires décrivant le contenu attendu  facilitent leur saisie par les utilisateurs déficients visuels.</p>
+<h2 id="ordre-de-lecture">Ordre de lecture <a class="header-anchor" href="#ordre-de-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle. Il est donc important d’y faire attention.</p>
+<p>Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres : la lecture « logique » (en France), soit de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il existe cependant certain cas où le lecteur d’écran n’arrive pas à déterminer un ordre et dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.</p>
+<p>Il est tout à fait possible de redéfinir cet ordre de lecture avec deux attributs :</p>
+<ul>
+<li><code>accessibilityTraversalAfter</code> : prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être « vue » par l’accessibilité après la vue passée en paramètre.</li>
+<li><code>accessibilityTraversalBefore</code> : prend un <code>id</code> en paramètre et permet de spécifier à la vue qu’elle doit être « vue » par l’accessibilité avant la vue passée en paramètre.</li>
+</ul>
+<p>À noter : ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes <code>setAccessibilityTraversalAfter</code> et <code>setAccessibilityTraversalBefore</code>. Ces méthodes sont disponibles pour tout élément qui hérite de <code>View</code>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>L’ordre de lecture (celui de <span lang="en">TalkBack</span>) est logique et cohérent.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteurs d’écran pour leur assurer une complète compréhension du contenu.</p>
+<p><strong>Exemple :</strong><br>
+Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci : <code>vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0</code>. Un ordre de lecture plus cohérent serait <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-</code>.</p>
+<img src="../../images/order.png" alt="exemple de scroll horizontal accessible" width="300">  
+<pre><code class="java" >volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
+chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
+chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());
+[…]</code></pre>
+<pre><code class="kotlin">
+volupButton.accessibilityTraversalAfter = remote0.id
+voldownButton.accessibilityTraversalAfter = volup.id
+chaineplusButton.accessibilityTraversalAfter = voldown.id
+chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
+[…]
+</code></pre>
+<h2 id="navigation-au-focus">Navigation au focus <a class="header-anchor" href="#navigation-au-focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes motrices qui utilisent un clavier pour naviguer.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>La navigation au focus est très utile pour les personnes qui présentent des difficultés motrices ou cognitives. Cette navigation permet de passer d’élément interactif en élément interactif (élément sur lequel on peut effectuer une action). Elle correspond à la navigation que l’on peut faire avec un clavier Bluetooth lié à un smartphone.</p>
+<p>Pour gérer la navigation au focus, il faut s’assurer de 3 choses :</p>
+<ul>
+<li>Permettre le focus sur les éléments interactifs : la navigation au focus ne concerne que les éléments interactifs. Si, par exemple, votre application possède des vues <i lang="en">custom</i> cliquables, il faut s’assurer que ces vues soient focusables en positionnant l’attribut <code>focusable</code> à <code>true</code>.</li>
+<li>Gérer l’affichage du focus : tout élément interactif peut recevoir le focus, il faut donc que le <code>state_focused</code> soit défini et permette de distinguer d’un seul coup d’œil quel élément a le focus.</li>
+<li>Gérer l’ordre du focus : à travers les options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> et <code>nextFocusLeft</code>, vous pouvez spécifier quelle vue doit prendre le focus selon l’utilisation des flèches tab, bas, haut, droit et gauche.</li>
+</ul>
+<p>À noter : <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> ainsi que d’autres options de gestion du focus sont accessibles directement dans le <abbr>xml</abbr> ou dans le code à travers les méthodes correspondantes.</p>
+<p>Pour plus d’information sur la <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">gestion du focus sous Android</a>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>L’ordre de navigation au focus (clavier) est logique et cohérent.</li>
+<li>À la navigation au focus (clavier), il est possible de déterminer visuellement l’élément qui a le focus</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre l’utilisation de l’application avec un clavier, dock tablette ou tout autre dispositif de navigation séquentielle.</p>
+<h2 id="orientation-de-lecran">Orientation de l’écran <a class="header-anchor" href="#orientation-de-lecran" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.</p>
+<p><strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong><br>
+L’accès au contenu d’une application ne doit pas dépendre de l’orientation de l’écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l’utilisation du contenu (projection, tableau…).</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>L’utilisation de composants graphiques standard qui supportent les deux modes (fragments…), ou définir un <code>design</code> spécifique à chaque orientation.</li>
+<li>Que l’application n’est pas verrouillée dans un mode (portrait ou paysage).</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<ul>
+<li>Assurer une meilleure lisibilité du contenu pour les personnes qui utilisent le grossissement de caractères et passent du portrait au paysage en fonction de leur besoin.</li>
+<li>Assurer une meilleure lisibilité du contenu pour les écrans fixés sur support (lit d’hôpital, chaise roulante…).</li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/android/conception.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

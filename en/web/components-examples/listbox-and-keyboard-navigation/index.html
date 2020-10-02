@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Listbox and keyboard navigation - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"><link rel="stylesheet" href="style.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link active" aria-current="true">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/web/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/develop/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/web/components-examples/" class="nav-link active" aria-current="true">
+  Component examples
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/web/components-examples/">Component examples</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Listbox and keyboard navigation
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      
+<h1>Listbox and keyboard navigation</h1>
+
+<h2>Introduction</h2>
+<p>For this article, we start from <a href="../listbox-with-checkboxes/">the example of the listbox with checkboxes</a>. The objective is to improve keyboard navigation in order to get close to the W3C / WAI guidelines.</p>
+
+<h2><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
+<p>The W3C maintains online specifications that describe how <abbr>ARIA</abbr> components should behave: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a>.</p>
+<p>The <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">specifications for the listbox</a> tell us that:</p>
+<ul>
+    <li>The list must be focusable (<code>tabindex="0"</code>).</li>
+    <li>The <kbd>up</kbd> / <kbd>down</kbd> arrows must be used to choose the selected item.</li>
+    <li>We must be able to select an item by quickly typing the first few characters (e.g. when pressing the “<kbd>p</kbd>” and “<kbd>h</kbd>” keys, the selection must move to “<strong>Ph</strong>otos”).</li>
+    <li><kbd>Shift + F10</kbd> must allow to open the focused item context menu if the item has one.</li>
+    <li>In case of a multiple-selection list, the <kbd>Ctrl + a</kbd> shortcut should select all items.</li>
+    <li>The <kbd>Home</kbd> and <kbd>End</kbd> keys must be able to respectively select the first and the last item of the list.</li>
+</ul>
+
+<h2>Example</h2>
+<div class="row">
+  <ul role="listbox" tabindex="0" class="col-md-8">
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check1" class="o-checkbox" type="checkbox"><label for="check1"></label>
+          <span>Important information about your account</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check2" class="o-checkbox" type="checkbox"><label for="check2"></label>
+          <span>Sending message test</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check3" class="o-checkbox" type="checkbox"><label for="check3"></label>
+          <span>Photos of the weekend at the sea</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check4" class="o-checkbox" type="checkbox"><label for="check4"></label>
+          <span>Re: Your order N°3642</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check5" class="o-checkbox" type="checkbox"><label for="check5"></label>
+          <span>Re: At noon, it will be the last!</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check6" class="o-checkbox" type="checkbox"><label for="check6"></label>
+          <span><i lang="fr">Jazz à Vienne</i> #36 has started!</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check7" class="o-checkbox" type="checkbox"><label for="check7"></label>
+          <span>Wine order</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check8" class="o-checkbox" type="checkbox"><label for="check8"></label>
+          <span>CDS 2016</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check9" class="o-checkbox" type="checkbox"><label for="check9"></label>
+          <span>Work council offers</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check10" class="o-checkbox" type="checkbox"><label for="check10"></label>
+          <span>Re: Reading</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check11" class="o-checkbox" type="checkbox"><label for="check11"></label>
+          <span>You have more friends than you can ever imagine</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check12" class="o-checkbox" type="checkbox"><label for="check12"></label>
+          <span>10 for today</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check13" class="o-checkbox" type="checkbox"><label for="check13"></label>
+          <span>Notification: appointment tonight</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check14" class="o-checkbox" type="checkbox"><label for="check14"></label>
+          <span>More than 20,000 discounted items!</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check15" class="o-checkbox" type="checkbox"><label for="check15"></label>
+          <span>7 stories you shouldn't miss</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check16" class="o-checkbox" type="checkbox"><label for="check16"></label>
+          <span>Warning, only 2 days left</span>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check17" class="o-checkbox" type="checkbox"><label for="check17"></label>
+          <span>Your order n°04565</span>
+      </li>
+  </ul>
+</div>
+
+<h2>Implementation</h2>
+<p>The functionality to automatically select the item by typing the first letters is not easy to implement. The following example uses <abbr title="XML Path Language">XPath</abbr>.</p>
+<p>The first thing to do is listen to the keyboard once the focus is on the list. Depending on the key, it performs an action (selecting an item, moving the selected item…).</p>
+
+<pre><code class="javascript">
+…
+// On keydown
+$("[role=listbox]").on("keydown", function (e) {
+  var currentItem = $(this).find("[aria-selected=true]");
+  switch (e.keyCode) {
+      case 9: // TAB
+          break;
+      case 36: // home
+          …
+          e.preventDefault();
+          break;
+      case 35: // end
+          …
+          e.preventDefault();
+          break;
+      case 38:  // Up arrow
+          …
+          e.preventDefault();
+          break;
+      …
+</code></pre>
+
+<p>Other keys that are not used to perform an action on the list, i.e. letters and digits, are saved to create the search string. When the user does not type anything for a few milliseconds (500 in our example), we look for a list item that begins with the typed string and select it.</p>
+
+<pre><code class="javascript">
+…
+case 65: // Ctrl + A
+  if (e.ctrlKey) {
+      …
+  }
+default:  // Search item starts with
+  // Cancel current timer
+  clearTimeout(timer);
+
+  // Create search string
+  searchString += e.key;
+  var self = this;
+
+  // Set a timer to search item after 500ms
+  timer = setTimeout(function(){
+      // Search item
+      var xpath = "li/span[starts-with(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" + searchString + "')]";
+      var matchingElement = document.evaluate(xpath, self, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+      // Reset search string
+      searchString = "";
+
+      // If an item is found…
+      if (matchingElement) {
+          currentItem.attr("aria-selected", "false");
+          $(matchingElement).parent().attr("aria-selected", "true").focus().addClass("active");
+      }
+  }, 500);
+
+  e.preventDefault();
+</code></pre>
+
+<p>To search the item in the list, we use the following <abbr>XPath</abbr> query <code>/li/span[starts-with(text(), "the string to search")]</code>. In addition, in order to fix the character case issue, we use the <code>translate</code> function.</p>
+
+<p>Finally, for compatibility issues with Internet Explorer, we use the <a href="https://github.com/google/wicked-good-xpath">Google <abbr>XPath</abbr> polyfill</a>, you just need to include it and install it at page load using: <code>wgxpath.install();</code>.</p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/components-examples/listbox-and-keyboard-navigation/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script src="wgxpath.install.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

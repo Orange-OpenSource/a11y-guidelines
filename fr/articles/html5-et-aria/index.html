@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 &amp; ARIA - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          HTML5 &amp; ARIA
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#quest-ce-que-cest" class="dropdown-item text-wrap">Qu’est-ce que c’est ?</a><a href="#le-support" class="dropdown-item text-wrap">Le support</a><a href="#faut-il-lutiliser" class="dropdown-item text-wrap">Faut-il l’utiliser ?</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1><abbr>HTML5</abbr> &amp; <abbr>ARIA</abbr></h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d’interface complexes : <i lang="en">slider</i>, <i lang="en">datepicker</i>…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le <abbr>HTML</abbr> classique.</p>
+<p>Même avec l’évolution due au <abbr>HTML5</abbr>, on manque encore d’informations sémantiques à fournir aux aides techniques (lecteurs d’écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées, notamment aux lecteurs d'écran.</p>
+<h2 id="quest-ce-que-cest">Qu’est-ce que c’est ? <a class="header-anchor" href="#quest-ce-que-cest" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour remédier à ces limitations, le <abbr>W3c</abbr>/<abbr>WAI</abbr> a publié une recommandation appelée <abbr>ARIA</abbr>, pour <i lang="en">Accessible Rich Internet Applications</i>, ainsi qu’une suite de documents traitant de l’utilisation d’<abbr>ARIA</abbr>. Nous sommes à la version 1.1 d'<abbr>ARIA</abbr> et des Authoring Practices, bonnes pratiques d'utilisation d'<abbr>ARIA</abbr>.</p>
+<p><abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. <strong><abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu’il est utilisé dans du <abbr>HTML5</abbr></strong>.</p>
+<p>Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d’interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l’interactivité via Javascript.</p>
+<h2 id="le-support">Le support <a class="header-anchor" href="#le-support" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Le support d’<abbr>ARIA</abbr> s’améliore constamment et est déjà présent depuis longtemps :</p>
+<ul>
+<li>Dans les navigateurs modernes (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera &gt;=9.5, Internet Explorer 8 pour un support basique, Internet Explorer &gt;=9 et Edge pour un support avancé).</li>
+<li>Dans les aides techniques (<abbr>NVDA</abbr> &gt;=2010, Orca &gt;= 2 + Firefox uniquement, VoiceOver <abbr>OSX</abbr> &gt;=10.5, <abbr>iOS</abbr> &gt;=4, <abbr>JAWS</abbr> &gt;=8, Window-Eyes &gt;=7, ZoomText 10 pour un support basique, ZoomText &gt;=11 pour un support avancé).</li>
+</ul>
+<p>De plus, l’efficacité optimale de la prise en charge d’<abbr>ARIA</abbr> dépend du couple navigateur / aide technique : Firefox avec <abbr>NVDA</abbr>, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
+<h2 id="faut-il-lutiliser">Faut-il l’utiliser ? <a class="header-anchor" href="#faut-il-lutiliser" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Globalement, <abbr>ARIA</abbr> améliore l’accessibilité pour des composants pas nativement présents dans le <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l’interopérabilité d’<abbr>ARIA</abbr> sont maintenant suffisantes pour qu’<a href="https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques">une quarantaine de techniques WCAG 2.1 soient spécifiques à <abbr>ARIA</abbr></a> (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l’<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.</p>
+<p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs / aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p>
+<p>Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement !</p>
+<h2 id="webographie">Webographie <a class="header-anchor" href="#webographie" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><abbr>W3c</abbr> :
+<ul>
+<li><a href="http://www.w3.org/TR/wai-aria/">Spécification <abbr>ARIA</abbr></a></li>
+<li><a href="http://www.w3.org/TR/wai-aria-practices/">Mettre en place <abbr>ARIA</abbr></a></li>
+<li><a href="http://www.w3.org/TR/aria-in-html/">Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr> (5)</a></li>
+<li><a href="https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques">Techniques <abbr>ARIA</abbr> dans le wiki du <abbr>W3c</abbr></a></li>
+</ul>
+</li>
+<li><a href="http://www.sitepoint.com/introduction-wai-aria/">Introduction à <abbr>ARIA</abbr> chez Site Point</a></li>
+<li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction et liste de liens vers des sources sur <abbr>ARIA</abbr></a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#quest-ce-que-cest" class="nav-link text-muted bg-200">Qu’est-ce que c’est ?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#le-support" class="nav-link text-muted bg-200">Le support</a>
+          </li><li class="nav-item position-relative">
+            <a href="#faut-il-lutiliser" class="nav-link text-muted bg-200">Faut-il l’utiliser ?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#webographie" class="nav-link text-muted bg-200">Webographie</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/html5-et-aria.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating accessible PowerPoint documents - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link active" aria-current="true">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/editorial-content/general/" class="nav-link">
+  Transversal recommendations
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/powerpoint/" class="nav-link active" aria-current="true">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/pdf/" class="nav-link">
+  PDF documents
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/en/editorial-content/animated-components/" class="nav-link">
+  Audio/video content
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/editorial-content/">Editorial content</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/editorial-content/powerpoint/">Powerpoint</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Creating accessible PowerPoint documents
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Creating accessible PowerPoint documents</h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Producing accessible PowerPoint presentations requires following different rules. They are summarized below (and detailed guides are available on the <a href="https://webaim.org/techniques/powerpoint/">WebAIM website</a>).</p>
+<p>In order to help you, PowerPoint includes a tool to check the accessibility of your presentation. This tool identifies the main errors and proposes different solutions.</p>
+<h2 id="slide-layouts">Slide Layouts <a class="header-anchor" href="#slide-layouts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Defining slide layouts is the first action to do in order to create an accessible presentation, it will ensure information have the correct reading order.<br>
+Use the Slide Master view: select the <code>View</code> tab &gt; <code>Slide Master</code> to create or modify slides layouts.</p>
+<img class="center" src="../../images/screen1.png" alt="Screenshot of view tab"/>
+<p>Use the Master Layout submenu to add titles or footers.</p>
+<img class="center" src="../../images/screen2.png" alt="Screenshot of slide master tab"/>
+<p>Create as many layouts as types of slides needed.<br>
+Avoid adding text boxes or images directly into the presentation via the <code>Insert</code> menu but use the <code>Slide Master</code> view.<br>
+Note: if you edit the slide layout after you have created the slides, you must reapply the new model.</p>
+<h2 id="presentation-properties">Presentation properties <a class="header-anchor" href="#presentation-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="language">Language <a class="header-anchor" href="#language" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The main language must be defined in the tab <code>File &gt; Options &gt; Language</code>.<br>
+Every punctual change of language must be identified by selecting the text and: tab <code>Review &gt; Language &gt; Set proofing language</code>.</p>
+<h3 id="other-properties">Other properties <a class="header-anchor" href="#other-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Title, author and tags fields have to be completed in tab <code>File &gt; Info &gt; Properties</code>.</p>
+<img class="center" src="../../images/screen3.png" alt="Screenshot of file properties"/>
+<p>This information is accessible by everyone in Windows Explorer and are readable by the screen readers.</p>
+<h2 id="use-unique-slide-titles">Use unique slide titles <a class="header-anchor" href="#use-unique-slide-titles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Give every slide a unique and descriptive title, it allows screen reader users to clearly understand which slide they are on.</p>
+<h2 id="wording">Wording <a class="header-anchor" href="#wording" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Avoid abbreviations and acronyms; explain them at the first occurrence.<br>
+If necessary, keep accentuation on capital letters (example: É or Ç): use the <code>Insert tab &gt; Symbol</code>.</p>
+<h2 id="formatting-layout">Formatting / layout <a class="header-anchor" href="#formatting-layout" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use familiar sans serif fonts (such as Arial or Calibri), in a larger font size (18pt or larger).<br>
+Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.<br>
+Avoid justifying the text; prefer left alignment.<br>
+In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… &gt; Indents and Spacing</code>.</p>
+<img class="center" src="../../images/screen4.png" alt="Screenshot of paragraph dialog"/>
+<h2 id="colors-and-contrasts">Colors and contrasts <a class="header-anchor" href="#colors-and-contrasts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="use-sufficient-contrast-for-text-and-background-colors">Use sufficient contrast for text and background colors <a class="header-anchor" href="#use-sufficient-contrast-for-text-and-background-colors" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The presentation of text should have a contrast ratio of at least 4.5:1.<br>
+Here are some examples on a white background:</p>
+<ul>
+<li>Foreground black : very good contrast, ratio = 21:1</li>
+<li>Foreground #767676 (dark grey), acceptable contrast, ratio = 4.54:1</li>
+<li>Foreground #AAAAAA (lighter grey), unacceptable contrast, ratio = 2.32:1</li>
+</ul>
+<p>If you choose to not use the Orange Group colors guidelines, you can download the <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> tool; it will be useful for checking your contrasts.</p>
+<h3 id="ensure-that-color-is-not-the-only-means-of-conveying-information">Ensure that color is not the only means of conveying information <a class="header-anchor" href="#ensure-that-color-is-not-the-only-means-of-conveying-information" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>For people who can not see the colors or the shades of colors, it is important to convey the information differently.</p>
+<img class="center" src="../../images/color1.png" alt="Bad example, color is used to convey the information"/>  
+<img class="center" src="../../images/color2.png" alt="Good example, the shape is used to convey the information"/>
+<p>Appropriate colors and contrast are necessary for people to see your presentations and understand their meaning.</p>
+<h2 id="bulleted-lists-or-numbered-lists">Bulleted Lists or Numbered Lists <a class="header-anchor" href="#bulleted-lists-or-numbered-lists" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Always use the appropriate and native functions in order to create lists.</p>
+<img class="center" src="../../images/screen5.png" alt="Screenshot of lists options"/>
+<h2 id="pictures-and-other-images">Pictures and other Images <a class="header-anchor" href="#pictures-and-other-images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides.<br>
+In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner.<br>
+Right-click on an image and select <code>Format Picture</code> or <code>Format Shape &gt; Alt Text</code>.</p>
+<img class="center" src="../../images/screen6.png" alt="Screenshot of format picture dialog"/>
+<p>Type the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).<br>
+If the picture is only decorative, leave the Description text box blank.<br>
+Alternative text helps people who can’t see the screen to understand what’s important in images and other visuals.<br>
+Do not use text in images to convey important information.</p>
+<p>Note: If a picture or a chart is too complex to describe with alt text, you will need to provide a text description elsewhere. You can add the full description to the Notes section of the slide for example. In this case, put a very short description in the alt text, endings with the words: “full text description in the Notes section of this slide”.</p>
+<p>For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).<br>
+Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.</p>
+<h2 id="hyperlinks">Hyperlinks <a class="header-anchor" href="#hyperlinks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Select the text to which you want to add the hyperlink, and then right-click.<br>
+The text you selected displays in the “Text to display” box. This is the hyperlink text.<br>
+If necessary, add a ScreenTip by clicking on the ScreenTip button.</p>
+<img class="center" src="../../images/screen11.png" alt="Insert hyperlink dialog box screenshot"/>
+<p>For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).<br>
+Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand.</p>
+<h2 id="tables">Tables <a class="header-anchor" href="#tables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use a simple table structure, and specify column header information.</p>
+<p>Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.</p>
+<p>If a table is too complex, you will need to provide an additional description: Right-click <code>Format Shape &gt; Alt Text</code>.</p>
+<h2 id="audio-or-video-file">Audio or video file <a class="header-anchor" href="#audio-or-video-file" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>For audio and video content, in addition to alt text, include closed captioning for people who are deaf or have limited hearing.</p>
+<p>Video content must have synchronized captions and also needs a rich description of the visual components.<br>
+Closed captions typically also describe audio attributes such as music or sound effects that occur off-screen.<br>
+Subtitles typically contain a transcription (or translation) of the dialogue.</p>
+<p>Audio content must have a transcript.</p>
+<p>Avoid automatic launching or slide transitions.</p>
+<p>Avoid content that blinks or flashes more than three times a second.</p>
+<h2 id="set-the-reading-order">Set the reading order <a class="header-anchor" href="#set-the-reading-order" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The order in which the screen readers read the slide contents can be modified in the Selection pane.<br>
+On the <code>Home</code> tab, in the <code>Drawing group</code>, select <code>Arrange &gt; Selection</code> Pane.<br>
+The elements of your slide are read in the reverse order listed in this pane.</p>
+<img class="center" src="../../images/screen7.png" alt="Screenshot of selection pane"/>
+<h2 id="accessibility-checker">Accessibility Checker <a class="header-anchor" href="#accessibility-checker" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>At least, run Accessibility Checker to make sure your content is accessible.</p>
+<p>In <code>File tab &gt; Check for Issues</code>.</p>
+<img class="center" src="../../images/screen8.png" alt="Screenshot of accessibility checker menu"/>
+<h2 id="convert-to-pdf">Convert to PDF <a class="header-anchor" href="#convert-to-pdf" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Save you presentation as <abbr>PDF</abbr>: <code>File tab &gt; Save As</code> and save as type PDF.<br>
+Check the « Document structure tags for accessibility » option.</p>
+<img class="center" src="../../images/screen9.png" alt="Screenshot of PDF options dialog"/>
+<p><abbr>PDF</abbr> is often a better format to present PowerPoint presentations electronically.</p>
+<p>Note:  If your presentation have more than 50 slides, it is better to advise your readers to change the following setting in Adobe:<br>
+<code>Edit &gt; Preferences &gt; Reading &gt; Screen Reader Options &gt; Page vs Document: &quot;Read the entire document&quot;</code></p>
+<img class="center" src="../../images/screen10.png" alt="Screenshot of screen reader options"/>
+<p>To check <abbr>PDF</abbr> document accessibility: download <a href="https://www.access-for-all.ch/en/pdf-accessibility-checker.html">PDF Accessibility Checker (PAC 3)</a>.</p>
+<h2 id="for-more-detailed-information">For more detailed information <a class="header-anchor" href="#for-more-detailed-information" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://webaim.org/techniques/powerpoint/">PowerPoint Accessibility, WebAIM</a></li>
+<li><a href="https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25">Microsoft Accessibility Support website</a></li>
+<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" lang="fr">(FR) Créer des documents bureautiques accessibles, DINISIC</a>.</li>
+</ul>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/editorial-content/powerpoint/create.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

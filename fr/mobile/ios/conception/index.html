@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Les critères de conception iOS - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d'évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/mobile/ios/conception/" class="nav-link active" aria-current="page">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/developpement/" class="nav-link">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/test/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/outils/" class="nav-link">
+  Boite à outils
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/wwdc/" class="nav-link">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Designer
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Les critères de conception iOS</h1>
+<p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.<br>
+<br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.</p>
+<h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et pendant le développement.</p>
+<p><strong>Description :</strong></p>
+<p>Les images sont très souvent utilisées pour transmettre de nombreuses informations. Comme le dit l’adage, une image vaut mille mots. Les non-voyants ne pouvant voir les images, il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.<br>
+Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.</p>
+<p>Certaines images sont utilisées à des fins décoratives. Ces images ne nécessitent pas d’alternative. Par défaut sous iOS, les images ne sont pas vocalisées par le lecteur d’écran <span lang="en">VoiceOver</span>.<br>
+Les illustrations de l’application sont également considérées comme des images décoratives. La règle est donc la même : il n’y a pas d’alternative textuelle à ajouter.<br>
+Les icônes sont, a contrario, largement utilisées en tant que boutons pour des fonctionnalités diverses. Elles ont donc besoin d’alternatives textuelles pertinentes.</p>
+<p>L’alternative d’une image est renseignée via l’attribut <code>accessibilityLabel</code> (via le protocole <code>UIAccessibility</code> implémenté par tout élément standard dérivant de <code>UIView</code>).</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>les images portant de l’information restituent cette information à travers leur alternative textuelle,</li>
+<li>les images décoratives n’ont pas d’alternative textuelle.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès. Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).</p>
+<p><strong>Exemples :</strong></p>
+<img src="../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">  
+<p>En décomposant l’image :</p>
+<ul>
+<li><img src="../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas d’<code>accessibilityLabel</code></li>
+<li><img src="../../images/edit.png" alt="exemple d’icône informative - paramètres" width="48"> <code>buttonView.accessibilityLabel = &quot;example_image_edit_accessibilityLabel&quot;.localized</code></li>
+<li><img src="../../images/settings.png" alt="exemple d’icône informative - édition" width="48"> <code>buttonView.accessibilityLabel = &quot;example_image_settings_accessibilityLabel&quot;.localized</code></li>
+</ul>
+<h2 id="couleurs">Couleurs <a class="header-anchor" href="#couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)<br>
+<strong>Quand :</strong>  dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Les couleurs jouent un rôle très important dans la transmission des informations.<br>
+<br>On associe certaines couleurs à des concepts ou à des sensations, mais il ne faut pas oublier qu’une partie de la population ne distingue pas correctement les couleurs.<br>
+<br><br>La décision de mettre certaines polices en gras va favoriser un contraste plus faible pour des tailles basses de police.<br>
+<br><img style="max-width: 1000px; height: auto;" alt="" src="../../images/color_contrast_2.png" /><br>
+<br><br>Ne pas mettre des polices en gras va demander un contraste des couleurs plus fort que dans le cas précédent.<br>
+<br><img style="max-width: 1000px; height: auto;" alt="" src="../../images/color_contrast_3.png" /><br>
+<br><br> Avec l’apparition du <a href="../developpement#taille-des-textes">Dynamic Type</a> permettant de grossir de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.<br>
+<br><img style="max-width: 300px; height: auto;" alt="" src="../../images/color_contrast_1.png" /><br>
+<br><br>Il existe des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.<br>
+<br><img style="max-width: 1100px; height: auto;" alt="" src="../../images/iOSdev/wwdc19-244-TextStyles_11.png" /><br>
+<br>Dans ce cas, l'utilisation de l'option d'accessibilité <a href="#optionA11Y_differentiateWithoutColour">différencier sans couleur</a> <em>(nouveauté iOS 13)</em> va permettre ce type d'affichage <strong>uniquement à la demande de l'utilisateur</strong>.<br></p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément.</li>
+<li>Le contraste entre les couleurs de texte et de fond doit aussi être suffisant <em>(à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité <a href="../wwdc/2019#ColorContrast">Color Contrast Calculator</a> de l'outil <span lang="en">Accessibility Inspector</span> sous Xcode 11)</em>.</li>
+<li>Avec l'arrivée du <strong>Mode Sombre</strong> en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <a href="#optionA11Y_contraste">augmenter le contraste</a>.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable (en mobilité).<br>
+Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure…), d’accéder tout de même à l’information par d’autres moyens.</p>
+<p><strong>Outil :</strong><br>
+L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/"><span lang="en">Colour Contrast Analyzer</span></a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows).<br>
+<br>L'outil <span lang="en">Accessibility Inspector</span> dispose aussi d'une fonctionnalité <a href="../wwdc/2019#ColorContrast"><span lang="en">Color Contrast Calculator</span></a> depuis Xcode 11 qui permet d'obtenir les mêmes résultats.</p>
+<p><strong>Exemple de contraste non valide :</strong><br>
+Le texte « film | 20h40 … » ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.</p>
+<p><img src="../../images/contraste.png" alt="capture d’écran présentant du texte dont le contraste n’est pas suffisant" class="img-fluid"></p>
+<p><strong>Exemple de passage d’information par la couleur valide et non valide :</strong></p>
+<img src="../../images/couleur_ios.png" alt="exemple de passage d’information par la couleur valide et non valide" width="300">
+<h2 id="alternative-textuelle">Alternative textuelle <a class="header-anchor" href="#alternative-textuelle" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
+<p><strong>Description :</strong></p>
+<p>Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Grâce à elles, un utilisateur non voyant peut utiliser une application sans perte d’information.</p>
+<p>Tout comme pour les images, il est important de renseigner une alternative textuelle lorsque l’information n’est pas disponible pour les personnes malvoyantes/non-voyantes. C’est le cas des composants fournissant de l’information par la couleur, la forme, la position, le son… Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d’enrichir la vocalisation native d’un élément, y compris celle d’un simple texte.</p>
+<p>La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restitue les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. À noter que <span lang="en">VoiceOver</span> sait reconnaître quelques abréviations courantes. Par exemple, « etc. » est bien vocalisé « et cetera ».</p>
+<p>Certaines images sont régulièrement associées à du texte pour donner une information. C’est le cas notamment des « messages non lus » où une infobulle donne le nombre de messages à lire et où une image donne l’information « message ». Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple : « 3 messages non lus ». On peut également placer cette alternative sur l’image, mais dans ce cas, il faut penser à rendre le texte « invisible » pour le lecteur d’écran.</p>
+<p>L’alternative textuelle d’un élément est renseignée via les attributs <code>accessibilityLabel</code>, <code>accessibilityHint</code>, <code>accessibilityValue</code> et <code>accessibilityTrait</code> (via le protocole <code>UIAccessibility</code> implémenté par tout élément standard dérivant de <code>UIView</code>).<br>
+L’ordre de vocalisation est toujours le suivant : <code>label</code>, <code>value</code>, <code>trait</code> et <code>hint</code>. Cet ordre ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.<br>
+Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des <a href="../developpement#alternatives-textuelles">alternatives textuelles dans le guide développeur</a>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les éléments de l’application qui nécessitent une alternative en possède bien une,</li>
+<li>Les alternatives textuelles de l’application sont explicites et compréhensibles.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs ayant des déficiences sensorielles (déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure, en milieu bruyant, malentendant…) d’accéder aux informations véhiculées par l’application par d’autres biais.</p>
+<p><strong>Exemple :</strong></p>
+<p>Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône « mail » couplée à l’infobulle de valeur « 3 » nous fait comprendre que nous avons « 3 mails non lus ». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues « bouton sans libellé » et « 3 ». On comprend bien ici l’importance d’ajouter des alternatives textuelles.<br>
+<br><img src="../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left"></p>
+<h2 id="titre-et-en-tete">Titre et en-tête <a class="header-anchor" href="#titre-et-en-tete" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde<br>
+<strong>Quand :</strong> dès la conception et à la rédaction du contenu.</p>
+<p><strong>Description :</strong></p>
+<p>Le titre de la page est le premier élément qui est vocalisé ou vu sur un écran mobile. Il facilite la navigation pour tout le monde : à tout moment, on sait où on se trouve dans l’application.<br>
+Une erreur commune est de mettre un titre unique pour toutes les pages d’une application (ou même pas de titre du tout).</p>
+<p>Les en-tête iOS permettent des structurer les pages en apportant une information supplémentaire. Cette information est utile à l’<abbr>API</abbr> d’accessibilité car <span lang="en">VoiceOver</span> est capable de naviguer d’en-tête en en-tête (molette de <span lang="en">VoiceOver</span>, mode en-tête). Cela permet de se déplacer plus rapidement dans la page.<br>
+Pour définir un élément en tant qu’en-tête, il faut positionner son attribut <code>accessibilityTraits</code> à la valeur <code>accessibilityTraitHeader</code>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Chaque écran doit avoir un titre qui lui est propre ou qui permet de se repérer dans la navigation (couplé avec le bouton de retour),</li>
+<li>Les éléments identifiés visuellement comme des en-têtes doivent être déclarés à l’<abbr>API</abbr> d’accessibilité comme tels.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer et se faire une idée précise du contenu de la page sans avoir à le lire. Permettre une navigation plus aisée.</p>
+<p><strong>Exemple non valide :</strong></p>
+<img src="../../images/header_ios.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
+<h2 id="etat-des-elements">État des éléments <a class="header-anchor" href="#etat-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Si un élément ne restitue pas à la vocalisation son statut, sa nature ou son état, l’utilisateur de <span lang="en">VoiceOver</span> est dans l’impossibilité de comprendre ce qui se passe à l’écran. Ne pas préciser qu’une zone est dépliée ou que l’on se trouve face à un système d’onglets sont des exemples très fréquents.</p>
+<p>Par défaut, les onglets proposés dans iOS sont parfaitement accessibles. Cependant, il est fréquent de proposer des onglets personnalisés afin d’avoir un rendu différent. Il est donc à la charge du développeur de donner les informations de nature et d’états des onglets à l’utilisateur via les attributs d’accessibilité correspondants. Notons toutefois qu’il serait possible de rendre accessibles ces onglets personnalisés comme cela est montré avec l’exemple de la section « composants standards ».</p>
+<p>Autres éléments classiques qui ne restituent pas par défaut leur état : les zones dépliables. Encore une fois, c’est grâce à l’alternative textuelle du titre de la zone dépliable que l’on peut donner à l’utilisateur de <span lang="en">VoiceOver</span> le statut de celle-ci.</p>
+<p>Pour renseigner ce genre d’information, il faut utiliser les attributs <code>accessibilityLabel</code> et <code>accessibilityTrait</code>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Tout élément dont le statut est modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné doit restituer son état à travers une alternative textuelle.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs de lecteurs d’écran d’avoir accès aux informations des composants, leur état, leur nature afin qu’ils puissent les utiliser sans difficultés.</p>
+<p><strong>Exemple :</strong></p>
+<img src="../../images/expandable_list.png" alt="exemple de liste dépliable qui nécessite une alternative textuelle" width="250" class="pull-left">
+<h2 id="composant-standard">Composant standard <a class="header-anchor" href="#composant-standard" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde.<br>
+<strong>Quand :</strong> en phase de sélection des briques logicielles et lors des développements.</p>
+<p><strong>Description :</strong></p>
+<p>L’accessibilité est prise en compte dans les composants natifs (la plupart du temps). De plus, l’utilisation de composants standards permet à l’utilisateur de se retrouver dans une situation et un comportement habituels. La navigation dans une interface standard est donc plus confortable.</p>
+<p>Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun composant standard ne permet de répondre au besoin, créer un composant dédié basé sur un composant standard en veillant à conserver la cohérence de navigation et l’accessibilité.</p>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permet à tous les utilisateurs d’interagir plus intuitivement avec l’interface.</p>
+<p><strong>Objectif technique :</strong></p>
+<p>Améliore globalement la maintenabilité. Réduit les temps de développement.</p>
+<h2 id="zone-de-clic">Zone de clic <a class="header-anchor" href="#zone-de-clic" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes avec des déficiences motrices.<br>
+<strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Une taille insuffisante pour la zone d’action d’un composant peut empêcher certains utilisateurs de profiter pleinement de l’application. Cela peut engendrer des frustrations qui peuvent conduire à la désinstallation de l’application. Chaque élément cliquable de l’application doit donner à l’utilisateur une taille suffisante pour sa zone d’action.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Apple définit pour son système une taille de zone de clic minimum de 44pt (en hauteur ET largeur) ; <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/layout/">lien vers les recommandations Apple</a></li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Améliorer le confort de navigation au toucher (<i lang="en">touch</i>).</p>
+<p><strong>Exemple valide :</strong></p>
+<p>Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.<br>
+<img src="../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300"></p>
+<p><strong>Exemple non-valide :</strong></p>
+<img src="../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
+<h2 id="element-fantome">Elément fantôme <a class="header-anchor" href="#element-fantome" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">VoiceOver</span> est capable de lire les informations d’une vue qui est placée « sous » une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.</p>
+<p>Un exemple fréquent d’élément fantôme survient lors de la création de composant personnalisé tel que des « <span lang="en">alert dialog</span> » (notification utilisateur). Notons toutefois que ce genre de composant personnalisé est tout à fait susceptible d’être accessible. Nous vous invitons à lire la section correspondante dans la <a href="../developpement#masquer-des-l-ments-l-accessibilit-">partie développeur</a>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li><span lang="en">VoiceOver</span> ne doit pas vocaliser d’éléments indésirables appartenant à un autre écran que celui en cours de consultation.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre la navigation dans l’application sans avoir d’élément perturbant, non utilisable, sur la vue courante.</p>
+<p><strong>Exemple non-valide :</strong></p>
+<p>Dans l’exemple ci-dessous, l’alerte personnalisée présente ce problème de vue fantôme. En effet, avec <span lang="en">VoiceOver</span> activé, il est possible de « lire » les éléments situés en dessous, comme nous le montre le focus de <span lang="en">VoiceOver</span> (en noir sur l’image)<br>
+<img src="../../images/ghost_ios.png" alt="exemple d’élément fantôme" width="300"></p>
+<h2 id="controle-de-contenu">Contrôle de contenu <a class="header-anchor" href="#controle-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles et cognitives.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.<br>
+L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel défile de manière automatique, etc.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les contenus interactifs peuvent être maîtrisés par l’utilisateur (bouton accessible pour sortir du mode plein-écran par exemple).</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre aux utilisateurs de rester maître de l’application. Permettre à l’utilisateur de lecteur d’écran d’éviter une pollution sonore qui peut nuire à sa navigation.</p>
+<p><strong>Objectif technique :</strong></p>
+<p>Améliorer le référencement naturel.</p>
+<h2 id="changement-de-contenu">Changement de contenu <a class="header-anchor" href="#changement-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Lorsque du contenu est modifié dynamiquement à la suite d’une action de l’utilisateur, il faut le notifier à la synthèse vocale. Sans retour vocal, l’utilisateur ne sait pas qu’une action a été déclenchée.<br>
+Sur une page, si du contenu est modifié dynamiquement suite à une action utilisateur, il est important que le lecteur d’écran soit notifié afin qu’il déclenche une vocalisation. Par exemple, les listes qui se rafraîchissent, ou un compteur de temps.</p>
+<p>Pour déclencher une vocalisation, il faut envoyer une notification à l’<abbr>API</abbr> d’accessibilité via la méthode <code>UIAccessibilityPostNotification</code> avec en paramètre la notification permettant de déclencher une vocalisation <code>UIAccessibilityAnnouncementNotification</code> et la chaîne de caractère à vocaliser.</p>
+<p>Il est également conseillé de notifier l’<abbr>API</abbr> d’accessibilité lorsqu’un changement de contexte survient. Pour ce faire, il faut envoyer une notification de modification à l’<abbr>API</abbr> d’accessibilité via la méthode <code>UIAccessibilityPostNotification</code>.<br>
+Il existe plusieurs notifications de modification, mais les deux plus utiles sont :</p>
+<ul>
+<li><code>UIAccessibilityLayoutChangedNotification</code> : permet de spécifier à l’<abbr>API</abbr> d’accessibilité qu’une partie de la page a été modifiée.</li>
+<li><code>UIAccessibilityScreenChangedNotification</code> : permet d’annoncer un changement global de la page.</li>
+</ul>
+<p>Pour plus d’information technique sur ces méthodes, nous vous invitons à regarder la section correspondante dans le <a href="../developpement#informer-d-une-modification-sur-la-page">guide développeur pour iOS</a>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Avec un lecteur d’écran, s’assurer que les modifications dynamiques dans les pages sont bien vocalisées.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Donner accès aux modifications des informations de l’application aux utilisateurs de lecteur d’écran.</p>
+<h2 id="scroll-horizontal"><i lang="en">Scroll</i> horizontal <a class="header-anchor" href="#scroll-horizontal" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Un <i lang="en">scroll</i> horizontal peut être très difficile à détecter si aucun visuel n’aide l’utilisateur à comprendre qu’il existe plusieurs pages.<br>
+Ne pas hésiter à afficher un élément pour indiquer un <i lang="en">scroll</i> horizontal (les &quot;points&quot; d’un <code>UIPageControl</code>). Quand cela est nécessaire, ajouter également des boutons « suivant » et « précédent ».</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les <i lang="en">scrolls</i> horizontaux sont indiqués visuellement</li>
+<li>Avec le lecteur d’écran activé, un mécanisme permet de passer de page en page lorsqu’un <i lang="en">scroll</i> horizontal est présent.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Donner une indication visuelle aux utilisateurs lors de la présence de <i lang="en">scrolls</i> horizontaux. Permettre aux utilisateurs de lecteur d’écran d’utiliser les <i lang="en">scrolls</i> horizontaux.</p>
+<div class="sideToSide row">
+<div class="col-sm-6 col-xs-12">
+<p><strong>Exemple valide :</strong></p>
+<img src="../../images/scroll_ios_h1.png" alt="exemple de scroll horizontal accessible" width="300">
+</div>
+<div class="col-sm-6 col-xs-12">
+<p><strong>Exemple non-valide :</strong></p>
+<img src="../../images/scroll_ios_h2.png" alt="exemple de scroll horizontal non accessible" width="300">
+</div>
+</div>
+<h2 id="formulaire">Formulaire <a class="header-anchor" href="#formulaire" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>Lier les champs de formulaires avec leurs labels apporte une vocalisation supplémentaire qui permet à l’utilisateur de comprendre quoi remplir lorsqu’il arrive sur un champ de formulaire.</p>
+<p>Sous iOS, on apporte une information supplémentaire sur les champs de formulaire via son alternative textuelle, soit l’attribut <code>accessibilityLabel</code>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>les champs de formulaire doivent restituer leurs labels</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Améliorer la navigation en améliorant la compréhension globale de la page, les champs de formulaires décrivant le contenu attendu.</p>
+<h2 id="ordre-de-lecture">Ordre de lecture <a class="header-anchor" href="#ordre-de-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle. Il est donc important d’y faire attention.</p>
+<p>Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres : la lecture « logique » (en France), soit de gauche à droite et de haut en bas. Il existe cependant certains cas où le lecteur d’écran n’arrive pas à déterminer un ordre et, dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.</p>
+<p>Redéfinir l’ordre de lecture dans <span lang="en">VoiceOver</span> s’effectue en respectant le protocole <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAccessibilityContainer_Protocol/"><code>UIAccessibilityContainer</code></a>. L’idée est d’avoir un tableau des éléments de la vue qui définit l’ordre de lecture des éléments. Il est bien souvent nécessaire d’utiliser l’attribut <code>shouldGroupAccessibilityElement</code> afin d’avoir un ordre précis, mais pour une partie seulement de la vue (le reste étant l’ordre naturel de lecture).</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>L’ordre de lecture (celui de <span lang="en">VoiceOver</span>) est logique et cohérent.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Assurer un ordre de lecture logique et cohérent aux utilisateurs de lecteur d’écran  pour leur assurer une complète compréhension du contenu.</p>
+<p><strong>Exemple :</strong><br>
+Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci : <code>1, 4, 7, 2, 5, 8, 0, 3, 6, 9, vol+, vol-, p+, p-</code>. Un ordre de lecture plus cohérent serait <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-</code>.<br>
+<br><img src="../../images/order.png" alt="exemple de scroll horizontal accessible" width="300"></p>
+<h2 id="langue">Langue <a class="header-anchor" href="#langue" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>La vocalisation donnée par <span lang="en">VoiceOver</span> s’effectue, par défaut, dans la langue du système du mobile. Il arrive parfois que certain mots/textes d’une application soient dans une langue différente. Afin que la vocalisation soit audible, il faut déclarer ces textes dans la langue correspondante.</p>
+<p>Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> pour un mot ou un texte, il existe l’attribut <code>accessibilityLanguage</code>. Disponible via le protocole <code>UIAccessibility</code>.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Les mots/textes dans une langue différente de celle du reste de l’application sont bien vocalisés dans leur langue</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Assurer une compréhension des textes de l’application.</p>
+<h2 id="orientation-de-lecran">Orientation de l’écran <a class="header-anchor" href="#orientation-de-lecran" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes avec des déficiences visuelles et/ou motrices.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong><br>
+l’accès au contenu d’une application ne doit absolument pas dépendre de l’orientation de l’écran, c’est pourquoi il est très fortement recommandé de mettre en place un <strong>passage sans contraintes entre les modes portrait et paysage</strong> dès le début du projet.<br>
+<br>Bien évidemment, ceci n’est valable que si des contraintes fonctionnelles ne viennent pas à l’encontre d’un de ces deux modes (projection, tableau… par exemple).<br>
+<br>L’idéal est de pouvoir aussi déployer l’application sur des écrans de type iPad de façon à favoriser la lecture et la gestuelle pour l’utilisateur.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Le cahier des charges <code>design</code> parfaitement détaillé et comprenant l’ensemble des écrans à implémenter selon leur orientation.</li>
+<li>La définition très précise de la façon dont les transitions entre les modes doivent être réalisées.</li>
+<li>La parfaite adaptation du contenu aux modes portrait et paysage par le biais d’une batterie de tests graphiques sur tous les mobiles compatibles avec la version iOS déployée (très important pour le grossissement de texte).</li>
+<li>Le paramétrage approprié dans l’éditeur de code.<br>
+<br><img style="max-width: 700px; height: auto;" alt="" src="../../images/orientation.png" /></li>
+</ul>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Assurer une meilleure lisibilité du contenu tout en permettant aux personnes déficientes motrices qui utilisent leur terminal en mode paysage de pouvoir utiliser l’application sans contrainte.<br><br></p>
+<h2 id="ecran-specifique-accessibilite">Écran spécifique accessibilité <a class="header-anchor" href="#ecran-specifique-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Description :</strong></p>
+<p>En fonction des spécificités liées aux interfaces graphiques proposées, il peut être beaucoup plus facile de vouloir <strong>créer un nouvel écran dédié accessibilité</strong> pour ne pas avoir à remettre en cause les développements déjà implémentés.</p>
+<p>Même si cela peut sembler être une bonne idée à première vue, il ne faut <strong>absolument pas s'engager dans cette voie</strong> car :</p>
+<ul>
+<li>Le lecteur d'écran est utilisé pour les personnes aveugles mais aussi par les personnes illétrées. Pour ces dernières, s'apercevoir qu'un écran d'application change en fonction de l'activation de cette fonctionnalité peut laisser croire que toutes les informations fournies initialement ne sont peut-être pas les mêmes que celles proposées en accessibilité, ce qui peut conduire à un sentiment discriminant.</li>
+<li>D'un point de vue pratique pour la maintenabilité de l'application, le fait de rajouter un écran qui ne sera utilisé que lorsqu'une option d'accessibilité est activée risque de rapidement l'oublier si des modifications ultérieures sont à apporter sur l'écran initial.</li>
+</ul>
+<h2 id="options-daccessibilite">Options d'accessibilité <a class="header-anchor" href="#options-daccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong> les options d'accessibilité présentes dans les réglages du terminal sont toutes susceptibles d'améliorer de façon conséquente le parcours d'un utilisateur souffrant d'un trouble que l'option peut fortement aider à surmonter.</p>
+<p>Il est donc primordial de :</p>
+<ul>
+<li><strong>Comprendre</strong> comment chacune de ces options peut impacter la conception et la réalisation d'une application.</li>
+<li><strong>Tester</strong> chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.</li>
+</ul>
+<p>La liste exhaustive de ces options est fournie ci-dessous en détaillant leur action et leur correspondance programmatique une fois sélectionnées :</p>
+<ol>
+<li><a href="#optionA11Y_contraste">Augmenter le contraste</a>.</li>
+<li><a href="#optionA11Y_assistiveTouch">Activer l'AssistiveTouch</a>.</li>
+<li><a href="#optionA11Y_bold">Mettre le texte en gras</a>.</li>
+<li><a href="#optionA11Y_closedCaption">Afficher les sous-titres</a>.</li>
+<li><a href="#optionA11Y_grayScale">Modifier les couleurs en échelle de gris</a>.</li>
+<li><a href="#optionA11Y_guidedAccess">Activer l'Accès Guidé</a>.</li>
+<li><a href="#optionA11Y_inverserLesCouleurs">Inverser les couleurs</a>.</li>
+<li><a href="#optionA11Y_audioEnMono">Passer l'audio en mono</a>.</li>
+<li><a href="#optionA11Y_limiteVisuel">Limiter les animations visuelles</a>.</li>
+<li><a href="#optionA11Y_reductionTransparence">Réduire le floutage et la transparence</a>.</li>
+<li><a href="#optionA11Y_secouerPourAnnuler">Secouer pour annuler</a>.</li>
+<li><a href="#optionA11Y_lecturePage">Énoncer le contenu de l'écran</a>.</li>
+<li><a href="#optionA11Y_speakSelection">Énoncer la sélection</a>.</li>
+<li><a href="#optionA11Y_switchControl">Activer le Contrôle de Sélection</a>.</li>
+<li><a href="#optionA11Y_voiceOver">Activer VoiceOver</a>.</li>
+<li><a href="#optionA11Y_autoPlayVideoPreviews">Prévisualisation vidéo</a> ⟹ <strong>nouveauté iOS 13</strong></li>
+<li><a href="#optionA11Y_differentiateWithoutColour">Différencier sans couleur</a> ⟹ <strong>nouveauté iOS 13</strong></li>
+<li><a href="#optionA11Y_onOffSwitchLabels">Boutons avec I/O</a> ⟹ <strong>nouveau dans iOS 13</strong></li>
+</ol>
+<p><a name="optionA11Y_contraste"></a></p>
+<ul>
+<li><strong>Augmenter le contraste</strong> <em>(UIAccessibilityDarkerSystemColorsEnabled)</em> : voir <a href="../wwdc/2018/230#Contrast">WWDC 2018</a> pour un descriptif de la fonctionnalité.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Contrast-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Contrast-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Contrast-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Augmenter le contraste." src="../../images/optionA11Y_iOS13_contraste.png" />
+<p>Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une <strong><a href="https://developer.apple.com/documentation/uikit/uitraitcollection/3238079-accessibilitycontrast" style="text-decoration: underline;">variable d'instance</a></strong> <code>traitCollection</code>.</p>
+</div>
+<div class="tab-pane" id="Contrast-iOS12" role="tabpanel" >
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Augmenter le contraste." src="../../images/optionA11Y_iOS12_contraste.png" />
+</div></div>
+<p><a name="optionA11Y_assistiveTouch"></a></p>
+<ul>
+<li><strong>Activer l'AssistiveTouch</strong> <em>(UIAccessibilityIsAssistiveTouchRunning)</em> : affiche le menu homonyme au premier plan quelle que soit l'application lancée.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#AssistiveTouch-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#AssistiveTouch-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="AssistiveTouch-iOS13"
+     role="tabpanel">
+<img style="max-width: 1100px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Toucher - AssistiveTouch - AssistiveTouch." src="../../images/optionA11Y_iOS13_assistiveTouch.png" />
+</div>
+<div class="tab-pane" id="AssistiveTouch-iOS12" role="tabpanel" >
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - AssistiveTouch" src="../../images/optionA11Y_iOS12_assistiveTouch.png" />
+</div></div>
+<p><a name="optionA11Y_bold"></a></p>
+<ul>
+<li><strong>Mettre le texte en gras</strong> <em>(UIAccessibilityIsBoldTextEnabled)</em> : voir <a href="../wwdc/2018/230#Sizing">WWDC 2018</a> pour un descriptif de la fonctionnalité.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#Bold-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#Bold-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="Bold-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Texte en gras" src="../../images/optionA11Y_iOS13_bold.png" />
+</div>
+<div class="tab-pane" id="Bold-iOS12" role="tabpanel" >
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Texte en gras" src="../../images/optionA11Y_iOS12_bold.png" />
+</div></div>
+<p><a name="optionA11Y_closedCaption"></a></p>
+<ul>
+<li><strong>Afficher les sous-titres</strong> <em>(UIAccessibilityIsClosedCaptioningEnabled)</em> : permet l'affichage de sous-titres codés (SC) ou pour sourds/malentendants selon leur disponibilité au visionnage dans l'<code>appTV</code> ou dans <code>Vidéos</code>.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ClosedCaption-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ClosedCaption-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ClosedCaption-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Sous-titres codés et SM" src="../../images/optionA11Y_iOS13_closedCaptions.png" />
+</div>
+<div class="tab-pane" id="ClosedCaption-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Sous-titres codés et SM" src="../../images/optionA11Y_iOS12_closedCaptions.png" />
+</div></div>
+<p><a name="optionA11Y_grayScale"></a></p>
+<ul>
+<li><strong>Modifier les couleurs en échelle de gris</strong> <em>(UIAccessibilityIsGrayscaleEnabled)</em> : permet aux personnes ne distinguant pas les couleurs de pouvoir cerner sans problèmes les écrans particulièrement bigarrés.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#GrayScale-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#GrayScale-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="GrayScale-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Filtres de couleur" src="../../images/optionA11Y_iOS13_grayScale.png" />
+</div>
+<div class="tab-pane" id="GrayScale-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Filtres de couleur" src="../../images/optionA11Y_iOS12_grayScale.png" />
+</div></div>
+<p><a name="optionA11Y_guidedAccess"></a></p>
+<ul>
+<li><strong>Activer l'Accès Guidé</strong> <em>(UIAccessibilityIsGuidedAccessEnabled)</em> : limite l'utilisation du terminal à une seule et unique application.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#GuidedAccess-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#GuidedAccess-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="GuidedAccess-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Accès guidé - Accès guidé" src="../../images/optionA11Y_iOS13_guidedAccess.png" />
+</div>
+<div class="tab-pane" id="GuidedAccess-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Accès guidé - Accès guidé" src="../../images/optionA11Y_iOS12_guidedAccess.png" />
+</div></div>
+<p><a name="optionA11Y_inverserLesCouleurs"></a></p>
+<ul>
+<li><strong>Inverser les couleurs</strong> <em>(UIAccessibilityIsInvertColorsEnabled)</em> : limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue occulaires en passant le terminal en <code>mode sombre</code>.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#invertColors-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#invertColors-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="invertColors-iOS13"
+     role="tabpanel">
+<img style="max-width: 600px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Inversion intelligente" src="../../images/optionA11Y_iOS13_invertColors.png" />
+</div>
+<div class="tab-pane" id="invertColors-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Adapter l'affichage - Inverser les couleurs - Inversion intelligente" src="../../images/optionA11Y_iOS12_invertColors.png" />
+</div></div>
+<p><a name="optionA11Y_audioEnMono"></a></p>
+<ul>
+<li><strong>Passer l'audio en mono</strong> <em>(UIAccessibilityIsMonoAudioEnabled)</em> : aide les personnes malentendantes ou sourdes d'une oreille par exemple.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#AudioMono-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#AudioMono-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="AudioMono-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Audio Visuel - Mono Audio" src="../../images/optionA11Y_iOS13_audioEnMono.png" />
+</div>
+<div class="tab-pane" id="AudioMono-iOS12" role="tabpanel" >
+<img style="max-width: 590px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Audio mono" src="../../images/optionA11Y_iOS12_audioEnMono.png" />
+</div></div>
+<p><a name="optionA11Y_limiteVisuel"></a></p>
+<ul>
+<li><strong>Limiter les animations visuelles</strong> <em>(UIAccessibilityIsReduceMotionEnabled)</em> : voir <a href="../wwdc/2018/230#Motion">WWDC 2018</a> pour un descriptif de la fonctionnalité.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ReduceMotion-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ReduceMotion-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ReduceMotion-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Réduire les animations" src="../../images/optionA11Y_iOS13_reduceMotion.png" />
+</div>
+<div class="tab-pane" id="ReduceMotion-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire les animations" src="../../images/optionA11Y_iOS12_reduceMotion.png" />
+</div></div>
+<p><a name="optionA11Y_reductionTransparence"></a></p>
+<ul>
+<li><strong>Réduire le floutage et la transparence</strong> <em>(UIAccessibilityIsReduceTransparencyEnabled)</em> : voir <a href="../wwdc/2018/230#TransparencyAndBlurring">WWDC 2018</a> pour un descriptif de la fonctionnalité.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ReduceTransparency-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ReduceTransparency-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ReduceTransparency-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Réduire la transparence" src="../../images/optionA11Y_iOS13_reduceTransparency.png" />
+</div>
+<div class="tab-pane" id="ReduceTransparency-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire la transparence" src="../../images/optionA11Y_iOS12_reduceTransparency.png" />
+</div></div>
+<p><a name="optionA11Y_secouerPourAnnuler"></a></p>
+<ul>
+<li><strong>Secouer pour annuler</strong> <em>(UIAccessibilityIsShakeToUndoEnabled)</em> : affichage d'un menu par secousse du terminal qui permet de rétablir une action supprimée ou encore d'éviter de rester appuyé sur la touche d'effacement pour regarder les lettres s'effacer l'une après l'autre.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ShakeToUndo-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ShakeToUndo-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="ShakeToUndo-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Toucher - Secouer pour annuler" src="../../images/optionA11Y_iOS13_shakeToUndo.png" />
+</div>
+<div class="tab-pane" id="ShakeToUndo-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Secouer pour annuler" src="../../images/optionA11Y_iOS12_shakeToUndo.png" />
+</div></div>
+<p><a name="optionA11Y_lecturePage"></a></p>
+<ul>
+<li><strong>Énoncer le contenu de l'écran</strong> <em>(UIAccessibilityIsSpeakScreenEnabled)</em> : permet l'accès au player natif pour lire automatiquement une page web par exemple.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SpeakScreen-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SpeakScreen-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SpeakScreen-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer lecontenu de l'écran" src="../../images/optionA11Y_iOS13_speakScreen.png" />
+</div>
+<div class="tab-pane" id="SpeakScreen-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer le contenu de l'écran" src="../../images/optionA11Y_iOS12_speakScreen.png" />
+</div></div>
+<p><a name="optionA11Y_speakSelection"></a></p>
+<ul>
+<li><strong>Énoncer la sélection</strong> <em>(UIAccessibilityIsSpeakSelectionEnabled)</em> : donne accès à l'affichage d'un menu qui propose d'énoncer la sélection qui a déclenché son apparition.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SpeakSelection-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SpeakSelection-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SpeakSelection-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer la sélection" src="../../images/optionA11Y_iOS13_speakSelection.png" />
+</div>
+<div class="tab-pane" id="SpeakSelection-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Parole - Énoncer la sélection" src="../../images/optionA11Y_iOS12_speakSelection.png" />
+</div></div>
+<p><a name="optionA11Y_switchControl"></a></p>
+<ul>
+<li><strong>Activer le Contrôle de Sélection</strong> <em>(UIAccessibilityIsSwitchControlRunning)</em> : active la fonctionnalité en <code>mode point</code> ou en <code>mode élément</code>.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#SwitchControl-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#SwitchControl-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="SwitchControl-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Switch Control - Switch Control" src="../../images/optionA11Y_iOS13_switchControl.png" />
+</div>
+<div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Contrôle de sélection" src="../../images/optionA11Y_iOS12_switchControl.png" />
+</div></div>
+<p><a name="optionA11Y_voiceOver"></a></p>
+<ul>
+<li><strong>Activer VoiceOver</strong> <em>(UIAccessibilityIsVoiceOverRunning)</em> : active le lecteur d'écran.</li>
+</ul>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#VoiceOver-iOS13"
+           role="tab" 
+           aria-selected="true">iOS 13</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#VoiceOver-iOS12"
+           role="tab" 
+           aria-selected="false">iOS 12</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="VoiceOver-iOS13"
+     role="tabpanel">
+<img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - VoiceOver - VoiceOver" src="../../images/optionA11Y_iOS13_voiceOver.png" />
+</div>
+<div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
+<img style="max-width: 950px; height: auto;" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - VoiceOver - VoiceOver" src="../../images/optionA11Y_iOS12_voiceOver.png" />
+</div></div>
+<p><a name="optionA11Y_autoPlayVideoPreviews"></a></p>
+<ul>
+<li><strong>Prévisualisation vidéo</strong> <em>(UIAccessibilityIsVideoAutoplayEnabled)</em> : voir <a href="../wwdc/2019#nouveautes-ios-13-pour-laccessibilite-visuelle">WWDC 2019</a> pour un descriptif de cette <strong>nouvelle fonctionnalité iOS 13</strong>.<br>
+<br><img style="max-width: 375px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" src="../../images/iOSdev/wwdc19-244-TextStyles_6.png" /></li>
+</ul>
+<p><a name="optionA11Y_differentiateWithoutColour"></a></p>
+<ul>
+<li><strong>Différencier sans couleur</strong> <em>(UIAccessibilityShouldDifferentiateWithoutColour)</em> : voir <a href="../wwdc/2019#nouveautes-ios-13-pour-laccessibilite-visuelle">WWDC 2019</a> pour un descriptif de cette <strong>nouvelle fonctionnalité iOS 13</strong>.<br>
+<br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur" src="../../images/optionA11Y_iOS13_differentiateWithoutColour.png" /></li>
+</ul>
+<p><a name="optionA11Y_onOffSwitchLabels"></a></p>
+<ul>
+<li><strong>Boutons avec I/O</strong> <em>(UIAccessibilityIsOnOffSwitchLabelsEnabled)</em> : une fois activée, cette option dont l'<strong>accès programmatique est une nouveauté iOS 13</strong> affiche directement l'état des boutons à bascule pour éviter que seule la couleur soit porteuse de l'information.<br>
+<br><img style="max-width: 1000px; height: auto;" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Boutons avec I/O" src="../../images/optionA11Y_iOS13_onOffSwitchLabels.png" /><br>
+<br></li>
+</ul>
+<p><br>Une fois l'option activée, si l'action désirée n'est pas effective au sein de l'application, il est <strong>très fortement recommandé</strong> d'agir en conséquence en se tenant informé de l'état de l'option impactée pour fournir à l'utilisateur l'expérience à laquelle il s'attend.<br>
+<br>La liste complète des options d'accessibilité avec leur notification dédiée est présente dans la <a href="../developpement#options-daccessibilite">partie développement</a>.<br>
+<br><br>Il peut être aussi particulièrement intéressant de suivre les (dés)activations de ces options sous forme d'indicateurs afin de mieux connaître les utilisateurs d'une application et d'affiner subséquemment sa mise en oeuvre.<br><br></p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/conception.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>
