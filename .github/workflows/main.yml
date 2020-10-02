@@ -1,0 +1,32 @@
+name: Publish website
+
+on:
+  workflow_dispatch
+
+jobs:
+  build_and_deploy:
+    name: Build & deploy website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Compile 11ty
+        run: npm run build:prod
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3.6.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _site
+          cname: a11y-guidelines.orange.com
