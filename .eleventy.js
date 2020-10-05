@@ -83,10 +83,10 @@ module.exports = function (eleventyConfig) {
 
     // We remove the extension to prevent 11ty from throwing errors as it tries to write, for example : `/en/all.html/index.html`
     if (path.includes('index.html')) {
-      return path.replace('index.html', '')
+      return `/${path.replace('index.html', '')}/`
     }
 
-    return path.replace('.html', '')
+    return `/${path}/`
   })
 
   eleventyConfig.addNunjucksFilter('getDefaultLocale', function (locales, outputKey = null) {
