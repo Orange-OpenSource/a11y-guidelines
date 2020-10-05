@@ -109,7 +109,7 @@ En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</s
 
 Le <span lang="en">floating button</span> permettant de générer un rapport lorsque <span lang="en">Accessibility Scanner</span> est actif.
 
-<img src="../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencer le scan" width="25%">
+<img src="../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencher le scan" width="25%">
 
 Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.
 
