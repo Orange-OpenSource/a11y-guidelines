@@ -9,12 +9,13 @@ To validate the accessibility of an application, manual checks made by accessibi
 
 However, before doing the manual verifications, steps must be taken beforehand in order to detect the majority of accessibility errors upstream, and thus reduce the cost of the process to make its application accessible.
 
-The first step is to analyze accessibility during the design phase, on models or prototypes. By bringing in an accessibility expert, he or she can provide feedback from this phase to adapt the models as needed, which will then avoid wasting time in developing interfaces that are not adapted to accessibility.
+- The first step is to analyze accessibility during the design phase, on models or prototypes. By bringing in an accessibility expert, he or she can provide feedback from this phase to adapt the models as needed, which will then avoid wasting time in developing interfaces that are not adapted to accessibility.
 
-The second step is to analyze the code during the development phase, by the developers. This notably involves automated tests or the Lint tool from Android Studio.
+- The second step is to analyze the code during the development phase, by the developers. This notably involves automated tests or the Lint tool from Android Studio.
 
-The third step is to scan the application with accessibility analysis tools, in order to detect other potential errors.
-The last step is to carry out extensive manual tests, putting yourself in a handicap situation to detect potential accessibility problems, considering the different profiles that may be concerned.
+- The third step is to scan the application with accessibility analysis tools, in order to detect other potential errors.
+
+- The last step is to carry out extensive manual tests, putting yourself in a handicap situation to detect potential accessibility problems, considering the different profiles that may be concerned.
 
 Ideally, the tests should be performed on Android mobiles without a custom OS like the Pixel. They must then be carried out on the mobiles with custom OS most used by the application.
 
