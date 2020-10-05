@@ -215,7 +215,7 @@ La navigation peut être utilisée en :
   <dl>
     <dt>Double clique avec un doigt</dt>
     <dd>
-      <img src="../../images/gestureclick.png" alt="" width="80">
+      <img src="../../images/gesture2.png" alt="" width="80">
       Active le dernier élément qui a été vocalisé
     </dd>
   <dt><span lang="en">Swipe</span> vers le haut ou vers le bas avec deux doigts</dt>

@@ -170,7 +170,7 @@ To do this, navigate in "Settings/Developer options" and activate the option "Sh
 
 The settings screen for layout bounds activation.
 
-<img src="../../images/contour_param.jpg" alt="Settings screenshot, with the layout bounds activation checkbox="25%"> 
+<img src="../../images/contour_param.jpg" alt="Settings screenshot, with the layout bounds activation checkbox" width="25%"> 
 
 Screen example with layout bounds activate
 
@@ -213,7 +213,7 @@ The different types of Talkback navigation:
   <dl>
     <dt>Double click with one finger</dt>
     <dd>
-      <img src="../../images/gestureclick.png" alt="" width="80">
+      <img src="../../images/gesture2.png" alt="" width="80">
       Activate the last vocalized element
     </dd>
   <dt>Swipe up or down with two fingers</dt>
