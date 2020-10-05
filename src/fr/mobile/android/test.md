@@ -20,7 +20,7 @@ Dans l’idéal, les tests doivent être effectués sur des mobiles Android sans
 
 Pour tester l’accessibilité sur Android, il est utile de télécharger sur [<span lang="en">Google Play</span>](https://play.google.com/store/apps?hl=fr), [<span lang="en">Android Accessibility Suite</span>](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) et [<span lang="en">Accessibility Scanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor). Les outils peuvent être combinés pour vérifier plus de critères en même temps.
 
-## Tests des développeurs : analyse du code
+## Tests des développeurs : analyse du code
 
 Cette étape permet de remonter directement des problèmes d’accessibilité pendant la phase de développement et provoque des erreurs de build de l’application, ou divers warnings. Le développeur doit ainsi les corriger directement pour pouvoir builder son application et la faire fonctionner, ce qui la rend d’office plus accessible avant même de la faire passer par des tests manuels, ou par des outils d’analyse. De plus, cela évite les possibles régressions d’accessibilité.
 
@@ -29,10 +29,10 @@ Le développeur peut en premier lieu utiliser l’outil <span lang="en">Lint</sp
 5 problèmes d’accessibilités peuvent être remontés grâce à <span lang="en">Lint</span> :
 
 - **<span lang="en">ClickableViewAccessibility </span>**: Si une vue surcharge  <span lang="en">onTouchEvent </span> ou utilise une surcharge <span lang="en">onTouchListener</span> , mais n’implémente pas <span lang="en">performClick</span>
-- **<span lang="en">ContentDescription</span>** : les widgets non textuels ne portant aucune <span lang="en">contentDescription</span>
-- **<span lang="en">KeyboardInaccessibleWidget</span>** : les widgets étant déclarés comme clickables mais non focusables. 
-- **<span lang="en">LabelFor</span>** : un <span lang="en">EditText</span> doit contenir soit un <span lang="en">hint</span>, soit la référence d’un label associé avec <span lang="en">labelFor</span>
-- **<span lang="en">GetContentDescriptionOverride</span>** : surcharger <span lang="en">getContentDescription</span> peut poser des problèmes d’accès aux services d’accessibilité. Dans le cas où on a besoin de modifier la description, il faut plutôt faire appel à la fonction : <span lang="en">setContentDescription</span>
+- **<span lang="en">ContentDescription</span>** : les widgets non textuels ne portant aucune <span lang="en">contentDescription</span>
+- **<span lang="en">KeyboardInaccessibleWidget</span>** : les widgets étant déclarés comme clickables mais non focusables. 
+- **<span lang="en">LabelFor</span>** : un <span lang="en">EditText</span> doit contenir soit un <span lang="en">hint</span>, soit la référence d’un label associé avec <span lang="en">labelFor</span>
+- **<span lang="en">GetContentDescriptionOverride</span>** : surcharger <span lang="en">getContentDescription</span> peut poser des problèmes d’accès aux services d’accessibilité. Dans le cas où on a besoin de modifier la description, il faut plutôt faire appel à la fonction : <span lang="en">setContentDescription</span>
 
 **Exemple de rapport Lint sous Android Studio :**   
 
@@ -45,7 +45,7 @@ Espresso est un framework permettant de tester son UI sous Android. On peut alor
 
 Aucun test explicite n’a besoin d’être écrit. Une fois ATF intégré aux tests Expresso, les vérifications d’accessibilité se rajoutent automatiquement. ATF fonctionne cependant avec les <span lang="en">ViewAction</span>, c’est-à-dire qu’il va effectuer automatiquement la vérification d’accessibilité sur les interactions <span lang="en">ViewAction</span> mis en place dans les tests Espresso. De plus, pour activer les vérifications d’accessibilité, il faut faire appel à la fonction `AccessibilityChecks.enable()` dans la suite de tests. 
 
-Voici comment l’intégrer :
+Voici comment l’intégrer :
 
 <pre>
 <code class="java">
@@ -71,13 +71,13 @@ C’est ainsi que, dans le cas où l’on réalise dans la suite de test un `Vie
 
 L’automatisation du test d’accessibilité selon les <span lang="en">ViewAction</span> peut cependant devenir limitant. C’est pourquoi, on peut indiquer lors de l’activation de ATF, que l’on souhaite faire les validations depuis la vue racine. Ainsi, toutes les vues seront testées, sans besoin d’ajouter de <span lang="en">ViewActions</span>. Pour ce faire, il faut remplacer  `AccessibilityChecks.enable()` par `AccessibilityChecks.enable().setRunChecksFromRootView(true)`
 
-#### Loguer les erreurs d’accessibilité plutôt que faire passer les tests en erreur
+#### Loguer les erreurs d’accessibilité plutôt que de provoquer l'échec des tests
 
-Il est possible de loguer les erreurs d’accessibilité afin de les voir apparaitre dans le logcat d’Android Studio, plutôt que de causer l’erreur des tests Espresso, même si cela n’est pas conseillé. Cela ne doit être utilisé que dans un cadre temporaire. Pour ce faire, il faut ajouter la fonction suivante : `AccessibilityChecks.enable().setThrowExceptionForErrors(false)`
+Il est possible de loguer les erreurs d’accessibilité afin de les voir apparaitre dans le logcat d’Android Studio, plutôt que de provoquer l'échec des tests Espresso, même si cela n’est pas conseillé. Cela ne doit être utilisé que dans un cadre temporaire. Pour ce faire, il faut ajouter la fonction suivante : `AccessibilityChecks.enable().setThrowExceptionForErrors(false)`
 
 #### Créer une whitelist 
 
-Plutôt que de loguer toutes les erreurs d’accessibilité dans le logcat, il est possible de créer une <span lang="en">whitelist</span> pour ne loguer que celles que l’on souhaite, tout en conservant les autres en erreur. Pour cela, il faut ajouter la fonction suivante : 
+Plutôt que d'afficher toutes les erreurs d’accessibilité dans le logcat, il est possible de créer une <span lang="en">whitelist</span> pour ne loguer que celles que l’on souhaite, tout en conservant les autres en erreur. Pour cela, il faut ajouter la fonction suivante : 
 `AccessibilityChecks.enable().setRunChecksFromRootView(true).setSuppressingResultMatcher(matchesView(anyOf(withId(R.id.buttonPlus))))`
 
 Dans cet exemple, la vue ayant pour id **<span lang="en">buttonPlus</span>** ne sera pas indiquée en erreur en cas de problème d’accessibilité, mais sera affichée dans le logcat.
@@ -95,7 +95,7 @@ Le scanner prend des captures d’écran de la page et vérifie :
 - que les zones cliquables sont suffisamment grandes et qu’elles ont un label propre 
 - Les contrastes de couleur
 
-Attention, c’est une aide à la vérification, l’outil remonte parfois des faux positifs.
+Attention, il ne s'agit que d'une aide à la vérification, l’outil remonte parfois des faux positifs.
 
 Certaines de ces vérifications font doublon avec `lint`.
 En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</span>](https://developer.paciellogroup.com/resources/contrastanalyser/) permet de faire un diagnostic plus précis.
@@ -103,13 +103,13 @@ En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</s
 #### Mode opératoire :
 
 - Activer le scanner dans les **paramètres/accessibilité/Accessibility Scanner** (paramètres/accessibilité/Services installés/Accessibility Scanner avec la surcouche de Samsung). Cela affiche un “<span lang="en">floating action button</span>” sur l’écran.
-- Actionner le bouton sur les écrans à tester. Une capture d’écran est réalisée et la liste des suggestions de correction s’affiche.
+- Actionner le bouton sur les écrans à tester. Une capture d’écran est réalisée et la liste des corrections suggérées s’affiche.
 
 **Exemple d'utilisation de l'<span lang="en">Accessibility Scanner</span> :**   
 
-Le <span lang="en">floating button</span> présent sur l'écran pour déclencher un rapport en cas de clic.
+Le <span lang="en">floating button</span> permettant de générer un rapport lorsque <span lang="en">Accessibility Scanner</span> est actif.
 
-<img src="../../images/scanner_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan" width="25%">
+<img src="../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencer le scan" width="25%">
 
 Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.
 
@@ -119,18 +119,18 @@ Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une 
 
 ### <span lang="en">Google Play - Pre Launch Report</span>
 
-Proche de l’analyse effectuée par <span lang="en">Accessibility Scanner, Google Play</span>  est en mesure de générer des rapports d’accessibilité après avoir transféré son application sur la console développeur. Celui-ci, s’appuyant sur le même Framework que l’application <span lang="en">Accessibility Scanner</span>, vérifie notamment 3 exigences <span lang="en">UI</span> au sein de l’application :
+Proche de l’analyse effectuée par <span lang="en">Accessibility Scanner, Google Play</span>  est en mesure de générer des rapports d’accessibilité après avoir transféré son application sur la console développeur. Celui-ci, s’appuyant sur le même Framework que l’application <span lang="en">Accessibility Scanner</span>, vérifie notamment 3 exigences <span lang="en">UI</span> au sein de l’application :
 
-- La zone utilisée pour les éléments interactifs : un bouton trop petit sera alors indiqué dans le rapport par exemple
-- Les contrastes : vérifie que les ratios de contraste sont respectés entre les textes et leurs backgrounds
-- Les descriptions de contenu : vérifie que tous les éléments possèdent un texte pour le décrire à l’utilisateur en cas de besoin
+- La zone utilisée pour les éléments interactifs : un bouton trop petit sera alors indiqué dans le rapport par exemple
+- Les contrastes : vérifie que les ratios de contraste sont respectés entre les textes et leurs backgrounds
+- Les descriptions de contenu : vérifie que tous les éléments possèdent un texte pour le décrire à l’utilisateur en cas de besoin
 
 Ce test étant réalisé depuis la console <span lang="en">Google Play</span>, cela peut être une dernière vérification faite par le Product Owner lui-même, avant de pousser en production l’application, et ainsi constater que les critères d’accessibilité ont bien été respectés.
 
 
 **Exemple de rapport généré par <span lang="en">Google Play Report</span> :**   
 
-![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../images/google_report.png) <!-- .element height="50%" width="50%" --> 
+![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../images/google_report.png) 
 
 
 ### aXe
@@ -141,9 +141,9 @@ L’utilisation d’aXe est très facile, puisqu’il suffit de télécharger l�
 
 **Exemple d'utilisation de aXe :**   
 
-Le <span lang="en">floating button</span> de l'application aXe présent sur l'écran pour déclencher un rapport en cas de clic.
+Le <span lang="en">floating button</span> de l'application aXe permettant de déclencher un rapport.
 
-<img src="../../images/aXe_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton permettant de déclencer le scan grâce à aXe" width="25%">   
+<img src="../../images/aXe_floating.jpg" alt="capture d’écran de l'application Orange TV, avec le bouton aXe permettant de déclencher le scan" width="25%">   
 
 Le rapport ainsi généré par aXe une fois le bouton cliqué.
 
@@ -156,7 +156,7 @@ Le rapport ainsi généré par aXe une fois le bouton cliqué.
 <span lang="en">UI Automator View</span> est un outil présent dans le SDK Android, qui permet de scanner et d’analyser les composants UI d’une application Android. Cela permet ainsi de voir la hiérarchie des vues et les différentes propriétés pour chacune d’elle.
 Bien que n’étant pas un outil dédié à l’accessibilité, celui-ci peut être utilisé afin d’analyser plus en détail un problème d’accessibilité rencontré, et ainsi mieux en comprendre l’origine.
 
-Pour utiliser cet outil, vous avez donc besoin d’installer le SDK Android. Une fois celui-ci installé, vous devriez pouvoir trouver l’outil au chemin suivant : **C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat**
+Pour utiliser cet outil, vous avez donc besoin d’installer le SDK Android. Une fois celui-ci installé, vous devriez pouvoir trouver l’outil au chemin suivant : **C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat**
 
 Il est ainsi possible de l’utiliser au sein d’une application présente sur son téléphone, si celui-ci a le mode développeur activé et qu’il est connecté via un câble USB à l’ordinateur sur lequel <span lang="en">UI Automator View/<span> est lancé. Une fois ces conditions réunies, il suffit de cliquer sur le bouton <span lang="en">Device Screenshot</span> dans l’outil pour lancer l’analyse des composants UI de l’écran affiché sur le téléphone.
 
@@ -165,7 +165,7 @@ Il est ainsi possible de l’utiliser au sein d’une application présente sur 
 ### Outil tracé des contours
 
 Il est possible sous Android d’afficher les contours des différentes vues d’une application, ce qui permet de détecter les possibles problématiques liées aux dimensions des éléments, de vérifier des marges suffisantes entre divers éléments, et de vérifier que chaque zone sensible a une taille suffisante.
-Pour ce faire, il suffit dans les paramètres, puis dans les options pour les développeurs du téléphone, d’activer l’option « Afficher les contours » dans la catégorie « Tracé »
+Pour ce faire, il suffit de naviguer dans les paramètres, puis dans les options pour les développeurs du téléphone, et d’activer l’option « Afficher les contours » dans la catégorie « Tracé »
 
 **Exemple d'utilisation du tracé des contours :**   
 
@@ -188,7 +188,7 @@ Pour les valeurs à respecter voir la [section concernant les couleurs](../conce
 
 ## Les tests manuels : mise en situation
 
-Les tests manuels concernent ceux que vous allez réaliser vous-même, en reproduisant la situation vécue par vos utilisateurs, et donc en utilisant leurs outils d’interaction pour votre application. Il est même préférable de faire tester l’application par de réels utilisateurs en situation de handicap si cela est possible. Plusieurs outils sont donc à utiliser, afin de prendre en compte le maximum de situations possibles : 
+Les tests manuels concernent ceux que vous allez réaliser vous-même, en reproduisant la situation vécue par vos utilisateurs, et donc en utilisant leurs outils d’interaction pour votre application. Il est même préférable de faire tester l’application par de réels utilisateurs en situation de handicap si cela est possible. Plusieurs outils sont donc à utiliser, afin de prendre en compte le maximum de situations possibles : 
 
 
 
@@ -200,17 +200,17 @@ Pour l’activation et l’utilisation du lecteur, vous pourrez obtenir davantag
 
 La navigation peut être utilisée en :
 
-- **Lecture par exploration avec le doigt** : en glissant lentement son doigt sur l’écran, <span lang="en">Talkback</span> annonce les éléments à mesure qu’on l’on passe son doigt sur l’écran.
+- **Lecture par exploration avec le doigt** : en glissant lentement son doigt sur l’écran, <span lang="en">Talkback</span> annonce les éléments à mesure qu’on l’on passe son doigt sur l’écran.
 
 <img src="../../images/gesture1.png" alt="image schématisant l'action de glisser son doigt sur un écran de téléphone" width="80">   
 
 
 
-- **Lecture linéaire** : il est possible d’explorer l’écran, élément par élément en faisant glisser son doigt vers la gauche ou vers la droite pour naviguer entre les éléments, dans l’ordre. Il est aussi possible de parcourir les paramètres de navigation en balayant l’écran vers le haut ou vers le bas jusqu’à obtenir le paramètre souhaité. Le balayage vers la droite ou la gauche se fera alors en utilisant le paramètre choisi ; Les différents paramètres de navigation existants sont : 
-	- **Titres** : naviguer par titre
-	- **Liens** : naviguer par liens (mail, numéro, sites ou tout autre lien à l’écran)
-	- **Commandes** : naviguer par cases à cocher, boutons et autres éléments interactifs
-	- **Défaut** : naviguer par ordre d’affichage pour chaque élément
+- **Lecture linéaire** : il est possible d’explorer l’écran, élément par élément en faisant glisser son doigt vers la gauche ou vers la droite pour naviguer entre les éléments, dans l’ordre. Il est aussi possible de parcourir les paramètres de navigation en balayant l’écran vers le haut ou vers le bas jusqu’à obtenir le paramètre souhaité. Le balayage vers la droite ou la gauche se fera alors en utilisant le paramètre choisi ; Les différents paramètres de navigation existants sont : 
+	- **Titres** : naviguer par titre
+	- **Liens** : naviguer par liens (mail, numéro, sites ou tout autre lien à l’écran)
+	- **Commandes** : naviguer par cases à cocher, boutons et autres éléments interactifs
+	- **Défaut** : naviguer par ordre d’affichage pour chaque élément
   
   <dl>
     <dt>Double clique avec un doigt</dt>
@@ -246,43 +246,43 @@ La navigation peut être utilisée en :
   </dl>
 
 
-- **Recherche sur écran** : il est possible de naviguer en utilisant la recherche sur l’écran ; pour cela, il faut balayer l’écran vers la gauche, puis vers le bas, saisir le terme de recherche et choisir une correspondance dans la liste fournie.
+- **Recherche sur écran** : il est possible de naviguer en utilisant la recherche sur l’écran ; pour cela, il faut balayer l’écran vers la gauche, puis vers le bas, saisir le terme de recherche et choisir une correspondance dans la liste fournie.
 
 <img src="../../images/search_talkback.jpg" alt="capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback" width="25%"> 
 
 
-- **Lecture en continu** : Pour utiliser la lecture de l’écran en continu, il faut ouvrir le menu contextuel général avec un balayage vers le bas puis vers la droite, puis choisir l’option (en balayant vers la droite pour la trouver dans le menu) « Lire à partir du haut de page » ou « Lire à part de l’élément suivant », puis appuyer deux fois dessus pour sélectionner l’option. La lecture en continu démarre alors et peut-être arrêtée en appuyant sur l’écran. 
+- **Lecture en continu** : Pour utiliser la lecture de l’écran en continu, il faut ouvrir le menu contextuel général avec un balayage vers le bas puis vers la droite, puis choisir l’option (en balayant vers la droite pour la trouver dans le menu) « Lire à partir du haut de page » ou « Lire à partir de l’élément suivant », puis appuyer deux fois dessus pour sélectionner l’option. La lecture en continu démarre alors et peut-être arrêtée en appuyant sur l’écran. 
 
 
 #### Mode opératoire
 
 Parcourir l’application sur les scénarios utilisateurs et vérifier que toutes les informations sont vocalisées dans un ordre logique et compréhensible ainsi que :
 
-- Tous les éléments signifiants sont-ils bien accessibles ?
+- Tous les éléments signifiants sont-ils bien accessibles ?
 
-- Les informations sont-elles vocalisées dans un ordre logique et compréhensible ?
+- Les informations sont-elles vocalisées dans un ordre logique et compréhensible ?
 
-- Les éléments interactifs sont-ils vocalisés avec l’action associée ? (bouton, case à cocher… Appuyer deux fois pour activer)
+- Les éléments interactifs sont-ils vocalisés avec l’action associée ? (bouton, case à cocher… Appuyer deux fois pour activer)
 
-- Les états des éléments sont-ils précisés ? (désactivé, coché)
+- Les états des éléments sont-ils précisés ? (désactivé, coché)
 
-- Les messages temporaires, et les alertes sont-ils vocalisés ?
+- Les messages temporaires, et les alertes sont-ils vocalisés ?
 
-- Les transitions entre les activités sont-elles vocalisées ?
+- Les transitions entre les activités sont-elles vocalisées ?
 
-- Les messages d’erreurs et les contenus dynamiques sont-ils vocalisés ?
+- Les messages d’erreurs et les contenus dynamiques sont-ils vocalisés ?
 
-- Les scrolls horizontaux sont-ils vocalisés ?
+- Les scrolls horizontaux sont-ils vocalisés ?
 
-- Y-a-t-il la présence d’éléments fantômes ?
+- Y-a-t-il la présence d’éléments fantômes ?
 
-- Les titres des activités sont-ils vocalisés ?
+- Les titres des activités sont-ils vocalisés ?
 
-- Le workflow est-il facile ? 
+- Le workflow est-il facile ? 
 
-- La vocalisation est-elle cohérente, succincte, et simple ?
+- La vocalisation est-elle cohérente, succincte, et simple ?
 
-- Les images décoratives sont-elles bien ignorées ? Et au contraire, les images signifiantes sont-elles vocalisées ?
+- Les images décoratives sont-elles bien ignorées ? Et au contraire, les images signifiantes sont-elles vocalisées ?
 
 Idéalement, le test doit se faire sans regarder l’écran, ou en activant l’écran noir (**Assombrir l’écran**).
 
@@ -294,9 +294,9 @@ Pour tester la navigation au clavier, il faut connecter un clavier d’ordinateu
 
 #### Mode opératoire
 
-Parcourir l’application à l’aide du clavier
-- toutes les fonctionnalités doivent être accessibles.  
-- le focus doit rester suffisamment visible sur chaque élément recevant ce focus (éléments activables, boutons, éléments cliquables, cases à cocher…).
+Parcourir l’application à l’aide du clavier et vérifier que :
+- toutes les fonctionnalités sont accessibles.  
+- le focus reste suffisamment visible sur chaque élément recevant ce focus (éléments activables, boutons, éléments cliquables, cases à cocher…).
 
 #### Liste des raccourcis clavier principaux&nbsp;: 
 
@@ -315,7 +315,7 @@ Il est considéré comme bloquant l’impossibilité de sortir d’une fonctionn
 
 **<span lang="en">Switch Access</span>** est une application à destination des personnes présentant des troubles moteur. Elle permet de contrôler le téléphone en programmant des touches. Elle ne peut se substituer aux tests claviers, mais reste cependant intéressante à tester, dans le cas de la méthode two switch.
 
-Pour l’activer, il faut procéder comme suit : 
+Pour l’activer, il faut procéder comme suit : 
 
 - Aller dans les paramètres du téléphone
 - Naviguer dans le menu jusqu’à accessibilité (puis Services installés avec la surcouche Samsung), puis sélectionner <span lang="en">Switch Access</span>, puis Paramètres
@@ -328,20 +328,20 @@ Pour l’activer, il faut procéder comme suit :
 
 Parcourir l’application à l’aide du bouton **Passer à l'option suivante** (volume haut).
 
-Puis vérifier de la même sorte avec la navigation au clavier que : 
-- Le <span lang="en">workflow</span> peut-il être parcouru totalement et facilement, dans un ordre cohérent ?
-- Les <span lang="en">inputs</span> peuvent-ils être édités facilement ?
-- Les éléments mis en surbrillance sont-ils seulement ceux sur lesquels on peut réaliser une action ?
+Puis vérifier que : 
+- Le <span lang="en">workflow</span> peut-il être parcouru totalement et facilement, dans un ordre cohérent ?
+- Les <span lang="en">inputs</span> peuvent-ils être édités facilement ?
+- Les éléments mis en surbrillance sont-ils seulement ceux sur lesquels on peut réaliser une action ?
 
 #### Afficher tout les éléments interactifs
 
-Afin d’afficher en surbrillance tous les éléments interactifs d’un écran rapidement, et ainsi de réaliser une vérification rapide, il est possible d’utiliser l’option <span lang="en">Group Selection</span> du <span lang="en">Switch Access</span>.
+Pour afficher en surbrillance tous les éléments interactifs d’un écran, et ainsi réaliser une vérification rapide, il est possible d’utiliser l’option <span lang="en">Group Selection</span> du <span lang="en">Switch Access</span>.
 
 Pour ce faire, il faut sélectionner la méthode <span lang="en">Group Selection</span> en tant que <span lang="en">Scanning Method</span> dans les paramètres du <span lang="en">Switch Access</span>, et ensuite attribuer une touche pour le scan.
 
-Une fois au sein de son application, il suffit d’appuyer sur l’action **<span lang="en">Select</span>** (volume bas dans notre configuration) pour afficher tous les éléments interactifs de notre écran actuel et ainsi vérifier que :
-- Tous les éléments interactifs sont-ils bien mis en surbrillance ?
-- N’y a-t-il que des éléments interactifs en surbrillance ?
+Une fois au sein de son application, il suffit d’appuyer sur l’action **<span lang="en">Select</span>** (volume bas dans notre configuration) pour afficher tous les éléments interactifs de notre écran actuel et ainsi vérifier que :
+- Tous les éléments interactifs sont-ils bien mis en surbrillance ?
+- N’y a-t-il que des éléments interactifs en surbrillance ?
 
 
 ### Agrandissement
@@ -356,7 +356,7 @@ Lire les instructions lors de l’activation des outils.
 #### Mode opératoire :
 
 - Positionner **Taille de la police** et **Taille d’affichage** au maximum. Parcourir l’application et noter les textes qui ne sont plus lisibles car ils ont disparu ou se chevauchent.
-- Positionner **Agrandissement** sur **Utiliser le service**. Revenir à l’application, cliquer 3 fois sur l’écran. Vérifier que les écrans sont lisibles dans ce mode. Pour agrandir, placer 2 doigts sur l’écran puis écarter les, se déplacer avec deux doigts sur l’écran et un doigt dans certaines listes. Toutes les informations de l’écran doivent être lisibles en mode zoom.
+- Activez l'option ** Agrandissement ** dans les paramètres d'accessibilité. Revenez à votre application et appuyez 3 fois sur l'écran (si vous avez conservé ce raccourci) pour démarrer l'affichage avec grossissement. Vérifiez que les écrans sont lisibles dans ce mode. Pincez avec 2 doigts pour régler le zoom et faites glisser 2 doigts pour vous déplacer sur l'écran. Toutes les informations sur l'écran doivent être lisibles en mode zoom.
 
 
 ### Orientation
@@ -368,10 +368,10 @@ Il est nécessaire de vérifier l’orientation de son application, celle-ci dev
 
 Cet outil n’est disponible qu’à partir de Android Q.
 
-Sur certaines applications, il arrive que l’UI change après un certain délai (par exemple la disparition des boutons de contrôles sur un lecteur vidéo après quelques secondes). Ce délai peut être adapté en fonction du besoin de chacun dans les paramètres, des utilisateurs ayant besoin de plus de temps pour réussir à « voir » les contrôles et à interagir avec eux (que ce soit par le biais d’une assistance ou non). On peut alors faire appel à cette fonction de <span lang="en">AccessibilityManager</span> qui permet d’obtenir le timeout recommandé pour l’utilisateur, en fonction de ces préférences en matière d’accessibilité : `public int getRecommendedTimeoutMillis (int originalTimeout, 
+Sur certaines applications, il arrive que l’UI change après un certain délai (par exemple la disparition des boutons de contrôles sur un lecteur vidéo après quelques secondes). Ce délai peut être adapté en fonction du besoin de chacun dans les paramètres, certains utilisateurs ayant besoin de plus de temps pour réussir à « voir » les contrôles et à interagir avec eux (que ce soit par le biais d’une assistance ou non). On peut alors faire appel à cette fonction de <span lang="en">AccessibilityManager</span> qui permet d’obtenir le timeout recommandé pour l’utilisateur, en fonction de ces préférences en matière d’accessibilité : `public int getRecommendedTimeoutMillis (int originalTimeout, 
                 int uiContentFlags)`
 
-Ainsi, pour tester si ce besoin d’accessibilité est bien pris en compte par l’application, il faut procéder comme suit : 
+Ainsi, pour tester si ce besoin d’accessibilité est bien pris en compte par l’application, il faut procéder comme suit : 
 
 - Aller dans les paramètres du téléphone
 - Naviguer dans le menu jusqu’à accessibilité, puis sélectionner <span lang="en">Time to take action</span>
@@ -383,8 +383,8 @@ Ainsi, pour tester si ce besoin d’accessibilité est bien pris en compte par l
 
 [<span lang="en">Voice Access</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess) est une application intégrée à [<span lang="en">Android Accessibility Suite</span>](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback), à destination des personnes présentant des troubles moteur. Elle permet de commander à la voix l’application à la place de l’écran tactile.
 
-Parmi les commandes possibles générales : 
-- Ouvrir « application »
+Parmi les commandes possibles : 
+- Ouvrir « application »
 - Retour
 - Accueil
 - Afficher les notifications
@@ -394,7 +394,7 @@ Parmi les commandes possibles générales :
 - Balayer vers l’avant
 - Etc..
 
-Dans le cadre du test de notre application, des numéros s’affichent à côté de tous les éléments de l’écran avec lesquels il est possible d’interagir. Si on souhaite ainsi interagir avec un bouton **Valider** qui a pour numéro 6, on peut énoncer les commandes suivantes :
+Une fois Voice Access activée, des numéros s’affichent à côté de tous les éléments de l’écran avec lesquels il est possible d’interagir. Si on souhaite ainsi interagir avec un bouton **Valider** qui a pour numéro 6, on peut énoncer les commandes suivantes :
 - 6
 - Valider
 - Cliquer sur 6
