@@ -58,6 +58,11 @@
 	"groupsTxt3": "Multimedia",
 	"groupsTxt4": "Tactile",
 	"dataBrowse": "Parcourir",
+	"recoverAction": "Restaurer",
+	"recoverTitle": "Restaurer le dernier audit",
+	"recoverMessage": "Souhaitez-vous restaurer le dernier audit sauvegardé ?",
+	"wcagView": "affichage WCAG",
+	"result": "résultat",
 	"template": {
 		"va11ydette": "La v<span class=\"text-primary\">a11y</span>dette",
 		"auditNameWcag": "Grille Audit WCAG 2.1 d’Orange",
@@ -80,6 +85,7 @@
 		"export": "télécharger l'audit (json)",
 		"btnChecklistName": "Modifier le nom de l’audit",
 		"btnPageName": "Modifier le nom de la page",
-		"btnDelPage": "Supprimer la page"
+		"btnDelPage": "Supprimer la page",
+		"btnLocalStorage": "Restaurer le dernier audit"
 	}
 }

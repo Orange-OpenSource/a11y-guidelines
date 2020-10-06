@@ -58,6 +58,11 @@
 	"groupsTxt3": "Multimedia",
 	"groupsTxt4": "Touch screen",
 	"dataBrowse": "Browse",
+	"recoverAction": "Recover",
+	"recoverTitle": "Recover the last audit",
+	"recoverMessage": "Do you want to recover the last saved audit?",
+	"wcagView": "WCAG view",
+	"result": "result",
 	"template": {
 		"va11ydette": "The v<span class=\"text-primary\">a11y</span>dette",
 		"auditNameWcag": "Orange WCAG 2.1 Audit check list",
@@ -80,6 +85,7 @@
 		"export": "download an audit (json)",
 		"btnChecklistName": "Edit the audit name",
 		"btnPageName": "Edit the page name",
-		"btnDelPage": "Delete the page"
+		"btnDelPage": "Delete the page",
+		"btnLocalStorage": "Recover the last audit"
 	}
 }
