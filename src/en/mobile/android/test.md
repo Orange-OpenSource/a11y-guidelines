@@ -1,21 +1,20 @@
 ﻿---
-title: "Android accessibility test"
+title: "Android accessibility testing"
 ---
 
-# Android accessibility test
+# Android accessibility testing
 
-For the web, the level of accessibility required of any <abbr>HTML</abbr> interface by the Orange group is compliance with level AA criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1. The equivalent for native mobile applications is a transposition of these criteria and compliance with [Android platform recommendations] (https://developer.android.com/training/accessibility/testing).
-To validate the accessibility of an application, manual checks made by accessibility experts or by users with disabilities must be carried out.
+Orange group requires its Web sites to be compliant with the level AA of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1. The equivalent for native mobile applications is a transposition of these criteria and compliance with [Android platform recommendations] (https://developer.android.com/training/accessibility/testing).
 
-However, before doing the manual verifications, steps must be taken beforehand in order to detect the majority of accessibility errors upstream, and thus reduce the cost of the process to make its application accessible.
+We recommend 4 steps to test accessibility with the objective to detect and fix accessibility errors as soon as possible during the project lifecycle. Whenever possible, it is useful to bring in an accessibility expert to get feedbak all along the project, as early as the design phase, as it could be expensive to fix accessibility issues identified during the test phase only.
 
-- The first step is to analyze accessibility during the design phase, on models or prototypes. By bringing in an accessibility expert, he or she can provide feedback from this phase to adapt the models as needed, which will then avoid wasting time in developing interfaces that are not adapted to accessibility.
+- The first step is to check accessibility during the design phase, on interface models or prototypes.  Android app created for Orange must also be compliant with the [Orange Design Guidelines (“Android”, “Digital Colour Palettes”, “Accessibility”)](https://design.orange.com/fr/guidelines/) that detail the color usage, the type system, etc.
+ 
+- The second step is to test the code during the development phase, by the developers. This step consists of performing automated tests or using the Lint tool from Android Studio.
 
-- The second step is to analyze the code during the development phase, by the developers. This notably involves automated tests or the Lint tool from Android Studio.
+- The third step is to scan the application with accessibility analysis tools.
 
-- The third step is to scan the application with accessibility analysis tools, in order to detect other potential errors.
-
-- The last step is to carry out extensive manual tests, putting yourself in a handicap situation to detect potential accessibility problems, considering the different profiles that may be concerned.
+- The last step is to carry out extensive manual tests, using the app as people with different disabilities or limitations would use it.
 
 Ideally, the tests should be performed on Android mobiles without a custom OS like the Pixel. They must then be carried out on the mobiles with custom OS most used by the application.
 
@@ -24,7 +23,7 @@ To test accessibility on Android, it is useful to download from [Google Play](ht
 
 ## Developer testing: code analysis
 
-This step allows accessibility issues to be reported directly during the development phase and causes application build errors, or various warnings. The developer must therefore correct them directly in order to be able to build his application and make it work, which automatically makes it more accessible before even putting it through manual tests, or analysis tools. In addition, it avoids possible accessibility regressions.
+This step allows accessibility issues to be reported directly during the development phase and causes application build errors or various warnings. The developer must therefore correct them directly in order to be able to build his application and make it work, which automatically makes it more accessible before even putting it through manual tests or analysis tools. In addition, it avoids possible accessibility regressions.
 
 ### <span lang="en">Lint</span>
 The developer can first use the Lint tool in Android Studio, on his application, to do a first pass on the accessibility problems encountered. 5 accessibility problems can be reported with Lint :
@@ -40,9 +39,9 @@ The developer can first use the Lint tool in Android Studio, on his application,
 <img src="../../images/lint.png" alt="screenshot showing a report of the Lint tool, which shows an accessibility error" width="50%">
 
 
-### Automated tests : Espresso
+### Automated tests: Espresso
 
-Espresso is a framework for UI testing on Android. We can integrate the ATF framework (Accessibility Test Framework), which will add a layer of tests concerning accessibility.
+Espresso is a framework for UI testing on Android. You can integrate the ATF framework (Accessibility Test Framework), which will add a layer of tests concerning accessibility.
 
 No explicit test needs to be written. Once ATF is integrated into the Expresso tests, accessibility checks are added automatically. ATF works with ViewAction, meaning that it will automatically perform the accessibility check on  ViewAction interactions set up in the Espresso tests. Additionally, to enable accessibility checks, you must call the `AccessibilityChecks.enable()` function in the test suite.
 
