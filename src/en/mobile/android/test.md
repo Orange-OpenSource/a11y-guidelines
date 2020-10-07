@@ -68,6 +68,8 @@ So, when in the test suite a `ViewAction.click ()` is performed on a button that
 
 #### Perform automated accessibility tests on the complete screen
 
+Accessibility testing automation according to ViewAction can be limited. That's why, validations from root view can be enabled to test all views, without the 'ViewActions' restrictions. To do this, replace `AccessibilityChecks.enable()` by `AccessibilityChecks.enable().setRunChecksFromRootView(true)`
+
 L’automatisation du test d’accessibilité selon les <span lang="en">ViewAction</span> peut cependant devenir limitant. C’est pourquoi, on peut indiquer lors de l’activation de ATF, que l’on souhaite faire les validations depuis la vue racine. Ainsi, toutes les vues seront testées, sans besoin d’ajouter de <span lang="en">ViewActions</span>. Pour ce faire, il faut remplacer  `AccessibilityChecks.enable()` par `AccessibilityChecks.enable().setRunChecksFromRootView(true)`
 
 #### Log accessibility errors rather than causing test failures
