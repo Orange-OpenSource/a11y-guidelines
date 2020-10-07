@@ -1354,5 +1354,9 @@
   {
     "old": "web/liens-telechargement.html",
     "new": "/fr/articles/liens-telechargement"
+  },
+  {
+    "old": "web/la-vallydette",
+    "new": "/fr/web/audit-wcag"
   }
 ]
