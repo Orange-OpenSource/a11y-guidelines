@@ -14,7 +14,14 @@ module.exports = {
   main: {
     'en': [
       { label: 'Home', href: '/en/' },
-      { label: 'Planning', href: '/en/planning/' },
+      {
+        label: 'Planning',
+        href: '/en/planning/',
+        subLevels: [
+          { label: 'Accessibility regulations', href: '/en/planning/accessibility-regulations/' },
+          { label: 'Testing method', href: '/en/planning/testing-method/' }
+        ]
+      },
       {
         label: 'Web',
         href: '/en/web/',
@@ -92,7 +99,14 @@ module.exports = {
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },
-      { label: 'Cadrage', href: '/fr/cadrage/' },
+      {
+        label: 'Cadrage',
+        href: '/fr/cadrage/',
+        subLevels: [
+          { label: 'Cadre légal', href: '/fr/cadrage/cadre-legal/' },
+          { label: 'Méthode de test', href: '/fr/cadrage/methode-de-test/' }
+        ]
+      },
       {
         label: 'Web',
         href: '/fr/web/',
