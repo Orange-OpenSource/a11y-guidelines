@@ -272,7 +272,7 @@ Use the application on the differents use cases and check that all the informati
 
 - Are the horizontal scrolls vocalized?
 
-- Are there no ghost elements?
+- Are visible items the only items to be vocalized (no ghost items vocalized)?
 
 - Are the titles of the activities vocalized?
 
@@ -363,7 +363,7 @@ Read the instructions when you activate the tools.
 
 ### Orientation
 
-It is necessary to check the orientation of your application, as it should work in both landscape and portrait mode. Manual tests must therefore be performed in both cases, since constraining the user to a single mode poses accessibility problems.
+It is necessary to check the orientation of your application, as it should work in both landscape and portrait mode. Manual tests must be performed in both modes, since constraining the user to a single mode poses accessibility problems.
 
 
 ### Accessibility timeouts
@@ -394,7 +394,7 @@ Among the possible commands:
 - Swipe forwards
 - Etc ..
 
-Once Voice Access is enabled, numbers appear next to all of the items on the screen that you can interact with. If you wish to interact with a **Save** button whose number is 6, you can say the following commands:
+Once Voice Access is enabled, numbers appear next to each item you can interact with. If you wish to interact with a **Save** button whose number is 6, you can say the following commands:
 
 - 6
 - Save
@@ -418,11 +418,11 @@ Screen example with Voice Access enabled.
 
 ### Select to Speak
 
-Select to Speak is a tool from Android Accessibility Suite, that allows you to read selected elements of the screen. 
+Select to Speak is a tool from Android Accessibility Suite, that makes it possible to read selected elements of the screen. 
 
 When a single item is selected, the tool vocalizes the item. When multiple items are selected, it implements a logical reading order like Talkback but it does not implement the actions or state of the items.
 
-It is useful for the visually impaired, when the screen is not readable, for read learning(functions like karaoke) or for learning a foreign language.
+It is useful for the visually impaired, when the screen is not readable, for learning to read (it functions like karaoke) or for learning a foreign language.
 
 It can be used for demonstration purposes but is redundant with Talkback for accessibility testing without being able to replace it.
 
