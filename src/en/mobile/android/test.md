@@ -5,6 +5,7 @@ title: "Android accessibility testing"
 # Android accessibility testing
 
 Orange group requires its Web sites to be compliant with the level AA of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1. The equivalent for native mobile applications is a transposition of these criteria and compliance with [Android platform recommendations] (https://developer.android.com/training/accessibility/testing).
+
 We recommend 4 steps to test accessibility with the objective to detect and fix accessibility errors as soon as possible during the project lifecycle. Whenever possible, it is useful to bring in an accessibility expert to get feedbak all along the project, as early as the design phase, as it could be expensive to fix accessibility issues identified during the test phase only.
 
 - The first step is to check accessibility during the design phase, on interface models or prototypes.  Android app created for Orange must also be compliant with the [Orange Design Guidelines (“Android”, “Digital Colour Palettes”, “Accessibility”)](https://design.orange.com/fr/guidelines/) that detail the color usage, the type system, etc.
@@ -70,7 +71,7 @@ Accessibility testing automation according to ViewAction can be limited. That's 
 
 #### Log accessibility errors rather than causing test failures
 
-Accessibility errors can be logged so that they appear in the Android Studio logcat, rather than causing Espresso tests fail, although this is not recommended. This should only be used in a temporary case. To do this, add the following function:
+Accessibility errors can be logged so that they appear in the Android Studio logcat, rather than causing Espresso tests fail, although this is not recommended. This should only be used temporarily. To do this, add the following function:
 `AccessibilityChecks.enable().setThrowExceptionForErrors(false)`
 
 #### Create a whitelist 
@@ -82,7 +83,7 @@ In this example, the view with the id **buttonPlus** will not be indicated in er
 
 ## Application scan : analysis tools
 
-Analysis tools complement the first approach, in order to detect other potential accessibility problems, such as those related to the size of the buttons, color contrasts etc ...
+Analysis tools complement the first approach, in order to detect other accessibility problems, such as those related to the size of the buttons, color contrasts etc ...
 
 
 ### Accessibility Scanner
@@ -97,9 +98,9 @@ The scanner takes screenshots of the current activity and checks:
 Please note, this is only a verification aid, the tool sometimes reports false positives.
 
 Some of these checks are duplicated with `lint`.
-In case of doubt about contrasts, [Colour contrast analysor](https://developer.paciellogroup.com/resources/contrastanalyser/) allow you to make a more precise diagnosis.
+In case of doubt about contrasts, [Colour contrast analysor](https://developer.paciellogroup.com/resources/contrastanalyser/) makes a more precise diagnosis.
 
-#### Procedure :
+#### Procedure:
 
 - Activate the scanner in **settings/accessibility/Accessibility Scanner** (settings/accessibility/Installed services/Accessibility Scanner with One UI for Samsung devices). A floating action button appears on the screen.
 - To test the display, press the button. A screenshot is taken and the list of suggested fixes is displayed.
@@ -132,9 +133,9 @@ Since this test is carried out from the Google Play console, this can be a final
 
 ### aXe
 
-aXe is an application available on the Google Play Store and which allows, as well as Accessibility Scanner or the Pre Launch Report from Google, to display accessibility problems of its application. Although redundant with the two previous tools presented in some checks, it is recommended to use it as a complement, since it will be able to display different accessibility errors, and will therefore perfectly complement the first exams.
+aXe is an application available on the Google Play Store and which makes it possible, as well as Accessibility Scanner or the Pre Launch Report from Google, to display accessibility problems. Although redundant with the two previous tools presented in some checks, it is recommended to use it as a complement, since it is able to display different accessibility errors, and will therefore perfectly complement the first exams.
 
-Using aXe is very easy, you just need to do download the application and then follow the instructions. Using a floating buton , an analysis can be launched on the screen of your choice, and the errors report will be immediately transcribed at the bottom of the screen.
+To use aXe, you just need to download the application and then follow the instructions. Using a floating button , an analysis can be launched on the screen of your choice, and the errors report will be immediately produced at the bottom of the screen.
 
 **aXe use example :**   
 
@@ -142,7 +143,7 @@ aXe floating button displayed on the screen to trigger a report.
 
 <img src="../../images/aXe_floating.jpg" alt="screenshot of the Orange TV application, with the aXe button to start the scan" width="25%">   
 
-The report thus generated by aXe once the button is clicked.
+The report generated by aXe once the button is clicked.
 
 <img src="../../images/aXe_report.jpg" alt="screenshot showing the aXe tool report" width="25%">   
 
@@ -150,18 +151,18 @@ The report thus generated by aXe once the button is clicked.
 
 ### <span lang="en">UI Automator View</span>
 
-UI Automator View is a Android SDK tool that allows you to scan and analyze the UI components of an Android application. This allows you to see the hierarchy of views and the different properties for each one.
-Although not a tool dedicated to accessibility, it can be used to analyze in more detail an accessibility issue encountered, and thus better understand its origin.
+UI Automator View is an Android SDK tool that scans and analyzes the UI components of an Android application. This makes it possible to see the hierarchy of views and the different properties for each one.
+Although not a tool dedicated to accessibility, it can be used to analyze in more detail an accessibility issue, and  better understand its origin.
 
-To use this tool, you need to install the Android SDK. Once installed, you should be able to find the tool at the following path: **C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat**
+To use this tool, you need to install the Android SDK. Once installed, you will find the tool at the following path: **C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat**
 
-To use it on an application, you need to have the developer mode activated on your phone, and to connect it via a USB cable to a computer, which has UI Automator View started.Once these conditions are met, just click on the Device Screenshot  button in the tool to launch the UI components analysis of the screen displayed on the phone.
+To use it on an application, you need to have the developer mode activated on your phone, and to connect it via a USB cable to a computer, which has UI Automator View started. Once these conditions are met, just click on the Device Screenshot button in the tool to launch the UI components analysis of the screen displayed on the phone.
 
 
 
 ### Layout bounds tool
 
-It is possible on Android to display the bounds of the different views of an application, which makes it possible to detect possible problems related to the dimensions of the elements, to check sufficient margins between various elements, and to verify that each sensitive area has a sufficient size.
+It is possible on Android to display the bounds of the different views of an application, which makes it possible to detect possible problems related to the size of the elements, to check margins are sufficient between various elements, and to verify that each sensitive area has a sufficient size.
 
 To do this, navigate in "Settings/Developer options" and activate the option "Show layout bounds" in the category "Drawing"
 
@@ -185,12 +186,12 @@ For the values ​​to respect see the [section concerning colors] (../design#c
 
 ## Manual tests: use cases
 
-Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users, and therefore using their interaction tools for your application. It is even better to have the application tested by real users with disabilities if possible. Several tools must be used, to take into account as many possible situations as possible:
+Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users, and therefore using their interaction tools. It is even better to have the application tested by real users with disabilities. Several tools must be used, to take into account as many possible situations as possible:
 
 
 ### Screen reader TalkBack
 
-The screen reader is a tool for the blind and visually impaired. It has two functions: vocalization and on-screen navigation. All significant elements must be **vocalized** in **logical order**.
+The screen reader is a tool for the blind and visually impaired people. It has two functions: vocalization and on-screen navigation. All significant elements must be **vocalized** in **logical order**.
 
 For Talkback activation and use, you can get more details in the [section about it](../talkback/).
 
@@ -204,10 +205,10 @@ The different types of Talkback navigation:
 
 - **Linear reading** : You can explore the screen, item by item, by swiping your finger left or right to navigate between items, in order. It is also possible to browse the navigation settings by swiping up or down the screen until you get the desired setting. The swipe to the right or to the left will then be done using the chosen parameter; The various existing navigation parameters are:
 
-	- **Headings** : navigate by headings
-	- **Links** : navigate by links (email, phone number, website or other links on the screen)
-	- **Controls** : navigate by checkboxes, switches, text fields, buttons, radio buttons, sliders.
-	- **Default** : explore every element on the page in logical order.
+	- **Headings**: navigate by headings
+	- **Links**: navigate by links (email, phone number, website or other links on the screen)
+	- **Controls**: navigate by checkboxes, switches, text fields, buttons, radio buttons, sliders.
+	- **Default**: explore every element on the page in logical order.
   
   <dl>
     <dt>Double click with one finger</dt>
@@ -257,7 +258,7 @@ Use the application on the differents use cases and check that all the informati
 
 - Are all the significant elements accessible?
 
-- Are the informations vocalized in a logical and understandable order?
+- Is all the information vocalized in a logical and understandable order?
 
 - Are the interactive elements vocalized with the associated action? (button, checkbox ... Double tap to activate)
 
@@ -271,7 +272,7 @@ Use the application on the differents use cases and check that all the informati
 
 - Are the horizontal scrolls vocalized?
 
-- Is there the presence of ghost elements?
+- Are there no ghost elements?
 
 - Are the titles of the activities vocalized?
 
@@ -279,7 +280,7 @@ Use the application on the differents use cases and check that all the informati
 
 - Is the vocalization coherent, succinct, and simple?
 
-- Are decorative images well ignored? And on the contrary, are the signifying images vocalized?
+- Are decorative images well ignored? And on the contrary, are the meaningful images vocalized?
 
 Ideally, the test should be done without looking at the screen, or by activating the black screen (**Darken the screen**).
 
@@ -289,7 +290,7 @@ Ideally, the test should be done without looking at the screen, or by activating
 
 Navigation in an application or a web page must be possible using an external keyboard (connected to the smartphone by Bluetooth or USB), in order to reproduce the case of people who cannot use the touch screen, such as those using a joystick (on a wheelchair for example), or those with Parkinson's disease. It is important to check its operation because some developments can cause difficulties to navigate correctly in the page.
 
-To test keyboard navigation, you must connect a computer keyboard to the smartphone, either with an adapter (USB - USB C for example), or, if the keyboard is, bluetooth, by pairing the keypad and the telephone. The bluetooth keyboard has the advantage of facilitating debugging.
+To test keyboard navigation, you must connect a computer keyboard to the smartphone, either with an adapter (USB - USB C for example), or, if the keyboard is bluetooth, by pairing the keypad and the phone. The bluetooth keyboard has the advantage of facilitating debugging.
 
 #### Procedure
 
@@ -308,12 +309,12 @@ Navigate the application using the keyboard and check that:
 
 These are the same keys used to test the accessibility of a website. But the use of the **Tab** in relation to the **arrows** as well as the use of the **space bar** in relation to the **enter** key are less codified: the test is considered successful when at least one of the two options allows the action to be taken.
 
-It is considered blocking, the inability to exit a feature or the application.
+Remark: the inability to exit a feature or the application is a blocking issue.
 
 
 ### <span lang="en">Switch Access</span>
 
-**Switch Access** is an application for people with motor disorders. It allows you to control the phone by programming keys. It cannot replace the keyboard tests, but remains interesting to test, in the case of the two switch method.
+**Switch Access** is an application for people with motor disorders. It allows you to control the phone by programming keys. It cannot replace the keyboard tests, but remains interesting in the case of the two switch method.
 
 To activate it, proceed as follows:
 
