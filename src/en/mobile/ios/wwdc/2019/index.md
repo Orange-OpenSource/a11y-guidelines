@@ -7,36 +7,35 @@ title: "WWDC 2019 : Accessibility Lessons"
 <img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-000.png" />
 <br>This video encompasses four short presentations all available on the **official Apple website**:
 
-- [Visual Design Accessibility](#VisualDesignAccessibility)
-- [Accessibility Inspector](#AccessibilityInspector)
-- [Writing Great Accessibility Labels](#WritingGreatAccessibilityLabels)
-- [Accessibility Custom Actions](#AccessibilityCustomActions)
+- [Visual Design Accessibility](#visual-design-accessibility)
+- [Accessibility Inspector](#accessibility-inspector)
+- [Writing Great Accessibility Labels](#writing-great-accessibility-labels)
+- [Accessibility Custom Actions](#accessibility-custom-actions)
 
 Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.
 <br><br>
-<a name="VisualDesignAccessibility"></a>
+
 ## Visual Design Accessibility
 This video available on the **official Apple website** ([session 244](https://developer.apple.com/videos/play/wwdc2019/244/)) highlights some points to **provide a better accessible application visually speaking**.
 <br><img style="max-width: 550px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244.png" />
 <br><br>Various contents are indicated hereunder:
 
 - **DYNAMIC TYPE**
-    - <a role="button" onclick="$('#DynamicType-TheFourPrinciples_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Four Principles</a>
-    - <a role="button" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text Styles</a>
-    - <a role="button" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('DynamicType').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ **iOS 13 new feature**
+    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TheFourPrinciples_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Four Principles</a>
+    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text Styles</a>
+    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ **iOS 13 new feature**
 <br><br>
 
 - **REDUCE MOTION**
-    - <a role="button" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
-    - <a role="button" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Autoplaying Video</a> ⟹ **iOS 13 new feature**
-    - <a role="button" onclick="$('#ReduceMotion-ScreenTransitions_tab').trigger('click');document.getElementById('ReduceMotion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Screen Transitions</a> ⟹ **iOS 13 new feature**
+    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
+    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Autoplaying Video</a> ⟹ **iOS 13 new feature**
+    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-ScreenTransitions_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Screen Transitions</a> ⟹ **iOS 13 new feature**
 <br><br>
 - **COLOR**
-    - <a role="button" onclick="$('#Color-TheBasics_tab').trigger('click');document.getElementById('Color').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
-    - <a role="button" onclick="$('#Color-DifferentiateWithoutColor_tab').trigger('click');document.getElementById('Color').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate Without Color</a> ⟹ **iOS 13 new feature**
+    - <a role="button" style="text-decoration: underline" onclick="$('#Color-TheBasics_tab').trigger('click');document.getElementById('color').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
+    - <a role="button" style="text-decoration: underline" onclick="$('#Color-DifferentiateWithoutColor_tab').trigger('click');document.getElementById('color').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate Without Color</a> ⟹ **iOS 13 new feature**
 <br>
 
-<a id="DynamicType"></a>
 ### DYNAMIC TYPE
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -96,9 +95,8 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-244-TextStyles_3.png" />
 </div>
 </div>
-
 <br>
-<a id="ReduceMotion"></a>
+
 ### REDUCE MOTION
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -160,10 +158,8 @@ This **iOS 13 new feature** only appears once the `Reduce Motion` accessibility 
 <br>Once activated, the `Prefer Cross-Fade Transitions` option is automatically taken into account by all the UIKit standard elements *(navigation, modal views...)*.
 </div>
 </div>
-
 <br>
 
-<a id="Color"></a>
 ### COLOR
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -206,21 +202,19 @@ The `Differentiate Without Color` **iOS 13 new feature** is a user setting that 
 </div>
 <br><br><br>
 
-<a name="AccessibilityInspector"></a>
 ## Accessibility Inspector
 This video available on the **official Apple website** ([session 257](https://developer.apple.com/videos/play/wwdc2019/257/)) aims at introducing the Accessibility Inspector tool and some Xcode 11 new features that will solve problems exposed inside a demo application.
 <br><img style="max-width: 500px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257.png" />
 <br><br>Various contents and their video timelapse are indicated hereunder:
 
-- [Introduction](#Introduction) (00:51)
-- [Audit](#Audit) (02:26)
-- [Inspection](#Inspection) (03:40) including a **Xcode 11 new feature**
-- [CATextLayer](#CATextLayer) (05:26)
-- [Color Contrast](#ColorContrast) (06:26) including a **Xcode 11 new feature**
-- [Conclusion](#Conclusion) (08:24)
+- [Introduction](#introduction-0051) (00:51)
+- [Audit](#audit-0226) (02:26)
+- [Inspection](#inspection-0340) (03:40) including a **Xcode 11 new feature**
+- [CATextLayer](#catextlayer-0526) (05:26)
+- [Color Contrast](#color-contrast-0626) (06:26) including a **Xcode 11 new feature**
+- [Conclusion](#conclusion-0824) (08:24)
 <br><br>
 
-<a name="Introduction"></a>
 ### [Introduction (00:51)](https://developer.apple.com/videos/play/wwdc2019/257/?time=51)
 <img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-Introduction.png" />
 <br>The demo application is introduced in depth so as to have a better understanding of some further issues while highlighting:
@@ -229,35 +223,30 @@ This video available on the **official Apple website** ([session 257](https://de
 - The `hover text` mac feature [(01:43)](https://developer.apple.com/videos/play/wwdc2019/257/?time=103).
 <br><br>
 
-<a name="Audit"></a>
 ### [Audit (02:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=146)
 The purpose of this functionality is to provide a list of potential accessibility issues.
 <br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-Audit.png" />
 <br><br><br>
 
-<a name="Inspection"></a>
 ### [Inspection (03:40)](https://developer.apple.com/videos/play/wwdc2019/257/?time=220)
 Introduction of a **Xcode 11 new feature** to **vocalize and select elements on the simulator** [(04:11)](https://developer.apple.com/videos/play/wwdc2019/257/?time=251) after showing the way to get the complete description of a graphic element in conjunction with its selection.
 <br><img style="max-width: 800px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-Inspection.png" />
 <br><br><br>
 
-<a name="CATextLayer"></a>
 ### [CATextLayer (05:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=326)
 This example emphasizes the non automatic accessibility handling for this kind of element that must be programmatically implemented to behave like any other accessibility element.
 <br><br><br>
 
-<a name="ColorContrast"></a>
 ### [Color Contrast (06:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=386)
 Besides the font size, it's also very important to be above a [contrast ratio](../../design#colours) to enable sight-impaired people to perfectly understand the whole screen content.
 <br>Once the color contrast issue is detected, a solution is brought about by the **Xcode 11 new feature**: **Color Contrast Calculator**.
 <br><img style="max-width: 850px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-257-ColorContrast.png" />
 <br><br><br>
 
-<a name="Conclusion"></a>
 ### [Conclusion (08:24)](https://developer.apple.com/videos/play/wwdc2019/257/?time=504)
 All the previous tools that have been used during this session are highlighted in order to visualize the final rendering and to be sure that the suggested solutions are effective.
 <br><br><br>
-<a name="WritingGreatAccessibilityLabels"></a>
+
 ## Writing Great Accessibility Labels
 This video available on the **official Apple website** ([session 254](https://developer.apple.com/videos/play/wwdc2019/254/)) is entirely presented by a blind person who explains the importance and the way of writing labels to be perfectly understood whatever the context.
 <br>Many examples are provided to show how the visual elements are exposed to a VoiceOver user when its properties are well fulfilled... or not.
@@ -275,24 +264,23 @@ After a quick introduction regarding the expectations of a blind user about a **
 - Add labels to the meaningful animations *(spinner...)* [(07:08)](https://developer.apple.com/videos/play/wwdc2019/254/?time=428).
 - Avoid verbose labels when not necessary [(07:24)](https://developer.apple.com/videos/play/wwdc2019/254/?time=444) but don't hesitate to use it when appropriate [(07:48)](https://developer.apple.com/videos/play/wwdc2019/254/?time=468).
 <br><br><br>
-<a name="AccessibilityCustomActions"></a>
+
 ## Accessibility Custom Actions
 This video available on the **official Apple website** ([session 250](https://developer.apple.com/videos/play/wwdc2019/250/)) highlights the custom actions for the [screen reader](../../voiceover/) and the [Switch Control feature](../../development#switch-control) thanks to a demo application that presents the explained concepts.
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250.png" />
 <br><br>Various contents and their video timelapse are indicated hereunder:
 
-- [Introduction](#CustomActionsIntroduction) (00:12)
-- <a role="button" onclick="$('#CustomActions-VoiceOver_tab').trigger('click');document.getElementById('CustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: VoiceOver</a> (03:10)
-- <a role="button" onclick="$('#CustomActions-SwitchControl_tab').trigger('click');document.getElementById('CustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: Switch Control</a> (04:28)
-- [Implementation](#CustomActionsCoding) (07:59) ⟹ **iOS 13 new syntax**
+- [Introduction](#introduction-0012) (00:12)
+- <a role="button" style="text-decoration: underline" onclick="$('#CustomActions-VoiceOver_tab').trigger('click');document.getElementById('custom-actions').scrollIntoView({ behavior: 'smooth', block: 'start' });">Custom Actions: VoiceOver</a> (03:10)
+- <a role="button" style="text-decoration: underline" onclick="$('#CustomActions-SwitchControl_tab').trigger('click');document.getElementById('custom-actions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: Switch Control</a> (04:28)
+- [Implementation](#implementation-0759) (07:59) ⟹ **iOS 13 new syntax**
 <br><br><br>
-<a name="CustomActionsIntroduction"></a>
-## [Introduction (00:12)](https://developer.apple.com/videos/play/wwdc2019/250/?time=12)
+
+### [Introduction (00:12)](https://developer.apple.com/videos/play/wwdc2019/250/?time=12)
 Quick introduction of VoiceOver with a problem due to an inadequate implementation highlighted by the demo application that's used all along the session.
 <br><br><br>
 
-<a id="CustomActions"></a>
-## Custom Actions
+### Custom Actions
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <a class="nav-link active"
@@ -328,10 +316,9 @@ The demo application uses the Switch Control feature on the device that is paire
 <br>Implementing custom actions in this context leads to a **drastic decrease of focus/activations actions** to be carried out by the user so as to reach the same result.
 </div>
 </div>
-
 <br><br><br>
-<a name="CustomActionsCoding"></a>
-## [Implementation (07:59)](https://developer.apple.com/videos/play/wwdc2019/250/?time=479)
+
+### [Implementation (07:59)](https://developer.apple.com/videos/play/wwdc2019/250/?time=479)
 Since iOS 8, the [custom actions](../../development#custom-actions) implementation relies on an Objective C syntax that now fits a Swift form by introducing a **closure** in **iOS 13**.
 <br><img style="max-width: 900px; height: auto;" alt="" src="../../../images/iOSdev/wwdc19-250-CustomActionsCoding.png" />
 <br><br><br>
