@@ -6,11 +6,13 @@ Each section contains:
 - Resources to learn and test yourself
 - Technical examples
 
-To get started, check out [https://a11y-guidelines.orange.com/](https://a11y-guidelines.orange.com/).  
+To get started, check out [https://a11y-guidelines.orange.com/](https://a11y-guidelines.orange.com/). This website is built using the static site generator [11ty](https://www.11ty.io/).
+
 
 ## Bugs and feature requests
 
 Have a bug or a feature request? Search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/a11y-guidelines/issues/new).
+
 
 ## Copyright and license
 
