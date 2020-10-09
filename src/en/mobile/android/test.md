@@ -296,7 +296,7 @@ To test keyboard navigation, you must connect a computer keyboard to the smartph
 
 Navigate the application using the keyboard and check that:
 - all functionalities are accessible.
-- the focus remains sufficiently visible on each element receiving this focus (activatable elements, buttons, clickable elements, check boxes, etc.).
+- the focus remains sufficiently visible on each element receiving this focus (activable elements, buttons, clickable elements, check boxes, etc.).
 
 
 #### List of main keyboard shortcuts
@@ -343,7 +343,7 @@ To do this, select the **Group Selection** method as **Scanning Method** in the 
 
 Once inside your application, you just have to press the **Select** action (low volume in our configuration) to display all the interactive elements and thus check that:
 - Are all interactive elements highlighted correctly?
-- Are there only interactive elements highlighted?
+- Are only interactive elements highlighted?
 
 
 ### Magnification
@@ -357,8 +357,8 @@ Read the instructions when you activate the tools.
 
 #### Procedure:
 
-- Set **Font size** and **Display size** to the maximum. Navigate in the application and note the texts that are no longer readable because they have disappeared or overlap.
-- Enable **Magnification** option from accessibility settings. Go back to your application and tap the screen 3 times (if you kept this shortcut) to start the display with magnification. Check that the screens are readable in this mode. Pinch with 2 fingers to adjust zoom and drag 2 fingers to move around the screen. All information on the screen should be readable in zoom mode.
+- Set **Font size** and **Display size** to the maximum. Navigate in the application and note the texts that are no longer readable because they have disappeared or they overlap.
+- Enable **Magnification** option from accessibility settings. Go back to your application and tap the screen 3 times (if you have kept this shortcut) to start the display with magnification. Check that the screens are readable in this mode. Pinch with 2 fingers to adjust zoom and drag 2 fingers to move around the screen. All information on the screen should be readable in zoom mode.
 
 
 ### Orientation
@@ -370,12 +370,12 @@ It is necessary to check the orientation of your application, as it should work 
 
 This tool is only available from Android Q.
 
-On some applications, the UI may change after a delay (for example the disappearance of control buttons on a video player after a few seconds). This delay can be adapted in the settings to suit everyone's needs , some users needing more time to successfully "see" the controls and interact with them. We can then use this AccessibilityManager function which allows to obtain the recommended timeout for the user, according to these accessibility preferences: `public int getRecommendedTimeoutMillis(int originalTimeout,              int uiContentFlags) `
+On some applications, the UI may change after a delay (for example the disappearance of control buttons on a video player after a few seconds). This delay can be adapted in the settings to suit everyone's needs , some users needing more time to successfully "see" the controls and interact with them. You can then use this AccessibilityManager function which allows to obtain the recommended timeout for the user, according to these accessibility preferences: `public int getRecommendedTimeoutMillis(int originalTimeout,              int uiContentFlags) `
 
-Thus, to test whether this need for accessibility is taken into account by the application, proceed as follows:
+To test whether this need for accessibility is taken into account by the application, proceed as follows:
 
 - Go to the phone settings
-- Navigate in accessibility menu , then select **Time to take action**
+- Navigate in accessibility menu, then select **Time to take action**
 - Choose a timeout from the options offered
 - Check that the application adapts well to the delay indicated above, for UI changes potentially affected by this delay.
 
