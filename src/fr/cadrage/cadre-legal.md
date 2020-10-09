@@ -6,7 +6,7 @@ title: "Cadre légal"
 
 Quelques lois françaises ou de l’union européenne à propos de l’accessibilité numérique.
 
-# Loi pour une République numérique – Décret n° 2019-768 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne (France)
+## Loi pour une République numérique – Décret n° 2019-768 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne (France)
 
 Le décret publié le 24 juillet 2019 précise les obligations d’accessibilité des services numériques, notamment pour les entreprises privées dont le chiffre d'affaire en France est supérieur à 250 millions d'euros.
 
@@ -37,7 +37,7 @@ Le décret publié le 24 juillet 2019 précise les obligations d’accessibilit�
 
 Le risque de sanction est de 20 000 € par service et par an.
  
-# Directive (UE) 2019/882 du 17 avril 2019 relative aux exigences en matière d’accessibilité applicables aux produits et services
+## Directive (UE) 2019/882 du 17 avril 2019 relative aux exigences en matière d’accessibilité applicables aux produits et services
 -	Cette directive doit être déclinée par les États membres d’ici le 28 juin 2022
 -	Toutes les mesures sont applicables à partir du 28 juin 2025
 -	Ces mesures s'appliquent même si un service, ou une partie d'un service, est sous-traité à un tiers
