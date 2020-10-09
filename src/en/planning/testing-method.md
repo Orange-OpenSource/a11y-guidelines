@@ -1,12 +1,9 @@
 ---
-title: "How to test digital accessibility?"
+title: "Testing digital accessibility?"
 ---
+# How to test digital accessibility&nbsp?
 
-# Orange digital accessibility guidelines
-
-## How to test digital accessibility&nbsp;?
-
-Orange evaluates the accessibility of mobile applications, web sites or any other digital services using three complementary methods&nbsp;:
+Orange evaluates the accessibility of mobile applications, web sites or any other digital services using three complementary methods&nbsp:
 - **Technical evaluation** (compliance with standards)  
 These tests consist in checking the source code and color contrast to measure compliance with WCAG for Web pages and with best practices for other technology platforms. Tests can be partly performed automatically by tools but the majority requires manual control.
 
