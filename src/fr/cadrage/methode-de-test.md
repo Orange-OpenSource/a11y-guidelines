@@ -1,10 +1,8 @@
 ---
-title: "Comment tester l’accessibilité numérique ?"
+title: "Tester l’accessibilité numérique"
 ---
 
-# Recommandations accessibilité numérique Orange
-
-## Comment tester l’accessibilité numérique&nbsp;?
+# Comment tester l’accessibilité numérique&nbsp;?
 
 Orange évalue l’accessibilité d’une application, d’un site ou de toute autre ressource numérique à l’aide de trois méthodes complémentaires&nbsp;:
 - **L'évaluation technique**&nbsp;: inspecter le code et le contraste des couleurs pour mesurer la conformité au standard WCAG pour le Web et aux bonnes pratiques pour les autres plateformes technologiques.
