@@ -79,6 +79,10 @@
       var tarteaucitronForceLanguage = "{{ locale }}"
       tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }});
       {%- if config.environment == "production" -%}
+        var dataLayer = [{
+          'site_name': '{{ site.tracking.siteName }}',
+          'phase': '{{ site.tracking.phase }}'
+        }];
         tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
       {%- endif -%}
