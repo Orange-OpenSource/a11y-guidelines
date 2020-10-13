@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="fr" dir="ltr" class="no-js">
+<html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Cadrage - Recommandations accessibilité numérique Orange</title>
+    <title>Testing digital accessibility? - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -26,25 +26,25 @@
 <header role="banner">
   <div class="navbar navbar-dark navbar-expand supra">
     <div class="container-lg">
-      <nav role="navigation" aria-label="Liens d'évitements">
+      <nav role="navigation" aria-label="Skip links">
   <ul class="navbar-nav"><li class="nav-item">
-        <a href="#main-menu" class="nav-link">Aller au menu</a>
+        <a href="#main-menu" class="nav-link">Go to menu</a>
       </li><li class="nav-item">
-        <a href="#main-content" class="nav-link">Aller au contenu</a>
+        <a href="#main-content" class="nav-link">Go to content</a>
       </li><li class="nav-item">
-        <a href="#footer" class="nav-link">Aller au pied de page</a>
+        <a href="#footer" class="nav-link">Go to footer</a>
       </li></ul>
 </nav>
 
-      <nav role="navigation" aria-label="Changement de langue">
+      <nav role="navigation" aria-label="Switch language">
   <ul class="navbar-nav">
       <li class="nav-item">
-        <a href="/en/" class="nav-link" lang="en">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
         English
         </a>
       </li>
       <li class="nav-item">
-        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        <a href="/fr/" class="nav-link" lang="fr">
         Français
         </a>
       </li></ul>
@@ -54,53 +54,53 @@
   
 
 <div class="navbar navbar-dark navbar-expand-md">
-  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
-    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
-      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
     </a>
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/fr/" class="nav-link">
-  Accueil
+          <a href="/en/" class="nav-link">
+  Home
 </a>
         </li><li class="nav-item">
-          <a href="/fr/cadrage/" class="nav-link active" aria-current="page">
-  Cadrage
+          <a href="/en/planning/" class="nav-link active" aria-current="true">
+  Planning
 </a>
         </li><li class="nav-item">
-          <a href="/fr/web/" class="nav-link">
+          <a href="/en/web/" class="nav-link">
   Web
 </a>
         </li><li class="nav-item">
-          <a href="/fr/mobile/android/" class="nav-link">
+          <a href="/en/mobile/android/" class="nav-link">
   Android
 </a>
         </li><li class="nav-item">
-          <a href="/fr/mobile/ios/" class="nav-link">
+          <a href="/en/mobile/ios/" class="nav-link">
   iOS
 </a>
         </li><li class="nav-item">
-          <a href="/fr/contenu-editorial/" class="nav-link">
-  Contenu éditorial
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
 </a>
         </li><li class="nav-item">
-          <a href="/fr/articles/" class="nav-link">
+          <a href="/en/articles/" class="nav-link">
   Articles
 </a>
         </li><li class="nav-item d-md-none">
-  <span class="sr-only">Changement de langue</span>
+  <span class="sr-only">Switch language</span>
   <ul class="d-flex list-inline">
       <li class="list-inline-item flex-grow-1">
-        <a href="/en/" class="nav-link" lang="en">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
         English
         </a>
       </li>
       <li class="list-inline-item flex-grow-1">
-        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        <a href="/fr/" class="nav-link" lang="fr">
         Français
         </a>
       </li></ul>
@@ -109,15 +109,15 @@
   </nav>
 </div>
 
-  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/cadrage/cadre-legal/" class="nav-link">
-  Cadre légal
+              <a href="/en/planning/accessibility-regulations/" class="nav-link">
+  Accessibility regulations
 </a>
             </li><li class="nav-item">
-              <a href="/fr/cadrage/methode-de-test/" class="nav-link">
-  Méthode de test
+              <a href="/en/planning/testing-method/" class="nav-link active" aria-current="page">
+  Testing method
 </a>
             </li></ul>
   </div>
@@ -130,16 +130,21 @@
         
 
 <nav role="navigation" aria-labelledby="breadcrumb-label">
-  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
   <ol class="breadcrumb">
       
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
         <li class="breadcrumb-item">
-          <a href="/fr/">Accueil</a>
+          <a href="/en/planning/">Planning</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Cadrage
+          Testing method
         </li>
       </ol>
 </nav>
@@ -152,20 +157,39 @@
     </div>
     
   <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Cadrage d'un projet numérique accessible</h1>
-<p>Cette partie donne des informations générales sur l’accessibilité : lois numériques en France ou dans l’union européenne, méthode générale de test qui s’applique quel que soit le projet numérique…</p>
+      <h1>How to test digital accessibility ?</h1>
+<p>Orange evaluates the accessibility of mobile applications, web sites or any other digital services using three complementary methods :</p>
+<ul>
+<li>
+<p><strong>Technical evaluation</strong> (compliance with standards)<br>
+These tests consist in checking the source code and color contrast to measure compliance with WCAG for Web pages and with best practices for other technology platforms. Tests can be partly performed automatically by tools but the majority requires manual control.</p>
+</li>
+<li>
+<p><strong>Functional evaluation</strong> (compatibility with <a href="/en/assistive-technologies/">assistive technologies</a>)<br>
+These tests aim at checking the interfaces behavior with keyboard-only navigation and with assistive technologies to make sure the service works with them. Assistive technologies include at least screen reader and software magnifier.</p>
+</li>
+<li>
+<p><strong>User evaluation</strong> (usability focused on accessibility barriers)<br>
+User evaluation refers to having digital services tested by users with disabilities. Users are asked to perform a series of tasks, usually the main scenarios of the service. The objective is to check the usability of the service from an accessibility point of view and to validate with users how critical are the remaining issues. These tests are  managed by accessibility experts.</p>
+</li>
+</ul>
+<p>For more details :</p>
+<ul>
+<li><a href="/en/web/toolbox/">Methods and tools specific to the Web</a></li>
+<li><a href="/en/accessibility-user-testing/">Accessibility user testing</a></li>
+</ul>
 
     </main>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav flex-column flex-sm-row"><li class="nav-item">
-            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
           </li><li class="nav-item">
-            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+            <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/cadrage/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
-            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/planning/testing-method.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>
       </ul>
@@ -173,8 +197,8 @@
   </div>
 </footer>
 
-    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
-      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
     </a>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     
@@ -190,17 +214,17 @@
     
     <script>
       const Application = {
-        lang: "fr",
+        lang: "en",
         vendors: {
           highlightJS: false
         }
       }
     </script>
     <script src="/assets/script.js"></script><script>
-      var tarteaucitronForceLanguage = "fr"
+      var tarteaucitronForceLanguage = "en"
       tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 
   </body>

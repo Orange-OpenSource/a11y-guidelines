@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Testing accessibility with Android - Orange digital accessibility guidelines</title>
+    <title>Android accessibility testing - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -167,8 +167,332 @@
     </div>
     
   <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Testing accessibility with Android</h1>
-<h2 id="writing-in-progress">Writing in progress… <a class="header-anchor" href="#writing-in-progress" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+      <h1>Android accessibility testing</h1>
+<p>Orange group requires its Web sites to be compliant with the level AA of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1. The equivalent for native mobile applications is a transposition of these criteria and compliance with [Android platform recommendations] (<a href="https://developer.android.com/training/accessibility/testing">https://developer.android.com/training/accessibility/testing</a>).</p>
+<p>We recommend 4 steps to test accessibility with the objective to detect and fix accessibility errors as soon as possible during the project lifecycle. Whenever possible, it is useful to bring in an accessibility expert to get feedbak all along the project, as early as the design phase, as it could be expensive to fix accessibility issues identified during the test phase only.</p>
+<ul>
+<li>
+<p>The first step is to check accessibility during the design phase, on interface models or prototypes.  Android app created for Orange must also be compliant with the <a href="https://design.orange.com/fr/guidelines/">Orange Design Guidelines (“Android”, “Digital Colour Palettes”, “Accessibility”)</a> that detail the color usage, the type system, etc.</p>
+</li>
+<li>
+<p>The second step is to test the code during the development phase, by the developers. This step consists of performing automated tests or using the Lint tool from Android Studio.</p>
+</li>
+<li>
+<p>The third step is to scan the application with accessibility analysis tools.</p>
+</li>
+<li>
+<p>The last step is to carry out extensive manual tests, using the app as people with different disabilities or limitations would use it.</p>
+</li>
+</ul>
+<p>Ideally, the tests should be performed on Android mobiles without a custom OS like the Pixel. They must then be carried out on the mobiles with custom OS most used by the application.</p>
+<p>To test accessibility on Android, it is useful to download from <a href="https://play.google.com/store/apps?hl=fr">Google Play</a>, <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">Android Accessibility Suite</a> and <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">Accessibility Scanner</a>. The tools can be combined to check more criteria at the same time.</p>
+<h2 id="developer-testing-code-analysis">Developer testing: code analysis <a class="header-anchor" href="#developer-testing-code-analysis" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This step allows accessibility issues to be reported directly during the development phase and causes application build errors or various warnings. The developer must therefore correct them directly in order to be able to build his application and make it work, which automatically makes it more accessible before even putting it through manual tests or analysis tools. In addition, it avoids possible accessibility regressions.</p>
+<h3 id="lint"><span lang="en">Lint</span> <a class="header-anchor" href="#lint" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The developer can first use the Lint tool in Android Studio, on his application, to do a first pass on the accessibility problems encountered. 5 accessibility problems can be reported with Lint :</p>
+<ul>
+<li><strong>ClickableViewAccessibility</strong>: If a view overloads <code>onTouchEvent</code> or oveloards <code>onTouchListener</code>, but does not implement <code>performClick</code></li>
+<li><strong>ContentDescription</strong> : non-textual widgets with no contentDescription</li>
+<li><strong>KeyboardInaccessibleWidget</strong> : widgets being declared as clickable but not focusable.</li>
+<li><strong>LabelFor</strong> : an EditText must contain either a hint, either the reference of a label associated with labelFor</li>
+<li><strong>GetContentDescriptionOverride</strong> : overriding getContentDescription can cause accessing accessibility services issues. If you need to modify the description, you should instead call the function: setContentDescription</li>
+</ul>
+<p><strong>Example of a Lint report in Android Studio:</strong></p>
+<img src="../../images/lint.png" alt="screenshot showing a report of the Lint tool, which shows an accessibility error" width="50%">
+<h3 id="automated-tests-espresso">Automated tests: Espresso <a class="header-anchor" href="#automated-tests-espresso" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Espresso is a framework for UI testing on Android. You can integrate the ATF framework (Accessibility Test Framework), which will add a layer of tests concerning accessibility.</p>
+<p>No explicit test needs to be written. Once ATF is integrated into the Expresso tests, accessibility checks are added automatically. ATF works with ViewAction, meaning that it will automatically perform the accessibility check on  ViewAction interactions set up in the Espresso tests. Additionally, to enable accessibility checks, you must call the <code>AccessibilityChecks.enable()</code> function in the test suite.</p>
+<p>How integrate ATF :</p>
+<pre>
+<code class="java">
+@Before
+    public static void enableAccessibilityChecks() {
+        AccessibilityChecks.enable();
+    }
+</code>
+<code class="kotlin">
+companion object {
+    @BeforeClass @JvmStatic
+    fun enableAccessibilityChecks() {
+        AccessibilityChecks.enable()
+    }
+}
+</code></pre>
+<p>So, when in the test suite a <code>ViewAction.click ()</code> is performed on a button that does not match the size required for an interactive element, the test will appear as an error until the accessibility issue be resolved.</p>
+<h4 id="perform-automated-accessibility-tests-on-the-complete-screen">Perform automated accessibility tests on the complete screen <a class="header-anchor" href="#perform-automated-accessibility-tests-on-the-complete-screen" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Accessibility testing automation according to ViewAction can be limited. That's why, validations from root view can be enabled to test all views, without the 'ViewActions' restrictions. To do this, replace <code>AccessibilityChecks.enable()</code> by <code>AccessibilityChecks.enable().setRunChecksFromRootView(true)</code></p>
+<h4 id="log-accessibility-errors-rather-than-causing-test-failures">Log accessibility errors rather than causing test failures <a class="header-anchor" href="#log-accessibility-errors-rather-than-causing-test-failures" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Accessibility errors can be logged so that they appear in the Android Studio logcat, rather than causing Espresso tests fail, although this is not recommended. This should only be used temporarily. To do this, add the following function:<br>
+<code>AccessibilityChecks.enable().setThrowExceptionForErrors(false)</code></p>
+<h4 id="create-a-whitelist">Create a whitelist <a class="header-anchor" href="#create-a-whitelist" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Rather than log all accessibility errors in the logcat, it is possible to create a whitelist to log only the ones you want, while keeping the others in error. To do this, we must add the following function :<br>
+<code>AccessibilityChecks.enable().setRunChecksFromRootView(true).setSuppressingResultMatcher(matchesView(anyOf(withId(R.id.buttonPlus))))</code></p>
+<p>In this example, the view with the id <strong>buttonPlus</strong> will not be indicated in error if there is an accessibility problem, but will be displayed in the logcat.</p>
+<h2 id="application-scan-analysis-tools">Application scan : analysis tools <a class="header-anchor" href="#application-scan-analysis-tools" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Analysis tools complement the first approach, in order to detect other accessibility problems, such as those related to the size of the buttons, color contrasts etc ...</p>
+<h3 id="accessibility-scanner">Accessibility Scanner <a class="header-anchor" href="#accessibility-scanner" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">scanner</a> can be downloaded from the playstore.</p>
+<p>The scanner takes screenshots of the current activity and checks:</p>
+<ul>
+<li>that the screen contains &quot;vocalizations or labels&quot; for the screen reader</li>
+<li>that the clickable areas are large enough and that they have their own label</li>
+<li>color contrasts</li>
+</ul>
+<p>Please note, this is only a verification aid, the tool sometimes reports false positives.</p>
+<p>Some of these checks are duplicated with <code>lint</code>.<br>
+In case of doubt about contrasts, <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour contrast analysor</a> makes a more precise diagnosis.</p>
+<h4 id="procedure">Procedure: <a class="header-anchor" href="#procedure" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul>
+<li>Activate the scanner in <strong>settings/accessibility/Accessibility Scanner</strong> (settings/accessibility/Installed services/Accessibility Scanner with One UI for Samsung devices). A floating action button appears on the screen.</li>
+<li>To test the display, press the button. A screenshot is taken and the list of suggested fixes is displayed.</li>
+</ul>
+<p><strong>Accessibility Scanner use exemple:</strong></p>
+<p>The floating button used to generate a report when Accessibility Scanner is active</p>
+<img src="../../images/scanner_floating.jpg" alt="screenshot showing the Orange TV application, with the floating button used to start the scan" width="25%">
+<p>The report thus generated by Accessibility Scanner once the button is clicked.</p>
+<img src="../../images/scanner_report.jpg" alt="screenshot showing the Accessibility Scanner report" width="25%">  
+<h3 id="google-play-pre-launch-report"><span lang="en">Google Play - Pre Launch Report</span> <a class="header-anchor" href="#google-play-pre-launch-report" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Similar to the analysis performed by Accessibility Scanner, Google Play is able to generate accessibility reports after uploading its application to the developer console. Based on the same Framework as the Accessibility Scanner  application, it verifies in particular 3  UI  requirements within the application:</p>
+<ul>
+<li>The area used for interactive elements: a too small button would be indicated in the report for example</li>
+<li>Contrasts: checks that the contrast ratios are respected between the texts and their backgrounds</li>
+<li>Content descriptions: checks that all elements have a text to describe it to the user if necessary</li>
+</ul>
+<p>Since this test is carried out from the Google Play console, this can be a final check made by the Product Owner himself, before pushing the application into production, and thus see that the accessibility criteria have been met.</p>
+<p><strong>Google Play report example :</strong></p>
+<p><img src="../../images/google_report.png" alt="screenshot showing accessibility report, on developer console" class="img-fluid"></p>
+<h3 id="axe">aXe <a class="header-anchor" href="#axe" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>aXe is an application available on the Google Play Store and which makes it possible, as well as Accessibility Scanner or the Pre Launch Report from Google, to display accessibility problems. Although redundant with the two previous tools presented in some checks, it is recommended to use it as a complement, since it is able to display different accessibility errors, and will therefore perfectly complement the first exams.</p>
+<p>To use aXe, you just need to download the application and then follow the instructions. Using a floating button , an analysis can be launched on the screen of your choice, and the errors report will be immediately produced at the bottom of the screen.</p>
+<p><strong>aXe use example :</strong></p>
+<p>aXe floating button displayed on the screen to trigger a report.</p>
+<img src="../../images/aXe_floating.jpg" alt="screenshot of the Orange TV application, with the aXe button to start the scan" width="25%">   
+<p>The report generated by aXe once the button is clicked.</p>
+<img src="../../images/aXe_report.jpg" alt="screenshot showing the aXe tool report" width="25%">   
+<h3 id="ui-automator-view"><span lang="en">UI Automator View</span> <a class="header-anchor" href="#ui-automator-view" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>UI Automator View is an Android SDK tool that scans and analyzes the UI components of an Android application. This makes it possible to see the hierarchy of views and the different properties for each one.<br>
+Although not a tool dedicated to accessibility, it can be used to analyze in more detail an accessibility issue, and  better understand its origin.</p>
+<p>To use this tool, you need to install the Android SDK. Once installed, you will find the tool at the following path: <strong>C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat</strong></p>
+<p>To use it on an application, you need to have the developer mode activated on your phone, and to connect it via a USB cable to a computer, which has UI Automator View started. Once these conditions are met, just click on the Device Screenshot button in the tool to launch the UI components analysis of the screen displayed on the phone.</p>
+<h3 id="layout-bounds-tool">Layout bounds tool <a class="header-anchor" href="#layout-bounds-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>It is possible on Android to display the bounds of the different views of an application, which makes it possible to detect possible problems related to the size of the elements, to check margins are sufficient between various elements, and to verify that each sensitive area has a sufficient size.</p>
+<p>To do this, navigate in &quot;Settings/Developer options&quot; and activate the option &quot;Show layout bounds&quot; in the category &quot;Drawing&quot;</p>
+<p><strong>Layout bounds use example:</strong></p>
+<p>The settings screen for layout bounds activation.</p>
+<img src="../../images/contour_param.jpg" alt="Settings screenshot, with the layout bounds activation checkbox" width="25%"> 
+<p>Screen example with layout bounds activate</p>
+<img src="../../images/contour_UI.jpg" alt="Orange TV application screenshot, having layout bounds" width="25%"> 
+<h3 id="colour-contrast-analyser"><span lang="en">Colour Contrast Analyser</span> <a class="header-anchor" href="#colour-contrast-analyser" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Color contrasts must be verified on the application mockups, or with Accessibility Scanner on an Android mobile. If any doubt remains, it is possible to take a screenshot of the application, then to check on a computer [Measure the level of color contrast] (../../../web/toolbox/methods-and-test-tools/color-contrast-level/) with the Color Contrast Analyzer tool.<br>
+For the values ​​to respect see the [section concerning colors] (../design#colors).</p>
+<h2 id="manual-tests-use-cases">Manual tests: use cases <a class="header-anchor" href="#manual-tests-use-cases" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users, and therefore using their interaction tools. It is even better to have the application tested by real users with disabilities. Several tools must be used, to take into account as many possible situations as possible:</p>
+<h3 id="screen-reader-talkback">Screen reader TalkBack <a class="header-anchor" href="#screen-reader-talkback" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The screen reader is a tool for the blind and visually impaired people. It has two functions: vocalization and on-screen navigation. All significant elements must be <strong>vocalized</strong> in <strong>logical order</strong>.</p>
+<p>For Talkback activation and use, you can get more details in the <a href="../talkback/">section about it</a>.</p>
+<p>The different types of Talkback navigation:</p>
+<ul>
+<li><strong>Reading by scanning with your finger</strong> : by sliding your finger slowly on the screen, Talkback announces the elements as you pass your finger on.</li>
+</ul>
+<img src="../../images/gesture1.png" alt="Representation of finger sliding action on a phone screen " width="80">   
+<ul>
+<li>
+<p><strong>Linear reading</strong> : You can explore the screen, item by item, by swiping your finger left or right to navigate between items, in order. It is also possible to browse the navigation settings by swiping up or down the screen until you get the desired setting. The swipe to the right or to the left will then be done using the chosen parameter; The various existing navigation parameters are:</p>
+<ul>
+<li><strong>Headings</strong>: navigate by headings</li>
+<li><strong>Links</strong>: navigate by links (email, phone number, website or other links on the screen)</li>
+<li><strong>Controls</strong>: navigate by checkboxes, switches, text fields, buttons, radio buttons, sliders.</li>
+<li><strong>Default</strong>: explore every element on the page in logical order.</li>
+</ul>
+<dl>
+  <dt>Double click with one finger</dt>
+  <dd>
+    <img src="../../images/gesture2.png" alt="" width="80">
+    Activate the last vocalized element
+  </dd>
+<dt>Swipe up or down with two fingers</dt>
+  <dd>
+    <img src="../../images/gesture3_1.png" alt="" width="80">
+    Vertical scroll in the page
+  </dd>
+<dt>Swipe left or right with two fingers</dt>
+  <dd>
+    <img src="../../images/gesture4_2.png" alt="" width="80">
+    Horizontal scroll in the page
+  </dd>
+<dt>Swipe right with one finger</dt>
+  <dd>
+    <img src="../../images/gesture6.png" alt="" width="80">
+    Moves to the next element
+  </dd>
+<dt>Swipe left with one finger</dt>
+  <dd>
+    <img src="../../images/gesture5.png" alt="" width="80">
+  Moves to the previous element
+  </dd>
+<dt>Swipe up or down with one finger</dt>
+  <dd>
+    <img src="../../images/gesture8.png" alt="" width="80">
+    Change the navigation setting applied
+  </dd>
+</dl>
+</li>
+<li>
+<p><strong>Search your screen</strong> : it is possible to navigate using screen search; to do this, swipe left then down, enter the search term and choose a match from the list provided</p>
+</li>
+</ul>
+<img src="../../images/search_talkback.jpg" alt="screenshot showing the Search your screen navigation on Talkback" width="25%"> 
+<ul>
+<li><strong>Read continuously</strong> : To use <code>read continuously</code>, open general contextual menu by swiping down then right, and choose the option *<em>read from top</em> or <strong>read from next item</strong>. Then, double tap to select the option. Continuous reading will start and can be stopped by tapping on the screen.</li>
+</ul>
+<h4 id="procedure-2">Procedure <a class="header-anchor" href="#procedure-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Use the application on the differents use cases and check that all the information is vocalized in a logical and understandable order as well as:</p>
+<ul>
+<li>
+<p>Are all the significant elements accessible?</p>
+</li>
+<li>
+<p>Is all the information vocalized in a logical and understandable order?</p>
+</li>
+<li>
+<p>Are the interactive elements vocalized with the associated action? (button, checkbox ... Double tap to activate)</p>
+</li>
+<li>
+<p>Are the states of the elements specified? (disabled, checked)</p>
+</li>
+<li>
+<p>Are temporary messages and alerts vocalized?</p>
+</li>
+<li>
+<p>Are the transitions between activities vocalized?</p>
+</li>
+<li>
+<p>Are error messages and dynamic content vocalized?</p>
+</li>
+<li>
+<p>Are the horizontal scrolls vocalized?</p>
+</li>
+<li>
+<p>Are visible items the only items to be vocalized (no ghost items vocalized)?</p>
+</li>
+<li>
+<p>Are the titles of the activities vocalized?</p>
+</li>
+<li>
+<p>Is the workflow easy?</p>
+</li>
+<li>
+<p>Is the vocalization coherent, succinct, and simple?</p>
+</li>
+<li>
+<p>Are decorative images well ignored? And on the contrary, are the meaningful images vocalized?</p>
+</li>
+</ul>
+<p>Ideally, the test should be done without looking at the screen, or by activating the black screen (<strong>Darken the screen</strong>).</p>
+<h3 id="focus-navigation-with-keyboard">Focus navigation (with keyboard) <a class="header-anchor" href="#focus-navigation-with-keyboard" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Navigation in an application or a web page must be possible using an external keyboard (connected to the smartphone by Bluetooth or USB), in order to reproduce the case of people who cannot use the touch screen, such as those using a joystick (on a wheelchair for example), or those with Parkinson's disease. It is important to check its operation because some developments can cause difficulties to navigate correctly in the page.</p>
+<p>To test keyboard navigation, you must connect a computer keyboard to the smartphone, either with an adapter (USB - USB C for example), or, if the keyboard is bluetooth, by pairing the keypad and the phone. The bluetooth keyboard has the advantage of facilitating debugging.</p>
+<h4 id="procedure-3">Procedure <a class="header-anchor" href="#procedure-3" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Navigate the application using the keyboard and check that:</p>
+<ul>
+<li>all functionalities are accessible.</li>
+<li>the focus remains sufficiently visible on each element receiving this focus (activable elements, buttons, clickable elements, check boxes, etc.).</li>
+</ul>
+<h4 id="list-of-main-keyboard-shortcuts">List of main keyboard shortcuts <a class="header-anchor" href="#list-of-main-keyboard-shortcuts" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul>
+<li><strong>TAB</strong> key to advance the focus.</li>
+<li><strong>SHIFT + TAB</strong> keys to move the focus back.</li>
+<li><strong>Enter</strong> key to activate the focused element (link, button, menu ...).</li>
+<li><strong>Space bar</strong> to check/uncheck a checkbox.</li>
+<li><strong>Directional arrows</strong> to modify the selection of the radio buttons, to move in a drop-down list, or to scroll through the <strong>scrollbar</strong>) when they are present.</li>
+</ul>
+<p>These are the same keys used to test the accessibility of a website. But the use of the <strong>Tab</strong> in relation to the <strong>arrows</strong> as well as the use of the <strong>space bar</strong> in relation to the <strong>enter</strong> key are less codified: the test is considered successful when at least one of the two options allows the action to be taken.</p>
+<p>Remark: the inability to exit a feature or the application is a blocking issue.</p>
+<h3 id="switch-access"><span lang="en">Switch Access</span> <a class="header-anchor" href="#switch-access" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>Switch Access</strong> is an application for people with motor disorders. It allows you to control the phone by programming keys. It cannot replace the keyboard tests, but remains interesting in the case of the two switch method.</p>
+<p>To activate it, proceed as follows:</p>
+<ul>
+<li>Go to phone settings</li>
+<li>Navigate in accessibility menu (then Services installed with the Samsung overlay), then select Switch Access, then Settings</li>
+<li>Check that the automatic search is disabled</li>
+<li>Use the <strong>Volume Up</strong> button as corresponding to the action <strong>Go to the next option</strong></li>
+<li>Use the <strong>Volume Down</strong> button as corresponding to the <strong>Select</strong> action</li>
+<li>Return to the main screen from Switch Access and enable or disable the Switch Access accessibility option when necessary</li>
+</ul>
+<h4 id="procedure-4">Procedure <a class="header-anchor" href="#procedure-4" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Navigate in the application using the <strong>Next</strong> button (volume up).</p>
+<p>Then check that:</p>
+<ul>
+<li>Can the workflow be covered completely and easily, in a logical order?</li>
+<li>Can the inputs be edited easily?</li>
+<li>Are the highlighted elements only those on which we can perform an action?</li>
+</ul>
+<h4 id="show-all-interactive-elements">Show all interactive elements <a class="header-anchor" href="#show-all-interactive-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>To highlight all the interactive elements of a screen, and thus do a quick check, it is possible to use the <strong>Group Selection</strong> option of the Switch Access.</p>
+<p>To do this, select the <strong>Group Selection</strong> method as <strong>Scanning Method</strong> in the settings of Switch Access, and then assign a key for scanning.</p>
+<p>Once inside your application, you just have to press the <strong>Select</strong> action (low volume in our configuration) to display all the interactive elements and thus check that:</p>
+<ul>
+<li>Are all interactive elements highlighted correctly?</li>
+<li>Are only interactive elements highlighted?</li>
+</ul>
+<h3 id="magnification">Magnification <a class="header-anchor" href="#magnification" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Android offers several enlargement options:</p>
+<ul>
+<li>Font size</li>
+<li>Display size</li>
+<li>Magnification</li>
+</ul>
+<p>Read the instructions when you activate the tools.</p>
+<h4 id="procedure-5">Procedure: <a class="header-anchor" href="#procedure-5" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul>
+<li>Set <strong>Font size</strong> and <strong>Display size</strong> to the maximum. Navigate in the application and note the texts that are no longer readable because they have disappeared or they overlap.</li>
+<li>Enable <strong>Magnification</strong> option from accessibility settings. Go back to your application and tap the screen 3 times (if you have kept this shortcut) to start the display with magnification. Check that the screens are readable in this mode. Pinch with 2 fingers to adjust zoom and drag 2 fingers to move around the screen. All information on the screen should be readable in zoom mode.</li>
+</ul>
+<h3 id="orientation">Orientation <a class="header-anchor" href="#orientation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>It is necessary to check the orientation of your application, as it should work in both landscape and portrait mode. Manual tests must be performed in both modes, since constraining the user to a single mode poses accessibility problems.</p>
+<h3 id="accessibility-timeouts">Accessibility timeouts <a class="header-anchor" href="#accessibility-timeouts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This tool is only available from Android Q.</p>
+<p>On some applications, the UI may change after a delay (for example the disappearance of control buttons on a video player after a few seconds). This delay can be adapted in the settings to suit everyone's needs , some users needing more time to successfully &quot;see&quot; the controls and interact with them. You can then use this AccessibilityManager function which allows to obtain the recommended timeout for the user, according to these accessibility preferences: <code>public int getRecommendedTimeoutMillis(int originalTimeout,              int uiContentFlags) </code></p>
+<p>To test whether this need for accessibility is taken into account by the application, proceed as follows:</p>
+<ul>
+<li>Go to the phone settings</li>
+<li>Navigate in accessibility menu, then select <strong>Time to take action</strong></li>
+<li>Choose a timeout from the options offered</li>
+<li>Check that the application adapts well to the delay indicated above, for UI changes potentially affected by this delay.</li>
+</ul>
+<h3 id="voice-access">Voice Access <a class="header-anchor" href="#voice-access" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess">Voice Access</a> is an application integrated into [Android Accessibility Suite] (<a href="https://play.google.com/store/apps/details?id=com.google.android.marvin">https://play.google.com/store/apps/details?id=com.google.android.marvin</a> .talkback), intended for people with motor disorders. It allows you to control the application by voice instead of the touch screen.</p>
+<p>Among the possible commands:</p>
+<ul>
+<li>Open &quot;app&quot;</li>
+<li>Go back</li>
+<li>Go home</li>
+<li>Show notifications</li>
+<li>Scroll up</li>
+<li>Scroll right</li>
+<li>Scroll down</li>
+<li>Swipe forwards</li>
+<li>Etc ..</li>
+</ul>
+<p>Once Voice Access is enabled, numbers appear next to each item you can interact with. If you wish to interact with a <strong>Save</strong> button whose number is 6, you can say the following commands:</p>
+<ul>
+<li>6</li>
+<li>Save</li>
+<li>Click 6</li>
+<li>Click save</li>
+</ul>
+<p>It is necessary to test that there are not several identical labels for interactive elements within the same screen. Although the user can still use the number for voice control, this limits the ability to use their label. It is also useful to test that you can open the application by name, with the command <strong>Open &quot;application&quot;</strong>.</p>
+<p><strong>Voice Access use example:</strong></p>
+<p>Screen example displaying a floating button which allows you to start Voice Access.</p>
+<img src="../../images/voice_access_floating.jpg" alt="Orange TV application screenshot, with the Voice Access floating button" width="25%"> 
+<p>Screen example with Voice Access enabled.</p>
+<img src="../../images/voice_access_actif.jpg" alt="Orange TV application screenshot with Voice Access enabled, each interactive element being associated with a number" width="25%"> 
+<h3 id="select-to-speak">Select to Speak <a class="header-anchor" href="#select-to-speak" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Select to Speak is a tool from Android Accessibility Suite, that makes it possible to read selected elements of the screen.</p>
+<p>When a single item is selected, the tool vocalizes the item. When multiple items are selected, it implements a logical reading order like Talkback but it does not implement the actions or state of the items.</p>
+<p>It is useful for the visually impaired, when the screen is not readable, for learning to read (it functions like karaoke) or for learning a foreign language.</p>
+<p>It can be used for demonstration purposes but is redundant with Talkback for accessibility testing without being able to replace it.</p>
+<p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
 
     </main>
     <footer id="footer" class="o-footer" role="contentinfo">

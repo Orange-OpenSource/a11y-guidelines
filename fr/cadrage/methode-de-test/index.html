@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Cadrage - Recommandations accessibilité numérique Orange</title>
+    <title>Tester l’accessibilité numérique - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -68,7 +68,7 @@
   Accueil
 </a>
         </li><li class="nav-item">
-          <a href="/fr/cadrage/" class="nav-link active" aria-current="page">
+          <a href="/fr/cadrage/" class="nav-link active" aria-current="true">
   Cadrage
 </a>
         </li><li class="nav-item">
@@ -116,7 +116,7 @@
   Cadre légal
 </a>
             </li><li class="nav-item">
-              <a href="/fr/cadrage/methode-de-test/" class="nav-link">
+              <a href="/fr/cadrage/methode-de-test/" class="nav-link active" aria-current="page">
   Méthode de test
 </a>
             </li></ul>
@@ -133,13 +133,18 @@
   <p id="breadcrumb-label" class="sr-only">Vous êtes ici&nbsp;:</p>
   <ol class="breadcrumb">
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/fr/">Accueil</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/fr/cadrage/">Cadrage</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Cadrage
+          Méthode de test
         </li>
       </ol>
 </nav>
@@ -152,8 +157,27 @@
     </div>
     
   <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Cadrage d'un projet numérique accessible</h1>
-<p>Cette partie donne des informations générales sur l’accessibilité : lois numériques en France ou dans l’union européenne, méthode générale de test qui s’applique quel que soit le projet numérique…</p>
+      <h1>Comment tester l’accessibilité numérique ?</h1>
+<p>Orange évalue l’accessibilité d’une application, d’un site ou de toute autre ressource numérique à l’aide de trois méthodes complémentaires :</p>
+<ul>
+<li>
+<p><strong>L'évaluation technique</strong> : inspecter le code et le contraste des couleurs pour mesurer la conformité au standard WCAG pour le Web et aux bonnes pratiques pour les autres plateformes technologiques.<br>
+Une partie des tests peut être réalisée automatiquement par des outils mais la majorité nécessite un contrôle manuel.</p>
+</li>
+<li>
+<p><strong>L'évaluation fonctionnelle</strong> : tester le comportement de l’interface avec différentes <a href="/fr/solutions-assistance/">aides techniques</a> pour vérifier que les contenus évalués sont exempts de points bloquants.<br>
+Les tests sont essentiellement réalisés pour 3 comportements : l’utilisation d’un lecteur d’écran, d’une loupe logicielle et la navigation au clavier.</p>
+</li>
+<li>
+<p><strong>L'évaluation utilisateur</strong> : faire tester l’application par des utilisateurs en situation de handicap sur la base de tâches à accomplir afin de vérifier le niveau d’accessibilité du point de vue de l’utilisateur.<br>
+Ces tests consistent à faire faire à quelques utilisateurs cibles dont le poste (ou le mobile…) est équipé d’une aide technique particulière (loupe numérique d’écran, lecteur d’écran, clavier seul, plage braille) les tâches principales de l’application. Ils permettent d’identifier les problèmes d’usage et de valider la criticité des anomalies rencontrées. Ces tests sont conduits par des experts accessibilité.</p>
+</li>
+</ul>
+<p>Pour plus de détails :</p>
+<ul>
+<li><a href="/fr/web/outils/">Méthodes de tests d’accessibilité techniques et fonctionnels propres au Web</a></li>
+<li><a href="/fr/methode-tests-utilisateur/">Méthode de test d’accessibilité avec des utilisateurs</a></li>
+</ul>
 
     </main>
     <footer id="footer" class="o-footer" role="contentinfo">
@@ -164,7 +188,7 @@
           </li><li class="nav-item">
             <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/cadrage/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/cadrage/methode-de-test.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
             <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>
