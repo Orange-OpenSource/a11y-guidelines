@@ -20,6 +20,8 @@ module.exports = {
     }
   },
   tracking: {
+    siteName: 'accessibility-guidelines',
+    phase: 'prod', // dev, qa, prod
     googletagmanagerId: "GTM-N3M5VXS",
     tarteaucitronConfig: {
       "privacyUrl": "", /* Privacy policy url */
