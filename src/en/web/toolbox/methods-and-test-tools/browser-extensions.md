@@ -25,11 +25,11 @@ Developed by WebAIM.org, same idea for [WAVE](http://wave.webaim.org/) except th
 
 ![screenshot WAVE](../../../images/WAVE_10_2020.png)
 
-### Related links
-https://ffoodd.github.io/a11y.css/  
-https://blog.clever-age.com/fr/2012/06/19/pagespeed-et-yslow-ne-sont-pas-des-indices-de-performance/ 
-https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/ 
+## Related links
+* https://ffoodd.github.io/a11y.css/  
+* https://blog.clever-age.com/fr/2012/06/19/pagespeed-et-yslow-ne-sont-pas-des-indices-de-performance/ 
+* https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/ 
 
-### Glossary
+## Glossary
 * CSS : Cascading Stylesheets, feuilles de style en cascade
 * DOM : Document Object Model, modèle d’objet document
