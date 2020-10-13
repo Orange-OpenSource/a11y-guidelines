@@ -76,12 +76,14 @@
       <script src="{{ item }}"></script>
     {%- endfor -%}
     <script>
+      var dataLayer = [{
+        'site_name': 'accessibility-guidelines',
+        'phase': 'prod'  // dev, qa, prod
+      }];
       var tarteaucitronForceLanguage = "{{ locale }}"
       tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }});
-      {%- if config.environment == "production" -%}
-        tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
-        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
-      {%- endif -%}
+      tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
+      (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
     </script>
     <div id="a11y_heading_anchor_label" hidden>{% translate "headingsAnchor.label", locale %}</div>
     {% include "partials/licence.njk" %}
