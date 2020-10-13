@@ -25,11 +25,11 @@ Développé par WebAIM.org, même idée pour [Wave](http://wave.webaim.org/) à 
 
 ![capture d’écran wave](../../../images/WAVE_10_2020.png)
 
-### Liens connexes 
+## Liens connexes 
 * https://ffoodd.github.io/a11y.css/  
 * https://blog.clever-age.com/fr/2012/06/19/pagespeed-et-yslow-ne-sont-pas-des-indices-de-performance/ 
 * https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/ 
 
-### Glossaire
+## Glossaire
 * CSS : Cascading Stylesheets, feuilles de style en cascade
 * DOM : Document Object Model, modèle d’objet document
