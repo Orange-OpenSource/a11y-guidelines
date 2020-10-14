@@ -5,21 +5,26 @@
   "repository": "https://github.com/Orange-OpenSource/a11y-guidelines",
   "main": "index.js",
   "scripts": {
-    "build:dev": "npm run clean && ELEVENTY_ENV=development eleventy",
-    "serve:dev": "npm run clean && ELEVENTY_ENV=development eleventy --serve --quiet",
-    "build:prod": "npm run clean && ELEVENTY_ENV=production eleventy",
-    "serve:prod": "npm run clean && ELEVENTY_ENV=production eleventy --serve --quiet",
     "clean": "del-cli _site",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "build:eleventy": "eleventy",
+    "serve:eleventy": "eleventy --serve --quiet",
+
+    "build:dev": "cross-env ELEVENTY_ENV=development npm-run-all --sequential clean build:eleventy",
+    "serve:dev": "cross-env ELEVENTY_ENV=development npm-run-all --sequential clean serve:eleventy",
+    "build:prod": "cross-env ELEVENTY_ENV=production npm-run-all --sequential clean build:eleventy",
+    "serve:prod": "cross-env ELEVENTY_ENV=production npm-run-all --sequential clean serve:eleventy"
   },
   "author": "Orange SA",
   "license": "CC-BY-SA-3.0",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "cheerio": "^1.0.0-rc.3",
+    "cross-env": "^7.0.2",
     "del-cli": "^3.0.1",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.3.0",
+    "npm-run-all": "^4.1.5",
     "string": "^3.3.3"
   },
   "dependencies": {
