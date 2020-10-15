@@ -4,18 +4,32 @@ title: "Extensions pour navigateur"
 
 # Extensions pour navigateur
 
-Certaines extensions permettent d’effectuer des tests automatiques sur la page en cours de consultation.
+Certaines extensions de navigateur (ou modules complémentaires) comme aXe de Deque ou Wave de WebAIM, permettent d’effectuer des tests automatiques dans des pages HTML. Cela permet d’identifier aisément les principales erreurs d’accessibilité, de recetter la qualité lors de vos développements et logiquement d’espacer les vérifications manuelles réalisées par les auditeurs en accessibilité. Ces outils de test automatique représentent l’outillage minimum de tout développement accessible et sont un prérequis à tout audit accessibilité.
+Ce sont des outils rapides et légers qui permettent d’identifier ce qui peut être testé automatiquement, comme par exemple : « y’a-t-il une alternative textuelle sur cette image ? » : OUI / NON ou de détecter les erreurs de contraste (ratio, calculé). 
+Mais ils ne permettent par contre pas de qualifier définitivement ce qui est appelé en général « alerte » ou encore « warning », comme par exemple : « cette alternative textuelle est-elle pertinente ? », ces vérifications complémentaires ne peuvent être réalisées que manuellement. Dans la plupart des cas, les outils vous permettent d’aller inspecter directement le nœud de code correspondant. 
 
-## <span lang="en">aXe accessibility audit</span>
-[aXe](http://www.deque.com/axe/) est une extension disponible pour Chrome et Firefox permettant d’effectuer une série de tests basés sur les [WCAG](https://www.w3.org/WAI/intro/wcag).
+**Important :**
+*	Ces outils facilitent l'évaluation humaine, permettent d’éviter les erreurs fréquentes et faciles à corriger et sensibilisent aux questions d'accessibilité.
+*	Les résultats obtenus ne reflètent pas le taux de conformité ou le niveau d’accessibilité du site inspecté mais permettent tout de même d’estimer une tendance. 
+*	Les référentiels (RGAA et WCAG) sont mis à jour régulièrement, pensez donc à vérifier les dates de mises à jour de l’outil que vous sélectionnerez.
 
-![capture d’écran de l’extension axe](../../images/aXe.png)
+## Testé par nos soins : aXe de Deque Systems
+Deque Systems propose [aXe](http://www.deque.com/axe/), une extension pour Chrome et une pour Firefox permettant d’effectuer une série de tests basés sur les critères d’accessibilité WCAG, remontant les erreurs dans un onglet de l’inspecteur web des outils développeur et proposant même dans la plupart des cas des pistes de solution.
+La philosophie repose sur le fait de minimiser les faux positifs (erreurs qui n’en sont pas) et de proposer au-delà de la conformité stricte WCAG, une série de bonnes pratiques utiles aux développeurs.
+
+![capture d’écran d'axe](../../../images/AXE_10_2020.png)
 &nbsp;
 
-## <span lang="en">Wave toolbar</span>
-[<span lang="en">Wave toolbar</span>](http://wave.webaim.org/extension/) est une barre d’extension pour Chrome. Tout comme aXe, elle permet d’effectuer une série de tests d’accessibilité sur la page en cours (proche des tests automatique de aXe). À la différence de ce dernier qui affiche les erreurs dans un onglet de l’inspecteur web, ici les erreurs sont affichées directement dans la page. Il existe un [bookmarklet (ou favlet) pour <span lang="en">Wave</span>](http://wave.webaim.org/help).
+## Testé par nos soins : Wave de WebAIM
+Développé par WebAIM.org, même idée pour [Wave](http://wave.webaim.org/) à la différence près qu’il remonte également des alertes (demandent une vérification manuelle) et que les résultats sont présentés dans un encart à part. L’outil ajoute des icônes et des indicateurs directement dans la page testée afin de vous aider à cibler les erreurs et alertes.
 
-![capture d’écran de l’extension wave toolbar](../../images/wave.png)
-<span lang="en">Wave toolbar</span> assure un grand nombre de tests automatiques mais aussi un certains nombre de tests semi-manuels qui demandent validation humaine,  appelés alertes ou <span lang="en">alert</span>. Que ce soit les alertes ou les erreurs, on peut examiner le noeud <abbr>DOM</abbr> qui à généré cette remontée et accéder à une information plus détaillée sur le critère d'accessibilité non respecté et comment y remédier.
+![capture d’écran wave](../../../images/WAVE_10_2020.png)
 
-Cette extension permet, également, de visualiser directement la hiérarchie des titres de la page (via un onglet dans la barre latérale), afficher la page avec et sans <abbr>CSS</abbr> et visualiser les problèmes de contraste via des icônes situés dans la page.
+## Liens connexes 
+* https://ffoodd.github.io/a11y.css/  
+* https://blog.clever-age.com/fr/2012/06/19/pagespeed-et-yslow-ne-sont-pas-des-indices-de-performance/ 
+* https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/ 
+
+## Glossaire
+* CSS : Cascading Stylesheets, feuilles de style en cascade
+* DOM : Document Object Model, modèle d’objet document
