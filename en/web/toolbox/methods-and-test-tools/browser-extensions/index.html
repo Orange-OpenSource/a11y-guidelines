@@ -16,7 +16,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css" integrity="sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
@@ -227,16 +227,34 @@
         
         <main id="main-content" class="col-md-9" role="main">
           <h1>Browser extensions</h1>
-<p>Some extensions allow you to perform automated tests on the current page.</p>
-<h2 id="axe-accessibility-audit">aXe accessibility audit <a class="header-anchor" href="#axe-accessibility-audit" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><a href="http://www.deque.com/products/axe/">aXe</a> is an extension available for Chrome and Firefox to perform several tests based on the <a href="https://www.w3.org/WAI/intro/wcag">WCAG</a>.</p>
-<p><img src="../../images/aXe.png" alt="screenshot of the aXe extension" class="img-fluid"><br>
+<p>Some browser extensions (or add-ons), such as aXe from Deque or Wave from WebAIM, allow automatic testing of HTML pages. This will allow you to easily identify the main accessibility errors, to check the quality during your developments and to space out the manual checks carried out by the accessibility auditors. These automatic test tools represent the minimum tooling of any accessible development and are a prerequisite for any accessibility audit.<br>
+They are quick and lightweight tools that identify what can be tested automatically, such as: &quot;Is there a textual alternative on this image? »: YES / NO or to detect contrast errors (ratio, calculated).<br>
+But on the other hand they do not make it possible to definitively qualify what is generally called “alert” or even “warning”, for example: “is this textual alternative relevant? », these additional checks can only be carried out manually. In most cases, the tools allow you to go directly to inspect the corresponding code node.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>These tools facilitate human assessment, prevent frequent and easy-to-correct errors, and raise awareness of accessibility issues.</li>
+<li>The results don’t reflect the compliance rate or the level of accessibility of the inspected site, but still allow a trend to be estimated.</li>
+<li>The guidelines (RGAA and WCAG) are updated regularly, so remember to check the update dates for the tool you select.</li>
+</ul>
+<h2 id="tested-by-us-axe-from-deque-systems">Tested by us: aXe from Deque Systems <a class="header-anchor" href="#tested-by-us-axe-from-deque-systems" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Deque Systems offers <a href="http://www.deque.com/axe/">aXe</a>, an extension for Chrome and one for Firefox to perform a series of tests based on WCAG accessibility criteria, reporting errors in a tab of the web inspector developer tools and even offering in most cases of possible solutions.<br>
+The philosophy is based on minimizing false positives (errors that are not errors) and offering beyond strict WCAG compliance, a series of good practices useful for developers.</p>
+<p><img src="../../../images/AXE_10_2020.png" alt="screenshot aXe" class="img-fluid"><br>
  </p>
-<h2 id="wave-toolbar">WAVE Toolbar <a class="header-anchor" href="#wave-toolbar" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><a href="http://wave.webaim.org/extension/">WAVE Toolbar</a> is a toolbar extension for Chrome. It allows to perform several tests on the current page just like aXe (nearly the same auto tests as aXe). Unlike aXe, which shows errors in a tab of Web Inspector, here the errors are displayed directly on the page. A <a href="http://wave.webaim.org/help">bookmarklet (or favelet) for WAVE</a> is also available.</p>
-<p><img src="../../images/wave.png" alt="screenshot of the WAVE Toolbar extension" class="img-fluid"></p>
-<p>Wave toolbar provides a large number of automatic tests but also a number of semi-manual tests that require human validation, called alerts. Whether alerts or errors, we can examine the  <abbr>DOM</abbr> node that generated this feedback and access more detailed information on the accessibility criteria concerned and how to fix it.</p>
-<p>This extension also allows a direct visualization of the hierarchy of the titles of the page (via a tab in the sidebar), a display of the page with and without <abbr> CSS &lt;/ abbr&gt; and a visualization of contrast issues via icons located in the page.</p>
+<h2 id="tested-by-us-wave-from-webaim">Tested by us: Wave from WebAIM <a class="header-anchor" href="#tested-by-us-wave-from-webaim" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Developed by <a href="http://WebAIM.org">WebAIM.org</a>, same idea for <a href="http://wave.webaim.org/">WAVE</a> except that it also raises alerts (that requires manual verification) and the results are presented in a separate insert. The tool adds icons and indicators directly into the tested page to help you target errors and alerts.</p>
+<p><img src="../../../images/WAVE_10_2020.png" alt="screenshot WAVE" class="img-fluid"></p>
+<h2 id="related-links">Related links <a class="header-anchor" href="#related-links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://ffoodd.github.io/a11y.css/">https://ffoodd.github.io/a11y.css/</a></li>
+<li><a href="https://blog.clever-age.com/fr/2012/06/19/pagespeed-et-yslow-ne-sont-pas-des-indices-de-performance/">https://blog.clever-age.com/fr/2012/06/19/pagespeed-et-yslow-ne-sont-pas-des-indices-de-performance/</a></li>
+<li><a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/">https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/</a></li>
+</ul>
+<h2 id="glossary">Glossary <a class="header-anchor" href="#glossary" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>CSS : Cascading Stylesheets, feuilles de style en cascade</li>
+<li>DOM : Document Object Model, modèle d’objet document</li>
+</ul>
 
         </main>
         
@@ -270,7 +288,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js" integrity="sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
     
     
     
