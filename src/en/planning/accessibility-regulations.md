@@ -36,7 +36,7 @@ The Access for the disabled to various digital services is made mandatory to ens
 
 The fine can go up to 20,000 euros per service and per year.
 
-## Directive (EU) 2019/882 of 17 April 2019 on the accessibility requirements for products and services
+## The European accessibility act - Directive (EU) 2019/882 of 17 April 2019 on the accessibility requirements for products and services
 - Laws to be published by Member States by 28 June 2022
 - All measures to be applied from 28 June 2025
 - Measures apply even if a service, or part of a service, is subcontracted to a third party

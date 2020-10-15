@@ -37,7 +37,7 @@ Le décret publié le 24 juillet 2019 précise les obligations d’accessibilit�
 
 Le risque de sanction est de 20 000 € par service et par an.
  
-## Directive (UE) 2019/882 du 17 avril 2019 relative aux exigences en matière d’accessibilité applicables aux produits et services
+## L’acte législatif européen sur l’accessibilité - Directive (UE) 2019/882 du 17 avril 2019 relative aux exigences en matière d’accessibilité applicables aux produits et services
 -	Cette directive doit être déclinée par les États membres d’ici le 28 juin 2022
 -	Toutes les mesures sont applicables à partir du 28 juin 2025
 -	Ces mesures s'appliquent même si un service, ou une partie d'un service, est sous-traité à un tiers
