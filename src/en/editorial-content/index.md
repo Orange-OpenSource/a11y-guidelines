@@ -1,8 +1,8 @@
 ---
-title: "Accessibility recommendations Orange for content"
+title: "Accessibility guidelines for content"
 ---
 
-# Accessibility guidelines Orange for content (editorial)
+# Accessibility guidelines for content (editorial)
 
 ## General editorial guidelines 
 Describe the guidelines to be observed to produce accessible documents, regardless of the type of content (Web, emails, Word document, etc.).
