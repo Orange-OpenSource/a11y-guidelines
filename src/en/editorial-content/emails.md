@@ -23,7 +23,7 @@ If your communication contains a lot of information and its layout needs to be c
 
 ## "Everyday" emails
 For all your everyday emails:
-- Use simple, sans serif fonts: Arial, Calibri or [Accessible DfA](http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/)
+- Use simple, sans serif fonts: Arial, Calibri or [Accessible DfA](https://github.com/Orange-OpenSource/font-accessible-dfa)
 - Adopt a font size at least equal to 10 points
 - Put a capital letter at the beginning of each sentence but avoid whole sentences in capital letters
 - Align the texts to the left (avoid justifying)
@@ -71,4 +71,4 @@ To test your entire email campaign, use the [Accessible email site](http://www.a
 - [A Beginner’s Guide to Email Accessibility](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240)
 - [The Ultimate Guide to Accessible Emails](https://litmus.com/blog/ultimate-guide-accessible-emails)
 - [Ideal Mobile Touchscreen Target Sizes](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)
-- [Accessible font DfA](http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/)
+- [Accessible font DfA](https://github.com/Orange-OpenSource/font-accessible-dfa)
