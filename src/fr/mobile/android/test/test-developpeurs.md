@@ -18,7 +18,7 @@ Le développeur peut en premier lieu utiliser l’outil <span lang="en">Lint</sp
 
 **Exemple de rapport Lint sous Android Studio :**   
 
-<img src="../../../images/lint.png" alt="capture d’écran présentant un rapport de l'outil Lint, qui affiche une erreur d'accessibilité">
+<img src="../../../images/lint.png" alt="capture d’écran présentant un rapport de l'outil Lint, qui affiche une erreur d'accessibilité" width="80%">
 
 
 ## Tests automatisés : Espresso
