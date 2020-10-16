@@ -357,7 +357,7 @@ Lire les instructions lors de l’activation des outils.
 #### Mode opératoire :
 
 - Positionner **Taille de la police** et **Taille d’affichage** au maximum. Parcourir l’application et noter les textes qui ne sont plus lisibles car ils ont disparu ou se chevauchent.
-- Activez l'option ** Agrandissement ** dans les paramètres d'accessibilité. Revenez à votre application et appuyez 3 fois sur l'écran (si vous avez conservé ce raccourci) pour démarrer l'affichage avec grossissement. Vérifiez que les écrans sont lisibles dans ce mode. Pincez avec 2 doigts pour régler le zoom et faites glisser 2 doigts pour vous déplacer sur l'écran. Toutes les informations sur l'écran doivent être lisibles en mode zoom.
+- Activez l'option **Agrandissement** dans les paramètres d'accessibilité. Revenez à votre application et appuyez 3 fois sur l'écran (si vous avez conservé ce raccourci) pour démarrer l'affichage avec grossissement. Vérifiez que les écrans sont lisibles dans ce mode. Pincez avec 2 doigts pour régler le zoom et faites glisser 2 doigts pour vous déplacer sur l'écran. Toutes les informations sur l'écran doivent être lisibles en mode zoom.
 
 
 ### Orientation
