@@ -12,13 +12,13 @@ Principalement :
 - Les polices, couleurs et styles utilisés
 - Les tableaux de mise en forme
 - Les liens
-- Les Pièces jointes 
+- Les pièces jointes 
 
 ## À noter 
 Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe : 
--	créer le mail avec la méthode qui vous est la plus simple, 
--	ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme **textuelle uniquement**, 
--	ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe. 
+-	Créer le mail avec la méthode qui vous est la plus simple, 
+-	Ajouter en pièce jointe un [fichier Word accessible](../word) (ou fichier texte) contenant le même niveau d’information mais sous forme **textuelle uniquement**, 
+-	Ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe. 
 
 ## Les mails du quotidien 
 Pour tous vos mails du quotidien : 
@@ -48,7 +48,7 @@ Plusieurs options s’offrent à vous pour créer un Pushmail accessible.
 1. Créer un document Word accessible en suivant nos [recommandations Word](../word).
 2. Utiliser l’option « Envoyer au destinataire du message ».  
 
-Option à ajouter la première fois via Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message. 
+Option à ajouter la première fois via **Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message**. 
 <img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png" width="400">
 
 ### Création à partir d’un outil de newsletter / mailing 
