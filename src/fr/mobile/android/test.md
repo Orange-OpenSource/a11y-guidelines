@@ -1,5 +1,6 @@
 ﻿---
 title: "Le test de l’accessibilité sous Android"
+displayToc: true
 ---
 
 # Le test de l’accessibilité sous Android

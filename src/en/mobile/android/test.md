@@ -1,5 +1,6 @@
 ﻿---
 title: "Android accessibility testing"
+displayToc: true
 ---
 
 # Android accessibility testing
