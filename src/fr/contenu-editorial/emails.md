@@ -22,7 +22,7 @@ Si votre communication contient beaucoup d'informations et que sa mise en page n
 
 ## Les mails du quotidien 
 Pour tous vos mails du quotidien : 
-- Utiliser des polices simples, sans serif : Arial, Calibri ou Accessible DfA
+- Utiliser des polices simples, sans serif : Arial, Calibri ou la [police Accessible DfA](https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/)
 -	Adopter une taille de police au moins égale à 10 points
 - Conserver l’accent des lettres en majuscule, voir [comment mettre des accents aux majuscules](https://a11y-guidelines.orange.com/others/editorial.html#annexes) ? ou suite Office : menu **Insertion** > **Symbole**
 - Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule
@@ -75,4 +75,4 @@ Afin de tester toute votre campagne mail, utiliser le site [Accessible email](ht
 - [Guide Litmus : mails accessibles (anglais)](https://litmus.com/blog/ultimate-guide-accessible-emails)
 - [Taille idéale des zones cliquables (anglais)](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)
 - [Taille des boutons interface tactile](https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/)
-- [Police Accessible DfA](http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/)
+- [Police Accessible DfA](https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/)
