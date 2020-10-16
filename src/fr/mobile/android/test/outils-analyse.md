@@ -29,11 +29,11 @@ En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</s
 
 Le <span lang="en">floating button</span> permettant de générer un rapport lorsque <span lang="en">Accessibility Scanner</span> est actif.
 
-<img src="../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencher le scan" width="25%">
+<img src="../../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencher le scan" width="25%">
 
 Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.
 
-<img src="../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil Accessibility Scanner" width="25%">  
+<img src="../../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil Accessibility Scanner" width="25%">  
 
 
 
@@ -50,7 +50,7 @@ Ce test étant réalisé depuis la console <span lang="en">Google Play</span>, c
 
 **Exemple de rapport généré par <span lang="en">Google Play Report</span> :**   
 
-![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../images/google_report.png) 
+![capture d’écran présentant un rapport d'accessibilité, sur la console développeur](../../../images/google_report.png) 
 
 
 ## aXe
@@ -63,11 +63,11 @@ L’utilisation d’aXe est très facile, puisqu’il suffit de télécharger l�
 
 Le <span lang="en">floating button</span> de l'application aXe permettant de déclencher un rapport.
 
-<img src="../../images/aXe_floating.jpg" alt="capture d’écran de l'application Orange TV, avec le bouton aXe permettant de déclencher le scan" width="25%">   
+<img src="../../../images/aXe_floating.jpg" alt="capture d’écran de l'application Orange TV, avec le bouton aXe permettant de déclencher le scan" width="25%">   
 
 Le rapport ainsi généré par aXe une fois le bouton cliqué.
 
-<img src="../../images/aXe_report.jpg" alt="capture d’écran présentant le rapport de l'outil aXe" width="25%">   
+<img src="../../../images/aXe_report.jpg" alt="capture d’écran présentant le rapport de l'outil aXe" width="25%">   
 
 
 
@@ -91,18 +91,18 @@ Pour ce faire, il suffit de naviguer dans les paramètres, puis dans les options
 
 L'écran des paramètres permettant d'activer le tracé des contours.
 
-<img src="../../images/contour_param.jpg" alt="capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours" width="25%"> 
+<img src="../../../images/contour_param.jpg" alt="capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours" width="25%"> 
 
 Exemple d'écran avec le tracé des contours actifs
 
-<img src="../../images/contour_UI.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues" width="25%"> 
+<img src="../../../images/contour_UI.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues" width="25%"> 
 
 
 
 ## <span lang="en">Colour Contrast Analyser</span>
 
 Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](../../../web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
-Pour les valeurs à respecter voir la [section concernant les couleurs](../conception#couleurs).
+Pour les valeurs à respecter voir la [section concernant les couleurs](../../conception#couleurs).
 
 <span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span>
 

@@ -18,7 +18,7 @@ La navigation peut être utilisée en :
 
 - **Lecture par exploration avec le doigt** : en glissant lentement son doigt sur l’écran, <span lang="en">Talkback</span> annonce les éléments à mesure qu’on l’on passe son doigt sur l’écran.
 
-<img src="../../images/gesture1.png" alt="image schématisant l'action de glisser son doigt sur un écran de téléphone" width="80">   
+<img src="../../../images/gesture1.png" alt="image schématisant l'action de glisser son doigt sur un écran de téléphone" width="80">   
 
 
 
@@ -31,32 +31,32 @@ La navigation peut être utilisée en :
   <dl>
     <dt>Double clique avec un doigt</dt>
     <dd>
-      <img src="../../images/gesture2.png" alt="" width="80">
+      <img src="../../../images/gesture2.png" alt="" width="80">
       Active le dernier élément qui a été vocalisé
     </dd>
   <dt><span lang="en">Swipe</span> vers le haut ou vers le bas avec deux doigts</dt>
     <dd>
-      <img src="../../images/gesture3_1.png" alt="" width="80">
+      <img src="../../../images/gesture3_1.png" alt="" width="80">
       <span lang="en">Scroll</span> dans la page, équivalent à un <span lang="en">scroll</span> vertical traditionnel
     </dd>
   <dt><span lang="en">Swipe</span> vers la gauche ou vers la droite avec deux doigts</dt>
     <dd>
-      <img src="../../images/gesture4_2.png" alt="" width="80">
+      <img src="../../../images/gesture4_2.png" alt="" width="80">
       Equivalent à un <span lang="en">scroll</span> horizontal traditionnel
     </dd>
   <dt><span lang="en">Swipe</span> vers la droite avec un doigt</dt>
     <dd>
-      <img src="../../images/gesture6.png" alt="" width="80">
+      <img src="../../../images/gesture6.png" alt="" width="80">
       Se déplace sur l'élément suivant
     </dd>
   <dt><span lang="en">Swipe</span> vers la gauche avec un doigt</dt>
     <dd>
-      <img src="../../images/gesture5.png" alt="" width="80">
+      <img src="../../../images/gesture5.png" alt="" width="80">
       Se déplace sur l'élément précédent
     </dd>
   <dt><span lang="en">Swipe</span> vers le haut ou vers le bas avec un doigt</dt>
     <dd>
-      <img src="../../images/gesture8.png" alt="" width="80">
+      <img src="../../../images/gesture8.png" alt="" width="80">
       Modifie le paramètre de navigation appliqué
     </dd>
   </dl>
@@ -64,7 +64,7 @@ La navigation peut être utilisée en :
 
 - **Recherche sur écran** : il est possible de naviguer en utilisant la recherche sur l’écran ; pour cela, il faut balayer l’écran vers la gauche, puis vers le bas, saisir le terme de recherche et choisir une correspondance dans la liste fournie.
 
-<img src="../../images/search_talkback.jpg" alt="capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback" width="25%"> 
+<img src="../../../images/search_talkback.jpg" alt="capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback" width="25%"> 
 
 
 - **Lecture en continu** : Pour utiliser la lecture de l’écran en continu, il faut ouvrir le menu contextuel général avec un balayage vers le bas puis vers la droite, puis choisir l’option (en balayant vers la droite pour la trouver dans le menu) « Lire à partir du haut de page » ou « Lire à partir de l’élément suivant », puis appuyer deux fois dessus pour sélectionner l’option. La lecture en continu démarre alors et peut-être arrêtée en appuyant sur l’écran. 
@@ -223,11 +223,11 @@ Il convient donc de tester qu’il n’y a pas plusieurs labels identiques pour 
 
 Exemple d'écran proposant le <span lang="en">floating button</span> qui permet de démarrer <span lang="en">Voice Access</span>.
 
-<img src="../../images/voice_access_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant" width="25%"> 
+<img src="../../../images/voice_access_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant" width="25%"> 
 
 Exemple d'écran avec <span lang="en">Voice Access</span> activé
 
-<img src="../../images/voice_access_actif.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro" width="25%"> 
+<img src="../../../images/voice_access_actif.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro" width="25%"> 
 
 
 
