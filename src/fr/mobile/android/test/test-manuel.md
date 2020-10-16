@@ -64,7 +64,7 @@ La navigation peut être utilisée en :
 
 - **Recherche sur écran** : il est possible de naviguer en utilisant la recherche sur l’écran ; pour cela, il faut balayer l’écran vers la gauche, puis vers le bas, saisir le terme de recherche et choisir une correspondance dans la liste fournie.
 
-<img src="../../../images/search_talkback.jpg" alt="capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback" width="25%"> 
+<img src="../../../images/search_talkback.jpg" alt="capture d'écran représentant le type de navigation recherche sur écran avec l'outil Talkback" width="50%"> 
 
 
 - **Lecture en continu** : Pour utiliser la lecture de l’écran en continu, il faut ouvrir le menu contextuel général avec un balayage vers le bas puis vers la droite, puis choisir l’option (en balayant vers la droite pour la trouver dans le menu) « Lire à partir du haut de page » ou « Lire à partir de l’élément suivant », puis appuyer deux fois dessus pour sélectionner l’option. La lecture en continu démarre alors et peut-être arrêtée en appuyant sur l’écran. 
@@ -223,11 +223,11 @@ Il convient donc de tester qu’il n’y a pas plusieurs labels identiques pour 
 
 Exemple d'écran proposant le <span lang="en">floating button</span> qui permet de démarrer <span lang="en">Voice Access</span>.
 
-<img src="../../../images/voice_access_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant" width="25%"> 
+<img src="../../../images/voice_access_floating.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, avec le bouton de Voice Access flottant" width="50%"> 
 
 Exemple d'écran avec <span lang="en">Voice Access</span> activé
 
-<img src="../../../images/voice_access_actif.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro" width="25%"> 
+<img src="../../../images/voice_access_actif.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant Voice Access actif, chaque élément interactif étant alors associé à un numéro" width="50%"> 
 
 
 

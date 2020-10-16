@@ -29,11 +29,11 @@ En cas de doute sur les contrastes, [<span lang="en">Colour contrast analysor</s
 
 Le <span lang="en">floating button</span> permettant de générer un rapport lorsque <span lang="en">Accessibility Scanner</span> est actif.
 
-<img src="../../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencher le scan" width="25%">
+<img src="../../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencher le scan" width="50%">
 
 Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.
 
-<img src="../../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil Accessibility Scanner" width="25%">  
+<img src="../../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil Accessibility Scanner" width="50%">  
 
 
 
@@ -63,11 +63,11 @@ L’utilisation d’aXe est très facile, puisqu’il suffit de télécharger l�
 
 Le <span lang="en">floating button</span> de l'application aXe permettant de déclencher un rapport.
 
-<img src="../../../images/aXe_floating.jpg" alt="capture d’écran de l'application Orange TV, avec le bouton aXe permettant de déclencher le scan" width="25%">   
+<img src="../../../images/aXe_floating.jpg" alt="capture d’écran de l'application Orange TV, avec le bouton aXe permettant de déclencher le scan" width="50%">   
 
 Le rapport ainsi généré par aXe une fois le bouton cliqué.
 
-<img src="../../../images/aXe_report.jpg" alt="capture d’écran présentant le rapport de l'outil aXe" width="25%">   
+<img src="../../../images/aXe_report.jpg" alt="capture d’écran présentant le rapport de l'outil aXe" width="50%">   
 
 
 
@@ -91,11 +91,11 @@ Pour ce faire, il suffit de naviguer dans les paramètres, puis dans les options
 
 L'écran des paramètres permettant d'activer le tracé des contours.
 
-<img src="../../../images/contour_param.jpg" alt="capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours" width="25%"> 
+<img src="../../../images/contour_param.jpg" alt="capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours" width="50%"> 
 
 Exemple d'écran avec le tracé des contours actifs
 
-<img src="../../../images/contour_UI.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues" width="25%"> 
+<img src="../../../images/contour_UI.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues" width="50%"> 
 
 
 
