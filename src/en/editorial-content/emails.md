@@ -12,7 +12,7 @@ Above all:
 - Fonts, colors and styles used
 - Layout tables
 - Links
--	Attachments
+- Attachments
 
 ## Important
 
@@ -38,7 +38,7 @@ For all your everyday emails:
 - Use the "Withdrawal, Spacing" functions to skip lines, example Office suite: **Page Layout menu> Paragraph> Indent or Spacing** or **Right click on your text: "Paragraph ..."**
 - Check that the size of the buttons and clickable areas is sufficient : no smaller than 1cm (0.4")
 - Configure your mail tool: HTML format by default, Outlook for example: **File> Options> Mail> Compose messages**
--	**Attachments:** Use the "Insert" function to add an attachment so that the screen reader signals its presence, it will appear in the "Attached" field.
+- **Attachments:** Use the "Insert" function to add an attachment so that the screen reader signals its presence, it will appear in the "Attached" field.
 
 ## Pushmails / newsletters / automatic communications
 You have several options for creating an accessible Pushmail.
@@ -47,14 +47,14 @@ You have several options for creating an accessible Pushmail.
 1. Create a Word document accessible by following [the Word accessibility guidelines](../word/create).
 2. Then use the "Send to Mail Recipient"* option.
 
-*Add this Option the first time via **File> Options> Quick access toolbar> “Send to Mail Recipient”**
+Add this Option the first time via **File> Options> Quick access toolbar> “Send to Mail Recipient”**
 
 ### From a newsletter / mailing tool
 It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our [general guidelines for editorial content](https://a11y-guidelines.orange.com/others_EN/editorial.html).
 Always check:
--	Text alternatives for images
--	Level titles
--	If presentation tables: role=presentation in the table tag
+- Text alternatives for images
+- Level titles
+- If presentation tables: role=presentation in the table tag
 
 ### Creation from HTML (or other dedicated tool)
 Compose the HTML code in an accessible way by following our [main web recommendations](../../web).  
