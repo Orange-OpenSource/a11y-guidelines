@@ -12,7 +12,7 @@ Les tests manuels concernent ceux que vous allez réaliser vous-même, en reprod
 
 Le lecteur d’écran est un outil pour les personnes non voyantes et malvoyantes. Il a deux fonctions, la vocalisation et la navigation dans l’écran. Tous les éléments signifiants doivent être **vocalisés** dans un **ordre logique**.
 
-Pour l’activation et l’utilisation du lecteur, vous pourrez obtenir davantage de précision dans la [section concernant <span lang="en">TalkBack</span>](../talkback/).
+Pour l’activation et l’utilisation du lecteur, vous pourrez obtenir davantage de précision dans la [section concernant <span lang="en">TalkBack</span>](../../talkback/).
 
 La navigation peut être utilisée en :
 

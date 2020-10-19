@@ -11,7 +11,7 @@ Manual tests are those that you will perform yourself, by reproducing the situat
 
 The screen reader is a tool for the blind and visually impaired people. It has two functions: vocalization and on-screen navigation. All significant elements must be **vocalized** in **logical order**.
 
-For Talkback activation and use, you can get more details in the [section about it](../talkback/).
+For Talkback activation and use, you can get more details in the [section about it](../../talkback/).
 
 The different types of Talkback navigation:
 
