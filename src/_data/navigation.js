@@ -87,7 +87,7 @@ module.exports = {
         },
         theme: 'purple',
         subLevels: [
-          { label: 'Transversal recommendations', href: '/en/editorial-content/general/' },
+          { label: 'Overall guidelines', href: '/en/editorial-content/general/' },
           { label: 'Word', href: '/en/editorial-content/word/' },
           { label: 'Powerpoint', href: '/en/editorial-content/powerpoint/' },
           { label: 'PDF documents', href: '/en/editorial-content/pdf/' },
