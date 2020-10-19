@@ -4,7 +4,7 @@ title: "Android accessibility testing"
 
 # Android accessibility testing
 
-Orange group requires its Web sites to be compliant with the level AA of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1. The equivalent for native mobile applications is a transposition of these criteria and compliance with [Android platform recommendations] (https://developer.android.com/training/accessibility/testing).
+Orange group requires its Web sites to be compliant with the level AA of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1. The equivalent for native mobile applications is a transposition of these criteria and compliance with [Android platform recommendations](https://developer.android.com/training/accessibility/testing).
 
 We recommend 4 steps to test accessibility with the objective to detect and fix accessibility errors as soon as possible during the project lifecycle. Whenever possible, it is useful to bring in an accessibility expert to get feedbak all along the project, as early as the design phase, as it could be expensive to fix accessibility issues identified during the test phase only.
 
