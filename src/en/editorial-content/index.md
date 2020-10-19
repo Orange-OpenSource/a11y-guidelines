@@ -1,22 +1,24 @@
 ---
-title: "Accessibility recommendations Orange for content"
+title: "Accessibility guidelines for content"
 ---
 
-# Accessibility recommendations Orange for content
+# Accessibility guidelines for content (editorial)
 
-## General recommendations for content
-The general recommendations describe the recommendations to respect whatever the type of content (web, email, Word document, etc.).
+## General editorial guidelines 
+Describe the guidelines to be observed to produce accessible documents, regardless of the type of content (Web, emails, Word document, etc.).
 <ul role="presentation">
-<li><a href="general">Access to general recommendations for content</a></li>
+<li><a href="general">General editorial guidelines</a></li>
 </ul>
 
-## Specific recommendations by type of content
-The following recommendations describe the specific rules to be followed depending on the type of document:
+## Specific accessibility guidelines 
+Specific rules to be followed if you want to produce accessible documents, depending on the type of document:
 
-- [Microsoft Word](word)&nbsp;
+- [Microsoft Word accessibility guidelines](word)
 
-- [Microsoft PowerPoint](powerpoint)&nbsp;
+- [Microsoft PowerPoint accessibility guidelines](powerpoint)
 
-- [PDF documents](pdf)&nbsp;
+- [Emails accessibility guidelines](emails)
 
-- [Videos, audios, and animated components](animated-components)&nbsp;
+- [PDF documents accessibility guidelines](pdf)
+
+- [Videos, audios and animated components accessibility guidelines](animated-components)
