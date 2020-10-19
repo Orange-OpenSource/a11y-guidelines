@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Emails accessibility - Orange digital accessibility guidelines</title>
+    <title>Emails accessibility guidelines - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -113,7 +113,7 @@
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
               <a href="/en/editorial-content/general/" class="nav-link">
-  Transversal recommendations
+  Overall guidelines
 </a>
             </li><li class="nav-item">
               <a href="/en/editorial-content/word/" class="nav-link">
@@ -173,14 +173,16 @@
     </div>
     
   <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Emails accessibility</h1>
-<p>Here, a list of guidelines/best practices for writing messages that everyone can understand whether or not the recipient usesis using assistive technology.</p>
+      <h1>Design emails accessible to all</h1>
+<p>Here is a list of recommendations for writing (or producing templates that generate) messages that are accessible, that is to say, understandable by all.</p>
 <h2 id="what-can-be-problematic">What can be problematic? <a class="header-anchor" href="#what-can-be-problematic" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Above all:</p>
 <ul>
 <li>Images</li>
 <li>Fonts, colors and styles used</li>
 <li>Layout tables</li>
 <li>Links</li>
+<li>Attachments</li>
 </ul>
 <h2 id="important">Important <a class="header-anchor" href="#important" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>If your communication contains a lot of information and its layout needs to be complex:</p>
@@ -192,39 +194,54 @@
 <h2 id="everyday-emails">&quot;Everyday&quot; emails <a class="header-anchor" href="#everyday-emails" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>For all your everyday emails:</p>
 <ul>
-<li>Use simple, sans serif fonts: Arial, Calibri or <a href="http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/">Accessible DfA</a></li>
+<li>Use simple, sans serif fonts: Arial, Calibri or <a href="https://github.com/Orange-OpenSource/font-accessible-dfa">Accessible DfA</a></li>
 <li>Adopt a font size at least equal to 10 points</li>
 <li>Put a capital letter at the beginning of each sentence but avoid whole sentences in capital letters</li>
 <li>Align the texts to the left (avoid justifying)</li>
 <li>Avoid too many italic or bold chunks of text or phrases</li>
 <li>Check the contrast between the font color and the background (Colour Contrast Analyzer) and limit the total number of colors used</li>
 <li>Use a neutral background: no decorative paper letter or background images</li>
-<li>Enter an alternative text for all the images (Office: right click on the picture&gt; Format Picture &gt; Alt text&gt; &quot;Description&quot; field) or if the image is just descriptive, leave the &quot;Description&quot; field empty</li>
+<li>Enter an alternative text for all the images (Office: right click on the picture&gt; <strong>Format Picture &gt; Alt text&gt; &quot;Description&quot; field</strong>) or if the image is just descriptive, leave the &quot;Description&quot; field empty</li>
 <li>Use the &quot;Title&quot; and &quot;Subtitle&quot; styles of the &quot;text format&quot; menu if long mail, with several sections</li>
 <li>Add an emoticon alternative text, example: &quot;;) [wink smiley] &quot; instead of just &quot;;)&quot;</li>
 <li>Avoid animations, animated GIFs and luminosity flashes</li>
 <li>Write explicit link labels, for example: prefer &quot;discover our offers&quot; to &quot;click here&quot; or &quot;find out more&quot;</li>
-<li>Use the &quot;Withdrawal, Spacing&quot; functions to skip lines, example Office suite: Page Layout menu&gt; Paragraph&gt; Indent or Spacing or Right click on your text: &quot;Paragraph ...&quot;)</li>
+<li>Use the &quot;Withdrawal, Spacing&quot; functions to skip lines, example Office suite: <strong>Page Layout menu&gt; Paragraph&gt; Indent or Spacing</strong> or <strong>Right click on your text: &quot;Paragraph ...&quot;</strong></li>
 <li>Check that the size of the buttons and clickable areas is sufficient : no smaller than 1cm (0.4&quot;)</li>
-<li>Configure your mail tool: HTML format by default, Outlook for example: File&gt; Options&gt; Mail&gt; Compose messages</li>
+<li>Configure your mail tool: HTML format by default, Outlook for example: <strong>File&gt; Options&gt; Mail&gt; Compose messages</strong></li>
+<li><strong>Attachments:</strong> Use the &quot;Insert&quot; function to add an attachment so that the screen reader signals its presence, it will appear in the &quot;Attached&quot; field.</li>
 </ul>
-<h2 id="pushmails">Pushmails <a class="header-anchor" href="#pushmails" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="pushmails-newsletters-automatic-communications">Pushmails / newsletters / automatic communications <a class="header-anchor" href="#pushmails-newsletters-automatic-communications" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>You have several options for creating an accessible Pushmail.</p>
-<h2 id="from-a-word-document">From a Word document <a class="header-anchor" href="#from-a-word-document" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="from-a-word-document">From a Word document <a class="header-anchor" href="#from-a-word-document" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ol>
-<li>Create a Word document accessible by following <a href="../word/create">the Word recommendations</a>.</li>
-<li>Then use the &quot;Send to Mail Recipient&quot;* option.<br>
-*Add this Option the first time via File&gt; Options&gt; Quick access toolbar&gt; “Send to Mail Recipient”</li>
+<li>Create a Word document accessible by following <a href="../word/create">the Word accessibility guidelines</a>.</li>
+<li>Then use the &quot;Send to Mail Recipient&quot;* option.</li>
 </ol>
-<h2 id="creation-from-html-or-other-dedicated-tool">Creation from HTML (or other dedicated tool) <a class="header-anchor" href="#creation-from-html-or-other-dedicated-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Compose the HTML code in an accessible way by following <a href="../../web">the main web recommendations</a>.</p>
-<p>Important: there are multiple email clients so there can be interpretation issues, the layout should rather be done via tables (using role=presentation in the &lt;table&gt; tag).</p>
-<h2 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Add this Option the first time via <strong>File&gt; Options&gt; Quick access toolbar&gt; “Send to Mail Recipient”</strong></p>
+<h3 id="from-a-newsletter-mailing-tool">From a newsletter / mailing tool <a class="header-anchor" href="#from-a-newsletter-mailing-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our <a href="https://a11y-guidelines.orange.com/others_EN/editorial.html">general guidelines for editorial content</a>.<br>
+Always check:</p>
+<ul>
+<li>Text alternatives for images</li>
+<li>Level titles</li>
+<li>If presentation tables: role=presentation in the table tag</li>
+</ul>
+<h3 id="creation-from-html-or-other-dedicated-tool">Creation from HTML (or other dedicated tool) <a class="header-anchor" href="#creation-from-html-or-other-dedicated-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Compose the HTML code in an accessible way by following our <a href="../../web">main web recommendations</a>.</p>
+<p>Important: given the interpretation issues of multiple mail clients, the layout should instead be done via tables using the role=presentation attribute in the table tag.<br>
+In order to occasionally test the support for HTML and CSS in the various email clients, use <a href="https://www.caniemail.com/">Can I email?</a> and <a href="https://caniuse.email/">Can I use in HTML emails?</a> Websites.<br>
+To test your entire email campaign, use the <a href="http://www.accessible-email.org/">Accessible email site</a>.</p>
+<h2 id="related-links">Related links <a class="header-anchor" href="#related-links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
 <li><a href="https://support.office.com/en-us/article/video-improve-email-accessibility-ebf3730a-18f8-4b57-81d1-730086231775?omkt=en-001&amp;ui=en-US&amp;rs=en-001&amp;ad=US">Improve email accessibility </a></li>
+<li><a href="http://www.accessible-email.org/">Analyse emails campaigns</a></li>
+<li><a href="https://www.caniemail.com/">Test support of HTML and CSS</a></li>
+<li><a href="https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606">On which email clients to test first</a></li>
 <li><a href="https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240">A Beginner’s Guide to Email Accessibility</a></li>
 <li><a href="https://litmus.com/blog/ultimate-guide-accessible-emails">The Ultimate Guide to Accessible Emails</a></li>
 <li><a href="https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Ideal Mobile Touchscreen Target Sizes</a></li>
+<li><a href="https://github.com/Orange-OpenSource/font-accessible-dfa">Accessible font DfA</a></li>
 </ul>
 
     </main>

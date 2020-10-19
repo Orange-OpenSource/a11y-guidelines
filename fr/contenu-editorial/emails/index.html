@@ -174,60 +174,77 @@
     
   <main id="main-content" class="container-lg pt-4" role="main">
       <h1>Concevoir des mails accessibles à tous</h1>
-<p>Voici une liste de recommandations pour écrire des messages compréhensibles par tous, que le destinataire utilise ou non des technologies d’assistance.</p>
-<h2 id="les-mails-du-quotidien">Les mails « du quotidien » <a class="header-anchor" href="#les-mails-du-quotidien" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite">Qu’est ce qui peut poser problème d’un point de vue accessibilité ? <a class="header-anchor" href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Voici une liste de recommandations pour écrire (ou produire des templates qui permettent de générer) des messages accessibles, c’est-à-dire, compréhensibles par tous.</p>
+<h2 id="quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite">Qu’est ce qui peut poser problème d’un point de vue accessibilité ? <a class="header-anchor" href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Principalement :</p>
 <ul>
 <li>Les images</li>
 <li>Les polices, couleurs et styles utilisés</li>
 <li>Les tableaux de mise en forme</li>
 <li>Les liens</li>
+<li>Les pièces jointes</li>
 </ul>
-<h3 id="les-basiques">Les basiques <a class="header-anchor" href="#les-basiques" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h2 id="a-noter">À noter <a class="header-anchor" href="#a-noter" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe :</p>
+<ul>
+<li>Créer le mail avec la méthode qui vous est la plus simple,</li>
+<li>Ajouter en pièce jointe un <a href="../word">fichier Word accessible</a> (ou fichier texte) contenant le même niveau d’information mais sous forme <strong>textuelle uniquement</strong>,</li>
+<li>Ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe.</li>
+</ul>
+<h2 id="les-mails-du-quotidien">Les mails du quotidien <a class="header-anchor" href="#les-mails-du-quotidien" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Pour tous vos mails du quotidien :</p>
 <ul>
-<li>Utiliser des polices simples, sans serif : Arial, Calibri ou Accessible DfA</li>
-<li>Adopter une taille de police au moins égale à 12 points</li>
-<li>Conserver l’accent des lettres en majuscule</li>
+<li>Utiliser des polices simples, sans serif : Arial, Calibri ou la <a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">police Accessible DfA</a></li>
+<li>Adopter une taille de police au moins égale à 10 points</li>
+<li>Conserver l’accent des lettres en majuscule, voir <a href="https://a11y-guidelines.orange.com/others/editorial.html#annexes">comment mettre des accents aux majuscules</a> ? ou suite Office : menu <strong>Insertion</strong> &gt; <strong>Symbole</strong></li>
+<li>Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule</li>
 <li>Aligner les textes à gauche (éviter de justifier)</li>
 <li>Éviter l’italique</li>
-<li>Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule</li>
 <li>Vérifier le contraste entre la couleur de police et l’arrière-plan (outil Colour Contrast Analyzer) et limiter le nombre total de couleurs utilisées</li>
 <li>Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan</li>
-<li>Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle)</li>
-<li>Traduire les émoticônes, exemple : [smiley clin d’oeil]</li>
+<li>Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle, suite Office : <strong>clic droit</strong> sur l’image &gt; <strong>Format de l’image</strong> &gt; <strong>Texte de remplacement</strong> &gt; champ <strong>« Description »</strong>)</li>
+<li>Utiliser les styles « Titre » et « Sous-titre » du menu « format du texte » si mail long, avec plusieurs sections</li>
+<li>Traduire les émoticônes, exemple : [smiley clin d’oeil] à la place du classique « ;) »</li>
 <li>Éviter les animations, les GIFs et les flashs</li>
-<li>Rédiger des libellés de liens explicites (éviter les liens du type : « cliquer ici » ou « en savoir plus »)</li>
-<li>Vérifier que la taille des boutons et des zones cliquables est suffisante (1cm de côté)</li>
-<li>Paramétrer votre outil mail : format HTML par défaut</li>
+<li>Utiliser les fonctions « <strong>Retrait, Espacement</strong> » pour sauter des lignes, exemple suite Office : <strong>Menu Mise en page &gt; Paragraphe &gt; Retrait ou Espacement</strong> ou <strong>Clic droit : « Paragraphe… »</strong>)</li>
+<li>Rédiger des libellés de liens explicites, exemple : préférer « découvrez nos offres » à « cliquer ici » ou « en savoir plus »</li>
+<li>Vérifier que la <a href="https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/">taille des boutons et des zones cliquables</a> est suffisante (1cm de côté)</li>
+<li>Paramétrer votre outil mail : format HTML par défaut, exemple Outlook : <strong>Fichier &gt; Options &gt; Courrier &gt; Composition des messages</strong></li>
+<li><strong>Pièces jointes</strong> : Utiliser la fonction « Insérer » pour ajouter une pièce jointe afin que le lecteur d’écran signale sa présence, elle apparaitra dans le champ « Attaché »</li>
 </ul>
-<h2 id="les-pushmails">Les Pushmails <a class="header-anchor" href="#les-pushmails" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="les-pushmails-newsletters-communications-automatiques">Les Pushmails / newsletters / communications automatiques <a class="header-anchor" href="#les-pushmails-newsletters-communications-automatiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Plusieurs options s’offrent à vous pour créer un Pushmail accessible.</p>
 <h3 id="creation-a-partir-dun-document-word">Création à partir d’un document Word <a class="header-anchor" href="#creation-a-partir-dun-document-word" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ol>
-<li>Créer un document Word accessible en suivant <a href="../word">les recommandations Word</a>.</li>
-<li>Puis utiliser l’option « Envoyer au destinataire du message ».</li>
+<li>Créer un document Word accessible en suivant nos <a href="../word">recommandations Word</a>.</li>
+<li>Utiliser l’option « Envoyer au destinataire du message ».</li>
 </ol>
-<p>Option à ajouter la première fois via Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message.<br>
-<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png"></p>
+<p>Option à ajouter la première fois via <strong>Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message</strong>.<br>
+<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png" width="400"></p>
+<h3 id="creation-a-partir-dun-outil-de-newsletter-mailing">Création à partir d’un outil de newsletter / mailing <a class="header-anchor" href="#creation-a-partir-dun-outil-de-newsletter-mailing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos <a href="../generalites">recommandations générales pour le contenu éditorial</a>.<br>
+Toujours vérifier :</p>
+<ul>
+<li>Alternatives textuelles des images</li>
+<li>Titres de niveaux</li>
+<li>Si tableaux de présentation : role=presentation dans la balise table</li>
+</ul>
 <h3 id="creation-a-partir-dhtml-ou-autre-outil-dedie">Création à partir d’HTML (ou autre outil dédié) <a class="header-anchor" href="#creation-a-partir-dhtml-ou-autre-outil-dedie" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Composer le code HTML de façon accessible en suivant <a href="../../web">les principales recommandations Web</a>.<br>
-Important : compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux (en utilisant role=presentation dans la balise table).</p>
-<h3 id="la-derniere-chance">La dernière chance <a class="header-anchor" href="#la-derniere-chance" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Si la mise en page de votre mail nécessite d’être très complexe :</p>
-<ul>
-<li>créer le mail avec la méthode qui vous est la plus simple,</li>
-<li>et ajouter en pièce jointe un fichier Word accessible (ou fichier texte) contenant le même niveau d’information mais sous forme textuelle uniquement.</li>
-</ul>
+<strong>Important :</strong> compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux en utilisant l’attribut role=presentation dans la balise table.<br>
+Afin de tester ponctuellement la prise en charge de l’HTML et du CSS dans les différents clients mails, utilisez les sites <a href="https://www.caniemail.com/">Can I email ?</a> et <a href="https://caniuse.email/">Can I use in HTML emails ?</a><br>
+Afin de tester toute votre campagne mail, utiliser le site <a href="http://www.accessible-email.org/">Accessible email</a></p>
 <h2 id="liens-utiles">Liens utiles <a class="header-anchor" href="#liens-utiles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
 <li><a href="https://a11y-guidelines.orange.com/">Site des recommandations accessibilité Orange</a></li>
 <li><a href="https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775">Tuto Office mails accessibles</a></li>
+<li><a href="https://www.caniemail.com/">Tester la prise en charge de l’HTML et du CSS sur les différents clients mails</a></li>
+<li><a href="https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606">Sur quels clients mails tester en priorité (anglais)</a></li>
 <li><a href="https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240">Guide le l’accessibilité des mails (anglais)</a></li>
 <li><a href="https://litmus.com/blog/ultimate-guide-accessible-emails">Guide Litmus : mails accessibles (anglais)</a></li>
 <li><a href="https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Taille idéale des zones cliquables (anglais)</a></li>
 <li><a href="https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/">Taille des boutons interface tactile</a></li>
-<li><a href="http://c-rnt.apf.asso.fr/2019/01/07/accessible-dfa-une-police-open-source-concue-par-orange/">Police Accessible DfA</a></li>
+<li><a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">Police Accessible DfA</a></li>
 </ul>
 
     </main>
