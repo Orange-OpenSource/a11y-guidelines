@@ -101,8 +101,8 @@ Screen example with layout bounds activate
 
 ## <span lang="en">Colour Contrast Analyser</span>
 
-Color contrasts must be verified on the application mockups, or with Accessibility Scanner on an Android mobile. If any doubt remains, it is possible to take a screenshot of the application, then to check on a computer [Measure the level of color contrast] (../../../web/toolbox/methods-and-test-tools/color-contrast-level/) with the Color Contrast Analyzer tool.
-For the values ​​to respect see the [section concerning colors] (../../design#colors).
+Color contrasts must be verified on the application mockups, or with Accessibility Scanner on an Android mobile. If any doubt remains, it is possible to take a screenshot of the application, then to check on a computer [Measure the level of color contrast](../../../../web/toolbox/methods-and-test-tools/color-contrast-level/) with the Color Contrast Analyzer tool.
+For the values ​​to respect see the [section concerning colors](../../design#colors).
 
 <span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span>
 

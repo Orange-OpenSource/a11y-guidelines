@@ -4,15 +4,15 @@
   "sideNavigationLinks": [
     {
       "label": "Developer testing: code analysis",
-      "href": "/en/mobile/android/test/test-developpeurs/"
+      "href": "/en/mobile/android/test/developers-testing/"
     },
     {
       "label": "Application scan : analysis tools",
-      "href": "/en/mobile/android/test/outils-analyse/"
+      "href": "/en/mobile/android/test/analysis-tools/"
     },
     {
       "label": "Manual tests: use cases",
-      "href": "/en/mobile/android/test/test-manuel/"
+      "href": "/en/mobile/android/test/manual-testing/"
     }
   ]
 }
