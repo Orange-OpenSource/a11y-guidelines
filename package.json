@@ -14,10 +14,10 @@
     "watch:js": "npm run build:js -- --watch",
     "build": "npm-run-all --sequential clean build:eleventy build:css build:js",
     "serve": "npm-run-all --sequential clean --parallel serve:eleventy watch:css watch:js",
-    "build:dev": "cross-env ELEVENTY_ENV=development npm-run build",
-    "build:prod": "cross-env ELEVENTY_ENV=production npm-run build",
-    "serve:dev": "cross-env ELEVENTY_ENV=development npm-run serve",
-    "serve:prod": "cross-env ELEVENTY_ENV=production npm-run serve"
+    "build:dev": "cross-env ELEVENTY_ENV=development npm-run-all build",
+    "build:prod": "cross-env ELEVENTY_ENV=production npm-run-all build",
+    "serve:dev": "cross-env ELEVENTY_ENV=development npm-run-all serve",
+    "serve:prod": "cross-env ELEVENTY_ENV=production npm-run-all serve"
   },
   "author": "Orange SA",
   "license": "CC-BY-SA-3.0",

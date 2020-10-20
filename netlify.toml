@@ -2,3 +2,4 @@
   base = "/"
   publish = "_site"
   command = "npm run build:dev"
+  environment = { NODE_VERSION = "14.14.0" }
