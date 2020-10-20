@@ -47,11 +47,11 @@ Pour les contenus audio et/ou vidéo, il faut prévoir une transcription textuel
 ## Exemples : 
 * Image décorative : Alternative textuelle vide (comprendre attribut alt="")
 
-<img alt="capture d'écran alternative textuelle image décorative" src="../images/image_decorative.png" width="250"/> 
+<img alt="capture d'écran alternative textuelle image décorative" src="../../images/image_decorative.png" width="250"/> 
 
 * Image cliquable : exemple d'alternative textuelle correcte : « ajouter un bouquet TV » 
 
-<img alt="capture d'écran alternative textuelle image cliquable" src="../images/image_cliquable.png"/>
+<img alt="capture d'écran alternative textuelle image cliquable" src="../../images/image_cliquable.png"/>
 
 ## Ressources : 
 * [Arbre de décision W3C (anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/) 
