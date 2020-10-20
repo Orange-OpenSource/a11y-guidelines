@@ -4,69 +4,55 @@ title: "Non-textual content"
 
 # Non-textual content
 
-<p class="lead">Ensure that an alternative to non-text content is provided to the user</p>
+<p class="lead">Ensure that an alternative to non-text content is provided to the user.</p>
 
 
 
 ## Define text alternatives
 
-**Target:** people with visual impairments, hearing difficulties or cognitive limitations and search engines.  
-**When:** as of design and during development.
+**Target:** people with visual or hearing impairments, seniors, people with cognitive impairments and search engines.  
+**When:** from conception and during development.
 
 **Description:**
-Set text alternatives on all non-text informative elements (alternatives to images, icons). Also provide scripts or subtitles for the audio or video content.
+A text alternative must be provided for each non-textual element: images, animation, video, podcast, advertisements, buttons, icons, logos, etc.
+For images, buttons, icons, logos, etc., the rules are as follows:
+* For clickable images: specify the function / target of the link
+* For decorative images: leave the text alternative blank
+* For images that convey information: text alternative describing the information
+* For complex images (diagrams, graphs, etc.): provide adjacent equivalent textual content:
+  * text in the page
+  * or a link pointing to another page with this description.
 
-**Example**
-In the screenshot below, the design phase should provide  text alternatives for each button:
-- “menu”,
-- “settings”,
-- “previous channel”,
-- “mute”…
-
-![screenshot of a video player with multiple buttons](../../images/player.png)
-
-
-
-## Provide accessible audio or video tracks
-
-**Target:** everyone and particularly people with visual disabilities, hearing impairments, cognitive limitations, or difficulties with English.  
-**When:** during design and development.
-
-**Description:**
-
-To be accessible, the multimedia contents must:
-1. propose a full transcript
-2. offer subtitles (video only)
-3. offer audio description (video only)
-4. choose an accessible media player
-5. Prohibit the automatic start of the video when loading the page
-6. Prohibit videos that have more than 3 flashes per second
-7. Furthermore, for any sound that has been emitted for more than 3 seconds, the user must have the option of either stopping or pausing it or controlling its volume regardless of the overall system volume.
-
-For more info check out [accessibility recommendations for video content, animations and Orange audios](../../../editorial-content/animated-components/).
-
-**Users’ goal:**  
-Provide access to visual and hearing information for people who cannot access it: visually impaired, blind, deaf, cognitively deficient, computer without speakers, noisy or bright environment.
-
-**Technical goal:**  
-Allow audio and video referencing.
+## Special case: formatting via an image
+If it is technically possible for you to achieve your visual via formatted text, it is better to choose this solution to convey information rather than text in the form of an image.
+Only permissions where the formatting can be done via an image:
+*	Whether the text in image form can be [customized visually by the user](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#visually-customizeddef);
+*	If a specific presentation of the text is [essential to the information conveyed](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#essentialdef) (example: text or name of a brand in a logo).
+In these specific cases, provide a text alternative containing at least the text of the image and [check the contrasts of the colors used](https://a11y-guidelines.orange.com/web_EN/methodes-outils-contrastes.html).
 
 
+## Special cases of animations, video and audio content
+For non-informative and purely decorative elements, no need for a text alternative. Just ensure that the [animation is ignored by assistive technologies](https://a11y-guidelines.orange.com/web_EN/exemples/masquage/index.html).
+For animations carrying information, provide a transcription (script type) containing the information of the content in text form.
+For audio and / or video content, a textual transcription (scripts) and / or subtitles must be provided according to the following rules: 
 
+*	Pre-recorded audio content: textual transcription equivalent to the audio content
+*	Pre-recorded video without audio: 
+  * textual transcription at minimum 
+  * or an audio track equivalent to the content of the video 
+*	Pre-recorded video (with or without audio): 
+  * textual transcription at minimum 
+  * Relevant and correctly synchronized audio description if necessary 
+*	Pre-recorded video with audio: transcribed subtitles showing all the content
+*	Live video with audio: transcribed subtitles showing all the content
 
-## Avoid captcha
+## Examples: 
+* Decorative image: Empty text alternative 
+<img alt="capture d'écran alternative textuelle image décorative" src="../../images/alt_text_deco.png" width="300"/> 
 
-**Target:** everyone in particular, visually impaired people.  
-**When:** during design and development.
+* Clickable image: Text alternative "add a TV channel" 
+<img alt="capture d'écran alternative textuelle image cliquable" src="../../images/image_cliquable.png"/>
 
-**Description**  
-Captchas are often the source of difficulties for all users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user:
-- Double authentication;
-- Hidden form field left blank (honeypot technique), not visible to the user;
-- Providing phone support to make sure the customer is a real person;
-- A check to ensure that the same <abbr> IP </abbr> / User agent combination does not attempt to submit the form more than N times per second.
-
-If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha:
-- an audio captcha + visual,
-- logical tests (question whose answer is obvious, simple mathematical test ...) + classic visual captcha
-- …
+## Related links:
+* [W3C decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) 
+* [Other practical cases on the W3C website](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content)
