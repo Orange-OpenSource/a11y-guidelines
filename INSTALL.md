@@ -1,6 +1,6 @@
 # How to install the project and run it on my computer
 
-You need to have [NodeJS](https://nodejs.org/) (at least v13) and [NPM](https://www.npmjs.com/) installed on your computer. We recommend you to use [NVM](https://github.com/nvm-sh/nvm) as it will allow you to easily switch your Node version.
+You need to have [NodeJS](https://nodejs.org/) (at least v14) and [NPM](https://www.npmjs.com/) installed on your computer. We recommend you to use [NVM](https://github.com/nvm-sh/nvm) as it will allow you to easily switch your Node version.
 
 
 ## Clone the project
