@@ -1,0 +1,18 @@
+﻿{
+  "highlightJS": true,
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Tests des développeurs : analyse du code",
+      "href": "/fr/mobile/android/test/test-developpeurs/"
+    },
+    {
+      "label": "Scan de l'application : les outils d'analyse",
+      "href": "/fr/mobile/android/test/outils-analyse/"
+    },
+    {
+      "label": "Les tests manuels : mise en situation",
+      "href": "/fr/mobile/android/test/test-manuel/"
+    }
+  ]
+}
