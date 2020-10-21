@@ -4,68 +4,56 @@ title: "Contenu non-textuel"
 
 # Contenu non-textuel
 
-<p class="lead">S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur</p>
+<p class="lead">S’assurer qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur.</p>
 
 ## Définir des équivalents textuels
+**Cible :** les personnes déficientes visuelles ou auditives, les séniors, les personnes déficientes cognitives et les moteurs de recherche.  
+**Quand :** dès la conception et pendant le développement. 
 
-**Cible&nbsp;:** les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.  
-**Quand&nbsp;:** dès la conception et pendant le développement.
+**Description :**  
+Il faut prévoir une alternative textuelle pour chaque élément non-textuel : images, animation, vidéo, podcast, publicités, boutons, icônes, logos, etc. 
+Pour les images, boutons, icônes, logos, etc, les règles sont les suivantes : 
+* Pour les images cliquables : préciser la fonction / la cible du lien 
+* Pour les images décoratives : laisser l’alternative textuelle vide
+* Pour les images porteuses d’information : alternative textuelle décrivant l’information 
+* Pour les images complexes (schémas, graphes…) : prévoir un contenu textuel équivalent adjacent : 
+  * du texte dans la page 
+  * ou un lien pointant vers une autre page présentant cette description.
+  
+## Cas particulier : mise en forme via une image 
+S’il vous est possible techniquement de réaliser votre visuel via du texte mise en forme, il est préférable de choisir cette solution pour véhiculer l’information plutôt que du texte sous forme d’image. 
 
-**Description&nbsp;:**  
-Mettre en place des alternatives textuelles pour tous les éléments informatifs non-textuels (alternatives aux images, icônes). De même, prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.
+Seuls cas où la mise en forme peut se faire via une image :
+* Si le [texte sous forme d'image peut être personnalisé visuellement](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#visually-customizeddef) par l'utilisateur ;
+* Si une [présentation spécifique du texte est essentielle à l'information véhiculée](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#essentialdef) (exemple : logo contenu du texte ou nom d’une marque).
+Dans ces cas précis, prévoir une alternative textuelle reprenant au moins le texte de l’image et [vérifier les contrastes des couleurs utilisées](https://a11y-guidelines.orange.com/web/methodes-outils-contrastes.html). 
 
-**Exemple&nbsp;:**  
-Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton&nbsp;:
-- «&nbsp;menu&nbsp;»,
-- «&nbsp;réglages&nbsp;»,
-- «&nbsp;chaîne précédente&nbsp;»
-- «&nbsp;couper le son&nbsp;»
-- …  
+## Cas particuliers des animations, contenus vidéo et audio
+Pour les éléments non informatifs et purement décoratifs, pas besoin d’alternative textuelle et faire en sorte que l’animation soit [ignorée par les aides techniques](https://a11y-guidelines.orange.com/web/exemples/masquage/index.html).
 
-![capture d’écran d’un lecteur vidéo contenant plusieurs boutons](../../images/player.png)  
+Pour les animations portant de l’information, prévoir une transcription (de type script) reprenant l’information du contenu sous forme de texte.
 
+Pour les contenus audio et/ou vidéo, il faut prévoir une transcription textuelle (scripts) et/ou des sous-titres selon les règles suivantes : 
+* Contenu audio préenregistré : transcription textuelle équivalente au contenu de l’audio 
+* Vidéo préenregistrée sans audio : 
+  * transcription textuelle à minima
+  * ou une piste audio équivalente au contenu de la vidéo 
+* Vidéo préenregistrée (avec ou sans audio) : 
+  * transcription textuelle à minima 
+  * audiodescription pertinente et correctement synchronisée si nécessaire
+* Vidéo préenregistrée avec audio : sous-titres transcrits reprenant tout le contenu 
+* Vidéo en direct avec audio : sous-titres transcrits reprenant tout le contenu 
 
-## Rendre accessible les pistes audio ou vidéo
-   
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
-**Quand&nbsp;:** lors de la conception et lors du développement.
+## Exemples : 
+* Image décorative : Alternative textuelle vide (comprendre attribut `alt=""`)
 
-**Description&nbsp;:** 
+<img alt="capture d'écran alternative textuelle image décorative" src="../../images/image_decorative.png" width="250"/> 
 
-Pour être accessibles, les contenus multimédias doivent&nbsp;: 
-1. proposer une transcription intégrale
-2.	proposer des sous-titres (vidéo uniquement) 
-3.	proposer une audiodescription (vidéo uniquement)
-4.	choisir un lecteur média accessible
-5.	proscrire le démarrage automatique de la vidéo au chargement de la page
-6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
-7. par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
+* Image cliquable : exemple d'alternative textuelle correcte : « ajouter un bouquet TV » 
 
-Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../../../contenu-editorial/composants-animes/).
+<img alt="capture d'écran alternative textuelle image cliquable" src="../../images/image_cliquable.png"/>
 
-**Objectif utilisateur&nbsp;:**
-
-Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier&nbsp;: malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.
-
-**Objectif technique&nbsp;:**
-
-Permet le référencement de tout contenu audio et vidéo.
-
-
-
-## Éviter les captcha
-
-**Cible&nbsp;:** tous le monde en particulier, les personnes déficientes visuelles.  
-**Quand&nbsp;:** lors de la conception et lors du développement.
-
-**Description&nbsp;:**  
-Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: 
-- Double authentification&nbsp;;
-- Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur&nbsp;;
-- Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne&nbsp;;
-- Un contrôle permettant de s'assurer qu'une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.
-
-Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;:
-- un captcha  audio&nbsp;+ visuel,
-- des tests logiques (question dont la réponse est évidente, test  mathématique simple…)&nbsp;+ captcha visuel classique
-- …
+## Ressources : 
+* [Arbre de décision W3C (anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/) 
+* [Autres cas pratiques sur le site du W3C](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/text-equiv-all.html)
+* [Plongez dans l’accessibilité : Fournir des équivalents texte pour les images](https://www.la-grange.net/accessibilite/day_23.html)
