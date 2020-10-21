@@ -2,7 +2,7 @@
 title: "Aggrandissement des éléments"
 ---
 
-# Aggrandissement des textes
+# Aggrandir les textes sans perte d'information
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.

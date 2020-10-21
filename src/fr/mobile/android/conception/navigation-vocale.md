@@ -2,9 +2,9 @@
 title: "Navigation vocale"
 ---
 
-#Navigation vocale
+# Navigation vocale
 
-## Vocalisation et Alternative textuelle
+## Vocaliser tout les éléments signifiants
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
@@ -21,19 +21,12 @@ Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. 
 
 Les images décoratives en revanche ne nécessitent pas d'alternative textuelles et ne doivent donc pas être vocalisées.
 
-L’alternative d’une image est renseignée via l’attribut contentDescription (disponible pour tout élément héritant de View).
+L’alternative textuelle est renseignée via l’attribut contentDescription (disponible pour tout élément héritant de View).
 
 La place sur mobile étant réduite, on utilise bien souvent des abréviations pour les textes. Mais cependant, cela pose un problème aux utilisateurs de synthèse vocale qui restituent les abréviations telles quelles. Pour corriger ces vocalisations, il suffit de placer une alternative textuelle sur le texte. Cette alternative contient le texte non abrégé. À noter que <span lang="en">TalkBack</span> sait reconnaître quelques abréviations courantes. Par exemple, «&nbsp;etc.&nbsp;» et «&nbsp;Dr.&nbsp;» sont bien vocalisées «&nbsp;et cetera&nbsp;» et «&nbsp;Docteur&nbsp;».  
   
 Certaines images sont régulièrement associées à du texte pour donner une information. C’est le cas notamment des «&nbsp;messages non lus&nbsp;» où une infobulle donne le nombre de messages à lire et où une image donne l’information «&nbsp;message&nbsp;». Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple&nbsp;: «&nbsp;3 messages non lus&nbsp;». On peut également placer cette alternative sur l’image, mais dans ce cas, il faut penser à rendre le texte «&nbsp;invisible&nbsp;» pour le lecteur d’écran.
 
-L’alternative textuelle d’un élément est renseignée via l’attribut `contentDescription` (disponible pour tout élément héritant de `View`). Pour les boutons présents dans l’`ActionBar` (ou `ToolBar`), c’est l’attribut `title` qu’il faut renseigner.
-Le texte ou son alternative est vocalisé automatiquement avec des informations sur le type de composant (bouton, case à cocher…), de son état éventuel (coché décoché, sélectionné), s’il est utilisable (désactivé). Pour plus d’informations techniques sur ces attributs, nous vous conseillons de lire la section des [alternatives textuelles dans le guide développeur](../developpement#alternatives-textuelles).
-
-
-De plus, il est aussi important de veiller à l'ordre de la vocalisation. L’ordre de lecture permet à l’utilisateur de lecteur d’écran de se repérer dans la navigation et d’assurer une cohérence fonctionnelle.
-
-Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieurs paramètres : la lecture « logique » (en France), soit de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il existe cependant certain cas où le lecteur d’écran n’arrive pas à déterminer un ordre et dans ce cas, il utilise l’ordre de définition des éléments, ce qui peut amener des vocalisations incohérentes.
 
 **À vérifier&nbsp;:**
 
@@ -45,20 +38,16 @@ Par défaut, l’ordre de lecture de la synthèse vocale prend en compte plusieu
 - Les images portant de l’information restituent cette information à travers leur alternative textuelle
 - L'ordre de la vocalisation suit un ordre compréhensible et logique
 
-**Objectif utilisateur&nbsp;:**
-
-Permettre aux utilisateurs du lecteur d’écran d’accéder à toutes les informations véhiculées par l’application.
-
 **Exemple&nbsp;:**
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
-<img src="../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
+<img src="../../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
    
 **Exemple&nbsp;:**      
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
-<img src="../../images/order.png" alt="exemple de scroll horizontal accessible" width="300">
+<img src="../../../images/order.png" alt="exemple de scroll horizontal accessible" width="300">
 
-## Changement de contenu
+## Vocaliser le changement de contenu
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
@@ -85,7 +74,7 @@ Il est également possible de spécifier à une vue qu’elle est une région <i
 - Le changement d'une partie de l'écran (par exemple le changement un fragment) est vocalisé
 - Le changement d'un élément de l'écran est vocalisé si il est utile pour l'utilisateur d'en être informé
 
-## État des éléments
+## Vocaliser l'état des éléments
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du développement.
@@ -102,15 +91,15 @@ Pour renseigner ce genre d’information, il faut utiliser l’attribut `content
 
 **À vérifier&nbsp;:**
 
-- Tout élément dont le statut est modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné doit restituer son état à travers une alternative textuelle.
+- Tout élément dont le statut peut être modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné doit restituer son état à travers une alternative textuelle.
 
 
 **Exemple&nbsp;:**
 
-<img src="../../images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"> 
+<img src="../../../images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"> 
   
 
-## Eléments décoratifs et cachés
+## Ne pas vocaliser les éléments décoratifs et cachés
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
@@ -131,14 +120,14 @@ Consulter l’article sur l’[utilisation des fragments](https://developer.andr
 
 **Exemples&nbsp;:**
 
-<img src="../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
+<img src="../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
 
 En décomposant l’image&nbsp;:
-- <img src="../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
-- <img src="../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`
-- <img src="../../images/edit.png" alt="exemple d’icône informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l’image")`
+- <img src="../../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
+- <img src="../../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`
+- <img src="../../../images/edit.png" alt="exemple d’icône informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l’image")`
 
 
 Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en">TalkBack</span>. Ce dernier vocalise (la vocalisation est affichée en bas de l’écran sur la capture) un contenu se trouvant derrière la vue active.  
-<img src="../../images/ghost.png" alt="exemple d’élément fantôme" width="300">
+<img src="../../../images/ghost.png" alt="exemple d’élément fantôme" width="300">
 

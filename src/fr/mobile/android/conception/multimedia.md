@@ -4,7 +4,7 @@ title: "Multimedia"
 
 # Multimedia
 
-## Contrôle de contenu
+## Contrôler le contenu multimédia
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et cognitives.  
 **Quand&nbsp;:** lors de la conception et lors du développement.

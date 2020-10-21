@@ -44,7 +44,7 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 **Exemple de contraste non valide&nbsp;:**  
 Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
-![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)   
+![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../../images/contraste.png)   
 
 **Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 

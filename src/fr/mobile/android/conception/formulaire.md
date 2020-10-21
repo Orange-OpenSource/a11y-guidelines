@@ -4,6 +4,8 @@ title: "Formulaire"
 
 # Formulaire
 
+## Avoir des champs de formulaires explicites
+
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
@@ -22,5 +24,21 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 - Les champs de formulaire doivent être liés à un label si celui-ci est visible, sinon un `hint` est présent.
 - Les champs obligatoires sont identifiables
 - Le format de données des champs "complexe" est indiqué à l'utilisateur
+
+
+## Identifier les erreurs de saisie dans le formulaire
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** lors de la conception et lors du développement.
+
+**Description&nbsp;:**
+
+Lors qu'un utilisateur se trompe lors de la saisie d'un formulaire, il est important de lui indiquer clairement quelles sont ses erreurs, afin qu'il puisse corriger les champs en question sans difficulté. 
+
+Il est d'ailleurs recommandé de fournir une suggestion de correction à l'utilisateur.
+
+**À vérifier&nbsp;:**
+
 - Les champs en erreurs sont clairements identifiables
 - Les messages d'erreurs sont explicites
+- Une suggestion de correction est proposée à l'utilisateur

@@ -4,6 +4,8 @@ title: "Entêtes"
 
 # Entêtes
 
+## Avoir un titre d'écran pertinent et unique
+
 **Cible&nbsp;:** tout le monde  
 **Quand&nbsp;:** dès la conception et à la rédaction du contenu.
 
@@ -18,4 +20,4 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d’une a
 
 **Exemple non valide&nbsp;:**
 
-<img src="../../images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 
+<img src="../../../images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300"> 

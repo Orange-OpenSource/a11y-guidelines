@@ -4,7 +4,7 @@ title: "Navigation generale"
 
 # Navigation generale
 
-## Zone de clic
+## Avoir des zones de click sufisamment grandes
 
 **Cible&nbsp;:** pour tous et en particulier les personnes avec des déficiences motrices  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -26,14 +26,14 @@ L’application [<span lang="en">AccessibilityScanner</span>](https://play.googl
 **Exemple valide&nbsp;:** 
 
 Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.  
-<img src="../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300">
+<img src="../../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300">
 
 **Exemple non-valide&nbsp;:**  
 
-<img src="../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
+<img src="../../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
 
-## Orientation de l’écran
+## Avoir une application utilisable quelque soit l'orientation
 **Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.
 
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -46,7 +46,7 @@ L’accès au contenu d’une application ne doit pas dépendre de l’orientati
 - Que l’application n’est pas verrouillée dans un mode (portrait ou paysage).
 
 
-## Alternative gestuelle
+## Proposer une alternative aux actions gestuelles
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et/ou moteur.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -61,16 +61,16 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les V
 
 **Objectif utilisateur&nbsp;:**
 
-<img src="../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
+<img src="../../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
 </div>
 <div class="col-sm-6 col-xs-12">
 **Exemple non-valide&nbsp;:**
 
-<img src="../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
+<img src="../../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 </div>
 </div>
 
-## Texte
+## Proposer des textes lisibles
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
@@ -85,7 +85,7 @@ Le texte peut poser des problèmes de lisibilité lorsque celui ci présente une
 - Les textes sont suffisaments grands pour être lues confortablement
 - Il n'y a pas d'italique utilisé
 
-## Composant standard
+## Utiliser les composants natifs
 
 **Cible&nbsp;:** tout le monde.  
 **Quand&nbsp;:** en phase de sélection des briques logicielles et lors des développements.
@@ -96,10 +96,3 @@ L’accessibilité est prise en compte dans les composants natifs (la plupart du
   
 Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun composant standard ne permet de répondre au besoin, créer un composant dédié basé sur un composant standard en veillant à conserver la cohérence de navigation et l’accessibilité.  
   
-**Objectif utilisateur&nbsp;:** 
-
-Permet à tous les utilisateurs d’interagir plus intuitivement avec l’interface.
-
-**Objectif technique&nbsp;:**
-
-Améliore globalement la maintenabilité. Réduit les temps de développement. 
