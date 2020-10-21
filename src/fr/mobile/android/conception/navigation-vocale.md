@@ -4,6 +4,23 @@ title: "Navigation vocale"
 
 # Navigation vocale
 
+
+## Vocaliser les images
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
+
+**Description&nbsp;:**
+
+Concernant les images,il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.
+Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.
+
+Les images décoratives en revanche ne nécessitent pas d'alternative textuelles et ne doivent donc pas être vocalisées.
+  
+**À vérifier&nbsp;:**
+- Les images portant de l’information restituent cette information à travers leur alternative textuelle
+
+
 ## Vocaliser tout les éléments signifiants
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -15,11 +32,6 @@ Lorsqu'un utilisateur navigue à l'aide de la navigation vocale (Talkback par ex
 Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Tandis qu'un texte sera restitué nativement par le lecteur d'écran, certains éléments nécessitent une alternative textuelle pour pouvoir vocaliser l'information correctement.
 
 Il est important de renseigner une alternative textuelle lorsque l’information n’est pas disponible ou suffisante nativement. C’est le cas des composants fournissant de l’information par la couleur, la forme, la position, le son… Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d’enrichir la vocalisation native d’un élément, y compris celle d’un simple texte.  
-  
-Concernant les images,il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.
-Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.
-
-Les images décoratives en revanche ne nécessitent pas d'alternative textuelles et ne doivent donc pas être vocalisées.
 
 L’alternative textuelle est renseignée via l’attribut contentDescription (disponible pour tout élément héritant de View).
 
@@ -35,17 +47,29 @@ Certaines images sont régulièrement associées à du texte pour donner une inf
 - Les éléments interactifs sont vocalisés avec l'action associée
 - Les titres des activités sont vocalisés
 - Les items d'une liste sont vocalisés indépendamment les uns des autres
-- Les images portant de l’information restituent cette information à travers leur alternative textuelle
-- L'ordre de la vocalisation suit un ordre compréhensible et logique
 
 **Exemple&nbsp;:**
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
 <img src="../../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
-   
+
+
+## Gérer l'ordre de lecture avec la navigation vocale 
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
+
+**Description&nbsp;:**  
+L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il arrive parfois que cela ne suffise pas à établir un ordre cohérent, comme dans l'exemple ci dessous, et il est donc nécessaire de redéfinir cet ordre de lecture.
+
+**À vérifier&nbsp;:**
+- L'ordre de la vocalisation suit un ordre compréhensible et logique
+
+
 **Exemple&nbsp;:**      
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
 <img src="../../../images/order.png" alt="exemple de scroll horizontal accessible" width="300">
+
 
 ## Vocaliser le changement de contenu
 
@@ -130,4 +154,49 @@ En décomposant l’image&nbsp;:
 
 Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en">TalkBack</span>. Ce dernier vocalise (la vocalisation est affichée en bas de l’écran sur la capture) un contenu se trouvant derrière la vue active.  
 <img src="../../../images/ghost.png" alt="exemple d’élément fantôme" width="300">
+
+
+## Regrouper les éléments 
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
+
+**Description&nbsp;:**  
+
+Il est recommandé de regrouper les éléments pour la vocalisation lorsque cela permet de gagner en efficacité et en compréhension.
+
+Par exemple, dans le cadre d'une application de musique, il est plus intéressant regrouper la vocalisation du nom de la musique, du nom de l'artiste et de la durée de celle-ci en un seul bloc, plutôt que de les vocaliser séparemment et d'alourdir la navigation.
+
+Il faut veiller à trouver la bonne balance entre la navigation et la vocalisation. Vocaliser trop d'informations dans un seul bloc va nuire à l'écoute, l'utilisateur devant patienter avant d'entendre l'info qu'il recherche. Tandis qu'avoir aucun élément regroupé va augmenter la quantité d'éléments sur lesquels on peut naviguer et donc alourdir la navigation. C'est d'autant plus le cas lorsqu'on a des informations multi-dimensionnelles.
+
+**À vérifier&nbsp;:**
+- Les éléments reliés sont groupés au sein d'un même block d'annonce pour la vocalisation
+- Les informations multi-dimensionnelles respectent une bonne balance entre nombre de blocs et nombre de contenu dans chaque bloc 
+
+
+## Vérifier la navigation par entêtes
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
+
+**Description&nbsp;:**  
+
+Au sein d'un même écran, il arrive parfois que le contenu affiché présente différentes sections, avec pour chacune d'entre elles une entête. Il est possible avec le lecteur d'écran Talkback de naviguer par entêtes, plutôt que de naviguer par éléments. Il est donc bien plus aisé pour un utilisateur de naviguer entre les différentes sections.
+
+Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut dans le layout XML au différents éléments considérés comme tel : **accessibilityHeading**
+
+**À vérifier&nbsp;:**
+- Les entêtes sont navigables avec le paramètre "Heading" de navigation Talkback 
+
+## Vérifier la navigation par contrôles
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
+
+**Description&nbsp;:**  
+
+Avec l'outil Talkback, l'utiliseur peut opter pour la navigation entre les différents contrôles (bouton, checkbox, champs de saisie, etc...) de l'application, plutôt que élément par élément. Cela lui permet d'interagir plus rapidement avec l'application.
+
+**À vérifier&nbsp;:**
+- Les éléments interactifs sont tous navigable une fois le paramètre Talkback de navigation par contrôle défini
 

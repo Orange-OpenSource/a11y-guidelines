@@ -62,13 +62,11 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les V
 **Objectif utilisateur&nbsp;:**
 
 <img src="../../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
-</div>
-<div class="col-sm-6 col-xs-12">
+
+
 **Exemple non-valide&nbsp;:**
 
 <img src="../../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
-</div>
-</div>
 
 ## Proposer des textes lisibles
 

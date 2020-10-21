@@ -32,4 +32,4 @@ L'option d'accessibilité d'agrandissement de la taille des textes, présent dan
 
 **Exemple&nbsp;:**
 
-<img src="../../images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 
+<img src="../../../images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 

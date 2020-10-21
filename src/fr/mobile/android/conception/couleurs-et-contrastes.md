@@ -48,4 +48,4 @@ Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne
 
 **Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 
-<img src="../../images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
+<img src="../../../images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
