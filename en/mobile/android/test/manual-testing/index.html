@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Manual tests: use cases - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link active" aria-current="true">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/android/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/test/" class="nav-link active" aria-current="true">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/android/">Android</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/test/">Test</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Manual tests: use cases
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/mobile/android/test/developers-testing/" class="nav-link dropdown-item">
+  Developer testing: code analysis
+</a><a href="/en/mobile/android/test/analysis-tools/" class="nav-link dropdown-item">
+  Application scan : analysis tools
+</a><a href="/en/mobile/android/test/manual-testing/" class="nav-link dropdown-item active" aria-current="page">
+  Manual tests: use cases
+</a></div>
+    </nav>
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#screen-reader-talkback" class="dropdown-item text-wrap">Screen reader TalkBack</a><a href="#procedure" class="dropdown-item text-wrap">Procedure</a><a href="#focus-navigation-with-keyboard" class="dropdown-item text-wrap">Focus navigation (with keyboard)</a><a href="#procedure-2" class="dropdown-item text-wrap">Procedure</a><a href="#list-of-main-keyboard-shortcuts" class="dropdown-item text-wrap">List of main keyboard shortcuts</a><a href="#switch-access" class="dropdown-item text-wrap">Switch Access</a><a href="#procedure-3" class="dropdown-item text-wrap">Procedure</a><a href="#show-all-interactive-elements" class="dropdown-item text-wrap">Show all interactive elements</a><a href="#magnification" class="dropdown-item text-wrap">Magnification</a><a href="#procedure-4" class="dropdown-item text-wrap">Procedure:</a><a href="#orientation" class="dropdown-item text-wrap">Orientation</a><a href="#accessibility-timeouts" class="dropdown-item text-wrap">Accessibility timeouts</a><a href="#voice-access" class="dropdown-item text-wrap">Voice Access</a><a href="#select-to-speak" class="dropdown-item text-wrap">Select to Speak</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/mobile/android/test/developers-testing/" class="nav-link text-muted">
+  Developer testing: code analysis
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/test/analysis-tools/" class="nav-link text-muted">
+  Application scan : analysis tools
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/test/manual-testing/" class="nav-link text-muted active" aria-current="page">
+  Manual tests: use cases
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Manual tests: use cases</h1>
+<p>Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users, and therefore using their interaction tools. It is even better to have the application tested by real users with disabilities. Several tools must be used, to take into account as many possible situations as possible:</p>
+<h2 id="screen-reader-talkback">Screen reader TalkBack <a class="header-anchor" href="#screen-reader-talkback" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The screen reader is a tool for the blind and visually impaired people. It has two functions: vocalization and on-screen navigation. All significant elements must be <strong>vocalized</strong> in <strong>logical order</strong>.</p>
+<p>For Talkback activation and use, you can get more details in the <a href="../../talkback/">section about it</a>.</p>
+<p>The different types of Talkback navigation:</p>
+<ul>
+<li><strong>Reading by scanning with your finger</strong> : by sliding your finger slowly on the screen, Talkback announces the elements as you pass your finger on.</li>
+</ul>
+<img src="../../../images/gesture1.png" alt="Representation of finger sliding action on a phone screen " width="80">   
+<ul>
+<li>
+<p><strong>Linear reading</strong> : You can explore the screen, item by item, by swiping your finger left or right to navigate between items, in order. It is also possible to browse the navigation settings by swiping up or down the screen until you get the desired setting. The swipe to the right or to the left will then be done using the chosen parameter; The various existing navigation parameters are:</p>
+<ul>
+<li><strong>Headings</strong>: navigate by headings</li>
+<li><strong>Links</strong>: navigate by links (email, phone number, website or other links on the screen)</li>
+<li><strong>Controls</strong>: navigate by checkboxes, switches, text fields, buttons, radio buttons, sliders.</li>
+<li><strong>Default</strong>: explore every element on the page in logical order.</li>
+</ul>
+<dl>
+  <dt>Double click with one finger</dt>
+  <dd>
+    <img src="../../../images/gesture2.png" alt="" width="80">
+    Activate the last vocalized element
+  </dd>
+<dt>Swipe up or down with two fingers</dt>
+  <dd>
+    <img src="../../../images/gesture3_1.png" alt="" width="80">
+    Vertical scroll in the page
+  </dd>
+<dt>Swipe left or right with two fingers</dt>
+  <dd>
+    <img src="../../../images/gesture4_2.png" alt="" width="80">
+    Horizontal scroll in the page
+  </dd>
+<dt>Swipe right with one finger</dt>
+  <dd>
+    <img src="../../../images/gesture6.png" alt="" width="80">
+    Moves to the next element
+  </dd>
+<dt>Swipe left with one finger</dt>
+  <dd>
+    <img src="../../../images/gesture5.png" alt="" width="80">
+  Moves to the previous element
+  </dd>
+<dt>Swipe up or down with one finger</dt>
+  <dd>
+    <img src="../../../images/gesture8.png" alt="" width="80">
+    Change the navigation setting applied
+  </dd>
+</dl>
+</li>
+<li>
+<p><strong>Search your screen</strong> : it is possible to navigate using screen search; to do this, swipe left then down, enter the search term and choose a match from the list provided</p>
+</li>
+</ul>
+<img src="../../../images/search_talkback.jpg" alt="screenshot showing the Search your screen navigation on Talkback" width="50%"> 
+<ul>
+<li><strong>Read continuously</strong> : To use <code>read continuously</code>, open general contextual menu by swiping down then right, and choose the option *<em>read from top</em> or <strong>read from next item</strong>. Then, double tap to select the option. Continuous reading will start and can be stopped by tapping on the screen.</li>
+</ul>
+<h3 id="procedure">Procedure <a class="header-anchor" href="#procedure" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Use the application on the differents use cases and check that all the information is vocalized in a logical and understandable order as well as:</p>
+<ul>
+<li>
+<p>Are all the significant elements accessible?</p>
+</li>
+<li>
+<p>Is all the information vocalized in a logical and understandable order?</p>
+</li>
+<li>
+<p>Are the interactive elements vocalized with the associated action? (button, checkbox ... Double tap to activate)</p>
+</li>
+<li>
+<p>Are the states of the elements specified? (disabled, checked)</p>
+</li>
+<li>
+<p>Are temporary messages and alerts vocalized?</p>
+</li>
+<li>
+<p>Are the transitions between activities vocalized?</p>
+</li>
+<li>
+<p>Are error messages and dynamic content vocalized?</p>
+</li>
+<li>
+<p>Are the horizontal scrolls vocalized?</p>
+</li>
+<li>
+<p>Are visible items the only items to be vocalized (no ghost items vocalized)?</p>
+</li>
+<li>
+<p>Are the titles of the activities vocalized?</p>
+</li>
+<li>
+<p>Is the workflow easy?</p>
+</li>
+<li>
+<p>Is the vocalization coherent, succinct, and simple?</p>
+</li>
+<li>
+<p>Are decorative images well ignored? And on the contrary, are the meaningful images vocalized?</p>
+</li>
+</ul>
+<p>Ideally, the test should be done without looking at the screen, or by activating the black screen (<strong>Darken the screen</strong>).</p>
+<h2 id="focus-navigation-with-keyboard">Focus navigation (with keyboard) <a class="header-anchor" href="#focus-navigation-with-keyboard" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Navigation in an application or a web page must be possible using an external keyboard (connected to the smartphone by Bluetooth or USB), in order to reproduce the case of people who cannot use the touch screen, such as those using a joystick (on a wheelchair for example), or those with Parkinson's disease. It is important to check its operation because some developments can cause difficulties to navigate correctly in the page.</p>
+<p>To test keyboard navigation, you must connect a computer keyboard to the smartphone, either with an adapter (USB - USB C for example), or, if the keyboard is bluetooth, by pairing the keypad and the phone. The bluetooth keyboard has the advantage of facilitating debugging.</p>
+<h3 id="procedure-2">Procedure <a class="header-anchor" href="#procedure-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Navigate the application using the keyboard and check that:</p>
+<ul>
+<li>all functionalities are accessible.</li>
+<li>the focus remains sufficiently visible on each element receiving this focus (activable elements, buttons, clickable elements, check boxes, etc.).</li>
+</ul>
+<h3 id="list-of-main-keyboard-shortcuts">List of main keyboard shortcuts <a class="header-anchor" href="#list-of-main-keyboard-shortcuts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><strong>TAB</strong> key to advance the focus.</li>
+<li><strong>SHIFT + TAB</strong> keys to move the focus back.</li>
+<li><strong>Enter</strong> key to activate the focused element (link, button, menu ...).</li>
+<li><strong>Space bar</strong> to check/uncheck a checkbox.</li>
+<li><strong>Directional arrows</strong> to modify the selection of the radio buttons, to move in a drop-down list, or to scroll through the <strong>scrollbar</strong>) when they are present.</li>
+</ul>
+<p>These are the same keys used to test the accessibility of a website. But the use of the <strong>Tab</strong> in relation to the <strong>arrows</strong> as well as the use of the <strong>space bar</strong> in relation to the <strong>enter</strong> key are less codified: the test is considered successful when at least one of the two options allows the action to be taken.</p>
+<p>Remark: the inability to exit a feature or the application is a blocking issue.</p>
+<h2 id="switch-access"><span lang="en">Switch Access</span> <a class="header-anchor" href="#switch-access" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Switch Access</strong> is an application for people with motor disorders. It allows you to control the phone by programming keys. It cannot replace the keyboard tests, but remains interesting in the case of the two switch method.</p>
+<p>To activate it, proceed as follows:</p>
+<ul>
+<li>Go to phone settings</li>
+<li>Navigate in accessibility menu (then Services installed with the Samsung overlay), then select Switch Access, then Settings</li>
+<li>Check that the automatic search is disabled</li>
+<li>Use the <strong>Volume Up</strong> button as corresponding to the action <strong>Go to the next option</strong></li>
+<li>Use the <strong>Volume Down</strong> button as corresponding to the <strong>Select</strong> action</li>
+<li>Return to the main screen from Switch Access and enable or disable the Switch Access accessibility option when necessary</li>
+</ul>
+<h3 id="procedure-3">Procedure <a class="header-anchor" href="#procedure-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Navigate in the application using the <strong>Next</strong> button (volume up).</p>
+<p>Then check that:</p>
+<ul>
+<li>Can the workflow be covered completely and easily, in a logical order?</li>
+<li>Can the inputs be edited easily?</li>
+<li>Are the highlighted elements only those on which we can perform an action?</li>
+</ul>
+<h3 id="show-all-interactive-elements">Show all interactive elements <a class="header-anchor" href="#show-all-interactive-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>To highlight all the interactive elements of a screen, and thus do a quick check, it is possible to use the <strong>Group Selection</strong> option of the Switch Access.</p>
+<p>To do this, select the <strong>Group Selection</strong> method as <strong>Scanning Method</strong> in the settings of Switch Access, and then assign a key for scanning.</p>
+<p>Once inside your application, you just have to press the <strong>Select</strong> action (low volume in our configuration) to display all the interactive elements and thus check that:</p>
+<ul>
+<li>Are all interactive elements highlighted correctly?</li>
+<li>Are only interactive elements highlighted?</li>
+</ul>
+<h2 id="magnification">Magnification <a class="header-anchor" href="#magnification" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Android offers several enlargement options:</p>
+<ul>
+<li>Font size</li>
+<li>Display size</li>
+<li>Magnification</li>
+</ul>
+<p>Read the instructions when you activate the tools.</p>
+<h3 id="procedure-4">Procedure: <a class="header-anchor" href="#procedure-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>Set <strong>Font size</strong> and <strong>Display size</strong> to the maximum. Navigate in the application and note the texts that are no longer readable because they have disappeared or they overlap.</li>
+<li>Enable <strong>Magnification</strong> option from accessibility settings. Go back to your application and tap the screen 3 times (if you have kept this shortcut) to start the display with magnification. Check that the screens are readable in this mode. Pinch with 2 fingers to adjust zoom and drag 2 fingers to move around the screen. All information on the screen should be readable in zoom mode.</li>
+</ul>
+<h2 id="orientation">Orientation <a class="header-anchor" href="#orientation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It is necessary to check the orientation of your application, as it should work in both landscape and portrait mode. Manual tests must be performed in both modes, since constraining the user to a single mode poses accessibility problems.</p>
+<h2 id="accessibility-timeouts">Accessibility timeouts <a class="header-anchor" href="#accessibility-timeouts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This tool is only available from Android Q.</p>
+<p>On some applications, the UI may change after a delay (for example the disappearance of control buttons on a video player after a few seconds). This delay can be adapted in the settings to suit everyone's needs , some users needing more time to successfully &quot;see&quot; the controls and interact with them. You can then use this AccessibilityManager function which allows to obtain the recommended timeout for the user, according to these accessibility preferences: <code>public int getRecommendedTimeoutMillis(int originalTimeout,              int uiContentFlags) </code></p>
+<p>To test whether this need for accessibility is taken into account by the application, proceed as follows:</p>
+<ul>
+<li>Go to the phone settings</li>
+<li>Navigate in accessibility menu, then select <strong>Time to take action</strong></li>
+<li>Choose a timeout from the options offered</li>
+<li>Check that the application adapts well to the delay indicated above, for UI changes potentially affected by this delay.</li>
+</ul>
+<h2 id="voice-access">Voice Access <a class="header-anchor" href="#voice-access" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess">Voice Access</a> is an application integrated into [Android Accessibility Suite] (<a href="https://play.google.com/store/apps/details?id=com.google.android.marvin">https://play.google.com/store/apps/details?id=com.google.android.marvin</a> .talkback), intended for people with motor disorders. It allows you to control the application by voice instead of the touch screen.</p>
+<p>Among the possible commands:</p>
+<ul>
+<li>Open &quot;app&quot;</li>
+<li>Go back</li>
+<li>Go home</li>
+<li>Show notifications</li>
+<li>Scroll up</li>
+<li>Scroll right</li>
+<li>Scroll down</li>
+<li>Swipe forwards</li>
+<li>Etc ..</li>
+</ul>
+<p>Once Voice Access is enabled, numbers appear next to each item you can interact with. If you wish to interact with a <strong>Save</strong> button whose number is 6, you can say the following commands:</p>
+<ul>
+<li>6</li>
+<li>Save</li>
+<li>Click 6</li>
+<li>Click save</li>
+</ul>
+<p>It is necessary to test that there are not several identical labels for interactive elements within the same screen. Although the user can still use the number for voice control, this limits the ability to use their label. It is also useful to test that you can open the application by name, with the command <strong>Open &quot;application&quot;</strong>.</p>
+<p><strong>Voice Access use example:</strong></p>
+<p>Screen example displaying a floating button which allows you to start Voice Access.</p>
+<img src="../../../images/voice_access_floating.jpg" alt="Orange TV application screenshot, with the Voice Access floating button" width="50%"> 
+<p>Screen example with Voice Access enabled.</p>
+<img src="../../../images/voice_access_actif.jpg" alt="Orange TV application screenshot with Voice Access enabled, each interactive element being associated with a number" width="50%"> 
+<h2 id="select-to-speak">Select to Speak <a class="header-anchor" href="#select-to-speak" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Select to Speak is a tool from Android Accessibility Suite, that makes it possible to read selected elements of the screen.</p>
+<p>When a single item is selected, the tool vocalizes the item. When multiple items are selected, it implements a logical reading order like Talkback but it does not implement the actions or state of the items.</p>
+<p>It is useful for the visually impaired, when the screen is not readable, for learning to read (it functions like karaoke) or for learning a foreign language.</p>
+<p>It can be used for demonstration purposes but is redundant with Talkback for accessibility testing without being able to replace it.</p>
+<p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#screen-reader-talkback" class="nav-link text-muted bg-200">Screen reader TalkBack</a>
+          </li><li class="nav-item position-relative">
+            <a href="#procedure" class="nav-link text-muted bg-200">Procedure</a>
+          </li><li class="nav-item position-relative">
+            <a href="#focus-navigation-with-keyboard" class="nav-link text-muted bg-200">Focus navigation (with keyboard)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#procedure-2" class="nav-link text-muted bg-200">Procedure</a>
+          </li><li class="nav-item position-relative">
+            <a href="#list-of-main-keyboard-shortcuts" class="nav-link text-muted bg-200">List of main keyboard shortcuts</a>
+          </li><li class="nav-item position-relative">
+            <a href="#switch-access" class="nav-link text-muted bg-200">Switch Access</a>
+          </li><li class="nav-item position-relative">
+            <a href="#procedure-3" class="nav-link text-muted bg-200">Procedure</a>
+          </li><li class="nav-item position-relative">
+            <a href="#show-all-interactive-elements" class="nav-link text-muted bg-200">Show all interactive elements</a>
+          </li><li class="nav-item position-relative">
+            <a href="#magnification" class="nav-link text-muted bg-200">Magnification</a>
+          </li><li class="nav-item position-relative">
+            <a href="#procedure-4" class="nav-link text-muted bg-200">Procedure:</a>
+          </li><li class="nav-item position-relative">
+            <a href="#orientation" class="nav-link text-muted bg-200">Orientation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibility-timeouts" class="nav-link text-muted bg-200">Accessibility timeouts</a>
+          </li><li class="nav-item position-relative">
+            <a href="#voice-access" class="nav-link text-muted bg-200">Voice Access</a>
+          </li><li class="nav-item position-relative">
+            <a href="#select-to-speak" class="nav-link text-muted bg-200">Select to Speak</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/test/manual-testing.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

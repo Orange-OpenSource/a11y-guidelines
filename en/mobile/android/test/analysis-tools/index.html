@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Application scan : analysis tools - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link active" aria-current="true">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/android/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/test/" class="nav-link active" aria-current="true">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/android/">Android</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/test/">Test</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Application scan : analysis tools
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/mobile/android/test/developers-testing/" class="nav-link dropdown-item">
+  Developer testing: code analysis
+</a><a href="/en/mobile/android/test/analysis-tools/" class="nav-link dropdown-item active" aria-current="page">
+  Application scan : analysis tools
+</a><a href="/en/mobile/android/test/manual-testing/" class="nav-link dropdown-item">
+  Manual tests: use cases
+</a></div>
+    </nav>
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#accessibility-scanner" class="dropdown-item text-wrap">Accessibility Scanner</a><a href="#procedure" class="dropdown-item text-wrap">Procedure:</a><a href="#google-play-pre-launch-report" class="dropdown-item text-wrap">Google Play - Pre Launch Report</a><a href="#axe" class="dropdown-item text-wrap">aXe</a><a href="#ui-automator-view" class="dropdown-item text-wrap">UI Automator View</a><a href="#layout-bounds-tool" class="dropdown-item text-wrap">Layout bounds tool</a><a href="#colour-contrast-analyser" class="dropdown-item text-wrap">Colour Contrast Analyser</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/mobile/android/test/developers-testing/" class="nav-link text-muted">
+  Developer testing: code analysis
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/test/analysis-tools/" class="nav-link text-muted active" aria-current="page">
+  Application scan : analysis tools
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/test/manual-testing/" class="nav-link text-muted">
+  Manual tests: use cases
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Application scan : analysis tools</h1>
+<p>Analysis tools complement the first approach, in order to detect other accessibility problems, such as those related to the size of the buttons, color contrasts etc ...</p>
+<h2 id="accessibility-scanner">Accessibility Scanner <a class="header-anchor" href="#accessibility-scanner" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">scanner</a> can be downloaded from the playstore.</p>
+<p>The scanner takes screenshots of the current activity and checks:</p>
+<ul>
+<li>that the screen contains &quot;vocalizations or labels&quot; for the screen reader</li>
+<li>that the clickable areas are large enough and that they have their own label</li>
+<li>color contrasts</li>
+</ul>
+<p>Please note, this is only a verification aid, the tool sometimes reports false positives.</p>
+<p>Some of these checks are duplicated with <code>lint</code>.<br>
+In case of doubt about contrasts, <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour contrast analysor</a> makes a more precise diagnosis.</p>
+<h3 id="procedure">Procedure: <a class="header-anchor" href="#procedure" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>Activate the scanner in <strong>settings/accessibility/Accessibility Scanner</strong> (settings/accessibility/Installed services/Accessibility Scanner with One UI for Samsung devices). A floating action button appears on the screen.</li>
+<li>To test the display, press the button. A screenshot is taken and the list of suggested fixes is displayed.</li>
+</ul>
+<p><strong>Accessibility Scanner use exemple:</strong></p>
+<p>The floating button used to generate a report when Accessibility Scanner is active</p>
+<img src="../../../images/scanner_floating.jpg" alt="screenshot showing the Orange TV application, with the floating button used to start the scan" width="50%">
+<p>The report thus generated by Accessibility Scanner once the button is clicked.</p>
+<img src="../../../images/scanner_report.jpg" alt="screenshot showing the Accessibility Scanner report" width="50%">  
+<h2 id="google-play-pre-launch-report"><span lang="en">Google Play - Pre Launch Report</span> <a class="header-anchor" href="#google-play-pre-launch-report" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Similar to the analysis performed by Accessibility Scanner, Google Play is able to generate accessibility reports after uploading its application to the developer console. Based on the same Framework as the Accessibility Scanner  application, it verifies in particular 3  UI  requirements within the application:</p>
+<ul>
+<li>The area used for interactive elements: a too small button would be indicated in the report for example</li>
+<li>Contrasts: checks that the contrast ratios are respected between the texts and their backgrounds</li>
+<li>Content descriptions: checks that all elements have a text to describe it to the user if necessary</li>
+</ul>
+<p>Since this test is carried out from the Google Play console, this can be a final check made by the Product Owner himself, before pushing the application into production, and thus see that the accessibility criteria have been met.</p>
+<p><strong>Google Play report example :</strong></p>
+<p><img src="../../../images/google_report.png" alt="screenshot showing accessibility report, on developer console" class="img-fluid"></p>
+<h2 id="axe">aXe <a class="header-anchor" href="#axe" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>aXe is an application available on the Google Play Store and which makes it possible, as well as Accessibility Scanner or the Pre Launch Report from Google, to display accessibility problems. Although redundant with the two previous tools presented in some checks, it is recommended to use it as a complement, since it is able to display different accessibility errors, and will therefore perfectly complement the first exams.</p>
+<p>To use aXe, you just need to download the application and then follow the instructions. Using a floating button , an analysis can be launched on the screen of your choice, and the errors report will be immediately produced at the bottom of the screen.</p>
+<p><strong>aXe use example :</strong></p>
+<p>aXe floating button displayed on the screen to trigger a report.</p>
+<img src="../../../images/aXe_floating.jpg" alt="screenshot of the Orange TV application, with the aXe button to start the scan" width="50%">   
+<p>The report generated by aXe once the button is clicked.</p>
+<img src="../../../images/aXe_report.jpg" alt="screenshot showing the aXe tool report" width="50%">   
+<h2 id="ui-automator-view"><span lang="en">UI Automator View</span> <a class="header-anchor" href="#ui-automator-view" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>UI Automator View is an Android SDK tool that scans and analyzes the UI components of an Android application. This makes it possible to see the hierarchy of views and the different properties for each one.<br>
+Although not a tool dedicated to accessibility, it can be used to analyze in more detail an accessibility issue, and  better understand its origin.</p>
+<p>To use this tool, you need to install the Android SDK. Once installed, you will find the tool at the following path: <strong>C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat</strong></p>
+<p>To use it on an application, you need to have the developer mode activated on your phone, and to connect it via a USB cable to a computer, which has UI Automator View started. Once these conditions are met, just click on the Device Screenshot button in the tool to launch the UI components analysis of the screen displayed on the phone.</p>
+<h2 id="layout-bounds-tool">Layout bounds tool <a class="header-anchor" href="#layout-bounds-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It is possible on Android to display the bounds of the different views of an application, which makes it possible to detect possible problems related to the size of the elements, to check margins are sufficient between various elements, and to verify that each sensitive area has a sufficient size.</p>
+<p>To do this, navigate in &quot;Settings/Developer options&quot; and activate the option &quot;Show layout bounds&quot; in the category &quot;Drawing&quot;</p>
+<p><strong>Layout bounds use example:</strong></p>
+<p>The settings screen for layout bounds activation.</p>
+<img src="../../../images/contour_param.jpg" alt="Settings screenshot, with the layout bounds activation checkbox" width="50%"> 
+<p>Screen example with layout bounds activate</p>
+<img src="../../../images/contour_UI.jpg" alt="Orange TV application screenshot, having layout bounds" width="50%"> 
+<h2 id="colour-contrast-analyser"><span lang="en">Colour Contrast Analyser</span> <a class="header-anchor" href="#colour-contrast-analyser" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Color contrasts must be verified on the application mockups, or with Accessibility Scanner on an Android mobile. If any doubt remains, it is possible to take a screenshot of the application, then to check on a computer <a href="../../../../web/toolbox/methods-and-test-tools/color-contrast-level/">Measure the level of color contrast</a> with the Color Contrast Analyzer tool.<br>
+For the values ​​to respect see the <a href="../../design#colors">section concerning colors</a>.</p>
+<p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#accessibility-scanner" class="nav-link text-muted bg-200">Accessibility Scanner</a>
+          </li><li class="nav-item position-relative">
+            <a href="#procedure" class="nav-link text-muted bg-200">Procedure:</a>
+          </li><li class="nav-item position-relative">
+            <a href="#google-play-pre-launch-report" class="nav-link text-muted bg-200">Google Play - Pre Launch Report</a>
+          </li><li class="nav-item position-relative">
+            <a href="#axe" class="nav-link text-muted bg-200">aXe</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ui-automator-view" class="nav-link text-muted bg-200">UI Automator View</a>
+          </li><li class="nav-item position-relative">
+            <a href="#layout-bounds-tool" class="nav-link text-muted bg-200">Layout bounds tool</a>
+          </li><li class="nav-item position-relative">
+            <a href="#colour-contrast-analyser" class="nav-link text-muted bg-200">Colour Contrast Analyser</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/test/analysis-tools.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

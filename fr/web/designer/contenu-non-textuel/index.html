@@ -201,7 +201,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#definir-des-equivalents-textuels" class="dropdown-item text-wrap">Définir des équivalents textuels</a><a href="#rendre-accessible-les-pistes-audio-ou-video" class="dropdown-item text-wrap">Rendre accessible les pistes audio ou vidéo</a><a href="#eviter-les-captcha" class="dropdown-item text-wrap">Éviter les captcha</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#definir-des-equivalents-textuels" class="dropdown-item text-wrap">Définir des équivalents textuels</a><a href="#cas-particulier-mise-en-forme-via-une-image" class="dropdown-item text-wrap">Cas particulier : mise en forme via une image</a><a href="#cas-particuliers-des-animations-contenus-video-et-audio" class="dropdown-item text-wrap">Cas particuliers des animations, contenus vidéo et audio</a><a href="#exemples" class="dropdown-item text-wrap">Exemples :</a><a href="#ressources" class="dropdown-item text-wrap">Ressources :</a></div>
     </nav>
         
       </div>
@@ -254,57 +254,67 @@
         
         <main id="main-content" class="col-md-6" role="main">
           <h1>Contenu non-textuel</h1>
-<p class="lead">S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur</p>
+<p class="lead">S’assurer qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur.</p>
 <h2 id="definir-des-equivalents-textuels">Définir des équivalents textuels <a class="header-anchor" href="#definir-des-equivalents-textuels" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> les personnes déficientes visuelles, les personnes malentendantes ou déficientes cognitives et les moteurs de recherche.<br>
-<strong>Quand :</strong> dès la conception et pendant le développement.</p>
-<p><strong>Description :</strong><br>
-Mettre en place des alternatives textuelles pour tous les éléments informatifs non-textuels (alternatives aux images, icônes). De même, prévoir des scripts ou des sous-titres pour les contenus audio ou vidéo.</p>
-<p><strong>Exemple :</strong><br>
-Dans la capture ci-dessous, il faudrait par exemple prévoir dès la conception les textes alternatifs pour chaque bouton :</p>
+<p><strong>Cible :</strong> les personnes déficientes visuelles ou auditives, les séniors, les personnes déficientes cognitives et les moteurs de recherche.<br>
+<strong>Quand :</strong> dès la conception et pendant le développement.</p>
+<p><strong>Description :</strong><br>
+Il faut prévoir une alternative textuelle pour chaque élément non-textuel : images, animation, vidéo, podcast, publicités, boutons, icônes, logos, etc.<br>
+Pour les images, boutons, icônes, logos, etc, les règles sont les suivantes :</p>
 <ul>
-<li>« menu »,</li>
-<li>« réglages »,</li>
-<li>« chaîne précédente »</li>
-<li>« couper le son »</li>
-<li>…</li>
+<li>Pour les images cliquables : préciser la fonction / la cible du lien</li>
+<li>Pour les images décoratives : laisser l’alternative textuelle vide</li>
+<li>Pour les images porteuses d’information : alternative textuelle décrivant l’information</li>
+<li>Pour les images complexes (schémas, graphes…) : prévoir un contenu textuel équivalent adjacent :
+<ul>
+<li>du texte dans la page</li>
+<li>ou un lien pointant vers une autre page présentant cette description.</li>
 </ul>
-<p><img src="../../images/player.png" alt="capture d’écran d’un lecteur vidéo contenant plusieurs boutons" class="img-fluid"></p>
-<h2 id="rendre-accessible-les-pistes-audio-ou-video">Rendre accessible les pistes audio ou vidéo <a class="header-anchor" href="#rendre-accessible-les-pistes-audio-ou-video" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br>
-<strong>Quand :</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description :</strong></p>
-<p>Pour être accessibles, les contenus multimédias doivent :</p>
-<ol>
-<li>proposer une transcription intégrale</li>
-<li>proposer des sous-titres (vidéo uniquement)</li>
-<li>proposer une audiodescription (vidéo uniquement)</li>
-<li>choisir un lecteur média accessible</li>
-<li>proscrire le démarrage automatique de la vidéo au chargement de la page</li>
-<li>proscrire les vidéos qui présentent plus de 3 flashs à la seconde</li>
-<li>par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.</li>
-</ol>
-<p>Pour plus d'infos consulter <a href="../../../contenu-editorial/composants-animes/">les recommandations accessibilité pour les contenus vidéos, animations et audios Orange</a>.</p>
-<p><strong>Objectif utilisateur :</strong></p>
-<p>Fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier : malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.</p>
-<p><strong>Objectif technique :</strong></p>
-<p>Permet le référencement de tout contenu audio et vidéo.</p>
-<h2 id="eviter-les-captcha">Éviter les captcha <a class="header-anchor" href="#eviter-les-captcha" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tous le monde en particulier, les personnes déficientes visuelles.<br>
-<strong>Quand :</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description :</strong><br>
-Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur :</p>
-<ul>
-<li>Double authentification ;</li>
-<li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur ;</li>
-<li>Mise à disposition d'un support téléphonique afin de s'assurer que le client est une vraie personne ;</li>
-<li>Un contrôle permettant de s'assurer qu'une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> (navigateur) ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
+</li>
 </ul>
-<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha :</p>
+<h2 id="cas-particulier-mise-en-forme-via-une-image">Cas particulier : mise en forme via une image <a class="header-anchor" href="#cas-particulier-mise-en-forme-via-une-image" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>S’il vous est possible techniquement de réaliser votre visuel via du texte mise en forme, il est préférable de choisir cette solution pour véhiculer l’information plutôt que du texte sous forme d’image.</p>
+<p>Seuls cas où la mise en forme peut se faire via une image :</p>
 <ul>
-<li>un captcha  audio + visuel,</li>
-<li>des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique</li>
-<li>…</li>
+<li>Si le <a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#visually-customizeddef">texte sous forme d'image peut être personnalisé visuellement</a> par l'utilisateur ;</li>
+<li>Si une <a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#essentialdef">présentation spécifique du texte est essentielle à l'information véhiculée</a> (exemple : logo contenu du texte ou nom d’une marque).<br>
+Dans ces cas précis, prévoir une alternative textuelle reprenant au moins le texte de l’image et <a href="https://a11y-guidelines.orange.com/web/methodes-outils-contrastes.html">vérifier les contrastes des couleurs utilisées</a>.</li>
+</ul>
+<h2 id="cas-particuliers-des-animations-contenus-video-et-audio">Cas particuliers des animations, contenus vidéo et audio <a class="header-anchor" href="#cas-particuliers-des-animations-contenus-video-et-audio" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour les éléments non informatifs et purement décoratifs, pas besoin d’alternative textuelle et faire en sorte que l’animation soit <a href="https://a11y-guidelines.orange.com/web/exemples/masquage/index.html">ignorée par les aides techniques</a>.</p>
+<p>Pour les animations portant de l’information, prévoir une transcription (de type script) reprenant l’information du contenu sous forme de texte.</p>
+<p>Pour les contenus audio et/ou vidéo, il faut prévoir une transcription textuelle (scripts) et/ou des sous-titres selon les règles suivantes :</p>
+<ul>
+<li>Contenu audio préenregistré : transcription textuelle équivalente au contenu de l’audio</li>
+<li>Vidéo préenregistrée sans audio :
+<ul>
+<li>transcription textuelle à minima</li>
+<li>ou une piste audio équivalente au contenu de la vidéo</li>
+</ul>
+</li>
+<li>Vidéo préenregistrée (avec ou sans audio) :
+<ul>
+<li>transcription textuelle à minima</li>
+<li>audiodescription pertinente et correctement synchronisée si nécessaire</li>
+</ul>
+</li>
+<li>Vidéo préenregistrée avec audio : sous-titres transcrits reprenant tout le contenu</li>
+<li>Vidéo en direct avec audio : sous-titres transcrits reprenant tout le contenu</li>
+</ul>
+<h2 id="exemples">Exemples : <a class="header-anchor" href="#exemples" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>Image décorative : Alternative textuelle vide (comprendre attribut <code>alt=&quot;&quot;</code>)</li>
+</ul>
+<img alt="capture d'écran alternative textuelle image décorative" src="../../images/image_decorative.png" width="250"/> 
+<ul>
+<li>Image cliquable : exemple d'alternative textuelle correcte : « ajouter un bouquet TV »</li>
+</ul>
+<img alt="capture d'écran alternative textuelle image cliquable" src="../../images/image_cliquable.png"/>
+<h2 id="ressources">Ressources : <a class="header-anchor" href="#ressources" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Arbre de décision W3C (anglais)</a></li>
+<li><a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/text-equiv-all.html">Autres cas pratiques sur le site du W3C</a></li>
+<li><a href="https://www.la-grange.net/accessibilite/day_23.html">Plongez dans l’accessibilité : Fournir des équivalents texte pour les images</a></li>
 </ul>
 
         </main>
@@ -316,9 +326,13 @@ Les captcha sont souvent  la source de difficultés pour les utilisateurs. Si la
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#definir-des-equivalents-textuels" class="nav-link text-muted bg-200">Définir des équivalents textuels</a>
           </li><li class="nav-item position-relative">
-            <a href="#rendre-accessible-les-pistes-audio-ou-video" class="nav-link text-muted bg-200">Rendre accessible les pistes audio ou vidéo</a>
+            <a href="#cas-particulier-mise-en-forme-via-une-image" class="nav-link text-muted bg-200">Cas particulier : mise en forme via une image</a>
           </li><li class="nav-item position-relative">
-            <a href="#eviter-les-captcha" class="nav-link text-muted bg-200">Éviter les captcha</a>
+            <a href="#cas-particuliers-des-animations-contenus-video-et-audio" class="nav-link text-muted bg-200">Cas particuliers des animations, contenus vidéo et audio</a>
+          </li><li class="nav-item position-relative">
+            <a href="#exemples" class="nav-link text-muted bg-200">Exemples :</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ressources" class="nav-link text-muted bg-200">Ressources :</a>
           </li></ul>
     </nav>
             </div>

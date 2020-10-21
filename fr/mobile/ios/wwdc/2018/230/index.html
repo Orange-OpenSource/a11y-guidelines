@@ -181,22 +181,22 @@
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230.png" /><br>
 <br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
 <ul>
-<li><a href="#TransparencyAndBlurring">Floutage et transparence</a> (03:07)</li>
-<li><a href="#Contrast">Contraste</a> (04:38)</li>
-<li><a href="#Sizing">Grossissement</a> (07:04)</li>
-<li><a href="#Motion">Mouvement</a> (08:48)</li>
-<li><a href="#UIAccessibilityElement">UIAccessibilityElement</a> (21:03)</li>
-<li><a href="#AdjustableValues">Les valeurs continûment ajustables</a> (21:44)</li>
-<li><a href="#CustomActions">Les actions personnalisées</a> (23:49)</li>
-<li><a href="#accessibilityViewIsModal">Élément au premier plan</a> (25:02)</li>
-<li><a href="#Notifications">Notifications</a> (25:13)</li>
-<li><a href="#Demo">Exemple</a>
+<li><a href="#floutage-et-transparence-0307">Floutage et transparence</a> (03:07)</li>
+<li><a href="#contraste-0438">Contraste</a> (04:38)</li>
+<li><a href="#grossissement-0704">Grossissement</a> (07:04)</li>
+<li><a href="#mouvement-0848">Mouvement</a> (08:48)</li>
+<li><a href="#uiaccessibilityelement-2103">UIAccessibilityElement</a> (21:03)</li>
+<li><a href="#les-valeurs-continument-ajustables-2144">Les valeurs continûment ajustables</a> (21:44)</li>
+<li><a href="#les-actions-personnalisees-2349">Les actions personnalisées</a> (23:49)</li>
+<li><a href="#element-au-premier-plan-2502">Élément au premier plan</a> (25:02)</li>
+<li><a href="#notifications-2513">Notifications</a> (25:13)</li>
+<li><a href="#exemple">Exemple</a>
 <ul>
-<li><a href="#DemoSetCarousel">Comment rendre un carrousel parfaitement interprétable par VoiceOver ?</a> (25:53)</li>
-<li><a href="#DemoUpdateData">Comment synchroniser la mise à jour de données avec l'élément du carrousel sélectioné ?</a> (30:53)</li>
-<li><a href="#DemoCustomActions">Comment associer des actions à un regroupement d'éléments ?</a> (33:05)</li>
-<li><a href="#DemoModalView">Comment éviter la sélection d'éléments derrière une 'Modal View' ?</a> (34:32)</li>
-<li><a href="#DemoExceptionalVoiceOverExperience">Rendu final de l'application avec VoiceOver optimisé</a> (35:38)</li>
+<li><a href="#comment-rendre-un-carrousel-parfaitement-interpretable-par-voiceover-2553">Comment rendre un carrousel parfaitement interprétable par VoiceOver ?</a> (25:53)</li>
+<li><a href="#comment-synchroniser-la-mise-a-jour-de-donnees-avec-lelement-du-carrousel-selectione-3053">Comment synchroniser la mise à jour de données avec l'élément du carrousel sélectioné ?</a> (30:53)</li>
+<li><a href="#comment-associer-des-actions-a-un-regroupement-delements-3305">Comment associer des actions à un regroupement d'éléments ?</a> (33:05)</li>
+<li><a href="#comment-eviter-la-selection-delements-derriere-une-modal-view">Comment éviter la sélection d'éléments derrière une 'Modal View' ?</a> (34:32)</li>
+<li><a href="#rendu-final-de-lapplication-avec-voiceover-optimise-3538">Rendu final de l'application avec VoiceOver optimisé</a> (35:38)</li>
 </ul>
 </li>
 </ul>
@@ -206,8 +206,7 @@
 <li>Celles et ceux qui souhaitent découvrir comment une application doit interagir avec VoiceOver pour que le parcours utilisateur soit optimal (voir '<a href="#DemoExceptionalVoiceOverExperience">Rendu final de l'application avec VoiceOver optimisé</a>').</li>
 </ul>
 <p>Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.<br>
-<br><br><br>
-<a name="TransparencyAndBlurring"></a></p>
+<br><br></p>
 <h2 id="floutage-et-transparence-0307"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=187">Floutage et transparence (03:07)</a> <a class="header-anchor" href="#floutage-et-transparence-0307" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Depuis iOS 8, des classes telles que <code>UIBlurEffect</code> et <code>UIVisualEffectView</code> permettent de gérer parfaitement l'effet de flou d'une image.<br>
 <br>Cependant, cela peut entraîner des difficultés occulaires pour les personnes ayant des problèmes visuels.<br>
@@ -217,14 +216,12 @@
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-TransparencyAndBlurring_2.png" /><br>
 <br>Côté développement, il est possible de connaître la valeur de la propriété <code>isReduceTransparencyEnabled</code>.<br>
 <br><img style="max-width: 650px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-TransparencyAndBlurring_3.png" /></p>
-<p><a name="Contrast"></a></p>
 <h2 id="contraste-0438"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=278">Contraste (04:38)</a> <a class="header-anchor" href="#contraste-0438" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Le contraste {couleur du contenu exposé / couleur du fond d'écran} est très important et repose beaucoup sur les propriétés de la police affichée détaillées dans la <a href="../../../conception#couleurs">partie conception de ce site</a>.<br>
 <br>Il est possible d'augmenter nativement le contraste des couleurs en activant l'<a href="../../../conception#options-d-accessibilite">option d'accessibilité</a> appropriée dans les réglages du terminal, pouvant ainsi favoriser un confort de lecture.<br>
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Contrast_1.png" /><br>
 <br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de <code>isDarkerSystemColorsEnabled</code>.<br>
 <br><img style="max-width: 650px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Contrast_2.png" /></p>
-<p><a name="Sizing"></a></p>
 <h2 id="grossissement-0704"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=424">Grossissement (07:04)</a> <a class="header-anchor" href="#grossissement-0704" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Les quelques points concernant le <code>Dynamic Type</code> sont largement expliqués dans la <a href="../../../developpement#taille-des-textes">section développement iOS</a> et font référence à une <a href="../../2017/245/">autre présentation</a> parfaitement détaillée dans la partie WWDC de ce site.<br>
 <br>Le simple fait de passer une police en gras peut nettement améliorer le rendu visuel pour certains utilisateurs sans avoir à en grossir démesurément la taille.<br>
@@ -232,45 +229,37 @@
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Sizing_1.png" /><br>
 <br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de <code>isBoldTextEnabled</code>.<br>
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Sizing_2.png" /></p>
-<p><a name="Motion"></a></p>
 <h2 id="mouvement-0848"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=528">Mouvement (08:48)</a> <a class="header-anchor" href="#mouvement-0848" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Certaines animations peuvent entraîner des problèmes d'équilibre voire de nausées à certaines personnes.<br>
 <br>Les réglages utilisateurs permettent de réduire fortement tout type d'animations natives en activant l'<a href="../../../conception#options-d-accessibilit-">option d'accessibilité</a> appropriée.<br>
 <br><img style="max-width: 950px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Motion_1.png" /><br>
 <br>Côté développement, le suivi de la modification de ce réglage se fait grâce à la valeur de <code>isReduceMotionEnabled</code> et permet d'adapter les effets de l'application aux souhaits de l'utilisateur s'ils ne sont pas automatiquement pris en compte.<br>
 <br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Motion_2.png" /></p>
-<p><a name="UIAccessibilityElement"></a></p>
 <h2 id="uiaccessibilityelement-2103"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1263">UIAccessibilityElement (21:03)</a> <a class="header-anchor" href="#uiaccessibilityelement-2103" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>L'intérêt de cet élément ainsi que son implémentation sont expliqués et mis en situation au sein de l'application de démonstration.<br>
 <br><img style="max-width: 550px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-UIAccessibilityElement.png" /></p>
-<p><a name="AdjustableValues"></a></p>
 <h2 id="les-valeurs-continument-ajustables-2144"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1304">Les valeurs continûment ajustables (21:44)</a> <a class="header-anchor" href="#les-valeurs-continument-ajustables-2144" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Cette fonctionnalité implémentable par définition de <code>trait</code> spécifique est présentée ici de façon à <strong>fluidifier la sélection d'éléments</strong> dans une <code>CollectionView</code>.<br>
 <br><img style="max-width: 550px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-AdjustableValues.png" /><br>
 <br>Un aperçu différent de cette utilisation a déjà été développé dans une <a href="../../2017/215#AdjustableValues">autre vidéo détaillée</a> de la partie WWDC de ce site.<br>
-<br><br><br>
-<a name="CustomActions"></a></p>
+<br><br></p>
 <h2 id="les-actions-personnalisees-2349"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1429">Les actions personnalisées (23:49)</a> <a class="header-anchor" href="#les-actions-personnalisees-2349" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Sur une unique sélection, il est possible de <strong>regrouper un ensemble d'actions</strong> proposées sur différents éléments graphiques.<br>
 <br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-CustomActions.png" /><br>
 <br>Les explications fournies ici sont aussi développées dans une <a href="../../2017/215#CustomActions">autre vidéo détaillée</a> de la partie WWDC de ce site.<br>
-<br><br><br>
-<a name="accessibilityViewIsModal"></a></p>
+<br><br></p>
 <h2 id="element-au-premier-plan-2502"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1502">Élément au premier plan (25:02)</a> <a class="header-anchor" href="#element-au-premier-plan-2502" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Lorsqu'une vue est simplement présentée comme étant &quot;en haut&quot; de la hiérarchie des vues, VoiceOver ne sait pas nativement qu'<strong>il ne faut pas traiter les éléments présents en fond d'écran</strong>.<br>
 <br>La solution consiste à modifier <code>accessibilityViewIsModal</code> de façon à ce que VoiceOver n'analyse que les éléments de la vue mise en avant.<br>
 <br><img style="max-width: 450px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-ModalView.png" /></p>
-<p><a name="Notifications"></a></p>
 <h3 id="notifications-2513"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1513">Notifications (25:13)</a> <a class="header-anchor" href="#notifications-2513" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Petit rappel pour <strong>notifier les utilisateurs de modifications</strong> sur l'écran.<br>
 <br><img style="max-width: 800px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-230-Notifications.png" /><br>
 <br>Des explications plus détaillées sur ce point sont fournies dans la <a href="../../../developpement#informer-d-une-modification-sur-la-page">partie développeur de ce site</a>.<br>
-<br><br><br>
-<a name="Demo"></a></p>
+<br><br></p>
 <h2 id="exemple">Exemple <a class="header-anchor" href="#exemple" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Un exemple d'application est proposé pour répondre aux questions que se posent les développeurs face aux éventuels problèmes rencontrés dans la mise en oeuvre de l'accessibilité avec VoiceOver.<br>
-<br>La <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=938">présentation de l'exemple</a> ainsi que le <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1022">rendu VoiceOver non optimisé</a> sont absolument à visionner afin de mieux comprendre la logique des solutions apportées par tous les éléments exposés précédemment.<br><br><br>
-<a name="DemoSetCarousel"></a></p>
+<br>La <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=938">présentation de l'exemple</a> ainsi que le <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1022">rendu VoiceOver non optimisé</a> sont absolument à visionner afin de mieux comprendre la logique des solutions apportées par tous les éléments exposés précédemment.<br><br></p>
 <h3 id="comment-rendre-un-carrousel-parfaitement-interpretable-par-voiceover-2553"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1553">Comment rendre un carrousel parfaitement interprétable par VoiceOver ? (25:53)</a> <a class="header-anchor" href="#comment-rendre-un-carrousel-parfaitement-interpretable-par-voiceover-2553" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ul>
 <li>Création d'un élement accessible pour définir le carrousel. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1571">(26:11)</a></li>
@@ -280,15 +269,13 @@
 <li>Ajouter l'élément du carrousel en tant qu'élément sélectionnable par VoiceOver. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1718">(28:38)</a></li>
 <li>Mise à jour de l'élément affiché en fonction de la sélection. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1791">(29:51)</a></li>
 <li>Notification de mise à jour d'écran dès qu'un nouvel élément du carrousel est sélectionné. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1814">(30:14)</a><br>
-<br><br><br>
-<a name="DemoUpdateData"></a></li>
+<br><br></li>
 </ul>
 <h3 id="comment-synchroniser-la-mise-a-jour-de-donnees-avec-lelement-du-carrousel-selectione-3053"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1853">Comment synchroniser la mise à jour de données avec l'élément du carrousel sélectioné ? (30:53)</a> <a class="header-anchor" href="#comment-synchroniser-la-mise-a-jour-de-donnees-avec-lelement-du-carrousel-selectione-3053" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ul>
 <li>Grouper des données pour améliorer significativement la sélection d'éléments. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1874">(31:14)</a></li>
 <li>Synchronisation des données regroupées avec l'élément du carrousel sélectionné. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1966">(32:46)</a><br>
-<br><br><br>
-<a name="DemoCustomActions"></a></li>
+<br><br></li>
 </ul>
 <h3 id="comment-associer-des-actions-a-un-regroupement-delements-3305"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=1985">Comment associer des actions à un regroupement d'éléments ? (33:05)</a> <a class="header-anchor" href="#comment-associer-des-actions-a-un-regroupement-delements-3305" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <br>
@@ -299,7 +286,6 @@
 <li>Penser à notifier l'utilisateur de l'apparition d'un nouvel écran. <a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2100">(35:00)</a><br>
 <br><br></li>
 </ul>
-<p><a name="DemoExceptionalVoiceOverExperience"></a></p>
 <h3 id="rendu-final-de-lapplication-avec-voiceover-optimise-3538"><a href="https://developer.apple.com/videos/play/wwdc2018/230/?time=2138">Rendu final de l'application avec VoiceOver optimisé. (35:38)</a> <a class="header-anchor" href="#rendu-final-de-lapplication-avec-voiceover-optimise-3538" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <br>
 Le code présenté lors de cette vidéo ainsi que des explications sur son implémentation sont accessibles sur le [site développeur d'<span lang="en">Apple</span>](https://developer.apple.com/documentation/uikit/accessibility/delivering_an_exceptional_accessibility_experience).

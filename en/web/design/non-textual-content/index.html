@@ -201,7 +201,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#define-text-alternatives" class="dropdown-item text-wrap">Define text alternatives</a><a href="#provide-accessible-audio-or-video-tracks" class="dropdown-item text-wrap">Provide accessible audio or video tracks</a><a href="#avoid-captcha" class="dropdown-item text-wrap">Avoid captcha</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#define-text-alternatives" class="dropdown-item text-wrap">Define text alternatives</a><a href="#special-case-formatting-via-an-image" class="dropdown-item text-wrap">Special case: formatting via an image</a><a href="#special-cases-of-animations-video-and-audio-content" class="dropdown-item text-wrap">Special cases of animations, video and audio content</a><a href="#examples" class="dropdown-item text-wrap">Examples:</a><a href="#related-links" class="dropdown-item text-wrap">Related links:</a></div>
     </nav>
         
       </div>
@@ -254,56 +254,68 @@
         
         <main id="main-content" class="col-md-6" role="main">
           <h1>Non-textual content</h1>
-<p class="lead">Ensure that an alternative to non-text content is provided to the user</p>
+<p class="lead">Ensure that an alternative to non-text content is provided to the user.</p>
 <h2 id="define-text-alternatives">Define text alternatives <a class="header-anchor" href="#define-text-alternatives" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> people with visual impairments, hearing difficulties or cognitive limitations and search engines.<br>
-<strong>When:</strong> as of design and during development.</p>
+<p><strong>Target:</strong> people with visual or hearing impairments, seniors, people with cognitive impairments and search engines.<br>
+<strong>When:</strong> from conception and during development.</p>
 <p><strong>Description:</strong><br>
-Set text alternatives on all non-text informative elements (alternatives to images, icons). Also provide scripts or subtitles for the audio or video content.</p>
-<p><strong>Example</strong><br>
-In the screenshot below, the design phase should provide  text alternatives for each button:</p>
+A text alternative must be provided for each non-textual element: images, animation, video, podcast, advertisements, buttons, icons, logos, etc.<br>
+For images, buttons, icons, logos, etc., the rules are as follows:</p>
 <ul>
-<li>“menu”,</li>
-<li>“settings”,</li>
-<li>“previous channel”,</li>
-<li>“mute”…</li>
+<li>For clickable images: specify the function / target of the link</li>
+<li>For decorative images: leave the text alternative blank</li>
+<li>For images that convey information: text alternative describing the information</li>
+<li>For complex images (diagrams, graphs, etc.): provide adjacent equivalent textual content:
+<ul>
+<li>text in the page</li>
+<li>or a link pointing to another page with this description.</li>
 </ul>
-<p><img src="../../images/player.png" alt="screenshot of a video player with multiple buttons" class="img-fluid"></p>
-<h2 id="provide-accessible-audio-or-video-tracks">Provide accessible audio or video tracks <a class="header-anchor" href="#provide-accessible-audio-or-video-tracks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> everyone and particularly people with visual disabilities, hearing impairments, cognitive limitations, or difficulties with English.<br>
-<strong>When:</strong> during design and development.</p>
-<p><strong>Description:</strong></p>
-<p>To be accessible, the multimedia contents must:</p>
-<ol>
-<li>propose a full transcript</li>
-<li>offer subtitles (video only)</li>
-<li>offer audio description (video only)</li>
-<li>choose an accessible media player</li>
-<li>Prohibit the automatic start of the video when loading the page</li>
-<li>Prohibit videos that have more than 3 flashes per second</li>
-<li>Furthermore, for any sound that has been emitted for more than 3 seconds, the user must have the option of either stopping or pausing it or controlling its volume regardless of the overall system volume.</li>
-</ol>
-<p>For more info check out <a href="../../../editorial-content/animated-components/">accessibility recommendations for video content, animations and Orange audios</a>.</p>
-<p><strong>Users’ goal:</strong><br>
-Provide access to visual and hearing information for people who cannot access it: visually impaired, blind, deaf, cognitively deficient, computer without speakers, noisy or bright environment.</p>
-<p><strong>Technical goal:</strong><br>
-Allow audio and video referencing.</p>
-<h2 id="avoid-captcha">Avoid captcha <a class="header-anchor" href="#avoid-captcha" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> everyone in particular, visually impaired people.<br>
-<strong>When:</strong> during design and development.</p>
-<p><strong>Description</strong><br>
-Captchas are often the source of difficulties for all users. If the implementation of an anti-spam system can not be avoided, it is advisable to move towards a more flexible solution for the user:</p>
-<ul>
-<li>Double authentication;</li>
-<li>Hidden form field left blank (honeypot technique), not visible to the user;</li>
-<li>Providing phone support to make sure the customer is a real person;</li>
-<li>A check to ensure that the same <abbr> IP </abbr> / User agent combination does not attempt to submit the form more than N times per second.</li>
+</li>
 </ul>
-<p>If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha:</p>
+<h2 id="special-case-formatting-via-an-image">Special case: formatting via an image <a class="header-anchor" href="#special-case-formatting-via-an-image" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>If it is technically possible for you to achieve your visual via formatted text, it is better to choose this solution to convey information rather than text in the form of an image.<br>
+Only permissions where the formatting can be done via an image:</p>
 <ul>
-<li>an audio captcha + visual,</li>
-<li>logical tests (question whose answer is obvious, simple mathematical test ...) + classic visual captcha</li>
-<li>…</li>
+<li>Whether the text in image form can be <a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#visually-customizeddef">customized visually by the user</a>;</li>
+<li>If a specific presentation of the text is <a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#essentialdef">essential to the information conveyed</a> (example: text or name of a brand in a logo).<br>
+In these specific cases, provide a text alternative containing at least the text of the image and <a href="https://a11y-guidelines.orange.com/web_EN/methodes-outils-contrastes.html">check the contrasts of the colors used</a>.</li>
+</ul>
+<h2 id="special-cases-of-animations-video-and-audio-content">Special cases of animations, video and audio content <a class="header-anchor" href="#special-cases-of-animations-video-and-audio-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>For non-informative and purely decorative elements, no need for a text alternative. Just ensure that the <a href="https://a11y-guidelines.orange.com/web_EN/exemples/masquage/index.html">animation is ignored by assistive technologies</a>.<br>
+For animations carrying information, provide a transcription (script type) containing the information of the content in text form.<br>
+For audio and / or video content, a textual transcription (scripts) and / or subtitles must be provided according to the following rules:</p>
+<ul>
+<li>Pre-recorded audio content: textual transcription equivalent to the audio content</li>
+<li>Pre-recorded video without audio:
+<ul>
+<li>textual transcription at minimum</li>
+<li>or an audio track equivalent to the content of the video</li>
+</ul>
+</li>
+<li>Pre-recorded video (with or without audio):
+<ul>
+<li>textual transcription at minimum</li>
+<li>Relevant and correctly synchronized audio description if necessary</li>
+</ul>
+</li>
+<li>Pre-recorded video with audio: transcribed subtitles showing all the content</li>
+<li>Live video with audio: transcribed subtitles showing all the content</li>
+</ul>
+<h2 id="examples">Examples: <a class="header-anchor" href="#examples" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p>Decorative image: Empty text alternative (understand: <code>alt=&quot;&quot;</code>)<br>
+<img alt="screenshot alt text for decorative image" src="../../images/alt_text_deco.png" width="300"/></p>
+</li>
+<li>
+<p>Clickable image: valid alternative text : &quot;add a TV channel&quot;<br>
+<img alt="screenshot alt text for Clickable image" src="../../images/image_cliquable.png"/></p>
+</li>
+</ul>
+<h2 id="related-links">Related links: <a class="header-anchor" href="#related-links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">W3C decision tree</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG21/quickref/#non-text-content">Other practical cases on the W3C website</a></li>
 </ul>
 
         </main>
@@ -315,9 +327,13 @@ Captchas are often the source of difficulties for all users. If the implementati
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#define-text-alternatives" class="nav-link text-muted bg-200">Define text alternatives</a>
           </li><li class="nav-item position-relative">
-            <a href="#provide-accessible-audio-or-video-tracks" class="nav-link text-muted bg-200">Provide accessible audio or video tracks</a>
+            <a href="#special-case-formatting-via-an-image" class="nav-link text-muted bg-200">Special case: formatting via an image</a>
           </li><li class="nav-item position-relative">
-            <a href="#avoid-captcha" class="nav-link text-muted bg-200">Avoid captcha</a>
+            <a href="#special-cases-of-animations-video-and-audio-content" class="nav-link text-muted bg-200">Special cases of animations, video and audio content</a>
+          </li><li class="nav-item position-relative">
+            <a href="#examples" class="nav-link text-muted bg-200">Examples:</a>
+          </li><li class="nav-item position-relative">
+            <a href="#related-links" class="nav-link text-muted bg-200">Related links:</a>
           </li></ul>
     </nav>
             </div>
