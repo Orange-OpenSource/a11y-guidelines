@@ -4,7 +4,7 @@ title: "Navigation generale"
 
 # Navigation generale
 
-## Avoir des zones de clic sufisamment grandes
+## Avoir des zones de clic suffisamment grandes
 
 **Cible&nbsp;:** pour tous et en particulier les personnes avec des déficiences motrices  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
