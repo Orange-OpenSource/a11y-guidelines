@@ -13,7 +13,8 @@ const IMAGES_EXTENSIONS = ['jpg', 'png', 'svg']
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true)
 
-  eleventyConfig.addPassthroughCopy({ 'src/assets/': 'assets' })
+  eleventyConfig.addPassthroughCopy('src/assets/**/*.!(css|js)') // CSS & JS files are now delegated to PostCSS & Babel
+  eleventyConfig.addPassthroughCopy({ 'src/assets/vendors': 'assets/vendors' })
   eleventyConfig.addPassthroughCopy({ 'node_modules/tarteaucitronjs': 'assets/vendors/tarteaucitronjs' })
 
   // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
@@ -226,6 +227,11 @@ module.exports = function (eleventyConfig) {
       eleventyConfig.addCollection(`${collection.name}_${locale}`, c => c.getFilteredByGlob(collection.glob))
     })
   }
+
+  // Because we no longer parse these files with 11ty, it cannot refresh the browser on changes
+  eleventyConfig.setBrowserSyncConfig({
+    files: [ '_site/assets/*.css', '_site/assets/*.js' ]
+  })
 
   return {
     dir: {
