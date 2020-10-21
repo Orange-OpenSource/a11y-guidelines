@@ -45,7 +45,7 @@ For audio and / or video content, a textual transcription (scripts) and / or sub
 - Live video with audio: transcribed subtitles showing all the content
 
 ## Examples: 
-* Decorative image: Empty text alternative (understand: alt="")
+* Decorative image: Empty text alternative (understand: `alt=""`)
 <img alt="screenshot alt text for decorative image" src="../../images/alt_text_deco.png" width="300"/> 
 
 * Clickable image: valid alternative text : "add a TV channel" 

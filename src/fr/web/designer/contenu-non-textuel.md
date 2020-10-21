@@ -45,7 +45,7 @@ Pour les contenus audio et/ou vidéo, il faut prévoir une transcription textuel
 * Vidéo en direct avec audio : sous-titres transcrits reprenant tout le contenu 
 
 ## Exemples : 
-* Image décorative : Alternative textuelle vide (comprendre attribut alt="")
+* Image décorative : Alternative textuelle vide (comprendre attribut `alt=""`)
 
 <img alt="capture d'écran alternative textuelle image décorative" src="../../images/image_decorative.png" width="250"/> 
 
