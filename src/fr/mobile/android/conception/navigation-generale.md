@@ -32,7 +32,7 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 
 <img src="../../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
-
+<br/><br/>
 ## Avoir une application utilisable quel que soit l'orientation
 **Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.
 
@@ -43,17 +43,17 @@ L’accès au contenu d’une application ne doit pas dépendre de l’orientati
 
 **À vérifier&nbsp;:**
 - L’utilisation de composants graphiques standard qui supportent les deux modes (fragments…), ou définir un `design` spécifique à chaque orientation.
-- Que l’application n’est pas verrouillée dans un mode (portrait ou paysage).
+- L’application n’est pas verrouillée dans un mode (portrait ou paysage).
 
-
+<br/><br/>
 ## Proposer une alternative aux actions gestuelles
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles et/ou moteur.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles et/ou motrices.
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
 
-Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les ViewPager notamment) peut devenir très complexe pour les personnes ayant des déficiences motrices ou visuelles. Il est donc essentiel d'ajouter une alternative, à l'aide de boutons «&nbsp;suivant&nbsp;» et «&nbsp;précédent&nbsp;» par exemple.
+Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (avec les ViewPager notamment) peut devenir très complexe pour les personnes ayant des déficiences motrices ou visuelles. Il est donc essentiel d'ajouter une alternative, à l'aide de boutons «&nbsp;suivant&nbsp;» et «&nbsp;précédent&nbsp;» par exemple.
 
 **À vérifier&nbsp;:**
 
@@ -68,21 +68,23 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les V
 
 <img src="../../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 
+<br/><br/>
 ## Proposer des textes lisibles
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles, et les personnes dyslexiques.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
 
-Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une police d'écriture avec de l'empâtement (différent de sans-serif) ou que sa taille du texte est trop petite. Il est notamment recommandé d'utiliser une taille minimum de 14sp pour les textes. Cela facilitera notamment la lecture pour les dyslexiques.
+Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une police d'écriture avec de l'empâtement ou que sa taille du texte est trop petite. Il est notamment recommandé d'utiliser une taille minimum de 14sp pour les textes. 
 
 **À vérifier&nbsp;:**
 
 - La police d'écriture est sans serif
-- Les textes sont suffisamment grands pour être lues confortablement
+- Les textes sont suffisamment grands pour être lus confortablement
 - Il n'y a pas d'italique utilisé
 
+<br/><br/>
 ## Utiliser les composants natifs
 
 **Cible&nbsp;:** tout le monde.  

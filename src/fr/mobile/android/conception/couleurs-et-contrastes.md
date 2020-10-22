@@ -4,7 +4,7 @@ title: "Couleurs et contrastes"
 
 # Couleurs et contrastes
 
-S'assurer que les couleurs utilisés ne posent pas de problèmes à l'utilisateur
+S'assurer que les couleurs utilisées ne posent pas de problèmes à l'utilisateur
 
 ## Assurer un contraste suffisant entre les couleurs de premier plan et de fond
 
@@ -26,7 +26,12 @@ L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.pa
 
 L’application [<span lang="en">AccessibilityScanner</span>](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) permet de tester directement vos applications sur certains critères d’accessibilité et notamment les couleurs. Disponible à partir d’Android 6.
 
+**Exemple de contraste non valide&nbsp;:**  
+Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 
+![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../../images/contraste.png)  
+
+<br/><br/>
 
 ## Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information 
 
@@ -40,11 +45,7 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 **À vérifier&nbsp;:**
 
 - La perte des couleurs ne doit pas entraîner de difficulté dans la navigation, ni provoquer de perte d’information.
-
-**Exemple de contraste non valide&nbsp;:**  
-Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
-
-![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../../images/contraste.png)   
+ 
 
 **Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 

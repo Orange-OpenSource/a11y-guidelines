@@ -23,13 +23,6 @@ Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir c
 
 - L’application réagit correctement à l’option grand caractère
 
-**Objectif utilisateur&nbsp;:**
-
-Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter la taille du texte sans perte d’information pour accéder plus aisément au contenu.
-
 **Outil&nbsp;:**
 L'option d'accessibilité d'agrandissement de la taille des textes, présent dans les paramètres du téléphone.
 
-**Exemple&nbsp;:**
-
-<img src="../../../images/text.png" alt="exemple d’utilisation de taille de police dynamique" width="300"> 

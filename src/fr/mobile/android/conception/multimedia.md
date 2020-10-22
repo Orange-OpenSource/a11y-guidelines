@@ -19,7 +19,7 @@ De plus, un contenu multimédia doit pouvoir être contrôlé à tout instant pa
 **À vérifier&nbsp;:**
 
 - Les contenus multimédia peuvent être contrôlés par l’utilisateur (présence d’un bouton pause, bouton accessible pour sortir du mode plein-écran, etc...)
-- Pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
+- Pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause, soit d'en contrôler son volume indépendamment du volume général du système.
 - Il n'y a pas de démarrage automatique de la vidéo au chargement de la page
 
 
@@ -35,10 +35,9 @@ Il est essentiel de fournir un moyen d’accès à l’information visuelle et a
 **À vérifier&nbsp;:**
 
 - Une transcription intégrale textuelle est proposée pour le contenu audio préenregistré
-- Une transcription intégrale textuelle, ou une audiodescription est proposé pour le contenu vidéo préenregistré
+- Une transcription intégrale textuelle, ou une audiodescription est proposée pour le contenu vidéo préenregistré
 - Des sous titres sont proposés pour le contenu vidéo, préenregistré ou non
 
-Pour plus d'infos consulter les recommandations accessibilité pour les contenus vidéo, animations et audio Orange.
 
 ## Eviter le contenu à risque épileptique
 
