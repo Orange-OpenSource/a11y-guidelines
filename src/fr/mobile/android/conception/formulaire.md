@@ -33,12 +33,12 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 
 **Description&nbsp;:**
 
-Lors qu'un utilisateur se trompe lors de la saisie d'un formulaire, il est important de lui indiquer clairement quelles sont ses erreurs, afin qu'il puisse corriger les champs en question sans difficulté. 
+Lorsqu'un utilisateur se trompe lors de la saisie d'un formulaire, il est important de lui indiquer clairement quelles sont ses erreurs, afin qu'il puisse corriger les champs en question sans difficulté. 
 
 Il est d'ailleurs recommandé de fournir une suggestion de correction à l'utilisateur.
 
 **À vérifier&nbsp;:**
 
-- Les champs en erreurs sont clairements identifiables
+- Les champs en erreurs sont clairement identifiables
 - Les messages d'erreurs sont explicites
 - Une suggestion de correction est proposée à l'utilisateur

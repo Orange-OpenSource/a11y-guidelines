@@ -12,16 +12,16 @@ title: "Navigation vocale"
 
 **Description&nbsp;:**
 
-Concernant les images,il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.
+Concernant les images, il est important que celles-ci possèdent une alternative qui donne toutes les informations portées par l’image.
 Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.
 
-Les images décoratives en revanche ne nécessitent pas d'alternative textuelles et ne doivent donc pas être vocalisées.
+Les images décoratives en revanche ne nécessitent pas d'alternative textuelle et ne doivent donc pas être vocalisées.
   
 **À vérifier&nbsp;:**
 - Les images portant de l’information restituent cette information à travers leur alternative textuelle
 
 
-## Vocaliser tout les éléments signifiants
+## Vocaliser tous les éléments signifiants
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
@@ -60,7 +60,7 @@ Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (in
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
 
 **Description&nbsp;:**  
-L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il arrive parfois que cela ne suffise pas à établir un ordre cohérent, comme dans l'exemple ci dessous, et il est donc nécessaire de redéfinir cet ordre de lecture.
+L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il arrive parfois que cela ne suffise pas à établir un ordre cohérent, comme dans l'exemple ci-dessous, et il est donc nécessaire de redéfinir cet ordre de lecture.
 
 **À vérifier&nbsp;:**
 - L'ordre de la vocalisation suit un ordre compréhensible et logique
@@ -92,7 +92,7 @@ Il est également possible de spécifier à une vue qu’elle est une région <i
 **À vérifier&nbsp;:**
 - Les messages temporaires affichés à l'écran (tels que les Toast) sont vocalisés
 - L'ouverture des dialogs sont vocalisés
-- Les transitions entre les activités sont vocalisés (par le titre de la nouvelle activité par exemple)
+- Les transitions entre les activités sont vocalisées (par le titre de la nouvelle activité par exemple)
 - Les messages d'erreurs sont vocalisés
 - Les scrolls horizontaux sont vocalisés
 - Le changement d'une partie de l'écran (par exemple le changement un fragment) est vocalisé
@@ -165,13 +165,13 @@ Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en
 
 Il est recommandé de regrouper les éléments pour la vocalisation lorsque cela permet de gagner en efficacité et en compréhension.
 
-Par exemple, dans le cadre d'une application de musique, il est plus intéressant regrouper la vocalisation du nom de la musique, du nom de l'artiste et de la durée de celle-ci en un seul bloc, plutôt que de les vocaliser séparemment et d'alourdir la navigation.
+Par exemple, dans le cadre d'une application de musique, il est plus intéressant regrouper la vocalisation du nom de la musique, du nom de l'artiste et de la durée de celle-ci en un seul bloc, plutôt que de les vocaliser séparément et d'alourdir la navigation.
 
-Il faut veiller à trouver la bonne balance entre la navigation et la vocalisation. Vocaliser trop d'informations dans un seul bloc va nuire à l'écoute, l'utilisateur devant patienter avant d'entendre l'info qu'il recherche. Tandis qu'avoir aucun élément regroupé va augmenter la quantité d'éléments sur lesquels on peut naviguer et donc alourdir la navigation. C'est d'autant plus le cas lorsqu'on a des informations multi-dimensionnelles.
+Il faut veiller à trouver la bonne balance entre la navigation et la vocalisation. Vocaliser trop d'informations dans un seul bloc va nuire à l'écoute, l'utilisateur devant patienter avant d'entendre l'info qu'il recherche. Tandis qu'avoir aucun élément regroupé va augmenter la quantité d'éléments sur lesquels on peut naviguer et donc alourdir la navigation. C'est d'autant plus le cas lorsqu'on a des informations multidimensionnelles.
 
 **À vérifier&nbsp;:**
 - Les éléments reliés sont groupés au sein d'un même block d'annonce pour la vocalisation
-- Les informations multi-dimensionnelles respectent une bonne balance entre nombre de blocs et nombre de contenu dans chaque bloc 
+- Les informations multidimensionnelles respectent une bonne balance entre nombre de blocs et nombre de contenu dans chaque bloc 
 
 
 ## Vérifier la navigation par entêtes
@@ -183,7 +183,7 @@ Il faut veiller à trouver la bonne balance entre la navigation et la vocalisati
 
 Au sein d'un même écran, il arrive parfois que le contenu affiché présente différentes sections, avec pour chacune d'entre elles une entête. Il est possible avec le lecteur d'écran Talkback de naviguer par entêtes, plutôt que de naviguer par éléments. Il est donc bien plus aisé pour un utilisateur de naviguer entre les différentes sections.
 
-Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut dans le layout XML au différents éléments considérés comme tel : **accessibilityHeading**
+Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut dans le layout XML aux différents éléments considérés comme tel : **accessibilityHeading**
 
 **À vérifier&nbsp;:**
 - Les entêtes sont navigables avec le paramètre "Heading" de navigation Talkback 
@@ -195,7 +195,7 @@ Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut d
 
 **Description&nbsp;:**  
 
-Avec l'outil Talkback, l'utiliseur peut opter pour la navigation entre les différents contrôles (bouton, checkbox, champs de saisie, etc...) de l'application, plutôt que élément par élément. Cela lui permet d'interagir plus rapidement avec l'application.
+Avec l'outil Talkback, l'utilisateur peut opter pour la navigation entre les différents contrôles (bouton, checkbox, champs de saisie, etc...) de l'application, plutôt qu'élément par élément. Cela lui permet d'interagir plus rapidement avec l'application.
 
 **À vérifier&nbsp;:**
 - Les éléments interactifs sont tous navigable une fois le paramètre Talkback de navigation par contrôle défini

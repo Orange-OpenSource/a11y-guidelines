@@ -19,7 +19,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 - S'assurer que le contraste entre la couleur de fond et du texte, est de :
 	- De 4,5:1 minimum pour les petits textes
 	- De 3:1 minimum pour les grands textes, ou pour les textes en gras
-- S'assurer que les couleurs utilisés dans les composants d'interface, ou que les éléments graphiques porteurs d'informations, ont un contraste de 3:1 par rapport à l'arrière plan. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection, le focus, les barres de progression etc...
+- S'assurer que les couleurs utilisés dans les composants d'interface, ou que les éléments graphiques porteurs d'informations, ont un contraste de 3:1 par rapport à l'arrière-plan. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection, le focus, les barres de progression etc...
 
 **Outil&nbsp;:**
 L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  

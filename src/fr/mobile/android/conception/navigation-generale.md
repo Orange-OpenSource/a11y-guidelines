@@ -1,8 +1,8 @@
 ﻿---
-title: "Navigation generale"
+title: "Navigation générale"
 ---
 
-# Navigation generale
+# Navigation générale
 
 ## Avoir des zones de clic suffisamment grandes
 
@@ -17,7 +17,7 @@ Une taille insuffisante pour la zone d’action d’un composant peut empêcher 
 
 - La zone de clic a une taille d'au minimum 48 dp
 - La zone de clic a une marge autour de l'élément d'au moins 8 dp
-- Les erreurs de clic peuvent être annulés en déplaçant son doigt hors de la zone cliquable avant de relacher
+- Les erreurs de clic peuvent être annulées en déplaçant son doigt hors de la zone cliquable avant de relâcher
 
 **Outil&nbsp;:**
 
@@ -33,7 +33,7 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 <img src="../../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
 
-## Avoir une application utilisable quelque soit l'orientation
+## Avoir une application utilisable quel que soit l'orientation
 **Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.
 
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -53,13 +53,13 @@ L’accès au contenu d’une application ne doit pas dépendre de l’orientati
 
 **Description&nbsp;:**
 
-Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les ViewPager notamment) peut devenir très complexe pour les personnes ayant des déficiences moteurs ou visuelles. Il est donc essentielles d'ajouter une alternative, à l'aide de boutons «&nbsp;suivant&nbsp;» et «&nbsp;précédent&nbsp;» par exemple.
+Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les ViewPager notamment) peut devenir très complexe pour les personnes ayant des déficiences motrices ou visuelles. Il est donc essentiel d'ajouter une alternative, à l'aide de boutons «&nbsp;suivant&nbsp;» et «&nbsp;précédent&nbsp;» par exemple.
 
 **À vérifier&nbsp;:**
 
-- Les actions déclenchés par un geste de l'utilisateur ou un mouvement de l'appareil dispose d'une alternative.
+- Les actions déclenchées par un geste de l'utilisateur ou un mouvement de l'appareil dispose d'une alternative.
 
-**Objectif utilisateur&nbsp;:**
+**Exemple valide&nbsp;:**
 
 <img src="../../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
 
@@ -75,12 +75,12 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (comme avec les V
 
 **Description&nbsp;:**
 
-Le texte peut poser des problèmes de lisibilité lorsque celui ci présente une police d'écriture avec de l'empatement (différent de sans-serif) ou que sa taille du texte est trop petite. Il est notamment recommandé d'utiliser une taille minimum de 14sp pour les textes. Cela facilitera notamment la lecture pour les dyslexiques.
+Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une police d'écriture avec de l'empâtement (différent de sans-serif) ou que sa taille du texte est trop petite. Il est notamment recommandé d'utiliser une taille minimum de 14sp pour les textes. Cela facilitera notamment la lecture pour les dyslexiques.
 
 **À vérifier&nbsp;:**
 
 - La police d'écriture est sans serif
-- Les textes sont suffisaments grands pour être lues confortablement
+- Les textes sont suffisamment grands pour être lues confortablement
 - Il n'y a pas d'italique utilisé
 
 ## Utiliser les composants natifs
