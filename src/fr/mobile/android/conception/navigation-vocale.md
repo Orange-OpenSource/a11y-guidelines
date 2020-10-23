@@ -21,6 +21,12 @@ Les images décoratives en revanche ne nécessitent pas d'alternative textuelle 
 **À vérifier&nbsp;:**
 - Les images portant de l’information restituent cette information à travers leurs alternatives textuelles
 
+
+**Exemple valide&nbsp;:**  
+
+L'image contenant l'information de la chaine est bien vocalisée par le lecteur d'écran.
+<img src="../../../images/image_desc.jpg" alt="exemple d'écran avec une image informative vocalisée" width="300">
+
 <br/><br/>
 ## Vocaliser tous les éléments signifiants
 
@@ -114,9 +120,10 @@ Pour renseigner ce genre d’information, il faut utiliser l’attribut `content
 - Tout élément dont le statut peut être modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné.
 
 
-**Exemple&nbsp;:**
+**Exemple valide&nbsp;:**  
 
-<img src="../../../images/tabs.png" alt="exemple d’onglets qui ne restituent pas leur état et nature par défaut" width="400"> 
+La section dépliable est ici vocalisée.
+<img src="../../../images/etat_element.jpg" alt="exemple d'écran avec l'état d'une section dépliable vocalisé" width="300">
   
 
 ## Ne pas vocaliser les éléments décoratifs et cachés
@@ -168,6 +175,12 @@ Il faut veiller à trouver la bonne balance entre la navigation et la vocalisati
 **À vérifier&nbsp;:**
 - Les éléments reliés sont groupés au sein d'un même block d'annonce pour la vocalisation
 - Les informations multidimensionnelles respectent une bonne balance entre nombre de blocs et nombre de contenu dans chaque bloc 
+
+
+**Exemple valide&nbsp;:**  
+
+Plusieurs éléments sont ici regroupés pour améliorer la navigation
+<img src="../../../images/regroupement.jpg" alt="exemple d'écran avec des éléments regroupés en une seule vocalisation" width="300">
 
 
 ## Permettre la navigation par entêtes

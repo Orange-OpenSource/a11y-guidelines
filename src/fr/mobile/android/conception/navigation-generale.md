@@ -45,6 +45,13 @@ L’accès au contenu d’une application ne doit pas dépendre de l’orientati
 - L’utilisation de composants graphiques standard qui supportent les deux modes (fragments…), ou définir un `design` spécifique à chaque orientation.
 - L’application n’est pas verrouillée dans un mode (portrait ou paysage).
 
+**Exemple valide&nbsp;:**  
+
+L'application reste utilisable en mode portrait et en mode paysage
+<img src="../../../images/portrait.jpg" alt="exemple d'écran fonctionnel en mode portrait" width="300">
+<img src="../../../images/paysage.jpg" alt="exemple d'écran fonctionnel en mode paysage" width="300">
+
+
 <br/><br/>
 ## Proposer une alternative aux actions gestuelles
 
@@ -96,3 +103,22 @@ L’accessibilité est prise en compte dans les composants natifs (la plupart du
   
 Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun composant standard ne permet de répondre au besoin, créer un composant dédié basé sur un composant standard en veillant à conserver la cohérence de navigation et l’accessibilité.  
   
+<br/><br/>
+
+## Rendre adaptable les UI avec limite de temps
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles ou/et motrices.
+**Quand&nbsp;:** dès la phase de conception et lors du développement.
+
+**Description&nbsp;:**
+
+Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéos, il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de seconde sans interaction. 
+
+Cette évolution automatique de l'interface pose cependant un problème pour l'accessibilité, une personne ayant peut-être besoin de plus de temps pour interagir avec les éléments. Ce délai doit donc pouvoir être adapté selon le besoin de chaque utilisateur. 
+
+Une option d'accessibilité nommée "Time to take action" existe depuis Android 10, et permet de définir son propre timeout. En faisant appel à cette option depuis son application, il est possible d'adapter ses interfaces avec timeout à l'utilisateur.
+
+**À vérifier&nbsp;:**
+
+- Une UI avec limite de temps a son délai paramétrable
+

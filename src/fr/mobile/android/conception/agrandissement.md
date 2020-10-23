@@ -26,3 +26,8 @@ Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir c
 **Outil&nbsp;:**
 L'option d'accessibilité d'agrandissement de la taille des textes, présent dans les paramètres du téléphone.
 
+
+**Exemple valide&nbsp;:**  
+
+<img src="../../../images/agrandissement.jpg" alt="exemple d'écran avec le texte à 200% sans perte d'information" width="300">
+
