@@ -1,5 +1,4 @@
 ﻿{
-  "highlightJS": true,
   "displayToc": true,
   "sideNavigationLinks": [
     	{
@@ -31,7 +30,7 @@
       		"href": "/fr/mobile/android/conception/formulaire/"
     	},
 	{
-      		"label": "Multimedia",
+      		"label": "Multimédia",
       		"href": "/fr/mobile/android/conception/multimedia/"
     	}
    
