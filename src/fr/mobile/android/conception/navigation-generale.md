@@ -107,12 +107,12 @@ Utiliser au maximum les composants natifs en modifiant leur apparence. Si aucun 
 
 ## Rendre adaptable les UI avec limite de temps
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles ou/et motrices.
+**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
 
-Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéos, il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de seconde sans interaction. 
+Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction. 
 
 Cette évolution automatique de l'interface pose cependant un problème pour l'accessibilité, une personne ayant peut-être besoin de plus de temps pour interagir avec les éléments. Ce délai doit donc pouvoir être adapté selon le besoin de chaque utilisateur. 
 
