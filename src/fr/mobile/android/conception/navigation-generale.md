@@ -49,6 +49,7 @@ L’accès au contenu d’une application ne doit pas dépendre de l’orientati
 
 L'application reste utilisable en mode portrait et en mode paysage
 <img src="../../../images/portrait.jpg" alt="exemple d'écran fonctionnel en mode portrait" width="300">
+<br/><br/>
 <img src="../../../images/paysage.jpg" alt="exemple d'écran fonctionnel en mode paysage" width="300">
 
 
