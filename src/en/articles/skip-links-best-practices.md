@@ -1,7 +1,7 @@
 ---
 title: "Skip links best practices"
 abstract: "Skip links, what is it and how to implement them"
-date: "2019-01-01"
+date: "2019-06-19"
 tags:
   - web
 ---

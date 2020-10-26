@@ -1,7 +1,7 @@
 ---
 title: "Quelques bonnes pratiques pour les liens de téléchargement"
 abstract: "Quelques bonnes pratiques pour les liens de téléchargement"
-date: "2019-01-01"
+date: "2020-07-02"
 tags:
   - web
 ---
