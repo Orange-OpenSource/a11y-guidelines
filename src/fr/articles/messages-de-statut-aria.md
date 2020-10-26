@@ -1,7 +1,7 @@
 ---
 title: "Utiliser ARIA, les messages d'état, de statut ou contextuel"
 abstract: "Les messages d'état, de statut ou contextuel gérés par ARIA"
-date: "2019-01-01"
+date: "2018-10-26"
 tags:
   - web
 ---
