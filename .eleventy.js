@@ -15,7 +15,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/assets/**/*.!(css|js)') // CSS & JS files are now delegated to PostCSS & Babel
   eleventyConfig.addPassthroughCopy({ 'src/assets/vendors': 'assets/vendors' })
-  eleventyConfig.addPassthroughCopy({ 'node_modules/tarteaucitronjs': 'assets/vendors/tarteaucitronjs' })
+
+  /**
+   * As we don't need all the services provided by the base services file, we use our local `tarteaucitron.services.js` file
+   * Also, we don't need to copy the Tarteaucitron CSS folder as we have our own
+   */
+  eleventyConfig.addPassthroughCopy({ 'node_modules/tarteaucitronjs/lang': 'assets/vendors/tarteaucitronjs/lang' })
+  eleventyConfig.addPassthroughCopy({ 'node_modules/tarteaucitronjs/!(tarteaucitron.services.js)': 'assets/vendors/tarteaucitronjs' })
 
   // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
   eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
