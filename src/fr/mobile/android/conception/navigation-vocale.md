@@ -100,31 +100,7 @@ Il est également possible de spécifier à une vue qu’elle est une région <i
 - Le changement d'une partie de l'écran (par exemple le changement un fragment) est vocalisé
 - Le changement d'un élément de l'écran est vocalisé si il est utile pour l'utilisateur d'en être informé
 
-## Vocaliser l'état des éléments
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
-**Quand&nbsp;:** lors du développement.
-
-**Description&nbsp;:**
-
-Si un élément ne restitue pas à la vocalisation son statut, sa nature ou son état, l’utilisateur de <span lang="en">TalkBack</span> est dans l’impossibilité de comprendre ce qui se passe à l’écran. Ne pas préciser qu’une zone est dépliée ou que l’on se trouve face à un système d’onglets sont des exemples très fréquents.  
-  
-Les différents types d’onglets proposés dans Android, par exemple, ne donnent pas toutes les informations sur leur nature et sur leur état. Il est donc à la charge du développeur de donner ces informations à l’utilisateur via les attributs d’accessibilité correspondants (`contentDescription`). En l’occurrence, une bonne alternative pour le titre d’un onglet peut être&nbsp;: "sélectionné, titre de l’onglet, onglet 1 sur 3"  
-  
-Autre classique d’élément qui ne restitue pas par défaut son état&nbsp;: les zones dépliables. Encore une fois, c’est grâce à l’alternative textuelle du titre de la zone dépliable que l’on peut donner à l’utilisateur de <span lang="en">TalkBack</span> le statut de celle-ci. 
-  
-Pour renseigner ce genre d’information, il faut utiliser l’attribut `contentDescription` (disponible pour tout élément héritant de `View`).
-
-**À vérifier&nbsp;:**
-
-- Tout élément dont le statut peut être modifié durant l’utilisation de l’application doit restituer son état à travers son alternative textuelle. Par exemple, un élément qui peut être sélectionné/non sélectionné.
-
-
-**Exemple valide&nbsp;:**  
-
-La section dépliable est ici vocalisée.
-<img src="../../../images/etat_element.jpg" alt="exemple d'écran avec l'état d'une section dépliable vocalisé" width="300">
-  
 
 ## Ne pas vocaliser les éléments décoratifs et cachés
 
