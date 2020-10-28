@@ -37,7 +37,7 @@ Exemple avec padding &nbsp;:
     android:layout_height="40dp"
     android:padding="4dp"
     android:margin="8dp"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 **Exemples non-valide&nbsp;:** 
 
@@ -46,7 +46,7 @@ Exemple avec padding &nbsp;:
     android:layout_width="48dp"
     android:layout_height="48dp"
     android:margin="4dp"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 
 <pre><code class="xml">&lt;Button 

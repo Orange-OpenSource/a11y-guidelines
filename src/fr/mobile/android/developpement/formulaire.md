@@ -29,16 +29,16 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 
 Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).
 
-<pre><code class="xml"><EditText
+<pre><code class="xml">&lt;EditText
    android:id="@+id/addressLine2"
-   android:hint="@string/aptSuiteBuilding" ... />
+   android:hint="@string/aptSuiteBuilding" ... /&gt;
 
-<TextView
+&lt;TextView
    android:id="@+id/usernameLabel" ...
    android:text="@string/username"
    android:importantForAccessibility="no" 
-   android:labelFor="@+id/usernameEntry" />
+   android:labelFor="@+id/usernameEntry" /&gt;
 
-<EditText
-   android:id="@+id/usernameEntry" ... />
+&lt;EditText
+   android:id="@+id/usernameEntry" ... /&gt;
 </code></pre>
