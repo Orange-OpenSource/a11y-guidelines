@@ -58,7 +58,7 @@ Certaines images sont régulièrement associées à du texte pour donner une inf
 **Exemple&nbsp;:**
 
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
-<img src="../../../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
+<img src="../../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
 
 <pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
 containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.
@@ -205,7 +205,7 @@ L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs p
 **Exemple&nbsp;:**
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
 
-<img src="../../../../images/order.png" alt="exemple d'écran représentant un clavier téléphonique" width="300">  
+<img src="../../../images/order.png" alt="exemple d'écran représentant un clavier téléphonique" width="300">  
 
 <pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
@@ -288,12 +288,12 @@ Consulter l’article sur l’[utilisation des fragments](https://developer.andr
 
 **Exemples&nbsp;:**
 
-<img src="../../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
+<img src="../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
 
 En décomposant l’image&nbsp;:
-- <img src="../../../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
-- <img src="../../../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`
-- <img src="../../../../images/edit.png" alt="exemple d’icône informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l’image")`
+- <img src="../../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
+- <img src="../../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48"> `imageView.setContentDescription("paramètres")`
+- <img src="../../../images/edit.png" alt="exemple d’icône informative - édition" width="48"> `imageView.setContentDescription("éditer le nom de l’image")`
 
 <pre><code class="xml">
     &lt;ImageView

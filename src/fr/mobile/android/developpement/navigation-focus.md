@@ -26,7 +26,7 @@ Pour gérer la navigation au focus, il faut s’assurer de 2 choses&nbsp;:
 
 **Exemple&nbsp;**:
 Exemple de sélecteur qui prend en compte l’état `state_focused` :
-<pre><code>&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+<pre><code class="xml">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
 	&lt;!-- Non focused states --&gt;
 	&lt;item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/draw_unselected_selector" /&gt;
 	&lt;item android:state_focused="false" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/draw_selected_selector" /&gt;
@@ -78,7 +78,7 @@ Pour plus d’information sur la [gestion du focus sous Android](http://develope
 - Les éléments sont regroupés lorsqu'ils sont liés (exemple : contenu au sein d'un item cliquable d'une liste)
 
 **Exemple**
-<pre><code>&lt;EditText
+<pre><code class="xml">&lt;EditText
     android:id="@+id/et1"
     android:nextFocusDown="@+id/et2"
     android:nextFocusUp="@+id/et2"

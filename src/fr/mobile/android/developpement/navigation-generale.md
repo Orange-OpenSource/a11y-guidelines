@@ -119,12 +119,12 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
 **Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
 **Quand&nbsp;:** lors du développement.
 
-### Description&nbsp;:
+**Description&nbsp;:**
 Il existe sous Android un bon nombre d’événements liés à l’<abbr>API</abbr> d’accessibilité. Vous pouvez manipuler ces événements au même titre que d’autres événements. Ils permettent d’enrichir des composants <i lang="en">custom</i> insuffisamment accessibles. L’utilisation des événements d’accessibilité est assez rare dans les applications non dédiées à l’accessibilité, les autres options étant généralement suffisantes. Cependant, il faut savoir qu’ils existent et permettent de surcharger la vocalisation d’un composant.
 
 Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.
 
-### Liens&nbsp;:
+**Liens&nbsp;:**
 
 - [`AccessibilityEvents`](http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html)
 - [Construire une vue custom accessible](https://developer.android.com/guide/topics/ui/accessibility/custom-views)
@@ -154,7 +154,7 @@ Android 10 a introduit la fonction getRecommendedTimeoutMillis(). Cette méthode
 ## <i lang="en">WebView</i>
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
-**Quand&nbsp;:**lors du développement.
+**Quand&nbsp;:** lors du développement.
 
 **Description&nbsp;:**
 Les `WebView` ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet&nbsp;: les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet&nbsp;: [recommandations accessibilité pour le web](../../../../web/).
