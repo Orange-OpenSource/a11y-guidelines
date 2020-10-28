@@ -4,7 +4,7 @@ title: "Cadre légal"
 
 # Cadre légal de l'accessibilité numérique
 
-Quelques lois françaises ou de l’union européenne à propos de l’accessibilité numérique.
+Quelques lois françaises ou de l’union européenne à propos de l’accessibilité numérique. Test.
 
 ## Loi pour une République numérique – Décret n° 2019-768 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne (France)
 
