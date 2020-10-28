@@ -60,8 +60,6 @@ Certaines images sont régulièrement associées à du texte pour donner une inf
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information. Dans notre cas, l’icône «&nbsp;mail&nbsp;» couplée à l’infobulle de valeur «&nbsp;3&nbsp;» nous fait comprendre que nous avons «&nbsp;3 mails non lus&nbsp;». Si aucune alternative textuelle n’est ajoutée, 2 vocalisations seront lues «&nbsp;bouton sans libellé&nbsp;» et «&nbsp;3&nbsp;». On comprend bien ici l’importance d’ajouter des alternatives textuelles.  
 <img src="../../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
 
-<code><pre>
-<img src="../../images/alt.png" alt="exemple d’icône couplée à du texte qui nécessite une alternative textuelle" width="80" class="pull-left">
 <pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
 containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.
 mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le bouton-icône pour éviter une redondance d’information
@@ -80,7 +78,7 @@ infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_N
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
 **Quand&nbsp;:** lors du développement.
 
-**Description&nbsp;:**
+**Description&nbsp;:**	
 
 Si un élément ne restitue pas à la vocalisation son statut, sa nature ou son état, l’utilisateur de <span lang="en">TalkBack</span> est dans l’impossibilité de comprendre ce qui se passe à l’écran. Ne pas préciser qu’une zone est dépliée ou que l’on se trouve face à un système d’onglets sont des exemples très fréquents.  
   
@@ -214,7 +212,6 @@ voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).get
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre>
 
-</code></pre>
 <pre><code class="kotlin">
 volupButton.accessibilityTraversalAfter = remote0.id
 voldownButton.accessibilityTraversalAfter = volup.id
@@ -314,7 +311,7 @@ En décomposant l’image&nbsp;:
         android:src="@drawable/edit"
         android:contentDescription="@string/edit"
         ... />
-</ConstraintLayout></pre></code>
+</code></pre>
 
 ## Regrouper les éléments 
 

@@ -28,7 +28,7 @@ Exemple simple &nbsp;:
     android:layout_width="48dp"
     android:layout_height="48dp"
     android:margin="8dp"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 Exemple avec padding &nbsp;:
 <pre><code class="xml">&lt;Button 
@@ -54,7 +54,7 @@ Exemple avec padding &nbsp;:
     android:layout_width="40dp"
     android:layout_height="40dp"
     android:margin="8dp"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 <br/><br/>
 
@@ -81,7 +81,7 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:fontFamily="sans-serif" 
     android:textSize="14sp"
     android:text="Exemple"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 
 **Exemple non valide&nbsp;:** 
@@ -92,7 +92,7 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:textStyle="italic" 
     android:textSize="14sp"
     android:text="Exemple"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 
 <pre><code class="xml">&lt;TextView
@@ -101,7 +101,7 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:fontFamily="sans-serif" 
     android:textSize="14dp"
     android:text="Exemple"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 
 <pre><code class="xml">&lt;TextView
@@ -110,7 +110,7 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:fontFamily="sans-serif" 
     android:textSize="10sp"
     android:text="Exemple"
-&#47;&gt;</code></pre><pre>
+&#47;&gt;</code></pre>
 
 
 <br/><br/>

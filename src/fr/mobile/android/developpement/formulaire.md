@@ -41,4 +41,4 @@ Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de 
 
 <EditText
    android:id="@+id/usernameEntry" ... />
-</pre></code>
+</code></pre>
