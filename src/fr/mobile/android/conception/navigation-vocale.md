@@ -109,7 +109,7 @@ Il est également possible de spécifier à une vue qu’elle est une région <i
 
 **Description&nbsp;:**  
 
-Afin de ne pas polluer et de ne pas rendre confus la navigation avec un lecteur d'écran, il est nécessaire de ne vocaliser que les éléments signifiants. Les éléments décoratifs, tels que les illustrations ne doivent donc pas être vocalisés.
+Afin de ne pas polluer et de ne pas rendre confus la navigation avec un lecteur d'écran, il est nécessaire de ne vocaliser que les éléments signifiants. Les éléments décoratifs, tels que les illustrations, ne doivent donc pas être vocalisés.
 
 De plus, bien qu’invisibles à l’écran, certains éléments peuvent être lus par le lecteur d’écran (éléments positionnés en dehors de la zone visible ou masqués par d’autres éléments). La superposition d’écrans est quelque chose de courant sur mobile, mais cela engendre des problèmes d’accessibilité très lourds à corriger si elle n’est pas faite correctement dès le départ. Un lecteur d’écran tel que <span lang="en">TalkBack</span> est capable de lire les informations d’une vue qui est placée «&nbsp;sous&nbsp;» une autre. Mais si l’utilisateur n’est plus capable d’interagir avec cette vue, cela perturbe totalement sa navigation et celle-ci devient vite impossible.  
   
