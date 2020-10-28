@@ -27,7 +27,13 @@ Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir c
 L'option d'accessibilité d'agrandissement de la taille des textes, présent dans les paramètres du téléphone.
 
 
-**Exemple valide&nbsp;:**  
+**Exemple valide&nbsp;:** 
 
-<img src="../../../images/agrandissement.jpg" alt="exemple d'écran avec le texte à 200% sans perte d'information" width="300">
+<pre><code class="xml">&lt;TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp"
+    android:textSize="14sp"
+    android:text="Exemple"
+&#47;&gt;</code></pre>
 
