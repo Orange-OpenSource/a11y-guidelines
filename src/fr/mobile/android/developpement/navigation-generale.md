@@ -99,21 +99,30 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:fontFamily="sans-serif" 
-    android:textSize="14dp"
-    android:text="Exemple"
-&#47;&gt;</code></pre>
-
-
-<pre><code class="xml">&lt;TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:fontFamily="sans-serif" 
     android:textSize="10sp"
     android:text="Exemple"
 &#47;&gt;</code></pre>
 
 
 <br/><br/>
+
+## Rendre adaptable les UI avec limite de temps
+
+**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
+**Quand&nbsp;:** dès la phase de conception et lors du développement.
+
+**Description&nbsp;:**
+
+Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction. 
+
+Cette évolution automatique de l'interface pose cependant un problème pour l'accessibilité, une personne ayant peut-être besoin de plus de temps pour interagir avec les éléments. Ce délai doit donc pouvoir être adapté selon le besoin de chaque utilisateur. 
+
+Une option d'accessibilité nommée **Time to take action** existe depuis Android 10, et permet de définir son propre timeout depuis les paramètres d'accessibilité. Il est ainsi possible d'exploiter cette option par le biais de la fonction `getRecommendedTimeoutMillis()`. Cette méthode prend en charge les délais d'expiration définis par l'utilisateur pour les éléments d'interface utilisateur interactifs et non interactifs. La valeur de retour est influencée à la fois par les préférences de l'utilisateur (Time to take action) et les API du service d'accessibilité.
+
+**À vérifier&nbsp;:**
+
+- Une UI avec limite de temps a son délai paramétrable
+
 ## Événements d’accessibilité & <i lang="en">custom views</i>
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
@@ -129,27 +138,13 @@ Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.
 - [`AccessibilityEvents`](http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html)
 - [Construire une vue custom accessible](https://developer.android.com/guide/topics/ui/accessibility/custom-views)
 - [Exemple de squelette d’implémentation des événements](https://github.com/Pascale22/A11yEventApp) en <abbr>Kotlin</abbr>
-  
-<br/><br/>
 
-## Rendre adaptable les UI avec limite de temps
-
-**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
-**Quand&nbsp;:** dès la phase de conception et lors du développement.
-
-**Description&nbsp;:**
-
-Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction. 
-
-Cette évolution automatique de l'interface pose cependant un problème pour l'accessibilité, une personne ayant peut-être besoin de plus de temps pour interagir avec les éléments. Ce délai doit donc pouvoir être adapté selon le besoin de chaque utilisateur. 
-
-Une option d'accessibilité nommée "Time to take action" existe depuis Android 10, et permet de définir son propre timeout. En faisant appel à cette option depuis son application, il est possible d'adapter ses interfaces avec timeout à l'utilisateur.
-
-Android 10 a introduit la fonction getRecommendedTimeoutMillis(). Cette méthode prend en charge les délais d'expiration définis par l'utilisateur pour les éléments d'interface utilisateur interactifs et non interactifs. La valeur de retour est influencée à la fois par les préférences de l'utilisateur (Time to take action) et les API du service d'accessibilité.
 
 **À vérifier&nbsp;:**
 
-- Une UI avec limite de temps a son délai paramétrable
+- Les custom views réagissent convenablement à l'accessibilité
+  
+<br/><br/>
 
 ## <i lang="en">WebView</i>
 
@@ -163,3 +158,6 @@ Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le 
 Dans ces conditions, la page affichée à travers la `WebView`  réagit convenablement à l’<abbr>API</abbr> d’accessibilité.
 
 
+**À vérifier&nbsp;:**
+
+- Les WebView réagissent convenablement à l'accessibilité

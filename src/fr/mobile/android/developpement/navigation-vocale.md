@@ -194,7 +194,7 @@ Il faut indiquer l’état et la nature des onglets (non internationalisé)&nbsp
 L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il arrive parfois que cela ne suffise pas à établir un ordre cohérent, comme dans l'exemple ci-dessous, et il est donc nécessaire de redéfinir cet ordre de lecture.
 
 L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres&nbsp;: la lecture «&nbsp;logique&nbsp;», en français, de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il est tout à fait possible de redéfinir cet ordre de lecture avec deux outils&nbsp;:  
--  accessibilityTraversalAfter`&nbsp;: prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité après la vue passée en paramètre.
+- `accessibilityTraversalAfter`&nbsp;: prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité après la vue passée en paramètre.
 - `accessibilityTraversalBefore`&nbsp;: prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité avant la vue passée en paramètre.
 
 À noter&nbsp;: ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes `setAccessibilityTraversalAfter` et `setAccessibilityTraversalBefore`. Ces méthodes sont disponibles pour tout élément qui hérite de `View`.
