@@ -11,13 +11,11 @@ title: "Agrandissement des éléments"
 
 **Description&nbsp;:** 
 
-L’utilisateur a la possibilité d’augmenter la taille du texte via une option d’accessibilité. Afin que l’application réagisse correctement à cette option, il est nécessaire d’utiliser des tailles de texte dynamiques qui s’ajusteront en fonction des paramètres utilisateurs. Un texte trop petit sera facilement ignoré par certains utilisateurs malvoyants.  
-  
-L’application devra mettre en œuvre des tailles de textes dynamiques, s’assurer de la bonne réactivité des zones d’affichage au grossissement de texte (conteneurs qui s’adaptent à la taille de leur contenu).
-  
-Afin de permettre à l’option «&nbsp;grand caractère&nbsp;» d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements&nbsp;:
-- Utiliser une taille de police dynamique&nbsp;: le «&nbsp;sp&nbsp;». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types d'appareils Android. 
-- Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique («&nbsp;sp&nbsp;» donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le `min-height` et le `height` des conteneurs pour obtenir un résultat correct (le `height` à `wrap_content` et le `min-height` à la hauteur voulue par défaut).
+La taille du texte doit pouvoir être multipliée par 2 (zoom du texte à 200% depuis les paramètres d'accessibilité du téléphone). À ce niveau de zoom, la présentation peut être altérée, mais l’information doit rester lisible (pas de texte tronqué, ni superposé).
+
+De plus, il faut s'assurer de faire du contenu adaptatif, donc prévoir les containers de textes pour qu'ils puissent s'ajuster au zoom des textes, en amont du développement.
+
+Par ailleurs, certains choix de design peuvent ou non faciliter la mise en place de ce critère lors du développement, il est donc important d’y réfléchir dès le départ.
 
 **À vérifier&nbsp;:**
 

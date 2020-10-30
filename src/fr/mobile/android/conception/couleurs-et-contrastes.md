@@ -33,7 +33,7 @@ Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne
 
 <br/><br/>
 
-## Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information 
+## S'assurer que la couleur ou l'information sensorielle ne sont pas les seules sources d'information 
 
 
 **Cible&nbsp;:** tout le monde (soleil sur l’écran, impression noir et blanc…) et en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)  
