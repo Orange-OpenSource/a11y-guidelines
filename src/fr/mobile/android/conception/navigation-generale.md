@@ -6,7 +6,7 @@ title: "Navigation générale"
 
 ## Avoir des zones de clic suffisamment grandes
 
-**Cible&nbsp;:** pour tous et en particulier les personnes avec des déficiences motrices  
+**Cible&nbsp;:** pour tous et en particulier les personnes avec des déficiences motrices.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -69,7 +69,7 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (avec les ViewPag
 
 **Exemple valide&nbsp;:**
 
-<img src="../../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et laquelle est affichée." width="300">
+<img src="../../../images/scroll_h1.png" alt="exemple de scroll horizontal accessible, avec des flèches matérialisant le scroll horizontal et des points indiquant le nombre de pages disponibles et celle qui est affichée." width="300">
 
 
 **Exemple non-valide&nbsp;:**
@@ -79,7 +79,7 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (avec les ViewPag
 <br/><br/>
 ## Proposer des textes lisibles
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles, et les personnes dyslexiques.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et les personnes dyslexiques.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
