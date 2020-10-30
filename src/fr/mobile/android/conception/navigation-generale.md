@@ -86,6 +86,8 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (avec les ViewPag
 
 Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une police d'écriture avec de l'empâtement ou que sa taille du texte est trop petite. Il est notamment recommandé d'utiliser une taille minimum de 14sp pour les textes. 
 
+Android propose nativement la police Roboto qui se compose de 16 variantes, dont de nombreuses sans serif qui sont parfaitement adaptées au besoin de lisibilité : roboto regular, roboto thin, roboto medium, etc... En revanche, les polices serif, comme les populaires Times New Roman ou Georgia, ne sont pas adaptées.
+
 **À vérifier&nbsp;:**
 
 - La police d'écriture est sans serif
