@@ -12,7 +12,7 @@ title: "Navigation vocale"
 
 **Description&nbsp;:**
 
-Il est important que les images possèdent une alternative textuelle, qui donne toutes les informations portées par l’image, pour les personnes qui utilisent la navigation vocale.
+Il est important que les images possèdent une alternative textuelle qui donne toutes les informations portées par l’image aux personnes qui utilisent la navigation vocale.
 
 Dans le cas d’une image contenant du texte, l’alternative sera ledit texte. Dans le cas d’une image qui apporte des informations sous la forme d’un graphe, dessin ou autre, l’alternative devra contenir toutes les informations nécessaires présentes dans l’image.
 
@@ -40,7 +40,7 @@ Les alternatives textuelles sont au cœur de l’accessibilité sur mobile. Tand
 
 Il est important de renseigner une alternative textuelle lorsque l’information n’est pas disponible ou suffisante nativement. C’est le cas des composants fournissant de l’information par la couleur, la forme, la position, le son… Sur mobile, tous les composants peuvent recevoir une alternative textuelle, il est donc possible d’enrichir la vocalisation native d’un élément, y compris celle d’un simple texte.  
   
-Certaines images sont régulièrement associées à du texte pour donner une information. C’est le cas notamment des «&nbsp;messages non lus&nbsp;» où une infobulle donne le nombre de messages à lire et où une image donne l’information «&nbsp;message&nbsp;». Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte qui donne toutes les informations nécessaires. Par exemple&nbsp;: «&nbsp;3 messages non lus&nbsp;». On peut également placer cette alternative sur l’image, mais dans ce cas, il faut penser à rendre le texte «&nbsp;invisible&nbsp;» pour le lecteur d’écran.
+Certaines images sont régulièrement associées à du texte pour donner une information. C’est le cas notamment des «&nbsp;messages non lus&nbsp;» où une infobulle donne le nombre de messages à lire et où une image donne l’information «&nbsp;message&nbsp;». Dans ce cas, la solution consiste à placer une alternative textuelle sur le texte avec toutes les informations nécessaires. Par exemple&nbsp;: «&nbsp;3 messages non lus&nbsp;». On peut également placer cette alternative sur l’image, mais dans ce cas, il faut penser à rendre le texte «&nbsp;invisible&nbsp;» pour le lecteur d’écran.
 
 **Exemple&nbsp;:**
 
@@ -144,13 +144,13 @@ Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en
 
 Il est recommandé de regrouper les éléments pour la vocalisation vocale lorsque cela permet de gagner en efficacité et en compréhension.
 
-Par exemple, dans le cadre d'une application de musique, il est plus intéressant regrouper la vocalisation du nom de la musique, du nom de l'artiste et de la durée de celle-ci en un seul bloc, plutôt que de les vocaliser séparément et d'alourdir la navigation.
+Par exemple, dans le cadre d'une application de musique, il est plus intéressant de regrouper la vocalisation du titre de la musique, du nom de l'artiste et de la durée de celle-ci en un seul bloc, plutôt que de les vocaliser séparément et d'alourdir la navigation.
 
-Il faut veiller à trouver la bonne balance entre la navigation et la vocalisation. Vocaliser trop d'informations dans un seul bloc va nuire à l'écoute, l'utilisateur devant patienter avant d'entendre l'info qu'il recherche. Tandis qu'avoir aucun élément regroupé va augmenter la quantité d'éléments naviguable et donc alourdir la navigation. C'est d'autant plus le cas lorsqu'on a des informations multidimensionnelles.
+Il faut veiller à trouver le bon équilibre entre la navigation et la vocalisation. Vocaliser trop d'informations dans un seul bloc va nuire à l'écoute, l'utilisateur devant patienter avant d'entendre l'info qu'il recherche. Tandis qu'avoir aucun élément regroupé va augmenter la quantité d'éléments naviguables et donc alourdir la navigation. C'est d'autant plus le cas lorsqu'on a des informations multidimensionnelles.
 
 **À vérifier&nbsp;:**
-- Les éléments reliés sont groupés au sein d'un même block d'annonce pour la vocalisation
-- Les informations multidimensionnelles respectent une bonne balance entre nombre de blocs et nombre de contenu dans chaque bloc 
+- Les éléments reliés sont groupés au sein d'un même bloc d'annonces pour la vocalisation
+- Les informations multidimensionnelles respectent un bon équilibre entre le nombre de blocs et le nombre de contenus dans chaque bloc 
 
 
 **Exemple valide&nbsp;:**  
@@ -166,9 +166,9 @@ Plusieurs éléments sont ici regroupés pour améliorer la navigation
 
 **Description&nbsp;:**  
 
-Au sein d'un même écran, il arrive parfois que le contenu affiché présente différentes sections, avec pour chacune d'entre elles une entête. Il est possible avec le lecteur d'écran Talkback de naviguer par entêtes, plutôt que de naviguer par éléments. Il est donc bien plus rapide pour un utilisateur de naviguer entre les différentes sections.
+Au sein d'un même écran, il arrive parfois que le contenu affiché présente différentes sections, avec pour chacune d'entre elles une entête. Il est possible avec le lecteur d'écran Talkback de naviguer par entêtes, plutôt que de naviguer par éléments. Il est alors plus rapide pour un utilisateur de naviguer entre les différentes sections.
 
-Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut dans le layout XML aux différents éléments considérés comme tel : **accessibilityHeading**
+Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut dans le layout XML aux différents éléments considérés comme tels : **accessibilityHeading**
 
 **À vérifier&nbsp;:**
 - Les entêtes sont navigables avec le paramètre "Heading" de navigation Talkback 
@@ -183,5 +183,5 @@ Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut d
 Avec l'outil Talkback, l'utilisateur peut opter pour la navigation entre les différents contrôles (bouton, checkbox, champs de saisie, etc...) de l'application, plutôt qu'élément par élément. Cela lui permet d'interagir plus rapidement avec l'application. Il faut donc faire attention aux éléments "custom", qui peuvent ne pas être reconnu comme contrôle.
 
 **À vérifier&nbsp;:**
-- Les éléments interactifs sont tous navigable une fois le paramètre Talkback de navigation par contrôle défini
+- Les éléments interactifs sont tous navigables une fois le paramètre Talkback de navigation par contrôle défini
 
