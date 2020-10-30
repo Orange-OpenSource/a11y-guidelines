@@ -26,6 +26,12 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 - Le format de données des champs "complexe" est indiqué à l'utilisateur
 
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
+
+
 ## Identifier les erreurs de saisie dans le formulaire
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -42,3 +48,8 @@ Il est d'ailleurs recommandé de fournir une suggestion de correction à l'utili
 - Les champs en erreurs sont clairement identifiables
 - Les messages d'erreurs sont explicites
 - Une suggestion de correction est proposée à l'utilisateur
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error identification</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error suggestion</a>

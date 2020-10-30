@@ -31,6 +31,11 @@ Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne
 
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../../images/contraste.png)  
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast minimum</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non text contrast</a>
+
 <br/><br/>
 
 ## S'assurer que la couleur ou l'information sensorielle ne sont pas les seules sources d'information 
@@ -50,3 +55,8 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 **Exemple de passage d’information par la couleur valide et non valide&nbsp;:** 
 
 <img src="../../../images/couleur.png" alt="exemple de passage d’information par la couleur valide et non valide. Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300">
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory characteristics</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of color</a>

@@ -20,6 +20,12 @@ Pour gérer la navigation au focus, il faut s’assurer de 2 choses&nbsp;:
 - Il n'y a que les éléments interactifs qui sont mis en surbrillance avec la navigation au focus
 
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
+
+
 ## Ordonner la navigation au focus
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes motrices qui utilisent un clavier pour naviguer.  
@@ -38,4 +44,11 @@ Pour plus d’information sur la [gestion du focus sous Android](http://develope
 
 - L’ordre de navigation au focus est logique et cohérent.
 - Les éléments sont regroupés lorsqu'ils sont liés (exemple : contenu au sein d'un item cliquable d'une liste)
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+
 

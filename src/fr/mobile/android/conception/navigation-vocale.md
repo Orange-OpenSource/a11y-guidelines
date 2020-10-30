@@ -27,6 +27,11 @@ Les images décoratives en revanche ne nécessitent pas d'alternative textuelle 
 L'image contenant l'information de la chaine est bien vocalisée par le lecteur d'écran.
 <img src="../../../images/image_desc.jpg" alt="exemple d'écran avec une image informative vocalisée" width="300">
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+
 <br/><br/>
 ## Vocaliser tous les éléments signifiants
 
@@ -56,6 +61,10 @@ Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (in
 - Les titres des activités sont vocalisés
 - Les items d'une liste sont vocalisés indépendamment les uns des autres
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+
 <br/><br/>
 ## Gérer l'ordre de lecture avec la navigation vocale 
 
@@ -72,6 +81,11 @@ Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’
 
 **À vérifier&nbsp;:**
 - L'ordre de la vocalisation suit un ordre compréhensible et logique
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
 
 <br/><br/>
 ## Vocaliser le changement de contenu
@@ -135,6 +149,10 @@ Dans l’exemple ci-dessous, le cadre vert correspond au focus de <span lang="en
 <img src="../../../images/ghost.png" alt="exemple d’élément fantôme" width="300">
 
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+
+
 ## Regrouper les éléments 
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -159,6 +177,10 @@ Plusieurs éléments sont ici regroupés pour améliorer la navigation
 <img src="../../../images/regroupement.jpg" alt="exemple d'écran avec des éléments regroupés en une seule vocalisation" width="300">
 
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+
+
 ## Permettre la navigation par entêtes
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -173,6 +195,11 @@ Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut d
 **À vérifier&nbsp;:**
 - Les entêtes sont navigables avec le paramètre "Heading" de navigation Talkback 
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+
 ## Permettre la navigation par contrôles
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -184,4 +211,10 @@ Avec l'outil Talkback, l'utilisateur peut opter pour la navigation entre les dif
 
 **À vérifier&nbsp;:**
 - Les éléments interactifs sont tous navigables une fois le paramètre Talkback de navigation par contrôle défini
+
+
+
+
+
+
 

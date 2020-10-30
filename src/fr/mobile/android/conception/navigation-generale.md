@@ -32,6 +32,12 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 
 <img src="../../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300">
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+
+
 <br/><br/>
 ## Avoir une application utilisable quel que soit l'orientation
 **Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.
@@ -52,6 +58,9 @@ L'application reste utilisable en mode portrait et en mode paysage
 <br/><br/>
 <img src="../../../images/paysage.jpg" alt="exemple d'écran fonctionnel en mode paysage" width="300">
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
 
 <br/><br/>
 ## Proposer une alternative aux actions gestuelles
@@ -76,6 +85,11 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (avec les ViewPag
 
 <img src="../../../images/scroll_h2.png" alt="exemple de scroll horizontal non accessible, sans informations sur l’action de scroll possible." width="300">
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+
 <br/><br/>
 ## Proposer des textes lisibles
 
@@ -93,6 +107,10 @@ Android propose nativement la police Roboto qui se compose de 16 variantes, dont
 - La police d'écriture est sans serif
 - Les textes sont suffisamment grands pour être lus confortablement
 - Il n'y a pas d'italique utilisé
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
 
 <br/><br/>
 ## Utiliser les composants natifs
@@ -124,4 +142,8 @@ Une option d'accessibilité nommée "Time to take action" existe depuis Android 
 **À vérifier&nbsp;:**
 
 - Une UI avec limite de temps a son délai paramétrable
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
 
