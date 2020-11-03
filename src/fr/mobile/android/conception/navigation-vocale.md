@@ -76,7 +76,7 @@ L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs p
 
 **Exemple&nbsp;:**      
 Dans cet exemple, l’ordre de lecture par défaut dépend complètement de l’implémentation et de l’ordre de déclaration des éléments. Dans ce cas-ci&nbsp;: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. Un ordre de lecture plus cohérent serait `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
-<img src="../../../images/order.png" alt="exemple de scroll horizontal accessible" width="300" height="530">
+<img src="../../../images/order.png" alt="exemple d'ordre de lecture pour un clavier de téléphone" width="300" height="245">
 
 
 **À vérifier&nbsp;:**
@@ -137,10 +137,10 @@ Consulter l’article sur l’[utilisation des fragments](https://developer.andr
 
 **Exemples&nbsp;:**
 
-<img src="../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
+<img src="../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400" height="149">
 
 En décomposant l’image&nbsp;:
-- <img src="../../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
+- <img src="../../../images/montagnard.png" alt="exemple d’image décorative" width="256" height="95"> pas de `contentDescription`
 - <img src="../../../images/settings.png" alt="exemple d’icône informative - paramètres" width="48" height="48"> `imageView.setContentDescription("paramètres")`
 - <img src="../../../images/edit.png" alt="exemple d’icône informative - édition" width="48" height="48"> `imageView.setContentDescription("éditer le nom de l’image")`
 

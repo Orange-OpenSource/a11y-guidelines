@@ -26,11 +26,11 @@ L’application [<span lang="en">AccessibilityScanner</span>](https://play.googl
 **Exemple valide&nbsp;:** 
 
 Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone interactive.  
-<img src="../../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300" height="530">
+<img src="../../../images/clic_ok.png" alt="exemple de composant interactif avec une zone d’interaction assez large" width="300" height="55">
 
 **Exemple non-valide&nbsp;:**  
 
-<img src="../../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300" height="530">
+<img src="../../../images/clic_ko.png" alt="exemple de composant interactif avec une zone d’interaction trop petite" width="300" height="55">
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
@@ -56,7 +56,7 @@ L’accès au contenu d’une application ne doit pas dépendre de l’orientati
 L'application reste utilisable en mode portrait et en mode paysage
 <img src="../../../images/portrait.jpg" alt="exemple d'écran fonctionnel en mode portrait" width="300" height="530">
 <br/><br/>
-<img src="../../../images/paysage.jpg" alt="exemple d'écran fonctionnel en mode paysage" width="300" height="530">
+<img src="../../../images/paysage.jpg" alt="exemple d'écran fonctionnel en mode paysage" width="300" height="170">
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
