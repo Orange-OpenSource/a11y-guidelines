@@ -20,7 +20,7 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d’une a
 
 **Exemple non valide&nbsp;:**
 
-<img src="../../../images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300">
+<img src="../../../images/header.png" alt="exemple de titre non pertinent (absence de titre)" width="300" height="530">
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  

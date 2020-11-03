@@ -27,7 +27,7 @@ L'option d'accessibilité d'agrandissement de la taille des textes, présent dan
 
 **Exemple valide&nbsp;:**  
 
-<img src="../../../images/agrandissement.jpg" alt="exemple d'écran avec le texte à 200% sans perte d'information" width="300">
+<img src="../../../images/agrandissement.jpg" alt="exemple d'écran avec le texte à 200% sans perte d'information" width="300" height="530">
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
