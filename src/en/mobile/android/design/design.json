@@ -1,0 +1,38 @@
+﻿{
+  "displayToc": true,
+  "sideNavigationLinks": [
+    	{
+      		"label": General navigation",
+      		"href": "/fr/mobile/android/conception/general-navigation/"
+    	},
+	{
+      		"label": "Vocal navigation",
+      		"href": "/fr/mobile/android/conception/vocal-navigation/"
+    	},
+	{
+      		"label": "Focus navigation",
+      		"href": "/fr/mobile/android/conception/focus-navigation/"
+    	},
+	{
+      		"label": "Headers",
+      		"href": "/fr/mobile/android/conception/headers/"
+    	},
+	{
+      		"label": "Colors and constrasts",
+      		"href": "/fr/mobile/android/conception/colors-and-contrasts/"
+    	},
+	{
+      		"label": "Magnification",
+      		"href": "/fr/mobile/android/conception/magnification/"
+    	},
+	{
+      		"label": "Form",
+      		"href": "/fr/mobile/android/conception/form/"
+    	},
+	{
+      		"label": "Multimedia",
+      		"href": "/fr/mobile/android/conception/multimedia/"
+    	}
+   
+  ]
+}

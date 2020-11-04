@@ -15,7 +15,7 @@ Lier les champs de formulaires avec leurs labels apporte une vocalisation suppl�
   
 Il existe 2 grandes techniques pour réaliser cette liaison&nbsp;:
  - `labelFor`&nbsp;: permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’`id` de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> `android:labelFor` ou le code `setLabelFor`.
- - `hint`&nbsp;: permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les `TextView`. Prend en paramètre l’`id` d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> `android:hint` ou le code `setHint`.
+ - `hint`&nbsp;: permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les `EditText`. Prend en paramètre l’`id` d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> `android:hint` ou le code `setHint`.
 
 De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhension du formulaire, les différents champs obligatoires, le format attendu, ou encore les erreurs commises sur de potentiels champs.
 
