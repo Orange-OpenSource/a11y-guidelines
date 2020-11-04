@@ -130,13 +130,13 @@ It's **highly recommended** to know the basic gestures before activating this fe
      id="VoiceOver-iOS13"
      role="tabpanel">
     
-![](../../images/ios-test-VoiceOver_iOS13.png)
+![](../../images/ios-test-VO_iOS13.png)
 </div>
 <div class="tab-pane" 
      id="VoiceOver-iOS12" 
      role="tabpanel" >
     
-![](../../images/ios-test-VoiceOver_iOS12.png)
+![](../../images/ios-test-VO_iOS12.png)
 </div></div>
 
 <br>Don't believe that every element must be absolutely vocalized one after another: that's definitely the proper way to get a VoiceOver implementation that is anything but effective !

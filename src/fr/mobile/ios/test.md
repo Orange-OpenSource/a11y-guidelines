@@ -135,13 +135,15 @@ Il est donc **très fortement recommandé** de connaître au moins les gestes de
      id="VoiceOver-iOS13"
      role="tabpanel">
     
-![](../../images/ios-test-VoiceOver_iOS13.png)
+![](../../images/ios-test-VO_iOS13.png)
+
 </div>
 <div class="tab-pane" 
      id="VoiceOver-iOS12" 
      role="tabpanel" >
     
-![](../../images/ios-test-VoiceOver_iOS12.png)
+![](../../images/ios-test-VO_iOS12.png)
+
 </div></div>
 
 <br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif&nbsp;!
