@@ -680,6 +680,16 @@ function localizeHTML() {
 		eleToLocalize.setAttribute('aria-label', langVallydette.title[key]);
 	});
 	
+	Object.keys(langVallydette.ariaLabelOnly).forEach(function (key) {
+		eleToLocalize = document.getElementById(key);
+		eleToLocalize.setAttribute('aria-label', langVallydette.ariaLabelOnly[key]);
+	});
+	
+	Object.keys(langVallydette.url).forEach(function (key) {
+		eleToLocalize = document.getElementById(key);
+		eleToLocalize.setAttribute('href', langVallydette.url[key]);
+	});
+	
 	utils.setPageTitle(langVallydette.auditNameWcag);
 	
 }

@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -167,43 +167,97 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#2019-large-content-viewer" class="dropdown-item text-wrap">2019 - Large Content Viewer</a><a href="#2019-quelques-enseignements-en-accessibilite" class="dropdown-item text-wrap">2019 - Quelques enseignements en accessibilité</a><a href="#2018-fournir-une-experience-exceptionnelle-en-accessibilite" class="dropdown-item text-wrap">2018 - Fournir une expérience exceptionnelle en accessibilité</a><a href="#2018-utiliser-une-voix-synthetisee" class="dropdown-item text-wrap">2018 - Utiliser une voix synthétisée</a><a href="#2017-les-nouveautes-en-accessibilite" class="dropdown-item text-wrap">2017 - Les nouveautés en accessibilité</a><a href="#2017-application-du-dynamic-type" class="dropdown-item text-wrap">2017 - Application du Dynamic Type</a><a href="#2016-les-nouveautes-en-accessibilite" class="dropdown-item text-wrap">2016 - Les nouveautés en accessibilité</a><a href="#2016-audit-dune-app-en-accessibilite" class="dropdown-item text-wrap">2016 - Audit d&#39;une app en accessibilité</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>WWDC : World Wide Developers Conference</h1>
-<p>Cette partie regroupe des <a href="https://developer.apple.com/videos/">présentations faites à la WWDC</a> et liées à l'accessibilité.<br>
-<br>Chacune de ces présentations est détaillée et comprend une description de chaque thème qui fait référence à une indication temporelle au sein de la vidéo.<br>
-<br><br>La plupart des illustrations proviennent des supports de présentations fournies par Apple et sont disponibles dans la partie <code>Resources</code> de l'onglet <code>Overview</code> propre à chaque vidéo.<br>
-<br><strong>L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation</strong>.<br><br><br></p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC : World Wide Developers Conference</h1>
+<p>Cette partie regroupe des <a href="https://developer.apple.com/videos/">présentations faites à la WWDC</a> et liées à l'accessibilité.</p>
+<p>Chacune de ces présentations est détaillée et comprend une description de chaque thème qui fait référence à une indication temporelle au sein de la vidéo.</p>
+<p>La plupart des illustrations proviennent des supports de présentations fournies par Apple et sont disponibles dans la partie <code>Resources</code> de l'onglet <code>Overview</code> propre à chaque vidéo.</p>
+<p><strong>L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation</strong>.<br>
+<br><br><br></p>
 <h2 id="2019-large-content-viewer"><a href="2019/261/">2019 - Large Content Viewer</a> <a class="header-anchor" href="#2019-large-content-viewer" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Cette courte vidéo concerne la fonctionnalité <strong>Large Content Viewer</strong> apparue avec iOS 11 et les nouveautés iOS 13 associées.<br>
-<br><a href="2019/261/"><img style="max-width: 700px; height: auto;" alt="Accès aux quelques enseignements en accessibilité." src="../../images/iOSdev/wwdc19-261.png" /><br><br><br></p>
+<a href="2019/261/"></p>
+<p><img src="../../images/iOSdev/wwdc19-261.png" alt="Accès aux quelques enseignements en accessibilité." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2019-quelques-enseignements-en-accessibilite"><a href="2019/">2019 - Quelques enseignements en accessibilité</a> <a class="header-anchor" href="#2019-quelques-enseignements-en-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Cette session regroupe quatre courtes interventions toutes liées à l'accessibilité.<br>
-<br><a href="2019/"><img style="max-width: 800px; height: auto;" alt="Accès aux quelques enseignements en accessibilité." src="../../images/iOSdev/wwdc19-000.png" /><br><br><br></p>
+<a href="2019/"></p>
+<p><img src="../../images/iOSdev/wwdc19-000.png" alt="Accès aux quelques enseignements en accessibilité." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2018-fournir-une-experience-exceptionnelle-en-accessibilite"><a href="2018/230/">2018 - Fournir une expérience exceptionnelle en accessibilité</a> <a class="header-anchor" href="#2018-fournir-une-experience-exceptionnelle-en-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Présentation de toutes les fonctionnalités qui vont permettre de créer une application accessible répondant parfaitement aux attentes des utilisateurs.<br>
-<br>Le détail de leurs mises en oeuvre est exposé aux développeurs par le biais d'une démonstration de façon à saisir la logique à suivre quel que soit le contexte.<br>
-<br><a href="2018/230/"><img style="max-width: 700px; height: auto;" alt="Accès à fournir une expérience exceptionnelle en accessibilité." src="../../images/iOSdev/wwdc18-230.png" /><br><br><br></p>
+<p>Présentation de toutes les fonctionnalités qui vont permettre de créer une application accessible répondant parfaitement aux attentes des utilisateurs.</p>
+<p>Le détail de leurs mises en oeuvre est exposé aux développeurs par le biais d'une démonstration de façon à saisir la logique à suivre quel que soit le contexte.<br>
+<a href="2018/230/"></p>
+<p><img src="../../images/iOSdev/wwdc18-230.png" alt="Accès à fournir une expérience exceptionnelle en accessibilité." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2018-utiliser-une-voix-synthetisee"><a href="2018/236/">2018 - Utiliser une voix synthétisée</a> <a class="header-anchor" href="#2018-utiliser-une-voix-synthetisee" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Cette très courte vidéo présente les éléments principaux à mettre en oeuvre pour implémenter une vocalisation synthétisée.<br>
-<br><a href="2018/236/"><img style="max-width: 466px; height: auto;" alt="Accès à utiliser une voix synthétisée." src="../../images/iOSdev/wwdc18-236.png" /><br><br><br></p>
+<a href="2018/236/"></p>
+<p><img src="../../images/iOSdev/wwdc18-236.png" alt="Accès à utiliser une voix synthétisée." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2017-les-nouveautes-en-accessibilite"><a href="2017/215/">2017 - Les nouveautés en accessibilité</a> <a class="header-anchor" href="#2017-les-nouveautes-en-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Présentation des nouvelles fonctionnalités d'accessibilité iOS 11 en associant la pratique de l'utilisateur à la conception du développeur.<br>
-<br><a href="2017/215/"><img style="max-width: 700px; height: auto;" alt="Accès aux nouveautés en accessibilité 2017." src="../../images/iOSdev/wwdc17-215.png" /><br><br><br></p>
+<a href="2017/215/"></p>
+<p><img src="../../images/iOSdev/wwdc17-215.png" alt="Accès aux nouveautés en accessibilité 2017." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2017-application-du-dynamic-type"><a href="2017/245/">2017 - Application du Dynamic Type</a> <a class="header-anchor" href="#2017-application-du-dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Permettre à l'utilisateur de déterminer la taille de texte nécessaire à son confort visuel et adapter son application à cette modification sont des éléments essentiels que le <code>Dynamic Type</code> met en avant.<br>
-<br>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le <code>Dynamic Type</code> ainsi qu'une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.<br>
-<br><a href="2017/245/"><img style="max-width: 700px; height: auto;" alt="Accès à l'application du dynalic type." src="../../images/iOSdev/wwdc17-245.png" /><br><br><br></p>
+<p>Permettre à l'utilisateur de déterminer la taille de texte nécessaire à son confort visuel et adapter son application à cette modification sont des éléments essentiels que le <code>Dynamic</code> <code>Type</code> met en avant.</p>
+<p>Cette vidéo propose à la fois une approche théorique pour bien comprendre les possibilités offertes par le <code>Dynamic</code> <code>Type</code> ainsi qu'une partie purement pratique au niveau développeur pour lui éviter de tomber dans les écueils classiques de programmation.<br>
+<a href="2017/245/"></p>
+<p><img src="../../images/iOSdev/wwdc17-245.png" alt="Accès à l'application du dynamic type." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2016-les-nouveautes-en-accessibilite"><a href="2016/202/">2016 - Les nouveautés en accessibilité</a> <a class="header-anchor" href="#2016-les-nouveautes-en-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Présentation des nouvelles fonctionnalités d'accessibilité iOS, MacOS, tvOS et WatchOS en associant la pratique de l'utilisateur à la conception du développeur.<br>
-<br><a href="2016/202/"><img style="max-width: 700px; height: auto;" alt="Accès aux nouveautés en accessibilité 2016." src="../../images/iOSdev/wwdc16-202.png" /><br><br><br></p>
+<a href="2016/202/"></p>
+<p><img src="../../images/iOSdev/wwdc16-202.png" alt="Accès aux nouveautés en accessibilité 2016." class="img-fluid"><br>
+<br><br><br></p>
 <h2 id="2016-audit-dune-app-en-accessibilite"><a href="2016/407/">2016 - Audit d'une app en accessibilité</a> <a class="header-anchor" href="#2016-audit-dune-app-en-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Après un rappel sur le fonctionnement de <span lang="en">VoiceOver</span> au niveau programmatique, cette présentation va détailler les différentes fonctionnalités proposées par l'outil <span lang="en">Accessibility Inspector</span> de Xcode en s'appuyant sur un exemple très simple pour une mise en situation concrète.<br>
-<br><a href="2016/407/"><img style="max-width: 700px; height: auto;" alt="Accès à l'audit d'une app en accessibilité" src="../../images/iOSdev/wwdc16-407.png" /></p>
+<a href="2016/407/"></p>
+<p><img src="../../images/iOSdev/wwdc16-407.png" alt="Accès à l'audit d'une app en accessibilité." class="img-fluid"></p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#2019-large-content-viewer" class="nav-link text-muted bg-200">2019 - Large Content Viewer</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2019-quelques-enseignements-en-accessibilite" class="nav-link text-muted bg-200">2019 - Quelques enseignements en accessibilité</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2018-fournir-une-experience-exceptionnelle-en-accessibilite" class="nav-link text-muted bg-200">2018 - Fournir une expérience exceptionnelle en accessibilité</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2018-utiliser-une-voix-synthetisee" class="nav-link text-muted bg-200">2018 - Utiliser une voix synthétisée</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2017-les-nouveautes-en-accessibilite" class="nav-link text-muted bg-200">2017 - Les nouveautés en accessibilité</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2017-application-du-dynamic-type" class="nav-link text-muted bg-200">2017 - Application du Dynamic Type</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2016-les-nouveautes-en-accessibilite" class="nav-link text-muted bg-200">2016 - Les nouveautés en accessibilité</a>
+          </li><li class="nav-item position-relative">
+            <a href="#2016-audit-dune-app-en-accessibilite" class="nav-link text-muted bg-200">2016 - Audit d&#39;une app en accessibilité</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
