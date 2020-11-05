@@ -78,7 +78,8 @@
 		"status4": "not tested",
 		"filters": "Filters",
 		"footerTxt1": "Documentation under <a href=\"https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE\">licence CC BY SA 3.0</a>.", 
-		"footerTxt2": "The Orange logo as well as certain images and screenshots are the property of Orange: Copyright © 2016 Orange SA All rights reserved." 
+		"footerTxt2": "The Orange logo as well as certain images and screenshots are the property of Orange: Copyright © 2016 Orange SA All rights reserved.",
+		"link-about-txt": "About"
 	},
 	"title": {
 		"btnImport": "import an audit (json)",
@@ -86,6 +87,13 @@
 		"btnChecklistName": "Edit the audit name",
 		"btnPageName": "Edit the page name",
 		"btnDelPage": "Delete the page",
-		"btnLocalStorage": "Recover the last audit"
+		"btnLocalStorage": "Recover the last audit",
+		"link-about": "About (new window)"
+	},
+	"ariaLabelOnly": {
+		"nav-lang": "About and languages menu"
+	},
+	"url": {
+		"link-about": "https://a11y-guidelines.orange.com/en/web/wcag-audit/"
 	}
 }
