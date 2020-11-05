@@ -1,5 +1,5 @@
 ---
-title: "Qu'est-ce que l'accessibilité numérique"
+title: "Accueil"
 layout: "templates/home"
 cardNavigationTitle: "Nos recommandations"
 ---

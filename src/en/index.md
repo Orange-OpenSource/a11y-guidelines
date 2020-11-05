@@ -1,5 +1,5 @@
 ---
-title: "What is digital accessibility"
+title: "Home"
 layout: "templates/home"
 cardNavigationTitle: "Our recommendations"
 ---
