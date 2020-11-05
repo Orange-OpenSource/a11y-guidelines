@@ -39,7 +39,7 @@ module.exports = {
     },
     lastPosts: {
       title: 'Last posts',
-      seeAll: 'See all'
+      seeAll: 'See all posts'
     },
     headingsAnchor: {
       label: 'Anchor link'
@@ -93,7 +93,7 @@ module.exports = {
     },
     lastPosts: {
       title: 'Derniers articles',
-      seeAll: 'Voir tout'
+      seeAll: 'Voir tous les articles'
     },
     headingsAnchor: {
       label: 'Lien pour ancrage'
