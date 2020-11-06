@@ -3,35 +3,35 @@
   "sideNavigationLinks": [
     	{
       		"label": "General navigation",
-      		"href": "/fr/mobile/android/conception/general-navigation/"
+      		"href": "/en/mobile/android/design/general-navigation/"
     	},
 	{
       		"label": "Vocal navigation",
-      		"href": "/fr/mobile/android/conception/vocal-navigation/"
+      		"href": "/en/mobile/android/design/vocal-navigation/"
     	},
 	{
       		"label": "Focus navigation",
-      		"href": "/fr/mobile/android/conception/focus-navigation/"
+      		"href": "/en/mobile/android/design/focus-navigation/"
     	},
 	{
       		"label": "Headers",
-      		"href": "/fr/mobile/android/conception/headers/"
+      		"href": "/en/mobile/android/design/headers/"
     	},
 	{
       		"label": "Colors and constrasts",
-      		"href": "/fr/mobile/android/conception/colors-and-contrasts/"
+      		"href": "/en/mobile/android/design/colors-and-contrasts/"
     	},
 	{
       		"label": "Magnification",
-      		"href": "/fr/mobile/android/conception/magnification/"
+      		"href": "/en/mobile/android/design/magnification/"
     	},
 	{
       		"label": "Form",
-      		"href": "/fr/mobile/android/conception/form/"
+      		"href": "/en/mobile/android/design/form/"
     	},
 	{
       		"label": "Multimedia",
-      		"href": "/fr/mobile/android/conception/multimedia/"
+      		"href": "/en/mobile/android/design/multimedia/"
     	}
    
   ]

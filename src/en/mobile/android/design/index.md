@@ -1,13 +1,13 @@
 ﻿---
-title: "Les critères incontournables sous Android pour la conception"
+title: "Android's essential criteria for design"
 ---
 
-# Les critères incontournables sous Android pour la conception
+# Android's essential criteria for design
 
-Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des captures d’exemples réels.
+This guide presents the different accessibility criteria required to obtain an accessible Android application. Each criterion is presented by explaining for whom it is important, when it can be implemented, and the accessibility rule that results from it.
 
-Nous vous invitons à installer l’application [mDAN](../../mdan/) pour obtenir des exemples fonctionnels avec <span lang="en">TalkBack</span>, le lecteur d’écran d’Android, et d’autres outils d’assistance. Pour plus d’information sur l’outil (comment l’activer, comment s’en servir…) nous vous invitons à vous référer à la [section concernant <span lang="en">TalkBack</span>](../talkback/).
+We invite you to install the [mDAN](../../mdan/) application to get functional examples with TalkBack, Android screen reader, and other support tools. For more information about the tool (how to activate it, how to use it...) please refer to the [section about TalkBack](../talkback/).
 
-Pour le web, le niveau d’accessibilité demandé à toute interface <abbr>HTML</abbr> par le groupe Orange est **le respect des critères du niveau AA des <span lang="en">Web Content Accessibility Guidelines</span> (<abbr>WCAG</abbr>) 2.1, sans point bloquant** suite à un test utilisateur d’aide technique pour les principaux scénarios d’utilisation des fonctionnalités du site ou de l’application. Pour les applications mobiles natives, une transposition de ces critères et le respect des recommandations de la plateforme Android en terme d’accessibilité sont demandés, voir ces [recommandations](https://developer.android.com/guide/topics/ui/accessibility/). L’objet de ces pages est d’en faire un « digest » sans s’y substituer.
+For the web, the level of accessibility required of any <abbr>HTML</abbr> interface by the Orange Group is **compliance with level AA criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without any blocking points** following a technical support user test for the main scenarios of use of application functionalities. For native mobile applications, a transposition of these criteria and compliance with the Android platform recommendations in terms of accessibility are required, see these [recommendations](https://developer.android.com/guide/topics/ui/accessibility/).
 
-Si l'application mobile est pour Orange, il est nécessaire de suivre les recommandations de design du groupe. Le respect de la charte Orange pour Android, notamment dans l'utilisation des couleurs est un prérequis. Nous vous invitons à vous référer à la [guideline accessibilité du groupe Orange](https://design.orange.com/fr/guidelines/accessibility/) et à [la charte design Android du groupe](https://design.orange.com/fr/guidelines/android/)
+If the mobile application is for Orange, it is necessary to follow the group's design recommendations. The respect of the Orange charter for Android, especially in the use of colors is a prerequisite. We invite you to refer to the [Orange group's accessibility guideline](https://design.orange.com/fr/guidelines/accessibility/) and to [the group's Android design charter](https://design.orange.com/fr/guidelines/android/).
