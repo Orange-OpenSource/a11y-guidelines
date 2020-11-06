@@ -15,7 +15,7 @@ The text size must be able to be multiplied by 2 (zoom the text to 200% from the
 
 From the design phase, it must be ensured that the content is adaptive and that the text containers adjust to the text zoom. 
 
-Furthermore, certain design choices may facilitate the implementation during development, so it is important to think about it from the start.
+Furthermore, design choices may facilitate the implementation during development, so it is important to think about it from the start.
 
 **To be verified&nbsp;:**
 

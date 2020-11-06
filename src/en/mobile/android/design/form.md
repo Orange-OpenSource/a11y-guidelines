@@ -14,8 +14,8 @@ title: "Form"
 Linking form fields with their labels provides additional vocalisation that makes the field easier for the user to understand.
   
 There are 2 techniques to do this linkage:
- - `labelFor` &nbsp;: allows to indicate that a label is linked to another view.  
- - `hint`&nbsp;: allows to add an example text when the text field is empty. This method only works for `EditText`.
+ - `labelFor` &nbsp;: indicate that a label is linked to another view.  
+ - `hint`&nbsp;: add an example text when the text field is empty. This method only works for `EditText`.
 
 It is essential to indicate to the user, for a good understanding of the form, the required fields, the expected format, or errors made on fields.
 

@@ -12,17 +12,17 @@ Ensure that the colors used do not cause problems for the user.
 **When&nbsp;:**  from the design phase and during development.
 
 **Description&nbsp;:**
-The level of contrast between the text or a graphic component and the background must be sufficiently high.
+The contrast level between the text (or a graphic component) and the background must be sufficiently high.
 Insufficient contrast will be detrimental to users with visual difficulties or those in a very bright environment.
 
 **To be verified&nbsp;:**
--- Make sure the contrast between the background color and the text is :
+- Make sure the contrast between the background color and the text is :
 	- More than 4.5:1 for small texts
 	- More than 3:1 for large texts, or for bold texts
 - Ensure that the colors used in interface components, or information-bearing graphic elements, have a 3:1 contrast to the background. This includes buttons, radio buttons, checkboxes, selection lists, focus, progress bars, etc.
 
 **Tool&nbsp;:**
-The [Colour Constrast Analyzer] application (http://www.paciellogroup.com/resources/contrastanalyser/) allows you to quickly measure color contrast levels (free for Mac and Windows).  
+The [Colour Constrast Analyzer](http://www.paciellogroup.com/resources/contrastanalyser/) application allows you to quickly measure color contrast levels (free for Mac and Windows).  
 
 The [AccessibilityScanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=fr) application allows you to directly test your applications on certain accessibility criteria, especially colors. Available from Android 6.
 

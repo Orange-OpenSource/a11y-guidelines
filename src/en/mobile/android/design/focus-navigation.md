@@ -6,17 +6,20 @@ title: "Focus navigation"
 
 ## Access to interactive elements
 
+**Target&nbsp;:** everyone and especially people with motor disabilities who use a keyboard to navigate.  
+**When&nbsp;:** during design and development.
+
 Focus navigation is very useful for people with motor or cognitive difficulties. This navigation makes it possible to move from one interactive element to another (element on which an action can be performed). It corresponds to the navigation that can be done with a Bluetooth keyboard linked to a smartphone.
 
 To manage focus navigation, there are 2 things to check:
-- Allow focus on interactive elements: focus navigation only concerns interactive elements. If, for example, your application has custom views that can be clicked on, you must make sure that these views are focusable by setting the `focusable` attribute to `true`.
+- Allow focus on interactive elements (focus navigation only concerns interactive elements). If, for example, your application has custom views that can be clicked on, you must make sure that these views are focusable by setting the `focusable` attribute to `true`.
 - Manage the focus display: any interactive element can receive the focus, so the `state_focused` must be defined and allow to easily distinguish which element has the focus.
 
 **To be verified&nbsp;:**
 
 - With the focus navigation, it is possible to visually determine which element has the focus.
 - All the features are accessible with the focus navigation.
-- All interactive elements are highlighted with the navigation in focus
+- All interactive elements are highlighted with the focus navigation. 
 - Only the interactive elements are highlighted with the focus navigation.
 
 
@@ -33,9 +36,9 @@ To manage focus navigation, there are 2 things to check:
 
 **Description&nbsp;:**
 
-Focus navigation, to be understandable and easy to use, must provide a coherent and comprehensible order of navigation. It is important to manage the order of the focus: through the options `nextFocusDown`, `nextFocusUp`, `nextFocusRight` and `nextFocusLeft`, you can specify which view should take the focus according to the use of the tab, down, up, right and left arrows.
+Focus navigation, to be understandable and easy to use, must provide a coherent and comprehensible order of navigation. It is important to manage the focus order : through the options `nextFocusDown`, `nextFocusUp`, `nextFocusRight` and `nextFocusLeft`, you can specify which view should take the focus according to the use of the tab, down, up, right and left arrows.
 
-Note: `nextFocusDown`, `nextFocusUp`, `nextFocusRight`, `nextFocusLeft`, `focusable` and other focus management options are available directly in the <abbr>XML</abbr> or in the code through the corresponding methods.
+**Note**: `nextFocusDown`, `nextFocusUp`, `nextFocusRight`, `nextFocusLeft`, `focusable` and other focus management options are available directly in the <abbr>XML</abbr> or in the code through the corresponding methods.
   
 For more information on [focus management on Android](http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav).
 
