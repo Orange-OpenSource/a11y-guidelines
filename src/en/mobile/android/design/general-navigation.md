@@ -6,12 +6,12 @@ title: "General navigation"
 
 ## Have sufficiently large click areas
 
-**Target&nbsp;:** for all and in particular for people with motor disabilities.  
+**Target&nbsp;:** everyone and in particular for people with motor disabilities.  
 **When&nbsp;:** from the design phase and during development.
 
 **Description&nbsp;:**  
 
-Insufficient size for a clickable element can cause difficulties to interact with the application. Each clickable element of the application must be of sufficient size for its area of action.
+Insufficient size for a clickable element can make it difficult to interact with the application. Each clickable element of the application must be of sufficient size.
 
 **To be verified&nbsp;:**
 
@@ -21,11 +21,11 @@ Insufficient size for a clickable element can cause difficulties to interact wit
 
 **Tool&nbsp;:**
 
-You can directly test your applications on certain accessibility criteria and in particular the size of the click zones with the [AccessibilityScanner] application (https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor). Available from Android 6. 
+You can directly test your applications on certain accessibility criteria and in particular the size of the click zones with the [AccessibilityScanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor) application. Available from Android 6. 
 
 **Valid example&nbsp;:** 
 
-In the examples below, the black border corresponds to the size of the interactive area.  
+In the examples below, the frame with border corresponds to the size of the interactive area.  
 <img src="../../../images/clic_ok.png" alt="example of an interactive component with a fairly large interaction area" width="300" height="55">
 
 **Invalid example&nbsp;:**  
@@ -48,12 +48,12 @@ In the examples below, the black border corresponds to the size of the interacti
 Content access of an application should not depend on the screen orientation (portrait and landscape).
 
 **To be verified&nbsp;:**
-- The use of standard graphic components that support both modes (fragments...), or define a specific `design` for each orientation.
-- The application is not locked in one mode (portrait or landscape).
+- The use of standard graphic components that support both modes (fragments...), or define a specific design for each orientation.
+- The application is not locked in one orientation (portrait or landscape).
 
 **Valid example&nbsp;:**  
 
-The application can still be used in both portrait and landscape mode.
+The application can be used in both portrait and landscape mode.
 <img src="../../../images/portrait.jpg" alt="example of a valid screen in portrait mode" width="300" height="530">
 <br/><br/>
 <img src="../../../images/paysage.jpg" alt="example of a valid screen in landscape mode" width="300" height="170">
@@ -91,16 +91,16 @@ Navigating between several pages using a horizontal swipe (especially with ViewP
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
 
 <br/><br/>
-## Propose readable texts
+## Have readable texts
 
 **Target&nbsp;:** everyone and in particular people with visual impairments and dyslexics.  
 **When&nbsp;:** from the design phase and during development.
 
 **Description&nbsp;:**
 
-The text can cause readability problems when the text has a font with impasto or is too small. In particular, a minimum text size of 14sp is recommended. 
+The text can cause readability problems when it is too small or the font has impasto : a minimum text size of 14sp is recommended. 
 
-Android natively offers the Roboto font which consists of 16 variants, including many sans serif that are perfectly adapted to the readability need : roboto regular, roboto thin, roboto medium, etc... Serif fonts, such as the popular Times New Roman or Georgia, are not suitable.
+Android natively offers the Roboto font which has 16 variants, including many sans serif that are perfectly adapted to the readability need : roboto regular, roboto thin, roboto medium, etc... Serif fonts, such as the popular Times New Roman or Georgia, are not suitable.
 
 **To be verified&nbsp;:**
 
