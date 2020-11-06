@@ -1,7 +1,9 @@
 name: Publish website
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - master
 
 jobs:
   build_and_deploy:
