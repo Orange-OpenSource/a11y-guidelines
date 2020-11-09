@@ -42,3 +42,9 @@ Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de 
 &lt;EditText
    android:id="@+id/usernameEntry" ... /&gt;
 </code></pre>
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
+

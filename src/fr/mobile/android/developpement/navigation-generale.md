@@ -56,6 +56,12 @@ Exemple avec padding &nbsp;:
     android:margin="8dp"
 &#47;&gt;</code></pre>
 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+
+
 <br/><br/>
 
 ## Proposer des textes lisibles
@@ -104,6 +110,10 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
 &#47;&gt;</code></pre>
 
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
+
+
 <br/><br/>
 
 ## Rendre adaptable les UI avec limite de temps
@@ -122,6 +132,10 @@ Une option d'accessibilité nommée **Time to take action** existe depuis Androi
 **À vérifier&nbsp;:**
 
 - Une UI avec limite de temps a son délai paramétrable
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
+
 
 ## Événements d’accessibilité & <i lang="en">custom views</i>
 

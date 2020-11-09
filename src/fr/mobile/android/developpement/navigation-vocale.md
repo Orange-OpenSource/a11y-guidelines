@@ -31,6 +31,11 @@ android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
 myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
 
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+
+
 <br/><br/>
 ## Vocaliser tous les éléments signifiants
 
@@ -70,6 +75,11 @@ containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES /
 mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information
 infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //On masque le texte pour éviter une redondance d’information
 </code></pre>
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+
 
 <br/><br/>
 
@@ -181,6 +191,10 @@ Il faut indiquer l’état et la nature des onglets (non internationalisé)&nbsp
         }
     }
 </code></pre>
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+
   
 <br/><br/>
   
@@ -218,6 +232,11 @@ voldownButton.accessibilityTraversalAfter = volup.id
 chaineplusButton.accessibilityTraversalAfter = voldown.id
 chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 </code></pre>
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+
 
 <br/><br/>
 ## Vocaliser le changement de contenu
@@ -313,6 +332,10 @@ En décomposant l’image&nbsp;:
         ... /&gt;
 </code></pre>
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+
+
 ## Regrouper les éléments 
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -347,6 +370,9 @@ Il faut veiller à trouver la bonne balance entre la navigation et la vocalisati
         android:text="@string/my_songwriter" /&gt;
 &lt;/ConstraintLayout&gt;</code></pre>
 
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+
 
 ## Gérer la navigation par entêtes
 
@@ -368,6 +394,11 @@ Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut d
 android:id="@+id/myTextLevel1viewId"
 android:accessibilityHeading="true"
 &#47;&gt;</code></pre>
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+
 
 ## Masquer des éléments à l’accessibilité  
 
