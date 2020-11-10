@@ -39,7 +39,7 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 
 
 <br/><br/>
-## Avoir une application utilisable quel que soit l'orientation
+## Avoir une application utilisable quelle que soit l'orientation
 **Cible&nbsp;:** tout le monde et en particulier les personnes avec des déficiences visuelles ou motrices.
 
 **Quand&nbsp;:** lors de la conception et lors du développement.
