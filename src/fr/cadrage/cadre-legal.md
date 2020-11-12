@@ -21,7 +21,7 @@ Le décret publié le 24 juillet 2019 précise les obligations d’accessibilit�
 - Former l’ensemble des parties prenantes du numérique : décideur, acheteur, chef de produit, designer, développeur, qualifieurs, communicants… 
 
 **Les obligations au niveau de chaque service numérique :**
-- Déclaration d’accessibilité précisant le niveau de conformité́, les non conformités, un moyen pour l’utilisateur de signaler un problème
+- Déclaration d’accessibilité précisant le niveau de conformité, les non conformités, un moyen pour l’utilisateur de signaler un problème
 - Conformité à la norme internationale WCAG 2.1 niveau AA (ou bones pratiques de la technologie utilisée)
 
 **Applicable à partir du** 
