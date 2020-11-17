@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -172,80 +172,132 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#uses-0048" class="dropdown-item text-wrap">Uses (00:48)</a><a href="#basics-0203" class="dropdown-item text-wrap">Basics (02:03)</a><a href="#avspeechsynthesizerdelegate-0320" class="dropdown-item text-wrap">AVSpeechSynthesizerDelegate (03:20)</a><a href="#demo-0411" class="dropdown-item text-wrap">Demo (04:11)</a><a href="#choosing-the-right-voice-0431" class="dropdown-item text-wrap">Choosing the right voice (04:31)</a><a href="#speech-rate-0532" class="dropdown-item text-wrap">Speech rate (05:32)</a><a href="#pitch-and-volume-0615" class="dropdown-item text-wrap">Pitch and volume (06:15)</a><a href="#phonetics-0654" class="dropdown-item text-wrap">Phonetics (06:54)</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>WWDC 2018 : Making iOS talk with AVSpeechSynthesizer</h1>
-<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2018/236/">session 236</a>) aims at highlighting the essential elements to be implemented in order to <strong>use a synthesized speech thanks to AVSpeechSynthesizer</strong>.<br>
-<br><img style="max-width: 466px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236.png" /><br>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC 2018 : Making iOS talk with AVSpeechSynthesizer</h1>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2018/236/">session 236</a>) aims at highlighting the essential elements to be implemented in order to <strong>use a synthesized speech thanks to AVSpeechSynthesizer</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc18-236.png" alt="" class="img-fluid"><br>
 <br><br>Various contents and their video timelapse are indicated hereunder:</p>
 <ul>
-<li><a href="#Uses">Uses</a> (00:48)</li>
-<li><a href="#Basics">Basics</a> (02:03)</li>
-<li><a href="#AVSpeechSynthesizerDelegate">AVSpeechSynthesizerDelegate</a> (03:20)</li>
-<li><a href="#Demo">Demo</a> (04:11)</li>
-<li><a href="#TheRightVoice">Choosing the right voice</a> (04:31)</li>
-<li><a href="#SpeechRate">Speech rate</a> (05:32)</li>
-<li><a href="#PitchAndVolume">Pitch and volume</a> (06:15)</li>
-<li><a href="#IPA">Phonetics</a> (06:54)</li>
+<li>
+<p><a href="#uses-0048">Uses</a> (00:48)</p>
+</li>
+<li>
+<p><a href="#basics-0203">Basics</a> (02:03)</p>
+</li>
+<li>
+<p><a href="#avspeechsynthesizerdelegate-0320">AVSpeechSynthesizerDelegate</a> (03:20)</p>
+</li>
+<li>
+<p><a href="#demo-0411">Demo</a> (04:11)</p>
+</li>
+<li>
+<p><a href="#choosing-the-right-voice-0431">Choosing the right voice</a> (04:31)</p>
+</li>
+<li>
+<p><a href="#speech-rate-0532">Speech rate</a> (05:32)</p>
+</li>
+<li>
+<p><a href="#pitch-and-volume-0615">Pitch and volume</a> (06:15)</p>
+</li>
+<li>
+<p><a href="#phonetics-0654">Phonetics</a> (06:54)</p>
+</li>
 </ul>
 <p>Thereafter, the selection of a title will give rise to the video playback on the Apple website directly at the proper moment.<br>
 <br><br></p>
-<p><a name="Uses"></a></p>
 <h2 id="uses-0048"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=48">Uses (00:48)</a> <a class="header-anchor" href="#uses-0048" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The wide range of possible use cases offered by this feature are introduced in this section.<br>
 <br><br></p>
-<p><a name="Basics"></a></p>
 <h2 id="basics-0203"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=123">Basics (02:03)</a> <a class="header-anchor" href="#basics-0203" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Using a synthesized speech first implies a <strong><code>AVSpeechSynthesizer</code> instance creation</strong> that must be retained until the speech is done.<br>
-<br><img style="max-width: 400px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-Basics_1.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-Basics_1.png" alt="" class="img-fluid"><br>
 <br>Then <strong>create an utterance</strong> that must be provided to the previous instance.<br>
-<br><img style="max-width: 500px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-Basics_2.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-Basics_2.png" alt="" class="img-fluid"><br>
 <br>In this case, an audio session is automatically activated and may be used together with the speech synthesis.<br>
-<br><img style="max-width: 850px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-Basics_3.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-Basics_3.png" alt="" class="img-fluid"><br>
 <br>This session must be explicitly deactivated after speech is done.<br>
 <br><br></p>
-<p><a name="AVSpeechSynthesizerDelegate"></a></p>
 <h2 id="avspeechsynthesizerdelegate-0320"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=200">AVSpeechSynthesizerDelegate (03:20)</a> <a class="header-anchor" href="#avspeechsynthesizerdelegate-0320" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>This protocol encompasses many <strong>optional methods that handle speech synthesis events</strong> :</p>
+<p>This protocol encompasses many <strong>optional methods that handle speech synthesis events</strong>:</p>
 <ul>
-<li>Pauses and resumes.</li>
-<li>Starts and ends of the <code>AVSpeechUtterance </code> instances.</li>
-<li>Spoken character range.<br>
-<br><img style="max-width: 900px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-AVSpeechSynthesizerDelegate.png" /><br>
-<br><br></li>
+<li>
+<p>Pauses and resumes.</p>
+</li>
+<li>
+<p>Starts and ends of the <code>AVSpeechUtterance</code> instances.</p>
+</li>
+<li>
+<p>Spoken character range.</p>
+</li>
 </ul>
-<p><a name="Demo"></a></p>
+<p><img src="../../../../images/iOSdev/wwdc18-236-AVSpeechSynthesizerDelegate.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="demo-0411"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=251">Demo (04:11)</a> <a class="header-anchor" href="#demo-0411" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Simple example of a speech synthesis highlighted thanks to the <code>AVSpeechSynthesizerDelegate</code> protocol methods.<br>
-<br><img style="max-width: 230px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-Demo.png" /><br>
-<br><br><br>
-<a name="TheRightVoice"></a></p>
+<img src="../../../../images/iOSdev/wwdc18-236-Demo.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="choosing-the-right-voice-0431"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=271">Choosing the right voice (04:31)</a> <a class="header-anchor" href="#choosing-the-right-voice-0431" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The default voice is the built-in voice of the device supported language.<br>
-<br><img style="max-width: 1000px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-TheRightVoice_1.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-TheRightVoice_1.png" alt="" class="img-fluid"><br>
 <br>However, it's still possible to select another voice specifying the desired language or using an identifier inside an array of speech voices that have been downloaded.<br>
-<br><img style="max-width: 800px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-TheRightVoice_2.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-TheRightVoice_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<p><a name="SpeechRate"></a></p>
 <h2 id="speech-rate-0532"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=332">Speech rate (05:32)</a> <a class="header-anchor" href="#speech-rate-0532" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The speech rate can be changed thanks to the rate property going from 0 to 1.<br>
-<br><img style="max-width: 530px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-SpeechRate.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-SpeechRate.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<p><a name="PitchAndVolume"></a></p>
 <h2 id="pitch-and-volume-0615"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=375">Pitch and volume (06:15)</a> <a class="header-anchor" href="#pitch-and-volume-0615" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The pitch tone and the speech volume can be easily modified without affecting the system volume.<br>
-<br><img style="max-width: 720px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-PitchAndVolume.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-PitchAndVolume.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<p><a name="IPA"></a></p>
 <h2 id="phonetics-0654"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=414">Phonetics (06:54)</a> <a class="header-anchor" href="#phonetics-0654" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The <abbr>IPA</abbr> can be used with <strong>Attributed Strings</strong> in order to customize how specialized names, words or sentences are pronounced.<br>
-<br><img style="max-width: 800px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc18-236-IPA.png" /><br>
+<img src="../../../../images/iOSdev/wwdc18-236-IPA.png" alt="" class="img-fluid"><br>
 <br>Attributed strings may also be used to specify a different language for a part of a sentence for instance.<br>
 <br><br></p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#uses-0048" class="nav-link text-muted bg-200">Uses (00:48)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#basics-0203" class="nav-link text-muted bg-200">Basics (02:03)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#avspeechsynthesizerdelegate-0320" class="nav-link text-muted bg-200">AVSpeechSynthesizerDelegate (03:20)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#demo-0411" class="nav-link text-muted bg-200">Demo (04:11)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#choosing-the-right-voice-0431" class="nav-link text-muted bg-200">Choosing the right voice (04:31)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#speech-rate-0532" class="nav-link text-muted bg-200">Speech rate (05:32)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#pitch-and-volume-0615" class="nav-link text-muted bg-200">Pitch and volume (06:15)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#phonetics-0654" class="nav-link text-muted bg-200">Phonetics (06:54)</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
