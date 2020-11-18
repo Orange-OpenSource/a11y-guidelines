@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -172,106 +172,186 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#text-detection-in-image-0707" class="dropdown-item text-wrap">Text detection in image (07:07)</a><a href="#improved-photo-description-0801" class="dropdown-item text-wrap">Improved photo description (08:01)</a><a href="#type-to-siri-1137" class="dropdown-item text-wrap">Type to SIRI (11:37)</a><a href="#accessibility-inspector-1535" class="dropdown-item text-wrap">Accessibility Inspector (15:35)</a><a href="#uiaccessibilityprotocol-2114" class="dropdown-item text-wrap">UIAccessibilityProtocol (21:14)</a><a href="#attributed-accessibility-properties-2607" class="dropdown-item text-wrap">Attributed Accessibility Properties (26:07)</a><a href="#accessibility-container-type-2720" class="dropdown-item text-wrap">Accessibility Container Type (27:20)</a><a href="#custom-actions-3543" class="dropdown-item text-wrap">Custom actions (35:43)</a><a href="#default-activation-3738" class="dropdown-item text-wrap">Default activation (37:38)</a><a href="#adjustable-3822" class="dropdown-item text-wrap">Adjustable (38:22)</a><a href="#pass-through-3940" class="dropdown-item text-wrap">Pass through (39:40)</a><a href="#custom-scrolling-4102" class="dropdown-item text-wrap">Custom scrolling (41:02)</a><a href="#drag-drop-4254" class="dropdown-item text-wrap">Drag &amp; Drop (42:54)</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>WWDC 2017 : What's New in Accessibility</h1>
-<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/215/">session 215</a>) points out the main iOS11 accessibility features.<br>
-<br><img style="max-width: 200px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-logo.png" /><br>
-<img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215.png" /><br>
-<br><br>Various contents and their video timelapse are indicated hereunder :</p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC 2017 : What's New in Accessibility</h1>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2017/215/">session 215</a>) points out the main iOS11 accessibility features.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-logo.png" alt="" class="img-fluid"><br>
+<img src="../../../../images/iOSdev/wwdc17-215.png" alt="" class="img-fluid"><br>
+<br><br>Various contents and their video timelapse are indicated hereunder:</p>
 <ul>
-<li><a href="#ImageTextDetection">Text detection in image</a> (07:07) ⟹ <strong>iOS 11 new feature</strong></li>
-<li><a href="#ImprovedPhotoDescription">Improved photo description</a> (08:01) ⟹ <strong>iOS 11 new feature</strong></li>
-<li><a href="#TypeToSIRI">Type to SIRI</a> (11:37) ⟹ <strong>iOS 11 new feature</strong></li>
-<li><a href="#AccessibilityInspector">Accessibility Inspector</a> (15:35)</li>
-<li><a href="#UIAccessibilityProtocol">UIAccessibilityProtocol</a> (21:14)</li>
-<li><a href="#AttributedProperties">Attributed Accessibility Properties</a> (26:07) ⟹ <strong>iOS 11 new feature</strong></li>
-<li><a href="#AccessibilityContainer">Accessibility Container Type</a> (27:20) ⟹ <strong>iOS 11 new feature</strong></li>
-<li><a href="#CustomActions">Custom actions</a> (35:43)</li>
-<li><a href="#DefaultActivation">Default activation</a> (37:38)</li>
-<li><a href="#AdjustableValues">Adjustable</a> (38:22)</li>
-<li><a href="#PassThrough">Pass through</a> (39:40)</li>
-<li><a href="#CustomScrolling">Custom scrolling</a> (41:02)</li>
-<li><a href="#DragAndDrop">Drag &amp; Drop</a> (42:54) ⟹ <strong>iOS 11 new feature</strong></li>
+<li>
+<p><a href="#text-detection-in-image-0707">Text detection in image</a> (07:07) ⟹ <strong>iOS 11 new feature</strong></p>
+</li>
+<li>
+<p><a href="#improved-photo-description-0801">Improved photo description</a> (08:01) ⟹ <strong>iOS 11 new feature</strong></p>
+</li>
+<li>
+<p><a href="#type-to-siri-1137">Type to SIRI</a> (11:37) ⟹ <strong>iOS 11 new feature</strong></p>
+</li>
+<li>
+<p><a href="#accessibility-inspector-1535">Accessibility Inspector</a> (15:35)</p>
+</li>
+<li>
+<p><a href="#uiaccessibilityprotocol-2114">UIAccessibilityProtocol</a> (21:14)</p>
+</li>
+<li>
+<p><a href="#attributed-accessibility-properties-2607">Attributed Accessibility Properties</a> (26:07) ⟹ <strong>iOS 11 new feature</strong></p>
+</li>
+<li>
+<p><a href="#accessibility-container-type-2720">Accessibility Container Type</a> (27:20) ⟹ <strong>iOS 11 new feature</strong></p>
+</li>
+<li>
+<p><a href="#custom-actions-3543">Custom actions</a> (35:43)</p>
+</li>
+<li>
+<p><a href="#default-activation-3738">Default activation</a> (37:38)</p>
+</li>
+<li>
+<p><a href="#adjustable-3822">Adjustable</a> (38:22)</p>
+</li>
+<li>
+<p><a href="#pass-through-3940">Pass through</a> (39:40)</p>
+</li>
+<li>
+<p><a href="#custom-scrolling-4102">Custom scrolling</a> (41:02)</p>
+</li>
+<li>
+<p><a href="#drag-drop-4254">Drag &amp; Drop</a> (42:54) ⟹ <strong>iOS 11 new feature</strong></p>
+</li>
 </ul>
-<p><br>During this presentation, the following solutions for accessibility development pitfalls are suggested thanks to a simple application (<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">take a look at it</a>) :</p>
+<p><br>During this presentation, the following solutions for accessibility development pitfalls are suggested thanks to a simple application (<a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1007">take a look at it</a>):</p>
 <ul>
-<li>How to define an (in)accessible element ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a></li>
-<li>How to fill the <code>label</code> and <code>value</code> properties? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a></li>
-<li>How to gather several elements into a single one ? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a></li>
+<li>
+<p>How to define an (in)accessible element? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1870">(31:10)</a></p>
+</li>
+<li>
+<p>How to fill the <code>label</code> and <code>value</code> properties? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1799">(29:59)</a></p>
+</li>
+<li>
+<p>How to gather several elements into a single one? <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1910">(31:50)</a></p>
+</li>
 </ul>
-<p>Thereafter, the selection of a title will give rise to the video playback directly at the proper moment.</p>
-<p><a name="ImageTextDetection"></a></p>
+<p><br>Thereafter, the selection of a title will give rise to the video playback directly at the proper moment.<br>
+<br><br></p>
 <h2 id="text-detection-in-image-0707"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=427">Text detection in image (07:07)</a> <a class="header-anchor" href="#text-detection-in-image-0707" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>It's now possible to find out if some <strong>text is incrusted inside an image</strong>.<br>
-<br><img style="max-width: 1000px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-ImageTextDetection.png" /><br>
+<p>It's now possible to find out if some <strong>text is incrusted inside an image</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-ImageTextDetection.png" alt="" class="img-fluid"><br>
 <br>This basic detection that can be done thanks to a <strong>simple tap with 3 fingers</strong> will vocalize the text to someone who<br>
-can't initially read it.</p>
-<p><a name="ImprovedPhotoDescription"></a></p>
+can't initially read it.<br>
+<br><br></p>
 <h2 id="improved-photo-description-0801"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=481">Improved photo description (08:01)</a> <a class="header-anchor" href="#improved-photo-description-0801" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The <strong>vocalization of a photo description</strong> is a new Voice Over feature that is fired thanks to a <strong>simple tap with 3 fingers</strong>.<br>
-<br><img style="max-width: 1000px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-ImprovedPhotoDescription.png" /><br>
-<br>A very simple detection of the context, the faces and their expressions is then vocalized to a visual impaired user.</p>
-<p><a name="TypeToSIRI"></a></p>
+<p>The <strong>vocalization of a photo description</strong> is a new Voice Over feature that is fired thanks to a <strong>simple tap with 3 fingers</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-ImprovedPhotoDescription.png" alt="" class="img-fluid"><br>
+<br>A very simple detection of the context, the faces and their expressions is then vocalized to a visual impaired user.<br>
+<br><br></p>
 <h2 id="type-to-siri-1137"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=697">Type to SIRI (11:37)</a> <a class="header-anchor" href="#type-to-siri-1137" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Very usefull feature for people who <strong>can't use SIRI vocally</strong> or who are willing to <strong>make some requests in a discreet way</strong>.<br>
-<br>To enable this feature, go to <code>Accessibility</code> in the <code>Settings</code> to make the activation effective.<br>
-<br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-TypeToSiri.png" /></p>
-<p><a name="AccessibilityInspector"></a></p>
+<br>To enable this feature, go to <code>Accessibility</code> in the <code>Settings</code> to make the activation effective.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-TypeToSiri.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="accessibility-inspector-1535"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=935">Accessibility Inspector (15:35)</a> <a class="header-anchor" href="#accessibility-inspector-1535" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>In this part, the Xcode accessibility inspector instrument is used to show basics about an accessibility app audit.<br>
-<br>Examples are provided without explaining in depth the tool itself to which a former Apple session (<a href="https://developer.apple.com/videos/play/wwdc2016/407/">2016 - 407</a>) is dedicated.</p>
-<p><a name="UIAccessibilityProtocol"></a></p>
+<br>Examples are provided without explaining in depth the tool itself to which a former Apple session (<a href="https://developer.apple.com/videos/play/wwdc2016/407/">2016 - 407</a>) is dedicated.<br>
+<br><br></p>
 <h2 id="uiaccessibilityprotocol-2114"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1274">UIAccessibilityProtocol (21:14)</a> <a class="header-anchor" href="#uiaccessibilityprotocol-2114" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Reminder on the <code>UIAccessibility</code> informal protocol fundamentals that will be used during the presentation.<br>
-<br><img style="max-width: 450px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /></p>
-<p><a name="AttributedProperties"></a></p>
+<br><img style="max-width: 450px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-UIAccessibilityProtocol.png" /><br>
+<br><br></p>
 <h2 id="attributed-accessibility-properties-2607"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1567">Attributed Accessibility Properties (26:07)</a> <a class="header-anchor" href="#attributed-accessibility-properties-2607" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><code>NSAttributedString</code> can be used in order to customize the way to vocalize the <code>label</code>, <code>value</code> and <code>hint</code> accessibility properties.<br>
-<br><img style="max-width: 550px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-AttributedStrings.png" /><br>
-<br>Among the provided examples, one deals with the vocalization of a specific element in a foreign language.<br>
-<br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-AttributedStringsExample.png" /><br>
-<br>All usable keys can be found on the <a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibility/speech_attributes_for_attributed_strings">Apple official documentation</a>.</p>
-<p><a name="AccessibilityContainer"></a></p>
+<p><code>NSAttributedString</code> can be used in order to customize the way to vocalize the <code>label</code>, <code>value</code> and <code>hint</code> accessibility properties.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-AttributedStrings.png" alt="" class="img-fluid"><br>
+<br>Among the provided examples, one deals with the vocalization of a specific element in a foreign language.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-AttributedStringsExample.png" alt="" class="img-fluid"><br>
+<br>All usable keys can be found on the <a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibility/speech_attributes_for_attributed_strings">Apple official documentation</a>.<br>
+<br><br></p>
 <h2 id="accessibility-container-type-2720"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=1640">Accessibility Container Type (27:20)</a> <a class="header-anchor" href="#accessibility-container-type-2720" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>A new accessibility <strong>typed container</strong> is available in <strong>iOS 11</strong>.<br>
-<br><img style="max-width: 750px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-ContainerType.png" /><br>
-<br>The notion of container already existed in iOS but VoiceOver couldn't know the kind of container until now.</p>
-<p><a name="CustomActions"></a></p>
+<p>A new accessibility <strong>typed container</strong> is available in <strong>iOS 11</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-ContainerType.png" alt="" class="img-fluid"><br>
+<br>The notion of container already existed in iOS but VoiceOver couldn't know the kind of container until now.<br>
+<br><br></p>
 <h2 id="custom-actions-3543"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2143">Custom actions (35:43)</a> <a class="header-anchor" href="#custom-actions-3543" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Many different actions may be attributed</strong> to an element thanks to a bunch of <code>accessibilityCustomAction</code>.<br>
-<br><img style="max-width: 600px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-CustomActions.png" /><br>
+<p><strong>Many different actions may be attributed</strong> to an element thanks to a bunch of <code>accessibilityCustomAction</code>.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-CustomActions.png" alt="" class="img-fluid"><br>
 <br>As soon as this element is selected, a <strong>vertical swipe with one finger</strong> will be proposing the choices of possible actions.<br>
-<br>The programming implementation of this feature is detailed in the <a href="../../../development#custom-actions">development part</a>.</p>
-<p><a name="DefaultActivation"></a></p>
+<br>The programming implementation of this feature is detailed in the <a href="../../../development#custom-actions">development part</a>.<br>
+<br><br></p>
 <h2 id="default-activation-3738"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2258">Default activation (37:38)</a> <a class="header-anchor" href="#default-activation-3738" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>In order to limit or make them easier all the user VoiceOver handlings, it's possible to trigger appropriate actions as soon as an element is activated thanks to a double tap.<br>
-<br><img style="max-width: 750px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-DefaultAction.png" /></p>
-<p><a name="AdjustableValues"></a></p>
+<p>In order to limit or make them easier all the user VoiceOver handlings, it's possible to trigger appropriate actions as soon as an element is activated thanks to a double tap.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-DefaultAction.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="adjustable-3822"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2302">Adjustable (38:22)</a> <a class="header-anchor" href="#adjustable-3822" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>When you want to <strong>change the value</strong> provided by elements such as <code>slider</code> or <code>picker</code> in a <strong>very fluid way</strong>, two methods have to be implemented :<br>
-<br><img style="max-width: 470px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-AdjustableValues.png" /><br>
+<p>When you want to <strong>change the value</strong> provided by elements such as <code>slider</code> or <code>picker</code> in a <strong>very fluid way</strong>, two methods have to be implemented:</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-AdjustableValues.png" alt="" class="img-fluid"><br>
 <br>As soon as the view is selected, a <strong>vertical swipe with one finger</strong> increases (up) or shrinks (down) the value.<br>
-<br>The programming implementation of this feature is detailed in the <a href="../../../development#continuous-adjustable-values">development part</a>.</p>
-<p><a name="PassThrough"></a></p>
+<br>The programming implementation of this feature is detailed in the <a href="../../../development#continuous-adjustable-values">development part</a>.<br>
+<br><br></p>
 <h2 id="pass-through-3940"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2380">Pass through (39:40)</a> <a class="header-anchor" href="#pass-through-3940" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>If a VoiceOver user <strong>double taps with one finger, holds it</strong> and passes it through the panning gesture, a finer adjustment of a slider can be obtained as below :<br>
-<br><img style="max-width: 400px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-PassThrough_1.png" /><br>
-<br>The <a href="../../../development#modify-the-focus-area-of-voiceover">accessibilityActivationPoint</a> attribute will allow a fine location in the panning gesture :<br>
-<br><img style="max-width: 500px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-PassThrough_2.png" /></p>
-<p><a name="CustomScrolling"></a></p>
+<p>If a VoiceOver user <strong>double taps with one finger, holds it</strong> and passes it through the panning gesture, a finer adjustment of a slider can be obtained.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-PassThrough_1.png" alt="" class="img-fluid"><br>
+<br>The <a href="../../../development#modify-the-focus-area-of-voiceover">accessibilityActivationPoint</a> attribute will allow a fine location in the panning gesture.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-PassThrough_2.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="custom-scrolling-4102"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2462">Custom scrolling (41:02)</a> <a class="header-anchor" href="#custom-scrolling-4102" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The VoiceOver basic scrolling is based on a ** 3 fingers swipe** but it can be customized thanks to the <code>accessibilityScroll</code> method belonging to the <code>UIAccessibilityAction</code> protocol.<br>
-<br><img style="max-width: 750px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-CustomScrolling.png" /></p>
-<p><a name="DragAndDrop"></a></p>
+<p>The VoiceOver basic scrolling is based on a <strong>3 fingers swipe</strong> but it can be customized thanks to the <code>accessibilityScroll</code> method belonging to the <code>UIAccessibilityAction</code> protocol.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-CustomScrolling.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="drag-drop-4254"><a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2574">Drag &amp; Drop (42:54)</a> <a class="header-anchor" href="#drag-drop-4254" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>This new feature isn't explained in depth but only its 2 overriding principles are presented : the drag sources and the drop points.<br>
-<br><img style="max-width: 750px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc17-215-DragAndDrop.png" /><br>
+<p>This new feature isn't explained in depth but only its 2 overriding principles are presented: the drag sources and the drop points.</p>
+<p><img src="../../../../images/iOSdev/wwdc17-215-DragAndDrop.png" alt="" class="img-fluid"><br>
 <br>Their use is briefly described in an <a href="https://developer.apple.com/videos/play/wwdc2017/215/?time=2729">example</a> at the end of the video.</p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#text-detection-in-image-0707" class="nav-link text-muted bg-200">Text detection in image (07:07)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#improved-photo-description-0801" class="nav-link text-muted bg-200">Improved photo description (08:01)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#type-to-siri-1137" class="nav-link text-muted bg-200">Type to SIRI (11:37)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibility-inspector-1535" class="nav-link text-muted bg-200">Accessibility Inspector (15:35)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#uiaccessibilityprotocol-2114" class="nav-link text-muted bg-200">UIAccessibilityProtocol (21:14)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#attributed-accessibility-properties-2607" class="nav-link text-muted bg-200">Attributed Accessibility Properties (26:07)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibility-container-type-2720" class="nav-link text-muted bg-200">Accessibility Container Type (27:20)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#custom-actions-3543" class="nav-link text-muted bg-200">Custom actions (35:43)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#default-activation-3738" class="nav-link text-muted bg-200">Default activation (37:38)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#adjustable-3822" class="nav-link text-muted bg-200">Adjustable (38:22)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#pass-through-3940" class="nav-link text-muted bg-200">Pass through (39:40)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#custom-scrolling-4102" class="nav-link text-muted bg-200">Custom scrolling (41:02)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#drag-drop-4254" class="nav-link text-muted bg-200">Drag &amp; Drop (42:54)</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
