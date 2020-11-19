@@ -1,0 +1,38 @@
+﻿{
+  "displayToc": true,
+  "sideNavigationLinks": [
+    	{
+      		"label": "General navigation",
+      		"href": "/en/mobile/android/design/general-navigation/"
+    	},
+	{
+      		"label": "Vocal navigation",
+      		"href": "/en/mobile/android/design/vocal-navigation/"
+    	},
+	{
+      		"label": "Focus navigation",
+      		"href": "/en/mobile/android/design/focus-navigation/"
+    	},
+	{
+      		"label": "Headers",
+      		"href": "/en/mobile/android/design/headers/"
+    	},
+	{
+      		"label": "Colors and constrasts",
+      		"href": "/en/mobile/android/design/colors-and-contrasts/"
+    	},
+	{
+      		"label": "Magnification",
+      		"href": "/en/mobile/android/design/magnification/"
+    	},
+	{
+      		"label": "Form",
+      		"href": "/en/mobile/android/design/form/"
+    	},
+	{
+      		"label": "Multimedia",
+      		"href": "/en/mobile/android/design/multimedia/"
+    	}
+   
+  ]
+}
