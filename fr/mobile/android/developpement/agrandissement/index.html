@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Les critères incontournables sous Android pour le développement - Recommandations accessibilité numérique Orange</title>
+    <title>Agrandissement des éléments - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -118,7 +118,7 @@
   Designer
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/android/developpement/" class="nav-link active" aria-current="page">
+              <a href="/fr/mobile/android/developpement/" class="nav-link active" aria-current="true">
   Développer
 </a>
             </li><li class="nav-item">
@@ -148,13 +148,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/fr/mobile/android/">Android</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/android/developpement/">Développer</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Développer
+          Agrandissement des éléments
         </li>
       </ol>
 </nav>
@@ -171,14 +176,19 @@
   Navigation vocale
 </a><a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link dropdown-item">
   Navigation focus
-</a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item">
+</a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item active" aria-current="page">
   Agrandissement
 </a><a href="/fr/mobile/android/developpement/formulaire/" class="nav-link dropdown-item">
   Formulaire
 </a></div>
     </nav>
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#agrandir-les-textes-sans-perte-dinformation" class="dropdown-item text-wrap">Agrandir les textes sans perte d&#39;information</a></div>
+    </nav>
         
       </div>
     </div>
@@ -203,7 +213,7 @@
   Navigation focus
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted">
+            <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted active" aria-current="page">
   Agrandissement
 </a>
           </li><li class="nav-item position-relative">
@@ -217,14 +227,48 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Les critères incontournables sous Android pour le développement</h1>
-<p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du <abbr>SDK</abbr> Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité, avec des exemples de codes pour illustrer les propos.</p>
+          <h1>Agrandissement des éléments</h1>
+<h2 id="agrandir-les-textes-sans-perte-dinformation">Agrandir les textes sans perte d'information <a class="header-anchor" href="#agrandir-les-textes-sans-perte-dinformation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong></p>
+<p>L’utilisateur a la possibilité d’augmenter la taille du texte via une option d’accessibilité. Afin que l’application réagisse correctement à cette option, il est nécessaire d’utiliser des tailles de texte dynamiques qui s’ajusteront en fonction des paramètres utilisateurs. Un texte trop petit sera facilement ignoré par certains utilisateurs malvoyants.</p>
+<p>L’application devra mettre en œuvre des tailles de textes dynamiques, s’assurer de la bonne réactivité des zones d’affichage au grossissement de texte (conteneurs qui s’adaptent à la taille de leur contenu).</p>
+<p>Afin de permettre à l’option « grand caractère » d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements :</p>
+<ul>
+<li>Utiliser une taille de police dynamique : le « sp ». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser pour les textes, ne serait-ce que pour obtenir un design uniforme sur tous les types d'appareils Android.</li>
+<li>Gérer les débordements de contenu : une erreur courante est d’utiliser une taille de texte dynamique (« sp » donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (le <code>height</code> à <code>wrap_content</code> et le <code>min-height</code> à la hauteur voulue par défaut).</li>
+</ul>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>L’application réagit correctement à l’option grand caractère</li>
+</ul>
+<p><strong>Outil :</strong><br>
+L'option d'accessibilité d'agrandissement de la taille des textes, présent dans les paramètres du téléphone.</p>
+<p><strong>Exemple valide :</strong></p>
+<pre><code class="xml">&lt;TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp"
+    android:textSize="14sp"
+    android:text="Exemple"
+&#47;&gt;</code></pre>
+<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a></li>
+</ul>
 
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#agrandir-les-textes-sans-perte-dinformation" class="nav-link text-muted bg-200">Agrandir les textes sans perte d&#39;information</a>
+          </li></ul>
+    </nav>
             </div>
           </div>
         
@@ -238,7 +282,7 @@
           </li><li class="nav-item">
             <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/android/developpement/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/android/developpement/agrandissement.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
             <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>
