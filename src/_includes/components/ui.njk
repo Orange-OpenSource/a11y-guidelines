@@ -74,9 +74,10 @@
       {% if displayTags == true and tags %}
         <ul class="list-inline">
           {%- for tag in tags -%}
+            {%- set tagTranslationKey = 'tags.' + tag -%}
             <li class="list-inline-item">
               <a href="?tag={{ tag }}" class="badge badge-secondary">
-                <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "tags." + tag, locale %}
+                <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ tagTranslationKey | translate }}
               </a>
             </li>
           {%- endfor -%}
@@ -95,17 +96,18 @@
 {%- macro filtersBar(posts) -%}
 {% set tags = posts | getPostsTags %}
 <nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
-  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{% translate "filtersBar.label", locale %} :</h2>
+  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ 'filtersBar.label' | translate }} :</h2>
   <ul class="nav">
     <li class="nav-item">
       <a href="?all" class="nav-link" data-tag="all">
-        <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "filtersBar.all", locale %}
+        <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ 'filtersBar.all' | translate }}
       </a>
     </li>
     {%- for tag in tags -%}
+      {%- set tagTranslationKey = 'tags.' + tag -%}
       <li class="nav-item">
         <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">
-          <span class="sr-only">{% translate "filtersBar.label", locale %}&nbsp;</span>{% translate "tags." + tag, locale %}
+          <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ tagTranslationKey | translate }}
         </a>
       </li>
     {%- endfor -%}
@@ -118,7 +120,7 @@
 {%- if headings | length > 0 -%}
   {%- if mode == "list" -%}
     <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
-      <h2 id="toc-title">{% translate "toc.title", locale %}</h2>
+      <h2 id="toc-title">{{ 'toc.title' | translate }}</h2>
       <ul class="nav flex-column">
         {%- for heading in headings -%}
           <li class="nav-item position-relative">
@@ -130,7 +132,7 @@
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
-        {% translate "toc.title", locale %}
+        {{ 'toc.title' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
         {%- for heading in headings -%}
@@ -146,7 +148,7 @@
 {% if sideNavigationLinks | length > 0 %}
   {%- if mode == "list" -%}
     <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label">{% translate "navigation.side.label", locale %}</h2>
+      <h2 id="side-navigation-label">{{ 'navigation.side.label' | translate }}</h2>
       <ul class="nav flex-column">
         {%- for link in sideNavigationLinks -%}
           <li class="nav-item position-relative">
@@ -158,7 +160,7 @@
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
-        {% translate "navigation.side.label", locale %}
+        {{ 'navigation.side.label' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-left">
         {%- for link in sideNavigationLinks -%}
@@ -183,7 +185,7 @@
 
 {%- macro changelang(mode) -%}
 {%- if mode == "supra" -%}
-<nav role="navigation" aria-label="{% translate "changelang.label", locale %}">
+<nav role="navigation" aria-label="{{ 'changelang.label' | translate }}">
   <ul class="navbar-nav">
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}
@@ -197,7 +199,7 @@
 </nav>
 {%- elseif mode == "mobile" -%}
 <li class="nav-item d-md-none">
-  <span class="sr-only">{% translate "changelang.label", locale %}</span>
+  <span class="sr-only">{{ 'changelang.label' | translate }}</span>
   <ul class="d-flex list-inline">
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}

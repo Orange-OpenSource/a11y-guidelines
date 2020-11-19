@@ -41,25 +41,6 @@ module.exports = function (eleventyConfig) {
       .use(config.eleventy.markdownItCustomParser)
   )
 
-  /**
-   * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
-   */
-  eleventyConfig.addShortcode('translate', function (key, locale) {
-    if (!locales.hasOwnProperty(locale)) {
-      throw new Error(`[translate]: Translation's locale \`${locale}\` does not exist`)
-    }
-
-    key = `${locale}.${key}`
-
-    const translation = key.split('.').reduce((acc, i) => acc[i], locales)
-
-    if (typeof translation === 'undefined') {
-      throw new Error(`[translate]: No translation found for key \`${key}\``)
-    }
-
-    return translation
-  })
-
   eleventyConfig.addShortcode('currentYear', function () {
     return String(new Date().getFullYear())
   })
@@ -80,6 +61,27 @@ module.exports = function (eleventyConfig) {
     }
 
     return new Intl.DateTimeFormat(locale, options).format(date)
+  })
+
+  /**
+   * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
+   */
+  eleventyConfig.addFilter('translate', function (key) {
+    const locale = this.ctx.locale
+
+    if (!locales.hasOwnProperty(locale)) {
+      throw new Error(`[translate]: Translation's locale \`${locale}\` does not exist`)
+    }
+
+    key = `${locale}.${key}`
+
+    const translation = key.split('.').reduce((acc, i) => acc[i], locales)
+
+    if (typeof translation === 'undefined') {
+      throw new Error(`[translate]: No translation found for key \`${key}\``)
+    }
+
+    return translation
   })
 
   eleventyConfig.addFilter('redirectionPermalink', function (path) {

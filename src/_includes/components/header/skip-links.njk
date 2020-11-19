@@ -1,4 +1,4 @@
-<nav role="navigation" aria-label="{% translate "skiplinks.label", locale %}">
+<nav role="navigation" aria-label="{{ 'skiplinks.label' | translate }}">
   <ul class="navbar-nav">
     {%- for link in navigation.top[locale] -%}
       <li class="nav-item">

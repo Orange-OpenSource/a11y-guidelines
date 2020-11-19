@@ -1,7 +1,7 @@
 {% set breadcrumb = navigation.main | getBreadcrumb(locale, page, title) %}
 
 <nav role="navigation" aria-labelledby="breadcrumb-label">
-  <p id="breadcrumb-label" class="sr-only">{% translate 'breadcrumb.label', locale %}</p>
+  <p id="breadcrumb-label" class="sr-only">{{ 'breadcrumb.label' | translate }}</p>
   <ol class="breadcrumb">
     {%- for item in breadcrumb -%}
       {% set beforeLast = loop.index == breadcrumb | length - 1 %}

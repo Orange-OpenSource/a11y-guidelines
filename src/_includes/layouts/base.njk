@@ -44,8 +44,8 @@
     </div>
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
-    <a href="#" id="back-to-top" class="o-scroll-up static" title="{% translate "backToTop.label", locale %}">
-      <span class="d-none d-sm-inline-block">{% translate "backToTop.label", locale %}</span>
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="{{ 'backToTop.label' | translate }}">
+      <span class="d-none d-sm-inline-block">{{ 'backToTop.label' | translate }}</span>
     </a>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     {% if jquery == true or boostedJS == true or displayToc == true %}
@@ -87,7 +87,7 @@
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
       {%- endif -%}
     </script>
-    <div id="a11y_heading_anchor_label" hidden>{% translate "headingsAnchor.label", locale %}</div>
+    <div id="a11y_heading_anchor_label" hidden>{{ 'headingsAnchor.label' | translate }}</div>
     {% include "partials/licence.njk" %}
   </body>
 </html>
