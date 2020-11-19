@@ -1,0 +1,26 @@
+﻿{
+  "highlightJS": true,
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Navigation générale",
+      "href": "/fr/mobile/android/developpement/navigation-generale/"
+    },
+    {
+      "label": "Navigation vocale",
+      "href": "/fr/mobile/android/developpement/navigation-vocale/"
+    },
+    {
+      "label": "Navigation focus",
+      "href": "/fr/mobile/android/developpement/navigation-focus/"
+    },
+    {
+      "label": "Agrandissement",
+      "href": "/fr/mobile/android/developpement/agrandissement/"
+    },
+    {
+      "label": "Formulaire",
+      "href": "/fr/mobile/android/developpement/formulaire/"
+    }
+  ]
+}
