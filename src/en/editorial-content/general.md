@@ -12,7 +12,7 @@ This section presents general recommendations to follow to ensure the accessibil
 * Make sure [color is not the only means used to communicate information](/en/web/design/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information).
 * Ensure a level of [sufficient contrast between the color of the text and that of the background](/en/web/design/colors-and-contrasts/#make-sure-there-is-enough-contrast-between-font-and-background-colors). This is valid for your texts but also for icons, buttons and other graphic elements. Contrast can be checked using the tool [Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/) for example:
   * 4.5:1 for normal size text.
-  * 3:1 for big text.
+  * 3:1 for large text and interface components or graphical elements that convey information.
 
 ## Make reading easier
 
