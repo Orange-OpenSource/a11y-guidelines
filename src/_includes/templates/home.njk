@@ -18,9 +18,9 @@
   <div class="bg-300">
     <section class="container-lg py-4">
       <div class="d-flex">
-        <h2>{% translate 'lastPosts.title', locale %}</h2>
+        <h2>{{ 'lastPosts.title' | translate }}</h2>
         <div class="pl-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">{% translate 'lastPosts.seeAll', locale %}</a>
+          <a href="articles/" class="btn btn-secondary btn-sm">{{ 'lastPosts.seeAll' | translate }}</a>
         </div>
       </div>
       {{ ui.lastPosts(collections["articles_" + locale], site.home.lastPosts.limit) }}
