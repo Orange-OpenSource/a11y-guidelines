@@ -20,7 +20,6 @@ This section presents general recommendations to follow to ensure the accessibil
 * Put a capital letter at the beginning of a sentence but avoid whole sentences in capital letters.
 * Avoid italics.
 * Use simple, sans serif fonts: Arial, Calibri or [accessible font Dfa](https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/), having a size of at least 10 points.
-<!-- removed multiples lines – not relevant in English --> 
 * Set up simple punctuation.
 * Avoid textured backgrounds (images).
 * Do not make repeated carriage returns or tabulation to space (but the “Paragraph & Spacing” or “Indent” function in Word, for example).
