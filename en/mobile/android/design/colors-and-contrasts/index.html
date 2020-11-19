@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Android&#39;s essential criteria for design - Orange digital accessibility guidelines</title>
+    <title>Colors and contrasts - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -114,7 +114,7 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="page">
+              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="true">
   Design
 </a>
             </li><li class="nav-item">
@@ -148,13 +148,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/en/mobile/android/">Android</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/design/">Design</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Design
+          Colors and contrasts
         </li>
       </ol>
 </nav>
@@ -173,7 +178,7 @@
   Focus navigation
 </a><a href="/en/mobile/android/design/headers/" class="nav-link dropdown-item">
   Headers
-</a><a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link dropdown-item">
+</a><a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link dropdown-item active" aria-current="page">
   Colors and constrasts
 </a><a href="/en/mobile/android/design/magnification/" class="nav-link dropdown-item">
   Magnification
@@ -184,7 +189,12 @@
 </a></div>
     </nav>
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#ensure-sufficient-contrast-between-foreground-and-background-colors" class="dropdown-item text-wrap">Ensure sufficient contrast between foreground and background colors</a><a href="#ensure-that-color-or-sensory-information-is-not-the-only-source-of-information" class="dropdown-item text-wrap">Ensure that color or sensory information is not the only source of information</a></div>
+    </nav>
         
       </div>
     </div>
@@ -213,7 +223,7 @@
   Headers
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link text-muted">
+            <a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link text-muted active" aria-current="page">
   Colors and constrasts
 </a>
           </li><li class="nav-item position-relative">
@@ -235,17 +245,65 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Android's essential criteria for design</h1>
-<p>This guide presents the different accessibility criteria required to obtain an accessible Android application. Each criterion is presented by explaining for whom it is important, when it can be implemented, and the accessibility rule that results from it.</p>
-<p>We invite you to install the <a href="../../mdan/">mDAN</a> application to get functional examples with TalkBack, Android screen reader, and other support tools. For more information about the tool (how to activate it, how to use it...) please refer to the <a href="../talkback/">section about TalkBack</a>.</p>
-<p>For the web, the level of accessibility required of any <abbr>HTML</abbr> interface by the Orange Group is <strong>compliance with level AA criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without any blocking points</strong> following a technical support user test for the main scenarios of use of application functionalities. For native mobile applications, a transposition of these criteria and compliance with the Android platform recommendations in terms of accessibility are required, see these <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommendations</a>.</p>
-<p>If the mobile application is for Orange, it is necessary to follow the group's design recommendations. The respect of the Orange charter for Android, especially in the use of colors is a prerequisite. We invite you to refer to the <a href="https://design.orange.com/fr/guidelines/accessibility/">Orange group's accessibility guideline</a> and to <a href="https://design.orange.com/fr/guidelines/android/">the group's Android design charter</a>.</p>
+          <h1>Colors and contrasts</h1>
+<p>Ensure that the colors used do not cause problems for the user.</p>
+<h2 id="ensure-sufficient-contrast-between-foreground-and-background-colors">Ensure sufficient contrast between foreground and background colors <a class="header-anchor" href="#ensure-sufficient-contrast-between-foreground-and-background-colors" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone (sun on the screen, black and white printing...) and in particular the visually impaired, senior citizens and people with vision problems (color blindness, contrast vision, etc.)<br>
+<strong>When :</strong>  from the design phase and during development.</p>
+<p><strong>Description :</strong><br>
+The contrast level between the text (or a graphic component) and the background must be sufficiently high.<br>
+Insufficient contrast will be detrimental to users with visual difficulties or those in a very bright environment.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>Make sure the contrast between the background color and the text is :
+<ul>
+<li>More than 4.5:1 for small texts</li>
+<li>More than 3:1 for large texts, or for bold texts</li>
+</ul>
+</li>
+<li>Ensure that the colors used in interface components, or information-bearing graphic elements, have a 3:1 contrast to the background. This includes buttons, radio buttons, checkboxes, selection lists, focus, progress bars, etc.</li>
+</ul>
+<p><strong>Tool :</strong><br>
+The <a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Constrast Analyzer</a> application allows you to quickly measure color contrast levels (free for Mac and Windows).</p>
+<p>The <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&amp;hl=fr">AccessibilityScanner</a> application allows you to directly test your applications on certain accessibility criteria, especially colors. Available from Android 6.</p>
+<p><strong>Invalid contrast example :</strong><br>
+The text &quot;film | 20h40 ...&quot; does not have sufficient contrast. It will not be readable by all users.</p>
+<p><img src="../../../images/contraste.png" alt="screenshot showing text with insufficient contrast" class="img-fluid"></p>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast minimum</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non text contrast</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="ensure-that-color-or-sensory-information-is-not-the-only-source-of-information">Ensure that color or sensory information is not the only source of information <a class="header-anchor" href="#ensure-that-color-or-sensory-information-is-not-the-only-source-of-information" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone (sun on the screen, black and white printing...) and in particular the visually impaired, senior citizens and people with vision problems (color blindness, contrast vision, etc.)<br>
+<strong>When :</strong>  from the design phase and during development.</p>
+<p><strong>Description :</strong><br>
+Do not use color or sensory information (shape, size, sound, orientation, visual location...) as the only way to convey information, to indicate an action, to solicit a response or to distinguish an element. The information provided by a change of color or sensory information must be complemented by textual information (alternative) and/or semantic structuring.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>The loss of colors should not cause any difficulty in navigation or loss of information.</li>
+</ul>
+<p><strong>Exemple :</strong></p>
+<img src="../../../images/couleur.png" alt="Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300" height="530">
+<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory characteristics</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of color</a></li>
+</ul>
 
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#ensure-sufficient-contrast-between-foreground-and-background-colors" class="nav-link text-muted bg-200">Ensure sufficient contrast between foreground and background colors</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ensure-that-color-or-sensory-information-is-not-the-only-source-of-information" class="nav-link text-muted bg-200">Ensure that color or sensory information is not the only source of information</a>
+          </li></ul>
+    </nav>
             </div>
           </div>
         
@@ -259,7 +317,7 @@
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/colors-and-contrasts.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>

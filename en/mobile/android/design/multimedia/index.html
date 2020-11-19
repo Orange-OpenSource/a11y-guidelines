@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Android&#39;s essential criteria for design - Orange digital accessibility guidelines</title>
+    <title>Multimedia - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -114,7 +114,7 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="page">
+              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="true">
   Design
 </a>
             </li><li class="nav-item">
@@ -148,13 +148,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/en/mobile/android/">Android</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/design/">Design</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Design
+          Multimedia
         </li>
       </ol>
 </nav>
@@ -179,12 +184,17 @@
   Magnification
 </a><a href="/en/mobile/android/design/form/" class="nav-link dropdown-item">
   Form
-</a><a href="/en/mobile/android/design/multimedia/" class="nav-link dropdown-item">
+</a><a href="/en/mobile/android/design/multimedia/" class="nav-link dropdown-item active" aria-current="page">
   Multimedia
 </a></div>
     </nav>
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#control-multimedia-content" class="dropdown-item text-wrap">Control multimedia content</a><a href="#transcribe-audio-or-video-content" class="dropdown-item text-wrap">Transcribe audio or video content</a><a href="#avoid-epileptic-risk-contents" class="dropdown-item text-wrap">Avoid epileptic risk contents</a></div>
+    </nav>
         
       </div>
     </div>
@@ -225,7 +235,7 @@
   Form
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/multimedia/" class="nav-link text-muted">
+            <a href="/en/mobile/android/design/multimedia/" class="nav-link text-muted active" aria-current="page">
   Multimedia
 </a>
           </li></ul>
@@ -235,17 +245,72 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Android's essential criteria for design</h1>
-<p>This guide presents the different accessibility criteria required to obtain an accessible Android application. Each criterion is presented by explaining for whom it is important, when it can be implemented, and the accessibility rule that results from it.</p>
-<p>We invite you to install the <a href="../../mdan/">mDAN</a> application to get functional examples with TalkBack, Android screen reader, and other support tools. For more information about the tool (how to activate it, how to use it...) please refer to the <a href="../talkback/">section about TalkBack</a>.</p>
-<p>For the web, the level of accessibility required of any <abbr>HTML</abbr> interface by the Orange Group is <strong>compliance with level AA criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without any blocking points</strong> following a technical support user test for the main scenarios of use of application functionalities. For native mobile applications, a transposition of these criteria and compliance with the Android platform recommendations in terms of accessibility are required, see these <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommendations</a>.</p>
-<p>If the mobile application is for Orange, it is necessary to follow the group's design recommendations. The respect of the Orange charter for Android, especially in the use of colors is a prerequisite. We invite you to refer to the <a href="https://design.orange.com/fr/guidelines/accessibility/">Orange group's accessibility guideline</a> and to <a href="https://design.orange.com/fr/guidelines/android/">the group's Android design charter</a>.</p>
+          <h1>Multimedia</h1>
+<h2 id="control-multimedia-content">Control multimedia content <a class="header-anchor" href="#control-multimedia-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular the visually and cognitively impaired.<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong></p>
+<p>On mobile devices, screen readers try to transmit context changes to the user as much as possible. In some cases, this can result in permanent, and therefore inaudible vocalizations, or prevent any action by the user.<br>
+The user must remain in control of the content at all times. This is especially true with interactive content. For example, a video should not be launched directly in full screen, or should not be launched directly without any prior action from the user, a carousel should not scroll automatically, etc...</p>
+<p>In addition, multimedia content must be able to be controlled at any time by the user, whether to mute or pause the sound.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>Multimedia content can be controlled by the user (presence of a pause button, accessible button to exit full-screen mode, etc.).</li>
+<li>For any sound emitted for more than 3 seconds, the user must have the possibility to either stop or pause it, or to control its volume independently of the general volume of the system.</li>
+<li>There is no automatic start of the video when the page loads.</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a></li>
+</ul>
+<h2 id="transcribe-audio-or-video-content">Transcribe audio or video content <a class="header-anchor" href="#transcribe-audio-or-video-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone, and in particular people with visual, cognitive and hearing impairments<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong></p>
+<p>It is essential to provide an access to visual and auditory information for people who cannot benefit from it: visually impaired, blind, deaf, cognitively impaired, computer without speakers, in bright or noisy environments.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>Full text transcription is available for pre-recorded audio content.</li>
+<li>A full text transcription or audio description is provided for pre-recorded video content.</li>
+<li>Subtitles are available for video content, pre-recorded or not.</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a></li>
+</ul>
+<h2 id="avoid-epileptic-risk-contents">Avoid epileptic risk contents <a class="header-anchor" href="#avoid-epileptic-risk-contents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone, and especially people with epileptic seizures<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong><br>
+In order to prevent the content of the application from causing epileptic seizures, it is essential to avoid flashes of more than 3 flashes per second.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>No more than 3 flashes per second.</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a></li>
+</ul>
 
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#control-multimedia-content" class="nav-link text-muted bg-200">Control multimedia content</a>
+          </li><li class="nav-item position-relative">
+            <a href="#transcribe-audio-or-video-content" class="nav-link text-muted bg-200">Transcribe audio or video content</a>
+          </li><li class="nav-item position-relative">
+            <a href="#avoid-epileptic-risk-contents" class="nav-link text-muted bg-200">Avoid epileptic risk contents</a>
+          </li></ul>
+    </nav>
             </div>
           </div>
         
@@ -259,7 +324,7 @@
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/multimedia.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Android&#39;s essential criteria for design - Orange digital accessibility guidelines</title>
+    <title>Form - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -114,7 +114,7 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="page">
+              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="true">
   Design
 </a>
             </li><li class="nav-item">
@@ -148,13 +148,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/en/mobile/android/">Android</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/design/">Design</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Design
+          Form
         </li>
       </ol>
 </nav>
@@ -177,14 +182,19 @@
   Colors and constrasts
 </a><a href="/en/mobile/android/design/magnification/" class="nav-link dropdown-item">
   Magnification
-</a><a href="/en/mobile/android/design/form/" class="nav-link dropdown-item">
+</a><a href="/en/mobile/android/design/form/" class="nav-link dropdown-item active" aria-current="page">
   Form
 </a><a href="/en/mobile/android/design/multimedia/" class="nav-link dropdown-item">
   Multimedia
 </a></div>
     </nav>
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#have-explicit-form-fields" class="dropdown-item text-wrap">Have explicit form fields</a><a href="#identify-input-errors-in-the-form" class="dropdown-item text-wrap">Identify input errors in the form</a></div>
+    </nav>
         
       </div>
     </div>
@@ -221,7 +231,7 @@
   Magnification
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/form/" class="nav-link text-muted">
+            <a href="/en/mobile/android/design/form/" class="nav-link text-muted active" aria-current="page">
   Form
 </a>
           </li><li class="nav-item position-relative">
@@ -235,17 +245,60 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Android's essential criteria for design</h1>
-<p>This guide presents the different accessibility criteria required to obtain an accessible Android application. Each criterion is presented by explaining for whom it is important, when it can be implemented, and the accessibility rule that results from it.</p>
-<p>We invite you to install the <a href="../../mdan/">mDAN</a> application to get functional examples with TalkBack, Android screen reader, and other support tools. For more information about the tool (how to activate it, how to use it...) please refer to the <a href="../talkback/">section about TalkBack</a>.</p>
-<p>For the web, the level of accessibility required of any <abbr>HTML</abbr> interface by the Orange Group is <strong>compliance with level AA criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without any blocking points</strong> following a technical support user test for the main scenarios of use of application functionalities. For native mobile applications, a transposition of these criteria and compliance with the Android platform recommendations in terms of accessibility are required, see these <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommendations</a>.</p>
-<p>If the mobile application is for Orange, it is necessary to follow the group's design recommendations. The respect of the Orange charter for Android, especially in the use of colors is a prerequisite. We invite you to refer to the <a href="https://design.orange.com/fr/guidelines/accessibility/">Orange group's accessibility guideline</a> and to <a href="https://design.orange.com/fr/guidelines/android/">the group's Android design charter</a>.</p>
+          <h1>Form</h1>
+<h2 id="have-explicit-form-fields">Have explicit form fields <a class="header-anchor" href="#have-explicit-form-fields" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular the visually impaired.<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong></p>
+<p>Linking form fields with their labels provides additional vocalisation that makes the field easier for the user to understand.</p>
+<p>There are 2 techniques to do this linkage:</p>
+<ul>
+<li><code>labelFor</code>  : indicate that a label is linked to another view.</li>
+<li><code>hint</code> : add an example text when the text field is empty. This method only works for <code>EditText</code>.</li>
+</ul>
+<p>It is essential to indicate to the user, for a good understanding of the form, the required fields, the expected format, or errors made on fields.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>Form fields must be linked to a label if it is visible, otherwise a <code>hint</code> is present.</li>
+<li>Required fields are identifiable</li>
+<li>The data format of the &quot;complex&quot; fields is indicated to the user</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a></li>
+</ul>
+<h2 id="identify-input-errors-in-the-form">Identify input errors in the form <a class="header-anchor" href="#identify-input-errors-in-the-form" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular the visually impaired.<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong></p>
+<p>If an error is made when entering a form, it is important to clearly indicate to the user what the errors are, so that the user can correct the form.</p>
+<p>It is also recommended to provide the user with a correction suggestion.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>Error fields are clearly identifiable</li>
+<li>Error messages are self-explanatory</li>
+<li>A suggestion of correction is proposed to the user</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error identification</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error suggestion</a></li>
+</ul>
 
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#have-explicit-form-fields" class="nav-link text-muted bg-200">Have explicit form fields</a>
+          </li><li class="nav-item position-relative">
+            <a href="#identify-input-errors-in-the-form" class="nav-link text-muted bg-200">Identify input errors in the form</a>
+          </li></ul>
+    </nav>
             </div>
           </div>
         
@@ -259,7 +312,7 @@
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/form.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>

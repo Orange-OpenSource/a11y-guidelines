@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Android&#39;s essential criteria for design - Orange digital accessibility guidelines</title>
+    <title>General navigation - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -114,7 +114,7 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="page">
+              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="true">
   Design
 </a>
             </li><li class="nav-item">
@@ -148,13 +148,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/en/mobile/android/">Android</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/design/">Design</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Design
+          General navigation
         </li>
       </ol>
 </nav>
@@ -165,7 +170,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
         Topics
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="/en/mobile/android/design/general-navigation/" class="nav-link dropdown-item">
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/mobile/android/design/general-navigation/" class="nav-link dropdown-item active" aria-current="page">
   General navigation
 </a><a href="/en/mobile/android/design/vocal-navigation/" class="nav-link dropdown-item">
   Vocal navigation
@@ -184,7 +189,12 @@
 </a></div>
     </nav>
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#have-sufficiently-large-click-areas" class="dropdown-item text-wrap">Have sufficiently large click areas</a><a href="#have-an-application-that-can-be-used-in-any-orientation" class="dropdown-item text-wrap">Have an application that can be used in any orientation</a><a href="#propose-an-alternative-to-gestural-actions" class="dropdown-item text-wrap">Propose an alternative to gestural actions</a><a href="#have-readable-texts" class="dropdown-item text-wrap">Have readable texts</a><a href="#use-native-components" class="dropdown-item text-wrap">Use native components</a><a href="#make-ui-with-timeout-adaptable" class="dropdown-item text-wrap">Make UI with timeout adaptable</a></div>
+    </nav>
         
       </div>
     </div>
@@ -197,7 +207,7 @@
               <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
       <h2 id="side-navigation-label">Topics</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/general-navigation/" class="nav-link text-muted">
+            <a href="/en/mobile/android/design/general-navigation/" class="nav-link text-muted active" aria-current="page">
   General navigation
 </a>
           </li><li class="nav-item position-relative">
@@ -235,17 +245,130 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Android's essential criteria for design</h1>
-<p>This guide presents the different accessibility criteria required to obtain an accessible Android application. Each criterion is presented by explaining for whom it is important, when it can be implemented, and the accessibility rule that results from it.</p>
-<p>We invite you to install the <a href="../../mdan/">mDAN</a> application to get functional examples with TalkBack, Android screen reader, and other support tools. For more information about the tool (how to activate it, how to use it...) please refer to the <a href="../talkback/">section about TalkBack</a>.</p>
-<p>For the web, the level of accessibility required of any <abbr>HTML</abbr> interface by the Orange Group is <strong>compliance with level AA criteria of the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) 2.1, without any blocking points</strong> following a technical support user test for the main scenarios of use of application functionalities. For native mobile applications, a transposition of these criteria and compliance with the Android platform recommendations in terms of accessibility are required, see these <a href="https://developer.android.com/guide/topics/ui/accessibility/">recommendations</a>.</p>
-<p>If the mobile application is for Orange, it is necessary to follow the group's design recommendations. The respect of the Orange charter for Android, especially in the use of colors is a prerequisite. We invite you to refer to the <a href="https://design.orange.com/fr/guidelines/accessibility/">Orange group's accessibility guideline</a> and to <a href="https://design.orange.com/fr/guidelines/android/">the group's Android design charter</a>.</p>
+          <h1>General navigation</h1>
+<h2 id="have-sufficiently-large-click-areas">Have sufficiently large click areas <a class="header-anchor" href="#have-sufficiently-large-click-areas" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular for people with motor disabilities.<br>
+<strong>When :</strong> from the design phase and during development.</p>
+<p><strong>Description :</strong></p>
+<p>Insufficient size for a clickable element can make it difficult to interact with the application. Each clickable element of the application must be of sufficient size.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>The click zone has a minimum size of 48 dp.</li>
+<li>The click zone has a margin around the element of at least 8 dp</li>
+<li>Click errors can be undone by moving your finger out of the clickable area before releasing.</li>
+</ul>
+<p><strong>Tool :</strong></p>
+<p>You can directly test your applications on certain accessibility criteria and in particular the size of the click zones with the <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">AccessibilityScanner</a> application. Available from Android 6.</p>
+<p><strong>Valid example :</strong></p>
+<p>In the examples below, the frame with border corresponds to the size of the interactive area.<br>
+<img src="../../../images/clic_ok.png" alt="example of an interactive component with a fairly large interaction area" width="300" height="55"></p>
+<p><strong>Invalid example :</strong></p>
+<img src="../../../images/clic_ko.png" alt="example of an interactive component with a too small interaction area" width="300" height="55">
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="have-an-application-that-can-be-used-in-any-orientation">Have an application that can be used in any orientation <a class="header-anchor" href="#have-an-application-that-can-be-used-in-any-orientation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular people with visual or motor impairments.<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong><br>
+Content access of an application should not depend on the screen orientation (portrait and landscape).</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>The use of standard graphic components that support both modes (fragments...), or define a specific design for each orientation.</li>
+<li>The application is not locked in one orientation (portrait or landscape).</li>
+</ul>
+<p><strong>Valid example :</strong></p>
+<p>The application can be used in both portrait and landscape mode.<br>
+<img src="../../../images/portrait.jpg" alt="example of a valid screen in portrait mode" width="300" height="530"><br>
+<br/><br/><br>
+<img src="../../../images/paysage.jpg" alt="example of a valid screen in landscape mode" width="300" height="170"></p>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="propose-an-alternative-to-gestural-actions">Propose an alternative to gestural actions <a class="header-anchor" href="#propose-an-alternative-to-gestural-actions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular people with visual and/or motor impairments.<br>
+<strong>When :</strong> from the design phase and during development.</p>
+<p><strong>Description :</strong></p>
+<p>Navigating between several pages using a horizontal swipe (especially with ViewPagers) can become complex for people with motor or visual impairments. It is essential to add an alternative, using &quot;Next&quot; and &quot;Previous&quot; buttons for example.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>The actions triggered by a user gesture or a movement of the device has an alternative.</li>
+</ul>
+<p><strong>Valid example :</strong></p>
+<img src="../../../images/scroll_h1.png" alt="example of an accessible horizontal scroll, with arrows marking the horizontal scroll and dots indicating the number of pages available " width="300" height="530">
+<p><strong>Invalid example :</strong></p>
+<img src="../../../images/scroll_h2.png" alt="example of horizontal scroll not accessible, without information about the scroll action." width="300" height="530">
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="have-readable-texts">Have readable texts <a class="header-anchor" href="#have-readable-texts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular people with visual impairments and dyslexics.<br>
+<strong>When :</strong> from the design phase and during development.</p>
+<p><strong>Description :</strong></p>
+<p>The text can cause readability problems when it is too small or the font has impasto : a minimum text size of 14sp is recommended.</p>
+<p>Android natively offers the Roboto font which has 16 variants, including many sans serif that are perfectly adapted to the readability need : roboto regular, roboto thin, roboto medium, etc... Serif fonts, such as the popular Times New Roman or Georgia, are not suitable.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>The font is sans-serif</li>
+<li>The texts are large enough to be read comfortably.</li>
+<li>There is no italics used</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="use-native-components">Use native components <a class="header-anchor" href="#use-native-components" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone.<br>
+<strong>When :</strong> from the design phase and during development.</p>
+<p><strong>Description :</strong></p>
+<p>Native components integrate accessibility (most of the time). Navigation in a standard interface is more comfortable since the behaviors of the different elements are usual.</p>
+<p>Make maximum use of native components: if no standard component can meet the need, create a dedicated component based on a standard component while maintaining navigation consistency and accessibility.</p>
+<p><br/><br/></p>
+<h2 id="make-ui-with-timeout-adaptable">Make UI with timeout adaptable <a class="header-anchor" href="#make-ui-with-timeout-adaptable" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone and in particular people with visual and/or motor impairments.<br>
+<strong>When :</strong> from the design phase and during development.</p>
+<p><strong>Description :</strong></p>
+<p>In some applications, the UI may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction.</p>
+<p>This automatic UI update is an issue for accessibility, cause a user could need more time to interact with the elements. This timeout must be adaptable according to the needs of each user.</p>
+<p>An accessibility option named &quot;Time to take action&quot; exists since Android 10, and allows to define its own timeout. By calling this option from the application, it is possible to adapt its interfaces with timeout to the user.</p>
+<p><strong>To be verified :</strong></p>
+<ul>
+<li>A UI with a timeout has a configurable delay.</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a></li>
+</ul>
 
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#have-sufficiently-large-click-areas" class="nav-link text-muted bg-200">Have sufficiently large click areas</a>
+          </li><li class="nav-item position-relative">
+            <a href="#have-an-application-that-can-be-used-in-any-orientation" class="nav-link text-muted bg-200">Have an application that can be used in any orientation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#propose-an-alternative-to-gestural-actions" class="nav-link text-muted bg-200">Propose an alternative to gestural actions</a>
+          </li><li class="nav-item position-relative">
+            <a href="#have-readable-texts" class="nav-link text-muted bg-200">Have readable texts</a>
+          </li><li class="nav-item position-relative">
+            <a href="#use-native-components" class="nav-link text-muted bg-200">Use native components</a>
+          </li><li class="nav-item position-relative">
+            <a href="#make-ui-with-timeout-adaptable" class="nav-link text-muted bg-200">Make UI with timeout adaptable</a>
+          </li></ul>
+    </nav>
             </div>
           </div>
         
@@ -259,7 +382,7 @@
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/general-navigation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>
