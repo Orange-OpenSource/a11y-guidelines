@@ -9,8 +9,8 @@ Cette section présente des recommandations générales à respecter pour garant
 
 ## Vérifier les couleurs
 
-* S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](https://a11y-guidelines.orange.com/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
-* Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](https://a11y-guidelines.orange.com/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> par exemple :
+* S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
+* Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques. Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> par exemple :
   * 4.5:1 pour du texte de taille normale.
   * 3:1 pour du texte de grande taille.
 
@@ -24,8 +24,8 @@ Cette section présente des recommandations générales à respecter pour garant
 *	Mettre en place une ponctuation simple.
 *	Éviter les fonds texturés (images).
 * Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&nbsp;Paragraphe&nbsp;&gt; Espacement&nbsp;» ou «&nbsp;Retrait&nbsp;» dans Word, par exemple).
-*	Éviter les tableaux de mise en page ou tableaux de données complexes (sauf en HTML si la [structure du tableau est accessible](https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees)). 
-*	Éviter le contenu "image" porteur d’information : graphes, schémas, diagrammes (sauf en HTML si une [alternative textuelle est accessible](https://a11y-guidelines.orange.com/fr/web/designer/contenu-non-textuel/))
+*	Éviter les tableaux de mise en page ou tableaux de données complexes (sauf en HTML si la [structure du tableau est accessible](/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees)). 
+*	Éviter le contenu "image" porteur d’information : graphes, schémas, diagrammes (sauf en HTML si une [alternative textuelle est accessible](/fr/web/designer/contenu-non-textuel/))
 *	Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple&nbsp;: sujet, verbe, complément. Une idée par phrase.
 *	Éviter au maximum les mots trop compliqués ou spécifiques à un domaine, et sinon, les expliquer.
 *	Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).
@@ -35,7 +35,7 @@ Cette section présente des recommandations générales à respecter pour garant
 
 ## Mise en page avec des tableaux 
 
-Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une [mise en page en tableaux](https://a11y-guidelines.orange.com/fr/contenu-editorial/emails/) : ajouter un role=presentation à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.  
+Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une [mise en page en tableaux](/fr/contenu-editorial/emails/) : ajouter un role=presentation à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.  
 
 
 ## Des tableaux de données accessibles
@@ -45,7 +45,7 @@ Afin que vos tableaux de données soient accessible, simplifiez-les au maximum d
 * Éviter de fusionner les cellules, d'utiliser trop de cellules vides, d'ajouter des images de fond.
 * Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas).
 
-Et pour l'implémentation dans une page Web par exemple, consultez <a href="https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees" title="Structurer les tableaux de données">notre article dédié</a>.
+Et pour l'implémentation dans une page Web par exemple, consultez <a href="/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees" title="Structurer les tableaux de données">notre article dédié</a>.
 
 ## Annexes
 ### Comment mettre des accents aux majuscules ?
