@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -172,111 +172,181 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#moteur-switch-control-0229" class="dropdown-item text-wrap">MOTEUR - Switch Control (02:29)</a><a href="#moteur-dwell-control-0336" class="dropdown-item text-wrap">MOTEUR - Dwell Control (03:36)</a><a href="#vue-adaptation-des-couleurs-0415" class="dropdown-item text-wrap">VUE - Adaptation des couleurs (04:15)</a><a href="#vue-taptic-time-0453" class="dropdown-item text-wrap">VUE - Taptic time (04:53)</a><a href="#vue-loupe-0517" class="dropdown-item text-wrap">VUE - Loupe (05:17)</a><a href="#ouie-tty-0651" class="dropdown-item text-wrap">OUÏE - TTY (06:51)</a><a href="#apprentissage-retour-audio-decriture-0751" class="dropdown-item text-wrap">APPRENTISSAGE - Retour audio d&#39;écriture (07:51)</a><a href="#decouvrir-le-protocole-uiaccessibility-1419" class="dropdown-item text-wrap">Découvrir le protocole UIAccessibility (14:19)</a><a href="#accessibilityelements-1800" class="dropdown-item text-wrap">accessibilityElements (18:00)</a><a href="#accessibilityframeincontainerspace-1902" class="dropdown-item text-wrap">accessibilityFrameInContainerSpace (19:02)</a><a href="#accessibilitycustomrotors-2419" class="dropdown-item text-wrap">accessibilityCustomRotors (24:19)</a><a href="#tvos-3120" class="dropdown-item text-wrap">tvOS (31:20)</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>WWDC 2016 : Les nouveautés en accessibilité</h1>
-<p>Cette présentation visualisable sur le <strong>site développeur officiel d'Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2016/202/">session 202</a>) a pour buts de mettre en avant les principales nouveautés en terme d'accessibilité et de rappeler quelques fondamentaux avec une importance notable pour <span lang="en">VoiceOver</span>.<br>
-<br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202.png" /><br>
-<br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC 2016 : Les nouveautés en accessibilité</h1>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d'Apple</strong> (<a href="https://developer.apple.com/videos/play/wwdc2016/202/">session 202</a>) a pour buts de mettre en avant les principales nouveautés en terme d'accessibilité et de rappeler quelques fondamentaux avec une importance notable pour <span lang="en">VoiceOver</span>.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202.png" alt="" class="img-fluid"><br>
+<br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
 <ul>
 <li>
 <p><strong>Fonctionnalités</strong></p>
 <ul>
-<li><a href="#SwitchControl">MOTEUR - Switch Control</a> (02:29) ⟹ <strong>nouveauté tvOS 10</strong></li>
-<li><a href="#DwellControl">MOTEUR - Dwell Control</a> (03:36)</li>
-<li><a href="#DisplayAdjustments">VUE - Adaptation des couleurs</a> (04:15) ⟹ <strong>nouveauté tvOS 10</strong></li>
-<li><a href="#TapticTime">VUE - Taptic time</a> (04:53)</li>
-<li><a href="#Magnifier">VUE - Loupe</a> (05:17) ⟹ <strong>nouveauté iOS 10</strong></li>
-<li><a href="#SoftwareTTY">OUÏE - TTY</a> (06:51) ⟹ <strong>nouveauté iOS 10</strong></li>
-<li><a href="#EnhancedTypingFeedback">APPRENTISSAGE - Retour audio d'écriture</a> (07:51)</li>
+<li>
+<p><a href="#moteur-switch-control-0229">MOTEUR - Switch Control</a> (02:29) ⟹ <strong>nouveauté tvOS 10</strong></p>
+</li>
+<li>
+<p><a href="#moteur-dwell-control-0336">MOTEUR - Dwell Control</a> (03:36)</p>
+</li>
+<li>
+<p><a href="#vue-adaptation-des-couleurs-0415">VUE - Adaptation des couleurs</a> (04:15) ⟹ <strong>nouveauté tvOS 10</strong></p>
+</li>
+<li>
+<p><a href="#vue-taptic-time-0453">VUE - Taptic time</a> (04:53)</p>
+</li>
+<li>
+<p><a href="#vue-loupe-0517">VUE - Loupe</a> (05:17) ⟹ <strong>nouveauté iOS 10</strong></p>
+</li>
+<li>
+<p><a href="#ouie-tty-0651">OUÏE - TTY</a> (06:51) ⟹ <strong>nouveauté iOS 10</strong></p>
+</li>
+<li>
+<p><a href="#apprentissage-retour-audio-decriture-0751">APPRENTISSAGE - Retour audio d'écriture</a> (07:51)</p>
+</li>
 </ul>
 </li>
 <li>
 <p><strong>Programmation</strong></p>
 <ul>
-<li><a href="#UIAccessibilityProtocol">Découvrir le protocole UIAccessibility</a> (14:19)</li>
-<li><a href="#accessibilityElements">accessibilityElements</a> (18:00)</li>
-<li><a href="#accessibilityFrameInContainerSpace">accessibilityFrameInContainerSpace</a> (19:02) ⟹ <strong>nouveauté iOS 10</strong></li>
-<li><a href="#accessibilityCustomRotors">accessibilityCustomRotors</a> (24:19) ⟹ <strong>nouveauté iOS 10</strong></li>
-<li><a href="#tvOS">tvOS header elements</a> (31:20)</li>
+<li>
+<p><a href="#decouvrir-le-protocole-uiaccessibility-1419">Découvrir le protocole UIAccessibility</a> (14:19)</p>
+</li>
+<li>
+<p><a href="#accessibilityelements-1800">accessibilityElements</a> (18:00)</p>
+</li>
+<li>
+<p><a href="#accessibilityframeincontainerspace-1902">accessibilityFrameInContainerSpace</a> (19:02) ⟹ <strong>nouveauté iOS 10</strong></p>
+</li>
+<li>
+<p><a href="#accessibilitycustomrotors-2419">accessibilityCustomRotors</a> (24:19) ⟹ <strong>nouveauté iOS 10</strong></p>
+</li>
+<li>
+<p><a href="#tvos-3120">tvOS</a> (31:20)</p>
+</li>
 </ul>
 </li>
 <li>
-<p><strong>Exemple</strong> : au cours de cette présentation, de nombreuses solutions sont proposées par le biais d'une application d'exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span>. Il est vivement conseillé de regarder l'<a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=698">application d'exemple sans améliorations</a> avant de consulter les solutions. Une fois tous les problèmes soulevés par ces questions solutionnés, l'accessibilité VoiceOver de l'application s'améliore nettement pour aboutir à la <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1753">démonstration</a> réalisée en séance.</p>
+<p><strong>Exemple</strong> : au cours de cette présentation, de nombreuses solutions sont proposées par le biais d'une application d'exemple pour répondre aux questions que se posent les développeurs face aux problèmes rencontrés en accessibilité avec <span lang="en">VoiceOver</span>.<br>
+Il est vivement conseillé de regarder l'<a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=699">application  d'exemple sans améliorations</a> avant de consulter les solutions. Une fois tous les problèmes soulevés par ces questions solutionnés, l'accessibilité VoiceOver de l'application s'améliore nettement pour aboutir à la <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1759">démonstration</a> réalisée en séance.</p>
 <ul>
-<li>Rendre une <code>table view cell</code> activable <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1198">(19:58)</a>.</li>
-<li>Mettre un <code>label</code> dynamique sur un bouton <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1221">(20:21)</a>.</li>
-<li>Rendre accessibles des éléments <code>CALayer</code> utilisés pour créer un graphe par exemple <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1245">(20:45)</a>.</li>
-<li>Comprendre la problématique de navigation sur un plan avec VoiceOver <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1413">(23:33)</a>.</li>
-<li>Effectuer une recherche concernant les éléments d'une <code>table view</code> <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1537">(25:37)</a> et d'un plan <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1665">(27:45)</a> avec le <code>rotor</code>.</li>
+<li>
+<p>Rendre une <code>table view cell</code> activable <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1198">(19:58)</a>.</p>
+</li>
+<li>
+<p>Mettre un <code>label</code> dynamique sur un bouton <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1221">(20:21)</a>.</p>
+</li>
+<li>
+<p>Rendre accessibles des éléments <code>CALayer</code> utilisés pour créer un graphe par exemple <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1245">(20:45)</a>.</p>
+</li>
+<li>
+<p>Comprendre la problématique de navigation sur un plan avec VoiceOver <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1413">(23:33)</a>.</p>
+</li>
+<li>
+<p>Effectuer une recherche concernant les éléments d'une <code>table view</code> <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1537">(25:37)</a> et d'un plan <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1665">(27:45)</a> avec le <code>rotor</code>.</p>
+</li>
 </ul>
 </li>
 </ul>
-<p>Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.<br>
-<br><br><br>
-<a name="SwitchControl"></a></p>
+<p><br>Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.<br>
+<br><br></p>
 <h2 id="moteur-switch-control-0229"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=149">MOTEUR - Switch Control (02:29)</a> <a class="header-anchor" href="#moteur-switch-control-0229" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Après un petit rappel sur l'utilisation iOS de cette fonctionnalité, un focus particulier est mis sur son <strong>introduction avec tvOS</strong>.<br>
-<br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-SwitchControl.png" /><br>
-<br><br><br>
-<a name="DwellControl"></a></p>
+<p>Après un petit rappel sur l'utilisation iOS de cette fonctionnalité, un focus particulier est mis sur son <strong>introduction avec tvOS</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-SwitchControl.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="moteur-dwell-control-0336"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=216">MOTEUR - Dwell Control (03:36)</a> <a class="header-anchor" href="#moteur-dwell-control-0336" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Des appareils spécifiques connectés à l'ordinateur permettent de l'utiliser sans avoir à manipuler la souris en associant le mouvement de cette dernière à celui des yeux.<br>
-<br>Lorsque le curseur se stabilise, un timer est lancé à l'expiration duquel une action dédiée est déclenchée <em>(nouveauté MacOS)</em>.<br>
-<br><img style="max-width: 700px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-DwellControl.png" /><br>
-<a name="DisplayAdjustments"></a></p>
+<br>Lorsque le curseur se stabilise, un timer est lancé à l'expiration duquel une action dédiée est déclenchée (nouveauté MacOS).</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-DwellControl.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="vue-adaptation-des-couleurs-0415"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=255">VUE - Adaptation des couleurs (04:15)</a> <a class="header-anchor" href="#vue-adaptation-des-couleurs-0415" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Toutes les facilités déjà présentes sur iOS et MacOS pour aider au maximum les personnes ayant des problèmes de reconnaissance de couleurs ou une forte sensibilité à la lumière sont désormais aussi <strong>disponibles sur tvOS</strong>.<br>
-<br><br><br><br>
-<a name="TapticTime"></a></p>
+<br><br></p>
 <h2 id="vue-taptic-time-0453"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=293">VUE - Taptic time (04:53)</a> <a class="header-anchor" href="#vue-taptic-time-0453" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>WatchOS 3</strong> introduit cette fonctionnalité qui permet via VoiceOver de mettre en oeuvre toute une <strong>série de taps</strong> spécifiques <strong>pour donner l'heure</strong> d'une façon très silencieuse et discrète.<br>
-<br><br><br><br>
-<a name="Magnifier"></a></p>
+<br><br></p>
 <h2 id="vue-loupe-0517"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=317">VUE - Loupe (05:17)</a> <a class="header-anchor" href="#vue-loupe-0517" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Cette <strong>nouveauté iOS 10</strong> permet d'utiliser son appareil mobile comme une loupe en associant des fonctionnalités d'accessibilité <em>(stabilisateur d'écran, filtres de couleurs...)</em> mises en situation par une <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=344">démonstration</a> au sein de cette présentation.<br>
-<br><br><br><br>
-<a name="SoftwareTTY"></a></p>
+<p>Cette <strong>nouveauté iOS 10</strong> permet d'utiliser son appareil mobile comme une loupe en associant des fonctionnalités d'accessibilité (stabilisateur d'écran, filtres de couleurs...) mises en situation par une <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=344">démonstration</a> au sein de cette présentation.<br>
+<br><br></p>
 <h2 id="ouie-tty-0651"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=411">OUÏE - TTY (06:51)</a> <a class="header-anchor" href="#ouie-tty-0651" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>L'utilisation du <strong>TTY</strong> <em>(Typewriter)</em> qui permet de faire passer du texte sur une ligne téléphonique grâce des appareils dédiés est désormais possible sur iOS.<br>
+<p>L'utilisation du <strong>TTY</strong> (Typewriter) qui permet de faire passer du texte sur une ligne téléphonique grâce des appareils dédiés est désormais possible sur iOS.<br>
 <br>Cette <strong>nouveauté iOS 10</strong> sous forme d'<strong>implémentation software</strong> permet donc de réaliser ce type de conversation directement sur son appareil mobile sans avoir à ajouter quelque complément matériel que ce soit.<br>
-<br><br><br><br>
-<a name="EnhancedTypingFeedback"></a></p>
+<br><br></p>
 <h2 id="apprentissage-retour-audio-decriture-0751"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=471">APPRENTISSAGE - Retour audio d'écriture (07:51)</a> <a class="header-anchor" href="#apprentissage-retour-audio-decriture-0751" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Outre les améliorations réalisées sur <code>Énoncer la sélection</code> et <code>Énoncer le contenu de l'écran</code> dans la partie <code>Accessibilité - Parole</code> des réglages, un retour audio sur ce qui est tapé à l'écran par l'utilisateur a aussi été implémenté.<br>
 <br>Cette <strong>nouveauté iOS 10</strong> permet à des personnes dyslexiques par exemple de vérifier directement leurs écrits qu'une <a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=496">démonstration</a> au sein de cette présentation met en évidence.<br>
-<br><br><br>
-<a name="UIAccessibilityProtocol"></a></p>
+<br><br></p>
 <h2 id="decouvrir-le-protocole-uiaccessibility-1419"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=859">Découvrir le protocole UIAccessibility (14:19)</a> <a class="header-anchor" href="#decouvrir-le-protocole-uiaccessibility-1419" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Petit rappel sur les fondements du protocole informel <code>UIAccessibility</code> qui va être utilisé dans la suite de la présentation.<br>
-<br><img style="max-width: 550px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-UIAccessibilityProtocol.png" /><br>
-<br><br><br>
-<a name="accessibilityElements"></a></p>
+<p>Petit rappel sur les fondements du protocole informel <code>UIAccessibility</code> qui va être utilisé dans la suite de la présentation.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-UIAccessibilityProtocol.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="accessibilityelements-1800"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1080">accessibilityElements (18:00)</a> <a class="header-anchor" href="#accessibilityelements-1800" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Rappel sur l'intérêt de créer ce type d'objets et le contexte au sein duquel ils évoluent.<br>
-<br><img style="max-width: 575px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-accessibilityElements.png" /><br>
-<br><br><br>
-<a name="accessibilityFrameInContainerSpace"></a></p>
+<p>Rappel sur l'intérêt de créer ce type d'objets et le contexte au sein duquel ils évoluent.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-accessibilityElements.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="accessibilityframeincontainerspace-1902"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1142">accessibilityFrameInContainerSpace (19:02)</a> <a class="header-anchor" href="#accessibilityframeincontainerspace-1902" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Nouveauté iOS 10</strong> qui permet la gestion automatique des coordonnées d'un élément accessible dans son <code>container</code>.<br>
-<br><img style="max-width: 575px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-accessibilityFrameInContainerSpace.png" /><br>
-<br><br><br>
-<a name="accessibilityCustomRotors"></a></p>
+<p><strong>Nouveauté iOS 10</strong> qui permet la gestion automatique des coordonnées d'un élément accessible dans son <code>container</code>.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-accessibilityFrameInContainerSpace.png" alt="" class="img-fluid"><br>
+<br><br></p>
 <h2 id="accessibilitycustomrotors-2419"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1459">accessibilityCustomRotors (24:19)</a> <a class="header-anchor" href="#accessibilitycustomrotors-2419" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Nouveauté iOS 10</strong> qui permet d'ajouter des éléments personnalisés sur le <code>rotor</code> natif d'un terminal.<br>
-<br><img style="max-width: 775px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-accessibilityCustomRotors.png" /><br>
-<br>La mise en place programmatique de ce type de fonctionnement est aussi présentée dans la partie <a href="../../../developpement#rotor-personnalise">développement</a>.<br>
-<br><br><br>
-<a name="tvOS"></a></p>
-<h2 id="tvos-header-elements-3120"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1880">tvOS header elements (31:20)</a> <a class="header-anchor" href="#tvos-header-elements-3120" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Rappel sur l'implémentation des éléments cités en objet ainsi que sur leur intérêt avec une navigation VoiceOver au sein de l'univers tvOS.<br>
-<br><img style="max-width: 500px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-tvOS_1.png" /><br>
-<br><img style="max-width: 450px; height: auto;" alt="" src="../../../../images/iOSdev/wwdc16-202-tvOS_2.png" /><br>
+<p><strong>Nouveauté iOS 10</strong> qui permet d'ajouter des éléments personnalisés sur le <code>rotor</code> natif d'un terminal.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-accessibilityCustomRotors.png" alt="" class="img-fluid"><br>
+<br>La mise en place programmatique de ce type de fonctionnement est aussi présentée dans la <a href="../../../developpement#rotor-personnalise">partie développement</a>.<br>
+<br><br></p>
+<h2 id="tvos-3120"><a href="https://developer.apple.com/videos/play/wwdc2016/202/?time=1880">tvOS (31:20)</a> <a class="header-anchor" href="#tvos-3120" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Rappel sur l'implémentation des éléments cités en objet ainsi que sur leur intérêt avec une navigation VoiceOver au sein de l'univers tvOS.</p>
+<p><img src="../../../../images/iOSdev/wwdc16-202-tvOS_1.png" alt="" class="img-fluid"><br>
+<img src="../../../../images/iOSdev/wwdc16-202-tvOS_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#moteur-switch-control-0229" class="nav-link text-muted bg-200">MOTEUR - Switch Control (02:29)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#moteur-dwell-control-0336" class="nav-link text-muted bg-200">MOTEUR - Dwell Control (03:36)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#vue-adaptation-des-couleurs-0415" class="nav-link text-muted bg-200">VUE - Adaptation des couleurs (04:15)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#vue-taptic-time-0453" class="nav-link text-muted bg-200">VUE - Taptic time (04:53)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#vue-loupe-0517" class="nav-link text-muted bg-200">VUE - Loupe (05:17)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ouie-tty-0651" class="nav-link text-muted bg-200">OUÏE - TTY (06:51)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#apprentissage-retour-audio-decriture-0751" class="nav-link text-muted bg-200">APPRENTISSAGE - Retour audio d&#39;écriture (07:51)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#decouvrir-le-protocole-uiaccessibility-1419" class="nav-link text-muted bg-200">Découvrir le protocole UIAccessibility (14:19)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibilityelements-1800" class="nav-link text-muted bg-200">accessibilityElements (18:00)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibilityframeincontainerspace-1902" class="nav-link text-muted bg-200">accessibilityFrameInContainerSpace (19:02)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibilitycustomrotors-2419" class="nav-link text-muted bg-200">accessibilityCustomRotors (24:19)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#tvos-3120" class="nav-link text-muted bg-200">tvOS (31:20)</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
