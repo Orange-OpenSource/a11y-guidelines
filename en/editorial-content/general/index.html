@@ -173,51 +173,46 @@
     </div>
     
   <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>General recommendations for content</h1>
+      <h1>General recommendations</h1>
 <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>This section proposes general recommendations to ensure your contents are accessible whatever the medium used (email, Web, Word, etc.).</p>
+<p>This section presents general recommendations to ensure the accessibility of your content regardless of the medium used (email, PPT, PDF, Word, etc.).</p>
 <h2 id="check-colours">Check colours <a class="header-anchor" href="#check-colours" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li>Make sure colour is not the only means used to convey information.</li>
-<li>Make sure there is sufficient contrast between the text colour and the background.</li>
-</ul>
-<p>The contrast can be checked with <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> :</p>
+<li>Make sure <a href="/en/web/design/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information">color is not the only means used to convey information</a>.</li>
+<li>Ensure a level of <a href="/en/web/design/colors-and-contrasts/#make-sure-there-is-enough-contrast-between-font-and-background-colors">sufficient contrast between the color of the text and that of the background</a>. This is valid for your texts but also for icons, buttons and other graphic elements. Contrast can be checked using the tool <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> for example:
 <ul>
 <li>4.5:1 for normal size text.</li>
-<li>3:1 for big text.</li>
+<li>3:1 for large text and interface components or graphical elements that convey information.</li>
 </ul>
-<h2 id="facilitate-reading">Facilitate reading <a class="header-anchor" href="#facilitate-reading" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+</li>
+</ul>
+<h2 id="make-reading-easier">Make reading easier <a class="header-anchor" href="#make-reading-easier" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li>Align text to the left, don’t justify it.</li>
-<li>Use an easily-readable font family with a minimum size of 12 pixels.</li>
-<li>Use simple punctuation.</li>
-<li>Avoid italics, completely capitalised sentences; but always put a capital at the beginning of a sentence.</li>
+<li>Align texts to the left (avoid justifying).</li>
+<li>Put a capital letter at the beginning of a sentence but avoid whole sentences in capital letters.</li>
+<li>Avoid italics.</li>
+<li>Use simple, sans serif fonts: Arial, Calibri or <a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">accessible font Dfa</a>, having a size of at least 10 points.</li>
+<li>Set up simple punctuation.</li>
 <li>Avoid textured backgrounds (images).</li>
-<li>Do not do too many repeated carriage returns or tabs to space contents (rather, use “Paragraph &gt; Spacing” or “Indent” in Word for instance).</li>
-<li>Avoid layout and data tables.</li>
-<li>Avoid information-conveying content in images (graphs, schemas, diagrams,…)</li>
-<li>Signal the end of the document (for instance, an image saying “End of email”, or a white-on-white text “End of document”).</li>
-<li>Use simple, clear and short phrase turns: subject, verb, complement. One idea per sentence, with simple words.</li>
-<li>Explain complicated words.</li>
-<li>Use the present tense, preferably direct style, and active form (no subjunctive, no conjunctions).</li>
+<li>Do not make repeated carriage returns or tabulation to space (but the “Paragraph &amp; Spacing” or “Indent” function in Word, for example).</li>
+<li>Avoid layout tables or complex data tables (except in HTML if the <a href="/en/web/develop/textual-content/#structuring-data-tables">table structure is accessible</a>).</li>
+<li>Avoid “image” content that conveys information: graphs, diagrams, diagrams (except in HTML if a <a href="/en/web/design/non-textual-content/">textual alternative is available</a>).</li>
+<li>Use clear turns of phrase, short sentences and simple construction. One idea per sentence.</li>
+<li>Avoid words that are too complicated or specific to a domain as much as possible, and if not, explain them.</li>
 <li>Use proper typographic characters: dash -, em-dash —, “rounded quotes”.</li>
-</ul>
-<!-- removed 1 line re: accents and caps – not relevant in English --> 
-<ul>
 <li>Avoid foreign words, abbreviations except those that are genuinely used.</li>
+<li>Signal the end of the document (for instance, an image saying “End of email”, or a white-on-white text “End of document”).</li>
 </ul>
-<h2 id="provide-accessible-layout-tables">Provide accessible layout tables <a class="header-anchor" href="#provide-accessible-layout-tables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Simplify tables, even if we know that email clients (including Outlook) still often demand to use tables for layout.</p>
-<p>Checkpoints:</p>
+<h2 id="layout-with-tables">Layout with tables <a class="header-anchor" href="#layout-with-tables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Knowing that email clients (Outlook included) still sometimes require to use a <a href="/en/editorial-content/emails/">table layout</a>: add a <code>role=&quot;presentation&quot;</code> to your table tags so that text-to-speeches understand it's just formatting.</p>
+<h2 id="accessible-data-tables">Accessible data tables <a class="header-anchor" href="#accessible-data-tables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>In order for your data tables to be accessible, simplify them as much as possible from their design:</p>
 <ul>
-<li>In general, don’t do complex table layouts (merging cells, multicolumn,…).</li>
-<li>Avoid embedding layout tables (maximum two levels of embedding), but also:</li>
-<li>Don’t merge table cells, but use several simpler tables.</li>
-<li>Don’t keep empty cells.</li>
-<li>Don’t add background images.</li>
-<li>Make sure that the sequential order is correct (one can read left to right and top to bottom).</li>
-<li>Avoid complex data tables, graphs or schemas.</li>
+<li>Avoid nested tables one inside the other (maximum 2 levels of nesting).</li>
+<li>Avoid merging cells, using too many empty cells, adding background images.</li>
+<li>Ensure sequential reading (we must be able to read from left to right and top to bottom).</li>
 </ul>
+<p>And for the implementation in a web page for example, see <a href="/en/web/develop/textual-content/#structuring-data-tables" title="Structuring data tables">our dedicated article</a>.</p>
 
     </main>
     <footer id="footer" class="o-footer" role="contentinfo">
