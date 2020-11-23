@@ -25,7 +25,7 @@ Cette section présente des recommandations générales à respecter pour garant
 *	Éviter les fonds texturés (images).
 * Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction «&nbsp;Paragraphe&nbsp;&gt; Espacement&nbsp;» ou «&nbsp;Retrait&nbsp;» dans Word, par exemple).
 *	Éviter les tableaux de mise en page ou tableaux de données complexes (sauf en HTML si la [structure du tableau est accessible](/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees)). 
-*	Éviter le contenu "image" porteur d’information : graphes, schémas, diagrammes (sauf en HTML si une [alternative textuelle est accessible](/fr/web/designer/contenu-non-textuel/))
+*	Éviter le contenu «&nbsp;image&nbsp;» porteur d’information : graphes, schémas, diagrammes (sauf en HTML si une [alternative textuelle est accessible](/fr/web/designer/contenu-non-textuel/))
 *	Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple&nbsp;: sujet, verbe, complément. Une idée par phrase.
 *	Éviter au maximum les mots trop compliqués ou spécifiques à un domaine, et sinon, les expliquer.
 *	Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).
@@ -35,7 +35,7 @@ Cette section présente des recommandations générales à respecter pour garant
 
 ## Mise en page avec des tableaux 
 
-Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une [mise en page en tableaux](/fr/contenu-editorial/emails/) : ajouter un role=presentation à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.  
+Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une [mise en page en tableaux](/fr/contenu-editorial/emails/) : ajouter un `role="presentation"` à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.  
 
 
 ## Des tableaux de données accessibles
