@@ -14,6 +14,13 @@ Most of the illustrations are parts of Apple presentations and are available at 
 **The summary of each video can be reached on clicking the title or the image presentation**.
 <br><br><br>
 
+## [2020 - VoiceOver Efficiency with Custom Rotors](2020/116/)
+Explanations about **custom rotors** are enlighted thanks to an application for which the rotor functionalities implementations are detailed in depth.
+<a href="2020/116/">
+    
+![Access to the VoiceOver Efficiency with Custom Rotors video session.](../../images/iOSdev/wwdc20-116.png)
+</br></br></br>
+
 ## [2019 - Large Content Viewer](2019/261/)
 This video session deals with the **Large Content Viewer** feature that helps people who prefer and/or need larger text sizes.
 <a href="2019/261/">
