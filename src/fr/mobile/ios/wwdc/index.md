@@ -14,6 +14,13 @@ La plupart des illustrations proviennent des supports de présentations fournies
 **L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation**.
 <br><br><br>
 
+## [2020 - Efficience du rotor](2020/116/)
+Explications sur la mise en oeuvre du **rotor personnalisé** à l'aide d'une application pour laquelle l'implémentation des fonctionnalités est développée de façon détaillée.
+<a href="2020/116/">
+    
+![Accès à l'efficience du rotor.](../../images/iOSdev/wwdc20-116.png)
+<br><br><br>
+
 ## [2019 - Large Content Viewer](2019/261/)
 Cette courte vidéo concerne la fonctionnalité **Large Content Viewer** apparue avec iOS 11 et les nouveautés iOS 13 associées.
 <a href="2019/261/">
