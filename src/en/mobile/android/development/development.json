@@ -1,0 +1,26 @@
+﻿{
+  "highlightJS": true,
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "General navigation",
+      "href": "/en/mobile/android/development/general-navigation/"
+    },
+    {
+      "label": "Vocal navigation",
+      "href": "/en/mobile/android/development/vocal-navigation/"
+    },
+    {
+      "label": "Focus navigation",
+      "href": "/en/mobile/android/development/focus-navigation/"
+    },
+    {
+      "label": "Magnification",
+      "href": "/en/mobile/android/development/magnification/"
+    },
+    {
+      "label": "Form",
+      "href": "/en/mobile/android/development/form/"
+    }
+  ]
+}
