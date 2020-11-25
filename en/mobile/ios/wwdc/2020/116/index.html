@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC 2020: VoiceOver Efficiency with Custom Rotors - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC 2020: VoiceOver Efficiency with Custom Rotors
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>WWDC 2020: VoiceOver Efficiency with Custom Rotors</h1>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10116/">session 10116</a>) aims at introducing the different ways to <strong>create some rotor items</strong> in order to <strong>improve the VoiceOver user experience</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116.png" alt="" class="img-fluid"><br>
+</br>This rotor customization is a great accessibility feature that makes the navigation within complex interfaces and the selection of related elements pretty much easier.<br>
+</br></br>Various contents and their video timelapse are indicated hereunder:</p>
+<ul>
+<li><strong>CUSTOM ROTORS FOR MAPS</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ContextForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImplementationForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">Implementation</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#FinalAppForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">Example</a><br>
+<br></li>
+</ul>
+</li>
+<li><strong>CUSTOM ROTORS FOR TEXT</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ContextForText_tab').trigger('click');document.getElementById('custom-rotors-for-text').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImplementationForText_tab').trigger('click');document.getElementById('custom-rotors-for-text').scrollIntoView({ behavior: 'smooth', block: 'start' })">Implementation</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#FinalAppForText_tab').trigger('click');document.getElementById('custom-rotors-for-text').scrollIntoView({ behavior: 'smooth', block: 'start' })">Example</a></li>
+</ul>
+</li>
+</ul>
+</br>
+Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.
+<p></br></br></p>
+<h2 id="custom-rotors-for-maps">CUSTOM ROTORS FOR MAPS <a class="header-anchor" href="#custom-rotors-for-maps" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ContextForMaps"
+           id="ContextForMaps_tab"
+           role="tab" 
+           aria-selected="true">Context</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImplementationForMaps"
+           id="ImplementationForMaps_tab"
+           role="tab" 
+           aria-selected="false">Implementation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#FinalAppForMaps"
+           id="FinalAppForMaps_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ContextForMaps" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=73">🎬 (01:13)</a><br>
+</br>Using a <a href="../../../voiceover/#common-gestures" style="text-decoration: underline;">one finger flick</a> with the native VoiceOver system may vocalizes many useless graphical items before reaching the useful element that can't be obtained directly.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_Context.png" alt="" class="img-fluid"><br>
+</br></br><a style="text-decoration: underline;">Reminder</a>: when browsing all the displayed accessible elements in a page, VoiceOver will natively and automatically read from left to right and select the first item in the top left corner to the last one in the bottom right corner.</p>
+</div>
+<div class="tab-pane" id="ImplementationForMaps" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=243">🎬 (04:03)</a><br>
+</br>The best way to easily present elements that must be grouped in a specific category is to create <a href="../../../development/#custom-rotor" style="text-decoration: underline;">customized rotor items</a>...</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_Implementation_1.png" alt="" class="img-fluid"><br>
+</br></br>... and implement their dedicated behaviors that will be triggered by the appropriate gesture.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_Implementation_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="FinalAppForMaps" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=196">🎬 (03:16)</a><br>
+</br>Once created, the customized rotor items are available to select, vocalize and focus all the elements that belong to these proposed categories.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_FinalApp.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="custom-rotors-for-text">CUSTOM ROTORS FOR TEXT <a class="header-anchor" href="#custom-rotors-for-text" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ContextForText"
+           id="ContextForText_tab"
+           role="tab" 
+           aria-selected="true">Context</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImplementationForText"
+           id="ImplementationForText_tab"
+           role="tab" 
+           aria-selected="false">Implementation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#FinalAppForText"
+           id="FinalAppForText_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ContextForText" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=367">🎬 (06:07)</a><br>
+</br>When reading some text that might contain any lines prefixed by icons that convey useful information, it's impossible to get directly the category of info related by the icon only using the native VoiceOver selections.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Context.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImplementationForText" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=461">🎬 (07:41)</a><br>
+</br>Let's improve the example in the <code>Context</code> tab following the same <a style="text-decoration: underline;" role="button" onclick="$('#ImplementationForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">method used for maps</a> but only with one single item whose aim will be to filter the alerts.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_1.png" alt="" class="img-fluid"><br>
+</br>As usual when dealing with text, filtering consists of working with range and size for the final implementation.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="FinalAppForText" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=442">🎬 (07:22)</a><br>
+</br>Once the customized rotor item is created to filter the alerts, a flick up or down with one finger will give rise to the selection of the elements in the defined category.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_FinalApp.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></br></p>
+
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2020/116.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>
