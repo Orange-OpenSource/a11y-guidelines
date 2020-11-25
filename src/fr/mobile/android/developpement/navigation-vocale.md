@@ -205,7 +205,6 @@ Il faut indiquer l’état et la nature des onglets (non internationalisé)&nbsp
 **Quand&nbsp;:** dès la conception, à la rédaction du contenu et pendant le développement.
 
 **Description&nbsp;:**  
-L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il arrive parfois que cela ne suffise pas à établir un ordre cohérent, comme dans l'exemple ci-dessous, et il est donc nécessaire de redéfinir cet ordre de lecture.
 
 L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres&nbsp;: la lecture «&nbsp;logique&nbsp;», en français, de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il est tout à fait possible de redéfinir cet ordre de lecture avec deux outils&nbsp;:  
 - `accessibilityTraversalAfter`&nbsp;: prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité après la vue passée en paramètre.
@@ -405,7 +404,7 @@ android:accessibilityHeading="true"
 **Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.  
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
-### Description&nbsp;:
+**Description&nbsp;:**
 
 Il est possible via un attribut d’accessibilité de masquer des éléments aux outils d’accessibilité (<span lang="en">TalkBack</span> par exemple). Par extension, il est possible de forcer certains éléments à être visibles aux outils d’accessibilité.  
 `ImportantForAccessibility`&nbsp;: suivant la valeur de l’attribut, cela permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité.  
@@ -416,7 +415,7 @@ Il est possible via un attribut d’accessibilité de masquer des éléments aux
   
 À noter&nbsp;: l’attribut «&nbsp;`importantForAccessibility`&nbsp;» est disponible pour tout élément qui hérite de `View`.
 
-### Exemples&nbsp;:
+**Exemples&nbsp;:**
 
 <pre><code class="xml">&lt;TextView
 […]
@@ -436,7 +435,7 @@ myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE
 </code></pre>
 
 ## Détecter si <span lang="en">TalkBack</span> est activé
-### Description&nbsp;:
+**Description&nbsp;:**
 
 Sous Android, il est possible de savoir si l’<abbr>API</abbr> d’accessibilité est activée, et par extension de savoir si <span lang="en">TalkBack</span> est activé.
 
