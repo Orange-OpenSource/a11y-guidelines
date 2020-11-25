@@ -416,18 +416,18 @@ android:accessibilityHeading="true"
 **Target&nbsp;:** everyone and in particular people with visual and/or motor impairments.  
 **When&nbsp;:** from the design phase and during development.
 
-### Description&nbsp;:
+**Description&nbsp;:**
 
 It is possible via an accessibility attribute to hide elements to accessibility tools (TalkBack for example). By extension, it is possible to force some elements to be visible to accessibility tools.  
 `ImportantForAccessibility`&nbsp;: depending on the value of the attribute, this indicates that an element is visible or not from the accessibility <abbr>API</abbr>.  
 - `auto` (0)&nbsp;: default value, the system decides. For example, a `Button` will have its default value at 1 (yes) and a `LinearLayout` at 2 (no).
-- `yes` (1)>nbsp;: the view is important for accessibility. It can for example receive the focus of TalkBack.
+- `yes` (1)&nbsp;: the view is important for accessibility. It can for example receive the focus of TalkBack.
 - `no` (2)&nbsp;: the view is not important for accessibility. It no longer triggers an accessibility event and is therefore ignored by services such as TalkBack.
-- noHideDescendants` (4)&nbsp;: the view is not important for accessibility, but all its daughter views are. It hide all the elements of a view from accessibility at once. Very useful on custom elements.  
+- `noHideDescendants` (4)&nbsp;: the view is not important for accessibility, but all its daughter views are. It hide all the elements of a view from accessibility at once. Very useful on custom elements.  
   
 Note: the "importantForAccessibility" attribute is available for any element that inherits from `View'.
 
-### Examples&nbsp;:
+**Examples&nbsp;:**
 
 <pre><code class="xml">&lt;TextView
 […]
@@ -448,7 +448,7 @@ myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE
 
 ## Detect if TalkBack is enabled
 
-### Description&nbsp;:
+**Description&nbsp;:**
 
 Under Android, it is possible to know if the Accessibility API is enabled, and by extension to know if TalkBack is enabled.
 

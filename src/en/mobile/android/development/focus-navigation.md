@@ -24,7 +24,7 @@ Note: Android Pie (9, API 28), introduces a specific focus for screen reader to 
 - All interactive elements are highlighted with the focus navigation. 
 - Only the interactive elements are highlighted with the focus navigation.
 
-**Example&nbsp;**:
+**Examples&nbsp;**:
 Example of a selector including the `state_focused` :
 <pre><code class="xml">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
 	&lt;!-- Non focused states --&gt;
@@ -80,7 +80,7 @@ For more information on [focus management on Android](http://developer.android.c
 - The focus navigation order is logical and consistent.
 - Items are grouped together when they are linked (example: content within a clickable item in a list).
 
-**Exemple**
+**Example**
 <pre><code class="xml">&lt;EditText
     android:id="@+id/et1"
     android:nextFocusDown="@+id/et2"
