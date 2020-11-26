@@ -21,6 +21,13 @@ Explanations about **custom rotors** are enlighted thanks to an application for 
 ![Access to the VoiceOver Efficiency with Custom Rotors video session.](../../images/iOSdev/wwdc20-116.png)
 </br></br></br>
 
+## [2020 - App Accessibility for Switch Control](2020/019/)
+Many **improvements for the user experience** dealing with the **Switch Control feature** are listed and perfectly explained in this video session.
+<a href="2020/019/">
+    
+![Access to the app accessibility for switch control video session.](../../images/iOSdev/wwdc20-019.png)
+</br></br></br>
+
 ## [2019 - Large Content Viewer](2019/261/)
 This video session deals with the **Large Content Viewer** feature that helps people who prefer and/or need larger text sizes.
 <a href="2019/261/">
