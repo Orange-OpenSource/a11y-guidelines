@@ -21,6 +21,13 @@ Explications sur la mise en oeuvre du **rotor personnalisé** à l'aide d'une ap
 ![Accès à l'efficience du rotor.](../../images/iOSdev/wwdc20-116.png)
 <br><br><br>
 
+## [2020 - Accessibilité avec le contrôle de sélection](2020/019/)
+Des améliorations significatives pour la **navigation avec le contrôle de sélection** sont passées en revue et parfaitement expliquées tant au niveau de leur fonctionnement que de leur implémentation.
+<a href="2020/019/">
+    
+![Accès à l'accessibilité avec le contrôle de sélection.](../../images/iOSdev/wwdc20-019.png)
+</br></br></br>
+
 ## [2019 - Large Content Viewer](2019/261/)
 Cette courte vidéo concerne la fonctionnalité **Large Content Viewer** apparue avec iOS 11 et les nouveautés iOS 13 associées.
 <a href="2019/261/">
