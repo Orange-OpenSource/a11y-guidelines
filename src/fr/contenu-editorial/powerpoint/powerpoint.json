@@ -1,0 +1,13 @@
+{
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Créer une présentation PowerPoint accessible",
+      "href": "/fr/contenu-editorial/powerpoint/"
+    },
+    {
+      "label": "Tester l'accessibilité de votre présentation PowerPoint",
+      "href": "/fr/contenu-editorial/powerpoint/tester/"
+    }  
+  ]
+}
