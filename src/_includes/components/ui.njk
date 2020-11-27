@@ -1,6 +1,11 @@
-{%- macro navLink(link, class) -%}
+{%- macro navLink(link, class, forceStrictlyActive = false) -%}
 {%- set strictlyActive = page.url == link.href -%}
-{%- set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl -%}
+
+{%- if forceStrictlyActive == true -%}
+  {%- set active = strictlyActive -%}
+{%- else -%}
+  {%- set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl -%}
+{%- endif -%}
 
 {%- set current = "page" if strictlyActive else "true" -%}
 
@@ -152,7 +157,7 @@
       <ul class="nav flex-column">
         {%- for link in sideNavigationLinks -%}
           <li class="nav-item position-relative">
-            {{ navLink(link, "text-muted") }}
+            {{ navLink(link, "text-muted", true) }}
           </li>
         {%- endfor -%}
       </ul>
@@ -164,7 +169,7 @@
       </button>
       <div class="dropdown-menu dropdown-menu-left">
         {%- for link in sideNavigationLinks -%}
-          {{ navLink(link, "dropdown-item") }}
+          {{ navLink(link, "dropdown-item", true) }}
         {%- endfor -%}
       </div>
     </nav>
