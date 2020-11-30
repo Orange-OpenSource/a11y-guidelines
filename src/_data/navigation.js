@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
   top: {
     en: [
       { label: 'Go to menu', href: '#main-menu' },
@@ -141,6 +141,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/android/conception/' },
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
+          { label: 'Évaluer', href: '/fr/mobile/android/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
         ]
       },
