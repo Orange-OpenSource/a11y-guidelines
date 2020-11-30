@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC 2020: App Accessibility for Switch Control - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC 2020: App Accessibility for Switch Control
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#navigation-improvements-by-ordering" class="dropdown-item text-wrap">Navigation improvements by ordering</a><a href="#navigation-improvements-by-taxonomy" class="dropdown-item text-wrap">Navigation improvements by taxonomy</a><a href="#good-practice" class="dropdown-item text-wrap">Good practice</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC 2020: App Accessibility for Switch Control</h1>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10019/">session 10019</a>) aims at accurately explaining <strong>how and why customizing the switch control navigation</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019.png" alt="" class="img-fluid"><br>
+</br></br>Various contents and their video timelapse are indicated hereunder:</p>
+<ul>
+<li><strong>Overview</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewUserGuide_tab').trigger('click');document.getElementById('OverviewUserGuide').scrollIntoView({ behavior: 'smooth', block: 'start' })">Principles</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewCustomPurpose_tab').trigger('click');document.getElementById('OverviewCustomPurpose').scrollIntoView({ behavior: 'smooth', block: 'start' })">Customization goal</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewVoiceOver_tab').trigger('click');document.getElementById('OverviewVoiceOver').scrollIntoView({ behavior: 'smooth', block: 'start' })">VoiceOver impacts</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewCustomActions_tab').trigger('click');document.getElementById('OverviewCustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom actions</a> ⟹ <strong>new in iOS 14</strong></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewDemo_tab').trigger('click');document.getElementById('OverviewDemo').scrollIntoView({ behavior: 'smooth', block: 'start' })">Demo application</a><br>
+<br></li>
+</ul>
+</li>
+<li><strong>Navigation improvements</strong>
+<ul>
+<li><a href="#navigation-improvements-by-ordering">Ordering</a>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByOrderingContext_tab').trigger('click');document.getElementById('ImprovementByOrderingContext').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByOrderingSolution_tab').trigger('click');document.getElementById('ImprovementByOrderingSolution').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution</a></li>
+</ul>
+</li>
+<li><a href="#navigation-improvements-by-taxonomy">Taxonomy</a>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomyContext_tab').trigger('click');document.getElementById('ImprovementByTaxonomyContext').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomySolution1_tab').trigger('click');document.getElementById('ImprovementByTaxonomySolution1').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution 1</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomySolution2_tab').trigger('click');document.getElementById('ImprovementByTaxonomySolution2').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution 2</a><br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Good practice</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices1_tab').trigger('click');document.getElementById('BestPractices1').scrollIntoView({ behavior: 'smooth', block: 'start' })">1.  Check the control switch feature option state.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices2_tab').trigger('click');document.getElementById('BestPractices2').scrollIntoView({ behavior: 'smooth', block: 'start' })">2.  <code>accessibilityRespondsToUserInteraction</code>.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices3_tab').trigger('click');document.getElementById('BestPractices3').scrollIntoView({ behavior: 'smooth', block: 'start' })">3.  Confirm destructive behaviors.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices4_tab').trigger('click');document.getElementById('BestPractices4').scrollIntoView({ behavior: 'smooth', block: 'start' })">4.  No timeouts.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices5_tab').trigger('click');document.getElementById('BestPractices5').scrollIntoView({ behavior: 'smooth', block: 'start' })">5.  Group elements for scanning efficiency and speed.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices6_tab').trigger('click');document.getElementById('BestPractices6').scrollIntoView({ behavior: 'smooth', block: 'start' })">6.  Don't keep private user info on screen.</a></li>
+</ul>
+</li>
+</ul>
+ </br>
+Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.   
+<p><br><br></p>
+<h2 id="overview">Overview <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#OverviewUserGuide"
+           id="OverviewUserGuide_tab"
+           role="tab" 
+           aria-selected="true">Principles</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewCustomPurpose"
+           id="OverviewCustomPurpose_tab"
+           role="tab" 
+           aria-selected="false">Customization</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewVoiceOver"
+           id="OverviewVoiceOver_tab"
+           role="tab" 
+           aria-selected="false">VoiceOver</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewCustomActions"
+           id="OverviewCustomActions_tab"
+           role="tab" 
+           aria-selected="false">Actions</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewDemo"
+           id="OverviewDemo_tab"
+           role="tab" 
+           aria-selected="false">Demo</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="OverviewUserGuide" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=59">🎬 (00:59)</a><br>
+</br>This <strong>native iOS feature</strong> is made for persons with restricted physical ability in order to use their devices like everyone.<br>
+</br></br><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=163">🎬 (02:43)</a><br>
+</br>The selection of the displayed elements can be automatic or manual following the same reading order as VoiceOver's.<br>
+External components appropriate for people with motor impairments are often associated to this feature in order to ease the selection and the activation of the graphical elements.<br>
+</br>If need be, many useful information about the switch control implementation are available in the <a href="../../../development/#switch-control" style="text-decoration: underline;">developers guide section</a>.</p>
+</div>
+<div class="tab-pane" id="OverviewCustomPurpose" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=200">🎬 (03:20)</a><br>
+</br>This footage highlights the reason why it's necessary to customize the switch control ⟹ shorten the time to select, group elements to speed up the access of an action...</p>
+</div>
+<div class="tab-pane" id="OverviewVoiceOver" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=267">🎬 (04:27)</a><br>
+</br>A perfect VoiceOver implementation is the best work base for the switch control feature that might need some adjustments though according to some specific cases.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-OverviewVoiceOver.png" alt="" class="img-fluid"><br>
+</br>It's then crucial to have a <strong>flawless VoiceOver implementation</strong> to provide the best user experience with the switch control.</p>
+</div>
+<div class="tab-pane" id="OverviewCustomActions" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=560">🎬 (09:20)</a><br>
+</br>This part of the session perfectly explains the benefits of using the custom actions that are a powerful mean for VoiceOver and the switch control to <strong>provide a similar experience to that with a deactivated assistive technology.</strong><br>
+</br></br><br>
+<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=638">🎬 (10:38)</a><br>
+</br><strong>iOS 14</strong> gives the great opportunity to display a custom icon for a new action.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-OverviewCustomActions.png" alt="" class="img-fluid"><br>
+</br>The <a href="../../../development/#custom-actions" style="text-decoration: underline;">developers guide</a> and the <a href="../../2019/#accessibility-custom-actions" style="text-decoration: underline;">detailed summary</a> of the WWDC 2019 video entitled <strong>Accessibility Custom Actions</strong> are efficient means to dive deeper into the custom actions.</p>
+</div>
+<div class="tab-pane" id="OverviewDemo" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=315">🎬 (05:15)</a> 😳 ⟹  <strong>no assistive technologies</strong>.<br>
+</br></br><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=402">🎬 (06:42)</a> 😱 ⟹ switch control activated with <strong>no customizations</strong>.<br>
+</br></br><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=661">🎬 (11:01)</a> 👍 ⟹ <strong>better user experience</strong> with the <strong>improvements for the switch control</strong>.</p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="navigation-improvements-by-ordering">Navigation improvements by ordering <a class="header-anchor" href="#navigation-improvements-by-ordering" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ImprovementByOrderingContext"
+           id="ImprovementByOrderingContext_tab"
+           role="tab" 
+           aria-selected="true">Context</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImprovementByOrderingSolution"
+           id="ImprovementByOrderingSolution_tab"
+           role="tab" 
+           aria-selected="false">Solution</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ImprovementByOrderingContext" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=408">🎬 (06:48)</a><br>
+</br>The basic system behavior is based on a native reading following the top-to-bottom and left-to-right ordering that might give rise to some problems for elements with graphic layout that's not bound to this logic.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingContext.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImprovementByOrderingSolution" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=461">🎬 (07:41)</a><br>
+</br>The simplest solution for the <code>Context</code> first problem consists in creating some appropriate blocks grouping elements in order to ease and speed up a selection wherever the location of the element.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingSolution_1.png" alt="" class="img-fluid"><br>
+</br></br>To reach this goal, it's crucial to define the inside elements as combined so as to be possibly selected as an individual object.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingSolution_2.png" alt="" class="img-fluid"><br>
+</br>Finally, the content of each created group must be accurately described for an exact operation.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingSolution_3.png" alt="" class="img-fluid"><br>
+</br>A comprehensive and meticulous example for this kind of implementation is provided in the <a href="../../../development/#switch-control" style="text-decoration: underline;">developers guide section</a>.</p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="navigation-improvements-by-taxonomy">Navigation improvements by taxonomy <a class="header-anchor" href="#navigation-improvements-by-taxonomy" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ImprovementByTaxonomyContext"
+           id="ImprovementByTaxonomyContext_tab"
+           role="tab" 
+           aria-selected="true">Context</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImprovementByTaxonomySolution1"
+           id="ImprovementByTaxonomySolution1_tab"
+           role="tab" 
+           aria-selected="false">Solution 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImprovementByTaxonomySolution2"
+           id="ImprovementByTaxonomySolution2_tab"
+           role="tab" 
+           aria-selected="false">Solution 2</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ImprovementByTaxonomyContext" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=435">🎬 (07:15)</a><br>
+</br>This footage highlights the numerous number of interactions that are necessary to use the application with no switch control customizations.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByTaxonomyContext.png" alt="" class="img-fluid"><br>
+</br>The first problem that comes out is the large amount of interactions to be executed in order to trigger a simple action.<br>
+</br>The second problem points out the gestures submenus that may require more manipulations according to the location of the action.</p>
+</div>
+<div class="tab-pane" id="ImprovementByTaxonomySolution1" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=506">🎬 (08:26)</a><br>
+</br>In order to avoid multiple round-trips in the interactions to return each card, the tip consists in going back to the initial state automatically once the card is deselected.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByTaxonomySolution1_1.png" alt="" class="img-fluid"><br>
+</br>Inside the implementation, the <code>CardView</code> class must conform to the <a href="../../../development/#focus-an-element" style="text-decoration: underline;"><code>UIAccessibilityFocus</code></a> informal protocol that provides programming elements to be informed of the accessible element focus.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByTaxonomySolution1_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImprovementByTaxonomySolution2" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=594">🎬 (09:54)</a><br>
+</br>Even if the <a href="../../2019/#accessibility-custom-actions" style="text-decoration: underline;">custom actions for the use of switch control</a> is no longer to be demonstrated, their accurate implementations are crucial for the significant improvement of the user experience.<br>
+</br>The thrust for the resolution of the second problem mentioned in the <code>Context</code> sheet is to create <a href="../../../development/#custom-actions" style="text-decoration: underline;">custom actions</a> localized in the main menu with a specific icon for each one of them to ease their recognitions.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-OverviewCustomActions.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="good-practice">Good practice <a class="header-anchor" href="#good-practice" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#BestPractices1"
+           id="BestPractices1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices2"
+           id="BestPractices2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices3"
+           id="BestPractices3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices4"
+           id="BestPractices4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices5"
+           id="BestPractices5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices6"
+           id="BestPractices6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="BestPractices1" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=707">🎬 (11:47)</a><br>
+</br>It's crucial to know the switch control state and be notified of its changing in order to eventually adapt the environment of the application.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_1.png" alt="" class="img-fluid"><br>
+</br>If further explanation are required, useful information about the accessibility events and their notifications can be found in the <a href="../../../development/#accessibility-options" style="text-decoration: underline;">developers guide section</a>.</p>
+</div>
+<div class="tab-pane" id="BestPractices2" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=716">🎬 (11:56)</a><br>
+</br>In some cases, it may be essential to use the <code>accessibilityRespondsToUserInteraction</code> property so as to make the switch control feature understood that it's important to select it even if it seems static.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BestPractices3" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=764">🎬 (12:44)</a></p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BestPractices4" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=782">🎬 (13:02)</a></p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BestPractices5" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=805">🎬 (13:25)</a></p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BestPractices6" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=822">🎬 (13:42)</a></p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_6.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br></br>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted bg-200">Overview</a>
+          </li><li class="nav-item position-relative">
+            <a href="#navigation-improvements-by-ordering" class="nav-link text-muted bg-200">Navigation improvements by ordering</a>
+          </li><li class="nav-item position-relative">
+            <a href="#navigation-improvements-by-taxonomy" class="nav-link text-muted bg-200">Navigation improvements by taxonomy</a>
+          </li><li class="nav-item position-relative">
+            <a href="#good-practice" class="nav-link text-muted bg-200">Good practice</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2020/019.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

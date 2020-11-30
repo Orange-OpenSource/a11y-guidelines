@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC 2020 : Accessibilité avec le contrôle de sélection  - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/mobile/ios/conception/" class="nav-link">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/developpement/" class="nav-link">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/test/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/outils/" class="nav-link">
+  Boite à outils
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC 2020 : Accessibilité avec le contrôle de sélection 
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#generalites" class="dropdown-item text-wrap">Généralités</a><a href="#ordonnancement-pour-ameliorer-la-navigation" class="dropdown-item text-wrap">Ordonnancement pour améliorer la navigation</a><a href="#taxonimie-pour-ameliorer-la-navigation" class="dropdown-item text-wrap">Taxonimie pour améliorer la navigation</a><a href="#bonnes-pratiques" class="dropdown-item text-wrap">Bonnes pratiques</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC 2020 : Accessibilité avec le contrôle de sélection</h1>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d'<span lang="en">Apple</span></strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10019/">session 10019</a>) explique précisément pourquoi et comment <strong>personnaliser la navigation avec le contrôle de sélection</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019.png" alt="" class="img-fluid"><br>
+</br></br>Les thèmes abordés sont les suivants :</p>
+<ul>
+<li><strong>Généralités</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewUserGuide_tab').trigger('click');document.getElementById('OverviewUserGuide').scrollIntoView({ behavior: 'smooth', block: 'start' })">Fonctionnement</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewCustomPurpose_tab').trigger('click');document.getElementById('OverviewCustomPurpose').scrollIntoView({ behavior: 'smooth', block: 'start' })">Buts de la personnalisation</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewVoiceOver_tab').trigger('click');document.getElementById('OverviewVoiceOver').scrollIntoView({ behavior: 'smooth', block: 'start' })">Influences de <span lang="en">VoiceOver</span></a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewCustomActions_tab').trigger('click');document.getElementById('OverviewCustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Actions personnalisées</a> ⟹ <strong>nouveauté iOS 14</strong></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewDemo_tab').trigger('click');document.getElementById('OverviewDemo').scrollIntoView({ behavior: 'smooth', block: 'start' })">Application de démonstration</a><br>
+<br></li>
+</ul>
+</li>
+<li><strong>Améliorations de la navigation</strong>
+<ul>
+<li><a href="#ordonnancement-pour-ameliorer-la-navigation">Ordonnancement pour trier</a>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByOrderingContext_tab').trigger('click');document.getElementById('ImprovementByOrderingContext').scrollIntoView({ behavior: 'smooth', block: 'start' })">Contexte</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByOrderingSolution_tab').trigger('click');document.getElementById('ImprovementByOrderingSolution').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution</a></li>
+</ul>
+</li>
+<li><a href="#taxonimie-pour-ameliorer-la-navigation">Taxinomie pour regrouper</a>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomyContext_tab').trigger('click');document.getElementById('ImprovementByTaxonomyContext').scrollIntoView({ behavior: 'smooth', block: 'start' })">Contexte</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomySolution1_tab').trigger('click');document.getElementById('ImprovementByTaxonomySolution1').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution 1</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomySolution2_tab').trigger('click');document.getElementById('ImprovementByTaxonomySolution2').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution 2</a><br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Bonnes pratiques</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices1_tab').trigger('click');document.getElementById('BestPractices1').scrollIntoView({ behavior: 'smooth', block: 'start' })">1.  Écouter la (dés)activation du contrôle de sélection.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices2_tab').trigger('click');document.getElementById('BestPractices2').scrollIntoView({ behavior: 'smooth', block: 'start' })">2.  <code>accessibilityRespondsToUserInteraction</code>.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices3_tab').trigger('click');document.getElementById('BestPractices3').scrollIntoView({ behavior: 'smooth', block: 'start' })">3.  Demander une confirmation pour chaque action significative.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices4_tab').trigger('click');document.getElementById('BestPractices4').scrollIntoView({ behavior: 'smooth', block: 'start' })">4.  Ne pas mettre en oeuvre de délais.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices5_tab').trigger('click');document.getElementById('BestPractices5').scrollIntoView({ behavior: 'smooth', block: 'start' })">5.  Regrouper les éléments graphiques.</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices6_tab').trigger('click');document.getElementById('BestPractices6').scrollIntoView({ behavior: 'smooth', block: 'start' })">6.  Attention aux données personnelles à l'écran.</a></li>
+</ul>
+</li>
+</ul>
+</br>
+Par la suite, selon la configuration de la présentation, le fait de cliquer sur un titre ou un temps indiqué permet d'ouvrir la vidéo <span lang="en">Apple</span> directement au moment spécifié.
+<p><br><br></p>
+<h2 id="generalites">Généralités <a class="header-anchor" href="#generalites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#OverviewUserGuide"
+           id="OverviewUserGuide_tab"
+           role="tab" 
+           aria-selected="true">Fonctionnement</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewCustomPurpose"
+           id="OverviewCustomPurpose_tab"
+           role="tab" 
+           aria-selected="false">Personnalisation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewVoiceOver"
+           id="OverviewVoiceOver_tab"
+           role="tab" 
+           aria-selected="false">VoiceOver</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewCustomActions"
+           id="OverviewCustomActions_tab"
+           role="tab" 
+           aria-selected="false">Actions</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#OverviewDemo"
+           id="OverviewDemo_tab"
+           role="tab" 
+           aria-selected="false">Demo</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="OverviewUserGuide" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=59">🎬 (00:59)</a><br>
+</br>Cette technologie <strong>implémentée nativement sur iOS</strong> s'adresse aux personnes à capacités motrices limitées afin qu'elles puissent utiliser leur terminal comme tout un chacun.<br>
+</br></br><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=163">🎬 (02:43)</a><br>
+</br>L'interaction avec le curseur peut se faire manuellement ou de façon automatique en laissant les éléments défiler les uns après les autres : l'ordre de lecture est le même que celui de <span lang="en">VoiceOver</span>.<br>
+On rajoute très souvent des composants externes appropriés à des problèmes moteurs spécifiques pour une utilisation plus aisée dans le but de sélectionner et d'activer les éléments sur l'écran.<br>
+</br>Si nécessaire, de plus amples informations concernant l'implémentation du contrôle de sélection sont disponibles dans la partie <a href="../../../developpement/#controle-de-selection" style="text-decoration: underline;">guide pour les développeurs</a>.</p>
+</div>
+<div class="tab-pane" id="OverviewCustomPurpose" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=200">🎬 (03:20)</a><br>
+</br>Cette partie de la vidéo met en avant les différents points qui justifient le fait de <strong>ne pas laisser le contrôle de sélection travailler automatiquement sans y apporter de modifications</strong> : temps nécessaire pour sélectionner, regroupement d'éléments pour aboutir à une action plus rapidement...</p>
+</div>
+<div class="tab-pane" id="OverviewVoiceOver" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=267">🎬 (04:27)</a><br>
+</br>Une parfaite implémentation de <span lang="en">VoiceOver</span> permet d'obtenir une excellente base de travail pour le contrôle de sélection qui, selon des cas spécifiques, peut tout de même nécessiter des ajustements pour coller au plus près de besoins bien particuliers.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-OverviewVoiceOver.png" alt="" class="img-fluid"><br>
+</br>Il est donc primordial de pouvoir s'appuyer sur une <strong>implémentation irréprochable de <span lang="en">VoiceOver</span></strong> pour fournir l'expérience utilisateur la plus appropriée avec le contrôle de sélection.</p>
+</div>
+<div class="tab-pane" id="OverviewCustomActions" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=560">🎬 (09:20)</a><br>
+</br>Les actions personnalisées sont un moyen extraordinaire pour <span lang="en">VoiceOver</span> et le contrôle de sélection de <strong>fournir une navigation équivalente à celle rencontrée en l'absence d'accessibilité</strong>.<br>
+Cet extrait explique parfaitement l'intérêt d'utiliser ce type de fonctionnalité.<br>
+</br><br>
+<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=638">🎬 (10:38)</a><br>
+</br>Il est désormais <strong>possible avec iOS 14</strong> de <strong>personnaliser l'icône</strong> représentant l'action créée.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-OverviewCustomActions.png" alt="" class="img-fluid"><br>
+</br>Pour en savoir plus, le <a href="../../../developpement/#actions-personnalisees" style="text-decoration: underline;">guide pour les développeurs</a> ainsi qu'un <a href="../../2019/#utiliser-les-actions-personnalisees" style="text-decoration: underline;">résumé détaillé</a> de la vidéo WWDC 2019 intitulée <strong>Accessibility Custom Actions</strong> fournissent des informations précieuses sur les actions personnalisées.</p>
+</div>
+<div class="tab-pane" id="OverviewDemo" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=315">🎬 (05:15)</a> 😳 ⟹  <strong>sans</strong> aucun système d'accessibilité activé.<br>
+</br></br><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=402">🎬 (06:42)</a> 😱 ⟹ <strong>sans</strong> personnalisation du contrôle de sélection.<br>
+</br></br><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=661">🎬 (11:01)</a> 👍 ⟹ <strong>avec</strong> les améliorations du contrôle de sélection pour une <strong>meilleure expérience utilisateur</strong>.</p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="ordonnancement-pour-ameliorer-la-navigation">Ordonnancement pour améliorer la navigation <a class="header-anchor" href="#ordonnancement-pour-ameliorer-la-navigation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ImprovementByOrderingContext"
+           id="ImprovementByOrderingContext_tab"
+           role="tab" 
+           aria-selected="true">Contexte</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImprovementByOrderingSolution"
+           id="ImprovementByOrderingSolution_tab"
+           role="tab" 
+           aria-selected="false">Solution</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ImprovementByOrderingContext" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=408">🎬 (06:48)</a><br>
+</br>Si aucune modification n'est réalisée, le système analysera de la gauche vers la droite tous les éléments en partant du coin en haut à gauche pour finir dans le coin en bas à droite (comme <span lang="en">VoiceOver</span>).<br>
+</br>Cette lecture native risque donc de poser des problèmes fonctionnels pour des éléments dont la position graphique ne suit pas cette logique.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingContext.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImprovementByOrderingSolution" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=461">🎬 (07:41)</a><br>
+</br>L'idée la plus simple pour solutionner la problématique soulevée dans l'onglet <code>Contexte</code> consiste à créer des sous-groupes suffisamment judicieux pour faciliter et accélérer la sélection d'un élément où qu'il soit.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingSolution_1.png" alt="" class="img-fluid"><br>
+</br></br>Pour réaliser cette opération, il est nécessaire de spécifier que tous les éléments contenus dans le sous-groupe sont combinés pour qu'ils puissent être éventuellement sélectionner individuellement.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingSolution_2.png" alt="" class="img-fluid"><br>
+</br>Enfin, il ne faut surtout pas oublier de définir très précisément le contenu de chacun des sous-groupes créés.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByOrderingSolution_3.png" alt="" class="img-fluid"><br>
+</br>Un exemple complet et détaillé reprenant ce type de fonctionnement est fourni dans la partie <a href="../../../developpement/#controle-de-selection" style="text-decoration: underline;">guide pour les développeurs</a>.</p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="taxonimie-pour-ameliorer-la-navigation">Taxonimie pour améliorer la navigation <a class="header-anchor" href="#taxonimie-pour-ameliorer-la-navigation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ImprovementByTaxonomyContext"
+           id="ImprovementByTaxonomyContext_tab"
+           role="tab" 
+           aria-selected="true">Contexte</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImprovementByTaxonomySolution1"
+           id="ImprovementByTaxonomySolution1_tab"
+           role="tab" 
+           aria-selected="false">Solution 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ImprovementByTaxonomySolution2"
+           id="ImprovementByTaxonomySolution2_tab"
+           role="tab" 
+           aria-selected="false">Solution 2</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ImprovementByTaxonomyContext" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=435">🎬 (07:15)</a><br>
+</br>L'exemple proposé met en avant le nombre important d'interactions nécessaires pour être capable d'utiliser l'application de démonstration sans apporter quelque modification que ce soit avec le contrôle de sélection.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByTaxonomyContext.png" alt="" class="img-fluid"><br>
+</br>Le premier cas à considérer est celui qui montre à quel point il peut être particulièrement pénible de devoir sans cesse interagir plusieurs fois pour effectuer une seule et même action.<br>
+</br>Le second cas se préoccupe des sous-menus d'actions proposées qui peuvent requérir encore plus de manipulations en fonction de la localisation de l'action.</p>
+</div>
+<div class="tab-pane" id="ImprovementByTaxonomySolution1" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=506">🎬 (08:26)</a><br>
+</br>Afin d'éviter de multiples allers-retours dans les manipulations pour retourner les différentes cartes, l'astuce consiste à réaliser automatiquement l'action de retour à l'état initial dès que l'objet n'est plus sélectionné.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByTaxonomySolution1_1.png" alt="" class="img-fluid"><br>
+</br>Au niveau du code, cela revient à implémenter dans la classe 'carte' certaines méthodes du protocole informel <a href="../../../developpement/#focus-dun-element" style="text-decoration: underline;"><code>UIAccessibilityFocus</code></a> qui fournit des éléments de programmation efficaces de façon à pouvoir être informé d'une sélection passée, active ou à venir d'un élément accessible.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-ImprovementByTaxonomySolution1_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImprovementByTaxonomySolution2" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=594">🎬 (09:54)</a><br>
+</br>L'<a href="../../2019/#utiliser-les-actions-personnalisees" style="text-decoration: underline;">utilité des actions personnalisées pour le contrôle de sélection</a> n'est plus à démontrer mais la précision de leur implémentation est d'une grande importance dans l'amélioration significative de l'expérience utilisateur.<br>
+</br>L'idée directrice pour solutionner la seconde problématique mentionnée dans l'onglet <code>Contexte</code> est de créer des <a href="../../../developpement/#actions-personnalisees" style="text-decoration: underline;">actions personnalisées</a> qui seront localisées dans le menu principal en y adjoignant une icône dédiée pour en faciliter la reconnaissance.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-OverviewCustomActions.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="bonnes-pratiques">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#BestPractices1"
+           id="BestPractices1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices2"
+           id="BestPractices2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices3"
+           id="BestPractices3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices4"
+           id="BestPractices4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices5"
+           id="BestPractices5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#BestPractices6"
+           id="BestPractices6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="BestPractices1" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=707">🎬 (11:47)</a><br>
+</br>Être à l'<strong>écoute de la (dés)activation du contrôle de sélection</strong> est très important afin d'adapter l'environnement applicatif si besoin.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_1.png" alt="" class="img-fluid"><br>
+</br>Si besoin, de plus amples informations concernant les événements et leur notification sont disponibles dans la partie <a href="../../../developpement/#options-daccessibilite" style="text-decoration: underline;">guide pour les développeurs</a>.</p>
+</div>
+<div class="tab-pane" id="BestPractices2" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=716">🎬 (11:56)</a><br>
+</br>Dans des cas où un élément est nativement statique mais peut fonctionnellement changer de valeur, il est impératif de pouvoir permettre au contrôle de sélection d'interagir avec cet élément en utilisant <code>accessibilityRespondsToUserInteraction</code> (cas d'un label qui peut changer de valeur par simple tap).</p>
+<p><img src="../../../../images/iOSdev/wwdc20-019-BestPractices_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BestPractices3" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=764">🎬 (12:44)</a><br>
+</br>Penser à demander confirmation quand une destruction de données est requise par l'utilisateur.</p>
+</div>
+<div class="tab-pane" id="BestPractices4" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=782">🎬 (13:02)</a><br>
+</br>Ne pas insérer de limite temporelle pour une action qui peut s'avérer bien plus longue que prévue avec le contrôle de sélection.</p>
+</div>
+<div class="tab-pane" id="BestPractices5" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=805">🎬 (13:25)</a><br>
+</br>Penser à regrouper les éléments graphiques pour faciliter la navigation de l'utilisateur au sein de l'application.</p>
+</div>
+<div class="tab-pane" id="BestPractices6" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10019/?time=822">🎬 (13:42)</a><br>
+</br>Ne pas laisser de données personnelles affichées à l'écran.</p>
+</div>
+</div>
+</br></br></br>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#generalites" class="nav-link text-muted bg-200">Généralités</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ordonnancement-pour-ameliorer-la-navigation" class="nav-link text-muted bg-200">Ordonnancement pour améliorer la navigation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#taxonimie-pour-ameliorer-la-navigation" class="nav-link text-muted bg-200">Taxonimie pour améliorer la navigation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques" class="nav-link text-muted bg-200">Bonnes pratiques</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/wwdc/2020/019.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+            <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>
