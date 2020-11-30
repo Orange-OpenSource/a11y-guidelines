@@ -232,7 +232,7 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation vocale",
-		"title": "Les changements de contenu au sein d'une "page" sont-ils vocalisés ? ",
+		"title": "Les changements de contenu au sein d'une 'page' sont-ils vocalisés ? ",
 		"ID": "testID-023",
 		"IDorigin": "testID-023",
 		"wcag": [
