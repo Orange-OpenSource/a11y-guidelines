@@ -180,8 +180,8 @@
 {%- macro glossaryList() -%}
 <dl class="Glossary">
   {%- for key, value in glossary -%}
-    {%- if (locale == "fr" and key != "ASSISTIVE TECHNOLOGIES") or (locale == "en" and key != "AIDES TECHNIQUES") -%}
-      <dt class="py-2 pl-2 text-right">{{ key }}</dt>
+    {%- if (locale == "fr" and key != "ASSISTIVE TECHNOLOGIES" and key != "LARGE TEXT") or (locale == "en" and key != "AIDES TECHNIQUES" and key != "TEXTE DE GRANDE TAILLE") -%}
+      <dt id="{{ key | slugify }}" class="py-2 pl-2 text-right">{{ key }}</dt>
       <dd class="py-2 pr-2 pl-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
     {%- endif -%}
   {%- endfor -%}

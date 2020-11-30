@@ -98,6 +98,10 @@ module.exports = function (eleventyConfig) {
     return `/${path}/`
   })
 
+  eleventyConfig.addNunjucksFilter('slugify', function (str) {
+    return config.eleventy.markdownItAnchor.slugify(str)
+  })
+
   eleventyConfig.addNunjucksFilter('getDefaultLocale', function (locales, outputKey = null) {
     for (let key in locales) {
       let locale = locales[key]
