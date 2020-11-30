@@ -393,7 +393,7 @@
   },
   {
     "old": "others/editorial.html",
-    "new": "/fr/contenu-editorial/generalites"
+    "new": "/fr/contenu-editorial"
   },
   {
     "old": "others/email.html",
@@ -409,7 +409,7 @@
   },
   {
     "old": "others/powerpoint-create.html",
-    "new": "/fr/contenu-editorial/powerpoint/creer"
+    "new": "/fr/contenu-editorial/powerpoint"
   },
   {
     "old": "others/powerpoint-test.html",
@@ -433,7 +433,7 @@
   },
   {
     "old": "others/word-create.html",
-    "new": "/fr/contenu-editorial/word/creer"
+    "new": "/fr/contenu-editorial/word"
   },
   {
     "old": "others/word-test.html",
