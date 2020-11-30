@@ -31,13 +31,13 @@ Ces critères sont utiles aux personnes créant des documents PDF sans utiliser 
 
 ### Navigation clavier et ordre de lecture
 * L’ordre de lecture restitué par un outil d’assistance, ainsi que l’ordre de la navigation clavier (par tabulation) reflètent la structure du document. 
-* Il ne doit pas y avoir de piège clavier (la navigation au clavier doit être possible dans l’ensemble du document sans blocage).
+* La navigation au clavier doit être possible dans l’ensemble du document sans blocage (empêcher les "pièges" clavier).
 Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF3.html" title="Technique PDF3 des WCAG 2.0" aria-label="Technique PDF3 des WCAG 2.0"><abbr>PDF3</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/G21.html" title="Technique G21 des WCAG 2.0" aria-label="Technique G21 des WCAG 2.0"><abbr>G21</abbr></a>.
 
 ### Images
 
 * Les images comportant une information ont une alternative textuelle appropriée. 
-* Les documents scannés sont convertis correctement en texte par reconnaissance optique des caractères (<abbr>OCR</abbr>). 
+* Les documents scannés sont convertis correctement en texte par reconnaissance optique des caractères (OCR). 
 * Les images décoratives sont cachées.
 Voir les critères WCAG associés  <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF1.html" title="Technique PDF1 des WCAG 2.0" aria-label="Technique PDF1 des WCAG 2.0"><abbr>PDF1</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF4.html" title="Technique PDF4 des WCAG 2.0" aria-label="Technique PDF4 des WCAG 2.0"><abbr>PDF4</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF7.html" title="Technique PDF7 des WCAG 2.0" aria-label="Technique PDF7 des WCAG 2.0"><abbr>PDF7</abbr></a>.
 
@@ -51,12 +51,12 @@ Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/TR/WCAG
 
 ### Liens
 
-Les intitulés de liens sont explicites, ou les liens possèdent une alternative explicite.
+Les intitulés de liens sont explicites ou les liens possèdent une alternative explicite.
 Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF11.html" title="Technique PDF11 des WCAG 2.0" aria-label="Technique PDF11 des WCAG 2.0"><abbr>PDF11</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF13.html" title="Technique PDF13 des WCAG 2.0" aria-label="Technique PDF13 des WCAG 2.0"><abbr>PDF13</abbr></a>.
 
 ### Listes
 
-Les listes utilisent les «&nbsp;tags&nbsp;» (balises) appropriés.
+Les listes utilisent les «&nbsp;tags&nbsp;» (balises) appropriés (exemples : `L`, `LI`, `Lbl` et `LBody`).
 Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF21.html" title="Technique PDF21 des WCAG 2.0" aria-label="Technique PDF21 des WCAG 2.0"><abbr>PDF21</abbr></a>.
 
 ### Formulaires
@@ -77,7 +77,7 @@ Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/W
 
 ## Tester l’accessibilité d’un document PDF
 
-Enfin, vous pouvez demander à [télécharger le PDF Validator de CommonLook](https://commonlook.com/accessibility-software/pdf-validator/) ou encore installer [PDF Accessibility Checker (PAC)](https://www.access-for-all.ch/en/pdf-accessibility-checker.html). 
+Enfin, vous pouvez demander à [télécharger le PDF Validator de CommonLook](https://commonlook.com/accessibility-software/pdf-validator/) ou encore [installer PDF Accessibility Checker (PAC)](https://www.access-for-all.ch/en/pdf-accessibility-checker.html). 
 Ces logiciels permettent l’exécution de tests automatiques sur un document PDF et la détection de problèmes d’accessibilité : 
 * testent les propriétés du document, 
 * vérifient le balisage des listes et des liens, des formulaires et des tableaux.
