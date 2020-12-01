@@ -1,8 +1,8 @@
 ---
-title: "Creating accessible Word documents"
+title: "Create an accessible Word document"
 ---
 
-# Creating accessible Word documents
+# Create an accessible Word document
 
 This part describes how to make your Word documents accessible to everyone, including assistive technology users.
 
