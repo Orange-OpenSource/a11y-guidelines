@@ -17,12 +17,12 @@ Définir des masques de diapositives est la première chose à faire  et une con
 Remarque : Si vous modifiez le masque des diapositives ou les mises en pages après avoir créé les différentes diapositives, vous devrez réappliquer les mises en page modifiées aux diapositives existantes de votre présentation en mode Normal.
 
 ## Attributs de la présentation 
-### 1. La langue
+### La langue
 Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votre présentation :  
 - La langue principale doit être définie dans le menu : `Fichier > Options > Langue`.
 - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision > Langue > Définir la langue de vérification`.
 
-### 2.	Les autres propriétés
+### Autres propriétés
 Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier > Informations`.  
 
 <img alt="" src="/fr/contenu-editorial/images/attributs.png" class="img-fluid">
@@ -51,13 +51,12 @@ Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes,
 <img alt="" src="/fr/contenu-editorial/images/paragraphe.png" class="img-fluid">  &nbsp;
 
 ## Couleurs et contrastes 
-1.	Assurer un contraste suffisant entre la couleur du texte et celle du fond :
-  * 4.5:1 pour du texte de taille normale (12pts ou 16px).
-  * 3:1 pour du texte de grande taille (150% minimum de la taille normale ou 120% si gras).
-  
-Téléchargez gratuitement l’outil <a href="https://developer.paciellogroup.com/resources/contrastanalyser/" lang="en">Colour Contrast Analyser</a> qui vous permettra de vérifier très simplement la qualité de vos contrastes.
 
-2.	S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information
+Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) par exemple :
+* 4.5:1 pour du texte de taille normale.
+* 3:1 pour du [texte de grande taille](/fr/glossaire/#texte-de-grande-taille) et les composants d'interface ou éléments graphiques porteurs d'informations.
+
+S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
 Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen suppléant la couleur pour véhiculer l’information.
 
 <figure>
