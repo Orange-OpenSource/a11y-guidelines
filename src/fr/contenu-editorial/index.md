@@ -12,7 +12,7 @@ Cette section présente des recommandations générales à respecter pour garant
 * S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
 * Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> par exemple :
   * 4.5:1 pour du texte de taille normale.
-  * 3:1 pour du texte de grande taille et les composants d'interface ou éléments graphiques porteurs d'informations.
+  * 3:1 pour du [texte de grande taille](/fr/glossaire/#texte-de-grande-taille) et les composants d'interface ou éléments graphiques porteurs d'informations.
 
 ## Faciliter la lecture
 
@@ -45,7 +45,7 @@ Afin que vos tableaux de données soient accessible, simplifiez-les au maximum d
 * Éviter de fusionner les cellules, d'utiliser trop de cellules vides, d'ajouter des images de fond.
 * Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas).
 
-Et pour l'implémentation dans une page Web par exemple, consultez <a href="/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees" title="Structurer les tableaux de données">notre article dédié</a>.
+Et pour l'implémentation dans une page Web par exemple, consultez [notre article dédié aux tableaux de données accessibles](/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees).
 
 ## Annexes
 ### Comment mettre des accents aux majuscules ?
