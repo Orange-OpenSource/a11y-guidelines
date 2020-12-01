@@ -28,7 +28,7 @@ Pour tous vos mails du quotidien :
 - Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule
 - Aligner les textes à gauche (éviter de justifier) 
 - Éviter l’italique 
-- Vérifier le contraste entre la couleur de police et l’arrière-plan (outil Colour Contrast Analyzer) et limiter le nombre total de couleurs utilisées
+- Vérifier le contraste entre la couleur de police et l’arrière-plan à l’aide de l’outil [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) et limiter le nombre total de couleurs utilisées
 - Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan
 - Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle, suite Office : **clic droit** sur l’image > **Format de l’image** > **Texte de remplacement** > champ **« Description »**) 
 - Utiliser les styles « Titre » et « Sous-titre » du menu « format du texte » si mail long, avec plusieurs sections
