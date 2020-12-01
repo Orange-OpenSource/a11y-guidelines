@@ -78,11 +78,11 @@ Numéroter les pages (menu **Insertion > Numéro de page**) pour permettre aux u
 
 ## Couleurs et contrastes
 
-Assurer un contraste suffisant entre la couleur du texte et celle du fond : au minimum 4.5 / 1.
+Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) par exemple :
+* 4.5:1 pour du texte de taille normale.
+* 3:1 pour du [texte de grande taille](/fr/glossaire/#texte-de-grande-taille) et les composants d'interface ou éléments graphiques porteurs d'informations.
 
-Si vous utilisez des combinaisons de couleurs différentes de celles préconisées par la charte Orange Groupe, téléchargez gratuitement l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyzer</a> qui vous permettra de vérifier très simplement la qualité de vos contrastes.
-
-S’assurer que la couleur n’est pas le seul moyen utilisé pour communiquer l’information. Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen en plus de la couleur pour véhiculer l’information.
+S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
 
 <img alt="" src="/fr/contenu-editorial/images/word_contrastes1_fr.png" class="img-fluid" /> 
 
