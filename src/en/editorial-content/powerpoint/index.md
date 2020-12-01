@@ -2,7 +2,7 @@
 title: "Create accessible PowerPoint slides"
 ---
 
-# Accessible PowerPoint slides
+# Create accessible PowerPoint slides
 
 ## Introduction
 
