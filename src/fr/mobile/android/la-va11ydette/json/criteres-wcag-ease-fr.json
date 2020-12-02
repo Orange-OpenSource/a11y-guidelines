@@ -497,7 +497,7 @@
 		"verifier": "<ul><li>possibilité de mettre en pause ou d'arrêter le son</li><li>possibilité de régler le volume indépendamment du volume système</li></ul>",
 		"resultatTest": "nt"
 	},{
-		"themes": "Multiméia",
+		"themes": "Multimédia",
 		"title": "Des contrôles sont-ils présents pour interagir avec un média ? (pause, stop, volume, sous titres, etc...) ?",
 		"ID": "testID-048",
 		"IDorigin": "testID-048",

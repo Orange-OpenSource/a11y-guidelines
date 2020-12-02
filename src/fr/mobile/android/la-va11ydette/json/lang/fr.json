@@ -1,4 +1,4 @@
-{
+﻿{
 	"va11ydette": "La va11ydette",
 	"auditNameWcag": "Grille Audit WCAG 2.1 d’Orange",
 	"pageName": "Nom de la page",
@@ -94,6 +94,6 @@
 		"nav-lang": "A propos et changement de langues"
 	},
 	"url": {
-		"link-about": "https://a11y-guidelines.orange.com/fr/web/audit-wcag/"
+		"link-about": "https://a11y-guidelines.orange.com/fr/mobile/android/audit-wcag/"
 	}
 }
