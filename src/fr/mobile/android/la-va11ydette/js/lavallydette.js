@@ -1,4 +1,4 @@
-$('#docs-navbar').navbar({sticky: true, hideSupra: true});
+﻿$('#docs-navbar').navbar({sticky: true, hideSupra: true});
 $('.o-nav-local').prioritynav('Autres pages');
 
 /**
@@ -45,7 +45,7 @@ var htmlMainContent = document.getElementById('mainContent');
  * @param {string} lang - Language can be defined in function params.
  */
 function initVallydetteApp (criteriaListName, lang) {
-	
+	console.log("test0");
 	initGlobalLang(lang);
 	
 	var langRequest = new XMLHttpRequest();
@@ -123,6 +123,7 @@ function createObjectAndRunVallydette() {
  *  update the dataVallydette object with the selected checklist object (ie the wcag ease object)
  */
 function importCriteriaToVallydetteObj (criteriaVallydette) {
+    console.log("test1");
     dataVallydette.checklist.name = langVallydette.auditNameWcag;
     dataVallydette.checklist.referentiel = currentCriteriaListName;
 	dataVallydette.checklist.page[0].groups = {
@@ -215,7 +216,7 @@ function importRGAA(dataVallydette, dataRGAA) {
 	Initialization of some string var and run multiple init functions.
  */
 function runVallydetteApp() {
-   	
+   	console.log("test2");
 	currentPage = 0;
 	
 	/** @todo to be replaced by a localization object */
