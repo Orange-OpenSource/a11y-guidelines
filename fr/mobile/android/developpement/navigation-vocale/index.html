@@ -187,7 +187,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#vocaliser-les-images" class="dropdown-item text-wrap">Vocaliser les images</a><a href="#vocaliser-tous-les-elements-signifiants" class="dropdown-item text-wrap">Vocaliser tous les éléments signifiants</a><a href="#vocaliser-letat-des-elements" class="dropdown-item text-wrap">Vocaliser l&#39;état des éléments</a><a href="#gerer-lordre-de-lecture-avec-la-navigation-vocale" class="dropdown-item text-wrap">Gérer l&#39;ordre de lecture avec la navigation vocale</a><a href="#vocaliser-le-changement-de-contenu" class="dropdown-item text-wrap">Vocaliser le changement de contenu</a><a href="#ne-pas-vocaliser-les-elements-decoratifs-et-caches" class="dropdown-item text-wrap">Ne pas vocaliser les éléments décoratifs et cachés</a><a href="#regrouper-les-elements" class="dropdown-item text-wrap">Regrouper les éléments</a><a href="#gerer-la-navigation-par-entetes" class="dropdown-item text-wrap">Gérer la navigation par entêtes</a><a href="#masquer-des-elements-a-laccessibilite" class="dropdown-item text-wrap">Masquer des éléments à l’accessibilité</a><a href="#description" class="dropdown-item text-wrap">Description :</a><a href="#exemples" class="dropdown-item text-wrap">Exemples :</a><a href="#detecter-si-talkback-est-active" class="dropdown-item text-wrap">Détecter si TalkBack est activé</a><a href="#description-2" class="dropdown-item text-wrap">Description :</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#vocaliser-les-images" class="dropdown-item text-wrap">Vocaliser les images</a><a href="#vocaliser-tous-les-elements-signifiants" class="dropdown-item text-wrap">Vocaliser tous les éléments signifiants</a><a href="#vocaliser-letat-des-elements" class="dropdown-item text-wrap">Vocaliser l&#39;état des éléments</a><a href="#gerer-lordre-de-lecture-avec-la-navigation-vocale" class="dropdown-item text-wrap">Gérer l&#39;ordre de lecture avec la navigation vocale</a><a href="#vocaliser-le-changement-de-contenu" class="dropdown-item text-wrap">Vocaliser le changement de contenu</a><a href="#ne-pas-vocaliser-les-elements-decoratifs-et-caches" class="dropdown-item text-wrap">Ne pas vocaliser les éléments décoratifs et cachés</a><a href="#regrouper-les-elements" class="dropdown-item text-wrap">Regrouper les éléments</a><a href="#gerer-la-navigation-par-entetes" class="dropdown-item text-wrap">Gérer la navigation par entêtes</a><a href="#masquer-des-elements-a-laccessibilite" class="dropdown-item text-wrap">Masquer des éléments à l’accessibilité</a><a href="#detecter-si-talkback-est-active" class="dropdown-item text-wrap">Détecter si TalkBack est activé</a></div>
     </nav>
         
       </div>
@@ -394,8 +394,7 @@ Il faut indiquer l’état et la nature des onglets (non internationalisé) :</
 <h2 id="gerer-lordre-de-lecture-avec-la-navigation-vocale">Gérer l'ordre de lecture avec la navigation vocale <a class="header-anchor" href="#gerer-lordre-de-lecture-avec-la-navigation-vocale" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
 <strong>Quand :</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
-<p><strong>Description :</strong><br>
-L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du xml (ordre de déclaration des éléments). Il arrive parfois que cela ne suffise pas à établir un ordre cohérent, comme dans l'exemple ci-dessous, et il est donc nécessaire de redéfinir cet ordre de lecture.</p>
+<p><strong>Description :</strong></p>
 <p>L’ordre du focus du lecteur d’écran par défaut prend en compte plusieurs paramètres : la lecture « logique », en français, de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il est tout à fait possible de redéfinir cet ordre de lecture avec deux outils :</p>
 <ul>
 <li><code>accessibilityTraversalAfter</code> : prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité après la vue passée en paramètre.</li>
@@ -560,7 +559,7 @@ android:accessibilityHeading="true"
 <h2 id="masquer-des-elements-a-laccessibilite">Masquer des éléments à l’accessibilité <a class="header-anchor" href="#masquer-des-elements-a-laccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.<br>
 <strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
-<h3 id="description">Description : <a class="header-anchor" href="#description" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>Description :</strong></p>
 <p>Il est possible via un attribut d’accessibilité de masquer des éléments aux outils d’accessibilité (<span lang="en">TalkBack</span> par exemple). Par extension, il est possible de forcer certains éléments à être visibles aux outils d’accessibilité.<br>
 <code>ImportantForAccessibility</code> : suivant la valeur de l’attribut, cela permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité.</p>
 <ul>
@@ -570,7 +569,7 @@ android:accessibilityHeading="true"
 <li><code>noHideDescendants</code>  (4) : la vue n’est pas importante pour l’accessibilité, mais également toutes ses vues filles. Cela permet de cacher tous les éléments d’une vue à l’accessibilité en une seule fois. Très utile sur les éléments custom.</li>
 </ul>
 <p>À noter : l’attribut « <code>importantForAccessibility</code> » est disponible pour tout élément qui hérite de <code>View</code>.</p>
-<h3 id="exemples">Exemples : <a class="header-anchor" href="#exemples" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>Exemples :</strong></p>
 <pre><code class="xml">&lt;TextView
 […]
 android:id="@+id/myTextviewId1"
@@ -588,7 +587,7 @@ myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HID
 myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT<br>
 </code></pre></p>
 <h2 id="detecter-si-talkback-est-active">Détecter si <span lang="en">TalkBack</span> est activé <a class="header-anchor" href="#detecter-si-talkback-est-active" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="description-2">Description : <a class="header-anchor" href="#description-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>Description :</strong></p>
 <p>Sous Android, il est possible de savoir si l’<abbr>API</abbr> d’accessibilité est activée, et par extension de savoir si <span lang="en">TalkBack</span> est activé.</p>
 <p><strong>Exemple </strong>:</p>
 <pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
@@ -623,13 +622,7 @@ val isAccessibilityEnabled = am.isEnabled<br>
           </li><li class="nav-item position-relative">
             <a href="#masquer-des-elements-a-laccessibilite" class="nav-link text-muted bg-200">Masquer des éléments à l’accessibilité</a>
           </li><li class="nav-item position-relative">
-            <a href="#description" class="nav-link text-muted bg-200">Description :</a>
-          </li><li class="nav-item position-relative">
-            <a href="#exemples" class="nav-link text-muted bg-200">Exemples :</a>
-          </li><li class="nav-item position-relative">
             <a href="#detecter-si-talkback-est-active" class="nav-link text-muted bg-200">Détecter si TalkBack est activé</a>
-          </li><li class="nav-item position-relative">
-            <a href="#description-2" class="nav-link text-muted bg-200">Description :</a>
           </li></ul>
     </nav>
             </div>
