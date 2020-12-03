@@ -98,4 +98,4 @@ These softwares allow the execution of automatic tests on a PDF document and the
 * test the document properties,
 * check the markup of lists and links, forms and tables.
 
-<img  src="/en/editorial-content/images" alt=""/>
+<img  src="/en/editorial-content/images/pac1.png" alt=""/>
