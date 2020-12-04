@@ -7,23 +7,23 @@ title: "Vocal navigation"
 
 ## Vocalize the images
 
-**Target&nbsp;:** everyone and in particular people with visual impairments.  
-**When&nbsp;:** from design, and during development.
+**Target:** everyone and in particular people with visual impairments.  
+**When:** from design, and during development.
 
-**Description&nbsp;:**
+**Description:**
 
 Images must have a text alternative that gives all the information carried by the image to users using voice navigation.
 
 For an image containing text, the alternative will be the text. For an image which provides information in the form of a graph, drawing or other, the alternative will contain all the necessary information present in the image.
 
-Decorative images, do not require a text alternative and therefore should not be vocalized.
+Decorative images do not require a text alternative and therefore should not be vocalized.
 
   
-**To be verified&nbsp;:**
-- Images carrying information restore this information through their textual alternatives.
+**To be verified:**
+- Images carrying information convey this information through their textual alternatives.
 
 
-**Valid example&nbsp;:**
+**Valid example:**
 <pre><code class="xml">&lt;TextView
 …
 android:id="@+id/myTextviewId"
@@ -33,7 +33,7 @@ android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
 myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
 
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**Référence <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
 
@@ -42,30 +42,30 @@ myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));<
 
 ## Vocalize all significant elements
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** from design, and during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** from design, and during development.
 
-**Description&nbsp;:**  
+**Description:**  
 When a user navigates using voice navigation (Talkback for example), every meaningful element on the screen must be vocalized, to be able to use the application without any loss of information.
 
 A text is restituted natively by the screen reader, but some elements require a text alternative to be able to vocalize the information correctly.
 
-It is important to provide a text alternative when the information is not available or sufficient natively, as for components providing information by color, shape, position, sound... All components can receive a text alternative, so it is possible to enrich the native vocalization of an element.
+It is important to provide a text alternative when the information is not available or sufficient natively, e.g. for components conveying information through color, shape, position, sound... All components can receive a text alternative, so it is possible to enrich the native vocalization of an element.
   
-Some images are sometimes associated with text to provide information. For example to present the "&nbsp;unread messages&nbsp;" : a tooltip gives the unread messages number and an image gives the "&nbsp;message&nbsp;" information. In this case, the solution is to use a text alternative on the text with all the necessary information. For example&nbsp;: "&nbsp;3 unread messages&nbsp;". It is also possible to use this alternative on the image, but it is necessary to  make the text "&nbsp;invisible&nbsp;" for the screen reader.
+Some images are sometimes associated with text to provide information. For example to present the "unread messages": a tooltip gives the unread messages number and an image gives the "message" information. In this case, the solution is to use a text alternative on the text with all the necessary information. For example: "3 unread messages". It is also possible to use this alternative on the image, but it is necessary to  make the text "invisible" for the screen reader.
 
 
-**To be verified&nbsp;:**
+**To be verified:**
 
-- Elements are all vocalized and accessible
+- Elements are all vocalized and accessible.
 - The vocalizations are explicit and understandable for each element.
 - The interactive elements are vocalized with the associated action.
-- The titles of the activities are vocalized
+- The titles of the activities are vocalized.
 - Items in a list are vocalized independently of each other.
 
-**Example&nbsp;:**
+**Example:**
 
-Example of an icon that is coupled with text (tooltip) to add information. The icon "&nbsp;mail&nbsp;" coupled with the tooltip value "&nbsp;3&nbsp;" indicates that we have "&nbsp;3 unread mails&nbsp;". If no textual alternative is added, 2 elements will be vocalized "&nbsp;button without label&nbsp;" and "&nbsp;3&nbsp;".  
+Example of an icon that is coupled with text (tooltip) to add information. The icon "mail" coupled with the tooltip value "3" indicates that we have "3 unread mails". If no textual alternative is added, 2 elements will be vocalized "button without label" and "3".  
 <img src="../../../images/alt.png" alt="example of an icon coupled with text that requires a text alternative" width="80" class="pull-left">
 
 <pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
@@ -79,33 +79,33 @@ mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //
 infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //On masque le texte pour éviter une redondance d’information
 </code></pre>
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
 
 
 ## Vocalize the state of the elements
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** during development.
 
-**Description&nbsp;:**	
+**Description:**	
 
 If an element does not vocalize its status, nature or state, the TalkBack user is unable to understand what is happening on the screen. 
   
-The different types of tabs offered in Android, for example, do not give all the information about their nature and status. It is up to the developer to give this information to the user via the corresponding accessibility attributes ("contentDescription"). In this case, a good alternative for the title of a tab can be: "selected, tab title, tab 1 of 3".  
+The different types of tabs offered in Android, for example, do not give all the information about their nature and status. It is up to the developer to give this information to the user via the corresponding accessibility attributes (`contentDescription`). In this case, a good alternative for the title of a tab can be: "selected, tab title, tab 1 of 3".  
   
 Another classic element that does not vocalize by default its state: the foldable zones. 
   
 To provide this kind of information, the `contentDescription` attribute (available for any element inheriting from `View`) must be used.
 
-**To be verified&nbsp;:**
+**To be verified:**
 
-- Any element whose status can be modified during the use of the application must restore its state through its text alternative. For example, an item that can be selected/unselected.
+- Any element whose status can be modified during the use of the application must convey its state through its text alternative. For example, an item that can be selected/unselected.
 
 
-**Example of tabs :**
-The example shows tabs above and below a `ViewPager' in one case in `TabLayout' and in the other in `BottomNavigationView'. Tabs are no longer practiced as `TabHost'.
+**Example of tabs:**
+The example shows tabs above and below a `ViewPager` in one case in `TabLayout` and in the other in `BottomNavigationView`. Tabs are no longer practiced as `TabHost`.
 It is necessary to indicate the state and the nature of the tabs (not internationalized):  
 
 <pre><code class="xml">//In the activity layout
@@ -201,18 +201,19 @@ It is necessary to indicate the state and the nature of the tabs (not internatio
 
 ## Manage the vocalization order 
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** from design, and during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** from design, and during development.
 
-**Description&nbsp;:**  
+**Description:**  
 
-The focus order of the default screen reader depends on several parameters: the "logical" reading, from left to right and from top to bottom, and the reading of the xml (order of declaration of the elements). It is possible to redefine this reading order with two tools :
+The focus order of the default screen reader depends on several parameters: the "logical" reading, from left to right and from top to bottom, and the reading of the <abbr>XML</abbr> (order of declaration of the elements). It is possible to redefine this reading order with two tools :
 
-- accessibilityTraversalAfter: takes an id in parameter and allows to specify to the view that it must be described by the accessibility after the view passed in parameter.
-- accessibilityTraversalBefore : takes an id in parameter and allows to specify to the view that it must be described by the accessibility before the view passed in parameter.
+- `accessibilityTraversalAfter`: takes an `id` in parameter and allows to specify to the view that it must be described by the accessibility API after the view was passed in parameter.
+- `accessibilityTraversalBefore`: takes an `id` in parameter and allows to specify to the view that it must be described by the accessibility API before the view is passed in parameter.
 
-Note: these attributes can be used directly in the xml but also in the code via the methods setAccessibilityTraversalAfter and setAccessibilityTraversalBefore. These methods are available for any element that inherits from View.
-**Example&nbsp;:**      
+Note: these attributes can be used directly in the <abbr>XML</abbr> but also in the code via the `setAccessibilityTraversalAfter` and `setAccessibilityTraversalBefore` methods. These methods are available for any element that inherits from View.
+
+**Example:**      
 In this example, the default reading order is completely dependent on the order in which elements are declared. In this case: `vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0`. A more consistent reading order would be `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-`.  
 <img src="../../../images/order.png" alt="example of reading order for a phone keypad" width="300" height="245">
 
@@ -228,11 +229,11 @@ chaineplusButton.accessibilityTraversalAfter = voldown.id
 chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 </code></pre>
 
-**To be verified&nbsp;:**
-- The vocalization order follows an understandable and logical order
+**To be verified:**
+- The vocalization order follows an understandable and logical order.
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
 
@@ -240,10 +241,10 @@ chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 
 ## Vocalize content change
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** from conception, and during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** from conception, and during development.
 
-**Description&nbsp;:**  
+**Description:**  
 
 When content is dynamically modified after a user action, it must be vocalized. Otherwise, a blind user cannot understand that an action has been triggered.  
 
@@ -262,12 +263,12 @@ The method `setAccessibilityLiveRegion` takes as parameter a mode. There are 3 m
 **Note**: the `setAccessibilityLiveRegion` method is available on any element that inherits from `View`.
 
 
-**To be verified&nbsp;:**
+**To be verified:**
 - Temporary messages displayed on the screen (such as Toast) are vocalized.
-- Dialogs opening are vocalized
+- Dialogs opening are vocalized.
 - Transitions between activities are vocalized (by the title of the new activity for example).
-- Error messages are vocalized
-- Horizontal scrolls are vocalized
+- Error messages are vocalized.
+- Horizontal scrolls are vocalized.
 - The change of a part of the screen is vocalized.
 - The change of a screen element is vocalized if it is useful for the user to be informed about it.
 
@@ -295,12 +296,12 @@ It is common to test the Android version before triggering TalkBack vocalization
 
 ## Do not vocalize the decorative and hidden elements.
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** from design,  and during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** from design,  and during development.
 
-**Description&nbsp;:**  
+**Description:**  
 
-To not confuse navigation with a screen reader, it is necessary to vocalize only the significant elements. Decorative elements, such as illustrations, should not be vocalized.
+To avoid confusion for a screen-reader user, it is necessary to vocalize only the significant elements. Decorative elements, such as illustrations, should not be vocalized.
 
 Although invisible on the screen, some elements could be read by the screen reader (elements positioned outside the visible area or hidden by other elements). Overlaying frames is common, but it creates very heavy accessibility problems if it is not done correctly.
 
@@ -308,18 +309,18 @@ A frequent case of this problem: fragments.  A bad use of fragments can lead to 
   
 See the article on [use of fragments](https://developer.android.com/guide/components/fragments.html) for more information.
 
-**To be verified&nbsp;:**
-- No invisible elements are vocalized
+**To be verified:**
+- No invisible elements are vocalized.
 - Decorative elements are ignored and are not vocalized.
 
-**Examples&nbsp;:**
+**Examples:**
 
 <img src="../../../images/image_ex.png" alt="complete example of decorative image and informative icon" width="400" height="149">
 
-By decomposing the image&nbsp;:
-- <img src="../../../images/montagnard.png" alt="example of a decorative image" width="256" height="95"> pas de `contentDescription`
-- <img src="../../../images/settings.png" alt="example of informative icon - settings" width="48" height="48"> `imageView.setContentDescription("paramètres")`
-- <img src="../../../images/edit.png" alt="xample of informative icon - edit" width="48" height="48"> `imageView.setContentDescription("éditer le nom de l’image")`
+By decomposing the image:
+- <img src="../../../images/montagnard.png" alt="example of a decorative image" width="256" height="95"> no `contentDescription`
+- <img src="../../../images/settings.png" alt="example of informative icon - settings" width="48" height="48"> `imageView.setContentDescription("settings")`
+- <img src="../../../images/edit.png" alt="example of informative icon - edit" width="48" height="48"> `imageView.setContentDescription("edit the image's name")`
 
 <pre><code class="xml">
     &lt;ImageView
@@ -340,29 +341,29 @@ By decomposing the image&nbsp;:
 </code></pre>
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
 
 ## Group the elements 
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** from design,  and during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** from design,  and during development.
 
-**Description&nbsp;:**  
+**Description:**  
 
-It is recommended to group the linked elements for vocalization when this increase efficiency and comprehension.
+It is recommended to group similar elements for vocalization when this increase efficiency and comprehension.
 
 For example, in a music application, it is more useful to group together the music title, artist name and duration vocalization in one block, rather than vocalizing them separately and making navigation more cumbersome.
 
 Care must be taken to find the right balance between navigation and vocalization. Vocalizing too much information in one block will be detrimental to listening. Having no elements grouped together will increase the amount of navigable elements and therefore make navigation more cumbersome. 
 
-**To be verified&nbsp;:**
-- Linked elements are grouped in the same block of announcements for vocalization
+**To be verified:**
+- Linked elements are grouped in the same block of announcements for vocalization.
 - Multidimensional information respects a good balance between the number of blocks and the number of contents in each block. 
 
 
-**Example of a grouped vocalization&nbsp;:**  
+**Example of a grouped vocalization:**  
 
 <pre><code class="xml">
 &lt;ConstraintLayout
@@ -380,24 +381,24 @@ Care must be taken to find the right balance between navigation and vocalization
 &lt;/ConstraintLayout&gt;</code></pre>
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## Enable header navigation
 
-**Target&nbsp;:** everyone and in particular the visually impaired.  
-**When&nbsp;:** from design, and during development.
+**Target:** everyone and in particular the visually impaired.  
+**When:** from design, and during development.
 
-**Description&nbsp;:**  
+**Description:**  
 
-Within the same screen, content have sometimes different sections, with a header for each of them. It is possible with the Talkback screen reader to navigate by headings, rather than by elements. This makes it faster for a user to navigate between sections.
+Within the same screen, content is sometimes split into different sections, with a header for each of them. It is possible with the Talkback screen reader to navigate by headings, rather than by elements. This makes it faster for a user to navigate between sections.
 
-To recognize headers, an attribute in the XML layout must be added to the elements : **accessibilityHeading**
+To recognize headers, an attribute in the <abbr>XML</abbr> layout must be added to the elements : **`accessibilityHeading`**
 
-**To be verified&nbsp;:**
+**To be verified:**
 - Headers are navigable with the Talkback Navigation "Heading" setting 
 
-**Example&nbsp;**:
+**Example**:
 <pre><code class="xml">&lt;TextView
 […]
 android:id="@+id/myTextLevel1viewId"
@@ -405,29 +406,29 @@ android:accessibilityHeading="true"
 &#47;&gt;</code></pre>
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 
-## Hide elements from accessibility  
+## Hide elements from the accessibility API 
 
-**Target&nbsp;:** everyone and in particular people with visual and/or motor impairments.  
-**When&nbsp;:** from the design phase and during development.
+**Target:** everyone and in particular people with visual and/or motor impairments.  
+**When:** from the design phase and during development.
 
-**Description&nbsp;:**
+**Description:**
 
 It is possible via an accessibility attribute to hide elements to accessibility tools (TalkBack for example). By extension, it is possible to force some elements to be visible to accessibility tools.  
 `ImportantForAccessibility`&nbsp;: depending on the value of the attribute, this indicates that an element is visible or not from the accessibility <abbr>API</abbr>.  
-- `auto` (0)&nbsp;: default value, the system decides. For example, a `Button` will have its default value at 1 (yes) and a `LinearLayout` at 2 (no).
-- `yes` (1)&nbsp;: the view is important for accessibility. It can for example receive the focus of TalkBack.
-- `no` (2)&nbsp;: the view is not important for accessibility. It no longer triggers an accessibility event and is therefore ignored by services such as TalkBack.
-- `noHideDescendants` (4)&nbsp;: the view is not important for accessibility, but all its daughter views are. It hide all the elements of a view from accessibility at once. Very useful on custom elements.  
+- `auto` (0): default value, the system decides. For example, a `Button` will have its default value at 1 (yes) and a `LinearLayout` at 2 (no).
+- `yes` (1): the view is important for accessibility. It can for example receive the focus of TalkBack.
+- `no` (2): the view is not important for accessibility. It no longer triggers an accessibility event and is therefore ignored by services such as TalkBack.
+- `noHideDescendants` (4): the view is not important for accessibility, but all its child views are. It hides all the elements of a view from accessibility at once. Very useful on custom elements.  
   
-Note: the "importantForAccessibility" attribute is available for any element that inherits from `View'.
+Note: the `importantForAccessibility` attribute is available for any element that inherits from `View'.
 
-**Examples&nbsp;:**
+**Examples:**
 
 <pre><code class="xml">&lt;TextView
 […]
@@ -448,11 +449,11 @@ myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE
 
 ## Detect if TalkBack is enabled
 
-**Description&nbsp;:**
+**Description:**
 
 Under Android, it is possible to know if the Accessibility API is enabled, and by extension to know if TalkBack is enabled.
 
-**Example&nbsp;**:
+**Example**:
 
 <pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
 boolean isAccessibilityEnabled = am.isEnabled();
