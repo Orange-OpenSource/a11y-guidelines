@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Android accessibility criteria for development - Orange digital accessibility guidelines</title>
+    <title>Element Magnification - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -118,7 +118,7 @@
   Design
 </a>
             </li><li class="nav-item">
-              <a href="/en/mobile/android/development/" class="nav-link active" aria-current="page">
+              <a href="/en/mobile/android/development/" class="nav-link active" aria-current="true">
   Develop
 </a>
             </li><li class="nav-item">
@@ -148,13 +148,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/en/mobile/android/">Android</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/development/">Develop</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Develop
+          Element Magnification
         </li>
       </ol>
 </nav>
@@ -171,14 +176,19 @@
   Vocal navigation
 </a><a href="/en/mobile/android/development/focus-navigation/" class="nav-link dropdown-item">
   Focus navigation
-</a><a href="/en/mobile/android/development/magnification/" class="nav-link dropdown-item">
+</a><a href="/en/mobile/android/development/magnification/" class="nav-link dropdown-item active" aria-current="page">
   Magnification
 </a><a href="/en/mobile/android/development/form/" class="nav-link dropdown-item">
   Form
 </a></div>
     </nav>
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#enlarge-texts-without-loss-of-information" class="dropdown-item text-wrap">Enlarge texts without loss of information</a></div>
+    </nav>
         
       </div>
     </div>
@@ -203,7 +213,7 @@
   Focus navigation
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/development/magnification/" class="nav-link text-muted">
+            <a href="/en/mobile/android/development/magnification/" class="nav-link text-muted active" aria-current="page">
   Magnification
 </a>
           </li><li class="nav-item position-relative">
@@ -217,14 +227,48 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Android accessibility criteria for development</h1>
-<p>This guide presents the different accessibility options of the Android SDK. Through different categories, this guide explains how to use the accessibility attributes and methods, with code examples to illustrate the purpose.</p>
+          <h1>Element magnification</h1>
+<h2 id="enlarge-texts-without-loss-of-information">Enlarge texts without loss of information <a class="header-anchor" href="#enlarge-texts-without-loss-of-information" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> during design and development.</p>
+<p><strong>Description:</strong></p>
+<p>The text size must be able to be multiplied by 2 (zoom the text to 200% from the phone's accessibility settings). At this zoom level, the presentation can be altered, but the information must remain legible (no truncated or overlapped text).</p>
+<p>The application must implement dynamic text sizes, ensure that display areas react properly to text magnification (containers that adapt to the size of their content).</p>
+<p>To allow the &quot;large character&quot; option, several points must be respected during development:</p>
+<ul>
+<li>Use a dynamic font size: the &quot;sp&quot;. This unit, specific to Android, allows to obtain a font size according to the pixel density of the screen.</li>
+<li>Manage content overflows: a common mistake is to use a dynamic text size (&quot;sp&quot; therefore) without adapting the container. If the text gets bigger, the container must do the same so that there is no overflow. You can use the <code>min-height</code> and <code>height</code> of the containers to get a correct result (the <code>height</code> at <code>wrap_content</code> and the <code>min-height</code> at the default height).</li>
+</ul>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>The application reacts correctly to the text magnification option</li>
+</ul>
+<p><strong>Tool:</strong><br>
+The text size magnification accessibility option, in the phone settings.</p>
+<p><strong>Valid example:</strong></p>
+<pre><code class="xml">&lt;TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp"
+    android:textSize="14sp"
+    android:text="Exemple"
+&#47;&gt;</code></pre>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a></li>
+</ul>
 
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#enlarge-texts-without-loss-of-information" class="nav-link text-muted bg-200">Enlarge texts without loss of information</a>
+          </li></ul>
+    </nav>
             </div>
           </div>
         
@@ -238,7 +282,7 @@
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/development/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/development/magnification.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>

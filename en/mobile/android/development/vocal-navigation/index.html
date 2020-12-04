@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Vocal navigation - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link active" aria-current="true">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/android/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/development/" class="nav-link active" aria-current="true">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/android/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/android/">Android</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/android/development/">Develop</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Vocal navigation
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/mobile/android/development/general-navigation/" class="nav-link dropdown-item">
+  General navigation
+</a><a href="/en/mobile/android/development/vocal-navigation/" class="nav-link dropdown-item active" aria-current="page">
+  Vocal navigation
+</a><a href="/en/mobile/android/development/focus-navigation/" class="nav-link dropdown-item">
+  Focus navigation
+</a><a href="/en/mobile/android/development/magnification/" class="nav-link dropdown-item">
+  Magnification
+</a><a href="/en/mobile/android/development/form/" class="nav-link dropdown-item">
+  Form
+</a></div>
+    </nav>
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#vocalize-the-images" class="dropdown-item text-wrap">Vocalize the images</a><a href="#vocalize-all-significant-elements" class="dropdown-item text-wrap">Vocalize all significant elements</a><a href="#vocalize-the-state-of-the-elements" class="dropdown-item text-wrap">Vocalize the state of the elements</a><a href="#manage-the-vocalization-order" class="dropdown-item text-wrap">Manage the vocalization order</a><a href="#vocalize-content-change" class="dropdown-item text-wrap">Vocalize content change</a><a href="#do-not-vocalize-the-decorative-and-hidden-elements" class="dropdown-item text-wrap">Do not vocalize the decorative and hidden elements.</a><a href="#group-the-elements" class="dropdown-item text-wrap">Group the elements</a><a href="#enable-header-navigation" class="dropdown-item text-wrap">Enable header navigation</a><a href="#hide-elements-from-the-accessibility-api" class="dropdown-item text-wrap">Hide elements from the accessibility API</a><a href="#detect-if-talkback-is-enabled" class="dropdown-item text-wrap">Detect if TalkBack is enabled</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/mobile/android/development/general-navigation/" class="nav-link text-muted">
+  General navigation
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/development/vocal-navigation/" class="nav-link text-muted active" aria-current="page">
+  Vocal navigation
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/development/focus-navigation/" class="nav-link text-muted">
+  Focus navigation
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/development/magnification/" class="nav-link text-muted">
+  Magnification
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/mobile/android/development/form/" class="nav-link text-muted">
+  Form
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Vocal navigation</h1>
+<h2 id="vocalize-the-images">Vocalize the images <a class="header-anchor" href="#vocalize-the-images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular people with visual impairments.<br>
+<strong>When:</strong> from design, and during development.</p>
+<p><strong>Description:</strong></p>
+<p>Images must have a text alternative that gives all the information carried by the image to users using voice navigation.</p>
+<p>For an image containing text, the alternative will be the text. For an image which provides information in the form of a graph, drawing or other, the alternative will contain all the necessary information present in the image.</p>
+<p>Decorative images do not require a text alternative and therefore should not be vocalized.</p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>Images carrying information convey this information through their textual alternatives.</li>
+</ul>
+<p><strong>Valid example:</strong></p>
+<pre><code class="xml">&lt;TextView
+…
+android:id="@+id/myTextviewId"
+android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
+&#47;&gt;</code></pre><pre>
+<p><code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);<br>
+myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre></p>
+<p><strong>Référence <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="vocalize-all-significant-elements">Vocalize all significant elements <a class="header-anchor" href="#vocalize-all-significant-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> from design, and during development.</p>
+<p><strong>Description:</strong><br>
+When a user navigates using voice navigation (Talkback for example), every meaningful element on the screen must be vocalized, to be able to use the application without any loss of information.</p>
+<p>A text is restituted natively by the screen reader, but some elements require a text alternative to be able to vocalize the information correctly.</p>
+<p>It is important to provide a text alternative when the information is not available or sufficient natively, e.g. for components conveying information through color, shape, position, sound... All components can receive a text alternative, so it is possible to enrich the native vocalization of an element.</p>
+<p>Some images are sometimes associated with text to provide information. For example to present the &quot;unread messages&quot;: a tooltip gives the unread messages number and an image gives the &quot;message&quot; information. In this case, the solution is to use a text alternative on the text with all the necessary information. For example: &quot;3 unread messages&quot;. It is also possible to use this alternative on the image, but it is necessary to  make the text &quot;invisible&quot; for the screen reader.</p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>Elements are all vocalized and accessible.</li>
+<li>The vocalizations are explicit and understandable for each element.</li>
+<li>The interactive elements are vocalized with the associated action.</li>
+<li>The titles of the activities are vocalized.</li>
+<li>Items in a list are vocalized independently of each other.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Example of an icon that is coupled with text (tooltip) to add information. The icon &quot;mail&quot; coupled with the tooltip value &quot;3&quot; indicates that we have &quot;3 unread mails&quot;. If no textual alternative is added, 2 elements will be vocalized &quot;button without label&quot; and &quot;3&quot;.<br>
+<img src="../../../images/alt.png" alt="example of an icon coupled with text that requires a text alternative" width="80" class="pull-left"></p>
+<pre><code class="java">containerView.setContentDescription("3 mails non lus, bouton"); //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur
+containerView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES); //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.
+mailImageView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le bouton-icône pour éviter une redondance d’information
+infobulleTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO); //On masque le texte pour éviter une redondance d’information
+</code></pre><pre>
+<p><code class="kotlin">containerView.contentDescription = &quot;3 mails non lus, bouton&quot; //On ajoute l’alternative complète (construite dynamiquement au préalable) sur le conteneur<br>
+containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES //Le conteneur est une View, non visible par l’<abbr>API</abbr> d’accessibilité par défaut. On le rend visible.<br>
+mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information<br>
+infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //On masque le texte pour éviter une redondance d’information<br>
+</code></pre></p>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+</ul>
+<h2 id="vocalize-the-state-of-the-elements">Vocalize the state of the elements <a class="header-anchor" href="#vocalize-the-state-of-the-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> during development.</p>
+<p><strong>Description:</strong></p>
+<p>If an element does not vocalize its status, nature or state, the TalkBack user is unable to understand what is happening on the screen.</p>
+<p>The different types of tabs offered in Android, for example, do not give all the information about their nature and status. It is up to the developer to give this information to the user via the corresponding accessibility attributes (<code>contentDescription</code>). In this case, a good alternative for the title of a tab can be: &quot;selected, tab title, tab 1 of 3&quot;.</p>
+<p>Another classic element that does not vocalize by default its state: the foldable zones.</p>
+<p>To provide this kind of information, the <code>contentDescription</code> attribute (available for any element inheriting from <code>View</code>) must be used.</p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>Any element whose status can be modified during the use of the application must convey its state through its text alternative. For example, an item that can be selected/unselected.</li>
+</ul>
+<p><strong>Example of tabs:</strong><br>
+The example shows tabs above and below a <code>ViewPager</code> in one case in <code>TabLayout</code> and in the other in <code>BottomNavigationView</code>. Tabs are no longer practiced as <code>TabHost</code>.<br>
+It is necessary to indicate the state and the nature of the tabs (not internationalized):</p>
+<pre><code class="xml">//In the activity layout
+&lt;android.support.constraint.ConstraintLayout
+   …&gt;
+    &lt;android.support.v4.view.ViewPager
+    android:id="@+id/viewpager"
+        …
+        &gt;
+    &lt;android.support.design.widget.TabLayout
+            android:id="@+id/tabtoolbar_pager"
+            …
+    &lt;/android.support.v4.view.ViewPager&gt;
+    &lt;android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        […]
+        app:menu="@menu/navigation" /&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+&nbsp;
+&nbsp;
+//Dans le fichier strings.xml
+&lt;string name="cd_tab_title_param"&gt;%1$s, onglet %2$s sur %3$s&lt;/string&gt;
+</code></pre><pre>
+<code class="java">
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mTabLayout = (TabLayout) findViewById(R.id.tabtoolbar_pager);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mTabLayout.addOnLayoutChangeListener(mTabLayoutListener);
+        mTabLayout.setupWithViewPager(mViewPager);
+        mAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mAdapter);
+//initializes the contentDescription at creation
+        updateTabContentDescription(0);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            […]
+            public void onPageSelected(int position) {
+                updateTabContentDescription(position);
+            }
+        });
+//The BottomNavigationView is not necessarily at the bottom of the view, it has to be positioned in the layout. 
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        […]
+        }
+    private void updateTabContentDescription(int position) {
+        for (int i = 0; i &lt; mAdapter.getCount(); i++) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(i);
+            String cd_param_string = getString(R.string.cd_tab_title_param,
+                    mAdapter.getPageTitle(i), // titre en paramètre 1 voir le xml
+                    i + 1,                    // le numéro de l’onglet actuel, paramètre 2
+                    mAdapter.getCount());     // le nombre d’onglets automatique, paramètre 3
+            if (tab != null) {
+                tab.setContentDescription(cd_param_string);
+            }         
+//For Tablayout and BottomNavigationView the "selected" information is already vocalized. 
+//Or, for example: "selected, `title tab 1`, tab 1 of 5&nbsp;".
+//or "title tab 3", tab 3 on 5.&nbsp;". Then "&nbsp;`press twice to activate&nbsp;".
+// Setting the upper terminal automatically prevents you from ending up with a vocalization of the type :
+//"selected, `title tab 4`, tab 4 on 3.&nbsp;", where the upper bound is inconsistent.
+// For the `TabHost` it would be necessary in addition to specify the information "&nbsp;selected&nbsp;".
+        }
+    }
+</code></pre><pre>
+<code class="kotlin">
+    private fun updateTabContentDescription(position: Int) {
+        for (i in 0 until mAdapter!!.count) {
+            val tab = mTabLayout!!.getTabAt(i)
+            val cd_param_string = getString(R.string.cd_tab_title_param,
+                    mAdapter!!.getPageTitle(i), // title in parameter 1 see the xml
+                    i + 1,                      // the number of the current tab, parameter 2
+                    mAdapter!!.count)           // the automatic number of tabs, parameter 3
+            if (tab != null) {
+                tab.contentDescription = cd_param_string
+//For Tablayout and BottomNavigationView the "selected" information is already vocalized. 
+//Or, for example: "selected, `title tab 1`, tab 1 of 5&nbsp;".
+//or "title tab 3", tab 3 on 5.&nbsp;". Then "&nbsp;`press twice to activate&nbsp;".
+// Setting the upper terminal automatically prevents you from ending up with a vocalization of the type :
+//"selected, `title tab 4`, tab 4 on 3.&nbsp;", where the upper bound is inconsistent.
+// For the `TabHost` it would be necessary in addition to specify the information "&nbsp;selected&nbsp;"..
+            }
+        }
+    }
+</code></pre>
+<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="manage-the-vocalization-order">Manage the vocalization order <a class="header-anchor" href="#manage-the-vocalization-order" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> from design, and during development.</p>
+<p><strong>Description:</strong></p>
+<p>The focus order of the default screen reader depends on several parameters: the &quot;logical&quot; reading, from left to right and from top to bottom, and the reading of the <abbr>XML</abbr> (order of declaration of the elements). It is possible to redefine this reading order with two tools :</p>
+<ul>
+<li><code>accessibilityTraversalAfter</code>: takes an <code>id</code> in parameter and allows to specify to the view that it must be described by the accessibility API after the view was passed in parameter.</li>
+<li><code>accessibilityTraversalBefore</code>: takes an <code>id</code> in parameter and allows to specify to the view that it must be described by the accessibility API before the view is passed in parameter.</li>
+</ul>
+<p>Note: these attributes can be used directly in the <abbr>XML</abbr> but also in the code via the <code>setAccessibilityTraversalAfter</code> and <code>setAccessibilityTraversalBefore</code> methods. These methods are available for any element that inherits from View.</p>
+<p><strong>Example:</strong><br>
+In this example, the default reading order is completely dependent on the order in which elements are declared. In this case: <code>vol+, vol-, 1, 2, 3, 4, 5, 6, 7, 8, 9, p+, p-, 0</code>. A more consistent reading order would be <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol+, vol-, p+, p-</code>.<br>
+<img src="../../../images/order.png" alt="example of reading order for a phone keypad" width="300" height="245"></p>
+<pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
+voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
+chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
+chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre>
+<pre><code class="kotlin">
+volupButton.accessibilityTraversalAfter = remote0.id
+voldownButton.accessibilityTraversalAfter = volup.id
+chaineplusButton.accessibilityTraversalAfter = voldown.id
+chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
+</code></pre>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>The vocalization order follows an understandable and logical order.</li>
+</ul>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="vocalize-content-change">Vocalize content change <a class="header-anchor" href="#vocalize-content-change" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> from conception, and during development.</p>
+<p><strong>Description:</strong></p>
+<p>When content is dynamically modified after a user action, it must be vocalized. Otherwise, a blind user cannot understand that an action has been triggered.</p>
+<p>A simple vocalization may be sufficient to notify the user. It is very easy to trigger vocalizations with TalkBack : you just need to use the <code>announceForAccessibility</code> method.</p>
+<p><strong>Note</strong>: the <code>announceForAccessibility</code> method is available on any element that inherits from <code>View</code>.</p>
+<p>It is also possible to specify to a view that it is a live region, i.e. its content can be dynamically modified. This will result in generating vocalizations with TalkBack for example. A typical example of use: on a form, if the user makes an error and an error message appears, the view containing the message must be defined as a live region.</p>
+<p>The method <code>setAccessibilityLiveRegion</code> takes as parameter a mode. There are 3 modes:</p>
+<ul>
+<li><code>ACCESSIBILITY_LIVE_REGION_NONE</code> : this view is not a live region. This is the default value for most views.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_POLITE</code> : vocalizations are performed on the view changes. These vocalizations are &quot;polite&quot; and have a lower priority than system vocalizations for example.</li>
+<li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code> : vocalizations are performed on the view changes. These vocalizations are &quot; rude &quot;. They are prioritized and immediately vocalized.</li>
+</ul>
+<p><strong>Note</strong>: the <code>setAccessibilityLiveRegion</code> method is available on any element that inherits from <code>View</code>.</p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>Temporary messages displayed on the screen (such as Toast) are vocalized.</li>
+<li>Dialogs opening are vocalized.</li>
+<li>Transitions between activities are vocalized (by the title of the new activity for example).</li>
+<li>Error messages are vocalized.</li>
+<li>Horizontal scrolls are vocalized.</li>
+<li>The change of a part of the screen is vocalized.</li>
+<li>The change of a screen element is vocalized if it is useful for the user to be informed about it.</li>
+</ul>
+<p><strong>Example of triggering a vocalization</strong>:</p>
+<p>It is common to test the Android version before triggering TalkBack vocalization. Indeed, <code>announceForAccessibility</code> only works since Android Jelly Bean version.</p>
+<pre>
+<code class="java">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
+    }
+</code></pre><pre>
+<p><code class="kotlin">if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.JELLY_BEAN) {<br>
+myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce))<br>
+}<br>
+</code></pre></p>
+<p><strong>Example of a live region</strong>:</p>
+<pre><code class="xml">&lt;TextView
+   […]
+   android:accessibilityLiveRegion="polite" /&gt;
+</code></pre>
+<h2 id="do-not-vocalize-the-decorative-and-hidden-elements">Do not vocalize the decorative and hidden elements. <a class="header-anchor" href="#do-not-vocalize-the-decorative-and-hidden-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> from design,  and during development.</p>
+<p><strong>Description:</strong></p>
+<p>To avoid confusion for a screen-reader user, it is necessary to vocalize only the significant elements. Decorative elements, such as illustrations, should not be vocalized.</p>
+<p>Although invisible on the screen, some elements could be read by the screen reader (elements positioned outside the visible area or hidden by other elements). Overlaying frames is common, but it creates very heavy accessibility problems if it is not done correctly.</p>
+<p>A frequent case of this problem: fragments.  A bad use of fragments can lead to an impossible navigation with the screen reader.</p>
+<p>See the article on <a href="https://developer.android.com/guide/components/fragments.html">use of fragments</a> for more information.</p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>No invisible elements are vocalized.</li>
+<li>Decorative elements are ignored and are not vocalized.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<img src="../../../images/image_ex.png" alt="complete example of decorative image and informative icon" width="400" height="149">
+<p>By decomposing the image:</p>
+<ul>
+<li><img src="../../../images/montagnard.png" alt="example of a decorative image" width="256" height="95"> no <code>contentDescription</code></li>
+<li><img src="../../../images/settings.png" alt="example of informative icon - settings" width="48" height="48"> <code>imageView.setContentDescription(&quot;settings&quot;)</code></li>
+<li><img src="../../../images/edit.png" alt="example of informative icon - edit" width="48" height="48"> <code>imageView.setContentDescription(&quot;edit the image's name&quot;)</code></li>
+</ul>
+<pre><code class="xml">
+    &lt;ImageView
+        android:id="@+id/montagnard"
+        android:src="@drawable/montagnard"
+        android:contentDescription="@null"
+        ... /&gt;
+    &lt;ImageButton
+        android:id="@+id/settings"
+        android:src="@drawable/settings"
+        android:contentDescription="@string/settings"
+        ... /&gt;
+    &lt;ImageButton
+        android:id="@+id/edit"
+        android:src="@drawable/edit"
+        android:contentDescription="@string/edit"
+        ... /&gt;
+</code></pre>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+</ul>
+<h2 id="group-the-elements">Group the elements <a class="header-anchor" href="#group-the-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> from design,  and during development.</p>
+<p><strong>Description:</strong></p>
+<p>It is recommended to group similar elements for vocalization when this increase efficiency and comprehension.</p>
+<p>For example, in a music application, it is more useful to group together the music title, artist name and duration vocalization in one block, rather than vocalizing them separately and making navigation more cumbersome.</p>
+<p>Care must be taken to find the right balance between navigation and vocalization. Vocalizing too much information in one block will be detrimental to listening. Having no elements grouped together will increase the amount of navigable elements and therefore make navigation more cumbersome.</p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>Linked elements are grouped in the same block of announcements for vocalization.</li>
+<li>Multidimensional information respects a good balance between the number of blocks and the number of contents in each block.</li>
+</ul>
+<p><strong>Example of a grouped vocalization:</strong></p>
+<pre><code class="xml">
+&lt;ConstraintLayout
+    android:id="@+id/song_data_container" ...
+    android:screenReaderFocusable="true"&gt;
+
+    &lt;TextView
+        android:id="@+id/song_title" ...
+        android:focusable="false"
+        android:text="@string/my_song_title" /&gt;
+    &lt;TextView
+        android:id="@+id/song_artist"
+        android:focusable="false"
+        android:text="@string/my_songwriter" /&gt;
+&lt;/ConstraintLayout&gt;</code></pre>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
+</ul>
+<h2 id="enable-header-navigation">Enable header navigation <a class="header-anchor" href="#enable-header-navigation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
+<strong>When:</strong> from design, and during development.</p>
+<p><strong>Description:</strong></p>
+<p>Within the same screen, content is sometimes split into different sections, with a header for each of them. It is possible with the Talkback screen reader to navigate by headings, rather than by elements. This makes it faster for a user to navigate between sections.</p>
+<p>To recognize headers, an attribute in the <abbr>XML</abbr> layout must be added to the elements : <strong><code>accessibilityHeading</code></strong></p>
+<p><strong>To be verified:</strong></p>
+<ul>
+<li>Headers are navigable with the Talkback Navigation &quot;Heading&quot; setting</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="xml">&lt;TextView
+[…]
+android:id="@+id/myTextLevel1viewId"
+android:accessibilityHeading="true"
+&#47;&gt;</code></pre>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a></li>
+</ul>
+<h2 id="hide-elements-from-the-accessibility-api">Hide elements from the accessibility API <a class="header-anchor" href="#hide-elements-from-the-accessibility-api" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> everyone and in particular people with visual and/or motor impairments.<br>
+<strong>When:</strong> from the design phase and during development.</p>
+<p><strong>Description:</strong></p>
+<p>It is possible via an accessibility attribute to hide elements to accessibility tools (TalkBack for example). By extension, it is possible to force some elements to be visible to accessibility tools.<br>
+<code>ImportantForAccessibility</code> : depending on the value of the attribute, this indicates that an element is visible or not from the accessibility <abbr>API</abbr>.</p>
+<ul>
+<li><code>auto</code> (0): default value, the system decides. For example, a <code>Button</code> will have its default value at 1 (yes) and a <code>LinearLayout</code> at 2 (no).</li>
+<li><code>yes</code> (1): the view is important for accessibility. It can for example receive the focus of TalkBack.</li>
+<li><code>no</code> (2): the view is not important for accessibility. It no longer triggers an accessibility event and is therefore ignored by services such as TalkBack.</li>
+<li><code>noHideDescendants</code> (4): the view is not important for accessibility, but all its child views are. It hides all the elements of a view from accessibility at once. Very useful on custom elements.</li>
+</ul>
+<p>Note: the <code>importantForAccessibility</code> attribute is available for any element that inherits from `View'.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="xml">&lt;TextView
+[…]
+android:id="@+id/myTextviewId1"
+android:importantForAccessibility="4"
+&#47;&gt;
+&lt;TextView
+[…]
+android:id="@+id/myTextviewId2"
+android:importantForAccessibility="noHideDescendants"
+&#47;&gt;</code></pre><pre>
+<p><code class="java">myTextView1 = (TextView) findViewById(R.id.myTextviewId1);<br>
+myTextView2 = (TextView) findViewById(R.id.myTextviewId2);<br>
+myTextView1.setImportantForAccessibility(4); // JELLY_BEAN<br>
+myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = &quot;4&quot; // JELLY_BEAN<br>
+myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT<br>
+</code></pre></p>
+<h2 id="detect-if-talkback-is-enabled">Detect if TalkBack is enabled <a class="header-anchor" href="#detect-if-talkback-is-enabled" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Description:</strong></p>
+<p>Under Android, it is possible to know if the Accessibility API is enabled, and by extension to know if TalkBack is enabled.</p>
+<p><strong>Example</strong>:</p>
+<pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
+boolean isAccessibilityEnabled = am.isEnabled();
+</code></pre><pre>
+<p><code class="kotlin">val am = context.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager<br>
+val isAccessibilityEnabled = am.isEnabled<br>
+</code></pre></p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#vocalize-the-images" class="nav-link text-muted bg-200">Vocalize the images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#vocalize-all-significant-elements" class="nav-link text-muted bg-200">Vocalize all significant elements</a>
+          </li><li class="nav-item position-relative">
+            <a href="#vocalize-the-state-of-the-elements" class="nav-link text-muted bg-200">Vocalize the state of the elements</a>
+          </li><li class="nav-item position-relative">
+            <a href="#manage-the-vocalization-order" class="nav-link text-muted bg-200">Manage the vocalization order</a>
+          </li><li class="nav-item position-relative">
+            <a href="#vocalize-content-change" class="nav-link text-muted bg-200">Vocalize content change</a>
+          </li><li class="nav-item position-relative">
+            <a href="#do-not-vocalize-the-decorative-and-hidden-elements" class="nav-link text-muted bg-200">Do not vocalize the decorative and hidden elements.</a>
+          </li><li class="nav-item position-relative">
+            <a href="#group-the-elements" class="nav-link text-muted bg-200">Group the elements</a>
+          </li><li class="nav-item position-relative">
+            <a href="#enable-header-navigation" class="nav-link text-muted bg-200">Enable header navigation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#hide-elements-from-the-accessibility-api" class="nav-link text-muted bg-200">Hide elements from the accessibility API</a>
+          </li><li class="nav-item position-relative">
+            <a href="#detect-if-talkback-is-enabled" class="nav-link text-muted bg-200">Detect if TalkBack is enabled</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/development/vocal-navigation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>
