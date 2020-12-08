@@ -28,6 +28,13 @@ Des améliorations significatives pour la **navigation avec le contrôle de sél
 ![Accès à l'accessibilité avec le contrôle de sélection.](../../images/iOSdev/wwdc20-019.png)
 </br></br></br>
 
+## [2020 - Rendre un visuel accessible](2020/020/)
+Cette présentation met en avant un ensemble de critères et de méthodes pour permettre au visuel d'une application de devenir accessible.
+<a href="2020/020/">
+    
+![Accès à rendre un visuel accessible.](../../images/iOSdev/wwdc20-020.png)
+</br></br></br>
+
 ## [2019 - Large Content Viewer](2019/261/)
 Cette courte vidéo concerne la fonctionnalité **Large Content Viewer** apparue avec iOS 11 et les nouveautés iOS 13 associées.
 <a href="2019/261/">
