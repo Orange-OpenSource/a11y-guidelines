@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Accessibilité des documents PowerPoint - Recommandations accessibilité numérique Orange</title>
+    <title>Créer des présentations PowerPoint accessibles - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/contenu-editorial/generalites/" class="nav-link">
-  Recommandations transverses
-</a>
-            </li><li class="nav-item">
               <a href="/fr/contenu-editorial/word/" class="nav-link">
   Word
 </a>
@@ -167,20 +163,213 @@
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Thématiques
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/contenu-editorial/powerpoint/" class="nav-link dropdown-item active" aria-current="page">
+  Créer une présentation PowerPoint accessible
+</a><a href="/fr/contenu-editorial/powerpoint/tester/" class="nav-link dropdown-item">
+  Tester l&#39;accessibilité de votre présentation PowerPoint
+</a></div>
+    </nav>
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#masques-de-diapositive" class="dropdown-item text-wrap">Masques de diapositive</a><a href="#attributs-de-la-presentation" class="dropdown-item text-wrap">Attributs de la présentation</a><a href="#la-langue" class="dropdown-item text-wrap">La langue</a><a href="#autres-proprietes" class="dropdown-item text-wrap">Autres propriétés</a><a href="#titre-des-diapositives" class="dropdown-item text-wrap">Titre des diapositives</a><a href="#redaction-des-contenus" class="dropdown-item text-wrap">Rédaction des contenus</a><a href="#mise-en-forme-des-contenus" class="dropdown-item text-wrap">Mise en forme des contenus</a><a href="#couleurs-et-contrastes" class="dropdown-item text-wrap">Couleurs et contrastes</a><a href="#listes-a-puces-ou-numerotees" class="dropdown-item text-wrap">Listes à puces ou numérotées</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#liens" class="dropdown-item text-wrap">Liens</a><a href="#tableaux-de-donnees-tableaux-de-presentation" class="dropdown-item text-wrap">Tableaux de données / tableaux de présentation</a><a href="#contenus-audio-ou-video" class="dropdown-item text-wrap">Contenus audio ou vidéo</a><a href="#ordre-de-lecture-des-elements" class="dropdown-item text-wrap">Ordre de lecture des éléments</a><a href="#verificateur-daccessibilite-integre" class="dropdown-item text-wrap">Vérificateur d’accessibilité intégré</a><a href="#convertir-une-presentation-powerpoint-en-fichier-pdf" class="dropdown-item text-wrap">Convertir une présentation PowerPoint en fichier PDF</a><a href="#ressources" class="dropdown-item text-wrap">Ressources</a></div>
+    </nav>
         
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Accessibilité des documents PowerPoint</h1>
-<p>Cette section contient des recommandations pour :</p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Thématiques</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/fr/contenu-editorial/powerpoint/" class="nav-link text-muted active" aria-current="page">
+  Créer une présentation PowerPoint accessible
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/contenu-editorial/powerpoint/tester/" class="nav-link text-muted">
+  Tester l&#39;accessibilité de votre présentation PowerPoint
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Créer des présentations PowerPoint accessibles</h1>
+<p>Produire une présentation PowerPoint accessible nécessite de respecter ces différentes recommandations :</p>
+<h2 id="masques-de-diapositive">Masques de diapositive <a class="header-anchor" href="#masques-de-diapositive" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Définir des masques de diapositives est la première chose à faire  et une condition sine qua none pour créer une présentation homogène et accessible.</p>
 <ul>
-<li><a href="creer">Créer un document PowerPoint accessible</a></li>
-<li><a href="tester">Tester l'accessibilité d'un document PowerPoint</a></li>
+<li>Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet <code>Affichage</code>, sélectionner <code>Masque des diapositives</code>).</li>
+<li>Utiliser les sous-menus <code>Mise en pages du masque</code> et <code>Insérer un espace réservé</code>.</li>
+<li>Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu <code>Insertion</code>.</li>
+<li>Créer autant de masques que de types de diapositives nécessaires.<br>
+<img alt="" src="/fr/contenu-editorial/images/masques.png" class="img-fluid"></li>
+</ul>
+<p>Remarque : Si vous modifiez le masque des diapositives ou les mises en pages après avoir créé les différentes diapositives, vous devrez réappliquer les mises en page modifiées aux diapositives existantes de votre présentation en mode Normal.</p>
+<h2 id="attributs-de-la-presentation">Attributs de la présentation <a class="header-anchor" href="#attributs-de-la-presentation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="la-langue">La langue <a class="header-anchor" href="#la-langue" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votre présentation :</p>
+<ul>
+<li>La langue principale doit être définie dans le menu : <code>Fichier &gt; Options &gt; Langue</code>.</li>
+<li>Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis <code>Révision &gt; Langue &gt; Définir la langue de vérification</code>.</li>
+</ul>
+<h3 id="autres-proprietes">Autres propriétés <a class="header-anchor" href="#autres-proprietes" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu <code>Fichier &gt; Informations</code>.</p>
+<img alt="" src="/fr/contenu-editorial/images/attributs.png" class="img-fluid">
+<p>Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans <code>Propriétés</code>, pourront également être lues par un lecteur d’écran.</p>
+<p><img alt="" src="/fr/contenu-editorial/images/attributs2.png" class="img-fluid">   </p>
+<h2 id="titre-des-diapositives">Titre des diapositives <a class="header-anchor" href="#titre-des-diapositives" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour éviter toute confusion entre des diapositives, notamment si l’utilisateur parcourt une présentation à l’aide d’un lecteur d’écran :<br>
+donner un titre spécifique à chaque diapositive, à insérer dans la zone : « Cliquer pour ajouter un titre ».</p>
+<h2 id="redaction-des-contenus">Rédaction des contenus <a class="header-anchor" href="#redaction-des-contenus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Limiter les abréviations et acronymes, et expliciter à la première occurrence ceux qui ne font pas partie du langage courant.</p>
+<p>Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu <strong>Insertion &gt; Symbole</strong> ou utiliser <a href="/fr/contenu-editorial/index#annexes">les raccourcis clavier</a>.</p>
+<h2 id="mise-en-forme-des-contenus">Mise en forme des contenus <a class="header-anchor" href="#mise-en-forme-des-contenus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial et Helvetica) en corps 12 pixels minimum.<br>
+Commencer les phrases par une majuscule et ne pas abuser des phrases entièrement écrites en majuscules.<br>
+Eviter de justifier le texte et privilégier l’alignement à gauche.<br>
+Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un <code>clic droit &gt; Paragraphe &gt; Retrait et Espacement</code>.</p>
+<p><img alt="" src="/fr/contenu-editorial/images/paragraphe.png" class="img-fluid">   </p>
+<h2 id="couleurs-et-contrastes">Couleurs et contrastes <a class="header-anchor" href="#couleurs-et-contrastes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Assurer un niveau de <a href="/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">contraste suffisant entre la couleur du texte et celle de l’arrière-plan</a>. Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> par exemple :</p>
+<ul>
+<li>4.5:1 pour du texte de taille normale.</li>
+<li>3:1 pour du <a href="/fr/glossaire/#texte-de-grande-taille">texte de grande taille</a> et les composants d'interface ou éléments graphiques porteurs d'informations.</li>
+</ul>
+<p>S’assurer que <a href="/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation">la couleur n’est pas le seul moyen utilisé pour communiquer l’information</a>.<br>
+Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen suppléant la couleur pour véhiculer l’information.</p>
+<figure>
+  <img src="/fr/contenu-editorial/images/color-ko.png" alt="" />
+  <figcaption><strong>Exemple incorrect</strong> : l'information est transmise uniquement par la couleur.</figcaption>
+</figure>
+<p> </p>
+<figure>
+  <img src="/fr/contenu-editorial/images/color-ok.png" alt="" />
+  <figcaption><strong>Exemple correct</strong> : l'information est transmise par la forme et la couleur.</figcaption>
+</figure>
+<h2 id="listes-a-puces-ou-numerotees">Listes à puces ou numérotées <a class="header-anchor" href="#listes-a-puces-ou-numerotees" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.</p>
+<p><img alt="" src="/fr/contenu-editorial/images/puce.png" class="img-fluid">   </p>
+<h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Un document peut contenir des images et être accessible, il faut simplement que l’information portée par l’image soit retranscrite textuellement.</p>
+<ul>
+<li><strong>Pour les images porteuses d’informations</strong> : associer un texte de remplacement décrivant le contenu informatif via un <code>clic droit &gt; Format de l’image &gt; Texte de remplacement &gt; champ « Description »</code>.</li>
+<li><strong>Pour les images décoratives/illustratives</strong> : laisser le champ <code>description</code> vide.</li>
+<li><strong>Pour les images informatives complexes</strong> : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans <a href="https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e">le guide du concepteur RGAA</a></li>
+</ul>
+ <img alt="" src="/fr/contenu-editorial/images/remplacement.png" class="img-fluid">
+<p>Pour les graphiques ou schémas : utiliser les composants <code>SmartArt</code> plutôt que des images (menu <code>Insertion &gt; SmartArt</code>).<br>
+Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (<code>Format de l’objet ou de l’image &gt; Texte de remplacement &gt; Description</code>).</p>
+<h2 id="liens">Liens <a class="header-anchor" href="#liens" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel et doit donc se suffire à lui-même :</p>
+<ul>
+<li>Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).</li>
+<li>Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).<br>
+<img alt="" src="/fr/contenu-editorial/images/lien.png" class="img-fluid">   </li>
+<li>Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.</li>
+</ul>
+<h2 id="tableaux-de-donnees-tableaux-de-presentation">Tableaux de données / tableaux de présentation <a class="header-anchor" href="#tableaux-de-donnees-tableaux-de-presentation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les tableaux peuvent être difficilement consultables, pour un non-voyant, par exemple. Il faut donc les utiliser avec parcimonie et les structurer le plus simplement possible :</p>
+<ul>
+<li>Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.</li>
+<li>Ajouter une description s'il s'agit d'un tableau complexe, clic droit : <code>Format de la forme &gt; Texte de remplacement &gt; Description</code></li>
+</ul>
+<p><strong>Important :</strong> Ne pas utiliser les tableaux à des fins de mise en forme.</p>
+<h2 id="contenus-audio-ou-video">Contenus audio ou vidéo <a class="header-anchor" href="#contenus-audio-ou-video" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>La communication audiovisuelle est aujourd’hui très fréquente en entreprise. Mais parce que certaines personnes peuvent ne pas voir ou ne pas entendre il est primordial de suppléer l’information transmise dans une modalité par une autre :</p>
+<ul>
+<li>Fournir une transcription intégrale des contenus audio (solution nécessaire et suffisante).</li>
+<li>Empêcher toute lecture automatique de contenu vidéo ou audio (menu <code>Animations</code> : démarrer au clic).</li>
+</ul>
+<p><img alt="" src="/fr/contenu-editorial/images/video.png" class="img-fluid">   </p>
+<p>Tout contenu vidéo doit respecter ces prérequis :</p>
+<ul>
+<li>Fournir des sous-titres pour restituer l’ensemble des informations véhiculées par la bande son.</li>
+<li>Fournir une audiodescription si la vidéo présente des informations accessibles seulement via les images.</li>
+<li>Utiliser des vidéos sans flashs rapides (pas plus de 3 clignotements par seconde).</li>
+</ul>
+<p>Consultez <a href="/fr/contenu-editorial/composants-animes">nos recommandations sur les contenus audio et vidéo</a> pour en savoir plus.</p>
+<h2 id="ordre-de-lecture-des-elements">Ordre de lecture des éléments <a class="header-anchor" href="#ordre-de-lecture-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection (menu <code>Accueil &gt; Organiser &gt; Volet de sélection</code>).<br>
+<strong>Attention</strong> : l’ordre doit être décroissant car c’est le dernier élément de la liste qui est lu en premier par le lecteur.</p>
+<p><img alt="" src="/fr/contenu-editorial/images/volet.png" class="img-fluid">   </p>
+<p>Il est important de vérifier cet ordre directement dans les masques des diapositives.</p>
+<h2 id="verificateur-daccessibilite-integre">Vérificateur d’accessibilité intégré <a class="header-anchor" href="#verificateur-daccessibilite-integre" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Il est important de contrôler l’accessibilité de la présentation à l'aide du vérificateur d’accessibilité (menu : <code>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</code>).<br>
+<img alt="" src="/fr/contenu-editorial/images/verificateur.png" class="img-fluid">   </p>
+<h2 id="convertir-une-presentation-powerpoint-en-fichier-pdf">Convertir une présentation PowerPoint en fichier PDF <a class="header-anchor" href="#convertir-une-presentation-powerpoint-en-fichier-pdf" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique <a href="/fr/contenu-editorial/powerpoint/tester.html">Tester l'accessibilité d'une présentation PowerPoint</a>), vous pouvez convertir la présentation en <abbr>PDF</abbr> : <code>Fichier &gt; Enregistrer sous</code> et de sélectionner le type de fichier <abbr>PDF</abbr>.<br>
+Cocher la case « Balises de structure de document pour l'accessibilité ».</p>
+<p><img alt="" src="/fr/contenu-editorial/images/export.png" class="img-fluid">   </p>
+<p>Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe :<br>
+<code>Édition &gt; Préférences &gt; Lecture &gt; Option de lecteur d’écran</code> : « Lire l’intégralité du document »</p>
+<p><img alt="" src="/fr/contenu-editorial/images/adobe.png" class="img-fluid">   </p>
+<p>Pour vérifier l’accessibilité d’un document PDF, consultez la <a href="/fr/contenu-editorial/pdf.html">rubrique PDF accessible de notre site</a>.</p>
+<h2 id="ressources">Ressources <a class="header-anchor" href="#ressources" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/">Créer des documents bureautiques accessibles</a>, <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).</li>
+<li><a href="https://webaim.org/techniques/powerpoint/" hreflang="en">Accessibilité PowerPoint, WebAIM</a> (anglais).</li>
 </ul>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#masques-de-diapositive" class="nav-link text-muted bg-200">Masques de diapositive</a>
+          </li><li class="nav-item position-relative">
+            <a href="#attributs-de-la-presentation" class="nav-link text-muted bg-200">Attributs de la présentation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#la-langue" class="nav-link text-muted bg-200">La langue</a>
+          </li><li class="nav-item position-relative">
+            <a href="#autres-proprietes" class="nav-link text-muted bg-200">Autres propriétés</a>
+          </li><li class="nav-item position-relative">
+            <a href="#titre-des-diapositives" class="nav-link text-muted bg-200">Titre des diapositives</a>
+          </li><li class="nav-item position-relative">
+            <a href="#redaction-des-contenus" class="nav-link text-muted bg-200">Rédaction des contenus</a>
+          </li><li class="nav-item position-relative">
+            <a href="#mise-en-forme-des-contenus" class="nav-link text-muted bg-200">Mise en forme des contenus</a>
+          </li><li class="nav-item position-relative">
+            <a href="#couleurs-et-contrastes" class="nav-link text-muted bg-200">Couleurs et contrastes</a>
+          </li><li class="nav-item position-relative">
+            <a href="#listes-a-puces-ou-numerotees" class="nav-link text-muted bg-200">Listes à puces ou numérotées</a>
+          </li><li class="nav-item position-relative">
+            <a href="#images" class="nav-link text-muted bg-200">Images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#liens" class="nav-link text-muted bg-200">Liens</a>
+          </li><li class="nav-item position-relative">
+            <a href="#tableaux-de-donnees-tableaux-de-presentation" class="nav-link text-muted bg-200">Tableaux de données / tableaux de présentation</a>
+          </li><li class="nav-item position-relative">
+            <a href="#contenus-audio-ou-video" class="nav-link text-muted bg-200">Contenus audio ou vidéo</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ordre-de-lecture-des-elements" class="nav-link text-muted bg-200">Ordre de lecture des éléments</a>
+          </li><li class="nav-item position-relative">
+            <a href="#verificateur-daccessibilite-integre" class="nav-link text-muted bg-200">Vérificateur d’accessibilité intégré</a>
+          </li><li class="nav-item position-relative">
+            <a href="#convertir-une-presentation-powerpoint-en-fichier-pdf" class="nav-link text-muted bg-200">Convertir une présentation PowerPoint en fichier PDF</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ressources" class="nav-link text-muted bg-200">Ressources</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

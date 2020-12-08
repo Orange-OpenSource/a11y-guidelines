@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Recommandations accessibilité des contenus vidéos, animations et audios Orange - Recommandations accessibilité numérique Orange</title>
+    <title>Accessibilité des contenus vidéos, animations et audios - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/contenu-editorial/generalites/" class="nav-link">
-  Recommandations transverses
-</a>
-            </li><li class="nav-item">
               <a href="/fr/contenu-editorial/word/" class="nav-link">
   Word
 </a>
@@ -169,64 +165,80 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#les-videos-animations-ou-audios-accessibles" class="dropdown-item text-wrap">Les vidéos, animations ou audios accessibles</a><a href="#transcription-integrale" class="dropdown-item text-wrap">Transcription intégrale</a><a href="#sous-titres" class="dropdown-item text-wrap">Sous-titres</a><a href="#audiodescription" class="dropdown-item text-wrap">Audiodescription</a><a href="#lecture" class="dropdown-item text-wrap">Lecture</a><a href="#un-lecteur-audio-ou-video-accessible" class="dropdown-item text-wrap">Un lecteur audio ou vidéo accessible</a><a href="#liens-utiles" class="dropdown-item text-wrap">Liens utiles</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Recommandations accessibilité des contenus vidéos, animations et audios Orange</h1>
-<h2 id="introduction-laccessibilite-des-contenus-videos-animations-et-audios">Introduction : l’accessibilité des contenus vidéos, animations et audios <a class="header-anchor" href="#introduction-laccessibilite-des-contenus-videos-animations-et-audios" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Les vidéos et les audios embarqués dans du contenu (page web, document bureautique...) nécessitent :</p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Accessibilité des contenus vidéos, animations et audios</h1>
+<p>L'accessibilité des vidéos et audios embarqués dans du contenu (page web, document bureautique...) passe par :</p>
 <ul>
-<li>que ces vidéos, animations et audios eux-même soient accessibles</li>
-<li>mais également, que l'interface qui permet la diffusion de ces fichiers soit accessible.</li>
+<li>ces vidéos, animations et audios eux-même doivent être accessibles ;<br>
+ET</li>
+<li>l'interface qui permet la diffusion de ces contenus doit être accessible.</li>
 </ul>
-<h2 id="rendre-les-videos-animations-ou-audios-accessibles">Rendre les vidéos, animations ou audios accessibles <a class="header-anchor" href="#rendre-les-videos-animations-ou-audios-accessibles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner ces fichiers :</p>
+<h2 id="les-videos-animations-ou-audios-accessibles">Les vidéos, animations ou audios accessibles <a class="header-anchor" href="#les-videos-animations-ou-audios-accessibles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour qu’une vidéo ou un audio soit accessible, les éléments suivants doivent accompagner le contenu :</p>
 <ul>
-<li>Une transcription intégrale, seule nécessité pour un fichier audio.</li>
-<li>Des sous-titres.</li>
-<li>Une audiodescription, si besoin.</li>
+<li>Une transcription intégrale (seule nécessité pour un fichier audio),</li>
+<li>Des sous-titres,</li>
+<li>Une audiodescription si besoin.</li>
 </ul>
 <h3 id="transcription-integrale">Transcription intégrale <a class="header-anchor" href="#transcription-integrale" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>La transcription doit restituer textuellement l’ensemble des informations importantes véhiculées par le contenu, celles-ci peuvent être :</p>
+<p><strong>La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.</strong><br>
+La transcription doit restituer textuellement l’ensemble des informations importantes véhiculées par le contenu, celles-ci peuvent être :</p>
 <ul>
-<li>les dialogues</li>
-<li>les messages affichés à l’écran</li>
-<li>les graphiques et animations éventuels qui apportent de l'information</li>
-<li>le nom et le titre des personnes</li>
-<li>le nom des objets (bâtiments, produit...)</li>
-<li>le lieu</li>
-<li>ce qui se passe dans la vidéo</li>
-<li>des informations sur les paramètres de la vidéo (qualité, noir et blanc...)</li>
+<li>les dialogues,</li>
+<li>les messages affichés à l’écran,</li>
+<li>les graphiques et animations éventuels qui apportent de l'information,</li>
+<li>le nom et le titre des personnes,</li>
+<li>le nom des objets (bâtiments, produit...),</li>
+<li>le lieu,</li>
+<li>ce qui se passe dans la vidéo,</li>
+<li>des informations sur les paramètres de la vidéo (qualité, noir et blanc...).</li>
 </ul>
-<p>La transcription peut être également agrémentée d’images, si besoin.</p>
-<p><strong>La transcription intégrale est la solution nécessaire et suffisante pour rendre accessible un fichier audio.</strong></p>
 <p>Cette transcription doit, par ordre de préférence, être :</p>
 <ol>
 <li>accessible directement à travers le lecteur audio/vidéo, lui-même.</li>
 <li>directement présente dans la page ou le document à proximité immédiate (l'élément qui suit directement, en fait) de la vidéo ou audio.</li>
-<li>accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.</li>
+<li>accessible à travers un lien à proximité immédiate pointant sur une autre partie de la page ou du document ou même, une page ou un document autre.<br>
+Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.</li>
 </ol>
-<p>Quelque soit le moyen choisi, il doit, bien sûr, être accessible à tous.</p>
+<p>La transcription peut éventuellement être agrémentée d’images, si besoin.</p>
 <h3 id="sous-titres">Sous-titres <a class="header-anchor" href="#sous-titres" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Les sous-titres doivent restituer l’ensemble des contenus (tout son porteur d'information : voix, coup de feu, ...) véhiculés par la bande son de la vidéo. Ils doivent être au format texte et synchronisés avec le son de la vidéo.</p>
-<p>Ils ne doivent pas être affichés (incrustés) directement dans la vidéo, mais doivent être associées à cette dernière grâce à un fichier texte indépendant (souvent un fichier .xml ou .srt).</p>
-<h3 id="audiodescription">Audiodescription <a class="header-anchor" href="#audiodescription" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>L’audiodescription doit, quant à elle, compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsqu'une vidéo est juste une interview, sans autre information visuelle.</p>
-<p>Elle doit remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).</p>
-<p>De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).</p>
-<h3 id="lors-de-la-lecture">Lors de la lecture <a class="header-anchor" href="#lors-de-la-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Lors de la lecture du fichier embarqué dans la page web, vérifier :</p>
+<p>Les sous-titres doivent</p>
 <ul>
-<li>Ne pas lancer automatiquement, au chargement de la page, la vidéo, l'animation ou l'audio mais laisser la main à l'utilisateur.</li>
+<li>restituer l’ensemble des contenus (tout son porteur d'information : voix, coup de feu, ...) véhiculés par la bande son de la vidéo. Ils doivent être au format texte et synchronisés avec le son de la vidéo,</li>
+<li>être associées à cette dernière grâce à un fichier texte indépendant (souvent un fichier .xml ou .srt) et ne doivent pas être affichés (incrustés) directement dans la vidéo.</li>
+</ul>
+<h3 id="audiodescription">Audiodescription <a class="header-anchor" href="#audiodescription" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>L’audiodescription doit</p>
+<ul>
+<li>compléter la bande son originale. Elle n'est pas forcement nécessaire, par exemple, lorsqu'une vidéo est juste une interview, sans autre information visuelle,</li>
+<li>remplacer, au format audio, l’ensemble des informations qui sont accessibles seulement par l’image (mouvements des acteurs, textes affichés, ...).<br>
+De même, cette piste audio ne doit pas être intégrée directement dans la vidéo, mais lui être associée par l’intermédiaire d’un fichier audio indépendant (souvent un fichier .mp3).</li>
+</ul>
+<h3 id="lecture">Lecture <a class="header-anchor" href="#lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Lors de la lecture du contenu, vérifier :</p>
+<ul>
+<li>Laisser la main à l'utilisateur sur la vidéo, l'animation ou l'audio (ne pas lancer automatiquement la lecture au chargement de la page),</li>
 <li>Pour une vidéo ou une animation, celle-ci doit être exempte de tout élément qui flashe plus de trois fois par seconde ou ce flash doit se situer sous <a href="https://www.w3.org/Translations/WCAG20-fr/#general-thresholddef">le seuil de flash générique et le seuil de flash rouge</a>.</li>
 </ul>
-<h2 id="le-lecteur-audio-ou-video">Le lecteur audio ou vidéo <a class="header-anchor" href="#le-lecteur-audio-ou-video" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Le lecteur vidéo utilisé doit :</p>
+<h2 id="un-lecteur-audio-ou-video-accessible">Un lecteur audio ou vidéo accessible <a class="header-anchor" href="#un-lecteur-audio-ou-video-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Le lecteur vidéo utilisé doit permettre :</p>
 <ul>
-<li>Prendre en charge au moins deux éléments : sous-titres et audiodescription.</li>
-<li>Permettre d'utiliser les contrôles du lecteurs (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin, à minima)  qui sont accessibles, notamment aux aides techniques (lecteurs d'écran, loupes logicielles, claviers, ...).</li>
-<li>Permettre de modifier les paramètres (à minima, la taille du texte, les couleurs texte/fond) d'affichage des sous-titres.</li>
+<li>de prendre en charge au moins les sous-titres et l'audiodescription,</li>
+<li>d'utiliser les boutons (lecture/pause, avance/recul, montrer/cacher les sous-titres, arrêt/contrôle du volume, ajouter/enlever l'audiodescription, si besoin) au clavier,</li>
+<li>de modifier les paramètres d'affichage des sous-titres (à minima : la taille du texte et les couleurs du texte/fond) .</li>
 </ul>
 <h2 id="liens-utiles">Liens utiles <a class="header-anchor" href="#liens-utiles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
@@ -235,7 +247,33 @@
 <li>Notice  d’accessibilité éditoriale AccedeWeb : <a href="https://www.accede-web.com/notices/editoriale/8-contenus-riches-multimedias/">Utiliser correctement les contenus riches et multimédias</a></li>
 </ul>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#les-videos-animations-ou-audios-accessibles" class="nav-link text-muted bg-200">Les vidéos, animations ou audios accessibles</a>
+          </li><li class="nav-item position-relative">
+            <a href="#transcription-integrale" class="nav-link text-muted bg-200">Transcription intégrale</a>
+          </li><li class="nav-item position-relative">
+            <a href="#sous-titres" class="nav-link text-muted bg-200">Sous-titres</a>
+          </li><li class="nav-item position-relative">
+            <a href="#audiodescription" class="nav-link text-muted bg-200">Audiodescription</a>
+          </li><li class="nav-item position-relative">
+            <a href="#lecture" class="nav-link text-muted bg-200">Lecture</a>
+          </li><li class="nav-item position-relative">
+            <a href="#un-lecteur-audio-ou-video-accessible" class="nav-link text-muted bg-200">Un lecteur audio ou vidéo accessible</a>
+          </li><li class="nav-item position-relative">
+            <a href="#liens-utiles" class="nav-link text-muted bg-200">Liens utiles</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

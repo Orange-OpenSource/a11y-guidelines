@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/contenu-editorial/generalites/" class="nav-link">
-  Recommandations transverses
-</a>
-            </li><li class="nav-item">
               <a href="/fr/contenu-editorial/word/" class="nav-link">
   Word
 </a>
@@ -169,11 +165,21 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" class="dropdown-item text-wrap">Qu’est ce qui peut poser problème d’un point de vue accessibilité ?</a><a href="#a-noter" class="dropdown-item text-wrap">À noter</a><a href="#les-mails-du-quotidien" class="dropdown-item text-wrap">Les mails du quotidien</a><a href="#les-pushmails-newsletters-communications-automatiques" class="dropdown-item text-wrap">Les Pushmails / newsletters / communications automatiques</a><a href="#creation-a-partir-dun-document-word" class="dropdown-item text-wrap">Création à partir d’un document Word</a><a href="#creation-a-partir-dun-outil-de-newsletter-mailing" class="dropdown-item text-wrap">Création à partir d’un outil de newsletter / mailing</a><a href="#creation-a-partir-dhtml-ou-autre-outil-dedie" class="dropdown-item text-wrap">Création à partir d’HTML (ou autre outil dédié)</a><a href="#liens-utiles" class="dropdown-item text-wrap">Liens utiles</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Concevoir des mails accessibles à tous</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Concevoir des mails accessibles à tous</h1>
 <p>Voici une liste de recommandations pour écrire (ou produire des templates qui permettent de générer) des messages accessibles, c’est-à-dire, compréhensibles par tous.</p>
 <h2 id="quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite">Qu’est ce qui peut poser problème d’un point de vue accessibilité ? <a class="header-anchor" href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Principalement :</p>
@@ -188,7 +194,7 @@
 <p>Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe :</p>
 <ul>
 <li>Créer le mail avec la méthode qui vous est la plus simple,</li>
-<li>Ajouter en pièce jointe un <a href="../word">fichier Word accessible</a> (ou fichier texte) contenant le même niveau d’information mais sous forme <strong>textuelle uniquement</strong>,</li>
+<li>Ajouter en pièce jointe un <a href="/fr/contenu-editorial/word/">fichier Word accessible</a> (ou fichier texte) contenant le même niveau d’information mais sous forme <strong>textuelle uniquement</strong>,</li>
 <li>Ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe.</li>
 </ul>
 <h2 id="les-mails-du-quotidien">Les mails du quotidien <a class="header-anchor" href="#les-mails-du-quotidien" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -196,11 +202,11 @@
 <ul>
 <li>Utiliser des polices simples, sans serif : Arial, Calibri ou la <a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">police Accessible DfA</a></li>
 <li>Adopter une taille de police au moins égale à 10 points</li>
-<li>Conserver l’accent des lettres en majuscule, voir <a href="https://a11y-guidelines.orange.com/others/editorial.html#annexes">comment mettre des accents aux majuscules</a> ? ou suite Office : menu <strong>Insertion</strong> &gt; <strong>Symbole</strong></li>
+<li>Conserver l’accent des lettres en majuscule, voir <a href="/fr/contenu-editorial/#comment-mettre-des-accents-aux-majuscules">comment mettre des accents aux majuscules</a> ? ou suite Office : menu <strong>Insertion</strong> &gt; <strong>Symbole</strong></li>
 <li>Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule</li>
 <li>Aligner les textes à gauche (éviter de justifier)</li>
 <li>Éviter l’italique</li>
-<li>Vérifier le contraste entre la couleur de police et l’arrière-plan (outil Colour Contrast Analyzer) et limiter le nombre total de couleurs utilisées</li>
+<li>Vérifier le contraste entre la couleur de police et l’arrière-plan à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> et limiter le nombre total de couleurs utilisées</li>
 <li>Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan</li>
 <li>Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle, suite Office : <strong>clic droit</strong> sur l’image &gt; <strong>Format de l’image</strong> &gt; <strong>Texte de remplacement</strong> &gt; champ <strong>« Description »</strong>)</li>
 <li>Utiliser les styles « Titre » et « Sous-titre » du menu « format du texte » si mail long, avec plusieurs sections</li>
@@ -216,27 +222,26 @@
 <p>Plusieurs options s’offrent à vous pour créer un Pushmail accessible.</p>
 <h3 id="creation-a-partir-dun-document-word">Création à partir d’un document Word <a class="header-anchor" href="#creation-a-partir-dun-document-word" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ol>
-<li>Créer un document Word accessible en suivant nos <a href="../word">recommandations Word</a>.</li>
+<li>Créer un document Word accessible en suivant <a href="/fr/contenu-editorial/word/">nos recommandations Word</a>.</li>
 <li>Utiliser l’option « Envoyer au destinataire du message ».</li>
 </ol>
-<p>Option à ajouter la première fois via <strong>Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message</strong>.<br>
-<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png" width="400"></p>
+<p>Option à ajouter la première fois via <strong>Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message</strong>.</p>
+<img src="/fr/contenu-editorial/images/email1.png" width="400">
 <h3 id="creation-a-partir-dun-outil-de-newsletter-mailing">Création à partir d’un outil de newsletter / mailing <a class="header-anchor" href="#creation-a-partir-dun-outil-de-newsletter-mailing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos <a href="../generalites">recommandations générales pour le contenu éditorial</a>.<br>
-Toujours vérifier :</p>
+<p>Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos <a href="/fr/contenu-editorial/">recommandations générales pour le contenu éditorial</a>.</p>
+<p>Toujours vérifier :</p>
 <ul>
-<li>Alternatives textuelles des images</li>
-<li>Titres de niveaux</li>
-<li>Si tableaux de présentation : role=presentation dans la balise table</li>
+<li>Alternatives textuelles des images,</li>
+<li>Titres de niveaux,</li>
+<li>Si tableaux de présentation : ajouter le role=presentation dans la balise <code>table</code>.</li>
 </ul>
 <h3 id="creation-a-partir-dhtml-ou-autre-outil-dedie">Création à partir d’HTML (ou autre outil dédié) <a class="header-anchor" href="#creation-a-partir-dhtml-ou-autre-outil-dedie" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Composer le code HTML de façon accessible en suivant <a href="../../web">les principales recommandations Web</a>.<br>
-<strong>Important :</strong> compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux en utilisant l’attribut role=presentation dans la balise table.<br>
-Afin de tester ponctuellement la prise en charge de l’HTML et du CSS dans les différents clients mails, utilisez les sites <a href="https://www.caniemail.com/">Can I email ?</a> et <a href="https://caniuse.email/">Can I use in HTML emails ?</a><br>
+<p>Composer le code HTML de façon accessible en suivant <a href="/fr/web/developper/">les principales recommandations Web</a>.</p>
+<p><strong>Important :</strong> compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux en utilisant l’attribut role=presentation dans la balise table.</p>
+<p>Afin de tester ponctuellement la prise en charge de l’HTML et du CSS dans les différents clients mails, utilisez les sites <a href="https://www.caniemail.com/">Can I email ?</a> et <a href="https://caniuse.email/">Can I use in HTML emails ?</a>.<br>
 Afin de tester toute votre campagne mail, utiliser le site <a href="http://www.accessible-email.org/">Accessible email</a></p>
 <h2 id="liens-utiles">Liens utiles <a class="header-anchor" href="#liens-utiles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li><a href="https://a11y-guidelines.orange.com/">Site des recommandations accessibilité Orange</a></li>
 <li><a href="https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775">Tuto Office mails accessibles</a></li>
 <li><a href="https://www.caniemail.com/">Tester la prise en charge de l’HTML et du CSS sur les différents clients mails</a></li>
 <li><a href="https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606">Sur quels clients mails tester en priorité (anglais)</a></li>
@@ -247,7 +252,35 @@ Afin de tester toute votre campagne mail, utiliser le site <a href="http://www.a
 <li><a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">Police Accessible DfA</a></li>
 </ul>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" class="nav-link text-muted bg-200">Qu’est ce qui peut poser problème d’un point de vue accessibilité ?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#a-noter" class="nav-link text-muted bg-200">À noter</a>
+          </li><li class="nav-item position-relative">
+            <a href="#les-mails-du-quotidien" class="nav-link text-muted bg-200">Les mails du quotidien</a>
+          </li><li class="nav-item position-relative">
+            <a href="#les-pushmails-newsletters-communications-automatiques" class="nav-link text-muted bg-200">Les Pushmails / newsletters / communications automatiques</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-a-partir-dun-document-word" class="nav-link text-muted bg-200">Création à partir d’un document Word</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-a-partir-dun-outil-de-newsletter-mailing" class="nav-link text-muted bg-200">Création à partir d’un outil de newsletter / mailing</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-a-partir-dhtml-ou-autre-outil-dedie" class="nav-link text-muted bg-200">Création à partir d’HTML (ou autre outil dédié)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#liens-utiles" class="nav-link text-muted bg-200">Liens utiles</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

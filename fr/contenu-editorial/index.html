@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Recommandations accessibilité Orange pour l’éditorial - Recommandations accessibilité numérique Orange</title>
+    <title>Recommandations éditoriales générales - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/contenu-editorial/generalites/" class="nav-link">
-  Recommandations transverses
-</a>
-            </li><li class="nav-item">
               <a href="/fr/contenu-editorial/word/" class="nav-link">
   Word
 </a>
@@ -164,37 +160,130 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#verifier-les-couleurs" class="dropdown-item text-wrap">Vérifier les couleurs</a><a href="#faciliter-la-lecture" class="dropdown-item text-wrap">Faciliter la lecture</a><a href="#mise-en-page-avec-des-tableaux" class="dropdown-item text-wrap">Mise en page avec des tableaux</a><a href="#des-tableaux-de-donnees-accessibles" class="dropdown-item text-wrap">Des tableaux de données accessibles</a><a href="#annexes" class="dropdown-item text-wrap">Annexes</a><a href="#comment-mettre-des-accents-aux-majuscules" class="dropdown-item text-wrap">Comment mettre des accents aux majuscules ?</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Recommandations accessibilité Orange pour l’éditorial</h1>
-<h2 id="recommandations-editoriales-generales">Recommandations éditoriales générales <a class="header-anchor" href="#recommandations-editoriales-generales" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Les recommandations générales décrivent les recommandations à respecter quel que soit le type de contenu (web, email, document Word, etc.).</p>
-<ul role="presentation">
-<li><a href="generalites">Accéder aux recommandations éditoriales générales</a></li>
-</ul>
-<h2 id="recommandations-specifiques-par-type-de-contenu">Recommandations spécifiques par type de contenu <a class="header-anchor" href="#recommandations-specifiques-par-type-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Les recommandations suivantes décrivent les règles spécifiques à respecter en fonction du type de document :</p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Recommandations éditoriales générales</h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Cette section présente des recommandations générales à respecter pour garantir l’accessibilité de vos contenus quel que soit le support utilisé (email, PPT, PDF, Word, etc.).</p>
+<h2 id="verifier-les-couleurs">Vérifier les couleurs <a class="header-anchor" href="#verifier-les-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li>
-<p><a href="word/">Documents Word</a> : section consacrée à la création de documents Word accessibles.</p>
-</li>
-<li>
-<p><a href="powerpoint/">Documents PowerPoint</a> : section consacrée à la création de présentations PowerPoint accessibles.</p>
-</li>
-<li>
-<p><a href="pdf/">Documents PDF</a> : section consacrée à la rédaction de documents PDF accessibles.</p>
-</li>
-<li>
-<p><a href="emails/">Rédiger des emails accessibles</a> : section consacrée à la rédaction d'emails accessibles.</p>
-</li>
-<li>
-<p><a href="composants-animes/">Fournir des contenus vidéos ou audios</a> : section consacrée à la mise en place dans le contenu de vidéos ou de fichiers audios accessibles.</p>
+<li>S’assurer que <a href="/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation">la couleur n’est pas le seul moyen utilisé pour communiquer l’information</a>.</li>
+<li>Assurer un niveau de <a href="/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">contraste suffisant entre la couleur du texte et celle de l’arrière-plan</a>. Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> par exemple :
+<ul>
+<li>4.5:1 pour du texte de taille normale.</li>
+<li>3:1 pour du <a href="/fr/glossaire/#texte-de-grande-taille">texte de grande taille</a> et les composants d'interface ou éléments graphiques porteurs d'informations.</li>
+</ul>
 </li>
 </ul>
+<h2 id="faciliter-la-lecture">Faciliter la lecture <a class="header-anchor" href="#faciliter-la-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>Aligner les textes à gauche (éviter de justifier).</li>
+<li>Mettre une majuscule à chaque début de phrase mais éviter les phrases entières en majuscule.</li>
+<li>Éviter l’italique.</li>
+<li>Utiliser des polices simples, sans serif : Arial, Calibri ou la <a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">police Accessible DfA</a> ayant une taille au moins égale à 10 points.</li>
+<li>Ajouter des accents aux majuscules éèêçàïùÉÈÊÇÀÏÙ (« Insertion &gt; Symbole &gt; Texte normal » ou utiliser <a href="#annexes">les raccourcis clavier</a>).</li>
+<li>Mettre en place une ponctuation simple.</li>
+<li>Éviter les fonds texturés (images).</li>
+<li>Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction « Paragraphe &gt; Espacement » ou « Retrait » dans Word, par exemple).</li>
+<li>Éviter les tableaux de mise en page ou tableaux de données complexes (sauf en HTML si la <a href="/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees">structure du tableau est accessible</a>).</li>
+<li>Éviter le contenu « image » porteur d’information : graphes, schémas, diagrammes (sauf en HTML si une <a href="/fr/web/designer/contenu-non-textuel/">alternative textuelle est accessible</a>)</li>
+<li>Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple : sujet, verbe, complément. Une idée par phrase.</li>
+<li>Éviter au maximum les mots trop compliqués ou spécifiques à un domaine, et sinon, les expliquer.</li>
+<li>Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).</li>
+<li>Utiliser les caractères typographiques du Français : tiret - , cadratin — , « guillemets français ».</li>
+<li>Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.</li>
+<li>Mettre en place un indicateur de fin de document (par exemple, une image indiquant « fin de mail », un texte blanc sur fond blanc « fin de document »).</li>
+</ul>
+<h2 id="mise-en-page-avec-des-tableaux">Mise en page avec des tableaux <a class="header-anchor" href="#mise-en-page-avec-des-tableaux" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une <a href="/fr/contenu-editorial/emails/">mise en page en tableaux</a> : ajouter un <code>role=&quot;presentation&quot;</code> à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.</p>
+<h2 id="des-tableaux-de-donnees-accessibles">Des tableaux de données accessibles <a class="header-anchor" href="#des-tableaux-de-donnees-accessibles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Afin que vos tableaux de données soient accessible, simplifiez-les au maximum dès leur conception :</p>
+<ul>
+<li>Éviter d’imbriquer les tableaux les uns dans les autres (maximum 2 niveaux d’imbrication).</li>
+<li>Éviter de fusionner les cellules, d'utiliser trop de cellules vides, d'ajouter des images de fond.</li>
+<li>Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas).</li>
+</ul>
+<p>Et pour l'implémentation dans une page Web par exemple, consultez <a href="/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees">notre article dédié aux tableaux de données accessibles</a>.</p>
+<h2 id="annexes">Annexes <a class="header-anchor" href="#annexes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="comment-mettre-des-accents-aux-majuscules">Comment mettre des accents aux majuscules ? <a class="header-anchor" href="#comment-mettre-des-accents-aux-majuscules" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour mettre des accents sur mac, il suffit de taper la lettre désirée par exemple « E » et laisser la touche enfoncée. Un menu contextuel apparait et permet de sélectionner la lettre accentuée désirée (É, È, Ë...), à noter qu'il est également possible d'utiliser des raccourcis clavier (cf. tableau ci-dessous).</p>
+<p>Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres majuscule accentuées quelle que soit l'application utilisée :</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lettre</th>
+      <th scope="col">raccourci Windows</th>
+      <th scope="col">raccourci Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">À</th>
+      <td>Alt Gr + \` (touche 7) puis A majuscule</td>
+      <td>Maj lock puis à</td>
+    </tr>
+    <tr>
+      <th scope="row">Ç</th>
+      <td>alt + 128</td>
+      <td>Option + ç</td>
+    </tr>
+    <tr>
+      <th scope="row">È</th>
+      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
+      <td>Maj lock puis è</td>
+    </tr>
+    <tr>
+      <th scope="row">É</th>
+      <td>alt + 144</td>
+      <td>Maj lock puis é</td>
+    </tr>
+    <tr>
+      <th scope="row">Ê</th>
+      <td>^ puis E majuscule </td>
+      <td>^ puis E majuscule</td>
+    </tr>
+  </tbody>
+</table>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#verifier-les-couleurs" class="nav-link text-muted bg-200">Vérifier les couleurs</a>
+          </li><li class="nav-item position-relative">
+            <a href="#faciliter-la-lecture" class="nav-link text-muted bg-200">Faciliter la lecture</a>
+          </li><li class="nav-item position-relative">
+            <a href="#mise-en-page-avec-des-tableaux" class="nav-link text-muted bg-200">Mise en page avec des tableaux</a>
+          </li><li class="nav-item position-relative">
+            <a href="#des-tableaux-de-donnees-accessibles" class="nav-link text-muted bg-200">Des tableaux de données accessibles</a>
+          </li><li class="nav-item position-relative">
+            <a href="#annexes" class="nav-link text-muted bg-200">Annexes</a>
+          </li><li class="nav-item position-relative">
+            <a href="#comment-mettre-des-accents-aux-majuscules" class="nav-link text-muted bg-200">Comment mettre des accents aux majuscules ?</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

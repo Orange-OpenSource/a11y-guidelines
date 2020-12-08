@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/editorial-content/general/" class="nav-link">
-  Overall guidelines
-</a>
-            </li><li class="nav-item">
               <a href="/en/editorial-content/word/" class="nav-link">
   Word
 </a>
@@ -169,65 +165,137 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#guides-to-create-accessible-pdf-documents" class="dropdown-item text-wrap">Guides to create accessible PDF documents</a><a href="#from-microsoft-word-or-powerpoint" class="dropdown-item text-wrap">From Microsoft Word or PowerPoint</a><a href="#from-adobe-indesign" class="dropdown-item text-wrap">From Adobe InDesign</a><a href="#from-adobe-acrobat-pro" class="dropdown-item text-wrap">From Adobe Acrobat Pro</a><a href="#mandatory-criteria" class="dropdown-item text-wrap">Mandatory criteria</a><a href="#document-structure" class="dropdown-item text-wrap">Document structure</a><a href="#keyboard-navigation-and-reading-order" class="dropdown-item text-wrap">Keyboard navigation and reading order</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#tables" class="dropdown-item text-wrap">Tables</a><a href="#links" class="dropdown-item text-wrap">Links</a><a href="#lists" class="dropdown-item text-wrap">Lists</a><a href="#forms" class="dropdown-item text-wrap">Forms</a><a href="#colours" class="dropdown-item text-wrap">Colours</a><a href="#testing-the-accessibility-of-a-pdf-document" class="dropdown-item text-wrap">Testing the accessibility of a PDF document</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Creating accessible <abbr>PDF</abbr> documents</h1>
-<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Producing accessible <abbr>PDF</abbr> documents requires to follow recommendations to make sure they are structured through proper tagging, to make them understandable and useable by everyone (including users with assistive technology).</p>
-<p>Below are listed guides aiming at providing necessary information in order to manually create accessible <abbr>PDF</abbr> documents based on the most popular softwares, then we will list the mandatory criteria to follow for <abbr>PDF</abbr> accessibility.</p>
-<h2 id="guides-to-create-accessible-pdf-documents">Guides to create accessible <abbr>PDF</abbr> documents <a class="header-anchor" href="#guides-to-create-accessible-pdf-documents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="with-microsoft-word">With Microsoft Word <a class="header-anchor" href="#with-microsoft-word" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>You will find Microsoft Word recommendations as well as the <abbr>PDF</abbr> export procedure on our <a href="../word">Creating accessible Word documents</a> page.</p>
-<h3 id="with-adobe-indesign">With Adobe InDesign <a class="header-anchor" href="#with-adobe-indesign" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>You will find Adobe InDesign recommendations (in French) at <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign" lang="fr" hreflang="fr">Créer des documents <abbr>PDF</abbr> accessibles avec Adobe Indesign</a> by the AcceDe <abbr>PDF</abbr> initiative.</p>
-<h3 id="with-adobe-acrobat-pro">With Adobe Acrobat Pro <a class="header-anchor" href="#with-adobe-acrobat-pro" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>You will find Adobe Acrobat Pro recommendations at <a href="http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf">Making <abbr>PDF</abbr> documents accessible with Adobe Acrobat Pro</a> by the AcceDe <abbr>PDF</abbr> initiative.</p>
-<h2 id="testing-the-accessibility-of-a-pdf-document">Testing the accessibility of a <abbr>PDF</abbr> document <a class="header-anchor" href="#testing-the-accessibility-of-a-pdf-document" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Install <a href="https://www.access-for-all.ch/en/pdf-accessibility-checker.html"><abbr>PDF</abbr> Accessibility Checker (<abbr>PAC</abbr>)</a>.</p>
-<p>This tool can, among other things, run automatic tests on a <abbr>PDF</abbr> document and check for accessibility issues.</p>
-<figure>
-<img class="center" src="../images/pac1.png" alt="Screenshot of automatic tests in PAC"/>
-<figcaption>Screenshot of the tool</figcaption>
-</figure>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Creating accessible <abbr>PDF</abbr> documents</h1>
+<p>In order to make your PDFs understandable and usable by everyone, they must be structured according to these recommendations.</p>
+<h2 id="guides-to-create-accessible-pdf-documents">Guides to create accessible PDF documents <a class="header-anchor" href="#guides-to-create-accessible-pdf-documents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="from-microsoft-word-or-powerpoint">From Microsoft Word or PowerPoint <a class="header-anchor" href="#from-microsoft-word-or-powerpoint" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Find <a href="/en/editorial-content/word/">our recommendations for creating a PDF accessible from Microsoft Word</a> and <a href="/en/editorial-content/powerpoint/">our recommendations for Microsoft PowerPoint</a>.</p>
+<h3 id="from-adobe-indesign">From Adobe InDesign <a class="header-anchor" href="#from-adobe-indesign" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Find the <a href="http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign">Adobe inDesign recommendations in this guide</a>.</p>
+<h3 id="from-adobe-acrobat-pro">From Adobe Acrobat Pro <a class="header-anchor" href="#from-adobe-acrobat-pro" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Find the <a href="http://www.pdf-accessible.com/wp-content/uploads/2015/01/making-PDF-accessible-Acrobat.pdf">Adobe Acrobat Pro file for AcceDe PDF (PDF, 6,2Mo)</a>.</p>
 <h2 id="mandatory-criteria">Mandatory criteria <a class="header-anchor" href="#mandatory-criteria" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The following are the main criteria for a <abbr>PDF</abbr> document to be accessible, regardless of the method used to create it. Mandatory criteria will be useful for people creating <abbr>PDF</abbr> documents even when they don’t rely on publication software (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro), e.g. developers whose applications generate <abbr>PDF</abbr> documents.</p>
+<p>These criteria are useful for people creating PDF documents without using the cited editing software (Microsoft Word, Adobe InDesign, Adobe Acrobat Pro, etc.), for example developers whose applications generate PDF documents.</p>
 <h3 id="document-structure">Document structure <a class="header-anchor" href="#document-structure" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Le document doit contenir a minima un titre de document et une langue par défaut (les changements de langues seront indiqués dans le document).</p>
-<p>The document must at the very least include a document title and a default language (language changes must be indicated in the document).</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF16.html" title="WCAG 2.0 technique: PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document" aria-label="WCAG 2.0 technique: PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document"><abbr>PDF16</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF17.html" title="WCAG 2.0 technique: PDF17: Specifying consistent page numbering for PDF documents" aria-label="WCAG 2.0 technique: PDF17: Specifying consistent page numbering for PDF documents"><abbr>PDF17</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF18.html" title="WCAG 2.0 technique: PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document" aria-label="WCAG 2.0 technique: PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document"><abbr>PDF18</abbr></a>.</p>
-<p>The document is structured with titles, through the proper use of title “tags”. Moreover, long documents must include bookmarks to make navigation easier.</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF2.html" title="WCAG 2.0 technique: PDF2: Creating bookmarks in PDF documents" aria-label="WCAG 2.0 technique: PDF2: Creating bookmarks in PDF documents"><abbr>PDF2</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF9.html" title="WCAG 2.0 technique: PDF9: Providing headings by marking content with heading tags in PDF documents" aria-label="WCAG 2.0 technique: PDF9: Providing headings by marking content with heading tags in PDF documents"><abbr>PDF9</abbr></a>.</p>
-<p>The use of headers and footers must help the user locating themselves in the document.</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF14.html" title="WCAG 2.0 technique: PDF14: Providing running headers and footers in PDF documents" aria-label="WCAG 2.0 technique: PDF14: Providing running headers and footers in PDF documents"><abbr>PDF14</abbr></a>.</p>
+<ul>
+<li>The document must at the very least include a document title and a default language (language changes must be indicated in the document).</li>
+</ul>
+<p>See related WCAG criteria <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF16.html" title="WCAG 2.0 technique: PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document" aria-label="WCAG 2.0 technique: PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document"><abbr>PDF16</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF17.html" title="WCAG 2.0 technique: PDF17: Specifying consistent page numbering for PDF documents" aria-label="WCAG 2.0 technique: PDF17: Specifying consistent page numbering for PDF documents"><abbr>PDF17</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF18.html" title="WCAG 2.0 technique: PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document" aria-label="WCAG 2.0 technique: PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document"><abbr>PDF18</abbr></a>.</p>
+<ul>
+<li>The document is structured with titles, through the proper use of title “tags”. Moreover, long documents must include bookmarks to make navigation easier.</li>
+</ul>
+<p>See related WCAG criteria <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF2.html" title="WCAG 2.0 technique: PDF2: Creating bookmarks in PDF documents" aria-label="WCAG 2.0 technique: PDF2: Creating bookmarks in PDF documents"><abbr>PDF2</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF9.html" title="WCAG 2.0 technique: PDF9: Providing headings by marking content with heading tags in PDF documents" aria-label="WCAG 2.0 technique: PDF9: Providing headings by marking content with heading tags in PDF documents"><abbr>PDF9</abbr></a>.</p>
+<ul>
+<li>The use of headers and footers must help the user locating themselves in the document.</li>
+</ul>
+<p>See the associated WCAG criterion <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF14.html" title="WCAG 2.0 technique: PDF14: Providing running headers and footers in PDF documents" aria-label="WCAG 2.0 technique: PDF14: Providing running headers and footers in PDF documents"><abbr>PDF14</abbr></a>.</p>
 <h3 id="keyboard-navigation-and-reading-order">Keyboard navigation and reading order <a class="header-anchor" href="#keyboard-navigation-and-reading-order" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>The reading order conveyed by an assistive tool, as well as keyboard navigation (through tabbing) must reflect the document’s structure. There must be no keyboard trap (keybaord navigation must be possible in the whole document without any blocking point).</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF3.html" title="WCAG 2.0 technique: PDF3: Ensuring correct tab and reading order in PDF documents" aria-label="WCAG 2.0 technique: PDF3: Ensuring correct tab and reading order in PDF documents"><abbr>PDF3</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/G21.html" title="WCAG 2.0 technique: G21: Ensuring that users are not trapped in content" aria-label="WCAG 2.0 technique: G21: Ensuring that users are not trapped in content"><abbr>G21</abbr></a>.</p>
+<ul>
+<li>The reading order conveyed by an assistive tool, as well as keyboard navigation (through tabbing) must reflect the document’s structure.</li>
+<li>Keyboard navigation should be possible throughout the document without blocking (preventing keyboard &quot;traps&quot;).</li>
+</ul>
+<p>See the related WCAG criterion <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF3.html" title="WCAG 2.0 technique: PDF3: Ensuring correct tab and reading order in PDF documents" aria-label="WCAG 2.0 technique: PDF3: Ensuring correct tab and reading order in PDF documents"><abbr>PDF3</abbr></a>.</p>
 <h3 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Images featuring information must have an appropriate alternative. Scanned documents must be covnerted to text through optical character recognition (<abbr>OCR</abbr>). Decorational images must be hidden.</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF1.html" title="WCAG 2.0 technique: PDF1: Applying text alternatives to images with the Alt entry in PDF documents" aria-label="WCAG 2.0 technique: PDF1: Applying text alternatives to images with the Alt entry in PDF documents"><abbr>PDF1</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF4.html" title="WCAG 2.0 technique: PDF4: Hiding decorative images with the Artifact tag in PDF documents" aria-label="WCAG 2.0 technique: PDF4: Hiding decorative images with the Artifact tag in PDF documents"><abbr>PDF4</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF7.html" title="WCAG 2.0 technique: PDF7: Performing OCR on a scanned PDF document to provide actual text" aria-label="WCAG 2.0 technique: PDF7: Performing OCR on a scanned PDF document to provide actual text"><abbr>PDF7</abbr></a>.</p>
+<ul>
+<li>Images featuring information must have an appropriate alternative.</li>
+<li>Scanned documents must be covnerted to text through optical character recognition (<abbr>OCR</abbr>).</li>
+<li>Decorational images must be hidden.</li>
+</ul>
+<p>See related WCAG criteria <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF1.html" title="WCAG 2.0 technique: PDF1: Applying text alternatives to images with the Alt entry in PDF documents" aria-label="WCAG 2.0 technique: PDF1: Applying text alternatives to images with the Alt entry in PDF documents"><abbr>PDF1</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF4.html" title="WCAG 2.0 technique: PDF4: Hiding decorative images with the Artifact tag in PDF documents" aria-label="WCAG 2.0 technique: PDF4: Hiding decorative images with the Artifact tag in PDF documents"><abbr>PDF4</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF7.html" title="WCAG 2.0 technique: PDF7: Performing OCR on a scanned PDF document to provide actual text" aria-label="WCAG 2.0 technique: PDF7: Performing OCR on a scanned PDF document to provide actual text"><abbr>PDF7</abbr></a>.</p>
 <h3 id="tables">Tables <a class="header-anchor" href="#tables" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>A data table must be structured by a <code>table</code> “tag” containing at least one line. Table headers must be used appropriately. All lines must contain the same number of cells. Merged cells must clearly indicate if the merge was vertical or horizontal (<code>rowSpan</code> or <code>colSpan</code> attribute).</p>
-<p>See<a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF6.html" title="WCAG 2.0 technique: PDF6: Using table elements for table markup in PDF Documents" aria-label="WCAG 2.0 technique: PDF6: Using table elements for table markup in PDF Documents"><abbr>PDF6</abbr></a>.</p>
+<ul>
+<li>A data table must be structured by a <code>table</code> “tag” containing at least one line.</li>
+<li>Table headers must be used appropriately.</li>
+<li>All lines must contain the same number of cells.</li>
+<li>Merged cells must clearly indicate if the merge was vertical or horizontal (<code>rowSpan</code> or <code>colSpan</code> attribute).</li>
+</ul>
+<p>See the associated WCAG criterion <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF6.html" title="WCAG 2.0 technique: PDF6: Using table elements for table markup in PDF Documents" aria-label="WCAG 2.0 technique: PDF6: Using table elements for table markup in PDF Documents"><abbr>PDF6</abbr></a>.</p>
 <h3 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Link texts must be explicit, or the links must provide an accessible alternative.</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF11.html" title="WCAG 2.0 technique: PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents" aria-label="WCAG 2.0 technique: PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents"><abbr>PDF11</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF13.html" title="WCAG 2.0 technique: PDF13: Providing replacement text using the /Alt entry for links in PDF documents" aria-label="WCAG 2.0 technique: PDF13: Providing replacement text using the /Alt entry for links in PDF documents"><abbr>PDF13</abbr></a>.</p>
+<p>See related WCAG criteria <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF11.html" title="WCAG 2.0 technique: PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents" aria-label="WCAG 2.0 technique: PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents"><abbr>PDF11</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF13.html" title="WCAG 2.0 technique: PDF13: Providing replacement text using the /Alt entry for links in PDF documents" aria-label="WCAG 2.0 technique: PDF13: Providing replacement text using the /Alt entry for links in PDF documents"><abbr>PDF13</abbr></a>.</p>
 <h3 id="lists">Lists <a class="header-anchor" href="#lists" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Lists must use the appropriate “tags”: list tag <code>L</code>, list item tag <code>LI</code>, list item label tag <code>Lbl</code> (for instance the item number, or the <code>Lbody</code> content tag of the list item).</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF21.html" title="WCAG 2.0 technique: PDF21: Using List tags for lists in PDF documents" aria-label="WCAG 2.0 technique: PDF21: Using List tags for lists in PDF documents"><abbr>PDF21</abbr></a>, section 14.8.4.3.3 of the <a href="http://www.adobe.com/devnet/pdf/pdf_reference.html"><abbr>PDF</abbr> specification</a>.</p>
+<p>Lists use the appropriate “tags” (examples: L, LI, Lbl and LBody).</p>
+<p>See the associated WCAG criterion <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF21.html" title="WCAG 2.0 technique: PDF21: Using List tags for lists in PDF documents" aria-label="WCAG 2.0 technique: PDF21: Using List tags for lists in PDF documents"><abbr>PDF21</abbr></a>.</p>
 <h3 id="forms">Forms <a class="header-anchor" href="#forms" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Form fields must have a name, a role, a value, and a state (if needed). Visually, labels must be correctly positioned towards the field. Mandatory fields and expected formats must be indicated. Fields must be accessible and keyboard-modifiable. Forms that can be submitted must provide a submit button.</p>
-<p>See <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF5.html" title="WCAG 2.0 technique: PDF5: Indicating required form controls in PDF forms" aria-label="WCAG 2.0 technique: PDF5: Indicating required form controls in PDF forms"><abbr>PDF5</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF10.html" title="WCAG 2.0 technique: PDF10: Providing labels for interactive form controls in PDF documents" aria-label="WCAG 2.0 technique: PDF10: Providing labels for interactive form controls in PDF documents"><abbr>PDF10</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF12.html" title="WCAG 2.0 technique: PDF12: Providing name, role, value information for form fields in PDF documents" aria-label="WCAG 2.0 technique: PDF12: Providing name, role, value information for form fields in PDF documents"><abbr>PDF12</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF15.html" title="WCAG 2.0 technique: PDF15: Providing submit buttons with the submit-form action in PDF forms" aria-label="WCAG 2.0 technique: PDF15: Providing submit buttons with the submit-form action in PDF forms"><abbr>PDF15</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF22.html" title="WCAG 2.0 technique: PDF22: Indicating when user input falls outside the required format or values in PDF forms" aria-label="WCAG 2.0 technique: PDF22: Indicating when user input falls outside the required format or values in PDF forms"><abbr>PDF22</abbr></a>.</p>
-<h3 id="colours">Colours <a class="header-anchor" href="#colours" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Colours must not be the only means to convey information.</p>
-<p>Contrast between the colour of text and of its background must be sufficient:</p>
 <ul>
-<li>4.5:1 for normal-size text;</li>
-<li>3:1 for bigger text.</li>
+<li>Form fields must have a name, a role, a value, and a state (if needed).</li>
+<li>Visually, labels must be correctly positioned towards the field.</li>
+<li>Mandatory fields and expected formats must be indicated.</li>
+<li>Fields must be accessible and keyboard-modifiable.</li>
+<li>Forms that can be submitted must provide a submit button.</li>
 </ul>
+<p>See associated WCAG criteria  <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF5.html" title="WCAG 2.0 technique: PDF5: Indicating required form controls in PDF forms" aria-label="WCAG 2.0 technique: PDF5: Indicating required form controls in PDF forms"><abbr>PDF5</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF10.html" title="WCAG 2.0 technique: PDF10: Providing labels for interactive form controls in PDF documents" aria-label="WCAG 2.0 technique: PDF10: Providing labels for interactive form controls in PDF documents"><abbr>PDF10</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF12.html" title="WCAG 2.0 technique: PDF12: Providing name, role, value information for form fields in PDF documents" aria-label="WCAG 2.0 technique: PDF12: Providing name, role, value information for form fields in PDF documents"><abbr>PDF12</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF15.html" title="WCAG 2.0 technique: PDF15: Providing submit buttons with the submit-form action in PDF forms" aria-label="WCAG 2.0 technique: PDF15: Providing submit buttons with the submit-form action in PDF forms"><abbr>PDF15</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF22.html" title="WCAG 2.0 technique: PDF22: Indicating when user input falls outside the required format or values in PDF forms" aria-label="WCAG 2.0 technique: PDF22: Indicating when user input falls outside the required format or values in PDF forms"><abbr>PDF22</abbr></a>.</p>
+<h3 id="colours">Colours <a class="header-anchor" href="#colours" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Make sure <a href="/en/web/design/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information">color is not the only means used to convey information</a>.<br>
+Ensure a level of <a href="/en/web/design/colors-and-contrasts/#make-sure-there-is-enough-contrast-between-font-and-background-colors">sufficient contrast between the color of the text and that of the background</a>. This is valid for your texts but also for icons, buttons and other graphic elements. Contrast can be checked using the tool <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyser</a> for example:</p>
+<ul>
+<li>4.5:1 for normal size text.</li>
+<li>3:1 for <a href="/en/glossary/#large-text">large text</a> and interface components or graphical elements that convey information.</li>
+</ul>
+<h2 id="testing-the-accessibility-of-a-pdf-document">Testing the accessibility of a PDF document <a class="header-anchor" href="#testing-the-accessibility-of-a-pdf-document" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Finally, you can ask to <a href="https://commonlook.com/accessibility-software/pdf-validator/">download the CommonLook PDF Validator</a> or <a href="https://www.access-for-all.ch/en/pdf-accessibility-checker.html">install the PDF Accessibility Checker (PAC)</a>.<br>
+These softwares allow the execution of automatic tests on a PDF document and the detection of accessibility problems:</p>
+<ul>
+<li>test the document properties,</li>
+<li>check the markup of lists and links, forms and tables.</li>
+</ul>
+<img  src="/en/editorial-content/images/pac1.png" alt=""/>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#guides-to-create-accessible-pdf-documents" class="nav-link text-muted bg-200">Guides to create accessible PDF documents</a>
+          </li><li class="nav-item position-relative">
+            <a href="#from-microsoft-word-or-powerpoint" class="nav-link text-muted bg-200">From Microsoft Word or PowerPoint</a>
+          </li><li class="nav-item position-relative">
+            <a href="#from-adobe-indesign" class="nav-link text-muted bg-200">From Adobe InDesign</a>
+          </li><li class="nav-item position-relative">
+            <a href="#from-adobe-acrobat-pro" class="nav-link text-muted bg-200">From Adobe Acrobat Pro</a>
+          </li><li class="nav-item position-relative">
+            <a href="#mandatory-criteria" class="nav-link text-muted bg-200">Mandatory criteria</a>
+          </li><li class="nav-item position-relative">
+            <a href="#document-structure" class="nav-link text-muted bg-200">Document structure</a>
+          </li><li class="nav-item position-relative">
+            <a href="#keyboard-navigation-and-reading-order" class="nav-link text-muted bg-200">Keyboard navigation and reading order</a>
+          </li><li class="nav-item position-relative">
+            <a href="#images" class="nav-link text-muted bg-200">Images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#tables" class="nav-link text-muted bg-200">Tables</a>
+          </li><li class="nav-item position-relative">
+            <a href="#links" class="nav-link text-muted bg-200">Links</a>
+          </li><li class="nav-item position-relative">
+            <a href="#lists" class="nav-link text-muted bg-200">Lists</a>
+          </li><li class="nav-item position-relative">
+            <a href="#forms" class="nav-link text-muted bg-200">Forms</a>
+          </li><li class="nav-item position-relative">
+            <a href="#colours" class="nav-link text-muted bg-200">Colours</a>
+          </li><li class="nav-item position-relative">
+            <a href="#testing-the-accessibility-of-a-pdf-document" class="nav-link text-muted bg-200">Testing the accessibility of a PDF document</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

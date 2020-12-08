@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/editorial-content/general/" class="nav-link active" aria-current="page">
-  Overall guidelines
-</a>
-            </li><li class="nav-item">
               <a href="/en/editorial-content/word/" class="nav-link">
   Word
 </a>
@@ -160,7 +156,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Overall guidelines
+          General recommendations for content
         </li>
       </ol>
 </nav>
@@ -169,11 +165,21 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#check-colours" class="dropdown-item text-wrap">Check colours</a><a href="#make-reading-easier" class="dropdown-item text-wrap">Make reading easier</a><a href="#layout-with-tables" class="dropdown-item text-wrap">Layout with tables</a><a href="#accessible-data-tables" class="dropdown-item text-wrap">Accessible data tables</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>General recommendations</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>General recommendations</h1>
 <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>This section presents general recommendations to ensure the accessibility of your content regardless of the medium used (email, PPT, PDF, Word, etc.).</p>
 <h2 id="check-colours">Check colours <a class="header-anchor" href="#check-colours" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -214,7 +220,29 @@
 </ul>
 <p>And for the implementation in a web page for example, see <a href="/en/web/develop/textual-content/#structuring-data-tables" title="Structuring data tables">our dedicated article</a>.</p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#check-colours" class="nav-link text-muted bg-200">Check colours</a>
+          </li><li class="nav-item position-relative">
+            <a href="#make-reading-easier" class="nav-link text-muted bg-200">Make reading easier</a>
+          </li><li class="nav-item position-relative">
+            <a href="#layout-with-tables" class="nav-link text-muted bg-200">Layout with tables</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessible-data-tables" class="nav-link text-muted bg-200">Accessible data tables</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

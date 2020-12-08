@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/editorial-content/general/" class="nav-link">
-  Overall guidelines
-</a>
-            </li><li class="nav-item">
               <a href="/en/editorial-content/word/" class="nav-link">
   Word
 </a>
@@ -172,13 +168,50 @@
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/editorial-content/powerpoint/" class="nav-link dropdown-item">
+  Create accessible PowerPoint slides
+</a><a href="/en/editorial-content/powerpoint/test/" class="nav-link dropdown-item active" aria-current="page">
+  Check accessibility in PowerPoint slides
+</a></div>
+    </nav>
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#automated-tests" class="dropdown-item text-wrap">Automated tests</a><a href="#office-accessibility-verification-tool" class="dropdown-item text-wrap">Office Accessibility Verification Tool</a><a href="#color-contrasts" class="dropdown-item text-wrap">Color contrasts</a><a href="#screen-reader-jaws-nvda" class="dropdown-item text-wrap">Screen reader: JAWS &amp; NVDA</a><a href="#self-assessment-grids" class="dropdown-item text-wrap">Self-Assessment Grids</a></div>
+    </nav>
         
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Check accessibility in PowerPoint slides</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/editorial-content/powerpoint/" class="nav-link text-muted">
+  Create accessible PowerPoint slides
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/editorial-content/powerpoint/test/" class="nav-link text-muted active" aria-current="page">
+  Check accessibility in PowerPoint slides
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Check accessibility in PowerPoint slides</h1>
 <h2 id="automated-tests">Automated tests <a class="header-anchor" href="#automated-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <h3 id="office-accessibility-verification-tool">Office Accessibility Verification Tool <a class="header-anchor" href="#office-accessibility-verification-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Start your tests with the Office Accessibility Verification Tool:<br>
@@ -199,7 +232,29 @@ It helps you to simulate the configuration as the visually impaired and blind pe
 </ul>
 <p>These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents:</p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#automated-tests" class="nav-link text-muted bg-200">Automated tests</a>
+          </li><li class="nav-item position-relative">
+            <a href="#office-accessibility-verification-tool" class="nav-link text-muted bg-200">Office Accessibility Verification Tool</a>
+          </li><li class="nav-item position-relative">
+            <a href="#color-contrasts" class="nav-link text-muted bg-200">Color contrasts</a>
+          </li><li class="nav-item position-relative">
+            <a href="#screen-reader-jaws-nvda" class="nav-link text-muted bg-200">Screen reader: JAWS &amp; NVDA</a>
+          </li><li class="nav-item position-relative">
+            <a href="#self-assessment-grids" class="nav-link text-muted bg-200">Self-Assessment Grids</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

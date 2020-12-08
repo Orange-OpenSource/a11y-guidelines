@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/editorial-content/general/" class="nav-link">
-  Overall guidelines
-</a>
-            </li><li class="nav-item">
               <a href="/en/editorial-content/word/" class="nav-link">
   Word
 </a>
@@ -169,11 +165,21 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#what-can-be-problematic" class="dropdown-item text-wrap">What can be problematic?</a><a href="#important" class="dropdown-item text-wrap">Important</a><a href="#everyday-emails" class="dropdown-item text-wrap">&quot;Everyday&quot; emails</a><a href="#pushmails-newsletters-automatic-communications" class="dropdown-item text-wrap">Pushmails / newsletters / automatic communications</a><a href="#from-a-word-document" class="dropdown-item text-wrap">From a Word document</a><a href="#from-a-newsletter-mailing-tool" class="dropdown-item text-wrap">From a newsletter / mailing tool</a><a href="#creation-from-html-or-other-dedicated-tool" class="dropdown-item text-wrap">Creation from HTML (or other dedicated tool)</a><a href="#related-links" class="dropdown-item text-wrap">Related links</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Design emails accessible to all</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Design emails accessible to all</h1>
 <p>Here is a list of recommendations for writing (or producing templates that generate) messages that are accessible, that is to say, understandable by all.</p>
 <h2 id="what-can-be-problematic">What can be problematic? <a class="header-anchor" href="#what-can-be-problematic" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Above all:</p>
@@ -188,7 +194,7 @@
 <p>If your communication contains a lot of information and its layout needs to be complex:</p>
 <ul>
 <li>create the email with the method which is the easiest for you,</li>
-<li>add <a href="../word">an accessible Word file</a> (or text file) as an attachment containing the same level of information (but only in text!),</li>
+<li>add <a href="/en/editorial-content/word/">an accessible Word file</a> (or text file) as an attachment containing the same level of information (but only in text!),</li>
 <li>specify that the equivalent accessible text is contained in the attachment.</li>
 </ul>
 <h2 id="everyday-emails">&quot;Everyday&quot; emails <a class="header-anchor" href="#everyday-emails" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -199,7 +205,7 @@
 <li>Put a capital letter at the beginning of each sentence but avoid whole sentences in capital letters</li>
 <li>Align the texts to the left (avoid justifying)</li>
 <li>Avoid too many italic or bold chunks of text or phrases</li>
-<li>Check the contrast between the font color and the background (Colour Contrast Analyzer) and limit the total number of colors used</li>
+<li>Check the contrast between the font color and the background using the tool <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyser</a> for example and limit the total number of colors used</li>
 <li>Use a neutral background: no decorative paper letter or background images</li>
 <li>Enter an alternative text for all the images (Office: right click on the picture&gt; <strong>Format Picture &gt; Alt text&gt; &quot;Description&quot; field</strong>) or if the image is just descriptive, leave the &quot;Description&quot; field empty</li>
 <li>Use the &quot;Title&quot; and &quot;Subtitle&quot; styles of the &quot;text format&quot; menu if long mail, with several sections</li>
@@ -215,12 +221,12 @@
 <p>You have several options for creating an accessible Pushmail.</p>
 <h3 id="from-a-word-document">From a Word document <a class="header-anchor" href="#from-a-word-document" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ol>
-<li>Create a Word document accessible by following <a href="../word/create">the Word accessibility guidelines</a>.</li>
+<li>Create a Word document accessible by following <a href="/en/editorial-content/word/">the Word accessibility guidelines</a>.</li>
 <li>Then use the &quot;Send to Mail Recipient&quot;* option.</li>
 </ol>
 <p>Add this Option the first time via <strong>File&gt; Options&gt; Quick access toolbar&gt; “Send to Mail Recipient”</strong></p>
 <h3 id="from-a-newsletter-mailing-tool">From a newsletter / mailing tool <a class="header-anchor" href="#from-a-newsletter-mailing-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our <a href="https://a11y-guidelines.orange.com/others_EN/editorial.html">general guidelines for editorial content</a>.<br>
+<p>It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our <a href="/en/editorial-content/">general guidelines for editorial content</a>.<br>
 Always check:</p>
 <ul>
 <li>Text alternatives for images</li>
@@ -228,7 +234,7 @@ Always check:</p>
 <li>If presentation tables: role=presentation in the table tag</li>
 </ul>
 <h3 id="creation-from-html-or-other-dedicated-tool">Creation from HTML (or other dedicated tool) <a class="header-anchor" href="#creation-from-html-or-other-dedicated-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Compose the HTML code in an accessible way by following our <a href="../../web">main web recommendations</a>.</p>
+<p>Compose the HTML code in an accessible way by following our <a href="/en/web/develop/">main web recommendations</a>.</p>
 <p>Important: given the interpretation issues of multiple mail clients, the layout should instead be done via tables using the role=presentation attribute in the table tag.<br>
 In order to occasionally test the support for HTML and CSS in the various email clients, use <a href="https://www.caniemail.com/">Can I email?</a> and <a href="https://caniuse.email/">Can I use in HTML emails?</a> Websites.<br>
 To test your entire email campaign, use the <a href="http://www.accessible-email.org/">Accessible email site</a>.</p>
@@ -244,7 +250,35 @@ To test your entire email campaign, use the <a href="http://www.accessible-email
 <li><a href="https://github.com/Orange-OpenSource/font-accessible-dfa">Accessible font DfA</a></li>
 </ul>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#what-can-be-problematic" class="nav-link text-muted bg-200">What can be problematic?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#important" class="nav-link text-muted bg-200">Important</a>
+          </li><li class="nav-item position-relative">
+            <a href="#everyday-emails" class="nav-link text-muted bg-200">&quot;Everyday&quot; emails</a>
+          </li><li class="nav-item position-relative">
+            <a href="#pushmails-newsletters-automatic-communications" class="nav-link text-muted bg-200">Pushmails / newsletters / automatic communications</a>
+          </li><li class="nav-item position-relative">
+            <a href="#from-a-word-document" class="nav-link text-muted bg-200">From a Word document</a>
+          </li><li class="nav-item position-relative">
+            <a href="#from-a-newsletter-mailing-tool" class="nav-link text-muted bg-200">From a newsletter / mailing tool</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-from-html-or-other-dedicated-tool" class="nav-link text-muted bg-200">Creation from HTML (or other dedicated tool)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#related-links" class="nav-link text-muted bg-200">Related links</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">

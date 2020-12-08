@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Word documents - Orange digital accessibility guidelines</title>
+    <title>Create an accessible Word document - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -112,10 +112,6 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/editorial-content/general/" class="nav-link">
-  Overall guidelines
-</a>
-            </li><li class="nav-item">
               <a href="/en/editorial-content/word/" class="nav-link active" aria-current="page">
   Word
 </a>
@@ -167,20 +163,202 @@
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/editorial-content/word/" class="nav-link dropdown-item active" aria-current="page">
+  Create an accessible Word document
+</a><a href="/en/editorial-content/word/test/" class="nav-link dropdown-item">
+  Check accessibility in Word
+</a></div>
+    </nav>
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#language" class="dropdown-item text-wrap">Language</a><a href="#document-properties" class="dropdown-item text-wrap">Document properties</a><a href="#headings" class="dropdown-item text-wrap">Headings</a><a href="#table-of-contents" class="dropdown-item text-wrap">Table of contents</a><a href="#wording" class="dropdown-item text-wrap">Wording</a><a href="#formatting-layout" class="dropdown-item text-wrap">Formatting / layout</a><a href="#colors-and-contrasts" class="dropdown-item text-wrap">Colors and contrasts</a><a href="#bulleted-lists-or-numbered-lists" class="dropdown-item text-wrap">Bulleted Lists or Numbered Lists</a><a href="#alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content" class="dropdown-item text-wrap">Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content</a><a href="#audio-or-video-file" class="dropdown-item text-wrap">Audio or video file</a><a href="#links" class="dropdown-item text-wrap">Links</a><a href="#data-tables" class="dropdown-item text-wrap">Data Tables</a><a href="#accessibility-checker" class="dropdown-item text-wrap">Accessibility Checker</a><a href="#converting-to-pdf" class="dropdown-item text-wrap">Converting to PDF</a><a href="#for-more-detailed-information" class="dropdown-item text-wrap">For more detailed information</a></div>
+    </nav>
         
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Word documents</h1>
-<p>This section contains recommendations for:</p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/editorial-content/word/" class="nav-link text-muted active" aria-current="page">
+  Create an accessible Word document
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/editorial-content/word/test/" class="nav-link text-muted">
+  Check accessibility in Word
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+          <h1>Create an accessible Word document</h1>
+<p>This part describes how to make your Word documents accessible to everyone, including assistive technology users.</p>
+<h2 id="language">Language <a class="header-anchor" href="#language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The main language of the document must be defined in the tab <code>File &gt; Options &gt; Language</code>.<br>
+Every change of language within the document must be identified by selecting the text and: <code>tab Review &gt; Language &gt; Set proofing language</code>.</p>
+<h2 id="document-properties">Document properties <a class="header-anchor" href="#document-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Title, author and tags fields have to be completed in tab <code>File &gt; Info &gt; Properties</code>.<br>
+<img alt="" src="/en/editorial-content/images/word1.png" class="img-fluid"></p>
+<p>These properties are readable by everyone in Windows Explorer and by the screen readers.</p>
+<h2 id="headings">Headings <a class="header-anchor" href="#headings" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Give unique and descriptive headings allow users to clearly understand in which part they are on.<br>
+Use a “Heading 1” for the main content heading, and then a “Heading 2” for the major section headings and a “Heading 3” etc. (in the Home panel).<br>
+A good heading structure is often the most important accessibility criteria in Word documents.<br>
+Screen reader users have the ability to navigate long Word documents by heading structure.</p>
+<h2 id="table-of-contents">Table of contents <a class="header-anchor" href="#table-of-contents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Provide a table of contents for long documents using tab <code>References &gt; Table of Contents</code><br>
+It allows users to find information more easily in the document.</p>
+<h2 id="wording">Wording <a class="header-anchor" href="#wording" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use simple language: avoid abbreviations and acronyms (explain them at the first occurrence).<br>
+If necessary, keep accentuation on capital letters (example: É or Ç): use the <code>Insert tab &gt; Symbol</code></p>
+<h2 id="formatting-layout">Formatting / layout <a class="header-anchor" href="#formatting-layout" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li><a href="create">Create an accessible Word document</a></li>
-<li><a href="test">How to test a Word document</a></li>
+<li>
+<p>Use familiar sans serif fonts (such as Arial or Calibri), in a large font size (12pt or larger). Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.</p>
+</li>
+<li>
+<p>Use predefined styles for formatting content: &quot;normal&quot; style must be assigned almost everywhere (default style), the &quot;quote&quot; style for quotes, etc.</p>
+</li>
+<li>
+<p>Avoid justifying the text; prefer left alignment.<br>
+<img alt="" src="/en/editorial-content/images/word2.png" class="img-fluid"></p>
+</li>
+<li>
+<p>Do not use text boxes because their content is not interpreted by screen readers.</p>
+</li>
+<li>
+<p>Use the page break option via the <code>Insert Tab &gt; “Page Break”</code> menu to move to the next page.</p>
+</li>
+<li>
+<p>Number pages of your document (<code>Insert Tab &gt; “Page Number”</code>) to allow users to navigate easily.</p>
+</li>
+<li>
+<p>Do not use carriage returns to skip rows nor successive tabs (&quot;Tab&quot; key on the keyboard ) for text formatting.</p>
+<ul>
+<li>
+<p>In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… &gt; Indents and Spacing</code>.<br>
+<img alt="" src="/en/editorial-content/images/word3.png" class="img-fluid"></p>
+</li>
+<li>
+<p>Note: the « Tabs… » options can let you adjust the Tab stop position.<br>
+<img alt="" src="/en/editorial-content/images/word4.png" class="img-fluid"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="colors-and-contrasts">Colors and contrasts <a class="header-anchor" href="#colors-and-contrasts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Ensure a level of <a href="/en/web/design/colors-and-contrasts/#make-sure-there-is-enough-contrast-between-font-and-background-colors">sufficient contrast between the color of the text and that of the background</a>. This is valid for your texts but also for icons, buttons and other graphic elements. Contrast can be checked using the tool <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyser</a> for example:</p>
+<ul>
+<li>4.5:1 for normal size text.</li>
+<li>3:1 for <a href="/en/glossary/#large-text">large text</a> and interface components or graphical elements that convey information.</li>
+</ul>
+<p>Make sure <a href="/en/web/design/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information">color is not the only means used to convey information</a>.</p>
+<img alt="" src="/en/editorial-content/images/word5.png" class="img-fluid">  
+<img alt="" src="/en/editorial-content/images/word6.png" class="img-fluid">
+<h2 id="bulleted-lists-or-numbered-lists">Bulleted Lists or Numbered Lists <a class="header-anchor" href="#bulleted-lists-or-numbered-lists" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Always use the appropriate and native functions to create lists:</p>
+<ul>
+<li>Ordered (numbered) lists are used to present a group of items (words, sentences…) that follow a sequence</li>
+<li>Unordered (bulleted) lists are used for a group of items without a sequence<br>
+<img alt="" src="/en/editorial-content/images/word7.png" class="img-fluid"></li>
+</ul>
+<h2 id="alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content">Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content <a class="header-anchor" href="#alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The alternative text has to convey the content and the purpose of the image and its context in a concise and unambiguous manner.<br>
+Right-click on an image and select Format Picture or Format <code>Shape &gt; Alt Text</code>.<br>
+Enter the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).<br>
+If the picture is only decorative, leave the Description text box blank.<br>
+Alternative text helps people who can’t see the screen to understand what’s important in pictures and other visuals.<br>
+Note: if you use a layout option other than &quot;In Line With Text&quot; (by right-clicking on the image an “Wrap Text” or the “Picture Tools” Tab), the image and text present in the description of image (Alt Text) will be ignored by some screen readers.</p>
+<h2 id="audio-or-video-file">Audio or video file <a class="header-anchor" href="#audio-or-video-file" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>For audio and video content, in addition to alt text, be sure the video or audio as well as the player are accessible.<br>
+<a href="/en/editorial-content/animated-components/">See our recommendations for audio or video files.</a></p>
+<h2 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Specify clear and accurate link text: it must make sense as standalone information to understand the destination target.<br>
+Specify when links are opened in a new window:<br>
+<code>Insert tab &gt; Hyperlink &gt; SreenTip</code><br>
+<img alt="" src="/en/editorial-content/images/word8.png" class="img-fluid"><br>
+Note: a blind person asks his screen reader to list all the links on a page. Each link text will therefore be read isolated from its visual context.</p>
+<h2 id="data-tables">Data Tables <a class="header-anchor" href="#data-tables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Use a simple table structure, and specify column header information.<br>
+Ensure that tables don't contain split cells, merged cells, nested tables, or completely blank rows or columns.<br>
+If a table is too complex, you will need to provide an additional description: Right-click <code>Table Properties &gt; Alt Text</code><br>
+Finally, tables should not be used for formatting purposes : use the &quot;Columns&quot; option on the “Page Layout” tab to create a columns layout.</p>
+<h2 id="accessibility-checker">Accessibility Checker <a class="header-anchor" href="#accessibility-checker" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>At least, run Accessibility Checker to make sure your content is accessible. It can detect the main errors and suggests some solutions.<br>
+In <code>File tab &gt; Check for Issues</code>.<br>
+<img alt="" src="/en/editorial-content/images/word9.png" class="img-fluid"></p>
+<p>Important: if you encounter some difficulties, try to save your document from within Word 2010 in &quot;.docx&quot; (or &quot;.pptx&quot;) format. The option to &quot;Maintain compatibility with previous versions of Word&quot; has to remains unchecked.</p>
+<h2 id="converting-to-pdf">Converting to PDF <a class="header-anchor" href="#converting-to-pdf" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>After checking the accessibility of your document (see the <a href="/en/editorial-content/word/test/">Testing the accessibility of your Word document section</a>), you can convert it to a PDF file, if necessary, by selecting: <code>File tab &gt; Save &amp; Send</code> and create PDF document.<br>
+Check if the « Document structure tags for accessibility » option is selected.</p>
+<img alt="" src="/en/editorial-content/images/word10.png" class="img-fluid">  
+<img alt="" src="/en/editorial-content/images/word11.png" class="img-fluid">  
+<p>Note: with Word 2010, generated PDF documents may have accessibility issues (especially with the images vocalization). These issues have been fixed in later versions of Microsoft Office.</p>
+<h2 id="for-more-detailed-information">For more detailed information <a class="header-anchor" href="#for-more-detailed-information" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="http://webaim.org/techniques/word/" hreflang="en">Word Accessibility, WebAIM</a>.</li>
+<li><a href="https://support.office.com/en-us/article/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25?ui=en-US&rs=en-US&ad=US">Microsoft Accessibility Support website</a></li>
+<li><a lang="fr" href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr">(FR) Créer des documents bureautiques accessible <abbr title="direction interministérielle du numérique et du système d’information et de communication" lang="fr">DINSIC</abbr>.</a></li>
 </ul>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#language" class="nav-link text-muted bg-200">Language</a>
+          </li><li class="nav-item position-relative">
+            <a href="#document-properties" class="nav-link text-muted bg-200">Document properties</a>
+          </li><li class="nav-item position-relative">
+            <a href="#headings" class="nav-link text-muted bg-200">Headings</a>
+          </li><li class="nav-item position-relative">
+            <a href="#table-of-contents" class="nav-link text-muted bg-200">Table of contents</a>
+          </li><li class="nav-item position-relative">
+            <a href="#wording" class="nav-link text-muted bg-200">Wording</a>
+          </li><li class="nav-item position-relative">
+            <a href="#formatting-layout" class="nav-link text-muted bg-200">Formatting / layout</a>
+          </li><li class="nav-item position-relative">
+            <a href="#colors-and-contrasts" class="nav-link text-muted bg-200">Colors and contrasts</a>
+          </li><li class="nav-item position-relative">
+            <a href="#bulleted-lists-or-numbered-lists" class="nav-link text-muted bg-200">Bulleted Lists or Numbered Lists</a>
+          </li><li class="nav-item position-relative">
+            <a href="#alternative-text-for-pictures-shapes-chart-smartart-graphic-or-other-graphical-content" class="nav-link text-muted bg-200">Alternative Text for pictures, shapes, chart, SmartArt graphic, or other graphical content</a>
+          </li><li class="nav-item position-relative">
+            <a href="#audio-or-video-file" class="nav-link text-muted bg-200">Audio or video file</a>
+          </li><li class="nav-item position-relative">
+            <a href="#links" class="nav-link text-muted bg-200">Links</a>
+          </li><li class="nav-item position-relative">
+            <a href="#data-tables" class="nav-link text-muted bg-200">Data Tables</a>
+          </li><li class="nav-item position-relative">
+            <a href="#accessibility-checker" class="nav-link text-muted bg-200">Accessibility Checker</a>
+          </li><li class="nav-item position-relative">
+            <a href="#converting-to-pdf" class="nav-link text-muted bg-200">Converting to PDF</a>
+          </li><li class="nav-item position-relative">
+            <a href="#for-more-detailed-information" class="nav-link text-muted bg-200">For more detailed information</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     <footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
