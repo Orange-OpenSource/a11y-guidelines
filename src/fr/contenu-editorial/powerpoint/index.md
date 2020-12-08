@@ -129,7 +129,7 @@ Il est important de contrôler l’accessibilité de la présentation à l'aide 
 
 ## Convertir une présentation PowerPoint en fichier PDF
 
-Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-editorial/powerpoint/tester.html)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
+Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-editorial/powerpoint/tester)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
 Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 <img alt="" src="/fr/contenu-editorial/images/export.png" class="img-fluid">  &nbsp;
@@ -139,7 +139,7 @@ Remarque : pour les présentations de plus de 50 diapositives, il faut conseille
 
 <img alt="" src="/fr/contenu-editorial/images/adobe.png" class="img-fluid">  &nbsp;
 
-Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PDF accessible de notre site](/fr/contenu-editorial/pdf.html).
+Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PDF accessible de notre site](/fr/contenu-editorial/pdf/).
 
 ## Ressources
 

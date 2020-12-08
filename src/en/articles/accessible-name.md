@@ -75,7 +75,7 @@ But we could also use `aria-labelledby` to reference another element of the page
 </code> </pre>
 When taking focus on the field, the screen reader announces "Search on the site edit".
 
-More details on ["The attributes <abbr>ARIA</abbr> that can save you"](label-ledby-describedby.html).
+More details on ["The attributes <abbr>ARIA</abbr> that can save you"](/en/articles/aria-attributes-that-can-save-you/).
 
 ## Sources
 
