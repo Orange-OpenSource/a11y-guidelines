@@ -1,0 +1,13 @@
+{
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Créer un document Word accessible",
+      "href": "/fr/contenu-editorial/word/"
+    },
+    {
+      "label": "Tester l'accessibilité de votre document Word",
+      "href": "/fr/contenu-editorial/word/tester/"
+    }  
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Create an accessible Word document",
+      "href": "/en/editorial-content/word/"
+    },
+    {
+      "label": "Check accessibility in Word",
+      "href": "/en/editorial-content/word/test/"
+    }  
+  ]
+}

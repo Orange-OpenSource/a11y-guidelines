@@ -18,7 +18,7 @@ Above all:
 
 If your communication contains a lot of information and its layout needs to be complex:
 - create the email with the method which is the easiest for you,
-- add [an accessible Word file](../word) (or text file) as an attachment containing the same level of information (but only in text!),
+- add [an accessible Word file](/en/editorial-content/word/) (or text file) as an attachment containing the same level of information (but only in text!),
 - specify that the equivalent accessible text is contained in the attachment.
 
 ## "Everyday" emails
@@ -28,7 +28,7 @@ For all your everyday emails:
 - Put a capital letter at the beginning of each sentence but avoid whole sentences in capital letters
 - Align the texts to the left (avoid justifying)
 - Avoid too many italic or bold chunks of text or phrases
-- Check the contrast between the font color and the background (Colour Contrast Analyzer) and limit the total number of colors used
+- Check the contrast between the font color and the background using the tool [Color Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) for example and limit the total number of colors used
 - Use a neutral background: no decorative paper letter or background images
 - Enter an alternative text for all the images (Office: right click on the picture> **Format Picture > Alt text> "Description" field**) or if the image is just descriptive, leave the "Description" field empty
 - Use the "Title" and "Subtitle" styles of the "text format" menu if long mail, with several sections
@@ -44,20 +44,20 @@ For all your everyday emails:
 You have several options for creating an accessible Pushmail.
 
 ### From a Word document
-1. Create a Word document accessible by following [the Word accessibility guidelines](../word/create).
+1. Create a Word document accessible by following [the Word accessibility guidelines](/en/editorial-content/word/).
 2. Then use the "Send to Mail Recipient"* option.
 
 Add this Option the first time via **File> Options> Quick access toolbar> “Send to Mail Recipient”**
 
 ### From a newsletter / mailing tool
-It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our [general guidelines for editorial content](https://a11y-guidelines.orange.com/others_EN/editorial.html).
+It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our [general guidelines for editorial content](/en/editorial-content/).
 Always check:
 - Text alternatives for images
 - Level titles
 - If presentation tables: role=presentation in the table tag
 
 ### Creation from HTML (or other dedicated tool)
-Compose the HTML code in an accessible way by following our [main web recommendations](../../web).  
+Compose the HTML code in an accessible way by following our [main web recommendations](/en/web/develop/).  
 
 Important: given the interpretation issues of multiple mail clients, the layout should instead be done via tables using the role=presentation attribute in the table tag.
 In order to occasionally test the support for HTML and CSS in the various email clients, use [Can I email?](https://www.caniemail.com/) and [Can I use in HTML emails?](https://caniuse.email/) Websites.

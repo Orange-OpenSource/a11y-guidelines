@@ -17,18 +17,18 @@ Principalement :
 ## À noter 
 Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe : 
 -	Créer le mail avec la méthode qui vous est la plus simple, 
--	Ajouter en pièce jointe un [fichier Word accessible](../word) (ou fichier texte) contenant le même niveau d’information mais sous forme **textuelle uniquement**, 
+-	Ajouter en pièce jointe un [fichier Word accessible](/fr/contenu-editorial/word/) (ou fichier texte) contenant le même niveau d’information mais sous forme **textuelle uniquement**, 
 -	Ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe. 
 
 ## Les mails du quotidien 
 Pour tous vos mails du quotidien : 
 - Utiliser des polices simples, sans serif : Arial, Calibri ou la [police Accessible DfA](https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/)
 -	Adopter une taille de police au moins égale à 10 points
-- Conserver l’accent des lettres en majuscule, voir [comment mettre des accents aux majuscules](https://a11y-guidelines.orange.com/others/editorial.html#annexes) ? ou suite Office : menu **Insertion** > **Symbole**
+- Conserver l’accent des lettres en majuscule, voir [comment mettre des accents aux majuscules](/fr/contenu-editorial/#comment-mettre-des-accents-aux-majuscules) ? ou suite Office : menu **Insertion** > **Symbole**
 - Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule
 - Aligner les textes à gauche (éviter de justifier) 
 - Éviter l’italique 
-- Vérifier le contraste entre la couleur de police et l’arrière-plan (outil Colour Contrast Analyzer) et limiter le nombre total de couleurs utilisées
+- Vérifier le contraste entre la couleur de police et l’arrière-plan à l’aide de l’outil [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) et limiter le nombre total de couleurs utilisées
 - Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan
 - Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle, suite Office : **clic droit** sur l’image > **Format de l’image** > **Texte de remplacement** > champ **« Description »**) 
 - Utiliser les styles « Titre » et « Sous-titre » du menu « format du texte » si mail long, avec plusieurs sections
@@ -45,29 +45,32 @@ Pour tous vos mails du quotidien :
 Plusieurs options s’offrent à vous pour créer un Pushmail accessible.
 
 ### Création à partir d’un document Word
-1. Créer un document Word accessible en suivant nos [recommandations Word](../word).
+1. Créer un document Word accessible en suivant [nos recommandations Word](/fr/contenu-editorial/word/).
 2. Utiliser l’option « Envoyer au destinataire du message ».  
 
 Option à ajouter la première fois via **Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message**. 
-<img alt="capture d'écran : paramétrer Word pour envoi de message à un destinataire" src="../images/email1.png" width="400">
+
+<img src="/fr/contenu-editorial/images/email1.png" width="400">
 
 ### Création à partir d’un outil de newsletter / mailing 
-Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos [recommandations générales pour le contenu éditorial](../generalites). 
+Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos [recommandations générales pour le contenu éditorial](/fr/contenu-editorial/). 
+
 Toujours vérifier : 
--	Alternatives textuelles des images 
--	Titres de niveaux 
--	Si tableaux de présentation : role=presentation dans la balise table
+-	Alternatives textuelles des images,  
+-	Titres de niveaux,  
+-	Si tableaux de présentation : ajouter le role=presentation dans la balise `table`. 
 
 ### Création à partir d’HTML (ou autre outil dédié)
 
-Composer le code HTML de façon accessible en suivant [les principales recommandations Web](../../web). 
+Composer le code HTML de façon accessible en suivant [les principales recommandations Web](/fr/web/developper/). 
+
 **Important :** compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux en utilisant l’attribut role=presentation dans la balise table.
-Afin de tester ponctuellement la prise en charge de l’HTML et du CSS dans les différents clients mails, utilisez les sites [Can I email ?](https://www.caniemail.com/) et [Can I use in HTML emails ?](https://caniuse.email/) 
+
+Afin de tester ponctuellement la prise en charge de l’HTML et du CSS dans les différents clients mails, utilisez les sites [Can I email ?](https://www.caniemail.com/) et [Can I use in HTML emails ?](https://caniuse.email/).  
 Afin de tester toute votre campagne mail, utiliser le site [Accessible email](http://www.accessible-email.org/)
 
 ## Liens utiles
 
-- [Site des recommandations accessibilité Orange](https://a11y-guidelines.orange.com/)
 - [Tuto Office mails accessibles](https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775)
 - [Tester la prise en charge de l’HTML et du CSS sur les différents clients mails](https://www.caniemail.com/)
 - [Sur quels clients mails tester en priorité (anglais)](https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606)

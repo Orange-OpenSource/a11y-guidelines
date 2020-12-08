@@ -333,7 +333,7 @@
   },
   {
     "old": "others_EN/editorial.html",
-    "new": "/en/editorial-content/general"
+    "new": "/en/editorial-content"
   },
   {
     "old": "others_EN/email.html",
@@ -349,7 +349,7 @@
   },
   {
     "old": "others_EN/powerpoint-create.html",
-    "new": "/en/editorial-content/powerpoint/create"
+    "new": "/en/editorial-content/powerpoint"
   },
   {
     "old": "others_EN/powerpoint-test.html",
@@ -369,7 +369,7 @@
   },
   {
     "old": "others_EN/word-create.html",
-    "new": "/en/editorial-content/word/create"
+    "new": "/en/editorial-content/word"
   },
   {
     "old": "others_EN/word-test.html",
@@ -393,7 +393,7 @@
   },
   {
     "old": "others/editorial.html",
-    "new": "/fr/contenu-editorial/generalites"
+    "new": "/fr/contenu-editorial"
   },
   {
     "old": "others/email.html",
@@ -409,7 +409,7 @@
   },
   {
     "old": "others/powerpoint-create.html",
-    "new": "/fr/contenu-editorial/powerpoint/creer"
+    "new": "/fr/contenu-editorial/powerpoint"
   },
   {
     "old": "others/powerpoint-test.html",
@@ -433,7 +433,7 @@
   },
   {
     "old": "others/word-create.html",
-    "new": "/fr/contenu-editorial/word/creer"
+    "new": "/fr/contenu-editorial/word"
   },
   {
     "old": "others/word-test.html",

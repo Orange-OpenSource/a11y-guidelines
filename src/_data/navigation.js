@@ -87,7 +87,6 @@ module.exports = {
         },
         theme: 'purple',
         subLevels: [
-          { label: 'Overall guidelines', href: '/en/editorial-content/general/' },
           { label: 'Word', href: '/en/editorial-content/word/' },
           { label: 'Powerpoint', href: '/en/editorial-content/powerpoint/' },
           { label: 'PDF documents', href: '/en/editorial-content/pdf/' },
@@ -173,7 +172,6 @@ module.exports = {
         },
         theme: 'purple',
         subLevels: [
-          { label: 'Recommandations transverses', href: '/fr/contenu-editorial/generalites/' },
           { label: 'Word', href: '/fr/contenu-editorial/word/' },
           { label: 'Powerpoint', href: '/fr/contenu-editorial/powerpoint/' },
           { label: 'Documents PDF', href: '/fr/contenu-editorial/pdf/' },
