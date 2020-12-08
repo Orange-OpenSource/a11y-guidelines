@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>WWDC 2020: Make Your App Visually Accessible - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          WWDC 2020: Make Your App Visually Accessible
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>WWDC 2020: Make Your App Visually Accessible</h1>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10020/">session 10020</a>) talks about some of the great ways that your app can provide for <strong>a visual experience that is inclusive to everyone</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020.png" alt="" class="img-fluid"><br>
+</br></br>Various contents and their video timelapse are indicated hereunder:</p>
+<ul>
+<li><strong><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=40">Introduction (00:40)</a></strong><br>
+<br></li>
+<li><strong>Color &amp; shapes</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesOverview_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesSettings_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">User settings</a> ⟹ <strong>new in iOS 14</strong></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesSFSymbols_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">SF Symbols</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesContrast_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Color contrast</a><br>
+<br></li>
+</ul>
+</li>
+<li><strong>Text readibility</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityOverview_tab').trigger('click');document.getElementById('text-readibility').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityNotification_tab').trigger('click');document.getElementById('text-readibility').scrollIntoView({ behavior: 'smooth', block: 'start' })">Size text notification</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityBold_tab').trigger('click');document.getElementById('text-readibility').scrollIntoView({ behavior: 'smooth', block: 'start' })">Bold text</a><br>
+<br></li>
+</ul>
+</li>
+<li><strong>Display preferences</strong>
+<ul>
+<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesOverview_tab').trigger('click');document.getElementById('display-preferences').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesMotion_tab').trigger('click');document.getElementById('display-preferences').scrollIntoView({ behavior: 'smooth', block: 'start' })">Motion sensitivity</a> ⟹ <strong>new in iOS 14</strong></li>
+<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesTransparency_tab').trigger('click');document.getElementById('display-preferences').scrollIntoView({ behavior: 'smooth', block: 'start' })">Reduce transparency</a></li>
+</ul>
+</li>
+</ul>
+</br>
+Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.
+<p><br><br></p>
+<h2 id="color-shapes">Color &amp; shapes <a class="header-anchor" href="#color-shapes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ColorAndShapesOverview"
+           id="ColorAndShapesOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ColorAndShapesSettings"
+           id="ColorAndShapesSettings_tab"
+           role="tab" 
+           aria-selected="false">Settings</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ColorAndShapesSFSymbols"
+           id="ColorAndShapesSFSymbols_tab"
+           role="tab" 
+           aria-selected="false">SF Symbols</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#ColorAndShapesContrast"
+           id="ColorAndShapesContrast_tab"
+           role="tab" 
+           aria-selected="false">Color contrast</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ColorAndShapesOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=73">🎬 (01:13)</a><br>
+</br>Using colors is the first idea that comes up to provide visual information.<br>
+Unfortunately, that won't be efficient at all for people suffering from dyschromatopsia for instance.<br>
+</br>It's then crucial to use simultaneously the notions of color contrast and shapes in order to ensure a <a href="../../../design/#colours" style="text-decoration: underline;">complete visual accessibility</a>.</p>
+</div>
+<div class="tab-pane" id="ColorAndShapesSettings" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=135">🎬 (02:15)</a><br>
+</br>Since iOS 7, graphical elements like buttons can stand out thanks to the user setting <strong><code>Button</code> <code>Shapes</code></strong> whose state is now available in iOS 14 through notifications.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-ColorAndShapesSettings_1.png" alt="" class="img-fluid"><br>
+</br>The <a href="../../../design/#accessibility-options" style="text-decoration: underline;"><code>Differentiate</code> <code>Without</code> <code>Color</code></a> accessibility option introduced in iOS 13 has also a state whose changing can be known through notification as well.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-ColorAndShapesSettings_2.png" alt="" class="img-fluid"><br>
+</br>If need be, further information about accessibility option events are available in the <a href="../../../development/#accessibility-options" style="text-decoration: underline;">developers guide section</a>.</p>
+</div>
+<div class="tab-pane" id="ColorAndShapesSFSymbols" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=206">🎬 (03:26)</a><br>
+</br>The <code>SF</code> <code>Symbols</code> introduced in iOS 13 automatically adapt to the <code>Dynamic Type</code> feature and the <a href="../../../design/#accessibility-options" style="text-decoration: underline;"><code>Bold</code> <code>Text</code></a> user setting as well so as to alleviate the necessary graphical work for accessibility.<br>
+</br>These elements are discussed in depth in the footage of the <a style="text-decoration: underline;" role="button" onclick="$('#TextReadibilityNotification_tab').trigger('click');document.getElementById('lisibilite-du-texte').scrollIntoView({ behavior: 'smooth', block: 'start' })">notification </a> sheet inside the <code>Text Readibility</code> section.</p>
+</div>
+<div class="tab-pane" id="ColorAndShapesContrast" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=318">🎬 (05:18)</a><br>
+</br>The <a href="../../../design/#colours" style="text-decoration: underline;">color contrast</a> is a key step in developing an accessible graphical interface.<br>
+</br>The <a href="../../../design/#accessibility-options" style="text-decoration: underline;"><code>Increase</code> <code>Contrast</code></a> user setting is a good way to significantly increase the contrast intensity.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-ColorAndShapesContrast_1.png" alt="" class="img-fluid"><br>
+</br></br>Xcode is the perfect place to define this option...</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-ColorAndShapesContrast_2.png" alt="" class="img-fluid"><br>
+</br>... while quickly checking out the different constrasts thanks to its <a href="../../2019/#color-contrast-0626" style="text-decoration: underline;"><code>Accessibility</code> <code>Inspector</code></a> tool.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-ColorAndShapesContrast_3.png" alt="" class="img-fluid"><br>
+Even if the <code>Dark</code> <code>Mode</code> iOS 13 feature is an essential element to be integrated, some users might choose the <code>Smart</code> <code>Invert</code> user setting to strongly darken the colors and increase their contrasts (<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=467" style="text-decoration: underline;">🎬 07:47)</a>.<br>
+</br></br>The graphical elements that aren't concerned by this option must inform the system with the <code>accessibilityIgnoresInvertColors</code> property.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-ColorAndShapesContrast_4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="text-readibility">Text readibility <a class="header-anchor" href="#text-readibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#TextReadibilityOverview"
+           id="TextReadibilityOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TextReadibilityNotification"
+           id="TextReadibilityNotification_tab"
+           role="tab" 
+           aria-selected="false">Notification</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#TextReadibilityBold"
+           id="TextReadibilityBold_tab"
+           role="tab" 
+           aria-selected="false">Bold text</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="TextReadibilityOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=536">🎬 (08:56)</a><br>
+</br>The <code>Dynamic Type</code> feature not only ensures a more condensed content by decreasing the text size but is also able to enlarge this same text size for people who are no longer emmetropic.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-TextReadibilityOverview.png" alt="" class="img-fluid"><br>
+</br>It's then crucial to set up the application interface with the most important text size in mind while <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=578" style="text-decoration: underline;">avoiding words truncations</a></strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-TextReadibilityNotification_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="TextReadibilityNotification" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=591">🎬 (09:51)</a><br>
+</br>The text size modification thanks to the user settings fires the <a href="../../2017/245/#example-2432" style="text-decoration: underline;"><code>traitCollectionDidChange</code></a> method that enables a more subtle layout of the graphical elements according to the chosen size value.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-TextReadibilityNotification_1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="TextReadibilityBold" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=657">🎬 (10:57)</a><br>
+</br>The <a href="../../../design/#accessibility-options" style="text-decoration: underline;"><code>Bold</code> <code>Text</code></a> accessibility option is fully efficient with the text styles using.<br>
+However, it's still possible to change the value of this property on the appropriate elements thanks to the dedicated notification.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-TextReadibilityBold.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="display-preferences">Display preferences <a class="header-anchor" href="#display-preferences" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#DisplayPreferencesOverview"
+           id="DisplayPreferencesOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#DisplayPreferencesMotion"
+           id="DisplayPreferencesMotion_tab"
+           role="tab" 
+           aria-selected="false">Motion</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#DisplayPreferencesTransparency"
+           id="DisplayPreferencesTransparency_tab"
+           role="tab" 
+           aria-selected="false">Transparency</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DisplayPreferencesOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=718">🎬 (11:58)</a><br>
+</br>All the options that may be used by the user to modify the application appearance must be taken into account in the design process.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-DisplayPreferencesOverview.png" alt="" class="img-fluid"><br>
+</br>The set of the accessibility options available in the user settings are fully described in the <a href="../../../design/#accessibility-options" style="text-decoration: underline;">design part</a>.</p>
+</div>
+<div class="tab-pane" id="DisplayPreferencesMotion" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=758">🎬 (12:38)</a><br>
+</br>This part deals with two user preferences about avoiding balance problems or nausea related to movement that might affect some people.<br>
+</br></br>The first one is the <a href="../../2018/230/#motion-0848" style="text-decoration: underline;">Reduce Motion</a> option whose intensity may be controlled in code writing.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-DisplayPreferencesMotion_1.png" alt="" class="img-fluid"><br>
+</br>The second one <a href="../../2019/#reduce-motion" style="text-decoration: underline;">introduced in iOS 13</a> defines a less disturbing transition between screens for those with a motion visual thickness (🎬 <a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=811" style="text-decoration: underline;">13:31</a>).<br>
+Developers can now access its state an be aware of its value modification since iOS 14.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-DisplayPreferencesMotion_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DisplayPreferencesTransparency" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=859">🎬 (14:19)</a><br>
+</br>The latest introduced preference is connected with  <a href="../../2018/230/#transparency-and-blurring-0307" style="text-decoration: underline;">transparency</a> that makes reading easier because blurring is often accompanied by a variation in contrasts that can significantly disrupt word recognition.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-DisplayPreferencesTransparency_1.png" alt="" class="img-fluid"><br>
+</br></br>It's also possible to modify the transparency property of an element and be notified of its modification in code writing.</p>
+<p><img src="../../../../images/iOSdev/wwdc20-020-DisplayPreferencesTransparency_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+    </main>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2020/020.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2020 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>
