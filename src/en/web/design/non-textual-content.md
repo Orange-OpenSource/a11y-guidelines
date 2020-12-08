@@ -26,11 +26,11 @@ If it is technically possible for you to achieve your visual via formatted text,
 Only permissions where the formatting can be done via an image:
 *	Whether the text in image form can be [customized visually by the user](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#visually-customizeddef);
 *	If a specific presentation of the text is [essential to the information conveyed](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#essentialdef) (example: text or name of a brand in a logo).
-In these specific cases, provide a text alternative containing at least the text of the image and [check the contrasts of the colors used](https://a11y-guidelines.orange.com/web_EN/methodes-outils-contrastes.html).
+In these specific cases, provide a text alternative containing at least the text of the image and [check the contrasts of the colors used](/en/web/toolbox/methods-and-test-tools/color-contrast-level/).
 
 
 ## Special cases of animations, video and audio content
-For non-informative and purely decorative elements, no need for a text alternative. Just ensure that the [animation is ignored by assistive technologies](https://a11y-guidelines.orange.com/web_EN/exemples/masquage/index.html).
+For non-informative and purely decorative elements, no need for a text alternative. Just ensure that the [animation is ignored by assistive technologies](/en/web/components-examples/accessible-hiding/).
 For animations carrying information, provide a transcription (script type) containing the information of the content in text form.
 For audio and / or video content, a textual transcription (scripts) and / or subtitles must be provided according to the following rules: 
 

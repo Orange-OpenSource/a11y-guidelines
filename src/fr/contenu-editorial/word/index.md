@@ -141,7 +141,7 @@ Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme.
 
 ## Convertir en fichier PDF
 
-Après avoir vérifié l'accessibilité de votre document (voir la rubrique [Tester l'accessibilité de votre document Word](/fr/contenu-editorial/word/tester.html)), vous pouvez, si besoin, le convertir en fichier PDF. 
+Après avoir vérifié l'accessibilité de votre document (voir la rubrique [Tester l'accessibilité de votre document Word](/fr/contenu-editorial/word/tester/)), vous pouvez, si besoin, le convertir en fichier PDF. 
 
 Pour transformer votre document en <abbr>PDF</abbr>, aller dans le menu : **Fichier > Enregistrer sous** puis de sélectionner le type de fichier **PDF**. 
 
@@ -151,7 +151,7 @@ La case à cocher « Balises de structure de document pour l’accessibilité »
 
 <img alt="" src="/fr/contenu-editorial/images/word_pdf_fr.png" class="img-fluid" /> 
 
-Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PDF accessible](/fr/contenu-editorial/pdf.html) de notre site.
+Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PDF accessible](/fr/contenu-editorial/pdf/) de notre site.
 
 ## Ressources externes
 
