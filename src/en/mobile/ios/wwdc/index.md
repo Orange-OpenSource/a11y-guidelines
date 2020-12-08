@@ -28,6 +28,13 @@ Many **improvements for the user experience** dealing with the **Switch Control 
 ![Access to the app accessibility for switch control video session.](../../images/iOSdev/wwdc20-019.png)
 </br></br></br>
 
+## [2020 - Make Your App Visually Accessible](2020/020/)
+This footage highlights a bundle of criteria and methods to render an optimal accessible visual aspect to a mobile application.
+<a href="2020/020/">
+    
+![Access to the Make Your App Visually Accessible video session.](../../images/iOSdev/wwdc20-020.png)
+</br></br></br>
+
 ## [2019 - Large Content Viewer](2019/261/)
 This video session deals with the **Large Content Viewer** feature that helps people who prefer and/or need larger text sizes.
 <a href="2019/261/">
