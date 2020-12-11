@@ -21,7 +21,7 @@ Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniqu
 
 - Utiliser au maximum les composants <abbr>HTML</abbr> interactifs de base (champs, liens, boutons), ceux-ci étant nativement accessibles au clavier. À défaut, veiller à ce que les composants personnalisés soient opérables au clavier de manière classique.
 
-Voir [la façon de naviguer au clavier](../../outils/navigation-clavier) dans un navigateur web.
+Voir [la façon de naviguer au clavier](/fr/web/outils/methodes-et-outils-de-test/navigation-clavier/) dans un navigateur web.
 
 **Objectif utilisateur&nbsp;:**
  Permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non ou malvoyants, déficients moteurs, cognitives, web mobile, en mobilité…) d’accéder aux fonctionnalités principales de l’application au clavier.
