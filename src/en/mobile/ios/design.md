@@ -7,7 +7,9 @@ displayToc: true
 
 This guide aims to present the different accessibility criteria for getting an accessible iOS application.
 <br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.
-<br><br>
+
+<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Access to the WWDC video highlighting the importance ofthe visual." src="../../images/conception-intro-wwdc.png"/>
+</a>
 ## Images
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -139,6 +141,8 @@ The label “film | 8:40 PM…” does not have enough contrast and will not be 
 - The contrast between the colour of the background and the text must be appropriate (can be measured with the Colour Contrast Analyser tool or with the [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019/#color-contrast-0626) feature of Accessibility Inspector since Xcode 11).
 
 - With the **Dark Mode** since iOS 13, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Increase&nbsp;Contrast</a> accessibility option.
+
+- The <a href="../wwdc/2020/020/" style="text-decoration: underline;">detailed summary</a> of the WWDC 2020 video entitled **Make Your App Visually Accessible** is a perfect start to follow the appropriate instructions (especially the section 'COLOR & SHAPES' - 'Contrast').
 </div>
 </div>
 <br><br>
@@ -936,6 +940,9 @@ It's then primordial :
 
 - To **test** each appropriate option so as to be sure that its purpose is completely taken into account inside the application.
 
+<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Access to the WWDC video that highlights the importance of taking into account the user settings inside an application." src="../../images/displayPreferences-wwdc.png"/>
+</a>
+
 </br>**Target:** everyone.  
 **When:** as of design and during development.
 </div>
@@ -1166,7 +1173,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div></br>
 
 <a name="optionA11Y_inverserLesCouleurs"></a>
-- **Invert Colours** (UIAccessibilityIsInvertColorsEnabled): reduces glare and eye strain thanks to a very helpful mode for visual impaired people.
+- **Invert Colours** (UIAccessibilityIsInvertColorsEnabled): reduces glare and eye strain thanks to a very helpful mode for visual impaired people ⟹ this option may be deactivated within an app thanks to the property <a href="../wwdc/2020/020/#color-shapes" style="text-decoration: underline;">`accessibilityIgnoresInvertColors`</a>.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1442,7 +1449,7 @@ The full list of these options including their purpose and their coding name is 
 </br>
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
-- **Differentiate Without Colour** (UIAccessibilityShouldDifferentiateWithoutColour): see the [WWDC&nbsp;2019&nbsp;video](../wwdc/2019/#VisualDesignAccessibility) for a detailed description of this **iOS 13 new feature**.
+- **Differentiate Without Colour** (UIAccessibilityShouldDifferentiateWithoutColour): see the [WWDC&nbsp;2019&nbsp;video](../wwdc/2019/#VisualDesignAccessibility) for a detailed description of this **iOS&nbsp;13 new feature** and the [WWDC&nbsp;2020&nbsp;video](../wwdc/2020/020/#color-shapes) for its **programmatic access from iOS&nbsp;14**.
 
 ![Access illustration via Settings - Accessibility - Display & Text Size - Differentiate Without Colour](../../images/optionA11Y_iOS13_differentiateWithoutColour.png)
 </br>

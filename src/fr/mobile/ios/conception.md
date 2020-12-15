@@ -5,8 +5,10 @@ displayToc: true
 
 # Les critères de conception iOS
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.
-Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.
-<br><br>
+</br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.
+
+<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance du visuel." src="../../images/conception-intro-wwdc.png"/>
+</a>
 ## Images
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -136,6 +138,8 @@ Dans ce cas, l'utilisation de l'option d'accessibilité <a style="text-decoratio
 - Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span> ou avec la fonctionnalité [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019#contraste-des-couleurs-0626) de l'outil <span lang="en">Accessibility&nbsp;Inspector</span> depuis Xcode 11).
 
 - Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">augmenter&nbsp;le&nbsp;contraste</a>.
+
+- Le <a href="../wwdc/2020/020/" style="text-decoration: underline;">résumé détaillé</a> de la vidéo WWDC 2020 intitulée **<span lang="en">Make Your App Visually Accessible</span>** est un excellent point d'entrée pour se faire une idée précise des directions à suivre (en particulier la partie 'COULEUR & FORMES' - 'Contraste des couleurs').
 </div>
 </div></br></br>
 
@@ -929,6 +933,9 @@ Les options d'accessibilité présentes dans les réglages du terminal sont tout
 
 - **Tester** chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.
 
+<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/>
+</a>
+
 **Cible&nbsp;:** tout le monde.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 </div>
@@ -1164,7 +1171,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 <a name="optionA11Y_inverserLesCouleurs"></a>
 
-- **Inverser les couleurs** (UIAccessibilityIsInvertColorsEnabled)&nbsp;: limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue oculaires en passant le terminal en mode assombri.
+- **Inverser les couleurs** (UIAccessibilityIsInvertColorsEnabled)&nbsp;: limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue oculaires en passant le terminal en mode assombri ⟹ cette option peut ne pas être activée sur cetrains éléments grâce à la propriété <a href="../wwdc/2020/020/#couleur-formes" style="text-decoration: underline;">`accessibilityIgnoresInvertColors`</a>.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1450,7 +1457,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
 
-- **Différencier sans couleur** (UIAccessibilityShouldDifferentiateWithoutColour)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#couleur) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
+- **Différencier sans couleur** (UIAccessibilityShouldDifferentiateWithoutColour)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#couleur) pour un descriptif de cette **nouvelle fonctionnalité iOS&nbsp;13** et de son **[accès&nbsp;programmatique](../wwdc/2020/020/#couleur-formes) possible à partir de iOS&nbsp;14**.
 
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur](../../images/optionA11Y_iOS13_differentiateWithoutColour.png)
 </br></br></br>
