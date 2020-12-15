@@ -183,8 +183,9 @@
         <main id="main-content" class="col-md-9" role="main">
           <h1>iOS design criteria</h1>
 <p>This guide aims to present the different accessibility criteria for getting an accessible iOS application.<br>
-<br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.<br>
-<br><br></p>
+<br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.</p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Access to the WWDC video highlighting the importance ofthe visual." src="../../images/conception-intro-wwdc.png"/><br>
+</a></p>
 <h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -314,6 +315,9 @@ The label “film | 8:40 PM…” does not have enough contrast and will not be 
 </li>
 <li>
 <p>With the <strong>Dark Mode</strong> since iOS 13, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Increase Contrast</a> accessibility option.</p>
+</li>
+<li>
+<p>The <a href="../wwdc/2020/020/" style="text-decoration: underline;">detailed summary</a> of the WWDC 2020 video entitled <strong>Make Your App Visually Accessible</strong> is a perfect start to follow the appropriate instructions (especially the section 'COLOR &amp; SHAPES' - 'Contrast').</p>
 </li>
 </ul>
 </div>
@@ -1068,6 +1072,8 @@ Sometimes some words and texts of an application are in a different language.</p
 <p>To <strong>test</strong> each appropriate option so as to be sure that its purpose is completely taken into account inside the application.</p>
 </li>
 </ul>
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Access to the WWDC video that highlights the importance of taking into account the user settings inside an application." src="../../images/displayPreferences-wwdc.png"/><br>
+</a></p>
 <p></br><strong>Target:</strong> everyone.<br>
 <strong>When:</strong> as of design and during development.</p>
 </div>
@@ -1301,7 +1307,7 @@ Sometimes some words and texts of an application are in a different language.</p
 </div></div></br>
 <p><a name="optionA11Y_inverserLesCouleurs"></a></p>
 <ul>
-<li><strong>Invert Colours</strong> (UIAccessibilityIsInvertColorsEnabled): reduces glare and eye strain thanks to a very helpful mode for visual impaired people.</li>
+<li><strong>Invert Colours</strong> (UIAccessibilityIsInvertColorsEnabled): reduces glare and eye strain thanks to a very helpful mode for visual impaired people ⟹ this option may be deactivated within an app thanks to the property <a href="../wwdc/2020/020/#color-shapes" style="text-decoration: underline;"><code>accessibilityIgnoresInvertColors</code></a>.</li>
 </ul>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1559,7 +1565,7 @@ Sometimes some words and texts of an application are in a different language.</p
 </br></p>
 <p><a name="optionA11Y_differentiateWithoutColour"></a></p>
 <ul>
-<li><strong>Differentiate Without Colour</strong> (UIAccessibilityShouldDifferentiateWithoutColour): see the <a href="../wwdc/2019/#VisualDesignAccessibility">WWDC 2019 video</a> for a detailed description of this <strong>iOS 13 new feature</strong>.</li>
+<li><strong>Differentiate Without Colour</strong> (UIAccessibilityShouldDifferentiateWithoutColour): see the <a href="../wwdc/2019/#VisualDesignAccessibility">WWDC 2019 video</a> for a detailed description of this <strong>iOS 13 new feature</strong> and the <a href="../wwdc/2020/020/#color-shapes">WWDC 2020 video</a> for its <strong>programmatic access from iOS 14</strong>.</li>
 </ul>
 <p><img src="../../images/optionA11Y_iOS13_differentiateWithoutColour.png" alt="Access illustration via Settings - Accessibility - Display &amp; Text Size - Differentiate Without Colour" class="img-fluid"><br>
 </br></p>

@@ -183,8 +183,9 @@
         <main id="main-content" class="col-md-9" role="main">
           <h1>Les critères de conception iOS</h1>
 <p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.<br>
-Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.<br>
-<br><br></p>
+</br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.</p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance du visuel." src="../../images/conception-intro-wwdc.png"/><br>
+</a></p>
 <h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -312,6 +313,9 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 </li>
 <li>
 <p>Avec l'arrivée du <strong>Mode Sombre</strong> en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">augmenter le contraste</a>.</p>
+</li>
+<li>
+<p>Le <a href="../wwdc/2020/020/" style="text-decoration: underline;">résumé détaillé</a> de la vidéo WWDC 2020 intitulée <strong><span lang="en">Make Your App Visually Accessible</span></strong> est un excellent point d'entrée pour se faire une idée précise des directions à suivre (en particulier la partie 'COULEUR &amp; FORMES' - 'Contraste des couleurs').</p>
 </li>
 </ul>
 </div>
@@ -1053,6 +1057,8 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 <p><strong>Tester</strong> chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.</p>
 </li>
 </ul>
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/><br>
+</a></p>
 <p><strong>Cible :</strong> tout le monde.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 </div>
@@ -1287,7 +1293,7 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
 </div></div></br>
 <p><a name="optionA11Y_inverserLesCouleurs"></a></p>
 <ul>
-<li><strong>Inverser les couleurs</strong> (UIAccessibilityIsInvertColorsEnabled) : limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue oculaires en passant le terminal en mode assombri.</li>
+<li><strong>Inverser les couleurs</strong> (UIAccessibilityIsInvertColorsEnabled) : limite l'éblouissement tout en atténuant fortement les contraintes et la fatigue oculaires en passant le terminal en mode assombri ⟹ cette option peut ne pas être activée sur cetrains éléments grâce à la propriété <a href="../wwdc/2020/020/#couleur-formes" style="text-decoration: underline;"><code>accessibilityIgnoresInvertColors</code></a>.</li>
 </ul>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1545,7 +1551,7 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
 </br></br></br></p>
 <p><a name="optionA11Y_differentiateWithoutColour"></a></p>
 <ul>
-<li><strong>Différencier sans couleur</strong> (UIAccessibilityShouldDifferentiateWithoutColour) : voir <a href="../wwdc/2019/#couleur">WWDC 2019</a> pour un descriptif de cette <strong>nouvelle fonctionnalité iOS 13</strong>.</li>
+<li><strong>Différencier sans couleur</strong> (UIAccessibilityShouldDifferentiateWithoutColour) : voir <a href="../wwdc/2019/#couleur">WWDC 2019</a> pour un descriptif de cette <strong>nouvelle fonctionnalité iOS 13</strong> et de son <strong><a href="../wwdc/2020/020/#couleur-formes">accès programmatique</a> possible à partir de iOS 14</strong>.</li>
 </ul>
 <p><img src="../../images/optionA11Y_iOS13_differentiateWithoutColour.png" alt="Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur" class="img-fluid"><br>
 </br></br></br></p>
