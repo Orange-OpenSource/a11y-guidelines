@@ -8,7 +8,7 @@ Quelques lois françaises ou de l’union européenne à propos de l’accessibi
 
 ## Loi pour une République numérique – Décret n° 2019-768 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne (France)
 
-Le décret publié le 24 juillet 2019 précise les obligations d’accessibilité des services numériques, notamment pour les entreprises privées dont le chiffre d'affaire en France est supérieur à 250 millions d'euros.
+Le décret publié le 24 juillet 2019 précise les obligations d’accessibilité des services numériques, notamment pour les entreprises privées dont le chiffre d'affaires en France est supérieur à 250 millions d'euros.
 
 **Services numériques concernés  :**
 - Sites internet, extranet, intranet, applications métier
@@ -17,12 +17,12 @@ Le décret publié le 24 juillet 2019 précise les obligations d’accessibilit�
 - Progiciels
 
 **Les obligations au niveau de l’entreprise :**
-- Publier un schéma pluriannuel de mise en accessibilité sur maximum 3 ans avec un plan d’action de l’année en cours (en exemple, le schéma pluriannuel d’Orange)
-- Former l’ensemble des parties prenantes du numérique : décideur, acheteur, chef de produit, designer, développeur, qualifieurs, communicants… 
+- Publier un schéma pluriannuel de mise en accessibilité sur maximum 3 ans avec un plan d’action de l’année en cours ([en exemple, le schéma pluriannuel d’Orange](https://www.orange.com/sites/orangecom/files/2020-09/Orange%20Schema%20pluriannuel%20d%20accessibilite%202020%20-%202022.pdf))
+- Former l’ensemble des parties prenantes du numérique : décideur, acheteur, chef de produit, designer, développeur, qualifieur, communicant… 
 
 **Les obligations au niveau de chaque service numérique :**
 - Déclaration d’accessibilité précisant le niveau de conformité, les non conformités, un moyen pour l’utilisateur de signaler un problème
-- Conformité à la norme internationale WCAG 2.1 niveau AA (ou bones pratiques de la technologie utilisée)
+- Conformité à la norme internationale WCAG 2.1 niveau AA (ou bonnes pratiques de la technologie utilisée)
 
 **Applicable à partir du** 
 - 1er octobre 2019 : 	
