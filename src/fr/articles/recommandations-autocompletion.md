@@ -79,7 +79,7 @@ En complément, des tests sur mobile sont réalisés par des experts accessibili
 -	IOS 13 + Safari + VoiceOver
 -	Android 6.0.1+ Chrome + Talkback
 
-Sur les 2 supports la conclusion est la même : 
+Sur ces 2 environnements la conclusion est la même : 
 
 **GOV UK <span lang="en">accessible autocomplete</span>**
 -	Comportement identique au desktop (toutes les vocalisations sont lancées, que ce soit à l’entrée dans le champ, et lors de la navigation dans la liste)
@@ -94,19 +94,19 @@ Sur les 2 supports la conclusion est la même :
 
 Il apparaît que ce sur les supports évalués, l’implémentation du GOV UK est plus robuste.
 
-L’implémentation ARIA repose sur une gestion du focus par `aria-activedescendant`, contrairement à l’implémentation de GOV UK qui repose sur la méthode `focus()`.
+Le <span lang="en">pattern</span> ARIA repose sur une gestion du focus par `aria-activedescendant`, contrairement au composant de GOV UK qui repose sur la méthode `focus()`.
 
 Il est possible que ce soit cette implémentation qui impacte le comportement sur mobile.
 
 C'est en tout cas  une différence significative entre les 2 composants.
 
-Nous avons pris également l’initiative des tester le pattern WAI ARIA 1.2, **encore en draft**.
+Nous avons pris également l’initiative des tester la version WAI ARIA 1.2 de la combobox, **encore en draft**.
 
 Là encore le comportement sur mobile n'est pas concluant, la liste de propositions n'est pas perçue.
 
-Cependant, pour le reste le pattern utilisé se rapproche de l'implémentation GOV UK (par exemple le role=’combobox’ est positionné directement sur l’input dorénavant, contrairement à la version ARIA 1.1).
+Cependant, pour le reste le <span lang="en">pattern</span> utilisé se rapproche de l'implémentation GOV UK (par exemple le `role = "combobox"` est dorénavant positionné directement sur l’`input`, contrairement à la version ARIA 1.1).
 
-A ce stade compte tenu des retours utilisateurs et des points de blocages sur mobile, nous orientons notre choix sur le composant GOV UK, par ailleurs conforté par l’évolution que semble prendre le pattern ARIA 1.2.
+A ce stade compte tenu des retours utilisateurs et des points de blocages sur mobile, nous orientons notre choix sur le composant GOV UK, par ailleurs conforté par l’évolution que semble prendre le <span lang="en">pattern</span> ARIA 1.2.
 
 ## Recommandations
 
@@ -154,15 +154,17 @@ Plus d’informations dans l'article <a href="https://www.levelaccess.com/differ
 
 **Remarques**
 
-1.	Pour rappel, cette solution s’avère plus robuste que gestion du focus par l’attribut aria-descendant, plus d’infos : 
+1.	Pour rappel, cette solution s’avère plus robuste que la gestion de l'élément actif par l’attribut `aria-descendant`, plus d’informations : 
 	a.	<a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex" target="_blank" title="Gestion du focus par tabindex (nouvelle fenêtre)">Gestion du focus par tabindex <span class="sr-only">(nouvelle fenêtre)</span></a>
-	b.	<a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)" target="_blank" title="Gestion du focus par aria-activedescendant (nouvelle fenêtre)">gestion du focus par aria-activedescendant <span class="sr-only">(nouvelle fenêtre)</span></a> 
-2.	La liste de résultats étant rafraichie dynamiquement nous préservons les attributs aria-posinset, etc. afin de fournir une liste à jour au lecteur d’écran.
+	b.	<a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)" target="_blank" title="Gestion du focus par aria-activedescendant (nouvelle fenêtre)">Gestion du focus par aria-activedescendant <span class="sr-only">(nouvelle fenêtre)</span></a> 
+2.	La liste de propositions étant rafraichie dynamiquement nous préservons les attributs `aria-posinset` et `aria-setsize`, afin de fournir une liste à jour au lecteur d’écran, quelques soit le nombre de propositions.
+Cela nous paraît plus robuste afin de palier à d'éventuels défauts d'interprétation des lecteurs d'écran.
+En effet ceux-ci pourraient être induits en erreur dans des cas comme celui-ci, où le contenu d'une liste, et notamment le nombre d'items, est mis à jour dynamiquement.
 Pour information, cette implémentation n’est pas préservée dans la <span lang="en">draft</span> ARIA 1.2.
 
 ### <span lang="en">Feedbacks</span>
 
--	Un message pour indiquer les interactions, exemple GOV UK :
+-	Un message pour indiquer les interactions, exemple issu de GOV UK :
 > Lorsque des résultats sont disponibles, utiliser les flèches haut et bas pour naviguer dans les propositions.
 Depuis un périphérique tactile, explorer en utilisant un balayage
 
@@ -172,11 +174,11 @@ Depuis un périphérique tactile, explorer en utilisant un balayage
 
 **Remarques**
 
-Nous préservons les feedbacks mis en places par GovUK. Ils se sont avérés pertinents pour diriger les utilisateurs dans l’utilisation du composant.
+Nous préservons les feedbacks mis en place par GOV UK. Ils se sont avérés pertinents pour diriger les utilisateurs dans l’utilisation du composant.
 
 **Intégration**
 
-Elément DIV présent dans le <abbr title="Document Object Model" lang="en">DOM</abbr> dès le chargement de la page :
+Un élément `DIV` est présent dans le <abbr title="Document Object Model" lang="en">DOM</abbr> dès le chargement de la page :
 
 -	`role = "status"`
 -	`aria-live = "polite"`
@@ -189,7 +191,7 @@ L’élément `DIV` avec l’attribut `aria-live` est présent dans le DOM dès 
 
 Nous nous assurons ainsi que les aides techniques identifient correctement cette zone dynamique lors de leur analyse du DOM.
 
-A l’initialisation, le `DIV` est vide afin d’éviter une vocalisation intempestive à l’utilisateur.
+A l’initialisation, le `DIV` est vide afin d’éviter une vocalisation intempestive.
 
 Les messages sont intégrés dynamiquement selon les actions de l’utilisateur.
 
@@ -207,7 +209,7 @@ La restitution d’un message s’opère dès son intégration dans la zone <spa
 	-	Ferme la `listbox` et repositionne focus dans l'`input`
 	-	Aucun item n’est sélectionné
 	-	Si une sélection est déjà faite, le focus est repositionné dans le champ sans le vider
--	**Fleche droite/gauche :** repositionner curseur dans l’input sans fermer la listbox
+-	**Fleche droite/gauche :** repositionner curseur dans la combobox sans fermer la listbox
 -	**Touche TAB depuis la combobox :** poursuivre le parcours focus, donc l’utilisateur est positionné sur l’élément suivant éligible au focus (`input`, `button`, `link`, …)
 -	**Touche TAB depuis la listbox :**
 	-	Poursuivre le parcours focus
@@ -218,16 +220,16 @@ La restitution d’un message s’opère dès son intégration dans la zone <spa
 	
 **Remarques**
 
-1.	Le composant GOV UK ne reprend pas l’ajout automatiquement de la valeur lors d’une tabulation.
-Nous faisons ici le choix de nous aligner sur le comportement natif de l’autocomplétion
-2.	Les flèches permettent de se repositionner dans l’input, là encore nous choisissons de nous aligner sur le comportement natif (contrairement cette fois-ci au pattern ARIA 1.2 <span lang="en">draft</span>)
+1.	Le composant GOV UK ne reprend pas l’ajout automatique de la valeur lors d’une tabulation.
+Nous faisons ici le choix de nous aligner sur le comportement natif de l’autocomplétion.
+2.	Les flèches permettent de se repositionner dans la combobox, là encore nous choisissons de nous aligner sur le comportement natif (contrairement cette fois-ci au pattern ARIA 1.2 <span lang="en">draft</span>)
 
 ### Ressources
 
--	<a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, composant accessible autocomplete (nouvelle fenêtre)">GOV UK, composant <span lang="en">accessible autocomplete</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
+-	<a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (nouvelle fenêtre)">GOV UK, <span lang="en">accessible autocomplete</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
 -	<a href="https://designnotes.blog.GOV UK/2017/04/20/were-building-an-autocomplete/" target="_blank" title="Article We’re building an autocomplete (nouvelle fenêtre)">Article <span lang="en">We’re building an autocomplete</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
 -	<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="WAI-ARIA Authoring Practices 1.1 Combobox (nouvelle fenêtre)"><span lang="en">WAI-ARIA Authoring Practices 1.1 Combobox </span> <span class="sr-only">(nouvelle fenêtre)</span></a>
 -	<a href="https://pidila.gitlab.io/select-a11y/" target="_blank" title="Select-a11y - demo (nouvelle fenêtre)"><span lang="en">Select-a11y - demo</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
 -	<a href="https://www.24a11y.com/2019/select-your-poison/" target="_blank" title="Select your poison (nouvelle fenêtre)"><span lang="en">Select your poison</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
 -	<a href="https://www.24a11y.com/2019/select-your-poison-part-2/" target="_blank" title="Select your poison part 2 (nouvelle fenêtre)"><span lang="en">Select your poison part 2</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
--	<a href="-	https://www.levelaccess.com/differences-aria-1-0-1-1-changes/" target="_blank" title="Differences between ARIA 1.0 and 1.1: Changes (nouvelle fenêtre)"><span lang="en">Differences between ARIA 1.0 and 1.1: Changes</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
+-	<a href="https://www.levelaccess.com/differences-aria-1-0-1-1-changes/" target="_blank" title="Differences between ARIA 1.0 and 1.1: Changes (nouvelle fenêtre)"><span lang="en">Differences between ARIA 1.0 and 1.1: Changes</span> <span class="sr-only">(nouvelle fenêtre)</span></a>
