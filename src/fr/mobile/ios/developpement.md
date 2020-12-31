@@ -7,11 +7,11 @@ displayToc: true
 
 Ce guide a pour objectif de présenter les différentes notions d’accessibilité à la main des développeurs en associant&nbsp;:
 
-- Des explications détaillées concernant les attributs et méthodes d'accessibilité.
+- des explications détaillées concernant les attributs et méthodes d'accessibilité,
 
-- Des exemples de code en **Swift 5.1** et en **Objective C** *(Xcode 11, iOS 13)*.
+- des exemples de code en **Swift 5.3** et en **Objective C** sous {Xcode 13 ; iOS 14},
 
-- Des liens vers la [`documentation officielle Apple`](https://developer.apple.com/documentation/uikit/accessibility).
+- des liens vers la [`documentation officielle Apple`](https://developer.apple.com/documentation/uikit/accessibility).
 
 <br><br>
 
@@ -540,69 +540,6 @@ UIAccessibility.post(notification: .announcement,
 </div>
 </div>
 <br><br>
-
-## Modifier la langue de vocalisation
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active"
-           data-toggle="tab" 
-           href="#changeLang-Details" 
-           role="tab" 
-           aria-selected="true">Fonctionnement</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Example" 
-           role="tab" 
-           aria-selected="false">Exemple</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Links" 
-           role="tab" 
-           aria-selected="false">Lien</a>
-    </li>
-</ul><div class="tab-content">
-<div class="tab-pane show active"
-     id="changeLang-Details"
-     role="tabpanel">
-
-Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> pour un mot ou un texte, il existe l’attribut **accessibilityLanguage**.
-
-Disponible via le protocole `UIAccessibility`, cet attribut permet de redéfinir la langue de prononciation d’un texte.
-
-</div>
-<div class="tab-pane" id="changeLang-Example" role="tabpanel">
-
-Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-ci sera vocalisé par <span lang="en">VoiceOver</span> dans la nouvelle langue donnée en valeur de l’attribut.<br>
-
-<pre><code class="objectivec">
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLanguage = @"en";
-    myLabel.accessibilityLabel = @"This is a new label. Thank you.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre>
-
-<pre><code class="swift">
-@IBAction func tapHere(_ sender: UIButton) {
-        
-    myLabel.accessibilityLanguage = "en"
-    myLabel.accessibilityLabel = "This is a new label. Thank you."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-</code></pre>
-
-</div>
-<div class="tab-pane" id="changeLang-Links" role="tabpanel">
-
-- [`accessibilityLanguage`](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage)
-</div>
-</div><br><br>
 
 ## Informer d’une modification sur la page
 <ul class="nav nav-tabs" role="tablist">
@@ -1580,6 +1517,9 @@ Pour application, supposons que nous avons une vue générique contenant des él
 
 <br><br>**Exemple 1**&nbsp;: passer `Parent A` en vue modale.
 <br>Sachant que `Parent A` et `Parent B` sont au même niveau de la hiérarchie des vues, le simple fait d'activer `accessibilityViewIsModal` sur `Parent A` permet d'obtenir le résulat souhaité.
+
+![](../../images/iOSdev/ModalView_2.png)
+
 <br><br>**Exemple 2**&nbsp;: passer `A2` en vue modale.
 <br>Les vues `A1` et `A3` ne sont pas prises en compte par <span lang="en">VoiceOver</span> car elles sont au même niveau de la hiérarchie des vues que `A2` **MAIS** `Parent B` (ou éventuellement ses sous-vues) sera vocalisé... ce qui n'est pas souhaité.
 
@@ -1851,7 +1791,6 @@ Malheureusement, cela n'est pas pris en compte nativement par le système et seu
     NSString * myString = @"anticonstitutionnellement";
     NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
     
-    paraph.alignment = NSTextAlignmentJustified;
     paraph.hyphenationFactor = 1.0;
     
     UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
@@ -1881,7 +1820,6 @@ class TruncationHyphen: UIViewController {
         let myString = "anticonstitutionnellement"
         
         let paraph = NSMutableParagraphStyle()
-        paraph.alignment = .justified
         paraph.hyphenationFactor = 1.0
         
         let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
@@ -1930,7 +1868,7 @@ class TruncationHyphen: UIViewController {
      id="graphEltSize-Description"
      role="tabpanel">
     
-Tout comme la taille des textes est adaptable selon les réglages d'accessibilité (voir <a href="#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d'une barre de tabulation ou d'outils l'est aussi mais **uniquement depuis iOS11 avec Xcode 9**.
+Tout comme la taille des textes est adaptable selon les réglages d'accessibilité (voir <a href="#taille-des-textes">la&nbsp;rubrique&nbsp;précédente</a>), la taille des images ainsi que celle des éléments d'une barre de tabulation ou d'outils l'est aussi mais **uniquement depuis iOS11 avec Xcode 9**.
 </div>
 <div class="tab-pane" id="graphEltSize-Example" role="tabpanel" >
 
@@ -1952,7 +1890,7 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
 
 **ATTENTION : s'assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.**
 <br><br>De façon à pouvoir tester à la fois le grossissement des images et celui d'un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l'image du logo Orange.
-<br>Après modification du grossissement de texte dans les réglages (voir <a href="#taille-des-textes">la rubrique précédente</a>), on revient dans l'application pour constater&nbsp;:
+<br>Après modification du grossissement de texte dans les réglages (voir <a href="#taille-des-textes">la&nbsp;rubrique&nbsp;précédente</a>), on revient dans l'application pour constater&nbsp;:
 
 - une taille de l'image Orange nettement plus conséquente,
 
@@ -2004,7 +1942,7 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
      id="largeContentViewer-Description"
      role="tabpanel">
 
-Le `Dynamic`&nbsp;`Type` permet le grossissement de tous les éléments graphiques avec une particularité pour les éléments {`navigation`/`tab`/`status bars` + `toolbars`} pour lesquels un appui long est nécessaire pour afficher un `HUD` en plein écran appelé **Large Content Viewer** *(voir <a href="#taille-des-elements-graphiques">Taille des éléments graphiques</a>)*.
+Le `Dynamic`&nbsp;`Type` permet le grossissement de tous les éléments graphiques avec une particularité pour les éléments {`navigation`/`tab`/`status bars` + `toolbars`} pour lesquels un appui long est nécessaire pour afficher un `HUD` en plein écran appelé **Large Content Viewer** (voir <a href="#taille-des-elements-graphiques">Taille&nbsp;des&nbsp;éléments graphiques</a>).
 </div>
 <div class="tab-pane" id="largeContentViewer-Details" role="tabpanel">
     

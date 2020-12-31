@@ -7,7 +7,7 @@ displayToc: true
 
 This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
 
-Code snippets are also available to show the different possible implementations {(*Swift 5.1*, *Objective C*) + (*Xcode 11*, *iOS 13*)}.
+Code snippets are also available to show the different possible implementations {(*Swift 5.3*, *Objective C*) + (*Xcode 12*, *iOS 14*)}.
 
 <br><br>
 
@@ -529,69 +529,6 @@ UIAccessibility.post(notification: .announcement,
 - [`UIAccessibilityAnnouncementNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilityannouncementnotification)
 </div>
 </div><br><br>
-
-## Change the vocalization language
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active"
-           data-toggle="tab" 
-           href="#changeLang-Details" 
-           role="tab" 
-           aria-selected="true">Details</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Example" 
-           role="tab" 
-           aria-selected="false">Example</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Links" 
-           role="tab" 
-           aria-selected="false">Link</a>
-    </li>
-</ul><div class="tab-content">
-<div class="tab-pane show active"
-     id="changeLang-Details"
-     role="tabpanel">
-     
-To change the vocalization language of VoiceOver for a word or a sentence, one can use the **accessibilityLanguage**&nbsp; attribute.
-
-Available through the `UIAccessibility` informal protocol, this attribute allows to specify a language for a dedicated text.
-
-</div>
-<div class="tab-pane" id="changeLang-Example" role="tabpanel">
-
-If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocalized by VoiceOver in the language set on this attribute.
-<pre><code class="objectivec">
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLanguage = @"fr";
-    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre>
-
-<pre><code class="swift">
-@IBAction func tapHere(_ sender: UIButton) {
-        
-    myLabel.accessibilityLanguage = "fr"
-    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-</code></pre>
-
-</div>
-<div class="tab-pane" id="changeLang-Links" role="tabpanel">  
-
-- [`accessibilityLanguage`](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage)
-</div>
-</div>
-<br><br>
 
 ## Notify a content change
 <ul class="nav nav-tabs" role="tablist">
@@ -1576,6 +1513,8 @@ For the examples, let's assume we have a main view containting the following acc
 
 Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is enough to get the desired result.
 
+![](../../images/iOSdev/ModalView_2.png)
+
 <br><br>**Example 2**: `A2` view as modal.
 
 `A1` and `A3` aren't taken into account by VoiceOver because they're `A2` siblings **BUT** `Parent B` (or possibly its subviews) will be vocalized... and that's definitely not the goal.
@@ -1851,7 +1790,6 @@ Unfortunately, the iOS system doesn't handle natively this point that can be imp
     NSString * myString = @"floccinaucinihilipilification";
     NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
     
-    paraph.alignment = NSTextAlignmentJustified;
     paraph.hyphenationFactor = 1.0;
     
     UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
@@ -1881,7 +1819,6 @@ class TruncationHyphen: UIViewController {
         let myString = "floccinaucinihilipilification"
         
         let paraph = NSMutableParagraphStyle()
-        paraph.alignment = .justified
         paraph.hyphenationFactor = 1.0
         
         let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
@@ -2005,7 +1942,7 @@ To illustrate these new features, the example below is obtained by following the
      
 This feature **introduced in iOS 11** allows people with low vision to use UIKit bar elements as effective as the `Dynamic`&nbsp;`Type` grows the text size.
 
-To trigger this **Large Content Viewer** *(see <a href="#graphical-elements-size">Graphical&nbsp;elements&nbsp;size</a>)*, the user must long press the element to see a larger version in the middle of the screen.
+To trigger this **Large Content Viewer** (see <a href="#graphical-elements-size">Graphical&nbsp;elements&nbsp;size</a>), the user must long press the element to see a larger version in the middle of the screen.
 </div>
 <div class="tab-pane" id="largeContentViewer-Details" role="tabpanel">
     

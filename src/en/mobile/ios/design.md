@@ -990,7 +990,7 @@ The full list of these options including their purpose and their coding name is 
 
 <a name="optionA11Y_contraste"></a>
 
-- **Increase Contrast** (UIAccessibilityDarkerSystemColorsEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230#Contrast) for a detailed description.
+- **Increase Contrast** (UIAccessibilityDarkerSystemColorsEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#contrast-0438) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1053,7 +1053,7 @@ The full list of these options including their purpose and their coding name is 
 
 <a name="optionA11Y_bold"></a>
 
-- **Bold Text** (UIAccessibilityIsBoldTextEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230#Sizing) for a detailed description.
+- **Bold Text** (UIAccessibilityIsBoldTextEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#sizing-0704) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1233,7 +1233,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div></br>
 
 <a name="optionA11Y_limiteVisuel"></a>
-- **Reduce Motion** (UIAccessibilityIsReduceMotionEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230#Motion) for a detailed description.
+- **Reduce Motion** (UIAccessibilityIsReduceMotionEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#motion-0848) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1263,7 +1263,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div></br>
 
 <a name="optionA11Y_reductionTransparence"></a>
-- **Reduce Transparency** (UIAccessibilityIsReduceTransparencyEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230#TransparencyAndBlurring) for a detailed description.
+- **Reduce Transparency** (UIAccessibilityIsReduceTransparencyEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#transparency-and-blurring-0307) for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1443,13 +1443,13 @@ The full list of these options including their purpose and their coding name is 
 </div></div></br>
 
 <a name="optionA11Y_autoPlayVideoPreviews"></a>
-- **Auto-Play Video Previews** (UIAccessibilityIsVideoAutoplayEnabled): see the [WWDC&nbsp;2019&nbsp;video](../wwdc/2019/#VisualDesignAccessibility) for a detailed description of this **iOS 13 new feature**.
+- **Auto-Play Video Previews** (UIAccessibilityIsVideoAutoplayEnabled): see the [WWDC&nbsp;2019&nbsp;video](../wwdc/2019/#reduce-motion) for a detailed description of this **iOS 13 new feature**.
 
 ![Access illustration via Settings - Accessibility - Motion - Auto-play Video Previews](../../images/optionA11Y_iOS13_autoPlayVideoPreviews.png)
 </br>
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
-- **Differentiate Without Colour** (UIAccessibilityShouldDifferentiateWithoutColour): see the [WWDC&nbsp;2019&nbsp;video](../wwdc/2019/#VisualDesignAccessibility) for a detailed description of this **iOS&nbsp;13 new feature** and the [WWDC&nbsp;2020&nbsp;video](../wwdc/2020/020/#color-shapes) for its **programmatic access from iOS&nbsp;14**.
+- **Differentiate Without Colour** (UIAccessibilityShouldDifferentiateWithoutColour): see the [WWDC&nbsp;2019&nbsp;video](../wwdc/2019/#color) for a detailed description of this **iOS&nbsp;13 new feature** and the [WWDC&nbsp;2020&nbsp;video](../wwdc/2020/020/#color-shapes) for its **programmatic access from iOS&nbsp;14**.
 
 ![Access illustration via Settings - Accessibility - Display & Text Size - Differentiate Without Colour](../../images/optionA11Y_iOS13_differentiateWithoutColour.png)
 </br>
