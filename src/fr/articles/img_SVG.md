@@ -78,7 +78,7 @@ Plusieurs choix possibles&nbsp;:
 &lt;/a&gt;
 </code></pre>
 
-On utilise `focusable="false"` pour éviter toute prise de focus sur le SVG en plus du lien `a`) par IE 10.
+On utilise `focusable="false"` pour éviter toute prise de focus sur le SVG (en plus du lien `a`) par <abbr>IE</abbr>> 10 et Edge.
 C’est la meilleure solution, la plus robuste mais pas toujours possible d’afficher un texte (contrainte graphique/design/marketing…).
 Alors, voici une alternative qui permet de  cacher visuellement le texte pour un bouton ou un lien tout en le laissant lisible par les aides techniques via `aria-labelledby`&nbsp;:
 

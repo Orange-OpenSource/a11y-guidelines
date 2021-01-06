@@ -25,7 +25,7 @@ Important: So remember to test your implementations on the browsers/assistive te
 &lt;/svg&gt;
 </code> </pre>
 
-We use `focusable ="false"` to avoid any focus on SVG by IE (> 10 and Edge)
+We use `focusable ="false"` to avoid any focus on SVG by <abbr>IE</abbr> (> 10 and Edge)
 
 In addition, you must make sure that the `svg` tag or one of its children (`<g>`,`<path>`...) does not have any attribute to provide it with an accessible name (` title`, `desc `,` aria- * `…).
 
