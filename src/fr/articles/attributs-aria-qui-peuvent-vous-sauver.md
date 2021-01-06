@@ -1,7 +1,7 @@
 ---
 title: "Les attributs ARIA qui peuvent vous sauver !"
-abstract: "Quelques attributs ARIA à connaître."
-date: "2018-01-08"
+abstract: "Quelques attributs ARIA à connaître pour avoir un nom accessible"
+date: "2019-01-01"
 tags:
   - web
 ---

@@ -24,7 +24,7 @@ On peut déclencher une alerte en insérant un nouvel élément dans le <abbr>DO
 <pre><code class="html">&lt;span role="alert"&gt;Ceci est un message d'alerte.&lt;/span&gt;</code></pre>
 
 ### Ajouter un role alert sur un élément existant
-Le déclenchement d'une alerte peut également s'effectuer en ajoutant un `role="alert"` à un élément existant dynamiquement via Javascript.
+Le déclenchement d'une alerte peut également s'effectuer en ajoutant un `role="alert"`, à un élément existant, dynamiquement via Javascript.
 
 <pre><code class="js">
 document.getElementById('alert').setAttribute("role", "alert");
@@ -34,7 +34,7 @@ document.getElementById('alert').setAttribute("role", "alert");
 
 Créer une alerte via la propriété innerHTML.
 <pre><code class="js">
-element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt';
+element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
 </code></pre>
 
 ## L'attribut `aria-live`
@@ -49,7 +49,7 @@ Trois valeurs sont possibles :
 Il est fortement recommandé que l'attribut `aria-live` soit positionné sur l'élément dès le chargement de la page pour maximiser la compatibilité avec les différents couples navigateurs et lecteurs d'écran.
 
 <pre><code class="html">
-&lt;span aria-live="polite"&gt;5 éléments sélectionnés&lt/span&gt;
+&lt;span aria-live="polite"&gt;5 éléments sélectionnés&lt;/span&gt;
 </code></pre>
   
 Des attributs supplémentaires permettent de modifier finement le comportement par défaut d'`aria-live`&nbsp;:
