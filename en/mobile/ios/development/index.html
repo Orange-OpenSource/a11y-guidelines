@@ -171,7 +171,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#change-the-vocalization-language" class="dropdown-item text-wrap">Change the vocalization language</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
     </nav>
         
       </div>
@@ -183,7 +183,7 @@
         <main id="main-content" class="col-md-9" role="main">
           <h1>iOS developer guide</h1>
 <p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes / methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>Apple official documentation</code></a>.</p>
-<p>Code snippets are also available to show the different possible implementations {(<em>Swift 5.1</em>, <em>Objective C</em>) + (<em>Xcode 11</em>, <em>iOS 13</em>)}.</p>
+<p>Code snippets are also available to show the different possible implementations {(<em>Swift 5.3</em>, <em>Objective C</em>) + (<em>Xcode 12</em>, <em>iOS 14</em>)}.</p>
 <p><br><br></p>
 <h2 id="element-trait">Element trait <a class="header-anchor" href="#element-trait" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
@@ -677,63 +677,6 @@ UIAccessibility.post(notification: .announcement,
 </ul>
 </div>
 </div><br><br>
-<h2 id="change-the-vocalization-language">Change the vocalization language <a class="header-anchor" href="#change-the-vocalization-language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active"
-           data-toggle="tab" 
-           href="#changeLang-Details" 
-           role="tab" 
-           aria-selected="true">Details</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Example" 
-           role="tab" 
-           aria-selected="false">Example</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Links" 
-           role="tab" 
-           aria-selected="false">Link</a>
-    </li>
-</ul><div class="tab-content">
-<div class="tab-pane show active"
-     id="changeLang-Details"
-     role="tabpanel">
-<p>To change the vocalization language of VoiceOver for a word or a sentence, one can use the <strong>accessibilityLanguage</strong>  attribute.</p>
-<p>Available through the <code>UIAccessibility</code> informal protocol, this attribute allows to specify a language for a dedicated text.</p>
-</div>
-<div class="tab-pane" id="changeLang-Example" role="tabpanel">
-<p>If we use the <code>accessibilityLanguage</code> attribute on a <code>UILabel</code>, it will be vocalized by VoiceOver in the language set on this attribute.</p>
-<pre><code class="objectivec">
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLanguage = @"fr";
-    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre>
-<pre><code class="swift">
-@IBAction func tapHere(_ sender: UIButton) {
-        
-    myLabel.accessibilityLanguage = "fr"
-    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-</code></pre>
-</div>
-<div class="tab-pane" id="changeLang-Links" role="tabpanel">  
-<ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage"><code>accessibilityLanguage</code></a></li>
-</ul>
-</div>
-</div>
-<br><br>
 <h2 id="notify-a-content-change">Notify a content change <a class="header-anchor" href="#notify-a-content-change" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1693,6 +1636,7 @@ float heightVal;
 <p><img src="../../images/iOSdev/ModalView_1.png" alt="" class="img-fluid"></p>
 <p><br><br><strong>Example 1</strong>: <code>Parent A</code> view as modal.</p>
 <p>Because <code>Parent B</code> is a <code>Parent A</code> sibling, <code>accessibilityViewIsModal = true</code> is enough to get the desired result.</p>
+<p><img src="../../images/iOSdev/ModalView_2.png" alt="" class="img-fluid"></p>
 <p><br><br><strong>Example 2</strong>: <code>A2</code> view as modal.</p>
 <p><code>A1</code> and <code>A3</code> aren't taken into account by VoiceOver because they're <code>A2</code> siblings <strong>BUT</strong> <code>Parent B</code> (or possibly its subviews) will be vocalized... and that's definitely not the goal.</p>
 <p><img src="../../images/iOSdev/ModalView_3.png" alt="" class="img-fluid"><br>
@@ -1965,7 +1909,6 @@ Don't forget to include the settings for the navigation/tab/status bar and toolb
     NSString * myString = @"floccinaucinihilipilification";
     NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
     
-    paraph.alignment = NSTextAlignmentJustified;
     paraph.hyphenationFactor = 1.0;
     
     UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
@@ -1994,7 +1937,6 @@ class TruncationHyphen: UIViewController {
         let myString = "floccinaucinihilipilification"
         
         let paraph = NSMutableParagraphStyle()
-        paraph.alignment = .justified
         paraph.hyphenationFactor = 1.0
         
         let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
@@ -2120,7 +2062,7 @@ class TruncationHyphen: UIViewController {
      id="largeContentViewer-Description"
      role="tabpanel">
 <p>This feature <strong>introduced in iOS 11</strong> allows people with low vision to use UIKit bar elements as effective as the <code>Dynamic</code> <code>Type</code> grows the text size.</p>
-<p>To trigger this <strong>Large Content Viewer</strong> <em>(see <a href="#graphical-elements-size">Graphical elements size</a>)</em>, the user must long press the element to see a larger version in the middle of the screen.</p>
+<p>To trigger this <strong>Large Content Viewer</strong> (see <a href="#graphical-elements-size">Graphical elements size</a>), the user must long press the element to see a larger version in the middle of the screen.</p>
 </div>
 <div class="tab-pane" id="largeContentViewer-Details" role="tabpanel">
 <p>When implementing the <code>Dynamic</code> <code>Type</code> feature, <strong>iOS 13</strong> allows to show the same UI that's shown for standard UIKit bar items for every element that conforms to the <strong>UILargeContentViewerItem</strong> protocol.</p>
@@ -3880,8 +3822,6 @@ class ViewController: UIViewController {
             <a href="#date-time-and-numbers" class="nav-link text-muted bg-200">Date, time and numbers</a>
           </li><li class="nav-item position-relative">
             <a href="#trigger-a-vocalization" class="nav-link text-muted bg-200">Trigger a vocalization</a>
-          </li><li class="nav-item position-relative">
-            <a href="#change-the-vocalization-language" class="nav-link text-muted bg-200">Change the vocalization language</a>
           </li><li class="nav-item position-relative">
             <a href="#notify-a-content-change" class="nav-link text-muted bg-200">Notify a content change</a>
           </li><li class="nav-item position-relative">

@@ -171,7 +171,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#nature-des-elements" class="dropdown-item text-wrap">Nature des éléments</a><a href="#alternatives-textuelles" class="dropdown-item text-wrap">Alternatives textuelles</a><a href="#date-heure-et-nombres" class="dropdown-item text-wrap">Date, heure et nombres</a><a href="#declencher-une-vocalisation" class="dropdown-item text-wrap">Déclencher une vocalisation</a><a href="#modifier-la-langue-de-vocalisation" class="dropdown-item text-wrap">Modifier la langue de vocalisation</a><a href="#informer-dune-modification-sur-la-page" class="dropdown-item text-wrap">Informer d’une modification sur la page</a><a href="#masquer-des-elements" class="dropdown-item text-wrap">Masquer des éléments</a><a href="#grouper-des-elements" class="dropdown-item text-wrap">Grouper des éléments</a><a href="#ordre-de-lecture" class="dropdown-item text-wrap">Ordre de lecture</a><a href="#focus-dun-element" class="dropdown-item text-wrap">Focus d&#39;un élément</a><a href="#modifier-la-zone-de-focus-de-voiceover" class="dropdown-item text-wrap">Modifier la zone de focus de VoiceOver</a><a href="#vue-modale" class="dropdown-item text-wrap">Vue modale</a><a href="#taille-des-textes" class="dropdown-item text-wrap">Taille des textes</a><a href="#trait-dunion-de-troncature" class="dropdown-item text-wrap">Trait d&#39;union de troncature</a><a href="#taille-des-elements-graphiques" class="dropdown-item text-wrap">Taille des éléments graphiques</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#valeurs-continument-ajustables" class="dropdown-item text-wrap">Valeurs continûment ajustables</a><a href="#actions-personnalisees" class="dropdown-item text-wrap">Actions personnalisées</a><a href="#rotor-personnalise" class="dropdown-item text-wrap">Rotor personnalisé</a><a href="#options-daccessibilite" class="dropdown-item text-wrap">Options d’accessibilité</a><a href="#barre-de-navigation" class="dropdown-item text-wrap">Barre de navigation</a><a href="#vocalisation-synthetisee" class="dropdown-item text-wrap">Vocalisation synthétisée</a><a href="#controle-de-selection" class="dropdown-item text-wrap">Contrôle de sélection</a><a href="#vocalisation-du-nom-de-lapplication" class="dropdown-item text-wrap">Vocalisation du nom de l&#39;application</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#nature-des-elements" class="dropdown-item text-wrap">Nature des éléments</a><a href="#alternatives-textuelles" class="dropdown-item text-wrap">Alternatives textuelles</a><a href="#date-heure-et-nombres" class="dropdown-item text-wrap">Date, heure et nombres</a><a href="#declencher-une-vocalisation" class="dropdown-item text-wrap">Déclencher une vocalisation</a><a href="#informer-dune-modification-sur-la-page" class="dropdown-item text-wrap">Informer d’une modification sur la page</a><a href="#masquer-des-elements" class="dropdown-item text-wrap">Masquer des éléments</a><a href="#grouper-des-elements" class="dropdown-item text-wrap">Grouper des éléments</a><a href="#ordre-de-lecture" class="dropdown-item text-wrap">Ordre de lecture</a><a href="#focus-dun-element" class="dropdown-item text-wrap">Focus d&#39;un élément</a><a href="#modifier-la-zone-de-focus-de-voiceover" class="dropdown-item text-wrap">Modifier la zone de focus de VoiceOver</a><a href="#vue-modale" class="dropdown-item text-wrap">Vue modale</a><a href="#taille-des-textes" class="dropdown-item text-wrap">Taille des textes</a><a href="#trait-dunion-de-troncature" class="dropdown-item text-wrap">Trait d&#39;union de troncature</a><a href="#taille-des-elements-graphiques" class="dropdown-item text-wrap">Taille des éléments graphiques</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#valeurs-continument-ajustables" class="dropdown-item text-wrap">Valeurs continûment ajustables</a><a href="#actions-personnalisees" class="dropdown-item text-wrap">Actions personnalisées</a><a href="#rotor-personnalise" class="dropdown-item text-wrap">Rotor personnalisé</a><a href="#options-daccessibilite" class="dropdown-item text-wrap">Options d’accessibilité</a><a href="#barre-de-navigation" class="dropdown-item text-wrap">Barre de navigation</a><a href="#vocalisation-synthetisee" class="dropdown-item text-wrap">Vocalisation synthétisée</a><a href="#controle-de-selection" class="dropdown-item text-wrap">Contrôle de sélection</a><a href="#vocalisation-du-nom-de-lapplication" class="dropdown-item text-wrap">Vocalisation du nom de l&#39;application</a></div>
     </nav>
         
       </div>
@@ -185,13 +185,13 @@
 <p>Ce guide a pour objectif de présenter les différentes notions d’accessibilité à la main des développeurs en associant :</p>
 <ul>
 <li>
-<p>Des explications détaillées concernant les attributs et méthodes d'accessibilité.</p>
+<p>des explications détaillées concernant les attributs et méthodes d'accessibilité,</p>
 </li>
 <li>
-<p>Des exemples de code en <strong>Swift 5.1</strong> et en <strong>Objective C</strong> <em>(Xcode 11, iOS 13)</em>.</p>
+<p>des exemples de code en <strong>Swift 5.3</strong> et en <strong>Objective C</strong> sous {Xcode 13 ; iOS 14},</p>
 </li>
 <li>
-<p>Des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle Apple</code></a>.</p>
+<p>des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle Apple</code></a>.</p>
 </li>
 </ul>
 <p><br><br></p>
@@ -698,62 +698,6 @@ UIAccessibility.post(notification: .announcement,
 </div>
 </div>
 <br><br>
-<h2 id="modifier-la-langue-de-vocalisation">Modifier la langue de vocalisation <a class="header-anchor" href="#modifier-la-langue-de-vocalisation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active"
-           data-toggle="tab" 
-           href="#changeLang-Details" 
-           role="tab" 
-           aria-selected="true">Fonctionnement</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Example" 
-           role="tab" 
-           aria-selected="false">Exemple</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" 
-           data-toggle="tab" 
-           href="#changeLang-Links" 
-           role="tab" 
-           aria-selected="false">Lien</a>
-    </li>
-</ul><div class="tab-content">
-<div class="tab-pane show active"
-     id="changeLang-Details"
-     role="tabpanel">
-<p>Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> pour un mot ou un texte, il existe l’attribut <strong>accessibilityLanguage</strong>.</p>
-<p>Disponible via le protocole <code>UIAccessibility</code>, cet attribut permet de redéfinir la langue de prononciation d’un texte.</p>
-</div>
-<div class="tab-pane" id="changeLang-Example" role="tabpanel">
-<p>Si on utilise l'attribut <code>accessibilityLanguage</code> sur un <code>UILabel</code>, alors celui-ci sera vocalisé par <span lang="en">VoiceOver</span> dans la nouvelle langue donnée en valeur de l’attribut.<br></p>
-<pre><code class="objectivec">
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLanguage = @"en";
-    myLabel.accessibilityLabel = @"This is a new label. Thank you.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre>
-<pre><code class="swift">
-@IBAction func tapHere(_ sender: UIButton) {
-        
-    myLabel.accessibilityLanguage = "en"
-    myLabel.accessibilityLabel = "This is a new label. Thank you."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-</code></pre>
-</div>
-<div class="tab-pane" id="changeLang-Links" role="tabpanel">
-<ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage"><code>accessibilityLanguage</code></a></li>
-</ul>
-</div>
-</div><br><br>
 <h2 id="informer-dune-modification-sur-la-page">Informer d’une modification sur la page <a class="header-anchor" href="#informer-dune-modification-sur-la-page" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1708,8 +1652,9 @@ float heightVal;
 </ul>
 <p><img src="../../images/iOSdev/ModalView_1.png" alt="" class="img-fluid"></p>
 <p><br><br><strong>Exemple 1</strong> : passer <code>Parent A</code> en vue modale.<br>
-<br>Sachant que <code>Parent A</code> et <code>Parent B</code> sont au même niveau de la hiérarchie des vues, le simple fait d'activer <code>accessibilityViewIsModal</code> sur <code>Parent A</code> permet d'obtenir le résulat souhaité.<br>
-<br><br><strong>Exemple 2</strong> : passer <code>A2</code> en vue modale.<br>
+<br>Sachant que <code>Parent A</code> et <code>Parent B</code> sont au même niveau de la hiérarchie des vues, le simple fait d'activer <code>accessibilityViewIsModal</code> sur <code>Parent A</code> permet d'obtenir le résulat souhaité.</p>
+<p><img src="../../images/iOSdev/ModalView_2.png" alt="" class="img-fluid"></p>
+<p><br><br><strong>Exemple 2</strong> : passer <code>A2</code> en vue modale.<br>
 <br>Les vues <code>A1</code> et <code>A3</code> ne sont pas prises en compte par <span lang="en">VoiceOver</span> car elles sont au même niveau de la hiérarchie des vues que <code>A2</code> <strong>MAIS</strong> <code>Parent B</code> (ou éventuellement ses sous-vues) sera vocalisé... ce qui n'est pas souhaité.</p>
 <p><img src="../../images/iOSdev/ModalView_3.png" alt="" class="img-fluid"><br>
 <br>Pour solutionner ce problème, l'idée est de masquer les éléments non désirables dès lors qu'on active la vue modale.</p>
@@ -1982,7 +1927,6 @@ Il est aussi possible d'utiliser la méthode <strong><a href="../wwdc/2017/245/#
     NSString * myString = @"anticonstitutionnellement";
     NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
     
-    paraph.alignment = NSTextAlignmentJustified;
     paraph.hyphenationFactor = 1.0;
     
     UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
@@ -2011,7 +1955,6 @@ class TruncationHyphen: UIViewController {
         let myString = "anticonstitutionnellement"
         
         let paraph = NSMutableParagraphStyle()
-        paraph.alignment = .justified
         paraph.hyphenationFactor = 1.0
         
         let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
@@ -2057,7 +2000,7 @@ class TruncationHyphen: UIViewController {
 <div class="tab-pane show active"
      id="graphEltSize-Description"
      role="tabpanel">
-<p>Tout comme la taille des textes est adaptable selon les réglages d'accessibilité (voir <a href="#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d'une barre de tabulation ou d'outils l'est aussi mais <strong>uniquement depuis iOS11 avec Xcode 9</strong>.</p>
+<p>Tout comme la taille des textes est adaptable selon les réglages d'accessibilité (voir <a href="#taille-des-textes">la rubrique précédente</a>), la taille des images ainsi que celle des éléments d'une barre de tabulation ou d'outils l'est aussi mais <strong>uniquement depuis iOS11 avec Xcode 9</strong>.</p>
 </div>
 <div class="tab-pane" id="graphEltSize-Example" role="tabpanel" >
 <p>En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini dans la partie Description et présenté graphiquement en exemple à la fin de cette rubrique :</p>
@@ -2080,7 +2023,7 @@ class TruncationHyphen: UIViewController {
 <p><img src="../../images/iOSdev/TailleDesEltsGraphiques_6.png" alt="" class="img-fluid"></p>
 <p><strong>ATTENTION : s'assurer que les contraintes mises en place initialement permettent toujours un affichage cohérent et désiré après grossissement.</strong><br>
 <br><br>De façon à pouvoir tester à la fois le grossissement des images et celui d'un onglet sélectionné, on crée une application contenant une barre de tabulations contenant 2 onglets dont seul le second nous intéresse et affiche l'image du logo Orange.<br>
-<br>Après modification du grossissement de texte dans les réglages (voir <a href="#taille-des-textes">la rubrique précédente</a>), on revient dans l'application pour constater :</p>
+<br>Après modification du grossissement de texte dans les réglages (voir <a href="#taille-des-textes">la rubrique précédente</a>), on revient dans l'application pour constater :</p>
 <ul>
 <li>
 <p>une taille de l'image Orange nettement plus conséquente,</p>
@@ -2137,7 +2080,7 @@ class TruncationHyphen: UIViewController {
 <div class="tab-pane show active"
      id="largeContentViewer-Description"
      role="tabpanel">
-<p>Le <code>Dynamic</code> <code>Type</code> permet le grossissement de tous les éléments graphiques avec une particularité pour les éléments {<code>navigation</code>/<code>tab</code>/<code>status bars</code> + <code>toolbars</code>} pour lesquels un appui long est nécessaire pour afficher un <code>HUD</code> en plein écran appelé <strong>Large Content Viewer</strong> <em>(voir <a href="#taille-des-elements-graphiques">Taille des éléments graphiques</a>)</em>.</p>
+<p>Le <code>Dynamic</code> <code>Type</code> permet le grossissement de tous les éléments graphiques avec une particularité pour les éléments {<code>navigation</code>/<code>tab</code>/<code>status bars</code> + <code>toolbars</code>} pour lesquels un appui long est nécessaire pour afficher un <code>HUD</code> en plein écran appelé <strong>Large Content Viewer</strong> (voir <a href="#taille-des-elements-graphiques">Taille des éléments graphiques</a>).</p>
 </div>
 <div class="tab-pane" id="largeContentViewer-Details" role="tabpanel">
 <p>Disponible depuis iOS 11, cette fonctionnalité était confinée aux seuls éléments UIKit mentionnés précédemment jusqu'à <strong>iOS 13</strong> où son utilisation est désormais possible sur tout élément graphique qui se conforme au protocole <strong>UILargeContentViewerItem</strong>.</p>
@@ -3899,8 +3842,6 @@ class ViewController: UIViewController {
             <a href="#date-heure-et-nombres" class="nav-link text-muted bg-200">Date, heure et nombres</a>
           </li><li class="nav-item position-relative">
             <a href="#declencher-une-vocalisation" class="nav-link text-muted bg-200">Déclencher une vocalisation</a>
-          </li><li class="nav-item position-relative">
-            <a href="#modifier-la-langue-de-vocalisation" class="nav-link text-muted bg-200">Modifier la langue de vocalisation</a>
           </li><li class="nav-item position-relative">
             <a href="#informer-dune-modification-sur-la-page" class="nav-link text-muted bg-200">Informer d’une modification sur la page</a>
           </li><li class="nav-item position-relative">
