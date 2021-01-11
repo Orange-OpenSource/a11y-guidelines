@@ -46,7 +46,3 @@ Pour la propriété `background-image:`, le risque est d'afficher des images por
 
 En désactivant les <abbr>CSS</abbr>, on désactive les règles impliquant les pseudo-éléments et on ignore la propriété `content:`, donc on peut identifier le contenu généré par <abbr>CSS</abbr> et voir s'il y perte d'information. Pour des images insérées en <abbr>CSS</abbr> porteuses d'informations, elles disparaîtrons sans <abbr>CSS</abbr> et c'est une erreur d'accessibilité à laquelle il faut être vigilant.
 
-
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2020  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
