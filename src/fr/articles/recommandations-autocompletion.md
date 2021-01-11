@@ -79,7 +79,7 @@ En complément, des tests sur mobile sont réalisés par des experts accessibili
 -	IOS 13 + Safari + VoiceOver
 -	Android 6.0.1+ Chrome + Talkback
 
-Sur ces 2 environnements la conclusion est la même&nbsp;: 
+Sur ces deux environnements la conclusion est la même&nbsp;: 
 
 **GOV UK <span lang="en">accessible autocomplete</span>**
 -	Comportement identique au desktop (toutes les vocalisations sont lancées, que ce soit à l’entrée dans le champ, et lors de la navigation dans la liste)
@@ -98,7 +98,7 @@ Le <span lang="en">pattern</span> ARIA repose sur une gestion du focus par `aria
 
 Il est possible que ce soit cette implémentation qui impacte le comportement sur mobile.
 
-C'est en tout cas une différence significative entre les dexux composants.
+C'est en tout cas une différence significative entre les deux composants.
 
 Nous avons pris également l’initiative des tester la version WAI ARIA 1.2 de la combobox, **encore en draft**.
 
@@ -133,6 +133,7 @@ Les écarts avec le composant initial sont commentés directement dans les recom
 
 1.	Le role est directement positionné sur l’`input`, contrairement à l’implémentation ARIA 1.1. et conformément à l’implémentation GOV UK et ARIA 1.2 <span lang="en">(draft)</span>, 
 2.	Par contre nous privilégions l’utilisation du `aria-control` au `aria-owns`, qui nous parait plus adaptée au regard de la description du <span lang="en">pattern</span>.
+
 Plus d’informations dans l'article <a href="https://www.levelaccess.com/differences-aria-1-0-1-1-changes/" target="_blank" lang="en" title="Differences between ARIA 1.0 and 1.1: Changes (new window)">Differences between ARIA 1.0 and 1.1: Changes <span class="sr-only">(new window)</span></a>
 
 ### Listbox
@@ -215,6 +216,7 @@ La restitution d’un message s’opère dès son intégration dans la zone <spa
 	-	Poursuivre le parcours focus
 	-	La combobox est renseignée avec la valeur en cours de sélection lors de l’activation de la touche TAB
 -	**Raccourci SHIFT + TAB depuis la listbox&nbsp;:**
+
 	-	Poursuivre le parcours focus en sens inverse
 	-	La combobox est renseignée avec la valeur en cours de sélection lors de l’activation de la touche TAB
 	
