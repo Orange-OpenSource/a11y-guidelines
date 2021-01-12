@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Web-specific methods and tools - Orange digital accessibility guidelines</title>
+    <title>Test by disabling CSS - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -165,7 +165,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Web-specific methods and tools
+          Test by disabling CSS
         </li>
       </ol>
 </nav>
@@ -178,7 +178,7 @@
       </button>
       <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
   Orange Boosted
-</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item active" aria-current="page">
+</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item">
   Methods and test tools
 </a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
   The Va11ydette
@@ -204,7 +204,7 @@
   Orange Boosted
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted active" aria-current="page">
+            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted">
   Methods and test tools
 </a>
           </li><li class="nav-item position-relative">
@@ -226,56 +226,29 @@
           </div>
         
         <main id="main-content" class="col-md-9" role="main">
-          <h1>Web-specific methods and tools</h1>
-<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (WCAG) version 2.1 - level AA.</p>
-<p>The detailed description of the tests can be found in the <a href="/en/web/test/">WCAG criteria by project phase, &quot;tests&quot; section</a>.</p>
-<p>Accessibility tests must be carried out throughout the project life cycle:</p>
-<ul>
-<li>at the start of the project, when choosing the framework, software, or package...</li>
-<li>at the design phase on storyboards or prototypes</li>
-<li>during development and testing</li>
-<li>in production, for content sites</li>
-</ul>
-<h2 id="general-method">General method <a class="header-anchor" href="#general-method" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The approach includes 2 types of tests:</p>
-<ul>
-<li>Technical tests that consist of inspecting the code and colour contrast.</li>
-<li>Functional tests that evaluate the interface's performance with various <abbr>assistive technologies</abbr> to ensure that there are no blocking points in the evaluated content.</li>
-</ul>
-<p>Depending on your profile, you can perform technical tests, functional tests or both, but both are necessary to test the accessibility of a website as a whole.</p>
-<h2 id="method-for-testing-the-web">Method for testing the Web <a class="header-anchor" href="#method-for-testing-the-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="technical-evaluation">Technical evaluation <a class="header-anchor" href="#technical-evaluation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Some of the tests can be performed automatically by tools, but the majority of them require manual check. These tests can be performed by any actor in the project (designer, developer, tester, contributor...).</p>
-<p>Approach:</p>
-<ul>
-<li>There are tools that help you to test the accessibility of your web content: <a href="./browser-extensions/">learn how to perform automatic or semi-automatic tests</a> (whistleblowing) with aXe or Wave browser extensions, for example.</li>
-<li><a href="./color-contrast-level/">Measure the contrast level of the colours</a> with the Colour Contrast Analyser tool.</li>
-<li>Check the valid text spacing via a tool to ensure the readability of the text</li>
-<li><a href="./css-deactivation/">Disable <abbr>CSS</abbr> to check some criteria easily</a></li>
-<li>All other tests must be passed through a manual review of the code, for example, all relevance criteria (consistency of a textual alternative with the content of an image...)</li>
-</ul>
-<h3 id="functional-evaluation">Functional evaluation <a class="header-anchor" href="#functional-evaluation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>These tests can easily be performed by any project actor. Only screen readers require a learning period.<br>
-Approach:</p>
-<ul>
-<li><a href="./keyboard-navigation/">Test keyboard navigation</a> using the main keyboard shortcuts to navigate in a web page.</li>
-<li><a href="./text-zoom/">Check the adjustment of the text size</a> by handling the browser zoom.</li>
-<li><a href="./navigating-with-a-screen-reader/">Test navigation and vocalization</a> with a screen reader.</li>
-</ul>
-<h2 id="method-for-testing-the-mobile-web">Method for testing the mobile web <a class="header-anchor" href="#method-for-testing-the-mobile-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="technical-evaluation-2">Technical evaluation <a class="header-anchor" href="#technical-evaluation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>The tests for the mobile web are identical to those performed for the web. Some of the tests can be performed from a computer using the development tools available in web browsers:</p>
-<ul>
-<li>The Adaptive View module on Firefox</li>
-<li>Device Toolbar on Chrome</li>
-</ul>
-<h3 id="functional-evaluation-2">Functional evaluation <a class="header-anchor" href="#functional-evaluation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>These tests must be performed on smartphones, using the screen readers available on iOS and Android.</p>
-<ul>
-<li><a href="/en/mobile/android/talkback/">Talkback on Android</a></li>
-<li><a href="/en/mobile/ios/voiceover/">VoiceOver on iOS</a></li>
-</ul>
+          <h1>Test by disabling CSS</h1>
+<p>Disabling <abbr>CSS</abbr> is a good way to ensure compliance with certain best practices and to validate some important accessibility criteria.<br>
+To disable <abbr>CSS</abbr>, the easiest way is to install the &quot;Web developer toolbar&quot; extension for FireFox or Chrome (<a href="https://chrispederick.com/work/web-developer/">https://chrispederick.com/work/web-developer/</a>). Once this is in place, click on the &quot;CSS&quot; menu, then &quot;Disable all styles&quot;.</p>
+<h2 id="separate-content-from-presentation">Separate content from presentation <a class="header-anchor" href="#separate-content-from-presentation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Although this is only a best practice, the strict separation of <abbr>CSS</abbr> and <abbr>HTML</abbr> is important with regard to quality and maintainability of the code and sometimes has an impact on accessibility, by limiting the possibilities of modifying the visual rendering of the pages.</p>
+<p>By disabling <abbr>CSS</abbr>, the page is displayed with the browser's default styles (blue underlined link, black text, white background, etc.). This is to verify that the content is not styled by inline <abbr>CSS</abbr>.</p>
+<p><img src="../../../images/sansCSS.png" alt="screenshot of a page with CSS disabled" class="img-fluid"></p>
+<h2 id="reading-order-and-hidden-content">Reading order and hidden content <a class="header-anchor" href="#reading-order-and-hidden-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The order of appearance of the content in the code must respect the order of visual display, if this affects comprehension. The problem can arise due, among other things, to the use of these types of <abbr>CSS</abbr> properties: <code>position:</code>, <code>float:</code>, <code>display: flexbox</code> (<a href="https://wiki.csswg.org/spec/css3-flexbox/accessibility">https://wiki.csswg.org/spec/css3-flexbox/accessibility</a>) or <code>display: grid</code> (<a href="https://webdesign.tutsplus.com/articles/a-guide-to-css-grid-and-accessibility--cms-32857">https://webdesign.tutsplus.com/articles/a-guide-to-css-grid-and-accessibility--cms-32857</a>). Indeed, these properties can modify the display order of content.</p>
+<p>Hidden content, which can be displayed by a user action, must also be displayed in the right place on the page so that the reading order is still understandable.</p>
+<p>By disabling <abbr>CSS</abbr>, the page content is displayed in the order of appearance in the code, so it's easy to check that the content is understandable in that order.</p>
+<p><strong>Warning:</strong> In addition, you can see the content visually hidden and intended for assistive technologies (accessible masking) and therefore check its relevance and usefulness.</p>
+<h2 id="content-semantics-and-presentation-table">Content semantics and presentation table <a class="header-anchor" href="#content-semantics-and-presentation-table" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>To be accessible, the content of a page must have a semantic structure that makes it possible to better understand its meaning.</p>
+<p>By disabling <abbr>CSS</abbr>, the page is displayed with the browser's default styles (blue underlined link, black text, white background, etc.). This makes it possible to verify that the content is semantized with lists, emphases, paragraphs, titles... <br /><br>
+And that the content is not laid out with <abbr>HTML</abbr> tables, because therefore it is still displayed as a table even with <abbr>CSS</abbr> disabled. While this is not an accessibility issue, it is a very bad practice.</p>
+<h2 id="information-carried-only-by-color">Information carried only by color <a class="header-anchor" href="#information-carried-only-by-color" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Information should not be carried only by color.</p>
+<p>By disabling <abbr>CSS</abbr>, we disable styles and therefore colors. We can thus verify that information are not conveyed only through a color.</p>
+<h2 id="informative-content-generated-via-css">Informative content generated via CSS <a class="header-anchor" href="#informative-content-generated-via-css" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Content can be generated by <abbr>CSS</abbr> via pseudo-elements (<code>::before</code>,<code> ::after</code>) or the <code>content:</code> property. It is not advisable to generate informative content with such methods because their support is low for older versions of assistive technologies, so avoid and test!<br>
+For the <code>background-image:</code> property, the risk is to display images carrying information in <abbr>CSS</abbr> which will be inaccessible to assistive t&amp;echnologies.</p>
+<p>Disabling <abbr>CSS</abbr> prevents the display of pseudo-elements and ignores the <code>content:</code> property, so we can identify the content generated by <abbr>CSS</abbr> and identify if there is loss of information. For images carrying information inserted in <abbr>CSS</abbr>, they will disappear with <abbr>CSS</abbr> disabled, this is an accessibility issue to be careful of.</p>
 
         </main>
         
@@ -289,7 +262,7 @@ Approach:</p>
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/css-deactivation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>

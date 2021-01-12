@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Some best practices for SVG images - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Some best practices for SVG images
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#decorative-image" class="dropdown-item text-wrap">Decorative image</a><a href="#svg-in-an-img-tag" class="dropdown-item text-wrap">SVG in an img tag</a><a href="#svg-online-inline" class="dropdown-item text-wrap">SVG online (inline)</a><a href="#informative-image-without-link-or-button" class="dropdown-item text-wrap">Informative image (without link or button)</a><a href="#svg-in-an-img-tag-2" class="dropdown-item text-wrap">SVG in an img tag</a><a href="#svg-online-inline-2" class="dropdown-item text-wrap">SVG online (inline)</a><a href="#last-words" class="dropdown-item text-wrap">Last words ...</a><a href="#ressources-articles-that-have-helped-me-a-lot" class="dropdown-item text-wrap">Ressources (articles that have helped me a lot)</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>SVG images are used more and more on the web but what about their accessibility?</h1>
+<p>Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly!<br>
+Important: So remember to test your implementations on the browsers/assistive technologies targets the most used by your users, whatever the solution for which you choose.</p>
+<h2 id="decorative-image">Decorative image <a class="header-anchor" href="#decorative-image" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="svg-in-an-img-tag">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre> <code class="html">
+&lt;img src="XXX.svg" alt="" aria-hidden="true" /&gt;
+</code> </pre>
+<h3 id="svg-online-inline">SVG online (inline) <a class="header-anchor" href="#svg-online-inline" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre> <code class="html">
+&lt;svg aria-hidden="true" focusable="false"&gt;
+...
+&lt;/svg&gt;
+</code> </pre>
+<p>We use <code>focusable =&quot;false&quot;</code> to avoid any focus on SVG by <abbr>IE</abbr> (&gt; 10 and Edge)</p>
+<p>In addition, you must make sure that the <code>svg</code> tag or one of its children (<code>&lt;g&gt;</code>,<code>&lt;path&gt;</code>...) does not have any attribute to provide it with an accessible name (<code> title</code>, <code>desc </code>,<code>aria- *</code>…).</p>
+<h2 id="informative-image-without-link-or-button">Informative image (without link or button) <a class="header-anchor" href="#informative-image-without-link-or-button" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="svg-in-an-img-tag-2">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre> <code class="html">
+&lt;img src ="XXX.svg" alt="alternative text" role="img" /&gt;
+</code> </pre>
+<p>second choice:</p>
+<pre> <code class="html">
+&lt;img src="XXX.svg" aria-label="replacement text" role="img" /&gt;
+</code> </pre>
+<p>We add <code>role=&quot;img&quot;</code> to make sure that with macOS Safari, VoiceOver (old versions) announces &quot;image&quot;.</p>
+<h4 id="svg-online-inline-2">SVG online (inline) <a class="header-anchor" href="#svg-online-inline-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<pre> <code class="html">
+&lt;svg viewBox="0 0 440 540" version="1.1" role="img"
+  lang="fr" xml:lang="fr"
+  aria-labelledby="title description"&gt;
+
+  &lt;title id="title"&gt;Gross revenue 2019&lt;/title&gt;
+
+  &lt;desc id="description"&gt;
+    This diagram shows the income for the year 2019, as a percentage of the total and in absolute value. The total income is 20.3 million Euros and is divided into 6.9 million (34%) for the first quarter, 2.1 million (10%) for the second, 10.3 million for the third (51%) and 1 million in the last quarter (5%).
+  &lt;/desc&gt;
+
+  ...
+&lt;/svg&gt;
+</code> </pre>
+<p>The best support for SVGs is to display them inline.</p>
+<p>You must use <code>aria-labelledby</code> as the first choice by referencing the &quot;title&quot; and the &quot;desc&quot; (avoid <code>aria-describedby</code> for the &quot;desc&quot;, still bad support) to ensure maximum support.<br>
+SVGs serving as a link or button</p>
+<p>Several possible choices:</p>
+<pre> <code class="html">
+&lt;button&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...-- &gt; &lt;/svg&gt;
+  Search
+&lt;/button&gt;
+
+&lt;a href="/Search"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...-- &gt; &lt;/svg&gt;
+  Search
+&lt;/a&gt;
+</code> </pre>
+<p>We use <code>focusable=&quot;false&quot;</code> to avoid any focus on the SVG in addition to the link <code>a</code>) by IE 10.<br>
+This is the best solution, the most robust but is not always possible to display a text (graphic / design / marketing constraint...).<br>
+So, here is an alternative that allows to visually hide the text for a button or a link while leaving it readable by assistive technologies via <code>aria-labelledby</code>:</p>
+<pre> <code class="html">
+&lt;button aria-labelledby="label"&gt;
+
+  &lt;span id="label" hidden&gt;Search&lt;/span&gt;
+
+  &lt;svg aria-hidden="true" focusable="false"&gt; &lt;!--...--&gt; &lt;/svg&gt;
+
+&lt;/button&gt;
+</code> </pre>
+<p>Finally, these two following solutions are equivalent and in any case to be tested in your targeted navigation environments (browser / assistive technologies pairs).</p>
+<pre> <code class="html">
+&lt;button&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
+  &lt;span class="sr-only"&gt; Search &lt;/ span&gt;
+&lt;/ button&gt;
+
+&lt;a href="/ Search"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
+  &lt;span class="sr-only"&gt; Search &lt;/span&gt;
+&lt;/ a&gt;
+</code> </pre>
+<p>The sr-only class is used to hide the text except to technical help users (accessible masking).</p>
+<p>or</p>
+<pre> <code class="html">
+&lt;button aria-label="Search"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
+&lt;/ button&gt;
+
+&lt;a href="/ Search" aria-label="Search"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
+&lt;/ a&gt;
+
+or, but much more risky ...
+
+&lt;button&gt;
+  &lt;svg aria-labelledby="search-icon-title" focusable="false" role=”img”&gt;
+    &lt;title id="search-icon-title"&gt;Search&lt;/title&gt;
+    &lt;! --...--&gt;
+  &lt;/svg&gt;
+&lt;/ button&gt;
+</code> </pre>
+<h2 id="last-words">Last words ... <a class="header-anchor" href="#last-words" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>In short, one tip for accessible SVG would be TEST and test again!</p>
+<h2 id="ressources-articles-that-have-helped-me-a-lot">Ressources (articles that have helped me a lot) <a class="header-anchor" href="#ressources-articles-that-have-helped-me-a-lot" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://www.deque.com/blog/creating-accessible-svgs/">https://www.deque.com/blog/creating-accessible-svgs/</a></li>
+<li><a href="https://weboverhauls.github.io/demos/svg/">https://weboverhauls.github.io/demos/svg/</a></li>
+<li><a href="https://www.scottohara.me/blog/2019/0">https://www.scottohara.me/blog/2019/0</a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#decorative-image" class="nav-link text-muted bg-200">Decorative image</a>
+          </li><li class="nav-item position-relative">
+            <a href="#svg-in-an-img-tag" class="nav-link text-muted bg-200">SVG in an img tag</a>
+          </li><li class="nav-item position-relative">
+            <a href="#svg-online-inline" class="nav-link text-muted bg-200">SVG online (inline)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#informative-image-without-link-or-button" class="nav-link text-muted bg-200">Informative image (without link or button)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#svg-in-an-img-tag-2" class="nav-link text-muted bg-200">SVG in an img tag</a>
+          </li><li class="nav-item position-relative">
+            <a href="#svg-online-inline-2" class="nav-link text-muted bg-200">SVG online (inline)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#last-words" class="nav-link text-muted bg-200">Last words ...</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ressources-articles-that-have-helped-me-a-lot" class="nav-link text-muted bg-200">Ressources (articles that have helped me a lot)</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/accessible-svg.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Best practices for the accessibility of an autocompletion component - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/editorial-content/" class="nav-link">
+  Editorial content
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Best practices for the accessibility of an autocompletion component
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#our-method" class="dropdown-item text-wrap">Our method</a><a href="#user-tests" class="dropdown-item text-wrap">User tests</a><a href="#summary-of-feedbacks" class="dropdown-item text-wrap">Summary of feedbacks</a><a href="#mobile-tests" class="dropdown-item text-wrap">Mobile tests</a><a href="#conclusion-of-tests" class="dropdown-item text-wrap">Conclusion of tests</a><a href="#guidelines" class="dropdown-item text-wrap">Guidelines</a><a href="#combobox" class="dropdown-item text-wrap">Combobox</a><a href="#listbox" class="dropdown-item text-wrap">Listbox</a><a href="#feedback-messages" class="dropdown-item text-wrap">Feedback messages</a><a href="#interactions" class="dropdown-item text-wrap">Interactions</a><a href="#resources" class="dropdown-item text-wrap">Resources</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Guidelines for the accessibility of an autocompletion component</h1>
+<p>Autocomplete components are increasingly common in user interfaces, yet they often remain inaccessible.</p>
+<p>We therefore decided to carry out an inventory in order to define several functional guidelines.</p>
+<p>The end goal is to offer a ready-to-use component for projects.</p>
+<p>In this article, we present our method and the guidelines adopted.</p>
+<h2 id="our-method">Our method <a class="header-anchor" href="#our-method" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>We want to build on existing patterns wherever possible.</p>
+<p>First, upstream audits are carried out on several components by an accessibility expert in order to ensure an initial selection.</p>
+<p>The most usable components are then subjected to user tests.</p>
+<p>At the end of the benchmark, the selected implementations are:</p>
+<ul>
+<li><a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)">GOV UK, accessible autocomplete<span class="sr-only"> (new window)</span></a></li>
+<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="Pattern WAI ARIA 1.1, combobox (new window)"> Pattern WAI ARIA 1.1, combobox<span class="sr-only"> (new window)</span></a></li>
+</ul>
+<h2 id="user-tests">User tests <a class="header-anchor" href="#user-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>We contacted Orange employees with disabilities.</p>
+<ul>
+<li>Documentalist, JAWS and IE11 user</li>
+<li>Developer, user of NVDA and Firefox ESR</li>
+<li>Phone advisor, ZoomText and IE11 user</li>
+</ul>
+<p>JAWS 19 (screen reader) and Zoomtext (screen magnifier) ​​are the technical aids provided to blind and partially sighted employees.</p>
+<p>Internet Explorer 11 and Firefox ESR are the default browsers installed on workstations.<br>
+Business applications and intranets are developed for these browsers.</p>
+<p>The JAWS / IE and Zoomtext / IE combinations are the pairs tested as a priority during an evaluation of internal projects, as they are the most common among our targeted users.</p>
+<p>We've created a simple, form-based scenario, each using a different version of the component:</p>
+<ul>
+<li><abbr title="UK government website"> GOV UK <span class="sr-only">UK government website</span></abbr> accessible autocomplete</span ></li>
+<li>WAI ARIA 1.1 pattern, Combobox with Listbox, example 1</li>
+<li>WAI ARIA 1.1 pattern, Combobox with Listbox, example 2</li>
+<li>WAI ARIA 1.1 pattern, Combobox with Listbox, example 3</li>
+</ul>
+<p><img src="../images/page-test.png" alt="" class="img-fluid"></p>
+<h3 id="summary-of-feedbacks">Summary of feedbacks <a class="header-anchor" href="#summary-of-feedbacks" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>with JAWS:</strong></p>
+<p>In the ARIA versions, examples 2 and 3, the user is not informed that this is an autocompletion field.</p>
+<p><strong>with NVDA:</strong></p>
+<ul>
+<li>The user prefers the GOV UK version, because, not only, does the component indicate the minimum number of characters to enter (2 or 3 letters), but also, the number of results displayed.</li>
+<li>From example 1 of the ARIA 1.1 pattern, it is by accident while pointing down that he discovers proposals.</li>
+</ul>
+<blockquote>
+<p>You can completely skip the auto-completion</p>
+</blockquote>
+<ul>
+<li>In examples 2 and 3 of the ARIA 1.1 pattern, the user perceives the notion of autocompletion, but no information is given to him after entering 2 or 3 letters (whether it is the number of porposals, or the proposals themselves) .</li>
+</ul>
+<p><strong>with ZoomText:</strong></p>
+<p>The user does not see any significant differences between the four implementations.</p>
+<h3 id="mobile-tests">Mobile tests <a class="header-anchor" href="#mobile-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>In addition, mobile tests are carried out by accessibility experts on the same test pages.</p>
+<p><strong>Tested versions:</strong></p>
+<ul>
+<li>IOS 13 + Safari + VoiceOver</li>
+<li>Android 6.0.1+ Chrome + Talkback</li>
+</ul>
+<p>On these two environments, the conclusion is the same:</p>
+<p><strong>GOV UK accessible autocomplete</strong></p>
+<ul>
+<li>Behavior identical to the desktop (all vocalizations are started, wether it is when entering the control or when browsing the list)</li>
+<li>Navigation in the list is ok, and selection of the desired item also ok</li>
+</ul>
+<p><strong>WAI ARIA 1.1 Combobox pattern with Listbox</strong></p>
+<ul>
+<li>The list of proposals is not displayed systematically</li>
+<li>When the list is displayed, no automatic vocalization is started</li>
+<li>The user does not know that are the suggested proposals</li>
+</ul>
+<h2 id="conclusion-of-tests">Conclusion of tests <a class="header-anchor" href="#conclusion-of-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It appears that with the assistive technologies and browers tested, the implementation of GOV UK is more robust.</p>
+<p>The ARIA pattern relies on focus management by <code>aria-activedescendant</code>, unlike the GOV UK component which relies on the <code>focus()</code>method.</p>
+<p>It's possible that these different implementations that impacts the behavior on mobile.</p>
+<p>It is, in any case, a significant difference between the two components.</p>
+<p>We also took the initiative to test the WAI ARIA 1.2 version of the combobox <strong>still in draft</strong>.</p>
+<p>Here again the behavior on mobile is not the one expected, the list of proposals is not perceived.</p>
+<p>However, for the rest the pattern used is similar to the GOV UK implementation (for example the <code>role=&quot;combobox&quot;</code> is now positioned directly on the <code>input</code>, unlike in the ARIA version 1.1).</p>
+<p>At this stage, taking into account user feedback and blockages on mobile, we are orienting our choice on the GOV UK component, moreover reinforced by the evolution that the ARIA 1.2 pattern seems to take.</p>
+<h2 id="guidelines">Guidelines <a class="header-anchor" href="#guidelines" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>You understand, we relied heavily on the GOV UK component.</p>
+<p>The differences with the initial component are commented directly in the guidelines.</p>
+<h3 id="combobox">Combobox <a class="header-anchor" href="#combobox" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>Input text with the following attributes:</strong></p>
+<p><img src="../images/autocompletion-combobox.png" alt="" class="img-fluid"></p>
+<ul>
+<li><code>role=&quot;combobox&quot;</code></li>
+<li><code>aria-expanded=true/false</code></li>
+<li><code>autocomplete=&quot;off&quot;</code></li>
+<li><code>aria-autocomplete=&quot;list&quot;</code>
+<ul>
+<li>The value <code>list</code> corresponds to the current behavior of the component that we have to produce, other values ​​are however possible (<code>inline</code> and <code>both</code>)</li>
+<li><code>inline</code> = automatic suggestion in the input field</li>
+<li><code>both</code> = automatic suggestion in the input field + list of choices</li>
+</ul>
+</li>
+<li><code>aria-control</code> (ID of the listbox)</li>
+</ul>
+<p>**Notes **</p>
+<ol>
+<li>The role is directly positioned on the input, unlike the ARIA 1.1 implementation. and in accordance with the GOV UK and ARIA 1.2 implementation (draft),</li>
+<li>On the other hand, we favor the use of <code>aria-control</code> over<code> aria-owns</code>, which seems more suitable with regard to the description of pattern.<br>
+More information in the article <a href = "https://www.levelaccess.com/differences-aria-1-0-1-1-changes/" target="_blank" title="Differences between ARIA 1.0 and 1.1: Changes (new window)">Differences between ARIA 1.0 and 1.1: Changes <span class = "sr-only">(new window)</span></a></li>
+</ol>
+<h3 id="listbox">Listbox <a class="header-anchor" href="#listbox" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>UL element with the following attributes:</strong></p>
+<p><img src="../images/autocompletion-listbox.png" alt="" class="img-fluid"></p>
+<ul>
+<li><code>role=&quot;listbox&quot;</code></li>
+<li><code>aria-label</code> (the value is identical to the label associated with the edit control)</li>
+</ul>
+<p><strong>LI element with the following attributes:</strong></p>
+<ul>
+<li><code>role=&quot;option&quot;</code></li>
+<li><code>aria-posinset</code> (item position in the list)</li>
+<li><code>aria-setsize</code> (total length of proposal elements list)</li>
+<li><code>aria-selected=&quot;true &quot;</code> (when an item is being selected)</li>
+<li><code>tabindex=&quot;-1&quot;</code> (the value -1 will allow management of the focus shift in a programmatic way)</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ol>
+<li>As a reminder, this solution turns out to be more robust than the management of the active element by the <code>aria-descendant</code> attribute, more information:<br>
+a. <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex" target="_blank" title="Focus management by tabindex (new window )">Focus management by tabindex<span class="sr-only"> (new window)</span></a><br>
+b. <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)" target="_blank" title="Focus management by aria-activedescendant (new window)">Focus management by aria-activedescendant <span class="sr-only"> (new window)</span></a></li>
+<li>As the list of propositions is refreshed dynamically, we preserve the <code>aria-posinset</code> and<code> aria-setsize</code> attributes, in order to provide an up-to-date list to the screen reader, regardless of the number of propositions.<br>
+This seems to be more robust in order to overcome any errors in the interpretation of screen readers.<br>
+Indeed, these could be misled in cases like this one, where the content of a list, and in particular the number of items, is dynamically updated.<br>
+For information, this implementation is not preserved in the ARIA 1.2 draft.</li>
+</ol>
+<h3 id="feedback-messages">Feedback messages <a class="header-anchor" href="#feedback-messages" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>A message to indicate the interactions, example from GOV UK:</li>
+</ul>
+<blockquote>
+<p>When results are available, use the up and down arrows to navigate through the proposals.<br>
+From a touch device, explore using a swipe</p>
+</blockquote>
+<ul>
+<li>A message to indicate the minimum number of characters to enter</li>
+<li>A message to indicate the number of results and the item being selected:</li>
+</ul>
+<blockquote>
+<p>3 results are available. Afghanistan 1 of 3 is selected</p>
+</blockquote>
+<p><strong>Notes</strong></p>
+<p>We preserve the feedbacks put in place by GOV UK. They have proven to be relevant in guiding users in using the component.</p>
+<p><strong>Integration</strong></p>
+<p>A <code>DIV</code> element is present in the <abbr title ="Document Object Model"> DOM </abbr> as soon as the page loads:</p>
+<ul>
+<li><code>role=&quot;status&quot;</code></li>
+<li><code>aria-live=&quot;polite&quot;</code></li>
+<li><code>aria-atomic=&quot;true&quot;</code></li>
+<li><code>class=&quot;sr-only&quot;</code></li>
+</ul>
+<p><strong>Notes</strong></p>
+<p><code>DIV</code> element with the <code>aria-live</code> attribute is present in the DOM as soon as the page loads.</p>
+<p>We thus make sure that the assistive technologies correctly identify this dynamic zone during their analysis of the DOM.</p>
+<p>At initialization, the <code>DIV</code> is empty to avoid unwanted vocalization.</p>
+<p>The messages are dynamically integrated according to the actions of the user.</p>
+<p>A message is returned as soon as it is included in the LIVE area.</p>
+<h3 id="interactions">Interactions <a class="header-anchor" href="#interactions" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><strong>Enter the proposals:</strong> down arrows (input to first item)</li>
+<li><strong>Navigation between the proposals:</strong> up and down arrows (no tabulation)</li>
+<li><strong>Exit proposals:</strong> up arrows (first item to input)</li>
+<li><strong>Select a proposal:</strong>
+<ul>
+<li>Space or Entrance</li>
+<li>Automatically reposition the focus in the input after selection</li>
+</ul>
+</li>
+<li><strong>Esc key:</strong>
+<ul>
+<li>Close the <code>listbox</code> and reposition focus in the<code> input</code></li>
+<li>No item is selected</li>
+<li>If a selection is already made, the focus is repositioned in the control without emptying it</li>
+</ul>
+</li>
+<li><strong>Right / left arrow:</strong> reposition cursor in the combobox without closing the listbox</li>
+<li><strong>TAB key from the combobox:</strong> continue with the focus course, so the user is positioned on the next element eligible for focus (<code>input</code>,<code> button</code>, <code>link</code> etc.)</li>
+<li><strong>TAB key from the listbox:</strong>
+<ul>
+<li>Continue the focus course</li>
+<li>The combobox is filled in with the value currently selected when pressing the TAB key</li>
+</ul>
+</li>
+<li><strong>SHIFT + TAB shortcut from the listbox:</strong>
+<ul>
+<li>Continue the focus course in the opposite direction</li>
+<li>The combobox is filled in with the value currently selected when pressing the TAB key</li>
+</ul>
+</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ol>
+<li>When the TAB key is used from the listbox, the currently selected value is automatically added to the combobox, before exiting the component.<br>
+Here we are choosing to align with the native behavior of autocompletion.<br>
+The GOV UK component does not follow this behavior.</li>
+<li>The arrows allow you to reposition yourself in the combobox, again we choose to align ourselves with the native behavior (unlike this time the ARIA 1.2 pattern draft </span>)</li>
+</ol>
+<h3 id="resources">Resources <a class="header-anchor" href="#resources" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)"> GOV UK, <span lang = " en "> accessible autocomplete </span> <span class =" sr-only "> (new window) </span> </a></li>
+<li><a href = "https://designnotes.blog.GOV UK / 2017/04/20 / were-building-an-autocomplete /" target = "_ blank" title = "Article We're building an autocomplete (new window ) "> Article <span lang =" en "> We're building an autocomplete </span> <span class =" sr-only "> (new window) </span> </a></li>
+<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="WAI-ARIA Authoring Practices 1.1 Combobox (new window)"> WAI-ARIA Authoring Practices 1.1 Combobox </span> <span class = "sr-only"> (new window) </span> </a></li>
+<li><a href="https://pidila.gitlab.io/select-a11y/" target="_blank" title="Select-a11y-demo (new window)"> Select- a11y - demo </span> <span class = "sr-only"> (new window) </span> </a></li>
+<li><a href="https://www.24a11y.com/2019/select-your-poison/" target="_blank" title="Select your poison (new window)"> Select your poison </span> <span class = "sr-only"> (new window) </span> </a></li>
+<li><a href="https://www.24a11y.com/2019/select-your-poison-part-2/" target="_blank" title="Select your poison part 2 (new window)"> Select your poison part 2 </span> <span class = "sr-only"> (new window) </span> </a></li>
+<li><a href = "https://www.levelaccess.com/differences-aria-1-0-1-1-changes/" target = "_ blank" title = "Differences between ARIA 1.0 and 1.1: Changes (new window ) "> <span lang =" en "> Differences between ARIA 1.0 and 1.1: Changes </span> <span class =" sr-only "> (new window) </span> </a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#our-method" class="nav-link text-muted bg-200">Our method</a>
+          </li><li class="nav-item position-relative">
+            <a href="#user-tests" class="nav-link text-muted bg-200">User tests</a>
+          </li><li class="nav-item position-relative">
+            <a href="#summary-of-feedbacks" class="nav-link text-muted bg-200">Summary of feedbacks</a>
+          </li><li class="nav-item position-relative">
+            <a href="#mobile-tests" class="nav-link text-muted bg-200">Mobile tests</a>
+          </li><li class="nav-item position-relative">
+            <a href="#conclusion-of-tests" class="nav-link text-muted bg-200">Conclusion of tests</a>
+          </li><li class="nav-item position-relative">
+            <a href="#guidelines" class="nav-link text-muted bg-200">Guidelines</a>
+          </li><li class="nav-item position-relative">
+            <a href="#combobox" class="nav-link text-muted bg-200">Combobox</a>
+          </li><li class="nav-item position-relative">
+            <a href="#listbox" class="nav-link text-muted bg-200">Listbox</a>
+          </li><li class="nav-item position-relative">
+            <a href="#feedback-messages" class="nav-link text-muted bg-200">Feedback messages</a>
+          </li><li class="nav-item position-relative">
+            <a href="#interactions" class="nav-link text-muted bg-200">Interactions</a>
+          </li><li class="nav-item position-relative">
+            <a href="#resources" class="nav-link text-muted bg-200">Resources</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link"><u>Contact</u></a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link"><u>About</u></a>
+          </li><li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/autocomplete-component.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+            <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+      <span class="d-none d-sm-inline-block">Back to top</span>
+    </a>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')</script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
+  </body>
+</html>

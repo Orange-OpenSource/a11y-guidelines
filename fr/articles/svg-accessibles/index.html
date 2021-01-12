@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>L&#39;attribut aria-live et le role alert - Recommandations accessibilité numérique Orange</title>
+    <title>Quelques bonnes pratiques pour les images SVG - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -134,7 +134,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          L&#39;attribut aria-live et le role alert
+          Quelques bonnes pratiques pour les images SVG
         </li>
       </ol>
 </nav>
@@ -147,7 +147,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#le-role-alert" class="dropdown-item text-wrap">Le role alert</a><a href="#creer-un-nouvel-element-dans-le-dom" class="dropdown-item text-wrap">Créer un nouvel élément dans le DOM</a><a href="#ajouter-un-role-alert-sur-un-element-existant" class="dropdown-item text-wrap">Ajouter un role alert sur un élément existant</a><a href="#utiliser-innerhtml" class="dropdown-item text-wrap">Utiliser innerHTML</a><a href="#lattribut-aria-live" class="dropdown-item text-wrap">L&#39;attribut aria-live</a><a href="#references" class="dropdown-item text-wrap">Références</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#image-de-decoration" class="dropdown-item text-wrap">Image de décoration</a><a href="#svg-dans-une-balise-img" class="dropdown-item text-wrap">SVG dans une balise img</a><a href="#svg-en-ligne-inline" class="dropdown-item text-wrap">SVG en ligne (inline)</a><a href="#image-informative-hors-lien-ou-bouton" class="dropdown-item text-wrap">Image informative (hors lien ou bouton)</a><a href="#svg-dans-une-balise-img-2" class="dropdown-item text-wrap">SVG dans une balise img</a><a href="#svg-en-ligne-inline-2" class="dropdown-item text-wrap">SVG en ligne (inline)</a><a href="#dernier-mots" class="dropdown-item text-wrap">Dernier mots…</a><a href="#webographie-articles-qui-mont-bien-bien-aides" class="dropdown-item text-wrap">Webographie (articles qui m’ont bien, bien aidés)</a></div>
     </nav>
         
       </div>
@@ -157,49 +157,115 @@
       <div class="row">
         
         <main id="main-content" class="col-md-9" role="main">
-          <h1>L'attribut aria-live et le role alert</h1>
-<p>Les utilisateurs qui naviguent à l'aide d'un lecteur d'écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu'une information est actualisée ou lorsqu'un message apparaît il est parfois nécessaire de faire parler le lecteur d'écran pour informer l'utilisateur. Pour ce faire, le language <abbr>ARIA</abbr> dispose du role <code>alert</code> et de l'attribut <code>aria-live</code>.</p>
-<h2 id="le-role-alert">Le role alert <a class="header-anchor" href="#le-role-alert" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Positionné sur un élément HTML, celui-ci permet d'indiquer au lecteur d'écran de vocaliser l'élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation <a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_r%C3%B4le_alert">MDN de Mozilla</a>. De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que <code>aria-live=&quot;polite&quot;</code> ou autres rôles de zone live.</p>
-<p>Pour déclencher une alerte, plusieurs méthodes sont possibles, avec des supports qui différent en fonction du couple navigateur et lecteur d'écran utilisé. Vous pouvez consulter <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">l'article de Steve Faulkner (en anglais)</a> à ce sujet.</p>
-<p>Voici quelques exemples de méthodes qui sont bien supportées.</p>
-<h3 id="creer-un-nouvel-element-dans-le-dom">Créer un nouvel élément dans le DOM <a class="header-anchor" href="#creer-un-nouvel-element-dans-le-dom" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>On peut déclencher une alerte en insérant un nouvel élément dans le <abbr>DOM</abbr> via Javascript.</p>
-<pre><code class="html">&lt;span role="alert"&gt;Ceci est un message d'alerte.&lt;/span&gt;</code></pre>
-<h3 id="ajouter-un-role-alert-sur-un-element-existant">Ajouter un role alert sur un élément existant <a class="header-anchor" href="#ajouter-un-role-alert-sur-un-element-existant" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Le déclenchement d'une alerte peut également s'effectuer en ajoutant un <code>role=&quot;alert&quot;</code>, à un élément existant, dynamiquement via Javascript.</p>
-<pre><code class="js">
-document.getElementById('alert').setAttribute("role", "alert");
-</code></pre>
-<h3 id="utiliser-innerhtml">Utiliser innerHTML <a class="header-anchor" href="#utiliser-innerhtml" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Créer une alerte via la propriété innerHTML.</p>
-<pre><code class="js">
-element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
-</code></pre>
-<h2 id="lattribut-aria-live">L'attribut <code>aria-live</code> <a class="header-anchor" href="#lattribut-aria-live" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Positionné sur un élément HTML, l'attribut <code>aria-live</code> permet d'indiquer au lecteur d'écran que toute modification apportée à son contenu entraînera une vocalisation par le lecteur d'écran.</p>
-<p>Trois valeurs sont possibles :</p>
-<ul>
-<li>Off : aucune vocalisation</li>
-<li>Polite : la vocalisation aura lieu lorsque le lecteur d'écran aura fini la tâche en cours</li>
-<li>Assertive : le lecteur d'écran interrompt la tâche en cours pour informer l'utilisateur</li>
-</ul>
-<p>Il est fortement recommandé que l'attribut <code>aria-live</code> soit positionné sur l'élément dès le chargement de la page pour maximiser la compatibilité avec les différents couples navigateurs et lecteurs d'écran.</p>
+          <h1>Les images SVG sont de plus en plus utilisées sur le web mais qu’en est-il de leur accessibilité ?</h1>
+<p>Voici quelques pistes sachant que le support navigateurs/aide techniques évolue très rapidement !<br>
+Important : Pensez donc à tester vos implémentations sur des cibles navigateurs /aides techniques les plus utilisées par vos utilisateurs, cela, quel que soit la solution pour laquelle vous optez. ;</p>
+<h2 id="image-de-decoration">Image de décoration <a class="header-anchor" href="#image-de-decoration" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="svg-dans-une-balise-img">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <pre><code class="html">
-&lt;span aria-live="polite"&gt;5 éléments sélectionnés&lt;/span&gt;
+&lt;img src="XXX.svg" alt="" aria-hidden=”true” /&gt;
 </code></pre>
-<p>Des attributs supplémentaires permettent de modifier finement le comportement par défaut d'<code>aria-live</code> :</p>
+<h3 id="svg-en-ligne-inline">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre><code class="html">
+&lt;svg aria-hidden="true" focusable="false"&gt;
+…
+&lt;/svg&gt;
+</code></pre>
+<p>On utilise <code>focusable=&quot;false&quot;</code> pour éviter toute prise de focus sur le SVG par IE (&gt;10 et Edge)</p>
+<p>De plus, vous devez vous assurer que la balise <code>svg</code> ou un de ses enfants (<code>&lt;g&gt;</code>, <code>&lt;path&gt;</code>…) ne possède aucun attribut visant à lui fournir un nom accessible (<code>title</code>, <code>desc</code>, <code>aria-*</code>…).</p>
+<h2 id="image-informative-hors-lien-ou-bouton">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="svg-dans-une-balise-img-2">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<pre><code class="html">
+&lt;img src="XXX.svg" alt="texte de remplacement" role="img" /&gt;
+</code></pre>
+<p>en second choix :</p>
+<pre><code class="html">
+&lt;img src="XXX.svg" aria-label="texte de remplacement" role="img" /&gt;
+</code></pre>
+<p>On rajoute <code>role=&quot;img&quot;</code> pour s’assurer qu’avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».</p>
+<h4 id="svg-en-ligne-inline-2">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<pre><code class="html">
+&lt;svg viewBox="0 0 440 540" version="1.1" role="img"
+  lang="fr" xml:lang="fr"
+  aria-labelledby="title description"&gt;
+
+  &lt;title id="title"&gt;Revenus bruts 2019&lt;/title&gt;
+
+  &lt;desc id="description"&gt;
+    Ce schéma présente les revenus de l’année 2019, en pourcentage du total et en valeur absolue. Le total des revenus est de 20,3 millions d’Euros et se divise en 6,9 millions (34%) pour le premier trimestre, 2,1 millions (10%) pour le second, 10,3 millions pour le troisième (51%) et 1 million au dernier trimestre (5%).
+  &lt;/desc&gt;
+
+  ...
+&lt;/svg&gt;
+</code></pre>
+<p>Le meilleur support pour les SVG est de les afficher inline.</p>
+<p>Il faut utiliser <code>aria-labelledby</code> en premier choix en référençant le « title » et la « desc » (éviter <code>aria-describedby</code> pour la « desc », support encore mauvais) pour assurer un support maximal.<br>
+Les SVG servant de lien ou de bouton</p>
+<p>Plusieurs choix possibles :</p>
+<pre><code class="html">
+&lt;button&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  Rechercher
+&lt;/button&gt;
+
+&lt;a href="/Rechercher"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  Rechercher
+&lt;/a&gt;
+</code></pre>
+<p>On utilise <code>focusable=&quot;false&quot;</code> pour éviter toute prise de focus sur le SVG (en plus du lien <code>a</code>) par <abbr>IE</abbr>&gt; 10 et Edge.<br>
+C’est la meilleure solution, la plus robuste mais pas toujours possible d’afficher un texte (contrainte graphique/design/marketing…).<br>
+Alors, voici une alternative qui permet de  cacher visuellement le texte pour un bouton ou un lien tout en le laissant lisible par les aides techniques via <code>aria-labelledby</code> :</p>
+<pre><code class="html">
+&lt;button aria-labelledby="label"&gt; 
+
+  &lt;span id="label" hidden&gt;Rechercher&lt;/span&gt;
+
+  &lt;svg aria-hidden="true" focusable="false"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+
+&lt;/button&gt; 
+</code></pre>
+<p>Enfin, ces deux solutions suivantes sont équivalentes et de toute façon à tester dans vos environnements de navigation (couples navigateur/aide technique) ciblés.</p>
+<pre><code class="html">
+&lt;button&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  &lt;span class="sr-only"&gt;Rechercher&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;a href="/Rechercher"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  &lt;span class="sr-only"&gt;Rechercher&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+<p>La class sr-only permet de cacher le texte sauf aux utilisateurs d’aide technique (masquage accessible).</p>
+<p>ou</p>
+<pre><code class="html">
+&lt;button aria-label="Rechercher"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;a href="/Rechercher" aria-label="Rechercher"&gt;
+  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+&lt;/a&gt;
+
+ou, mais beaucoup plus risqué…
+&lt;button&gt;
+  &lt;svg aria-labelledby="rechercher-icon-title" focusable="false" role=”img”&gt;
+    &lt;title id="rechercher-icon-title"&gt;Rechercher&lt;/title&gt;
+    &lt;!--...--&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;
+</code></pre>
+<h2 id="dernier-mots">Dernier mots… <a class="header-anchor" href="#dernier-mots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>En résumé, un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !</p>
+<h2 id="webographie-articles-qui-mont-bien-bien-aides">Webographie (articles qui m’ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li><strong>aria-atomic :</strong>  true ou false (défaut), permet d'indiquer si la totalité de la zone live doit être lue (true) ou seulement la partie modifiée (false).</li>
-<li><strong>aria-relevant :</strong> indique quel type de changement déclenche une vocalisation, valeurs possibles : additions (défaut), removals, all.</li>
-</ul>
-<p>Enfin pour être complet, sachez que le langage <abbr>ARIA</abbr> prévoit également quelques roles spécifiques, <strong>status</strong> et <strong>log</strong> notamment qui peuvent s'avérer utiles dans certains cas (barre d'état, journalisation, chat…) et qui pour le moment doivent être utilisés en complément de l'attribut <code>aria-live</code> pour maximiser la prise en charge par les outils d'assistance. Vous trouverez plus d'infos sur ces roles dans les liens ci-dessous.</p>
-<h2 id="references">Références <a class="header-anchor" href="#references" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<ul>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert">Utilisation du rôle alert</a></li>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA">Zones live ARIA</a></li>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log">Utiliser le rôle log</a></li>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status">Utiliser le rôle status</a></li>
+<li><a href="https://www.deque.com/blog/creating-accessible-svgs/">https://www.deque.com/blog/creating-accessible-svgs/</a></li>
+<li><a href="https://weboverhauls.github.io/demos/svg/">https://weboverhauls.github.io/demos/svg/</a></li>
+<li><a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html">https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html</a></li>
+<li><a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility">https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility</a></li>
+<li><a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md">https://github.com/JeremiePat/svg-accessible/blob/master/slides.md</a></li>
+<li><a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/">https://www.sarasoueidan.com/blog/accessible-icon-buttons/</a></li>
 </ul>
 
         </main>
@@ -209,17 +275,21 @@ element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sommaire</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#le-role-alert" class="nav-link text-muted bg-200">Le role alert</a>
+            <a href="#image-de-decoration" class="nav-link text-muted bg-200">Image de décoration</a>
           </li><li class="nav-item position-relative">
-            <a href="#creer-un-nouvel-element-dans-le-dom" class="nav-link text-muted bg-200">Créer un nouvel élément dans le DOM</a>
+            <a href="#svg-dans-une-balise-img" class="nav-link text-muted bg-200">SVG dans une balise img</a>
           </li><li class="nav-item position-relative">
-            <a href="#ajouter-un-role-alert-sur-un-element-existant" class="nav-link text-muted bg-200">Ajouter un role alert sur un élément existant</a>
+            <a href="#svg-en-ligne-inline" class="nav-link text-muted bg-200">SVG en ligne (inline)</a>
           </li><li class="nav-item position-relative">
-            <a href="#utiliser-innerhtml" class="nav-link text-muted bg-200">Utiliser innerHTML</a>
+            <a href="#image-informative-hors-lien-ou-bouton" class="nav-link text-muted bg-200">Image informative (hors lien ou bouton)</a>
           </li><li class="nav-item position-relative">
-            <a href="#lattribut-aria-live" class="nav-link text-muted bg-200">L&#39;attribut aria-live</a>
+            <a href="#svg-dans-une-balise-img-2" class="nav-link text-muted bg-200">SVG dans une balise img</a>
           </li><li class="nav-item position-relative">
-            <a href="#references" class="nav-link text-muted bg-200">Références</a>
+            <a href="#svg-en-ligne-inline-2" class="nav-link text-muted bg-200">SVG en ligne (inline)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#dernier-mots" class="nav-link text-muted bg-200">Dernier mots…</a>
+          </li><li class="nav-item position-relative">
+            <a href="#webographie-articles-qui-mont-bien-bien-aides" class="nav-link text-muted bg-200">Webographie (articles qui m’ont bien, bien aidés)</a>
           </li></ul>
     </nav>
             </div>
@@ -235,7 +305,7 @@ element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
           </li><li class="nav-item">
             <a href="/fr/a-propos" class="nav-link"><u>À propos</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/aria-live-alert.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/svg-accessibles.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
             <u>Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>

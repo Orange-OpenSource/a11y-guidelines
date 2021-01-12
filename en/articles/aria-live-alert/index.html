@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Web-specific methods and tools - Orange digital accessibility guidelines</title>
+    <title>The aria-live attribute and the role alert - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -18,9 +18,11 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css" integrity="sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -72,7 +74,7 @@
   Planning
 </a>
         </li><li class="nav-item">
-          <a href="/en/web/" class="nav-link active" aria-current="true">
+          <a href="/en/web/" class="nav-link">
   Web
 </a>
         </li><li class="nav-item">
@@ -88,7 +90,7 @@
   Editorial content
 </a>
         </li><li class="nav-item">
-          <a href="/en/articles/" class="nav-link">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
         </li><li class="nav-item d-md-none">
@@ -109,35 +111,7 @@
   </nav>
 </div>
 
-  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
-  <div class="container-lg">
-    <ul class="nav"><li class="nav-item">
-              <a href="/en/web/design/" class="nav-link">
-  Design
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/develop/" class="nav-link">
-  Develop
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/test/" class="nav-link">
-  Test
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/wcag-audit/" class="nav-link">
-  Evaluate
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/toolbox/" class="nav-link active" aria-current="true">
-  Toolbox
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/components-examples/" class="nav-link">
-  Component examples
-</a>
-            </li></ul>
-  </div>
-</nav>
+  
 </header>
 
     <div class="container-lg pt-2">
@@ -154,39 +128,26 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/web/">Web</a>
-        </li>
-      
-      
         <li class="breadcrumb-item">
-          <a href="/en/web/toolbox/">Toolbox</a>
+          <a href="/en/articles/">Articles</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Web-specific methods and tools
+          The aria-live attribute and the role alert
         </li>
       </ol>
 </nav>
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
-        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
-        Topics
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
-  Orange Boosted
-</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item active" aria-current="page">
-  Methods and test tools
-</a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
-  The Va11ydette
-</a><a href="/en/web/useful-links" class="nav-link dropdown-item">
-  Useful links
-</a><a href="/en/glossary/" class="nav-link dropdown-item">
-  Glossary
-</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-role-alert" class="dropdown-item text-wrap">The role alert</a><a href="#create-a-new-element-in-the-dom" class="dropdown-item text-wrap">Create a new element in the DOM</a><a href="#add-a-role-alert-on-an-existing-element" class="dropdown-item text-wrap">Add a role alert on an existing element</a><a href="#using-innerhtml" class="dropdown-item text-wrap">Using innerHTML</a><a href="#the-aria-live-attribute" class="dropdown-item text-wrap">The aria-live attribute</a><a href="#references" class="dropdown-item text-wrap">References</a></div>
     </nav>
         
       </div>
@@ -195,89 +156,74 @@
   <div class="container-lg pt-4">
       <div class="row">
         
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label">Topics</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="https://boosted.orange.com/" class="nav-link text-muted">
-  Orange Boosted
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted active" aria-current="page">
-  Methods and test tools
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/wcag-audit/" class="nav-link text-muted">
-  The Va11ydette
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/useful-links" class="nav-link text-muted">
-  Useful links
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/glossary/" class="nav-link text-muted">
-  Glossary
-</a>
-          </li></ul>
-    </nav>
-              
-            </div>
-          </div>
-        
         <main id="main-content" class="col-md-9" role="main">
-          <h1>Web-specific methods and tools</h1>
-<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria of the Web Content Accessibility Guidelines (WCAG) version 2.1 - level AA.</p>
-<p>The detailed description of the tests can be found in the <a href="/en/web/test/">WCAG criteria by project phase, &quot;tests&quot; section</a>.</p>
-<p>Accessibility tests must be carried out throughout the project life cycle:</p>
+          <h1>The aria-live attribute and the role alert</h1>
+<p>Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role <code>alert</code> and the attribute<code> aria-live</code>.</p>
+<h2 id="the-role-alert">The role alert <a class="header-anchor" href="#the-role-alert" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN] documentation (<a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/">https://developer.mozilla.org/fr/docs/Accessibilité/ARIA/Techniques_ARIA/</a> Use_the_r% C3% B4le_alert). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as <code>aria-live=&quot;polite&quot;</code> or other live zone roles.</p>
+<p>To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner's article] (<a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/</a>) on this subject.</p>
+<p>Here are some examples of methods that are well supported.</p>
+<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.</p>
+<pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
+<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The triggering of an alert can also be done by adding a <code>role=&quot;alert&quot;</code> dynamically to an existing element via Javascript.</p>
+<pre> <code class="js">
+document.getElementById('alert').setAttribute("role", "alert");
+</code> </pre>
+<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Create an alert via the <code>innerHTML</code> property.</p>
+<pre> <code class="js">
+element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
+</code> </pre>
+<h2 id="the-aria-live-attribute">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Positioned on an HTML element, the <code>aria-live</code> attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.</p>
+<p>Three values ​​are possible:</p>
 <ul>
-<li>at the start of the project, when choosing the framework, software, or package...</li>
-<li>at the design phase on storyboards or prototypes</li>
-<li>during development and testing</li>
-<li>in production, for content sites</li>
+<li>Off: no vocalization</li>
+<li>Polite: the vocalization will take place when the screen reader has finished the current task</li>
+<li>Assertive: the screen reader interrupts the current task to inform the user</li>
 </ul>
-<h2 id="general-method">General method <a class="header-anchor" href="#general-method" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The approach includes 2 types of tests:</p>
+<p>It is strongly recommended that the <code>aria-live</code> attribute be set on the element as soon as the page is loaded to maximize compatibility with different browsers and screen readers.</p>
+<pre> <code class = "html">
+&lt;span aria-live="polite"&gt;5 selected items&lt;/span&gt;
+</code> </pre>
+<p>Additional attributes allow fine modification of the default behavior of <code>aria-live</code>:</p>
 <ul>
-<li>Technical tests that consist of inspecting the code and colour contrast.</li>
-<li>Functional tests that evaluate the interface's performance with various <abbr>assistive technologies</abbr> to ensure that there are no blocking points in the evaluated content.</li>
+<li><strong>aria-atomic:</strong> true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).</li>
+<li><strong>aria-relevant:</strong> indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.</li>
 </ul>
-<p>Depending on your profile, you can perform technical tests, functional tests or both, but both are necessary to test the accessibility of a website as a whole.</p>
-<h2 id="method-for-testing-the-web">Method for testing the Web <a class="header-anchor" href="#method-for-testing-the-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="technical-evaluation">Technical evaluation <a class="header-anchor" href="#technical-evaluation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Some of the tests can be performed automatically by tools, but the majority of them require manual check. These tests can be performed by any actor in the project (designer, developer, tester, contributor...).</p>
-<p>Approach:</p>
+<p>Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, <strong>status</strong> and <strong>log</strong> in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the <code>aria-live</code> attribute to maximize support by the different tools. You can find more info on these roles in the links below.</p>
+<h2 id="references">References <a class="header-anchor" href="#references" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
-<li>There are tools that help you to test the accessibility of your web content: <a href="./browser-extensions/">learn how to perform automatic or semi-automatic tests</a> (whistleblowing) with aXe or Wave browser extensions, for example.</li>
-<li><a href="./color-contrast-level/">Measure the contrast level of the colours</a> with the Colour Contrast Analyser tool.</li>
-<li>Check the valid text spacing via a tool to ensure the readability of the text</li>
-<li><a href="./css-deactivation/">Disable <abbr>CSS</abbr> to check some criteria easily</a></li>
-<li>All other tests must be passed through a manual review of the code, for example, all relevance criteria (consistency of a textual alternative with the content of an image...)</li>
-</ul>
-<h3 id="functional-evaluation">Functional evaluation <a class="header-anchor" href="#functional-evaluation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>These tests can easily be performed by any project actor. Only screen readers require a learning period.<br>
-Approach:</p>
-<ul>
-<li><a href="./keyboard-navigation/">Test keyboard navigation</a> using the main keyboard shortcuts to navigate in a web page.</li>
-<li><a href="./text-zoom/">Check the adjustment of the text size</a> by handling the browser zoom.</li>
-<li><a href="./navigating-with-a-screen-reader/">Test navigation and vocalization</a> with a screen reader.</li>
-</ul>
-<h2 id="method-for-testing-the-mobile-web">Method for testing the mobile web <a class="header-anchor" href="#method-for-testing-the-mobile-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="technical-evaluation-2">Technical evaluation <a class="header-anchor" href="#technical-evaluation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>The tests for the mobile web are identical to those performed for the web. Some of the tests can be performed from a computer using the development tools available in web browsers:</p>
-<ul>
-<li>The Adaptive View module on Firefox</li>
-<li>Device Toolbar on Chrome</li>
-</ul>
-<h3 id="functional-evaluation-2">Functional evaluation <a class="header-anchor" href="#functional-evaluation-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>These tests must be performed on smartphones, using the screen readers available on iOS and Android.</p>
-<ul>
-<li><a href="/en/mobile/android/talkback/">Talkback on Android</a></li>
-<li><a href="/en/mobile/ios/voiceover/">VoiceOver on iOS</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert">Use of the alert role</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA">ARIA live zones</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log">Use the log role</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status">Use the status role</a></li>
 </ul>
 
         </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#the-role-alert" class="nav-link text-muted bg-200">The role alert</a>
+          </li><li class="nav-item position-relative">
+            <a href="#create-a-new-element-in-the-dom" class="nav-link text-muted bg-200">Create a new element in the DOM</a>
+          </li><li class="nav-item position-relative">
+            <a href="#add-a-role-alert-on-an-existing-element" class="nav-link text-muted bg-200">Add a role alert on an existing element</a>
+          </li><li class="nav-item position-relative">
+            <a href="#using-innerhtml" class="nav-link text-muted bg-200">Using innerHTML</a>
+          </li><li class="nav-item position-relative">
+            <a href="#the-aria-live-attribute" class="nav-link text-muted bg-200">The aria-live attribute</a>
+          </li><li class="nav-item position-relative">
+            <a href="#references" class="nav-link text-muted bg-200">References</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
         
       </div>
     </div>
@@ -289,7 +235,7 @@ Approach:</p>
           </li><li class="nav-item">
             <a href="/en/about" class="nav-link"><u>About</u></a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/aria-live-alert.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             <u>Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg></u>
           </a>
         </li>
@@ -313,11 +259,13 @@ Approach:</p>
     
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "en",
         vendors: {
-          highlightJS: false
+          highlightJS: true
         }
       }
     </script>
