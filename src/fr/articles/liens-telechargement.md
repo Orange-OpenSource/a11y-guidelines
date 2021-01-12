@@ -1,6 +1,6 @@
 ---
 title: "Quelques bonnes pratiques pour les liens de téléchargement"
-abstract: "Quelques bonnes pratiques pour les liens de téléchargement"
+abstract: "Comment rendre compréhensible les liens de téléchargement"
 date: "2020-07-02"
 tags:
   - web

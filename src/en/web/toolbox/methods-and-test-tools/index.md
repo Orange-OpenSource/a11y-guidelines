@@ -29,8 +29,8 @@ Approach:
 - There are tools that help you to test the accessibility of your web content: [learn how to perform automatic or semi-automatic tests](./browser-extensions/) (whistleblowing) with aXe or Wave browser extensions, for example.
 - [Measure the contrast level of the colours](./color-contrast-level/) with the Colour Contrast Analyser tool.
 - Check the valid text spacing via a tool to ensure the readability of the text
-- All other tests must be passed through a manual review of the code
-    - Example: all relevance criteria (consistency of a textual alternative with the content of an image...)
+- [Disable <abbr>CSS</abbr> to check some criteria easily](./css-deactivation/)
+- All other tests must be passed through a manual review of the code, for example, all relevance criteria (consistency of a textual alternative with the content of an image...)
 
 ### Functional evaluation
 These tests can easily be performed by any project actor. Only screen readers require a learning period.

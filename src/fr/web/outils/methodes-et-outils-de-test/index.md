@@ -37,8 +37,8 @@ Ces tests peuvent être réalisés par tout acteur du projet ( concepteur, déve
 - Il existe des outils qui vous aident à tester l’accessibilité de vos contenus Web : apprenez à [réaliser des tests automatiques ou semi-automatique (levées d’alertes)](./extensions-navigateur/) avec les extensions de navigateur aXe et Wave, par exemple.  
 - [Mesurer le niveau de contraste des couleurs](./mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
 - [Vérifier le bon espacement du texte](/fr/web/designer/mise-en-page/#permettre-daerer-le-texte) via un outil pour garantir la lisibilité du texte
-- Tous les autres tests doivent être passés via une revue de code manuelle
-    - exemple : tous les critères de pertinence ( alternative textuelle cohérente avec le contenu d’une image…) 
+- [Désactiver les <abbr>CSS</abbr> pour vérifier plusieurs critères facilement](./desactiver-les-css/)
+- Tous les autres tests doivent être passés via une revue de code manuelle, par exemple, tous les critères de pertinence (alternative textuelle cohérente avec le contenu d’une image…) 
 
 ### Évaluation fonctionnelle
 
