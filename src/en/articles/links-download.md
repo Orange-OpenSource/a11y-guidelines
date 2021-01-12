@@ -1,7 +1,7 @@
 ---
 title: "Some best practices for downloading links"
 abstract: "How to make understandable downloading links"
-date: "2019-01-01"
+date: "2020-09-01"
 tags:
   - web
 ---
