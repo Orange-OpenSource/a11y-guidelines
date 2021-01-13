@@ -968,23 +968,25 @@ The full list of these options including their purpose and their coding name is 
 
 9. [Reduce Motion](#optionA11Y_limiteVisuel)
 
-10. [Reduce Transparency](#optionA11Y_reductionTransparence)
+10. [Prefer Cross-Fade Transition](#optionA11Y_preferCrossFadeTransition)
 
-11. [Shake to Undo](#optionA11Y_secouerPourAnnuler)
+11. [Reduce Transparency](#optionA11Y_reductionTransparence)
 
-12. [Speak Screen](#optionA11Y_lecturePage)
+12. [Shake to Undo](#optionA11Y_secouerPourAnnuler)
 
-13. [Speak Selection](#optionA11Y_speakSelection)
+13. [Speak Screen](#optionA11Y_lecturePage)
 
-14. [Switch Control](#optionA11Y_switchControl)
+14. [Speak Selection](#optionA11Y_speakSelection)
 
-15. [VoiceOver](#optionA11Y_voiceOver)
+15. [Switch Control](#optionA11Y_switchControl)
 
-16. [Auto-Play Video Previews](#optionA11Y_autoPlayVideoPreviews)
+16. [VoiceOver](#optionA11Y_voiceOver)
 
-17. [Differentiate Without Colour](#optionA11Y_differentiateWithoutColour)
+17. [Auto-Play Video Previews](#optionA11Y_autoPlayVideoPreviews)
 
-18. [On/Off Labels](#optionA11Y_onOffSwitchLabels)
+18. [Differentiate Without Colour](#optionA11Y_differentiateWithoutColour)
+
+19. [On/Off Labels](#optionA11Y_onOffSwitchLabels)
 
 <br>
 
@@ -1233,7 +1235,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div></br>
 
 <a name="optionA11Y_limiteVisuel"></a>
-- **Reduce Motion** (UIAccessibilityIsReduceMotionEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#motion-0848) for a detailed description.
+- **Reduce Motion** (UIAccessibilityIsReduceMotionEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#motion-0848), the [WWDC&nbsp;2019](../wwdc/2019/#reduce-motion) and the  [WWDC&nbsp;2020](../wwdc/2020/020/#display-preferences) videos for a detailed description.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1261,6 +1263,12 @@ The full list of these options including their purpose and their coding name is 
     
 ![Access illustration via Settings - General - Accessibility - Reduce Motion](../../images/optionA11Y_iOS12_reduceMotion.png)
 </div></div></br>
+
+<a name="optionA11Y_preferCrossFadeTransition"></a>
+- **Prefer Cross-Fade Transition** (UIAccessibilityPrefersCrossFadeTranstions): see the [WWDC&nbsp;2019](../wwdc/2019/#reduce-motion) and the  [WWDC&nbsp;2020](../wwdc/2020/020/#display-preferences) videos for a detailed description.
+    
+![Access illustration via Settings - Accessibility - Motion - Reduce Motion - Prefer Cross-Fade Transition](../../images/optionA11Y_iOS13_crossFadeTransition.png)
+</br>
 
 <a name="optionA11Y_reductionTransparence"></a>
 - **Reduce Transparency** (UIAccessibilityIsReduceTransparencyEnabled): see the [WWDC&nbsp;2018&nbsp;video](../wwdc/2018/230/#transparency-and-blurring-0307) for a detailed description.

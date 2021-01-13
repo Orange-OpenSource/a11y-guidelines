@@ -929,9 +929,9 @@ En fonction des spécificités liées aux interfaces graphiques proposées, il p
 Les options d'accessibilité présentes dans les réglages du terminal sont toutes susceptibles d'améliorer de façon conséquente le parcours d'un utilisateur souffrant d'un trouble que l'option peut fortement aider à surmonter.
 </br>Il est donc primordial de&nbsp;:
 
-- **Comprendre** comment chacune de ces options peut impacter la conception et la réalisation d'une application.
+- **comprendre** comment chacune de ces options peut impacter la conception et la réalisation d'une application,
 
-- **Tester** chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.
+- **tester** chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.
 
 <a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/>
 </a>
@@ -961,23 +961,25 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 
 9. [Limiter les animations visuelles](#optionA11Y_limiteVisuel).
 
-10. [Réduire le floutage et la transparence](#optionA11Y_reductionTransparence).
+10. [Préférer les fondus enchaînés](#optionA11Y_preferCrossFadeTransition).
 
-11. [Secouer pour annuler](#optionA11Y_secouerPourAnnuler).
+11. [Réduire le floutage et la transparence](#optionA11Y_reductionTransparence).
 
-12. [Énoncer le contenu de l'écran](#optionA11Y_lecturePage).
+12. [Secouer pour annuler](#optionA11Y_secouerPourAnnuler).
 
-13. [Énoncer la sélection](#optionA11Y_speakSelection).
+13. [Énoncer le contenu de l'écran](#optionA11Y_lecturePage).
 
-14. [Activer le Contrôle de Sélection](#optionA11Y_switchControl).
+14. [Énoncer la sélection](#optionA11Y_speakSelection).
 
-15. [Activer VoiceOver](#optionA11Y_voiceOver).
+15. [Activer le Contrôle de Sélection](#optionA11Y_switchControl).
 
-16. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews).
+16. [Activer VoiceOver](#optionA11Y_voiceOver).
 
-17. [Différencier sans couleur](#optionA11Y_differentiateWithoutColour).
+17. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews).
 
-18. [Boutons avec I/O](#optionA11Y_onOffSwitchLabels).
+18. [Différencier sans couleur](#optionA11Y_differentiateWithoutColour).
+
+19. [Boutons avec I/O](#optionA11Y_onOffSwitchLabels).
 
 <br>
 
@@ -1233,7 +1235,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 <a name="optionA11Y_limiteVisuel"></a>
 
-- **Limiter les animations visuelles** (UIAccessibilityIsReduceMotionEnabled)&nbsp;: voir [WWDC&nbsp;2018](../wwdc/2018/230/#mouvement-0848) pour un descriptif de la fonctionnalité.
+- **Limiter les animations visuelles** (UIAccessibilityIsReduceMotionEnabled)&nbsp;: voir [WWDC&nbsp;2018](../wwdc/2018/230/#mouvement-0848), [WWDC&nbsp;2019](../wwdc/2019/#reduction-de-mouvement) et [WWDC&nbsp;2020](../wwdc/2020/020/#preferences-utilisateur) pour un descriptif détaillé de la fonctionnalité.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1255,12 +1257,19 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
      id="ReduceMotion-iOS13"
      role="tabpanel">
     
-![Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Réduire les animations](../../images/optionA11Y_iOS13_reduceMotion.png)
+![Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations](../../images/optionA11Y_iOS13_reduceMotion.png)
 </div>
 <div class="tab-pane" id="ReduceMotion-iOS12" role="tabpanel" >
     
 ![Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire les animations](../../images/optionA11Y_iOS12_reduceMotion.png)
 </div></div></br>
+
+<a name="optionA11Y_preferCrossFadeTransition"></a>
+
+- **Préférer les fondus enchaînés** (UIAccessibilityPrefersCrossFadeTranstions)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#reduction-de-mouvement) et [WWDC&nbsp;2020](../wwdc/2020/020/#preferences-utilisateur) pour un descriptif précis de la fonctionnalité.
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations - Préférer les fondus enchaînés](../../images/optionA11Y_iOS13_crossFadeTransition.png)
+</br>
 
 <a name="optionA11Y_reductionTransparence"></a>
 
@@ -1452,7 +1461,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 - **Prévisualisation vidéo** (UIAccessibilityIsVideoAutoplayEnabled)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#reduction-de-mouvement) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 
-![Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus](../../images/optionA11Y_iOS13_autoPlayVideoPreviews.png)
+![Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus](../../images/optionA11Y_iOS13_autoPlayVideoPreviews.jpg)
 </br></br></br>
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
