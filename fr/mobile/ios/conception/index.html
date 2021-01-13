@@ -1051,10 +1051,10 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 </br>Il est donc primordial de :</p>
 <ul>
 <li>
-<p><strong>Comprendre</strong> comment chacune de ces options peut impacter la conception et la réalisation d'une application.</p>
+<p><strong>comprendre</strong> comment chacune de ces options peut impacter la conception et la réalisation d'une application,</p>
 </li>
 <li>
-<p><strong>Tester</strong> chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.</p>
+<p><strong>tester</strong> chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.</p>
 </li>
 </ul>
 <p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/><br>
@@ -1091,6 +1091,9 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 </li>
 <li>
 <p><a href="#optionA11Y_limiteVisuel">Limiter les animations visuelles</a>.</p>
+</li>
+<li>
+<p><a href="#optionA11Y_preferCrossFadeTransition">Préférer les fondus enchaînés</a>.</p>
 </li>
 <li>
 <p><a href="#optionA11Y_reductionTransparence">Réduire le floutage et la transparence</a>.</p>
@@ -1349,7 +1352,7 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
 </div></div></br>
 <p><a name="optionA11Y_limiteVisuel"></a></p>
 <ul>
-<li><strong>Limiter les animations visuelles</strong> (UIAccessibilityIsReduceMotionEnabled) : voir <a href="../wwdc/2018/230/#mouvement-0848">WWDC 2018</a> pour un descriptif de la fonctionnalité.</li>
+<li><strong>Limiter les animations visuelles</strong> (UIAccessibilityIsReduceMotionEnabled) : voir <a href="../wwdc/2018/230/#mouvement-0848">WWDC 2018</a>, <a href="../wwdc/2019/#reduction-de-mouvement">WWDC 2019</a> et <a href="../wwdc/2020/020/#preferences-utilisateur">WWDC 2020</a> pour un descriptif détaillé de la fonctionnalité.</li>
 </ul>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -1370,11 +1373,17 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
 <div class="tab-pane show active"
      id="ReduceMotion-iOS13"
      role="tabpanel">
-<p><img src="../../images/optionA11Y_iOS13_reduceMotion.png" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Réduire les animations" class="img-fluid"></p>
+<p><img src="../../images/optionA11Y_iOS13_reduceMotion.png" alt="Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="ReduceMotion-iOS12" role="tabpanel" >
 <p><img src="../../images/optionA11Y_iOS12_reduceMotion.png" alt="Illustration d'accès via le menu Réglages - Général - Accessibilité - Réduire les animations" class="img-fluid"></p>
 </div></div></br>
+<p><a name="optionA11Y_preferCrossFadeTransition"></a></p>
+<ul>
+<li><strong>Préférer les fondus enchaînés</strong> (UIAccessibilityPrefersCrossFadeTranstions) : voir <a href="../wwdc/2019/#reduction-de-mouvement">WWDC 2019</a> et <a href="../wwdc/2020/020/#preferences-utilisateur">WWDC 2020</a> pour un descriptif précis de la fonctionnalité.</li>
+</ul>
+<p><img src="../../images/optionA11Y_iOS13_crossFadeTransition.png" alt="Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations - Préférer les fondus enchaînés" class="img-fluid"><br>
+</br></p>
 <p><a name="optionA11Y_reductionTransparence"></a></p>
 <ul>
 <li><strong>Réduire le floutage et la transparence</strong> (UIAccessibilityIsReduceTransparencyEnabled) : voir <a href="../wwdc/2018/230/#floutage-et-transparence-0307">WWDC 2018</a> pour un descriptif de la fonctionnalité.</li>
@@ -1547,7 +1556,7 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
 <ul>
 <li><strong>Prévisualisation vidéo</strong> (UIAccessibilityIsVideoAutoplayEnabled) : voir <a href="../wwdc/2019/#reduction-de-mouvement">WWDC 2019</a> pour un descriptif de cette <strong>nouvelle fonctionnalité iOS 13</strong>.</li>
 </ul>
-<p><img src="../../images/optionA11Y_iOS13_autoPlayVideoPreviews.png" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" class="img-fluid"><br>
+<p><img src="../../images/optionA11Y_iOS13_autoPlayVideoPreviews.jpg" alt="Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus" class="img-fluid"><br>
 </br></br></br></p>
 <p><a name="optionA11Y_differentiateWithoutColour"></a></p>
 <ul>
