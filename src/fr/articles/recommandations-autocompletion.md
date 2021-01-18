@@ -42,7 +42,7 @@ JAWS 19 (lecteur d’écran) et Zoomtext (loupe d’écran), sont les aides tech
 Internet Explorer 11 et Firefox ESR sont les navigateurs installés par défaut sur les postes de travail.
 Les applications métiers et les intranets sont développés pour ces supports.
 
-Les associations JAWS / IE et Zoomtext / IE sont les couples testés en priorité lors d’une évaluation de projets internes, car les plus répandu chez nos utilisateurs cibles.
+Les associations JAWS / IE et Zoomtext / IE sont les couples testés en priorité lors d’une évaluation de projets internes, car les plus répandus chez nos utilisateurs cibles.
 
 Nous avons créé un scénario simple, basé sur des formulaires, utilisant chacun une version différente du composant&nbsp;: 
 
@@ -63,7 +63,7 @@ Dans les versions ARIA, exemples 2 et 3, l'utilisateur n'est pas informé qu’i
 
 -	L'utilisateur préfère la version GOV UK, car, non seulement, le composant lui indique le nombre de caractères minimum à saisir (2 ou 3 lettres), mais également, le nombre de résultats affichés. 
 -	Depuis l'exemple 1 du pattern ARIA 1.1, c’est par hasard en faisant flèche bas qu’il découvre des propositions.
-> On peut complètement zapper l’auto complétion
+> On peut complètement zapper l’autocomplétion
 -	Dans les exemples 2 et 3 du pattern ARIA 1.1, l'utilisateur perçoit la notion d’autocomplétion, mais on ne lui précise aucune information après la saisie de 2 ou 3 lettres (que ce soit le nombre de propositions, ou les propositions).
  
 **Depuis ZoomText&nbsp;:**
@@ -87,12 +87,12 @@ Sur ces deux environnements la conclusion est la même&nbsp;:
 
 **Pattern WAI ARIA 1.1 <span lang="en">Combobox with Listbox</span>**
 -	La liste de propositions ne s’affiche pas systématiquement
--	Lorsque la liste s’affiche, aucune vocalisation automatiques n’est lancée
+-	Lorsque la liste s’affiche, aucune vocalisation automatique n’est lancée
 -	L’utilisateur ne sait pas que des propositions lui sont faites
 
 ## Conclusion des tests
 
-Il apparaît que ce sur les supports (aides techniques, navigateurs) testés, l’implémentation du GOV UK est plus robuste.
+Il apparaît que sur les supports (aides techniques, navigateurs) testés, l’implémentation du GOV UK est plus robuste.
 
 Le <span lang="en">pattern</span> ARIA repose sur une gestion du focus par `aria-activedescendant`, contrairement au composant de GOV UK qui repose sur la méthode `focus()`.
 
@@ -230,7 +230,7 @@ Le composant GOV UK ne reprend pas ce comportement.
 ### Ressources
 
 -	<a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)">GOV UK, accessible autocomplete <span class="sr-only">(new window)</span></a>
--	<a href="https://designnotes.blog.GOV UK/2017/04/20/were-building-an-autocomplete/" target="_blank" title="Article We’re building an autocomplete (new window)">Article We’re building an autocomplete <span class="sr-only">(new window)</span></a>
+-	<a href="https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/" target="_blank" title="Article We’re building an autocomplete (new window)">Article We’re building an autocomplete <span class="sr-only">(new window)</span></a>
 -	<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="WAI-ARIA Authoring Practices 1.1 Combobox (new window)">WAI-ARIA Authoring Practices 1.1 Combobox <span class="sr-only">(new window)</a>
 -	<a href="https://pidila.gitlab.io/select-a11y/" target="_blank" title="Select-a11y - demo (new window)">Select-a11y - demo <span class="sr-only">(new window)</span></a>
 -	<a href="https://www.24a11y.com/2019/select-your-poison/" target="_blank" title="Select your poison (new window)"><span lang="en">Select your poison</span> <span class="sr-only">(new window)</span></a>
