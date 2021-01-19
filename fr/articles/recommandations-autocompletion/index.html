@@ -181,7 +181,7 @@
 <p>JAWS 19 (lecteur d’écran) et Zoomtext (loupe d’écran), sont les aides techniques fournies aux salariés non-voyants et malvoyants.</p>
 <p>Internet Explorer 11 et Firefox ESR sont les navigateurs installés par défaut sur les postes de travail.<br>
 Les applications métiers et les intranets sont développés pour ces supports.</p>
-<p>Les associations JAWS / IE et Zoomtext / IE sont les couples testés en priorité lors d’une évaluation de projets internes, car les plus répandu chez nos utilisateurs cibles.</p>
+<p>Les associations JAWS / IE et Zoomtext / IE sont les couples testés en priorité lors d’une évaluation de projets internes, car les plus répandus chez nos utilisateurs cibles.</p>
 <p>Nous avons créé un scénario simple, basé sur des formulaires, utilisant chacun une version différente du composant :</p>
 <ul>
 <li><abbr title="site web du gouvernement britannique">GOV UK <span class="sr-only">site du gouvernement britannique</span></abbr> <span lang="en">accessible autocomplete</span></li>
@@ -199,7 +199,7 @@ Les applications métiers et les intranets sont développés pour ces supports.<
 <li>Depuis l'exemple 1 du pattern ARIA 1.1, c’est par hasard en faisant flèche bas qu’il découvre des propositions.</li>
 </ul>
 <blockquote>
-<p>On peut complètement zapper l’auto complétion</p>
+<p>On peut complètement zapper l’autocomplétion</p>
 </blockquote>
 <ul>
 <li>Dans les exemples 2 et 3 du pattern ARIA 1.1, l'utilisateur perçoit la notion d’autocomplétion, mais on ne lui précise aucune information après la saisie de 2 ou 3 lettres (que ce soit le nombre de propositions, ou les propositions).</li>
@@ -222,11 +222,11 @@ Les applications métiers et les intranets sont développés pour ces supports.<
 <p><strong>Pattern WAI ARIA 1.1 <span lang="en">Combobox with Listbox</span></strong></p>
 <ul>
 <li>La liste de propositions ne s’affiche pas systématiquement</li>
-<li>Lorsque la liste s’affiche, aucune vocalisation automatiques n’est lancée</li>
+<li>Lorsque la liste s’affiche, aucune vocalisation automatique n’est lancée</li>
 <li>L’utilisateur ne sait pas que des propositions lui sont faites</li>
 </ul>
 <h2 id="conclusion-des-tests">Conclusion des tests <a class="header-anchor" href="#conclusion-des-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Il apparaît que ce sur les supports (aides techniques, navigateurs) testés, l’implémentation du GOV UK est plus robuste.</p>
+<p>Il apparaît que sur les supports (aides techniques, navigateurs) testés, l’implémentation du GOV UK est plus robuste.</p>
 <p>Le <span lang="en">pattern</span> ARIA repose sur une gestion du focus par <code>aria-activedescendant</code>, contrairement au composant de GOV UK qui repose sur la méthode <code>focus()</code>.</p>
 <p>Il est possible que ce soit cette implémentation qui impacte le comportement sur mobile.</p>
 <p>C'est en tout cas une différence significative entre les deux composants.</p>
@@ -372,7 +372,7 @@ Le composant GOV UK ne reprend pas ce comportement.</li>
 <h3 id="ressources">Ressources <a class="header-anchor" href="#ressources" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <ul>
 <li><a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)">GOV UK, accessible autocomplete <span class="sr-only">(new window)</span></a></li>
-<li><a href="https://designnotes.blog.GOV UK/2017/04/20/were-building-an-autocomplete/" target="_blank" title="Article We’re building an autocomplete (new window)">Article We’re building an autocomplete <span class="sr-only">(new window)</span></a></li>
+<li><a href="https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/" target="_blank" title="Article We’re building an autocomplete (new window)">Article We’re building an autocomplete <span class="sr-only">(new window)</span></a></li>
 <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="WAI-ARIA Authoring Practices 1.1 Combobox (new window)">WAI-ARIA Authoring Practices 1.1 Combobox <span class="sr-only">(new window)</a></li>
 <li><a href="https://pidila.gitlab.io/select-a11y/" target="_blank" title="Select-a11y - demo (new window)">Select-a11y - demo <span class="sr-only">(new window)</span></a></li>
 <li><a href="https://www.24a11y.com/2019/select-your-poison/" target="_blank" title="Select your poison (new window)"><span lang="en">Select your poison</span> <span class="sr-only">(new window)</span></a></li>
