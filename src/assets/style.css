@@ -189,6 +189,16 @@ pre code {
   width: 100%;
 }
 
+/* Place the search dropdown to the left */
+.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
+  right: unset !important;
+}
+
+.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu::before {
+  left: 3rem;
+  right: unset;
+}
+
 /* Customize colors and appearance */
 .algolia-autocomplete .algolia-docsearch-suggestion {
   text-decoration: none;

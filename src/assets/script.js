@@ -149,25 +149,6 @@ function highlightCodeBlocks () {
 }
 
 function enhanceSearchField () {
-  // Algolia does not seem to allow defining the horizontal position of the docsearch dropdown at instanciation although the CSS classes exists in the styles
-  function placeSearchBoxToTheLeft () {
-    const targetNode = document.querySelector('.algolia-autocomplete')
-
-    const callback = function (mutations) {
-      for (let mutation of mutations) {
-        let classes = mutation.target.classList
-        if (mutation.attributeName === 'class' && classes.contains('algolia-autocomplete-right')) {
-          classes.replace('algolia-autocomplete-right', 'algolia-autocomplete-left')
-        }
-      }
-    }
-
-    const observer = new MutationObserver(callback)
-    observer.observe(targetNode, { attributes: true })
-  }
-
-  placeSearchBoxToTheLeft()
-
   /**
    * Set focus directly in the search box with we open it
    */
