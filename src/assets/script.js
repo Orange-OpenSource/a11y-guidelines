@@ -149,10 +149,26 @@ function highlightCodeBlocks () {
 }
 
 function enhanceSearchField () {
+  const searchInputSkipLink = document.querySelector('[role="banner"] a[href="#search-input"]')
+  const searchInputContainer = $('#search-input-container') // jQuery selector needed by Bootstrap v4.x.x for events
+  const searchInputToggler = document.getElementById('search-input-toggler')
+  const searchInput = document.getElementById('search-input')
+
+  searchInputSkipLink.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    // We place the focus inside the search input if it is already visible
+    if (searchInputToggler.getAttribute('aria-expanded') === 'true') {
+      searchInput.focus()
+    } else {
+      searchInputContainer.collapse('show')
+    }
+  })
+
   /**
    * Set focus directly in the search box with we open it
    */
-  $('#search-input-container').on('shown.bs.collapse', function () {
+  searchInputContainer.on('shown.bs.collapse', function () {
     $(this).find('[type="search"]').focus()
   })
 }
