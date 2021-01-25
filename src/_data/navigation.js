@@ -3,13 +3,13 @@ module.exports = {
     en: [
       { label: 'Go to menu', href: '#main-menu' },
       { label: 'Go to content', href: '#main-content' },
-      { label: 'Go to search', href: '#search-input', hiddenIfNoJS: true },
+      { label: 'Go to search', href: '#search-input', itemClass: ['hidden-if-no-js'] },
       { label: 'Go to footer', href: '#footer' }
     ],
     fr: [
       { label: 'Aller au menu', href: '#main-menu' },
       { label: 'Aller au contenu', href: '#main-content' },
-      { label: 'Aller à la recherche', href: '#search-input', hiddenIfNoJS: true },
+      { label: 'Aller à la recherche', href: '#search-input', itemClass: ['hidden-if-no-js'] },
       { label: 'Aller au pied de page', href: '#footer' }
     ]
   },
