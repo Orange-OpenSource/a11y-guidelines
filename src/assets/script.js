@@ -166,7 +166,7 @@ function enhanceSearchField () {
   })
 
   /**
-   * Set focus directly in the search box with we open it
+   * Set focus directly in the search box when we open it
    */
   searchInputContainer.on('shown.bs.collapse', function () {
     $(this).find('[type="search"]').focus()
