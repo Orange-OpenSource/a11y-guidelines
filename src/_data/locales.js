@@ -32,7 +32,8 @@ module.exports = {
       componentExample: "Component example",
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
-      web: 'Web'
+      web: 'Web',
+      veille: 'Watch'
     },
     toc: {
       title: 'Table of content'
@@ -86,7 +87,8 @@ module.exports = {
       componentExample: "Exemple de composant",
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
-      web: 'Web'
+      web: 'Web',
+      veille: 'Veille'
     },
     toc: {
       title: 'Sommaire'
