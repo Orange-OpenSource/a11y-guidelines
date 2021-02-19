@@ -1,8 +1,8 @@
 module.exports = {
   boosted: {
-    version: '4.5.3',
+    version: '4.6.0',
     css: {
-      integrity: 'sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS'
+      integrity: 'sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx'
     },
     js: {
       integrity: 'sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj'
