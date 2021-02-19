@@ -1,14 +1,16 @@
 ---
 title: "#a11y technical watch, January-February 2021"
 abstract: "#a11y anthology, January-February 2021"
-date: "2021-02-16"
+date: "2021-02-19"
 tags:
   - veille
 ---
 # Digital accessibility watch January - February  2021
 
 Big news, “W3C First Public Working Draft 21 January 2021” released, the future of a11y web and more. An introduction: https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/
+
 And some articles to get an idea:
+
 - https://www.deque.com/blog/first-public-working-draft-wcag-3/
 - https://www.deque.com/blog/public-working-draft-wcag-3-history/
 - https://jspellman-77432.medium.com/an-insider-look-at-wcag-3-0-276e9b964a33
@@ -39,15 +41,15 @@ And some articles to get an idea:
 
 ## Accessibility technical points
 
-- Aria-description, neat: https://html5accessibility.com/stuff/2021/02/09/aria-description-by-public-demand-and-to-thunderous-applause/
-- Be careful to the CSS content-visibility property: https://marcysutton.com/content-visibility-accessible-semantics
-- Difference between aria-label, labelledby, describedby: https://benmyers.dev/blog/aria-labels-and-descriptions/
+- `aria-description`, neat: https://html5accessibility.com/stuff/2021/02/09/aria-description-by-public-demand-and-to-thunderous-applause/
+- Be careful to the CSS `content-visibility` property: https://marcysutton.com/content-visibility-accessible-semantics
+- Difference between `aria-label`, `labelledby`, `describedby`: https://benmyers.dev/blog/aria-labels-and-descriptions/
 - Labeling a control (interactive elements), prioritized the methods, to read: https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html
-- Aria-haspopup, not very robust and therefore to be avoided, how… & nbsp ;: https://html5accessibility.com/stuff/2021/02/02/haspopup-haspoop/
+- `aria-haspopup`, not very robust and therefore to be avoided, how…&nbsp;: https://html5accessibility.com/stuff/2021/02/02/haspopup-haspoop/
 - An update on focus visibility, technics: https://www.nicchan.me/blog/tips-for-focus-styles/
 - Advice for voice control and SVG: https://www.ajsaucier.com/accessibility/2020/12/14/voice-control-and-css-psuedo-elements.html
 - Change accessible names dynamically, bad thing sometimes!: https://adrianroselli.com/2020/12/be-careful-with-dynamic-accessible-names.html
-- Alt and figcaption, for whom, why: https://thoughtbot.com/blog/alt-vs-figcaption
+- `alt` and `figcaption`, for whom, why: https://thoughtbot.com/blog/alt-vs-figcaption
 - Anchor and accessibility link: https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/
 
 ## Mobile app
@@ -59,7 +61,7 @@ And some articles to get an idea:
 - User experience and accessibility, basic points: https://www.awwwards.com/accessibility-in-user-experience-how-to-include-people-with-disabilities.html
 - Users without mouse, the basics: https://uxdesign.cc/taking-the-keyboard-navigation-red-pill-dbb76dd73b1e
 - Cognitive load, examples: https://uxdesign.cc/the-cognitive-overload-happening-on-your-screen-right-now-deee2a913393
-- 8 points on Ux and a11y: https://uxdesign.cc/8-faqs-about-accessible-ux-7c5a372a1ffb
+- 8 points on UX and a11y: https://uxdesign.cc/8-faqs-about-accessible-ux-7c5a372a1ffb
 
 ## Resources
 
@@ -70,7 +72,7 @@ And some articles to get an idea:
 - Excellent video episodes of Heydon Pickering, here on ARIA, must see, humor in: https://briefs.video/videos/what-is-aria-even-for/
 - Newsletter digital accessibility: http://www.webaxe.org/digital-accessibility-newsletters/
 - 2021 dev tools a11y: https://dev.to/jaketracey/the-best-web-accessibility-tools-for-developers-in-2021-8c8
-- Semantic html: https://dev.to/eevajonnapanula/ode-to-semantic-html-38c3
+- Semantic HTML: https://dev.to/eevajonnapanula/ode-to-semantic-html-38c3
 - The semantic web, go further than the previous link: https://24days.in/umbraco-cms/2020/semantics-in-web-development/
 - List of accessible sites: https://www.a11ywebsites.com/
 

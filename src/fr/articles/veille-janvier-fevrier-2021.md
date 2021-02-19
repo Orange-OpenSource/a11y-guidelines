@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Janvier-Février 2021"
 abstract: "Florilèges de ressources en #a11y, janvier-février 2021"
-date: "2021-02-16"
+date: "2021-02-19"
 tags:
   - veille
 ---
@@ -9,7 +9,9 @@ tags:
 # Veille accessibilité numérique Décembre 2020 – Janvier 2021
 
 Grosse nouvelle, sortie du “W3C First Public Working Draft 21 January 2021” l’avenir de l’a11y web et bien plus. Une introduction&nbsp;: https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/ 
+
 Et quelques articles pour se faire une idée&nbsp;: 
+
 - https://www.deque.com/blog/first-public-working-draft-wcag-3/ 
 - https://www.deque.com/blog/public-working-draft-wcag-3-history/
 - https://jspellman-77432.medium.com/an-insider-look-at-wcag-3-0-276e9b964a33 
@@ -24,7 +26,7 @@ Et quelques articles pour se faire une idée&nbsp;:
 ## Retours d’expérience et accessibilité
 
 - Un message d’un utilisateur de lecteur d’écran pour les devs (anglais)&nbsp;: https://bighack.org/message-to-web-developers-from-a-screen-reader-user/ 
-- Html sémantique ou affichage CSS ? (anglais)&nbsp;: https://adrianroselli.com/2020/10/a11yto-conf-css-display-properties-versus-html-semantics.html 
+- HTML sémantique ou affichage CSS ? (anglais)&nbsp;: https://adrianroselli.com/2020/10/a11yto-conf-css-display-properties-versus-html-semantics.html 
 
 ## Stratégie de mise en accessibilité
 
@@ -40,15 +42,15 @@ Et quelques articles pour se faire une idée&nbsp;:
 
 ## Points techniques en accessibilité
 
-- Aria-description, chouette (anglais)&nbsp;: https://html5accessibility.com/stuff/2021/02/09/aria-description-by-public-demand-and-to-thunderous-applause/ 
-- Attention à la propriété CSS content-visibility (anglais)&nbsp;: https://marcysutton.com/content-visibility-accessible-semantics 
-- Différence aria-label, labelledby, describedby (anglais)&nbsp;: https://benmyers.dev/blog/aria-labels-and-descriptions/ 
+- `aria-description`, chouette (anglais)&nbsp;: https://html5accessibility.com/stuff/2021/02/09/aria-description-by-public-demand-and-to-thunderous-applause/ 
+- Attention à la propriété CSS `content-visibility` (anglais)&nbsp;: https://marcysutton.com/content-visibility-accessible-semantics 
+- Différence `aria-label`, `labelledby`, `describedby` (anglais)&nbsp;: https://benmyers.dev/blog/aria-labels-and-descriptions/ 
 - Étiqueter un contrôle (éléments interactif), prioriser les méthodes, à lire (anglais)&nbsp;: https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html 
-- Aria-haspopup, peu robuste et donc à éviter, comment… (anglais)&nbsp;: https://html5accessibility.com/stuff/2021/02/02/haspopup-haspoop/ 
+- `aria-haspopup`, peu robuste et donc à éviter, comment… (anglais)&nbsp;: https://html5accessibility.com/stuff/2021/02/02/haspopup-haspoop/ 
 - Un point sur la visibilité du focus, techniques (anglais)&nbsp;: https://www.nicchan.me/blog/tips-for-focus-styles/ 
 - Conseil pour la commande vocale et les SVG (anglais)&nbsp;: https://www.ajsaucier.com/accessibility/2020/12/14/voice-control-and-css-psuedo-elements.html 
 - Changer les noms accessibles dynamiquement, bof ! (anglais)&nbsp;: https://adrianroselli.com/2020/12/be-careful-with-dynamic-accessible-names.html 
-- Alt et figcaption, pour qui, pourquoi (anglais)&nbsp;: https://thoughtbot.com/blog/alt-vs-figcaption 
+- `alt` et `figcaption`, pour qui, pourquoi (anglais)&nbsp;: https://thoughtbot.com/blog/alt-vs-figcaption 
 - Lien ancre et accessibilité (anglais)&nbsp;: https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/ 
 
 ## Appli mobile
@@ -60,7 +62,7 @@ Et quelques articles pour se faire une idée&nbsp;:
 - Expérience utilisateur et accessibilité, les points de base (anglais)&nbsp;: https://www.awwwards.com/accessibility-in-user-experience-how-to-include-people-with-disabilities.html 
 - Utilisateurs sans souris, les basiques (anglais)&nbsp;: https://uxdesign.cc/taking-the-keyboard-navigation-red-pill-dbb76dd73b1e 
 - La charge cognitive, exemples (anglais)&nbsp;: https://uxdesign.cc/the-cognitive-overload-happening-on-your-screen-right-now-deee2a913393 
-- 8 points sur Ux et a11y (anglais)&nbsp;: https://uxdesign.cc/8-faqs-about-accessible-ux-7c5a372a1ffb 
+- 8 points sur UX et a11y (anglais)&nbsp;: https://uxdesign.cc/8-faqs-about-accessible-ux-7c5a372a1ffb 
 
 ## Ressources
 
@@ -71,11 +73,11 @@ Et quelques articles pour se faire une idée&nbsp;:
 - Excellents épisodes vidéos de Heydon Pickering, ici sur ARIA, à voir absolument, humour dedans (anglais)&nbsp;: https://briefs.video/videos/what-is-aria-even-for/ 
 - Newsletter accessibilité numérique (anglais)&nbsp;: http://www.webaxe.org/digital-accessibility-newsletters/ 
 - Outils 2021 de dev a11y (anglais)&nbsp;: https://dev.to/jaketracey/the-best-web-accessibility-tools-for-developers-in-2021-8c8 
-- Le html sémantique (anglais)&nbsp;: https://dev.to/eevajonnapanula/ode-to-semantic-html-38c3 
+- Le HTML sémantique (anglais)&nbsp;: https://dev.to/eevajonnapanula/ode-to-semantic-html-38c3 
 - Le web sémantique, aller plus loin que le précédent lien (anglais)&nbsp;: https://24days.in/umbraco-cms/2020/semantics-in-web-development/ 
 - Liste de sites accessibles (anglais)&nbsp;: https://www.a11ywebsites.com/ 
 
 ## Autres
 
-- Le progressive enhancement (amélioration progressive)  où «en est on ? (anglais)&nbsp;: https://briefs.video/videos/is-progressive-enhancement-dead-yet/ 
+- Le progressive enhancement (amélioration progressive) où en est-on ? (anglais)&nbsp;: https://briefs.video/videos/is-progressive-enhancement-dead-yet/ 
 - Pourquoi séparer HTML, CSS et JS, c’est bon pour l’utilisateur (anglais)&nbsp;: https://hiddedevries.nl/en/blog/2020-11-25-why-its-good-for-users-that-html-css-and-js-are-separate-languages 
