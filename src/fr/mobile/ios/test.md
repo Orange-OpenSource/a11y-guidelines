@@ -218,7 +218,7 @@ Comme son nom l'indique, cette partie requiert des connaissances plus ou moins p
 <br>
 ### Contraste des couleurs
 
-Graphiquement, [ce point](../conception#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).
+Graphiquement, [le contraste des couleurs](../conception#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).
 
 L'outil <span lang="en">Accessibility Inspector</span> dispose d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](../wwdc/2019/#contraste-des-couleurs-0626) depuis Xcode 11 qui permet aussi de réaliser le même type de vérifications.
 <br><br>
