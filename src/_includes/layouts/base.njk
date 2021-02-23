@@ -44,9 +44,11 @@
     </div>
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
-    <a href="#" id="back-to-top" class="o-scroll-up static" title="{{ 'backToTop.label' | translate }}">
-      <span class="d-none d-sm-inline-block">{{ 'backToTop.label' | translate }}</span>
-    </a>
+    <nav role="navigation" aria-label="{{ 'backToTop.label' | translate }}">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="{{ 'backToTop.label' | translate }}">
+        <span class="d-none d-sm-inline-block">{{ 'backToTop.label' | translate }}</span>
+      </a>
+    </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     {% if jquery == true or boostedJS == true or displayToc == true %}
       <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
