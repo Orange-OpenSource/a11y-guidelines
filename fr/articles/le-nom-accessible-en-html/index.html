@@ -159,7 +159,7 @@
         <main id="main-content" class="col-md-9" role="main">
           <h1>Le nom accessible en <abbr>HTML</abbr></h1>
 <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Le nom (<span lang="en">name</span>) du composant d'interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c'est globalement ce nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation 1.1</a>.<br>
+<p>Le nom (<span lang="en">name</span>) du composant d'interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c'est globalement ce nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/"><span lang="en">Accessible Name and Description Computation 1.1</span></a>.<br>
 En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n'ont qu'un but de présentation, ex. : balises <code>div</code> et <code>span</code> n'en ont pas l'utilité) ont besoin d'un nom (accessible) pour être correctement identifiés par l'<abbr>AT</abbr>.</p>
 <p>Le nom accessible est issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.</p>
 <h2 id="en-pratique-comment-ca-marche">En pratique, comment ça marche ? <a class="header-anchor" href="#en-pratique-comment-ca-marche" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -250,9 +250,11 @@ Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer u
   </div>
 </footer>
 
-    <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
-      <span class="d-none d-sm-inline-block">Retour en haut de page</span>
-    </a>
+    <nav role="navigation" aria-label="Retour en haut de page">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+      </a>
+    </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
