@@ -169,7 +169,7 @@ $(document).ready(function () {
         let htmlFeedback = '';
         if (activeFilter) {
           elBtnReinit.disabled = false;
-          htmlFeedback = '<p><span><b>'+nbTests+'</b> tests dans filtres en cours</span> | <button type="button" class="btn btn-secondary btn-sm" id="reinitLink">reinitialiser</a></p>';
+          htmlFeedback = '<p><span><b>'+nbTests+'</b> tests dans filtres en cours</span> | <button type="button" class="btn btn-secondary btn-sm" id="reinitLink">Réinitialiser<span class="sr-only">&nbsp;les filtres</span></a></p>';
           elFeedback.innerHTML = htmlFeedback;
 
           let elreinitLink = document.getElementById('reinitLink');
@@ -253,7 +253,7 @@ $(document).ready(function () {
       this.DisplayFilters = function() {
         let elFilterFooter = document.getElementById('filter-footer');
         let htmlFilterFooter = '';
-        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>Réinitialiser</button>';
+        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>Réinitialiser<span class="sr-only">&nbsp;les filtres</span></button>';
         elFilterFooter.innerHTML = htmlFilterFooter;
         let elBtnReinit = document.getElementById('reinit');
 
