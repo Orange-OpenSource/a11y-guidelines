@@ -167,9 +167,11 @@ $(document).ready(function () {
         let elBtnReinit = document.getElementById('reinit');
         let elFeedback = document.getElementById('feedback');
         let htmlFeedback = '';
+        let test = nbTests > 1 ? 'tests' : 'test'
+
         if (activeFilter) {
           elBtnReinit.disabled = false;
-          htmlFeedback = '<p><span><b>'+nbTests+'</b> tests dans filtres en cours</span> | <button type="button" class="btn btn-secondary btn-sm" id="reinitLink">Réinitialiser<span class="sr-only">&nbsp;les filtres</span></a></p>';
+          htmlFeedback = '<p><div><b>'+nbTests+'</b> '+test+' dans les filtres en cours</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">Réinitialiser<span class="sr-only">&nbsp;les filtres</span></a></p>';
           elFeedback.innerHTML = htmlFeedback;
 
           let elreinitLink = document.getElementById('reinitLink');
