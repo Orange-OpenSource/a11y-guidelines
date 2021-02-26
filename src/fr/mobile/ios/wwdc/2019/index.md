@@ -41,7 +41,7 @@ Cette présentation visualisable sur le site développeur officiel d'<span lang=
 <br><br>
 ### Dynamic Type
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#DynamicType-TheFourPrinciples"
@@ -49,7 +49,7 @@ Cette présentation visualisable sur le site développeur officiel d'<span lang=
            role="tab" 
            aria-selected="true">Les quatre principes</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#DynamicType-TextStyles"
@@ -57,7 +57,7 @@ Cette présentation visualisable sur le site développeur officiel d'<span lang=
            role="tab" 
            aria-selected="false">Les styles de texte</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#DynamicType-Xcode"
@@ -107,7 +107,7 @@ Un **nouvel écran** apparaît sous **Xcode 11** pour modifier et visualiser le 
 <br><br>
 ### Réduction de mouvement
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#ReduceMotion-TheBasics"
@@ -115,7 +115,7 @@ Un **nouvel écran** apparaît sous **Xcode 11** pour modifier et visualiser le 
            role="tab" 
            aria-selected="true">Fondamentaux</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#ReduceMotion-AutoplayingVideo"
@@ -123,7 +123,7 @@ Un **nouvel écran** apparaît sous **Xcode 11** pour modifier et visualiser le 
            role="tab" 
            aria-selected="false">Prévisualisation vidéo</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#ReduceMotion-ScreenTransitions"
@@ -174,7 +174,7 @@ Une fois activée, l'option `Préférer`&nbsp;`les`&nbsp;`transisitions`&nbsp;`e
 <br><br>
 ### Couleur
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#Color-TheBasics"
@@ -182,7 +182,7 @@ Une fois activée, l'option `Préférer`&nbsp;`les`&nbsp;`transisitions`&nbsp;`e
            role="tab" 
            aria-selected="true">Fondamentaux</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#Color-DifferentiateWithoutColor"
@@ -306,7 +306,7 @@ Présentation rapide de VoiceOver ainsi que de la problématique liée à une im
 <br><br>
 ### Actions personnalisées
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#CustomActions-VoiceOver"
@@ -314,7 +314,7 @@ Présentation rapide de VoiceOver ainsi que de la problématique liée à une im
            role="tab" 
            aria-selected="true">Lecteur d'écran</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#CustomActions-SwitchControl"

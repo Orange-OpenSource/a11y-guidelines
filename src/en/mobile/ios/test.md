@@ -111,14 +111,14 @@ The iOS native screen reader activation drastically changes the visual behavior 
 It's **highly recommended** to know the basic gestures before activating this feature in the device user settings.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#VoiceOver-iOS12"
@@ -174,14 +174,14 @@ In this case, the feedback information provided by the tests must be as helpful 
 Note: this feature can be (de)activated in the device user settings.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#SwitchControl-iOS12"

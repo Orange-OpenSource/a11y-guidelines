@@ -116,14 +116,14 @@ L'activation du lecteur d'écran natif change radicalement les résultats obtenu
 Il est donc **très fortement recommandé** de connaître au moins les gestes de base avant d'activer cette fonctionnalité à partir des réglages du terminal.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#VoiceOver-iOS12"
@@ -182,14 +182,14 @@ Dans ce cas, les tests réalisés devront donc remonter toute amélioration néc
 Remarque&nbsp;: l'activation de cette fonctionnalité se fait elle aussi via les réglages du terminal.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#SwitchControl-iOS12"

@@ -10,14 +10,14 @@ title: "Guide d'utilisation de VoiceOver"
 L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages` du téléphone&nbsp;:
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#VoiceOverActivation-iOS12"
@@ -44,14 +44,14 @@ L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages`
 Il est préférable mais non obligatoire d'**activer la vibration** pour percevoir le point de déclenchement de certaines fonctionnalités.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#iPhoneVibration-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#iPhoneVibration-iOS12"
