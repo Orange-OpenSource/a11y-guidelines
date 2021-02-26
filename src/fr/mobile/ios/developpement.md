@@ -17,35 +17,35 @@ Ce guide a pour objectif de présenter les différentes notions d’accessibilit
 
 ## Nature des éléments
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#TraitElt-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#TraitElt-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#TraitElt-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#TraitElt-BasicOperations" 
            role="tab" 
            aria-selected="false">Operations</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#TraitElt-Links" 
@@ -159,28 +159,28 @@ func changeTraits() {
 
 ## Alternatives textuelles
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#textAlt-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#textAlt-Details" 
            role="tab" 
            aria-selected="true">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#textAlt-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#textAlt-Links" 
@@ -271,28 +271,28 @@ class ChangeTextView: UIViewController {
 
 ## Date, heure et nombres
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#format-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#format-DateTime" 
            role="tab" 
            aria-selected="false">Date & Heure</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#format-Numbers" 
            role="tab" 
            aria-selected="false">Nombre</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#format-PhoneNumbers" 
@@ -486,21 +486,21 @@ L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir 
 
 ## Déclencher une vocalisation
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#triggerVocal-Details" 
            role="tab" 
            aria-selected="true">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#triggerVocal-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#triggerVocal-Links" 
@@ -543,28 +543,28 @@ UIAccessibility.post(notification: .announcement,
 
 ## Informer d’une modification sur la page
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#changeNotif-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#changeNotif-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#changeNotif-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#changeNotif-Links" 
@@ -645,28 +645,28 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 
 ## Masquer des éléments  
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#hideElts-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#hideElts-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#hideElts-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#hideElts-Links" 
@@ -796,21 +796,21 @@ override func viewDidAppear(_ animated: Bool) {
 
 ## Grouper des éléments
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#groupElts-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#groupElts-Example1" 
            role="tab" 
            aria-selected="false">Exemple 1</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#groupElts-Example2"
@@ -818,7 +818,7 @@ override func viewDidAppear(_ animated: Bool) {
            role="tab" 
            aria-selected="false">Exemple 2</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#groupElts-Links" 
@@ -1087,21 +1087,21 @@ Cela permet notamment de faire des vocalisations uniques ou de définir un ordre
 
 ## Ordre de lecture
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#readingOrder-Details" 
            role="tab" 
            aria-selected="true">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#readingOrder-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#readingOrder-Links" 
@@ -1179,28 +1179,28 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
 
 ## Focus d'un élément
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#focusElt-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#focusElt-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#focusElt-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#focusElt-Links" 
@@ -1296,14 +1296,14 @@ extension UIView {
 
 ## Modifier la zone de focus de <span lang="en">VoiceOver</span>
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#focusArea-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#focusArea-Details"
@@ -1311,14 +1311,14 @@ extension UIView {
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#focusArea-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#focusArea-Links" 
@@ -1459,21 +1459,21 @@ float heightVal;
 
 ## Vue modale
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#modalView-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#modalView-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#modalView-Example"
@@ -1481,7 +1481,7 @@ float heightVal;
            role="tab" 
            aria-selected="false">Exemples</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#modalView-Links" 
@@ -1602,21 +1602,21 @@ Pour application, supposons que nous avons une vue générique contenant des él
 
 ## Taille des textes
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#textSize-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#textSize-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#textSize-Links" 
@@ -1633,14 +1633,14 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 <div class="tab-pane" id="textSize-Details" role="tabpanel">
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#TextSize-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#TextSize-iOS12"
@@ -1749,14 +1749,14 @@ Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwd
 
 ## Trait d'union de troncature
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#truncHyphen-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#truncHyphen-Example" 
@@ -1842,21 +1842,21 @@ class TruncationHyphen: UIViewController {
 
 ## Taille des éléments graphiques
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#graphEltSize-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#graphEltSize-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#graphEltSize-Links" 
@@ -1909,28 +1909,28 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
 
 ## Large Content Viewer
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#largeContentViewer-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#largeContentViewer-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#largeContentViewer-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#largeContentViewer-Links" 
@@ -2072,21 +2072,21 @@ Lorsque la **gestuelle 'appui long' est déjà implémentée sur l'élément imp
 
 ## Valeurs continûment ajustables
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#adjustable-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#adjustable-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#adjustable-Links" 
@@ -2292,21 +2292,21 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 
 ## Actions personnalisées
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#customActions-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#customActions-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#customActions-Links" 
@@ -2323,14 +2323,14 @@ Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fon
 Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensemble d'actions.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#CustomActionsVoiceOver"
            role="tab" 
            aria-selected="true">Lecteur d'écran</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#CustomActionsSwitchControl"
@@ -2477,21 +2477,21 @@ class CustomActions: UIViewController {
 
 ## Rotor personnalisé
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#rotor-Details" 
            role="tab" 
            aria-selected="true">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#rotor-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#rotor-Link" 
@@ -2634,28 +2634,28 @@ L'implémentation d'une telle fonctionnalité au sein d'une application est donc
 
 ## Options d’accessibilité
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#a11yOptions-States" 
            role="tab" 
            aria-selected="true">États</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#a11yOptions-Events" 
            role="tab" 
            aria-selected="false">Événements</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#a11yOptions-Recap" 
            role="tab" 
            aria-selected="false">Recapitulatif</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#a11yOptions-Link" 
@@ -2764,42 +2764,42 @@ Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/
 
 ## Barre de navigation
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#navBar-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#navBar-LeftBarItem" 
            role="tab" 
            aria-selected="false">LeftBarItem</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#navBar-Title" 
            role="tab" 
            aria-selected="false">Titre</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#navBar-RightBarItem" 
            role="tab" 
            aria-selected="false">RightBarItem</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#navBar-ReadingOrder" 
            role="tab" 
            aria-selected="false">Ordre de lecture</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#navBar-Link" 
@@ -3237,35 +3237,35 @@ private func createA11yElts() {
 
 ## Vocalisation synthétisée
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#speechSyn-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#speechSyn-Details" 
            role="tab" 
            aria-selected="false">Fonctionnement</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-toggle="tab" 
            href="#speechSyn-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#speechSyn-Phonemes" 
            role="tab" 
            aria-selected="false">Phonèmes</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#speechSyn-Links" 
@@ -3492,14 +3492,14 @@ Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réa
 
 La génération de cette phonétique peut se faire en passant par les réglages du terminal.
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#Phonemes-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#Phonemes-iOS12"
@@ -3573,21 +3573,21 @@ L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont prés
 
 ## Contrôle de sélection
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#switchCtrl-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#switchCtrl-Custom" 
            role="tab" 
            aria-selected="false">Personnalisation du mode élément</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#switchCtrl-Link" 
@@ -3754,21 +3754,21 @@ Les groupes créés permettent d'accéder directement aux éléments qu'ils cont
 
 ## Vocalisation du nom de l'application
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#appName-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#appName-Example" 
            role="tab" 
            aria-selected="false">Exemple</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#appName-Link" 

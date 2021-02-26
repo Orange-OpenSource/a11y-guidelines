@@ -10,14 +10,14 @@ VoiceOver is a built-in screen reader that reads aloud the items that appear on 
 VoiceOver can be switched on thanks to the `Settings` device menu:
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#VoiceOverActivation-iOS12"
@@ -43,14 +43,14 @@ VoiceOver can be switched on thanks to the `Settings` device menu:
 It's better but not mandatory to **activate the vibration** feature in the accessibility settings in order to feel the trigger of some actions.
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#iPhoneVibration-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#iPhoneVibration-iOS12"

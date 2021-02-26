@@ -42,7 +42,7 @@ This video available on the official Apple website ([session&nbsp;244](https://d
 <br><br>
 ### Dynamic Type
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#DynamicType-TheFourPrinciples"
@@ -50,7 +50,7 @@ This video available on the official Apple website ([session&nbsp;244](https://d
            role="tab" 
            aria-selected="true">The Four Principles</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#DynamicType-TextStyles"
@@ -58,7 +58,7 @@ This video available on the official Apple website ([session&nbsp;244](https://d
            role="tab" 
            aria-selected="false">Text Styles</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#DynamicType-Xcode"
@@ -108,7 +108,7 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
 <br><br>
 ### Reduce motion
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#ReduceMotion-TheBasics"
@@ -116,7 +116,7 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
            role="tab" 
            aria-selected="true">The Basics</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#ReduceMotion-AutoplayingVideo"
@@ -124,7 +124,7 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
            role="tab" 
            aria-selected="false">Autoplaying Video</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#ReduceMotion-ScreenTransitions"
@@ -177,7 +177,7 @@ Once activated, the `Prefer`&nbsp;`Cross-Fade`&nbsp;`Transitions` option is auto
 <br><br>
 ### Color
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#Color-TheBasics"
@@ -185,7 +185,7 @@ Once activated, the `Prefer`&nbsp;`Cross-Fade`&nbsp;`Transitions` option is auto
            role="tab" 
            aria-selected="true">The Basics</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#Color-DifferentiateWithoutColor"
@@ -311,7 +311,7 @@ Quick introduction of VoiceOver with a problem due to an inadequate implementati
 <br><br>
 ### Custom Actions
 <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
            href="#CustomActions-VoiceOver"
@@ -319,7 +319,7 @@ Quick introduction of VoiceOver with a problem due to an inadequate implementati
            role="tab" 
            aria-selected="true">VoiceOver</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-toggle="tab" 
            href="#CustomActions-SwitchControl"
