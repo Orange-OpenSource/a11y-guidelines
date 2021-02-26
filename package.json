@@ -38,6 +38,7 @@
     "string": "^3.3.3"
   },
   "dependencies": {
+    "docsearch.js": "^2.6.3",
     "tarteaucitronjs": "^1.4.0"
   }
 }

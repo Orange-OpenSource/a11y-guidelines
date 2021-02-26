@@ -24,6 +24,9 @@ module.exports = {
     header: {
       logoAlt: 'Orange, go to homepage'
     },
+    search: {
+      label: 'Search'
+    },
     filtersBar: {
       label: 'Filters',
       all: "All"
@@ -78,6 +81,9 @@ module.exports = {
     },
     header: {
       logoAlt: "Orange, aller à l’accueil"
+    },
+    search: {
+      label: 'Rechercher'
     },
     filtersBar: {
       label: 'Filtres',
