@@ -112,6 +112,12 @@ blockquote p::after {
   transition: opacity .25s ease;
 }
 
+#back-to-top:hover,
+#back-to-top:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
 
 
 /*
