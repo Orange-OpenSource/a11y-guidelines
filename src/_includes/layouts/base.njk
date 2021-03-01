@@ -88,7 +88,7 @@
           'phase': '{{ site.tracking.phase }}'
         }];
         tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
-        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
       {%- endif -%}
       docsearch({{ site.getDocSearchConfig(locale) | dump | safe }});
     </script>
