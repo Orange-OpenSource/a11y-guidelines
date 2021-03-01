@@ -640,9 +640,72 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 
 - [`UIAccessibilityPageScrolledNotification`](https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification)
 </div>
-</div><br><br>
-<a name="MaskElements"></a>
+</div>
+<br><br>
 
+## Modifier la langue de vocalisation
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#changeLang-Details" 
+           role="tab" 
+           aria-selected="true">Fonctionnement</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Example" 
+           role="tab" 
+           aria-selected="false">Exemple</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Links" 
+           role="tab" 
+           aria-selected="false">Lien</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="changeLang-Details"
+     role="tabpanel">
+
+Afin de modifier la langue de prononciation de <span lang="en">VoiceOver</span> pour un mot ou un texte, il existe l’attribut **accessibilityLanguage**.
+
+Disponible via le protocole `UIAccessibility`, cet attribut permet de redéfinir la langue de prononciation d’un texte.
+
+</div>
+<div class="tab-pane" id="changeLang-Example" role="tabpanel">
+
+Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-ci sera vocalisé par <span lang="en">VoiceOver</span> dans la nouvelle langue donnée en valeur de l’attribut.<br>
+
+<pre><code class="objectivec">
+- (IBAction)tapHere:(UIButton *)sender {
+    
+    myLabel.accessibilityLanguage = @"en";
+    myLabel.accessibilityLabel = @"This is a new label. Thank you.";
+}
+</code></pre>
+
+<pre><code class="swift">
+@IBAction func tapHere(_ sender: UIButton) {
+        
+    myLabel.accessibilityLanguage = "en"
+    myLabel.accessibilityLabel = "This is a new label. Thank you."
+}
+</code></pre>
+
+Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec VoiceOver, on peut s'appuyer sur les **Attributed Accessibility Properties** en utilisant un `NSAttributedString` [depuis iOS&nbsp;11](https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
+</div>
+<div class="tab-pane" id="changeLang-Links" role="tabpanel">
+
+- [`accessibilityLanguage`](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage)
+</div>
+</div>
+<br><br>
+
+<a name="MaskElements"></a>
 ## Masquer des éléments  
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">

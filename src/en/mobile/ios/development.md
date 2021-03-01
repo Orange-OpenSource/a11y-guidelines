@@ -633,6 +633,67 @@ This notification comes along with a vocalization including a sound like announc
 </div>
 <br><br>
 
+## Change the vocalization language
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#changeLang-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="changeLang-Details"
+     role="tabpanel">
+     
+To change the vocalization language of VoiceOver for a word or a sentence, one can use the **accessibilityLanguage**&nbsp; attribute.
+
+Available through the `UIAccessibility` informal protocol, this attribute allows to specify a language for a dedicated text.
+
+</div>
+<div class="tab-pane" id="changeLang-Example" role="tabpanel">
+
+If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocalized by VoiceOver in the language set on this attribute.
+<pre><code class="objectivec">
+- (IBAction)tapHere:(UIButton *)sender {
+    
+    myLabel.accessibilityLanguage = @"fr";
+    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
+}
+</code></pre>
+
+<pre><code class="swift">
+@IBAction func tapHere(_ sender: UIButton) {
+        
+    myLabel.accessibilityLanguage = "fr"
+    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
+}
+</code></pre>
+
+A single word in a foreign language may be added in a sentence with the appropriate pronunciation thanks to the **Attributed Accessibility Properties** using a `NSAttributedString` [since iOS&nbsp;11](https://a11y-guidelines.orange.com/en/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
+</div>
+<div class="tab-pane" id="changeLang-Links" role="tabpanel">  
+
+- [`accessibilityLanguage`](https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage)
+</div>
+</div>
+<br><br>
+
 <a name="MaskElements"></a>
 ## Hide elements
 <ul class="nav nav-tabs" role="tablist">
@@ -2660,7 +2721,7 @@ Such a feature must be implemented with **caution** and according to **specific 
      
 On iOS, it is possible to check the accessibility options state that may be changed in the device settings. 
 
-The most useful method rpovided by the `UIKit` framework is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
+The most useful method provided by the `UIKit` framework is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
 <pre><code class="objectivec">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
