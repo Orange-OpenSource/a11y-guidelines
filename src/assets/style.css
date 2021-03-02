@@ -141,6 +141,10 @@ blockquote p::after {
  * Footer
  */
 
+[role="contentinfo"] a:not([aria-current]) {
+  text-decoration: underline;
+}
+
 [role="contentinfo"] svg {
   fill: #fff;
 }
