@@ -193,7 +193,8 @@ module.exports = {
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact' },
-      { label: 'À propos', href: '/fr/a-propos' }
+      { label: 'À propos', href: '/fr/a-propos' },
+      { label: 'Accessibilité', href: '/fr/accessibilite' }
     ]
   }
 }
