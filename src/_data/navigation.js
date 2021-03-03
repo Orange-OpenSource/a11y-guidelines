@@ -57,6 +57,7 @@ module.exports = {
           { label: 'Design', href: '/en/mobile/android/design/' },
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
+          { label: 'Evaluate', href: '/en/mobile/android/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
         ]
       },
@@ -142,6 +143,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/android/conception/' },
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
+          { label: 'Évaluer', href: '/fr/mobile/android/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
         ]
       },
