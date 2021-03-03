@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Multimédia - Recommandations accessibilité numérique Orange</title>
+    <title>Audit WCAG - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+  <body>
     
 
 <header role="banner">
@@ -131,7 +131,7 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/mobile/android/conception/" class="nav-link active" aria-current="true">
+              <a href="/fr/mobile/android/conception/" class="nav-link">
   Designer
 </a>
             </li><li class="nav-item">
@@ -143,7 +143,7 @@
   Tester
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/android/audit-wcag/" class="nav-link">
+              <a href="/fr/mobile/android/audit-wcag/" class="nav-link active" aria-current="page">
   Évaluer
 </a>
             </li><li class="nav-item">
@@ -169,174 +169,34 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
+        <li class="breadcrumb-item">
           <a href="/fr/mobile/android/">Android</a>
         </li>
       
       
-        <li class="breadcrumb-item">
-          <a href="/fr/mobile/android/conception/">Designer</a>
-        </li>
-      
-      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Multimédia
+          Évaluer
         </li>
       </ol>
 </nav>
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
-        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
-        Thématiques
-      </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/mobile/android/conception/navigation-generale/" class="nav-link dropdown-item">
-  Navigation générale
-</a><a href="/fr/mobile/android/conception/navigation-vocale/" class="nav-link dropdown-item">
-  Navigation vocale
-</a><a href="/fr/mobile/android/conception/navigation-focus/" class="nav-link dropdown-item">
-  Navigation clavier (Switch Access)
-</a><a href="/fr/mobile/android/conception/entetes/" class="nav-link dropdown-item">
-  Entêtes
-</a><a href="/fr/mobile/android/conception/couleurs-et-contrastes/" class="nav-link dropdown-item">
-  Couleurs et contrastes
-</a><a href="/fr/mobile/android/conception/agrandissement/" class="nav-link dropdown-item">
-  Agrandissement
-</a><a href="/fr/mobile/android/conception/formulaire/" class="nav-link dropdown-item">
-  Écran de saisie
-</a><a href="/fr/mobile/android/conception/multimedia/" class="nav-link dropdown-item active" aria-current="page">
-  Multimédia
-</a></div>
-    </nav>
         
-          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
-        Sommaire
-      </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#controler-le-contenu-multimedia" class="dropdown-item text-wrap">Contrôler le contenu multimédia</a><a href="#transcrire-le-contenu-audio-ou-video" class="dropdown-item text-wrap">Transcrire le contenu audio ou vidéo</a><a href="#eviter-le-contenu-a-risque-epileptique" class="dropdown-item text-wrap">Eviter le contenu à risque épileptique</a></div>
-    </nav>
         
       </div>
     </div>
     
-  <div class="container-lg pt-4">
-      <div class="row">
-        
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label">Thématiques</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/navigation-generale/" class="nav-link text-muted">
-  Navigation générale
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/navigation-vocale/" class="nav-link text-muted">
-  Navigation vocale
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/navigation-focus/" class="nav-link text-muted">
-  Navigation clavier (Switch Access)
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/entetes/" class="nav-link text-muted">
-  Entêtes
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/couleurs-et-contrastes/" class="nav-link text-muted">
-  Couleurs et contrastes
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/agrandissement/" class="nav-link text-muted">
-  Agrandissement
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/formulaire/" class="nav-link text-muted">
-  Écran de saisie
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/fr/mobile/android/conception/multimedia/" class="nav-link text-muted active" aria-current="page">
-  Multimédia
-</a>
-          </li></ul>
-    </nav>
-              
-            </div>
-          </div>
-        
-        <main id="main-content" class="col-md-6" role="main">
-          <h1>Multimédia</h1>
-<h2 id="controler-le-contenu-multimedia">Contrôler le contenu multimédia <a class="header-anchor" href="#controler-le-contenu-multimedia" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles et cognitives.<br>
-<strong>Quand :</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description :</strong></p>
-<p>Sur mobile, les lecteurs d’écran essayent de transmettre au maximum à l’utilisateur les changements de contexte. Dans certains cas, cela peut donner des vocalisations permanentes, et donc inaudibles, ou empêcher toute action de l’utilisateur.<br>
-L’utilisateur doit rester maître du contenu à tout instant. C’est particulièrement vrai avec le contenu interactif. Il faut donc éviter par exemple qu’une vidéo ne se lance directement en plein écran, qu’une vidéo ne se lance directement sans une action au préalable de l’utilisateur, qu’un carrousel ne défile de manière automatique, etc.</p>
-<p>De plus, un contenu multimédia doit pouvoir être contrôlé à tout instant par l'utilisateur, que ce soit pour couper le son, ou pour le mettre en pause.</p>
-<p><strong>À vérifier :</strong></p>
-<ul>
-<li>Les contenus multimédias peuvent être contrôlés par l’utilisateur (présence d’un bouton pause, bouton accessible pour sortir du mode plein-écran, etc...)</li>
-<li>Pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause, soit d'en contrôler son volume indépendamment du volume général du système.</li>
-<li>Il n'y a pas de démarrage automatique de la vidéo au chargement de la page.</li>
-</ul>
-<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a></li>
-</ul>
-<h2 id="transcrire-le-contenu-audio-ou-video">Transcrire le contenu audio ou vidéo <a class="header-anchor" href="#transcrire-le-contenu-audio-ou-video" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br>
-<strong>Quand :</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description :</strong></p>
-<p>Il est essentiel de fournir un moyen d’accès à l’information visuelle et auditive pour des personnes ne pouvant pas en bénéficier : malvoyants, aveugles, sourds, déficients cognitifs, ordinateur sans haut-parleurs, en environnement lumineux ou bruyant.</p>
-<p><strong>À vérifier :</strong></p>
-<ul>
-<li>Une transcription intégrale textuelle est proposée pour le contenu audio préenregistré</li>
-<li>Une transcription intégrale textuelle ou une audiodescription est proposée pour le contenu vidéo préenregistré</li>
-<li>Des sous-titres sont proposés pour le contenu vidéo, préenregistré ou non</li>
-</ul>
-<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a></li>
-</ul>
-<h2 id="eviter-le-contenu-a-risque-epileptique">Eviter le contenu à risque épileptique <a class="header-anchor" href="#eviter-le-contenu-a-risque-epileptique" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tout le monde, et en particulier les personnes ayant des crises d'épilepsie<br>
-<strong>Quand :</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description :</strong><br>
-Afin d'éviter que le contenu de l'application provoque des crises d'épilepsie, il est primordial d'éviter les clignotements de plus de 3 flashs par seconde.</p>
-<p><strong>À vérifier :</strong></p>
-<ul>
-<li>Il n'y a aucun clignotement de plus de 3 flashs à la seconde</li>
-</ul>
-<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a></li>
-</ul>
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Audit WCAG</h1>
+<p>L’audit WCAG a pour objectif de calculer les taux de conformité mentionnés sur les déclarations d’accessibilité des applications Orange.</p>
+<p>Orange a mis en place une grille de questions nommée la va11ydette.  Cette grille reprend les 50 critères du standard WCAG version 2.1 de niveau A et AA en 54 questions. Chaque question permet de valider ou d’invalider un ou plusieurs critères, un critère peut être traité par une ou plusieurs questions.</p>
+<p>La grille calcule un taux de conformité par écran auditée : ce taux est égal à la somme des critères conformes divisée par le nombre de critères applicables. Elle calcule aussi le taux moyen de conformité qui correspond à la moyenne des taux de conformité de chaque écran de l’échantillon.</p>
+<h2 id="acceder-a-la-va11ydette">Accéder à la va11ydette <a class="header-anchor" href="#acceder-a-la-va11ydette" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Le lien ci-dessous entraine l'ouverture de la grille dans un nouvel onglet du navigateur.</p>
+<p><a href="/fr/web/la-va11ydette/?list=wcag-android&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la va11ydette (nouvelle fenêtre)">Ouvrir la va11ydette<span class="sr-only"> (nouvelle fenêtre)</span></a></p>
 
-        </main>
-        
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
-      <h2 id="toc-title">Sommaire</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#controler-le-contenu-multimedia" class="nav-link text-muted bg-200">Contrôler le contenu multimédia</a>
-          </li><li class="nav-item position-relative">
-            <a href="#transcrire-le-contenu-audio-ou-video" class="nav-link text-muted bg-200">Transcrire le contenu audio ou vidéo</a>
-          </li><li class="nav-item position-relative">
-            <a href="#eviter-le-contenu-a-risque-epileptique" class="nav-link text-muted bg-200">Eviter le contenu à risque épileptique</a>
-          </li></ul>
-    </nav>
-            </div>
-          </div>
-        
-      </div>
-    </div>
+    </main>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -351,7 +211,7 @@ Afin d'éviter que le contenu de l'application provoque des crises d'épilepsie,
   À propos
 </a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/android/conception/multimedia.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/android/audit-wcag.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur Github (nouvelle fenêtre)">
             Signaler une erreur sur Github<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

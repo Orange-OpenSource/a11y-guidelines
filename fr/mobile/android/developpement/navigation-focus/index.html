@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Navigation au focus - Recommandations accessibilité numérique Orange</title>
+    <title>Navigation au clavier (Switch Access) - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -143,6 +143,10 @@
   Tester
 </a>
             </li><li class="nav-item">
+              <a href="/fr/mobile/android/audit-wcag/" class="nav-link">
+  Évaluer
+</a>
+            </li><li class="nav-item">
               <a href="/fr/mobile/android/outils/" class="nav-link">
   Boite à outils
 </a>
@@ -176,7 +180,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Navigation au focus
+          Navigation au clavier (Switch Access)
         </li>
       </ol>
 </nav>
@@ -192,11 +196,11 @@
 </a><a href="/fr/mobile/android/developpement/navigation-vocale/" class="nav-link dropdown-item">
   Navigation vocale
 </a><a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link dropdown-item active" aria-current="page">
-  Navigation focus
+  Navigation clavier (Switch Access)
 </a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item">
   Agrandissement
 </a><a href="/fr/mobile/android/developpement/formulaire/" class="nav-link dropdown-item">
-  Formulaire
+  Écran de saisie
 </a></div>
     </nav>
         
@@ -204,7 +208,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#acceder-aux-elements-interactifs" class="dropdown-item text-wrap">Accéder aux éléments interactifs</a><a href="#ordonner-la-navigation-au-focus" class="dropdown-item text-wrap">Ordonner la navigation au focus</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#acceder-aux-elements-interactifs" class="dropdown-item text-wrap">Accéder aux éléments interactifs</a><a href="#ordonner-la-navigation-au-clavier" class="dropdown-item text-wrap">Ordonner la navigation au clavier</a></div>
     </nav>
         
       </div>
@@ -227,7 +231,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link text-muted active" aria-current="page">
-  Navigation focus
+  Navigation clavier (Switch Access)
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted">
@@ -235,7 +239,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/formulaire/" class="nav-link text-muted">
-  Formulaire
+  Écran de saisie
 </a>
           </li></ul>
     </nav>
@@ -244,23 +248,23 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Navigation au focus</h1>
+          <h1>Navigation au clavier (Switch Access)</h1>
 <h2 id="acceder-aux-elements-interactifs">Accéder aux éléments interactifs <a class="header-anchor" href="#acceder-aux-elements-interactifs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes motrices ou cognitives.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
-<p>La navigation au focus est très utile pour les personnes qui présentent des difficultés motrices ou cognitives. Cette navigation permet de passer d’élément interactif en élément interactif (élément sur lequel on peut effectuer une action). Elle correspond à la navigation que l’on peut faire avec un clavier Bluetooth lié à un smartphone.</p>
-<p>Pour gérer la navigation au focus, il faut s’assurer de 2 choses :</p>
+<p>La navigation avec Switch Access est très utile pour les personnes qui présentent des difficultés motrices ou cognitives. Cette navigation permet de passer d’élément interactif en élément interactif (élément sur lequel on peut effectuer une action). Elle correspond à la navigation que l’on peut faire avec un clavier Bluetooth lié à un smartphone.</p>
+<p>Pour gérer la navigation au clavier, il faut s’assurer de 2 choses :</p>
 <ul>
-<li>Permettre le focus sur les éléments interactifs : la navigation au focus ne concerne que les éléments interactifs. Si, par exemple, votre application possède des vues <i lang="en">custom</i> cliquables, il faut s’assurer que ces vues soient &quot;focusables&quot; en positionnant l’attribut <code>focusable</code> à <code>true</code>.</li>
+<li>Permettre le focus sur les éléments interactifs : la navigation au clavier ne concerne que les éléments interactifs. Si, par exemple, votre application possède des vues <i lang="en">custom</i> cliquables, il faut s’assurer que ces vues soient &quot;focusables&quot; en positionnant l’attribut <code>focusable</code> à <code>true</code>.</li>
 <li>Gérer l’affichage du focus : tout élément interactif peut recevoir le focus, il faut donc que le <code>state_focused</code> soit défini et permette de distinguer d’un seul coup d’œil quel élément a le focus.</li>
 </ul>
 <p>À noter : Android Pie (9, API 28), introduit un focus spécifique au lecteur d’écran permet d’éviter les effets de bords entre le focus du lecteur d’écran (screenReaderFocusable) et le focus clavier (focusable). La navigation clavier n’est pas sensible au screenReaderFocusable.</p>
 <p><strong>À vérifier :</strong></p>
 <ul>
-<li>À la navigation au focus, il est possible de déterminer visuellement l’élément qui a le focus</li>
-<li>Toutes les fonctionnalités sont accessibles avec la navigation au focus</li>
-<li>Tous les éléments interactifs sont bien mis en surbrillance avec la navigation au focus</li>
-<li>Il n'y a que les éléments interactifs qui sont mis en surbrillance avec la navigation au focus</li>
+<li>À la navigation au clavier, il est possible de déterminer visuellement l’élément qui a le focus</li>
+<li>Toutes les fonctionnalités sont accessibles avec la navigation au clavier</li>
+<li>Tous les éléments interactifs sont bien mis en surbrillance avec la navigation au clavier</li>
+<li>Il n'y a que les éléments interactifs qui sont mis en surbrillance avec la navigation au clavier</li>
 </ul>
 <p><strong>Exemple </strong>:<br>
 Exemple de sélecteur qui prend en compte l’état <code>state_focused</code> :</p>
@@ -296,16 +300,16 @@ Exemple de sélecteur qui prend en compte l’état <code>state_focused</code> 
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
 </ul>
-<h2 id="ordonner-la-navigation-au-focus">Ordonner la navigation au focus <a class="header-anchor" href="#ordonner-la-navigation-au-focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="ordonner-la-navigation-au-clavier">Ordonner la navigation au clavier <a class="header-anchor" href="#ordonner-la-navigation-au-clavier" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes motrices qui utilisent un clavier pour naviguer.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
-<p>La navigation au focus, pour être compréhensible et facile d'utilisation, doit proposer un ordre cohérent et compréhensible de navigation. Il est donc important de gérer l’ordre du focus : à travers les options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> et <code>nextFocusLeft</code>, vous pouvez spécifier quelle vue doit prendre le focus selon l’utilisation des flèches tab, bas, haut, droit et gauche.</p>
+<p>La navigation au clavier, pour être compréhensible et facile d'utilisation, doit proposer un ordre cohérent et compréhensible de navigation. Il est donc important de gérer l’ordre du focus : à travers les options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> et <code>nextFocusLeft</code>, vous pouvez spécifier quelle vue doit prendre le focus selon l’utilisation des flèches tab, bas, haut, droit et gauche.</p>
 <p>À noter : <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> ainsi que d’autres options de gestion du focus sont accessibles directement dans le <abbr>XML</abbr> ou dans le code à travers les méthodes correspondantes.</p>
 <p>Pour plus d’information sur la <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">gestion du focus sous Android</a>.</p>
 <p><strong>À vérifier :</strong></p>
 <ul>
-<li>L’ordre de navigation au focus est logique et cohérent.</li>
+<li>L’ordre de navigation au clavier est logique et cohérent.</li>
 <li>Les éléments sont regroupés lorsqu'ils sont liés (exemple : contenu au sein d'un item cliquable d'une liste)</li>
 </ul>
 <p><strong>Exemple</strong></p>
@@ -336,7 +340,7 @@ Exemple de sélecteur qui prend en compte l’état <code>state_focused</code> 
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#acceder-aux-elements-interactifs" class="nav-link text-muted bg-200">Accéder aux éléments interactifs</a>
           </li><li class="nav-item position-relative">
-            <a href="#ordonner-la-navigation-au-focus" class="nav-link text-muted bg-200">Ordonner la navigation au focus</a>
+            <a href="#ordonner-la-navigation-au-clavier" class="nav-link text-muted bg-200">Ordonner la navigation au clavier</a>
           </li></ul>
     </nav>
             </div>

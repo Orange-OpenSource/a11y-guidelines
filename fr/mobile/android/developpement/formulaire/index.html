@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Formulaire - Recommandations accessibilité numérique Orange</title>
+    <title>Écran de saisie - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -143,6 +143,10 @@
   Tester
 </a>
             </li><li class="nav-item">
+              <a href="/fr/mobile/android/audit-wcag/" class="nav-link">
+  Évaluer
+</a>
+            </li><li class="nav-item">
               <a href="/fr/mobile/android/outils/" class="nav-link">
   Boite à outils
 </a>
@@ -176,7 +180,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Formulaire
+          Écran de saisie
         </li>
       </ol>
 </nav>
@@ -192,11 +196,11 @@
 </a><a href="/fr/mobile/android/developpement/navigation-vocale/" class="nav-link dropdown-item">
   Navigation vocale
 </a><a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link dropdown-item">
-  Navigation focus
+  Navigation clavier (Switch Access)
 </a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item">
   Agrandissement
 </a><a href="/fr/mobile/android/developpement/formulaire/" class="nav-link dropdown-item active" aria-current="page">
-  Formulaire
+  Écran de saisie
 </a></div>
     </nav>
         
@@ -204,7 +208,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#avoir-des-champs-de-formulaires-explicites" class="dropdown-item text-wrap">Avoir des champs de formulaires explicites</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#avoir-des-champs-de-saisie-explicites" class="dropdown-item text-wrap">Avoir des champs de saisie explicites</a></div>
     </nav>
         
       </div>
@@ -227,7 +231,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link text-muted">
-  Navigation focus
+  Navigation clavier (Switch Access)
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted">
@@ -235,7 +239,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/formulaire/" class="nav-link text-muted active" aria-current="page">
-  Formulaire
+  Écran de saisie
 </a>
           </li></ul>
     </nav>
@@ -244,26 +248,26 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Formulaire</h1>
-<h2 id="avoir-des-champs-de-formulaires-explicites">Avoir des champs de formulaires explicites <a class="header-anchor" href="#avoir-des-champs-de-formulaires-explicites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+          <h1>Écran de saisie</h1>
+<h2 id="avoir-des-champs-de-saisie-explicites">Avoir des champs de saisie explicites <a class="header-anchor" href="#avoir-des-champs-de-saisie-explicites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
-<p>Lier les champs de formulaires avec leurs labels apporte une vocalisation supplémentaire qui permet à l’utilisateur de comprendre ce qu'il faut remplir lorsqu’il arrive sur un champ de formulaire.</p>
+<p>Lier les champs de saisie avec leurs labels apporte une vocalisation supplémentaire qui permet à l’utilisateur de comprendre ce qu'il faut remplir lorsqu’il arrive sur un champ de saisie.</p>
 <p>Il existe 2 grandes techniques pour réaliser cette liaison :</p>
 <ul>
-<li><code>labelFor</code> : permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’<code>id</code> de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> <code>android:labelFor</code> ou le code <code>setLabelFor</code>.</li>
+<li><code>labelFor</code> : permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’<code>id</code> de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de saisie. Utilisable depuis le <abbr>xml</abbr> <code>android:labelFor</code> ou le code <code>setLabelFor</code>.</li>
 <li><code>hint</code> : permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les <code>TextView</code>. Prend en paramètre l’<code>id</code> d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> <code>android:hint</code> ou le code <code>setHint</code>.</li>
 </ul>
-<p>De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhension du formulaire, les différents champs obligatoires, le format attendu, ou encore les erreurs commises sur de potentiels champs.</p>
+<p>De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhension de l'écran de saisie, les différents champs obligatoires, le format attendu, ou encore les erreurs commises sur de potentiels champs.</p>
 <p><strong>À vérifier :</strong></p>
 <ul>
-<li>Les champs de formulaire doivent être liés à un label si celui-ci est visible, sinon un <code>hint</code> est présent.</li>
+<li>Les champs de saisie doivent être liés à un label si celui-ci est visible, sinon un <code>hint</code> est présent.</li>
 <li>Les champs obligatoires sont identifiables</li>
 <li>Le format de données des champs &quot;complexe&quot; est indiqué à l'utilisateur</li>
 </ul>
 <p><strong>Exemple</strong></p>
-<p>Remarque : il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de formulaire l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).</p>
+<p>Remarque : il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de saisie l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).</p>
 <pre><code class="xml">&lt;EditText
    android:id="@+id/addressLine2"
    android:hint="@string/aptSuiteBuilding" ... /&gt;
@@ -291,7 +295,7 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sommaire</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#avoir-des-champs-de-formulaires-explicites" class="nav-link text-muted bg-200">Avoir des champs de formulaires explicites</a>
+            <a href="#avoir-des-champs-de-saisie-explicites" class="nav-link text-muted bg-200">Avoir des champs de saisie explicites</a>
           </li></ul>
     </nav>
             </div>

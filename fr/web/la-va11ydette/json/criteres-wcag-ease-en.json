@@ -1,6 +1,5 @@
 {
-	"version":1.4,
-	"lang":"en",
+	"name": "Conformity audit WCAG / WEB",		 
 	"items":[{
 		"themes": "Form",
 		"title": "Does every input field in the form have a label?",
@@ -12,6 +11,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "Verify that the accessible name of each input field is defined.",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -23,6 +23,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "Verify that the accessible name of each input field is appropriate.",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -35,6 +36,7 @@
 		],
 		"verifier": "<ul><li>the presence of a <code>fieldset</code> group or <code>role='group'</code></li><li>each group possesses a legend (<code>legend</code>, <code>aria-labelledby</code>)</li><li>each legend is appropriate</li></ul>",
 		"complement": "<h4>Additionally: </h4><p>Group elements only when it is necessary, for example:</p><ul><li>in order to differentiate between several fields having the same label (road, postcode, town – for delivery address and billing address)</li><li>legend text is necessary in order to facilitate the choice among a list of <code>radio</code> buttons or <code>checkbox</code> elements</li></ul>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -46,6 +48,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "<ul><li>verify that color is not used as the only visual means for identifying that a form element is required (e.g. asterisk)</li><li>verify that one of the following techniques is used to convey programmatically the information:<ul><li>the visible information is provided within the <code>label</code></li><li>presence of <code>required</code> attribute</li><li>presence of <code>aria-required</code> property</li></ul></li></ul>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -56,6 +59,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "<ul><li>check that the input format is present visually, and that its position allows it to be associated with the appropriate field</li><li>check that the input format is present in the accessible name (<code>label</code>, <code>aria-label</code>, <code>aria-labelledby</code>) or in the accessible description of the input field (<code>aria-describedby</code>)</li></ul>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -65,7 +69,8 @@
 		"wcag": [
 			"1.3.5 AA"
 		],
-		"verifier": "<ul><li>for the input fields intended for information about the user (name, address…), check that the <code>autocomplete</code> attribute is present</li><li>the value indicated for the <code>autocomplete</code> attribute is appropriate with respect to the type of information expected</li></ul>",
+		"verifier": "<ul><li>for the input fields intended for information about the user (name, address…), check that the <code>autocomplete</code> attribute is present</li><li>the value indicated for the <code>autocomplete</code> attribute is appropriate with respect to the type of information expected (<a href='https://www.w3.org/TR/WCAG21/#input-purposes' lang='en'> exhaustive list of allowed values </a>)</li></ul>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -75,7 +80,8 @@
 		"wcag": [
 			"3.3.1 A"
 		],
-		"verifier": "<ul><li>check that the label of the field that is in error is modified (e.g. by inserting an error message into the page prefixed by the word «&nbsp;error&nbsp;», or by the use of an error-icon)</li><li>if the visual information does not have a text alternative (e.g. icon without alternative) then check that the field has an <code>aria-invalid='true'</code> attribute</li></ul>",
+		"verifier": "<ul><li>check that the label of the field that is in error is modified (e.g. by inserting an error message into the page prefixed by the word  'error ', or by the use of an error-icon)</li><li>if the visual information does not have a text alternative (e.g. icon without alternative) then check that the field has an <code>aria-invalid='true'</code> attribute</li></ul>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -86,6 +92,7 @@
 			"3.3.1 A"
 		],
 		"verifier": "<p>Check that an error message is present visually, and that it allows the field in error to be precisely identified and the nature of the error to be understood.</p>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -96,6 +103,7 @@
 			"3.3.3 AA"
 		],
 		"verifier": "<p>Check that the error messages give the information necessary about how to correct the errors.</p>\n<p>If it's impossible to make a suggestion to correctm, te  Si il n'est pas possible de suggérer une correction , the criterion is not applicable</p>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Form",
@@ -106,6 +114,7 @@
 			"3.3.4 AA"
 		],
 		"verifier": "<p>For forms that:</p><ul><li>modify or delete data,</li><li>submit user test responses,</li><li> cause legal commitments (validate terms of service) or financial transactions (online shopping) for the user to occur,</li></ul><p>the user can modify or cancel before and after validation unless the validation is explicit (e.g. use of checkbox).</p>",
+		"group": "Form",
 		"resultatTest": "nt"
 	},{
 		"themes": "Textual Content",
@@ -137,7 +146,7 @@
 		"wcag": [
 			"1.3.1 A"
 		],
-		"verifier": "<ul> <li>content should always be placed between semantic tags (for instance <code>p</code>) in order that its relationship to the rest of the document structure may be understood</li> <li> long quotations (paragraph) use <code>blockquote</code> tags</li> <li> short quotations use <code>q</code> tags.</li> <li> the information presented visually, in a list format, is encoded as an HTML list </li> <li> unordered lists use the <code>ul</code> / <code>li</code> tags </li> <li> ordered lists use the <code>ol</code> / <code>li</code> tags</li> <li> description lists use the <code>dl</code> / <code>dt</code> / <code>dd</code> tags</li> </ul>  ",
+		"verifier": "<ul> <li>content should always be placed between semantic tags (for instance <code>p</code>) in order that its relationship to the rest of the document structure may be understood</li> <li> long quotations (paragraph) use <code>blockquote</code> tags</li> <li> short quotations use <code>q</code> tags.</li> <li> the information presented visually, in a list format, is encoded as an HTML list </li> <li> unordered lists use the <code>ul</code> / <code>li</code> tags </li> <li> ordered lists use the <code>ol</code> / <code>li</code> tags</li> <li> description lists use the <code>dl</code> / <code>dt</code> / <code>dd</code> tags</li><li>link (<code>&lt;a&gt;</code>), for any change of context via loading a new URL</li><li>button (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), for any triggering of an action, validation or selection</li></ul>  ",
 		"resultatTest": "nt"
 	},{
 		"themes": "Textual Content",
@@ -198,7 +207,7 @@
 		"wcag": [
 			"1.4.5 AA"
 		],
-		"verifier": "<ul><li>check that image and graphics elements (<code>img</code>, <code>input</code> / <code>object type='image'</code>, <code>embed</code>, <code>canvas</code>) are not used to present text.</li></ul>\n<p>Not :applicable i)f there is no image containing text</p>",
+		"verifier": "<ul><li>check that image and graphics elements (<code>img</code>, <code>input</code> / <code>object type='image'</code>, <code>embed</code>, <code>canvas</code>) are not used to present text.</li></ul>\n<p>Not applicable if there is no image containing text</p>",
 		"exceptions": "<ul><li>SVG (real text),</li><li>special cases (e.g. logo, captcha, tradename)</li></ul>",
 		"resultatTest": "nt"
 	},{
@@ -209,7 +218,8 @@
 		"wcag": [
 			"1.1.1 A"
 		],
-		"verifier": "<p>Check that the accessible name of each captcha image conveys the purpose of the image and not its content (e.g.  «&nbsp;captcha (anti-spam image)&nbsp;» ).</p>",
+		"verifier": "<p>Check that the accessible name of each captcha image conveys the purpose of the image and not its content (e.g.   'captcha (anti-spam image) ' ).</p>",
+		"group": "Captcha",
 		"resultatTest": "nt"
 	},{
 		"themes": "Non-text Content",
@@ -220,6 +230,7 @@
 			"1.1.1 A"
 		],
 		"verifier": "<p>Check that for each captcha which is exclusively visual or audio, one of the following alternatives is provided in addition: </p><ul><li>audio and visual captcha</li><li>logic problems (question for which the response is obvious, simple maths test…)</li><li>there is another method to access the functionality that is protected by the CAPTCHA</li></ul>",
+		"group": "Captcha",
 		"resultatTest": "nt"
 	},{
 		"themes": "Non-text Content",
@@ -302,7 +313,7 @@
 			"2.5.3 A"
 		],
 		"verifier": "<p>Check that the text of the displayed label (the textual description or the text of the image visible on the screen) is present (at the start, if possible) in the accessible name of this component (to find out more: <a href='https://a11y-guidelines.orange.com/web/a11y-name.html' target='_blank' title='The accessible name in HTML (new window)' aria-label='The accessible name in HTML (new window)'>The accessible name in HTML </a></p>\n<p>Not applicable, if no interface component has a visible label (icon without text, for example)</p>",
-		"complement": "<p>For example: for a «&nbsp;start&nbsp;» link, use an <code>aria-label</code> «&nbsp;start to play&nbsp;», but not «&nbsp;commence playing&nbsp;»</p>",
+		"complement": "<p>For example: for a  'start ' link, use an <code>aria-label</code>  'start playing', but not  'commence playing'</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
@@ -324,16 +335,6 @@
 			"2.4.1 A"
 		],
 		"verifier": "<p>If one of the mechanisms below is necessary for navigation, but absent from the page, then the test is non-compliant:</p><ul><li> heading tags (<code>hn</code>)</li><li> bypass blocks or skip links present at the top of the page, which allow the user to go directly to the main content sections </li><li>landmark elements, used to organize the document (<code>header</code>, <code>main</code>…)</li><li> bypass blocks present within the content</li></ul>",
-		"resultatTest": "nt"
-	},{
-		"themes": "Common navigation",
-		"title": "Is the semantic global structure of the document consistent?",
-		"ID": "testID-061",
-		"IDorigin": "testID-061",
-		"wcag": [
-			"1.3.1 A"
-		],
-		"verifier": "<ul><li>check that each region of the page is semantically correct through the appropriate use of <code>header</code>, <code>nav</code>… HTML5 structure tags</li><li>check that the main content is included inside a <code>main</code> tag</li><li>check that the <code>main</code> element does not contain elements which are repeated elsewhere on the page (e.g. navigation)</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
@@ -366,7 +367,7 @@
 			"3.2.1 A",
 			"3.2.2 A"
 		],
-		"verifier": "<p>When using forms or any interactive component, check that there is no change of context:</p><ul><li>when a component receives focus</li><li>when entering data</li><li>when activating a form element other than a button</li></ul>",
+		"verifier": "<p>When using forms or any interactive component, check that there is no change of context witho$ut warning the user:</p><ul><li>when a component receives focus</li><li>when entering data</li><li>when activating a form element other than a button</li></ul>",
 		"complement": "<h4>Context changes</h4><p>Major change in the content of the Web page which, when made without the user being aware of it, may confuse users who are unable to view the complete page.</p><p> Changes in context include changes of:</p><ul><li>user agent</li><li>viewport</li><li>focus</li><li>content that changes the meaning of the Web page</li></ul>",
 		"resultatTest": "nt"
 	},{
@@ -391,13 +392,13 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
-		"title": "For any moving or blinking information that lasts more than five seconds, is there a mechanism for the user to pause, stop, or hide it?",
+		"title": "For any moving, scrolling, blinking information that lasts more than five seconds or updated content, start automatically , is there a mechanism for the user to pause, stop, or hide it?",
 		"ID": "testID-035",
 		"IDorigin": "testID-035",
 		"wcag": [
 			"2.2.2 A"
 		],
-		"verifier": "<p>Not applicable,  if no movement or flashing is less than 5 seconds long</p>",
+		"verifier": "<p>Not applicable, if no movement, scrolling or flashing lasts more than 5 seconds or does not start automatically or if updates also start automatically</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
@@ -519,8 +520,8 @@
 		"wcag": [
 			"1.3.2 A"
 		],
-		"verifier": "<p>Check that when the content is read in a linear order, it remains understandable.</p>",
-		"complement": "<h4>More details</h4><p>The content order in the HTML code must be identical to the layout order of the content on the screen.</p><p>Examples of content to test:</p><ul><li>Layout with css <ul><li>Positioning properties (<code>top</code>, <code>left</code>…)</li><li><code>Float</code> in particular <code>right</code></li><li><code>Display:flex</code> or <code>display:grid</code></li></ul></li><li>Layout table</li></ul>",
+		"verifier": "<p>Check that when the content is read in a linear order, it remains understandable (reading order in the page without CSS).</p>",
+		"complement": "<h4>More details</h4><p>The content order in the HTML code must be understandable, often, it is identical to the layout order of the content on the screen.</p><p>Examples of content to test:</p><ul><li>Layout with css <ul><li>Positioning properties (<code>top</code>, <code>left</code>…)</li><li><code>Float</code> in particular <code>right</code></li><li><code>Display:flex</code> or <code>display:grid</code></li></ul></li><li>Layout table</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Layout",
@@ -531,7 +532,7 @@
 			"1.3.1 A"
 		],
 		"verifier": "<p>Check that no information is lost</p>",
-		"complement": "<h4>More details</h4><ul><li>No information must be provided by CSS generated content (example : pseudo classes<code> ::before / :before</code> and <code>::after / :after</code> and <code>content</code> property , background CSS images </li><li>CSS generated content must only provide decorative informations</li></ul>",
+		"complement": "<h4>More details</h4><ul><li>No information must be provided by CSS generated content (example: pseudo classes<code> ::before / :before</code> and <code>::after / :after</code>, <code>content</code> property , background CSS images </li><li>CSS generated content must only provide decorative informations</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Layout",
@@ -552,7 +553,8 @@
 			"2.5.1 A"
 		],
 		"verifier": "<p>Check that for any multipoint gesture (requiring several fingers) and / or requiring path-based gestures, an alternative is available that requires only a single pointer (a single finger) and without a path-based gesture.</p>",
-		"complement": "<h4>For example</h4><p><stong> Zoom functionality on a map: </strong>(+ / -) buttons are available, as an alternative to a two-finger pinch.</p>",
+		"complement": "<h4>For example</h4><p><strong> Zoom functionality on a map: </strong>(+ / -) buttons are available, as an alternative to a two-finger pinch.</p>",
+		"group": "Touche Screen",
 		"resultatTest": "nt"
 	},{
 		"themes": "Touch and interactions",
@@ -575,6 +577,7 @@
 		],
 		"verifier": "<ul><li>check that these actions can also be operated by user interface components (e.g. button)</li><li>check that it is possible to disable the motion detection</li></ul>",
 		"exceptions": "<p>The motion is essential for the function (e.g. pedometer)</p>",
+		"group": "Touche Screen",
 		"resultatTest": "nt"
 	},{
 		"themes": "Touch and interactions",
@@ -585,6 +588,7 @@
 			"1.3.4 AA"
 		],
 		"verifier": "<p>Check that the content and functionalities are available in both orientations (no loss of information, no truncated elements).</p>",
+		"group": "Touche Screen",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -595,6 +599,7 @@
 			"1.2.1 A"
 		],
 		"verifier": "<p>Check that a complete transcript (text containing all the auditory information) is provided as plain text or HTML.<br> This text transcript should be:</p><ul><li>present in the page</li> <li>or available via a link immediately next to the link to the audio clip</li></ul>",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -605,6 +610,7 @@
 			"1.2.1 A"
 		],
 		"verifier": "<p>Check that a complete transcript (text that provides an equivalent to what is presented visually) is provided as plain text or HTML.<br> This text transcript should be: </p><ul><li> present in the page </li> <li> or available via a link immediately next to the link to the video clip</li></ul> ",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -615,6 +621,7 @@
 			"1.2.3 A"
 		],
 		"verifier": "<ul><li>Check that a complete transcript (all of the information - both visual and auditory - in text form) is provided as plain text or HTML.<br> This text transcript should be:<ul><li> present in the page </li> <li> or available via a link immediately next to the link to the video clip</li></ul></li><li>Or for all video content, check that an audio description is provided:<ul><li> check that the audio description is synchronized correctly </li><li> check that the audio description does not conflict with the audio track of the video (no loss of information)</li><li> check that the audio description is appropriate</li></ul>",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -625,6 +632,7 @@
 			"1.2.5 AA"
 		],
 		"verifier": "<ul><li>check that an audio description is provided for all video content</li><li>check that the audio description is synchronized correctly</li><li>check that the audio description does not conflict with the audio track of the video (no loss of information)</li><li>check that the audio description is appropriate</li></ul>",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -635,6 +643,7 @@
 			"1.2.2 A"
 		],
 		"verifier": "<ul><li>check that captions are available for all video with audio content</li><li>check that the captions are relevant (providing all of the information needed to understand the content, such as the identity of the speakers)</li><li>check that the captions are not covering important information in the video</li></ul>",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -646,6 +655,7 @@
 		],
 		"verifier": "<ul><li>check that captions are available</li><li>check that the captions are relevant (providing all of the information needed to understand the content, such as the identity of the speakers)</li></ul>",
 		"complement": "<h4>Captions</h4><p>The captions convey not only the content of spoken dialogue, but also equivalents for non-dialogue audio information needed to understand the program content, including sound effects, music, laughter, speaker identification and location.</p>",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimedia",
@@ -656,6 +666,7 @@
 			"1.4.2 A"
 		],
 		"verifier": "<ul><li>possible to pause or stop the sound</li><li>possible to control audio volume independently from the overall system volume level</li></ul>",
+		"group": "Multimedia",
 		"resultatTest": "nt"
 	},{
 		"themes": " Assistive technology",
@@ -665,7 +676,7 @@
 		"wcag": [
 			"4.1.2 A"
 		],
-		"verifier": "<p> Check all standard components (e.g. form elements) as well as those components developed using JavaScript (e.g. drop-down menu): </p><ul><li> each custom component uses an appropriate ARIA role (refer to the component's design pattern in order to validate this)</li><li> for components for which the user can change the value or state, these properties can also be defined via assistive technologies (e.g. check or uncheck a checkbox)</li><li> every time the state changes, the user is notified via their assistive technology (example of this test passed: screen reader notification: «&nbsp; checked &nbsp;» or «&nbsp;unchecked &nbsp;»)</li></ul>",
+		"verifier": "<p> Check all standard components (e.g. form elements) as well as those components developed using JavaScript (e.g. drop-down menu): </p><ul><li> each custom component uses an appropriate ARIA role (refer to the component's design pattern in order to validate this)</li><li> for components for which the user can change the value or state, these properties can also be defined via assistive technologies (e.g. check or uncheck a checkbox)</li><li> every time the state changes, the user is notified via their assistive technology (example of this test passed: screen reader notification: 'checked' or 'unchecked')</li></ul>",
 		"resultatTest": "nt"
 	}
 ]}

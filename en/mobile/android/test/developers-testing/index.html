@@ -143,6 +143,10 @@
   Test
 </a>
             </li><li class="nav-item">
+              <a href="/en/mobile/android/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
               <a href="/en/mobile/android/toolbox/" class="nav-link">
   Toolbox
 </a>
@@ -265,6 +269,7 @@ companion object {
 }
 </code></pre>
 <p>So, when in the test suite a <code>ViewAction.click ()</code> is performed on a button that does not match the size required for an interactive element, the test will appear as an error until the accessibility issue be resolved.</p>
+<p>Orange has its own framework based on Espresso to perform automatic accessibility checks, which contains additional rules. It is recommended to use this framework available on <a href="https://gitlab.tech.orange/soft_a11y/espresso-accessibility-orange">gitlab</a>.</p>
 <h3 id="perform-automated-accessibility-tests-on-the-complete-screen">Perform automated accessibility tests on the complete screen <a class="header-anchor" href="#perform-automated-accessibility-tests-on-the-complete-screen" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Accessibility testing automation according to ViewAction can be limited. That's why, validations from root view can be enabled to test all views, without the 'ViewActions' restrictions. To do this, replace <code>AccessibilityChecks.enable()</code> by <code>AccessibilityChecks.enable().setRunChecksFromRootView(true)</code></p>
 <h3 id="log-accessibility-errors-rather-than-causing-test-failures">Log accessibility errors rather than causing test failures <a class="header-anchor" href="#log-accessibility-errors-rather-than-causing-test-failures" aria-labelledby="a11y_heading_anchor_label">#</a></h3>

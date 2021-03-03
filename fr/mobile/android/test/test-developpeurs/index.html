@@ -143,6 +143,10 @@
   Tester
 </a>
             </li><li class="nav-item">
+              <a href="/fr/mobile/android/audit-wcag/" class="nav-link">
+  Évaluer
+</a>
+            </li><li class="nav-item">
               <a href="/fr/mobile/android/outils/" class="nav-link">
   Boite à outils
 </a>
@@ -267,6 +271,7 @@ companion object {
 }
 </code></pre>
 <p>C’est ainsi que, dans le cas où l’on réalise dans la suite de test un <code>ViewAction.click()</code> sur un bouton qui ne correspond pas à la taille requise pour un élément interactif, le test apparaitra en erreur jusqu’à ce que le problème d’accessibilité soit résolu.</p>
+<p>Orange propose son propre framework basé sur Espresso pour réaliser des vérifications automatique d'accessibilité. Des règles supplémentaires y sont notamment ajoutées. Il est donc recommandé d'utiliser ce framework disponible sur <a href="https://gitlab.tech.orange/soft_a11y/espresso-accessibility-orange"><span lang="en">gitlab</span></a>.</p>
 <h3 id="realiser-les-tests-automatises-daccessibilite-sur-lensemble-de-lecran">Réaliser les tests automatisés d’accessibilité sur l’ensemble de l’écran <a class="header-anchor" href="#realiser-les-tests-automatises-daccessibilite-sur-lensemble-de-lecran" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>L’automatisation du test d’accessibilité selon les <span lang="en">ViewAction</span> peut cependant devenir limitant. C’est pourquoi, on peut indiquer lors de l’activation de ATF, que l’on souhaite faire les validations depuis la vue racine. Ainsi, toutes les vues seront testées, sans besoin d’ajouter de <span lang="en">ViewActions</span>. Pour ce faire, il faut remplacer  <code>AccessibilityChecks.enable()</code> par <code>AccessibilityChecks.enable().setRunChecksFromRootView(true)</code></p>
 <h3 id="loguer-les-erreurs-daccessibilite-plutot-que-de-provoquer-lechec-des-tests">Loguer les erreurs d’accessibilité plutôt que de provoquer l'échec des tests <a class="header-anchor" href="#loguer-les-erreurs-daccessibilite-plutot-que-de-provoquer-lechec-des-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h3>

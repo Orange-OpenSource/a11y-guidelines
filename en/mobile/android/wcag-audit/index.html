@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Keyboard navigation (Switch Access) - Orange digital accessibility guidelines</title>
+    <title>WCAG audit - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+  <body>
     
 
 <header role="banner">
@@ -131,7 +131,7 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/mobile/android/design/" class="nav-link active" aria-current="true">
+              <a href="/en/mobile/android/design/" class="nav-link">
   Design
 </a>
             </li><li class="nav-item">
@@ -143,7 +143,7 @@
   Test
 </a>
             </li><li class="nav-item">
-              <a href="/en/mobile/android/wcag-audit/" class="nav-link">
+              <a href="/en/mobile/android/wcag-audit/" class="nav-link active" aria-current="page">
   Evaluate
 </a>
             </li><li class="nav-item">
@@ -169,162 +169,34 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
+        <li class="breadcrumb-item">
           <a href="/en/mobile/android/">Android</a>
         </li>
       
       
-        <li class="breadcrumb-item">
-          <a href="/en/mobile/android/design/">Design</a>
-        </li>
-      
-      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Keyboard navigation (Switch Access)
+          Evaluate
         </li>
       </ol>
 </nav>
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
-        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
-        Topics
-      </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="/en/mobile/android/design/general-navigation/" class="nav-link dropdown-item">
-  General navigation
-</a><a href="/en/mobile/android/design/vocal-navigation/" class="nav-link dropdown-item">
-  Vocal navigation
-</a><a href="/en/mobile/android/design/focus-navigation/" class="nav-link dropdown-item active" aria-current="page">
-  Keyboard navigation (Switch Access)
-</a><a href="/en/mobile/android/design/headers/" class="nav-link dropdown-item">
-  Headers
-</a><a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link dropdown-item">
-  Colors and constrasts
-</a><a href="/en/mobile/android/design/magnification/" class="nav-link dropdown-item">
-  Magnification
-</a><a href="/en/mobile/android/design/form/" class="nav-link dropdown-item">
-  Input screen
-</a><a href="/en/mobile/android/design/multimedia/" class="nav-link dropdown-item">
-  Multimedia
-</a></div>
-    </nav>
         
-          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
-        Table of content
-      </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#access-to-interactive-elements" class="dropdown-item text-wrap">Access to interactive elements</a><a href="#order-keyboard-navigation" class="dropdown-item text-wrap">Order keyboard navigation</a></div>
-    </nav>
         
       </div>
     </div>
     
-  <div class="container-lg pt-4">
-      <div class="row">
-        
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label">Topics</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/general-navigation/" class="nav-link text-muted">
-  General navigation
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/vocal-navigation/" class="nav-link text-muted">
-  Vocal navigation
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/focus-navigation/" class="nav-link text-muted active" aria-current="page">
-  Keyboard navigation (Switch Access)
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/headers/" class="nav-link text-muted">
-  Headers
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link text-muted">
-  Colors and constrasts
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/magnification/" class="nav-link text-muted">
-  Magnification
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/form/" class="nav-link text-muted">
-  Input screen
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/mobile/android/design/multimedia/" class="nav-link text-muted">
-  Multimedia
-</a>
-          </li></ul>
-    </nav>
-              
-            </div>
-          </div>
-        
-        <main id="main-content" class="col-md-6" role="main">
-          <h1>Keyboard navigation (Switch Access)</h1>
-<h2 id="access-to-interactive-elements">Access to interactive elements <a class="header-anchor" href="#access-to-interactive-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target :</strong> everyone and especially people with motor disabilities who use a keyboard to navigate.<br>
-<strong>When :</strong> during design and development.</p>
-<p>Navigation using Switch Access is very useful for people with motor or cognitive difficulties. This navigation makes it possible to move from one interactive element to another (element on which an action can be performed). It corresponds to the navigation that can be done with a Bluetooth keyboard linked to a smartphone.</p>
-<p>To manage keyboard navigation, there are 2 things to check:</p>
-<ul>
-<li>Allow focus on interactive elements (focus navigation only concerns interactive elements). If, for example, your application has custom views that can be clicked on, you must make sure that these views are focusable by setting the <code>focusable</code> attribute to <code>true</code>.</li>
-<li>Manage the focus display: any interactive element can receive the focus, so the <code>state_focused</code> must be defined and allow to easily distinguish which element has the focus.</li>
-</ul>
-<p><strong>To be verified :</strong></p>
-<ul>
-<li>With the keyboard navigation, it is possible to visually determine which element has the focus.</li>
-<li>All the features are accessible with the keyboard navigation.</li>
-<li>All interactive elements are highlighted with the keyboard navigation.</li>
-<li>Only the interactive elements are highlighted with the keyboard navigation.</li>
-</ul>
-<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
-</ul>
-<h2 id="order-keyboard-navigation">Order keyboard navigation <a class="header-anchor" href="#order-keyboard-navigation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target :</strong> everyone and especially people with motor disabilities who use a keyboard to navigate.<br>
-<strong>When :</strong> during design and development.</p>
-<p><strong>Description :</strong></p>
-<p>Keyboard navigation, to be understandable and easy to use, must provide a coherent and comprehensible order of navigation. It is important to manage the focus order : through the options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> and <code>nextFocusLeft</code>, you can specify which view should take the focus according to the use of the tab, down, up, right and left arrows.</p>
-<p><strong>Note</strong>: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> and other focus management options are available directly in the <abbr>XML</abbr> or in the code through the corresponding methods.</p>
-<p>For more information on <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">focus management on Android</a>.</p>
-<p><strong>To be verified :</strong></p>
-<ul>
-<li>The keyboard navigation order is logical and consistent.</li>
-<li>Items are grouped together when they are linked (example: content within a clickable item in a list).</li>
-</ul>
-<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a></li>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a></li>
-</ul>
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>WCAG audit</h1>
+<p>The purpose of the WCAG audit is to calculate the compliance rates found in the accessibility statements which are available on Orange apps.</p>
+<p>Orange has developed a grid of questions called the va11ydette. This grid consists of 54 questions, that between them cover the 50 criteria of the WCAG version 2.1 levels A and AA. Each question is used to validate or invalidate one or more criteria, and any given criterion can be addressed by one or more questions.</p>
+<p>The grid calculates a compliance rate per screen audited: this rate is equal to the sum of the criteria that are compliant, divided by the number of criteria that are applicable. It also calculates the average compliance rate, which corresponds to the average of the compliance rates of the screens tested.</p>
+<h2 id="go-to-the-va11ydette">Go to the va11ydette <a class="header-anchor" href="#go-to-the-va11ydette" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The link below opens the grid in a new browser tab.</p>
+<p><a href="/fr/web/la-va11ydette/?list=wcag-android&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the va11ydette (new tab)">Open the va11ydette <span class="sr-only"> (new tab)</span></a></p>
 
-        </main>
-        
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
-      <h2 id="toc-title">Table of content</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#access-to-interactive-elements" class="nav-link text-muted bg-200">Access to interactive elements</a>
-          </li><li class="nav-item position-relative">
-            <a href="#order-keyboard-navigation" class="nav-link text-muted bg-200">Order keyboard navigation</a>
-          </li></ul>
-    </nav>
-            </div>
-          </div>
-        
-      </div>
-    </div>
+    </main>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -339,7 +211,7 @@
   About
 </a>
           </li><li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/design/focus-navigation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/wcag-audit.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on Github (new window)">
             Report an error on Github<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

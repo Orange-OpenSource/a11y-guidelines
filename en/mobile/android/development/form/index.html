@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Form - Orange digital accessibility guidelines</title>
+    <title>Input screen - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -143,6 +143,10 @@
   Test
 </a>
             </li><li class="nav-item">
+              <a href="/en/mobile/android/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
               <a href="/en/mobile/android/toolbox/" class="nav-link">
   Toolbox
 </a>
@@ -176,7 +180,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Form
+          Input screen
         </li>
       </ol>
 </nav>
@@ -192,11 +196,11 @@
 </a><a href="/en/mobile/android/development/vocal-navigation/" class="nav-link dropdown-item">
   Vocal navigation
 </a><a href="/en/mobile/android/development/focus-navigation/" class="nav-link dropdown-item">
-  Focus navigation
+  Keyboard navigation (Switch Access)
 </a><a href="/en/mobile/android/development/magnification/" class="nav-link dropdown-item">
   Magnification
 </a><a href="/en/mobile/android/development/form/" class="nav-link dropdown-item active" aria-current="page">
-  Form
+  Input screen
 </a></div>
     </nav>
         
@@ -204,7 +208,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#explicitly-label-form-fields" class="dropdown-item text-wrap">Explicitly label form fields</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#explicitly-label-input-fields" class="dropdown-item text-wrap">Explicitly label input fields</a></div>
     </nav>
         
       </div>
@@ -227,7 +231,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/focus-navigation/" class="nav-link text-muted">
-  Focus navigation
+  Keyboard navigation (Switch Access)
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/magnification/" class="nav-link text-muted">
@@ -235,7 +239,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/form/" class="nav-link text-muted active" aria-current="page">
-  Form
+  Input screen
 </a>
           </li></ul>
     </nav>
@@ -244,22 +248,22 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Form</h1>
-<h2 id="explicitly-label-form-fields">Explicitly label form fields <a class="header-anchor" href="#explicitly-label-form-fields" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+          <h1>Input screen</h1>
+<h2 id="explicitly-label-input-fields">Explicitly label input fields <a class="header-anchor" href="#explicitly-label-input-fields" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> during design and development.</p>
 <p><strong>Description:</strong></p>
-<p>Linking form fields with their labels provides additional vocalisation that makes the field easier for the user to understand.</p>
+<p>Linking input fields with their labels provides additional vocalisation that makes the field easier for the user to understand.</p>
 <p>There are 2 techniques to achieve this:</p>
 <ul>
-<li><code>labelFor</code>  : indicate that a label is linked to another view.  This method takes as parameter the id of the view that we label. You can use this method with almost any type of form field. It can be used from the <abbr>XML</abbr> <code>android:labelFor</code> or the <code>setLabelFor</code> method.</li>
+<li><code>labelFor</code>  : indicate that a label is linked to another view.  This method takes as parameter the id of the view that we label. You can use this method with almost any type of input field. It can be used from the <abbr>XML</abbr> <code>android:labelFor</code> or the <code>setLabelFor</code> method.</li>
 <li><code>hint</code> : add an example text when the text field is empty. This method only works for <code>EditText</code>. It takes in parameter the <code>id</code> of a string. Usable from the <code>android:hint</code> <abbr>XML</abbr> or the <code>setHint</code> method.</li>
 </ul>
-<p>It is essential to indicate to the user, for a good understanding of the form, the required fields, the expected format, or errors made on fields.</p>
-<p>Remark: Once a label is associated to its related field, it will be vocalized during the focus on its form field. It is therefore necessary to hide the label from accessibility API to avoid double vocalization.</p>
+<p>It is essential to indicate to the user, for a good understanding of the input screen, the required fields, the expected format, or errors made on fields.</p>
+<p>Remark: Once a label is associated to its related field, it will be vocalized during the focus on its input field. It is therefore necessary to hide the label from accessibility API to avoid double vocalization.</p>
 <p><strong>To be verified:</strong></p>
 <ul>
-<li>Form fields must be linked to a label if it is visible, otherwise a <code>hint</code> is present.</li>
+<li>Input fields must be linked to a label if it is visible, otherwise a <code>hint</code> is present.</li>
 <li>Required fields are identifiable</li>
 <li>The format expected for &quot;complex&quot; fields is indicated to the user</li>
 </ul>
@@ -291,7 +295,7 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Table of content</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#explicitly-label-form-fields" class="nav-link text-muted bg-200">Explicitly label form fields</a>
+            <a href="#explicitly-label-input-fields" class="nav-link text-muted bg-200">Explicitly label input fields</a>
           </li></ul>
     </nav>
             </div>

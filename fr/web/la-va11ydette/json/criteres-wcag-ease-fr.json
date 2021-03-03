@@ -1,6 +1,5 @@
 {
-	"version":1.4,
-	"lang":"fr",
+	"name": "Audit conformité WCAG / WEB",			 
 	"items":[{
 		"themes": "Formulaire",
 		"title": "Chaque champ de formulaire possède-t-il une étiquette&nbsp;?",
@@ -12,6 +11,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "<p>Vérifier que l'<span lang=\"en\">accessible name</span> de chaque champ est défini.</p>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -23,6 +23,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "<p>Vérifier que l'<span lang=\"en\">accessible name</span> de chaque champ est pertinent.</p>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -35,6 +36,7 @@
 		],
 		"verifier": "<ul><li>la présence de groupe <code>fieldset</code> ou <code>role='group'</code></li><li>chaque groupe possède une légende (<code>legend</code>, <code>aria-labelledby</code>)</li><li>chaque légende est pertinente</li></ul>",
 		"complement": "<h4>Complément&nbsp;: </h4><p>On regroupe uniquement lorsque nécessaire, par exemple&nbsp;:</p><ul><li>afin de distinguer plusieurs champs ayant le même label (rue, code postal, ville pour adresse de facturation et adresse de livraison)</li><li>légende necessaire pour faire un choix dans une liste de <code>radio</code> ou <code>checkbox</code></li></ul>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -46,6 +48,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "<ul><li>vérifier la présence d'une identification visuelle du champ obligatoire ne reposant pas uniquement sur la couleur (ex&nbsp;: astérisque)</li><li>vérifier qu'une des techniques ci-dessous est implémentée pour transmettre l'information de manière programmatique&nbsp;:<ul><li>l'information visuelle est intégrée dans le <code>label</code></li><li>présence d'un attribut <code>required</code></li><li>présence d'un attribut <code>aria-required</code></li></ul></li></ul>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -56,6 +59,7 @@
 			"3.3.2 A"
 		],
 		"verifier": "<ul><li>vérifier que le format de saisie est présent visuellement, et que son positionnement permet de l'associer au champ concerné</li><li>vérifier que le format de saisie est présent dans l'<span lang=\"en\">accessible name</span> (<code>label</code>, <code>aria-label</code>, <code>aria-labelledby</code>) ou dans l'<span lang=\"en\">accessible description</span> du champ (<code>aria-describedby</code>)</li></ul>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -65,7 +69,8 @@
 		"wcag": [
 			"1.3.5 AA"
 		],
-		"verifier": "<ul><li>pour les champs de saisie destinés à contenir une information sur l'utilisateur (nom, adresse…), vérifier la présence de l'attribut <code>autocomplete</code></li><li>la valeur indiquée pour l'attribut <code>autocomplete</code> est pertinente au regard du type d'information attendue</li></ul>",
+		"verifier": "<ul><li>pour les champs de saisie destinés à contenir une information sur l'utilisateur (nom, adresse…), vérifier la présence de l'attribut <code>autocomplete</code></li><li>la valeur indiquée pour l'attribut <code>autocomplete</code> est pertinente (<a href='https://www.w3.org/TR/WCAG21/#input-purposes' lang='en'>liste exhaustive des valeurs autorisées</a>) au regard du type d'information attendue</li></ul>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -76,6 +81,7 @@
 			"3.3.1 A"
 		],
 		"verifier": "<ul><li>vérifier que le label du champ en erreur est modifié (ex&nbsp;: ajout de la mention «&nbsp;erreur&nbsp;», ajout d'un icône)</li><li>si l'information visuelle ne possède pas d'alternative texte (ex&nbsp;: icône sans alternative), vérifier que le champ possède un attribut <code>aria-invalid='true'</code></li></ul>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -86,6 +92,7 @@
 			"3.3.1 A"
 		],
 		"verifier": "<p>Vérifier qu'un message d'erreur est présent visuellement, qu'il permet d'identifier explicitement le champ en erreur et de comprendre la nature de l'erreur.</p>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -96,6 +103,7 @@
 			"3.3.3 AA"
 		],
 		"verifier": "<p>Vérifier que les messages d'erreurs donnent les informations nécessaires à la correction des saisies.</p>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Formulaire",
@@ -106,6 +114,7 @@
 			"3.3.4 AA"
 		],
 		"verifier": "<p>Pour les formulaires avec&nbsp;:</p><ul><li>modification ou suppression de données,</li><li>transmission de réponse à un test ou un examen,</li><li>conséquences financières (achat en ligne) ou juridiques (validation de conditions générales d'utilisation),</li></ul><p>l'utilisateur peut modifier ou annuler avant et après validation sauf si la validation est explicite (avec une case à cocher par exemple).</p>",
+		"group": "Formulaire",
 		"resultatTest": "nt"
 	},{
 		"themes": "Contenu textuel",
@@ -136,7 +145,7 @@
 		"wcag": [
 			"1.3.1 A"
 		],
-		"verifier": "<ul><li>du contenu n'est pas isolé sans être entouré d'une balise sémantique (notamment p) pour en comprendre le sens ou sa relation au reste de la structure du document</li><li>les citations longues (paragraphe) sont balisées avec des <code>blockquote</code></li><li>les citations courtes sont balisées avec des <code>q</code>.</li><li>les informations présentées visuellement sous forme de liste sont codées en tant que liste HTML</li><li>les listes d'items non-ordonnés sont balisées avec des <code>ul</code> / <code>li</code></li><li>les listes d'items ordonnés sont balisées avec des <code>ol</code> / <code>li</code></li><li>les listes de définitions sont balisées avec des <code>dl</code> / <code>dt</code> / <code>dd</code></li></ul>",
+		"verifier": "<ul><li>du contenu n'est pas isolé sans être entouré d'une balise sémantique (notamment p) pour en comprendre le sens ou sa relation au reste de la structure du document</li><li>les citations longues (paragraphe) sont balisées avec des <code>blockquote</code></li><li>les citations courtes sont balisées avec des <code>q</code>.</li><li>les informations présentées visuellement sous forme de liste sont codées en tant que liste HTML</li><li>les listes d'items non-ordonnés sont balisées avec des <code>ul</code> / <code>li</code></li><li>les listes d'items ordonnés sont balisées avec des <code>ol</code> / <code>li</code></li><li>les listes de définitions sont balisées avec des <code>dl</code> / <code>dt</code> / <code>dd</code></li><li>lien (<code>&lt;a&gt;</code>), pour tout changement de contexte via chargement d'une nouvelle URL</li><li>bouton (<code>&lt;button&gt;</code>, <code>&lt;input type='button'&gt;</code>), pour tout déclenchement d'action,  validation ou sélection</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Contenu textuel",
@@ -209,6 +218,7 @@
 			"1.1.1 A"
 		],
 		"verifier": "<p>Vérifier que l'<span lang=\"en\">accessible name</span> de chaque image captcha communique l'objectif de l'image et non son contenu (ex&nbsp;: «&nbsp;captcha (image anti-spam)&nbsp;» ).</p>",
+		"group": "Captcha",
 		"resultatTest": "nt"
 	},{
 		"themes": "Contenu non-textuel",
@@ -219,6 +229,7 @@
 			"1.1.1 A"
 		],
 		"verifier": "<p>Vérifier que pour tout captcha uniquement visuel ou sonore, une alternative ci-dessous est proposée en complément&nbsp;: </p><ul><li>captcha audio et visuel</li><li>des tests logiques (question dont la réponse est évidente, test mathématique simple…)</li><li>il existe une autre solution d'accès à la fonctionnalité sécurisée par le CAPTCHA</li></ul>",
+		"group": "Captcha",
 		"resultatTest": "nt"
 	},{
 		"themes": "Contenu non-textuel",
@@ -326,16 +337,6 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
-		"title": "La structure sémantique globale du document est-elle cohérente&nbsp;?",
-		"ID": "testID-061",
-		"IDorigin": "testID-061",
-		"wcag": [
-			"1.3.1 A"
-		],
-		"verifier": "<ul><li>vérifier que chaque région de la page possède une sémantique à travers des balises de structure HTML5 <code>header</code>, <code>nav</code>…</li><li>vérifier que le contenu principal est inclus dans une balise <code>main</code></li><li>vérifier que l'élément <code>main</code> ne contient pas d'éléments répétés ailleurs dans la page (ex&nbsp;: navigation)</li></ul>",
-		"resultatTest": "nt"
-	},{
-		"themes": "Navigation générale",
 		"title": "Les contenus apparaissant à la prise de focus ou au survol d'un composant d'interfaces (ex&nbsp;: <span lang=\"en\">tooltip</span>) sont-ils contrôlables par l'utilisateur&nbsp;?",
 		"ID": "testID-030",
 		"IDorigin": "testID-030",
@@ -365,7 +366,7 @@
 			"3.2.1 A",
 			"3.2.2 A"
 		],
-		"verifier": "<p>Lors de l'utilisation de formulaires ou de tout composant interactif, vérifier l'absence de changement de contexte&nbsp;:</p><ul><li>lors de la prise de focus d'un élément</li><li>lors de la saisie de données</li><li>lors de l'activation d'un élément de formulaire autre qu'un bouton</li></ul>",
+		"verifier": "<p>Lors de l'utilisation de formulaires ou de tout composant interactif, vérifier l'absence de changement de contexte, sans avertissement de l'utilisateur&nbsp;:</p><ul><li>lors de la prise de focus d'un élément</li><li>lors de la saisie de données</li><li>lors de l'activation d'un élément de formulaire autre qu'un bouton</li></ul>",
 		"complement": "<h4>Changement de contexte</h4><p>Changement majeur dans le contenu de la page Web qui, lorsqu'il est effectué à l'insu de l'utilisateur, peut désorienter les utilisateurs incapables d'afficher la page dans sa totalité.</p><p>Les changements de contexte incluent les changements de&nbsp;:</p><ul><li>agent utilisateur</li><li><span lang=\"en\">viewport</span></li><li>focus</li><li>contenu qui modifie le sens de la page Web</li></ul>",
 		"resultatTest": "nt"
 	},{
@@ -391,13 +392,13 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
-		"title": "Si un contenu de la page est en mouvement ou clignote plus de 5 secondes, l'utilisateur a-t-il la possibilité de stopper, mettre en pause ou masquer ce contenu&nbsp;?",
+		"title": "Si un contenu de la page est en mouvement, défilant, clignote, plus de 5 secondes ou se met à jour et démarrant automatiquement l'utilisateur a-t-il la possibilité de stopper, mettre en pause ou masquer ce contenu&nbsp;?",
 		"ID": "testID-035",
 		"IDorigin": "testID-035",
 		"wcag": [
 			"2.2.2 A"
 		],
-		"verifier": "<p>Non applicable, si aucun mouvement ou clignottement ne dure plus de 5 secondes</p>",
+		"verifier": "<p>Non applicable, si aucun mouvement, défilement ou clignotement ne dure plus de 5 secondes ou ne démarre pas automatiquement ou si des mises à jours démarrent elles-aussi automatiquement</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
@@ -519,8 +520,8 @@
 		"wcag": [
 			"1.3.2 A"
 		],
-		"verifier": "<p>Vérifier que le contenu lu de façon linéaire reste compréhensible (ordre de lecture).</p>",
-		"complement": "<h4>Compléments d'information</h4><p>L’ordre des contenus dans le code HTML doit être identique à l’ordre d’affichage des contenus à l’écran.</p><p>Exemples de contenus à tester :</p><ul><li>Mise en page via ces propriétés CSS : <ul><li>les propriétés de positionnement (<code>top</code>, <code>left</code>…)</li><li><code>float</code> notamment <code>right</code></li><li><code>display:\"flex\"</code> ou <code>dislay:\"grid\"</code></li></ul></li><li>Tableau de mise en forme</li></ul>",
+		"verifier": "<p>Vérifier que le contenu lu de façon linéaire reste compréhensible (ordre de lecture dans la page sans CSS).</p>",
+		"complement": "<h4>Compléments d'information</h4><p>L’ordre des contenus dans le code HTML doit rester compréhensible, en général, il suffit qu'il soit identique à l’ordre d’affichage des contenus à l’écran.</p><p>Exemples de contenus à tester :</p><ul><li>Mise en page via ces propriétés CSS : <ul><li>les propriétés de positionnement (<code>top</code>, <code>left</code>…)</li><li><code>float</code> notamment <code>right</code></li><li><code>display:\"flex\"</code> ou <code>dislay:\"grid\"</code></li></ul></li><li>Tableau de mise en forme</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Mise en page",
@@ -531,7 +532,7 @@
 			"1.3.1 A"
 		],
 		"verifier": "<p>Vérifier l'absence de perte d'information</p>",
-		"complement": "<h4>Complément d'information</h4><ul><li>Aucune information ne doit être transmise par du contenu généré en CSS (ex : propriété <code>content</code> des pseudo classes <code>::before / :before</code> et <code>::after / : after</code>, images intégrées en background)</li><li>Le css doit présenter uniquement des informations décoratives</li></ul>",
+		"complement": "<h4>Complément d'information</h4><ul><li>Aucune information ne doit être transmise par du contenu généré en CSS (ex : propriété <code>content</code> des pseudo classes <code>::before / :before</code> et <code>::after / : after</code >, <code>content</code> property, images intégrées en background)</li><li>Le contenu généré par CSS doit présenter uniquement des informations décoratives</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Mise en page",
@@ -552,7 +553,8 @@
 			"2.5.1 A"
 		],
 		"verifier": "<p>Vérifier que pour tout geste multipoints (nécessitant plusieurs doigts) et/ou nécessitant des trajectoires gestuelles, une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire gestuelle est disponible.</p>",
-		"complement": "<h4>Exemple</h4><p><stong>Zoom sur une carte&nbsp;: </strong>Des boutons (+ / -) sont disponibles, en alternative au pincé.</p>",
+		"complement": "<h4>Exemple</h4><p><strong>Zoom sur une carte&nbsp;: </strong>Des boutons (+ / -) sont disponibles, en alternative au pincé.</p>",
+		"group": "Tactile",
 		"resultatTest": "nt"
 	},{
 		"themes": "Tactile et interactions",
@@ -575,6 +577,7 @@
 		],
 		"verifier": "<ul><li>vérifier que ces actions sont également disponibles depuis un composant d'interfaces (ex.&nbsp;: bouton)</li><li>vérifier qu'il est possible de désactiver la détection de mouvement</li></ul>",
 		"exception": "<p>Le mouvement est essentiel à l'accomplissement de la fonctionnalité (ex.&nbsp;: podomètre)</p>",
+		"group": "Tactile",
 		"resultatTest": "nt"
 	},{
 		"themes": "Tactile et interactions",
@@ -585,6 +588,7 @@
 			"1.3.4 AA"
 		],
 		"verifier": "<p>Vérifier que le contenu et les fonctionnalités sont disponibles dans les deux orientations (pas de perte d'information, pas d'éléments tronqués).</p>",
+		"group": "Tactile",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -595,6 +599,7 @@
 			"1.2.1 A"
 		],
 		"verifier": "<p>Vérifier qu'un transcrit complet (texte contenant l'ensemble des informations auditives) est fourni sous forme de texte brut ou HTML.<br>Cette transcription textuelle est alors&nbsp;:</p><ul><li>présente dans la page</li><li>ou disponible via un lien positionné à proximité de la piste audio</li></ul>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -605,6 +610,7 @@
 			"1.2.1 A"
 		],
 		"verifier": "<p>Vérifier qu'un transcrit complet (texte contenant l'ensemble des informations visuelles) est fourni sous forme de texte brut ou HTML.<br>Cette transcription textuelle est alors&nbsp;: </p><ul><li>présente dans la page</li><li>ou disponible via un lien positionné à proximité de la vidéo</li><li>ou vérifier la présence d'une piste audio fournissant les informations présentées visuellement</li></ul>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -615,6 +621,7 @@
 			"1.2.3 A"
 		],
 		"verifier": "<ul><li>vérifier qu'un transcrit complet (texte contenant l'ensemble des informations auditives et visuelles) est fourni sous forme de texte brut ou HTML.<br>Cette transcription textuelle est alors&nbsp;: <ul><li>présente dans la page</li><li>ou disponible via un lien positionné à proximité de la vidéo</li></ul></li><li>ou vérifier que pour toute vidéo, une audiodescription est disponible<ul><li>vérifier que l'audiodescription est correctement synchronisée</li><li>vérifier que l'audiodescription n'entre pas en conflit avec la piste audio de la vidéo (pas de perte d'information)</li><li>vérifier que l'audiodescription est pertinente</li></ul></li></ul>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -625,6 +632,7 @@
 			"1.2.5 AA"
 		],
 		"verifier": "<ul><li>vérifier que pour toute vidéo, une audiodescription est disponible</li><li>vérifier que l'audiodescription est correctement synchronisée</li><li>vérifier que l'audiodescription n'entre pas en conflit avec la piste audio de la vidéo (pas de perte d'information)</li><li>vérifier que l'audiodescription est pertinente</li></ul>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -635,6 +643,7 @@
 			"1.2.2 A"
 		],
 		"verifier": "<ul><li>vérifier que pour toute vidéo avec audio, des sous-titres sont disponibles</li><li>vérifier que les sous-titres sont pertinents (restitution de toutes les informations nécessaires à la compréhension, comme l'identité des orateurs)</li><li>vérifier que les sous-titres ne masquent pas des informations importantes de la vidéo</li></ul>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -646,6 +655,7 @@
 		],
 		"verifier": "<ul><li>vérifier que des sous-titres sont disponibles</li><li>vérifier que les sous-titres sont pertinents (restitution de toutes les informations nécessaires à la compréhension, comme l'identité des orateurs)</li></ul>",
 		"complement": "<h4>Sous-titres transcrits</h4><p>Les sous-titres ne communiquent pas uniquement les dialogues, mais également toutes les autres informations audio nécessaires à la compréhension du contenu (ex&nbsp;: identifications des interlocuteurs, effets sonores…).</p>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Multimédia",
@@ -656,6 +666,7 @@
 			"1.4.2 A"
 		],
 		"verifier": "<ul><li>possibilité de mettre en pause ou d'arrêter le son</li><li>possibilité de régler le volume indépendamment du volume système</li></ul>",
+		"group": "Multimédia",
 		"resultatTest": "nt"
 	},{
 		"themes": "Aides techniques",
