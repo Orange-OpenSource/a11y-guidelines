@@ -4,7 +4,7 @@
 		"name": "Non-text Content",
 		"level": "A",
 		"tests": [],
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -12,7 +12,7 @@
 		"name": "Audio-only and Video-only (Prerecorded)",
 		"level": "A",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -20,7 +20,7 @@
 		"level": "A",
 		"name": "Captions (Prerecorded)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -28,7 +28,7 @@
 		"level": "A",
 		"name": "Audio Description or Media Alternative (Prerecorded)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -36,7 +36,7 @@
 		"level": "AA",
 		"name": "Captions (Live)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -44,7 +44,7 @@
 		"level": "AA",
 		"name": "Audio Description (Prerecorded)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -52,7 +52,7 @@
 		"level": "A",
 		"name": "Info and Relationships",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -60,7 +60,7 @@
 		"level": "A",
 		"name": "Meaningful Sequence",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -68,7 +68,7 @@
 		"level": "A",
 		"name": "Sensory Characteristics",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -76,7 +76,7 @@
 		"level": "AA",
 		"name": "Orientation",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -84,7 +84,7 @@
 		"level": "AA",
 		"name": "Identify Input Purpose",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -92,7 +92,7 @@
 		"level": "A",
 		"name": "Use of Color",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -100,7 +100,7 @@
 		"level": "A",
 		"name": "Audio Control",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -108,7 +108,7 @@
 		"level": "AA",
 		"name": "Contrast (Minimum)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -116,7 +116,7 @@
 		"level": "AA",
 		"name": "Resize text",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -124,7 +124,7 @@
 		"level": "AA",
 		"name": "Images of Text",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -132,7 +132,7 @@
 		"level": "AA",
 		"name": "Reflow",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -140,7 +140,7 @@
 		"level": "AA",
 		"name": "Non-text Contrast",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -148,7 +148,7 @@
 		"level": "AA",
 		"name": "Text Spacing",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -156,7 +156,7 @@
 		"level": "AA",
 		"name": "Content on Hover or Focus",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -164,7 +164,7 @@
 		"level": "A",
 		"name": "Keyboard",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -172,14 +172,14 @@
 		"level": "A",
 		"name": "No Keyboard Trap",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},{
 		"wcag": "2.1.4",
 		"level": "A",
 		"name": "Character Key Shortcuts",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -187,7 +187,7 @@
 		"level": "A",
 		"name": "Timing Adjustable",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -195,7 +195,7 @@
 		"level": "A",
 		"name": "Pause, Stop, Hide",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -203,7 +203,7 @@
 		"level": "A",
 		"name": "Three Flashes or Below Threshold",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -211,7 +211,7 @@
 		"level": "A",
 		"name": "Bypass Blocks",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -219,7 +219,7 @@
 		"level": "A",
 		"name": "Page Titled",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -227,7 +227,7 @@
 		"level": "A",
 		"name": "Focus Order",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -235,7 +235,7 @@
 		"level": "A",
 		"name": "Link Purpose (In Context)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -243,7 +243,7 @@
 		"level": "AA",
 		"name": "Multiple Ways",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -251,13 +251,29 @@
 		"level": "AA",
 		"name": "Headings and Labels",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
 		"wcag": "2.4.7",
 		"level": "AA",
 		"name": "Focus Visible",
+		"tests": [], 
+		"resultat":"na",
+		"comment":[]
+	},
+	{
+		"wcag": "2.4.8",
+		"level": "AAA",
+		"name": "Location",
+		"tests": [], 
+		"resultat":"nt",
+		"comment":[]
+	},
+	{
+		"wcag": "2.4.9",
+		"level": "AAA",
+		"name": "Link Purpose (Link Only)",
 		"tests": [], 
 		"resultat":"nt",
 		"comment":[]
@@ -267,7 +283,7 @@
 		"level": "A",
 		"name": "Pointer Gestures",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -275,7 +291,7 @@
 		"level": "A",
 		"name": "Pointer Cancellation",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -283,7 +299,7 @@
 		"level": "A",
 		"name": "Label in Name",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -291,7 +307,15 @@
 		"level": "A",
 		"name": "Motion Actuation",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
+		"comment":[]
+	},
+	{
+		"wcag": "2.5.5",
+		"level": "AAA",
+		"name": "Minimal target size",
+		"tests": [], 
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -299,7 +323,7 @@
 		"level": "A",
 		"name": "Language of Page",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -307,7 +331,7 @@
 		"level": "AA",
 		"name": "Language of Parts",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -315,7 +339,7 @@
 		"level": "A",
 		"name": "On Focus",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -323,7 +347,7 @@
 		"level": "A",
 		"name": "On Input",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -331,7 +355,7 @@
 		"level": "AA",
 		"name": "Consistent Navigation",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -339,7 +363,7 @@
 		"level": "AA",
 		"name": "Consistent Identification",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -347,7 +371,7 @@
 		"level": "A",
 		"name": "Error Identification",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -355,7 +379,7 @@
 		"level": "A",
 		"name": "Labels or Instructions",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -363,7 +387,7 @@
 		"level": "AA",
 		"name": "Error Suggestion",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -371,7 +395,7 @@
 		"level": "AA",
 		"name": "Error Prevention (Legal, Financial, Data)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -379,7 +403,7 @@
 		"level": "A",
 		"name": "Parsing",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -387,7 +411,7 @@
 		"level": "A",
 		"name": "Name, Role, Value",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -395,7 +419,7 @@
 		"level": "AA",
 		"name": "Status Messages",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	}
 	]

@@ -1,0 +1,318 @@
+{
+	"testWebID-0": [
+		{
+			"title" : "Titre de page non renseigné",
+			"detail" : "Chaque page doit posséder un titre unique.",
+			"solution" : "Renseigner l'élément <title>, avec des mots clefs permettant de comprendre le rôle de la page. Les informations peuvent être ordonnées de la  plus spécifique vers la moins spécifique, ou inversement (pas de règles).",
+			"technicalSolution" : "<title>Acccueil - Espace client Orange</title>"
+		
+		},
+		{
+			"title" : "Titre de page non pertinent",
+			"detail" : "Chaque page doit posséder un titre unique, permettant de comprendre le rôle de celle-ci.",
+			"solution" : "Renseigner l'élément <title>, avec des mots clefs permettant de comprendre le rôle de la page. Les informations peuvent être ordonnées de la  plus spécifique vers la moins spécifique, ou inversement (pas de règles).",
+			"technicalSolution" : "<title>Acccueil - Espace client Orange</title>"
+		
+		}
+		
+	],
+	"testWebID-1": [
+		{
+			"title" : "Hiérarchisation imcompléte",
+			"detail" : "La page doit être structurée à partir de titres de niveaux.",
+			"solution" : "Tous les contenus, traités visuellement comme des titres, doivent posséder une sémantique de titre (balises <h1> à <h6>)",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Hiérarchisation des niveaux de titres non logique",
+			"detail" : "Les titres de niveaux doivent être structurés de manière logique",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		}
+		
+	],
+	"testWebID-2": [
+			{
+					"title" : "Absence de sémantique de liste HTML",
+					"detail" : "Les éléments présentés visuellement comme des listes doivent être structurés avec une sémantique de liste.",
+					"solution" : "Utiliser des sémantiques de listes appropriées <ul>, <ol> ou <dl>, <dt> et <dd>",
+					"technicalSolution" : ""
+			},
+			{
+					"title" : "Absence de sémantique de lien HTML ",
+					"detail" : "Les éléments interactifs entrainant un changement d'URL doivent utiliser une sémantique de lien HTML. ",
+					"solution" : "Utiliser la sémantique <a>.",
+					"technicalSolution" : ""
+			},
+			{
+					"title" : "Absence de sémantique de bouton HTML ",
+					"detail" : "Les éléments interactifs déclanchant une action doivent utiliser une sémantique de bouton HTML. ",
+					"solution" : "Utiliser la sémantique <button> ou <input type=\"button\"> ",
+					"technicalSolution" : ""
+			}
+	],
+	"testWebID-3": [
+		{
+			"title" : "Element incomplet",
+			"detail" : "Des balises de début ou de fin sont manquantes pour un ou plusieurs éléments.",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		},
+		{
+			"title" : "Erreur d'imbrication",
+			"detail" : "Des éléments ne respectent pas les règles d'imbrications (conformité HTML).",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		},
+		{
+			"title" : "Attributs dupliqués",
+			"detail" : "Présence d'attributs dupliqués sur un même élément.",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		},
+		{
+			"title" : "Présence d'ID dupliqués",
+			"detail" : "La page ne doit pas comporter des ID dupliqués.",
+			"solution" : "",
+			"technicalSolution" : ""
+		}
+		
+	],
+	"testWebID-4": [
+		{
+			"title" : "Absence d'attribut lang",
+			"detail" : "Un attribut lang doit être présent sur l'élément HTML. De plus la valeur de l'attribut doit correspondre à la langue principale du document.",
+			"solution" : "",
+			"technicalSolution" : "<html lang=\"fr\" >"
+		},
+		{
+			"title" : "La valeur de l'attribut lang est erronée",
+			"detail" : "La valeur de l'attribut doit correspondre à la langue principale du document.",
+			"solution" : "Si la langue principale du document est l'anglais, la valeur de l'attribut sera lang=\"en\"",
+			"technicalSolution" : "<html lang=\"en\" >"
+		}
+	],
+	"testWebID-5": [
+		{
+			"title" : "Changement de langue non indiqué",
+			"detail" : "Les mots et expressions en langue étrangère doivent être indiqués aux utilisateurs.",
+			"solution" : "Ajouter un attribut lang aux termes en langue étrangère",
+			"technicalSolution" : "<q lang=\"en\">[…]</q>"
+		}
+	],
+	"testWebID-6": [
+		{
+			"title" : "Absence d'entêtes de lignes ou de colonnes",
+			"detail" : "Les entêtes sont obligatoires pour identifier la nature des colonnes et/ou des lignes",
+			"solution" : "Les cellules d'entêtes de colonnes doivent posséder une sémantique de TH + un attribut scope='col'. Les cellules d'entêtes de lignes doivent posséder une sémantique de TH + un attribut scope=\"row\". ",
+			"technicalSolution" : "<th scope=\"col\"> / <th scope=\"row\"> "
+		},
+		{
+			"title" : "Présence de tableau de mise en forme",
+			"detail" : "Les tableaux ne doivent pas être utilisés pour de la mise en forme",
+			"solution" : "Ajouter un role=\"presentation\" au tableau",
+			"technicalSolution" : "<table role=\"presentation\">"
+		}
+	],
+	"testWebID-7": [
+		{
+			"title" : "Absence de ALT sur des images",
+			"detail" : "Toutes les images doivent posséder un attribut ALT.",
+			"solution" : "Ajouter un attribut ALT aux images.",
+			"technicalSolution" : "<img alt=\"[...]\" [...]> "
+		},
+		{
+			"title" : "Absence de TITLE sur les cadres",
+			"detail" : "Tous les cadres doivent posséder un attribut TITLE.",
+			"solution" : "Ajouter un attribut TITLE aux cadres.",
+			"technicalSolution" : "<iframe title=\"[...]\">"
+		}
+	],
+	"testWebID-8": [
+		{
+			"title" : "Une image porteuse d'information est intégrée en background (CSS)",
+			"detail" : "Les images intégrées par du CSS ne doivent pas porter d'information.",
+			"solution" : "Les images portant de l'information doivent être intégrées dans le HTML.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-9": [
+		{
+			"title" : "Le ALT d'une image-lien n'est pas renseigné ou non pertinent",
+			"detail" : "Le contenu de l'attribut alt de chaque image-lien est pertinent par rapport à sa fonction de lien.",
+			"solution" : "Renseigner la cible du lien dans le ALT.",
+			"technicalSolution" : "<a href=\"http://monsite.com\"> <img src=\"[...]\" alt= \"Mon site\" > </a>"
+		},
+		{
+			"title" : "Le ALT d'une image porteuse d'information n'est pas renseigné ou non pertinent",
+			"detail" : "L'attribut alt de chaque image est pertinent par rapport au rôle de l'image dans la page.",
+			"solution" : "Renseigner dans le ALT, l'information portée par l'image..",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Le ALT d'une image contenant du texte n'est pas renseigné ou non pertinent",
+			"detail" : "L'attribut alt reprend au moins le texte de l’image.",
+			"solution" : "Reporter  dans la ALT le texte présenté par l'image.",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Le ALT d'une image décorative n'est pas pertinent",
+			"detail" : "L'attribut alt d'une image décorative doit être vide, afin que l'image soit ignorée, notamment par les aides techniques.",
+			"solution" : "Renseigner un alt vide.",
+			"technicalSolution" : "<img src=\"[...]\" alt=\"\" >"
+		},
+		{
+			"title" : "Le ALT d'une image complexe (schémas, graphes ...) n'est pas pertinent",
+			"detail" : "",
+			"solution" : "Pour toute description d'image trop longue pour être mise dans un attribut alt, la description de l'image sous forme de texte html est, soit présente dans la page, soit, un lien pointe vers une page html contenant la description, et ceci, à proximité de l'image à décrire.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-10": [
+		{
+			"title" : "Attribut TITLE non pertinent",
+			"detail" : "La valeur de l'attribut doit permettre aux utilisateurs de comprendre la nature de la frame ou iframe",
+			"solution" : "Ajouter un attribut TITLE, la valeur de l'attribut décrit le contenu de la frame ou iframe",
+			"technicalSolution" : ""
+		}
+		
+	],
+	"testWebID-11": [
+		{
+			"title" : "Présence de texte sous forme d'image",
+			"detail" : "Les textes doivent être présent dans le HTML et mis en forme via CSS.",
+			"solution" : "Intégrer les textes dans le HTML et gérer la mise en forme via CSS",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-12": [
+		{
+			"title" : "Absence de transcrit complet",
+			"detail" : "Un transcrit complet (texte contenant l'ensemble des informations visuelles et auditives) doit être proposé en alternative aux pistes audios ou vidéos. ",
+			"solution" : "Ajouter un transcrit complet sous forme de texte html, soit directement dans la page, soit par un lien pointant vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Absence de sous-titres",
+			"detail" : "Pour toute vidéo, des sous-titres sont disponibles",
+			"solution" : "Ajouter des sous-titres sous formats texte sont présents pour toutes vidéos et restituent l’ensemble des informations de la bande son",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Absence d'audiodescription",
+			"detail" : "Une audiodescription est nécessaire pour les vidéos présentant des informations sous forme visuelle.",
+			"solution" : "Ajouter une audio-description est présente en complément de la bande audio, si besoin. Celle-ci présente, sous format texte, les informations convoyées uniquement par l’image.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-13": [
+		{
+			"title" : "Impossible de stopper une piste audio ou vidéo",
+			"detail" : "Les pistes audio de la page automatiquement jouées plus de 3 secondes peuvent être stoppées, mises en pause ou leur volume peut être contrôlé indépendamment",
+			"solution" : "Fournir un mécanisme accessible, permettant aux utilisateurs de contrôler les sons joués plus de 3 secondes.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-14": [
+		{
+			"title" : "Présence de clignotements rapides",
+			"detail" : "Présence de contenu présentant des clignotements rapides (plus de 3 flash à la seconde) ou les flashs sont inférieurs au seuil général ou seuil de rouge.",
+			"solution" : "",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-15": [
+		{
+			"title" : "Absence d'alternative au captcha",
+			"detail" : "Tout captcha uniquement visuel ou sonore doit posséder une alternative accessible.",
+			"solution" : "Proposer en alternative : un captcha audio + visuel, ou  des tests logiques (question dont la réponse est évidente, test mathématique simple…).",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-16": [
+		{
+			"title" : "Contraste insuffisant entre texte et fond",
+			"detail" : "Le contraste doit être suffisant pour comprendre l'information portée par tous les textes.",
+			"solution" : "Assurer un contraste de 4.5:1 minimum pour les textes de tailles normales (infèrieur à 24px CSS et 19px CSS en gras). Assurer un contraste de 3:1 minimum pour les textes de grandes tailles (supérieur à 24px CSS et 19px CSS en gras).",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Contraste insuffisant pour des liens non-soulignés",
+			"detail" : "Les liens non-soulignés doivent avoir un rapport de contraste suffisant avec le texte environnant",
+			"solution" : "Assurer un contraste de 4.5:1 minimum entre un lien non-souligné et le texte environnant de tailles normales (infèrieur à 24px CSS et 19px CSS en gras). Assurer un contraste de 3:1 minimum entre un lien non-souligné et le texte environnant de grandes tailles (supérieur à 24px CSS et 19px CSS en gras).",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-17": [
+		{
+			"title" : "Contraste insuffisant pour des icônes porteur d'information",
+			"detail" : "Le contraste doit être suffisant pour transmettre l'information.",
+			"solution" : "Assurer un contraste de 3:1 minimum pour les icônes.",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Contraste insuffisant pour des composants interactifs (boutons, boutons radios, ...)",
+			"detail" : "Le contraste doit être suffisant pour transmettre l'information.",
+			"solution" : "Assurer un contraste de 3:1 minimum pour les différents états de composants interactifs.",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Contraste insuffisant pour états de composants interactifs (focus, hover, ...)",
+			"detail" : "Le contraste doit être suffisant pour transmettre l'information.",
+			"solution" : "Assurer un contraste de 3:1 minimum pour les différents états de composants interactifs.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-18": [
+		{
+			"title" : "La couleur est le seul moyen de convoyer de l'information",
+			"detail" : "La couleur ne doit pas être le seul moyen de convoyer d'information : au moins un autre moyen visuel est disponible pour obtenir la même information",
+			"solution" : "Compléter la couleur par un texte explicite, ou une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes).",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-19": [
+		{
+			"title" : "Lien non identifiable dans un corps de texte",
+			"detail" : "Les liens dans le corps du texte doivent être facilement identifiables visuellement par un moyen autre que la couleur (souligné, gras, etc.)",
+			"solution" : "Appliquer un moyen visuellement identifiable (souligné, gras, etc.).  s'assurer d'un contraste de 3:1 entre le texte, le fond et les liens et qu'il existe un autre moyen que la couleur pour les identifier au survol et au focus.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-20": [
+		{
+			"title" : "Une information sensorielle est le seul moyen de convoyer de l'information",
+			"detail" : "Une l’information sensorielle (ex : position, taille, son) ne doit pas être le seul moyen pour transmettre de l'information",
+			"solution" : "Compléter linformation par un texte, ou un message explicite.",
+			"technicalSolution" : ""
+		}
+	],
+	"testWebID-22": [
+		{
+			"title" : "Présence de libellés identiques",
+			"detail" : "Des éléments interactifs avec des libellés identiques, mais des cibles différentes sont présents dans la page.",
+			"solution" : "Ajouter une information discriminante à chaque libellé afin de les différencier.",
+			"technicalSolution" : "Plusieurs solutions sont possibles pour compléter un libellé de lien ou de bouton : sr-only, aria-labelledby, aria-label"
+		}
+	],
+	"testWebID-24": [
+		{
+			"title" : "Présence de libellés identiques",
+			"detail" : "Des éléments interactifs avec des libellés identiques, mais des cibles différentes sont présents dans la page.",
+			"solution" : "Ajouter une information discriminante à chaque libellé afin de les différencier.",
+			"technicalSolution" : "Plusieurs solutions sont possibles pour compléter un libellé de lien ou de bouton : sr-only, aria-labelledby, aria-label"
+		}
+	],
+	"testWebID-25": [
+		{
+			"title" : "Absence du texte visible à l'écran dans l'accessible name",
+			"detail" : "Le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant.",
+			"solution" : "Modifier l'accessible name de l'élément afin d'intégrer le texte visible à l'écran, si possible en premier.",
+			"technicalSolution" : "Plusieurs solutions sont possibles pour redéfinir l'accessible name : aria-labelledby, aria-label, title, sr-only"
+		}
+	]
+}
