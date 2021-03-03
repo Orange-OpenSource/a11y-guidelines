@@ -1,0 +1,21 @@
+{
+	"wcag-web": {
+		"filename": "criteres-wcag-ease",
+		"template": "wcag",
+		"version": "1.5",
+		"about-fr": "/fr/web/audit-wcag/",
+		"about-en": "/en/web/wcag-audit/"
+	},
+	"wcag-android": {
+		"filename": "criteres-wcag-android",
+		"template": "wcag",
+		"version": "1.0",
+		"about-fr": "/fr/mobile/android/audit-wcag/",
+		"about-en": "/en/mobile/android/wcag-audit/"
+	},
+	"audit-web": {
+		"filename": "tests-web",
+		"template": "audit",
+		"version": "1.1"
+	}
+}

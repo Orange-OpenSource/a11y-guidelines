@@ -49,6 +49,7 @@ companion object {
 
 C’est ainsi que, dans le cas où l’on réalise dans la suite de test un `ViewAction.click()` sur un bouton qui ne correspond pas à la taille requise pour un élément interactif, le test apparaitra en erreur jusqu’à ce que le problème d’accessibilité soit résolu.
 
+Orange propose son propre framework basé sur Espresso pour réaliser des vérifications automatique d'accessibilité. Des règles supplémentaires y sont notamment ajoutées. Il est donc recommandé d'utiliser ce framework disponible sur [<span lang="en">gitlab</span>](https://gitlab.tech.orange/soft_a11y/espresso-accessibility-orange).
 ### Réaliser les tests automatisés d’accessibilité sur l’ensemble de l’écran
 
 L’automatisation du test d’accessibilité selon les <span lang="en">ViewAction</span> peut cependant devenir limitant. C’est pourquoi, on peut indiquer lors de l’activation de ATF, que l’on souhaite faire les validations depuis la vue racine. Ainsi, toutes les vues seront testées, sans besoin d’ajouter de <span lang="en">ViewActions</span>. Pour ce faire, il faut remplacer  `AccessibilityChecks.enable()` par `AccessibilityChecks.enable().setRunChecksFromRootView(true)`

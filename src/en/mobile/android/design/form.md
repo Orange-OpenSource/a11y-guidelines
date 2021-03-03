@@ -1,27 +1,27 @@
 ﻿---
-title: "Form"
+title: "Input screen"
 ---
 
-# Form
+# Input screen
 
-## Have explicit form fields
+## Have explicit input fields
 
 **Target&nbsp;:** everyone and in particular the visually impaired.  
 **When&nbsp;:** during design and development.
 
 **Description&nbsp;:**
 
-Linking form fields with their labels provides additional vocalisation that makes the field easier for the user to understand.
+Linking input fields with their labels provides additional vocalisation that makes the field easier for the user to understand.
   
 There are 2 techniques to do this linkage:
  - `labelFor` &nbsp;: indicate that a label is linked to another view.  
  - `hint`&nbsp;: add an example text when the text field is empty. This method only works for `EditText`.
 
-It is essential to indicate to the user, for a good understanding of the form, the required fields, the expected format, or errors made on fields.
+It is essential to indicate to the user, for a good understanding of the input screen, the required fields, the expected format, or errors made on fields.
 
 **To be verified&nbsp;:**
 
-- Form fields must be linked to a label if it is visible, otherwise a `hint` is present.
+- Input fields must be linked to a label if it is visible, otherwise a `hint` is present.
 - Required fields are identifiable
 - The data format of the "complex" fields is indicated to the user
 
@@ -39,7 +39,7 @@ It is essential to indicate to the user, for a good understanding of the form, t
 
 **Description&nbsp;:**
 
-If an error is made when entering a form, it is important to clearly indicate to the user what the errors are, so that the user can correct the form.
+If an error is made when entering input screen, it is important to clearly indicate to the user what the errors are, so that the user can correct the fields.
 
 It is also recommended to provide the user with a correction suggestion.
 

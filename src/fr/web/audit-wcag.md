@@ -14,4 +14,4 @@ La grille calcule un taux de conformité par page auditée : ce taux est égal �
 
 Le lien ci-dessous entraine l'ouverture de la grille dans un nouvel onglet du navigateur.  
 
-<a href="../la-va11ydette/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la va11ydette (nouvelle fenêtre)">Ouvrir la va11ydette<span class="sr-only"> (nouvelle fenêtre)</span></a>
+<a href="../la-va11ydette/?list=wcag-web&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la va11ydette (nouvelle fenêtre)">Ouvrir la va11ydette<span class="sr-only"> (nouvelle fenêtre)</span></a>

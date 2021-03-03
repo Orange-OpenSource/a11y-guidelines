@@ -4,7 +4,7 @@
 		"name": "Contenu non textuel",
 		"level": "A",
 		"tests": [],
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -12,7 +12,7 @@
 		"name": "Contenu seulement audio ou vidéo (pré-enregistré)",
 		"level": "A",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -20,7 +20,7 @@
 		"level": "A",
 		"name": "Sous-titres (pré-enregistrés)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -28,7 +28,7 @@
 		"level": "A",
 		"name": "Audio-description ou version de remplacement pour un média temporel (pré-enregistré)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -36,7 +36,7 @@
 		"level": "AA",
 		"name": "Sous-titres (en direct)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -44,7 +44,7 @@
 		"level": "AA",
 		"name": "Audio-description (pré-enregistrée)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -52,7 +52,7 @@
 		"level": "A",
 		"name": "Information et relations",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -60,7 +60,7 @@
 		"level": "A",
 		"name": "Ordre séquentiel logique",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -68,7 +68,7 @@
 		"level": "A",
 		"name": "Caractéristiques sensorielles",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -76,7 +76,7 @@
 		"level": "AA",
 		"name": "Orientation",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -84,7 +84,7 @@
 		"level": "AA",
 		"name": "Identifier la fonction du champ",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -92,7 +92,7 @@
 		"level": "A",
 		"name": "Utilisation de la couleur",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -100,7 +100,7 @@
 		"level": "A",
 		"name": "Contrôle du son",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -108,7 +108,7 @@
 		"level": "AA",
 		"name": "Contraste (minimum)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -116,7 +116,7 @@
 		"level": "AA",
 		"name": "Redimensionnement du texte",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -124,7 +124,7 @@
 		"level": "AA",
 		"name": "Texte sous forme d'image",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -132,7 +132,7 @@
 		"level": "AA",
 		"name": "Reflow",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -140,7 +140,7 @@
 		"level": "AA",
 		"name": "Contraste des éléments non-textuels",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -148,7 +148,7 @@
 		"level": "AA",
 		"name": "Espacement du texte",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -156,7 +156,7 @@
 		"level": "AA",
 		"name": "Contenus s’affichant au survol du pointeur ou lors d’une tabulation",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -164,7 +164,7 @@
 		"level": "A",
 		"name": "Clavier",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -172,14 +172,14 @@
 		"level": "A",
 		"name": "Pas de piège au clavier",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},{
 		"wcag": "2.1.4",
 		"level": "A",
 		"name": "Raccourcis clavier",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -187,7 +187,7 @@
 		"level": "A",
 		"name": "Réglage du délai",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -195,7 +195,7 @@
 		"level": "A",
 		"name": "Mettre en pause, arrêter, masquer",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -203,7 +203,7 @@
 		"level": "A",
 		"name": "Pas plus de trois flashs ou sous le seuil critique",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -211,7 +211,7 @@
 		"level": "A",
 		"name": "Contourner des blocs",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -219,7 +219,7 @@
 		"level": "A",
 		"name": "Titre de page",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -227,7 +227,7 @@
 		"level": "A",
 		"name": "Parcours du focus",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -235,7 +235,7 @@
 		"level": "A",
 		"name": "Fonction du lien (selon le contexte)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -243,7 +243,7 @@
 		"level": "AA",
 		"name": "Accès multiples",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -251,13 +251,29 @@
 		"level": "AA",
 		"name": "En-têtes et étiquettes",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
 		"wcag": "2.4.7",
 		"level": "AA",
 		"name": "Visibilité du focus",
+		"tests": [], 
+		"resultat":"na",
+		"comment":[]
+	},
+	{
+		"wcag": "2.4.8",
+		"level": "AAA",
+		"name": "Localisation",
+		"tests": [], 
+		"resultat":"nt",
+		"comment":[]
+	},
+	{
+		"wcag": "2.4.9",
+		"level": "AAA",
+		"name": "Fonction du lien (lien uniquement)",
 		"tests": [], 
 		"resultat":"nt",
 		"comment":[]
@@ -267,7 +283,7 @@
 		"level": "A",
 		"name": "Gestes multipoints ou trajectoires",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -275,7 +291,7 @@
 		"level": "A",
 		"name": "Déclenchement d'une action",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -283,7 +299,7 @@
 		"level": "A",
 		"name": "Label dans le nom",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -291,7 +307,15 @@
 		"level": "A",
 		"name": "Mouvement de l'appareil ou de l'utilisateur",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
+		"comment":[]
+	},
+	{
+		"wcag": "2.5.5",
+		"level": "AAA",
+		"name": "Taille minimum des zones sensibles",
+		"tests": [], 
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -299,7 +323,7 @@
 		"level": "A",
 		"name": "Langue de la page",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -307,7 +331,7 @@
 		"level": "AA",
 		"name": "Langue d'un passage",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -315,7 +339,7 @@
 		"level": "A",
 		"name": "Au focus",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -323,7 +347,7 @@
 		"level": "A",
 		"name": "À la saisie",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -331,7 +355,7 @@
 		"level": "AA",
 		"name": "Navigation cohérente",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -339,7 +363,7 @@
 		"level": "AA",
 		"name": "Identification cohérente",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -347,7 +371,7 @@
 		"level": "A",
 		"name": "Identification des erreurs",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -355,7 +379,7 @@
 		"level": "A",
 		"name": "Étiquettes ou instructions",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -363,7 +387,7 @@
 		"level": "AA",
 		"name": "Suggestion après une erreur",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -371,7 +395,7 @@
 		"level": "AA",
 		"name": "Prévention des erreurs (juridiques, financières, de données)",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -379,7 +403,7 @@
 		"level": "A",
 		"name": "Analyse syntaxique",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -387,7 +411,7 @@
 		"level": "A",
 		"name": "Nom, rôle et valeur",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	},
 	{
@@ -395,7 +419,7 @@
 		"level": "AA",
 		"name": "Messages d’état",
 		"tests": [], 
-		"resultat":"nt",
+		"resultat":"na",
 		"comment":[]
 	}
 	]

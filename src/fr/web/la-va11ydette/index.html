@@ -66,6 +66,8 @@
                 top: 3.75rem;
             }
 
+			#filter {max-height: calc(100vh - 9.6rem);}
+			
             [aria-expanded="true"] .icon-arrow-down {
                 transform: rotate(180deg);
             }
@@ -106,13 +108,12 @@
 		<div class="navbar navbar-dark navbar-expand supra">
 			<div class="d-flex flex-row-reverse container-lg">
 
-				
 			  <nav role="navigation" id="nav-lang" aria-label="A propos et changement de langue">
 				  <ul class="navbar-nav">
 					
 					  <li class="nav-item">
-						<a href="https://a11y-guidelines.orange.com/fr/web/audit-wcag/" id="link-about" target="_blank" title="A propos (nouvelle fenêtre)" class="nav-link">
-							<span id="link-about-txt">A propos</span>
+						<a href="https://a11y-guidelines.orange.com/fr/web/audit-wcag/" id="link-about" target="_blank" title="À propos (nouvelle fenêtre)" class="nav-link">
+							<span id="link-about-txt">À propos</span>
 						</a>
 					  </li>
 					
@@ -162,11 +163,12 @@
                 <div class="container py-3">
                     <div class="input-group">
                         <div class="custom-file">
-                            <input class="custom-file-input" id="selectFiles" value="Import" type="file" lang="fr">
-                            <label class="custom-file-label" id="selectFilesLabel" for="selectFiles" data-browse="Parcourir">Sélectionner un audit</label>
+                            <input class="custom-file-input" id="selectFiles" type="file">
+                            <label class="custom-file-label" id="selectFilesLabel" for="selectFiles" aria-describedby="import">Sélectionner un audit</label>
                         </div>
                         <div class="input-group-append">
-                            <button class="btn btn-secondary btn-inverse" type="button" id="import">Importer</button>
+                            <button class="btn btn-secondary btn-inverse" type="button" id="import" data-toggle="collapse" data-target="#import-form"
+                            aria-expanded="false" aria-controls="import-form">Importer</button>
                         </div>
                     </div>
                 </div>
@@ -193,7 +195,7 @@
                         data-toggle="modal" data-target="#modalResult"
                         id="btnShowResult">Afficher le résultat de l’audit
                 </button>
-               
+              
             </div>
 
             <div class="o-nav-local bg-white navbar-light my-3 d-print-none" id="pageManager"></div>
@@ -220,11 +222,11 @@
                         </div>
                         
                     </div>
-                    <div class="col-md-8 bg-white border border-light col-print-12">
+                    <div class="col-md-8 bg-white border border-light col-print-12" id="currentPageContent">
                         <span id="count" class="alert-danger"></span>
                         <section id="mainContent"></section>
                     </div>
-                    <aside id="filter" class="col-md-2 sticky-top pt-4 col-print-12">
+                    <aside id="filter" class="col-md-2 sticky-top pt-4 col-print-12 overflow-auto">
                         
                     </aside>
                 </div>
@@ -250,6 +252,10 @@
         <script src="https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/js/boosted.min.js"
                 integrity="sha384-Y/0NjLXRerXrg7jzex/E5ONTjY9VxGnhnsY0dVw12hlg/0XlAJFjh1biCQfdWI1R"
                 crossorigin="anonymous"></script>
+		<script src="./js/marked.min.js"></script>
+		<script src="./js/FileSaver.min.js"></script>
+		<script src="./js/jszip.min.js"></script>
+		<script src="./js/myexcel.js"></script>
         <script src="./js/lavallydette.js"></script>
     </body>
 </html>

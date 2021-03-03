@@ -46,6 +46,8 @@ companion object {
 
 So, when in the test suite a `ViewAction.click ()` is performed on a button that does not match the size required for an interactive element, the test will appear as an error until the accessibility issue be resolved.
 
+Orange has its own framework based on Espresso to perform automatic accessibility checks, which contains additional rules. It is recommended to use this framework available on [gitlab](https://gitlab.tech.orange/soft_a11y/espresso-accessibility-orange).
+
 ### Perform automated accessibility tests on the complete screen
 
 Accessibility testing automation according to ViewAction can be limited. That's why, validations from root view can be enabled to test all views, without the 'ViewActions' restrictions. To do this, replace `AccessibilityChecks.enable()` by `AccessibilityChecks.enable().setRunChecksFromRootView(true)`

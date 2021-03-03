@@ -1,26 +1,26 @@
 ﻿---
-title: "Focus navigation"
+title: "Keyboard navigation (Switch Access)"
 ---
 
-# Focus navigation
+# Keyboard navigation (Switch Access)
 
 ## Access to interactive elements
 
 **Target&nbsp;:** everyone and especially people with motor disabilities who use a keyboard to navigate.  
 **When&nbsp;:** during design and development.
 
-Focus navigation is very useful for people with motor or cognitive difficulties. This navigation makes it possible to move from one interactive element to another (element on which an action can be performed). It corresponds to the navigation that can be done with a Bluetooth keyboard linked to a smartphone.
+Navigation using Switch Access is very useful for people with motor or cognitive difficulties. This navigation makes it possible to move from one interactive element to another (element on which an action can be performed). It corresponds to the navigation that can be done with a Bluetooth keyboard linked to a smartphone.
 
-To manage focus navigation, there are 2 things to check:
+To manage keyboard navigation, there are 2 things to check:
 - Allow focus on interactive elements (focus navigation only concerns interactive elements). If, for example, your application has custom views that can be clicked on, you must make sure that these views are focusable by setting the `focusable` attribute to `true`.
 - Manage the focus display: any interactive element can receive the focus, so the `state_focused` must be defined and allow to easily distinguish which element has the focus.
 
 **To be verified&nbsp;:**
 
-- With the focus navigation, it is possible to visually determine which element has the focus.
-- All the features are accessible with the focus navigation.
-- All interactive elements are highlighted with the focus navigation. 
-- Only the interactive elements are highlighted with the focus navigation.
+- With the keyboard navigation, it is possible to visually determine which element has the focus.
+- All the features are accessible with the keyboard navigation.
+- All interactive elements are highlighted with the keyboard navigation. 
+- Only the interactive elements are highlighted with the keyboard navigation.
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
@@ -29,14 +29,14 @@ To manage focus navigation, there are 2 things to check:
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
 
 
-## Order focus navigation
+## Order keyboard navigation
 
 **Target&nbsp;:** everyone and especially people with motor disabilities who use a keyboard to navigate.  
 **When&nbsp;:** during design and development.
 
 **Description&nbsp;:**
 
-Focus navigation, to be understandable and easy to use, must provide a coherent and comprehensible order of navigation. It is important to manage the focus order : through the options `nextFocusDown`, `nextFocusUp`, `nextFocusRight` and `nextFocusLeft`, you can specify which view should take the focus according to the use of the tab, down, up, right and left arrows.
+Keyboard navigation, to be understandable and easy to use, must provide a coherent and comprehensible order of navigation. It is important to manage the focus order : through the options `nextFocusDown`, `nextFocusUp`, `nextFocusRight` and `nextFocusLeft`, you can specify which view should take the focus according to the use of the tab, down, up, right and left arrows.
 
 **Note**: `nextFocusDown`, `nextFocusUp`, `nextFocusRight`, `nextFocusLeft`, `focusable` and other focus management options are available directly in the <abbr>XML</abbr> or in the code through the corresponding methods.
   
@@ -44,7 +44,7 @@ For more information on [focus management on Android](http://developer.android.c
 
 **To be verified&nbsp;:**
 
-- The focus navigation order is logical and consistent.
+- The keyboard navigation order is logical and consistent.
 - Items are grouped together when they are linked (example: content within a clickable item in a list).
 
 

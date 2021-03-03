@@ -1,0 +1,97 @@
+{
+	"testWebID-0": [
+		{
+			"title" : "Titre de page non renseigné",
+			"detail" : "Chaque page doit posséder un titre unique.",
+			"solution" : "Renseigner l'élément <title>, avec des mots clefs permettant de comprendre le rôle de la page. Les informations peuvent être ordonnées de la  plus spécifique vers la moins spécifique, ou inversement (pas de règles).",
+			"technicalSolution" : "<title>Acccueil - Espace client Orange</title>"
+		
+		},
+		{
+			"title" : "Titre de page non pertinent",
+			"detail" : "Chaque page doit posséder un titre unique, permettant de comprendre le rôle de celle-ci.",
+			"solution" : "Renseigner l'élément <title>, avec des mots clefs permettant de comprendre le rôle de la page. Les informations peuvent être ordonnées de la  plus spécifique vers la moins spécifique, ou inversement (pas de règles).",
+			"technicalSolution" : "<title>Acccueil - Espace client Orange</title>"
+		
+		}
+		
+	],
+	"testWebID-1": [
+		{
+			"title" : "Hiérarchisation imcompléte",
+			"detail" : "La page doit être structurée à partir de titres de niveaux.",
+			"solution" : "Tous les contenus, traités visuellement comme des titres, doivent posséder une sémantique de titre (balises <h1> à <h6>)",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Hiérarchisation des niveaux de titres non logique",
+			"detail" : "Les titres de niveaux doivent être structurés de manière logique",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		}
+		
+	],
+	"testWebID-3": [
+		{
+			"title" : "Element incomplet",
+			"detail" : "Des balises de début ou de fin sont manquantes pour un ou plusieurs éléments",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		},
+		{
+			"title" : "Erreur d'imbrication",
+			"detail" : "Des éléments ne respectent pas les règles d'imbrications (conformité HTML)",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		},
+		{
+			"title" : "Attributs dupliqués",
+			"detail" : "Présence d'attributs dupliqués sur un même élément",
+			"solution" : "",
+			"technicalSolution" : ""
+		
+		},
+		{
+			"title" : "Présence d'ID dupliqués",
+			"detail" : "La page ne doit pas comporter des ID dupliqués",
+			"solution" : "",
+			"technicalSolution" : ""
+		}
+		
+	],
+	"testWebID-6": [
+		{
+			"title" : "Absence d'entêtes de lignes ou de colonnes",
+			"detail" : "Les entêtes sont obligatoires pour identifier la nature des colonnes et/ou des lignes",
+			"solution" : "Les cellules d'entêtes de colonnes doivent posséder une sémantique de TH + un attribut scope='col'. Les cellules d'entêtes de lignes doivent posséder une sémantique de TH + un attribut scope='row'. ",
+			"technicalSolution" : "<th scope='col'> / <th scope='row'> "
+		
+		},
+		{
+			"title" : "Présence de tableau de mise en forme",
+			"detail" : "Les tableaux ne doivent pas être utilisés pour de la mise en forme",
+			"solution" : "Ajouter un role='presentation' au tableau",
+			"technicalSolution" : "<table role='presentation'>"
+		
+		}
+	],
+	"testWebID-10": [
+		{
+			"title" : "Absence d'attribut TITLE",
+			"detail" : "Les frame et iframe doivent comporter un attribut TITLE",
+			"solution" : "Ajouter un attribut TITLE, la valeur de l'attribut décrit le contenu de la frame ou iframe",
+			"technicalSolution" : ""
+		},
+		{
+			"title" : "Attribut TITLE non pertinent",
+			"detail" : "La valeur de l'attribut doit permettre aux utilisateurs de comprendre la nature de la frame ou iframe",
+			"solution" : "Ajouter un attribut TITLE, la valeur de l'attribut décrit le contenu de la frame ou iframe",
+			"technicalSolution" : ""
+		
+		}
+		
+	]
+}
