@@ -6,7 +6,7 @@
 (function () {
   window.addEventListener('tac.root_available', function (e) {
 
-    document.querySelectorAll('#tarteaucitronRoot button').forEach(button => {
+    document.querySelectorAll('#tarteaucitronRoot button').forEach(function (button) {
       if (button.classList.contains('catToggleBtn') || button.id === 'tarteaucitronClosePanel') {
         return
       }
@@ -22,7 +22,7 @@
   window.addEventListener('tac.open_panel', function () {
     const servicesContainer = document.getElementById('tarteaucitronServices_api')
 
-    servicesContainer.querySelectorAll('button').forEach(button => {
+    servicesContainer.querySelectorAll('button').forEach(function (button) {
       if (button.classList.contains('tarteaucitronAllow')) {
         button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ml-2')
       } else {
