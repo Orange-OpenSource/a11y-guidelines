@@ -42,6 +42,7 @@ module.exports = {
       "showAlertSmall": false, /* Show the small banner on bottom right */
       "cookieslist": true, /* Show the cookie list */
       "adblocker": false, /* Show a Warning if an adblocker is detected */
+      "showIcon": false,
       "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
       "highPrivacy": true, /* Disable auto consent */
       "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
