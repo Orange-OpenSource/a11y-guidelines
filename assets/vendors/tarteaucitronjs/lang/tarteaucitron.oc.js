@@ -74,5 +74,8 @@ tarteaucitron.lang = {
     "other": {
         "title": "Autre",
         "details": "Servicis que cèrcan a afichar de contengut web."
-    }
+    },
+    
+    "mandatoryTitle": "Cookies necessaris",
+    "mandatoryText": "Aqueste site utiliza de cookies necessaris pel seu pròpri foncionament que pòdon pas èsser desactivats."
 };
