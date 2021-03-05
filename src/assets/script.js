@@ -12,7 +12,7 @@
       }
 
       if (button.classList.contains('tarteaucitronAllow')) {
-        button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ml-2')
+        button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ml-2')
       } else {
         button.classList.add('btn', 'btn-inverse', 'btn-info', 'ml-2')
       }
