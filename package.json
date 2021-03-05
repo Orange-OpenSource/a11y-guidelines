@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "docsearch.js": "^2.6.3",
-    "tarteaucitronjs": "^1.4.0"
+    "tarteaucitronjs": "^1.8.4"
   }
 }
