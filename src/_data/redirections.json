@@ -1358,5 +1358,9 @@
   {
     "old": "web/la-vallydette",
     "new": "/fr/web/audit-wcag"
+  },
+  {
+    "old": "web/fondamentaux-nontech.html",
+    "new": "/fr/web/designer"
   }
 ]
