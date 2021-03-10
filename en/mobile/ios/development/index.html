@@ -188,7 +188,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#change-the-vocalization-language" class="dropdown-item text-wrap">Change the vocalization language</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
     </nav>
         
       </div>
@@ -794,6 +794,61 @@ This notification comes along with a vocalization including a sound like announc
 <li>
 <p><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitypagescrollednotification"><code>UIAccessibilityPageScrolledNotification</code></a></p>
 </li>
+</ul>
+</div>
+</div>
+<br><br>
+<h2 id="change-the-vocalization-language">Change the vocalization language <a class="header-anchor" href="#change-the-vocalization-language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#changeLang-Details" 
+           role="tab" 
+           aria-selected="true">Details</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#changeLang-Links" 
+           role="tab" 
+           aria-selected="false">Link</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="changeLang-Details"
+     role="tabpanel">
+<p>To change the vocalization language of VoiceOver for a word or a sentence, one can use the <strong>accessibilityLanguage</strong>  attribute.</p>
+<p>Available through the <code>UIAccessibility</code> informal protocol, this attribute allows to specify a language for a dedicated text.</p>
+</div>
+<div class="tab-pane" id="changeLang-Example" role="tabpanel">
+<p>If we use the <code>accessibilityLanguage</code> attribute on a <code>UILabel</code>, it will be vocalized by VoiceOver in the language set on this attribute.</p>
+<pre><code class="objectivec">
+- (IBAction)tapHere:(UIButton *)sender {
+    
+    myLabel.accessibilityLanguage = @"fr";
+    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
+}
+</code></pre>
+<pre><code class="swift">
+@IBAction func tapHere(_ sender: UIButton) {
+        
+    myLabel.accessibilityLanguage = "fr"
+    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
+}
+</code></pre>
+<p>A single word in a foreign language may be added in a sentence with the appropriate pronunciation thanks to the <strong>Attributed Accessibility Properties</strong> using a <code>NSAttributedString</code> <a href="https://a11y-guidelines.orange.com/en/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607">since iOS 11</a>.</p>
+</div>
+<div class="tab-pane" id="changeLang-Links" role="tabpanel">  
+<ul>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615192-accessibilitylanguage"><code>accessibilityLanguage</code></a></li>
 </ul>
 </div>
 </div>
@@ -2774,7 +2829,7 @@ class CustomRotor: UIViewController {
      id="a11yOptions-States"
      role="tabpanel">
 <p>On iOS, it is possible to check the accessibility options state that may be changed in the device settings.</p>
-<p>The most useful method rpovided by the <code>UIKit</code> framework is <strong>UIAccessibilityIsVoiceOverRunning</strong> which allows to know whether VoiceOver is activated.</p>
+<p>The most useful method provided by the <code>UIKit</code> framework is <strong>UIAccessibilityIsVoiceOverRunning</strong> which allows to know whether VoiceOver is activated.</p>
 <pre><code class="objectivec">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
@@ -3841,6 +3896,8 @@ class ViewController: UIViewController {
             <a href="#trigger-a-vocalization" class="nav-link text-muted bg-200">Trigger a vocalization</a>
           </li><li class="nav-item position-relative">
             <a href="#notify-a-content-change" class="nav-link text-muted bg-200">Notify a content change</a>
+          </li><li class="nav-item position-relative">
+            <a href="#change-the-vocalization-language" class="nav-link text-muted bg-200">Change the vocalization language</a>
           </li><li class="nav-item position-relative">
             <a href="#hide-elements" class="nav-link text-muted bg-200">Hide elements</a>
           </li><li class="nav-item position-relative">
