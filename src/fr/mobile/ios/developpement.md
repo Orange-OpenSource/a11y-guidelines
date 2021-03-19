@@ -1240,6 +1240,171 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
 </div>
 <br><br>
 
+## Fournisseur de contenu personnalisé
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CuCoPro-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CuCoPro-Details" 
+           role="tab" 
+           aria-selected="false">Fonctionnement</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CuCoPro-Example" 
+           role="tab" 
+           aria-selected="false">Exemple</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CuCoPro-Links" 
+           role="tab" 
+           aria-selected="false">Liens</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="CuCoPro-Description"
+     role="tabpanel">
+     
+Cette **nouveauté iOS&nbsp;14** passée incognito lors de la WWDC 2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>.
+
+L'objectif principal du **fournisseur de contenu personnalisé** réside dans une navigation plus rapide au sein d'une interface riche en détails auxquels l'utilisateur peut accéder sans être obligé de subir la vocalisation d'éléments parasites avant d'obtenir ce qui l'intéresse.
+
+L'association d'une **vocalisation souhaitée** de l'information (visuelle ou non) avec une **navigation plus fluide et plus rapide** caractérise donc parfaitement la finalité de cette fonctionnalité.
+
+Un exemple probant est celui de l'application `Photos` où cette fonctionnalité permet l'accès à certaines métadonnées (date, heure...) en ayant toujours la photo sélectionnée&nbsp;: ces informations sont accessibles via l'item `Plus`&nbsp;`de`&nbsp;`contenus` présent dans le [rotor](#rotor-personnalise).
+![](../../images/iOSdev/CustomContentProvider_1.png)
+On peut aussi envisager l'implémentation de cette fonctionnalité dans des listes de cellules comprenant de nombreux détails dont la vocalisation pourrait être réalisée uniquement par ce biais selon l'**intérêt manifesté par l'utilisateur**.
+</div>
+<div class="tab-pane" id="CuCoPro-Details" role="tabpanel">
+
+Pour utiliser cette fonctionnalité, il est impératif de&nbsp;:
+
+- se conformer au protocole **AXCustomContentProvider**,
+
+- fournir un tableau **accessibilityCustomContent** rempli d'éléments **AXCustomContent**,
+
+- définir chaque élément **AXCustomContent** avec sa caractéristique (`value`) ainsi que la famille à laquelle elle appartient (`label`).
+
+
+
+L'accès à ces informations se fait en **utilisant le rotor** qui contiendra alors un item **`Plus`&nbsp;`de`&nbsp;`contenus`** qui permettra de vocaliser chaque `AXCustomContent` par un **balayage vertical avec un doigt** comme pour les [valeurs continûment ajustables](#valeurs-continument-ajustables) ou les [actions personnalisées](#actions-personnalisees).
+</div>
+<div class="tab-pane" id="CuCoPro-Example" role="tabpanel">
+
+L'exemple de code ci-dessous permet d'obtenir tout un tas d'informations présentes sur une image sous forme de données non visuelles mais vocalisables.
+
+⚠️ Il faut absolument penser à **importer le framework Accessibility** auquel appartient le protocole `AXCustomContentProvider`. ⚠️
+
+Après avoir défini la classe pour la vue contenant l'image&nbsp;:
+
+<pre><code class="objectivec">
+//MyCustomView.h
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;Accessibility/Accessibility.h&gt;  //Oubli rédhibitoire
+
+@interface MyCustomView : UIImageView <AXCustomContentProvider>
+@end
+
+//MyCustomView.m
+@implementation MyCustomView
+
+@synthesize accessibilityCustomContent = _accessibilityCustomContent;
+
+- (void)setAccessibilityCustomContent:(NSArray<AXCustomContent *> *)accessibilityCustomContent {
+
+    if (accessibilityCustomContent != nil) {
+        _accessibilityCustomContent = accessibilityCustomContent;
+    }
+}
+@end        
+</code></pre>
+
+<pre><code class="swift">
+import Accessibility  //Oubli rédhibitoire
+
+class MyCustomView: UIImageView, AXCustomContentProvider {
+    
+    var _accessibilityCustomContent: [AXCustomContent]? = nil
+    var accessibilityCustomContent: [AXCustomContent]! {
+           get { return _accessibilityCustomContent }
+           set(newValue) { _accessibilityCustomContent = newValue }
+       }
+}
+</code></pre>
+
+... on crée chaque élément à vocaliser lors du balayage vertical avec un doigt&nbsp;:
+
+<pre><code class="objectivec">
+@interface ViewController ()
+@property (weak, nonatomic) IBOutlet MyCustomView * myView;
+@end
+
+
+@implementation ViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    _myView.accessibilityLabel = @"logo Orange";
+    _myView.accessibilityHint = @"utiliser l'élément du rotor intitulé plus de contenus pour obtenir des informations complémentaires";
+    
+    AXCustomContent * lastModified = [AXCustomContent customContentWithLabel:@"date de création"
+                                                                       value:@"1988"];
+    AXCustomContent * items = [AXCustomContent customContentWithLabel:@"siège social"
+                                                                value:@"paris"];
+    AXCustomContent * type = [AXCustomContent customContentWithLabel:@"type de société"
+                                                               value:@"télécommunications"];
+    
+    _myView.accessibilityCustomContent = @[lastModified, items, type];
+}
+@end
+</code></pre>
+
+<pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var myView: MyCustomView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myView.accessibilityLabel = "logo Orange"
+        myView.accessibilityHint = "utiliser l'élément du rotor intitulé plus de contenus pour obtenir des informations complémentaires"
+        
+        let lastModified = AXCustomContent(label: "date de création", 
+                                           value: "1988")
+        let items = AXCustomContent(label: "siège social", 
+                                    value: "paris")
+        let type = AXCustomContent(label: "type de société", 
+                                   value: "télécommunications")
+
+        myView.accessibilityCustomContent = [lastModified, items, type]
+    }
+}
+</code></pre>
+
+![](../../images/iOSdev/CustomContentProvider_2.png)
+![](../../images/iOSdev/CustomContentProvider_3.png)
+</div>
+<div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
+
+- [Customized Accessibility Content](https://developer.apple.com/documentation/accessibility/customized_accessibility_content/)
+
+- L'[article de Rob Whitaker](https://mobilea11y.com/blog/custom-accessibility-content/) apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls aujourd'hui à exposer à l'issue de la WWDC 2020.
+</div>
+</div>
+<br><br>
+
 ## Focus d'un élément
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
