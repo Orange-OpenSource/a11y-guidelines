@@ -188,7 +188,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#change-the-vocalization-language" class="dropdown-item text-wrap">Change the vocalization language</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#change-the-vocalization-language" class="dropdown-item text-wrap">Change the vocalization language</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#custom-content-provider" class="dropdown-item text-wrap">Custom content provider</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
     </nav>
         
       </div>
@@ -1362,6 +1362,162 @@ UIAccessibilityElement * elt;
 </li>
 <li>
 <p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+<br><br>
+<h2 id="custom-content-provider">Custom content provider <a class="header-anchor" href="#custom-content-provider" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CuCoPro-Description" 
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CuCoPro-Details" 
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CuCoPro-Example" 
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#CuCoPro-Links" 
+           role="tab" 
+           aria-selected="false">Links</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="CuCoPro-Description"
+     role="tabpanel">
+<p>This <strong>iOS 14 new feature</strong> has unfortunately not been introduced during the WWDC 2020 while it's crucial to significantly improve the VoiceOver user experience.</p>
+<p>The <strong>custom content provider</strong> provides a faster navigation within an interface the user can access some rich details without having to undergo the vocalization of parasitic elements before getting what he's interested in.</p>
+<p>The main goal of this feature may be defined as merging <strong>vocalized information</strong> with a <strong>smoother and faster navigation</strong>.</p>
+<p>The <code>Photos</code> iOS application is an outstanding example where some metadata (date, hour...) can be obtained while the photo is still selected thanks to the <code>More</code> <code>Content</code> <a href="#custom-rotor">rotor item</a>.<br>
+<img src="../../images/iOSdev/CustomContentProvider_1.png" alt="" class="img-fluid"><br>
+Another use case may be an important list of elements with rich details that may be vocalized only by this means according to the <strong>user interest</strong> for instance.</p>
+</div>
+<div class="tab-pane" id="CuCoPro-Details" role="tabpanel">
+<p>To implement this functionality, it's mandatory to:</p>
+<ul>
+<li>
+<p>conform to the <strong>AXCustomContentProvider</strong> protocol,</p>
+</li>
+<li>
+<p>provide an <strong>accessibilityCustomContent</strong> array of <strong>AXCustomContent</strong> elements,</p>
+</li>
+<li>
+<p>define each and every <strong>AXCustomContent</strong> element with its <code>value</code> and the kind of family this value belongs to (<code>label</code>).</p>
+</li>
+</ul>
+<p>The <code>More</code> <code>Content</code> <strong>rotor item</strong> is the only means to get these information by vocalizing every <code>AXCustomContent</code> element thanks to a one finger vertical swipe like the <a href="#continuous-adjustable-values">continuous adjustable values</a> or the <a href="#custom-actions">custom actions</a>.</p>
+</div>
+<div class="tab-pane" id="CuCoPro-Example" role="tabpanel">
+<p>The following code provides an example to reach some invisible information that are all completely embedded within an image.</p>
+<p>⚠️ It's mandatory to <strong>import the Accessibility framework</strong> the <code>AXCustomContentProvider</code> protocol belongs to. ⚠️</p>
+<p>First, define the class of the view that contains the image:</p>
+<pre><code class="objectivec">
+//MyCustomView.h
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;Accessibility/Accessibility.h&gt;  //Fatal issue if not used.
+
+@interface MyCustomView : UIImageView <AXCustomContentProvider>
+@end
+
+//MyCustomView.m
+@implementation MyCustomView
+
+@synthesize accessibilityCustomContent = _accessibilityCustomContent;
+
+- (void)setAccessibilityCustomContent:(NSArray<AXCustomContent *> *)accessibilityCustomContent {
+
+    if (accessibilityCustomContent != nil) {
+        _accessibilityCustomContent = accessibilityCustomContent;
+    }
+}
+@end        
+</code></pre>
+<pre><code class="swift">
+import Accessibility  //Fatal issue if not used.
+
+class MyCustomView: UIImageView, AXCustomContentProvider {
+    
+    var _accessibilityCustomContent: [AXCustomContent]? = nil
+    var accessibilityCustomContent: [AXCustomContent]! {
+           get { return _accessibilityCustomContent }
+           set(newValue) { _accessibilityCustomContent = newValue }
+       }
+}
+</code></pre>
+<p>Then, create each and every element to be vocalized with a one finger vertical swipe:</p>
+<pre><code class="objectivec">
+@interface ViewController ()
+@property (weak, nonatomic) IBOutlet MyCustomView * myView;
+@end
+
+
+@implementation ViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    _myView.accessibilityLabel = @"Orange logo";
+    _myView.accessibilityHint = @"use the rotor item entitled more content to get additional information";
+    
+    AXCustomContent * lastModified = [AXCustomContent customContentWithLabel:@"date of creation"
+                                                                       value:@"1988"];
+    AXCustomContent * items = [AXCustomContent customContentWithLabel:@"registered office location"
+                                                                value:@"paris"];
+    AXCustomContent * type = [AXCustomContent customContentWithLabel:@"type of company"
+                                                               value:@"telecommunications"];
+    
+    _myView.accessibilityCustomContent = @[lastModified, items, type];
+}
+@end
+</code></pre>
+<pre><code class="swift">
+class ViewController: UIViewController {
+
+    @IBOutlet weak var myView: MyCustomView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myView.accessibilityLabel = "Orange logo"
+        myView.accessibilityHint = "use the rotor item entitled more content to get additional information"
+        
+        let lastModified = AXCustomContent(label: "date of creation", 
+                                           value: "1988")
+        let items = AXCustomContent(label: "registered office location", 
+                                    value: "paris")
+        let type = AXCustomContent(label: "type of company", 
+                                   value: "telecommunications")
+
+        myView.accessibilityCustomContent = [lastModified, items, type]
+    }
+}
+</code></pre>
+<p><img src="../../images/iOSdev/CustomContentProvider_2.png" alt="" class="img-fluid"><br>
+<img src="../../images/iOSdev/CustomContentProvider_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
+<ul>
+<li>
+<p><a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content/">Customized Accessibility Content</a></p>
+</li>
+<li>
+<p>This <a href="https://mobilea11y.com/blog/custom-accessibility-content/">Rob Whitaker article</a> provides an interesting description of this new feature that he's one of the few to highlight after the WWDC 2020.</p>
 </li>
 </ul>
 </div>
@@ -3904,6 +4060,8 @@ class ViewController: UIViewController {
             <a href="#grouping-elements" class="nav-link text-muted bg-200">Grouping elements</a>
           </li><li class="nav-item position-relative">
             <a href="#reading-order" class="nav-link text-muted bg-200">Reading order</a>
+          </li><li class="nav-item position-relative">
+            <a href="#custom-content-provider" class="nav-link text-muted bg-200">Custom content provider</a>
           </li><li class="nav-item position-relative">
             <a href="#focus-an-element" class="nav-link text-muted bg-200">Focus an element</a>
           </li><li class="nav-item position-relative">
