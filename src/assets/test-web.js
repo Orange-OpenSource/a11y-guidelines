@@ -23,8 +23,8 @@ $(document).ready(function () {
   }
 
   //appel des Json
-  doXHR('/assets/json/'+lang+'/tests-web.json', function(errFirst, responseFirst) {
-	  
+  
+  doXHR('/fr/web/la-va11ydette/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
@@ -120,7 +120,7 @@ $(document).ready(function () {
     var data = JSON.parse(responseFirst);
     var data2 = JSON.parse(responseSecond);
     var uniqueTypes = [];
-    var refTests = compareReorder(data, data2);
+    var refTests = compareReorder(data.items, data2);
 
     let app = new function() {
       // Récupération des données
