@@ -24,6 +24,7 @@ $(document).ready(function () {
 
   //appel des Json
   doXHR('/assets/json/'+lang+'/tests-web.json', function(errFirst, responseFirst) {
+	  
     if (errFirst) {
       reqError();
     }

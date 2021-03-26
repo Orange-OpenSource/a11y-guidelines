@@ -249,7 +249,7 @@
 		"wcag": [
 			"4.1.2 A"
 		],
-		"verifier": "<p>Vérifier que la valeur des attributs <code>title</code> décrit la contenu ou la fonction de <code>iframe</code> ou <code>frame</code>.</p>",
+		"verifier": "<p>Vérifier que la valeur des attributs <code>title</code> décrit le contenu ou la fonction de <code>iframe</code> ou <code>frame</code>.</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Couleurs et contrastes",

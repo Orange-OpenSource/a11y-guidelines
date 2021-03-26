@@ -1,17 +1,18 @@
 {
+
 	"wcag-web": {
 		"filename": "criteres-wcag-ease",
 		"template": "wcag",
 		"version": "1.5",
-		"about-fr": "/fr/web/audit-wcag/",
-		"about-en": "/en/web/wcag-audit/"
+		"about-fr": "https://a11y-guidelines.orange.com/fr/web/audit-wcag/",
+		"about-en": "https://a11y-guidelines.orange.com/en/web/wcag-audit/"
 	},
 	"wcag-android": {
 		"filename": "criteres-wcag-android",
 		"template": "wcag",
 		"version": "1.0",
-		"about-fr": "/fr/mobile/android/audit-wcag/",
-		"about-en": "/en/mobile/android/wcag-audit/"
+		"about-fr": "https://a11y-guidelines.orange.com/fr/android/audit-wcag/",
+		"about-en": "https://a11y-guidelines.orange.com/en/android/wcag-audit/"
 	},
 	"audit-web": {
 		"filename": "tests-web",
