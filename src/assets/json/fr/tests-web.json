@@ -196,17 +196,12 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que toutes les images possèdent un attribut <code>alt</code>",
-      "Vérifier que toutes les <code>iframe</code> et <code>frame</code> contiennent un attribut <code>title</code> non-vide"
+      "Vérifier que toutes les images possèdent un attribut <code>alt</code>"
     ],
     "resultat": [
-      "Aucune erreur relative à l'absence d'attribut <code>alt</code>",
-      "Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code> et <code>iframe</code> "
+      "Aucune erreur relative à l'absence d'attribut <code>alt</code>"
     ],
-    "exception": [
-      "Présence d'un attribut <code>alt</code> pour toutes les images",
-      "Présence d'un attribut <code>title</code> pour toutes les <code>frame</code> et <code>iframe</code> "
-    ],
+    "exception": "",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
@@ -274,7 +269,7 @@
     "resultat": [
       "Tous les cadres possèdent un attribut <code>title</code> pertinent"
     ],
-    "exception": "",
+    "exception": "<ul><li> Une <code>frame</code> ou <code>iframe</code> non-informative masquée convenablement n'a pas besoin de <code>title</code>.</li><li>Un <code>title</code> n'est pas requis si le contenu de l'<code>iframe</code> n'est pas distinct du contenu environnant et n'a pas d'élément tabulable à l'intérieur, et qu'on a ajouté <code>tabindex='- 1'</code> sur l'<code>iframe</code> afin qu'il ne reçoive pas le focus.</li></ul>",
     "raccourcis": "<a href='https://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html'>Les iframes techniques</a>",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
@@ -398,7 +393,7 @@
       "Présence d'éléments suffisamment contrastés",
       "Présence de liens non-soulignés suffisamment contrastés"
     ],
-    "exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
+    "exception": "",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"]
   },
@@ -595,7 +590,7 @@
       "Test manuel"
     ],
     "tests": [
-      "Identifier les contenus additionnels s'affichant à la prise de focus ou au survol de la souris (ex : tooltip)"
+      "Identifier les contenus additionnels s'affichant à la prise de focus ou au survol de la souris (ex : tooltip, sous-menus)"
     ],
     "verifier": [
       "Vérifier que l'utilisateur peut déplacer le pointeur, de l'élément déclencheur, vers le contenu additionnel, sans que celui-ci ne se ferme",
@@ -607,7 +602,7 @@
       "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple, avec la touche <kbd>échap.</kbd>)",
       "Le contenu additionnel  est persistant jusqu'à la suppression du focus ou du survol sur l'élément déclenchant, que l'utilisateur le fasse disparaître ou que ce contenu n'est plus valide"
     ],
-    "exception": "",
+    "exception": "Si le contenu additionnel ne masque pas de contenu informatif, le critère est non applicable",
     "raccourcis": "",
     "profils": ["Expert Accessibilité"]
   },

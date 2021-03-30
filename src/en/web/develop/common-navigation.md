@@ -161,6 +161,8 @@ To make them appear, move the focus on the top of the page by clicking on your b
 
 3. If actions are to be performed in a timely manner, verify that the user can extend or remove this restriction.
 
+**Exception:** if the additional content does not mask informative content, the criterion is not applicable",
+
 **User Objective:** give all users control of the context changes related to their action and give them the necessary time to perform an action.
 
 **Example:** a form must have a send button. It should not be sent automatically after the user input.

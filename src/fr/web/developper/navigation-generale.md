@@ -162,6 +162,8 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 
 3. Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.
 
+**Exception&nbsp;:** si le contenu additionnel ne masque pas de contenu informatif, le critère est non applicable
+
 **Objectif utilisateur&nbsp;:**
 donner à tous les utilisateurs la maîtrise de l'apparition de contenu, des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.
 

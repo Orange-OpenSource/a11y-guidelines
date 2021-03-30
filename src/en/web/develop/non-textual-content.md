@@ -32,6 +32,8 @@ Add a `title` attribute to describe all `frame` or `iframe` content or function.
 - Each `img` tag must have an `alt` attribute.
 - For images not carrying information, set them as background images preferably (<abbr>CSS</abbr>). 
 - For graphics, you can add a link under them to access the data table (revealing it in the same page or in a different page).
+- A properly masked non-informative `frame` or` iframe` does not need a `title`.
+- A `title` is not required if the content of the` iframe` is not distinct from the surrounding content and has no focusable element inside, and there is an added `tabindex = "- 1" `on the` iframe` so that it does not get focus.
 
 **Users’ goal:**
 

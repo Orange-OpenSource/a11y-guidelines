@@ -25,7 +25,7 @@ Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;:
 - Pour les images décoratives&nbsp;: mettre un attribut `alt` vide.
 - Pour les images dont le contenu du `alt` serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.
 
-Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: [Masquer les iframe techniques de manière accessible](../../exemples-de-composants/iframes-techniques/)
+Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `frame` ou `iframe`. Si la `frame` ou `iframe` ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: [Masquer les iframe techniques de manière accessible](../../exemples-de-composants/iframes-techniques/). Dans ce cas pas besoin de `title`.
 
 **À vérifier&nbsp;:**
 
@@ -33,8 +33,11 @@ Mettre un attribut `title` décrivant le contenu et/ou la fonction de toute `fra
 - Toute balise `img` doit posséder un attribut `alt`.
 - Pour les images non-porteuses d’information, il est préférable de les passer en image de fond <abbr>CSS</abbr>.
 - Pour les graphiques, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffres (le faire apparaître dans la même page ou sur une autre page).
+- Une `frame` ou `iframe` non-informative masquée convenablement n'a pas besoin de `title`.
+- Un  `title` n'est pas requis si le contenu de l'`iframe` n'est pas distinct du contenu environnant et n'a pas d'élément tabulable à l'intérieur, et qu'on a ajouté `tabindex = "- 1"` sur l'`iframe` afin qu'elle ne reçoive pas le focus.
 
 **Objectif utilisateur&nbsp;:**
+
 Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès et éviter des images inutiles.
 
 Point bloquant&nbsp;: une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).
