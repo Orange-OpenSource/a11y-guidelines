@@ -18,11 +18,11 @@ Le lien ci-dessous entraine l'ouverture de la grille "Audit WCAG" dans un nouvel
 	
 # Audit d'évaluation
 
-L’audit d'évaluation propose des tests et procédures afin de valider la conformité à nos recommandations Orange.
+L’audit d'évaluation propose des tests et procédures afin de vérifier le respect des critères d'accessibilité recommandés pour les projets d'Orange. 
 
-Contrairement à l'audit de conformité, cette checklist ne se limite pas aux WCAG de niveau A et AA, mais couvre également des bonnes pratiques ainsi que quelques critères AAA jugés important de notre point de vue.
+Cette checklist ne se limite pas aux WCAG de niveau A et AA, mais couvre également des bonnes pratiques et quelques critères AAA.
 
-Cette grille est adaptée lors d'un accompagnement projet, elle peut être ainsi utilisée par différent profils d'auditeur (expert, developpeur, qualifieur), que ce soit pour un audit initial, ou pour des phases de recettes.
+Cette grille est utilisable à différentes étapes d'un projet : elle peut être ainsi utilisée par différent profils (développeur, qualifieur, expert accessibilité), que ce soit pour un audit initial, ou pour des phases de recettes. Il est aussi possible de filtrer les critères par outil ou méthode de tests (aXe, Colour Contrast Analyser, navigation au clavier...).
 
 ## Accéder à la va11ydette
 

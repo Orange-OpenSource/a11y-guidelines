@@ -1,5 +1,5 @@
 {
-	"name": "Audit conformité WCAG / WEB",			 
+	"name": "Audit de conformité WCAG / WEB",			 
 	"items":[{
 		"themes": "Formulaire",
 		"title": "Chaque champ de formulaire possède-t-il une étiquette&nbsp;?",
