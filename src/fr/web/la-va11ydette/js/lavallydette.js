@@ -949,13 +949,13 @@ function localizeHTML() {
 function initGroups() {
 	
 	if (Object.keys(dataVallydette.checklist.page[currentPage].groups).length !== 0) {
-		htmlgroups = "";
+		htmlgroups = '';
 		htmlgroups = '<h6>' + langVallydette.groupHeading + '</h6>';
-		htmlgroups += "<ul class=\"list-inline m-0\">";
+		htmlgroups += '<ul class="list-inline m-0">';
 		for (var themeItem in dataVallydette.checklist.page[currentPage].groups)  {
 			htmlgroups += '<li class="custom-control custom-checkbox custom-control-inline mb-0"><input type="checkbox"  class="custom-control-input"  id="' + themeItem + '" value="' + themeItem + '" name="' + themeItem + '" ' + (dataVallydette.checklist.page[currentPage].groups[themeItem].checked ? "checked" : "") + '/><label for="' + themeItem + '" class="custom-control-label">' + themeItem + '</label></li>';
 		};
-		htmlgroups += "</ul>";
+		htmlgroups += '</ul>';
 		
 		htlmgroupsMarker = document.getElementById("themeManager");
 		htlmgroupsMarker.innerHTML = htmlgroups;
