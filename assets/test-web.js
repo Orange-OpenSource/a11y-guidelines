@@ -10,7 +10,7 @@ for(var b=0;b<c.length;b++){let d=c[b].themes;for(var f,e=0;e<a.length;e++)f=a[e
 // }
 function d(a){return a=a.toLowerCase(),a=a.replace(/é|è|ê/g,"e"),a=a.replace(/ /g,"-"),a}//supprimer les doublons dans les filtres
 function e(a,b){for(var c=0;c<a.length;c++){//for (let condition of arrCond) {
-let d=a[c];if(d.name==b){let b=a.indexOf(d);a.splice(b,1)}}return a}function f(a,b){var f=JSON.parse(a),g=JSON.parse(b),h=[],k=c(f,g);let l=new function(){// Récupération des données
+let d=a[c];if(d.name==b){let b=a.indexOf(d);a.splice(b,1)}}return a}function f(a,b){var f=JSON.parse(a),g=JSON.parse(b),h=[],k=c(f.items,g);let l=new function(){// Récupération des données
 //this.refTests = refTests;
 var a={title1:"Proc\xE9dures",title2:"A v\xE9rifier",title3:"R\xE9sultats",title4:"Justification"};// Retourne la liste des checkboxes
 // Retourne les tests filtrés
@@ -36,4 +36,4 @@ let m=g.filter(function(a,b,c){return c.indexOf(a)===b}),n="";for(let a in m)n+=
         */for(var m=0;m<a.length;m++){let d=a[m];d.addEventListener("click",function(){this.checked&&"profil"===this.name&&(c=[],c.push(d.value)),this.checked&&"typeAll"===this.id?b=[]:this.checked&&"types"===this.name&&(b=[],b.push(d.value));let a=b.length+c.length;0<a?(1==a?(1===c.length&&(e(f,this.name),f.unshift(function(a){//return item.profils === arrProfil[0];
 return-1!==a.profils.indexOf(c[0])}),Object.defineProperty(f[0],"name",{value:this.name,writable:!1}),j=!0),1===b.length&&(e(f,this.name),f.unshift(function(a){return-1!==a.type.indexOf(b[0])}),Object.defineProperty(f[0],"name",{value:this.name,writable:!1}),j=!1)):(this.checked&&"profil"===this.name&&(e(f,this.name),f.unshift(function(a){return-1!==a.profils.indexOf(c[0])}),Object.defineProperty(f[0],"name",{value:this.name,writable:!1}),j=!0),this.checked&&"types"===this.name&&"allType"!=this.id&&(e(f,this.name),f.unshift(function(a){return-1!==a.type.indexOf(b[0])}),Object.defineProperty(f[0],"name",{value:this.name,writable:!1}),j=!1)),filteredTest=k.filter(function(a){return f.every(function(b){return b(a)})}),l.FetchAll(filteredTest),j&&l.UpdateTypes(h,filteredTest),l.UpdateFeedback(!0,filteredTest.length)):l.FetchAll(k)})}}};// Affichage de tous les tests
 // Filtrage
-l.FetchAll(k),l.FilterByType(),l.UpdateFeedback(!1,k.length)}const g=document.documentElement.getAttribute("lang");if(!g)throw new Error("A lang attribute must be set on the <html> tag !");a("/assets/json/"+g+"/tests-web.json",function(c,d){return c&&b(),a("/assets/json/"+g+"/tests-concepteur.json",function(a,c){return a&&b(),f(d,c)})})});
+l.FetchAll(k),l.FilterByType(),l.UpdateFeedback(!1,k.length)}const g=document.documentElement.getAttribute("lang");if(!g)throw new Error("A lang attribute must be set on the <html> tag !");a("/fr/web/la-va11ydette/json/tests-web-"+g+".json",function(c,d){return c&&b(),a("/assets/json/"+g+"/tests-concepteur.json",function(a,c){return a&&b(),f(d,c)})})});
