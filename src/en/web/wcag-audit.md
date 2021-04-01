@@ -28,4 +28,4 @@ This grid can be used at various projects steps : it may be used by different pr
 
 The link below opens the grid "Evaluation audit" in a new browser tab.   
 
-<a href="../la-va11ydette/?list=audit-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the evaluation grid (new tab)">Open the evaluation grid<span class="sr-only"> (new tab)</span></a>
+<a href="/fr/web/la-va11ydette/?list=audit-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the evaluation grid (new tab)">Open the evaluation grid<span class="sr-only"> (new tab)</span></a>
