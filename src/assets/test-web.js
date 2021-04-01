@@ -24,6 +24,7 @@ $(document).ready(function () {
 
   //appel des Json
   
+
   doXHR('https://a11y-guidelines.orange.com/fr/web/la-va11ydette/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
