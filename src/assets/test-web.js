@@ -24,11 +24,12 @@ $(document).ready(function () {
 
   //appel des Json
   
-  doXHR('/fr/web/la-va11ydette/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
+
+  doXHR('https://a11y-guidelines.orange.com/fr/web/la-va11ydette/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
-    return doXHR('/assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
+    return doXHR('https://a11y-guidelines.orange.com/assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
       if (errSecond) {
         reqError();
       }
