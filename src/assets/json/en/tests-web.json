@@ -196,17 +196,12 @@
       "Launch aXe"
     ],
     "verifier": [
-      "Check that all images have an attribute <code>alt</code>",
-      "Check that all <code>iframe</code> and <code>frame</code> contain a non-empty <code>title</code> attribute"
+      "Check that all images have an attribute <code>alt</code>"
     ],
     "resultat": [
-      "No error due to the absence of <code>alt</code> attribute",
-      "No error due to the absence of <code>title</code> attribute on <code>frame</code> and <code>iframe</code>"
+      "No error due to the absence of <code>alt</code> attribute"
     ],
-    "exception": [
-      "Presence of an attribute <code>alt</code> for all images",
-      "Presence of an attribute <code>title</code> for all <code>frame</code> and <code>iframe</code>"
-    ],
+    "exception": "",
     "raccourcis":"",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
   },
@@ -274,7 +269,7 @@
     "resultat": [
       "All frames have a relevant <code>title</code> attribute"
     ],
-    "exception":"",
+    "exception":"<ul><li>A properly masked non-informative <code>frame</code> or <code>iframe</code> does not need a <code>title</code>. </li> <li >A <code>title</code> is not required if the content of the <code>iframe</code> is not distinct from the surrounding content and does not have a focusable element inside, and there is an added <code>tabindex='- 1'</code> on the <code>iframe</code> so that it does not receive the focus.</li></ul>",
     "raccourcis": "Technical iframes: http://a11y-guidelines.orange.com/web_EN/exemples/iframes-techniques/index.html",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"]
   },
@@ -604,7 +599,7 @@
       "The additional content can be removed without the need to move the pointer or focus (e.g. with the <kbd>esc.</kbd> key)",
       "The additional content is persistent until the focus or hover on the triggering element is removed, until the user make it disappear or until the content is no longer valid."
     ],
-    "exception":"",
+    "exception":"If the additional content does not mask informative content, the criterion is not applicable",
     "raccourcis":"",
     "profils": ["Accessibility Expert"]
   },

@@ -60,7 +60,8 @@ tags: componentsExamples_fr
 
 <h3>Mise en œuvre</h3>
 <p>Pour masquer un élément aux lecteurs d’écran (ainsi que les éléments enfants), il suffit d’ajouter un attribut <code>aria-hidden="true"</code>.</p>
-<p>Attention : si on met un élément focusable dans du contenu (même sur un noeud parent) possédant un `aria-hidden="true"`, il sera présent à la navigation clavier mais sera vide pour les <abbr>AT</abbr>. Donc, à ne pas faire.</p>
+<h4>Attention</h4>
+<p>Si on met un élément focusable dans du contenu (même sur un noeud parent) possédant un `aria-hidden="true"`, il sera présent à la navigation clavier mais sera vide pour les <abbr>AT</abbr>. <em>Donc, à ne pas faire.</em></p>
 
 <p><strong>Exemple&nbsp;: </strong><br>
 La capture d’écran suivante montre un lecteur vidéo contenant un certain nombre de boutons (chaîne précédente, chaîne suivante, pause…). Ce lecteur est entouré par deux boutons permettant également d’accéder aux chaînes précédentes et suivantes.</p>
