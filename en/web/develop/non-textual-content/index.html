@@ -298,6 +298,8 @@
 <li>Each <code>img</code> tag must have an <code>alt</code> attribute.</li>
 <li>For images not carrying information, set them as background images preferably (<abbr>CSS</abbr>).</li>
 <li>For graphics, you can add a link under them to access the data table (revealing it in the same page or in a different page).</li>
+<li>A properly masked non-informative <code>frame</code> or<code> iframe</code> does not need a <code>title</code>.</li>
+<li>A <code>title</code> is not required if the content of the<code> iframe</code> is not distinct from the surrounding content and has no focusable element inside, and there is an added <code>tabindex = &quot;- 1&quot; </code>on the<code> iframe</code> so that it does not get focus.</li>
 </ul>
 <p><strong>Users’ goal:</strong></p>
 <p>Access the information included in images for users who cannot access it.</p>

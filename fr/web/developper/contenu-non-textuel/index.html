@@ -291,16 +291,18 @@
 <li>Pour les images décoratives : mettre un attribut <code>alt</code> vide.</li>
 <li>Pour les images dont le contenu du <code>alt</code> serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.</li>
 </ul>
-<p>Mettre un attribut <code>title</code> décrivant le contenu et/ou la fonction de toute <code>frame</code> ou <code>iframe</code>. Si la <code>frame</code> ou <code>iframe</code> ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: <a href="../../exemples-de-composants/iframes-techniques/">Masquer les iframe techniques de manière accessible</a></p>
+<p>Mettre un attribut <code>title</code> décrivant le contenu et/ou la fonction de toute <code>frame</code> ou <code>iframe</code>. Si la <code>frame</code> ou <code>iframe</code> ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: <a href="../../exemples-de-composants/iframes-techniques/">Masquer les iframe techniques de manière accessible</a>. Dans ce cas pas besoin de <code>title</code>.</p>
 <p><strong>À vérifier :</strong></p>
 <ul>
 <li>S'assurer que les images ne peuvent être remplacées par du texte mis en forme</li>
 <li>Toute balise <code>img</code> doit posséder un attribut <code>alt</code>.</li>
 <li>Pour les images non-porteuses d’information, il est préférable de les passer en image de fond <abbr>CSS</abbr>.</li>
 <li>Pour les graphiques, la solution peut être de mettre un lien sous l’image permettant d’accéder à un tableau de chiffres (le faire apparaître dans la même page ou sur une autre page).</li>
+<li>Une <code>frame</code> ou <code>iframe</code> non-informative masquée convenablement n'a pas besoin de <code>title</code>.</li>
+<li>Un  <code>title</code> n'est pas requis si le contenu de l'<code>iframe</code> n'est pas distinct du contenu environnant et n'a pas d'élément tabulable à l'intérieur, et qu'on a ajouté <code>tabindex = &quot;- 1&quot;</code> sur l'<code>iframe</code> afin qu'elle ne reçoive pas le focus.</li>
 </ul>
-<p><strong>Objectif utilisateur :</strong><br>
-Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès et éviter des images inutiles.</p>
+<p><strong>Objectif utilisateur :</strong></p>
+<p>Permettre l’accès à l’information incluse dans une image pour des utilisateurs qui n’y ont pas accès et éviter des images inutiles.</p>
 <p>Point bloquant : une image sans description textuelle est inexploitable par des personnes ayant des déficiences visuelles ou celles n’affichant pas les images (mobile, faible bande passante…).</p>
 <p><strong>Objectif technique :</strong></p>
 <p>Améliorer le référencement naturel.</p>
