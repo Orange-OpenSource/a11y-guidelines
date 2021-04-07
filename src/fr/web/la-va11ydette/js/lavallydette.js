@@ -487,6 +487,7 @@ runTestListMarkup = function (currentRefTests) {
 		/** Modify column number */ 
 		utils.columnDisplay(3);
 	
+		
 		/** pass through the tests object to display each of them */
 		for (let i in currentRefTests) {
 			var currentTest = currentRefTests[i].ID;
@@ -947,17 +948,18 @@ function localizeHTML() {
  */
 function initGroups() {
 	
-	htmlgroups = "";
-	htmlgroups = '<h6>' + langVallydette.groupHeading + '</h6>';
-	htmlgroups += "<ul class=\"list-inline m-0\">";
-	for (var themeItem in dataVallydette.checklist.page[currentPage].groups)  {
-		htmlgroups += '<li class="custom-control custom-checkbox custom-control-inline mb-0"><input type="checkbox"  class="custom-control-input"  id="' + themeItem + '" value="' + themeItem + '" name="' + themeItem + '" ' + (dataVallydette.checklist.page[currentPage].groups[themeItem].checked ? "checked" : "") + '/><label for="' + themeItem + '" class="custom-control-label">' + themeItem + '</label></li>';
-	};
-	htmlgroups += "</ul>";
-	
-	htlmgroupsMarker = document.getElementById("themeManager");
-	htlmgroupsMarker.innerHTML = htmlgroups;
-   	
+	if (Object.keys(dataVallydette.checklist.page[currentPage].groups).length !== 0) {
+		htmlgroups = '';
+		htmlgroups = '<h6>' + langVallydette.groupHeading + '</h6>';
+		htmlgroups += '<ul class="list-inline m-0">';
+		for (var themeItem in dataVallydette.checklist.page[currentPage].groups)  {
+			htmlgroups += '<li class="custom-control custom-checkbox custom-control-inline mb-0"><input type="checkbox"  class="custom-control-input"  id="' + themeItem + '" value="' + themeItem + '" name="' + themeItem + '" ' + (dataVallydette.checklist.page[currentPage].groups[themeItem].checked ? "checked" : "") + '/><label for="' + themeItem + '" class="custom-control-label">' + themeItem + '</label></li>';
+		};
+		htmlgroups += '</ul>';
+		
+		htlmgroupsMarker = document.getElementById("themeManager");
+		htlmgroupsMarker.innerHTML = htmlgroups;
+   	}
 }
 
  /**
@@ -997,40 +999,47 @@ function applyGroups() {
 			
 			dataVallydette.checklist.page[currentPage].items.map(function(itemTest, index) {
 	
-			
 				if (themeIdTest === itemTest.IDorigin) {
 						
 					const radioButtons = document.getElementsByName("test-"+itemTest.ID);
 					
-					if (dataVallydette.checklist.page[currentPage].groups[themeItem].checked) {
+					if (dataVallydette.checklist.page[currentPage].items[index].resultatTest === "nt" || dataVallydette.checklist.page[currentPage].items[index].resultatTest === "na") {
+					
+						if (dataVallydette.checklist.page[currentPage].groups[themeItem].checked) {
 			
-						testValue = "nt";
+							testValue = "nt";
+							
+							radioButtons.forEach(function(button) {
+								button.disabled=false;
+								button.classList.remove("disabled");
+							});
 						
-						radioButtons.forEach(function(button) {
-							button.disabled=false;
-							button.classList.remove("disabled");
-						});
+						} else {
 						
-					} else {
-						testValue = "na";
-	
-						radioButtons.forEach(function(button) {
-							button.disabled=true;
-							button.classList.add("disabled");
-						});
-												
+							testValue = "na";
+		
+							radioButtons.forEach(function(button) {
+								button.disabled=true;
+								button.classList.add("disabled");
+							});
+													
+						}
+							
+						 /** testing if not null in case of an activated filter */
+						radioToUpdate = document.getElementById(testValue+"-"+itemTest.ID);
+					
+					
+						if (radioToUpdate!==null) {
+							radioToUpdate.checked = true;
+							setStatusAndResults(radioToUpdate, itemTest.ID);
+						} else {
+							dataVallydette.checklist.page[currentPage].items[index].resultatTest = testValue;
+						}
+					
 					}
 					
-					 /** testing if not null in case of an activated filter */
-					radioToUpdate = document.getElementById(testValue+"-"+itemTest.ID);
-					
-					
-					if (radioToUpdate!==null) {
-						radioToUpdate.checked = true;
-						setStatusAndResults(radioToUpdate, itemTest.ID);
-					} else {
-						dataVallydette.checklist.page[currentPage].items[index].resultatTest = testValue;
-					}
+				
+				
 					
 				
 				}
@@ -1653,7 +1662,7 @@ function runFinalComputation(pagesResultsArray) {
 					
 							computationContent += '<ul>';
 							for (let j in listNonConformity[i].comment) {
-								computationContent += '<li>' + listNonConformity[i].comment[j] + '</li>';	
+								computationContent += '<li>' + utils.htmlEntities(listNonConformity[i].comment[j]) + '</li>';	
 							}
 							computationContent += '</ul>';	
 					} 
@@ -3048,6 +3057,8 @@ for (let i in dataVallydette.checklist.page) {
 }
 
 
+
+
  /**
  * Some utilities funtions.
  */
@@ -3171,6 +3182,9 @@ const utils = {
 	document.getElementById('filter').style.display = display;
 	document.getElementById('currentPageContent').classList.remove(remove);
 	document.getElementById('currentPageContent').classList.add(add);
+  },
+  htmlEntities: function (str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 	
 }  

@@ -1,5 +1,5 @@
 ﻿{
-	"name": "Audit conformité WCAG / ANDROID",
+	"name": "Audit de conformité WCAG / ANDROID",
 	"items":[{
 		"themes": "Écran de saisie",
 		"title": "Chaque champ de saisie possède-t-il une étiquette ?",

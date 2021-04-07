@@ -1,5 +1,5 @@
 {
-	"name": "Tests audit WEB",
+	"name": "Evaluation audit WEB",
 	"items":[{
     "themes": "Textual content",
     "title": "Set a title for each page",
@@ -183,12 +183,10 @@
       "Launch aXe"
     ],
     "verifier": [
-      "Check that all images have an attribute <code>alt</code>",
-      "Check that all <code>iframe</code> and <code>frame</code> contain a non-empty <code>title</code> attribute"
+      "Check that all images have an attribute <code>alt</code>"
     ],
     "resultat": [
-      "No error due to the absence of <code>alt</code> attribute",
-      "No error due to the absence of <code>title</code> attribute on <code>frame</code> and <code>iframe</code>"
+      "No error due to the absence of <code>alt</code> attribute"
     ],
     "exception": [
       ""
@@ -275,13 +273,13 @@
       "Manual test"
     ],
     "tests": [
-"Examine text images"
+"Examine informative text images"
 ],
     "verifier": [
       "Check that the text image cannot be laid out using CSS"
     ],
     "resultat": [
-      "All texts are formatted via CSS"
+      "If possible, all informative texts are inside the code and formatted via CSS"
     ],
     "exception": "Essential images (logo, captcha, brand, etc.)",
     "raccourcis": "",
@@ -374,7 +372,7 @@
   },
   {
     "themes": "Colors and contrasts",
-    "title": "Provide enough contrast between text and background / texts",
+    "title": "Provide enough contrast between text and background / texts or images of text",
     "type": [
       "aXe"
     ],
@@ -382,21 +380,21 @@
       "Launch aXe"
     ],
     "verifier": [
-      "Check that the contrast is sufficient to understand the information conveyed by all interactive components, texts",
-      "Check that non-underlined links have a sufficient contrast ratio with the surrounding text"
+      "Check that the contrast is sufficient to see texts or images of text",
+      "Check that non-underlined links have a sufficient contrast ratio with the surrounding text and the background color"
     ],
     "resultat": [
-      "Presence of sufficiently contrasting elements",
-      "Presence of non-underlined links sufficiently contrasted"
+      "<strong>Presence of texts or images of text sufficiently contrasted:</strong> <ul><li>Font size less than <code>24px</code>: contrast ratio 4.5:1</li><li>Font size greater than or equal to <code>24px</code>: contrast ratio 3:1</li></ul></li><li><strong>For bold text</strong> <ul><li> Font size less than <code>18.5px</code>: contrast ratio 4.5:1</li><li> Font size greater than or equal to <code>18.5px</code>: contrast ratio 3:1</li></ul></li></ul></li><li>For non-underlined links, check that there is sufficient contrast between the body text and the link text</li></ul>",
+      "Presence of non-underlined links with a contrast of 3:1  with the surrounding text and the background color"
     ],
-    "exception": "Exception on the color pair #F16E00 / #FFFFFFFF, for interfaces implementing the latest version of the Orange brand.",
+    "exception": "as no contrast requirement: <ul><li> text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content,</li><li> and also, text that is part of a logo or brand name or any logotypes</li></ul>",
     "raccourcis":"",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.3"]
   },
   {
     "themes": "Colors and contrasts",
-    "title": "Provide enough contrast between text and background / images and components",
+    "title": "Provide enough contrast between text and background / components",
     "type": [
       "Color Contrast Analyser"
     ],
@@ -404,12 +402,12 @@
       "Launch Color Contrast Analyser"
     ],
     "verifier": [
-      "Verify that text of images, graphics, icons, and interactive components have sufficient contrast to transmit information."
+      "Verify that graphics, icons, and interactive components have sufficient contrast to transmit information."
     ],
     "resultat": [
-      "Presence of text of images, graphic objects, icons, and interactive components with sufficient contrast"
+      "Presence of graphic objects, icons, and interactive components with a contrast ratio of 3:1"
     ],
-    "exception": "Are excluded from the scope: <ul><li> logos</li><li> if a text, such as a label, a data table, provides the same information as the icon or graphic</li><li> if the lack of contrast of the image does not prevent the understanding of the content or its function</li><li> inactive components</li></ul>",
+    "exception": "Are excluded from the scope: <ul><li> if a text, such as a label, a data table, provides the same information as the icon or graphic</li><li> if the lack of contrast of the image does not prevent the understanding of the content or its function</li><li> inactive components</li></ul>",
     "raccourcis":"",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["1.4.3", "1.4.11"]
@@ -597,22 +595,22 @@
     "tests": [
       "Run the code inspector of tne browser",
       "Locate the links (or other) allowing the downloading of documents (pdf, word processor, video, audio, etc.)",
-      "Inspect the text label of these items, <br/> If the test cannot be validated from step 3, inspect the <code>aria-label</code> and <code>title</code> attributes"
+      "Inspect the text label of these items"
     ],
     "verifier": [
-      "Check that the (accessible) name of the link contains:",
+      "Check that the text of the link contains:",
       "the name/title of the document",
       "the type of document: pdf, text, mp3, etc.",
       "if necessary, the language of the document",
       "the approximate weight of the document"
     ],
     "resultat": [
-      "Document download links are relevant and informative"
+      "Document downloading links are relevant and informative"
     ],
     "exception": "",
     "raccourcis": "",
     "profils": ["Developer", "Accessibility Expert"],
-    "wcag": []
+    "wcag": [""]
   },
   {
     "themes": "Common navigation",
@@ -849,15 +847,15 @@
   },
   {
     "themes": "Keyboard navigation",
-    "title": "Allow to use the main features of the application with the keyboard",
+    "title": "Allow the use of the application with keyboard",
     "type": [
       "Keyboard navigation"
     ],
     "tests": [
-      "Scroll through the page using the keyboard using the <kbd>tab</kbd> key"
+      "Scroll through the page using the keyboard with the <kbd>tab</kbd> key"
     ],
     "verifier": [
-      "Check that you get a result equivalent to a mouse navigation for the main features of the page"
+      "Check that you get a result equivalent to a mouse navigation for the features of the page"
     ],
     "resultat": [
       "All interactive elements can be reached from a keyboard navigation",
@@ -879,7 +877,7 @@
       "Scroll through the page using the keyboard using the <kbd>tab</kbd> key"
     ],
     "verifier": [
-      "Checking the order of focus of the elements (buttons, links, form fields) is consistent and logical (often the same as the visual order)"
+      "Checking the order of focus for the interactive elements (buttons, links, form fields) is consistent and logical (often the same as the visual order)"
     ],
     "resultat": [
       "The keyboard focus order through the page is logical and meaningful without keyboard trap"

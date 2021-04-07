@@ -23,11 +23,13 @@ $(document).ready(function () {
   }
 
   //appel des Json
-  doXHR('/assets/json/'+lang+'/tests-web.json', function(errFirst, responseFirst) {
+  
+
+  doXHR('https://a11y-guidelines.orange.com/fr/web/la-va11ydette/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
-    return doXHR('/assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
+    return doXHR('https://a11y-guidelines.orange.com/assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
       if (errSecond) {
         reqError();
       }
@@ -119,7 +121,7 @@ $(document).ready(function () {
     var data = JSON.parse(responseFirst);
     var data2 = JSON.parse(responseSecond);
     var uniqueTypes = [];
-    var refTests = compareReorder(data, data2);
+    var refTests = compareReorder(data.items, data2);
 
     let app = new function() {
       // Récupération des données
