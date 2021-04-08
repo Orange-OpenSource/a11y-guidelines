@@ -15,14 +15,14 @@ Every change (commit, merged pull request) to the `master` branch will trigger a
 
 This project is based on a kind of [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow.
 It means you cannot commit directly to the `master` branch and have to create a specific branch to apply a modification. Once you are ready you can open a pull request in order to merge your work branch on the `master` branch.
-When you open a pull request, you have to set reviewer(s) who will approve or reject your changes. The approbation of at least one reviewer is mandatory to merge the pull request.
+When you open a pull request, you have to set reviewer(s) who will be in charge of approving or rejecting your changes. The approbation of at least one reviewer is mandatory to merge the pull request.
 
 
 ## Naming things
 
-Please make sure you are naming correctly your branch so it's easy to find and understand what is it for.
+Please make sure you are naming correctly your branch, so it's easy to find and understand what is it for.
 
-A branch named `patch`, `correction` or `new-post` is not relevant whereas a branch named `fix-typo-in-pdf-recommendations` or `update-the-autocomplete-component-article` is much more understandable.
+A branch named `patch`, `correction`, `new-post` or `potato` is not relevant while a branch named `fix-typo-in-pdf-recommendations` or `update-the-autocomplete-component-article` is much more understandable.
 
 The same goes for the commits. Please avoid naming them as `fix article`, `update` or anything not relevant. A commit history must be readable and easy to interpret by someone else or even yourself in a few months. We try to follow the [Conventional Commits](https://www.conventionalcommits.org) convention, please do so.
 
@@ -36,7 +36,7 @@ The same goes for the commits. Please avoid naming them as `fix article`, `updat
 
 ### Command Line
 
-First, make sure that your are even with the last version of your target branch with `git fetch && git status`. If not, pull changes from it with `git pull`
+First, make sure that your are up to date with the last version of your target branch with `git fetch && git status`. If not, pull changes from it with `git pull`. After that, you can create your branch with:
 
 ```shell
 $ git checkout -b my-new-branch
@@ -61,7 +61,7 @@ $ git checkout -b my-new-branch
 $ git commit -m "fix(main navigation): current page was not announced by screen readers"
 ```
 
-Don't forget to frequently push your commits to GitHub to avoid the risk of loosing your work. The first time you push, you will need to launch some arguments alongside the `git push` command:
+Don't forget to frequently push your commits to GitHub to avoid the risk of loosing your work. The first time you push, you will need to pass some arguments alongside the `git push` command:
 
 ```shell
 $ git push --set-upstream origin my-new-branch
@@ -88,9 +88,9 @@ To do so, you have to navigate to the [pull requests page](https://github.com/Or
 
 ![](https://user-images.githubusercontent.com/2474522/114052825-ac64d780-988e-11eb-9b1a-7c7e3e7fcc4a.png)
 
-When done, you will need to assign at least one reviewer to validate your modification. The reviewer will have the abillity to approve or reject your pull request. Once you have one approval and not committed since the last approval, you are able to merge your pull request.
+When done, you will need to assign at least one reviewer to validate your modifications. The reviewer will have the abillity to approve or reject your pull request. Once you have at least one approval and not committed since the last approval, you are able to merge your pull request.
 
-This is when Netlify provide a link to a version of the website onboarding the modifications included in the pull request. This is a good way to review changes without having to install the project and run it on your computer. The Netlify Bot will left a comment in the pull request's conversation section when it's available (a few minutes) and rebuild the preview each time a new commit is pushed.
+This is when Netlify provides a link to a version of the website onboarding the modifications included in your pull request. This is a good way to review changes without having to install the project and run it on your computer. The Netlify Bot will leave a comment in the pull request's conversation section when the preview is available (allow a few minutes) and rebuild the preview each time a new commit is pushed.
 
 
 ## Review a pull request
