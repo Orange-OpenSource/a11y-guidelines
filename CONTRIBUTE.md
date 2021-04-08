@@ -50,6 +50,8 @@ $ git checkout -b my-new-branch
 3. Type the name of your branch in the input field and then click on the `Create branch: xxx` (replace `xxx` with the name of the branch you are about to create).
 4. You can now see that the combobox is showing your new branch instead of the `master` branch. This indicates that every modification you make on the repo is now done on your specific branch
 
+![](https://user-images.githubusercontent.com/2474522/114052341-41b39c00-988e-11eb-9811-5a10ba46372d.png)
+
 
 ## Commit changes
 
@@ -76,11 +78,15 @@ When you edit a file in the GitHub interface, you will see a form under the edit
 3. Choose an email address to sign the commit with (you probably won't need to worry about this and leave it untouched).
 4. Choose between commit to the current branch (this is where you make sure that you are on the correct one) or create a new branch. If you already have created your branch you can directly commit your change to it.
 
+![](https://user-images.githubusercontent.com/2474522/114052729-96571700-988e-11eb-8b87-37e0e00aa94f.png)
+
 
 ## Create a pull request
 
 When you feel like it, you can create a pull request to merge your branch into the `master` branch (which triggers a deploy to production).
 To do so, you have to navigate to the [pull requests page](https://github.com/Orange-OpenSource/a11y-guidelines/pulls), click on the `New pull request` button and select your branch in the `compare` combobox displayed and then create the pull request.
+
+![](https://user-images.githubusercontent.com/2474522/114052825-ac64d780-988e-11eb-9b1a-7c7e3e7fcc4a.png)
 
 When done, you will need to assign at least one reviewer to validate your modification. The reviewer will have the abillity to approve or reject your pull request. Once you have one approval and not committed since the last approval, you are able to merge your pull request.
 
@@ -90,6 +96,9 @@ This is when Netlify provide a link to a version of the website onboarding the m
 ## Review a pull request
 
 You can approve or reject a pull request by going to the `Files changed` tab on a pull request page. Then click on the `Review changes` button and it will open a panel in which you can leave a comment and select if it's just a comment or associate it with an approval or a change request.
+
+![](https://user-images.githubusercontent.com/2474522/114052914-c30b2e80-988e-11eb-9654-f81df1abbcc0.png)
+
 
 In this page, you can also directly add comments on the content changes too.
 
