@@ -3,7 +3,7 @@
 This is mainly a guide for internal contribution from the team, if you are an external contributor you can follow this and skip parts that might not be relevant to you.
 
 
-## TL;
+## TL;DR
 
 The `master` branch is used to build the production website, thus you cannot directly push to it.
 You have to create a branch, create a pull request from your branch to the `master` branch (which will give you access to a preproduction build provided by Netlify) then assign a reviewer and merge it once it's approved.
