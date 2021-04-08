@@ -3,7 +3,7 @@
 This is mainly a guide for internal contribution from the team, if you are an external contributor you can follow this and skip parts that might not be relevant to you.
 
 
-## tl;dr
+## TL;
 
 The `master` branch is used to build the production website, thus you cannot directly push to it.
 You have to create a branch, create a pull request from your branch to the `master` branch (which will give you access to a preproduction build provided by Netlify) then assign a reviewer and merge it once it's approved.
@@ -29,7 +29,7 @@ The same goes for the commits. Please avoid naming them as `fix article`, `updat
 
 ## Common pitfalls
 
-- Make sure you are on the right branch before you commit anything (for the GithHub interface users, see the Create a new branch section below)
+- Make sure you are on the right branch before you commit anything (for the GitHub interface users, see the Create a new branch section below)
 
 
 ## Create a new branch
