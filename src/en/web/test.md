@@ -5,7 +5,6 @@ leftColumn:
   display: true
   components: 
     - "wcag-tests-filters"
-boostedJS: true
 js:
   - /assets/test-web.js
 ---
