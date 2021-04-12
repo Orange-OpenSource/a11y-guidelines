@@ -456,8 +456,8 @@
 	},{	
 		"themes": "Navigation générale",
 		"title": "Le mécanisme de navigation est cohérent avec les autres écrans de l'application",
-		"ID": "testID-050",
-		"IDorigin": "testID-050",
+		"ID": "testID-056",
+		"IDorigin": "testID-056",
 		"wcag": [
 			"3.2.3 AA"
 		],
