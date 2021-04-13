@@ -1,4 +1,4 @@
-{
+﻿{
 	"name": "Conformity audit WCAG / ANDROID",
 	"items":[{
 		"themes": "Input screen",
@@ -445,8 +445,8 @@
 	},{	
 		"themes": "Common navigation",
 		"title": "The navigation mechanism is consistent with the other screens.",
-		"ID": "testID-050",
-		"IDorigin": "testID-050",
+		"ID": "testID-056",
+		"IDorigin": "testID-056",
 		"wcag": [
 			"3.2.3 AA"
 		],
