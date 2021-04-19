@@ -9,6 +9,7 @@ jobs:
   build_and_deploy:
     name: Build & deploy website
     runs-on: ubuntu-latest
+    if: github.repository == 'Orange-OpenSource/a11y-guidelines'
 
     steps:
       - name: Checkout repository
