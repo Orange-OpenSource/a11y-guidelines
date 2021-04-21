@@ -30,6 +30,8 @@ Finally, it is advisable to change the default playback mode. On a webpage use t
 ### Navigating web pages
 
 The main useful shortcuts to test navigation in a web page using NVDA are:
+- <kbd>Ctrl + Alt + N</kbd> to turn NVDA on.
+- <kbd>Ins + Q</kbd> to turn NVDA off.
 - <kbd>Up</kbd> and <kbd>down</kbd> keys to go to the next or the prior line.
 - <kbd>Left</kbd> and <kbd>right</kbd> keys to move forward or backward one character
 - <kbd>Ctrl + Home</kbd> to move to the top of the page.
@@ -55,7 +57,6 @@ The main useful shortcuts to test navigation in a web page using NVDA are:
 - <kbd>X</kbd> and <kbd>shift + X</kbd> to move through checkboxes.
 - <kbd>Spacebar</kbd> to check or uncheck a checkbox.
 - <kbd>Ins + shift + S</kbd> allows to pause NVDA only in the current application.
-- <kbd>Ins + Q</kbd> to exit NVDA.
 
 Also note that NVDA has a speech viewer (*Tools&nbsp;&gt; Speech viewer*), it displays everything that is vocalized.
 

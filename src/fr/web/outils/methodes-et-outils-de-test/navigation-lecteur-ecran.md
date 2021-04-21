@@ -30,6 +30,8 @@ Enfin, il est conseillé de modifier le mode de lecture par défaut. Pour cela, 
 ### Navigation dans les pages Web
 
 Voici les principaux raccourcis utiles pour tester la navigation au sein d’une page web à l’aide de <abbr>NVDA</abbr>&nbsp;:
+- <kbd>Ctrl+Alt+N</kbd> pour démarrer <abbr>NVDA</abbr>.
+- <kbd>INS+Q</kbd> pour quitter <abbr>NVDA</abbr>.
 - <kbd>flèche haut</kbd> et <kbd>flèche bas</kbd> pour avancer ou reculer dans la lecture de la page.
 - <kbd>flèche droite</kbd> et <kbd>flèche gauche</kbd> pour avancer ou reculer d’un caractère
 - <kbd>Ctrl+Home</kbd> pour se déplacer en haut de la page.
@@ -55,7 +57,6 @@ Voici les principaux raccourcis utiles pour tester la navigation au sein d’une
 - <kbd>X</kbd> et <kbd>maj+X</kbd> pour naviguer parmi les cases à cocher.
 - <kbd>Barre espace</kbd> pour cocher ou décocher une case à cocher.
 - <kbd>INS+maj+S</kbd> permet de mettre en veille <abbr>NVDA</abbr> uniquement dans l’application en cours.
-- <kbd>INS+Q</kbd> pour quitter <abbr>NVDA</abbr>.
 
 À noter également que <abbr>NVDA</abbr> dispose d’une visionneuse de parole (*Outils &gt; Visionneuse de parole*), celle-ci permet d’afficher tout ce qui est vocalisé.
 
