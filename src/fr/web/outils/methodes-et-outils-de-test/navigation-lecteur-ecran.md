@@ -72,26 +72,26 @@ Vous pouvez télécharger Jaws directement depuis [le site de l’éditeur Freed
 
 Voici les principaux raccourcis utiles pour tester la navigation au sein d’une page web à l’aide de Jaws&nbsp;:
 - <kbd>flèche haut</kbd> et <kbd>flèche bas</kbd> pour avancer ou reculer dans la lecture de la page.
-- <kbd>INS + T</kbd> pour faire lire le titre de la page.
-- <kbd>INS + F5</kbd> pour afficher la liste des champs de formulaire.
-- <kbd>INS + F6</kbd> pour afficher la liste des titres de la page.
-- <kbd>INS + F7</kbd> pour afficher la liste des liens.
+- <kbd>INS+T</kbd> pour faire lire le titre de la page.
+- <kbd>INS+F5</kbd> pour afficher la liste des champs de formulaire.
+- <kbd>INS+F6</kbd> pour afficher la liste des titres de la page.
+- <kbd>INS+F7</kbd> pour afficher la liste des liens.
 - <kbd>Barre espace</kbd> pour cocher ou décocher une case à cocher.
 - <kbd>Ctrl</kbd> pour faire taire Jaws.
 
 ## Prise en main de VoiceOver (sous Mac)
 
 VoiceOver est le lecteur d’écran disponible sur Mac. Celui-ci nécessite aucune installation puisqu’il est intégré directement au système.  
-Pour pouvez activer VoiceOver depuis les *Préférences systèmes &gt; Accessibilité*. Ou directement en utilisant le raccourci <kbd>Commande + F5</kbd>.
+Pour pouvez activer VoiceOver depuis les *Préférences systèmes &gt; Accessibilité*. Ou directement en utilisant le raccourci <kbd>Commande+F5</kbd>.
 
 ### Navigation dans les pages web
 
 Au démarrage de VoiceOver, celui-ci propose un guide interactif permettant d’apprendre les principaux raccourcis clavier. Il est recommandé de le parcourir.  
 Voici néanmoins les raccourcis principaux&nbsp;:
-- <kbd>Ctrl + Option + flèche droite</kbd> et <kbd>Ctrl + Option + flèche gauche</kbd> pour avancer ou reculer dans la lecture de la page.
-- <kbd>Ctrl + Option + U</kbd> pour accéder à la liste des titres, liens, champs de formulaires… (utiliser les flèches gauche et droite pour naviguer entre les différentes listes). 
+- <kbd>Ctrl+Option+flèche droite</kbd> et <kbd>Ctrl+Option+flèche gauche</kbd> pour avancer ou reculer dans la lecture de la page.
+- <kbd>Ctrl+Option+U</kbd> pour accéder à la liste des titres, liens, champs de formulaires… (utiliser les flèches gauche et droite pour naviguer entre les différentes listes). 
 - <kbd>Ctrl</kbd> pour faire taire VoiceOver.
-- <kbd>Ctrl + Option</kbd> <!-- MISSING SOMETHING HERE? (sd) -->
+- <kbd>Ctrl+Option</kbd> <!-- MISSING SOMETHING HERE? (sd) -->
 
 ## Prise en main des lecteurs d'écran sous mobile
 Pour tester un site web sur mobile : 
