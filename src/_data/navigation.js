@@ -189,7 +189,8 @@ module.exports = {
   footer: {
     en: [
       { label: 'Contact', href: '/en/contact' },
-      { label: 'About', href: '/en/about' }
+      { label: 'About', href: '/en/about' },
+      { label: 'Accessibility', href: '/en/accessibility' }
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact' },
