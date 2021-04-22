@@ -111,7 +111,7 @@ The `disabled` attribute is used to disable form elements
 <input type="text" name="address" disabled>
 ```
 
-If a `<fieldset>` is disabled, the descendant form controls are all disabled (with the exception of form controls within the `<legend>`).
+If a `<fieldset>` is disabled, the descendant form controls are all disabled.
 
 ```html
 <fieldset id="group" disabled> 

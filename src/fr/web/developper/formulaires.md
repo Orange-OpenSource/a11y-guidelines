@@ -111,7 +111,7 @@ Pour désactiver un champ de formulaire il suffit de lui attribuer l'attribut `d
 <button disabled>Supprimer</button>
 <input type="text" name="address" disabled>
 ```
-Si `disable` est utilisé sur un `<fieldset>`, les éléments enfants sont désactivés (à l'exception des éléments contenus dans la `<legend>`).
+Si `disable` est utilisé sur un `<fieldset>`, les éléments enfants sont désactivés.
 ```html
 <fieldset id="groupe" disabled> 
     <input name="foo"> 
