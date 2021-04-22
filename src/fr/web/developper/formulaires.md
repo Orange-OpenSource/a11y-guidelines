@@ -123,9 +123,3 @@ Si `disable` est utilisé sur un `<fieldset>`, les éléments enfants sont désa
     </select>
 </fieldset>
 ```
-
-Pour les liens l'attribut `disabled` n'est pas disponible, dans ce cas on doit utiliser les attributs `aria-disabled` et `tabindex`.
-
-```html
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" aria-disabled="true">Page suivante</a>
-```

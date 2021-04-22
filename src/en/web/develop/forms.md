@@ -124,9 +124,3 @@ If a `<fieldset>` is disabled, the descendant form controls are all disabled (wi
     </select>
 </fieldset>
 ```
-
-Links don't support `disabled`, in this case you must use `aria-disabled` and `tabindex` attributs.
-
-```html
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" aria-disabled="true">Next page</a>
-```
