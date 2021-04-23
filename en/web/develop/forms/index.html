@@ -220,7 +220,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#make-form-fields-accessible" class="dropdown-item text-wrap">Make form fields accessible</a><a href="#detect-identify-errors-and-suggest-corrections" class="dropdown-item text-wrap">Detect, identify errors and suggest corrections</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#make-form-fields-accessible" class="dropdown-item text-wrap">Make form fields accessible</a><a href="#detect-identify-errors-and-suggest-corrections" class="dropdown-item text-wrap">Detect, identify errors and suggest corrections</a><a href="#disable-form-elements" class="dropdown-item text-wrap">Disable form elements</a></div>
     </nav>
         
       </div>
@@ -333,6 +333,22 @@ For fields with auto-completion, this avoids users input errors.</p>
 <li><a href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error Suggestion</a></li>
 <li><a href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a></li>
 </ul>
+<h2 id="disable-form-elements">Disable form elements <a class="header-anchor" href="#disable-form-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The <code>disabled</code> attribute is used to disable form elements</p>
+<pre><code class="language-html">&lt;button disabled&gt;Delete&lt;/button&gt;
+&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
+</code></pre>
+<p>If a <code>&lt;fieldset&gt;</code> is disabled, the descendant form controls are all disabled.</p>
+<pre><code class="language-html">&lt;fieldset id=&quot;group&quot; disabled&gt; 
+    &lt;input name=&quot;foo&quot;&gt; 
+    &lt;input type=&quot;checkbox&quot; name=&quot;bar&quot;&gt; 
+    &lt;select name=&quot;values&quot;&gt; 
+        &lt;option value=&quot;1&quot;&gt;Value 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Value 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Value 3&lt;/option&gt;        
+    &lt;/select&gt;
+&lt;/fieldset&gt;
+</code></pre>
 
         </main>
         
@@ -344,6 +360,8 @@ For fields with auto-completion, this avoids users input errors.</p>
             <a href="#make-form-fields-accessible" class="nav-link text-muted bg-200">Make form fields accessible</a>
           </li><li class="nav-item position-relative">
             <a href="#detect-identify-errors-and-suggest-corrections" class="nav-link text-muted bg-200">Detect, identify errors and suggest corrections</a>
+          </li><li class="nav-item position-relative">
+            <a href="#disable-form-elements" class="nav-link text-muted bg-200">Disable form elements</a>
           </li></ul>
     </nav>
             </div>
