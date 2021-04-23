@@ -102,3 +102,24 @@ Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/fo
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error Identification</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error Suggestion</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>
+
+## Désactiver des champs de formulaire
+
+Pour désactiver un champ de formulaire il suffit de lui attribuer l'attribut `disabled` :
+
+```html
+<button disabled>Supprimer</button>
+<input type="text" name="address" disabled>
+```
+Si `disable` est utilisé sur un `<fieldset>`, les éléments enfants sont désactivés.
+```html
+<fieldset id="groupe" disabled> 
+    <input name="foo"> 
+    <input type="checkbox" name="bar"> 
+    <select name="values"> 
+        <option value="1">Valeur 1</option>
+        <option value="2">Valeur 2</option>
+        <option value="3">Valeur 3</option>        
+    </select>
+</fieldset>
+```
