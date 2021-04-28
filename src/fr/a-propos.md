@@ -8,7 +8,7 @@ Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a
 
 Le logo Orange ainsi que certaines images et captures d’écran sont la propriété d’Orange&nbsp;:  
 
-<span lang="en">Copyright (C) 2016 - 2020 Orange SA All rights reserved</span>  
+<span lang="en">Copyright (C) 2016 - {% currentYear %} Orange SA All rights reserved</span>  
 
 ## Gestion des cookies
 
