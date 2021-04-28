@@ -133,7 +133,7 @@ module.exports = function (eleventyConfig) {
     // Get the last nav object from the navigation data file which `href` property is included in the current page's URL
     const pageNavigationObject = navigation.main[locale].filter(obj => page.url.includes(obj.href)).pop()
 
-    return pageNavigationObject.hasOwnProperty('subLevels') && pageNavigationObject.subLevels.length > 0
+    return pageNavigationObject && pageNavigationObject.hasOwnProperty('subLevels') && pageNavigationObject.subLevels.length > 0
   })
 
   eleventyConfig.addNunjucksFilter('getBreadcrumb', function (data, locale, page, pageTitle) {
