@@ -4,6 +4,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
+const helpers = require('./src/_data/helpers')
 const locales = require('./src/_data/locales')
 const navigation = require('./src/_data/navigation')
 const collections = require('./src/config/collections')
@@ -108,21 +109,7 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addNunjucksFilter('getDefaultLocale', function (locales, outputKey = null) {
-    for (let key in locales) {
-      let locale = locales[key]
-
-      if (locale.default === true) {
-        if (outputKey === null) {
-          return locale
-        }
-
-        if (!locale.hasOwnProperty(outputKey)) {
-          throw new Error(`[getDefaultLocale filter]: locale \`${locale.code}\` is missing outputKey \`${outputKey}\``)
-        }
-
-        return locale[outputKey]
-      }
-    }
+    return helpers.getDefaultLocale(locales, outputKey)
   })
 
   eleventyConfig.addNunjucksFilter('isHomeUrl', function (url) {
