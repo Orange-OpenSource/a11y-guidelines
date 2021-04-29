@@ -430,7 +430,7 @@ android:importantForAccessibility="noHideDescendants"
 <code class="java">myTextView1 = (TextView) findViewById(R.id.myTextviewId1);
 myTextView2 = (TextView) findViewById(R.id.myTextviewId2);
 myTextView1.setImportantForAccessibility(4); // JELLY_BEAN
-myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = "4" // JELLY_BEAN
+myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = 4 // JELLY_BEAN
 myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT
 </code></pre>
 
