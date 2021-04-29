@@ -10,7 +10,7 @@ Quelques lois françaises ou de l’union européenne à propos de l’accessibi
 
 Le décret publié le 24 juillet 2019 précise les obligations d’accessibilité des services numériques, notamment pour les entreprises privées dont le chiffre d'affaires en France est supérieur à 250 millions d'euros.
 
-**Services numériques concernés  :**
+**Services numériques concernés :**
 - Sites internet, extranet, intranet, applications métier
 - Applications mobile 
 - Fichiers bureautiques, audios et vidéos préenregistrés 
@@ -54,7 +54,7 @@ Le risque de sanction est de 20 000 € par service et par an.
 Les exigences d’accessibilité à appliquer correspondent au standard international WCAG 2.1 niveau AA.
 
 **Produits :**
--	Bornes interactives en libre-service: distributeurs automatiques 
+-	Bornes interactives en libre-service : distributeurs automatiques 
 -	Équipement terminal avec capacité informatique interactive, utilisé pour accéder au service de médias audiovisuels
 
 Les exigences d'accessibilité pour les produits seront clarifiées d’ici 2025.
