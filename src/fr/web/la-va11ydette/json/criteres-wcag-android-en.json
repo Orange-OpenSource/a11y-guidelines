@@ -434,13 +434,13 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
-		"title": "There should be no blinking or flashing at speeds of 3 per second or more in an area equal to or greater than <code>21 824 px²</code>.",
+		"title": "There should be no blinking or flashing at speeds of 3 per second or more.",
 		"ID": "testID-040",
 		"IDorigin": "testID-040",
 		"wcag": [
 			"2.3.1 A"
 		],
-		"verifier": "<p> Not applicable, if the flashes flash less than 3 times per second or on an area of less than <code> 21 824 px² </code> </p>",
+		"verifier": "<p> Not applicable, if the flashes flash less than 3 times per second or on an very small area (less than <code> 21 824 px² </code>) </p>",
 		"resultatTest": "nt"
 	},{	
 		"themes": "Common navigation",
@@ -463,17 +463,6 @@
 		"verifier": "<p>Check that image and graphics elements are not used to display text. (Except for special cases : e.g. logo, captcha, tradename).</p>",
 		"resultatTest": "nt"
 	},{
-		"themes": "Common navigation",
-		"title": "Are texts internationalized?",
-		"ID": "testID-053",
-		"IDorigin": "testID-053",
-		"wcag": [
-			"3.1.1 A"
-		],
-		"verifier": "<p>Verify that the texts adapt to the language selected in the phone settings.</p>",
-		"resultatTest": "nt"
-	},{
-
 		"themes": "Common navigation",
 		"title": "Is each link label explicit, at least if the user takes its context into consideration?",
 		"ID": "testID-054",
