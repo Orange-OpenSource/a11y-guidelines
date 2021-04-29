@@ -39,4 +39,4 @@ Ces exemples utilisent la librairie [Boosted](http://boosted.orange.com/). Cette
 Des articles techniques sur la mise en place de l'accessibilité web.
 
 ### Outils Orange open source
-Présentation de la bibliothèque Boosted et du service Confort+.
+Présentation de la bibliothèque [Boosted](http://boosted.orange.com/) et du service [Confort+](https://confort-plus.orange.com/).
