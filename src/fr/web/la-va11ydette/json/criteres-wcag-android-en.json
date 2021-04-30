@@ -440,7 +440,7 @@
 		"wcag": [
 			"2.3.1 A"
 		],
-		"verifier": "<p> Not applicable, if the flashes flash less than 3 times per second or on an very small area (less than <code> 21 824 px² </code>) </p>",
+		"verifier": "<p> Not applicable, if the flashes flash less than 3 times per second or on a very small area (less than <code> 21 824 px² </code>) </p>",
 		"resultatTest": "nt"
 	},{	
 		"themes": "Common navigation",
@@ -460,7 +460,7 @@
 		"wcag": [
 			"1.4.5 AA"
 		],
-		"verifier": "<p>Check that image and graphics elements are not used to display text. (Except for special cases : e.g. logo, captcha, tradename).</p>",
+		"verifier": "<p>Check that images and graphics elements are not used to display text. (Except for special cases : e.g. logo, captcha, tradename).</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
