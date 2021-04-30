@@ -71,8 +71,9 @@ module.exports = function (eleventyConfig) {
   /**
    * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
    */
-  eleventyConfig.addFilter('translate', function (key) {
-    return helpers.translate(key, this.ctx.locale)
+  eleventyConfig.addFilter('translate', function (key, to = null) {
+    const targetedLocale = to || this.ctx.locale
+    return helpers.translate(key, targetedLocale)
   })
 
   eleventyConfig.addFilter('redirectionPermalink', function (path) {
