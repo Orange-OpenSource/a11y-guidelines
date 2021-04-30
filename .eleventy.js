@@ -5,7 +5,6 @@ const markdownItAnchor = require('markdown-it-anchor')
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
 const helpers = require('./src/_data/helpers')
-const locales = require('./src/_data/locales')
 const navigation = require('./src/_data/navigation')
 const collections = require('./src/config/collections')
 
@@ -73,21 +72,7 @@ module.exports = function (eleventyConfig) {
    * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
    */
   eleventyConfig.addFilter('translate', function (key) {
-    const locale = this.ctx.locale
-
-    if (!locales.hasOwnProperty(locale)) {
-      throw new Error(`[translate]: Translation's locale \`${locale}\` does not exist`)
-    }
-
-    key = `${locale}.${key}`
-
-    const translation = key.split('.').reduce((acc, i) => acc[i], locales)
-
-    if (typeof translation === 'undefined') {
-      throw new Error(`[translate]: No translation found for key \`${key}\``)
-    }
-
-    return translation
+    return helpers.translate(key, this.ctx.locale)
   })
 
   eleventyConfig.addFilter('redirectionPermalink', function (path) {
