@@ -4,7 +4,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
-const locales = require('./src/_data/locales')
+const helpers = require('./src/_data/helpers')
 const navigation = require('./src/_data/navigation')
 const collections = require('./src/config/collections')
 
@@ -71,22 +71,9 @@ module.exports = function (eleventyConfig) {
   /**
    * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
    */
-  eleventyConfig.addFilter('translate', function (key) {
-    const locale = this.ctx.locale
-
-    if (!locales.hasOwnProperty(locale)) {
-      throw new Error(`[translate]: Translation's locale \`${locale}\` does not exist`)
-    }
-
-    key = `${locale}.${key}`
-
-    const translation = key.split('.').reduce((acc, i) => acc[i], locales)
-
-    if (typeof translation === 'undefined') {
-      throw new Error(`[translate]: No translation found for key \`${key}\``)
-    }
-
-    return translation
+  eleventyConfig.addFilter('translate', function (key, to = null) {
+    const targetedLocale = to || this.ctx.locale
+    return helpers.translate(key, targetedLocale)
   })
 
   eleventyConfig.addFilter('redirectionPermalink', function (path) {
@@ -108,21 +95,7 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addNunjucksFilter('getDefaultLocale', function (locales, outputKey = null) {
-    for (let key in locales) {
-      let locale = locales[key]
-
-      if (locale.default === true) {
-        if (outputKey === null) {
-          return locale
-        }
-
-        if (!locale.hasOwnProperty(outputKey)) {
-          throw new Error(`[getDefaultLocale filter]: locale \`${locale.code}\` is missing outputKey \`${outputKey}\``)
-        }
-
-        return locale[outputKey]
-      }
-    }
+    return helpers.getDefaultLocale(locales, outputKey)
   })
 
   eleventyConfig.addNunjucksFilter('isHomeUrl', function (url) {
@@ -133,7 +106,7 @@ module.exports = function (eleventyConfig) {
     // Get the last nav object from the navigation data file which `href` property is included in the current page's URL
     const pageNavigationObject = navigation.main[locale].filter(obj => page.url.includes(obj.href)).pop()
 
-    return pageNavigationObject.hasOwnProperty('subLevels') && pageNavigationObject.subLevels.length > 0
+    return pageNavigationObject && pageNavigationObject.hasOwnProperty('subLevels') && pageNavigationObject.subLevels.length > 0
   })
 
   eleventyConfig.addNunjucksFilter('getBreadcrumb', function (data, locale, page, pageTitle) {
@@ -236,6 +209,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter('sortByField', function (values, field) {
     return values.slice().sort((a, b) => a.data[field].localeCompare(b.data[field]))
+  })
+
+  eleventyConfig.addNunjucksFilter('getSorted404Messages', function (locales) {
+    return Object.values(locales).sort((a, b) => !b.default && a.default ? -1 : 1)
   })
 
   // Create collections & dynamically suffix their name by the locale key
