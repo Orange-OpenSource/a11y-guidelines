@@ -59,8 +59,8 @@ module.exports = {
     404: {
       title: 'Page not found',
       content: {
-        message: 'The page you looking for doesn\'t exist. This is the link to go back to the home page.',
-        linkLabel: 'Back to the homepage'
+        message: 'The page you are looking for doesn\'t exist. This is the link to go back to the home page.',
+        linkLabel: 'Back to the home page'
       }
     }
   },
