@@ -288,7 +288,7 @@ Les images sont très souvent utilisées pour transmettre de nombreuses informat
      id="colours-Objectives"
      role="tabpanel">
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable.
-</br></br>Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure…) d’accéder tout de même à l’information par d’autres moyens.
+</br></br>Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, utilisateurs de mobile en luminosité extérieure…) d’accéder tout de même à l’information par d’autres moyens.
 <p></br><strong>Cible :</strong> tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes,...).<br>
 <strong>Quand :</strong>  dès la phase de conception et lors du développement.</p>
 </div>
@@ -301,7 +301,23 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 <p><img src="../../images/color_contrast_3.png" alt="" class="img-fluid"><br>
 </br> Avec l’apparition du <a href="../developpement#taille-des-textes">Dynamic Type</a> permettant de modifier de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.</p>
 <p><img src="../../images/color_contrast_1.png" alt="" class="img-fluid"><br>
-</br>Il existe des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.</p>
+</br>Respecter les seuils de contraste est primordial mais il ne faut pas non plus tomber dans l'extrême car un contraste trop élevé accentue la fatigue oculaire et peut engendrer une sensation visuelle de tremblement sur le texte.<br>
+Par exemple, pour les personnes sensibles à la lumière, l'utilisation d'un texte écrit en noir sur un fond blanc purs risque d'augmenter de façon très significative un effet de halo qui va agresser l'oeil et souvent contraindre à plisser les yeux pour pouvoir lire.<br>
+</br>Cependant, pour favoriser significativement la lisibilité, il est tout de même préférable et fortement recommandé d'<strong>écrire un texte foncé sur un fond clair</strong> (texte à contraste positif).<br>
+</br>Afin de fournir une expérience utilisateur optimale en accessibilité, il est <strong>impératif</strong> de prendre en compte deux caractéristiques colorimétriques supplémentaires :</p>
+<ul>
+<li>la <strong>luminosité</strong> (valeur &gt; 125),</li>
+<li>la <strong>différence de tonalité</strong> (valeur &gt; 500).</li>
+</ul>
+<p>Ces deux éléments permettent de proposer au plus grand nombre une lecture très confortable que seul le contraste ne peut malheureusement pas assurer (voir outil mentionné en fin de section pour calcul automatique de ces valeurs).</p>
+<p><img src="../../images/color_contrast_5.png" alt="" class="img-fluid"><br>
+</br>Choisir les couleurs appropriées revient donc à <strong>vérifier toutes les contraintes</strong> définies précédemment sur :</p>
+<ul>
+<li>le <strong>contraste</strong>,</li>
+<li>la <strong>luminosité</strong>,</li>
+<li>la <strong>différence de tonalité</strong>.</li>
+</ul>
+<p></br>Il existe cependant des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.</p>
 <p><img src="../../images/color_contrast_4.png" alt="" class="img-fluid"></p>
 <p>Dans ce cas, l'utilisation de l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('options-daccessibilite').scrollIntoView({ behavior: 'smooth', block: 'start' })">différencier sans couleur</a> va permettre ce type d'affichage <strong>uniquement à la demande de l'utilisateur</strong>.<br>
 </br></br><strong>Outils :</strong></p>
@@ -1023,7 +1039,7 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
      id="DedicatedScreen-Description" 
      role="tabpanel" >
 <p>En fonction des spécificités liées aux interfaces graphiques proposées, il peut être beaucoup plus facile de vouloir <strong>créer un nouvel écran dédié accessibilité</strong> pour ne pas avoir à remettre en cause les développements déjà implémentés.<br>
-</br>Même si cela peut sembler être une bonne idée à première vue, il ne faut <strong>absolument pas s'engager dans cette voie</strong> car :</p>
+</br>Même si cela peut sembler être une bonne idée à première vue, il n'est <strong>absolument pas recommandé de s'engager dans cette voie</strong> car :</p>
 <ul>
 <li>
 <p>le lecteur d'écran est utilisé pour les personnes aveugles mais aussi par les personnes illétrées. Pour ces dernières, s'apercevoir qu'un écran d'application change en fonction de l'activation de cette fonctionnalité peut laisser croire que toutes les informations fournies initialement ne sont peut-être pas les mêmes que celles proposées en accessibilité, ce qui peut conduire à un sentiment discriminant,</p>
