@@ -211,6 +211,10 @@ module.exports = function (eleventyConfig) {
     return values.slice().sort((a, b) => a.data[field].localeCompare(b.data[field]))
   })
 
+  eleventyConfig.addNunjucksFilter('getSorted404Messages', function (locales) {
+    return Object.values(locales).sort((a, b) => !b.default && a.default ? -1 : 1)
+  })
+
   // Create collections & dynamically suffix their name by the locale key
   for (let locale in collections) {
     collections[locale].forEach(collection => {

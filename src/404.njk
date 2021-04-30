@@ -1,19 +1,14 @@
 ---
-title: Page non trouvée
 layout: "templates/default"
 ---
 
-<h1 class="mx-auto" lang="fr">Page 404</h1>
+<h1>{{ title }}</h1>
 
-<div lang="fr" class="mt-4">
-    <h2>Francais</h2>
-    <p>La page que vous recherchez n'existe pas. 
-    Voici le lien qui permet de retourner à la page d'accueil.</p>
-    <a href="/fr" class="btn btn-secondary" title="Retour à l'accueil (version francaise)">Retour à l'accueil (version francaise)</a> 
-</div>
-<div lang="en" class="mt-4">
-    <h2>English</h2>
-    <p>The page you looking for doesn't exist. 
-    This is the link to go back to the home page.</p>
-    <a href="/en" class="btn btn-secondary" title="Back to the home page (english version)">Back to the home page (english version)</a>
-</div>
+{% for localeObject in site.locales | getSorted404Messages %}
+  {%- set localeCode = localeObject.code -%}
+  <section{% if locale != localeCode %} lang="{{ localeCode }}"{% endif %} class="mt-4">
+    <h2>{{ localeObject.displayName | capitalize }}</h2>
+    <p>{{ '404.content.message' | translate(localeCode) }}</p>
+    <a href="/{{ localeCode }}" class="btn btn-secondary">{{ '404.content.linkLabel' | translate(localeCode) }}</a>
+  </section>
+{% endfor %}
