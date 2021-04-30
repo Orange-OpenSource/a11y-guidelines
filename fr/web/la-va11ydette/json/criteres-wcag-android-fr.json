@@ -1,5 +1,5 @@
 ﻿{
-	"name": "Audit conformité WCAG / ANDROID",
+	"name": "Audit de conformité WCAG / ANDROID",
 	"items":[{
 		"themes": "Écran de saisie",
 		"title": "Chaque champ de saisie possède-t-il une étiquette ?",
@@ -434,13 +434,13 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
-		"title": "Il n'y a aucun clignotement de plus de 3 flashs par seconde sur une zone égale ou supérieure à <code>21 824 px²</code>",
+		"title": "Il n'y a aucun clignotement de plus de 3 flashs par seconde",
 		"ID": "testID-040",
 		"IDorigin": "testID-040",
 		"wcag": [
 			"2.3.1 A"
 		],
-		"verifier": "<p>Non applicable, si les clignotements flashent moins de 3 fois par seconde ou sur une zone de moins de <code>21 824 px²</code></p>",
+		"verifier": "<p>Non applicable, si les clignotements flashent moins de 3 fois par seconde ou sur une zone très petite (de moins de <code>21 824 px²</code>)</p>",
 		"resultatTest": "nt"
 	},{	
 		"themes": "Navigation générale",
@@ -463,17 +463,6 @@
 		"verifier": "<p>Vérifier que les images ne sont pas utilisées pour présenter du texte (hors cas particulier : logo, captcha, dénomination commerciale).</p>",
 		"resultatTest": "nt"
 	},{
-		"themes": "Navigation générale",
-		"title": "Les textes sont-ils internationalisés ?",
-		"ID": "testID-053",
-		"IDorigin": "testID-053",
-		"wcag": [
-			"3.1.1 A"
-		],
-		"verifier": "<p>Vérifier que les textes présents dans l'application s'adaptent à la langue choisie dans les paramètres du téléphone.</p>",
-		"resultatTest": "nt"
-	},{
-
 		"themes": "Navigation générale",
 		"title": "Chaque libellé de lien est-il explicite, au minimum dans son contexte ?",
 		"ID": "testID-054",
