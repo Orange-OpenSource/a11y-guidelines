@@ -94,7 +94,7 @@ Les images sont très souvent utilisées pour transmettre de nombreuses informat
      id="colours-Objectives"
      role="tabpanel">
 Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes dans un environnement lumineux défavorable.
-</br></br>Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, déficients auditifs, utilisateurs de mobile en luminosité extérieure…) d’accéder tout de même à l’information par d’autres moyens.
+</br></br>Permettre aux utilisateurs ne distinguant pas les couleurs (daltoniens, déficients visuels, utilisateurs de mobile en luminosité extérieure…) d’accéder tout de même à l’information par d’autres moyens.
 
 </br>**Cible&nbsp;:** tout le monde, en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes,...).
 **Quand&nbsp;:**  dès la phase de conception et lors du développement.
@@ -111,7 +111,22 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 </br> Avec l’apparition du [Dynamic&nbsp;Type](../developpement#taille-des-textes) permettant de modifier de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
 
 ![](../../images/color_contrast_1.png)
-</br>Il existe des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.
+</br>Respecter les seuils de contraste est primordial mais il ne faut pas non plus tomber dans l'extrême car un contraste trop élevé accentue la fatigue oculaire et peut engendrer une sensation visuelle de tremblement sur le texte.
+Par exemple, pour les personnes sensibles à la lumière, l'utilisation d'un texte écrit en noir sur un fond blanc purs risque d'augmenter de façon très significative un effet de halo qui va agresser l'oeil et souvent contraindre à plisser les yeux pour pouvoir lire.
+</br>Cependant, pour favoriser significativement la lisibilité, il est tout de même préférable et fortement recommandé d'**écrire un texte foncé sur un fond clair** (texte à contraste positif).
+</br>Afin de fournir une expérience utilisateur optimale en accessibilité, il est **impératif** de prendre en compte deux caractéristiques colorimétriques supplémentaires&nbsp;:
+- la **luminosité** (valeur > 125),
+- la **différence de tonalité** (valeur > 500).
+
+Ces deux éléments permettent de proposer au plus grand nombre une lecture très confortable que seul le contraste ne peut malheureusement pas assurer (voir outil mentionné en fin de section pour calcul automatique de ces valeurs).
+
+![](../../images/color_contrast_5.png)
+</br>Choisir les couleurs appropriées revient donc à **vérifier toutes les contraintes** définies précédemment sur&nbsp;:
+- le **contraste**,
+- la **luminosité**,
+- la **différence de tonalité**.
+
+</br>Il existe cependant des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.
 
 ![](../../images/color_contrast_4.png)
 
@@ -887,7 +902,7 @@ L’accès au contenu d’une application ne doit absolument pas dépendre de l�
      role="tabpanel" >
 
 En fonction des spécificités liées aux interfaces graphiques proposées, il peut être beaucoup plus facile de vouloir **créer un nouvel écran dédié accessibilité** pour ne pas avoir à remettre en cause les développements déjà implémentés.
-</br>Même si cela peut sembler être une bonne idée à première vue, il ne faut **absolument pas s'engager dans cette voie** car&nbsp;:  
+</br>Même si cela peut sembler être une bonne idée à première vue, il n'est **absolument pas recommandé de s'engager dans cette voie** car&nbsp;:  
 
 - le lecteur d'écran est utilisé pour les personnes aveugles mais aussi par les personnes illétrées. Pour ces dernières, s'apercevoir qu'un écran d'application change en fonction de l'activation de cette fonctionnalité peut laisser croire que toutes les informations fournies initialement ne sont peut-être pas les mêmes que celles proposées en accessibilité, ce qui peut conduire à un sentiment discriminant,
 

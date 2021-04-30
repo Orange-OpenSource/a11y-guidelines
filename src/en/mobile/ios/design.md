@@ -114,7 +114,22 @@ Colours have a very important role in the transmission of information.
 </br> With [Dynamic&nbsp;Type](../development#text-size) whose purpose is to adapt the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
 
 ![](../../images/color_contrast_1.png)
-</br>Adding different forms to differentiate the information provided only by colors may unnecessarily overlay the graphic interface if the user doesn't need them.
+</br>Abide by the contrast ratio is crucial but a too high contrast accentuates eye strain and may cause a visual sensation of blurring on the text.
+For light sensitive persons, a pure black text on a pure white background may significantly make the halo effect appear that will force to squint to read.
+</br>However, to substantially improve the legibility, it's still better and highly recommended to **write dark text on a light background** (text with a positive contrast).
+</br></br>In order to deliver an optimal user experience in accessibility, it's **mandatory** to take into account the following two additional colorimetric characteristics:
+- **Brightness difference** (value > 125).
+- **Colour difference** (value > 500).
+
+These two elements propose to the greatest number a very comfortable reading that the contrast unfortunately can't assure on its own (see the end of this section to discover the proper tool for automatic calculations).
+
+![](../../images/color_contrast_5.png)
+</br>Choosing the appropriate colours finally amounts to **checking each and every contraint** previously exposed for:
+- The **contrast**.
+- The **brightness difference**.
+- The **colour difference**.
+
+</br>Adding different forms to differentiate the information provided only by colours may unnecessarily overlay the graphic interface if the user doesn't need them.
 
 ![](../../images/color_contrast_4.png)
 <br>In this case, the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate&nbsp;Without&nbsp;Colour</a> accessibility option will allow this display **only at the user's demand**.
@@ -1115,7 +1130,7 @@ The full list of these options including their purpose and their coding name is 
 </div></div></br>
 
 <a name="optionA11Y_grayScale"></a>
-- **Grayscale** (UIAccessibilityIsGrayscaleEnabled): makes the display more readable for color blind people.
+- **Grayscale** (UIAccessibilityIsGrayscaleEnabled): makes the display more readable for colour blind people.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
