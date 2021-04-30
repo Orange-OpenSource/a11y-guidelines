@@ -3202,7 +3202,7 @@ function initStatementObject() {
 			}
 			if (p === "lang") {
 				dataVallydette.statement.lang = globalLang;
-				langStatement = langVallydette;
+				langStatement = langVallydettew;
 			}
 			if (p === "status") {
 				dataVallydette.statement.status = "WIP";
@@ -3273,7 +3273,7 @@ function initStatementObject() {
 						"name": "CSS",
 						"version": ""
 					},{
-						"name": "Javascript",
+						"name": "JavaScript",
 						"version": ""
 					}];
 				}
