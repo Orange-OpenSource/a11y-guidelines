@@ -6,7 +6,9 @@ title: "Accessibilité sous iOS"
 
 De façon à pouvoir implémenter au mieux l'accessibilité au sein d'applications iOS, la parfaite compréhension d'un ensemble de notions est nécessaire pour apporter la meilleure expérience utilisateur possible.
 
-Toutes ces notions élémentaires et avancées sont illustrées et développées dans les différentes rubriques ci-dessous :
+Pour connaître et suivre les différentes évolutions mises en oeuvre côté iOS, n'hésitez pas à consulter de temps à autres l'[historique&nbsp;des&nbsp;modifications](historique/) mis en place.
+
+Toutes ces notions élémentaires et avancées sont illustrées et développées dans les différentes rubriques ci-dessous&nbsp;:
 
 ## [Critères de conception](conception/)
 Ce socle de critères pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.

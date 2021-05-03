@@ -6,7 +6,9 @@ title: "iOS accessibility"
 
 Many accessibility concepts must be perfectly understood in order to bring the best user experience.
 
-All these basic and advanced notions are illustrated and explained within the following sections :
+In order to stay up to date on the latest iOS news on this site, don't hesitate to take a look at the [change&nbsp;history](changeHistory/) from time to time.
+
+All these basic and advanced notions are illustrated and explained within the following sections:
 
 ## [Design criteria](design/)
 This section introduces the different accessibility criteria for getting an accessible iOS application.
