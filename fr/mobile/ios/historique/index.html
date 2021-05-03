@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Accessibilité sous iOS - Recommandations accessibilité numérique Orange</title>
+    <title>Historique iOS - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -81,7 +81,7 @@
   Android
 </a>
         </li><li class="nav-item">
-          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="page">
+          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
   iOS
 </a>
         </li><li class="nav-item">
@@ -164,13 +164,18 @@
   <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
   <ol class="breadcrumb">
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/fr/">Accueil</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/ios/">iOS</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          iOS
+          Historique iOS
         </li>
       </ol>
 </nav>
@@ -183,25 +188,14 @@
     </div>
     
   <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Accessibilité sous iOS</h1>
-<p>De façon à pouvoir implémenter au mieux l'accessibilité au sein d'applications iOS, la parfaite compréhension d'un ensemble de notions est nécessaire pour apporter la meilleure expérience utilisateur possible.</p>
-<p>Pour connaître et suivre les différentes évolutions mises en oeuvre côté iOS, n'hésitez pas à consulter de temps à autres l'<a href="historique/">historique des modifications</a> mis en place.</p>
-<p>Toutes ces notions élémentaires et avancées sont illustrées et développées dans les différentes rubriques ci-dessous :</p>
-<h2 id="criteres-de-conception"><a href="conception/">Critères de conception</a> <a class="header-anchor" href="#criteres-de-conception" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Ce socle de critères pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.</p>
-<p>Le respect de la charte Orange pour iOS, document disponible sur le site de la marque <a href="http://design.orange.com/">Orange</a>, est un prérequis à l’utilisation de ce socle.</p>
-<p>Certains points déjà présents dans cette charte <em>(utilisation des couleurs notamment)</em> n’ont pas été repris dans cette liste de critères.</p>
-<h2 id="guide-pour-les-developpeurs"><a href="developpement/">Guide pour les développeurs</a> <a class="header-anchor" href="#guide-pour-les-developpeurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>L'aide au développement a pour vocation d’aider les développeurs avec les éléments programmatiques d’accessibilité disponibles sous iOS.</p>
-<p>L'intérêt principal de cette partie réside dans tous les exemples concrets comprenant des illustrations et des exemples de code <em>(ObjC et Swift)</em> qui permettront aux développeurs de trouver rapidement une solution à leurs problèmes.</p>
-<h2 id="voiceover"><a href="voiceover/">VoiceOver</a> <a class="header-anchor" href="#voiceover" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Afin de comprendre parfaitement les problématiques liées au lecteur d'écran, toutes les gestuelles sont illustrées et expliquées de façon détaillée.</p>
-<p>La maîtrise parfaite de ces gestes permet de mettre en place une application qui colle au mieux aux attentes des utilisateurs, l'effort à fournir pour la pratique se faisant tant au niveau des concepteurs que des développeurs et des testeurs.</p>
-<h2 id="wwdc"><a href="wwdc/">WWDC</a> <a class="header-anchor" href="#wwdc" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Cette section regroupe des présentations concernant l'accessibilité faites par Apple à la World Wide Developers Conference présentée chaque année.</p>
-<p>Chacune de ces présentations est détaillée et chaque thème décrit fait référence à une indication temporelle au sein de la vidéo de façon à pouvoir le visualiser le plus rapidement possible.</p>
-<h2 id="tests"><a href="test/">Tests</a> <a class="header-anchor" href="#tests" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Cette partie contient l'ensemble des tests à réaliser afin de s'assurer que les recommandations iOS sont bien suivies.</p>
+      <p><strong>30/04/21</strong> ⟹ ajouts de critères de conception pour les couleurs <a href="../conception/#couleurs">🔖</a></p>
+<p><strong>19/03/21</strong> ⟹ Fournisseur de contenu personnalisé <a href="../developpement/#fournisseur-de-contenu-personnalise">🔖</a></p>
+<p><strong>10/03/21</strong> ⟹ Modifier la langue de vocalisation <a href="../developpement/#modifier-la-langue-de-vocalisation">🔖</a></p>
+<p><strong>07/01/21</strong> ⟹ mises à jour (swift 5.3, Xcode 12 et iOS 14)</p>
+<p><strong>08/12/20</strong> ⟹ WWDC 2020 <a href="../wwdc/2020/020/">🎬</a> Rendre un visuel accessible</p>
+<p><strong>30/11/20</strong> ⟹ WWDC 2020 <a href="../wwdc/2020/019/">🎬</a> Accessibilité avec le contrôle de sélection</p>
+<p><strong>25/11/20</strong> ⟹ WWDC 2020 <a href="../wwdc/2020/116/">🎬</a> Efficience du rotor</p>
+<p><strong>27/04/20</strong> ⟹ Écran spécifique accessibilité <a href="../conception/#ecran-specifique-accessibilite">🔖</a></p>
 
     </main>
     
@@ -231,7 +225,7 @@
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/historique.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
