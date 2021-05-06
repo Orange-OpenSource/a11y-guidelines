@@ -18,14 +18,12 @@ title: "Couleurs et contrastes"
 Le niveau de contraste entre le premier plan et l’arrière-plan, même pour des éléments graphiques non-textuels porteurs de sens, doit être suffisamment élevé.
 Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs ayant des difficultés visuelles ainsi que pour les utilisateurs de mobiles et tablettes se trouvant dans un environnement très lumineux.
 
-**Exemple non valide&nbsp;:**  
-Le texte «&nbsp;film | 20h40…&nbsp;» ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
-
+**Exemples non valides&nbsp;:**  
+- Le texte “film | 20h40…” ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)
 
-Les images suivantes sont porteuses d’information pour les utilisateurs. Elles doivent fournir un contraste de couleur de 3:1 minimum.
-
-![capture d’écran présentant des icônes et des graphiques dont le contraste n'est suffisant](../../images/icones.png)
+- Les images suivantes sont porteuses d’information pour les utilisateurs. Elles devraient fournir un niveau de contraste de 3:1 minimum.
+![capture d’écran présentant des icônes et des graphiques dont le contraste n'est pas suffisant](../../images/icones.png)
 
 **À vérifier&nbsp;:**
 
