@@ -22,7 +22,7 @@ Insufficient contrast level will have detrimental impact on users with visual di
 - The label “film | 20h40…” does not have enough contrast. It will not be readable by all users.  
 ![screenshot showing text with poor contrast](../../images/contraste.png)
 
-- The following images provide information for users. They should provide a minimum contrast level of 3:1. 
+- The following images provide information for users. But they don't provide enough contrast (the contrast ratio should be at least 3:1).
 ![screenshot showing icons and graphics with insufficient contrast ](../../images/icones.png)
 
 **Checklist:**

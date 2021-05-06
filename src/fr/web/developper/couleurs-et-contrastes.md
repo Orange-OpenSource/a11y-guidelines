@@ -22,7 +22,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 - Le texte “film | 20h40…” ne présente pas un contraste suffisant. Celui-ci ne sera pas lisible par tous les utilisateurs.  
 ![capture d’écran présentant du texte dont le contraste n’est pas suffisant](../../images/contraste.png)
 
-- Les images suivantes sont porteuses d’information pour les utilisateurs. Elles devraient fournir un niveau de contraste de 3:1 minimum.
+- Les images suivantes sont porteuses d’information pour les utilisateurs. Mais elles ne fournissent pas un niveau de contraste suffisant qui devrait être de 3:1 minimum.
 ![capture d’écran présentant des icônes et des graphiques dont le contraste n'est pas suffisant](../../images/icones.png)
 
 **À vérifier&nbsp;:**
