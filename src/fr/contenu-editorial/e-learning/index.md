@@ -1,10 +1,11 @@
 ---
 title: "Storyline 3 - E-learning"
 ---
+# Recommandations Storyline 3
 
-# Personnaliser l’expérience utilisateur dès le début
+## Personnaliser l’expérience utilisateur dès le début
 
-## Fournir des instructions dès le premier slide
+### Fournir des instructions dès le premier slide
 
 Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navigation.
 - Fournir des instructions textuelles dès le premier slide
@@ -15,7 +16,7 @@ Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navi
   <figcaption class="figure-caption">Si des raccourcis clavier sont définis, ceux-ci doivent être annoncés dès le premier slide.</figcaption>
 </figure>
 
-## Proposer le choix entre différents profils
+### Proposer le choix entre différents profils
 
 L'objectif de l’accessibilité est de proposer une seule interface utilisable par tous les utilisateurs, valides ou en situation de handicap.
 Cependant les e-learnings comportent des spécificités, tels que des serious game par exemple, qui peuvent empêcher la mise en place d’un interface sans dégradations de l’expérience pour tous les utilisateurs.
@@ -29,7 +30,7 @@ Les contenus (serious game, exercices, …) pourront être adaptés au contexte 
   <figcaption class="figure-caption">Dans cet exemple des Serious Games alternatifs sont proposés aux utilisateurs non-voyants.</figcaption>
 </figure>
 
-# Permettre d'utiliser les principales fonctionnalités de l'application au clavier
+## Permettre d'utiliser les principales fonctionnalités de l'application au clavier
 
 Il s'agit de permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non-voyants, déficients moteurs, ...) d'accéder aux fonctionnalités principales de l'application depuis le clavier.
 
@@ -39,29 +40,51 @@ Il s'agit de permettre aux utilisateurs qui ne peuvent pas utiliser la souris (n
 	- le drag n’ drop 
 	- l’état « survol » pour transmettre des informations importantes
   
-# S’assurer que l’utilisateur garde le contrôle lors des interactions
+## S’assurer que l’utilisateur garde le contrôle lors des interactions
 
-## Connaitre le résultat de ses actions
+### Connaitre le résultat de ses actions
 Les résultats des quizzs notamment, doivent être perçus par tous les utilisateurs.
 
 - Utiliser les composants de notifications natifs de Storyline (feedback layers)
 - Lancer une vocalisation du résultat après soumission par l’utilisateur
+<figure class="figure">
+  <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid mx-auto d-block">
+  <figcaption class="figure-caption">Dans cet exemple, le résultat "Pas tout-à-fait... Toutes ces propositions sont exactes !" est vocalisé par une voix-off</figcaption>
+</figure>
 
-## Rédaction des contenus
+### Éviter les limites de temps
 
-Limiter les abréviations et acronymes, et expliciter à la première occurrence ceux qui ne font pas partie du langage courant.
+Tous les utilisateurs doivent pouvoir compléter ses actions sans comportement inattendu, comme un changement de slide par exemple.
 
-Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion > Symbole** ou utiliser [les raccourcis clavier](/fr/contenu-editorial/index#annexes).
+- Eviter les limites de temps pour compléter un exercice ou un quizz, lire un contenu
+- Si une limite de temps est essentielle à la réalisation d’un exercice, proposer une alternative (possibilité de désactiver ou modifier la limite de temps, ou proposer un exercice différent selon le profil par exemple).
 
-## Mise en forme des contenus
-Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial et Helvetica) en corps 12 pixels minimum. 
-Commencer les phrases par une majuscule et ne pas abuser des phrases entièrement écrites en majuscules.
-Eviter de justifier le texte et privilégier l’alignement à gauche.
-Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit > Paragraphe > Retrait et Espacement`.
+A l’inverse, il peut être utile de préciser le temps nécessaire à la consultation d’un contenu alternatif, ou la consultation de l’elearning
 
-<img alt="" src="/fr/contenu-editorial/images/paragraphe.png" class="img-fluid">  &nbsp;
+## Organiser les objets et les textes de manière logique
 
-## Couleurs et contrastes 
+Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’écran, loupe d’écran, navigation clavier), l’ordre de lecture des composants à l'écran correspondra au sens de lecture de la langue du document (donc de gauche à droite et de haut en bas pour le français par exemple).
+
+- D’une manière générale, s’assurer de reproduire un ordre de lecture logique (gauche à droite et de haut en bas suivant la langue utilisée). 
+- S’assurer que l’ordre des éléments permet la compréhension des informations. Par exemple, dans le cadre d’un questionnaire s’assurer que les utilisateurs tabulent ou vocalisent d’abord sur la question, puis ensuite sur les choix de réponses.
+- Si des boutons de contrôle sont utiliser (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier.
+- Eviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations.
+- Masquer les images décoratives aux lecteurs d’écran
+
+### Procédure
+
+1. Activer la fonction « Ordre des onglets »
+2. La boîte de dialogue « Ordre des onglets » s’ouvre. Celle-ci centralise tous les éléments du slide
+3. Sélectionner « personnaliser l’ordre des onglets »
+4. Sélectionner un élément
+5. Utiliser les flèches « haut / bas » pour modifier l’ordre de l’élément
+6. Activer « enregistrer »
+
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid mx-auto d-block">
+
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid mx-auto d-block">
+
+### Couleurs et contrastes 
 
 Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) par exemple :
 * 4.5:1 pour du texte de taille normale.
