@@ -1,6 +1,4 @@
-{
-	"name": "Audit d'évaluation WEB",
-	"items":[{
+[{
     "themes": "Contenu textuel",
     "title": "Donner un titre aux pages",
     "type": [
@@ -1347,4 +1345,4 @@
     "profils": ["Expert Accessibilité"],
     "wcag": ["4.1.2"]
 }
-]}
+]

@@ -1,6 +1,4 @@
-{
-	"name": "Evaluation audit WEB",
-	"items":[{
+[{
     "themes": "Textual content",
     "title": "Set a title for each page",
     "type": [
@@ -1347,4 +1345,3 @@
     "wcag": ["4.1.2"]
 	  }
 	]
-}

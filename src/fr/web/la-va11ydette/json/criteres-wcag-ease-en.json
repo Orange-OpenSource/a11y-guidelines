@@ -1,6 +1,4 @@
-{
-	"name": "Conformity audit WCAG / WEB",		 
-	"items":[{
+[{
 		"themes": "Form",
 		"title": "Does every input field in the form have a label?",
 		"ID": "testID-001",
@@ -680,4 +678,4 @@
 		"verifier": "<p> Check all standard components (e.g. form elements) as well as those components developed using JavaScript (e.g. drop-down menu): </p><ul><li> each custom component uses an appropriate ARIA role (refer to the component's design pattern in order to validate this)</li><li> for components for which the user can change the value or state, these properties can also be defined via assistive technologies (e.g. check or uncheck a checkbox)</li><li> every time the state changes, the user is notified via their assistive technology (example of this test passed: screen reader notification: 'checked' or 'unchecked')</li></ul>",
 		"resultatTest": "nt"
 	}
-]}
+]
