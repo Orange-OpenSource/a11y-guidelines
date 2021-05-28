@@ -1,6 +1,4 @@
-﻿{
-	"name": "Conformity audit WCAG / ANDROID",
-	"items":[{
+﻿[{
 		"themes": "Input screen",
 		"title": "Does every input field in the form have a label?",
 		"ID": "testID-001",
@@ -562,4 +560,4 @@
 		"group": "Multimedia",		
 		"resultatTest": "nt"
 	}
-]}
+]
