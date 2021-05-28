@@ -4,7 +4,7 @@ title: "Storyline 360 - E-learning"
 # Recommandations Storyline 360
 
 Recommandations pour la création de présentation elearning accessible.
-En complément <a href="./fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
+En complément <a href="/fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
 
 ## Personnaliser l’expérience utilisateur dès le début
 
@@ -15,7 +15,7 @@ Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navi
 - Ces instructions présentent les éventuels raccourcis spécifiques à l’e-learning
 - Pour les utilisateurs de lecteur d’écran, nous recommandons d’ajouter des instructions à propos de la navigation clavier
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/trigger-wizard.png" class="img-fluid mx-auto d-block">
+  <img alt="" src="/fr/contenu-editorial/images/trigger-wizard.png" class="img-fluid">
   <figcaption class="figure-caption">Si des raccourcis clavier sont définis, ceux-ci doivent être annoncés dès le premier slide.</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ Les contenus (serious game, exercices, …) pourront être adaptés au contexte 
 - Proposer des mécanismes alternatifs (ex : en remplacement d’un système drag n’drop par exemple)
 - Proposer des contenus supplémentaires (ex : ajout de descriptions détaillées destinées aux lecteurs d’écrans)
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/profile-selection.png" class="img-fluid mx-auto d-block">
+  <img alt="" src="/fr/contenu-editorial/images/profile-selection.png" class="img-fluid">
   <figcaption class="figure-caption">Dans cet exemple des Serious Games alternatifs sont proposés aux utilisateurs non-voyants.</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ La visualisation du focus permet aux utilisateurs clavier de se réperer dans le
 2. Sélectionner "Couleurs & effets"
 3. Modifier la couleurs par défaut du focus
 
- <img alt="" src="/fr/contenu-editorial/images/storyline-focus.png" class="img-fluid mx-auto d-block">  &nbsp;
+ <img alt="" src="/fr/contenu-editorial/images/storyline-focus.png" class="img-fluid">  &nbsp;
   
 ## S’assurer que l’utilisateur garde le contrôle lors des interactions
 
@@ -61,7 +61,7 @@ Les résultats des quizzs notamment, doivent être perçus par tous les utilisat
 - Utiliser les composants de notifications natifs de Storyline (feedback layers)
 - Lancer une vocalisation du résultat après soumission par l’utilisateur
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid mx-auto d-block">
+  <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid">
   <figcaption class="figure-caption">Dans cet exemple, le résultat "Pas tout-à-fait... Toutes ces propositions sont exactes !" est vocalisé par une voix-off</figcaption>
 </figure>
 
@@ -84,7 +84,7 @@ Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’é
 - Eviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations.
 - Masquer les images décoratives aux lecteurs d’écran
 
-### Procédure
+*La procédure :*
 
 1. Activer la fonction « Ordre du focus »
 2. La boîte de dialogue « Ordre du focus » s’ouvre. Celle-ci centralise tous les éléments du slide
@@ -93,10 +93,14 @@ Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’é
 5. Utiliser les flèches « haut / bas » pour modifier l’ordre de l’élément
 6. Activer « enregistrer »
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid mx-auto d-block">
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
+<figcaption class="figure-caption">Storyline permet la réorganisation de tous les éléments grâce à l'option "Ordre du focus".
+</figcaption>
+</figure>
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid mx-auto d-block">
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid">
 <figcaption class="figure-caption">L’ordre des éléments à l’écran, ne correspond pas toujours à l’ordre des éléments dans le code source.
 L’ordre des éléments dans le code source, va avoir un impact lors de la lecture depuis une aide technique, comme un lecteur d’écran par exemple.
 </figcaption>
@@ -111,13 +115,13 @@ Il permet aux utilisateurs finaux d'identifier la formation dans leur navigateur
 Ceci est particulièrement important pour les utilisateurs de lecteurs d'écran.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid mx-auto d-block">
+<img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid">
 <figcaption class="figure-caption">Cliquer sur Publier, puis renseigner le champ Titre.
 </figcaption>
 
 </figure>
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/onglet-formation.png" class="img-fluid mx-auto d-block">
+<img alt="" src="/fr/contenu-editorial/images/onglet-formation.png" class="img-fluid">
 <figcaption class="figure-caption">Le titre apparaît dans l'onglet du navigateur.
 </figcaption>
 </figure>
@@ -128,14 +132,14 @@ Le titre de diapositive doit également être explicite.
 Il permet aux utilisateurs finaux de comprendre le contexte de chaque nouvelle diapositive.
 Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera vocalisé automatiquement à l'arrivée sur un nouveau diaporama.
 
-<img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid mx-auto d-block">  &nbsp;
+<img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid">  &nbsp;
 
 ## Structurer le contenu avec des titres de niveaux
 
 Appliquer des styles de titre sur les texte présentés comme des titres.
 Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre et naviguer au sein du contenu.
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid mx-auto d-block">  &nbsp;
+<img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
 
 ## Fournir des textes alternatifs pertinents 
 
@@ -143,7 +147,7 @@ Le texte de remplacement est primordial pour les utilisateurs non-voyants.
 C’est ce contenu qui sera vocalisé.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/alt-images.png" class="img-fluid mx-auto d-block">
+<img alt="" src="/fr/contenu-editorial/images/alt-images.png" class="img-fluid">
 <figcaption class="figure-caption">
 Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
 
@@ -153,7 +157,7 @@ Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
 </figcaption>
 </figure>
 
-### Recommandations
+*Les recommandations :*
 
 - Pour les images porteuses de texte, le texte alternatif reprend  le contenu textuel présent dans l’image
 - Pour les boutons et autres éléments de formulaire, le texte alternatif convoie la cible ou l’action portée par le bouton
@@ -161,7 +165,7 @@ Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
 - Éviter les abréviations et la répétition d’éléments de ponctuation
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/alt-images-infos.png" class="img-fluid mx-auto d-block">
+<img alt="" src="/fr/contenu-editorial/images/alt-images-infos.png" class="img-fluid">
 <figcaption class="figure-caption">
 Exemple d’une image porteuse d’information :
 
@@ -170,21 +174,29 @@ Exemple d’une image porteuse d’information :
 </figcaption>
 </figure>
 
-### Procédures
+*La procédure :*
 1. Activer la fonction « Ordre du focus »
 2. La boîte de dialogue « Ordre du focus » s’ouvre. Celle-ci centralise tous les éléments d’une slide
 3. Renseigner le texte alternatif des boutons ou des objets porteurs d’information
 4. Cliquer sur « Enregistrer »
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid mx-auto d-block mb-1">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-3.png" class="img-fluid mx-auto d-block">  &nbsp;
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
+<figcaption class="figure-caption">
+Les textes alternatifs peuvent être définis depuis le panneau "Ordre du focus".
+</figcaption>
+</figure>
+
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-3.png" class="img-fluid">  &nbsp;
 
 
 ## Masquer les images décoratives
 
 Une image est considérée comme décorative lorsqu'elle n'apporte pas d’information supplémentaire à la compréhension d'un texte ou d'une fonctionnalité.
 
-Les bénéfices pour les utilisateurs : 
+Il est recommdandé de masquer ces éléments aux utilisateurs de lecteur d'écran.
+
+Les bénéfices : 
 - Alléger la vocalisation, en évitant la lecture d’information inutile à la compréhension du contenu.
 - Alléger la navigation clavier en supprimant des éléments inutiles du parcours clavier.
 
@@ -197,10 +209,7 @@ Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
 </figcaption>
 </figure>
 
-### Recommandation
-Masquer l’élément aux lecteurs d’écrans afin d’éviter le bruit à la vocalisation.
-
-### Procédure
+*La procédure :*
 1. Click droit sur l’image.
 2. Sélectionner « Accessibilité » dans le menu.
 3. La boîte de dialogue « taille et position » s’ouvre.
@@ -208,26 +217,22 @@ Masquer l’élément aux lecteurs d’écrans afin d’éviter le bruit à la v
 5. Décocher la case « L’objet est visible… ».
 6. Cliquer sur «fermer ».
 
-<img alt="" src="/fr/contenu-editorial/images/hide-image.png" class="img-fluid mx-auto d-block mb-1">
-<img alt="" src="/fr/contenu-editorial/images/hide-image-2.png" class="img-fluid mx-auto d-block">  &nbsp;
+<img alt="" src="/fr/contenu-editorial/images/hide-image.png" class="img-fluid mb-1">
+<img alt="" src="/fr/contenu-editorial/images/hide-image-2.png" class="img-fluid">  &nbsp;
 
 
 ## Indiquer la langue principale du document
   
-Permettre aux utilisateurs de synthèse vocale d'adapter la vocalisation par rapport à la langue du contenu.
+Définir la langue d'un document permettra aux synthèses vocale d'adapter leur vocalisation par rapport à la langue du contenu.
 
-### Recommandation
-
-Masquer l’élément aux lecteurs d’écrans afin d’éviter le bruit à la vocalisation.
-
-### Procédure
+*La procédure :*
 1. Sélectionner « lecteur – modifier les propriétés du lecteur ».
-2. Sélectionner « étiquettes de texte »
+2. Sélectionner « étiquettes de texte ».
 3. Dans le menu déroulant « langue », sélectionner la langue correspondant au document.
 4. Modifier les textes dans la colonne « texte personnalisé ».
-5. Cliquer sur « OK »
+5. Cliquer sur « OK ».
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-langue-1.png" class="img-fluid mx-auto d-block mb-1">  &nbsp;
+<img alt="" src="/fr/contenu-editorial/images/storyline-langue-1.png" class="img-fluid mb-1">  &nbsp;
 
 ## Contenus audio ou vidéo
 
@@ -235,7 +240,7 @@ Masquer l’élément aux lecteurs d’écrans afin d’éviter le bruit à la v
 - Ne pas lancer l’audio ou la vidéo automatiquement
 - Si le média se lance automatiquement, s’assurer que l’utilisateur a la possibilité de l’arrêter manuellement
 
-<img alt="" src="/fr/contenu-editorial/images/lancement-auto.png" class="img-fluid mx-auto d-block">  &nbsp;
+<img alt="" src="/fr/contenu-editorial/images/lancement-auto.png" class="img-fluid">  &nbsp;
 
 ### Audios accessibles
 
@@ -246,7 +251,7 @@ Storyline permet la création de sous-titres synchronisés.
 - S’assurer que l’ensemble du contenu textuel du slide soit vocalisé, afin de ne pas induire en erreur les utilisateurs non-voyants qui pourraient se reposer uniquement sur l’audio et ne pas consulter manuellement tout le contenu du slide.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/activer-sous-titre.png" class="img-fluid mx-auto d-block">
+<img alt="" src="/fr/contenu-editorial/images/activer-sous-titre.png" class="img-fluid">
 <figcaption class="figure-caption">
 Donner la possibilité aux utilisateurs d'activiter les sous-titres dès le début de la présentation.
 </figcaption>
