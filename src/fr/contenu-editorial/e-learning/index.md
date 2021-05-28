@@ -3,7 +3,7 @@ title: "Storyline 360 - E-learning"
 ---
 # Recommandations Storyline 360
 
-Recommandations pour la création de présentation elearning accessible.
+Recommandations pour la création de présentation <span lang="en">e-learning</span> accessible.
 En complément <a href="/fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
 
 ## Personnaliser l’expérience utilisateur dès le début
@@ -12,7 +12,7 @@ En complément <a href="/fr/contenu-editorial/">les recommandations éditoriales
 
 Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navigation.
 - Fournir des instructions textuelles dès le premier slide
-- Ces instructions présentent les éventuels raccourcis spécifiques à l’e-learning
+- Ces instructions présentent les éventuels raccourcis spécifiques à l’<span lang="en">e-learning</span>
 - Pour les utilisateurs de lecteur d’écran, nous recommandons d’ajouter des instructions à propos de la navigation clavier
 <figure class="figure">
   <img alt="" src="/fr/contenu-editorial/images/trigger-wizard.png" class="img-fluid">
@@ -22,7 +22,7 @@ Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navi
 ### Proposer le choix entre différents profils
 
 L'objectif de l’accessibilité est de proposer une seule interface utilisable par tous les utilisateurs, valides ou en situation de handicap.
-Cependant les e-learnings comportent des spécificités, tels que des serious game par exemple, qui peuvent empêcher la mise en place d’un interface sans dégradations de l’expérience pour tous les utilisateurs.
+Cependant les <span lang="en">e-learnings</span> comportent des spécificités, tels que des serious game par exemple, qui peuvent empêcher la mise en place d’un interface sans dégradations de l’expérience pour tous les utilisateurs.
 La solution est donc de proposer le choix de profils.
 Les contenus (serious game, exercices, …) pourront être adaptés au contexte de chaque utilisateur.
 
