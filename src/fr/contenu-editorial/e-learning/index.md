@@ -1,7 +1,10 @@
 ---
-title: "Storyline 3 - E-learning"
+title: "Storyline 360 - E-learning"
 ---
-# Recommandations Storyline 3
+# Recommandations Storyline 360
+
+Recommandations pour la création de présentation elearning accessible.
+En complément <a href="./fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
 
 ## Personnaliser l’expérience utilisateur dès le début
 
@@ -39,6 +42,16 @@ Il s'agit de permettre aux utilisateurs qui ne peuvent pas utiliser la souris (n
 - Ne pas utiliser des systèmes nécessitant exclusivement la souris, tels que : 
 	- le drag n’ drop 
 	- l’état « survol » pour transmettre des informations importantes
+
+### Rendre le focus visible en toute circonstance
+
+La visualisation du focus permet aux utilisateurs clavier de se réperer dans leur parcours de navigation.
+
+1. Activer "Propriétes du lecteur"
+2. Sélectionner "Couleurs & effets"
+3. Modifier la couleurs par défaut du focus
+
+ <img alt="" src="/fr/contenu-editorial/images/storyline-focus.png" class="img-fluid mx-auto d-block">  &nbsp;
   
 ## S’assurer que l’utilisateur garde le contrôle lors des interactions
 
@@ -73,109 +86,178 @@ Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’é
 
 ### Procédure
 
-1. Activer la fonction « Ordre des onglets »
-2. La boîte de dialogue « Ordre des onglets » s’ouvre. Celle-ci centralise tous les éléments du slide
-3. Sélectionner « personnaliser l’ordre des onglets »
+1. Activer la fonction « Ordre du focus »
+2. La boîte de dialogue « Ordre du focus » s’ouvre. Celle-ci centralise tous les éléments du slide
+3. Sélectionner « Créer un ordre de focus personnalisé »
 4. Sélectionner un élément
 5. Utiliser les flèches « haut / bas » pour modifier l’ordre de l’élément
 6. Activer « enregistrer »
 
 <img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid mx-auto d-block">
 
+<figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid mx-auto d-block">
-
-### Couleurs et contrastes 
-
-Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de l’arrière-plan](/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond). Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) par exemple :
-* 4.5:1 pour du texte de taille normale.
-* 3:1 pour du [texte de grande taille](/fr/glossaire/#texte-de-grande-taille) et les composants d'interface ou éléments graphiques porteurs d'informations.
-
-S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
-Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordial d’utiliser un moyen suppléant la couleur pour véhiculer l’information.
-
-<figure>
-  <img src="/fr/contenu-editorial/images/color-ko.png" alt="" />
-  <figcaption><strong>Exemple incorrect</strong> : l'information est transmise uniquement par la couleur.</figcaption>
+<figcaption class="figure-caption">L’ordre des éléments à l’écran, ne correspond pas toujours à l’ordre des éléments dans le code source.
+L’ordre des éléments dans le code source, va avoir un impact lors de la lecture depuis une aide technique, comme un lecteur d’écran par exemple.
+</figcaption>
 </figure>
+
+## Donner un titre à la présentation et aux diapositives
+
+### Titre de présentation
+
+Le titre de présentation doit être explicite.
+Il permet aux utilisateurs finaux d'identifier la formation dans leur navigateur.
+Ceci est particulièrement important pour les utilisateurs de lecteurs d'écran.
+
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid mx-auto d-block">
+<figcaption class="figure-caption">Cliquer sur Publier, puis renseigner le champ Titre.
+</figcaption>
+
+</figure>
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/onglet-formation.png" class="img-fluid mx-auto d-block">
+<figcaption class="figure-caption">Le titre apparaît dans l'onglet du navigateur.
+</figcaption>
+</figure>
+
+### Titre de diapositive
+
+Le titre de diapositive doit également être explicite.
+Il permet aux utilisateurs finaux de comprendre le contexte de chaque nouvelle diapositive.
+Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera vocalisé automatiquement à l'arrivée sur un nouveau diaporama.
+
+<img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid mx-auto d-block">  &nbsp;
+
+## Structurer le contenu avec des titres de niveaux
+
+Appliquer des styles de titre sur les texte présentés comme des titres.
+Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre et naviguer au sein du contenu.
+
+<img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid mx-auto d-block">  &nbsp;
+
+## Fournir des textes alternatifs pertinents 
+
+Le texte de remplacement est primordial pour les utilisateurs non-voyants.
+C’est ce contenu qui sera vocalisé.
+
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/alt-images.png" class="img-fluid mx-auto d-block">
+<figcaption class="figure-caption">
+Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
+
+- *Alternative non valide :* bouton-gerer-1.png
+- *Alternative valide :* Gérer
+
+</figcaption>
+</figure>
+
+### Recommandations
+
+- Pour les images porteuses de texte, le texte alternatif reprend  le contenu textuel présent dans l’image
+- Pour les boutons et autres éléments de formulaire, le texte alternatif convoie la cible ou l’action portée par le bouton
+- Il est contreproductif de commencer les textes par « image de ». Il faut être concis et fournir uniquement l’information nécessaire pour l’utilisateur
+- Éviter les abréviations et la répétition d’éléments de ponctuation
+
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/alt-images-infos.png" class="img-fluid mx-auto d-block">
+<figcaption class="figure-caption">
+Exemple d’une image porteuse d’information :
+
+- *Alternative non valide :* coche.png
+- *Alternative valide :* séquence déficient auditif déjà consultée
+</figcaption>
+</figure>
+
+### Procédures
+1. Activer la fonction « Ordre du focus »
+2. La boîte de dialogue « Ordre du focus » s’ouvre. Celle-ci centralise tous les éléments d’une slide
+3. Renseigner le texte alternatif des boutons ou des objets porteurs d’information
+4. Cliquer sur « Enregistrer »
+
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid mx-auto d-block mb-1">
+<img alt="" src="/fr/contenu-editorial/images/storyline-order-3.png" class="img-fluid mx-auto d-block">  &nbsp;
+
+
+## Masquer les images décoratives
+
+Une image est considérée comme décorative lorsqu'elle n'apporte pas d’information supplémentaire à la compréhension d'un texte ou d'une fonctionnalité.
+
+Les bénéfices pour les utilisateurs : 
+- Alléger la vocalisation, en évitant la lecture d’information inutile à la compréhension du contenu.
+- Alléger la navigation clavier en supprimant des éléments inutiles du parcours clavier.
+
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/image-deco-1.png" class="w-50 pr-1 float-left">
+<img alt="" src="/fr/contenu-editorial/images/image-deco-2.png" class="w-50 float-left">
+<figcaption class="figure-caption">
+Exemples d'images décoratives, dans ces contextes, le personnages ou la pied de table n'apportent pas d'informations.
+Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
+</figcaption>
+</figure>
+
+### Recommandation
+Masquer l’élément aux lecteurs d’écrans afin d’éviter le bruit à la vocalisation.
+
+### Procédure
+1. Click droit sur l’image.
+2. Sélectionner « Accessibilité » dans le menu.
+3. La boîte de dialogue « taille et position » s’ouvre.
+4. L'onglet "Accessibilité" est ouvert par défaut.
+5. Décocher la case « L’objet est visible… ».
+6. Cliquer sur «fermer ».
+
+<img alt="" src="/fr/contenu-editorial/images/hide-image.png" class="img-fluid mx-auto d-block mb-1">
+<img alt="" src="/fr/contenu-editorial/images/hide-image-2.png" class="img-fluid mx-auto d-block">  &nbsp;
+
+
+## Indiquer la langue principale du document
   
-&nbsp;
+Permettre aux utilisateurs de synthèse vocale d'adapter la vocalisation par rapport à la langue du contenu.
 
-<figure>
-  <img src="/fr/contenu-editorial/images/color-ok.png" alt="" />
-  <figcaption><strong>Exemple correct</strong> : l'information est transmise par la forme et la couleur.</figcaption>
-</figure>
+### Recommandation
 
-## Listes à puces ou numérotées  
-Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.
+Masquer l’élément aux lecteurs d’écrans afin d’éviter le bruit à la vocalisation.
 
-<img alt="" src="/fr/contenu-editorial/images/puce.png" class="img-fluid">  &nbsp;
+### Procédure
+1. Sélectionner « lecteur – modifier les propriétés du lecteur ».
+2. Sélectionner « étiquettes de texte »
+3. Dans le menu déroulant « langue », sélectionner la langue correspondant au document.
+4. Modifier les textes dans la colonne « texte personnalisé ».
+5. Cliquer sur « OK »
 
-## Images
-Un document peut contenir des images et être accessible, il faut simplement que l’information portée par l’image soit retranscrite textuellement. 
-- **Pour les images porteuses d’informations** : associer un texte de remplacement décrivant le contenu informatif via un `clic droit > Format de l’image > Texte de remplacement > champ « Description »`.
-- **Pour les images décoratives/illustratives** : laisser le champ `description` vide.
-- **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)
-
- <img alt="" src="/fr/contenu-editorial/images/remplacement.png" class="img-fluid">
-
-Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion > SmartArt`).  
-Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`Format de l’objet ou de l’image > Texte de remplacement > Description`). 
-
-## Liens
-Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel et doit donc se suffire à lui-même : 
-* Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).
-* Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).
-<img alt="" src="/fr/contenu-editorial/images/lien.png" class="img-fluid">  &nbsp;
-* Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.
-
-## Tableaux de données / tableaux de présentation 
-Les tableaux peuvent être difficilement consultables, pour un non-voyant, par exemple. Il faut donc les utiliser avec parcimonie et les structurer le plus simplement possible : 
-* Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.
-* Ajouter une description s'il s'agit d'un tableau complexe, clic droit : `Format de la forme > Texte de remplacement > Description`
-
-**Important :** Ne pas utiliser les tableaux à des fins de mise en forme.
+<img alt="" src="/fr/contenu-editorial/images/storyline-langue-1.png" class="img-fluid mx-auto d-block mb-1">  &nbsp;
 
 ## Contenus audio ou vidéo
-La communication audiovisuelle est aujourd’hui très fréquente en entreprise. Mais parce que certaines personnes peuvent ne pas voir ou ne pas entendre il est primordial de suppléer l’information transmise dans une modalité par une autre :
-* Fournir une transcription intégrale des contenus audio (solution nécessaire et suffisante).
-* Empêcher toute lecture automatique de contenu vidéo ou audio (menu `Animations` : démarrer au clic).
 
-<img alt="" src="/fr/contenu-editorial/images/video.png" class="img-fluid">  &nbsp;
+- Fournir une transcription aux audios et vidéos
+- Ne pas lancer l’audio ou la vidéo automatiquement
+- Si le média se lance automatiquement, s’assurer que l’utilisateur a la possibilité de l’arrêter manuellement
 
-Tout contenu vidéo doit respecter ces prérequis :
-- Fournir des sous-titres pour restituer l’ensemble des informations véhiculées par la bande son.
-- Fournir une audiodescription si la vidéo présente des informations accessibles seulement via les images.
-- Utiliser des vidéos sans flashs rapides (pas plus de 3 clignotements par seconde).
+<img alt="" src="/fr/contenu-editorial/images/lancement-auto.png" class="img-fluid mx-auto d-block">  &nbsp;
+
+### Audios accessibles
+
+Certaines formations possèdent une vocalisation de chaque slide (voix off) :
+
+- Si la voix fournie des informations non présentes dans le contenu du slide, des sous-titres sont alors nécessaires.
+Storyline permet la création de sous-titres synchronisés.
+- S’assurer que l’ensemble du contenu textuel du slide soit vocalisé, afin de ne pas induire en erreur les utilisateurs non-voyants qui pourraient se reposer uniquement sur l’audio et ne pas consulter manuellement tout le contenu du slide.
+
+<figure class="figure">
+<img alt="" src="/fr/contenu-editorial/images/activer-sous-titre.png" class="img-fluid mx-auto d-block">
+<figcaption class="figure-caption">
+Donner la possibilité aux utilisateurs d'activiter les sous-titres dès le début de la présentation.
+</figcaption>
+</figure>
+
+### Vidéos accessibles
 
 Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-editorial/composants-animes) pour en savoir plus.
 
-## Ordre de lecture des éléments
-L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection (menu `Accueil > Organiser > Volet de sélection`).  
-**Attention** : l’ordre doit être décroissant car c’est le dernier élément de la liste qui est lu en premier par le lecteur.
-
-<img alt="" src="/fr/contenu-editorial/images/volet.png" class="img-fluid">  &nbsp;
-
-Il est important de vérifier cet ordre directement dans les masques des diapositives.
-
-## Vérificateur d’accessibilité intégré
-Il est important de contrôler l’accessibilité de la présentation à l'aide du vérificateur d’accessibilité (menu : `Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité`).
-<img alt="" src="/fr/contenu-editorial/images/verificateur.png" class="img-fluid">  &nbsp;
-
-## Convertir une présentation PowerPoint en fichier PDF
-
-Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-editorial/powerpoint/tester)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
-Cocher la case « Balises de structure de document pour l'accessibilité ».
-
-<img alt="" src="/fr/contenu-editorial/images/export.png" class="img-fluid">  &nbsp;
-
-Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe :
-`Édition > Préférences > Lecture > Option de lecteur d’écran` : « Lire l’intégralité du document »
-
-<img alt="" src="/fr/contenu-editorial/images/adobe.png" class="img-fluid">  &nbsp;
-
-Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PDF accessible de notre site](/fr/contenu-editorial/pdf/).
-
 ## Ressources
 
-- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
-- <a href="https://webaim.org/techniques/powerpoint/" hreflang="en">Accessibilité PowerPoint, WebAIM</a> (anglais).
+- <a href="https://articulate-heroes.s3.amazonaws.com/uploads/attachment/attachment_url/24511/Storyline_accessibility_guide.pdf?dl=true" hreflang="en" lang="en">Designing Accessible E-Learning Using Articulate Storyline (pdf, anglais)</a>.
+- <a href="https://www.ucop.edu/electronic-accessibility/_files/creating-accessible-ecourses.pdf" hreflang="en" lang="en">Creating Accessible eCourses (pdf, anglais)</a>.
+- <a href="http://generic.wordpress.soton.ac.uk/digital-learning/2019/01/28/accessibility-for-articulate-storyline-are-you-wcag-compliant/" hreflang="en" lang="en">Accessibility for Articulate storyline – Are you WCAG compliant? (anglais)</a>.
