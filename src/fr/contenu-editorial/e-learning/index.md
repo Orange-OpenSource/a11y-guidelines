@@ -4,7 +4,7 @@ title: "Storyline 360 - E-learning"
 # Recommandations Storyline 360
 
 Recommandations pour la création de présentation <span lang="en">e-learning</span> accessible.
-En complément <a href="/fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
+*Remarque* : en complément <a href="/fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
 
 ## Personnaliser l’expérience utilisateur dès le début
 
@@ -22,7 +22,7 @@ Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navi
 ### Proposer le choix entre différents profils
 
 L'objectif de l’accessibilité est de proposer une seule interface utilisable par tous les utilisateurs, valides ou en situation de handicap.
-Cependant les <span lang="en">e-learnings</span> comportent des spécificités, tels que des serious game par exemple, qui peuvent empêcher la mise en place d’un interface sans dégradations de l’expérience pour tous les utilisateurs.
+Cependant les <span lang="en">e-learnings</span> comportent des spécificités, tels que des serious game par exemple, qui peuvent empêcher la mise en place d’une interface sans dégradations de l’expérience pour tous les utilisateurs.
 La solution est donc de proposer le choix de profils.
 Les contenus (serious game, exercices, …) pourront être adaptés au contexte de chaque utilisateur.
 
@@ -72,17 +72,16 @@ Tous les utilisateurs doivent pouvoir compléter ses actions sans comportement i
 - Eviter les limites de temps pour compléter un exercice ou un quizz, lire un contenu
 - Si une limite de temps est essentielle à la réalisation d’un exercice, proposer une alternative (possibilité de désactiver ou modifier la limite de temps, ou proposer un exercice différent selon le profil par exemple).
 
-A l’inverse, il peut être utile de préciser le temps nécessaire à la consultation d’un contenu alternatif, ou la consultation de l’elearning
+A l’inverse, il peut être utile de préciser le temps nécessaire à la consultation d’un contenu alternatif, ou la consultation de l’elearning.
 
 ## Organiser les objets et les textes de manière logique
 
-Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’écran, loupe d’écran, navigation clavier), l’ordre de lecture des composants à l'écran correspondra au sens de lecture de la langue du document (donc de gauche à droite et de haut en bas pour le français par exemple).
+Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’écran, loupe d’écran, navigation clavier), l’ordre de lecture des composants à l'écran correspondra au sens de lecture de la langue du document (donc de gauche à droite et de haut en bas pour une interface en français par exemple).
 
 - D’une manière générale, s’assurer de reproduire un ordre de lecture logique (gauche à droite et de haut en bas suivant la langue utilisée). 
 - S’assurer que l’ordre des éléments permet la compréhension des informations. Par exemple, dans le cadre d’un questionnaire s’assurer que les utilisateurs tabulent ou vocalisent d’abord sur la question, puis ensuite sur les choix de réponses.
 - Si des boutons de contrôle sont utiliser (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier.
 - Eviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations.
-- Masquer les images décoratives aux lecteurs d’écran
 
 *La procédure :*
 
@@ -130,13 +129,13 @@ Ceci est particulièrement important pour les utilisateurs de lecteurs d'écran.
 
 Le titre de diapositive doit également être explicite.
 Il permet aux utilisateurs finaux de comprendre le contexte de chaque nouvelle diapositive.
-Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera vocalisé automatiquement à l'arrivée sur un nouveau diaporama.
+Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera vocalisé automatiquement à l'arrivée sur une nouvelle diapositive.
 
 <img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid">  &nbsp;
 
 ## Structurer le contenu avec des titres de niveaux
 
-Appliquer des styles de titre sur les texte présentés comme des titres.
+Appliquer des styles de titre sur les textes présentés comme des titres.
 Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre et naviguer au sein du contenu.
 
 <img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
@@ -197,14 +196,14 @@ Une image est considérée comme décorative lorsqu'elle n'apporte pas d’infor
 Il est recommdandé de masquer ces éléments aux utilisateurs de lecteur d'écran.
 
 Les bénéfices : 
-- Alléger la vocalisation, en évitant la lecture d’information inutile à la compréhension du contenu.
+- Alléger la vocalisation, en évitant la lecture d’une information inutile à la compréhension du contenu.
 - Alléger la navigation clavier en supprimant des éléments inutiles du parcours clavier.
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/image-deco-1.png" class="w-50 pr-1 float-left">
 <img alt="" src="/fr/contenu-editorial/images/image-deco-2.png" class="w-50 float-left">
 <figcaption class="figure-caption">
-Exemples d'images décoratives, dans ces contextes, le personnages ou la pied de table n'apportent pas d'informations.
+Exemples d'images décoratives, dans ces contextes, le personnages ou le pied de table n'apportent pas d'informations.
 Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
 </figcaption>
 </figure>
@@ -223,7 +222,7 @@ Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
 
 ## Indiquer la langue principale du document
   
-Définir la langue d'un document permettra aux synthèses vocale d'adapter leur vocalisation par rapport à la langue du contenu.
+Définir la langue d'un document permettra aux synthèses vocales d'adapter leur vocalisation par rapport à la langue du contenu.
 
 *La procédure :*
 1. Sélectionner « lecteur – modifier les propriétés du lecteur ».
