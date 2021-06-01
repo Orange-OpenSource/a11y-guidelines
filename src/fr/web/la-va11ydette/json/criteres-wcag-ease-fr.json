@@ -1,6 +1,4 @@
-{
-	"name": "Audit de conformité WCAG / WEB",			 
-	"items":[{
+[{
 		"themes": "Formulaire",
 		"title": "Chaque champ de formulaire possède-t-il une étiquette&nbsp;?",
 		"ID": "testID-001",
@@ -680,4 +678,4 @@
 		"verifier": "<p>Vérifier tous les composants standards (ex&nbsp;: éléments de formulaire) et créés via JavaScript (ex&nbsp;: menu déroulant)&nbsp;: </p><ul><li>chaque composant personnalisé utilise un rôle ARIA approprié (se référer au <span lang=\"en\">design pattern</span> du composant pour valider)</li><li>pour les composants dont l'utilisateur peut changer la valeur ou l'état, ces propriétés peuvent être également définies depuis un outil d'assistance (ex&nbsp;: cocher ou décocher une case à cocher)</li><li>à chaque changement d'état, l'utilisateur est notifié via son outil d'assistance (exemple valide&nbsp;: le lecteur d'écran notifie&nbsp;: «&nbsp;coché&nbsp;» ou «&nbsp;non coché&nbsp;»)</li></ul>",
 		"resultatTest": "nt"
 	}
-]}
+]

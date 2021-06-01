@@ -1,0 +1,548 @@
+[{
+		"themes": "Input screen",
+		"title": "Does every input field in the form have a label?",
+		"ID": "testID-001",
+		"IDorigin": "testID-001",
+		"wcag": {
+			"0": "1.3.1 A",
+			"1": "2.4.6 AA",
+			"2": "3.3.2 A"
+		},
+		"verifier": "<p> Verify that the label name (<code> TextField </code>) of each input field is defined and appropriate.</p>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "Are the form elements grouped where it is necessary?&nbsp;?",
+		"ID": "testID-002",
+		"IDorigin": "testID-002",
+		"wcag": {
+			"0": "1.3.1 A",
+			"1": "3.3.2 A"
+		},
+		"verifier": "<p> Are the elements grouped when it is necessary, for example : </p> <ul> <li> for an address (street, postal code, city, etc. fields) </li> <li> for a list of <code> Switch </code> </li>  </ul>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "Are the required input fields clearly identified&nbsp;?",
+		"ID": "testID-003",
+		"IDorigin": "testID-003",
+		"wcag": {
+			"0": "1.3.1 A",
+			"1": "3.3.2 A"
+		},
+		"verifier": "<ul><li>Verify that color is not used as the only visual means for identifying that a form element is required (ex&nbsp;: asterisk).</li><li>Verify that the requirement is properly vocalized with voice navigation.</li><li>Check that the form cannot be validated if the mandatory field is not filled in.</li></ul>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "For the input fields which require a specific data format, is this expected data format clearly communicated to the user&nbsp;?",
+		"ID": "testID-004",
+		"IDorigin": "testID-004",
+		"wcag": {
+			"0": "3.3.2 A"
+		},
+		"verifier": "<ul><li>Check that the input format is present visually, and that its position allows it to be associated with the appropriate field.</li><li>Check that the input format is vocalized with VoiceOver.</li></ul>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "Are the fields in error identifiable&nbsp;?",
+		"ID": "testID-006",
+		"IDorigin": "testID-006",
+		"wcag": {
+			"0": "3.3.1 A"
+		},
+		"verifier": "<p> Check that the field in error is modified (ex & nbsp;: addition of the mention « & nbsp; error & nbsp;», addition of an icon, change of the field in red color). </p>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "Are the error messages explicit&nbsp;?",
+		"ID": "testID-007",
+		"IDorigin": "testID-007",
+		"wcag": {
+			"0": "3.3.1 A"
+		},
+		"verifier": "<p>Check that an error message is present visually, and that it allows the field in error to be precisely identified and the nature of the error to be understood.</p>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "If an error is detected, is a suggestion for correction provided to the user&nbsp;?",
+		"ID": "testID-008",
+		"IDorigin": "testID-008",
+		"wcag": {
+			"0": "3.3.3 AA"
+		},
+		"verifier": "<p>Check that the error messages give the information necessary about how to correct the errors.</p>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Input screen",
+		"title": "For each input screen requiring sensitive or personal data, does the user have control over their data?&nbsp;?",
+		"ID": "testID-009",
+		"IDorigin": "testID-009",
+		"wcag": {
+			"0": "3.3.4 AA"
+		},
+		"verifier": "<p>For input screen that:&nbsp;:</p><ul><li>modify or delete data,</li><li>submit user test responses,\n</li><li>cause legal commitments (validate terms of service) or financial transactions (online shopping) for the user to occur,</li></ul><p>the user can modify or cancel before and after validation unless the validation is explicit (e.g. use of checkbox).</p>",
+		"group": "Écran de saisie",
+		"resultatTest": "nt"
+	},{
+		"themes": "Headers",
+		"title": "Does the screen have a visible title?",
+		"ID": "testID-010",
+		"IDorigin": "testID-010",
+		"wcag": {
+			"0": "2.4.2 A"
+		},
+		"verifier": "<p>Verify that the <code>UIView</code> title is visible.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Headers",
+		"title": "Does the screen have a unique title?",
+		"ID": "testID-011",
+		"IDorigin": "testID-011",
+		"wcag": {
+			"0": "2.4.2 A"
+		},
+		"verifier": "<p>Verify that the title of the<code>UIView</code>  is unique. A common error is to use the same title for the whole application.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Headers",
+		"title": "Does the screen have a relevant title?",
+		"ID": "testID-012",
+		"IDorigin": "testID-012",
+		"wcag": {
+			"0": "2.4.2 A"
+		},
+		"verifier": "<p>Verify that the page context is understandable with the<code>UIView</code> title</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Colors and constrasts",
+		"title": "Is there sufficient contrast between the text color and the background color (except for special cases)?&nbsp;?",
+		"ID": "testID-013",
+		"IDorigin": "testID-013",
+		"wcag": {
+			"0": "1.4.3 AA"
+		},
+		"verifier": "<p>Verify that the contrast is sufficient in order that the information communicated by the text can be understood.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Colors and constrasts",
+		"title": "Is there sufficient contrast between the colors that are used in the interface components or graphic elements which convey information&nbsp?",
+		"ID": "testID-014",
+		"IDorigin": "testID-014",
+		"wcag": {
+			"0": "1.4.11 AA"
+		},
+		"verifier": "<p>Verify that images of text, as well as graphics, icons and interactive components have a minimum contrast ratio of 3:1 in order to communicate the information</p>",
+		"resultatTest": "nt",
+		"exception": "<ul><li>les logos</li><li>si un texte apporte la même information que l'icône ou le graphique</li><li>si le manque de contraste de l'image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>"
+	},{
+		"themes": "Colors and constrasts",
+		"title": "Is the information also conveyed to the user by a means other than colour?&nbsp;?",
+		"ID": "testID-015",
+		"IDorigin": "testID-015",
+		"wcag": {
+			"0": "1.4.1 A"
+		},
+		"verifier": "<p>Verify that color is not the only means for conveying information&nbsp;:</p><ul><li>information can also be obtained from a text element</li><li>at least one other visual means is available to provide the same information (e.g&nbsp;: cons that are different colors, as well as having different shapes).</li></ul>"
+	},{
+		"themes": "Colors and constrasts",
+		"title": "Is the information also transmitted to the user by a means other than a sensory characteristic&nbsp;?",
+		"ID": "testID-016",
+		"IDorigin": "testID-016",
+		"wcag": {
+			"0": "1.3.3 A"
+		},
+		"verifier": "<p>Check that the information conveyed by using sensory characteristics (shape, size, position, orientation, sound) is also available in text or a message.</p>"
+	},{
+		"themes": "Elements magnification",
+		"title": "Can the text be enlarged without loss of content or functionality?",
+		"ID": "testID-017",
+		"IDorigin": "testID-017",
+		"wcag": {
+			"0": "1.4.4 AA",
+			"1": "1.4.10 AA"
+		},
+		"verifier": "<p>Verify that there is no loss of information (no unusable, truncated or hidden content or functionality) as a result of enlarging the text size to 200%.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are all the significant elements vocalized?",
+		"ID": "testID-018",
+		"IDorigin": "testID-018",
+		"wcag": {
+			"0": "1.1.1 A"
+		},
+		"verifier": "<p>Verify that all significant elements are vocalized and accessible using Voice navigation.</p><ul><li>Each element has a relevant vocalisation (especially on informative images and which have no text initially)..</li><li>Each interactive element is vocalized with the associated action.</li><li>The title of the activity is vocalized.</li><li>Does each row of a list have a relevant and unique description?</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Is the order of vocalisation of the elements logical and understandable?",
+		"ID": "testID-019",
+		"IDorigin": "testID-019",
+		"wcag": {
+			"0": "1.3.2 A",
+			"1": "2.4.3 A"
+		},
+		"verifier": "<p>Verify that the elements follow a logical and understandable order using voice navigation.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are the linked elements gathered in the same announcement block for vocalization?",
+		"ID": "testID-020",
+		"IDorigin": "testID-020",
+		"wcag": {
+			"0": "1.3.1 A"
+		},
+		"verifier": "<p>Check that the linked elements are vocalized in a single block:</p><ul><li>lare the linked elements gathered in the same announcement block for vocalization?</li><li>does the multidimensional information respect a good balance between the number of blocks and the content within each block?</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are the section headers used in the header-based voice navigation?",
+		"ID": "testID-022",
+		"IDorigin": "testID-022",
+		"wcag": {
+			"0": "2.4.6 AA"
+		},
+		"verifier": "<p>Verify that with VoiceOver voice navigation and the header navigation setting set:</p><ul><li>all section headers are navigable and vocalized</li><li>only headers are navigable and vocalized</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are content changes vocalized?",
+		"ID": "testID-023",
+		"IDorigin": "testID-023",
+		"wcag": {
+			"0": "1.1.1 A"
+		},
+		"verifier": "<p>Verify that using voice navigation, the content changes are vocalized to the user:</p><ul><li>the opening of (<code>pop-up</code>) s vocalized</li><li>the opening of a new screen (UIView) is vocalized by its title</li><li>the change of a part of the screen (such as a fragment that changes) is vocalizede</li><li>horizontal scrolling is vocalized</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are status or contextual messages correctly rendered?",
+		"ID": "testID-049",
+		"IDorigin": "testID-049",
+		"wcag": {
+			"0": "4.1.3 AA"
+		},
+		"verifier": "<p>Verify that a mechanism based on live regions is implemented:\n</p><ul><li>temporary messages are vocalized</li><li>the change of an element is vocalized if it is useful for the user to be informed about it</li><li>the progress of a content update is vocalized</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are element states vocalized?",
+		"ID": "testID-024",
+		"IDorigin": "testID-024",
+		"wcag": {
+			"0": "4.1.2 A"
+		},
+		"verifier": "<p>Check that element states are vocalized (tabs, checkbox, radio button, etc).</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are the visible elements the only ones vocalized?",
+		"ID": "testID-025",
+		"IDorigin": "testID-025",
+		"wcag": {
+			"0": "1.1.1 A"
+		},
+		"verifier": "<p>Verify that there are no ghost elements using voice navigation.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Are decorative elements ignored when using voice navigation?",
+		"ID": "testID-026",
+		"IDorigin": "testID-026",
+		"wcag": {
+			"0": "1.1.1 A"
+		},
+		"verifier": "<p>Check that decorative elements (such as certain images) are not vocalized.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Voice navigation",
+		"title": "Does the vocalization of a text contain at least its label visible on the screen?",
+		"ID": "testID-051",
+		"IDorigin": "testID-051",
+		"wcag": {
+			"0": "2.5.3 A"
+		},
+		"verifier": "<p>Check that the element's label is present (first if possible) in the vocalization of this component. Not applicable if the element has no visible label (icon without text for example).</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Selection control",
+		"title": "Is all functionality of the page content operable through a selection control?",
+		"ID": "testID-027",
+		"IDorigin": "testID-027",
+		"wcag": {
+			"0": "2.1.1 A"
+		},
+		"verifier": "<p>Check that:</p><ul><li>all features are available using selection control</li><li>only interactive elements are accessible using selection control</li><li>elements are gathered when they are linked (e.g : contents within a clickable row in a list)</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Selection control",
+		"title": "The screen does not contain keyboard traps&nbsp;? ",
+		"ID": "testID-028",
+		"IDorigin": "testID-028",
+		"wcag": {
+			"0": "2.1.2 A"
+		},
+		"verifier": "<p>Check that the screen does not contain keyboard traps.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Selection control",
+		"title": "Is the order in which focusable components receive focus logical and consistent&nbsp;?",
+		"ID": "testID-029",
+		"IDorigin": "testID-029",
+		"wcag": {
+			"0": "2.4.3 A"
+		},
+		"verifier": "<p>Check that the focus order of the elements (buttons, links, form fields) is consistent and logical (usually equivalent to the visual order).</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Selection control",
+		"title": "When focus is received, is there a visible focus indicator&nbsp;?",
+		"ID": "testID-030",
+		"IDorigin": "testID-030",
+		"wcag": {
+			"0": "2.4.7 AA"
+		},
+		"verifier": "<p>Check that the focus is clearly and easily visible.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Is there an alternative for actions triggered by device motion or user motion?",
+		"ID": "testID-031",
+		"IDorigin": "testID-031",
+		"wcag": {
+			"0": "2.5.4 A"
+		},
+		"verifier": "<ul><li>check that these actions can also be operated by user interface components (e.g.&nbsp;: button).</li><li>check that it is possible to disable the motion detection.</li></ul>",
+		"resultatTest": "nt",
+		"exception": "<p>Le mouvement est essentiel à l'accomplissement de la fonctionnalité (ex.&nbsp;: podomètre)</p>"
+	},{
+		"themes": "Common navigation",
+		"title": "Do multipoint or path-based gestures have an alternative that can be operated with a single pointer without a path-based gesture&nbsp;? (exemple zoom map)",
+		"ID": "testID-032",
+		"IDorigin": "testID-032",
+		"wcag": {
+			"0": "2.5.1 A"
+		},
+		"verifier": "<p>Check that for any multipoint gesture (requiring several fingers) and / or requiring path-based gestures, an alternative is available that requires only a single pointer (a single finger) and without a path-based gesture. Zoom functionality on a map: (+ / -) buttons are available, as an alternative to a two-finger pinch.</p>",
+		"resultatTest": "nt",
+		"complement": "<h4>Exemple</h4><p><stong>Zoom sur une carte&nbsp;: </strong>des boutons (+ / -) sont disponibles, en alternative au pincé.</p>"
+	},{
+		"themes": "Common navigation",
+		"title": "Can click (or touch) errors be cancelled?&nbsp;?",
+		"ID": "testID-033",
+		"IDorigin": "testID-033",
+		"wcag": {
+			"0": "2.5.2 A"
+		},
+		"verifier": "<p>It must be possible to cancel actions triggered by a single pointer input that operates with one point of contact with the screen (e.g. single taps and clicks, double-taps and clicks)&nbsp;:</p><ul><li>check that no action is triggered on the down-event (as soon as you touch or press an element) and that it is possible to abort the action by lifting the pointer outside that element.</li><li>if an action is triggered when an element is pressed, check that it is cancelled as soon as the pointer is released.</li><li>for complex actions (e.g. drag and drop), check that the user can cancel the action before completing the process through, for example, a confirmation dialog.</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Is the content displayed regardless of the screen orientation (portrait or landscape)?&nbsp;?",
+		"ID": "testID-034",
+		"IDorigin": "testID-034",
+		"wcag": {
+			"0": "1.3.4 AA"
+		},
+		"verifier": "<p>Check that the content and functionalities are available in both orientations (no loss of information, no truncated elements).</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Do the clickable elements have a sufficiently large click area?",
+		"ID": "testID-050",
+		"IDorigin": "testID-050",
+		"wcag": {
+			"0": "2.5.5 AAA"
+		},
+		"verifier": "<p>Check that :</p><ul><li>interactive elements have sufficient click area</li><li>interactive elements have a margin that separates them from other elements or the edges of the screen.</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Are all elements that have the same function named identically?",
+		"ID": "testID-035",
+		"IDorigin": "testID-035",
+		"wcag": {
+			"0": "3.2.4 AA"
+		},
+		"verifier": "<p>Check that components that have the same function are named identically from one screen to another, and within the same screen if a component is repeated.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Does an UI with a time limit have an adaptable timeframe? (time limite) (exemple de netflix)",
+		"ID": "testID-036",
+		"IDorigin": "testID-036",
+		"wcag": {
+			"0": "2.2.1 A"
+		},
+		"verifier": "<p>Check that the delay causing an automatic context change (for example, the control overflow of a video that disappears after a few seconds) is adaptable directly from the application.</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Are the texts easy to read?",
+		"ID": "testID-037",
+		"IDorigin": "testID-037",
+		"wcag": {
+			"0": "1.4.12 AA"
+		},
+		"verifier": "<p>Check that:</p><ul><li>texts have a sufficient size to be read easily</li><li>the font used is sans serif</li><li>text is not in italic</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Does the user have control over context changes?",
+		"ID": "testID-038",
+		"IDorigin": "testID-038",
+		"wcag": {
+			"0": "3.2.1 A",
+			"1": "3.2.2 A"
+		},
+		"verifier": "<p>When using forms or any interactive component, check that there is no change of context&nbsp;:</p><ul><li>when a component receives focus</li><li>when entering data</li><li>when activating a form element other than a button</li></ul>",
+		"resultatTest": "nt",
+		"complement": "<h4>Changement de contexte</h4><p>Changement majeur dans le contenu de l'écran qui, lorsqu'il est effectué à l'insu de l'utilisateur, peut désorienter les utilisateurs incapables d'afficher la page dans sa totalité.</p>"
+	},{
+		"themes": "Common navigation",
+		"title": "For any moving, scrolling, blinking information that lasts more than five seconds or updated content, start automatically, is there a mechanism for the user to pause, stop, or hide it&nbsp;?",
+		"ID": "testID-039",
+		"IDorigin": "testID-039",
+		"wcag": {
+			"0": "2.2.2 A"
+		},
+		"verifier": "<p>Not applicable, if no movement, scrolling or flashing lasts more than 5 seconds</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "There should be no blinking or flashing at speeds of 3 per second or more.",
+		"ID": "testID-040",
+		"IDorigin": "testID-040",
+		"wcag": {
+			"0": "2.3.1 A"
+		},
+		"verifier": "<p>Not applicable, if the flashes flash less than 3 times per second or on a very small area </p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "The navigation mechanism is consistent with the other screens.",
+		"ID": "testID-056",
+		"IDorigin": "testID-050",
+		"wcag": {
+			"0": "3.2.3 AA"
+		},
+		"verifier": "<p>Check that the navigation mechanisms are always located in the same place in a set of screens (between the different activities of the application).</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "No image is used to display text?",
+		"ID": "testID-052",
+		"IDorigin": "testID-052",
+		"wcag": {
+			"0": "1.4.5 AA"
+		},
+		"verifier": "<p>Check that images and graphics elements are not used to display text.(Except for special cases : e.g. logo, captcha, tradename).</p>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Common navigation",
+		"title": "Is each link label explicit, at least if the user takes its context into consideration?",
+		"ID": "testID-054",
+		"IDorigin": "testID-054",
+		"wcag": {
+			"0": "2.4.4 A"
+		},
+		"verifier": "<p>The user should be able to determine if they wish to follow a link without having to move around the screen to understand what it is.</p><ul><li>check that there are not any identical labels pointing to different locations (URLs)</li><li>check that it is possible to determine the action or destination of a link or button given only its accessible name</li><li>if this is not the case, check that the target of a link or the action of a button may be inferred from its context.</li></ul>",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "For pre-recorded audio-only media: is an equivalent text transcript provided&nbsp;?",
+		"ID": "testID-041",
+		"IDorigin": "testID-041",
+		"wcag": {
+			"0": "1.2.1 A"
+		},
+		"verifier": "<p>Check that a complete transcript (text containing all the auditory information) is provided as text.<br>This text transcript should be&nbsp;:</p><ul><li>présente dans l'écran</li><li>or available via a link immediately next to the link to the audio clip</li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "Pre-recorded video-only media without audio&nbsp;: is a text transcript or an audio track that presents equivalent information provided&nbsp;?",
+		"ID": "testID-042",
+		"IDorigin": "testID-042",
+		"wcag": {
+			"0": "1.2.1 A"
+		},
+		"verifier": "<p>Check that a complete transcript (text that provides an equivalent to what is presented visually) is provided as text.<br>This text transcript should be&nbsp;: </p><ul><li>present in the screen</li>\n<li>or available via a link immediately next to the link to the video clip</li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "Pre-recorded video (with or without audio)&nbsp;: is a text transcript or an audio description provided&nbsp;?",
+		"ID": "testID-043",
+		"IDorigin": "testID-043",
+		"wcag": {
+			"0": "1.2.3 A"
+		},
+		"verifier": "<ul><li>Check that a complete transcript (all of the information - both visual and auditory - in text form) is provided as text.<br>This text transcript should be&nbsp;: <ul><li>present in the screen</li><li>or available via a link immediately next to the link to the video clip</li></ul></li><li>Or for all video content, check that an audio description is provided<ul><li>check that the audio description is synchronized correctly</li><li>check that the audio description does not conflict with the audio track of the video (no loss of information)</li><li>check that the audio description is appropriate</li></ul></li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "Pre-recorded video (with or without audio)&nbsp;: is an audio description provided&nbsp;?",
+		"ID": "testID-044",
+		"IDorigin": "testID-044",
+		"wcag": {
+			"0": "1.2.5 AA"
+		},
+		"verifier": "<ul><li>check that an audio description is provided for all video content.</li><li>check that the audio description is synchronized correctly.</li><li>check that the audio description does not conflict with the audio track of the video (no loss of information).</li><li>check that the audio description is appropriate.</li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "Pre-recorded video with audio: are captions provided for all the content&nbsp;?",
+		"ID": "testID-045",
+		"IDorigin": "testID-045",
+		"wcag": {
+			"0": "1.2.2 A"
+		},
+		"verifier": "<ul><li>check that captions are available for all video with audio content.</li><li>check that the captions are relevant (providing all of the information needed to understand the content, such as the identity of the speakers).</li><li>check that the captions are not covering important information in the video.</li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "Live video content with audio: are captions provided for all the content&nbsp;?",
+		"ID": "testID-046",
+		"IDorigin": "testID-046",
+		"wcag": {
+			"0": "1.2.4 AA"
+		},
+		"verifier": "<ul><li>check that captions are available.</li><li>check that the captions are relevant (providing all of the information needed to understand the content, such as the identity of the speakers).</li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt",
+		"complement": "<h4>Sous-titres transcrits</h4><p>Les sous-titres ne communiquent pas uniquement les dialogues, mais également toutes les autres informations audio nécessaires à la compréhension du contenu (ex&nbsp;: identifications des interlocuteurs, effets sonores…).</p>"
+	},{
+		"themes": "Multimedia",
+		"title": "If any audio plays automatically for more than 3 seconds, does the user have a mechanism to control it&nbsp;?",
+		"ID": "testID-047",
+		"IDorigin": "testID-047",
+		"wcag": {
+			"0": "1.4.2 A"
+		},
+		"verifier": "<ul><li>possible to pause or stop the sound.</li><li>possible to control audio volume independently from the overall system volume level.</li></ul>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	},{
+		"themes": "Multimedia",
+		"title": "Are there controls to interact with a media (pause, stop, volume, subtitles, etc...)?",
+		"ID": "testID-048",
+		"IDorigin": "testID-048",
+		"wcag": {
+			"0": "2.2.2 A"
+		},
+		"verifier": "<p>Verify that controls are displayed to interact with audio media, or video media.</p>",
+		"group": "Multimédia",
+		"resultatTest": "nt"
+	}
+]

@@ -75,6 +75,7 @@ module.exports = {
           { label: 'Design', href: '/en/mobile/ios/design/' },
           { label: 'Develop', href: '/en/mobile/ios/development/' },
           { label: 'Test', href: '/en/mobile/ios/test/' },
+          { label: 'Evaluate', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
@@ -161,6 +162,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/ios/conception/' },
           { label: 'Développer', href: '/fr/mobile/ios/developpement/' },
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
+          { label: 'Évaluer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
