@@ -1,0 +1,13 @@
+{
+  "displayToc": true,
+  "sideNavigationLinks": [
+    {
+      "label": "Storyline 360",
+      "href": "/fr/contenu-editorial/e-learning/"
+    },
+    {
+      "label": "Momindum Maker",
+      "href": "/fr/contenu-editorial/e-learning/momindum/"
+    }  
+  ]
+}
