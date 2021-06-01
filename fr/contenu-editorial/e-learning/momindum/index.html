@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Comment tester l&#39;accessibilité d&#39;une présentation PowerPoint - Recommandations accessibilité numérique Orange</title>
+    <title>Momindum Maker - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -133,7 +133,7 @@
   Word
 </a>
             </li><li class="nav-item">
-              <a href="/fr/contenu-editorial/powerpoint/" class="nav-link active" aria-current="true">
+              <a href="/fr/contenu-editorial/powerpoint/" class="nav-link">
   Powerpoint
 </a>
             </li><li class="nav-item">
@@ -149,7 +149,7 @@
   Contenus audios/vidéos
 </a>
             </li><li class="nav-item">
-              <a href="/fr/contenu-editorial/e-learning/" class="nav-link">
+              <a href="/fr/contenu-editorial/e-learning/" class="nav-link active" aria-current="true">
   E-learning
 </a>
             </li></ul>
@@ -177,12 +177,12 @@
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/contenu-editorial/powerpoint/">Powerpoint</a>
+          <a href="/fr/contenu-editorial/e-learning/">E-learning</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Comment tester l&#39;accessibilité d&#39;une présentation PowerPoint
+          Momindum Maker
         </li>
       </ol>
 </nav>
@@ -193,10 +193,10 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
         Thématiques
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/contenu-editorial/powerpoint/" class="nav-link dropdown-item">
-  Créer une présentation PowerPoint accessible
-</a><a href="/fr/contenu-editorial/powerpoint/tester/" class="nav-link dropdown-item active" aria-current="page">
-  Tester l&#39;accessibilité de votre présentation PowerPoint
+      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/contenu-editorial/e-learning/" class="nav-link dropdown-item">
+  Storyline 360
+</a><a href="/fr/contenu-editorial/e-learning/momindum/" class="nav-link dropdown-item active" aria-current="page">
+  Momindum Maker
 </a></div>
     </nav>
         
@@ -204,7 +204,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#tests-automatiques" class="dropdown-item text-wrap">Tests automatiques</a><a href="#verifications-des-contrastes-de-couleurs" class="dropdown-item text-wrap">Vérifications des contrastes de couleurs</a><a href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" class="dropdown-item text-wrap">Tests avec les synthèses vocales JAWS et NVDA</a><a href="#autres-tests-manuels" class="dropdown-item text-wrap">Autres tests manuels</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#proprietes-du-projet" class="dropdown-item text-wrap">Propriétés du projet</a><a href="#proposer-des-alternatives-aux-pistes-audios-et-videos" class="dropdown-item text-wrap">Proposer des alternatives aux pistes audios et vidéos</a><a href="#definir-un-plan" class="dropdown-item text-wrap">Définir un plan</a><a href="#quizz" class="dropdown-item text-wrap">Quizz</a><a href="#defauts-daccessibilites" class="dropdown-item text-wrap">Défauts d&#39;accessibilités</a></div>
     </nav>
         
       </div>
@@ -218,12 +218,12 @@
               <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
       <h2 id="side-navigation-label">Thématiques</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="/fr/contenu-editorial/powerpoint/" class="nav-link text-muted">
-  Créer une présentation PowerPoint accessible
+            <a href="/fr/contenu-editorial/e-learning/" class="nav-link text-muted">
+  Storyline 360
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/fr/contenu-editorial/powerpoint/tester/" class="nav-link text-muted active" aria-current="page">
-  Tester l&#39;accessibilité de votre présentation PowerPoint
+            <a href="/fr/contenu-editorial/e-learning/momindum/" class="nav-link text-muted active" aria-current="page">
+  Momindum Maker
 </a>
           </li></ul>
     </nav>
@@ -232,24 +232,77 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Comment tester l'accessibilité d'une présentation PowerPoint</h1>
-<h2 id="tests-automatiques">Tests automatiques <a class="header-anchor" href="#tests-automatiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.<br>
-<strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong></p>
-<img alt="" src="/fr/contenu-editorial/images/word_verification_fr.png" class="img-fluid" />
-<p><strong>Important :</strong> si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format « .pptx » avec la case « compatibilité avec les versions précédentes » décochée.</p>
-<h2 id="verifications-des-contrastes-de-couleurs">Vérifications des contrastes de couleurs <a class="header-anchor" href="#verifications-des-contrastes-de-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes.</p>
-<img alt="" src="/fr/contenu-editorial/images/cca.png" class="img-fluid" />  
-<h2 id="tests-avec-les-syntheses-vocales-jaws-et-nvda">Tests avec les synthèses vocales JAWS et NVDA <a class="header-anchor" href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.<br>
-Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.</p>
-<p><a href="/fr/web/outils/methodes-et-outils-de-test/navigation-lecteur-ecran">Apprendre la navigation vocale avec JAWS et NVDA</a></p>
-<h2 id="autres-tests-manuels">Autres tests manuels <a class="header-anchor" href="#autres-tests-manuels" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint :</p>
+          <h1>Recommandations Momindum Maker</h1>
+<p>Les bonnes pratiques détaillées dans cet article s'appliquent à l'outil <em>Momindum Maker</em>, permettant de créer des présentations vidéos à partir d'un document <em>Powerpoint</em>.<br>
+Il est donc impératif en pré-requis d'appliquer <a href="http://localhost:8080/fr/contenu-editorial/powerpoint/">les recommandations Powerpoint</a> sur le document servant de base à la présentation.</p>
+<h2 id="proprietes-du-projet">Propriétés du projet <a class="header-anchor" href="#proprietes-du-projet" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Renseigner au minimum le titre et la langue.</p>
 <ul>
-<li><a href="/fr/contenu-editorial/grille_eval_AXS_PPT_V2.xlsx">Grille d'évaluation PowerPoint</a> (16 Ko)</li>
-<li><a href="/fr/contenu-editorial/grille_eval_AXS_WORD_V1.xlsx">Grille d'évaluation Word</a> (16 Ko)</li>
+<li>
+<p><em>Titre du projet</em><br>
+Le titre du projet est repris dans le <em>titre de page</em> et en <em>titre principal</em>.<br>
+Ce sont 2 éléments très importants pour les utilisateurs de lecteur d’écran.</p>
+</li>
+<li>
+<p><em>Langue</em><br>
+Le choix de langue définit la traduction des éléments de navigation (ex : lecture / pause, menu de navigation, etc…).</p>
+</li>
+</ul>
+<p><img alt="" src="/fr/contenu-editorial/images/titre-presentation.png" class="img-fluid" />   </p>
+<h2 id="proposer-des-alternatives-aux-pistes-audios-et-videos">Proposer des alternatives aux pistes audios et vidéos <a class="header-anchor" href="#proposer-des-alternatives-aux-pistes-audios-et-videos" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p><em>Sous-titres</em></p>
+<ul>
+<li><em>Proposer des sous-titres</em> en alternative de la piste audio (la transcription automatique est adaptée, ou des sous-titres .SRT).</li>
+<li><em>Ne pas proposer des sous-titres incrustés</em> dans la vidéo.</li>
+</ul>
+</li>
+<li>
+<p><em>Transcription</em></p>
+<ul>
+<li>Proposer une transcription complète de la vidéo sous forme d’un fichier texte (txt, word, html)</li>
+<li>Veiller à renseigner un titre compréhensible pour le document</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="/fr/contenu-editorial/images/momindum-alternative.png" class="img-fluid" />   </p>
+<h2 id="definir-un-plan">Définir un plan <a class="header-anchor" href="#definir-un-plan" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p><em>Le système de plan généré par Momindum est accessible.</em><br>
+Il peut notamment être utilisé depuis une navigation clavier ou un lecteur d'écran, et s'avérer très utile pour la navigation au sein de la présentation.</p>
+</li>
+<li>
+<p>Il est impératif que les libellés soient pertinents.</p>
+</li>
+</ul>
+<p><img alt="" src="/fr/contenu-editorial/images/momindum-plan.png" class="img-fluid" />   </p>
+<h2 id="quizz">Quizz <a class="header-anchor" href="#quizz" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les quizz Momindum sont utilisables (voir néanmoins les remarques dans le paragraphe <a href="/fr/contenu-editorial/e-learning/momindum/#defauts-daccessibilites">défauts d'accessibilités</a>.</p>
+<ul>
+<li>Proposer néanmoins <em>le résultat sous forme de texte</em>, car l’information (bonne / mauvaise réponse) est donnée uniquement par la couleur (elle sera non perçue par les utilisateurs non-voyants ou malvoyants).</li>
+</ul>
+<p><img alt="" src="/fr/contenu-editorial/images/momindum-quizz.png" class="img-fluid" />   </p>
+<h2 id="defauts-daccessibilites">Défauts d'accessibilités <a class="header-anchor" href="#defauts-daccessibilites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Si des bonnes pratiques peuvent rendre utilisable une présentation Momindum Maker, des défauts impactants pour les utilisateurs finaux sont tout de même à relever :</p>
+<ul>
+<li>
+<p><em>Lecture automatique :</em><br>
+Les actions lecture / pause  ne sont pas possibles depuis une navigation clavier.<br>
+Il s’avère donc nécessaire de proposer une lecture automatique, contrairement aux recommandations habituelles, afin de ne pas bloquer les utilisateurs clavier.</p>
+</li>
+<li>
+<p><em>Quizz :</em><br>
+Il est possible de répondre au quizz depuis une aide technique, cependant :</p>
+<ul>
+<li>La perception des réponses devrait être améliorée.<br>
+Des utilisateurs de lecteur d’écran pourraient ne pas les percevoir selon leur mode de navigation.</li>
+<li>La sélection des réponses se fait systématiquement sous la forme de case à cocher.<br>
+Or, lorsqu’une seule réponse est possible, le format bouton radio est plus adapté.<br>
+Les utilisateurs de lecteur d’écran pourraient être induits en erreur.</li>
+</ul>
+</li>
 </ul>
 
         </main>
@@ -259,13 +312,15 @@ Ces tests permettent de naviguer dans la même configuration que les personnes m
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sommaire</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#tests-automatiques" class="nav-link text-muted bg-200">Tests automatiques</a>
+            <a href="#proprietes-du-projet" class="nav-link text-muted bg-200">Propriétés du projet</a>
           </li><li class="nav-item position-relative">
-            <a href="#verifications-des-contrastes-de-couleurs" class="nav-link text-muted bg-200">Vérifications des contrastes de couleurs</a>
+            <a href="#proposer-des-alternatives-aux-pistes-audios-et-videos" class="nav-link text-muted bg-200">Proposer des alternatives aux pistes audios et vidéos</a>
           </li><li class="nav-item position-relative">
-            <a href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" class="nav-link text-muted bg-200">Tests avec les synthèses vocales JAWS et NVDA</a>
+            <a href="#definir-un-plan" class="nav-link text-muted bg-200">Définir un plan</a>
           </li><li class="nav-item position-relative">
-            <a href="#autres-tests-manuels" class="nav-link text-muted bg-200">Autres tests manuels</a>
+            <a href="#quizz" class="nav-link text-muted bg-200">Quizz</a>
+          </li><li class="nav-item position-relative">
+            <a href="#defauts-daccessibilites" class="nav-link text-muted bg-200">Défauts d&#39;accessibilités</a>
           </li></ul>
     </nav>
             </div>
@@ -300,7 +355,7 @@ Ces tests permettent de naviguer dans la même configuration que les personnes m
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/contenu-editorial/powerpoint/tester.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/contenu-editorial/e-learning/momindum.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
