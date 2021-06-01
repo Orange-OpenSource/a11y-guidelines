@@ -45,7 +45,7 @@ Il s'agit de permettre aux utilisateurs qui ne peuvent pas utiliser la souris (n
 
 ### Rendre le focus visible en toute circonstance
 
-La visualisation du focus permet aux utilisateurs clavier de se réperer dans leur parcours de navigation.
+La visualisation du focus permet aux utilisateurs clavier de se repérer dans leur parcours de navigation.
 
 1. Activer "Propriétes du lecteur"
 2. Sélectionner "Couleurs & effets"
@@ -58,7 +58,7 @@ La visualisation du focus permet aux utilisateurs clavier de se réperer dans le
 ### Connaitre le résultat de ses actions
 Les résultats des quizzs notamment, doivent être perçus par tous les utilisateurs.
 
-- Utiliser les composants de notifications natifs de Storyline (feedback layers)
+- Utiliser les composants de notifications natifs de Storyline (<span lang="en">feedback layers</span>)
 - Lancer une vocalisation du résultat après soumission par l’utilisateur
 <figure class="figure">
   <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid">
@@ -80,7 +80,7 @@ Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’é
 
 - D’une manière générale, s’assurer de reproduire un ordre de lecture logique (gauche à droite et de haut en bas suivant la langue utilisée). 
 - S’assurer que l’ordre des éléments permet la compréhension des informations. Par exemple, dans le cadre d’un questionnaire s’assurer que les utilisateurs tabulent ou vocalisent d’abord sur la question, puis ensuite sur les choix de réponses.
-- Si des boutons de contrôle sont utiliser (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier.
+- Si des boutons de contrôle sont utilisés (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier.
 - Eviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations.
 
 *La procédure :*
