@@ -10,7 +10,7 @@ for(var b=0;b<c.length;b++){let d=c[b].themes;for(var f,e=0;e<a.length;e++)f=a[e
 // }
 function e(a){return a=a.toLowerCase(),a=a.replace(/é|è|ê/g,"e"),a=a.replace(/ /g,"-"),a}//supprimer les doublons dans les filtres
 function f(a,b){for(var c=0;c<a.length;c++){//for (let condition of arrCond) {
-let d=a[c];if(d.name==b){let b=a.indexOf(d);a.splice(b,1)}}return a}function g(b,c){var g=JSON.parse(b),h=JSON.parse(c),j=[],k=d(g.items,h);let l=new function(){// Récupération des données
+let d=a[c];if(d.name==b){let b=a.indexOf(d);a.splice(b,1)}}return a}function g(b,c){var g=JSON.parse(b),h=JSON.parse(c),j=[],k=d(g,h);let l=new function(){// Récupération des données
 //this.refTests = refTests;
 // Retourne la liste des checkboxes
 // Retourne les tests filtrés
