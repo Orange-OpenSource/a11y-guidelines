@@ -1,6 +1,4 @@
-{
-	"name": "Audit de tests WEB",
-	"items":[{
+[{
     "themes": "Contenu textuel",
     "title": "Donner un titre aux pages",
     "type": [
@@ -183,12 +181,10 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que toutes les images possèdent un attribut <code>alt</code>",
-      "Vérifier que toutes les <code>iframe</code> et <code>frame</code> contiennent un attribut <code>title</code> non-vide"
+      "Vérifier que toutes les images possèdent un attribut <code>alt</code>"
     ],
     "resultat": [
-      "Aucune erreur relative à l'absence d'attribut <code>alt</code>",
-      "Aucune erreur relative à l'absence d'attribut <code>title</code> sur <code>frame</code> et <code>iframe</code> "
+      "Aucune erreur relative à l'absence d'attribut <code>alt</code>"
     ],
     "exception": [
       ""
@@ -258,12 +254,12 @@
 		"Examiner les cadres"
 	],
     "verifier": [
-      "Vérifier que la valeur des attributs <code>title</code> décrit la contenu ou la fonction de <code>iframe</code> ou  <code>frame</code>"
+      "Vérifier que la valeur des attributs <code>title</code> décrit la contenu ou la fonction de <code>iframe</code> ou <code>frame</code>"
     ],
     "resultat": [
       "Tous les cadres possèdent un attribut <code>title</code> pertinent"
     ],
-    "exception": "",
+    "exception": "<ul><li>Une <code>frame</code> ou <code>iframe</code> non-informative masquée convenablement n'a pas besoin de <code>title</code>.</li><li>Un <code>title</code> n'est pas requis si le contenu de l'<code>iframe</code> n'est pas distinct du contenu environnant et n'a pas d'élément tabulable à l'intérieur, et qu'on a ajouté <code>tabindex='- 1'</code> sur l'<code>iframe</code> afin qu'il ne reçoive pas le focus.</li></ul>",
     "raccourcis": "<a href='https://a11y-guidelines.orange.com/web/exemples/iframes-techniques/index.html'>Les iframes techniques</a>",
     "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
     "wcag": ["1.1.1"]
@@ -275,13 +271,13 @@
       "Test manuel"
     ],
     "tests": [
-		"Examiner les images contenant du texte"
+		"Examiner les images contenant du informatif texte"
 	],
     "verifier": [
       "Vérifier que le texte sous forme d'image ne puisse pas être mise en page via des CSS"
     ],
     "resultat": [
-      "Tous les textes sont mis en forme via CSS"
+      "Tous les  textes informatifs, si possible, sont présents dans le code et mis en forme via CSS"
     ],
     "exception": "Images essentielles (logo, captcha, marque, etc.)",
     "raccourcis": "",
@@ -305,7 +301,7 @@
     "resultat": [
       "Présence d'un transcrit complet dans la même page ou dans une  autre via un lien",
 	  "Des sous-titres sous formats texte sont présents pour toutes vidéos et restituent l’ensemble des informations de la bande son",
-      "Une audio-description est présente en complément de la bande audio, si besoin. <br/>Celle-ci présente, sous format texte, les informations convoyées uniquement par l’image."																	
+      "Une audio-description est présente en complément de la bande audio, si besoin. <br/>Celle-ci présente, sous format audio, les informations convoyées uniquement par l’image."																	
     ],
     "exception": "",
     "raccourcis": "",
@@ -374,7 +370,7 @@
   },
   {
     "themes": "Couleurs et contrastes",
-    "title": "Assurer un contraste suffisant entre texte et fond",
+    "title": "Assurer un contraste suffisant entre texte et fond / textes et images texte",
     "type": [
       "aXe"
     ],
@@ -382,21 +378,21 @@
       "Lancer aXe"
     ],
     "verifier": [
-      "Vérifier que le contraste soit suffisant pour comprendre l'information portée par tous les composants interactifs, les textes",
-      "Vérifier que les liens non-soulignés ont un rapport de contraste suffisent avec le texte environnent"
+      "Vérifier que le contraste soit suffisant pour les textes et les images texte",
+      "Vérifier que les liens non-soulignés ont un rapport de contraste suffisent avec le texte environnent et la couleur de fond"
     ],
     "resultat": [
-      "Présence d'éléments suffisamment contrastés",
-      "Présence de liens non-soulignés suffisamment contrastés"
+      "<strong>Présence d'éléments textuels ou images sous forme de texte suffisamment contrastés&nbsp;:</strong> <ul><li>Taille inférieure à <code>24px</code>&nbsp;: contraste de 4,5:1</li><li>Taille supérieure ou égale à <code>24px</code>&nbsp;: contraste de 3:1</li></ul></li><li><strong>Pour les textes gras</strong> <ul><li>Taille inférieure à <code>18,5px</code>&nbsp;: contraste de 4,5:1</li><li>Taille supérieure ou égale à <code>18,5px</code>&nbsp;: contraste de 3:1</li></ul>",
+      "Les  liens non-soulignés ont un rapport de contraste de 3:1 avec le texte environnement et la couleur de fond"
     ],
-    "exception": "Exception sur le couple de couleurs #F16E00 / #FFFFFF, pour les interface mettant en œuvre la dernière version de la brand Orange.",
+    "exception": "N'a pas d'exigence de contraste&nbsp;:<ul><li>Le texte ou les images de texte qui font partie d'un composant d'interface utilisateur inactif, qui sont une décoration pure, qui ne sont visibles par personne ou qui font partie d'une image qui contient un autre contenu visuel important,</li><li>Ainsi que du texte qui fait partie de un logo ou un nom de marque ou tout logotype</li></ul>",
     "raccourcis": "",
     "profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
     "wcag": ["1.4.3"]
   },
   {
     "themes": "Couleurs et contrastes",
-    "title": "Assurer un contraste suffisant entre texte et fond / images et composants",
+    "title": "Assurer un contraste suffisant entre texte et fond / composants",
     "type": [
       "Color Contrast Analyser"
     ],
@@ -404,12 +400,12 @@
       "Lancer le Color Contrast Analyser"
     ],
     "verifier": [
-      "Vérifier que les textes sous forme d'images, les graphiques, les icônes, et les composants interactifs ont un contraste suffisant pour transmettre l'information"
+      "Vérifier que les graphiques, les icônes, et les composants interactifs ont un contraste suffisant pour transmettre l'information"
     ],
     "resultat": [
-      "Présence de textes sous forme d'images, les objets graphiques, les icônes, et les composants interactifs suffisamment contrastés"
+      "Présence d'objets graphiques, d'icônes, et de composants interactifs ayant un contraste de 3:1"
     ],
-    "exception": "Sont exclus du périmètre  : <ul><li>les logos</li><li>si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li>si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>les composants inactifs</li></ul>",
+    "exception": "Sont exclus du périmètre&nbsp;: <ul><li> si un texte, comme un label, un tableau de donnée, apporte la même information que l’icône ou le graphique</li><li> si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li> les composants inactifs</li></ul>",
     "raccourcis": "",
     "profils": ["Développeur", "Expert Accessibilité"],
     "wcag": ["1.4.3", "1.4.11"]
@@ -429,7 +425,7 @@
     "resultat": [
       "L'information transmise par la couleur peut également être obtenue par un texte explicite",
       "L'information transmise par la couleur est complétée par une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes)",
-      "Cas particulier des liens dans du texte : s'ils ne sont pas soulignés, au focus clavier et au survol souris, fournir un autre moyen que le couleur pour les distinguer."
+      "Cas particulier des liens dans du texte : s'ils ne sont pas soulignés, au focus clavier et au survol souris, fournir un autre moyen que la couleur pour les distinguer."
     ],
     "exception": "",
     "raccourcis": "",
@@ -480,7 +476,7 @@
   },
   {
     "themes": "Navigation générale",
-    "title": "S'assurer que l'ordre de lecture du contenu ets compréhensible",
+    "title": "S'assurer que l'ordre de lecture du contenu est compréhensible",
     "type": [
       "Test manuel - Inspecteur de code"
     ],
@@ -598,10 +594,10 @@
     "tests": [
       "Lancer l'inspecteur de code du navigateur",
       "Localiser les liens (ou autre) permettant le téléchargement de documents (pdf, traitement de texte, vidéo, audio...)",
-      "Inspecter le libellé texte de ces items, <br/>Si le test ne peut être validé dès l'étape 3, inspecter les attributs <code>aria-label</code> et <code>title</code>"
+      "Inspecter le libellé texte de ces éléments"
     ],
     "verifier": [
-      "Vérifier que le nom (accessible) du lien contient&nbsp;",
+      "Vérifier que le libellé du lien contient&nbsp;",
       "le nom/titre du document",
       "le type de document&nbsp;: pdf, texte, mp3...",
       "si besoin, la langue du document",      
@@ -613,7 +609,7 @@
     "exception": "",
     "raccourcis": "",
     "profils": ["Développeur", "Expert Accessibilité"],
-    "wcag": []
+    "wcag": [""]
   },
   {
     "themes": "Navigation générale",		 																				
@@ -718,7 +714,7 @@
       "Le contenu additionnel  sans avoir besoin de déplacer le pointeur ou le focus (par exemple, avec la touche <kbd>échap.</kbd>)",
       "Le contenu additionnel  est persistant jusqu'à la suppression du focus ou du survol sur l'élément déclenchant, que l'utilisateur le fasse disparaître ou que ce contenu n'est plus valide"
     ],
-    "exception": "",
+    "exception": "Si le contenu additionnel ne masque pas de contenu informatif, le critère est non applicable",
     "raccourcis": "",
     "profils": ["Expert Accessibilité"],
     "wcag": ["1.4.13"]
@@ -745,7 +741,7 @@
   },
   {
     "themes": "Navigation générale",
-    "title": "S’assurer que l’utilisateur garde le contrôle lors des interactions - Character key shortcut",
+    "title": "S’assurer que l’utilisateur garde le contrôle lors des interactions - Raccourcis clavier",
     "type": [
       "Test manuel"
     ],
@@ -850,7 +846,7 @@
   },
   {
     "themes": "Navigation clavier",
-    "title": "Permettre d’utiliser les principales fonctionnalités de l’application au clavier",
+    "title": "Permettre l'utilisation de  l’application au clavier",
     "type": [
       "Navigation clavier"
     ],
@@ -858,7 +854,7 @@
       "Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
     ],
     "verifier": [
-      "Vérifier que l'on obtient un résultat équivalent à la navigation au moyen de la souris pour les fonctionnalités principales de la page"
+      "Vérifier que l'on obtient un résultat équivalent à la navigation au moyen de la souris pour les fonctionnalités de la page"
     ],
     "resultat": [
       "Tous les éléments interactifs sont atteignables depuis une navigation clavier",
@@ -880,7 +876,7 @@
 		"Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>"
 	],
     "verifier": [
-      "Vérifier l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est exhaustif, cohérent et logique (souvent équivalent à l'ordre visuel, haut-bas, gauche-droite)"
+      "Vérifier l'ordre de prise de focus pour les interactifs éléments (boutons, liens, champs de formulaires) est cohérent et logique (souvent équivalent à l'ordre visuel, haut-bas, gauche-droite)"
     ],
     "resultat": [
       "Le parcours clavier à travers la page est logique et fait sens, sans piège clavier"
@@ -903,7 +899,7 @@
       "Vérifier que la prise de focus par les différents éléments (boutons, liens, champs de formulaires) est suffisamment  visible"
     ],
     "resultat": [
-      "La prise de focus est visible et suffisamment contrasté (par exemple, pour la propriété CSS <code>outline</code> a une taille suffisante >1px)"
+      "La prise de focus est visible (par exemple, pour la propriété CSS <code>outline</code> a une taille suffisante >1px)"
     ],
     "exception": "",
     "raccourcis": "",
@@ -1349,5 +1345,4 @@
     "profils": ["Expert Accessibilité"],
     "wcag": ["4.1.2"]
 }
-
-]}
+]

@@ -40,3 +40,6 @@ These examples use the [Boosted](http://boosted.orange.com/) library. It is base
 
 ### Technical articles
 Technical articles on setting up web accessibility.
+
+### Orange open source solutions
+Presentation of the library [Boosted](http://boosted.orange.com/) and of the service [Confort+ (French)](https://confort-plus.orange.com/).

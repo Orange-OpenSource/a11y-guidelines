@@ -42,6 +42,23 @@ html {
  * Typography
  */
 
+a:hover, a:focus {
+  text-decoration: none;
+  color: #000;
+}
+
+h2 a:hover, h2 a:focus {
+  color: #f16e00;
+}
+
+a.text-decoration-none:hover, a.text-decoration-none:focus {
+  text-decoration: underline !important;
+}
+
+li::marker {
+  color: #000;
+}
+
 /* Citations */
 blockquote {
   quotes: "«\00A0" "\00A0»";
@@ -59,7 +76,13 @@ blockquote p::after {
   content: close-quote;
 }
 
+.nav-link:hover,.nav-link:focus {
+  text-decoration: underline;
+}
 
+#secondary-navigation .nav-link:hover, #secondary-navigation .nav-link:focus {
+  color: #000;
+}
 
 /**
  * Table Of Content and Side navigation
@@ -145,6 +168,10 @@ blockquote p::after {
   text-decoration: underline;
 }
 
+[role="contentinfo"] a:hover, [role="contentinfo"] a:focus {
+  text-decoration: none;
+}
+
 [role="contentinfo"] svg {
   fill: #fff;
 }
@@ -187,6 +214,10 @@ pre code {
 
 #search-input-toggler {
   outline-color: #ff7900;
+}
+
+#search-input-toggler:hover svg, #search-input-toggler:focus svg {   
+  fill: #fff;
 }
 
 .algolia-autocomplete {
@@ -262,8 +293,6 @@ pre code {
 .list-position-inside {
   list-style-position: inside !important;
 }
-
-
 
 /**
  * Responsive

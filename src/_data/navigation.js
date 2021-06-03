@@ -75,6 +75,7 @@ module.exports = {
           { label: 'Design', href: '/en/mobile/ios/design/' },
           { label: 'Develop', href: '/en/mobile/ios/development/' },
           { label: 'Test', href: '/en/mobile/ios/test/' },
+          { label: 'Evaluate', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
@@ -161,6 +162,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/ios/conception/' },
           { label: 'Développer', href: '/fr/mobile/ios/developpement/' },
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
+          { label: 'Évaluer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
@@ -180,7 +182,8 @@ module.exports = {
           { label: 'Powerpoint', href: '/fr/contenu-editorial/powerpoint/' },
           { label: 'Documents PDF', href: '/fr/contenu-editorial/pdf/' },
           { label: 'Emails', href: '/fr/contenu-editorial/emails/' },
-          { label: 'Contenus audios/vidéos', href: '/fr/contenu-editorial/composants-animes/' }
+          { label: 'Contenus audios/vidéos', href: '/fr/contenu-editorial/composants-animes/' },
+		  { label: 'E-learning', href: '/fr/contenu-editorial/e-learning/' }
         ]
       },
       { label: 'Articles', href: '/fr/articles/' }
@@ -189,12 +192,15 @@ module.exports = {
   footer: {
     en: [
       { label: 'Contact', href: '/en/contact' },
-      { label: 'About', href: '/en/about' }
+      { label: 'About', href: '/en/about' },
+      { label: 'Accessibility', href: '/en/accessibility' },
+      { label: 'Pre-release on Netlify', href: 'https://a11y-guidelines-orange.netlify.app/en/' }
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact' },
       { label: 'À propos', href: '/fr/a-propos' },
-      { label: 'Accessibilité', href: '/fr/accessibilite' }
+      { label: 'Accessibilité', href: '/fr/accessibilite' },
+      { label: 'Pré-version sur Netlify', href: 'https://a11y-guidelines-orange.netlify.app/fr/' }
     ]
   }
 }

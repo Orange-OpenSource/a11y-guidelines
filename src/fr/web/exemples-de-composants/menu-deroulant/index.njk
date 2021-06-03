@@ -2,8 +2,6 @@
 title: "Exemple de menu déroulant"
 abstract: "Créer un menu déroulant accessible."
 tags: componentsExamples_fr
-boostedJS: true
-popperJS: true
 ---
 
 <h1>Menu déroulant</h1>
@@ -77,14 +75,13 @@ popperJS: true
  <h2>Attributs <abbr>ARIA</abbr></h2>
  <p>Si vous n'utilisez pas un composant menu déjà accessible, vous aller devoir utiliser quelques attributs <abbr>ARIA</abbr> pour que ce menu soit correctement vocalisé au lecteur d'écran.</p>
  <p>Sur le bouton permettant d'ouvrir le menu&nbsp;:</p>
- <ul>
-   <li>L'attribut <code>aria-haspopup="true"</code> permet de faire vocaliser par le lecteur d'écran qu'il s'agit d'un menu.</li>
+ <ul>   
    <li>L'attribut <code>aria-expanded</code> avec comme valeur <code>true/false</code>, permet de faire vocaliser l'état du menu (ouvert ou fermé).</li>
 </ul>
 
 Exemple&nbsp;:
 <pre><code class="html">
-  &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
 </code></pre>
 
 <p>Sur la liste des éléments à l'intérieur du menu&nbsp;:</p>
@@ -95,7 +92,7 @@ Exemple&nbsp;:
 
 Exemple&nbsp;:
 <pre><code class="html">
-  &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
   &lt;ul role="menu"&gt;
     &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Mon panier&lt;/li&gt;
     &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Mes commandes&lt;/li&gt;

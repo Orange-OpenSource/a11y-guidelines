@@ -1,6 +1,4 @@
-{
-	"name": "Audit conformité WCAG / WEB",			 
-	"items":[{
+[{
 		"themes": "Formulaire",
 		"title": "Chaque champ de formulaire possède-t-il une étiquette&nbsp;?",
 		"ID": "testID-001",
@@ -249,7 +247,8 @@
 		"wcag": [
 			"4.1.2 A"
 		],
-		"verifier": "<p>Vérifier que la valeur des attributs <code>title</code> décrit la contenu ou la fonction de <code>iframe</code> ou <code>frame</code>.</p>",
+		"verifier": "<p>Vérifier que la valeur des attributs <code>title</code> décrit le contenu ou la fonction de <code>iframe</code> ou <code>frame</code>.</p>",
+		"exception": "<ul><li>Une <code>frame</code> ou <code>iframe</code> non-informative masquée convenablement n'a pas besoin de <code>title</code>.</li><li>Un <code>title</code> n'est pas requis si le contenu de l'<code>iframe</code> n'est pas distinct du contenu environnant et n'a pas d'élément tabulable à l'intérieur, et qu'on a ajouté <code>tabindex='- 1'</code> sur l'<code>iframe</code> afin qu'il ne reçoive pas le focus.</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Couleurs et contrastes",
@@ -316,7 +315,7 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
-		"title": "Chaque libellé de lien est-il explicite, au minimum dans son contexte&nbsp;?",
+		"title": "Chaque libellé de lien ou de bouton est-il explicite, au minimum dans son contexte&nbsp;?",
 		"ID": "testID-028",
 		"IDorigin": "testID-028",
 		"wcag": [
@@ -344,7 +343,7 @@
 			"1.4.13 AA"
 		],
 		"verifier": "<p>Le contenu apparaissant au focus ou survol&nbsp;:</p><ul><li>doit pouvoir être masqué sans déplacer le focus ou le pointeur de la souris</li><li>doit pouvoir être survolé à la souris (sans entraîner sa disparition)</li><li>doit rester affiché tant que l'utilisateur ne déclenche pas sa fermeture (en déplaçant la souris, le focus, touche <kbd>Échap</kbd>…) et tant que ce contenu reste valide</li></ul>",
-		"exception": "<p>Les contenus additionnels contrôlés par l'agent utilisateur, par exemple&nbsp;: infobulle générée par l'utilisation d'un attribut <code>title</code>.</p>",
+		"exception": "<ul><li>Les contenus additionnels contrôlés par l'agent utilisateur, par exemple&nbsp;: infobulle générée par l'utilisation d'un attribut <code>title</code>.</li><li>Si le contenu additionnel ne masque pas de contenu informatif, le critère est non applicable</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
@@ -679,4 +678,4 @@
 		"verifier": "<p>Vérifier tous les composants standards (ex&nbsp;: éléments de formulaire) et créés via JavaScript (ex&nbsp;: menu déroulant)&nbsp;: </p><ul><li>chaque composant personnalisé utilise un rôle ARIA approprié (se référer au <span lang=\"en\">design pattern</span> du composant pour valider)</li><li>pour les composants dont l'utilisateur peut changer la valeur ou l'état, ces propriétés peuvent être également définies depuis un outil d'assistance (ex&nbsp;: cocher ou décocher une case à cocher)</li><li>à chaque changement d'état, l'utilisateur est notifié via son outil d'assistance (exemple valide&nbsp;: le lecteur d'écran notifie&nbsp;: «&nbsp;coché&nbsp;» ou «&nbsp;non coché&nbsp;»)</li></ul>",
 		"resultatTest": "nt"
 	}
-]}
+]

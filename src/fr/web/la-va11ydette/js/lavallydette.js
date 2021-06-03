@@ -6,15 +6,17 @@ $('.o-nav-local').prioritynav('Autres pages');
  * @param {object} dataVallydette - Global main object, that contains all tests and result of the selected checklist.
  * @param {object} langVallydette - language object.
  * @param {object} checklistVallydette - checklists parameters (ex : url list param).
- * @param {object} dataVallydette - statement object.
+ * @param {object} issuesVallydette - issues object.
  * @param {string} globalLang - current selected language.
- * @param {string} globalTemplate - actually 2 template are available, wcag for conformity audit et audit for test audit.
+ * @param {string} globalTemplate - actually 2 templates are available, wcag for conformity audit et audit for test audit.
  * @param {number} globalVersion - Contains the last checklist version
  * @param {object} dataWCAG - Object related to matrice-wcag-ease.json, that contains the link between WCAG rules and conformity checklist tests.
  * @param {number} currentPage - Current page index, updated each time user move to another page.
  * @param {string} statutClass - Default class used by the html element displaying a test result.
  * @param {array} arrayFilterNameAndValue - Initialization of filter labels and values.
  * @param {array} arrayFilterActivated - Array that contains all the activated filters from the frontend component menu.
+ * @param {array} arrayProfileActivated - Array that contains all the activated profiles from the frontend filter menu (from audit mode).
+ * @param {array} arrayTypeActivated - Array that contains all the activated types from the frontend filter menu (from audit mode).
  * @param {string} currentCriteriaListName - Selected checklist json file name.
  * @param {object} htmlContextualMenuContent - Contextual page menu (edit page name, delete a page).
  * @param {object} htmlFilterContent - Test filter menu.
@@ -23,11 +25,6 @@ $('.o-nav-local').prioritynav('Autres pages');
 var dataVallydette;
 var langVallydette;
 var checklistVallydette;
-var dataVallydette;
-   
-/**
- * @todo add comment
- */
 var issuesVallydette;
 
 var globalLang;
@@ -42,17 +39,14 @@ var statutClass = "badge-light";
 var arrayFilterNameAndValue = [];
 var arrayFilterActivated = [];
 
-/**
- * @todo add comment
- */
 var arrayProfileActivated = [];
 var arrayTypeActivated = [];
 
 var currentCriteriaListName;
 
-var htmlContextualMenuContent = document.getElementById('contextualMenu');
-var htmlFilterContent = document.getElementById('filter');
-var htmlMainContent = document.getElementById('mainContent');
+var htmlContextualMenuContent;
+var htmlFilterContent;
+var htmlMainContent;
 
 	
 /**
@@ -69,60 +63,70 @@ var htmlMainContent = document.getElementById('mainContent');
 function initVallydetteApp (criteriaListName, lang) {
 	
 	initGlobalLang(lang);
-	
+
 	var langRequest = new XMLHttpRequest();
 	langRequest.open("GET", "json/lang/"+globalLang+".json", true);
 	langRequest.onreadystatechange = function () {
 	  if(langRequest.readyState === 4 && langRequest.status === 200) {
 		langVallydette = JSON.parse(langRequest.responseText);
-		localizeHTML();
 		initGlobalCriteriaListName(criteriaListName);
-	
 	  } 
 	};
 	langRequest.send();
 	
-
-	
 }
 
+/**
+ * Init the requested checklist from url params, or default configuration.
+ * Then load the config json
+ * @param {string} criteriaListName - Selected checklist json file name.
+ */
 function initGlobalCriteriaListName(criteriaListName) {
 	
 	const paramString = window.location.search;
 	const urlParams = new URLSearchParams(paramString);
-
 	if (urlParams.has('list')) {
 		currentCriteriaListName = urlParams.get('list');
 	} else if (criteriaListName) {
 		currentCriteriaListName = criteriaListName;
-	} else {
-		currentCriteriaListName = 'wcag-web';
-	}
+	} 
 	
+
 	var checklistRequest = new XMLHttpRequest();
-		checklistRequest.open("GET", "json/config-checklist.json", true);
-		checklistRequest.onreadystatechange = function () {
-			
-		  if(checklistRequest.readyState === 4 && checklistRequest.status === 200) {
-			checklistVallydette = JSON.parse(checklistRequest.responseText);
+	checklistRequest.open("GET", "json/config-checklist.json", true);
+	checklistRequest.onreadystatechange = function () {
+		
+	  if(checklistRequest.readyState === 4 && checklistRequest.status === 200) {
+		checklistVallydette = JSON.parse(checklistRequest.responseText);
+		
+		if (currentCriteriaListName) {
+			initAuditPage();
 			createObjectAndRunVallydette();
-		  } 
-		};
+			
+		} else {
+			initHomePage();
+		}
 		
-		checklistRequest.send();
-		
+		initMainMenu();
+		localizeHTML();
+	  } 
+	};
+	
+	checklistRequest.send();
+	
+	
 	var issuesRequest = new XMLHttpRequest();
-	issuesRequest.open("GET", "json/issues-"+globalLang+".json", true);
+	issuesRequest.open("GET", "json/issues-" + globalLang + ".json", true);
 	issuesRequest.onreadystatechange = function () {
 	  if(issuesRequest.readyState === 4 && issuesRequest.status === 200) {
 		issuesVallydette = JSON.parse(issuesRequest.responseText);
 	  } 
 	};
-	issuesRequest.send();		
-		
+	
+	issuesRequest.send();	
 	
 	initLangMenu();
-	
+
 }										 
 
 
@@ -145,6 +149,7 @@ function createObjectAndRunVallydette() {
 			"referentiel": currentCriteriaListName,
 			"version": globalVersion,
 			"template": globalTemplate,
+			"autoCheckIDs": [],
 			"page": [{
 					"IDPage": "pageID-0",
 					"name": langVallydette.pageName,
@@ -183,12 +188,152 @@ function createObjectAndRunVallydette() {
 }
 
 /**
- *  update the dataVallydette object with the selected checklist object (ie the wcag ease object)
+ *  init the main menu
+ */
+function initMainMenu() {
+	
+	var htmlMainMenu = "";
+	
+	htmlMainMenu += '<div class="btn-group">';
+	htmlMainMenu += '<button class="btn btn-link btn-inverse dropdown-toggle pr-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+	htmlMainMenu += langVallydette.selectAchecklist;
+	htmlMainMenu += '</button>';
+	htmlMainMenu += '<div class="dropdown-menu dropdown-menu-right">';
+	
+	Object.keys(checklistVallydette).forEach(c => htmlMainMenu += ' <a class="dropdown-item' + (c === currentCriteriaListName ? ' active' : '') + '" href="./?list=' + c + '&lang=' + globalLang + '" ' + (c === currentCriteriaListName ? ' aria-current="page"' : '') + '>' + checklistVallydette[c]['name-' + globalLang] + '</a>');
+	
+	htmlMainMenu += '</div>';
+	htmlMainMenu += '</div>';
+	
+	document.getElementById("importexport").innerHTML = htmlMainMenu + document.getElementById("importexport").innerHTML;
+	
+}
+
+/**
+ *  init the homepage
+ */
+function initHomePage() {
+	
+	localizeHTML();
+	
+	utils.setPageTitle(langVallydette.homepage);
+		
+	document.getElementById("main").innerHTML = "";
+	
+	var htmlHomePage = "";
+	
+	htmlHomePage += '<div class="container">';
+	htmlHomePage += '<h1 class="display-2">' + langVallydette.va11ydetteOrange +  '</h1>';
+	htmlHomePage += '<p>' + langVallydette.homepageDescription +  '</p>';
+	
+	htmlHomePage += '<div class="row mb-5">';
+	
+	Object.keys(checklistVallydette).forEach(function(c){
+		
+		htmlHomePage += '<div class="col-sm-6 col-md-4 col-xl-3 mb-3">';
+		htmlHomePage += '<div class="card h-100 border-0">';
+		htmlHomePage += '<div class="card-body">';
+        htmlHomePage += '  <h2 class="card-title bg-transparent">' + checklistVallydette[c]['name-' + globalLang] + '</h2>';
+        htmlHomePage += ' <p class="card-subtitle">' + checklistVallydette[c]['description-' + globalLang] + '</p>';
+		htmlHomePage += ' </div>';
+        htmlHomePage += '<div class="card-footer py-3 border-0">';
+        htmlHomePage += '  <a href="./?list=' + c + '&lang=' + globalLang + '" class="btn btn-info  stretched-link">';
+        htmlHomePage +=  langVallydette.run;
+        htmlHomePage += '   <span class="sr-only">' + checklistVallydette[c]['name-' + globalLang] + '</span>';
+        htmlHomePage += '  </a>';
+        htmlHomePage += '</div>';
+		htmlHomePage += '</div>';
+		htmlHomePage += '</div>';
+	});
+	
+	htmlHomePage += '</div>';
+	htmlHomePage += '</div>';
+	
+	document.getElementById("main").innerHTML = htmlHomePage;
+	
+	eventHandler();
+	
+}
+
+function initAuditPage() {
+	
+	document.getElementById("main").innerHTML = "";
+	
+	var htmlAuditPage = '';
+	htmlAuditPage = `
+	<div class="container d-flex align-items-center mb-3" id="auditInfoManager">
+                <h1 id="checklistName" class="mb-0"></h1>
+                <button class="btn btn-secondary btn-icon ml-auto d-print-none" id="btnChecklistName"
+                        aria-label="" title=""
+                        data-element="checklistName" data-property="checklist.name"
+                        data-toggle="modal" data-target="#modalEdit">
+                    <span class="icon-Pencil" aria-hidden="true"></span>
+                </button>
+				<button class="btn btn-secondary btn-icon ml-2 d-print-none" id="btnLocalStorage"
+                        aria-label="" title=""
+                        data-element="checklistName" data-property="checklist.name"
+                        data-toggle="modal" data-target="#modalLocalStorage">
+                     <span class="icon-Syncronise" aria-hidden="true"></span>
+                </button>
+                <button class="btn btn-secondary ml-2 d-print-none" type="button"
+                        data-toggle="modal" data-target="#modalResult"
+                        id="btnShowResult">
+                </button>
+              
+            </div>
+
+            <div class="o-nav-local bg-white navbar-light my-3 d-print-none" id="pageManager"></div>
+
+            <div class="container">
+                <div class="row align-items-start position-relative">
+                    <div class="col-md-2 sticky-top pt-4 pr-0 col-print-12" id="currentPageManager">
+                        <h1 id="pageName" class="mb-0"></h1>
+                        <hr class="border-light">
+                        <div id="contextualMenu" class="d-flex align-content-stretch flex-wrap w-100 d-print-none">
+                            <button class="btn btn-secondary btn-icon" id="btnPageName"
+                                    aria-label="" title=""
+                                    data-element="pageName" data-secondary-element="pageID-0"
+                                    data-property="checklist.page.0.name" data-toggle="modal" data-target="#modalEdit">
+                                <span class="icon-Pencil" aria-hidden="true"></span>
+                            </button>
+                            <button id="btnDelPage" class="btn btn-secondary btn-icon ml-2"
+                                    aria-label="" title=""
+                                    data-element="pageName" data-property="checklist.page.0"
+                                    data-toggle="modal" data-target="#modalDelete" disabled>
+                                <span class="icon-trash" aria-hidden="true"></span>
+                            </button>
+							<hr class="border-light w-100">	
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8 bg-white border border-light col-print-12" id="currentPageContent">
+                        <span id="count" class="alert-danger"></span>
+                        <section id="mainContent"></section>
+                    </div>
+                    <aside id="filter" class="col-md-2 sticky-top pt-4 col-print-12 overflow-auto">
+                        
+                    </aside>
+                </div>
+            </div>
+	`
+	
+	document.getElementById("main").innerHTML = htmlAuditPage;
+	
+	htmlFilterContent = document.getElementById('filter');
+	htmlContextualMenuContent = document.getElementById('contextualMenu');
+	htmlMainContent = document.getElementById('mainContent');
+	
+	eventHandler();
+	
+}
+
+/**
+ *  update the dataVallydette object with the selected checklist object
  */
 function importCriteriaToVallydetteObj (criteriaVallydette) {
  
 	if (checklistVallydette[currentCriteriaListName].template === 'audit'){
-		criteriaVallydette.items.forEach(function (criteria, key) {
+		criteriaVallydette.forEach(function (criteria, key) {
 			 criteria.ID = "testWebID-"+key;
 			 criteria.IDorigin = "testWebID-"+key;
 			 criteria.resultatTest = "nt";
@@ -197,9 +342,9 @@ function importCriteriaToVallydetteObj (criteriaVallydette) {
 		 })
 	}
 
-	dataVallydette.checklist.name = criteriaVallydette.name;
+	dataVallydette.checklist.name = checklistVallydette[currentCriteriaListName]['name-' + globalLang];
 	dataVallydette.checklist.page[0].groups = {};
-    dataVallydette.checklist.page[0].items = dataVallydette.checklist.page[0].items.concat(criteriaVallydette.items);
+    dataVallydette.checklist.page[0].items = dataVallydette.checklist.page[0].items.concat(criteriaVallydette);
 
 	dataVallydette.checklist.page[0].items.forEach(function (test) {
 
@@ -215,9 +360,7 @@ function importCriteriaToVallydetteObj (criteriaVallydette) {
 			
 		}
 		
-		
 	}); 
-
 	
 	dataVallydette.checklist.lang = globalLang;
 	dataVallydette.checklist.version = globalVersion;
@@ -225,7 +368,7 @@ function importCriteriaToVallydetteObj (criteriaVallydette) {
 	
 	utils.setPageTitle();
 	
-	eventHandler();
+	//eventHandler();
 	
 	runVallydetteApp();
 }
@@ -286,7 +429,11 @@ function importRGAA(dataRGAA) {
     runVallydetteApp();
 }
 
-
+/**
+ *  Init the global template var. Currently 2 diffrents templates are available : "wcag" for wcag conformity checklist, and "audit" for evaluation audit checklist.
+ * 	The frontEnd view depend on wich template is called.
+ *	@param {string} templateValue - Selected checklist json file name.
+ */
 function initGlobalTemplate (templateValue) {
 	
 	if(templateValue) {
@@ -335,7 +482,7 @@ function runVallydetteApp() {
   
 	
     updateCounter(false, dataVallydette.checklist.page[currentPage].items.length);
-	utils.setPageTitle ( dataVallydette.checklist.page[currentPage].name);
+	utils.setPageTitle( dataVallydette.checklist.page[currentPage].name);
 }
 
 
@@ -352,6 +499,17 @@ function eventHandler() {
 
 		fr.onload = function (e) {
 			dataVallydette = JSON.parse(e.target.result);
+			if (dataVallydette.checklist.referentiel) {
+				
+				//fix obsolete referentiel name (from 1.4 checklist version)
+				if (dataVallydette.checklist.referentiel === "wcagEase") {
+					dataVallydette.checklist.referentiel = "wcag-web";
+				}
+				
+				currentCriteriaListName = dataVallydette.checklist.referentiel;
+				
+			}
+			initAuditPage();
 			initGlobalLang(dataVallydette.checklist.lang, true);
 			initGlobalTemplate(dataVallydette.checklist.template);
 			checkTheVersion(dataVallydette.checklist.version);
@@ -366,7 +524,6 @@ function eventHandler() {
 	inputSelectFile.addEventListener('change', function () {
 		document.getElementById("selectFilesLabel").innerText = inputSelectFile.files[0].name;
 	}, false);
-	
 	
 	var btnChecklist = document.getElementById("btnChecklistName");
 	btnChecklist.addEventListener('click', function () {
@@ -393,7 +550,7 @@ function eventHandler() {
  */
 
 /**
- *  Opening the localStorage dialog modal, and running the localStorage get function if acceptance
+ *  Open the localStorage dialog modal, and running the localStorage get function if acceptance
  */
 function runLocalStorage() {
 	
@@ -412,8 +569,7 @@ function runLocalStorage() {
 	htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">' + langVallydette.cancel + '</button>';
 	htmlModal += '<button type="button" id="localStorageSaveBtn" data-dismiss="modal" class="btn btn-primary">' + langVallydette.recoverAction + '</button>';
 	htmlModal += '</div></div></div></div>';
-
-
+	
 	let elModal = document.getElementById('modal');
 	elModal.innerHTML = htmlModal;
 
@@ -456,11 +612,10 @@ function btnActionPageEventHandler () {
 		setValue(currentBtnPageName.dataset.element, currentBtnPageName.dataset.property, currentBtnPageName.dataset.secondaryElement)
 	}, false);
 
-	
 	currentBtnDelPage.addEventListener('click', function () {
-		setDeletePage(currentBtnPageName.dataset.element)
+		setDeletePage(currentBtnPageName.dataset.property)
 	}, false);
-			
+
 }
 
 
@@ -470,23 +625,38 @@ function btnActionPageEventHandler () {
  */
 runTestListMarkup = function (currentRefTests) {
 
-	let elrefTests = document.getElementById('mainContent');
+	//let htmlMainContent = document.getElementById('mainContent');
 	let htmlrefTests = '';
 	let headingTheme = '';
 	let headingCriterium = '';
 	let nextIndex = 1;
 
+	if (document.getElementById('btnExcelExport') === null) {
+		
+			var btnExcelExport = utils.addElement('button', 'btnExcelExport', langVallydette.title.btnExcelExport, 'icon-Excel', true, ["btn", "btn-secondary", "btn-icon", "ml-2", "d-print-none"], langVallydette.title.btnExcelExport);
+		
+			let auditInfoNode = document.getElementById("auditInfoManager");
+			auditInfoNode.insertBefore(btnExcelExport, auditInfoNode.children[3]);
+			btnExcelExport.addEventListener('click', function () {
+				excelExport(globalTemplate);
+			});
+			
+	}
 
 	/** 'wcag' value correspond to the conformity checklist */
 	if (globalTemplate === 'wcag') {
 
 		setPageName(dataVallydette.checklist.page[currentPage].name);
 		
-		utils.removeElement(document.getElementById('btnExcelExport'));
-		
 		/** Modify column number */ 
 		utils.columnDisplay(3);
 	
+		if(document.getElementById('btnShowStatement') === null) {
+			var btnStatement = utils.addElement('button', 'btnShowStatement', langVallydette.statement, false, false, ["btn", "btn-secondary", "ml-2", "d-print-none"], langVallydette.statementTitle);
+			document.getElementById("auditInfoManager").appendChild(btnStatement);
+			document.getElementById("btnShowStatement").addEventListener('click',  function () {initStatementObject();});
+		}
+		
 		/** pass through the tests object to display each of them */
 		for (let i in currentRefTests) {
 			var currentTest = currentRefTests[i].ID;
@@ -501,7 +671,7 @@ runTestListMarkup = function (currentRefTests) {
 				htmlrefTests += '<div class="collapse show px-2" id="collapse-' + formattedHeadingTheme + '">';
 			}
 
-			htmlrefTests += '<article class="card mb-3" id="' + currentTest + '"><div class="card-header border-light"><h3 class="card-title h5 d-flex align-items-center mb-0" id="heading' + currentTest + '"><span class="w-75">' + currentRefTests[i].title + '</span><span id="resultID-' + currentTest + '" class="ml-auto badge ' + getStatutClass(currentRefTests[i].resultatTest) + '">' + setStatutText(currentRefTests[i].resultatTest) + '</span></h3></div>';
+			htmlrefTests += '<article class="card mb-3" id="' + currentTest + '"><div class="card-header border-light"><h3 class="card-title h5 d-flex align-items-center mb-0" id="heading' + currentTest + '"><span class="w-75 mr-auto">' + currentRefTests[i].title + '</span>' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + currentRefTests[i].ID + '"><span class="sr-only">Ce test est lié à la première page</span></span>' : '') + '<span id="resultID-' + currentTest + '" class="ml-1 badge ' + getStatutClass(currentRefTests[i].resultatTest) + '">' + setStatutText(currentRefTests[i].resultatTest) + '</span></h3></div>';
 			
 			htmlrefTests += '<div class="card-body py-2 d-flex align-items-center justify-content-between"><ul class="list-inline m-0">';
 			htmlrefTests += '<li class="custom-control custom-radio custom-control-inline mb-0"><input class="custom-control-input" type="radio" id="conforme-' + currentTest + '" name="test-' + currentTest + '" value="ok" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[0][1]) ? "checked" : "") + '/><label for="conforme-' + currentTest + '" class="custom-control-label">' + langVallydette.template.status1 + '</label></li>';
@@ -515,6 +685,15 @@ runTestListMarkup = function (currentRefTests) {
 			htmlrefTests += '<button class="btn btn-secondary btn-icon d-print-none" type="button" data-toggle="collapse" data-target="#collapse-' + currentTest + '" aria-expanded="false" aria-controls="collapse-' + currentTest + '"><span class="icon-arrow-down" aria-hidden="true"></span><span class="sr-only">' + langVallydette.informations + '</span></button></div>';
 			htmlrefTests += '<div class="collapse ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + ' border-light pt-3 mx-3 d-print-block" id="collapse-' + currentTest + '">';
 
+			if (currentPage === 0) {
+				htmlrefTests += '<div class="custom-control custom-checkbox">';
+				htmlrefTests += '	<input type="checkbox" class="custom-control-input" id="autoCheck-' + currentTest + '" aria-labelledby="heading' + currentTest + ' autoCheckLabel-' + currentTest + '" ' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? "checked" : "" )  + '>';
+				htmlrefTests += '	<label class="custom-control-label" for="autoCheck-' + currentTest + '" id="autoCheckLabel-' + currentTest + '">Appliquer automatiquement ce résultat aux nouvelles pages.</label>';
+				htmlrefTests += '</div>';
+
+				htmlrefTests += '<hr class="border-light w-100">';
+			}
+			
 			if (currentRefTests[i].verifier) {
 				htmlrefTests += '<h4 class="h5">' + langVallydette.toCheckHeading + '</h4>';
 				htmlrefTests += currentRefTests[i].verifier;
@@ -544,19 +723,7 @@ runTestListMarkup = function (currentRefTests) {
 		
 		setPageName(dataVallydette.checklist.page[currentPage].name);
 		utils.removeElement(document.getElementById('btnShowStatement'));
-		
-		if (document.getElementById('btnExcelExport') === null) {
-		
-			var btnExcelExport = utils.addElement('button', 'btnExcelExport', langVallydette.title.btnExcelExport, 'icon-Excel', true, ["btn", "btn-secondary", "btn-icon", "ml-2", "d-print-none"]);
-		
-			document.getElementById("auditInfoManager").appendChild(btnExcelExport);
-			btnExcelExport.addEventListener('click', function () {
-				excelExport();
-			});
-			
-		}
 
-		
 		/** pass through the tests object to display each of them */
 		for (let i in currentRefTests) {
 			var currentTest = currentRefTests[i].ID;
@@ -781,9 +948,8 @@ runTestListMarkup = function (currentRefTests) {
 		}
 	}
 
-	currentRefTests.length === 0 ? elrefTests.innerHTML = '<div class="alert alert-warning">' + langVallydette.warningNoResult + '</div>' : elrefTests.innerHTML = htmlrefTests;
+	currentRefTests.length === 0 ? htmlMainContent.innerHTML = '<div class="alert alert-warning">' + langVallydette.warningNoResult + '</div>' : htmlMainContent.innerHTML = htmlrefTests;
 
-	 
 	/** event handler */
 	for (let i in currentRefTests) {
 	
@@ -816,9 +982,74 @@ runTestListMarkup = function (currentRefTests) {
 			}, false);
 		}
 		
+		var autoCheck = document.getElementById("autoCheck-" + currentRefTests[i].ID);
+		if (autoCheck) {
+			autoCheck.addEventListener('click', function () {
+				setAutoCheckID(this, currentRefTests[i].IDorigin, currentRefTests[i].ID)
+			}, false);
+		}
 	}
 
 	applyDisabledGroups();
+}
+
+
+/**
+ * Auto Check manager
+ */
+
+/**
+ * Add or remove a test from the autocheckIDs array (depending if the checkbox is checked or not)
+ * @param {object} e - autocheck input checkbox
+ * @param {string} testIDorigin - test ID property from dataVa11ydette
+ * @param {string} testID - current test ID property from dataVa11ydette
+ */
+function setAutoCheckID(e, testIDorigin, testID) {
+	
+	if (e.checked) {
+		
+		if (!dataVallydette.checklist.autoCheckIDs) {
+			dataVallydette.checklist.autoCheckIDs = [];
+		}
+		dataVallydette.checklist.autoCheckIDs.push(testIDorigin);
+		
+		const iconHtml = '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + testID + '"><span class="sr-only">Ce test est lié à la première page</span></span>';
+		const iconNode = new DOMParser().parseFromString(iconHtml, 'text/html').body.firstElementChild;
+		let headingNode = document.getElementById('heading' + testID);
+		headingNode.insertBefore(iconNode, headingNode.children[1]);
+		
+		
+	} else {
+		
+		dataVallydette.checklist.autoCheckIDs = dataVallydette.checklist.autoCheckIDs.filter(item => item !== testIDorigin);
+		document.getElementById('link-' + testID).remove();
+		
+	}
+
+}
+
+function getTestResult(pageId, testIDorigin) {
+	
+	const result = dataVallydette.checklist.page[pageId].items.filter(item => item.IDorigin === testIDorigin).map(item => item.resultatTest);
+	return result[0];
+
+}
+
+/**
+ * Get if a test is part of the autocheckIDs array depending of his IDorigin property
+ * @param {string} currentIDorigin - test ID property from dataVa11ydette of the current test
+ */
+function getIfAutoCheck(currentIDorigin) {
+	
+	let autoUpdateResult = false;
+	if (dataVallydette.checklist.autoCheckIDs) {
+		const autoUpdate = dataVallydette.checklist.autoCheckIDs.filter(a => a === currentIDorigin);
+			if (autoUpdate.length > 0) {
+			autoUpdateResult = true;
+		}
+	} 
+	return autoUpdateResult;
+	
 }
 
 /**
@@ -860,27 +1091,34 @@ function initGlobalLang(lang, fromImport) {
 
 }
 
+/**
+ *  Init the current item in the menu lang
+ */
 function initLangMenu() {
-	if (globalLang === "fr") {
-		var linkFr = document.getElementById("link-fr");
-		linkFr.setAttribute('aria-current', true);
+	
+	var linkFr = document.getElementById("link-fr");
+	var linkEn = document.getElementById("link-en");
+	
+	if (currentCriteriaListName) {
 		linkFr.setAttribute('href', './?lang=fr&list=' + currentCriteriaListName);
+		linkEn.setAttribute('href', './?lang=en&list=' + currentCriteriaListName);
+	} else {
+		linkFr.setAttribute('href', './?lang=fr');
+		linkEn.setAttribute('href', './?lang=en');
+	}
+	
+	if (globalLang === "fr") {
+		linkFr.setAttribute('aria-current', true);	
 		linkFr.classList.add("active");
 		
-		var linkEn = document.getElementById("link-en");
 		linkEn.removeAttribute('aria-current');
-		linkEn.setAttribute('href', './?lang=en&list=' + currentCriteriaListName);
 		linkEn.classList.remove("active");
 		
 	} else {
-		var linkEn = document.getElementById("link-en");
 		linkEn.setAttribute('aria-current', true);
-		linkEn.setAttribute('href', './?lang=en&list=' + currentCriteriaListName);
 		linkEn.classList.add("active");
 		
-		var linkFr = document.getElementById("link-fr");
 		linkFr.removeAttribute('aria-current');
-		linkFr.setAttribute('href', './?lang=fr&list=' + currentCriteriaListName);
 		linkFr.classList.remove("active");
 	}
 }
@@ -889,7 +1127,7 @@ function initLangMenu() {
  *  Useful for import and localstorage. Will load the interface localisation json depending on new object loaded, and run the vallydette app.
  */
 function runLangRequest () {
-	
+
 	var langRequest = new XMLHttpRequest();
 				langRequest.open("GET", "json/lang/"+globalLang+".json", true);
 				langRequest.onreadystatechange = function () {
@@ -899,7 +1137,7 @@ function runLangRequest () {
 					runVallydetteApp();
 			  } 
 			};
-			langRequest.send();
+	langRequest.send();
 	
 }
 
@@ -947,17 +1185,18 @@ function localizeHTML() {
  */
 function initGroups() {
 	
-	htmlgroups = "";
-	htmlgroups = '<h6>' + langVallydette.groupHeading + '</h6>';
-	htmlgroups += "<ul class=\"list-inline m-0\">";
-	for (var themeItem in dataVallydette.checklist.page[currentPage].groups)  {
-		htmlgroups += '<li class="custom-control custom-checkbox custom-control-inline mb-0"><input type="checkbox"  class="custom-control-input"  id="' + themeItem + '" value="' + themeItem + '" name="' + themeItem + '" ' + (dataVallydette.checklist.page[currentPage].groups[themeItem].checked ? "checked" : "") + '/><label for="' + themeItem + '" class="custom-control-label">' + themeItem + '</label></li>';
-	};
-	htmlgroups += "</ul>";
-	
-	htlmgroupsMarker = document.getElementById("themeManager");
-	htlmgroupsMarker.innerHTML = htmlgroups;
-   	
+	if (Object.keys(dataVallydette.checklist.page[currentPage].groups).length !== 0) {
+		htmlgroups = '';
+		htmlgroups = '<h6>' + langVallydette.groupHeading + '</h6>';
+		htmlgroups += '<ul class="list-inline m-0">';
+		for (var themeItem in dataVallydette.checklist.page[currentPage].groups)  {
+			htmlgroups += '<li class="custom-control custom-checkbox custom-control-inline mb-0"><input type="checkbox"  class="custom-control-input"  id="' + themeItem + '" value="' + themeItem + '" name="' + themeItem + '" ' + (dataVallydette.checklist.page[currentPage].groups[themeItem].checked ? "checked" : "") + '/><label for="' + themeItem + '" class="custom-control-label">' + themeItem + '</label></li>';
+		};
+		htmlgroups += '</ul>';
+		
+		htlmgroupsMarker = document.getElementById("themeManager");
+		htlmgroupsMarker.innerHTML = htmlgroups;
+   	}
 }
 
  /**
@@ -997,42 +1236,45 @@ function applyGroups() {
 			
 			dataVallydette.checklist.page[currentPage].items.map(function(itemTest, index) {
 	
-			
 				if (themeIdTest === itemTest.IDorigin) {
 						
 					const radioButtons = document.getElementsByName("test-"+itemTest.ID);
 					
-					if (dataVallydette.checklist.page[currentPage].groups[themeItem].checked) {
+					if (dataVallydette.checklist.page[currentPage].items[index].resultatTest === "nt" || dataVallydette.checklist.page[currentPage].items[index].resultatTest === "na") {
+					
+						if (dataVallydette.checklist.page[currentPage].groups[themeItem].checked) {
 			
-						testValue = "nt";
+							testValue = "nt";
+							
+							radioButtons.forEach(function(button) {
+								button.disabled=false;
+								button.classList.remove("disabled");
+							});
 						
-						radioButtons.forEach(function(button) {
-							button.disabled=false;
-							button.classList.remove("disabled");
-						});
+						} else {
 						
-					} else {
-						testValue = "na";
-	
-						radioButtons.forEach(function(button) {
-							button.disabled=true;
-							button.classList.add("disabled");
-						});
-												
+							testValue = "na";
+		
+							radioButtons.forEach(function(button) {
+								button.disabled=true;
+								button.classList.add("disabled");
+							});
+													
+						}
+							
+						 /** testing if not null in case of an activated filter */
+						radioToUpdate = document.getElementById(testValue+"-"+itemTest.ID);
+					
+					
+						if (radioToUpdate!==null) {
+							radioToUpdate.checked = true;
+							setStatusAndResults(radioToUpdate, itemTest.ID);
+						} else {
+							dataVallydette.checklist.page[currentPage].items[index].resultatTest = testValue;
+						}
+					
 					}
-					
-					 /** testing if not null in case of an activated filter */
-					radioToUpdate = document.getElementById(testValue+"-"+itemTest.ID);
-					
-					
-					if (radioToUpdate!==null) {
-						radioToUpdate.checked = true;
-						setStatusAndResults(radioToUpdate, itemTest.ID);
-					} else {
-						dataVallydette.checklist.page[currentPage].items[index].resultatTest = testValue;
-					}
-					
-				
+
 				}
 			
 			}); 	
@@ -1091,7 +1333,7 @@ function applyDisabledGroups() {
  * @param {number} currentChecklistVersion
 */
 function checkTheVersion(currentChecklistVersion) {
-	
+
 	if (dataVallydette.checklist.referentiel && checklistVallydette[dataVallydette.checklist.referentiel]) {
 				
 		if (checklistVallydette[dataVallydette.checklist.referentiel].version) {
@@ -1150,7 +1392,7 @@ function initComputation() {
 
             var btnShowResult = document.getElementById("btnShowResult");
             btnShowResult.addEventListener('click', function () {
-                runComputation();
+				runComputation();
 				utils.setPageTitle(langVallydette.auditResult);
 				utils.resetActive(document.getElementById("pageManager"));
 				utils.putTheFocus(document.getElementById("pageName"));
@@ -1254,9 +1496,12 @@ function runComputation(obj) {
 							 }
 
 							if (pagesResults[i].items[k].resultat) {
+								
 								if (dataVallydette.checklist.page[i].items[j].resultatTest === "ok") {
 									pagesResults[i].items[k].resultat = true;
+									
 									if (dataWCAG.items[k].resultat !== false) {
+
 										dataWCAG.items[k].resultat = true;
 									}
 									
@@ -1270,12 +1515,12 @@ function runComputation(obj) {
 								} else if ((dataVallydette.checklist.page[i].items[j].resultatTest === "na") && (pagesResults[i].items[k].resultat === "nt")) {
 									pagesResults[i].items[k].resultat = "na";
 									
-									if (dataWCAG.items[k].resultat !== false || dataWCAG.items[k].resultat !== true ) {
+									if (dataWCAG.items[k].resultat !== false && dataWCAG.items[k].resultat !== true ) {
 										dataWCAG.items[k].resultat = "na";
 									}
 									
 									break;	
-								}
+								} 
 
 							}	
 						}
@@ -1291,6 +1536,8 @@ function runComputation(obj) {
 	
 	pagesResults = pagesResultsComputation(pagesResults);
 	dataWCAGComputation();
+
+	
 	
 	if (obj) {
 		return pagesResults;
@@ -1301,6 +1548,11 @@ function runComputation(obj) {
 }
 
 
+/**
+ * Run all the computation per pages, from the results collected into pagesResults array
+ * @param {array} pagesResultsArray - Contains all wcag results by pages.
+ * @return {array} pagesResultsArray - Contains all wcag results by pages, and the diffrents results
+*/
 function pagesResultsComputation(pagesResultsArray) {
 	var finalTotal = 0;
     var finalResult = 0;
@@ -1399,7 +1651,7 @@ function pagesResultsComputation(pagesResultsArray) {
 
 
 /**
-	*  Gets the number of true, false, non-applicable and non-tested by wcag level only.
+	*  Get the number of true, false, non-applicable and non-tested by wcag level only.
 	*  If one result is non-tested, then the property 'complete' is passed false, and the final result is not displayed (only the number of non-tested items).
 */
 function dataWCAGComputation() {
@@ -1448,6 +1700,9 @@ function dataWCAGComputation() {
 	
 }
 
+/**
+	*  Get if a test rely on AAA wcag rules
+*/
 function getAAA(currentWcag) {
 	
 	let level = false;
@@ -1477,7 +1732,7 @@ function getAAA(currentWcag) {
  *  @param {array} pagesResultsArray - Contains all wcag results by pages.
 */
 function runFinalComputation(pagesResultsArray) {
-  
+
 	/**
 	 * 	Gets the number of non-tested items.
 	 @param {number} nbNT - number of non-tested items.
@@ -1535,11 +1790,11 @@ function runFinalComputation(pagesResultsArray) {
 		computationContent += '  <div class="tab-pane" id="synthesePages" role="tabpanel" tabindex="-1" aria-hidden="true" aria-labelledby="tabsynthesePages">';
 		computationContent += '<table class="table table-striped"><caption class="sr-only">' + langVallydette.auditTxt4 + '</caption>';
 		computationContent += '<thead><tr>';
-		computationContent += '<th scope="row">' + langVallydette.auditTxt4 + '</th>';
-		computationContent += '<th scope="col" colspan="2" class="text-center">' + langVallydette.template.status1 + '</th>';
-		computationContent += '<th scope="col" colspan="2" class="text-center">' + langVallydette.template.status2 + '</th>';
-		computationContent += '<th scope="col" colspan="2" class="text-center">' + langVallydette.template.status3 + '</th>';
-		computationContent += '<th rowspan="2" class="text-center bg-light">' + langVallydette.result + '</th>';
+		computationContent += '<th scope="row">' + langVallydette.auditTxt17 + '</th>';
+		computationContent += '<th scope="col" colspan="2" class="text-center">' + langVallydette.compliant + '</th>';
+		computationContent += '<th scope="col" colspan="2" class="text-center">' + langVallydette.nonCompliant + '</th>';
+		computationContent += '<th scope="col" colspan="2" class="text-center">' + langVallydette.notApplicable + '</th>';
+		computationContent += '<th rowspan="2" class="text-center bg-light">' + langVallydette.auditTxt8 + '</th>';
 		computationContent += '</tr><tr>';
 		computationContent += '<th scope="col">' + langVallydette.auditTxt10 + '</th>';
 		computationContent += '<th scope="col" class="text-center">A</th>';
@@ -1574,7 +1829,7 @@ function runFinalComputation(pagesResultsArray) {
 		computationContent += ' </div>';
 		
 		computationContent += '<div class="tab-pane" id="syntheseNiveaux" role="tabpanel" tabindex="-1" aria-hidden="true" aria-labelledby="tabsyntheseNiveaux">';
-		computationContent += '<table class="table table-striped"><caption class="sr-only">' + langVallydette.auditTxt10 + '</caption>';
+		computationContent += '<table class="table table-striped"><caption class="sr-only">' + langVallydette.auditTxt15 + '</caption>';
 		computationContent += '<thead><tr>';
 		computationContent += '<th scope="row">' + langVallydette.auditTxt10 + '</th>';
 		computationContent += '<th scope="col" class="text-center">A</th>';
@@ -1584,28 +1839,28 @@ function runFinalComputation(pagesResultsArray) {
 		computationContent += '<tbody>';
 		
 		computationContent += '<tr>';
-		computationContent += '<th scope="row" class="font-weight-bold">Nombre de critères</th>';
+		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.criteriaNumber + '</th>';
 		computationContent += '<td class="text-center">' + dataWCAG.totalA + '</td>';
 		computationContent += '<td class="text-center">' + dataWCAG.totalAA + '</td>';
 		computationContent += '<td class="text-center">' + (dataWCAG.totalA+dataWCAG.totalAA) + '</td>';
 		computationContent += '</tr>';
 		
 		computationContent += '<tr>';
-		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.template.status1 + '</th>';
+		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.compliant + '</th>';
 		computationContent += '<td class="text-center">' + dataWCAG.conformeA + '</td>';
 		computationContent += '<td class="text-center">' + dataWCAG.conformeAA + '</td>';
 		computationContent += '<td class="text-center">' + dataWCAG.totalconforme + '</td>';
 		computationContent += '</tr>';
 		
 		computationContent += '<tr>';
-		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.template.status2 + '</th>';
+		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.nonCompliant + '</th>';
 		computationContent += '<td class="text-center">' + dataWCAG.nonconformeA + '</td>';
 		computationContent += '<td class="text-center">' + dataWCAG.nonconformeAA + '</td>';
 		computationContent += '<td class="text-center">' + dataWCAG.totalnonconforme + '</td>';
 		computationContent += '</tr>';
 		
 		computationContent += '<tr>';
-		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.template.status3 + '</th>';
+		computationContent += '<th scope="row" class="font-weight-bold">' + langVallydette.notApplicable + '</th>';
 		computationContent += '<td class="text-center">' + dataWCAG.naA + '</td>';
 		computationContent += '<td class="text-center">' + dataWCAG.naAA + '</td>';
 		computationContent += '<td class="text-center">' + (dataWCAG.naA+dataWCAG.naAA) + '</td>';
@@ -1644,7 +1899,7 @@ function runFinalComputation(pagesResultsArray) {
 				for (let i in listNonConformity) {
 				
 					computationContent += '<ul>';
-					computationContent += '<li><strong>' + langVallydette.auditTxt9 + ' ' + listNonConformity[i].wcag + ', ' + listNonConformity[i].name  + ', niveau ' + listNonConformity[i].level + '</strong>';
+					computationContent += '<li><strong>' + langVallydette.auditTxt9 + ' ' + listNonConformity[i].wcag + ', ' + listNonConformity[i].name  + ', ' + langVallydette.level + ' ' + listNonConformity[i].level + '</strong>';
 				
 					/** Remove undefined values */
 					listNonConformity[i].comment = listNonConformity[i].comment.filter(x => x);
@@ -1653,7 +1908,7 @@ function runFinalComputation(pagesResultsArray) {
 					
 							computationContent += '<ul>';
 							for (let j in listNonConformity[i].comment) {
-								computationContent += '<li>' + listNonConformity[i].comment[j] + '</li>';	
+								computationContent += '<li>' + utils.htmlEntities(listNonConformity[i].comment[j]) + '</li>';	
 							}
 							computationContent += '</ul>';	
 					} 
@@ -1674,6 +1929,7 @@ function runFinalComputation(pagesResultsArray) {
 		computationContent += '</div>';
 
     htmlMainContent.innerHTML = computationContent;
+
 }
 
 /**
@@ -1763,7 +2019,7 @@ initPagination = function (pages) {
 addPage = function () {
 	
 	/**  Duplicate the page object and push it to the dataVallydette as a new page. */
-	var arr2 = JSON.parse(JSON.stringify(dataVallydette.checklist.page[currentPage]));
+	var arr2 = JSON.parse(JSON.stringify(dataVallydette.checklist.page[0]));
 	dataVallydette.checklist.page.push(arr2);
 
 	indexPage = dataVallydette.checklist.page.length - 1;
@@ -1780,6 +2036,8 @@ addPage = function () {
 	dataVallydette.checklist.page[indexPage].url = "";
 	dataVallydette.checklist.page[indexPage].items.forEach(initNewPage);
 
+	
+	
 	initNewThemes(indexPage);
 	
 	jsonStr = JSON.stringify(dataVallydette);
@@ -1812,8 +2070,13 @@ addPage = function () {
 /**  Initialization of some properties */
 initNewPage = function (item) {
 	item.ID = item.ID + '-p' + indexPage;
-	item.resultatTest = 'nt';
-	item.commentaire = '';
+	
+	/**  auto check */
+	if (!getIfAutoCheck(item.IDorigin)) {
+		item.resultatTest = 'nt';
+		item.commentaire = '';
+	}
+	
 	if(item.issues) {
 		item.issues.splice(0, item.issues.length);
 	}
@@ -1824,7 +2087,6 @@ initNewPage = function (item) {
 		dataVallydette.checklist.page[indexPage].groups[item.group].checked = true;
 	} 
 			
-	
 }
 
 /**  Initialization of themes */
@@ -1851,7 +2113,13 @@ initProperties = function (item) {
 initContextualMenu = function (currentPageIndex, currentPageID) {
 	var htmlMenu = '';
 	htmlMenu += '<button class="btn btn-secondary btn-icon" id="btnPageName" aria-label="' + langVallydette.editPageName + '" title="' + langVallydette.editPageName + '" data-element="pageName" data-secondary-element="' + currentPageID + '" data-property="checklist.page.' + currentPageIndex + '.name" data-toggle="modal" data-target="#modalEdit"><span class="icon-Pencil" aria-hidden="true"></span></button>';
-	htmlMenu += '<button id="btnDelPage" class="btn btn-secondary btn-icon ml-2" aria-label="' + langVallydette.deletePageName + '" title="' + langVallydette.deletePageName + '" data-element="pageName" data-property="checklist.page.' + currentPageIndex + '" data-toggle="modal" data-target="#modalDelete" data-pagination="' + currentPageID + '"><span class="icon-trash" aria-hidden="true"></span></button>';
+	
+	if (currentPage === 0) {
+		htmlMenu += '<button id="btnDelPage" class="btn btn-secondary btn-icon ml-2" aria-label="' + langVallydette.deletePageName + '" title="' + langVallydette.deletePageName + '" data-element="pageName" data-property="" data-toggle="modal" data-target="#modalDelete" data-pagination="' + currentPageID + '" disabled><span class="icon-trash" aria-hidden="true"></span></button>';
+	} else {
+		htmlMenu += '<button id="btnDelPage" class="btn btn-secondary btn-icon ml-2" aria-label="' + langVallydette.deletePageName + '" title="' + langVallydette.deletePageName + '" data-element="pageName" data-property="checklist.page.' + currentPageIndex + '" data-toggle="modal" data-target="#modalDelete" data-pagination="' + currentPageID + '"><span class="icon-trash" aria-hidden="true"></span></button>';
+	}
+
 	htmlMenu += '<hr class="border-light  w-100">';
 	htmlContextualMenuContent.innerHTML = htmlMenu;
 	
@@ -1873,7 +2141,6 @@ showPage = function (id) {
 	var index = dataVallydette.checklist.page.findIndex(function (o) {
 		return o.IDPage === id;
 	})
-
 	
 	/** Update the global var currentPage with the index */
 	currentPage = index;
@@ -1893,11 +2160,19 @@ showPage = function (id) {
 		currentBtnPageName.dataset.secondaryElement = id;
 
 		var currentBtnDelPage = document.getElementById('btnDelPage');
-		currentBtnDelPage.dataset.property = "checklist.page." + currentPage;
-		currentBtnDelPage.dataset.pagination = id;
+		
+		if (currentPage === 0) {
+			currentBtnDelPage.disabled = true;
+			currentBtnDelPage.dataset.property = "";
+			currentBtnDelPage.dataset.pagination = "";
+		} else {
+			currentBtnDelPage.disabled = false;
+			currentBtnDelPage.dataset.property = "checklist.page." + currentPage;
+			currentBtnDelPage.dataset.pagination = id;
+		}
 		
 	}
-
+	
 	utils.setPageTitle(dataVallydette.checklist.page[currentPage].name);
 	
 	utils.resetActive(document.getElementById("pageManager"));
@@ -1923,7 +2198,7 @@ setDeletePage = function (targetElement) {
 	htmlModal += '<button type="button" class="close" data-dismiss="modal" aria-label="' + langVallydette.close + '"></button>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="modal-body">';
-	htmlModal += langVallydette.deletePageName + getPropertyValue(targetElement) + ' ?';
+	htmlModal += '<p>' + langVallydette.deletePageName + ' <strong>' + getPropertyValue(targetElement) + '</strong> ?</p>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="modal-footer">';
 	htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">' + langVallydette.cancel + '</button>';
@@ -1983,21 +2258,6 @@ function setPageName(value) {
 	
 }
 
-/** @todo to be removed, obsolete function */
-getIfFilter = function (name) {
-	const filters = document.querySelectorAll('[name="' + name + '"]');
-	let found = false;
-	let foundItem;
-	filters.forEach(function (filterItem) {
-		if (filterItem.checked) {
-			found = true;
-			foundItem = filterItem;
-		}
-	});
-
-	return [found, foundItem];
-}
-
 
 /**
  * Tests status manager
@@ -2042,28 +2302,45 @@ setStatutText = function (lastResult) {
 
 
 /**
- * Sets the test result into the vallydette object.
- * Updates the badge status
+ * Set the test result into the vallydette object.
+ * Update the badge status
  * @param {object} ele - radio button checked from a test.
  * @return {string} targetId - test ID that has been checked.
 */
 setStatusAndResults = function (ele, targetId) {
+	let isAutoChecked;
+	var itemIndice;
 	
-	/** Updates the test result into the object	*/
+	/** Update the test result into the object	*/
 	for (let i in dataVallydette.checklist.page[currentPage].items) {
 		if (dataVallydette.checklist.page[currentPage].items[i].ID === targetId) {
 			lastResult = getStatutClass(dataVallydette.checklist.page[currentPage].items[i].resultatTest);
 			dataVallydette.checklist.page[currentPage].items[i].resultatTest = ele.value;
+			
+			//auto checked
+			if (dataVallydette.checklist.autoCheckIDs) {
+				isAutoChecked = dataVallydette.checklist.autoCheckIDs.filter(id => id === dataVallydette.checklist.page[currentPage].items[i].IDorigin);	
+			}
+			
+			itemIndice = i;
 		}
 	}
 
-	/** Updates the status result into the badge element */
+	/** Update the status result into the badge element */
 	testResult = document.getElementById("resultID-" + targetId + "");
 	testResult.classList.remove(lastResult);
 	statutClass = getStatutClass(ele.value);
 	testResult.innerText = setStatutText(ele.value);
 	testResult.classList.add(statutClass);
 
+	if (currentPage === 0 && isAutoChecked.length > 0) {
+		if (dataVallydette.checklist.autoCheckIDs.length > 0) {
+			dataVallydette.checklist.page.forEach(function(p){
+				p.items[itemIndice].resultatTest = ele.value;
+			});
+		}
+	}
+	
 	jsonUpdate();
 }
 
@@ -2423,6 +2700,12 @@ addIssue = function (targetId, issueTitle, issueDetail, issueSolution, issueTech
 	jsonUpdate();
 }
 
+
+/**
+ * Get the predefined issues if exists, and update the select menu
+ * @param {string} targetId - current test ID
+ * @return {string} htmlPredefinedIssue - html of the updated select menu
+*/
 getPredefinedIssues = function(targetId) {
 	
 	let htmlPredefinedIssues = '';
@@ -2443,6 +2726,13 @@ getPredefinedIssues = function(targetId) {
 	
 }
 
+/**
+ * Get an issue property
+ * @param {string} targetId - current test ID
+ * @param {string} issueProperty - property name
+ * @param {string} issueIndex - index of the issue to remove into an issue array
+ * @return {string} currentIssue[issueProperty] - issue property value
+*/
 getIssue = function (targetId, issueProperty, issueIndex) {
 	let currentIssue;
 
@@ -2455,6 +2745,11 @@ getIssue = function (targetId, issueProperty, issueIndex) {
 	return currentIssue[issueProperty];
 }
 
+/**
+ * Edit an issue
+ * @param {string} targetId - current test ID
+ * @param {string} issueIndex - index of the issue to remove into an issue array
+*/
 editIssue = function (targetId, issueIndex) {
 	
 	let htmlEditIssue = '';
@@ -2496,6 +2791,12 @@ editIssue = function (targetId, issueIndex) {
 	
 }
 
+/**
+ * Save an issue
+ * @param {string} targetId - current test ID
+ * @param {string} issueIndex - index of the issue to remove into an issue array
+ * @param {object} issueEditForm - issue edit form object
+*/
 saveIssue = function (targetId, issueIndex, issueEditForm) {
 
 	for (let i in dataVallydette.checklist.page[currentPage].items) {
@@ -2515,6 +2816,14 @@ saveIssue = function (targetId, issueIndex, issueEditForm) {
 	
 }
 
+
+/**
+ * Cancel the issue edition form
+ * @param {string} targetId - current test ID
+ * @param {string} issueIndex - index of the issue to remove into an issue array
+ * @param {string} issueTitle - issue title property
+ * @param {string} issueDetail - issue detail property
+*/
 cancelIssue = function (targetId, issueIndex, issueTitle, issueDetail) {
 
 	let htmlEditIssue = '';
@@ -2533,6 +2842,12 @@ cancelIssue = function (targetId, issueIndex, issueTitle, issueDetail) {
 	
 }
 
+
+/**
+ * Delete confirmation feedback
+ * @param {string} targetId - current test ID
+ * @param {string} issueIndex - index of the issue to remove into an issue array
+*/
 deleteConfirmationIssue = function (targetId, issueIndex) {
 	
 	let htmlIssueFeedback = '<div id="deleteIssueBtn-'+ targetId +'-'+ issueIndex +'-feedback">';
@@ -2551,7 +2866,8 @@ deleteConfirmationIssue = function (targetId, issueIndex) {
 /**
  * Delete an issue from the vallydette object.
  * @param {string} targetId - current test ID.
- * @return {string} issueIndex - index of the issue to remove
+ * @param {string} issueIndex - index of the issue to remove into an issue array
+ * @param {boolean} issueValidation - if true => run the deletion, if false => come back to the issues list
 */
 deleteIssue = function (targetId, issueIndex, issueValidation) {
 
@@ -2702,6 +3018,9 @@ initFilters = function () {
 			}, false);
 }
 
+/**
+ * Create the filters markup (lists of filters)
+*/
 function PropertyFilterMarkup(arrayActivatedFilter, arrayNameAndValue, inputName) {
 	
 	if (window[arrayNameAndValue]) {
@@ -2747,6 +3066,9 @@ function PropertyFilterMarkup(arrayActivatedFilter, arrayNameAndValue, inputName
 	}
 }
 
+/**
+ * Create the wcag view (cheklist tests and results displayed by wcag)
+*/
 function wcagDisplayMode(wcagDisplayModeInput) {
 	
 	if (wcagDisplayModeInput.checked) {
@@ -2961,15 +3283,19 @@ jsonUpdate = function () {
 
 /**
  * Run the excel export
- */
-excelExport = function () {
+ * @param {string} type - checklist type (wcag, audit, etc...)
+ * 
+*/
+excelExport = function (type) {
 
 var excel = $JExcel.new();   
-var formatHeader = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000 B", fill: "#FFCC00"});
-var formatHeaderProject = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000 B", fill: "#C5D9F1"});
-var formatRow = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000"}); 
-var pageHeaders = ['Nom', 'URL'];
-var dataHeaders = ['ID', 'Test', 'Titre', 'Détail', 'Solution', 'Solution Technique', 'Suivi Validation', 'Etat / remarque équipe projet'];
+const formatHeader = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000 B", fill: "#FFCC00"});
+const formatHeaderProject = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000 B", fill: "#C5D9F1"});
+const formatRow = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000"}); 
+const formatWarning = excel.addStyle ( {font: "Calibri 11 #ff0000 B"}); 
+const pageHeaders = ['Nom', 'URL'];
+const dataHeaders = ['ID', 'Test', langVallydette.summary, langVallydette.description, langVallydette.solution, langVallydette.technical_solution, langVallydette.reviewIssue, langVallydette.stateIssue];
+
 
 excel.set( {sheet:0,value:"Informations"} );
 excel.set(0,0,0,"Audit",formatHeader);
@@ -2977,9 +3303,9 @@ excel.set(0,0,1,dataVallydette.checklist.name);
 excel.set(0,0,2,"");
 
 
-for (var j=0;j<pageHeaders.length;j++){    
+for (var j=0; j < pageHeaders.length; j++){    
 		
-			excel.set(0,j,3,pageHeaders[j], formatHeader);    
+	excel.set(0,j,3,pageHeaders[j], formatHeader);    
 			            
 }	
 
@@ -2995,14 +3321,17 @@ for (let i in dataVallydette.checklist.page) {
 	rowPages++;
 }
 
+rowPages++;
+
+excel.set(0,0,rowPages, langVallydette.auditWarning, formatWarning);
+
+	
 let setIndex = 1;
 
 for (let i in dataVallydette.checklist.page) {
 	
-		
-		excel.addSheet(dataVallydette.checklist.page[i].name);
-		
-		   
+		excel.addSheet(dataVallydette.checklist.page[i].name.slice(0, 31));
+  
 		for (var j=0;j<dataHeaders.length;j++){    
 		
 			if(j===7){
@@ -3016,45 +3345,1513 @@ for (let i in dataVallydette.checklist.page) {
 		
 		let rowIssues = 0;
 		
-		for (let j in dataVallydette.checklist.page[i].items) {
+		const listNonConformity = dataVallydette.checklist.page[i].items.filter(item => item.resultatTest === "ko").map(function(item) {
 			
-			
-			if (dataVallydette.checklist.page[i].items[j].issues.length > 0) {
-					
-				dataVallydette.checklist.page[i].items[j].issues.forEach(function (issue, key) {
-					
-					//@ ajout url tests
-					rowIssues++;
-					excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
-					excel.set(setIndex,1,rowIssues, dataVallydette.checklist.page[i].items[j].title);
-					excel.set(setIndex,2,rowIssues, issue.issueTitle);
-					excel.set(setIndex,3,rowIssues, issue.issueDetail);
-					excel.set(setIndex,4,rowIssues, issue.issueSolution);
-					excel.set(setIndex,5,rowIssues, issue.issueTechnicalSolution);
+			rowIssues++;
+			excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
 		
-				})
-					
-			}
+			if (type === "audit") {
+				
+				if (item.issues.length > 0) {
+						
+					item.issues.forEach(function (issue, key) {
+						
+						//@ ajout url tests
+						
+						excel.set(setIndex,1,rowIssues, item.title);
+						excel.set(setIndex,2,rowIssues, issue.issueTitle);
+						excel.set(setIndex,3,rowIssues, issue.issueDetail);
+						excel.set(setIndex,4,rowIssues, issue.issueSolution);
+						excel.set(setIndex,5,rowIssues, issue.issueTechnicalSolution);
 			
-		}
+					})
+						
+				}
+				
+			} else {
+
+					if (!item.commentaire) {
+						item.commentaire = langVallydette.noCommentary;
+					}
+
+					excel.set(setIndex,1,rowIssues, item.title);
+					excel.set(setIndex,2,rowIssues, '');
+					excel.set(setIndex,3,rowIssues, item.commentaire);
+					excel.set(setIndex,4,rowIssues, '');
+					excel.set(setIndex,5,rowIssues, '');
+
+			} 
+			
+		});
 		
 		setIndex++;
 		
 	} 
 
-	let exportFileName = utils.fileName("xlsx");
-    excel.generate(exportFileName);
+		let exportFileName = utils.fileName("xlsx");
+		excel.generate(exportFileName);
 	
 }
 
+	
+/**
+ * Statement manager
+ * @param {array} statementObjectProperties - list all the statement object properties
+ * @param {array} statementProperties - list of the properties updated from popin form
+ * @param {array} statementInputs - list of the input type properties
+ * @param {object} langStatement - traductions keys (needed if statement lang is diffrent from global lang)
+*/
+const statementObjectProperties = ["name", "lang", "status", "date", "results", "plan", "userNumber", "userBlockingPoints", "userTestDescription", "approval", "contact", "derogation", "exemption", "technology", "tests", "environments"];
+const statementProperties = ["name", "type", "version", "content", "email", "checked", "environment"];
+const statementInputs = ["name", "lang", "date", "userNumber", "userBlockingPoints", "userTestDescription", "plan", "derogation", "exemption"];
+var langStatement = {};
+
+
+/**
+ * Init the statement object
+ *
+*/
+function initStatementObject() {
+	
+	if (!dataVallydette.statement) {
+		dataVallydette.statement = {};
+	}
+	
+	if (!dataVallydette.statement.lang) {
+		
+		dataVallydette.statement.lang = globalLang;
+		langStatement = langVallydette;
+		
+	} else if (dataVallydette.statement.lang !== globalLang) {
+				
+		var langRequest = new XMLHttpRequest();
+		langRequest.open("GET", "json/lang/" + dataVallydette.statement.lang + ".json", true);
+		langRequest.onreadystatechange = function () {
+		  if(langRequest.readyState === 4 && langRequest.status === 200) {
+			langStatementRequest = JSON.parse(langRequest.responseText);
+			
+			langStatement = langStatementRequest;
+			
+		  } 
+		};
+		langRequest.send();
+		
+	} else {
+		
+		langStatement = langVallydette;
+				
+	}
+	
+		statementObjectProperties.forEach(function(p){
+			if (!dataVallydette.statement.hasOwnProperty(p)) {
+				if (p === "name") {
+					dataVallydette.statement.name = "";
+				}
+				if (p === "status") {
+					dataVallydette.statement.status = "WIP";
+				}
+				if (p === "date") {
+					dataVallydette.statement.date = "";
+				}
+				if (p === "results") {
+					dataVallydette.statement.results = [{
+							"type" : "pagesAverage",
+							"checked" : "true"
+						},
+						{
+							"type" : "criteriaPercentage",
+						}
+						
+					];
+				}
+				if (p === "plan") {
+					dataVallydette.statement.plan = "";
+				}
+				if (p === "userNumber") {
+					dataVallydette.statement.userNumber = 0;
+				}
+				if (p === "userBlockingPoints") {
+					dataVallydette.statement.userBlockingPoints = 0;
+				}
+				if (p === "userTestDescription") {
+					dataVallydette.statement.userTestDescription = "";
+				}
+				if (p === "approval") {
+					dataVallydette.statement.approval = [{
+						"name": langStatement.customerService,
+						"content": ""
+					},{
+						"name": langStatement.internalService,
+						"content": "",
+					}
+					];
+				}
+				if (p === "contact") {
+					dataVallydette.statement.contact = [{
+						"name": "Orange France",
+						"content": ""
+					},
+					{
+						"name": langStatement.orangeGroup,
+						"content": ""
+					}
+					];
+				}
+				if (p === "derogation") {
+					dataVallydette.statement.derogation = "";
+				}
+				if (p === "exemption") {
+					dataVallydette.statement.exemption = "";
+				}
+				if (p === "userTestDescription") {
+					dataVallydette.statement.userTestDescription = langStatement.userTestingContent;
+					
+				}
+				if (p === "technology") {
+					if (currentCriteriaListName === "wcag-web") {
+						dataVallydette.statement.technology = [{
+							"name": "HTML",
+							"version": ""
+						},{
+							"name": "CSS",
+							"version": ""
+						},{
+							"name": "JavaScript",
+							"version": ""
+						}];
+					}
+					if (currentCriteriaListName === "wcag-android") {
+						dataVallydette.statement.technology = [{
+							"name": "Java",
+							"version": ""
+						},{
+							"name": "Kotlin",
+							"version": ""
+						},{
+							"name": "XML",
+							"version": ""
+						}];
+					}
+					if (currentCriteriaListName === "wcag-ios") {
+						dataVallydette.statement.technology = [{
+							"name": "Swift",
+							"version": ""
+						}];
+					}
+				}
+				if (p === "tests") {
+					if (currentCriteriaListName === "wcag-web") {
+						dataVallydette.statement.tests = [{
+						"type": "auto",
+						"name": "aXe",
+						"version": "4.9.3"
+						},
+						{
+						"type": "auto",
+						"name": "Wave",
+						"version": "3.1.3"
+						},
+						{	
+						"type": "functional",
+						"name": "NVDA",
+						"version": "2020.4"
+						},
+						{	
+						"type": "functional",
+						"name":  langStatement.keyboardNavigation,
+						"version": ""
+						}];
+					}
+					if (currentCriteriaListName === "wcag-android") {
+						dataVallydette.statement.tests = [{
+						"type": "auto",
+						"name": "aXe",
+						"version": "0.10.2"
+						},
+						{
+						"type": "auto",
+						"name": "Accessibility Scanner",
+						"version": ""
+						},
+						{	
+						"type": "functional",
+						"name": "Talkback",
+						"version": ""
+						},
+						{	
+						"type": "functional",
+						"name":  "Switch Access",
+						"version": ""
+						}];
+					}
+					if (currentCriteriaListName === "wcag-ios") {
+						dataVallydette.statement.tests = [{
+						"type": "auto",
+						"name": "Accessibility Inspector",
+						"version": ""
+						},
+						{	
+						"type": "functional",
+						"name": "Voice Over",
+						"version": ""
+						}];
+					}
+				}
+				if (p === "environments") {
+					if (currentCriteriaListName === "wcag-web") {
+						dataVallydette.statement.environments = [{
+							"environment": langStatement.environmentEx1
+						},{
+							"environment": langStatement.environmentEx2
+						}];
+					}
+					if (currentCriteriaListName === "wcag-android") {
+						dataVallydette.statement.environments = [{
+							"environment": langStatement.environmentEx3
+						}];
+					}
+					if (currentCriteriaListName === "wcag-ios") {
+						dataVallydette.statement.environments = [{
+							"environment": langStatement.environmentEx4
+						}];
+					}
+				}
+			}
+		});
+	
+	
+	showStatementWizard();
+	
+}
+
+/**
+ * Init the statement page
+ *
+*/
+function showStatementWizard() {
+	
+	setPageName(langVallydette.statement);
+	utils.setPageTitle(langVallydette.statementTxt1);
+	removeContextualMenu();
+	removeFilterSection();
+	utils.columnDisplay(2);
+	
+	var btnStatementXmlExport = document.createElement('a');
+	btnStatementXmlExport.innerHTML = "XML";
+	btnStatementXmlExport.setAttribute('id', "btnStatementXmlExport");
+	btnStatementXmlExport.setAttribute('title', langVallydette.xmlBtn);
+	btnStatementXmlExport.classList.add("btn", "btn-secondary", "btn-icon", "ml-2", "d-print-none");
+	document.getElementById("contextualMenu").appendChild(btnStatementXmlExport);
+	
+	var btnStatementHtmlExport = document.createElement('a');
+	btnStatementHtmlExport.innerHTML = "HTML";
+	btnStatementHtmlExport.setAttribute('id', "btnStatementHtmlExport");
+	btnStatementHtmlExport.setAttribute('title', langVallydette.htmlBtn);
+	btnStatementHtmlExport.classList.add("btn", "btn-secondary", "btn-icon", "ml-2", "d-print-none");
+	document.getElementById("contextualMenu").appendChild(btnStatementHtmlExport);
+	
+	
+	var statementResult = runComputation(true);
+
+	if (dataWCAG.globalPagesResult !== undefined && !isNaN(dataWCAG.globalPagesResult) && dataVallydette.statement.status === "DONE") {
+		
+		initStatementExports(statementResult);
+		
+	} else {
+		
+		btnStatementXmlExport.classList.add("disabled");
+		btnStatementHtmlExport.classList.add("disabled");
+	}
+
+	let statementWizardContent = '';
+	
+	statementWizardContent += '<h2 class="pt-4 pb-3">' + langVallydette.statementTxt1 + '</h2>';
+	
+	statementWizardContent += '<div id="alertContainer">';
+	if (dataWCAG.globalPagesResult === undefined || isNaN(dataWCAG.globalPagesResult)) {
+		statementWizardContent += '<div class="alert alert-info alert-dismissible fade show" role="alert"> <span class="alert-icon"><span class="sr-only">Info</span></span><p>' + langVallydette.statementTxt2 + '</p>';
+		statementWizardContent += '<button type="button" class="close" data-dismiss="alert"><span class="sr-only">Close information message</span></button>';   
+		statementWizardContent += '</div>';
+	}
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="row">';
+	statementWizardContent += '<div class="col-lg-6">';
+	statementWizardContent += '<h3>1. ' + langVallydette.formPrefill + '</h3>';
+	statementWizardContent += '<p id="descStatementImport">' + langVallydette.formPrefillDesc + '</p>';
+	statementWizardContent += '<div class="input-group">';
+    statementWizardContent += '                    <div class="custom-file">';
+    statementWizardContent += '                        <input class="custom-file-input" id="selectFilesStatement" type="file" aria-describedby="descStatementImport">';
+    statementWizardContent += '                        <label class="custom-file-label" id="selectFilesLabelStatement" for="selectFilesStatement" aria-describedby="importStatementData" data-browse="' + langVallydette.dataBrowse + '">' + langVallydette.selectData + '</label>';
+    statementWizardContent += '                    </div>';
+    statementWizardContent += '                    <div class="input-group-append">';
+    statementWizardContent += '                        <button class="btn btn-secondary" type="button" id="importStatementData">' + langVallydette.template.btnImportTxt + '</button>';
+    statementWizardContent += '                    </div>';
+    statementWizardContent += '                </div>';
+    statementWizardContent += '            </div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<hr class="border-light">';
+		
+	statementWizardContent += '<form id="statementForm">';
+
+	statementWizardContent += '<h3>2. ' + langVallydette.manualDataEntry + '</h3>';
+	statementWizardContent += '<p>' + langVallydette.manualDataEntryDesc + '</p>';
+
+	statementWizardContent += '<div class="row">';
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group">';
+    statementWizardContent += '<label for="input-name" class="is-required">' + langVallydette.projectName + '</label>';
+    statementWizardContent += '<input type="text" class="form-control" id="input-name" style="scroll-margin-top: 10.35em;" value="' + dataVallydette.statement.name + '" required >';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group">';
+    statementWizardContent += '<label for="input-lang" class="is-required">' + langVallydette.lang + '</label>';
+    statementWizardContent += '<select class="custom-select" id="input-lang"  style="scroll-margin-top: 10.35em;"  required>';
+    statementWizardContent += '<option value="" label="' + langVallydette.select + '"></option>';
+    statementWizardContent += '<option value="fr" ' + (dataVallydette.statement.lang === "fr" ? "selected" : "") + '>' + langVallydette.french + '</option>';
+    statementWizardContent += '<option value="en" ' + (dataVallydette.statement.lang === "en" ? "selected" : "") + '>' + langVallydette.english + '</option>';
+    statementWizardContent += '</select>';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group">';
+    statementWizardContent += '<label for="input-date"  class="is-required">' + langVallydette.date + '</label>';
+    statementWizardContent += '<input type="date" class="form-control" id="input-date" style="scroll-margin-top: 10.35em;" value="' + dataVallydette.statement.date + '" required>';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group" role="group">';
+	statementWizardContent += '<span class="d-block"><strong>' + langVallydette.typeOfResult + '</strong></span>';
+    statementWizardContent += '<label class="mt-1 font-weight-normal">';
+    statementWizardContent += '<input id="input-pagesAverage"  name="input-pagesAverage" class="mr-1" type="checkbox" autocomplete="off" ' + (dataVallydette.statement.results[0].checked === "true" ? " checked " : "") + '>';
+    statementWizardContent += '<span>' + langVallydette.averageRate + '</span>';
+    statementWizardContent += '</label>';
+	statementWizardContent += '<label class="font-weight-normal">';
+    statementWizardContent += '<input id="input-criteriaPercentage"  name="input-criteriaPercentage"  class="mr-1" type="checkbox" autocomplete="off" '+ (dataVallydette.statement.results[1].checked === "true" ? " checked " : "") + '>';
+    statementWizardContent += '<span>' + langVallydette.criteriaPercentage + '</span>';
+    statementWizardContent += '</label>';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<hr class="border-light">';
+
+	statementWizardContent += '<div class="row">';
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<h4>' + langVallydette.approval + ' <button class="btn btn-secondary btn-icon btn-sm d-print-none" id="btnEditApprovalList" data-toggle="modal" data-target="#modalStatement" aria-label="' + langVallydette.approvalEdit + '" title="' + langVallydette.approvalEdit + '"><span class="icon-Pencil" aria-hidden="true"></span></button></h4>';
+	statementWizardContent += '<div class="form-group" id="approvalList">';
+	
+	dataVallydette.statement.approval.forEach(function(a, index){ 
+		statementWizardContent += '<div class="custom-control custom-radio">';
+		statementWizardContent += '<input type="radio" id="approval' +  index + '" name="approvalRadio" class="custom-control-input" onClick="radioIsChecked(\'approval\', ' + index + ')" ' + (a.checked === "true" ? " checked " : "") + ' >';
+		statementWizardContent += '<label class="custom-control-label" for="approval' +  index + '">' + a.name + '</label>';
+		statementWizardContent += '</div>';
+	})
+	
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<h4>' + langVallydette.contact + '  <button class="btn btn-secondary btn-icon btn-sm d-print-none" id="btnEditContactList" data-toggle="modal" data-target="#modalStatement" aria-label="' + langVallydette.contactEdit + '" title="' + langVallydette.contactEdit + '"><span class="icon-Pencil" aria-hidden="true"></span></button></h4>';
+	statementWizardContent += '<div class="form-group" id="contactList">';
+	
+	dataVallydette.statement.contact.forEach(function(c, index){ 
+		statementWizardContent += '<div class="custom-control custom-radio">';
+		statementWizardContent += '<input type="radio" id="contact' +  index + '" name="contactRadio" class="custom-control-input" onClick="radioIsChecked(\'contact\', ' + index + ')" ' + (c.checked === "true" ? " checked " : "") + ' >';
+		statementWizardContent += '<label class="custom-control-label" for="contact' +  index + '">' + c.name + '</label>';
+		statementWizardContent += '</div>';
+	})
+	
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-6">';
+	statementWizardContent += '<div class="form-group">';
+    statementWizardContent += '<label for="input-plan">' + langVallydette.accessibilityPlan + '</label>';
+    statementWizardContent += '<textarea class="form-control" id="input-plan" rows="5" aria-describedby="planDesc">' + dataVallydette.statement.plan + '</textarea>';
+	statementWizardContent += '<small id="planDesc" class="form-text text-muted">' + langVallydette.markdownDesc + '</small>';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<hr class="border-light">';
+	
+	statementWizardContent += '<div class="row">';
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group" role="group" aria-labelledby="technologyLegend">';
+	statementWizardContent += '<h4 id="technologyLegend">' + langVallydette.technologies + ' <button class="btn btn-secondary btn-icon btn-sm d-print-none" id="btnEditTechList" data-toggle="modal" data-target="#modalStatement" aria-label="' + langVallydette.technologiesEdit + '" title="' + langVallydette.technologiesEdit + '"><span class="icon-Pencil" aria-hidden="true"></span></button></h4>';
+    statementWizardContent += '<ul id="technologyList">';	
+
+	dataVallydette.statement.technology.forEach(function(listItem, index){
+		statementWizardContent += '<li>'+listItem.name+' '+listItem.version+'</li>';
+	})
+	
+	statementWizardContent += '</ul>';
+ 
+	statementWizardContent += '</div>';	
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group" role="group" aria-labelledby="testLegend">';
+	statementWizardContent += '<h4 id="testLegend">' + langVallydette.tests + ' <button class="btn btn-secondary btn-icon btn-sm d-print-none" id="btnEditTestList" data-toggle="modal" data-target="#modalStatement" aria-label="' + langVallydette.testsEdit + '" title="' + langVallydette.testsEdit + '"><span class="icon-Pencil" aria-hidden="true"></span></button></h4>';
+
+	statementWizardContent += '<ul id="testsList">';	
+	
+    dataVallydette.statement.tests.forEach(function(listItem, index){
+		statementWizardContent += '<li>' +listItem.name + ' ' + listItem.version + '</li>';
+	})
+	
+	statementWizardContent += '</ul>';
+	statementWizardContent += '</div>';	
+	statementWizardContent += '</div>';	
+	
+		
+	statementWizardContent += '<div class="col-lg-3">';
+	statementWizardContent += '<div class="form-group" role="group" aria-labelledby="environmentLegend">';
+	statementWizardContent += '<h4 id="environmentLegend">' + langVallydette.environments + ' <button class="btn btn-secondary btn-icon btn-sm d-print-none" id="btnEditEnvironmentList" data-toggle="modal" data-target="#modalStatement" aria-label="' + langVallydette.environmentsEdit + '" title="' + langVallydette.environmentsEdit + '"><span class="icon-Pencil" aria-hidden="true"></span></button></h4>';
+
+	statementWizardContent += '<ul id="environmentsList">';	
+	
+    dataVallydette.statement.environments.forEach(function(listItem, index){
+		statementWizardContent += '<li>' + listItem.environment + '</li>';
+	})
+	
+	statementWizardContent += '</ul>';
+	statementWizardContent += '</div>';	
+	statementWizardContent += '</div>';	
+	
+		
+	statementWizardContent += '<div class="col-lg-3" role="group" aria-labelledby="usersTestsHeading">';
+	statementWizardContent += '<h4 id="usersTestsHeading">' + langVallydette.userTesting + '</h4>';
+	statementWizardContent += '<div class="form-group input-group-sm">';
+	statementWizardContent += '<label for="input-userNumber" >' + langVallydette.userNumber + '</label>';
+	statementWizardContent += '<input type="number" class="form-control" id="input-userNumber" value="' + dataVallydette.statement.userNumber +'" min="0" max="100">';
+	statementWizardContent += '</div>';
+	statementWizardContent += '<div class="form-group input-group-sm">';
+	statementWizardContent += '<label for="input-userBlockingPoints" >' + langVallydette.blockingNumber + '</label>';
+	statementWizardContent += '<input type="number" class="form-control" id="input-userBlockingPoints" value="' + dataVallydette.statement.userBlockingPoints +'" min="0" max="100">';
+	statementWizardContent += '</div>';
+	statementWizardContent += '<div class="form-group input-group-sm">';
+	statementWizardContent += '<label for="input-userTestDescription" >' + langVallydette.userTestDescription + '</label>';
+	statementWizardContent += '<textarea class="form-control" id="input-userTestDescription" rows="2" >' + dataVallydette.statement.userTestDescription 
+	if (currentCriteriaListName === "wcag-web") {
+		statementWizardContent += langVallydette.userTestingContentWeb;
+	} else if (currentCriteriaListName === "wcag-android") {
+		statementWizardContent += langVallydette.userTestingContentAndroid;
+	} else if (currentCriteriaListName === "wcag-ios") {
+		statementWizardContent += langVallydette.userTestingContentIOS;
+	}
+	statementWizardContent += '</textarea>';
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+			
+	statementWizardContent += '</div>';
+
+	statementWizardContent += '<hr class="border-light">';
+	statementWizardContent += '<div class="row">';
+	statementWizardContent += '<div class="col-lg-6">';
+	
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="row">';
+	statementWizardContent += '<div class="col-lg-6">';
+	statementWizardContent += '<div class="form-group">';
+    statementWizardContent += '<label for="input-derogation">' + langVallydette.derogations + '</label>';
+    statementWizardContent += '<textarea class="form-control" id="input-derogation" rows="5" aria-describedby="derogationDesc">' + dataVallydette.statement.derogation + '</textarea>';
+	statementWizardContent += '<small id="derogationDesc" class="form-text text-muted">' + langVallydette.markdownDesc + '</small>';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="col-lg-6">';
+	statementWizardContent += '<div class="form-group">';
+    statementWizardContent += '<label for="input-exemption">' + langVallydette.exemptions + '</label>';
+    statementWizardContent += '<textarea class="form-control" id="input-exemption" rows="5" aria-describedby="exemptionDesc">' + dataVallydette.statement.exemption + '</textarea>';
+	statementWizardContent += '<small id="exemptionDesc" class="form-text text-muted">' + langVallydette.markdownDesc + '</small>';
+    statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '<div class="row mb-2">';
+	statementWizardContent += '<div class="col-lg-12">';
+	statementWizardContent += '<button type="submit" id="statementSaveBtn" class="btn btn-primary ml-2">' + langVallydette.save + '</button>';
+	statementWizardContent += '<button type="submit" id="statementSaveAndDownloadBtn" class="btn btn-secondary ml-2">' + langVallydette.saveDownloadJson + '</button>';
+	statementWizardContent += '<a href="#" id="exportStatementData" class="btn btn-secondary" hidden>';      
+	statementWizardContent += langVallydette.downloadJson;
+	statementWizardContent += '</a>';
+	statementWizardContent += '</div>';
+	statementWizardContent += '</div>';
+	
+	statementWizardContent += '</form>';
+	statementWizardContent += '</div>';	
+	
+    htmlMainContent.innerHTML = statementWizardContent;
+	
+	document.getElementById("btnEditContactList").addEventListener('click', function(){event.preventDefault(); editStatementProperty("contact");});
+	document.getElementById("btnEditApprovalList").addEventListener('click', function(){event.preventDefault(); editStatementProperty("approval");});
+	
+	document.getElementById("btnEditTechList").addEventListener('click', function(){event.preventDefault(); editStatementProperty("technology");});
+	document.getElementById("btnEditTestList").addEventListener('click', function(){event.preventDefault(); editStatementProperty("tests");});
+	document.getElementById("btnEditEnvironmentList").addEventListener('click', function(){event.preventDefault(); editStatementProperty("environments");});
+	
+	document.getElementById('importStatementData').onclick = function () {
+		var files = document.getElementById('selectFilesStatement').files;
+		var fr = new FileReader();
+
+		fr.onload = function (e) {
+			dataVallydette.statement = JSON.parse(e.target.result);
+			if (dataVallydette.statement.lang !== globalLang) {
+				
+				var langRequest = new XMLHttpRequest();
+				langRequest.open("GET", "json/lang/" + dataVallydette.statement.lang + ".json", true);
+				langRequest.onreadystatechange = function () {
+				  if(langRequest.readyState === 4 && langRequest.status === 200) {
+					langStatementRequest = JSON.parse(langRequest.responseText);
+					
+					langStatement = langStatementRequest;
+					initStatementObject();
+					
+				  } 
+				};
+				langRequest.send();
+				
+			} else {
+				
+				langStatement = langVallydette;
+				initStatementObject();
+			}
+			
+			
+		}
+
+		fr.readAsText(files.item(0));
+	};
+	
+	
+	document.getElementById("selectFilesStatement").addEventListener('change', function () {
+		document.getElementById("selectFilesLabelStatement").innerText = document.getElementById("selectFilesStatement").files[0].name;
+	}, false);
+	
+	let dataStr = JSON.stringify(dataVallydette.statement);
+	let dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+	document.getElementById("exportStatementData").setAttribute('href', dataUri);
+	let exportFileName = 'statementData.json';
+	document.getElementById("exportStatementData").setAttribute('download', exportFileName);
+	
+	document.getElementById("statementForm").addEventListener('submit', function (e) {
+		event.preventDefault();
+		saveStatement(this, e.submitter.id);
+	});
+	
+	document.getElementById("statementForm").addEventListener('focusin', function (e) {
+		if (document.getElementById('StatementFormInfo')) {
+			document.getElementById('StatementFormInfo').remove();
+		}
+	});
+		
+}
+
+/**
+ * Used to update statement properties state
+*/
+radioIsChecked = function (statementProperty, propertyIndex) {
+	
+	dataVallydette.statement[statementProperty].forEach(function(listItem, index){
+		
+		if (propertyIndex === index) {
+			listItem.checked = "true";
+		} else {
+			listItem.checked = "false";
+		}
+	
+	})
+}
+
+/**
+ * Statement property edition
+ * @param {string} statementProperty - statement property to edit
+*/
+editStatementProperty = function (statementProperty) {
+	
+	let htmlModal = '';
+	htmlModal = '<div id="modalStatement" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalStatementTitle">';
+	htmlModal += '<div class="modal-dialog modal-dialog-scrollable" role="document">';
+	htmlModal += '<div class="modal-content">';
+	htmlModal += '<div class="modal-header">';
+	htmlModal += '<h5 class="modal-title" id="modalStatementTitle">' + langVallydette.edition + '</h5>';
+	htmlModal += '<button type="button" class="close" data-dismiss="modal" aria-label="' + langVallydette.close + '"></button>';
+	htmlModal += '</div>';
+	htmlModal += '<div class="modal-body">';
+	htmlModal += '<form id="listEditForm">';
+	htmlModal += '<ul id="listToEdit">';
+	
+	dataVallydette.statement[statementProperty].forEach(function(listItem, index){
+	
+		htmlModal += '<li>';
+		
+		if (statementProperty === 'approval' || statementProperty === 'contact' ) {
+			htmlModal += '<span role="group" aria-labelledby="itemLegend-' + index + '">';
+			htmlModal += '	<span id="itemLegend-'+index+'" class="font-weight-bold">' + langVallydette.item + ' ' + index + '</span>';
+		} else {
+			htmlModal += '<span class="input-group"  role="group"  aria-labelledby="itemLegend-' + index + '">';
+			htmlModal += ' <span class="input-group-prepend">';
+			htmlModal += '	<span class="input-group-text" id="itemLegend-'+index+'">' + langVallydette.item + ' ' + index + '</span>';
+			htmlModal += '  </span>';	
+		}
+
+		statementProperties.forEach(function(p) {
+			
+			if (listItem[p] !== undefined && p === 'type') {
+				
+				htmlModal += '<select id="type-'+index+'" class="custom-select mb-1" aria-label="' + langVallydette.type + '" title="' + langVallydette.type + '" >';
+				htmlModal += '<option value="auto" ' + (listItem[p] === "auto" ? "selected" : "") + ' >' + langVallydette.auto + '</option>';
+				htmlModal += '<option value="functional" ' + (listItem[p] === "functional" ? "selected" : "") + ' >' + langVallydette.functional + '</option>';
+				htmlModal += '<option value="manual" ' + (listItem[p] === "manual" ? "selected" : "") + ' >' + langVallydette.manual + '</option>';
+				htmlModal += '<option value="user" ' + (listItem[p] === "user" ? "selected" : "") + ' >' + langVallydette.user + '</option>';
+				htmlModal += '</select>';
+				
+			} else if (listItem[p] !== undefined && p === 'content') {
+				
+				htmlModal += '<textarea rows="2" cols="20" id="' + p + '-' + index + '" class="form-control mb-1" aria-label="' + langVallydette.content + '" title="' + langVallydette.content + '" >' + listItem.content + '</textarea>';
+				
+			} else if (listItem[p] !== undefined && p === 'checked') {
+				
+				htmlModal += '<input type="hidden" id="checked-' + index + '" class="form-control mb-1" value="' + listItem.checked + '" aria-label="' + langVallydette.checked + '" title="' + langVallydette.checked + '" />';
+				
+			} else if (listItem[p] !== undefined) {
+				
+				htmlModal += '<input type="text" id="' + p + '-' + index + '" class="form-control mb-1" value="' + listItem[p] + '" aria-label="' + langVallydette[p] + '" title="' + langVallydette[p] + '" aria-describedby="itemDesc" placeholder="' + langVallydette[p] + '" />';
+				
+			}
+
+		})
+		
+		htmlModal += '</span>';
+		htmlModal += '</li>';	
+
+	})
+	htmlModal += '</ul>';
+
+	if (statementProperty === "environments") {
+		htmlModal += '<p id="itemDesc" class="form-text text-muted">' + langVallydette.statementTxt5 + '</p>';
+	} else {
+		htmlModal += '<p id="itemDesc" class="form-text text-muted">' + langVallydette.statementTxt3 + '</p>';
+	}
+	
+	htmlModal += '<button type="button" id="addElement" class="btn btn-secondary btn-sm">' + langVallydette.addElement + '</button>';
+	htmlModal += '</form>';
+	htmlModal += '</div>';
+	htmlModal += '<div class="modal-footer">';
+	htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">' + langVallydette.cancel + '</button>';
+	htmlModal += '<button type="button" id="editionSaveBtn" data-dismiss="modal" class="btn btn-primary">' + langVallydette.save + '</button>';
+	htmlModal += '</div></div></div></div>';
+
+	let elModal = document.getElementById('modal');
+	elModal.innerHTML = htmlModal;
+	
+	document.getElementById("addElement").addEventListener('click', function(){addListElement(statementProperty);});
+	document.getElementById("editionSaveBtn").addEventListener('click', function(){saveListElement(document.getElementById("listToEdit"), statementProperty);});
+} 
+
+/**
+ * Save an item list (list of properties)
+ * @param {string} listToEdit - a list ID (html element ID)
+ * @param {string} statementProperty - statement property to edit
+*/
+saveListElement = function(listToEdit, statementProperty) {
+
+	dataVallydette.statement[statementProperty] = [];
+	let listMarkup = '';
+	let index = 0;
+			
+	//vérifier les value
+	for (let listItem of listToEdit.children) {
+		
+		
+		if ((listItem.children[0].children["name-"+index] !== undefined && listItem.children[0].children["name-"+index].value !== "") || (listItem.children[0].children["environment-"+index] !== undefined && listItem.children[0].children["environment-"+index].value !== "")) {
+			
+			itemObj = {};
+			
+			statementProperties.forEach(function(p){
+				if (listItem.children[0].children[p+"-"+index]) {
+					itemObj[p] = listItem.children[0].children[p+"-"+index].value;
+				}
+			})
+			
+			dataVallydette.statement[statementProperty].push(itemObj);
+			
+			if (statementProperty === 'technology' || statementProperty === 'tests' ) {
+				
+				listMarkup += '<li>';
+				listMarkup += itemObj.name ? itemObj.name + ' ' : '';	
+				listMarkup += itemObj.version ? itemObj.version  + ' ' : '';
+				listMarkup += '</li>';
+				
+			}
+			
+			if (statementProperty === 'contact' || statementProperty === 'approval' ) {
+				
+				listMarkup += '<div class="custom-control custom-radio">';
+				listMarkup += '<input type="radio" id="' + statementProperty +  index + '" name="' + statementProperty + 'Radio" class="custom-control-input" onClick="radioIsChecked(\'' + statementProperty + '\', ' + index + ')" ';
+				listMarkup += itemObj.checked === "true" ? "checked" : "";
+				listMarkup += '>';
+				listMarkup += '<label class="custom-control-label" for="' + statementProperty +  index + '">' + itemObj.name + '</label>';
+				listMarkup += '</div>';
+			}
+			
+			if (statementProperty === 'environments') {
+				
+				listMarkup += '<li>';
+				listMarkup += itemObj.environment ? itemObj.environment + ' ' : '';	
+				listMarkup += '</li>';
+				
+			}
+			
+		}
+		index++;
+		
+	}
+	
+	document.getElementById(statementProperty+"List").innerHTML = listMarkup;
+
+}
+
+/**
+ * Add a new item to a given list (list of properties)
+ * @param {string} statementProperty - statement property to edit
+*/
+addListElement = function(statementProperty) {
+
+	var listItem = document.createElement("li");
+	var listToEdit = document.getElementById("listToEdit");
+	var listIndex = listToEdit.querySelectorAll("li").length;
+
+	let htmlItem = '';
+	
+		if (statementProperty === 'approval' || statementProperty === 'contact' ) {
+			htmlItem += '<span>';
+			htmlItem += '	<span id="itemLegend-' + listIndex + '" class="font-weight-bold">' + langVallydette.item + ' ' + listIndex + '</span>';
+		} else {
+			htmlItem += '<span class="input-group">';
+			htmlItem += ' <span class="input-group-prepend">';
+			htmlItem += '	<span class="input-group-text" id="itemLegend-' + listIndex + '">' + langVallydette.item + ' ' + listIndex + '</span>';
+			htmlItem += '  </span>';	
+		}
+
+		statementProperties.forEach(function(p){
+			
+			if (dataVallydette.statement[statementProperty][0].hasOwnProperty(p) && p === 'type') {
+				
+				htmlItem += '<select id="type-'+listIndex+'" class="custom-select mb-1" aria-labelledby="itemLegend-' + listIndex + ' name-' + listIndex + '" aria-label="' + langVallydette.type + '" title="' + langVallydette.type + '" >';
+				htmlItem += '<option value="auto" ' + (listItem[p] === "auto" ? "selected" : "") + ' >' + langVallydette.auto + '</option>';
+				htmlItem += '<option value="functional" ' + (listItem[p] === "functional" ? "selected" : "") + ' >' + langVallydette.functional + '</option>';
+				htmlItem += '<option value="manual" ' + (listItem[p] === "manual" ? "selected" : "") + ' >' + langVallydette.manual + '</option>';
+				htmlItem += '<option value="user" ' + (listItem[p] === "user" ? "selected" : "") + ' >' + langVallydette.user + '</option>';
+				htmlItem += '</select>';
+				
+			} else if (dataVallydette.statement[statementProperty][0].hasOwnProperty(p) && p === 'content') {
+				
+				htmlItem += '<textarea  rows="4" cols="50" id="' + p + '-' + listIndex + '" class="form-control mb-1" aria-labelledby="itemLegend-' + listIndex + ' ' + p + '-' + listIndex + '" aria-label="' + langVallydette.content + '" title="' + langVallydette.content + '" ></textarea>';
+				
+			} else if (dataVallydette.statement[statementProperty][0].hasOwnProperty(p)) {
+				
+				htmlItem += '<input type="text" id="' + p + '-' + listIndex + '" class="form-control mb-1" value="" aria-labelledby="itemLegend-' + listIndex + ' ' + p + '-' + listIndex +'" aria-label="' + langVallydette[p] + '" title="' + langVallydette[p] + '" aria-describedby="itemDesc" placeholder="' + langVallydette[p] + '" />';
+				
+			}
+
+		})
+			
+		htmlItem += '</span>';	
+	
+	listItem.innerHTML = htmlItem;
+	listToEdit.appendChild(listItem);
+	
+	document.getElementById("name-"+listIndex).focus();
+}
+
+/**
+ * Save the statement form
+ * @param {object} statementForm - the statement form object
+ * @param {string} submitterBtn - the submit button ID (html element ID)
+*/
+saveStatement = function(statementForm, submitterBtn) {
+	
+	var statementResult = runComputation(true);
+
+	statementInputs.forEach(function(input){
+		dataVallydette.statement[input] = statementForm.elements["input-"+input].value;
+	});
+	
+	if (statementForm.elements["input-pagesAverage"].checked) {
+		dataVallydette.statement.results[0].checked = "true";
+	} else {
+		dataVallydette.statement.results[0].checked = "false";
+	}
+	
+	if (statementForm.elements["input-criteriaPercentage"].checked) {
+		dataVallydette.statement.results[1].checked = "true";
+	} else {
+		dataVallydette.statement.results[1].checked = "false";
+	}
+	
+	if (dataWCAG.globalPagesResult) {
+		
+		dataVallydette.statement.status = "DONE";
+		
+		if (dataVallydette.statement.lang !== globalLang) {
+			
+			var langRequest = new XMLHttpRequest();
+			langRequest.open("GET", "json/lang/" + dataVallydette.statement.lang + ".json", true);
+			langRequest.onreadystatechange = function () {
+			  if(langRequest.readyState === 4 && langRequest.status === 200) {
+				langStatementRequest = JSON.parse(langRequest.responseText);
+				
+				langStatement = langStatementRequest;
+				
+				initStatementExports(statementResult);
+	
+			  } 
+			};
+			langRequest.send();
+			
+		} else {
+			
+			langStatement = langVallydette;
+			
+			initStatementExports(statementResult);
+			
+		}
+	
+	} else {
+		
+		dataVallydette.statement.status = "WIP";
+		
+	}
+
+	alertMessage = '';
+	alertMessage += '<div class="alert alert-success alert-dismissible fade show" id="StatementFormInfo" role="alert"> <span class="alert-icon"><span class="sr-only">Info</span></span><p>' + langVallydette.successFeedback + '</p>';
+	alertMessage += '<button type="button" class="close" data-dismiss="alert"><span class="sr-only">' + langVallydette.closeInformations + '</span></button>';   
+	alertMessage += '</div>';
+	
+	document.getElementById('alertContainer').innerHTML += (alertMessage);
+
+	if (submitterBtn === "statementSaveAndDownloadBtn") {
+		// dataStatement export update
+		let dataStr = JSON.stringify(dataVallydette.statement);
+		let dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+		document.getElementById("exportStatementData").setAttribute('href', dataUri);
+		document.getElementById("exportStatementData").click();
+	}
+
+	// dataVallydette export update
+	jsonUpdate();
+
+}
+
+/**
+ * Run the statement exports functions. Useful each time an update is made into the statement properties.
+*/
+function initStatementExports(statementResult){
+	exportStatementHTML(statementResult);
+	exportStatement(statementResult);
+}
+
+/**
+ * XML statement export
+ * @param {object} statementResult - Contains all wcag results by pages (pagesResults).
+ * @param {object} langStatement - traductions keys (needed if statement lang is diffrent from global lang)
+*/
+exportStatement = function(statementResult) {
+
+	var md = window.markdownit();
+
+	var xmlStatement = '<?xml version="1.0" encoding="UTF-8"?>\n';
+	xmlStatement += '<declaration>\n';
+
+	xmlStatement += '<!-- from la va11ydette with love -->\n\n';
+	
+	xmlStatement += '<!--\n ';
+	xmlStatement += 'TITLE\n ';
+	xmlStatement += 'This is the name for the site, or page, or section of a site that was audited\n ';
+	xmlStatement += '-->\n ';
+
+	xmlStatement += '<title><![CDATA[' + dataVallydette.statement.name + ']]></title>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'LANGUAGE\n';
+	xmlStatement += 'This declaration was done in this language:\n';
+	xmlStatement += '(please use proper HTML lang attribute)\n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<lang>' + dataVallydette.statement.lang + '</lang>\n\n';
+
+	xmlStatement += '<!-- \n';
+	xmlStatement += 'STATUS\n';
+	xmlStatement += 'Either being audited or having been audited\n';
+	xmlStatement += 'So:\n';
+	xmlStatement += '[WIP|DONE]\n';
+	xmlStatement += '-->\n';
+
+	xmlStatement += '<status>' + dataVallydette.statement.status + '</status>\n\n';
+	xmlStatement += '<!--\n\n';
+	xmlStatement += ' below this line will not be read if we\'re WIP, so don\'t bother filling it up\n';
+	xmlStatement += '-->\n\n';
+
+	xmlStatement += '<!--\n';
+	xmlStatement += '******************************************************\n';
+	xmlStatement += 'GENERAL DECLARATION INFORMATION\n';
+	xmlStatement += '******************************************************\n';
+	xmlStatement += '-->\n\n';
+
+	xmlStatement += '<!--\n';
+	xmlStatement += 'APPROVAL\n';
+	xmlStatement += 'Name: approval name\n';
+	xmlStatement += 'Content: usefull for additional information like a postal address for example. This is CDATA-protected, please add properly formatted HTML. \n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<approval>\n';
+	dataVallydette.statement.approval.filter(a => a.checked === "true").map(a => xmlStatement += '	<name>' + a.name + '</name>\n	<content>\n<![CDATA[' +  md.render(a.content) + ']]>\n</content>\n');
+	xmlStatement += '</approval>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'CONTACT\n';
+	xmlStatement += 'Name: contact name\n';
+	xmlStatement += 'Content: full contact informations. This is CDATA-protected, please add properly formatted HTML. \n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<contact>\n';
+	dataVallydette.statement.contact.filter(c => c.checked === "true").map(c => xmlStatement += '	<name>' + c.name + '</name>\n	<content>\n<![CDATA[' + md.render(c.content) + ']]>\n</content>\n');
+	xmlStatement += '</contact>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'AUDIT DATE\n';
+	xmlStatement += 'Format: YYYY-MM-DD\n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<audit_date>' + dataVallydette.statement.date + '</audit_date>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'DIGITAL ACCESSIBILITY PLAN\n';
+	xmlStatement += 'Plan: Paragraph for the digital accessibility plan. This is CDATA-protected, please add properly formatted HTML. \n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<plan>\n<![CDATA[' +  md.render(dataVallydette.statement.plan) + ']]>\n</plan>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'REFERENTIAL USED\n';
+	xmlStatement += '-->\n';
+
+	xmlStatement += '<referential>\n';
+	xmlStatement += '	<name>WCAG</name><!-- if it\'s an abbreviation, the document template must translate it to plain text -->\n';
+	xmlStatement += '	<version>2.1</version>\n';
+	xmlStatement += '	<level>AA</level>\n';
+	xmlStatement += '	<url>https://www.w3.org/Translations/WCAG20-fr/</url>\n';
+	xmlStatement += '</referential>\n\n';
+
+	xmlStatement += '<!--\n';
+	xmlStatement += 'TECHNOLOGIES USED IN THE SITE\n';
+	xmlStatement += '-->\n';
+
+	xmlStatement += '<technologies>\n';
+	dataVallydette.statement.technology.forEach(item => xmlStatement += '	<technology>' + item.name + ' ' + item.version + '</technology>\n');
+	xmlStatement += '</technologies>\n\n';
+		
+	xmlStatement += '<!--\n';
+	xmlStatement += 'TESTS PERFORMED TO EVALUATE ACCESSIBILITY\n';
+	xmlStatement += 'a test can have the type [auto|manual|functional|user]:\n';
+	xmlStatement += '* automatic testing\n';
+	xmlStatement += '* manual testing\n';
+	xmlStatement += '* functional testing\n';
+	xmlStatement += '* test done by a real user\n';
+	xmlStatement += '-->\n';
+
+	xmlStatement += '<tests>\n';
+	dataVallydette.statement.tests.forEach(item => xmlStatement += '	<test type="' + item.type + '">\n		<name>' + item.name + '</name>\n		<version>' + item.version + '</version>\n	</test>\n');
+	
+	if (dataVallydette.statement.userNumber > 0 && dataVallydette.statement.userTestDescription !== '') {
+		xmlStatement += '	<test type="user">\n		<name>' + dataVallydette.statement.userTestDescription + '</name>\n		<version></version>\n	</test>\n'
+	}
+	
+	xmlStatement += '</tests>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'ENVIRONMENTS USED TO EVALUATE ACCESSIBILITY\n';
+	xmlStatement += 'Environment: an environment should indicate a user agent and an assistive technologie. This is CDATA-protected, please add properly formatted HTML. \n';
+	xmlStatement += '-->\n';
+
+	xmlStatement += '<environments>\n';
+	dataVallydette.statement.environments.forEach(item => xmlStatement += '	<environment><![CDATA[' + item.environment + ']]></environment>\n');
+	xmlStatement += '</environments>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'URLS\n';
+	xmlStatement += 'This is the list of URLs that were tested\n';
+	xmlStatement += 'This is CDATA-protected, please add properly formatted HTML.\n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<urls>\n';
+	dataVallydette.checklist.page.forEach(item => xmlStatement += '	<url>\n		<name><![CDATA[' + item.name + ']]></name>\n		<location><![CDATA[' + item.url + ']]></location>\n	</url>\n');	
+	xmlStatement += '</urls>\n';
+
+	xmlStatement += '<!--\n';
+	xmlStatement += '******************************************************\n';
+	xmlStatement += 'END GENERAL DECLARATION INFORMATION\n';
+	xmlStatement += '******************************************************\n';
+	xmlStatement += 'START SPECIFIC CONFORMITY NUMBERS\n';
+	xmlStatement += '******************************************************\n';
+	xmlStatement += '-->\n';
+
+	xmlStatement += '<!--\n';
+	xmlStatement += 'USERS\n';
+	xmlStatement += 'Number of real users that tested the pages\n';
+	xmlStatement += 'and blocking points they found (if 0, the document will have to say “with no blocking points from a user\'s point of view”\n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<users>' + dataVallydette.statement.userNumber + '</users>\n';
+	xmlStatement += '<blocking_points>' + dataVallydette.statement.userBlockingPoints + '</blocking_points>\n\n';
+
+	if (dataVallydette.statement.results[1].checked === "true") {
+		xmlStatement += '<!--\n';
+		xmlStatement += 'RESULTS DETAILS\n';
+		xmlStatement += '-->\n';
+		xmlStatement += '<results>\n';
+		xmlStatement += '	<result type="a">\n';
+		xmlStatement += '		<criteria>' + dataWCAG.totalA + '</criteria>\n';
+		xmlStatement += '		<ok>' + dataWCAG.conformeA + '</ok><!-- valid -->\n';
+		xmlStatement += '		<nok>' + dataWCAG.nonconformeA + '</nok><!-- not valid -->\n';
+		xmlStatement += '		<na>' + dataWCAG.naA + '</na><!-- not applicable -->\n';
+		xmlStatement += '		<conformity>' + dataWCAG.resultA + '</conformity><!-- percentage, expressed as a number with no “%” sign -->\n';
+		xmlStatement += '	</result>\n\n';
+
+		xmlStatement += '	<result type="aa">\n';
+		xmlStatement += '		<criteria>' + dataWCAG.totalAA + '</criteria>\n';
+		xmlStatement += '		<ok>' + dataWCAG.conformeAA + '</ok><!-- valid -->\n';
+		xmlStatement += '		<nok>' + dataWCAG.nonconformeAA + '</nok><!-- not valid -->\n';
+		xmlStatement += '		<na>' + dataWCAG.naAA + '</na><!-- not applicable -->\n';
+		xmlStatement += '		<conformity>' + dataWCAG.resultAA + '</conformity><!-- percentage, expressed as a number with no “%” sign -->\n';
+		xmlStatement += '	</result>\n\n';
+
+		xmlStatement += '	<result type="total">\n';
+		xmlStatement += '		<criteria>' + (dataWCAG.totalA+dataWCAG.totalAA) + '</criteria>\n';
+		xmlStatement += '		<ok>' + dataWCAG.nbTrueWcag + '</ok><!-- valid -->\n';
+		xmlStatement += '		<nok>' + dataWCAG.nbFalseWcag + '</nok><!-- not valid -->\n';
+		xmlStatement += '		<na>' + dataWCAG.nbNaWcag + '</na><!-- not applicable -->\n';
+		xmlStatement += '		<conformity>' + dataWCAG.result + '</conformity><!-- percentage, expressed as a number with no “%” sign -->\n';
+		xmlStatement += '	</result>\n';
+		xmlStatement += '</results>\n\n';
+	}
+	
+	if (dataVallydette.statement.results[0].checked === "true") {
+		xmlStatement += '<!--\n';
+		xmlStatement += 'Pages results details\n';
+		xmlStatement += '-->\n';
+		xmlStatement += '<pages_results conformity="' + dataWCAG.globalPagesResult + '">\n';
+		statementResult.forEach(item => xmlStatement += '	<page name="' + utils.escape_html(item.name) + '">\n		<ok type="a">' + item.conformeA + '</ok><!-- valid -->\n		<ok type="aa">' + item.conformeAA + '</ok><!-- valid -->\n		<nok type="a">' + item.nonconformeA + '</nok> <!-- not valid -->\n		<nok type="aa">' + item.nonconformeAA + '</nok> <!-- not valid -->\n		<na type="a">' + item.naA + '</na><!-- not applicable -->\n		<na type="aa">' + item.naAA + '</na><!-- not applicable -->\n		<conformity>' + item.result + '</conformity><!-- percentage, expressed as a number with no “%” sign -->\n</page>\n');;
+		xmlStatement += '</pages_results>\n\n';
+	}
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'Non conformity details\n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<details>\n';
+	const listNonConformity = dataWCAG.items.filter(dataWcagResult => dataWcagResult.resultat === false);
+			
+			if (listNonConformity.length > 0) {
+				
+				for (let i in listNonConformity) {
+				
+					xmlStatement += '	<detail>\n';
+					xmlStatement += '		<title>' + listNonConformity[i].wcag + ', ' + langStatement.wcag[listNonConformity[i].wcag] + ', ' + langVallydette.auditTxt10 + ' ' + listNonConformity[i].level + '</title>\n';
+					xmlStatement += '		<description><![CDATA[';
+					/** Remove undefined values */
+					
+					var last = 0;
+					listNonConformity[i].comment = listNonConformity[i].comment.filter(x => x);
+					
+					if (listNonConformity[i].comment.length > 0) {
+					
+							for (let j in listNonConformity[i].comment) {
+								last = last + 1;
+								
+								//xmlStatement += listNonConformity[i].comment[j] + (listNonConformity[i].comment.length !== last ? ' <br>' : '');
+								
+							}	
+					} 
+					
+					xmlStatement += ']]></description>\n';
+					xmlStatement += '	</detail>\n';
+		
+				}
+				
+			}
+	xmlStatement += '</details>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'DEROGATIONS\n';
+	xmlStatement += 'Derogations list. This is CDATA-protected, please add properly formatted HTML. \n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<derogations>\n<![CDATA[';
+	xmlStatement += md.render(dataVallydette.statement.derogation);
+	xmlStatement += ']]>\n</derogations>\n\n';
+	
+	xmlStatement += '<!--\n';
+	xmlStatement += 'DEROGATIONS\n';
+	xmlStatement += 'Exemptions list. This is CDATA-protected, please add properly formatted HTML. \n';
+	xmlStatement += '-->\n';
+	xmlStatement += '<exemptions>\n<![CDATA[';
+	xmlStatement += md.render(dataVallydette.statement.exemption);
+	xmlStatement += ']]>\n</exemptions>';
+	
+	xmlStatement += '\n\n</declaration>';
+
+	if (dataVallydette.statement.status === "DONE") {
+		
+		var bb = new Blob([xmlStatement], {type: 'application/octet-stream'});
+		var statementFileName = utils.slugify(dataVallydette.statement.name) + '.xml';
+		
+		var btnStatementXmlExport = document.getElementById("btnStatementXmlExport");
+		btnStatementXmlExport.classList.remove('disabled');
+		btnStatementXmlExport.setAttribute('href', window.URL.createObjectURL(bb));
+		btnStatementXmlExport.setAttribute('download', statementFileName); 
+		
+	}
+
+}
+
+/**
+ * HTML statement export
+ * @param {object} statementResult - Contains all wcag results by pages (pagesResults).
+ * @param {object} langStatement - traductions keys (needed if statement lang is diffrent from global lang)
+*/
+exportStatementHTML = function(statementResult) {
+	
+	const arrayTypeTest = ["auto", "manual", "functional", "user"];
+	const listNonConformity = dataWCAG.items.filter(dataWcagResult => dataWcagResult.resultat === false);
+	var statementDate = new Date(dataVallydette.statement.date);
+	var localeStatementDate = statementDate.toLocaleDateString(dataVallydette.statement.lang);
+	var md = window.markdownit();
+	
+	htmlStatement = "";
+	htmlStatement = `<!DOCTYPE html>
+<html lang="${dataVallydette.statement.lang}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="boosted-grid.min.css">
+  <link rel="stylesheet" href="pie.css">
+  
+  <title>${langStatement.statementTemplate.title} - ${dataVallydette.statement.name}</title>
+
+</head>
+
+<body>    
+    <main class="container content">        
+        <h1>${langStatement.statementTemplate.title} : ${dataVallydette.statement.name}</h1>
+        
+        <div class="summary">
+        
+            <div class="row">
+        
+                <div class="col-lg-3">
+                        
+                    <h2 class="pie" data-value="${dataWCAG.globalPagesResult}">
+						<span class="sr-only">${langStatement.statementTemplate.state}</span> 
+                        <div class="pie-val"><span>${dataWCAG.globalPagesResult}%</span></div>
+                    </h2>
+                    
+                    <p class="lead">${langStatement.statementTemplate.compliantContent1} ${dataWCAG.globalPagesResult}% ${langStatement.statementTemplate.compliantContent2}${dataVallydette.statement.userNumber > 0 ? `${langStatement.statementTemplate.resultsContent3} ${dataVallydette.statement.userBlockingPoints} ${langStatement.statementTemplate.blockingPoint1}` : `` }.
+					</p>
+				</div>
+        
+                <div class="col-lg-3">
+                    
+                    <h3>${langStatement.statementTemplate.auditDate}</h3>
+                    <p>${localeStatementDate}</p>
+                    
+                    <h3>${langStatement.statementTemplate.approvalHeading}</h3>
+					${dataVallydette.statement.approval.filter(a => a.checked === "true").map(a => md.render(a.content)).join('')}
+					
+                    <h3>${langStatement.statementTemplate.standardHeading}</h3>
+                    <p>
+                       ${langStatement.statementTemplate.wcagVersion}
+                    </p>
+                    
+                </div>
+                
+                <div class="col-lg-6">
+                
+                    <h3>${langStatement.statementTemplate.technologyHeading}</h3>
+                    <ul>
+						${dataVallydette.statement.technology.map(e => `<li>${e.name}${e.version.length > 0 ? ` ${e.version}` : ``}</li>`).join('\n						')}
+                    </ul>
+					
+                    <h3>${langStatement.statementTemplate.environmentHeading}</h3>
+					<p>${langStatement.statementTemplate.environmentContent}</p>
+                    <ul>
+						${dataVallydette.statement.environments.map(e => `<li>${e.environment}</li>`).join('\n						')}
+                    </ul>
+                    
+                    <h3>${langStatement.statementTemplate.methodsHeading}</h3>
+                    <ul>
+					`;
+						
+					arrayTypeTest.forEach(function(t){
+						
+						let arrayTypeResult = dataVallydette.statement.tests.filter(e => e.type === t);
+						let separator = ', '
+						
+						arrayTypeResult.length > 0 ? htmlStatement += `	<li><strong>${langStatement[t + "Test"]}:</strong> ${arrayTypeResult.map(e => `${e.name}${e.version.length > 0 ? ` ${e.version}` : ``}`).join(separator)}</li>\n					` : '';
+						
+					});
+					
+					if (dataVallydette.statement.userNumber > 0 && dataVallydette.statement.userTestDescription !== '') {
+						htmlStatement += `<li><strong>${langStatement.userTest}:</strong> ${dataVallydette.statement.userTestDescription}</li>`
+					}
+	
+	htmlStatement += `</ul>
+                
+                </div>
+            
+            </div>
+            
+        </div>
+        
+        <div class="row">
+        
+            <div class="col-md">
+				
+				<h2 class="h4 mt-4">${langStatement.statementTemplate.contextHeading}</h2>
+				${md.render(dataVallydette.statement.plan)}
+				
+				<h2 class="h4 mt-4">${langStatement.statementTemplate.pagesHeading}</h2>
+                
+                <p>${langStatement.statementTemplate.pagesContent}</p>
+				
+                <ol>
+					${dataVallydette.checklist.page.map(item => `<li><strong>${item.name} : </strong>${item.url}</li>`).join('\n					')}
+				</ol>
+                
+						
+            </div>
+            
+            <div class="col-md">
+				<h2 class="h4 mt-4">${langStatement.statementTemplate.resultsHeading}</h2>`;
+				
+			if (dataVallydette.statement.results[0].checked === "true") {
+               htmlStatement += ` <p>
+				${langStatement.statementTemplate.resultsContent1}${dataWCAG.globalPagesResult}${langStatement.statementTemplate.resultsContent2}${dataVallydette.statement.userNumber > 0 ? `${langStatement.statementTemplate.resultsContent3}${dataVallydette.statement.userBlockingPoints}${langStatement.statementTemplate.resultsContent4}` : `` }).${langStatement.statementTemplate.resultsContent5}
+				</p>
+				
+                <table class="table table-striped">
+				<caption class="sr-only">${langStatement.auditTxt4}</caption>
+				  <tr>
+					<th scope="row">${langStatement.auditTxt17}</th>
+					<th scope="col" colspan="2" class="text-center">${langStatement.compliant}</th>
+					<th scope="col" colspan="2" class="text-center">${langStatement.nonCompliant}</th>
+					<th scope="col" colspan="2" class="text-center">${langStatement.notApplicable}</th>
+					<th rowspan="2" class="text-center bg-light">${langStatement.auditTxt8}</th>
+				  </tr>
+				  <tr>
+					<th scope="col">${langStatement.auditTxt10}</th>
+					<th scope="col">A</th>
+					<th scope="col">AA</th>
+					<th scope="col">A</th>
+					<th scope="col">AA</th>
+					<th scope="col">A</th>
+					<th scope="col">AA</th>
+				  </tr>
+				 
+				
+				  ${statementResult.map(r => 
+					`<tr>
+						<th scope="row">${r.name}</th>
+						<td>${r.conformeA}</td>
+						<td>${r.conformeAA}</td>
+						<td>${r.nonconformeA}</td>
+						<td>${r.nonconformeAA}</td>
+						<td>${r.naA}</td>
+						<td>${r.naAA}</td>
+						<td style="background-color:#ddd !important;">${r.result} %</td>
+					</tr>`
+					  
+					).join('')}
+				  
+				</table>
+				
+				<p><strong>${langStatement.statementTemplate.resultsContent6}</strong> ${dataWCAG.globalPagesResult}${langStatement.statementTemplate.resultsContent7}</p>
+				`;
+	
+			}
+			
+			if (dataVallydette.statement.results[1].checked === "true") {
+               htmlStatement += `
+				<p>
+				${langStatement.statementTemplate.resultsContent1}${dataWCAG.result}${langStatement.statementTemplate.resultsContent8}${dataVallydette.statement.userNumber > 0 ? `${langStatement.statementTemplate.resultsContent3}${dataVallydette.statement.userBlockingPoints}${langStatement.statementTemplate.resultsContent4}` : `` }).
+				</p>	
+
+				<table class="table table-striped"><caption class="sr-only">${langStatement.auditTxt15}</caption>
+					<thead><tr>
+						<th scope="row">${langStatement.auditTxt10}</th>
+						<th scope="col" class="text-center">A</th>
+						<th scope="col" class="text-center">AA</th>
+						<th scope="col" class="text-center">Total</th>
+					</tr></thead>
+				<tbody>
+				
+				<tr>
+					<th scope="row" class="font-weight-bold">${langStatement.criteriaNumber}</th>
+					<td class="text-center">${dataWCAG.totalA}</td>
+					<td class="text-center">${dataWCAG.totalAA}</td>
+					<td class="text-center">${(dataWCAG.totalA+dataWCAG.totalAA)}</td>
+				</tr>
+				
+				<tr>
+					<th scope="row" class="font-weight-bold">${langStatement.compliant}</th>
+					<td class="text-center">${dataWCAG.conformeA}</td>
+					<td class="text-center">${dataWCAG.conformeAA}</td>
+					<td class="text-center">${dataWCAG.totalconforme}</td>
+				</tr>
+				
+				<tr>
+					<th scope="row" class="font-weight-bold">${langStatement.nonCompliant}</th>
+					<td class="text-center">${dataWCAG.nonconformeA}</td>
+					<td class="text-center">${dataWCAG.nonconformeAA}</td>
+					<td class="text-center">${dataWCAG.totalnonconforme}</td>
+				</tr>
+				
+				<tr>
+					<th scope="row" class="font-weight-bold">${langStatement.notApplicable}</th>
+					<td class="text-center">${dataWCAG.naA}</td>
+					<td class="text-center">${dataWCAG.naAA}</td>
+					<td class="text-center">${(dataWCAG.naA+dataWCAG.naAA)}</td>
+				</tr>
+				
+				<tr>
+					<th scope="row" class="font-weight-bold bg-light">${langStatement.auditTxt16}</th>
+					<td class="text-center bg-light">
+						${(!isNaN(dataWCAG.resultA) && dataWCAG.result!=="NA") ? `${dataWCAG.resultA}% ` : ``}		
+					</td>
+					<td class="text-center bg-light">
+						${(!isNaN(dataWCAG.resultAA) && dataWCAG.result!=="NA") ? `${dataWCAG.resultAA}% ` : ``}	
+					</td>
+					<td class="text-center bg-light">
+						${(!isNaN(dataWCAG.result) && dataWCAG.result!=="NA") ? `${dataWCAG.result}% ` : ``}
+					</td>
+				</tr>
+				
+				</tbody>
+				</table>`;
+			}
+			
+		htmlStatement += `		
+            </div>
+        </div>
+        
+        <div class="row">
+        
+            <div class="col-lg">
+                <h3 class="h6 mt-4">${langStatement.statementTemplate.noncompliancesHeading}</h3>`;
+		
+				if (listNonConformity.length > 0) {
+					htmlStatement += `
+					<ul>
+					${listNonConformity.map(nc => 
+						`	<li>
+							${nc.wcag} ${langStatement.wcag[nc.wcag]}, ${langStatement.auditTxt10} ${nc.level}
+						</li>`).join('\n					')}
+					</ul>`;
+	
+				} else {
+					htmlStatement += `<p>${langStatement.statementTemplate.noNonCompliance}</p>`;
+				}
+	
+	
+	
+    htmlStatement += `
+            </div>
+        </div>`;
+		
+	if (dataVallydette.statement.derogation !== "") {
+		htmlStatement += `<div class="row">
+        
+            <div class="col-lg">
+        
+                <h3 class="h6 mt-4">${langStatement.statementTemplate.derogationsHeading}</h3>
+				
+				${md.render(dataVallydette.statement.derogation)}
+
+		</div>
+		</div>`;
+		
+	}
+	
+	if (dataVallydette.statement.exemption !== "") {
+		htmlStatement += `<div class="row">
+        
+            <div class="col-lg">
+        
+                <h3 class="h6 mt-4">${langStatement.statementTemplate.exemptionsHeading}</h3>
+				
+				${md.render(dataVallydette.statement.exemption)}
+
+		</div>
+		</div>`;
+		
+	}		
+    htmlStatement += `    <div class="row">
+        
+            <div class="col-lg">
+        
+                <h2 class="h4 mt-4">${langStatement.statementTemplate.contactsHeading}</h2>
+				
+				${dataVallydette.statement.contact.filter(c => c.checked === "true").map(c => md.render(c.content)).join('')}
+
+			</div>
+        </div>
+		<div class="row">
+        
+            <div class="col-lg">
+        
+                <h2 class="h4 mt-4">${langStatement.statementTemplate.legalHeading}</h2>
+				<p>${langStatement.statementTemplate.legalContent}</p>
+				<ul>
+					<li>${langStatement.statementTemplate.legalList1}</li>
+					<li>${langStatement.statementTemplate.legalList2}</li>
+					<li>${langStatement.statementTemplate.legalList3}</li>
+				</ul>
+
+			</div>
+        </div>
+    </main>
+</body>
+
+</html>`;
+	
+	
+	if (dataVallydette.statement.status === "DONE") {
+		
+		var bb = new Blob([htmlStatement], {type: 'application/octet-stream'});
+		var statementFileName = utils.slugify(dataVallydette.statement.name) + '.html';
+		
+		var btnStatementHtmlExport = document.getElementById("btnStatementHtmlExport");
+		btnStatementHtmlExport.classList.remove('disabled');
+		btnStatementHtmlExport.setAttribute('href', window.URL.createObjectURL(bb));
+		btnStatementHtmlExport.setAttribute('download', statementFileName); 
+		
+	
+	}
+}
 
  /**
  * Some utilities funtions.
  */
 const utils = {
   reqError: function (err) {
-	let elrefTests = document.getElementById('mainContent');
-    elrefTests.innerHTML = '<div id="alertMsg" class="alert alert-danger mt-2"> <span class="alert-icon"><span class="sr-only">Warning</span></span>' + langVallydette.errorJson + '</div>';
+	//let htmlMainContent = document.getElementById('mainContent');
+	
+    htmlMainContent.innerHTML = '<div id="alertMsg" class="alert alert-danger mt-2"> <span class="alert-icon"><span class="sr-only" lang="en">Warning</span></span>' + langVallydette.errorJson + '</div>';
   },
   formatHeading: function (str) {
     return str.toLowerCase()
@@ -3068,24 +4865,35 @@ const utils = {
         .replace(/\-\-+/g, '-') 
         .replace(/^-+/, '')
         .replace(/-+$/, '');
-	},
+  },
+  escape_html: function (str) {
+    var map = {
+    '&': '&amp;',
+	'<': '&lt;',
+	'>': '&gt;',
+	'"': '&quot;',
+	"'": '&#039;'
+	};
+
+	return str.toString().replace(/[&<>"']/g, function(m) { return map[m]; });
+  },
   putTheFocus: function (e) {
 	e.setAttribute("tabindex", "-1");
 	e.focus();
-    },
+  },
   resetActive: function (e) {
 	var btnActive = e.querySelector(".active");
 		if (btnActive != undefined) {
 			btnActive.classList.remove("active");
 			btnActive.removeAttribute("aria-current");
 		}
-	},
+  },
   setActive: function (e) {
 	e.classList.add("active");
 	e.setAttribute("aria-current", "true");
   },
   setPageTitle: function (e) {
-	document.title = e + " — " + dataVallydette.checklist.name + " — " + langVallydette.va11ydette;
+	document.title = e + " — " + ((dataVallydette) ? dataVallydette.checklist.name + " — " : '') + langVallydette.va11ydette;
   },
   listOrParagraph: function (e) {
 	let htmlMarker;
@@ -3121,8 +4929,8 @@ const utils = {
 		
 		return exportFileDefaultName;
 	}
- },
- addElement: function (type,  id, innerText, icon, iconOnly, arrayClass) { 
+  },
+ addElement: function (type,  id, innerText, icon, iconOnly, arrayClass, title) { 
 	var e = document.createElement(type);
 	
 	if (icon) {
@@ -3136,7 +4944,10 @@ const utils = {
 	}
 	
 	e.setAttribute('id', id);
-	e.setAttribute('title', innerText);
+	if (title) {
+		e.setAttribute('title', title);
+	}
+
 
 	arrayClass.forEach(c => e.classList.add(c));
 	
@@ -3166,13 +4977,16 @@ const utils = {
 		return
 		
 	}
-	 
-	 
+	  
 	document.getElementById('filter').style.display = display;
 	document.getElementById('currentPageContent').classList.remove(remove);
 	document.getElementById('currentPageContent').classList.add(add);
+  },
+  htmlEntities: function (str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 	
 }  
 
-initVallydetteApp('wcag-android', 'fr');
+//default builder
+initVallydetteApp('', 'fr');

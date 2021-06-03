@@ -10,7 +10,7 @@ tags:
   
 ## Introduction
 
-Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Humans Apart », en français  « Test public de Turing complètement automatisé pour différencier les humains des ordinateurs ») est un test destiné à différencier un utilisateur d’un programme informatique. Il est utilisé notamment sur les formulaires pour se prémunir du SPAM.
+Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Humans Apart », en français « Test public de Turing complètement automatisé pour différencier les humains des ordinateurs ») est un test destiné à différencier un utilisateur d’un programme informatique. Il est utilisé notamment sur les formulaires pour se prémunir du SPAM.
 
 Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visuels où on demande à l’utilisateur de saisir une série de lettres déformées affichées à l’écran.
   

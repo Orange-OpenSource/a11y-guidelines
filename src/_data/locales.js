@@ -55,6 +55,13 @@ module.exports = {
       title: 'Filters',
       profiles: 'Profiles',
       tools: 'Tools'
+    },
+    404: {
+      title: 'Page not found',
+      content: {
+        message: 'The page you are looking for doesn\'t exist. This is the link to go back to the home page.',
+        linkLabel: 'Back to the home page'
+      }
     }
   },
   fr: {
@@ -113,6 +120,13 @@ module.exports = {
       title: 'Filtres',
       profiles: 'Profils',
       tools: 'Outils'
+    },
+    404: {
+      title: 'Page non trouvée',
+      content: {
+        message: 'La page que vous recherchez n\'existe pas. Voici le lien qui permet de retourner à la page d\'accueil.',
+        linkLabel: 'Retour à l\'accueil'
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Grille Audit Wcag 2.1 d’Orange — La va11ydette</title>
         <link rel="icon" href="favicon.ico">
@@ -142,21 +142,21 @@
                     <img src="https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/img/orange_logo.svg" alt="" width="50" height="50">
                     <span class="h2">
                         <span id="va11ydette">La v<span class="text-primary">a11y</span>dette</span><br>
-                        <h1 class="small text-primary m-0" id="auditNameWcag">Grille d’audit WCAG 2.1 d’Orange</h1>
+                        <h1 class="small text-primary m-0" id="auditNameWcag"></h1>
                     </span>
                 </a>
                 <div class="ml-auto" id="importexport">
-                    <button id="btnImport" type="button" class="btn btn-inverse btn-link ml-2 mr-n3" title="importer un audit (json)"
+                    <button id="btnImport" type="button" class="btn btn-inverse btn-link mr-n3" title=""
                             data-toggle="collapse" data-target="#import-form"
                             aria-expanded="false" aria-controls="import-form">
                         <span class="icon-modifier-upload" aria-hidden="true"></span>
-                        <span id="btnImportTxt">Importer</span>
+                        <span id="btnImportTxt"></span>
                     </button>
-					 <a href="#" id="export" class="btn btn-inverse btn-link mr-n3 disabled" title="télécharger l'audit (json)"
+					 <a href="#" id="export" class="btn btn-inverse btn-link mr-n3 disabled" title=""
                         disabled aria-disabled="true">
-                    <span class="icon-Modifier-download" aria-hidden="true"></span>
-                    <span id="btnExportTxt">Télécharger</span>
-                </a>
+						<span class="icon-Modifier-download" aria-hidden="true"></span>
+						<span id="btnExportTxt"></span>
+					</a>
                 </div>
             </div>
             <div class="collapse w-100 border-top border-900" id="import-form">
@@ -177,60 +177,8 @@
         </header>
 
         <main role="main" class="mt-4" id="main">
-            <div class="container d-flex align-items-center mb-3" id="auditInfoManager">
-                <h1 id="checklistName" class="mb-0"></h1>
-                <button class="btn btn-secondary btn-icon ml-auto d-print-none" id="btnChecklistName"
-                        aria-label="Modifier le nom de l’audit" title="Modifier le nom de l’audit"
-                        data-element="checklistName" data-property="checklist.name"
-                        data-toggle="modal" data-target="#modalEdit">
-                    <span class="icon-Pencil" aria-hidden="true"></span>
-                </button>
-				<button class="btn btn-secondary btn-icon ml-2 d-print-none" id="btnLocalStorage"
-                        aria-label="Récupérer le dernier audit" title="Restaurer le dernier audit"
-                        data-element="checklistName" data-property="checklist.name"
-                        data-toggle="modal" data-target="#modalLocalStorage">
-                     <span class="icon-Syncronise" aria-hidden="true"></span>
-                </button>
-                <button class="btn btn-secondary ml-2 d-print-none" type="button"
-                        data-toggle="modal" data-target="#modalResult"
-                        id="btnShowResult">Afficher le résultat de l’audit
-                </button>
+            
               
-            </div>
-
-            <div class="o-nav-local bg-white navbar-light my-3 d-print-none" id="pageManager"></div>
-
-            <div class="container">
-                <div class="row align-items-start position-relative">
-                    <div class="col-md-2 sticky-top pt-4 pr-0 col-print-12" id="currentPageManager">
-                        <h1 id="pageName" class="mb-0">Nom de la page</h1>
-                        <hr class="border-light">
-                        <div id="contextualMenu" class="d-flex align-content-stretch flex-wrap w-100 d-print-none">
-                            <button class="btn btn-secondary btn-icon" id="btnPageName"
-                                    aria-label="Modifier le nom de la page" title="Modifier le nom de la page"
-                                    data-element="pageName" data-secondary-element="pageID-0"
-                                    data-property="checklist.page.0.name" data-toggle="modal" data-target="#modalEdit">
-                                <span class="icon-Pencil" aria-hidden="true"></span>
-                            </button>
-                            <button id="btnDelPage" class="btn btn-secondary btn-icon ml-2"
-                                    aria-label="Supprimer la page" title="Supprimer la page"
-                                    data-element="pageName" data-property="checklist.page.0"
-                                    data-toggle="modal" data-target="#modalDelete" disabled>
-                                <span class="icon-trash" aria-hidden="true"></span>
-                            </button>
-							<hr class="border-light w-100">	
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-8 bg-white border border-light col-print-12" id="currentPageContent">
-                        <span id="count" class="alert-danger"></span>
-                        <section id="mainContent"></section>
-                    </div>
-                    <aside id="filter" class="col-md-2 sticky-top pt-4 col-print-12 overflow-auto">
-                        
-                    </aside>
-                </div>
-            </div>
         </main>
         <footer class="o-footer" id="footer" role="contentinfo">
             <div class="o-footer-body">
@@ -249,10 +197,11 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
                 integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
                 crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/js/boosted.min.js"
                 integrity="sha384-Y/0NjLXRerXrg7jzex/E5ONTjY9VxGnhnsY0dVw12hlg/0XlAJFjh1biCQfdWI1R"
                 crossorigin="anonymous"></script>
-		<script src="./js/marked.min.js"></script>
+		<script src="./js/markdown-it.min.js"></script>
 		<script src="./js/FileSaver.min.js"></script>
 		<script src="./js/jszip.min.js"></script>
 		<script src="./js/myexcel.js"></script>

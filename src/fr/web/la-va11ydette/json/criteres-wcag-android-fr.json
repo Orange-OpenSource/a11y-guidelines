@@ -1,6 +1,4 @@
-﻿{
-	"name": "Audit conformité WCAG / ANDROID",
-	"items":[{
+﻿[{
 		"themes": "Écran de saisie",
 		"title": "Chaque champ de saisie possède-t-il une étiquette ?",
 		"ID": "testID-001",
@@ -34,7 +32,7 @@
 			"1.3.1 A",
 			"3.3.2 A"
 		],
-		"verifier": "<ul><li>Vérifier la présence d'une identification visuelle du champ obligatoire ne reposant pas uniquement sur la couleur (ex&nbsp;: astérisque).</li><li>Vérifier que l'obligation du champ est bien vocalisée avec la navigation vocale.</li><li>Vérifier que le formulaire ne peut être validé si le champ obligatoire n'est pas renseigné.</li></ul>",
+		"verifier": "<ul><li>Vérifier la présence d'une identification visuelle du champ obligatoire ne reposant pas uniquement sur la couleur (ex&nbsp;: astérisque).</li><li>Vérifier que l'obligation du champ est bien vocalisée avec la navigation vocale.</li><li>Vérifier que le formulaire ne peut pas être validé si le champ obligatoire n'est pas renseigné.</li></ul>",
 		"group": "Écran de saisie",		
 		"resultatTest": "nt"
 	},{
@@ -106,7 +104,7 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Entêtes",
-		"title": "Chaque écran a-t-il un titre visible ?",
+		"title": "L'écran a-t-il un titre visible ?",
 		"ID": "testID-010",
 		"IDorigin": "testID-010",
 		"wcag": [
@@ -116,7 +114,7 @@
 		"resultatTest": "nt"
 	},{
 	"themes": "Entêtes",
-		"title": "Chaque écran a-t-il un titre qui lui est unique ?",
+		"title": "L'écran a-t-il un titre qui lui est unique ?",
 		"ID": "testID-011",
 		"IDorigin": "testID-011",
 		"wcag": [
@@ -126,7 +124,7 @@
 		"resultatTest": "nt"
 	},{
 	"themes": "Entêtes",
-		"title": "Chaque écran a-t-il un titre pertinent ?",
+		"title": "L'écran a-t-il un titre pertinent ?",
 		"ID": "testID-012",
 		"IDorigin": "testID-012",
 		"wcag": [
@@ -434,19 +432,19 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
-		"title": "Il n'y a aucun clignotement de plus de 3 flashs par seconde sur une zone égale ou supérieure à <code>21 824 px²</code>",
+		"title": "Il n'y a aucun clignotement de plus de 3 flashs par seconde",
 		"ID": "testID-040",
 		"IDorigin": "testID-040",
 		"wcag": [
 			"2.3.1 A"
 		],
-		"verifier": "<p>Non applicable, si les clignotements flashent moins de 3 fois par seconde ou sur une zone de moins de <code>21 824 px²</code></p>",
+		"verifier": "<p>Non applicable, si les clignotements flashent moins de 3 fois par seconde ou sur une zone très petite (de moins de <code>21 824 px²</code>)</p>",
 		"resultatTest": "nt"
 	},{	
 		"themes": "Navigation générale",
 		"title": "Le mécanisme de navigation est cohérent avec les autres écrans de l'application",
-		"ID": "testID-050",
-		"IDorigin": "testID-050",
+		"ID": "testID-056",
+		"IDorigin": "testID-056",
 		"wcag": [
 			"3.2.3 AA"
 		],
@@ -463,17 +461,6 @@
 		"verifier": "<p>Vérifier que les images ne sont pas utilisées pour présenter du texte (hors cas particulier : logo, captcha, dénomination commerciale).</p>",
 		"resultatTest": "nt"
 	},{
-		"themes": "Navigation générale",
-		"title": "Les textes sont-ils internationalisés ?",
-		"ID": "testID-053",
-		"IDorigin": "testID-053",
-		"wcag": [
-			"3.1.1 A"
-		],
-		"verifier": "<p>Vérifier que les textes présents dans l'application s'adaptent à la langue choisie dans les paramètres du téléphone.</p>",
-		"resultatTest": "nt"
-	},{
-
 		"themes": "Navigation générale",
 		"title": "Chaque libellé de lien est-il explicite, au minimum dans son contexte ?",
 		"ID": "testID-054",
@@ -573,4 +560,4 @@
 		"group": "Multimédia",		
 		"resultatTest": "nt"
 	}
-]}
+]

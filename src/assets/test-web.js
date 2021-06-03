@@ -5,6 +5,55 @@ $(document).ready(function () {
     throw new Error('A lang attribute must be set on the <html> tag !')
   }
 
+  const locales = {
+    'en': {
+      process : "Process",
+      check : "To check",
+      conception: 'Design',
+      development: 'Development',
+      results : "Results",
+      justification : "Justification",
+      profiles: 'Profiles',
+      tools: 'Tools',
+      allTools: 'All tools',
+      exceptions: 'Exceptions',
+      ongoingTests: 'ongoing tests',
+      noResults: 'No results match your selection',
+      withCurrentFilters: 'with current filters',
+      reinitFilters: 'Reinit <span class="sr-only">&nbsp;filters</span>'
+    },
+    'fr': {
+      process : "Procédures",
+      check : "A vérifier",
+      conception: 'Conception',
+      development: 'Développement',
+      results : "Résultats",
+      justification : "Justification",
+      profiles: 'Profils',
+      tools: 'Outils',
+      allTools: 'Tous les outils',
+      exceptions: 'Exceptions',
+      ongoingTests: 'tests en cours',
+      noResults: 'Aucun résultat ne correspond à votre sélection',
+      withCurrentFilters: 'dans les filtres en cours',
+      reinitFilters: 'Réinitialiser <span class="sr-only">&nbsp;les filtres</span>'
+    }
+  }
+
+  function translate(key, to) {
+    const locale = to || lang
+
+    if (!locales.hasOwnProperty(locale)) {
+      throw new Error(`translate(): Translation's locale \`${locale}\` does not exist`)
+    }
+
+    if (!locales[locale].hasOwnProperty(key)) {
+      throw new Error(`translate(): Translation's key \`${key}\` does not exist for locale \`${locale}\``)
+    }
+
+    return locales[locale][key]
+  }
+
   //requette XMLHttpRequest
   function doXHR(url, callback) {
     var oReq = new XMLHttpRequest();
@@ -23,11 +72,13 @@ $(document).ready(function () {
   }
 
   //appel des Json
-  doXHR('/assets/json/'+lang+'/tests-web.json', function(errFirst, responseFirst) {
+  
+
+  doXHR('https://a11y-guidelines.orange.com/fr/web/la-va11ydette/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
-    return doXHR('/assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
+    return doXHR('https://a11y-guidelines.orange.com/assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
       if (errSecond) {
         reqError();
       }
@@ -124,12 +175,6 @@ $(document).ready(function () {
     let app = new function() {
       // Récupération des données
       //this.refTests = refTests;
-      var textContent = {
-        title1 : "Procédures",
-        title2 : "A vérifier",
-        title3 : "Résultats",
-        title4 : "Justification"
-      };
 
       this.UpdateTypes = function(allTypes, updatedTypes) {
         let elrefTypes = [];
@@ -171,7 +216,7 @@ $(document).ready(function () {
 
         if (activeFilter) {
           elBtnReinit.disabled = false;
-          htmlFeedback = '<p><div><b>'+nbTests+'</b> '+test+' dans les filtres en cours</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">Réinitialiser<span class="sr-only">&nbsp;les filtres</span></a></p>';
+          htmlFeedback = '<p><div><b>'+nbTests+'</b> ' + test + ' ' + translate('withCurrentFilters') + '</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '</a></p>';
           elFeedback.innerHTML = htmlFeedback;
 
           let elreinitLink = document.getElementById('reinitLink');
@@ -184,7 +229,7 @@ $(document).ready(function () {
 
         } else {
           elBtnReinit.disabled = true;
-          htmlFeedback = '<p><b>'+nbTests+'</b> tests en cours</p>';
+          htmlFeedback = '<p><b>'+nbTests+'</b> ' + translate('ongoingTests') + '</p>';
           elFeedback.innerHTML = htmlFeedback;
         }
 
@@ -204,40 +249,40 @@ $(document).ready(function () {
             headingTheme=currentRefTests[i].themes;
             htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+'>'+currentRefTests[i].themes+'</h2>';
           }
-          htmlrefTests += '<article class="card"><div class="card-header" id="heading'+i+'"><h3 class="card-title mb-0"><a class="" role="button" data-toggle="collapse" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge badge-pill badge-light mr-2 align-self-center">'+((currentRefTests[i].profils[0] == 'Concepteur') ? "Conception" : "Développement")+'</span></a></h3>';
+          htmlrefTests += '<article class="card"><div class="card-header" id="heading'+i+'"><h3 class="card-title mb-0"><a class="" role="button" data-toggle="collapse" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge badge-pill badge-light mr-2 align-self-center">'+((currentRefTests[i].profils[0] == 'Concepteur') ? translate('conception') : translate('development'))+'</span></a></h3>';
 
           htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
           htmlrefTests += '<div class="card-block"><div class="row">';
-          htmlrefTests += '<div class="col-lg-6"><h4>'+textContent.title1+'</h4><ol>';
+          htmlrefTests += '<div class="col-lg-6"><h4>' + translate('process') + '</h4><ol>';
           for (let j in currentRefTests[i].tests) {
             htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';
           }
           htmlrefTests += '</ol></div>';
-          htmlrefTests += '<div class="col-lg-6"><h4>'+textContent.title2+'</h4><ol>';
+          htmlrefTests += '<div class="col-lg-6"><h4>' + translate('check') + '</h4><ol>';
           for (let j in currentRefTests[i].verifier) {
             htmlrefTests += '<li>' +  currentRefTests[i].verifier[j] + '</li> ';
           }
           htmlrefTests += '</ol></div>';
           htmlrefTests += '</div>';
           htmlrefTests += '<div class="row">';
-          htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Concepteur') ? textContent.title4 : textContent.title3)+'</h4><ol>';
+          htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Concepteur') ? translate('justification') : translate('results'))+'</h4><ol>';
           for (let j in currentRefTests[i].resultat) {
             htmlrefTests += '<li>' + currentRefTests[i].resultat[j] + '</li> ';
           }
           htmlrefTests += '</ol></div>';
           htmlrefTests += '</div>';
           if (currentRefTests[i].exception) {
-            htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>Exceptions</h4>';
+            htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>' + translate('exceptions') + '</h4>';
             htmlrefTests += '<p>' + currentRefTests[i].exception + '</p> ';
             htmlrefTests += '</div>';
             htmlrefTests += '</div>';
           }
-          htmlrefTests += '</div><div class="card-footer text-muted"><b>Profils : </b>';
+          htmlrefTests += '</div><div class="card-footer text-muted"><b>' + translate('profiles') + ': </b>';
           for (let j in currentRefTests[i].profils) {
             htmlrefTests += currentRefTests[i].profils[j];
             j != ((currentRefTests[i].profils).length-1) ? htmlrefTests +=',  ' : '';
           }
-          htmlrefTests += '<br />'+((currentRefTests[i].type).length > 0 ? '<b>Outils : </b>' : '');
+          htmlrefTests += '<br />'+((currentRefTests[i].type).length > 0 ? '<b>' + translate('tools') + ': </b>' : '');
           for (let j in currentRefTests[i].type) {
             htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + currentRefTests[i].type[j] + ' ';
           }
@@ -246,7 +291,7 @@ $(document).ready(function () {
         }
 
         // Affichage de l'ensemble des lignes en HTML
-        currentRefTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">Aucun résultat ne correspond à votre sélection</div>' : elrefTests.innerHTML = htmlrefTests;
+        currentRefTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">' + translate('noResults') + '</div>' : elrefTests.innerHTML = htmlrefTests;
 
       };
 
@@ -255,7 +300,7 @@ $(document).ready(function () {
       this.DisplayFilters = function() {
         let elFilterFooter = document.getElementById('filter-footer');
         let htmlFilterFooter = '';
-        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>Réinitialiser<span class="sr-only">&nbsp;les filtres</span></button>';
+        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>' + translate('reinitFilters') + '</button>';
         elFilterFooter.innerHTML = htmlFilterFooter;
         let elBtnReinit = document.getElementById('reinit');
 
@@ -301,7 +346,7 @@ $(document).ready(function () {
 
         let htmlTypes = '';
 
-        htmlTypes += '<li><input type="radio" id="typeAll" name="types" value="typeAll" checked> <label for="typeAll" >Tous les outils</label>';
+        htmlTypes += '<li><input type="radio" id="typeAll" name="types" value="typeAll" checked> <label for="typeAll">' + translate('allTools') +'</label>';
 
         for (let i in uniqueTypes) {
           htmlTypes += '<li><input type="radio" id="type' + i + '" name="types" value="' + uniqueTypes[i] + '"> <label for="type' + i + '" id="labelType' + i + '">' + uniqueTypes[i] + '</label></li>';

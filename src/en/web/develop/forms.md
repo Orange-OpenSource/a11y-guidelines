@@ -101,3 +101,26 @@ See [the accessible form example](../../components-examples/forms/) for more det
 - <a href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error Identification</a>
 - <a href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error Suggestion</a>
 - <a href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>
+
+## Disable form elements
+
+The `disabled` attribute is used to disable form elements
+
+```html
+<button disabled>Delete</button>
+<input type="text" name="address" disabled>
+```
+
+If a `<fieldset>` is disabled, the descendant form controls are all disabled.
+
+```html
+<fieldset id="group" disabled> 
+    <input name="foo"> 
+    <input type="checkbox" name="bar"> 
+    <select name="values"> 
+        <option value="1">Value 1</option>
+        <option value="2">Value 2</option>
+        <option value="3">Value 3</option>        
+    </select>
+</fieldset>
+```

@@ -2,8 +2,6 @@
 title: "Dropdown menu"
 abstract: "Create an accessible drop-down menu."
 tags: componentsExamples_en
-boostedJS: true
-popperJS: true
 ---
 
 <h1>Dropdown menu</h1>
@@ -77,14 +75,13 @@ popperJS: true
  <h2><abbr>ARIA</abbr> attributes</h2>
  <p>If you do not already use an accessible drop-down component, you will need to add some <abbr>ARIA</abbr> attributes in order to be correctly vocalized by the screen reader.</p>
  On the opening button:
- <ul>
-   <li>The <code>aria-haspopup="true"</code> attribute allows the screen reader to vocalize that it is a drop-down menu.</li>
+ <ul>   
    <li>The <code>aria-expanded</code> attribute with a <code>true</code>/<code>false</code> value, allows to vocalize menu states (open or closed).</li>
 </ul>
 
 Example:
 <pre><code class="html">
-  &lt;button aria-haspopup="true" aria-expanded="false"&gt;My account&lt;/button&gt;
+  &lt;button aria-expanded="false"&gt;My account&lt;/button&gt;
 </code></pre>
 
 On the menu list items:
@@ -95,7 +92,7 @@ On the menu list items:
 
 Example:
 <pre><code class="html">
-  &lt;button aria-haspopup="true" aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
   &lt;ul role="menu"&gt;
     &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My cart&lt;/li&gt;
     &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My orders&lt;/li&gt;
