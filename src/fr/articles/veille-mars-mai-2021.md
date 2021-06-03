@@ -134,7 +134,7 @@ Dernière minute : questionnaire WebAim n°9 sur les utilisateurs	 de lecteurs d
 
 ## Autres
 
-- Sous-titres en direct (live) dans chrome pour l’audio et la vidéo (e&n) : https://blog.google/products/chrome/live-caption-chrome/ 
+- Sous-titres en direct (live) dans chrome pour l’audio et la vidéo (en) : https://blog.google/products/chrome/live-caption-chrome/ 
 
 - Des conférences sur l’a11y, plein de sujets, à voir (en) : https://a11ytalks.com/ 
 
