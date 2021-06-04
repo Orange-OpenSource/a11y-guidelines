@@ -45,10 +45,6 @@ a:hover, a:focus {
   color: #000;
 }
 
-main a:hover {    
-  background-color: #fafafa;
-}
-
 a:focus {
   outline-color: #f16e00;  
   outline-offset: .075rem;  
