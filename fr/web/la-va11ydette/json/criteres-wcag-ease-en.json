@@ -100,7 +100,7 @@
 		"wcag": [
 			"3.3.3 AA"
 		],
-		"verifier": "<p>Check that the error messages give the information necessary about how to correct the errors.</p>\n<p>If it's impossible to make a suggestion to correctm, te  Si il n'est pas possible de suggérer une correction , the criterion is not applicable</p>",
+		"verifier": "<p>Check that the error messages give the information necessary about how to correct the errors.</p>\n<p>If it's impossible to make a suggestion to correct, the criterion is not applicable.</p>",
 		"group": "Form",
 		"resultatTest": "nt"
 	},{
@@ -179,13 +179,13 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Textual Content",
-		"title": "Are data tables structured correctly?",
+		"title": "Are the data tables structured properly?",
 		"ID": "testID-023",
 		"IDorigin": "testID-023",
 		"wcag": [
 			"1.3.1 A"
 		],
-		"verifier": "<ol><li>check that data tables have a <code>caption</code> legend that is not empty</li><li>check there is an summary that clearly describes the table structure:<ul><li><strong>HTML5</strong>: presence of a summary, if necessary off-screen accessible text or <code>display:none</code>, linked to the table via an <code>aria-describedby</code></li><li><strong>Previous version:</strong> summary present in a <code>summary</code> attribute</li></ul></li><li><strong> Tables with one header:</strong> check for the presence of header elements (<code>th</code>)</li><li><strong> Tables with two headers:</strong><ul><li>For each <code>th</code> check for the presence of a <code>scope='col'</code> attribute for the column header elements,</li><li>and for the presence of <code>scope='row'</code> for the row header elements </li></ul></li><li><strong>Complex tables:</strong> check for the presence of <code>th</code> header elements or <code>id</code> and <code>headers</code> attributes</li></ol>",
+		"verifier": "<ol><li> If a data table has a title (or a caption), check that the title is programmatically linked to the table using one of the following techniques: <br /><ul><li><code>Caption</code> tag</li><li><code>Aria-label</code> on the table element *</li><li><code>Aria-labelledby</code> on the element pointing to the title’s <code>ID</code> *</li><li> Title on the table element *</li> * Warning: In addition, the technique must be validated with a functional test on the specific environment(s) (browser or technical assistance) targeted by the audit.</ul></li><li> If the data table has a title, check that the title is relevant.<ul><li>The title isn’t empty</li><li>The title helps the user to understand the nature of the data in the table</li></ul></li><li> If the table includes a summary, check that it is programmatically linked to the table using one of the following techniques:<ul><li><strong>HTML5</strong>: presence of a summary, in accessible masking if necessary or <code>display:none</code>, linked to the table with a <code>aria-describedby</code></li><li><strong>Older HTML version:</strong> the summary is in a <code>summary</code> attribute</li></ul></li><li> If a summary is provided, check that it is:<ul><li>relevant</li><li>different from the title</li></ul></li><li><strong>Single header table</strong> (a row, or a column header only), check that there are headers (<code>th</code>)</li><li> <strong>Double header table</strong> (a row and a column header):<ul><li>For each <code>th</code> check that there is a <code>scope='col'</code> attribute for the column headers,</li><li> and that there is a <code>scope='row'</code> attribute for the row headers</li></ul></li><li><strong>Complex tables</strong> (multiple and irregular headers), check that there are headers (<code>th</code>) and/or <code>id</code> and <code>headers</code> attributes</li></ol>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Non-text Content",
@@ -285,23 +285,23 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Colors and contrasts",
-		"title": "Is the information also conveyed to the user by a means other than colour?",
+		"title": "Is the information also conveyed to the user by other means than colour?",
 		"ID": "testID-027",
 		"IDorigin": "testID-027",
 		"wcag": [
 			"1.4.1 A"
 		],
-		"verifier": "<p>Check that color is not the only means for conveying information:</p><ul><li>information can also be obtained from a text element</li><li>at least one other visual means is available to provide the same information (e.g. icons that are different colors, as well as having different shapes)</li><li>special case of link text: if links are not underlined, they can be identified on keyboard focus and mouse hover by a means other than color</li></ul>\n<p>Not applicable, if no information is conveyed by colour</p>",
+		"verifier": "<p>Check that colour is not the only means of conveying the information:</p><ul><li>the information can also be obtained in text form</li><li>one (or more) visual aids are available to convey the same information (e.g. icons using the same colours, but different shapes)</li><li> Particular case of non-underlined links in text:<ul><li>the link must have at least a 3:1 contrast ratio with the surrounding text</li><li>and an indicator that does not rely on the use of colour must make the link distinguishable for the user when he/she is focusing on the link or hovers over it with the mouse (e.g. underlined)</li></ul></li></ul><p><strong>Remarks:</strong></p><ul><li>are excluded links that are explicit in nature, for example links that are in a website’s navigation areas (page headers and footers, menus or link lists…)</li><li>the criterion is not applicable if no information is conveyed by the use of colour</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Colors and contrasts",
-		"title": "Is the information also transmitted to the user by a means other than a sensory characteristic?",
+		"title": "Is the information also conveyed to the user by other means than a sensory characteristic?",
 		"ID": "testID-051",
 		"IDorigin": "testID-051",
 		"wcag": [
 			"1.3.3 A"
 		],
-		"verifier": "<p>Check that the information conveyed by using sensory characteristics (shape, size, position, orientation, sound) is also available in text or a message.</p>\n<p>Not applicable, if no information: is conveyed by sound, shape, size or position</p>",
+		"verifier": "<p>Check that the information conveyed by a sensory characteristic (shape, size, position, orientation, sound) can also be obtained with a text or an explicit message.</p><p><strong>Examples of non-conformities: </strong></p><ul><li>identification of an information only with its position: \"to go to the next page press the button on the right\", or \"choose one of the links displayed above the image to know more\"</li><li>identification of information only from its visual shape or a graphical symbol: \"Press the round button to leave\"</li></ul><p>The criterion is not applicable if no information is conveyed with the use of sound, orientation, size, shape or position</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Common navigation",
