@@ -177,6 +177,8 @@
 	"notApplicable": "Not applicable",
 	"notTested": "not tested",
 	"noCommentary": "no commentary",
+	"autocheckTxt1": "This test is linked to the first page",
+	"autocheckTxt2": "Automatically apply this result to new pages.",
 	"template": {
 		"va11ydette": "The v<span class=\"text-primary\">a11y</span>dette",
 		"auditNameWcag": "Orange WCAG 2.1 Audit check list",
