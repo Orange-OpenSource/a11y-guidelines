@@ -10,7 +10,7 @@ tags:
 
 Pour la cent cinquantième fois au moins, dans cette veille, on vous dit et on vous prouve que les solutions de surcouches magiques d’accessibilité numérique ne marchent pas.
 
-Voici une escalade dans cette sombre histoire, certains experts en accessibilité français bien connus (salut les zamis !) sont attaqués par une de ces sociétés aux discours souvent fallacieux FACIL’ITI. Les détails sur cette affaire : 
+Voici une escalade dans cette sombre histoire, certains experts en accessibilité français bien connus (salut les zamis !) sont attaqués par une de ces sociétés aux discours souvent limite, FACIL’ITI. Les détails sur cette affaire : 
 -	https://koena.net/koena-mise-en-demeure-par-faciliti/ 
 -	https://koena.net/2e-courrier-avocat-de-faciliti/ 
 -	Un communiqué de soutien du syndicat des tpme et indépendant du numérique à Koena : https://www.cinov-numerique.fr/motion-de-soutien-a-lentreprise-koena/ 
