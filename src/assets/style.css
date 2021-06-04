@@ -40,7 +40,6 @@ html {
 /** 
  * Fix for Boosted (to remove as soon as Boosted removes orange on white colors) 
  */
-
 a:hover, a:focus {
   color: #000;
 }
@@ -103,8 +102,6 @@ blockquote p::after {
 .navbar-light .nav-link.active::before {
   background-color: #ff7900;
 }
-
-
 
 /**
  * Table Of Content and Side navigation

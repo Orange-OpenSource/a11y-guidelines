@@ -671,7 +671,7 @@ runTestListMarkup = function (currentRefTests) {
 				htmlrefTests += '<div class="collapse show px-2" id="collapse-' + formattedHeadingTheme + '">';
 			}
 
-			htmlrefTests += '<article class="card mb-3" id="' + currentTest + '"><div class="card-header border-light"><h3 class="card-title h5 d-flex align-items-center mb-0" id="heading' + currentTest + '"><span class="w-75 mr-auto">' + currentRefTests[i].title + '</span>' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + currentRefTests[i].ID + '"><span class="sr-only">Ce test est lié à la première page</span></span>' : '') + '<span id="resultID-' + currentTest + '" class="ml-1 badge ' + getStatutClass(currentRefTests[i].resultatTest) + '">' + setStatutText(currentRefTests[i].resultatTest) + '</span></h3></div>';
+			htmlrefTests += '<article class="card mb-3" id="' + currentTest + '"><div class="card-header border-light"><h3 class="card-title h5 d-flex align-items-center mb-0" id="heading' + currentTest + '"><span class="w-75 mr-auto">' + currentRefTests[i].title + '</span>' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + currentRefTests[i].ID + '"><span class="sr-only">' + langVallydette.autocheckTxt1 + '</span></span>' : '') + '<span id="resultID-' + currentTest + '" class="ml-1 badge ' + getStatutClass(currentRefTests[i].resultatTest) + '">' + setStatutText(currentRefTests[i].resultatTest) + '</span></h3></div>';
 			
 			htmlrefTests += '<div class="card-body py-2 d-flex align-items-center justify-content-between"><ul class="list-inline m-0">';
 			htmlrefTests += '<li class="custom-control custom-radio custom-control-inline mb-0"><input class="custom-control-input" type="radio" id="conforme-' + currentTest + '" name="test-' + currentTest + '" value="ok" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[0][1]) ? "checked" : "") + '/><label for="conforme-' + currentTest + '" class="custom-control-label">' + langVallydette.template.status1 + '</label></li>';
@@ -688,7 +688,7 @@ runTestListMarkup = function (currentRefTests) {
 			if (currentPage === 0) {
 				htmlrefTests += '<div class="custom-control custom-checkbox">';
 				htmlrefTests += '	<input type="checkbox" class="custom-control-input" id="autoCheck-' + currentTest + '" aria-labelledby="heading' + currentTest + ' autoCheckLabel-' + currentTest + '" ' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? "checked" : "" )  + '>';
-				htmlrefTests += '	<label class="custom-control-label" for="autoCheck-' + currentTest + '" id="autoCheckLabel-' + currentTest + '">Appliquer automatiquement ce résultat aux nouvelles pages.</label>';
+				htmlrefTests += '	<label class="custom-control-label" for="autoCheck-' + currentTest + '" id="autoCheckLabel-' + currentTest + '">' + langVallydette.autocheckTxt2 + '</label>';
 				htmlrefTests += '</div>';
 
 				htmlrefTests += '<hr class="border-light w-100">';
@@ -1013,7 +1013,7 @@ function setAutoCheckID(e, testIDorigin, testID) {
 		}
 		dataVallydette.checklist.autoCheckIDs.push(testIDorigin);
 		
-		const iconHtml = '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + testID + '"><span class="sr-only">Ce test est lié à la première page</span></span>';
+		const iconHtml = '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + testID + '"><span class="sr-only">' + langVallydette.autocheckTxt1 + '</span>';
 		const iconNode = new DOMParser().parseFromString(iconHtml, 'text/html').body.firstElementChild;
 		let headingNode = document.getElementById('heading' + testID);
 		headingNode.insertBefore(iconNode, headingNode.children[1]);
