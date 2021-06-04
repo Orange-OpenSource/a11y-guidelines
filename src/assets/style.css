@@ -41,19 +41,17 @@ html {
  * Fix for Boosted (to remove as soon as Boosted removes orange on white colors) 
  */
 a:hover, a:focus {
-  text-decoration: none;
   color: #000;
 }
 
-a:focus {
-  outline-offset: .075rem;  
+a:hover {
+  text-decoration-thickness: .1rem;
 }
 
-main a:hover, main a:focus {
-  background: #000;
-  color: #fff;
-  outline-color: #000;
-  outline-offset: 0;
+a:focus {
+  outline-color: #f16e00;  
+  outline-offset: .075rem;  
+  text-decoration: none;
 }
 
 h2 a:hover, h2 a:focus {
@@ -104,8 +102,6 @@ blockquote p::after {
 .navbar-light .nav-link.active::before {
   background-color: #ff7900;
 }
-
-
 
 /**
  * Table Of Content and Side navigation
