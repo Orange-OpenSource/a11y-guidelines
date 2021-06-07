@@ -47,7 +47,7 @@ Il s'agit de permettre aux utilisateurs qui ne peuvent pas utiliser la souris (n
 
 La visualisation du focus permet aux utilisateurs clavier de se repérer dans leur parcours de navigation.
 
-1. Activer "Propriétes du lecteur"
+1. Activer "Propriétés du lecteur"
 2. Sélectionner "Couleurs & effets"
 3. Modifier la couleurs par défaut du focus
 
@@ -113,6 +113,11 @@ Le titre de présentation doit être explicite.
 Il permet aux utilisateurs finaux d'identifier la formation dans leur navigateur.
 Ceci est particulièrement important pour les utilisateurs de lecteurs d'écran.
 
+*La procédure :*
+1. Cliquer sur Publier
+2. Se positionner dans l’onglet " Web" de la boite de dialogue
+3. Compléter le champ " Titre "
+
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid">
 <figcaption class="figure-caption">Cliquer sur Publier, puis renseigner le champ Titre.
@@ -131,14 +136,23 @@ Le titre de diapositive doit également être explicite.
 Il permet aux utilisateurs finaux de comprendre le contexte de chaque nouvelle diapositive.
 Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera vocalisé automatiquement à l'arrivée sur une nouvelle diapositive.
 
+
+<figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid">  &nbsp;
+<figcaption class="figure-caption">Double cliquer sur le titre de la diapositive pour le modifier.
+</figcaption>
+</figure>
 
 ## Structurer le contenu avec des titres de niveaux
 
 Appliquer des styles de titre sur les textes présentés comme des titres.
-Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre et naviguer au sein du contenu.
+Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre la structure du contenu et naviguer facilement au sein de celui-ci.
 
+<figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
+<figcaption class="figure-caption">Utiliser les styles appropriés (de Titre 1 à Titre 4).
+</figcaption>
+</figure>
 
 ## Fournir des textes alternatifs pertinents 
 
