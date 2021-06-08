@@ -33,46 +33,47 @@ The content (serious game, exercises, etc.) can be adapted to the context of eac
   <figcaption class="figure-caption">In this example, alternative Serious Games are offered to blind users.</figcaption>
 </figure>
 
-## Permettre d'utiliser les principales fonctionnalités de l'application au clavier
+## Allow to use the main functions of the application through a keyboard interface
 
-Il s'agit de permettre aux utilisateurs qui ne peuvent pas utiliser la souris (non-voyants, déficients moteurs, ...) d'accéder aux fonctionnalités principales de l'application depuis le clavier.
+This is to allow users who cannot use the mouse (blind, motor impaired, etc.) to access the main functionalities of the application from the keyboard.
 
-- S’assurer que tous les éléments interactifs sont accessibles au clavier
-- Privilégier les composants natifs (radio, checkbox, bouton) proposés par Storyline
-- Ne pas utiliser des systèmes nécessitant exclusivement la souris, tels que : 
-	- le drag n’ drop 
-	- l’état « survol » pour transmettre des informations importantes
+- Ensure that all interactive elements are usable from the keyboard
+- Focus on native components (radio, checkbox, button) offered by Storyline
+- Do not use systems that only rely on mouse interaction, such as: 
+	- drag n’drop 
+	- the "hover" state to transmit important information
 
-### Rendre le focus visible en toute circonstance
+### Make the focus visible in all circumstances
 
-La visualisation du focus permet aux utilisateurs clavier de se repérer dans leur parcours de navigation.
+A visible focus indicator allows keyboard users to know which component is currently active.
 
-1. Activer "Propriétés du lecteur"
-2. Sélectionner "Couleurs & effets"
-3. Modifier la couleurs par défaut du focus
+1. Activate "Player properties"
+2. Select "Colors & Effects"
+3. Change the default focus color
 
  <img alt="" src="/fr/contenu-editorial/images/storyline-focus.png" class="img-fluid">  &nbsp;
   
-## S’assurer que l’utilisateur garde le contrôle lors des interactions
+## Ensure that the user keeps control during interactions
 
-### Connaitre le résultat de ses actions
-Les résultats des quizzs notamment, doivent être perçus par tous les utilisateurs.
+### Know the result of your actions
 
-- Utiliser les composants de notifications natifs de Storyline (<span lang="en">feedback layers</span>)
-- Lancer une vocalisation du résultat après soumission par l’utilisateur
+The results of quizzes in particular must be perceived by all users.
+
+- Use Storyline's native notification components (feedback layers)
+- Start a vocalization of the result after submission by the user
 <figure class="figure">
   <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid">
-  <figcaption class="figure-caption">Dans cet exemple, le résultat "Pas tout-à-fait... Toutes ces propositions sont exactes !" est vocalisé par une voix-off</figcaption>
+  <figcaption class="figure-caption">In this example, the result "Not quite ... All of the above are correct!" is vocalized by a voice-over</figcaption>
 </figure>
 
-### Éviter les limites de temps
+### Avoid time limits
 
-Tous les utilisateurs doivent pouvoir compléter ses actions sans comportement inattendu, comme un changement de slide par exemple.
+All users must be able to complete their actions without unexpected behavior, such as a slide change for example.
 
-- Eviter les limites de temps pour compléter un exercice ou un quizz, lire un contenu
-- Si une limite de temps est essentielle à la réalisation d’un exercice, proposer une alternative (possibilité de désactiver ou modifier la limite de temps, ou proposer un exercice différent selon le profil par exemple).
+- Avoid time limits to complete an exercise or a quiz, read content
+- If a time limit is essential for carrying out an exercise, offer an alternative (possibility of deactivating or modifying the time limit, or proposing a different exercise depending on the profile for example)
 
-A l’inverse, il peut être utile de préciser le temps nécessaire à la consultation d’un contenu alternatif, ou la consultation de l’elearning.
+Conversely, it may be useful to specify the time required for viewing alternative content, or viewing e-learning.
 
 ## Organiser les objets et les textes de manière logique
 

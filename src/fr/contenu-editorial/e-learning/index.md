@@ -69,8 +69,8 @@ Les résultats des quizzs notamment, doivent être perçus par tous les utilisat
 
 Tous les utilisateurs doivent pouvoir compléter ses actions sans comportement inattendu, comme un changement de slide par exemple.
 
-- Eviter les limites de temps pour compléter un exercice ou un quizz, lire un contenu
-- Si une limite de temps est essentielle à la réalisation d’un exercice, proposer une alternative (possibilité de désactiver ou modifier la limite de temps, ou proposer un exercice différent selon le profil par exemple).
+- Éviter les limites de temps pour compléter un exercice ou un quizz, lire un contenu
+- Si une limite de temps est essentielle à la réalisation d’un exercice, proposer une alternative (possibilité de désactiver ou modifier la limite de temps, ou proposer un exercice différent selon le profil par exemple)
 
 A l’inverse, il peut être utile de préciser le temps nécessaire à la consultation d’un contenu alternatif, ou la consultation de l’elearning.
 
@@ -78,10 +78,10 @@ A l’inverse, il peut être utile de préciser le temps nécessaire à la consu
 
 Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’écran, loupe d’écran, navigation clavier), l’ordre de lecture des composants à l'écran correspondra au sens de lecture de la langue du document (donc de gauche à droite et de haut en bas pour une interface en français par exemple).
 
-- D’une manière générale, s’assurer de reproduire un ordre de lecture logique (gauche à droite et de haut en bas suivant la langue utilisée). 
-- S’assurer que l’ordre des éléments permet la compréhension des informations. Par exemple, dans le cadre d’un questionnaire s’assurer que les utilisateurs tabulent ou vocalisent d’abord sur la question, puis ensuite sur les choix de réponses.
-- Si des boutons de contrôle sont utilisés (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier.
-- Eviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations.
+- D’une manière générale, s’assurer de reproduire un ordre de lecture logique (gauche à droite et de haut en bas suivant la langue utilisée)
+- S’assurer que l’ordre des éléments permet la compréhension des informations. Par exemple, dans le cadre d’un questionnaire s’assurer que les utilisateurs tabulent ou vocalisent d’abord sur la question, puis ensuite sur les choix de réponses
+- Si des boutons de contrôle sont utilisés (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier
+- Éviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations
 
 *La procédure :*
 
