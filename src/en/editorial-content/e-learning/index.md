@@ -75,208 +75,209 @@ All users must be able to complete their actions without unexpected behavior, su
 
 Conversely, it may be useful to specify the time required for viewing alternative content, or viewing e-learning.
 
-## Organiser les objets et les textes de manière logique
+## Organize objects and texts in a logical way
 
-Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’écran, loupe d’écran, navigation clavier), l’ordre de lecture des composants à l'écran correspondra au sens de lecture de la langue du document (donc de gauche à droite et de haut en bas pour une interface en français par exemple).
+For all users, whatever their method of browsing (screen reader, screen magnifier, keyboard navigation), the reading order of the components on the screen will correspond to the reading direction of the language of the document (therefore from left to right and from top to bottom for an interface in French for example)..
 
-- D’une manière générale, s’assurer de reproduire un ordre de lecture logique (gauche à droite et de haut en bas suivant la langue utilisée). 
-- S’assurer que l’ordre des éléments permet la compréhension des informations. Par exemple, dans le cadre d’un questionnaire s’assurer que les utilisateurs tabulent ou vocalisent d’abord sur la question, puis ensuite sur les choix de réponses.
-- Si des boutons de contrôle sont utilisés (bouton de soumission, bouton suivant), positionner ceux-ci en bas à droite du slide, afin qu’ils soient lus en dernier.
-- Eviter les mises en page sur plusieurs colonnes pour ne pas perturber la compréhension des informations.
+- In general, make sure to reproduce a logical reading order (left to right and top to bottom depending on the language used)
+- Make sure that the order of the items allows the information to be understood. For example, in a questionnaire make sure that users move the focus or vocalize first on the question, then on the choice of answers
+- If control buttons are used (submit button, next button), place them at the bottom right of the slide, so that they are read last
+- Avoid layouts on several columns so as not to disrupt the understanding of information
 
-*La procédure :*
+*The procedure:*
 
-1. Activer la fonction « Ordre du focus »
-2. La boîte de dialogue « Ordre du focus » s’ouvre. Celle-ci centralise tous les éléments du slide
-3. Sélectionner « Créer un ordre de focus personnalisé »
-4. Sélectionner un élément
-5. Utiliser les flèches « haut / bas » pour modifier l’ordre de l’élément
-6. Activer « enregistrer »
+1. Activate the "Focus order" function
+2. The "Focus Order" dialog box opens. This centralizes all the elements of the slide
+3. Select "Create a custom focus order"
+4. Select an item
+5. Use the "up / down" arrows to change the order of the item
+6. Activate "save"
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
-<figcaption class="figure-caption">Storyline permet la réorganisation de tous les éléments grâce à l'option "Ordre du focus".
+<figcaption class="figure-caption">Storyline allows all items to be rearranged with the "Focus Order" option.
 </figcaption>
 </figure>
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid">
-<figcaption class="figure-caption">L’ordre des éléments à l’écran, ne correspond pas toujours à l’ordre des éléments dans le code source.
-L’ordre des éléments dans le code source, va avoir un impact lors de la lecture depuis une aide technique, comme un lecteur d’écran par exemple.
+<figcaption class="figure-caption">The order of items on the screen does not always match the order of items in the source code.
+The order of the elements in the source code will have an impact when reading from a technical aid, such as a screen reader for example.
 </figcaption>
 </figure>
 
-## Donner un titre à la présentation et aux diapositives
+## Give a title to the presentation and slides
 
-### Titre de présentation
+### Presentation title
 
-Le titre de présentation doit être explicite.
-Il permet aux utilisateurs finaux d'identifier la formation dans leur navigateur.
-Ceci est particulièrement important pour les utilisateurs de lecteurs d'écran.
+The presentation title must be explicit.
+It allows end users to identify the training in their browser.
+This is especially important for users of screen readers.
 
-*La procédure :*
-1. Cliquer sur Publier
-2. Se positionner dans l’onglet " Web" de la boite de dialogue
-3. Compléter le champ " Titre "
+*The procedure:*
+1. Click on Publish
+2. Go to the "Web" tab of the dialog box
+3. Complete the "Title" field
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid">
-<figcaption class="figure-caption">Cliquer sur Publier, puis renseigner le champ Titre.
+<figcaption class="figure-caption">Click on Publish, then fill in the Title field.
 </figcaption>
 
 </figure>
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/onglet-formation.png" class="img-fluid">
-<figcaption class="figure-caption">Le titre apparaît dans l'onglet du navigateur.
+<figcaption class="figure-caption">The title appears in the browser tab.
 </figcaption>
 </figure>
 
-### Titre de diapositive
+### Slide title
 
-Le titre de diapositive doit également être explicite.
-Il permet aux utilisateurs finaux de comprendre le contexte de chaque nouvelle diapositive.
-Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera vocalisé automatiquement à l'arrivée sur une nouvelle diapositive.
+The slide title should also be self-explanatory.
+It allows end users to understand the context of each new slide.
+Especially screen reader users, indeed this element will be vocalized automatically upon arrival on a new slide.
 
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid">  &nbsp;
-<figcaption class="figure-caption">Double cliquer sur le titre de la diapositive pour le modifier.
+<figcaption class="figure-caption">Double click on the title of the slide to modify it.
 </figcaption>
 </figure>
 
-## Structurer le contenu avec des titres de niveaux
+## Structure the content with headings
 
-Appliquer des styles de titre sur les textes présentés comme des titres.
-Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre la structure du contenu et naviguer facilement au sein de celui-ci.
+Apply heading styles to texts presented as heading.
+Headings are essential for screen reader users to understand the structure of content and navigate easily within it.
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
-<figcaption class="figure-caption">Utiliser les styles appropriés (de Titre 1 à Titre 4).
+<figcaption class="figure-caption">Use the appropriate styles (from Heading 1 to Heading 4).
 </figcaption>
 </figure>
 
-## Fournir des textes alternatifs pertinents 
+## Provide relevant alternative texts
 
-Le texte de remplacement est primordial pour les utilisateurs non-voyants.
-C’est ce contenu qui sera vocalisé.
+Alt text is essential for blind users.
+It is this content that will be vocalized.
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/alt-images.png" class="img-fluid">
 <figcaption class="figure-caption">
-Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
+List of 3 buttons : <span lang="fr">anticiper</span> (anticipate), <span lang="fr">gérer</span> (manage), <span lang="fr">communiquer</span> (communicate), based on images.
 
-- *Alternative non valide :* bouton-gerer-1.png
-- *Alternative valide :* Gérer
+- *Invalid alternative:* button-gerer-1.png
+- *Valid alternative:* <span lang="fr">Gérer</span>
 
 </figcaption>
 </figure>
 
-*Les recommandations :*
+*The recommendations:*
 
-- Pour les images porteuses de texte, le texte alternatif reprend  le contenu textuel présent dans l’image
-- Pour les boutons et autres éléments de formulaire, le texte alternatif convoie la cible ou l’action portée par le bouton
-- Il est contreproductif de commencer les textes par « image de ». Il faut être concis et fournir uniquement l’information nécessaire pour l’utilisateur
-- Éviter les abréviations et la répétition d’éléments de ponctuation
+- For images with text, the alternative text includes the textual content present in the image
+- For buttons and other form elements, the alternative text conveys the target or the action carried by the button
+- It is counterproductive to begin texts with "image of". Be concise and provide only the information that is necessary for the user
+- Avoid abbreviations and repetition of punctuation elements
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/alt-images-infos.png" class="img-fluid">
 <figcaption class="figure-caption">
-Exemple d’une image porteuse d’information :
+Example of an image that conveys information:
 
-- *Alternative non valide :* coche.png
-- *Alternative valide :* séquence déficient auditif déjà consultée
+- *Invalid alternative:* coche.png
+- *Valid alternative:* hearing impaired sequence already consulted
 </figcaption>
 </figure>
 
-*La procédure :*
-1. Activer la fonction « Ordre du focus »
-2. La boîte de dialogue « Ordre du focus » s’ouvre. Celle-ci centralise tous les éléments d’une slide
-3. Renseigner le texte alternatif des boutons ou des objets porteurs d’information
-4. Cliquer sur « Enregistrer »
+*The procedure:*
+1. Activate the "Focus order" function
+2. The "Focus Order" dialog box opens. This centralizes all the elements of a slide
+3. Enter the alternative text of buttons or objects carrying information
+4. Click on "Save"
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
 <figcaption class="figure-caption">
-Les textes alternatifs peuvent être définis depuis le panneau "Ordre du focus".
+Alternative texts can be defined from the "Focus order" panel.
 </figcaption>
 </figure>
 
 <img alt="" src="/fr/contenu-editorial/images/storyline-order-3.png" class="img-fluid">  &nbsp;
 
 
-## Masquer les images décoratives
+## Hide decorative images
 
-Une image est considérée comme décorative lorsqu'elle n'apporte pas d’information supplémentaire à la compréhension d'un texte ou d'une fonctionnalité.
+An image is considered decorative when it does not provide additional information for the understanding of a text or a feature.
 
-Il est recommdandé de masquer ces éléments aux utilisateurs de lecteur d'écran.
+It is recommended that you hide these items from screen reader users.
 
-Les bénéfices : 
-- Alléger la vocalisation, en évitant la lecture d’une information inutile à la compréhension du contenu.
-- Alléger la navigation clavier en supprimant des éléments inutiles du parcours clavier.
+Profits : 
+- Lighten vocalization, avoiding the reading of information useless to understanding the content
+- Simplify keyboard navigation by removing unnecessary elements from the keyboard path
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/image-deco-1.png" class="w-50 pr-1 float-left">
 <img alt="" src="/fr/contenu-editorial/images/image-deco-2.png" class="w-50 float-left">
 <figcaption class="figure-caption">
-Exemples d'images décoratives, dans ces contextes, le personnages ou le pied de table n'apportent pas d'informations.
-Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
+Examples of decorative images, in these contexts, the figures or the table leg do not provide any information.
+They can therefore be hidden from users of technical aids.
 </figcaption>
 </figure>
 
-*La procédure :*
-1. Click droit sur l’image.
-2. Sélectionner « Accessibilité » dans le menu.
-3. La boîte de dialogue « taille et position » s’ouvre.
-4. L'onglet "Accessibilité" est ouvert par défaut.
-5. Décocher la case « L’objet est visible… ».
-6. Cliquer sur «fermer ».
+*The procedure:*
+1. Right click on the image
+2. Select "Accessibility" in the menu
+3. The "size and position" dialog box opens
+4. The "Accessibility" tab is open by default
+5. Uncheck the box "The object is visible ..."
+6. Click on "close"
 
 <img alt="" src="/fr/contenu-editorial/images/hide-image.png" class="img-fluid mb-1">
 <img alt="" src="/fr/contenu-editorial/images/hide-image-2.png" class="img-fluid">  &nbsp;
 
 
-## Indiquer la langue principale du document
+## Indicate the main language of the document
   
-Définir la langue d'un document permettra aux synthèses vocales d'adapter leur vocalisation par rapport à la langue du contenu.
+Defining the language of a document will allow screen readers to adapt their vocalization to the language of the content.
 
-*La procédure :*
-1. Sélectionner « lecteur – modifier les propriétés du lecteur ».
-2. Sélectionner « étiquettes de texte ».
-3. Dans le menu déroulant « langue », sélectionner la langue correspondant au document.
-4. Modifier les textes dans la colonne « texte personnalisé ».
-5. Cliquer sur « OK ».
+*The procedure:*
+1. Select "player - modify reader properties"
+2. Select "text labels"
+3. In the "language" drop-down menu, select the language corresponding to the document
+4. Edit the texts in the "personalized text" column
+5. Click on “OK”
 
 <img alt="" src="/fr/contenu-editorial/images/storyline-langue-1.png" class="img-fluid mb-1">  &nbsp;
 
-## Contenus audio ou vidéo
+## Audio or video content
 
-- Fournir une transcription aux audios et vidéos
-- Ne pas lancer l’audio ou la vidéo automatiquement
-- Si le média se lance automatiquement, s’assurer que l’utilisateur a la possibilité de l’arrêter manuellement
+- Provide transcription for audios and videos
+- Do not start audio or video automatically
+- If the media starts automatically, make sure the user has the option to stop it manually
 
 <img alt="" src="/fr/contenu-editorial/images/lancement-auto.png" class="img-fluid">  &nbsp;
 
-### Audios accessibles
+### Accessible audios
 
-Certaines formations possèdent une vocalisation de chaque slide (voix off) :
+Some formations have a vocalization of each slide (voice over):
 
-- Si la voix fournie des informations non présentes dans le contenu du slide, des sous-titres sont alors nécessaires.
-Storyline permet la création de sous-titres synchronisés.
-- S’assurer que l’ensemble du contenu textuel du slide soit vocalisé, afin de ne pas induire en erreur les utilisateurs non-voyants qui pourraient se reposer uniquement sur l’audio et ne pas consulter manuellement tout le contenu du slide.
+- If the voice provides information not present in the content of the slide, then subtitles are necessary.
+Storyline enables the creation of synchronized captions.
+- Make sure that all textual content on the slide is vocalized, so as not to mislead blind users who may rely solely on audio and not manually view all of the slide's content.
 
 <figure class="figure">
 <img alt="" src="/fr/contenu-editorial/images/activer-sous-titre.png" class="img-fluid">
 <figcaption class="figure-caption">
-Donner la possibilité aux utilisateurs d'activiter les sous-titres dès le début de la présentation.
+Give the possibility to users to activate the subtitles from the beginning of the presentation.
 </figcaption>
 </figure>
 
-### Vidéos accessibles
+### Accessible videos
 
-Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-editorial/composants-animes) pour en savoir plus.
+See [Accessibility of video, animation and audio content](/en/editorial-content/animated-components/) to learn more.
 
 ## Ressources
 
-- <a href="https://articulate-heroes.s3.amazonaws.com/uploads/attachment/attachment_url/24511/Storyline_accessibility_guide.pdf?dl=true" hreflang="en" lang="en">Designing Accessible E-Learning Using Articulate Storyline (pdf, anglais)</a>.
-- <a href="https://www.ucop.edu/electronic-accessibility/_files/creating-accessible-ecourses.pdf" hreflang="en" lang="en">Creating Accessible eCourses (pdf, anglais)</a>.
-- <a href="http://generic.wordpress.soton.ac.uk/digital-learning/2019/01/28/accessibility-for-articulate-storyline-are-you-wcag-compliant/" hreflang="en" lang="en">Accessibility for Articulate storyline – Are you WCAG compliant? (anglais)</a>.
+- <a href="https://articulate-heroes.s3.amazonaws.com/uploads/attachment/attachment_url/24511/Storyline_accessibility_guide.pdf?dl=true" hreflang="en" lang="en">Designing Accessible E-Learning Using Articulate Storyline (pdf)</a>
+- <a href="https://www.ucop.edu/electronic-accessibility/_files/creating-accessible-ecourses.pdf" hreflang="en" lang="en">Creating Accessible eCourses (pdf, anglais)</a>
+- <a href="http://generic.wordpress.soton.ac.uk/digital-learning/2019/01/28/accessibility-for-articulate-storyline-are-you-wcag-compliant/" hreflang="en" lang="en">Accessibility for Articulate storyline – Are you WCAG compliant?</a>
+- <a href="https://www.hassellinclusion.com/blog/elearning-accessibility-poster/" hreflang="en" lang="en">Creating e-learning that can be used by everyone (POSTER)</a>
