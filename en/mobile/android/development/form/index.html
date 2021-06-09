@@ -260,7 +260,6 @@
 <li><code>hint</code> : add an example text when the text field is empty. This method only works for <code>EditText</code>. It takes in parameter the <code>id</code> of a string. Usable from the <code>android:hint</code> <abbr>XML</abbr> or the <code>setHint</code> method.</li>
 </ul>
 <p>It is essential to indicate to the user, for a good understanding of the input screen, the required fields, the expected format, or errors made on fields.</p>
-<p>Remark: Once a label is associated to its related field, it will be vocalized during the focus on its input field. It is therefore necessary to hide the label from accessibility API to avoid double vocalization.</p>
 <p><strong>To be verified:</strong></p>
 <ul>
 <li>Input fields must be linked to a label if it is visible, otherwise a <code>hint</code> is present.</li>
@@ -275,7 +274,6 @@
 &lt;TextView
    android:id="@+id/usernameLabel" ...
    android:text="@string/username"
-   android:importantForAccessibility="no" 
    android:labelFor="@+id/usernameEntry" /&gt;
 
 &lt;EditText
