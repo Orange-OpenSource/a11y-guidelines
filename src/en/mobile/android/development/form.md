@@ -19,8 +19,6 @@ There are 2 techniques to achieve this:
 
 It is essential to indicate to the user, for a good understanding of the input screen, the required fields, the expected format, or errors made on fields.
 
-Remark: Once a label is associated to its related field, it will be vocalized during the focus on its input field. It is therefore necessary to hide the label from accessibility API to avoid double vocalization.
-
 **To be verified:**
 
 - Input fields must be linked to a label if it is visible, otherwise a `hint` is present.
@@ -36,7 +34,6 @@ Remark: Once a label is associated to its related field, it will be vocalized du
 &lt;TextView
    android:id="@+id/usernameLabel" ...
    android:text="@string/username"
-   android:importantForAccessibility="no" 
    android:labelFor="@+id/usernameEntry" /&gt;
 
 &lt;EditText
