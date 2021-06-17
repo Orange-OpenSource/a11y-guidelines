@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page Applications (SPA) - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-editorial/" class="nav-link">
+  Contenu éditorial
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Rechercher</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Rechercher" placeholder="Rechercher">
+  </form>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Single Page Applications (SPA)
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#mettre-a-jour-le-titre-des-pages" class="dropdown-item text-wrap">Mettre à jour le titre des pages</a><a href="#prevenir-lutilisateur-des-changements-de-page" class="dropdown-item text-wrap">Prévenir l&#39;utilisateur des changements de page</a><a href="#prevenir-lutilisateur-des-mises-a-jour-a-linterieur-de-la-page" class="dropdown-item text-wrap">Prévenir l&#39;utilisateur des mises à jour à l&#39;intérieur de la page</a><a href="#deplacer-le-focus" class="dropdown-item text-wrap">Déplacer le focus</a><a href="#utiliser-la-semantique-html-5" class="dropdown-item text-wrap">Utiliser la sémantique HTML 5</a><a href="#gerer-lhistorique-du-navigateur" class="dropdown-item text-wrap">Gérer l&#39;historique du navigateur</a><a href="#resume" class="dropdown-item text-wrap">Résumé des bonnes pratiques</a><a href="#liens-utiles" class="dropdown-item text-wrap">Liens utiles</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Recommandations pour les <span lang="en">Single Page Applications</span></h1>
+<p>Une <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">application web monopage</a> (en anglais single-page application ou <abbr lang="en" title="single-page application">SPA</abbr>) est une application web dont la particularité est de n'avoir qu'une seule page. Lors de la navigation celle-ci n'est jamais rechargée, seules des portions de la page sont dynamiquement mises à jour à l'aide de code Javascript.</p>
+<p>Les <abbr lang="en" title="single-page application">SPA</abbr> rencontrent un engouement depuis l'avènement des frameworks Javascript : <code>Angular</code>, <code>React</code> ou <code>Vue</code> pour ne citer que les plus populaires. Dans cet article, l'idée n'est pas de prendre partie pour ou contre les <abbr lang="en" title="single-page application">SPA</abbr>. Il faut reconnaître qu'employé correctement, ce type de framework peut résoudre des problèmes notamment lorsqu'il est utilisé dans la conception d'applications web complexes. Nous allons nous concentrer ici sur les difficultés que cela peut apporter en terme d'accessibilité.</p>
+<p><strong>Avertissement :</strong> les <abbr lang="en" title="single-page application">SPA</abbr> ne doivent en aucun cas devenir la norme. Si votre besoin peut être satisfait à l'aide d'un site standard inutile de succomber aux effets de mode. Un site Web standard offre nativement une prise en charge de l'accessiblité et vous épargne la prise en main d'un framework complexe, la montée en compétence, la maintenance ou les problèmes de compatibilité avec les anciens navigateurs.</p>
+<h2 id="mettre-a-jour-le-titre-des-pages">Mettre à jour le titre des pages <a class="header-anchor" href="#mettre-a-jour-le-titre-des-pages" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>La navigation à travers une <abbr lang="en" title="single-page application">SPA</abbr> n'entraîne pas de rechargement de page par le navigateur. Qui dit pas de rechargement, dit pas de modification du titre de la page (balise <code>title</code>). Or, il est important que <a href="https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#donner-un-titre-aux-pages">chaque page ait un titre unique</a>.</p>
+<p>Il faudra donc veiller à mettre à jour le titre de la page via Javascript (<code>document.title</code>). Se référer à la documentation du framework utilisé pour savoir si une implémentation de ce mécanisme est proposée ou s'il doit être créé de toute pièce.</p>
+<h2 id="prevenir-lutilisateur-des-changements-de-page">Prévenir l'utilisateur des changements de page <a class="header-anchor" href="#prevenir-lutilisateur-des-changements-de-page" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les lecteurs d'écran utilisés par les personnes malvoyantes informent l'utilisateur automatiquement dès qu'une nouvelle page est chargée par le navigateur. Dans le cadre d'une <abbr lang="en" title="single-page application">SPA</abbr>, les changements de page n'entraînent pas de rechargement par le navigateur. Le lecteur d'écran n'a donc aucun moyen de prévenir l'utilisateur.</p>
+<p>Une solution acceptable consiste à déplacer le focus sur le premier titre <code>&lt;h1&gt;</code> de la page courante. Ceci entraînerra sa lecture par le lecteur d'écran, ainsi l'utilisateur sera prévenu qu'une nouvelle page est affichée.<br>
+À noter que par défaut une balise <code>&lt;h1&gt;</code> n'est pas focusable. Pour L'autoriser à recevoir le focus via Javascript, il suffit de lui ajouter un attribut <code>tabindex=&quot;-1&quot;</code>.</p>
+<h2 id="prevenir-lutilisateur-des-mises-a-jour-a-linterieur-de-la-page">Prévenir l'utilisateur des mises à jour à l'intérieur de la page <a class="header-anchor" href="#prevenir-lutilisateur-des-mises-a-jour-a-linterieur-de-la-page" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Si certaines informations sont mises à jour dynamiquement dans la page (message de confirmation, chargement en cours, affichage d'erreur…). Il est important de faire en sorte que les lecteurs d'écran annoncent ces modifications. Plusieurs méthodes sont disponibles selon les cas :</p>
+<ul>
+<li>Déplacer le focus sur un élément qui vient d'être mis à jour.</li>
+<li>Utiliser de l'ARIA comme indiqué dans les articles suivants : <a href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/">Utiliser ARIA les messages d'état, de statut ou contextuel</a> et <a href="https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#main-content">L'attribut aria-live et le role alert</a>.</li>
+</ul>
+<h2 id="deplacer-le-focus">Déplacer le focus <a class="header-anchor" href="#deplacer-le-focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Sur un site web classique, lorsqu'un utilisateur clique sur un lien et qu'une nouvelle page s'affiche, le focus est automatiquement repositionné en haut de page (sur le <code>body</code>). Ainsi pour les utilisateurs qui naviguent à l'aide du clavier, il suffit d'utiliser la touche <code>TAB</code> pour se déplacer dans la page.</p>
+<p>Dans une <abbr lang="en" title="single-page application">SPA</abbr>, si un utilisateur clique sur un bouton qui entraîne une mise jour du contenu, le focus n'est pas déplacé (il reste sur le bouton). Plus important encore, si le changement de page a fait disparaître l'élément sur lequel était positionné le focus, l'utilisateur ne sait plus où il est dans la page. Cela peut également entraîner des problèmes de vocalisation pour les personnes qui naviguent à l'aide d'un lecteur d'écran.</p>
+<p>Il est donc important de veiller à déplacer le focus via Javascript lorsque cela est nécessaire. De même si une boite de dialogue modale est affichée à l'écran, le focus doit être positionné dans la boite lors de son apparition puis replacé sur l'élément d'origine (un bouton par exemple) lors de sa disparition.</p>
+<h2 id="utiliser-la-semantique-html-5">Utiliser la sémantique HTML 5 <a class="header-anchor" href="#utiliser-la-semantique-html-5" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les <abbr lang="en" title="single-page application">SPA</abbr> sont souvent utilisées dans le cadre d'applications Web. L'utilisateur doit composer parfois avec une interface qui s'apparente plus a une application native qu'à celle d'un site Web. Il est important de veiller à identifier correctement les différentes zones : navigation, contenu, zone de recherche…</p>
+<p>Si votre application possèdent des zones spécifiques, il est recommandé de leur attribuer un <code>label</code> afin qu'elles soient rapidement identifiables. Par exemple à l'aide d'une balise <code>&lt;region&gt;</code> et d'un attribut <code>aria-label</code> ou <code>aria-labelledby</code>.</p>
+<pre><code class="html">
+&lt;div role="region" aria-label="moniteur d'activité"&gt;
+  &lt;!-- contenu de la région --&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="html">
+&lt;div role="region" aria-label="simulateur des coûts"&gt;
+  &lt;!-- contenu de la région --&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Consultez l'article : <a href="https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/landmarks-aria/#main-content">les régions ou landmarks ARIA</a>, pour obtenir plus d'information sur l'utilisation de ces balises.</p>
+<h2 id="gerer-lhistorique-du-navigateur">Gérer l'historique du navigateur <a class="header-anchor" href="#gerer-lhistorique-du-navigateur" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Rien de plus agaçant que de sortir d'une application alors qu'on souhaitait simplement revenir à la page précédente en utilisant le bouton <code>précédent</code> du navigateur. C'est pourtant ce qui se produit parfois dans les <abbr lang="en" title="single-page application">SPA</abbr>.</p>
+<p>La solution consiste à manipuler l'historique du navigateur en Javascript à l'aide de l'<a href="https://developer.mozilla.org/fr/docs/Web/API/History_API" lang="en">History API</a>. Celle-ci permet de mémoriser les différents états de l'application et d'y revenir à l'aide des boutons <code>précédent</code> et <code>suivant</code> du navigateur.</p>
+<h2 id="resume">Résumé des bonnes pratiques</h2>
+<ul>
+<li>Mettre à jour le titre des pages (<code>document.title</code>)</li>
+<li>Prévenir l'utilisateur des changements de page</li>
+<li>Prévenir l'utilisateur des mises à jour à l'intérieur de la page (ARIA)</li>
+<li>Déplacer le focus</li>
+<li>Utiliser la sémantique HTML 5</li>
+<li>Gérer l'historique du navigateur (<span lang="en">History API</span>)</li>
+</ul>
+<h2 id="liens-utiles">Liens utiles <a class="header-anchor" href="#liens-utiles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://dev.to/s_aitchison/page-titles-and-a11y-in-single-page-applications-esp-react-vue-4ok8" hreflang="en" lang="en">Page Titles and A11y in Single Page Applications (Suzanne Aitchison)</a></li>
+<li><a href="https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/" hreflang="en" lang="en">What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs (Marcy Sutton)</a></li>
+<li><a href="https://www.paris-web.fr/2020/conferences/trucs-et-astuces-pour-construire-une-single-page-app-accessible.php">Mini-conf Maël Brunet, Paris Web 2020</a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#mettre-a-jour-le-titre-des-pages" class="nav-link text-muted bg-200">Mettre à jour le titre des pages</a>
+          </li><li class="nav-item position-relative">
+            <a href="#prevenir-lutilisateur-des-changements-de-page" class="nav-link text-muted bg-200">Prévenir l&#39;utilisateur des changements de page</a>
+          </li><li class="nav-item position-relative">
+            <a href="#prevenir-lutilisateur-des-mises-a-jour-a-linterieur-de-la-page" class="nav-link text-muted bg-200">Prévenir l&#39;utilisateur des mises à jour à l&#39;intérieur de la page</a>
+          </li><li class="nav-item position-relative">
+            <a href="#deplacer-le-focus" class="nav-link text-muted bg-200">Déplacer le focus</a>
+          </li><li class="nav-item position-relative">
+            <a href="#utiliser-la-semantique-html-5" class="nav-link text-muted bg-200">Utiliser la sémantique HTML 5</a>
+          </li><li class="nav-item position-relative">
+            <a href="#gerer-lhistorique-du-navigateur" class="nav-link text-muted bg-200">Gérer l&#39;historique du navigateur</a>
+          </li><li class="nav-item position-relative">
+            <a href="#resume" class="nav-link text-muted bg-200">Résumé des bonnes pratiques</a>
+          </li><li class="nav-item position-relative">
+            <a href="#liens-utiles" class="nav-link text-muted bg-200">Liens utiles</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/single-page-app.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Retour en haut de page">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:fr"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
