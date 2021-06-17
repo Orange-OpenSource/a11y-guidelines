@@ -708,6 +708,10 @@ runTestListMarkup = function (currentRefTests) {
 				htmlrefTests += '<p>' + currentRefTests[i].exception + '</p>';
 			}
 			
+			if (currentRefTests[i].moreInfo) {
+				htmlrefTests += '<a href="' + currentRefTests[i].moreInfo + '" id="mi-' + currentTest + '" aria-labelledby="heading' + currentTest + ' mi-' + currentTest + '" class="btn btn-secondary btn-sm" title="' + langVallydette.moreInfo + ' (' + langVallydette.newWindow +')" target="_blank">' + langVallydette.moreInfo + '</a>';
+			}
+			
 			htmlrefTests += '<div class="py-2 ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + 'border-light"><p class="text-muted mb-0"><abbr title="Web Content Accessibility Guidelines" aria-label="Web Content Accessibility Guidelines" lang="en">WCAG</abbr>&nbsp;:&nbsp;';
 			for (let j in currentRefTests[i].wcag) {
 				htmlrefTests += currentRefTests[i].wcag[j];
@@ -803,6 +807,10 @@ runTestListMarkup = function (currentRefTests) {
 				htmlrefTests += '<p>' + currentRefTests[i].raccourcis+ '</p>';
 			}
 
+			if (currentRefTests[i].moreInfo) {
+				htmlrefTests += '<a href="' + currentRefTests[i].moreInfo + '" id="mi-' + currentTest + '" aria-labelledby="heading' + currentTest + ' mi-' + currentTest + '" class="btn btn-secondary btn-sm" title="' + langVallydette.moreInfo + ' (' + langVallydette.newWindow +')" target="_blank">' + langVallydette.moreInfo + '</a>';
+			}
+			
 			htmlrefTests += '<div class="py-2 ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + 'border-light"><p class="text-muted mb-0"><abbr title="Web Content Accessibility Guidelines" aria-label="Web Content Accessibility Guidelines" lang="en">WCAG</abbr>&nbsp;:&nbsp;';
 			for (let j in currentRefTests[i].wcag) {
 				htmlrefTests += currentRefTests[i].wcag[j];
@@ -3292,9 +3300,10 @@ var excel = $JExcel.new();
 const formatHeader = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000 B", fill: "#FFCC00"});
 const formatHeaderProject = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000 B", fill: "#C5D9F1"});
 const formatRow = excel.addStyle ( {border: "none,none,none,thin #333333",font: "Calibri 11 #000000"}); 
-const formatWarning = excel.addStyle ( {font: "Calibri 11 #ff0000 B"}); 
-const pageHeaders = ['Nom', 'URL'];
-const dataHeaders = ['ID', 'Test', langVallydette.summary, langVallydette.description, langVallydette.solution, langVallydette.technical_solution, langVallydette.reviewIssue, langVallydette.stateIssue];
+const formatWarning = excel.addStyle ( {font: "Calibri 11 #ff0000 B"});
+const formatHyperlink = excel.addStyle ( {font: "Calibri Light 12 #0563C1 U"}); 
+const pageHeaders = [langVallydette.name, 'URL'];
+const dataHeaders = ['ID', 'test', langVallydette.guidelines, langVallydette.summary, langVallydette.description, langVallydette.solution, langVallydette.technical_solution, langVallydette.reviewIssue, langVallydette.stateIssue];
 
 
 excel.set( {sheet:0,value:"Informations"} );
@@ -3315,7 +3324,7 @@ for (let i in dataVallydette.checklist.page) {
 
 	excel.set(0,0,rowPages, dataVallydette.checklist.page[i].name);
 	if (dataVallydette.checklist.page[i].url) {
-		excel.set(0,1,rowPages, dataVallydette.checklist.page[i].url);
+		excel.set(0,1,rowPages, '=HYPERLINK("' + dataVallydette.checklist.page[i].url + '","' + dataVallydette.checklist.page[i].url + '")', formatHyperlink);
 	}
 
 	rowPages++;
@@ -3324,7 +3333,6 @@ for (let i in dataVallydette.checklist.page) {
 rowPages++;
 
 excel.set(0,0,rowPages, langVallydette.auditWarning, formatWarning);
-
 	
 let setIndex = 1;
 
@@ -3334,7 +3342,7 @@ for (let i in dataVallydette.checklist.page) {
   
 		for (var j=0;j<dataHeaders.length;j++){    
 		
-			if(j===7){
+			if(j===8){
 				excel.set(setIndex,j,0,dataHeaders[j], formatHeaderProject); 
 			} else {
 				excel.set(setIndex,j,0,dataHeaders[j], formatHeader);	
@@ -3347,22 +3355,26 @@ for (let i in dataVallydette.checklist.page) {
 		
 		const listNonConformity = dataVallydette.checklist.page[i].items.filter(item => item.resultatTest === "ko").map(function(item) {
 			
-			rowIssues++;
-			excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
-		
 			if (type === "audit") {
 				
 				if (item.issues.length > 0) {
 						
 					item.issues.forEach(function (issue, key) {
-						
+						rowIssues++;
+						excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
 						//@ ajout url tests
 						
 						excel.set(setIndex,1,rowIssues, item.title);
-						excel.set(setIndex,2,rowIssues, issue.issueTitle);
-						excel.set(setIndex,3,rowIssues, issue.issueDetail);
-						excel.set(setIndex,4,rowIssues, issue.issueSolution);
-						excel.set(setIndex,5,rowIssues, issue.issueTechnicalSolution);
+						if (item.moreInfo) {
+							excel.set(setIndex,2,rowIssues, '=HYPERLINK("' + item.moreInfo + '","' + langVallydette.moreInfo + '")', formatHyperlink);
+						} else {
+							excel.set(setIndex,2,rowIssues, '');
+						}
+
+						excel.set(setIndex,3,rowIssues, issue.issueTitle);
+						excel.set(setIndex,4,rowIssues, issue.issueDetail);
+						excel.set(setIndex,5,rowIssues, issue.issueSolution);
+						excel.set(setIndex,6,rowIssues, issue.issueTechnicalSolution);
 			
 					})
 						
@@ -3370,15 +3382,24 @@ for (let i in dataVallydette.checklist.page) {
 				
 			} else {
 
+					rowIssues++;
+					excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
+						
 					if (!item.commentaire) {
 						item.commentaire = langVallydette.noCommentary;
 					}
 
 					excel.set(setIndex,1,rowIssues, item.title);
-					excel.set(setIndex,2,rowIssues, '');
-					excel.set(setIndex,3,rowIssues, item.commentaire);
-					excel.set(setIndex,4,rowIssues, '');
+					if (item.moreInfo) {
+							excel.set(setIndex,2,rowIssues, '=HYPERLINK("' + item.moreInfo + '","' + langVallydette.moreInfo + '")', formatHyperlink);
+						} else {
+							excel.set(setIndex,2,rowIssues, '');
+						}
+
+					excel.set(setIndex,3,rowIssues, '');
+					excel.set(setIndex,4,rowIssues, item.commentaire);
 					excel.set(setIndex,5,rowIssues, '');
+					excel.set(setIndex,6,rowIssues, '');
 
 			} 
 			
