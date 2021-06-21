@@ -129,6 +129,10 @@ module.exports = {
     "base": "<span lang='en'>Search Engine Optimisation</span>",
     "fr": "optimisation pour les moteurs de recherche"
   },
+  "SPA": {
+    "base": "<span lang='en'>Single Page Application</span>",
+    "fr": "application Web monopage"
+  },
   "SVG": {
     "base": "<span lang='en'>Scalable Vector Graphics</span>",
     "fr": "graphique vectoriel adaptable"
