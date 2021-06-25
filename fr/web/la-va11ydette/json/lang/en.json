@@ -47,6 +47,7 @@
 	"addPage": "Add a page",
 	"editPageName": "Edit the page name",
 	"deletePageName": "Delete the page",
+	"openPageUrl": "Open the url of the current page (new window)",
 	"delete": "Delete",
 	"close": "Close",
 	"cancel": "Cancel",

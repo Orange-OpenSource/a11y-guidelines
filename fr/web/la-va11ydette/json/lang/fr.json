@@ -48,6 +48,7 @@
 	"addPage": "Ajouter une page",
 	"editPageName": "Modifier le nom de la page",
 	"deletePageName": "Supprimer la page",
+	"openPageUrl": "Ouvrir l'url de la page en cours (nouvelle fenetre)",
 	"delete": "Supprimer",
 	"close": "Fermer",
 	"cancel": "Annuler",
