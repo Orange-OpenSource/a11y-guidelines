@@ -399,8 +399,8 @@
 			"3.2.1 A",
 			"3.2.2 A"
 		],
-		"verifier": "<p>When using forms or any interactive component, check that there is no change of context witho$ut warning the user:</p><ul><li>when a component receives focus</li><li>when entering data</li><li>when activating a form element other than a button</li></ul>",
-		"complement": "<h4>Context changes</h4><p>Major change in the content of the Web page which, when made without the user being aware of it, may confuse users who are unable to view the complete page.</p><p> Changes in context include changes of:</p><ul><li>user agent</li><li>viewport</li><li>focus</li><li>content that changes the meaning of the Web page</li></ul>",
+		"verifier": "<p> When using forms or any interactive component, check that there is no change of context, without warning the user: </p> <ul> <li> when an element takes the focus </li> <li> when entering data </li> <li> when activating a form element other than a button </li> </ul>",
+		"complement": "<h4> Change of context </h4> <p> Major change in the content of the web page which, when done without the knowledge of the user, can be confusing. </p> <p> The changes context include changes: </p> <ul> <li> the user agent (opening an application from the browser) </li> <li> the viewport  (other part of the displayed page, open a new window) </li> <li>the focus position (focus sequence) </li> <li> content that changes the meaning of the web page </li></ul> <p> The context switch is compliant if: </p> <ul> <li> the action is initiated by a button or an explicit link </li> <li>  the user is warned by a text before it is triggered </li> </ul>",
 		"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#ensure-the-user-keeps-control-during-interactions",
 		"resultatTest": "nt"
 	},{
@@ -422,7 +422,8 @@
 		"wcag": [
 			"4.1.3 A"
 		],
-		"verifier": "<p>Check that a mechanism based on ARIA roles (<code>status</code>, <code>alert</code>, <code>alertdialog</code>…) or live regions <code>aria-live</code>\nis implemented.</p> <h4>For example</h4><ul><li> message that provides information on the results of an action or the state of the application: <code>role='status'</code></li><li>error message: <code>role='alert'</code></li><li> message indicating progress: <code>role='log'</code>, <code>'progressbar'</code> or <code>'status'</code></li></ul><p>For more information: <a href=\"https://a11y-guidelines.orange.com/web/aria-status.html#utiliser-abbr-aria-abbr-les-messages-d-tat-de-statut-ou-contextuel\" target=\"_blank\" title=\"Status messages (new window)\"> status messages</a>.</p>",
+		"verifier": "<p>For all status messages (results of a reload, a notification, dialogue in a chatbot, upload of a file, product registration in a basket, progressive loading of a page (next 20 items) ... ): </p> <ul> <li>check that a mechanism based on the ARIA roles (<code>status</code>, <code>alert</code>, <code> lertdialog </code>, ...) or on dynamic regions <code>aria-live</code> is implemented </li> <li> check that they are rendered in a relevant way to the screen reader </li> </ul>",
+		"complement":"<h4>Examples</h4><ul> <li> message that informs about the result of an action or the state of the application: <code>role='status'</code></ li > <li> error message: <code>role='alert'</code></li> <li> message indicating progress: <code>role='log'</code>, <code>'progressbar'</code> or <code>'status'</code></li></ul> <p>More information on <a href =\"https://a11y-guidelines.orange.com/web/aria-status.html#user-abbr-aria-abbr-les-messages-d-tat-de-statut-ou-contextuel \" target=\"_ blank\" title=\"Messages status (new window) \"> status messages</a>. </p>",
 		"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#allow-to-know-the-result-of-a-user-interaction-with-status-messages",
 		"resultatTest": "nt"
 	},{
@@ -567,8 +568,8 @@
 		"wcag": [
 			"1.3.2 A"
 		],
-		"verifier": "<p>Check that when the content is read in a linear order, it remains understandable (reading order in the page without CSS).</p>",
-		"complement": "<h4>More details</h4><p>The content order in the HTML code must be understandable, often, it is identical to the layout order of the content on the screen.</p><p>Examples of content to test:</p><ul><li>Layout with css <ul><li>Positioning properties (<code>top</code>, <code>left</code>…)</li><li><code>Float</code> in particular <code>right</code></li><li><code>Display:flex</code> or <code>display:grid</code></li></ul></li><li>Layout table</li></ul>",
+		"verifier": "<p>If a specific reading order is required to understand a content on the page<br/> when CSS is disabled, check that this content read linearly remains understandable.</p><p> <strong> Example: </strong> a content implemented with multiple columns in CSS must be rendered in the correct order without CSS. </p><p> If no content requires a specific reading order, then the criterion is not applicable.</p>",
+		"complement": "<h4> Additional information </h4> <p> The order of the contents in the HTML code must remain understandable, in general, it is sufficient that it be identical to the order of display of the contents on the screen.</p> <p>Examples of content to test: </p> <ul><li>Layout via these CSS properties:<ul> <li>positioning properties (<code>top</code >, <code>left</code>, <code>float</code> …)</li><li><code>display:\"flex\"</code> or <code>dislay:\"grid\"</code></li> </ul> <li>Formatting table</li></ul>",
 		"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#decoupling-content-from-interaction-and-presentation",
 		"resultatTest": "nt"
 	},{
