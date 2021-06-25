@@ -2073,6 +2073,8 @@ addPage = function () {
 	currentBtnDelPage.disabled = false;
 	
 	showPage(currentIdPage);
+	document.getElementById('btnPageName').click();
+
 }
 
 /**  Initialization of some properties */
@@ -2121,7 +2123,13 @@ initProperties = function (item) {
 initContextualMenu = function (currentPageIndex, currentPageID) {
 	var htmlMenu = '';
 	htmlMenu += '<button class="btn btn-secondary btn-icon" id="btnPageName" aria-label="' + langVallydette.editPageName + '" title="' + langVallydette.editPageName + '" data-element="pageName" data-secondary-element="' + currentPageID + '" data-property="checklist.page.' + currentPageIndex + '.name" data-toggle="modal" data-target="#modalEdit"><span class="icon-Pencil" aria-hidden="true"></span></button>';
-	
+	if( getPropertyValue("checklist.page." + currentPageIndex + ".url") === '' ){
+		htmlMenu += '<a role="link" id="btnOpenUrl" class="btn btn-secondary btn-icon ml-2 disabled" aria-label="' + langVallydette.openPageUrl + '" title="' + langVallydette.openPageUrl + '" target="_blank" aria-disabled="true"><span class="icon-Link" aria-hidden="true"></span></a>';
+	}
+	else{
+		htmlMenu += '<a role="link" id="btnOpenUrl" class="btn btn-secondary btn-icon ml-2" aria-label="' + langVallydette.openPageUrl + '" title="' + langVallydette.openPageUrl + '" href="'+ getPropertyValue("checklist.page." + currentPageIndex + ".url") +'" target="_blank" aria-disabled="false"><span class="icon-Link" aria-hidden="true"></span></a>';
+	}
+
 	if (currentPage === 0) {
 		htmlMenu += '<button id="btnDelPage" class="btn btn-secondary btn-icon ml-2" aria-label="' + langVallydette.deletePageName + '" title="' + langVallydette.deletePageName + '" data-element="pageName" data-property="" data-toggle="modal" data-target="#modalDelete" data-pagination="' + currentPageID + '" disabled><span class="icon-trash" aria-hidden="true"></span></button>';
 	} else {
@@ -2177,6 +2185,18 @@ showPage = function (id) {
 			currentBtnDelPage.disabled = false;
 			currentBtnDelPage.dataset.property = "checklist.page." + currentPage;
 			currentBtnDelPage.dataset.pagination = id;
+		}
+
+		var currentbtnOpenUrl = document.getElementById('btnOpenUrl');
+		if( getPropertyValue("checklist.page." + currentPage + ".url") === '' ){
+			currentbtnOpenUrl.classList.add('disabled');
+			currentbtnOpenUrl.removeAttribute('href');
+			currentbtnOpenUrl.setAttribute('aria-disabled', 'true');
+		}
+		else{
+			currentbtnOpenUrl.classList.remove('disabled');
+			currentbtnOpenUrl.href = getPropertyValue("checklist.page." + currentPage + ".url");
+			currentbtnOpenUrl.setAttribute('aria-disabled', 'false');
 		}
 		
 	}
@@ -2477,6 +2497,18 @@ setPropertyValue = function (propertyValue, propertyPath) {
 }
 
 /**
+ * Check if the url is correct, and correct it accordingly
+ * @param {string} url - url link.
+*/
+validateUrl = function( url ){
+	if (url.indexOf("http://") == -1 && url.indexOf("https://") == -1) {
+       url =  "http://" + url;
+    }
+	return url;
+
+}
+
+/**
  * Run the set up of properties value, and display a feedback.
  * @param {array} arrayPropertyValue - Array of properties to update.
  * @param {string} targetElement - Element to edit (audit or page).
@@ -2486,7 +2518,15 @@ setPropertyValue = function (propertyValue, propertyPath) {
 updateProperty = function(arrayPropertyValue, targetElement, targetProperty, targetSecondaryElement) {
 
 	setPropertyValue(arrayPropertyValue[0], targetProperty);
-	if (arrayPropertyValue[1]) {setPropertyValue(arrayPropertyValue[1], "checklist.page." + currentPage + ".url");}
+	if (arrayPropertyValue[1]) {
+		setPropertyValue(validateUrl(arrayPropertyValue[1]), "checklist.page." + currentPage + ".url");
+
+		/**  Enabled url button */
+		var currentbtnOpenUrl = document.getElementById('btnOpenUrl');
+		currentbtnOpenUrl.href = getPropertyValue("checklist.page." + currentPage + ".url");
+		currentbtnOpenUrl.classList.remove('disabled');
+		currentbtnOpenUrl.setAttribute('aria-disabled', 'false');
+	}
 	
 	var currentTargetElement = document.getElementById(targetElement);
 	currentTargetElement.innerText = arrayPropertyValue[0];
@@ -4877,7 +4917,8 @@ const utils = {
   formatHeading: function (str) {
     return str.toLowerCase()
 		.replace(/é|è|ê/g, "e")
-		.replace(/ /g, "-");
+		.replace(/ /g, "-")
+		.replace(/\(|\)/g, "");
   },
   slugify: function (str) {
     return str.toString().toLowerCase()
