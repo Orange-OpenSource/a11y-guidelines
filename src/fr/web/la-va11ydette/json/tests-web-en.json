@@ -18,6 +18,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#set-a-title-for-each-page",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.2"]
   },
@@ -42,6 +43,7 @@
     ],
     "exception": "Do not take into account hidden headings (<code>visibility:hidden</code>, <code>aria-hidden='true'</code> or <code>display:none</code>). If one of these masked headings is likely to appear, observations on the new structure of the headings must be made again.",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#start-sections-with-headings",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.6", "1.3.1"]
   },
@@ -69,6 +71,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#use-html-semantics",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["1.3.1"]
   },
@@ -92,6 +95,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#use-html-semantics",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["4.1.1"]
   },
@@ -115,6 +119,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#declaring-the-main-language-and-language-changes",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["3.1.1"]
   },
@@ -136,6 +141,7 @@
     ],
     "exception": "For words or expressions in a foreign language that have passed into common use (déjà-vu, cul-de-sac..) or proper names, do not indicate a change of language.",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#declaring-the-main-language-and-language-changes",
     "profils": ["Developer", "Accessibility Expert"]    ,
     "wcag": ["3.1.2"]
   },
@@ -168,6 +174,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["3.1.1"]
   },
@@ -190,6 +197,7 @@
       ""
     ],
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#set-a-text-alternatives-for-images-and-frames",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.1.1"]
   },
@@ -210,6 +218,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#set-a-text-alternatives-for-images-and-frames",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.1.1"]
   },
@@ -240,6 +249,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#set-a-text-alternatives-for-images-and-frames",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.1.1"]
   },
@@ -261,6 +271,7 @@
     ],
     "exception":"<ul><li>A properly masked non-informative <code>frame</code> or <code>iframe</code> does not need a <code>title</code>. </li> <li >A <code>title</code> is not required if the content of the <code>iframe</code> is not distinct from the surrounding content and does not have a focusable element inside, and there is an added <code>tabindex='- 1'</code> on the <code>iframe</code> so that it does not receive the focus.</li></ul>",
     "raccourcis": "Technical iframes: http://a11y-guidelines.orange.com/web_EN/exemples/iframes-techniques/index.html",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#set-a-text-alternatives-for-images-and-frames",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.1.1"]
   },
@@ -282,6 +293,7 @@
     "exception": "Essential images (logo, captcha, brand, etc.)",
     "raccourcis": "",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#set-a-text-alternatives-for-images-and-frames",
     "wcag": ["1.4.5"]
   },
   {
@@ -305,6 +317,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#provide-accessible-audio-or-video-tracks",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.5"]
   },
@@ -325,6 +338,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#provide-accessible-audio-or-video-tracks",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.2"]
   },
@@ -345,6 +359,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#allowing-animations-control",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.3.1"]
   },
@@ -365,6 +380,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#avoid-captcha",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["1.1.1"]
   },
@@ -387,6 +403,7 @@
     ],
     "exception": "as no contrast requirement: <ul><li> text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content,</li><li> and also, text that is part of a logo or brand name or any logotypes</li></ul>",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.3"]
   },
@@ -407,6 +424,7 @@
     ],
     "exception": "Are excluded from the scope: <ul><li> if a text, such as a label, a data table, provides the same information as the icon or graphic</li><li> if the lack of contrast of the image does not prevent the understanding of the content or its function</li><li> inactive components</li></ul>",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["1.4.3", "1.4.11"]
   },
@@ -429,6 +447,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.1"]
   },
@@ -450,6 +469,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors",
     "profils":  ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.1", "1.4.3"]
   },
@@ -470,6 +490,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.3.3"]
   },
@@ -491,6 +512,7 @@
     ],
     "exception": "",
     "raccourcis": "",
+	
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["1.3.2"]
   },
@@ -513,6 +535,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#text-of-links-and-buttons-must-be-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.9"]
   },
@@ -536,6 +559,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#text-of-links-and-buttons-must-be-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.4"]
   },
@@ -559,6 +583,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#text-of-links-and-buttons-must-be-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.4"]
   },
@@ -581,6 +606,7 @@
     ],
     "exception": "",
     "raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#text-of-links-and-buttons-must-be-accessible",
     "profils": ["Accessibility Expert"],
     "wcag": ["2.5.3"]
   },
@@ -607,6 +633,7 @@
     ],
     "exception": "",
     "raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#text-of-links-and-buttons-must-be-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": [""]
   },
@@ -630,6 +657,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#warn-the-user-when-opening-a-new-window",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": [""]
   },
@@ -642,7 +670,7 @@
     "tests":[
       "Use Wave > Structure",
       "Consider the prioritization of ARIA landmarks"    ],
-		"verifier": ["<ul><li>check that each region of the page is semantically correct through the appropriate use of <code>header</code>, <code>nav</code>… HTML5 structure tags</li><li>check that the main content is included inside a <code>main</code> tag</li><li>check that the <code>main</code> element does not contain elements which are repeated elsewhere on the page (e.g. navigation)</li></ul>"],
+	"verifier": ["<ul><li>check that each region of the page is semantically correct through the appropriate use of <code>header</code>, <code>nav</code>… HTML5 structure tags</li><li>check that the main content is included inside a <code>main</code> tag</li><li>check that the <code>main</code> element does not contain elements which are repeated elsewhere on the page (e.g. navigation)</li></ul>"],
     "resultat": [
       "The different regions are clearly identifiable programmatically"
     ],
@@ -652,7 +680,7 @@
     "wcag": [""]
   },
   {
-		"themes": "Common navigation",
+	"themes": "Common navigation",
     "title": "Provide skip links",
     "type": [
       "Manual test"
@@ -668,6 +696,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#provide-skip-links",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.1"]
   },
@@ -691,6 +720,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#ensure-the-user-keeps-control-during-interactions",
     "profils": ["Accessibility Expert"],
     "wcag": ["3.2.1", "3.2.2"]
   },
@@ -715,6 +745,7 @@
     ],
     "exception":"If the additional content does not mask informative content, the criterion is not applicable",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#ensure-the-user-keeps-control-during-interactions",
     "profils": ["Accessibility Expert"],
     "wcag": ["1.4.13"]
   },
@@ -735,6 +766,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#ensure-the-user-keeps-control-during-interactions",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.2.1"]
   },
@@ -745,22 +777,23 @@
       "Manual test"
     ],
     "tests": [
-      "Identify if shortcuts using a printable character are available in the application"
+      "Identify if shortcuts using a printable character (upper-case and lower-case letter, punctuation, number, or symbol characters) are available in the application"
     ],
     "verifier": [
-      "Check that keyboard shortcuts based on a non-printable character meet one of the following conditions: <ul><li>shortcuts can be disabled by the user</li><li>shortcuts can be modified, with the possibility of adding one or more characters non-printable (<kbd>Ctrl</kbd>, <kbd>Alt</kbd>, etc.) to the combination</li><li>shortcuts are only active when focusing on the element</li></ul>"
+      "Check that keyboard shortcuts based on a printable character meet one of the following conditions: <ul><li>shortcuts can be disabled by the user</li><li>shortcuts can be modified, with the possibility of adding one or more characters non-printable (<kbd>Ctrl</kbd>, <kbd>Alt</kbd>, etc.) to the combination</li><li>shortcuts are only active when focusing on the element</li></ul>"
     ],
     "resultat": [
-      "Non-printable character key shortcuts can be activated on focus only, disabled or reprogrammed."
+      "Printable character key shortcuts can be activated on focus only, disabled or reprogrammed."
     ],
     "exception": "Not concerned : 'accesskey' and keyboard shortcuts using a modification key.",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#ensure-the-user-keeps-control-during-interactions",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.1.4"]
   },
   {
     "themes": "Common navigation",
-    "title": "Provide multiple access and a location",
+    "title": "Provide multiple access and a location / multiple access",
     "type": [
       "Manual test"
     ],
@@ -769,13 +802,14 @@
       "Identify navigation and search elements"
     ],
     "verifier": [
-      "Verify that at least 2 of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu, locating the current position of the user</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>"
+      "Verify that at least 2 of the mechanisms listed below are present on the page, to allow a user to be located within a content tree structure: <ul><li>provide a main navigation menu</li><li>provide a table of contents</li><li>provide a sitemap</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site</li>"
     ],
     "resultat": [
-      "2 of the following mechanisms are present on the page: <ul><li>provide a main navigation menu, presenting the current position of the user (be careful, the information must not be based on color only)</li><li>provide a breadcrumb trail</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li></ul>"
+      "2 of the following mechanisms are present on the page: <ul><li>provide a main navigation menu</li><li>provide a sitemap, table of contents</li><li>provide a search mechanism</li><li>provide a link list to navigate through the entire site (in the footer)</li></ul>"
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#provide-multiple-access-and-location",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.5"]
   },
@@ -787,7 +821,7 @@
     ],
     "tests": [
       "Browse the page",
-      "Identify navigation and search elements"
+      "Identify navigation elements (main  menu, breadcrumb trail,...)"
     ],
     "verifier": [
       "Verify that the user's current location within a site is visually and programmatically given"
@@ -797,6 +831,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#provide-multiple-access-and-location",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.8"]
   },
@@ -820,6 +855,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#allow-to-know-the-result-of-a-user-interaction-with-status-messages",
     "profils": ["Accessibility Expert"],
     "wcag": ["4.1.3"]
   },
@@ -840,6 +876,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#allowing-animations-control",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.2.2"]
   },
@@ -861,6 +898,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#allow-the-use-of-the-main-features-of-the-application-with-the-keyboard",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.1.1"]
   },
@@ -882,6 +920,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#the-focus-order-must-be-sequential-and-logical-without-keyboard-trap",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.3", "2.1.2"]
   },
@@ -902,6 +941,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#make-the-focus-visible-at-all-times",
     "profils": [ "Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.7"]
   },
@@ -925,6 +965,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#make-the-focus-visible-at-all-times",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.11"]
   },
@@ -946,6 +987,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#use-relative-size-to-allow-changing-text-size-and-responsive-design",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.11"]
   },
@@ -966,6 +1008,7 @@
     ],
     "exception": "Some content such as maps, data tables, games, etc., may require a 2-dimensional scroll.",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#use-relative-size-to-allow-changing-text-size-and-responsive-design",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.10"]
   },
@@ -990,6 +1033,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#allow-text-spacing",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.12"]
   },
@@ -1013,6 +1057,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["3.2.3", "3.2.4"]
   },
@@ -1027,13 +1072,14 @@
       "Identify interactive elements"
     ],
     "verifier": [
-      "Check that the size of these elements exceeds 44px by 44px"
+      "Check that the size of the target for these elements exceeds 44px by 44px"
     ],
     "resultat": [
-      "All interactive elements have dimensions that exceed 44px by 44px"
+      "The size of the target of all of these interactive elements exceed 44px by 44px"
     ],
-    "exception": "<ul><li>Anchor / internal link to the page</li><li>Link within a paragraph</li><li>Link within a sentence</li><li>Link within a footnote (at the end of a paragraph or sentence)</li><li>A clickable icon within a sentence or paragraph</li></ul>",
-    "raccourcis":"",
+    "exception": "<ul><li>Anchor / internal link to the page</li><li>Link within a paragraph</li><li>Link within a sentence</li><li>Link within a footnote (at the end of a paragraph or sentence)</li><li>A clickable icon within a sentence or paragraph</li><li>If the browser default style is used</li><li>If the use of a reduced area is justified by the context of the application (e.g. serious game)</li></ul>",
+    "raccourcis": "You can use this <a href=\"https://adrianroselli.com/2019/06/target-size-and-2-5-5.html#Update04 \" title=\"Bookmarklet Target Size (new window)\" target=\"_blank\">bookmarklet</a> to quickly assess the dimensions of a click zone.",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#define-sensitive-areas-of-sufficient-size",
     "profils": ["Accessibility Expert"],
     "wcag": ["2.5.5"]
   },
@@ -1054,6 +1100,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#make-form-fields-accessible",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.4.6", "3.3.2"]
   },
@@ -1075,6 +1122,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#make-form-fields-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.6", "3.3.2"]
   },
@@ -1089,13 +1137,14 @@
       "Identify each forms"
     ],
     "verifier": [
-      "Check that the label text indicates the data format when necessary."
+      "Check that the data format is present in the accessible name or the accessible description (aria-describedby)."
     ],
     "resultat": [
       "Presence of text specifying the input formats"
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#make-form-fields-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.6", "3.3.2"]
   },
@@ -1117,6 +1166,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#make-form-fields-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.6", "3.3.2"]
   },
@@ -1138,6 +1188,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#make-form-fields-accessible",
     "profils": ["Developer", "Accessibility Expert"],
     "wcag": ["2.4.6", "3.3.2"]
   },
@@ -1161,6 +1212,7 @@
     ],
     "exception": [],
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#detect-identify-errors-and-suggest-corrections",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["3.3.3"]
   },
@@ -1185,6 +1237,7 @@
     ],
     "exception": [],
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#detect-identify-errors-and-suggest-corrections",
     "profils": ["Accessibility Expert"],
     "wcag": ["3.3.1"]
   },
@@ -1209,6 +1262,7 @@
 	],
     "exception": [],
     "raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#detect-identify-errors-and-suggest-corrections",
     "profils": ["Accessibility Expert"],
     "wcag": ["3.3.4"]
   },
@@ -1233,6 +1287,7 @@
     ],
     "exception": [],
     "raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/forms/#detect-identify-errors-and-suggest-corrections",
     "profils": ["Accessibility Expert"],
     "wcag": ["1.3.5"]
   },
@@ -1255,6 +1310,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#allow-zooming",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.4.4"]
   },
@@ -1278,6 +1334,7 @@
       "The function on the Down event is essential, the functions which emulate a keystroke or a numeric keypad are considered essential"
     ],
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#allow-to-cancel-the-triggering-of-gestural-interactions",
     "profils": ["Accessibility Expert"],
     "wcag": ["2.5.2"]
   },
@@ -1300,6 +1357,7 @@
     ],
     "exception":"The function activated by the multi-point gesture (requiring several fingers), and / or requiring gestural trajectories or movement of the user or the device is essential",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#offer-an-alternative-to-complex-gestures",
     "profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["2.5.1", "2.5.4"]
   },
@@ -1321,6 +1379,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#give-access-to-the-content-regardless-of-the-orientation-of-the-screen",
     "profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
     "wcag": ["1.3.4"]
   },
@@ -1341,6 +1400,7 @@
     ],
     "exception":"",
     "raccourcis":"",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/assistive-technology/#make-sure-the-main-features-can-be-used-with-screen-readers",
     "profils": ["Accessibility Expert"],
     "wcag": ["4.1.2"]
 	  }
