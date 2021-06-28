@@ -23,7 +23,7 @@ It will therefore be necessary to update the title of the page via Javascript (`
 
 Screen readers used by visually impaired people inform the user automatically when a new page is loaded by the browser. In the context of an <abbr title="single-page application">SPA</abbr>, page changes do not lead to reloading by the browser. The screen reader therefore has no way of warning the user.
 
-An acceptable solution is to move the focus to the first title `<h1>` of the current page. This will cause it to be read by the screen reader, so the user will be warned that a new page is displayed.
+An acceptable solution is to move the focus to the first heading `<h1>` of the current page. This will cause it to be read by the screen reader, so the user will be warned that a new page is displayed.
 Note that by default an `<h1>` tag is not focusable. To allow it to receive focus via Javascript, you must add a `tabindex="-1"` attribute to it. 
 
 ## Notify the user of updates inside the page 
