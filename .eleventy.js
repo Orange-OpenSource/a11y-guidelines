@@ -1,6 +1,7 @@
 const cheerio = require('cheerio')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
@@ -12,6 +13,7 @@ const IMAGES_EXTENSIONS = ['jpg', 'png', 'svg']
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true)
+  eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addPassthroughCopy('src/assets/**/*.!(css|js)') // CSS & JS files are now delegated to PostCSS & Babel
   eleventyConfig.addPassthroughCopy({ 'src/assets/vendors': 'assets/vendors' })

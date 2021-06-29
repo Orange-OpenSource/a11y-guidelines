@@ -14,6 +14,16 @@ module.exports = {
     en: 'Orange digital accessibility guidelines',
     fr: 'Recommandations accessibilité numérique Orange'
   },
+  rss: {
+    title: {
+      en: 'Orange digital accessibility guidelines',
+      fr: 'Recommandations accessibilité Orange'
+    },
+    url: {
+      en: 'http://127.0.0.1:8080/en/feed.xml',
+      fr: 'http://127.0.0.1:8080/fr/feed.xml'
+    }     
+  },
   home: {
     lastPosts: {
       limit: 6
