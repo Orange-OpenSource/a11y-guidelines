@@ -39,7 +39,7 @@
 		{
 				"title" : "Absence de sémantique de lien HTML ",
 				"detail" : "Les éléments interactifs entrainant un changement d'URL doivent utiliser une sémantique de lien HTML. ",
-				"solution" : "Utiliser la sémantique <a>.",
+				"solution" : "Utiliser la sémantique <a> avec un attribut href.",
 				"technicalSolution" : ""
 		},
 		{
@@ -103,9 +103,9 @@
 	],
 	"testWebID-6": [
 		{
-			"title" : "Absence d'entêtes de lignes ou de colonnes",
+			"title" : "Absence de sémantiques d'entêtes de ligne ou de colonne",
 			"detail" : "Les entêtes sont obligatoires pour identifier la nature des colonnes et/ou des lignes",
-			"solution" : "Les cellules d'entêtes de colonnes doivent posséder une sémantique de TH + un attribut scope='col'. Les cellules d'entêtes de lignes doivent posséder une sémantique de TH + un attribut scope=\"row\". ",
+			"solution" : "Les cellules d'entêtes de colonnes doivent posséder une sémantique de TH + un attribut scope=\"col\". Les cellules d'entêtes de lignes doivent posséder une sémantique de TH + un attribut scope=\"row\". ",
 			"technicalSolution" : "<th scope=\"col\"> / <th scope=\"row\"> "
 		},
 		{
@@ -147,7 +147,7 @@
 		{
 			"title" : "Le ALT d'une image porteuse d'information n'est pas renseigné ou non pertinent",
 			"detail" : "L'attribut alt de chaque image est pertinent par rapport au rôle de l'image dans la page.",
-			"solution" : "Renseigner dans le ALT, l'information portée par l'image..",
+			"solution" : "Renseigner dans le ALT, l'information portée par l'image.",
 			"technicalSolution" : ""
 		},
 		{
@@ -172,8 +172,8 @@
 	"testWebID-10": [
 		{
 			"title" : "Attribut TITLE non pertinent",
-			"detail" : "La valeur de l'attribut doit permettre aux utilisateurs de comprendre la nature de la frame ou iframe",
-			"solution" : "Ajouter un attribut TITLE, la valeur de l'attribut décrit le contenu de la frame ou iframe",
+			"detail" : "La valeur de l'attribut doit permettre aux utilisateurs de comprendre la nature de la frame ou iframe.",
+			"solution" : "Ajouter un attribut TITLE, la valeur de l'attribut décrit le contenu de la frame ou iframe.",
 			"technicalSolution" : ""
 		}
 		
@@ -182,7 +182,7 @@
 		{
 			"title" : "Présence de texte sous forme d'image",
 			"detail" : "Les textes doivent être présent dans le HTML et mis en forme via CSS.",
-			"solution" : "Intégrer les textes dans le HTML et gérer la mise en forme via CSS",
+			"solution" : "Intégrer les textes dans le HTML et gérer la mise en forme via CSS.",
 			"technicalSolution" : ""
 		}
 	],
@@ -190,13 +190,13 @@
 		{
 			"title" : "Absence de transcrit complet",
 			"detail" : "Un transcrit complet (texte contenant l'ensemble des informations visuelles et auditives) doit être proposé en alternative aux pistes audios ou vidéos. ",
-			"solution" : "Ajouter un transcrit complet sous forme de texte html, soit directement dans la page, soit par un lien pointant vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire",
+			"solution" : "Ajouter un transcrit complet sous forme de texte html, soit directement dans la page, soit par un lien pointant vers une page html contenant ce transcrit et ceci, à proximité de l'élément à décrire.",
 			"technicalSolution" : ""
 		},
 		{
 			"title" : "Absence de sous-titres",
-			"detail" : "Pour toute vidéo, des sous-titres sont disponibles",
-			"solution" : "Ajouter des sous-titres sous formats texte sont présents pour toutes vidéos et restituent l’ensemble des informations de la bande son",
+			"detail" : "Pour toute vidéo, des sous-titres sont disponibles.",
+			"solution" : "Ajouter des sous-titres sous formats texte pour toutes vidéos. Ceux-ci restituent l’ensemble des informations de la piste audio.",
 			"technicalSolution" : ""
 		},
 		{
@@ -209,7 +209,7 @@
 	"testWebID-13": [
 		{
 			"title" : "Impossible de stopper une piste audio ou vidéo",
-			"detail" : "Les pistes audio de la page automatiquement jouées plus de 3 secondes peuvent être stoppées, mises en pause ou leur volume peut être contrôlé indépendamment",
+			"detail" : "Les pistes audio de la page automatiquement jouées plus de 3 secondes peuvent être stoppées, mises en pause ou leur volume peut être contrôlé indépendamment.",
 			"solution" : "Fournir un mécanisme accessible, permettant aux utilisateurs de contrôler les sons joués plus de 3 secondes.",
 			"technicalSolution" : ""
 		}
@@ -239,7 +239,7 @@
 		},
 		{
 			"title" : "Contraste insuffisant pour des liens non-soulignés",
-			"detail" : "Les liens non-soulignés doivent avoir un rapport de contraste suffisant avec le texte environnant",
+			"detail" : "Les liens non-soulignés doivent avoir un rapport de contraste suffisant avec le texte environnant.",
 			"solution" : "Assurer un contraste de 4.5:1 minimum entre un lien non-souligné et le texte environnant de tailles normales (infèrieur à 24px CSS et 19px CSS en gras). Assurer un contraste de 3:1 minimum entre un lien non-souligné et le texte environnant de grandes tailles (supérieur à 24px CSS et 19px CSS en gras).",
 			"technicalSolution" : ""
 		}
@@ -267,7 +267,7 @@
 	"testWebID-18": [
 		{
 			"title" : "La couleur est le seul moyen de convoyer de l'information",
-			"detail" : "La couleur ne doit pas être le seul moyen de convoyer d'information : au moins un autre moyen visuel est disponible pour obtenir la même information",
+			"detail" : "La couleur ne doit pas être le seul moyen de convoyer d'information : au moins un autre moyen visuel est disponible pour obtenir la même information.",
 			"solution" : "Compléter la couleur par un texte explicite, ou une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes).",
 			"technicalSolution" : ""
 		}
@@ -275,7 +275,7 @@
 	"testWebID-19": [
 		{
 			"title" : "Lien non identifiable dans un corps de texte",
-			"detail" : "Les liens dans le corps du texte doivent être facilement identifiables visuellement par un moyen autre que la couleur (souligné, gras, etc.)",
+			"detail" : "Les liens dans le corps du texte doivent être facilement identifiables visuellement par un moyen autre que la couleur (souligné, gras, etc.).",
 			"solution" : "Appliquer un moyen visuellement identifiable (souligné, gras, etc.).  s'assurer d'un contraste de 3:1 entre le texte, le fond et les liens et qu'il existe un autre moyen que la couleur pour les identifier au survol et au focus.",
 			"technicalSolution" : ""
 		}
@@ -283,7 +283,7 @@
 	"testWebID-20": [
 		{
 			"title" : "Une information sensorielle est le seul moyen de convoyer de l'information",
-			"detail" : "Une l’information sensorielle (ex : position, taille, son) ne doit pas être le seul moyen pour transmettre de l'information",
+			"detail" : "Une l’information sensorielle (ex : position, taille, son) ne doit pas être le seul moyen pour transmettre de l'information.",
 			"solution" : "Compléter linformation par un texte, ou un message explicite.",
 			"technicalSolution" : ""
 		}
@@ -293,7 +293,7 @@
 			"title" : "Présence de libellés identiques",
 			"detail" : "Des éléments interactifs avec des libellés identiques mais des cibles différentes, sont présents dans la page.",
 			"solution" : "Ajouter une information discriminante à chaque libellé afin de les différencier.",
-			"technicalSolution" : "Plusieurs solutions sont possibles pour compléter un libellé de lien ou de bouton : sr-only, aria-labelledby, aria-label"
+			"technicalSolution" : "Plusieurs solutions sont possibles pour compléter un libellé de lien ou de bouton : sr-only, aria-labelledby, aria-label."
 		}
 	],
 	"testWebID-23": [
@@ -301,7 +301,7 @@
 			"title" : "Présence de libellés non-compréhensibles dans leur contexte",
 			"detail" : "La cible d'un lien ou l'action portée par un bouton n'est pas compréhensible grâce à son contexte direct (texte environnant).",
 			"solution" : "Ajouter une information discriminante dans le texte environnant.",
-			"technicalSolution" : "La solution dépend du contexte d'utilisation de l'élément : \n- élément dans un paragraphe : compléter le texte du paragraphe (<p>[...]</p>) \n- élément dans une liste : compléter un item de la liste (<ul>, <ol>) \n- élément dans une cellule de tableau : compléter le texte de la cellule (<td>[...]</td>) ou compléter l'entête directe de la cellule (<th>[...]</th>) "
+			"technicalSolution" : "La solution dépend du contexte d'utilisation de l'élément : \n- élément dans un paragraphe : compléter le texte du paragraphe (<p>[...]</p>) \n- élément dans une liste : compléter un item de la liste (<ul>, <ol>) \n- élément dans une cellule de tableau : compléter le texte de la cellule (<td>[...]</td>) ou compléter l'entête directe de la cellule (<th>[...]</th>)."
 		}
 	],
 	"testWebID-24": [
@@ -317,7 +317,7 @@
 			"title" : "Absence du texte visible à l'écran, dans l'accessible name",
 			"detail" : "Le texte de l'étiquette affichée (le libellé textuel ou le texte de l'image visible à l'écran) doit être présent (en premier, si possible) dans le nom (accessible) de ce composant.",
 			"solution" : "Modifier l'accessible name de l'élément afin d'intégrer le texte visible à l'écran, si possible en premier.",
-			"technicalSolution" : "Plusieurs solutions sont possibles pour redéfinir l'accessible name : aria-labelledby, aria-label, title, sr-only"
+			"technicalSolution" : "Plusieurs solutions sont possibles pour redéfinir l'accessible name : aria-labelledby, aria-label, title, sr-only."
 		}
 	],
 	"testWebID-26": [
@@ -329,7 +329,7 @@
 		},
 		{
 			"title" : "Absence du format du document",
-			"detail" : "Le format du document n'est pas précisé dans le libellé du lien",
+			"detail" : "Le format du document n'est pas précisé dans le libellé du lien.",
 			"solution" : "Ajouter le format du fichier dans le libellé texte du lien.",
 			"technicalSolution" : ""
 		},
@@ -366,7 +366,7 @@
 		{
 			"title" : "Absence de liens d'évitement",
 			"detail" : "Des liens d'évitements sont nécessaires afin d'accéder aux principales zones de la pages (menu principal, contenu principal, moteur de recherche, etc...",
-			"solution" : "Ajouter des liens d'évitements, en début de page. Ce sont les premiers éléments de la page. Les liens sont masqués (de manière accessible, cf. masquage accessible), si contrainte forte, pour s'afficher uniquement dès la prise de focus clavier.",
+			"solution" : "Ajouter des liens d'évitements, en début de page. Ce sont les premiers éléments de la page. Les liens peuvent être masqués (de manière accessible, cf. masquage accessible) seulement si contrainte forte. Ils s'affichent alors uniquement dès la prise de focus clavier.",
 			"technicalSolution" : ""
 		}
 	],
@@ -418,7 +418,7 @@
 		{
 			"title" : "L'utilisateur n'a pas le contrôle d'un raccourci clavier basé sur une seule touche",
 			"detail" : "L'utilisateur n'a pas le contrôle d'un raccourci clavier basé sur une seule touche : letter (minuscule ou majuscule), ponctuation, chiffre, ou symbôle.",
-			"solution" : "L'utilisateur doit pouvoir : \n- désactiver le raccourci \n- ou modifier le raccourci pour ajouter une touche supplémentaire à la combinaison \n Ou s'assurer que le raccourci est actif uniquement lors de la prise de focus du composant de l'interface.",
+			"solution" : "L'utilisateur doit pouvoir : \n- désactiver le raccourci \n- ou modifier le raccourci pour ajouter une touche supplémentaire à la combinaison \n ou s'assurer que le raccourci est actif uniquement lors de la prise de focus du composant de l'interface.",
 			"technicalSolution" : ""
 		}
 	],
@@ -426,21 +426,21 @@
 		{
 			"title" : "Un seul mécanisme de navigation est présent",
 			"detail" : "Au moins 2 mécanismes de navigation doivent être présent sur l'interface.",
-			"solution" : "Compléter le mécanisme existant une solution listée ci-dessous : \n -  un menu de navigation principal \n - une table des matières \n - un sitemap \n - un mécanisme de recherche \n - une liste de liens permettant de naviguer à travers tout le site (pied de page)",
+			"solution" : "Compléter le mécanisme existant avec une solution listée ci-dessous : \n -  un menu de navigation principal \n - une table des matières \n - un sitemap \n - un mécanisme de recherche \n - une liste de liens permettant de naviguer à travers tout le site (pied de page).",
 			"technicalSolution" : ""
 		}
 	],
 	"testWebID-35": [
 		{
-			"title" : "Absence d'information visuelle sur la position courante de l'utilisateur au sein de la hiérarchisation.",
+			"title" : "Absence d'information visuelle sur la position courante de l'utilisateur au sein de la hiérarchisation",
 			"detail" : "La position courante au sein de la hiérarchisation d'un site ne peut être déterminée visuellement.",
 			"solution" : "- ajouter un fil d'ariane \n - navigation principale : ajouter une indication visuelle, ne dépendant pas uniquement de la couleur (ex : souligner l'item actif)",
 			"technicalSolution" : ""
 		}, {
 			"title" : "La position courante au sein de la hiérarchisation ne peut être déterminée de manière programmatique",
-			"detail" : "La position courante au sein de la hiérarchisation ne peut être déterminée de manière programmatique (depuis une aide technique telle qu'un lecteur d'écran par exemple)",
-			"solution" : "- fil d'ariane : appliquer un attribut aria-current=\"location\" sur l'élément actif \n - navigation principale : ajouter un attribut aria-current=\"page\" sur l'item actif",
-			"technicalSolution" : "- fil d'ariane : <li aria-current=\"location\"> [...] </li> \n- navigation principale : <a [...] aria-current=\"page\"> [...] </a> \n- procédure, étapes multiples : <a [...] aria-current=\"step\"> [...] </a>"
+			"detail" : "La position courante au sein de la hiérarchisation ne peut être déterminée de manière programmatique (depuis une aide technique telle qu'un lecteur d'écran par exemple).",
+			"solution" : "- fil d'ariane : appliquer un attribut aria-current=\"location\" sur l'élément actif \n - navigation principale : ajouter un attribut aria-current=\"page\" sur l'item actif.",
+			"technicalSolution" : "- fil d'ariane : <li aria-current=\"location\"> [...] </li> \n- navigation principale : <a [...] aria-current=\"page\"> [...] </a> \n- procédure, étapes multiples : <a [...] aria-current=\"step\"> [...] </a>."
 		}
 	],
 	"testWebID-36": [
@@ -479,7 +479,7 @@
 		{
 			"title" : "La visualisation du focus (outline) est désactivée",
 			"detail" : "Le outline ne doit pas être désactivé.",
-			"solution" : "Vérifier que le outline n'est pas supprimé depuis une propriété css (ex : \"outline:none;\")",
+			"solution" : "Vérifier que le outline n'est pas supprimé depuis une propriété css (ex : \"outline:none;\").",
 			"technicalSolution" : ""
 		}
 	],
@@ -495,7 +495,7 @@
 		{
 			"title" : "Présence de textes tronqués ou de chevauchement",
 			"detail" : "Des contenus sont tronqués ou se chevauchent après un zoom à 200% du texte.",
-			"solution" : "- appliquer des unités relatives (em, rem, %) aux conteneurs de textes \n- ou utiliser des propriétés \"min-width\" et \"min-height\" à la place des propriétés \"width\" et \"height\"",
+			"solution" : "- appliquer des unités relatives (em, rem, %) aux conteneurs de textes \n- ou utiliser des propriétés \"min-width\" et \"min-height\" à la place des propriétés \"width\" et \"height\".",
 			"technicalSolution" : ""
 		}
 	],
@@ -503,7 +503,7 @@
 		{
 			"title" : "Présence d'une barre de défilement horizontale",
 			"detail" : "Une barre de défilement horizontale apparaît après un redissionnement de l'interface à 320 px css de large.",
-			"solution" : "- appliquer des unités relatives (em, rem, %) aux conteneurs de textes \n- ou utiliser des propriétés \"min-width\" et \"min-height\" à la place des propriétés \"width\" et \"height\"",
+			"solution" : "- appliquer des unités relatives (em, rem, %) aux conteneurs de textes \n- ou utiliser des propriétés \"min-width\" et \"min-height\" à la place des propriétés \"width\" et \"height\".",
 			"technicalSolution" : ""
 		}
 	],
@@ -511,8 +511,8 @@
 		{
 			"title" : "Présence de textes tronqués ou de chevauchement",
 			"detail" : "Des contenus sont tronqués ou se chevauchent après application de propriétés d'aération du texte.",
-			"solution" : "Ne pas imposer ou hériter une taille absolue (px, ...) aux propriétés d'espacement",
-			"technicalSolution" : "- appliquer des unités relatives (em, rem, %) aux propriétés d'espacement de textes \n- appliquer des unités relatives (em, rem, %) aux conteneurs de textes \n- ou utiliser des propriétés \"min-width\" et \"min-height\" à la place des propriétés \"width\" et \"height\""
+			"solution" : "Ne pas imposer ou hériter une taille absolue (px, ...) aux propriétés d'espacement.",
+			"technicalSolution" : "- appliquer des unités relatives (em, rem, %) aux propriétés d'espacement de textes \n- appliquer des unités relatives (em, rem, %) aux conteneurs de textes \n- ou utiliser des propriétés \"min-width\" et \"min-height\" à la place des propriétés \"width\" et \"height\"."
 		}
 	],
 	"testWebID-45": [
@@ -535,7 +535,7 @@
 		{
 			"title" : "Présence de champs non-labellisés",
 			"detail" : "Tous les éléments de formulaire doivent posséder un label.",
-			"solution" : "Appliquer une des solutions ci-dessous :\n- ajout d'un élément \"label\", en masquage accessible si nécessaire, lié de manière programmatique au champ\n- utilisation d'un aria-labelledby pointant vers une information pertinente pour comprendre la nature du champ \n- ajout d'un attribut aria-label\n ajout d'un attribut title",
+			"solution" : "Appliquer une des solutions ci-dessous :\n- ajout d'un élément \"label\", en masquage accessible si nécessaire, lié de manière programmatique au champ\n- utilisation d'un aria-labelledby pointant vers une information pertinente pour comprendre la nature du champ \n- ajout d'un attribut aria-label\n- ajout d'un attribut title",
 			"technicalSolution" : "Exemples :\n- <label for=\"idInput\">[...]</label> <input id=\"idInput\" type=\"[...]\">\n- <h2 id=\"idHeading\">[...]</h2> <input aria-labelledby=\"idHeading\" type=\"[...]\">\n-  <input aria-label=\"[...]\" type=\"[...]\">\n- <input title=\"[...]\" type=\"[...]\">"
 		}
 	],
@@ -552,12 +552,12 @@
 			"title" : "Absence de format de données",
 			"detail" : "Un format de données est nécessaire pour permettre à tous les utilisateurs de renseigner correctement une information.",
 			"solution" : "Ajouter un format de données. Ce format est lié de manière programmatique au champ.",
-			"technicalSolution" : "Appliquer une des solutions ci-dessous :\n- intégrer le format de donnée dans l'élément label\nexemple : <label for=\"idInput\">Date JJ/MM/AAAA</label>\n- lier le format au champ via un attribut aria-describedby\nexemeple : <input aria-describedby=\"idDesc\" [...]><p id=\"idDesc\">Format de saisie : JJ/MM/AAAA</p>"
+			"technicalSolution" : "Appliquer une des solutions ci-dessous :\n- intégrer le format de donnée dans l'élément label\nexemple : <label for=\"idInput\">Date JJ/MM/AAAA</label>\n- lier le format au champ via un attribut aria-describedby\nexemple : <input aria-describedby=\"idDesc\" [...]><p id=\"idDesc\">Format de saisie : JJ/MM/AAAA</p>"
 		},{
 			"title" : "Le format de données n'est pas lié de manière programmatique au champ",
 			"detail" : "Dans le cas le format de données ne sera pas perçu depuis une aide technique (exemple : lecteur d'écran).",
 			"solution" : "Ajouter un format de données. Ce format est lié de manière programmatique au champ.",
-			"technicalSolution" : "Appliquer une des solutions ci-dessous :\n- intégrer le format de donnée dans l'élément label\nexemple : <label for=\"idInput\">Date JJ/MM/AAAA</label>\n- lier le format au champ via un attribut aria-describedby\nexemeple : <input aria-describedby=\"idDesc\" [...]><p id=\"idDesc\">Format de saisie : JJ/MM/AAAA</p>"
+			"technicalSolution" : "Appliquer une des solutions ci-dessous :\n- intégrer le format de donnée dans l'élément label\nexemple : <label for=\"idInput\">Date JJ/MM/AAAA</label>\n- lier le format au champ via un attribut aria-describedby\nexemple : <input aria-describedby=\"idDesc\" [...]><p id=\"idDesc\">Format de saisie : JJ/MM/AAAA</p>"
 		}
 	],
 	"testWebID-50": [
@@ -634,7 +634,7 @@
 		{
 			"title" : "Une action basée sur une gestuelle complexe ne possède pas d'alternative",
 			"detail" : "Toute action basée sur une gestuelle complexe doit posséder une alternative basée sur un seul pointeur.",
-			"solution" : "Exemple : pour une action de zoom sur une carte au pincement de doigt, une alternative sous forme de <button> [+] et [-] est proposée",
+			"solution" : "Exemple : pour une action de zoom sur une carte au pincement de doigt, une alternative sous forme de <button> [+] et [-] est proposée.",
 			"technicalSolution" : ""
 		}
 	],
