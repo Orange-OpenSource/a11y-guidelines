@@ -1500,6 +1500,7 @@ function runComputation(obj) {
 								dataWCAG.items[k].resultat = false;
 								if (dataVallydette.checklist.page[i].items[j].commentaire!=="") { 
 								   dataWCAG.items[k].comment.push(dataVallydette.checklist.page[i].items[j].commentaire);
+								   dataWCAG.items[k].page.push(pagesResults[i].name);
 								}
 							 }
 
@@ -1916,7 +1917,7 @@ function runFinalComputation(pagesResultsArray) {
 					
 							computationContent += '<ul>';
 							for (let j in listNonConformity[i].comment) {
-								computationContent += '<li>' + utils.htmlEntities(listNonConformity[i].comment[j]) + '</li>';	
+								computationContent += '<li>' + utils.htmlEntities(listNonConformity[i].comment[j]) + ' <span class="badge bg-light">' +  utils.htmlEntities(listNonConformity[i].page[j]) + '</span></li>';	
 							}
 							computationContent += '</ul>';	
 					} 
@@ -2113,6 +2114,7 @@ initNewThemes = function () {
 initProperties = function (item) {
 	item.resultat = 'nt';
 	item.comment = [];
+	item.page = [];
 }
 
 /**  
