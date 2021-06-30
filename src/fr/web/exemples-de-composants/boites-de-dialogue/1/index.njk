@@ -14,7 +14,7 @@ js:
 <p>Les boîtes de dialogue font partie des composants que l’on retrouve régulièrement sur un site web. Malheureusement il n’existe pas de composant natif HTML permettant de créer ce type d’objet. Elles doivent donc être créées de toute pièce lors du développement, phase qui introduit souvent des problèmes d’accessibilité si on n’y prête pas attention.</p>
 <p>Les boîtes de dialogue présentent souvent de cruelles difficultés, jusqu’à une complète inaccessibilité pour les utilisateurs qui naviguent à l’aide du clavier (touche <kbd>Tab</kbd>), ou celles qui naviguent à l’aide d’un lecteur d’écran (personnes malvoyantes ou non-voyantes). Cet exemple liste pas à pas les différentes étapes nécessaires pour créer une boîte de dialogue accessible.</p>
 <p><strong>Rappel ergonomie&nbsp;:</strong> il faut éviter l’emploi des boîtes de dialogue, fenêtres modales et autres popins, en particulier pour afficher de l’information, car leur utilisabilité et lisibilité sont <em>problématiques pour tous les utilisateurs</em>. Ne réserver leur emploi qu’à une petite quantité d’information avec un appel à action (validation d’une action, confirmation d’effacement de données…).</p>
-<p>Si vous ne souhaitez pas créer ce composant de toute pièce, vous pouvez également utiliser <a href="https://boosted.orange.com/docs/4.5/components/modal/">le composant «&nbsp;modal&nbsp;»</a> de la librairie <a href="http://boosted.orange.com/">Boosted</a> qui présente le double avantage d’être accessible et d’être déjà aux couleurs de la charte Orange.</p>
+<p>Si vous ne souhaitez pas créer ce composant de toute pièce, vous pouvez également utiliser <a href="https://boosted.orange.com/docs/5.0/components/modal/" hreflang="en">le composant «&nbsp;modal&nbsp;»</a> de la librairie <a href="http://boosted.orange.com/">Boosted</a> qui présente le double avantage d’être accessible et d’être déjà aux couleurs de la charte Orange.</p>
 <h2>Exemple final</h2>
 <p>Voici le rendu final de la boîte de dialogue dont nous allons expliquer la création pas à pas dans cet exemple.</p>
 
@@ -86,35 +86,60 @@ js:
 
 <p>Dans ce nouvel exemple, on mémorise l’emplacement du focus à l’ouverture&nbsp;:</p>
 <pre><code class="javascript">
- // Sauvegarde le focus pour le repositionner à la fermeture
- $(’#step2-dialog’).attr(’data-focusBack’, ’step2-openButton’);
+  // Récupère l'élément boîte de dialogue
+  const dialog =  document.getElementById('step2-dialog');
 
- // Place le focus sur l’élément par défaut
- $(’#step2-dialog .defaultFocus’).focus();
+  // Sauvegarde le focus pour le repositionner à la fermeture
+  dialog.setAttribute('data-focusBack', 'step2-openButton');
+
+  // Place le focus sur l’élément par défaut
+  dialog.querySelector('.defaultFocus').focus();
 </code></pre>
 
 <p>On repositionne le focus lors de la fermeture&nbsp;:</p>
 <pre><code class="javascript">
   // Repositionne le focus à la fermeture de la dialogue
-  $(’#’+$(’#step2-dialog’).attr(’data-focusBack’)).focus();
+  var focusBackElement = dialog.getAttribute('data-focusBack');
+  document.getElementById(focusBackElement).focus();
 </code></pre>
 
-<p>On empêche le focus de sortir de la boîte de dialogue. Lorsque celui-ci arrive sur le dernier élément on le repositionne sur le premier et inversement. Il existe plusieurs solutions pour créer ce comportement. Dans cet exemple, on ajoute deux balises <code>span</code> vides au début et à la fin de la dialogue. Celles-ci sont rendues focusables à l’aide d’un attribut <code>tabindex="0"</code>. Lorsque la première balise <code>span</code> reçoit le focus, on déplace celui-ci sur le dernier élément de la boîte de dialogue. Lorsque le dernier <code>span</code> reçoit le focus, on déplace celui-ci en haut de la boîte de dialogue.</p>
-<p>Les balises <code>span</code> vides offrent l’avantage de ne pas être vocalisées par les lecteurs d’écran.</p>
+<p>On empêche le focus de sortir de la boîte de dialogue.</p>
+<p>Pour cela nous nous appuyons sur la méthode <code>querySelectorAll</code>. Elle nous permettra de récupérer facilement les éléments interactifs de la boîte de dialogue, pour ensuite identifier le premier élément et le dernier élément de la boîte.</p>
+<p>Enfin à l'aide du gestionnaire d'évènement <code>onKeyDown</code>, nous pourrons intercepter le focus lorsque il arrivera sur le premier ou le dernier item, pour le repositionner en début ou en fin de modale, selon notre besoin.</p>
+<p>La solution détaillée est présentée dans cet article : <a href="https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700" hreflang="en">How to trap focus inside modal to make it ADA compliant</a></p>
 
 <pre><code class="javascript">
- $(’.dialog-start’).on(’focus’, function () {
-    $(this).parent().find(’button:last’).focus();
- });
+  // Récupère le premier élément interactif
+  const dialogStart = finalDialog.querySelectorAll('button')[0];
+  
+  // Récupère le dernier élément interactif
+  const dialogFocusableContent = dialog.querySelectorAll('button');
+  const dialogStop = dialogFocusableContent[finalFocusableContent.length - 1];
 
- $(’.dialog-stop’).on(’focus’, function () {
-    $(this).parent().find(’button:first’).focus();
- });
+  // Ecoute le parcours clavier, et repositionne le focus si nécessaire en fonction de l'élément actif
+  dialog.onkeydown = function(e){
+	
+	if (e.key === 'Tab' || e.keyCode === 9) {
+		
+		if ( e.shiftKey ) {
+		  if (document.activeElement === dialogStart) {
+			e.preventDefault();
+			dialogStop.focus();
+			
+		  }
+		} else /* tab */ {
+		  if (document.activeElement === dialogStop) {
+			e.preventDefault();
+			dialogStart.focus();
+			
+		  }
+		}
+	}
+  }
 </code></pre>
 
 <!-- Dialog 2 -->
 <div id="step2-dialog" class="dialog">
-  <span tabindex="0" class="dialog-start"></span>
   <div class="dialogContainer">
     <button class="closeButton">X</button>
     <h1 id="final-dialogTitle2">Avertissement</h1>
@@ -122,14 +147,12 @@ js:
     <button class="btn btn-secondary defaultFocus">J’ai compris</button>
     <button class="btn btn-secondary">Annuler</button>
   </div>
-  <span tabindex="0" class="dialog-stop"></span>
 </div>
 
-<p>Enfin on écoute l’événement <code>onKeyDown</code> pour fermer la dialogue lorsque la touche <kbd>Échap</kbd> est pressée.</p>
+<p>On écoute également l’événement <code>onKeyDown</code> pour fermer la dialogue lorsque la touche <kbd>Échap</kbd> est pressée.</p>
 <p>Voici le code HTML à jour de la boîte de dialogue&nbsp;:</p>
 <pre><code class="html">
 &lt;div id="step2-dialog" class="dialog"&gt;
-  &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
   &lt;div class="dialogContainer"&gt;
     &lt;button&gt;X&lt;/button&gt;
     &lt;h1&gt;Avertissement&lt;/h1&gt;
@@ -137,7 +160,6 @@ js:
     &lt;button class="defaultFocus"&gt;J’ai compris&lt;/button&gt;
     &lt;button&gt;Annuler&lt;/button&gt;
   &lt;/div&gt;
-  &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -162,7 +184,6 @@ js:
 
 <pre><code class="html">
 &lt;div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description"&gt;
-  &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
   &lt;div class="dialogContainer"&gt;
     &lt;button aria-label="fermer" title="Fermer"&gt;X&lt;/button&gt;
     &lt;h1 id="final-dialogTitle"&gt;Avertissement&lt;/h1&gt;
@@ -170,7 +191,6 @@ js:
     &lt;button class="defaultFocus"&gt;J’ai compris&lt;/button&gt;
     &lt;button&gt;Annuler&lt;/button&gt;
   &lt;/div&gt;
-  &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
