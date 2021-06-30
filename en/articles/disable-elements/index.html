@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Home - Orange digital accessibility guidelines</title>
+    <title>Disable HTML elements - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -18,10 +18,12 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -63,7 +65,7 @@
     </a>
 
     <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/en/" class="nav-link active" aria-current="page">
+          <a href="/en/" class="nav-link">
   Home
 </a>
         </li><li class="nav-item">
@@ -87,7 +89,7 @@
   Editorial content
 </a>
         </li><li class="nav-item">
-          <a href="/en/articles/" class="nav-link">
+          <a href="/en/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
         </li><li class="nav-item d-md-none">
@@ -132,171 +134,90 @@
     <div class="container-lg pt-2">
       
       
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Disable HTML elements
+        </li>
+      </ol>
+</nav>
+
+      
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#disable-form-elements" class="dropdown-item text-wrap">Disable form elements</a></div>
+    </nav>
+        
       </div>
     </div>
     
-<main id="main-content" class="pt-4" role="main">
-  <section class="container-lg">
-    <div class="row">
-      <div class="col-md-7 pb-5"><h1>Orange Digital Accessibility?</h1>
-<h2 id="in-a-few-words">In a few words <a class="header-anchor" href="#in-a-few-words" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Guidelines, methods, resources and tools proposed by EASE, E-Accessibility Solutions for Everyone, the Orange skill center for digital accessibility.</p>
-<p>We offer training, publish resources for digital stakeholders, support projects and perform compliance audits. Our expertise covers websites (e-commerce, e-learning, business applications, Intranet, etc.), mobile applications, office documents, corporate social networks, emails, videos, software packages, etc.</p>
-<ul class="list-inline">
-  <li class="list-inline-item pb-2">
-    <a href="digital-accessibility-definition" class="btn btn-secondary btn-sm">Digital accessibility definition</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="types-of-disabilities" class="btn btn-secondary btn-sm">Types of disabilities</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="assistive-technologies" class="btn btn-secondary btn-sm">Assistive technologies</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="glossary" class="btn btn-secondary btn-sm">Glossary</a>
-  </li>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h2 id="disable-form-elements">Disable form elements <a class="header-anchor" href="#disable-form-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The <code>disabled</code> attribute is used to disable form elements</p>
+<pre><code class="language-html">&lt;button disabled&gt;Delete&lt;/button&gt;
+&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
+</code></pre>
+<p>If a <code>&lt;fieldset&gt;</code> is disabled, the descendant form controls are all disabled.</p>
+<pre><code class="language-html">&lt;fieldset id=&quot;group&quot; disabled&gt; 
+    &lt;input name=&quot;foo&quot;&gt; 
+    &lt;input type=&quot;checkbox&quot; name=&quot;bar&quot;&gt; 
+    &lt;select name=&quot;values&quot;&gt; 
+        &lt;option value=&quot;1&quot;&gt;Value 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Value 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Value 3&lt;/option&gt;        
+    &lt;/select&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<h1>Disable a link</h1>
+<p>To disable a link, unlike the previous technique, the use of the <code>disabled</code> attribute is not allowed. It is still possible to disable a link by following 3 steps:</p>
+<ul>
+<li>remove the <code>href</code> attribute so that it can no longer receive the focus</li>
+<li>add a <code>role=&quot;link&quot;</code> so that it is always considered a link by screen readers</li>
+<li>add an attribute <code>aria-disabled=&quot;true&quot;</code> so that it is indicated as being disabled</li>
 </ul>
-</div>
-      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
-    </div>
-  </section>
-  <div class="bg-success py-4">
-    <section class="container-lg">
-      <h2>Our recommendations</h2>
-      <div class="card-deck flex-column flex-md-row"><div class="card bg-info border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/web.svg" alt="" class="img-fluid" width="190" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/en/web/" class="text-primary stretched-link">Web</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-warning border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/android.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/en/mobile/android/" class="text-primary stretched-link">Android</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-warning border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/ios.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/en/mobile/ios/" class="text-primary stretched-link">iOS</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-purple border-secondary mb-0">
-    <div class="pt-3 px-3 text-center">
-      <img src="../images/icons/editorial-content.svg" alt="" class="img-fluid" width="131" height="151">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/en/editorial-content/" class="text-primary stretched-link">Editorial content</a>
-      </h3>
-      
-    </div>
-  </div></div>
-    </section>
-  </div>
-  <div class="bg-300">
-    <section class="container-lg py-4">
-      <div class="d-flex">
-        <h2>Last posts</h2>
-        <div class="pl-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">See all posts</a>
-        </div>
-      </div>
-      <ol class="list-unstyled row"><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/en/articles/disable-elements/" class="text-decoration-none">Disable HTML elements</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">July 01, 2021</time>
-        
-        
-          <p class="my-2">How to disable page elements ?</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/en/articles/single-page-app/" class="text-decoration-none">Single Page Applications (SPA)</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-06-25T00:00:00.000Z">June 25, 2021</time>
-        
-        
-          <p class="my-2">Recommendations for Single Page Applications</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/en/articles/watch-march-may-2021/" class="text-decoration-none">#a11y technical watch, March-May 2021</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-06-03T00:00:00.000Z">June 03, 2021</time>
-        
-        
-          <p class="my-2">#a11y anthology, March-May 2021</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/en/articles/watch-january-february-2021/" class="text-decoration-none">#a11y technical watch, January-February 2021</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-02-19T00:00:00.000Z">February 19, 2021</time>
-        
-        
-          <p class="my-2">#a11y anthology, January-February 2021</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/en/articles/accessible-svg/" class="text-decoration-none">Some best practices for SVG images</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-01-01T00:00:00.000Z">January 01, 2021</time>
-        
-        
-          <p class="my-2">How to make SVG images accessible</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/en/articles/autocomplete-component/" class="text-decoration-none">Best practices for the accessibility of an autocompletion component</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2020-12-23T00:00:00.000Z">December 23, 2020</time>
-        
-        
-          <p class="my-2">Presentation of our approach and selected guidelines</p>
-        
-      </article>
-    </li></ol>
-    </section>
-  </div>
-</main>
+<pre><code class="html">&lt;a role="link" aria-disabled="true"&gt; Disabled link &lt;/a&gt;</code></pre>
+<p>Check out Scott O'Hara's excellent article on the subject: <a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html">Disabling a link</a>.</p>
 
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#disable-form-elements" class="nav-link text-muted bg-200">Disable form elements</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
-<footer id="footer" class="o-footer mt-0" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
@@ -321,7 +242,7 @@
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/disable-elements.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -348,11 +269,13 @@
     
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "en",
         vendors: {
-          highlightJS: false
+          highlightJS: true
         }
       }
     </script>

@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Accueil - Recommandations accessibilité numérique Orange</title>
+    <title>Désactiver des éléments HTML - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -18,10 +18,12 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -63,7 +65,7 @@
     </a>
 
     <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/fr/" class="nav-link active" aria-current="page">
+          <a href="/fr/" class="nav-link">
   Accueil
 </a>
         </li><li class="nav-item">
@@ -87,7 +89,7 @@
   Contenu éditorial
 </a>
         </li><li class="nav-item">
-          <a href="/fr/articles/" class="nav-link">
+          <a href="/fr/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
         </li><li class="nav-item d-md-none">
@@ -132,172 +134,80 @@
     <div class="container-lg pt-2">
       
       
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Désactiver des éléments HTML
+        </li>
+      </ol>
+</nav>
+
+      
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          
+        
       </div>
     </div>
     
-<main id="main-content" class="pt-4" role="main">
-  <section class="container-lg">
-    <div class="row">
-      <div class="col-md-7 pb-5"><h1>Accessibilité Numérique Orange</h1>
-<h2 id="en-quelques-mots">En quelques mots <a class="header-anchor" href="#en-quelques-mots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.</p>
-<p>Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.<br>
-Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...</p>
-<ul class="list-inline">
-  <li class="list-inline-item pb-2">
-    <a href="definition-accessibilite-numerique" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="les-situations-de-handicap" class="btn btn-secondary btn-sm">Les situations de handicap</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="solutions-assistance" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="glossaire" class="btn btn-secondary btn-sm">Glossaire</a>
-  </li>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Désactiver un champ de formulaire</h1>
+<p>Pour désactiver un champ de formulaire il suffit de lui attribuer l'attribut <code>disabled</code> :</p>
+<pre><code class="language-html">&lt;button disabled&gt;Supprimer&lt;/button&gt;
+&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
+</code></pre>
+<p>Si <code>disable</code> est utilisé sur un <code>&lt;fieldset&gt;</code>, les éléments enfants sont désactivés.</p>
+<pre><code class="language-html">&lt;fieldset id=&quot;groupe&quot; disabled&gt; 
+    &lt;input name=&quot;foo&quot;&gt; 
+    &lt;input type=&quot;checkbox&quot; name=&quot;bar&quot;&gt; 
+    &lt;select name=&quot;values&quot;&gt; 
+        &lt;option value=&quot;1&quot;&gt;Valeur 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Valeur 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Valeur 3&lt;/option&gt;        
+    &lt;/select&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<h1>Désactiver un lien</h1>
+<p>Pour désactiver un lien, contrairement à la technique précédente, l'utilisation de l'attribut <code>disabled</code> n'est pas autorisée. Il est tout de même possible de désactiver un lien en suivant les 3 étapes suivantes :</p>
+<ul>
+<li>supprimer l'attribut <code>href</code> pour qu'il ne puisse plus recevoir le focus</li>
+<li>ajouter un <code>role=&quot;link&quot;</code> pour qu'il soit toujours considéré comme un lien par les lecteurs d'écran</li>
+<li>ajouter un attribut <code>aria-disabled=&quot;true&quot;</code> pour qu'il soit indiqué comme étant désactivé</li>
 </ul>
-</div>
-      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
-    </div>
-  </section>
-  <div class="bg-success py-4">
-    <section class="container-lg">
-      <h2>Nos recommandations</h2>
-      <div class="card-deck flex-column flex-md-row"><div class="card bg-info border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/web.svg" alt="" class="img-fluid" width="190" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/web/" class="text-primary stretched-link">Web</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-warning border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/android.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/android/" class="text-primary stretched-link">Android</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-warning border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/ios.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/ios/" class="text-primary stretched-link">iOS</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-purple border-secondary mb-0">
-    <div class="pt-3 px-3 text-center">
-      <img src="../images/icons/editorial-content.svg" alt="" class="img-fluid" width="131" height="151">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/contenu-editorial/" class="text-primary stretched-link">Contenu éditorial</a>
-      </h3>
-      
-    </div>
-  </div></div>
-    </section>
-  </div>
-  <div class="bg-300">
-    <section class="container-lg py-4">
-      <div class="d-flex">
-        <h2>Derniers articles</h2>
-        <div class="pl-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">Voir tous les articles</a>
-        </div>
-      </div>
-      <ol class="list-unstyled row"><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/desactiver-des-elements/" class="text-decoration-none">Désactiver des éléments HTML</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">01 juillet 2021</time>
-        
-        
-          <p class="my-2">Comment désactiver des éléments dans la page ?</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/single-page-app/" class="text-decoration-none">Single Page Applications (SPA)</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-06-16T00:00:00.000Z">16 juin 2021</time>
-        
-        
-          <p class="my-2">Recommandations pour les Single Page Applications</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-mars-mai-2021/" class="text-decoration-none">Veille #A11y Mars-Mai 2021</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-06-03T00:00:00.000Z">03 juin 2021</time>
-        
-        
-          <p class="my-2">Florilèges de ressources en #a11y, mars-mai 2021</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-janvier-fevrier-2021/" class="text-decoration-none">Veille #A11y Janvier-Février 2021</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-02-19T00:00:00.000Z">19 février 2021</time>
-        
-        
-          <p class="my-2">Florilèges de ressources en #a11y, janvier-février 2021</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/svg-accessibles/" class="text-decoration-none">Quelques bonnes pratiques pour les images SVG</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-01-01T00:00:00.000Z">01 janvier 2021</time>
-        
-        
-          <p class="my-2">Comment rendre accessibles les images SVG</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/recommandations-autocompletion/" class="text-decoration-none">Recommandations pour l&#39;accessibilité d&#39;un composant d&#39;autocomplétion</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2020-12-23T00:00:00.000Z">23 décembre 2020</time>
-        
-        
-          <p class="my-2">Présentation de notre démarche et des recommandations sélectionnées</p>
-        
-      </article>
-    </li></ol>
-    </section>
-  </div>
-</main>
+<pre><code class="html">&lt;a role="link" aria-disabled="true"&gt;Lien désactivé&lt;/a&gt;</code></pre>
+<p>Consultez l'excellent article de Scott O'Hara sur le sujet : <a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en" lang="en">Disabling a link</a>.</p>
 
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
-<footer id="footer" class="o-footer mt-0" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
@@ -322,7 +232,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/desactiver-des-elements.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -349,11 +259,13 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
     
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: false
+          highlightJS: true
         }
       }
     </script>
