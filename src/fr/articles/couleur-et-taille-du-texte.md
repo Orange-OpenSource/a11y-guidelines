@@ -1,7 +1,7 @@
 ---
 title: "Taille et couleur des textes"
 abstract: "Quelle taille et quelles couleurs doit ont adopter pour les textes ?"
-date: "2021-04-26"
+date: "2021-06-05"
 tags:
   - web
 ---
