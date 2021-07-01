@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Accueil - Recommandations accessibilité numérique Orange</title>
+    <title>Taille et couleur des textes - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -18,10 +18,12 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -63,7 +65,7 @@
     </a>
 
     <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/fr/" class="nav-link active" aria-current="page">
+          <a href="/fr/" class="nav-link">
   Accueil
 </a>
         </li><li class="nav-item">
@@ -87,7 +89,7 @@
   Contenu éditorial
 </a>
         </li><li class="nav-item">
-          <a href="/fr/articles/" class="nav-link">
+          <a href="/fr/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
         </li><li class="nav-item d-md-none">
@@ -132,172 +134,109 @@
     <div class="container-lg pt-2">
       
       
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Taille et couleur des textes
+        </li>
+      </ol>
+</nav>
+
+      
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#quen-dit-le-referenciel" class="dropdown-item text-wrap">Qu&#39;en dit le référenciel ?</a><a href="#agrandissement-de-la-taille-des-caracteres" class="dropdown-item text-wrap">Agrandissement de la taille des caractères</a><a href="#contraste-des-couleurs" class="dropdown-item text-wrap">Contraste des couleurs</a><a href="#et-les-utilisateurs-dans-tout-ca" class="dropdown-item text-wrap">Et, les utilisateurs dans tout ça ?</a></div>
+    </nav>
+        
       </div>
     </div>
     
-<main id="main-content" class="pt-4" role="main">
-  <section class="container-lg">
-    <div class="row">
-      <div class="col-md-7 pb-5"><h1>Accessibilité Numérique Orange</h1>
-<h2 id="en-quelques-mots">En quelques mots <a class="header-anchor" href="#en-quelques-mots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.</p>
-<p>Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.<br>
-Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...</p>
-<ul class="list-inline">
-  <li class="list-inline-item pb-2">
-    <a href="definition-accessibilite-numerique" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="les-situations-de-handicap" class="btn btn-secondary btn-sm">Les situations de handicap</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="solutions-assistance" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="glossaire" class="btn btn-secondary btn-sm">Glossaire</a>
-  </li>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Taille et couleur des textes</h1>
+<p>Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web:</p>
+<ul>
+<li>Quelle taille faut-il utiliser pour les textes ?</li>
+<li>Quelle est la taille de police minimale à respecter ?</li>
+<li>Quelle couleur puis-je utiliser pour le texte ?</li>
 </ul>
-</div>
-      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
-    </div>
-  </section>
-  <div class="bg-success py-4">
-    <section class="container-lg">
-      <h2>Nos recommandations</h2>
-      <div class="card-deck flex-column flex-md-row"><div class="card bg-info border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/web.svg" alt="" class="img-fluid" width="190" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/web/" class="text-primary stretched-link">Web</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-warning border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/android.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/android/" class="text-primary stretched-link">Android</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-warning border-secondary mb-4 mb-md-0">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/ios.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/ios/" class="text-primary stretched-link">iOS</a>
-      </h3>
-      
-    </div>
-  </div><div class="card bg-purple border-secondary mb-0">
-    <div class="pt-3 px-3 text-center">
-      <img src="../images/icons/editorial-content.svg" alt="" class="img-fluid" width="131" height="151">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/contenu-editorial/" class="text-primary stretched-link">Contenu éditorial</a>
-      </h3>
-      
-    </div>
-  </div></div>
-    </section>
-  </div>
-  <div class="bg-300">
-    <section class="container-lg py-4">
-      <div class="d-flex">
-        <h2>Derniers articles</h2>
-        <div class="pl-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">Voir tous les articles</a>
-        </div>
-      </div>
-      <ol class="list-unstyled row"><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/couleur-et-taille-du-texte/" class="text-decoration-none">Taille et couleur des textes</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-07-05T00:00:00.000Z">05 juillet 2021</time>
-        
-        
-          <p class="my-2">Quelle taille et quelles couleurs doit ont adopter pour les textes ?</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/desactiver-des-elements/" class="text-decoration-none">Désactiver des éléments HTML</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">01 juillet 2021</time>
-        
-        
-          <p class="my-2">Comment désactiver des éléments dans la page ?</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/single-page-app/" class="text-decoration-none">Single Page Applications (SPA)</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-06-16T00:00:00.000Z">16 juin 2021</time>
-        
-        
-          <p class="my-2">Recommandations pour les Single Page Applications</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-mars-mai-2021/" class="text-decoration-none">Veille #A11y Mars-Mai 2021</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-06-03T00:00:00.000Z">03 juin 2021</time>
-        
-        
-          <p class="my-2">Florilèges de ressources en #a11y, mars-mai 2021</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-janvier-fevrier-2021/" class="text-decoration-none">Veille #A11y Janvier-Février 2021</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-02-19T00:00:00.000Z">19 février 2021</time>
-        
-        
-          <p class="my-2">Florilèges de ressources en #a11y, janvier-février 2021</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/svg-accessibles/" class="text-decoration-none">Quelques bonnes pratiques pour les images SVG</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2021-01-01T00:00:00.000Z">01 janvier 2021</time>
-        
-        
-          <p class="my-2">Comment rendre accessibles les images SVG</p>
-        
-      </article>
-    </li></ol>
-    </section>
-  </div>
-</main>
+<h2 id="quen-dit-le-referenciel">Qu'en dit le référenciel ? <a class="header-anchor" href="#quen-dit-le-referenciel" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Le <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">référentiel WCAG</a> n'impose pas de taille minimale ni de couleurs pour les textes. Ceci dit deux critères permettant de répondre à ces questions méritent notre attention :</p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#resize-text" lang="en">1.4.4 Resize text</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" lang="en">1.4.3 Contrast (Minimum)</a></li>
+</ul>
+<h3 id="agrandissement-de-la-taille-des-caracteres">Agrandissement de la taille des caractères <a class="header-anchor" href="#agrandissement-de-la-taille-des-caracteres" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Si le référentiel n'impose pas de taille minimale pour la taille des caractères, <a href="https://www.w3.org/TR/WCAG21/#resize-text">le critère 1.4.4</a> indique que l'utilisateur doit pouvoir augmenter la taille du texte jusqu'à 200% sans perte de contenu ou de fonctionnalité. Pour être conforme à ce critère il est indispensable de tester dans un navigateur. La procédure pour augmenter la taille du texte est disponible sur la page suivante : <a href="/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/">Agrandissement de la taille du texte</a>.<br>
+Parfois le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem ...).</p>
+<h3 id="contraste-des-couleurs">Contraste des couleurs <a class="header-anchor" href="#contraste-des-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le référentiel n'impose pas d'utiliser ni même n'interdit l'utilisation de certaines couleurs pour les textes. Cela dit, un texte gris clair sur fond blanc par exemple pourra poser des difficultés. Il est donc indispensable de vérifier que la couleur du texte et la couleur du fond fournissent un niveau de contraste suffisant (cf. niveaux ci-dessous). Celui-ci peut être <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">mesuré très simplement à l'aide d'outils</a>.<br>
+ <br>
+Le <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">critère 1.4.3 du référentiel</a> impose des niveaux de contraste minimums permettant de garantir un confort de lecture suffisant.</p>
+<p>Pour les textes standards :</p>
+<ul>
+<li>de taille inférieure à 24px : contraste de 4,5:1 minimum</li>
+<li>de taille supérieure ou égale à 24px : contraste de 3:1 minimum</li>
+</ul>
+<p>Pour les textes gras :</p>
+<ul>
+<li>de taille inférieure à 18,5px : contraste de 4,5:1 minimum</li>
+<li>de taille supérieure ou égale à 18,5px : contraste de 3:1 minimum</li>
+</ul>
+<p>Pour les liens non-soulignés</p>
+<ul>
+<li>contraste de 3:1 minimum avec le texte environnement et la couleur de fond</li>
+</ul>
+<p>Le critère mentionne quelques exceptions soumises à aucune contrainte, notamment les textes des éléments inactifs (un bouton apparaissant grisé par exemple), les textes faisant partie d'un logo ou un nom de marque.</p>
+<h2 id="et-les-utilisateurs-dans-tout-ca">Et, les utilisateurs dans tout ça ? <a class="header-anchor" href="#et-les-utilisateurs-dans-tout-ca" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Comme on vient de le voir, le référentiel n'impose pas de taille minimale car il part du principe qu'il est possible d'agrandir le texte si nécessaire. Dans les faits les utilisateurs n'ajustent pas toujours la taille du texte à leurs besoins, par manque d'habitude ou par méconnaissance des possibilités qui leur sont offertes. C'est pourquoi il est important que la taille par défaut soit suffisante pour garantir un confort de lecture qui donne envie de poursuivre sur le site.</p>
+<p>La taille et la couleur ne sont pas les seules caractéristiques qui entrent en jeu sur la lisibilité d'un texte, en effet la police de caractères ou l'utilisation de texte en italique peut avoir des conséquences importantes. Vous trouverez quelques recommandations complémentaires à ce sujet dans la section <a href="https://a11y-guidelines.orange.com/fr/contenu-editorial/">contenu éditorial</a>.</p>
 
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#quen-dit-le-referenciel" class="nav-link text-muted bg-200">Qu&#39;en dit le référenciel ?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#agrandissement-de-la-taille-des-caracteres" class="nav-link text-muted bg-200">Agrandissement de la taille des caractères</a>
+          </li><li class="nav-item position-relative">
+            <a href="#contraste-des-couleurs" class="nav-link text-muted bg-200">Contraste des couleurs</a>
+          </li><li class="nav-item position-relative">
+            <a href="#et-les-utilisateurs-dans-tout-ca" class="nav-link text-muted bg-200">Et, les utilisateurs dans tout ça ?</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
-<footer id="footer" class="o-footer mt-0" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
@@ -322,7 +261,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/couleur-et-taille-du-texte.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -349,11 +288,13 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
     
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: false
+          highlightJS: true
         }
       }
     </script>
