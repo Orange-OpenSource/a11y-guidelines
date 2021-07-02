@@ -86,35 +86,58 @@ Here is the final rendering of the dialog, we will show you how to create it ste
 
 <p>In this new example, we save the location of the focus at the opening:</p>
 <pre><code class="javascript">
+ // Get the dialog element
+  const dialog =  document.getElementById('step2-dialog');
+
  // Save the focus position that will be used when closing
- $('#step2-dialog').attr('data-focusBack', 'step2-openButton');
+ dialog.setAttribute('data-focusBack', 'step2-openButton');
 
  // Set the focus on the default item
- $('#step2-dialog .defaultFocus').focus();
+ dialog.querySelector('.defaultFocus').focus();
 </code></pre>
 
 <p>It resets the focus when closing:</p>
 <pre><code class="javascript">
   // Resets the focus when closing the dialog
-  $('#'+$('#step2-dialog').attr('data-focusBack')).focus();
+  var focusBackElement = dialog.getAttribute('data-focusBack');
+  document.getElementById(focusBackElement).focus();
 </code></pre>
 
-<p>We also have to prevent the focus from going out of the dialog. When the focus is set on the last element it should go back to the first element and vice versa. There are several solutions to create this behaviour. In this example, two empty <code>span</code> tags are added at the beginning and at the end of the dialog. These are made ​​focusable using the <code>tabindex="0"</code> attribute. When the first <code>span</code> tag receives the focus, it is moved to the last element of the dialog. When the last <code>span</code> receives the focus, it is moved to the first element of the dialog.</p>
-<p>Empty <code>span</code> tags have the advantage of not being vocalized by screen readers.</p>
+<p>We prevent the focus from leaving the dialog box</p>
+<p>For this we rely on the <code>querySelectorAll</code> method. It will allow us to easily retrieve the interactive elements of the dialog box, to then identify the first element and the last element of the box.</p>
+<p>Finally, using the <code>onKeyDown</code> event handler, we will be able to intercept the focus when it arrives on the first or the last item, to reposition it at the start or at the end of the modal, as needed.</p>
+<p>The full solution is presented in this article: <a href="https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700" >How to trap focus inside modal to make it ADA compliant</a></p>
 
 <pre><code class="javascript">
- $('.dialog-start').on('focus', function () {
-    $(this).parent().find('button:last').focus();
- });
+  // Get the first focusable element
+  const dialogStart = finalDialog.querySelectorAll('button')[0];
+  
+  // Get the last focusable element
+  const dialogFocusableContent = dialog.querySelectorAll('button');
+  const dialogStop = dialogFocusableContent[finalFocusableContent.length - 1];
 
- $('.dialog-stop').on('focus', function () {
-    $(this).parent().find('button:first').focus();
- });
+  // Listen the focus sequence, and relocate the focus if necessary depending on which element is currently active
+  dialog.onkeydown = function(e){
+	
+	if (e.key === 'Tab' || e.keyCode === 9) {
+		
+		if ( e.shiftKey ) {
+		  if (document.activeElement === dialogStart) {
+			e.preventDefault();
+			dialogStop.focus();
+		  }
+		} else /* tab */ {
+		  if (document.activeElement === dialogStop) {
+			e.preventDefault();
+			dialogStart.focus();
+		  }
+		}
+	}
+  }
 </code></pre>
 
 <!-- Dialog 2 -->
 <div id="step2-dialog" class="dialog">
-  <span tabindex="0" class="dialog-start"></span>
   <div class="dialogContainer">
     <button class="closeButton">X</button>
     <h1 id="final-dialogTitle2">Warning</h1>
@@ -122,14 +145,12 @@ Here is the final rendering of the dialog, we will show you how to create it ste
     <button class="btn btn-secondary defaultFocus">OK</button>
     <button class="btn btn-secondary">Cancel</button>
   </div>
-  <span tabindex="0" class="dialog-stop"></span>
 </div>
 
-Finally, we listen to the <code>onKeyDown</code> event to close the dialog when the <kbd>Escape</kbd> key is pressed.<br>
+We also listen to the <code>onKeyDown</code> event to close the dialog when the <kbd>Escape</kbd> key is pressed.<br>
 Here is the updated <abbr>HTML</abbr> code for the dialog:
 <pre><code class="html">
 &lt;div id="step2-dialog" class="dialog"&gt;
-  &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
   &lt;div class="dialogContainer"&gt;
     &lt;button&gt;X&lt;/button&gt;
     &lt;h1&gt;Warning&lt;/h1&gt;
@@ -137,7 +158,6 @@ Here is the updated <abbr>HTML</abbr> code for the dialog:
     &lt;button class="defaultFocus"&gt;OK&lt;/button&gt;
     &lt;button&gt;Cancel&lt;/button&gt;
   &lt;/div&gt;
-  &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -162,7 +182,6 @@ Here is the updated <abbr>HTML</abbr> code for the dialog:
 
 <pre><code class="html">
 &lt;div id="final-dialog" role="dialog" aria-labelledby="final-dialogTitle" aria-describedby="final-description"&gt;
-  &lt;span tabindex="0" class="dialog-start"&gt;&lt;/span&gt;
   &lt;div class="dialogContainer"&gt;
     &lt;button aria-label="close" title="Close"&gt;X&lt;/button&gt;
     &lt;h1 id="final-dialogTitle"&gt;Warning&lt;/h1&gt;
@@ -170,7 +189,6 @@ Here is the updated <abbr>HTML</abbr> code for the dialog:
     &lt;button class="defaultFocus"&gt;OK&lt;/button&gt;
     &lt;button&gt;Cancel&lt;/button&gt;
   &lt;/div&gt;
-  &lt;span tabindex="0" class="dialog-stop"&gt;&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
