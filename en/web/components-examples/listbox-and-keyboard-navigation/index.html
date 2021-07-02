@@ -295,9 +295,12 @@
 
 <pre><code class="javascript">
 …
+// Init
+const listbox = document.querySelector("[role=listbox]");
+
 // On keydown
-$("[role=listbox]").on("keydown", function (e) {
-  var currentItem = $(this).find("[aria-selected=true]");
+listbox.onkeydown = function(e) {          
+	var currentItem = this.querySelector("[aria-selected=true]"); 
   switch (e.keyCode) {
       case 9: // TAB
           break;
@@ -342,10 +345,12 @@ default:  // Search item starts with
       searchString = "";
 
       // If an item is found…
-      if (matchingElement) {
-          currentItem.attr("aria-selected", "false");
-          $(matchingElement).parent().attr("aria-selected", "true").focus().addClass("active");
-      }
+      if (matchingElement) {                            
+	   currentItem.setAttribute("aria-selected", "false");
+	   matchingElement.parentElement.setAttribute("aria-selected", "true");
+	   matchingElement.parentElement.focus();
+	   matchingElement.parentElement.classList.add("active");
+      }     
   }, 500);
 
   e.preventDefault();
@@ -420,7 +425,7 @@ default:  // Search item starts with
         }
       }
     </script>
-    <script src="/assets/script.js"></script><script src="script.js"></script><script src="wgxpath.install.js"></script><script>
+    <script src="/assets/script.js"></script><script src="wgxpath.install.js"></script><script src="script.js"></script><script>
       var tarteaucitronForceLanguage = "en"
       tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
           'site_name': 'accessibility-guidelines',
