@@ -93,14 +93,16 @@
           case 36: // home                    
               currentItem.setAttribute("aria-selected", "false");                    
               var firstItem = this.querySelectorAll("[role=option]")[0];
-			  firstItem.setAttribute("aria-selected", "true").focus();
+			  firstItem.setAttribute("aria-selected", "true");
+			  firstItem.focus();
               e.preventDefault();
               break;
           case 35: // end
               currentItem.setAttribute("aria-selected", "false");
 			  var allItems = this.querySelectorAll("[role=option]");
 			  var lastItem = allItems[allItems.length - 1];
-              lastItem.setAttribute("aria-selected", "true").focus();
+              lastItem.setAttribute("aria-selected", "true");
+			  lastItem.focus();
               e.preventDefault();
               break;                   
       }
