@@ -149,7 +149,7 @@ default:  // Search item starts with
   // Set a timer to search item after 500ms
   timer = setTimeout(function(){
       // Search item
-      var xpath = "li/span[starts-with(translate(text(), ’ABCDEFGHIJKLMNOPQRSTUVWXYZ’, ’abcdefghijklmnopqrstuvwxyz’), ’" + searchString + "’)]";
+      var xpath = "li/span[starts-with(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" + searchString + "')]";
       var matchingElement = document.evaluate(xpath, self, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       // Reset search string
