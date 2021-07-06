@@ -86,10 +86,14 @@ function removePoll(message) {
 
 function rawPush(from, message) {
 	var chatContent = document.getElementById('chat-content');
-	var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from");    
+	if (chatContent.querySelector((".messages:last-child"))) {
+		var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from"); 
+	}
+	
     if (lastFrom !== from) {
        chatContent.innerHTML = chatContent.innerHTML + '<span data-from="' + from + '" class="from invisible" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>';
     }
+	
     chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="raw-message"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>';    
 	
 	chatContent.style.scrollTop = document.getElementById("chat-content").scrollHeight;
@@ -98,10 +102,12 @@ function rawPush(from, message) {
 
 function push(from, message, silence, id) {
 	var chatContent = document.getElementById('chat-content');
-    var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from");    
+	if (chatContent.querySelector((".messages:last-child"))) {
+		var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from"); 
+	}
+	    
     var id = id?' id="'+id+'" ':'';
     if (lastFrom !== from) {
- 
 		 chatContent.innerHTML = chatContent.innerHTML + '<span data-from="' + from + '" class="from" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>';
     }
 
@@ -115,18 +121,21 @@ function push(from, message, silence, id) {
             }
         }
     }
+	
 	chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>';
     chatContent.scrollTop = chatContent.scrollHeight;
 }
 
 function sendMessage() {
-    var msg = $("#chat-input").val();
+    var msg = document.getElementById("chat-input").value;
+
     if (msg == '') {
         return;
     }
     push("moi", msg);
-    $("#chat-input").val("").focus();
-    
+	document.getElementById("chat-input").value = "";
+	document.getElementById("chat-input").focus();
+   
     // echo reply
     window.setTimeout(function () {
         push("Djingo", msg);
