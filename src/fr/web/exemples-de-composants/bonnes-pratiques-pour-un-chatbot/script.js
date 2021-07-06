@@ -97,10 +97,12 @@ function rawPush(from, message) {
 }
 
 function push(from, message, silence, id) {
-    var lastFrom = $("#chat-content .messages").last().attr("data-from");
+	var chatContent = document.getElementById('chat-content');
+    var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from");    
     var id = id?' id="'+id+'" ':'';
     if (lastFrom !== from) {
-        $("#chat-content").append('<span data-from="' + from + '" class="from" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
+ 
+		 chatContent.innerHTML = chatContent.innerHTML + '<span data-from="' + from + '" class="from" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>';
     }
 
     if (!silence) {
@@ -113,9 +115,7 @@ function push(from, message, silence, id) {
             }
         }
     }
-
-    $("#chat-content .messages").last().append('<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>');    
-    var chatContent = document.getElementById('chat-content');
+	chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' dit : </span>' + message + '</div>';
     chatContent.scrollTop = chatContent.scrollHeight;
 }
 
