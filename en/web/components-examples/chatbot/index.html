@@ -421,7 +421,7 @@ document.title = "Djingo says…" + title;
   <p>When focus is moved to an item, the screen reader automatically vocalizes it. But in our case, the <code>aria-live</code> attribute already allows to automatically vocalize any addition in the chat window. To avoid double vocalization in this case, make sure to temporarily disable the <code>aria-live</code>. </p>
 <pre><code class="js">
   // Deactivation of aria-live (avoid double vocalization)
-  $("#chat-container").attr("aria-live", "off");
+  document.getElementById("chat-container").setAttribute("aria-live", "off");
 
   // Displaying the question
   push("Djingo", "Excellent idea ! Do you want to talk about web or mobile accessibility?", true, "poll1");
@@ -430,11 +430,11 @@ document.title = "Djingo says…" + title;
   rawPush('me', '&lt;button id="poll-web" class="btn btn-primary btn-poll"&gt;Web&lt;/button&gt;&lt;button id="poll-mobile" class="btn btn-primary btn-poll"&gt;Mobile&lt;button&gt;');
 
   // Put focus on the question (triggering of the vocalization)
-  $("#poll1").focus();
+  document.getElementById("poll1").focus();
 
   // Reactivation of aria-live
   window.setTimeout(function() {
-      $("#chat-container").attr("aria-live", "polite");
+      document.getElementById("chat-container").setAttribute("aria-live", "polite");
   }, 0);
 </code></pre>
 
