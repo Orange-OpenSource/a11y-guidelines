@@ -16,9 +16,9 @@
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.articles_fr | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.articles_en | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>  
-  {%- for post in collections.articles_fr %}
+  {%- for post in collections.articles_en %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
